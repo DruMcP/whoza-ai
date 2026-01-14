@@ -5,12 +5,14 @@ import { supabase } from '../lib/supabase';
 import { emailService } from '../services/emailService';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { AEOAssessment } from '../components/AEOAssessment';
 
 const STEPS = [
   { id: 1, title: 'Account', description: 'Create your account' },
   { id: 2, title: 'Business', description: 'Tell us about your business' },
   { id: 3, title: 'Services', description: 'What you offer' },
-  { id: 4, title: 'Finish', description: 'Final details' },
+  { id: 4, title: 'AI Readiness', description: 'Quick AI visibility check' },
+  { id: 5, title: 'Finish', description: 'Final details' },
 ];
 
 const TRADE_OPTIONS = [
@@ -58,6 +60,7 @@ export default function Start() {
     credentials: '',
     competitors: '',
     isFounder: false,
+    aeoAssessment: null,
   });
 
   const [touched, setTouched] = useState({});
@@ -235,6 +238,10 @@ export default function Start() {
           const googleError = validateUrl(formData.googleBusinessUrl || '');
           return !websiteError && !googleError;
         case 4:
+          // AI Readiness step - always valid (can be skipped or completed)
+          return true;
+        case 5:
+          // Finish step - always valid (all fields optional)
           return true;
         default:
           return false;
@@ -243,6 +250,32 @@ export default function Start() {
       // TODO: Review error handling: console.error('Validation error:', err)
       return false;
     }
+  };
+
+  // Handle AEO Assessment completion
+  const handleAEOComplete = (assessmentData) => {
+    setFormData(prev => ({
+      ...prev,
+      aeoAssessment: assessmentData
+    }));
+    // Automatically advance to next step
+    setCurrentStep(prev => Math.min(prev + 1, STEPS.length));
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }, 0);
+  };
+
+  // Handle AEO Assessment skip
+  const handleAEOSkip = () => {
+    setFormData(prev => ({
+      ...prev,
+      aeoAssessment: { skipped: true, completedAt: new Date().toISOString() }
+    }));
+    // Advance to next step
+    setCurrentStep(prev => Math.min(prev + 1, STEPS.length));
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }, 0);
   };
 
   const handleNext = () => {
@@ -383,6 +416,7 @@ export default function Start() {
             key_services: formData.keyServices || null,
             credentials: formData.credentials || null,
             competitors: formData.competitors || null,
+            aeo_assessment: formData.aeoAssessment || null,
             founder: formData.isFounder,
             role: 'customer',
             subscription_tier: 'free',
@@ -960,6 +994,16 @@ export default function Start() {
         );
 
       case 4:
+        // AI Readiness Assessment step
+        return (
+          <AEOAssessment
+            onComplete={handleAEOComplete}
+            onSkip={handleAEOSkip}
+            initialResponses={formData.aeoAssessment?.responses || null}
+          />
+        );
+
+      case 5:
         return (
           <>
             <p className="step-description">
@@ -1155,7 +1199,8 @@ export default function Start() {
             <div className="form-navigation">
               {isSignUp ? (
                 <>
-                  {currentStep > 1 && (
+                  {/* Hide Back button on step 4 (AEO Assessment) - it has its own navigation */}
+                  {currentStep > 1 && currentStep !== 4 && (
                     <button
                       type="button"
                       onClick={handlePrevious}
@@ -1165,7 +1210,8 @@ export default function Start() {
                       Back
                     </button>
                   )}
-                  {currentStep < STEPS.length ? (
+                  {/* Hide Next button on step 4 (AEO Assessment handles its own navigation) */}
+                  {currentStep < STEPS.length && currentStep !== 4 ? (
                     <button
                       type="button"
                       onClick={handleNext}
@@ -1175,7 +1221,7 @@ export default function Start() {
                     >
                       Next
                     </button>
-                  ) : (
+                  ) : currentStep === STEPS.length ? (
                     <button
                       type="submit"
                       disabled={loading}
@@ -1184,7 +1230,7 @@ export default function Start() {
                     >
                       {loading ? 'Please wait...' : 'Continue to choose plan'}
                     </button>
-                  )}
+                  ) : null /* Step 4 (AEO Assessment) handles its own navigation */}
                 </>
               ) : (
                 !showForgotPassword && (

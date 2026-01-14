@@ -1,0 +1,314 @@
+/**
+ * AEO Assessment Component Styles
+ * Matches the existing whoza.ai design system
+ */
+
+.aeo-assessment {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.aeo-header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg, 24px);
+}
+
+.aeo-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary, #1a1a2e);
+  margin: 0 0 var(--spacing-sm, 8px) 0;
+}
+
+.aeo-description {
+  font-size: 0.95rem;
+  color: var(--text-secondary, #6b7280);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Questions Container */
+.aeo-questions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md, 16px);
+  margin-bottom: var(--spacing-lg, 24px);
+}
+
+/* Individual Question Card */
+.aeo-question-card {
+  display: flex;
+  gap: var(--spacing-md, 16px);
+  padding: var(--spacing-md, 16px);
+  background: var(--surface-secondary, #f8fafc);
+  border-radius: var(--radius-md, 12px);
+  border: 1px solid var(--border-color, #e2e8f0);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.aeo-question-card:hover {
+  border-color: var(--color-primary-300, #93c5fd);
+}
+
+.aeo-question-card:has(input:checked) {
+  border-color: var(--color-primary-500, #3b82f6);
+  box-shadow: 0 0 0 1px var(--color-primary-200, #bfdbfe);
+}
+
+.aeo-question-number {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary-500, #3b82f6);
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 50%;
+}
+
+.aeo-question-content {
+  flex: 1;
+}
+
+.aeo-question-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary, #1a1a2e);
+  margin: 0 0 var(--spacing-xs, 4px) 0;
+  line-height: 1.4;
+}
+
+.aeo-question-hint {
+  font-size: 0.85rem;
+  color: var(--text-tertiary, #9ca3af);
+  margin: 0 0 var(--spacing-sm, 12px) 0;
+}
+
+/* Options */
+.aeo-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs, 8px);
+}
+
+.aeo-option {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm, 10px);
+  padding: var(--spacing-sm, 10px) var(--spacing-md, 12px);
+  background: white;
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: var(--radius-sm, 8px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.aeo-option:hover {
+  background: var(--color-primary-50, #eff6ff);
+  border-color: var(--color-primary-300, #93c5fd);
+}
+
+.aeo-option.selected {
+  background: var(--color-primary-50, #eff6ff);
+  border-color: var(--color-primary-500, #3b82f6);
+}
+
+.aeo-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.aeo-option-radio {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border-color, #d1d5db);
+  border-radius: 50%;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.aeo-option.selected .aeo-option-radio {
+  border-color: var(--color-primary-500, #3b82f6);
+}
+
+.aeo-option.selected .aeo-option-radio::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background: var(--color-primary-500, #3b82f6);
+  border-radius: 50%;
+}
+
+.aeo-option-label {
+  font-size: 0.9rem;
+  color: var(--text-primary, #374151);
+}
+
+/* Actions */
+.aeo-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md, 16px);
+  margin-bottom: var(--spacing-md, 16px);
+}
+
+.aeo-actions .button {
+  width: 100%;
+  max-width: 300px;
+}
+
+.aeo-skip-link {
+  background: none;
+  border: none;
+  color: var(--text-secondary, #6b7280);
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: var(--spacing-xs, 8px);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.aeo-skip-link:hover {
+  color: var(--text-primary, #374151);
+}
+
+.aeo-footer-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs, 6px);
+  font-size: 0.8rem;
+  color: var(--text-tertiary, #9ca3af);
+  text-align: center;
+  margin: 0;
+}
+
+/* Score Display */
+.aeo-score-display {
+  text-align: center;
+  padding: var(--spacing-lg, 24px) 0;
+}
+
+.aeo-score-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary, #1a1a2e);
+  margin: 0 0 var(--spacing-xs, 4px) 0;
+}
+
+.aeo-score-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary, #6b7280);
+  margin: 0 0 var(--spacing-lg, 24px) 0;
+}
+
+.aeo-score-circle {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto var(--spacing-md, 16px);
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--score-color, #3b82f6) 0%, color-mix(in srgb, var(--score-color, #3b82f6) 80%, white) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.aeo-score-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+}
+
+.aeo-score-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.aeo-score-segment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs, 8px);
+  margin-bottom: var(--spacing-sm, 12px);
+}
+
+.aeo-segment-icon {
+  font-size: 1.25rem;
+}
+
+.aeo-segment-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.aeo-score-message {
+  font-size: 1rem;
+  color: var(--text-secondary, #4b5563);
+  margin: 0 0 var(--spacing-lg, 24px) 0;
+  line-height: 1.5;
+}
+
+.aeo-score-note {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm, 10px);
+  padding: var(--spacing-md, 16px);
+  background: var(--surface-secondary, #f0f9ff);
+  border-radius: var(--radius-md, 12px);
+  border: 1px solid var(--color-primary-200, #bae6fd);
+  margin-bottom: var(--spacing-lg, 24px);
+  text-align: left;
+}
+
+.aeo-score-note svg {
+  flex-shrink: 0;
+  color: var(--color-primary-500, #0ea5e9);
+  margin-top: 2px;
+}
+
+.aeo-score-note span {
+  font-size: 0.85rem;
+  color: var(--text-secondary, #4b5563);
+  line-height: 1.5;
+}
+
+.aeo-continue-btn {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .aeo-question-card {
+    flex-direction: column;
+    gap: var(--spacing-sm, 12px);
+  }
+
+  .aeo-question-number {
+    align-self: flex-start;
+  }
+
+  .aeo-score-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .aeo-score-number {
+    font-size: 2.5rem;
+  }
+}
