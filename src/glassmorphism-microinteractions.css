@@ -1,0 +1,641 @@
+/* ========================================
+   ADVANCED GLASSMORPHISM & MICRO-INTERACTIONS
+   World-Class Design Enhancement System
+   ======================================== */
+
+/* ========================================
+   1. GLASSMORPHISM NAVIGATION BAR
+   ======================================== */
+
+.header {
+  background: rgba(249, 250, 251, 0.7) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-inner {
+  position: relative;
+  z-index: 10;
+}
+
+/* Glassmorphism effect on scroll */
+.header.scrolled {
+  background: rgba(249, 250, 251, 0.85) !important;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   2. GLASSMORPHISM CARDS
+   ======================================== */
+
+.glass-card,
+.pricing-card,
+.feature-card,
+.testimonial-card,
+.card,
+.stat-card,
+.metric-card,
+.score-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before,
+.pricing-card::before,
+.feature-card::before,
+.testimonial-card::before,
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(158, 240, 26, 0.3),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.glass-card:hover::before,
+.pricing-card:hover::before,
+.feature-card:hover::before,
+.testimonial-card:hover::before,
+.card:hover::before {
+  opacity: 1;
+}
+
+.glass-card:hover,
+.pricing-card:hover,
+.feature-card:hover,
+.testimonial-card:hover,
+.card:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(158, 240, 26, 0.3) !important;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(158, 240, 26, 0.1);
+}
+
+/* ========================================
+   3. ADVANCED BUTTON MICRO-INTERACTIONS
+   ======================================== */
+
+.button,
+.btn,
+.button-primary,
+.btn-primary,
+.button-secondary,
+.btn-secondary,
+.button-header-cta,
+.btn-hover {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  isolation: isolate;
+}
+
+.button::before,
+.btn::before,
+.button-primary::before,
+.btn-primary::before,
+.button-header-cta::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+  z-index: -1;
+}
+
+.button:hover::before,
+.btn:hover::before,
+.button-primary:hover::before,
+.btn-primary:hover::before,
+.button-header-cta:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.button:active,
+.btn:active,
+.button-primary:active,
+.btn-primary:active,
+.button-secondary:active,
+.btn-secondary:active,
+.button-header-cta:active {
+  transform: scale(0.98);
+}
+
+.button:hover,
+.btn:hover,
+.button-primary:hover,
+.btn-primary:hover,
+.button-header-cta:hover {
+  box-shadow: 0 8px 30px rgba(158, 240, 26, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Secondary button ripple effect */
+.button-secondary::before,
+.btn-secondary::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(158, 240, 26, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+  z-index: -1;
+}
+
+.button-secondary:hover::before,
+.btn-secondary:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* ========================================
+   4. INPUT FIELD FOCUS ANIMATIONS
+   ======================================== */
+
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #9EF01A !important;
+  box-shadow: 0 0 0 3px rgba(158, 240, 26, 0.2),
+              0 0 20px rgba(158, 240, 26, 0.1) !important;
+  transform: translateY(-1px);
+}
+
+/* Input glow animation */
+@keyframes inputGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 3px rgba(158, 240, 26, 0.2),
+                0 0 20px rgba(158, 240, 26, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 0 3px rgba(158, 240, 26, 0.3),
+                0 0 30px rgba(158, 240, 26, 0.15);
+  }
+}
+
+input:not([type="checkbox"]):not([type="radio"]):focus,
+textarea:focus,
+select:focus {
+  animation: inputGlow 2s ease-in-out infinite;
+}
+
+/* ========================================
+   5. ICON HOVER ANIMATIONS
+   ======================================== */
+
+.icon,
+svg.icon,
+.trust-icon,
+.social-icon,
+[class*="icon-"],
+.metric-icon,
+.feature-icon {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.3s ease,
+              filter 0.3s ease;
+}
+
+.icon:hover,
+svg.icon:hover,
+button:hover .icon,
+button:hover svg,
+a:hover .icon,
+a:hover svg {
+  transform: scale(1.15) rotate(5deg);
+  color: #9EF01A;
+  filter: drop-shadow(0 0 8px rgba(158, 240, 26, 0.5));
+}
+
+/* Special animation for checkmarks and success icons */
+.icon-check:hover,
+.icon-success:hover {
+  transform: scale(1.15) rotate(360deg);
+}
+
+/* ========================================
+   6. STAGGERED FADE-IN ANIMATIONS
+   ======================================== */
+
+.stagger-item,
+.pricing-card,
+.feature-card,
+.testimonial-card,
+.case-study-card,
+.metric-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.stagger-item:nth-child(1),
+.pricing-card:nth-child(1),
+.feature-card:nth-child(1) { animation-delay: 0.1s; }
+
+.stagger-item:nth-child(2),
+.pricing-card:nth-child(2),
+.feature-card:nth-child(2) { animation-delay: 0.2s; }
+
+.stagger-item:nth-child(3),
+.pricing-card:nth-child(3),
+.feature-card:nth-child(3) { animation-delay: 0.3s; }
+
+.stagger-item:nth-child(4),
+.pricing-card:nth-child(4),
+.feature-card:nth-child(4) { animation-delay: 0.4s; }
+
+.stagger-item:nth-child(5),
+.pricing-card:nth-child(5),
+.feature-card:nth-child(5) { animation-delay: 0.5s; }
+
+.stagger-item:nth-child(6),
+.feature-card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   7. TOOLTIP MICRO-INTERACTIONS
+   ======================================== */
+
+.tooltip {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(158, 240, 26, 0.2);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #fff;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+.tooltip-trigger:hover .tooltip,
+.tooltip-trigger:focus .tooltip,
+[data-tooltip]:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Enhanced tooltip with arrow */
+.tooltip::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-bottom-color: rgba(158, 240, 26, 0.2);
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-bottom-color: rgba(20, 20, 20, 0.95);
+}
+
+/* ========================================
+   8. ENHANCED LINK HOVER EFFECTS
+   ======================================== */
+
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #9EF01A, #7BC616);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #9EF01A;
+}
+
+/* ========================================
+   9. LOADING SHIMMER EFFECT
+   ======================================== */
+
+.shimmer,
+.loading-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(158, 240, 26, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* ========================================
+   10. SCROLL REVEAL ANIMATIONS
+   ======================================== */
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ========================================
+   11. FLOATING ANIMATION FOR SPECIAL ELEMENTS
+   ======================================== */
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ========================================
+   12. PULSE ANIMATION FOR BADGES
+   ======================================== */
+
+.pulse,
+.badge-pulse,
+.notification-badge {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+/* ========================================
+   13. SMOOTH CHECKBOX AND RADIO TRANSITIONS
+   ======================================== */
+
+input[type="checkbox"],
+input[type="radio"] {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  animation: checkBounce 0.4s ease;
+}
+
+@keyframes checkBounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* ========================================
+   14. GLASSMORPHISM MODAL/OVERLAY
+   ======================================== */
+
+.modal-overlay,
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.modal,
+.dialog {
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(158, 240, 26, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================
+   15. PROGRESS BAR ANIMATIONS
+   ======================================== */
+
+.progress-bar {
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: progressShine 2s infinite;
+}
+
+@keyframes progressShine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ========================================
+   16. ACCESSIBILITY - REDUCED MOTION
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .stagger-item,
+  .pricing-card,
+  .feature-card,
+  .testimonial-card,
+  .scroll-reveal,
+  .scroll-reveal-left,
+  .scroll-reveal-right {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ========================================
+   17. ENHANCED FOCUS INDICATORS
+   ======================================== */
+
+*:focus-visible {
+  outline: 2px solid #9EF01A;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+button:focus-visible,
+a:focus-visible,
+.button:focus-visible {
+  box-shadow: 0 0 0 4px rgba(158, 240, 26, 0.3);
+}
+
+/* ========================================
+   18. SMOOTH NUMBER COUNTER ANIMATION
+   ======================================== */
+
+.counter {
+  transition: all 0.5s ease;
+}
+
+/* ========================================
+   19. IMAGE HOVER EFFECTS
+   ======================================== */
+
+img {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              filter 0.4s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* ========================================
+   20. GLASS PANEL FOR DASHBOARD
+   ======================================== */
+
+.dashboard-panel,
+.stat-panel,
+.analytics-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.dashboard-panel:hover,
+.stat-panel:hover,
+.analytics-panel:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(158, 240, 26, 0.2);
+  box-shadow: 0 8px 32px rgba(158, 240, 26, 0.08);
+}

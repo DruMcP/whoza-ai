@@ -1,0 +1,88 @@
+import { useState, useRef } from 'react';
+
+export default function ExplainerVideo() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef(null);
+
+  const handlePlayClick = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    }
+  };
+
+  return (
+    <section className="explainer-video-section">
+      <div className="container">
+        <div className="explainer-video-header">
+          <h2 className="gradient-text">See How whoza.ai Works in 60 Seconds</h2>
+          <p className="section-subtitle">
+            Watch how Rex transforms your online visibility with simple, weekly tasks
+          </p>
+        </div>
+
+        <div className="video-wrapper glass-card">
+          <div className="video-container">
+            <div className="relative rounded-2xl overflow-hidden bg-black aspect-video max-w-4xl mx-auto shadow-2xl">
+              <video
+                ref={videoRef}
+                className="w-full h-full object-contain"
+                controls={isPlaying}
+                preload="metadata"
+                playsInline
+                poster=""
+              >
+                <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663026746483/pCbMHXOHmajxZOkK.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              {!isPlaying && (
+                <div
+                  className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-black/40 to-black/60 cursor-pointer z-10 backdrop-blur-sm"
+                  onClick={handlePlayClick}
+                >
+                  <button
+                    className="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 hover:shadow-green-500/50 transition-all duration-300 group"
+                    aria-label="Play video"
+                  >
+                    <svg className="w-10 h-10 text-green-600 ml-1.5 group-hover:text-green-700 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+
+          <div className="video-features">
+            <div className="video-feature">
+              <svg className="feature-icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+              </svg>
+              <span>60 seconds</span>
+            </div>
+            <div className="video-feature">
+              <svg className="feature-icon" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
+                <path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
+              </svg>
+              <span>Subtitles included</span>
+            </div>
+            <div className="video-feature">
+              <svg className="feature-icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              <span>Real results shown</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="video-cta">
+          <p>Ready to boost your AI visibility?</p>
+          <a href="/start" className="button button-primary">
+            Get Started Free
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
