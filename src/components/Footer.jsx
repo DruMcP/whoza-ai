@@ -201,6 +201,12 @@ const Footer = memo(function Footer() {
                   textDecoration: 'none'
                 }}>Pricing Plans</Link>
               </p>
+              <p style={{ marginBottom: '12px' }}>
+                <Link to="/blog" style={{
+                  color: '#94a3b8',
+                  textDecoration: 'none'
+                }}>AI Visibility Blog</Link>
+              </p>
             </nav>
             <h3 style={{
               color: '#84CC16',
