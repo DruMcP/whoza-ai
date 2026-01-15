@@ -8,33 +8,40 @@ function BlogPost() {
   const navigate = useNavigate();
   const [post, setPost] = useState(null);
   const [relatedPosts, setRelatedPosts] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const foundPost = getPostBySlug(slug);
-    
-    if (!foundPost) {
-      navigate('/blog', { replace: true });
-      return;
+    try {
+      const foundPost = getPostBySlug(slug);
+      
+      if (!foundPost) {
+        navigate('/blog', { replace: true });
+        return;
+      }
+      
+      // Check if post is published
+      const today = new Date().toISOString().split('T')[0];
+      if (foundPost.publishDate > today) {
+        navigate('/blog', { replace: true });
+        return;
+      }
+      
+      setPost(foundPost);
+      setError(null);
+      
+      // Get related posts (same category, excluding current)
+      const allPosts = getPublishedPosts();
+      const related = allPosts
+        .filter(p => p.id !== foundPost.id)
+        .slice(0, 3);
+      setRelatedPosts(related);
+      
+      // Scroll to top
+      window.scrollTo(0, 0);
+    } catch (err) {
+      console.error('Error loading blog post:', err);
+      setError(err.message);
     }
-    
-    // Check if post is published
-    const today = new Date().toISOString().split('T')[0];
-    if (foundPost.publishDate > today) {
-      navigate('/blog', { replace: true });
-      return;
-    }
-    
-    setPost(foundPost);
-    
-    // Get related posts (same category, excluding current)
-    const allPosts = getPublishedPosts();
-    const related = allPosts
-      .filter(p => p.id !== foundPost.id)
-      .slice(0, 3);
-    setRelatedPosts(related);
-    
-    // Scroll to top
-    window.scrollTo(0, 0);
   }, [slug, navigate]);
 
   // Set page title and meta tags
