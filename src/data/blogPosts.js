@@ -10,7 +10,7 @@ export const blogPosts = [
     slug: 'what-is-ai-visibility-uk-tradespeople-2026',
     title: 'What is AI Visibility and Why UK Tradespeople Need It in 2026',
     metaDescription: 'AI visibility determines whether ChatGPT, Perplexity, and Google AI recommend your trade business. Learn why UK plumbers, electricians, and builders must optimise for AI search in 2026.',
-    publishDate: '2026-01-15',
+    publishDate: '2026-01-14',
     author: 'Whoza.ai Team',
     category: 'AI Visibility',
     tags: ['AI visibility', 'UK tradespeople', 'ChatGPT', 'Google AI', 'AEO', 'local SEO'],
