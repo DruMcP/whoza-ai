@@ -58,5 +58,10 @@ export const seoConfig = {
     title: 'Reports | Whoza.ai - Track Your AI Visibility Growth',
     description: 'View detailed reports on your AI visibility improvements and track how your trade business is performing in AI search results.',
     image: '/og-image.png'
+  },
+  '/blog': {
+    title: 'AI Visibility Blog for UK Tradespeople | Whoza.ai',
+    description: 'Expert guides on AI visibility, Answer Engine Optimization (AEO), and digital marketing for UK plumbers, electricians, builders, and tradespeople.',
+    image: '/og-image.png'
   }
 };
