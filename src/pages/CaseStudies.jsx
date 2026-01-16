@@ -473,7 +473,7 @@ export default function CaseStudies() {
                 </Link>
               </div>
               <p className="cta-note">
-                <Link to="/pricing">View pricing</Link> · Starter from £19/month
+                <Link to="/pricing">View pricing</Link> · Monitor from £19/month
               </p>
             </div>
           </section>

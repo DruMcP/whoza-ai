@@ -10,24 +10,24 @@ export default function Checkout() {
   const navigate = useNavigate();
   const { userData } = useAuth();
   const toast = useToast();
-  const [selectedPlan, setSelectedPlan] = useState('Pro');
+  const [selectedPlan, setSelectedPlan] = useState('Improve');
   const [loading, setLoading] = useState(false);
 
   const plans = {
-    Starter: { price: 99, name: 'Starter' },
-    Pro: { price: 199, name: 'Pro' },
-    Max: { price: 399, name: 'Max' },
+    Monitor: { price: 19, name: 'Monitor' },
+    Improve: { price: 59, name: 'Improve' },
+    Priority: { price: 149, name: 'Priority' },
   };
 
-  const founderPrice = userData?.founder ? 79 : null;
+  const founderPrice = userData?.founder ? 19 : null;
 
   const handleCheckout = async () => {
     setLoading(true);
     try {
       const priceIds = {
-        Starter: 'price_starter_monthly',
-        Pro: 'price_pro_monthly',
-        Max: 'price_max_monthly',
+        Monitor: 'price_1So43gDN44gTlvjn8OyQ2VEB',
+        Improve: 'price_1So458DN44gTlvjntt2UULvS',
+        Priority: 'price_1So46EDN44gTlvjnaJdSGr7V',
       };
 
       const successUrl = `${window.location.origin}/portal?session_id={CHECKOUT_SESSION_ID}`;
@@ -98,25 +98,29 @@ export default function Checkout() {
                 <input
                   type="radio"
                   name="plan"
-                  value="Starter"
-                  checked={selectedPlan === 'Starter'}
+                  value="Monitor"
+                  checked={selectedPlan === 'Monitor'}
                   onChange={(e) => setSelectedPlan(e.target.value)}
                   style={{ marginTop: '4px', marginRight: 'var(--spacing-sm)', flexShrink: 0 }}
                 />
                 <div>
                   <h3 style={{ marginTop: 0, marginBottom: 'var(--spacing-xs)' }}>
-                    Starter
+                    Monitor
                   </h3>
+                  <p style={{ fontSize: '14px', color: 'var(--color-text-secondary)', marginBottom: 'var(--spacing-sm)' }}>
+                    See Where You Stand
+                  </p>
                   <p className="score-display" style={{ marginBottom: 'var(--spacing-sm)' }}>
-                    £{userData?.founder ? founderPrice : plans.Starter.price}
+                    £{userData?.founder ? founderPrice : plans.Monitor.price}
                     <span style={{ fontSize: '19px', color: 'var(--color-text)' }}>
                       / month
                     </span>
                   </p>
                   <ul style={{ marginBottom: 0 }}>
-                    <li>One task per week</li>
                     <li>Monthly Visibility Confidence Score™</li>
-                    <li>Email delivery</li>
+                    <li>AI visibility report across ChatGPT, Google AI, Perplexity</li>
+                    <li>Email alerts when your score changes</li>
+                    <li>Competitor visibility comparison (1 competitor)</li>
                   </ul>
                 </div>
               </label>
@@ -125,7 +129,7 @@ export default function Checkout() {
             <div
               className="card"
               style={{
-                border: selectedPlan === 'Pro' ? '3px solid #00857d' : '1px solid var(--color-border)',
+                border: selectedPlan === 'Improve' ? '3px solid #00857d' : '1px solid var(--color-border)',
               }}
             >
               <label
@@ -139,34 +143,44 @@ export default function Checkout() {
                 <input
                   type="radio"
                   name="plan"
-                  value="Pro"
-                  checked={selectedPlan === 'Pro'}
+                  value="Improve"
+                  checked={selectedPlan === 'Improve'}
                   onChange={(e) => setSelectedPlan(e.target.value)}
                   style={{ marginTop: '4px', marginRight: 'var(--spacing-sm)', flexShrink: 0 }}
                 />
                 <div>
                   <h3 style={{ marginTop: 0, marginBottom: 'var(--spacing-xs)' }}>
-                    Pro{' '}
+                    Improve{' '}
                     <span
                       style={{
-                        fontSize: '16px',
-                        fontWeight: 'normal',
-                        color: 'var(--color-text-secondary)',
+                        fontSize: '12px',
+                        fontWeight: 'bold',
+                        color: '#fff',
+                        background: '#00857d',
+                        padding: '2px 8px',
+                        borderRadius: '4px',
+                        marginLeft: '8px',
                       }}
                     >
-                      ← Most popular
+                      MOST POPULAR
                     </span>
                   </h3>
+                  <p style={{ fontSize: '14px', color: 'var(--color-text-secondary)', marginBottom: 'var(--spacing-sm)' }}>
+                    Get Found by AI
+                  </p>
                   <p className="score-display" style={{ marginBottom: 'var(--spacing-sm)' }}>
-                    £{userData?.founder ? founderPrice : plans.Pro.price}
+                    £{userData?.founder ? founderPrice : plans.Improve.price}
                     <span style={{ fontSize: '19px', color: 'var(--color-text)' }}>
                       / month
                     </span>
                   </p>
                   <ul style={{ marginBottom: 0 }}>
-                    <li>Everything in Starter</li>
-                    <li>Priority support</li>
-                    <li>Competitor tracking</li>
+                    <li>Everything in Monitor, plus:</li>
+                    <li>Weekly personalised tasks from Rex</li>
+                    <li>Step-by-step action plans you approve</li>
+                    <li>Progress tracking across all 5 pillars</li>
+                    <li>Email support</li>
+                    <li>Monthly progress reports</li>
                   </ul>
                 </div>
               </label>
@@ -184,25 +198,32 @@ export default function Checkout() {
                 <input
                   type="radio"
                   name="plan"
-                  value="Max"
-                  checked={selectedPlan === 'Max'}
+                  value="Priority"
+                  checked={selectedPlan === 'Priority'}
                   onChange={(e) => setSelectedPlan(e.target.value)}
                   style={{ marginTop: '4px', marginRight: 'var(--spacing-sm)', flexShrink: 0 }}
                 />
                 <div>
                   <h3 style={{ marginTop: 0, marginBottom: 'var(--spacing-xs)' }}>
-                    Max
+                    Priority
                   </h3>
+                  <p style={{ fontSize: '14px', color: 'var(--color-text-secondary)', marginBottom: 'var(--spacing-sm)' }}>
+                    For Businesses Where Reputation Matters
+                  </p>
                   <p className="score-display" style={{ marginBottom: 'var(--spacing-sm)' }}>
-                    £{userData?.founder && selectedPlan === 'Max' ? 99 : plans.Max.price}
+                    £{userData?.founder ? founderPrice : plans.Priority.price}
                     <span style={{ fontSize: '19px', color: 'var(--color-text)' }}>
                       / month
                     </span>
                   </p>
                   <ul style={{ marginBottom: 0 }}>
-                    <li>Everything in Pro</li>
-                    <li>Custom task timing</li>
-                    <li>Quarterly strategy review</li>
+                    <li>Everything in Improve, plus:</li>
+                    <li>Priority task review (human oversight)</li>
+                    <li>Conservative approach for reputation</li>
+                    <li>Dedicated account manager check-ins</li>
+                    <li>Competitor tracking (up to 5 competitors)</li>
+                    <li>Quarterly strategy calls</li>
+                    <li>Priority email support (24-hour response)</li>
                   </ul>
                 </div>
               </label>
@@ -218,8 +239,7 @@ export default function Checkout() {
 
           <div className="panel" style={{ marginTop: 'var(--spacing-xl)' }}>
             <p style={{ marginBottom: 0 }}>
-              <strong>Cancel anytime.</strong> No long-term contracts. 14-day
-              money-back guarantee if you're not happy.
+              <strong>30-Day Money-Back Guarantee.</strong> Cancel anytime. No long-term contracts.
             </p>
           </div>
         </div>
