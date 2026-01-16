@@ -7,6 +7,37 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Client-Info, Apikey, stripe-signature",
 };
 
+// Helper function to send email via send-email Edge Function
+async function sendSubscriptionEmail(supabaseUrl: string, supabaseAnonKey: string, userId: string, email: string, planName: string, amount: number) {
+  try {
+    const response = await fetch(`${supabaseUrl}/functions/v1/send-email`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${supabaseAnonKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        templateName: 'subscription_confirmation',
+        userId: userId,
+        recipientEmail: email,
+        variables: {
+          plan_name: planName,
+          amount: (amount / 100).toFixed(0), // Convert from cents to pounds
+        },
+      }),
+    });
+    
+    if (!response.ok) {
+      const error = await response.json();
+      console.error('Failed to send subscription email:', error);
+    } else {
+      console.log('Subscription confirmation email sent to:', email);
+    }
+  } catch (error) {
+    console.error('Error sending subscription email:', error);
+  }
+}
+
 Deno.serve(async (req: Request) => {
   if (req.method === "OPTIONS") {
     return new Response(null, {
@@ -60,6 +91,7 @@ Deno.serve(async (req: Request) => {
 
     const supabaseUrl = Deno.env.get("SUPABASE_URL");
     const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+    const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY");
 
     const supabaseClient = await import("npm:@supabase/supabase-js@2.39.0").then(
       (mod) => mod.createClient(supabaseUrl!, supabaseServiceKey!)
@@ -124,6 +156,34 @@ Deno.serve(async (req: Request) => {
             subscription_id: subscription.id,
             metadata: { session_id: session.id },
           });
+
+          // Send subscription confirmation email
+          const { data: userData } = await supabaseClient
+            .from("users")
+            .select("email, business_name")
+            .eq("id", userId)
+            .maybeSingle();
+
+          if (userData?.email && supabaseUrl && supabaseAnonKey) {
+            // Get plan name from price
+            const price = subscription.items.data[0].price;
+            let planName = "Subscription";
+            const amount = price.unit_amount || 0;
+            
+            // Map price to plan name based on amount
+            if (amount === 1900) planName = "Monitor";
+            else if (amount === 4900) planName = "Grow";
+            else if (amount === 9900) planName = "Dominate";
+            
+            await sendSubscriptionEmail(
+              supabaseUrl,
+              supabaseAnonKey,
+              userId,
+              userData.email,
+              planName,
+              amount
+            );
+          }
         }
         break;
       }
