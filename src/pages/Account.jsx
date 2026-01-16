@@ -344,7 +344,7 @@ export default function Account() {
   };
 
   const handleManageBilling = async () => {
-    alert('Stripe Customer Portal will be available soon. For billing inquiries, please contact hello@whoza.ai');
+    window.location.href = 'mailto:hello@whoza.ai?subject=Billing%20Inquiry';
   };
 
   const handleCancelSubscription = async () => {
@@ -949,7 +949,7 @@ export default function Account() {
                       Delete your account and all associated data. This action cannot be undone.
                     </p>
                     <button
-                      onClick={() => setToast({ type: 'error', message: 'Please contact hello@whoza.ai to delete your account' })}
+                      onClick={() => window.location.href = 'mailto:hello@whoza.ai?subject=Account%20Deletion%20Request'}
                       style={{
                         padding: 'var(--spacing-sm) var(--spacing-lg)',
                         backgroundColor: 'transparent',

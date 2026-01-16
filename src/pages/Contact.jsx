@@ -275,7 +275,7 @@ const Contact = memo(function Contact() {
                     color: 'var(--color-text-secondary)',
                     lineHeight: '1.6'
                   }}>
-                    Yes! Email us at support@whoza.ai with "Demo Request" in the subject line, and we'll arrange a convenient time to show you how Whoza.ai can help your business.
+                    Yes! Email us at <a href="mailto:support@whoza.ai?subject=Demo%20Request" style={{ color: 'var(--color-primary-500)', textDecoration: 'underline', fontWeight: '600' }}>support@whoza.ai</a> with "Demo Request" in the subject line, and we'll arrange a convenient time to show you how Whoza.ai can help your business.
                   </p>
                 </div>
               </div>
