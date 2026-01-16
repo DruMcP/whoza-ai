@@ -153,7 +153,95 @@ The tradespeople using Whoza.ai are building visibility now, before their compet
     }
   },
   
-  // Post 2: How Plumbers Can Get Found in ChatGPT
+  // Post 2: How Plumbers Can Get Found in ChatGPT: A Step-by-Step Guide
+  {
+    id: 'how-plumbers-can-get-found-in-chatgpt-a-step-by-step-guide',
+    slug: 'how-plumbers-can-get-found-in-chatgpt-a-step-by-step-guide',
+    title: 'How Plumbers Can Get Found in ChatGPT: A Step-by-Step Guide',
+    metaDescription: 'A step-by-step guide for UK plumbers on how to get their business recommended by ChatGPT and other AI assistants. Learn practical AEO tips for plumber AI visibility and UK plumber marketing.',
+    publishDate: '2026-01-16',
+    author: 'Whoza.ai Team',
+    category: 'AEO for Plumbers',
+    tags: ['plumber ChatGPT', 'plumber AI visibility', 'plumber Google AI', 'UK plumber marketing', 'AEO'],
+    readTime: '7 min read',
+    featured: false,
+    
+    leadAnswer: 'To get your plumbing business found and recommended by ChatGPT, focus on building strong signals of trust and expertise. This involves creating a hyper-local Google Business Profile, gathering consistent customer reviews, and developing website content that directly answers common questions about your plumbing services in the UK.',
+    
+    content: [
+      {
+        type: 'section',
+        heading: 'Why Your Plumbing Business Needs to Be on ChatGPT',
+        content: `In 2026, your customers are not just searching on Google; they are asking AI assistants. When a homeowner in Manchester has a leaking radiator, they are more likely to ask, "Hey Google, find a plumber near me" or type into ChatGPT, "Who is a reliable emergency plumber in Manchester?" This shift from searching to asking is the single biggest change in local marketing. If your business isn't optimized for these AI conversations, you are invisible to a growing majority of potential customers. Achieving high **plumber AI visibility** is the new frontier for **UK plumber marketing**.`
+      },
+      {
+        type: 'section',
+        heading: 'How AI Assistants Like ChatGPT Choose Plumbers',
+        content: `AI assistants are designed to provide the most helpful and trustworthy answer. They don't have personal opinions; they rely on data. To recommend your plumbing business, an AI needs to be confident about who you are, what you do, where you operate, and whether you are trustworthy. It assesses this through four key signals: Clarity (consistent business info), Consensus (multiple sources confirming your data), Answerability (directly answering questions), and Authority (strong review signals and credentials). Your goal is to make it incredibly easy for AI to understand and trust your business.`
+      },
+      {
+        type: 'section',
+        heading: 'Step 1: Build a Hyper-Local Google Business Profile',
+        content: `Your Google Business Profile (GBP) is the cornerstone of your **plumber Google AI** strategy. It is the primary source of information for Google's AI. Go beyond the basics. Instead of listing your service area as 'Kent', list every town and postcode (e.g., 'Maidstone, ME14, ME15', 'Canterbury, CT1, CT2'). Under services, don't just write 'Plumbing'; add 'Boiler repair', 'Blocked drain clearing', 'Bathroom installation', and 'Gas safety certificates'. Upload geo-tagged photos of your team at work in specific locations. This hyper-local detail is exactly what AI needs to recommend you for a local job.`
+      },
+      {
+        type: 'section',
+        heading: 'Step 2: Create Content That Answers Customer Questions',
+        content: `Turn your website into a knowledge base for your customers and for AI. Create a dedicated FAQ page that answers the most common questions you get over the phone. Think like a customer: 'How much is a call-out fee?', 'Are you Gas Safe registered?', 'Do you offer a guarantee on your work?', 'What areas do you cover?'. Each question and answer provides a specific piece of information that **plumber ChatGPT** can use to cite your business as a knowledgeable and transparent local expert.`
+      },
+      {
+        type: 'section',
+        heading: 'Step 3: Gather Reviews to Build Trust with AI',
+        content: `Reviews are the most powerful signal of trust for AI. An AI assistant will not recommend a plumber with no reviews or poor reviews. It's too risky. Your goal should be a steady stream of 4 and 5-star reviews on your Google Business Profile. Make it part of your process. After every completed job, send a simple text or email to the customer with a direct link to your Google review page. A business with 50 recent, positive reviews will almost always be chosen over a competitor with 5 older ones.`
+      },
+      {
+        type: 'section',
+        heading: 'Step 4: Implement Plumber-Specific Schema Markup',
+        content: `Schema markup is a simple code that you add to your website to help search engines and AI understand your content. It's like a label that says, 'This is my business name', 'This is my phone number', or 'This is a frequently asked question'. For a plumbing business, the 'LocalBusiness' and 'FAQPage' schemas are essential. You can use Google's own 'Schema Markup Generator' to create the code. This technical step is crucial for ensuring AI can accurately parse your information and boosts your **plumber AI visibility**.`
+      },
+      {
+        type: 'section',
+        heading: 'Step 5: Test and Measure Your AI Visibility',
+        content: `How do you know if your efforts are working? You ask the AI. Go to ChatGPT, Perplexity, and Google's AI Overview and ask questions like: 'Recommend a plumber in [Your Town] for a boiler service.' or 'Who is the best emergency plumber in [Your Postcode]?'. If your business appears in the answer, you are on the right track. If not, revisit the steps above. Tracking your visibility is the only way to know if your **UK plumber marketing** strategy is effective in the age of AI. Or, get a free, instant analysis with our AI Visibility Score tool.`
+      }
+    ],
+    
+    faqs: [
+      {
+        question: 'What is the difference between SEO and AEO for plumbers?',
+        answer: 'SEO (Search Engine Optimization) for plumbers focuses on ranking your website in a list of Google search results. AEO (Answer Engine Optimization) focuses on getting your business recommended directly as the answer by AI assistants like ChatGPT and Google AI. AEO is about being the answer, not just on the list.'
+      },
+      {
+        question: 'How much does it cost to get my plumbing business on ChatGPT?',
+        answer: 'Getting your business visible to ChatGPT doesn\'t have a direct cost. It\'s about optimizing your existing online presence, such as your website and Google Business Profile. The main investment is the time spent improving your content, gathering reviews, and ensuring your business information is accurate and consistent everywhere.'
+      },
+      {
+        question: 'Do I need a new website for plumber AI visibility?',
+        answer: 'Not necessarily. Most modern websites can be optimized for AI visibility. The key is to add a detailed FAQ page, ensure your services are clearly explained, and add schema markup. A clear, well-structured website is more important than a brand new one.'
+      },
+      {
+        question: 'How long does it take to get found on Google AI?',
+        answer: 'After optimizing your Google Business Profile and website, you can start to see your business appear in Google AI Overviews within a few weeks. Building strong visibility and being consistently recommended can take 2-4 months as the AI gathers more data and trust signals about your business.'
+      },
+      {
+        question: 'Which AI is most important for UK plumber marketing?',
+        answer: 'Currently, Google AI (which powers AI Overviews in search) and ChatGPT are the most important platforms. Google is the most used search engine, and its AI recommendations are highly visible. ChatGPT is the most popular dedicated AI assistant. Optimizing for both is the best strategy for comprehensive **UK plumber marketing**.'
+      },
+      {
+        question: 'Can I just run ads to appear in AI answers?',
+        answer: 'Currently, AI answer engines like ChatGPT and Google AI Overviews do not have a direct advertising model. Recommendations are based on organic signals of trust and relevance. Therefore, you cannot pay to be the top recommendation; you must earn it through AEO.'
+      }
+    ],
+    
+    cta: {
+      heading: 'Check Your Plumbing Business AI Score',
+      text: 'Find out if ChatGPT and Google AI can find and recommend your plumbing business. Get your free AI visibility score in 60 seconds.',
+      buttonText: 'Get Free Score',
+      buttonLink: '/free-score'
+    }
+  },
+  
+  // Post 3: How Plumbers Can Get Found in ChatGPT (Original)
   {
     id: 'how-plumbers-can-get-found-in-chatgpt-2026',
     slug: 'how-plumbers-can-get-found-in-chatgpt-2026',
