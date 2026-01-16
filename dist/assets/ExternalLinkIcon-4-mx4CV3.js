@@ -1,2 +1,0 @@
-import{j as r}from"./index-D7e20ain.js";import{b as i}from"./react-vendor-DgcI4brk.js";const a=i.forwardRef(({width:t=24,height:o=24,color:e="currentColor",...s},n)=>r.jsx("svg",{ref:n,viewBox:"0 0 24 24",width:t,height:o,...s,children:r.jsxs("g",{fill:"none",stroke:e,strokeWidth:"1.5",strokeLinecap:"butt",strokeLinejoin:"miter",children:[r.jsx("path",{d:"M18 13 V19 H5 V6 H11"}),r.jsx("path",{d:"M15 3 H21 V9"}),r.jsx("path",{d:"M21 3 L12 12"})]})}));a.displayName="ExternalLinkIcon";export{a as E};
-//# sourceMappingURL=ExternalLinkIcon-4-mx4CV3.js.map

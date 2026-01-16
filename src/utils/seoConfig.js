@@ -11,7 +11,7 @@ export const seoConfig = {
   },
   '/pricing': {
     title: 'Pricing | Whoza.ai - Affordable AI Marketing for Tradespeople',
-    description: 'Simple, transparent pricing for tradespeople. Get more local jobs with Rex for £99/month. No contracts, cancel anytime. GDPR compliant.',
+    description: 'Simple, transparent pricing for tradespeople. Monitor from £19/month, Improve from £59/month. No contracts, cancel anytime. GDPR compliant.',
     image: '/og-image.png'
   },
   '/trust': {
