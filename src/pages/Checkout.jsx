@@ -30,7 +30,7 @@ export default function Checkout() {
         Priority: 'price_1So46EDN44gTlvjnaJdSGr7V',
       };
 
-      const successUrl = `${window.location.origin}/portal?session_id={CHECKOUT_SESSION_ID}`;
+      const successUrl = `${window.location.origin}/success?session_id={CHECKOUT_SESSION_ID}`;
       const cancelUrl = `${window.location.origin}/checkout`;
 
       const response = await fetch(
