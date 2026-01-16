@@ -153,6 +153,72 @@ The tradespeople using Whoza.ai are building visibility now, before their compet
     }
   },
   
+  {
+    id: 'how-uk-tradespeople-get-found-ai-search-2026',
+    slug: 'how-uk-tradespeople-get-found-ai-search-2026',
+    title: 'How UK Tradespeople Can Get Found by AI Search (ChatGPT & Google)',
+    metaDescription: 'A step-by-step guide for UK tradespeople on how to get their business recommended by AI assistants like ChatGPT and Google AI. Learn practical AEO tips for AI visibility in London, Manchester, and Birmingham.',
+    publishDate: '2026-01-16',
+    author: 'Whoza.ai Team',
+    category: 'AEO for Tradespeople',
+    tags: ["AEO for tradespeople", "UK trades", "ChatGPT visibility", "AI search", "local SEO", "London", "Manchester", "Birmingham"],
+    readTime: '7 min read',
+    featured: false,
+    
+    leadAnswer: 'To get found by AI search, UK tradespeople must structure their website content to directly answer customer questions. This involves creating clear service descriptions, location-specific pages for cities like London or Manchester, and adding schema markup to help AI systems like ChatGPT and Google AI understand and recommend your business.',
+    
+    content: [
+      {
+        type: 'section',
+        heading: 'Why Is AI Search Important for UK Tradespeople?',
+        content: `Potential customers are no longer just searching on Google; they are asking AI assistants like ChatGPT, Alexa, and Google AI for direct recommendations. In 2026, a significant portion of local service discovery begins with a question posed to an AI. If a homeowner in Birmingham needs an emergency plumber, they are now more likely to ask, "Who is the best emergency plumber in Birmingham?" rather than sifting through pages of search results. This shift means that if your business isn\'t optimized for these AI-driven "answer engines," you are invisible to a growing base of high-intent customers. Traditional SEO is no longer enough; visibility in this new AI-powered landscape is paramount.`
+      },
+      {
+        type: 'section',
+        heading: 'How Do AI Assistants Like ChatGPT Choose Which Tradesperson to Recommend?',
+        content: `AI assistants prioritize trust and clarity. They don\'t "crawl" your website in the traditional sense; they analyze it for clear answers to specific questions. To recommend a tradesperson, an AI evaluates several key factors: it looks for a clear and consistent business name, address, and phone number (NAP), positive customer reviews, and website content that is structured in a question-and-answer format. For instance, having a dedicated FAQ page that answers questions like "How much does a boiler service cost in the UK?" or "Do you offer 24-hour electrical services in Manchester?" provides the AI with the confidence to recommend your business. Without these clear signals, the AI will simply choose a competitor who provides them.`
+      },
+      {
+        type: 'section',
+        heading: 'What Are the First Steps to Getting Found by AI?',
+        content: `The journey to AI visibility begins with foundational, yet crucial, steps. First, ensure your Google Business Profile is fully completed and optimized. This is a primary source of information for Google\'s AI. Second, create a dedicated FAQ page on your website that addresses the most common questions your customers ask. Think about what your customers are likely to ask and provide concise, direct answers. Finally, start actively encouraging and collecting customer reviews on platforms like Google, Trustpilot, and Checkatrade. Positive reviews act as powerful trust signals for AI, reinforcing that your business is a reliable choice for customers in your service area.`
+      },
+      {
+        type: 'section',
+        heading: 'How Can I Optimise My Website for Local AI Search in Cities like London or Manchester?',
+        content: `For tradespeople operating in specific cities, hyper-local optimization is key. Create dedicated pages on your website for each major city or borough you serve, such as "Emergency Plumber in London" or "Electrician in Manchester." On these pages, include location-specific details, mention local landmarks, and answer questions relevant to that area. For example, a page targeting London could mention specific boroughs like Hackney or Islington. Additionally, ensure your 
+        LocalBusiness schema markup is correctly implemented and specifies your service area. This structured data provides a clear roadmap for AI assistants, helping them understand exactly where you operate and confidently recommend you for local jobs.`
+      },
+      {
+        type: 'section',
+        heading: 'How Do I Write Content That AI Will Recommend?',
+        content: `Writing for AI is about clarity and directness. Structure your content around questions and answers. Use clear, descriptive headings that reflect the questions your customers are asking (e.g., "What Are the Signs of a Leaking Roof?"). Within the content, provide concise, jargon-free answers that are between 150 and 300 words. Break down complex topics into simple, easy-to-understand steps. For example, a blog post titled "A Homeowner\'s Guide to Boiler Maintenance" is more likely to be recommended by an AI than a generic sales page. By creating helpful, informative content, you position your business as an authority, making it a go-to source for AI recommendations.`
+      }
+    ],
+    
+    faqs: [
+      {
+        question: 'What\'s the difference between normal SEO and AEO?',
+        answer: 'Traditional SEO focuses on ranking your website in a list of search results. Answer Engine Optimization (AEO) focuses on getting your business recommended as the single best answer by AI assistants like ChatGPT. AEO requires more structured content, such as FAQ pages and schema markup, to help AI understand your business.'
+      },
+      {
+        question: 'How long does it take to see results from AEO?',
+        answer: 'While some foundational changes can yield results in a few weeks, building strong AI visibility is an ongoing process. Consistent effort in creating helpful content, gathering reviews, and refining your website\'s structure will typically show significant results within 2-3 months.'
+      },
+      {
+        question: 'Can I do AEO myself or do I need an expert?',
+        answer: 'Many foundational AEO tasks, such as creating an FAQ page and optimizing your Google Business Profile, can be done yourself. However, more technical aspects like implementing schema markup might require assistance from a developer or a specialized platform like Whoza.ai to ensure it\'s done correctly.'
+      }
+    ],
+    
+    cta: {
+      heading: 'Check Your AI Visibility Score',
+      text: 'Find out how visible your trade business is to AI assistants. Get your free AI visibility score in 60 seconds.',
+      buttonText: 'Get Free Score',
+      buttonLink: '/free-score'
+    }
+  },
+
   // Post 2: Best Practices for Tradespeople in London: Local AI Visibility Guide
   {
     id: 'best-practices-tradespeople-london-local-ai-visibility-guide',
