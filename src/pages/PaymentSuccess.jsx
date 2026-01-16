@@ -57,6 +57,16 @@ export default function PaymentSuccess() {
     },
   };
 
+  // Add timeout to prevent infinite loading
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (loading) {
+        setLoading(false);
+      }
+    }, 5000); // 5 second timeout
+    return () => clearTimeout(timeout);
+  }, [loading]);
+
   useEffect(() => {
     const fetchSubscriptionDetails = async () => {
       if (!userData?.id) return;
@@ -110,15 +120,8 @@ export default function PaymentSuccess() {
     }
   }, [authLoading, userData, user, navigate]);
 
-  // Redirect if no session_id (direct access without payment)
-  useEffect(() => {
-    if (!sessionId && !loading && !authLoading) {
-      // Allow viewing if they have an active subscription
-      if (!subscriptionData) {
-        navigate('/checkout');
-      }
-    }
-  }, [sessionId, loading, authLoading, subscriptionData, navigate]);
+  // Note: We don't redirect if no session_id - the user may have just completed
+  // payment and the webhook hasn't processed yet. Let them see the success page.
 
   if (loading || authLoading) {
     return (
