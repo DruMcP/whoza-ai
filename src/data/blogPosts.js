@@ -6,6 +6,127 @@
 
 export const blogPosts = [
   {
+    id: 'ai-visibility-manchester-trades-2026-guide',
+    slug: 'ai-visibility-manchester-trades-2026-guide',
+    title: 'AI Visibility for Manchester Trades: A 2026 Guide for Plumbers & Electricians',
+    metaDescription: 'Learn how Manchester plumbers and electricians can optimize for AI search in 2026. Hyper-local SEO strategies for Didsbury, Salford, Chorlton, and Greater Manchester.',
+    publishDate: '2026-01-18',
+    author: 'Whoza.ai Team',
+    category: 'Local AI Visibility',
+    tags: ['Manchester', 'local SEO', 'AI visibility', 'plumber Manchester', 'electrician Salford', 'GEO optimization'],
+    readTime: '7 min read',
+    featured: false,
+    
+    leadAnswer: 'To get your Manchester plumbing or electrical business found in AI search results in 2026, you need to focus on hyper-local SEO. This means optimizing your Google Business Profile with Manchester-specific keywords, getting customer reviews that mention local areas (e.g., "Didsbury," "Salford"), and creating content that answers questions specific to Manchester homeowners.',
+    
+    content: [
+      {
+        type: 'section',
+        heading: 'Why Manchester is a Unique Market for Trades',
+        content: `Manchester's trade market presents unique opportunities and challenges for plumbers and electricians. The city's mix of Victorian terraces in areas like Didsbury and Chorlton, modern developments in Salford Quays, and historic buildings in the Northern Quarter means tradespeople need diverse expertise.
+
+Competition is fierce in the city centre, but suburban areas like Sale, Altrincham, and Stretford offer opportunities for trades who can demonstrate local knowledge. AI systems increasingly recognize these geographical nuances, making hyper-local optimization crucial.
+
+When customers ask AI "Who's the best plumber in Didsbury?" or "Find an electrician near Salford Quays," the systems prioritize businesses that demonstrate clear, verifiable connections to these specific areas. Generic "Manchester plumber" optimization is no longer enough—you need to show expertise in the specific neighborhoods you serve.`
+      },
+      {
+        type: 'section',
+        heading: 'Google Business Profile: Your #1 Manchester Asset',
+        content: `Your Google Business Profile (GBP) is the foundation of AI visibility in Manchester. AI systems pull heavily from GBP data when making recommendations, so optimization here has immediate impact.
+
+**Critical GBP elements for Manchester trades:**
+
+Start with your business name. While you shouldn't keyword-stuff, including your primary service and location is legitimate: "ABC Plumbing Services - Manchester" is acceptable; "Best Plumber Manchester Didsbury Chorlton" is not.
+
+Your service areas deserve careful attention. Don't just list "Manchester"—specify all the Greater Manchester boroughs and key neighborhoods you serve: Salford, Trafford, Stockport, Didsbury, Chorlton, Sale, Altrincham, Stretford, Northern Quarter, Salford Quays, and any others relevant to your business.
+
+Use Google Posts weekly to showcase local projects. When you complete a boiler installation in Chorlton, post about it with photos and location tags. When you rewire a Victorian terrace in Didsbury, share the project. These posts feed directly into AI understanding of your local expertise.
+
+The Q&A section is gold for AI visibility. Proactively answer questions like "Do you serve Salford?" or "What's your call-out fee for Didsbury?" AI systems read these Q&As when formulating responses.`
+      },
+      {
+        type: 'section',
+        heading: 'Getting Manchester-Specific Customer Reviews',
+        content: `Reviews that mention specific Manchester locations are exponentially more valuable than generic praise. When AI is asked "Who's a good electrician in Chorlton?" it looks for reviews that mention Chorlton specifically.
+
+**How to get location-based reviews:**
+
+After completing a job, send your review request with gentle location prompting: "If you have a moment, we'd love a review mentioning you're in the Didsbury area!" Most customers are happy to include this detail when prompted.
+
+Respond to every review with location context. If someone reviews your plumbing work, respond with: "Thank you for trusting us with your Chorlton home! We're always happy to help residents in the area." This reinforces your local connection for AI systems.
+
+Showcase neighborhood expertise in your responses. When someone mentions a specific issue, reference local context: "Victorian terraces in Didsbury often have this plumbing configuration—glad we could sort it for you."
+
+The goal is to create a pattern that AI can recognize: your business consistently serves specific Manchester areas, and customers in those areas consistently recommend you.`
+      },
+      {
+        type: 'section',
+        heading: 'Content That Speaks to Manchester Homeowners',
+        content: `Creating content that addresses Manchester-specific questions dramatically improves AI visibility. When AI systems scan your website, they're looking for authoritative answers to real questions.
+
+**High-value Manchester content ideas:**
+
+Write guides that address local building characteristics: "Cost of Rewiring a Victorian Terrace in Didsbury" or "Plumbing Challenges in Salford Quays Apartments." These demonstrate local expertise AI can cite.
+
+Create neighborhood-specific service pages. Instead of one generic "Plumbing Services" page, have dedicated pages for "Plumber in Salford," "Emergency Plumber Didsbury," and "Electrician Chorlton." Each page should include local testimonials, case studies, and area-specific information.
+
+Answer questions about local regulations and requirements: "Do I Need a Special Permit for Plumbing Work in a Listed Building in Manchester?" or "Manchester Building Control Requirements for Electrical Work." AI loves citing authoritative local guidance.
+
+Use local landmarks and terminology naturally. Reference the Metrolink, mention specific postcodes (M20, M21, M5), and discuss common issues in different Manchester neighborhoods. This linguistic fingerprint helps AI understand your local authority.`
+      },
+      {
+        type: 'section',
+        heading: 'Local Link Building for Manchester Trades',
+        content: `Links from Manchester-based websites signal local authority to AI systems. These connections help AI understand you're not just a business that serves Manchester—you're part of the Manchester business community.
+
+**Effective local link strategies:**
+
+Get listed in Manchester-specific directories: Manchester Business Directory, Greater Manchester Chamber of Commerce, and neighborhood-specific business associations in Didsbury, Chorlton, or Salford.
+
+Partner with complementary local businesses. Estate agents, property management companies, and builders in Manchester can provide valuable links and referrals. A link from a Didsbury estate agent's "Recommended Tradespeople" page is gold for AI visibility.
+
+Sponsor local community initiatives. Supporting a local football team, school, or community center often results in a website link and demonstrates community integration—both valuable for AI understanding.
+
+Contribute to local news and blogs. Manchester Evening News, Confidentials Manchester, and neighborhood blogs often need expert commentary on property and home improvement topics. These citations dramatically boost AI visibility.
+
+The key is quality over quantity. One link from a respected Manchester institution is worth more than dozens from generic directories.`
+      }
+    ],
+    
+    faqs: [
+      {
+        question: 'How do I get my plumbing business to show up in AI search for Manchester?',
+        answer: 'Optimize your Google Business Profile with "Manchester" in the title, get customer reviews that mention local areas like Didsbury or Salford, and create content that answers questions specific to Manchester homeowners. Adding LocalBusiness schema markup to your site is also crucial.'
+      },
+      {
+        question: 'What are the best keywords for an electrician in Manchester?',
+        answer: 'Focus on a mix of broad and specific keywords. Use "electrician Manchester" for general visibility, but also target hyper-local terms like "emergency electrician Chorlton," "EICR certificate Didsbury," or "EV charger installation Salford Quays" to capture high-intent customers.'
+      },
+      {
+        question: 'Does AI use my website to answer questions about my services?',
+        answer: 'Yes, AI systems like ChatGPT and Google AI read your website to understand your services, service areas, and expertise. Ensure your site has clear, well-structured content with pages for each service you offer and detailed information about your Manchester coverage area.'
+      },
+      {
+        question: 'How can I get more local reviews for my Manchester business?',
+        answer: 'After completing a job, send a direct link to your Google review page. In your request, gently prompt customers to mention their location, for example: "If you have a moment, we would appreciate a review mentioning you are in the Didsbury area!" This helps AI connect your business to specific neighborhoods.'
+      },
+      {
+        question: 'What is LocalBusiness schema and why does it matter for Manchester trades?',
+        answer: 'LocalBusiness schema is a type of code you add to your website that explicitly tells search engines you are a local business with a physical address and service area. For Manchester trades, this is critical for showing up in "near me" searches and for AI to understand you serve the Greater Manchester area.'
+      },
+      {
+        question: 'Should I have separate pages for each area of Manchester I serve?',
+        answer: 'While you do not need a page for every single neighborhood, it is a powerful strategy to have dedicated pages for your main service areas (e.g., "Plumber in Salford," "Electrician in Didsbury"). These pages can be highly optimized with local content, testimonials, and case studies, which AI systems love.'
+      }
+    ],
+    
+    cta: {
+      text: 'Ready to see how your business scores for AI visibility in Manchester?',
+      buttonText: 'Get Your Free AI Visibility Score',
+      buttonLink: '/free-score'
+    }
+  },
+  {
     id: 'what-is-ai-visibility-uk-tradespeople-2026',
     slug: 'what-is-ai-visibility-uk-tradespeople-2026',
     title: 'What is AI Visibility and Why UK Tradespeople Need It in 2026',
