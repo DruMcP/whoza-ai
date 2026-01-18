@@ -1,0 +1,96 @@
+name: Submit Blog Posts to IndexNow
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/data/blogPosts.js'
+
+jobs:
+  submit-to-indexnow:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Extract blog post URLs
+        id: extract_urls
+        run: |
+          echo "Extracting blog post slugs from blogPosts.js..."
+          
+          # Extract all slugs from blogPosts.js using grep and sed
+          slugs=$(grep -o 'slug: "[^"]*"' src/data/blogPosts.js | sed 's/slug: "//g' | sed 's/"//g')
+          
+          # Build JSON array of full URLs
+          urls="["
+          first=true
+          for slug in $slugs; do
+            if [ "$first" = true ]; then
+              urls="${urls}\"https://whoza.ai/blog/${slug}\""
+              first=false
+            else
+              urls="${urls}, \"https://whoza.ai/blog/${slug}\""
+            fi
+          done
+          urls="${urls}]"
+          
+          echo "Found $(echo $slugs | wc -w) blog posts"
+          echo "urls=$urls" >> $GITHUB_OUTPUT
+          
+      - name: Submit to IndexNow API
+        env:
+          INDEXNOW_KEY: "6331d1916c7c4ddbb0afcda7ebe03513"
+          BLOG_URLS: ${{ steps.extract_urls.outputs.urls }}
+        run: |
+          echo "Submitting blog URLs to IndexNow..."
+          
+          # Create JSON payload
+          payload=$(cat <<EOF
+          {
+            "host": "whoza.ai",
+            "key": "${INDEXNOW_KEY}",
+            "keyLocation": "https://whoza.ai/${INDEXNOW_KEY}.txt",
+            "urlList": ${BLOG_URLS}
+          }
+          EOF
+          )
+          
+          echo "Payload:"
+          echo "$payload" | jq '.'
+          
+          # Submit to IndexNow API
+          response=$(curl -s -w "\n%{http_code}" -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "$payload")
+          
+          # Extract status code
+          http_code=$(echo "$response" | tail -n1)
+          response_body=$(echo "$response" | sed '$d')
+          
+          echo "HTTP Status: $http_code"
+          
+          if [ "$http_code" = "200" ] || [ "$http_code" = "202" ]; then
+            echo "✅ SUCCESS! Blog posts submitted to IndexNow"
+            echo "URLs will be indexed by Bing, Yandex, Seznam.cz, and Naver"
+          else
+            echo "⚠️ Unexpected status code: $http_code"
+            echo "Response: $response_body"
+            exit 1
+          fi
+          
+      - name: Summary
+        if: success()
+        run: |
+          echo "## ✅ IndexNow Submission Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "All blog post URLs have been submitted to IndexNow for instant indexing." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Search Engines Notified:**" >> $GITHUB_STEP_SUMMARY
+          echo "- Bing" >> $GITHUB_STEP_SUMMARY
+          echo "- Yandex" >> $GITHUB_STEP_SUMMARY
+          echo "- Seznam.cz" >> $GITHUB_STEP_SUMMARY
+          echo "- Naver" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Indexing typically occurs within minutes to hours." >> $GITHUB_STEP_SUMMARY
