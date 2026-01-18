@@ -61,13 +61,27 @@ export function useTurnstile() {
   }, []);
 
   /**
-   * Resets Turnstile widget
+   * Resets Turnstile widget safely
+   * Handles cases where widget may not exist or has been removed
    */
   const resetTurnstile = () => {
-    if (window.turnstile) {
-      window.turnstile.reset();
-    }
+    // Clear the token state first
     setTurnstileToken('');
+    
+    // Only attempt reset if turnstile is available
+    if (window.turnstile) {
+      try {
+        // Find the turnstile container element
+        const container = document.querySelector('.cf-turnstile');
+        if (container) {
+          window.turnstile.reset(container);
+        }
+      } catch (e) {
+        // Widget may have been removed or not initialized - this is expected
+        // in some scenarios (e.g., component unmounted, widget never rendered)
+        console.debug('[Turnstile] Reset skipped - widget not found or already removed');
+      }
+    }
   };
 
   return {
