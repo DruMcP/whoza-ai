@@ -35,9 +35,24 @@ export default defineConfig(({ mode }) => {
     build: {
       rollupOptions: {
         output: {
-          manualChunks: {
-            'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-            'supabase-vendor': ['@supabase/supabase-js'],
+          manualChunks(id) {
+            // Vendor chunks
+            if (id.includes('node_modules')) {
+              // React core
+              if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
+                return 'react-vendor';
+              }
+              // Supabase (lazy load this)
+              if (id.includes('@supabase')) {
+                return 'supabase-vendor';
+              }
+              // Other large dependencies
+              if (id.includes('react-ga4') || id.includes('@sentry')) {
+                return 'analytics-vendor';
+              }
+              // Everything else
+              return 'vendor';
+            }
           },
           assetFileNames: 'assets/[name]-[hash][extname]',
           chunkFileNames: 'assets/[name]-[hash].js',

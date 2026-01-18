@@ -7,6 +7,7 @@ import SkipLink from './components/SkipLink';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
 import SEO from './components/SEO';
+import StructuredData from './components/StructuredData';
 import { initMicrointeractions } from './utils/microinteractions';
 
 const Home = lazy(() => import('./pages/Home'));
@@ -90,6 +91,7 @@ function AppRoutes() {
   return (
     <>
       <SEO />
+      <StructuredData />
       <Suspense fallback={loadingFallback}>
         <Routes>
           <Route path="/" element={<Home />} />
