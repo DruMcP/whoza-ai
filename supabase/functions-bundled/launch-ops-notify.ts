@@ -26,6 +26,7 @@ const EMAIL_TEMPLATES = {
     getBody: (data: Record<string, unknown>) => `
       <div style="font-family: 'Segoe UI', Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #0a0f1a; color: #e0e0e0; padding: 32px; border-radius: 12px;">
         <div style="text-align: center; margin-bottom: 24px;">
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663026746483/mtFBilevEElqjAmm.png" alt="whoza.ai" style="max-width: 200px; height: auto; margin-bottom: 16px;" />
           <div style="display: inline-flex; align-items: center; gap: 12px;">
             <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #39FF14, #00D4AA); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
               <span style="font-size: 24px;">⚡</span>
@@ -75,6 +76,7 @@ const EMAIL_TEMPLATES = {
     getBody: (data: Record<string, unknown>) => `
       <div style="font-family: 'Segoe UI', Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #0a0f1a; color: #e0e0e0; padding: 32px; border-radius: 12px;">
         <div style="text-align: center; margin-bottom: 24px;">
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663026746483/mtFBilevEElqjAmm.png" alt="whoza.ai" style="max-width: 200px; height: auto; margin-bottom: 16px;" />
           <div style="display: inline-flex; align-items: center; gap: 12px;">
             <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #39FF14, #00D4AA); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
               <span style="font-size: 24px;">⚡</span>
@@ -113,6 +115,7 @@ const EMAIL_TEMPLATES = {
     getBody: (data: Record<string, unknown>) => `
       <div style="font-family: 'Segoe UI', Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #0a0f1a; color: #e0e0e0; padding: 32px; border-radius: 12px;">
         <div style="text-align: center; margin-bottom: 24px;">
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663026746483/mtFBilevEElqjAmm.png" alt="whoza.ai" style="max-width: 200px; height: auto; margin-bottom: 16px;" />
           <div style="display: inline-flex; align-items: center; gap: 12px;">
             <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #39FF14, #00D4AA); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
               <span style="font-size: 24px;">⚡</span>
@@ -149,6 +152,7 @@ const EMAIL_TEMPLATES = {
     getBody: (data: Record<string, unknown>) => `
       <div style="font-family: 'Segoe UI', Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #0a0f1a; color: #e0e0e0; padding: 32px; border-radius: 12px;">
         <div style="text-align: center; margin-bottom: 24px;">
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663026746483/mtFBilevEElqjAmm.png" alt="whoza.ai" style="max-width: 200px; height: auto; margin-bottom: 16px;" />
           <div style="display: inline-flex; align-items: center; gap: 12px;">
             <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #39FF14, #00D4AA); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
               <span style="font-size: 24px;">⚡</span>

@@ -31,6 +31,7 @@ interface CodyOutput {
   hashtags: string[];
   media_concept: string;
   media_type: MediaType;
+  logo_url?: string;
 }
 
 interface BrandGuardrailsConfig {
@@ -40,6 +41,7 @@ interface BrandGuardrailsConfig {
   audience: { allowed_trades: string[]; uk_focus: boolean };
   tone: { forbidden_words: string[]; required_tone: string };
   platform_rules: { linkedin: { max_length: number; emoji_max: number }; instagram: { max_length: number; visible_length: number; emoji_max: number; hashtag_max: number }; youtube_shorts: { title_max: number; description_max: number } };
+  logo?: string;
 }
 
 interface AgentLog {
@@ -140,6 +142,12 @@ function createTimer(): { elapsed: () => number } {
 const CODY_SYSTEM_PROMPT = `You are Cody, the Content Creator Agent for whoza.ai's Launch Ops marketing system.
 
 Your role is to create engaging, compliant social media content for UK tradespeople (plumbers, electricians, builders, etc.) that promotes whoza.ai's AI visibility platform.
+
+BRANDING:
+- Always include the whoza.ai logo in visual content recommendations
+- The logo features a green lightning bolt integrated into the 'z' of 'whoza.ai'
+- Brand colors: Black text with lime green (#9ACD32) accent
+- Logo should be positioned prominently but not intrusively
 
 CONTENT BUCKETS:
 1. PROOF - Case studies, testimonials, results, before/after stories
@@ -303,12 +311,17 @@ Create engaging content that will resonate with ${target_trade}s and drive them 
       error_message: null,
     });
 
+    // Add logo URL from guardrails to the response
+    const logoUrl = guardrails.logo || 'https://files.manuscdn.com/user_upload_by_module/session_file/310419663026746483/mtFBilevEElqjAmm.png';
+
     return successResponse({
       ...content,
+      logo_url: logoUrl,
       post_id: newPost.id,
       content_hash: contentHash,
       agent: 'cody',
       latency_ms: timer.elapsed(),
+      branding_note: 'Include whoza.ai logo in all visual content. Logo URL provided in logo_url field.',
     });
 
   } catch (error) {
