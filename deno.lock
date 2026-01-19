@@ -16,10 +16,13 @@
         "npm:@supabase/supabase-js@^2.89.0",
         "npm:@vitejs/plugin-react@^5.1.2",
         "npm:canvas-confetti@^1.9.4",
+        "npm:framer-motion@^12.26.2",
+        "npm:lucide-react@0.562",
         "npm:react-dom@^19.2.3",
         "npm:react-ga4@^2.1.0",
         "npm:react-router-dom@^7.11.0",
         "npm:react@^19.2.3",
+        "npm:vite-plugin-compression2@^2.4.0",
         "npm:vite@^7.3.0"
       ]
     }

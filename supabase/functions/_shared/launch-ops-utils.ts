@@ -1,7 +1,8 @@
 // Launch Ops Agent System - Shared Utilities
 // Common functions used across all agent Edge Functions
 
-import { createClient, SupabaseClient } from 'npm:@supabase/supabase-js@2';
+import { createClient } from 'npm:@supabase/supabase-js@2.39.0';
+import type { SupabaseClient } from 'npm:@supabase/supabase-js@2.39.0';
 import type { AgentLog, AgentName, BrandGuardrails, BrandGuardrailsConfig } from './launch-ops-types.ts';
 
 // CORS headers for all Launch Ops endpoints
