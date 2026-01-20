@@ -6,6 +6,86 @@
 
 export const blogPosts = [
   {
+    id: 'electricians-guide-to-google-ai-overviews',
+    slug: 'electricians-guide-to-google-ai-overviews',
+    title: 'Electrician\'s Guide to Google AI Overviews: How to Get Featured',
+    metaDescription: 'A comprehensive guide for UK electricians on how to get their business featured in Google AI Overviews. Learn about AEO, structured data, and content strategies to boost your electrician AI visibility.',
+    publishDate: '2026-01-21',
+    author: 'Whoza.ai Team',
+    category: 'AEO for Tradespeople',
+    tags: ['electrician Google AI', 'electrician AI visibility', 'electrician SEO', 'UK electrician marketing'],
+    readTime: '7 min read',
+    featured: false,
+    
+    leadAnswer: 'To get your electrician business featured in Google AI Overviews, focus on creating high-quality, authoritative content that directly answers common customer questions. Implement structured data like FAQPage and LocalBusiness schema to help Google\'s AI understand your expertise, service area, and pricing, thereby increasing your electrician AI visibility.',
+    
+    content: [
+      {
+        type: 'section',
+        heading: 'What Are Google AI Overviews and Why Do They Matter for Electricians?',
+        content: `Google AI Overviews are AI-generated summaries that appear at the top of search results, providing direct answers to user queries. For electricians, this means potential customers are getting recommendations without ever scrolling down to the traditional search listings. If your business isn\'t featured in these overviews, you\'re missing out on a significant and growing source of high-intent leads. Optimizing for these features is the new frontier of electrician SEO.`
+      },
+      {
+        type: 'section',
+        heading: 'The Core Principles of AEO for Electricians',
+        content: `Answer Engine Optimization (AEO) is the practice of optimizing your online presence to be found and recommended by AI assistants. For electricians, this means focusing on four key areas: 1) **Answerability**: Directly answering common questions. 2) **Clarity**: Ensuring your business information is consistent everywhere. 3) **Context**: Using structured data to explain your services and service area. 4) **Consensus**: Building a strong reputation through reviews and local citations.`
+      },
+      {
+        type: 'section',
+        heading: 'Creating Content That Google\'s AI Trusts',
+        content: `To be featured, your content must be seen as authoritative. Create detailed guides and blog posts that address specific customer needs. For example, instead of a generic \'Services\' page, write a detailed article on \'The Cost of a Full House Rewire in the UK\' or \'How to Choose the Right EV Charger for Your Home\'. This demonstrates your expertise and provides the in-depth information Google\'s AI is looking for.`
+      },
+      {
+        type: 'section',
+        heading: 'The Electrician\'s Guide to Structured Data',
+        content: `Structured data is a type of code that you add to your website to help search engines understand your content. For electricians, the two most important types are **LocalBusiness schema** and **FAQPage schema**. LocalBusiness schema tells Google your name, address, phone number, and service area. FAQPage schema highlights the questions and answers on your FAQ page, making it easy for Google\'s AI to use them in an AI Overview.`
+      },
+      {
+        type: 'section',
+        heading: 'Building Your Reputation with Reviews and Local Citations',
+        content: `Google\'s AI relies on consensus to validate information. The more high-quality, consistent mentions of your business it finds, the more confident it becomes in recommending you. Encourage your customers to leave reviews on Google and other platforms. Ensure your business is listed correctly in all relevant online directories. This builds the trust and authority needed for high electrician AI visibility.`
+      },
+      {
+        type: 'section',
+        heading: 'Your Google Business Profile: The AEO Powerhouse',
+        content: `Your Google Business Profile (GBP) is a critical asset for AEO. Google\'s AI pulls a vast amount of information directly from your GBP. Ensure every section is fully completed, including your services, service areas, opening hours, and photos. Use Google Posts to share updates, offers, and project photos. A well-optimized GBP is a direct feed to Google\'s AI, significantly boosting your chances of being featured.`
+      }
+    ],
+    
+    faqs: [
+      {
+        question: 'What is the difference between SEO and AEO for electricians?',
+        answer: 'Traditional SEO for electricians focuses on ranking in the list of blue links on Google. AEO (Answer Engine Optimization) focuses on getting your business featured directly in the AI-generated answers at the top of the page. AEO is the next evolution of electrician SEO.'
+      },
+      {
+        question: 'How can I find out what questions my customers are asking?',
+        answer: 'Listen to your customers. What are the common questions you get on the phone or via email? You can also use free tools like Google\'s \'People Also Ask\' section to see what questions people are searching for related to your services.'
+      },
+      {
+        question: 'Do I need a blog to get featured in Google AI Overviews?',
+        answer: 'While not strictly necessary, a blog is a powerful tool for AEO. It allows you to create the in-depth, authoritative content that Google\'s AI is looking for. A blog is one of the best ways to improve your electrician AI visibility.'
+      },
+      {
+        question: 'How important are customer reviews for AEO?',
+        answer: 'Customer reviews are critically important. They provide the social proof and consensus that AI systems need to trust and recommend your business. Aim for a steady stream of recent, positive reviews on your Google Business Profile.'
+      },
+      {
+        question: 'What is the most important first step for an electrician starting with AEO?',
+        answer: 'The most important first step is to claim and fully optimize your Google Business Profile. This is the foundation of your local AI visibility and provides a direct feed of information to Google\'s AI.'
+      },
+      {
+        question: 'How long does it take to see results from AEO?',
+        answer: 'AEO is a long-term strategy, much like traditional SEO. While some changes, like optimizing your Google Business Profile, can have a quick impact, building the authority and content required to be consistently featured in AI Overviews can take several months.'
+      }
+    ],
+    
+    cta: {
+      text: 'Ready to boost your electrician AI visibility and get featured in Google AI Overviews?',
+      buttonText: 'Get Your Free AI Visibility Score',
+      buttonLink: '/free-score'
+    }
+  },
+  {
     id: 'how-to-create-an-faq-page-that-ai-can-find-and-reference',
     slug: 'how-to-create-an-faq-page-that-ai-can-find-and-reference',
     title: 'How to Create an FAQ Page That AI Can Find and Reference',
