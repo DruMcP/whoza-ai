@@ -6,6 +6,188 @@
 
 export const blogPosts = [
   {
+    id: 'how-uk-tradespeople-get-recommended-chatgpt-2026',
+    slug: 'how-uk-tradespeople-get-recommended-chatgpt-2026',
+    title: 'How UK Tradespeople Can Get Recommended by ChatGPT in 2026',
+    metaDescription: 'Learn the 7-step strategy for getting your UK trade business recommended by ChatGPT. Practical AEO tactics for plumbers, electricians, roofers, and builders to dominate AI search in 2026.',
+    publishDate: '2026-01-20',
+    author: 'Whoza.ai Team',
+    category: 'AI Visibility',
+    tags: ['ChatGPT', 'AI visibility', 'AEO', 'UK tradespeople', 'answer engine optimization', 'local SEO'],
+    readTime: '8 min read',
+    featured: true,
+    
+    leadAnswer: 'To get your UK trade business recommended by ChatGPT in 2026, you need to optimize for Answer Engine Optimization (AEO). This means claiming your Bing Places listing, building reviews across multiple platforms, ensuring NAP consistency, adding schema markup to your website, creating FAQ content in natural language, getting featured in local "best of" lists, and keeping your content fresh with regular updates.',
+    
+    content: [
+      {
+        type: 'section',
+        heading: 'Why "ChatGPT Recommended You Guys" is the New Word-of-Mouth',
+        content: `A fundamental shift is happening in how UK homeowners find tradespeople. Instead of scrolling through pages of Google results, they are simply asking ChatGPT "Who's the best plumber in Birmingham?" or "Find me a reliable electrician in Manchester." ChatGPT then provides a direct recommendation, and the customer makes contact.
+
+This is not a future trend. It is happening right now. Across the UK, trade businesses are receiving calls that start with "ChatGPT recommended you guys." For businesses that appear in these AI recommendations, it is like having the most trusted referral source working for them around the clock. For businesses that do not appear, they are simply invisible to this growing segment of customers.
+
+The critical difference between traditional SEO and AI visibility is this: Google shows you a list of options, but ChatGPT makes a specific recommendation. If your business is not structured for AI to understand and trust, you will not be mentioned at all. This makes Answer Engine Optimization (AEO) essential for UK tradespeople who want to remain competitive in 2026 and beyond.`
+      },
+      {
+        type: 'section',
+        heading: 'How ChatGPT Decides Which Tradespeople to Recommend',
+        content: `Understanding how ChatGPT makes recommendations is the first step to getting your business selected. Unlike traditional search engines that rank websites based primarily on keywords and backlinks, ChatGPT evaluates businesses based on trust signals, consistency, and clarity of information.
+
+When someone asks ChatGPT for a tradesperson recommendation, the AI scans multiple data sources to find businesses that meet specific criteria. It looks for businesses with consistent information across platforms, high ratings on multiple review sites, structured data that makes the business easy to understand, and recent activity that indicates the business is currently operating.
+
+ChatGPT uses Bing's search infrastructure to gather information about businesses. This means your Bing Places for Business listing is foundational to AI visibility. The AI also reads your website content, particularly FAQ sections and service descriptions written in natural language. It checks review platforms including Google, Yelp, Facebook, and industry-specific sites to assess your reputation. It looks for mentions in local news, directories, and community websites that signal you are an established, trusted business.
+
+The businesses that get recommended are not necessarily the biggest or the ones with the most advertising budget. They are the businesses with the clearest, most consistent, and most trustworthy digital presence. This levels the playing field for small, local trade businesses that invest in proper AEO.`
+      },
+      {
+        type: 'section',
+        heading: 'What is Answer Engine Optimization (AEO) for Tradespeople?',
+        content: `Answer Engine Optimization (AEO) is the practice of structuring your online presence so that AI systems like ChatGPT can easily find, understand, and confidently recommend your business. While traditional SEO focuses on ranking in search results, AEO focuses on being the definitive answer that AI provides directly to users.
+
+For UK tradespeople, AEO means ensuring your business information is identical across every platform, from your website to Google Business Profile to Bing Places to Yelp. Even small inconsistencies like "Street" versus "St." or different phone numbers confuse AI and reduce your chances of being recommended.
+
+AEO also means adding structured data (schema markup) to your website. This is code that explicitly tells AI what your business does, where you operate, what your hours are, and what your aggregate rating is. AI systems love this structured data because it removes ambiguity and makes your information instantly understandable.
+
+Creating content that answers real questions in natural language is another critical element of AEO. When someone asks ChatGPT "Do I need a permit for a loft conversion in London?" and your website has a clear, authoritative answer to that question, ChatGPT can cite your business as the expert source. This is why FAQ pages with schema markup are so valuable for AI visibility.
+
+The goal of AEO is to translate your real-world expertise and reputation into digital signals that AI can recognize and trust. If you are an excellent plumber but have no digital footprint, ChatGPT cannot recommend you. AEO bridges that gap.`
+      },
+      {
+        type: 'section',
+        heading: 'Step 1: Claim and Optimize Your Bing Places Listing',
+        content: `Since ChatGPT uses Bing's infrastructure to search the web, your Bing Places for Business listing is the foundation of your AI visibility strategy. This is the single most important first step for UK tradespeople who want ChatGPT recommendations.
+
+Bing Places is powered by Foursquare, which means optimizing your Bing listing also distributes your information across multiple platforms. This amplifies your visibility and reinforces the consistency signals that AI looks for.
+
+When optimizing your Bing Places listing, ensure every single field is completely filled out. Include your accurate business name, full address, primary phone number, comprehensive service descriptions, all service areas you cover, complete business hours including emergency availability, and high-quality photos of your work, team, and vehicles.
+
+Your service area deserves particular attention. Do not just list "London" or "Manchester." Specify all the boroughs, neighborhoods, and postcodes you serve. If you are a Birmingham plumber, list Edgbaston, Moseley, Harborne, Selly Oak, and every other area you cover. This helps AI understand exactly where you operate and match you to location-specific queries.
+
+The business description should be written in natural language and answer the question "What does this business do and who do they serve?" Avoid keyword stuffing. Instead, write clearly: "We are a family-run plumbing business serving Birmingham and the West Midlands. We specialize in emergency repairs, boiler installations, and bathroom renovations for residential and commercial properties."
+
+Once your Bing Places listing is optimized, monitor it regularly and update it whenever your information changes. An outdated listing with incorrect hours or a disconnected phone number will actively harm your AI visibility.`
+      },
+      {
+        type: 'section',
+        heading: 'Step 2: Build Reviews Across Multiple Platforms',
+        content: `This is arguably the most important step for ChatGPT visibility. ChatGPT does not just look at your Google reviews. It evaluates your reputation across multiple platforms to assess whether you are consistently trusted by customers.
+
+Your goal is to build high ratings across at least three to five platforms. The critical platforms for UK tradespeople are Google Business Profile, Yelp, Facebook, Trustpilot, and industry-specific sites like Checkatrade, Rated People, or MyBuilder. ChatGPT looks for consistency across these platforms. If you have five stars on Google but no presence on other platforms, AI has less confidence in recommending you.
+
+After every completed job, send a review request to your customer. The key is to rotate where you send them. One week, send customers to Google. The next week, send them to Trustpilot. The following week, send them to Facebook. Over time, this builds a consistent pattern of positive reviews across multiple platforms, which is exactly what ChatGPT looks for.
+
+Make it easy for customers to leave reviews by providing direct links. Do not just ask them to "leave a review." Send them a specific link that takes them directly to your review page on the platform you are targeting that week.
+
+When requesting reviews, gently prompt customers to mention their location. For example: "If you have a moment, we would love a review mentioning you are in the Harborne area!" This helps ChatGPT connect your business to specific neighborhoods and increases your chances of being recommended for location-specific queries.
+
+Respond to every review, positive or negative. Your responses should be professional, specific, and include location context where relevant. This reinforces your local expertise and shows AI that you are actively engaged with your customers.`
+      },
+      {
+        type: 'section',
+        heading: 'Step 3: Ensure NAP Consistency Everywhere',
+        content: `NAP stands for Name, Address, Phone number. These three pieces of information must be absolutely identical across every single platform where your business appears. This includes your website, Google Business Profile, Bing Places, Yelp, Facebook, Trustpilot, Checkatrade, and every directory listing.
+
+Even small inconsistencies confuse AI and reduce the trust factor for ChatGPT. If your website lists your address as "123 High Street" but your Google profile says "123 High St." and your Bing listing says "123 High Street, Unit 1," AI sees these as potentially different businesses. This ambiguity reduces your chances of being recommended.
+
+The same applies to phone numbers. If you use different phone numbers on different platforms, or if you have changed your number but not updated all your listings, AI cannot confidently verify your business identity. Use one primary phone number consistently across all platforms.
+
+Your business name also needs to be consistent. If you are "ABC Plumbing Services" on your website but "ABC Plumbing" on Google and "ABC Plumbing Services Ltd" on Bing, this creates confusion. Choose one official business name and use it identically everywhere.
+
+Conduct a NAP audit by searching for your business across all major platforms and directories. Create a spreadsheet listing every place your business appears and verify that your NAP information is identical. Correct any discrepancies immediately.
+
+This may seem tedious, but NAP consistency is one of the most powerful trust signals for AI. It tells ChatGPT that your business is legitimate, established, and reliable. Businesses with inconsistent NAP data are often filtered out of AI recommendations entirely.`
+      },
+      {
+        type: 'section',
+        heading: 'Step 4: Add Schema Markup to Your Website',
+        content: `Schema markup is structured data code that you add to your website to explicitly tell search engines and AI what your business is about. ChatGPT loves schema markup because it makes your information incredibly easy to understand and removes any ambiguity.
+
+For UK tradespeople, the most important schema type is LocalBusiness schema. This includes your business name, full address, primary phone number, service area (all locations you serve), business hours including emergency availability, aggregate rating (your average star rating across reviews), total number of reviews, and a complete list of services you offer.
+
+Adding schema markup may require technical knowledge, so you might need to hire a web developer or use a WordPress plugin if your site is built on WordPress. There are several plugins specifically designed for adding LocalBusiness schema, such as Schema Pro or Rank Math.
+
+Once schema markup is added to your site, you can verify it is working correctly using Google's Rich Results Test tool. Simply enter your website URL and the tool will show you what structured data Google (and by extension, AI systems) can read from your site.
+
+Schema markup is particularly powerful for FAQ pages. If you have a page answering common customer questions, adding FAQ schema markup means ChatGPT can directly cite your answers when users ask matching questions. For example, if someone asks ChatGPT "Do I need a Gas Safe certificate for a new boiler?" and your website has an FAQ with that exact question and a clear answer marked up with FAQ schema, ChatGPT can cite your business as the authoritative source.
+
+The investment in schema markup pays dividends in AI visibility. It is one of the clearest signals you can send to AI that your business is professional, legitimate, and worthy of recommendation.`
+      },
+      {
+        type: 'section',
+        heading: 'Step 5: Create FAQ Content in Natural Language',
+        content: `People use ChatGPT conversationally, asking questions in natural language like "Do I need a permit for a loft conversion?" or "What's a fair price for rewiring a three-bedroom house?" Your website needs content that matches this natural language to be cited by AI.
+
+Create a comprehensive FAQ page on your website that answers the most common questions your customers ask. Think about the questions you hear repeatedly on the phone or in person, and write clear, authoritative answers to each one.
+
+For UK tradespeople, valuable FAQ topics include questions about licensing and regulations ("Do you need to be Gas Safe registered to install a boiler?"), pricing and estimates ("How much does it cost to rewire a house in London?"), emergency services ("Do you offer 24-hour emergency plumbing?"), service areas ("Do you cover Birmingham and the West Midlands?"), and common problems ("Why is my boiler making a banging noise?").
+
+Write your answers in clear, jargon-free language. Imagine you are explaining the answer to a friend who knows nothing about your trade. Avoid technical terms unless you explain them. Keep answers between 50 and 150 words for optimal AI citation.
+
+Once your FAQ page is complete, add FAQ schema markup to it. This structured data tells ChatGPT exactly which text is the question and which text is the answer, making it easy for AI to cite your content when users ask matching questions.
+
+Update your FAQ page regularly as you encounter new questions from customers. The more comprehensive and current your FAQ content, the more opportunities ChatGPT has to cite your business as an expert source.`
+      },
+      {
+        type: 'section',
+        heading: 'Step 6: Get Featured in Local "Best Of" Lists',
+        content: `ChatGPT specifically looks for businesses that are featured in local "best of" lists, community awards, Chamber of Commerce directories, and local news articles. These high-authority mentions are powerful trust signals that dramatically boost your chances of being recommended by AI.
+
+For UK tradespeople, there are several practical ways to earn these mentions. Start by joining your local Chamber of Commerce. Most chambers have online directories of members, and a link from your local chamber website is a strong trust signal for AI.
+
+Participate in local business awards. Many UK cities and regions have annual awards for best local businesses, including categories for tradespeople. Even being nominated can result in a mention on the award website, which AI recognizes as a trust signal.
+
+Pitch stories to local news outlets and community blogs. Local newspapers and websites often need expert commentary on property and home improvement topics. Offer to provide quotes or write guest articles on topics like "How to Prepare Your Home for Winter" or "Common Electrical Safety Issues in Older Homes." These citations from trusted local news sources dramatically boost AI visibility.
+
+Sponsor local community initiatives. Supporting a local football team, school fundraiser, or community center often results in a mention on their website. This demonstrates community integration and provides another trust signal for AI.
+
+Get listed in "best of" roundups. Many local lifestyle websites and blogs publish articles like "Best Plumbers in Manchester" or "Top Electricians in Birmingham." Reach out to these websites and ask to be considered for inclusion. Provide information about your qualifications, customer reviews, and what makes your business stand out.
+
+The key is quality over quantity. One mention in a respected local news outlet or chamber of commerce directory is worth more than dozens of generic directory listings. Focus on earning mentions from sources that AI recognizes as authoritative and trustworthy.`
+      },
+      {
+        type: 'section',
+        heading: 'Step 7: Keep Your Content Fresh and Updated',
+        content: `ChatGPT pays attention to recency. Websites and business listings that have not been updated in months or years are deprioritized because AI assumes they may no longer be accurate or the business may no longer be operating.
+
+For UK tradespeople, keeping your content fresh means regularly updating your website, business listings, and social media presence. You do not need to publish daily, but you do need to show consistent, ongoing activity.
+
+Publish blog posts or project highlights monthly. These do not need to be long or complex. A simple post showcasing a recent job with before-and-after photos and a brief description is sufficient. For example: "We recently completed a full bathroom renovation in Edgbaston. The homeowners wanted a modern, accessible design with a walk-in shower and underfloor heating. Here's how it turned out." This shows AI that your business is active and currently operating.
+
+Update your service pages with current pricing context. You do not need to list exact prices, but updating pages to reflect "2026 pricing" or "current rates" signals to AI that your information is current and reliable.
+
+Add new customer testimonials regularly. When you receive positive feedback, add it to your website with the customer's permission. Include their location if they are comfortable with it: "John from Harborne said: 'Excellent service, arrived on time and fixed our boiler quickly.'"
+
+Post updates on your Google Business Profile. Google Posts allow you to share news, offers, and updates directly on your business profile. Use this feature weekly to share recent projects, seasonal tips, or service reminders. These posts feed directly into AI understanding of your business activity.
+
+Include "last updated" dates on key pages of your website. This explicitly tells AI when your information was last verified, which increases confidence in your content. For example, at the bottom of your service pages, include a line like "Last updated: January 2026."
+
+The goal is to create a pattern of consistent activity that tells AI your business is current, active, and reliable. Stale websites with no recent updates are filtered out of AI recommendations, even if they were once well-optimized.`
+      }
+    ],
+    
+    faqs: [
+      {
+        question: 'How is AEO different from traditional local SEO?',
+        answer: 'Traditional local SEO focuses on ranking in a list of search results. AEO (Answer Engine Optimization) focuses on being the single, definitive answer that an AI like ChatGPT provides directly to the user. It prioritizes clarity, trust, and structured data over keyword density and backlinks.'
+      },
+      {
+        question: 'Does AEO help small local businesses compete with big brands?',
+        answer: 'Yes. AEO levels the playing field. AI is looking for the best answer, not the biggest brand. A small, local trade business with a perfectly optimized and consistent online presence can be chosen over a larger competitor if their information is clearer and more trustworthy to the AI.'
+      },
+      {
+        question: 'What is the most important first step I can take?',
+        answer: 'Claiming and fully optimizing your Bing Places for Business listing is the most critical first step. Since ChatGPT uses Bing infrastructure, this is the foundation of your AEO strategy. Ensure every field is filled out accurately and completely.'
+      }
+    ],
+    
+    cta: {
+      text: 'Ready to see how your business stacks up in the new age of AI search?',
+      buttonText: 'Get Your Free AI Visibility Score',
+      buttonLink: '/free-score'
+    }
+  },
+  {
     id: 'electricians-guide-to-google-ai-overviews',
     slug: 'electricians-guide-to-google-ai-overviews',
     title: 'Electrician\'s Guide to Google AI Overviews: How to Get Featured',
