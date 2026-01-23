@@ -6,6 +6,97 @@
 
 export const blogPosts = [
   {
+    id: 'how-uk-tradespeople-get-found-chatgpt-ai-search-2026',
+    slug: 'how-uk-tradespeople-get-found-chatgpt-ai-search-2026',
+    title: 'How UK Tradespeople Can Get Found on ChatGPT and AI Search in 2026',
+    metaDescription: 'A guide for UK tradespeople on how to get their business found and recommended by AI search engines like ChatGPT and Google AI Overviews. Learn practical AEO strategies to increase your AI visibility and get more leads in 2026.',
+    publishDate: '2026-01-23',
+    author: 'Whoza.ai Team',
+    category: 'AI Visibility',
+    tags: ['ChatGPT', 'AI search', 'AEO', 'UK tradespeople', 'answer engine optimization', 'local SEO', 'AI visibility'],
+    readTime: '7 min read',
+    featured: true,
+    
+    leadAnswer: 'To get your UK trade business found on ChatGPT and AI search in 2026, you must optimize for Answer Engine Optimization (AEO). This involves creating clear, structured content that directly answers customer questions, ensuring your business information is consistent across all online platforms, and building a strong reputation through customer reviews.',
+    
+    content: [
+      {
+        type: 'section',
+        heading: 'What is AI Search and How is it Different from Google?',
+        content: `AI search, also known as Answer Engines, represents a significant shift in how customers find local services. Instead of typing a query into Google and getting a list of websites to browse, users now ask questions to AI assistants like ChatGPT, Perplexity, and Google AI Overviews. These AI systems then provide a single, direct answer, often recommending a specific business.
+
+For a plumber in London or an electrician in Manchester, this means the old rules of SEO are no longer enough. While traditional Google search provides a list of options for the user to choose from, AI search makes the choice for them. If your business is not the one recommended, you are effectively invisible to a growing number of potential customers. This is the core difference: Google gives results, while AI gives answers.
+
+This change is driven by user demand for speed and convenience. Customers don't want to spend time clicking through multiple websites; they want a quick, reliable recommendation. As a result, businesses that are optimized for AI search are gaining a significant advantage over their competitors.`
+      },
+      {
+        type: 'section',
+        heading: 'How Do AI Engines Like ChatGPT Decide Which Tradesperson to Recommend?',
+        content: `AI engines like ChatGPT don't just randomly pick a business. They have a sophisticated process for deciding which tradesperson is the most trustworthy and relevant to a user's query. The AI acts like a digital research assistant, scanning the internet for signals that indicate a business's quality and reliability.
+
+The key signals AI evaluates include clarity and consistency of your business information across all platforms. The AI looks for consistent NAP data (Name, Address, Phone number) across your website, Google Business Profile, Bing Places, and other online directories. Inconsistencies can confuse the AI and reduce your chances of being recommended.
+
+AI also evaluates your authoritativeness and expertise by analyzing your website content to see if you are an expert in your field. This is where having a detailed FAQ page and blog posts that answer common customer questions becomes crucial. For example, a roofer in Birmingham whose website clearly explains the process of a roof repair is more likely to be recommended than one with a generic, one-page website.
+
+Customer reviews are a powerful signal of trust for AI. The AI looks at reviews on multiple platforms, not just Google. A consistent pattern of positive reviews across different sites tells the AI that your business is trusted by real customers.`
+      },
+      {
+        type: 'section',
+        heading: 'What is Answer Engine Optimization (AEO) for Tradespeople?',
+        content: `Answer Engine Optimization (AEO) is the process of making your business more visible and trustworthy to AI search engines. While SEO focuses on ranking in a list of search results, AEO focuses on becoming the single, definitive answer that an AI provides. For UK tradespeople, AEO is the key to getting recommended by systems like ChatGPT.
+
+AEO involves a holistic approach to your online presence. It's not just about keywords; it's about providing clear, structured information that an AI can easily understand. This includes structured data (schema markup), which is a type of code you add to your website to explicitly tell AI what your business does, where you are located, and what your customers think of you. It's like a digital name tag for your business.
+
+Creating content that answers questions in a natural, conversational way is essential for AEO. Think about the questions your customers ask you every day and create content that answers them directly. AEO for tradespeople also heavily relies on local signals. This means optimizing your content for specific locations, such as mentioning the neighborhoods you serve in Glasgow or the types of homes you work on in Leeds.
+
+The goal of AEO is to translate your real-world expertise and reputation into digital signals that AI can recognize and trust. If you are an excellent plumber but have no digital footprint, ChatGPT cannot recommend you. AEO bridges that gap.`
+      },
+      {
+        type: 'section',
+        heading: 'How Can UK Plumbers and Electricians Optimize for AI Search?',
+        content: `For plumbers, electricians, and other tradespeople across the UK, optimizing for AI search is now a necessity. The first and most effective step is to create a detailed FAQ page. This is the single most effective AEO strategy. Answer at least 10-15 common customer questions in a clear, question-and-answer format. For example, an electrician could answer, "How much does it cost to rewire a 3-bedroom house in London?"
+
+Next, optimize your Google Business Profile and Bing Places. These are the two most important directories for AI search. Fill out every section completely and ensure your information is 100% consistent with your website. Include your accurate business name, full address, primary phone number, comprehensive service descriptions, all service areas you cover, complete business hours, and high-quality photos of your work.
+
+Building a strong review profile is critical. Actively solicit reviews from your customers and encourage them to mention their location. Aim for a steady stream of new reviews on multiple platforms including Google, Yelp, Facebook, Trustpilot, and industry-specific sites like Checkatrade or MyBuilder. After every completed job, send a review request to your customer, rotating between platforms.
+
+Finally, implement LocalBusiness schema markup to your website to clearly define your business information for AI. This is a technical step, but it's crucial for AEO. Schema markup explicitly tells AI what your business does, where you operate, what your hours are, and what your aggregate rating is.
+
+By taking these steps, you can significantly improve your chances of being found and recommended by AI search engines, giving you a powerful advantage in your local market.`
+      },
+      {
+        type: 'section',
+        heading: 'Why UK Tradespeople in London, Manchester, and Birmingham Need AEO Now',
+        content: `UK tradespeople operating in major cities like London, Manchester, Birmingham, Leeds, and Glasgow face intense competition. In these markets, the businesses that adapt to AI search first will capture a growing segment of customers who rely on AI assistants for recommendations.
+
+In London, where customers have countless options for plumbers, electricians, and builders, being the one business that ChatGPT recommends can be transformative. The same applies to Manchester's competitive trades market, Birmingham's growing service sector, and Leeds' expanding residential areas. AI search levels the playing field, allowing smaller, local businesses to compete with larger companies by focusing on clarity, consistency, and trust.
+
+The tradespeople who invest in AEO now are building a sustainable competitive advantage. As more customers turn to AI for recommendations, businesses without AI visibility will simply disappear from consideration. This is not a future trend—it is happening right now across the UK.`
+      }
+    ],
+    
+    faqs: [
+      {
+        question: 'Why has my business disappeared from Google?',
+        answer: 'Your business likely hasn\'t disappeared from Google entirely, but it may be less visible due to the rise of AI Overviews. These AI-generated answers appear at the top of the search results, pushing the traditional blue links further down the page. If your business is not optimized for AEO, it\'s less likely to be featured in these prominent AI answers.'
+      },
+      {
+        question: 'Do I need a new website for AI search?',
+        answer: 'Not necessarily. In most cases, you can optimize your existing website for AI search by adding structured data, creating new content (like an FAQ page), and ensuring your business information is consistent. However, if your website is very old or not mobile-friendly, a redesign may be a good investment.'
+      },
+      {
+        question: 'How long does it take to see results from AEO?',
+        answer: 'While some improvements can be seen within a few weeks, AEO is a long-term strategy. It typically takes 2-3 months of consistent effort to build a strong enough online presence to be regularly recommended by AI search engines. The key is to be patient and persistent in your optimization efforts.'
+      }
+    ],
+    
+    cta: {
+      text: 'Ready to see how your business stacks up in the new world of AI search?',
+      buttonText: 'Get Your Free AI Visibility Score',
+      buttonLink: '/free-score'
+    }
+  },
+  {
     id: 'how-uk-tradespeople-get-recommended-chatgpt-2026',
     slug: 'how-uk-tradespeople-get-recommended-chatgpt-2026',
     title: 'How UK Tradespeople Can Get Recommended by ChatGPT in 2026',
