@@ -1,35 +1,50 @@
 import { Link } from 'react-router-dom';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, lazy, Suspense } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
-import TestimonialsCarousel from '../components/TestimonialsCarousel';
-import LiveResultsShowcase from '../components/LiveResultsShowcase';
-import ExplainerVideo from '../components/ExplainerVideo';
-import MiniROICalculator from '../components/MiniROICalculator';
-import AITeam from '../components/AITeam';
 import Icon from '../components/icons/Icon';
-import { initScrollAnimations, addRippleEffect } from '../utils/animations';
-import HeroIllustration from '../components/illustrations/HeroIllustration';
-import Step1BusinessProfile from '../components/illustrations/Step1BusinessProfile';
-import Step2TaskGeneration from '../components/illustrations/Step2TaskGeneration';
-import Step3TaskApproval from '../components/illustrations/Step3TaskApproval';
-import Step4ProgressTracking from '../components/illustrations/Step4ProgressTracking';
-import TaskExamplesByTrade from '../components/TaskExamplesByTrade';
-import ResultsTimeline from '../components/ResultsTimeline';
-import InteractiveTaskPreview from '../components/InteractiveTaskPreview';
-import ECEBrandBadge from '../components/ECEBrandBadge';
-import First30Days from '../components/First30Days';
-import StickyCTABar from '../components/StickyCTABar';
-import GuaranteeBadge from '../components/GuaranteeBadge';
-import ProofCard from '../components/ProofCard';
-import FounderNote from '../components/FounderNote';
-import WeeklyLoopVisual from '../components/WeeklyLoopVisual';
-import WhoItsFor from '../components/WhoItsFor';
-import WhatWeDontDo from '../components/WhatWeDontDo';
-import AIAnswerShift from '../components/AIAnswerShift';
-import RexIllustration from '../components/illustrations/RexIllustration';
-import ECEExplainer from '../components/ECEExplainer/ECEExplainer';
+import { initScrollAnimations } from '../utils/animations';
+
+// Lazy load below-the-fold components for performance optimization
+const TestimonialsCarousel = lazy(() => import('../components/TestimonialsCarousel'));
+const LiveResultsShowcase = lazy(() => import('../components/LiveResultsShowcase'));
+const ExplainerVideo = lazy(() => import('../components/ExplainerVideo'));
+const MiniROICalculator = lazy(() => import('../components/MiniROICalculator'));
+const AITeam = lazy(() => import('../components/AITeam'));
+const TaskExamplesByTrade = lazy(() => import('../components/TaskExamplesByTrade'));
+const ResultsTimeline = lazy(() => import('../components/ResultsTimeline'));
+const InteractiveTaskPreview = lazy(() => import('../components/InteractiveTaskPreview'));
+const First30Days = lazy(() => import('../components/First30Days'));
+const StickyCTABar = lazy(() => import('../components/StickyCTABar'));
+const GuaranteeBadge = lazy(() => import('../components/GuaranteeBadge'));
+const ProofCard = lazy(() => import('../components/ProofCard'));
+const FounderNote = lazy(() => import('../components/FounderNote'));
+const WeeklyLoopVisual = lazy(() => import('../components/WeeklyLoopVisual'));
+const WhoItsFor = lazy(() => import('../components/WhoItsFor'));
+const WhatWeDontDo = lazy(() => import('../components/WhatWeDontDo'));
+const AIAnswerShift = lazy(() => import('../components/AIAnswerShift'));
+const ECEExplainer = lazy(() => import('../components/ECEExplainer/ECEExplainer'));
+
+// Minimal loading fallback component
+const LoadingFallback = () => (
+  <div style={{
+    minHeight: '200px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 'var(--spacing-xl)'
+  }}>
+    <div style={{
+      width: '40px',
+      height: '40px',
+      border: '3px solid rgba(0, 149, 255, 0.1)',
+      borderTop: '3px solid var(--color-primary-600)',
+      borderRadius: '50%',
+      animation: 'spin 0.8s linear infinite'
+    }} />
+  </div>
+);
 
 const AnimatedCounter = ({ target, suffix = '' }) => {
   const [count, setCount] = useState(0);
@@ -120,13 +135,21 @@ export default function Home() {
       </div>
 
       <main id="main-content" role="main">
+        {/* Above-the-fold: Critical content loaded immediately */}
         <HeroSection />
 
-        <WhoItsFor />
+        {/* Below-the-fold: Lazy loaded with Suspense boundaries */}
+        <Suspense fallback={<LoadingFallback />}>
+          <WhoItsFor />
+        </Suspense>
 
-        <ECEExplainer />
+        <Suspense fallback={<LoadingFallback />}>
+          <ECEExplainer />
+        </Suspense>
 
-        <AIAnswerShift />
+        <Suspense fallback={<LoadingFallback />}>
+          <AIAnswerShift />
+        </Suspense>
 
         <section className="section" style={{
           background: 'linear-gradient(135deg, rgba(0, 149, 255, 0.06) 0%, rgba(0, 112, 204, 0.03) 100%)',
@@ -162,8 +185,12 @@ export default function Home() {
               }}>
                 Get your free AI readiness score
               </Link>
-              <GuaranteeBadge />
-              <ProofCard />
+              <Suspense fallback={<div style={{ minHeight: '60px' }} />}>
+                <GuaranteeBadge />
+              </Suspense>
+              <Suspense fallback={<div style={{ minHeight: '80px' }} />}>
+                <ProofCard />
+              </Suspense>
               <div style={{
                 display: 'flex',
                 gap: 'var(--spacing-lg)',
@@ -197,7 +224,9 @@ export default function Home() {
               <p>Real tradespeople who are getting found by local customers through AI search</p>
             </div>
             <div>
-              <TestimonialsCarousel />
+              <Suspense fallback={<LoadingFallback />}>
+                <TestimonialsCarousel />
+              </Suspense>
             </div>
             <div className="case-studies-cta">
               <h3>Want to See More Success Stories?</h3>
@@ -226,34 +255,42 @@ export default function Home() {
 
         <section className="section" style={{ backgroundColor: '#f8fafc' }}>
           <div className="container">
-            <MiniROICalculator />
+            <Suspense fallback={<LoadingFallback />}>
+              <MiniROICalculator />
+            </Suspense>
           </div>
         </section>
 
-        <AITeam
-          onWaitlistSubmit={async (email, product) => {
-            const response = await fetch(
-              `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/ai-team-waitlist`,
-              {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                  'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
-                },
-                body: JSON.stringify({ email, product }),
+        <Suspense fallback={<LoadingFallback />}>
+          <AITeam
+            onWaitlistSubmit={async (email, product) => {
+              const response = await fetch(
+                `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/ai-team-waitlist`,
+                {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+                  },
+                  body: JSON.stringify({ email, product }),
+                }
+              );
+              if (!response.ok) {
+                const error = await response.json();
+                throw new Error(error.error || 'Failed to join waitlist');
               }
-            );
-            if (!response.ok) {
-              const error = await response.json();
-              throw new Error(error.error || 'Failed to join waitlist');
-            }
-            return await response.json();
-          }}
-        />
+              return await response.json();
+            }}
+          />
+        </Suspense>
 
-        <ExplainerVideo />
+        <Suspense fallback={<LoadingFallback />}>
+          <ExplainerVideo />
+        </Suspense>
 
-        <TaskExamplesByTrade />
+        <Suspense fallback={<LoadingFallback />}>
+          <TaskExamplesByTrade />
+        </Suspense>
 
         <section className="section">
           <div className="container">
@@ -269,7 +306,7 @@ export default function Home() {
               color: 'var(--color-text-secondary)'
             }}>
               <span style={{ fontSize: '16px' }}>✓</span>
-              <span>Powered by <strong style={{ color: 'var(--color-primary-600)' }}>Entity Confidence Engineering™</strong> - Our proprietary 5-pillar methodology</span>
+              <span>Simple 3-step process</span>
             </div>
 
             <div style={{
@@ -407,17 +444,27 @@ export default function Home() {
           </div>
         </section>
 
-        <InteractiveTaskPreview />
+        <Suspense fallback={<LoadingFallback />}>
+          <InteractiveTaskPreview />
+        </Suspense>
 
-        <ResultsTimeline />
+        <Suspense fallback={<LoadingFallback />}>
+          <ResultsTimeline />
+        </Suspense>
 
-        <LiveResultsShowcase />
+        <Suspense fallback={<LoadingFallback />}>
+          <LiveResultsShowcase />
+        </Suspense>
 
-        <First30Days />
+        <Suspense fallback={<LoadingFallback />}>
+          <First30Days />
+        </Suspense>
 
         <section className="section" style={{ backgroundColor: '#0f172a', padding: 'var(--spacing-4xl) var(--spacing-lg)' }}>
           <div className="container">
-            <WeeklyLoopVisual />
+            <Suspense fallback={<LoadingFallback />}>
+              <WeeklyLoopVisual />
+            </Suspense>
           </div>
         </section>
 
@@ -457,11 +504,15 @@ export default function Home() {
 
         <section className="section" style={{ backgroundColor: '#0f172a' }}>
           <div className="container">
-            <FounderNote />
+            <Suspense fallback={<LoadingFallback />}>
+              <FounderNote />
+            </Suspense>
           </div>
         </section>
 
-        <WhatWeDontDo />
+        <Suspense fallback={<LoadingFallback />}>
+          <WhatWeDontDo />
+        </Suspense>
 
         <section className="section">
           <div className="container" style={{ textAlign: 'center' }}>
@@ -472,7 +523,9 @@ export default function Home() {
             <Link to="/start" className="button btn-hover">
               Get started
             </Link>
-            <GuaranteeBadge />
+            <Suspense fallback={<div style={{ minHeight: '60px' }} />}>
+              <GuaranteeBadge />
+            </Suspense>
             <p style={{ marginTop: 'var(--spacing-md)', fontSize: '16px' }}>
               <Link to="/pricing">View pricing</Link> · Monitor from £19/month
             </p>
@@ -484,7 +537,9 @@ export default function Home() {
       </main>
 
       <Footer />
-      <StickyCTABar />
+      <Suspense fallback={null}>
+        <StickyCTABar />
+      </Suspense>
     </>
   );
 }
