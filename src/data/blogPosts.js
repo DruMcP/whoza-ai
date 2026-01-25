@@ -6,6 +6,192 @@
 
 export const blogPosts = [
   {
+    id: "how-ai-chooses-local-businesses",
+    slug: "how-ai-chooses-local-businesses",
+    title: "How AI Search Engines Choose Which Local Businesses to Recommend",
+    metaDescription: "Learn how AI search engines like ChatGPT and Google AI decide which local businesses to recommend. Understand Entity Confidence and the key signals that build trust with AI.",
+    publishDate: "2026-01-25",
+    author: "Whoza.ai Team",
+    category: "AI Visibility",
+    tags: ["AI search", "AEO", "Entity Confidence", "local SEO", "ChatGPT"],
+    readTime: "6 min read",
+    featured: true,
+    leadAnswer: "AI search engines like ChatGPT, Perplexity, and Google AI recommend local businesses they trust. This trust is built on a concept called Entity Confidence, which measures how consistently and authoritatively a business is represented across the web. For UK tradespeople, this means having a clear, consistent, and verifiable online presence is no longer optional—it's essential for getting found.",
+    content: [
+      {
+        type: "section",
+        heading: "Introduction: The New Gatekeepers of Local Search",
+        content: `In 2026, the way customers find local tradespeople has fundamentally changed. Instead of sifting through pages of Google results, they're asking AI assistants for direct recommendations: "Who is the best plumber in Bristol?" or "Find a reliable electrician near me."
+
+These AI gatekeepers don't just present a list of websites; they synthesize information to provide a confident, authoritative answer. If your business isn't on their short list, you're invisible to a growing number of potential customers. This guide explains how these AI systems decide which businesses to trust and recommend, and what you can do to ensure your business gets found.`
+      },
+      {
+        type: "section",
+        heading: "What is Entity Confidence?",
+        content: `At its core, Entity Confidence is how sure an AI is about the facts of your business. An "entity" is your business—a unique, real-world thing with a name, address, phone number, and services. The AI's confidence in your entity is determined by the consistency and authority of the information it can find about you online.
+
+Think of it like a background check. If an AI finds conflicting information about your business hours, service area, or qualifications across different websites, its confidence drops. If it finds the same accurate information across your website, Google Business Profile, local directories, and customer reviews, its confidence soars.`
+      },
+      {
+        type: "section",
+        heading: "How AI Search Engines Rank Local Businesses",
+        content: `AI search engines use a sophisticated process to evaluate and rank local businesses. It's no longer about just having the right keywords; it's about building a comprehensive, trustworthy online footprint.
+
+First, the AI scours the web for any mention of your business, pulling data from your website, Google Business Profile, online directories, customer review sites, social media platforms, and local news articles. It then reconciles this data, looking for consistency. Discrepancies create uncertainty and lower your ranking.
+
+Google's E-A-T (Expertise, Authoritativeness, and Trustworthiness) framework is even more critical for AI search. The AI needs to be confident that you are a legitimate, qualified, and trustworthy business before it will recommend you. For UK tradespeople, this means showcasing your qualifications prominently on your website and ensuring these are mentioned in your online profiles.`
+      },
+      {
+        type: "section",
+        heading: "Practical Steps to Improve Your AI Search Ranking",
+        content: `Improving your AI search visibility is a systematic process, not a one-time fix. Here are actionable steps you can take today:
+
+1. **Audit Your Online Presence:** Search for your business name online and check your NAP consistency across all platforms. Correct any inaccuracies immediately.
+2. **Optimize Your Google Business Profile:** This is the single most important data source for local AI search. Fill out every section completely, including services, service areas, hours, and photos.
+3. **Build Citations in Reputable Directories:** Get listed in high-quality UK directories and trade-specific portals. Consistency is key.
+4. **Encourage and Manage Reviews:** Actively ask your satisfied customers for reviews on Google and other relevant platforms. Respond to all reviews to show you are engaged.
+5. **Create Expert Content:** Write blog posts or create videos that answer common customer questions. Showcase your expertise and provide real value.`
+      }
+    ],
+    faqs: [
+      {
+        question: "How is AEO different from SEO?",
+        answer: "While related, they are different. SEO (Search Engine Optimization) focuses on ranking in traditional search results, often by targeting specific keywords. AEO (Answer Engine Optimization) focuses on becoming a citable, trusted source for AI-powered answer engines. AEO prioritizes comprehensive, authoritative content over keyword density."
+      },
+      {
+        question: "How long does it take to see results from AEO?",
+        answer: "Building trust and authority takes time. While you can see initial improvements in a few weeks by cleaning up your online data, it typically takes 3-6 months of consistent effort to become a regularly cited source for AI search engines."
+      },
+      {
+        question: "Do I still need a website in the age of AI search?",
+        answer: "Yes, more than ever. Your website is the central hub of your online identity. It's the one place where you have complete control over your brand narrative and can provide the comprehensive, expert content that AI engines are looking for."
+      }
+    ],
+    cta: {
+      text: "Ready to see how your business scores in AI search?",
+      buttonText: "Get Your Free AI Visibility Score",
+      buttonLink: "/free-score"
+    }
+  },
+  {
+    id: "google-business-profile-optimization-for-ai-search",
+    slug: "google-business-profile-optimization-for-ai-search",
+    title: "The Ultimate Guide to Google Business Profile Optimization for AI Search (2026)",
+    metaDescription: "A step-by-step guide for UK tradespeople on how to optimize their Google Business Profile for AI search engines. Learn the AI-first approach to GBP optimization to dominate local AI search in 2026.",
+    publishDate: "2026-01-25",
+    author: "Whoza.ai Team",
+    category: "AI Visibility",
+    tags: ["Google Business Profile", "GBP", "AEO", "AI search", "local SEO"],
+    readTime: "7 min read",
+    featured: false,
+    leadAnswer: "To optimize your Google Business Profile (GBP) for AI search in 2026, you must treat it as your most critical data source. This means going beyond basic information and providing rich, structured, and verifiable data that builds an AI's confidence in your business. Key optimizations include fully detailed service menus, precise service areas, showcasing credentials, and leveraging Google Posts to demonstrate ongoing activity and expertise.",
+    content: [
+      {
+        type: "section",
+        heading: "Introduction: Your GBP is Your Digital Front Door for AI",
+        content: `In the era of AI-powered search, your Google Business Profile is no longer just a listing; it is the foundational block of your online identity. When a user asks ChatGPT, Perplexity, or Google AI for a local business recommendation, your GBP is one of the first and most trusted sources they consult.
+
+A poorly optimized profile is a sign of a neglected business, reducing an AI's confidence in recommending you. A world-class profile, on the other hand, provides the clear, structured data that AI engines need to trust and recommend your services. This guide provides a comprehensive, step-by-step methodology for optimizing your GBP to dominate AI search in 2026.`
+      },
+      {
+        type: "section",
+        heading: "Step-by-Step GBP Optimization for AI Visibility",
+        content: `Follow this comprehensive checklist to ensure your GBP is perfectly optimized for AI search engines.
+
+**Step 1: Foundational Business Information** - Your business name must be your exact, legal business name. Your address must be real and verifiable. Use a local phone number as it's a stronger geographic signal. Link to your mobile-friendly, secure website.
+
+**Step 2: Categories and Services** - Choose the most specific primary category. Add all relevant secondary categories. Create a detailed services menu with descriptions and prices.
+
+**Step 3: Service Areas** - Be precise. List specific boroughs, postcodes, or neighborhoods you serve.
+
+**Step 4: Showcasing Expertise** - Write a detailed 750-character business description. Add your credentials and licenses. Upload high-quality, geotagged photos and videos.
+
+**Step 5: Google Posts and Q&A** - Create weekly posts to show your business is active. Proactively populate the Q&A section with common customer questions and detailed answers.`
+      }
+    ],
+    faqs: [
+      {
+        question: "How often should I update my Google Business Profile?",
+        answer: "You should check your profile for accuracy at least once a month. You should be creating Google Posts and adding new photos at least once a week to signal that your business is active."
+      },
+      {
+        question: "Can I use AI to help optimize my GBP?",
+        answer: "Yes, AI tools can help you write detailed service descriptions, create engaging Google Posts, and analyze customer reviews to identify common themes. However, the core data must be accurate and human-verified."
+      },
+      {
+        question: "What is the biggest mistake tradespeople make with their GBP?",
+        answer: "Incompleteness. Leaving sections blank is the fastest way to lose an AI's trust. A close second is inconsistency—having different business names or phone numbers across the web."
+      }
+    ],
+    cta: {
+      text: "Whoza.ai helps UK tradespeople optimize their entire online presence for AI search, starting with a world-class Google Business Profile.",
+      buttonText: "Get Your Free AI Visibility Score",
+      buttonLink: "/free-score"
+    }
+  },
+  {
+    id: "why-your-business-isnt-in-chatgpt-recommendations",
+    slug: "why-your-business-isnt-in-chatgpt-recommendations",
+    title: "Why Your Business Isn't Showing Up in ChatGPT Recommendations (And How to Fix It)",
+    metaDescription: "Find out why your business isn't being recommended by ChatGPT and other AI assistants. Learn how to fix common issues like inconsistent data, a neglected Google Business Profile, and a lack of expertise signals.",
+    publishDate: "2026-01-25",
+    author: "Whoza.ai Team",
+    category: "AI Visibility",
+    tags: ["ChatGPT", "AI search", "AEO", "local SEO", "troubleshooting"],
+    readTime: "7 min read",
+    featured: false,
+    leadAnswer: "If your business isn't showing up in ChatGPT recommendations, it's likely due to a lack of Entity Confidence. This means ChatGPT cannot find enough consistent, authoritative, and trustworthy information about your business online to feel confident recommending you. The most common causes are an inconsistent online presence, a poorly optimized Google Business Profile, and a lack of verifiable expertise signals.",
+    content: [
+      {
+        type: "section",
+        heading: "Introduction: The Frustration of AI Invisibility",
+        content: `You've seen it happen. A potential customer asks ChatGPT or another AI assistant for a local tradesperson, and your competitor's name pops up. You know you offer a better service, but to the AI, you might as well be invisible. This is a common and frustrating problem for many UK tradespeople in 2026.
+
+The good news is that this is a solvable problem. AI recommendations are not random; they are based on a logical process of data evaluation. This guide will walk you through the most common reasons why your business is being overlooked by AI search and provide a clear, actionable plan to fix it.`
+      },
+      {
+        type: "section",
+        heading: "The Three Main Problems",
+        content: `When ChatGPT fails to recommend your business, it's not a judgment on the quality of your work. It's a judgment on the quality of your data.
+
+**1. Inconsistent NAP Data** - Your business name, address, and phone number are different across various online platforms. These inconsistencies are major red flags for AI.
+
+**2. Neglected Google Business Profile** - Your GBP is incomplete, with missing service descriptions, no recent photos, and no updates in months. This signals to AI that your business may not be active.
+
+**3. Lack of Verifiable Expertise** - You're highly skilled, but there's no online proof. Your qualifications aren't listed, you have few reviews, and you're not mentioned on reputable websites.`
+      },
+      {
+        type: "section",
+        heading: "The 30-Day Action Plan",
+        content: `Fixing your AI visibility won't happen overnight, but you can make significant progress in just 30 days.
+
+- **Week 1: The Great Cleanup** - Conduct your online audit and fix all NAP inconsistencies. This is your foundation.
+- **Week 2: GBP Overhaul** - Dedicate a few hours to fully optimizing your Google Business Profile.
+- **Week 3: The Review Push** - Reach out to your last 10-20 happy customers and ask for a Google review.
+- **Week 4: Content and Citations** - Write your first expert blog post and get listed in 3-5 high-quality directories.`
+      }
+    ],
+    faqs: [
+      {
+        question: "I've done all this, but I'm still not showing up. What now?",
+        answer: "Building authority takes time. If your foundation is solid, the next step is to consistently create expert content and build more high-quality backlinks and citations. It's a marathon, not a sprint."
+      },
+      {
+        question: "Does my website design matter to AI?",
+        answer: "Indirectly, yes. A professional, mobile-friendly website with clear navigation is easier for AI crawlers to understand. More importantly, it provides a better user experience, which can lead to longer visit times and lower bounce rates—positive signals for all search engines."
+      },
+      {
+        question: "Where should I focus my efforts first?",
+        answer: "Your Google Business Profile. It is the single most impactful element for local AI search visibility. A perfectly optimized GBP can start yielding results faster than any other single activity."
+      }
+    ],
+    cta: {
+      text: "Whoza.ai provides the tools and weekly tasks to make this process simple.",
+      buttonText: "Get Your Free AI Visibility Score",
+      buttonLink: "/free-score"
+    }
+  },
+  {
     id: 'how-uk-tradespeople-get-found-chatgpt-ai-search-2026',
     slug: 'how-uk-tradespeople-get-found-chatgpt-ai-search-2026',
     title: 'How UK Tradespeople Can Get Found on ChatGPT and AI Search in 2026',
