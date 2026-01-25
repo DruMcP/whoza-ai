@@ -88,17 +88,31 @@ export default function ComparisonTable() {
               </th>
               <th style={{
                 padding: '20px',
-                textAlign: 'left',
+                textAlign: 'center',
                 fontSize: '16px',
                 fontWeight: '700',
                 color: '#c4f135',
                 borderBottom: '2px solid #c4f135',
                 background: 'rgba(196, 241, 53, 0.1)',
-                borderLeft: '2px solid #c4f135',
-                borderTop: '2px solid #c4f135',
-                borderTopLeftRadius: '12px'
+                border: '2px solid #c4f135',
+                borderTopLeftRadius: '12px',
+                borderTopRightRadius: '12px',
+                boxSizing: 'border-box'
               }}>
-                whoza.ai (with Rex)
+                <div style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: '4px'
+                }}>
+                  <span>whoza.ai with Rex</span>
+                  <span style={{
+                    fontSize: '13px',
+                    fontWeight: '600',
+                    color: '#c4f135',
+                    opacity: 0.9
+                  }}>(your AI employee)</span>
+                </div>
               </th>
               <th style={{
                 padding: '20px',
@@ -144,11 +158,14 @@ export default function ComparisonTable() {
                   padding: '20px',
                   fontSize: '15px',
                   color: '#ffffff',
-                  borderBottom: index < features.length - 1 ? '1px solid rgba(196, 241, 53, 0.2)' : 'none',
+                  borderBottom: index < features.length - 1 ? '1px solid rgba(196, 241, 53, 0.2)' : '2px solid #c4f135',
                   background: 'rgba(196, 241, 53, 0.05)',
                   borderLeft: '2px solid #c4f135',
-                  borderRight: index === features.length - 1 ? 'none' : '2px solid #c4f135',
-                  fontWeight: '600'
+                  borderRight: '2px solid #c4f135',
+                  borderBottomLeftRadius: index === features.length - 1 ? '12px' : '0',
+                  borderBottomRightRadius: index === features.length - 1 ? '12px' : '0',
+                  fontWeight: '600',
+                  boxSizing: 'border-box'
                 }}>
                   <div style={{
                     display: 'flex',
