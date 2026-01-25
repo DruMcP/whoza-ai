@@ -50,22 +50,38 @@ export default function ProofCard() {
           Brighton Plumber
         </div>
 
+        {/* Horizontal Progress Row with Arrow */}
         <div style={{
           display: 'flex',
           alignItems: 'center',
-          gap: 'var(--spacing-sm)',
-          marginBottom: 'var(--spacing-xs)',
-          fontSize: '20px',
-          fontWeight: 700
+          justifyContent: 'space-between',
+          marginBottom: 'var(--spacing-sm)',
+          flexWrap: 'wrap',
+          gap: 'var(--spacing-xs)'
         }}>
-          <span style={{ color: '#ef4444' }}>23</span>
-          <Icon name="arrow-right" size={20} style={{ color: 'var(--color-primary-600)' }} />
-          <span style={{ color: 'var(--color-primary-600)' }}>67</span>
+          {/* Score Progress: 23 → 67 */}
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 'var(--spacing-md)',
+            fontSize: '20px',
+            fontWeight: 700
+          }}>
+            <span style={{ color: '#ef4444' }}>23</span>
+            <span style={{ 
+              color: '#1a1a2e',
+              fontWeight: 600,
+              fontSize: '20px'
+            }}>→</span>
+            <span style={{ color: 'var(--color-primary-600)' }}>67</span>
+          </div>
+
+          {/* Visibility Score Label - Aligned to the right on mobile */}
           <span style={{
             fontSize: '14px',
             color: '#374151',
             fontWeight: 400,
-            marginLeft: 'var(--spacing-xs)'
+            whiteSpace: 'nowrap'
           }}>
             Visibility Score
           </span>
