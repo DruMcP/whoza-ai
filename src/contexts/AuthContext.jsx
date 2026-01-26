@@ -19,14 +19,26 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setUser(session?.user ?? null);
-      if (session?.user) {
-        fetchUserData(session.user.id);
-      } else {
-        setLoading(false);
-      }
-    });
+    // Handle auth initialization with error handling for known Supabase AbortError
+    supabase.auth.getSession()
+      .then(({ data: { session } }) => {
+        setUser(session?.user ?? null);
+        if (session?.user) {
+          fetchUserData(session.user.id);
+        } else {
+          setLoading(false);
+        }
+      })
+      .catch((error) => {
+        // Handle known Supabase AbortError (GitHub issue #41968)
+        if (error.name === 'AbortError') {
+          logger.warn('Auth session retrieval aborted, will retry on next auth state change', { error });
+          setLoading(false);
+        } else {
+          logger.error('Error getting auth session', { error });
+          setLoading(false);
+        }
+      });
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (event, session) => {

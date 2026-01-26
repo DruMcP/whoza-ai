@@ -10,7 +10,7 @@
   "dependencies": {
     "@sentry/react": "^10.32.1",
     "@sentry/vite-plugin": "^4.6.1",
-    "@supabase/supabase-js": "^2.89.0",
+    "@supabase/supabase-js": "^2.93.0",
     "@vitejs/plugin-react": "^5.1.2",
     "canvas-confetti": "^1.9.4",
     "framer-motion": "^12.26.2",

@@ -20,6 +20,22 @@ Sentry.init({
   replaysSessionSampleRate: 0.1,
   replaysOnErrorSampleRate: 1.0,
   environment: import.meta.env.MODE,
+  // Ignore known Supabase auth-js AbortError (GitHub issue #41968)
+  // This is a benign race condition that doesn't affect functionality
+  ignoreErrors: [
+    'AbortError: signal is aborted without reason',
+    /signal is aborted without reason/,
+    /AbortError.*locks\.js/,
+  ],
+  beforeSend(event, hint) {
+    const error = hint.originalException;
+    // Filter out Supabase AbortErrors that don't affect functionality
+    if (error && error.name === 'AbortError' && 
+        error.message && error.message.includes('signal is aborted')) {
+      return null; // Don't send to Sentry
+    }
+    return event;
+  },
 })
 
 ReactGA.initialize('G-VCQND9WPW9')

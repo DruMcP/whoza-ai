@@ -15,11 +15,11 @@ importers:
         specifier: ^4.6.1
         version: 4.6.2
       '@supabase/supabase-js':
-        specifier: ^2.89.0
-        version: 2.90.1
+        specifier: ^2.93.0
+        version: 2.93.0
       '@vitejs/plugin-react':
         specifier: ^5.1.2
-        version: 5.1.2(vite@7.3.1(@types/node@25.0.9))
+        version: 5.1.2(vite@7.3.1(@types/node@25.0.10))
       canvas-confetti:
         specifier: ^1.9.4
         version: 1.9.4
@@ -43,7 +43,7 @@ importers:
         version: 7.12.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       vite:
         specifier: ^7.3.0
-        version: 7.3.1(@types/node@25.0.9)
+        version: 7.3.1(@types/node@25.0.10)
     devDependencies:
       vite-plugin-compression2:
         specifier: ^2.4.0
@@ -545,28 +545,28 @@ packages:
     resolution: {integrity: sha512-hK9N50LlTaPlb2P1r87CFupU7MJjvtrp+Js96a2KDdiP8ViWnw4Gsa/OvA0pkj2wAFXFeBQMLS6g/SktTKG54w==}
     engines: {node: '>= 14'}
 
-  '@supabase/auth-js@2.90.1':
-    resolution: {integrity: sha512-vxb66dgo6h3yyPbR06735Ps+dK3hj0JwS8w9fdQPVZQmocSTlKUW5MfxSy99mN0XqCCuLMQ3jCEiIIUU23e9ng==}
+  '@supabase/auth-js@2.93.0':
+    resolution: {integrity: sha512-cKbYoaFOKa0fE5/PMEd2vvJpvzkOrVFkaMUWaz9lG+bORzzEpUQnMlgBdL8j0VEpMXGkvMgbvvGXVm4UhtCB6g==}
     engines: {node: '>=20.0.0'}
 
-  '@supabase/functions-js@2.90.1':
-    resolution: {integrity: sha512-x9mV9dF1Lam9qL3zlpP6mSM5C9iqMPtF5B/tU1Jj/F0ufX5mjDf9ghVBaErVxmrQJRL4+iMKWKY2GnODkpS8tw==}
+  '@supabase/functions-js@2.93.0':
+    resolution: {integrity: sha512-bg6AFBMCeznBNC6VEZXI7ztnjwmxS6SvI+gtkkjhg0+tiYe0ZucBy56x0c9v9WKbXUXfKgSGAZtaZRSycvz10g==}
     engines: {node: '>=20.0.0'}
 
-  '@supabase/postgrest-js@2.90.1':
-    resolution: {integrity: sha512-jh6vqzaYzoFn3raaC0hcFt9h+Bt+uxNRBSdc7PfToQeRGk7PDPoweHsbdiPWREtDVTGKfu+PyPW9e2jbK+BCgQ==}
+  '@supabase/postgrest-js@2.93.0':
+    resolution: {integrity: sha512-Bg1FVyjJFHbdN2lwcY7p6GgMGYEbY8Zbsqe5VyQOU8RS5KdudN/HB+XfnB5Ov936klZMtm/e3znkBKnqPUaftg==}
     engines: {node: '>=20.0.0'}
 
-  '@supabase/realtime-js@2.90.1':
-    resolution: {integrity: sha512-PWbnEMkcQRuor8jhObp4+Snufkq8C6fBp+MchVp2qBPY1NXk/c3Iv3YyiFYVzo0Dzuw4nAlT4+ahuPggy4r32w==}
+  '@supabase/realtime-js@2.93.0':
+    resolution: {integrity: sha512-q1PERmJ8j2wrKgO+D5wbXmrI/5LPXMgTRBGEZjiiutqG7fiCVpKc4hUjNudstxoMOh6GO+leBA8s/0HFAzvUJQ==}
     engines: {node: '>=20.0.0'}
 
-  '@supabase/storage-js@2.90.1':
-    resolution: {integrity: sha512-GHY+Ps/K/RBfRj7kwx+iVf2HIdqOS43rM2iDOIDpapyUnGA9CCBFzFV/XvfzznGykd//z2dkGZhlZZprsVFqGg==}
+  '@supabase/storage-js@2.93.0':
+    resolution: {integrity: sha512-hUA6dncn+hq9yq9YTj3t4TceL8pDOgIuPkr2BKlnvc/XGnKLV0tb6CAjmNuKPQmHHNSTLP8DwTr4GpsvhDIjrQ==}
     engines: {node: '>=20.0.0'}
 
-  '@supabase/supabase-js@2.90.1':
-    resolution: {integrity: sha512-U8KaKGLUgTIFHtwEW1dgw1gK7XrdpvvYo7nzzqPx721GqPe8WZbAiLh/hmyKLGBYQ/mmQNr20vU9tWSDZpii3w==}
+  '@supabase/supabase-js@2.93.0':
+    resolution: {integrity: sha512-95kw2w+TC2Gy03BlA/s5tAZh9+cofcCvXzZ0DJfMbkGkjv7eGhQJh43sz7803Q1uo2i98jrttWB8ct9kqZ3OPQ==}
     engines: {node: '>=20.0.0'}
 
   '@types/babel__core@7.20.5':
@@ -584,8 +584,8 @@ packages:
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
 
-  '@types/node@25.0.9':
-    resolution: {integrity: sha512-/rpCXHlCWeqClNBwUhDcusJxXYDjZTyE8v5oTO7WbL8eij2nKhUeU89/6xgjU7N4/Vh3He0BtyhJdQbDyhiXAw==}
+  '@types/node@25.0.10':
+    resolution: {integrity: sha512-zWW5KPngR/yvakJgGOmZ5vTBemDoSqF3AcV/LrO5u5wTWyEAVVh+IT39G4gtyAkh3CtTZs8aX/yRM82OfzHJRg==}
 
   '@types/phoenix@1.6.7':
     resolution: {integrity: sha512-oN9ive//QSBkf19rfDv45M7eZPi0eEXylht2OLEXicu5b4KoQ1OzXIw+xDSGWxSxe1JmepRR/ZH283vsu518/Q==}
@@ -1528,19 +1528,19 @@ snapshots:
       - encoding
       - supports-color
 
-  '@supabase/auth-js@2.90.1':
+  '@supabase/auth-js@2.93.0':
     dependencies:
       tslib: 2.8.1
 
-  '@supabase/functions-js@2.90.1':
+  '@supabase/functions-js@2.93.0':
     dependencies:
       tslib: 2.8.1
 
-  '@supabase/postgrest-js@2.90.1':
+  '@supabase/postgrest-js@2.93.0':
     dependencies:
       tslib: 2.8.1
 
-  '@supabase/realtime-js@2.90.1':
+  '@supabase/realtime-js@2.93.0':
     dependencies:
       '@types/phoenix': 1.6.7
       '@types/ws': 8.18.1
@@ -1550,18 +1550,18 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@supabase/storage-js@2.90.1':
+  '@supabase/storage-js@2.93.0':
     dependencies:
       iceberg-js: 0.8.1
       tslib: 2.8.1
 
-  '@supabase/supabase-js@2.90.1':
+  '@supabase/supabase-js@2.93.0':
     dependencies:
-      '@supabase/auth-js': 2.90.1
-      '@supabase/functions-js': 2.90.1
-      '@supabase/postgrest-js': 2.90.1
-      '@supabase/realtime-js': 2.90.1
-      '@supabase/storage-js': 2.90.1
+      '@supabase/auth-js': 2.93.0
+      '@supabase/functions-js': 2.93.0
+      '@supabase/postgrest-js': 2.93.0
+      '@supabase/realtime-js': 2.93.0
+      '@supabase/storage-js': 2.93.0
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -1589,7 +1589,7 @@ snapshots:
 
   '@types/estree@1.0.8': {}
 
-  '@types/node@25.0.9':
+  '@types/node@25.0.10':
     dependencies:
       undici-types: 7.16.0
 
@@ -1597,9 +1597,9 @@ snapshots:
 
   '@types/ws@8.18.1':
     dependencies:
-      '@types/node': 25.0.9
+      '@types/node': 25.0.10
 
-  '@vitejs/plugin-react@5.1.2(vite@7.3.1(@types/node@25.0.9))':
+  '@vitejs/plugin-react@5.1.2(vite@7.3.1(@types/node@25.0.10))':
     dependencies:
       '@babel/core': 7.28.6
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.28.6)
@@ -1607,7 +1607,7 @@ snapshots:
       '@rolldown/pluginutils': 1.0.0-beta.53
       '@types/babel__core': 7.20.5
       react-refresh: 0.18.0
-      vite: 7.3.1(@types/node@25.0.9)
+      vite: 7.3.1(@types/node@25.0.10)
     transitivePeerDependencies:
       - supports-color
 
@@ -2027,7 +2027,7 @@ snapshots:
     transitivePeerDependencies:
       - rollup
 
-  vite@7.3.1(@types/node@25.0.9):
+  vite@7.3.1(@types/node@25.0.10):
     dependencies:
       esbuild: 0.27.2
       fdir: 6.5.0(picomatch@4.0.3)
@@ -2036,7 +2036,7 @@ snapshots:
       rollup: 4.55.1
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 25.0.9
+      '@types/node': 25.0.10
       fsevents: 2.3.3
 
   webidl-conversions@3.0.1: {}
