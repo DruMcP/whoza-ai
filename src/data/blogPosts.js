@@ -7,7 +7,7 @@
 export const blogPosts = [
   {
     id: "how-ai-chooses-local-businesses",
-    slug: "how-ai-chooses-local-businesses",
+    slug: "how-ai-search-engines-choose-which-local-businesses-to-recommend",
     title: "How AI Search Engines Choose Which Local Businesses to Recommend",
     metaDescription: "Learn how AI search engines like ChatGPT and Google AI decide which local businesses to recommend. Understand Entity Confidence and the key signals that build trust with AI.",
     publishDate: "2026-01-25",
@@ -75,7 +75,7 @@ Google's E-A-T (Expertise, Authoritativeness, and Trustworthiness) framework is 
   },
   {
     id: "google-business-profile-optimization-for-ai-search",
-    slug: "google-business-profile-optimization-for-ai-search",
+    slug: "the-ultimate-guide-to-google-business-profile-optimization-for-ai-search-2026",
     title: "The Ultimate Guide to Google Business Profile Optimization for AI Search (2026)",
     metaDescription: "A step-by-step guide for UK tradespeople on how to optimize their Google Business Profile for AI search engines. Learn the AI-first approach to GBP optimization to dominate local AI search in 2026.",
     publishDate: "2026-01-25",
@@ -131,7 +131,7 @@ A poorly optimized profile is a sign of a neglected business, reducing an AI's c
   },
   {
     id: "why-your-business-isnt-in-chatgpt-recommendations",
-    slug: "why-your-business-isnt-in-chatgpt-recommendations",
+    slug: "why-your-business-isnt-showing-up-in-chatgpt-recommendations-and-how-to-fix-it",
     title: "Why Your Business Isn't Showing Up in ChatGPT Recommendations (And How to Fix It)",
     metaDescription: "Find out why your business isn't being recommended by ChatGPT and other AI assistants. Learn how to fix common issues like inconsistent data, a neglected Google Business Profile, and a lack of expertise signals.",
     publishDate: "2026-01-25",
@@ -193,7 +193,7 @@ The good news is that this is a solvable problem. AI recommendations are not ran
   },
   {
     id: 'how-uk-tradespeople-get-found-chatgpt-ai-search-2026',
-    slug: 'how-uk-tradespeople-get-found-chatgpt-ai-search-2026',
+    slug: 'how-uk-tradespeople-can-get-found-on-chatgpt-and-ai-search-in-2026',
     title: 'How UK Tradespeople Can Get Found on ChatGPT and AI Search in 2026',
     metaDescription: 'A guide for UK tradespeople on how to get their business found and recommended by AI search engines like ChatGPT and Google AI Overviews. Learn practical AEO strategies to increase your AI visibility and get more leads in 2026.',
     publishDate: '2026-01-23',
@@ -284,7 +284,7 @@ The tradespeople who invest in AEO now are building a sustainable competitive ad
   },
   {
     id: 'how-uk-tradespeople-get-recommended-chatgpt-2026',
-    slug: 'how-uk-tradespeople-get-recommended-chatgpt-2026',
+    slug: 'how-uk-tradespeople-can-get-recommended-by-chatgpt-in-2026',
     title: 'How UK Tradespeople Can Get Recommended by ChatGPT in 2026',
     metaDescription: 'Learn the 7-step strategy for getting your UK trade business recommended by ChatGPT. Practical AEO tactics for plumbers, electricians, roofers, and builders to dominate AI search in 2026.',
     publishDate: '2026-01-20',
@@ -466,7 +466,7 @@ The goal is to create a pattern of consistent activity that tells AI your busine
   },
   {
     id: 'electricians-guide-to-google-ai-overviews',
-    slug: 'electricians-guide-to-google-ai-overviews',
+    slug: 'electricians-guide-to-google-ai-overviews-how-to-get-featured',
     title: 'Electrician\'s Guide to Google AI Overviews: How to Get Featured',
     metaDescription: 'A comprehensive guide for UK electricians on how to get their business featured in Google AI Overviews. Learn about AEO, structured data, and content strategies to boost your electrician AI visibility.',
     publishDate: '2026-01-21',
