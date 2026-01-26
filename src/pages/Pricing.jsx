@@ -411,7 +411,7 @@ export default function Pricing() {
                             fontSize: '14px',
                             color: '#6B7280'
                           }}>
-                            £{plan.price}/mo
+                            £{plan.price}/month
                           </div>
                         </div>
                       </th>
@@ -506,7 +506,7 @@ export default function Pricing() {
                   Monitor
                 </div>
                 <div style={{ fontSize: '48px', fontWeight: 700, marginBottom: 'var(--spacing-xs)' }}>
-                  <span style={{ fontSize: '24px' }}>£</span>19<span style={{ fontSize: '18px', color: '#6B7280' }}>/mo</span>
+                  <span style={{ fontSize: '24px' }}>£</span>19<span style={{ fontSize: '18px', color: '#6B7280' }}>/month</span>
                 </div>
                 <p style={{ color: '#9CA3AF', fontSize: '16px', lineHeight: '1.6', minHeight: '75px' }}>
                   Track your AI visibility score and trend.
@@ -549,7 +549,7 @@ export default function Pricing() {
                   Improve
                 </div>
                 <div style={{ fontSize: '48px', fontWeight: 700, marginBottom: 'var(--spacing-xs)' }}>
-                  <span style={{ fontSize: '24px' }}>£</span>59<span style={{ fontSize: '18px', color: '#6B7280' }}>/mo</span>
+                  <span style={{ fontSize: '24px' }}>£</span>59<span style={{ fontSize: '18px', color: '#6B7280' }}>/month</span>
                 </div>
                 <p style={{ color: '#9CA3AF', fontSize: '16px', lineHeight: '1.6', minHeight: '75px' }}>
                   One approved improvement per week + monthly confidence score.
@@ -574,7 +574,7 @@ export default function Pricing() {
                   Priority
                 </div>
                 <div style={{ fontSize: '48px', fontWeight: 700, marginBottom: 'var(--spacing-xs)' }}>
-                  <span style={{ fontSize: '24px' }}>£</span>149<span style={{ fontSize: '18px', color: '#6B7280' }}>/mo</span>
+                  <span style={{ fontSize: '24px' }}>£</span>149<span style={{ fontSize: '18px', color: '#6B7280' }}>/month</span>
                 </div>
                 <p style={{ color: '#9CA3AF', fontSize: '16px', lineHeight: '1.6', minHeight: '75px' }}>
                   Faster reviews + extra caution for high-value or regulated services.
