@@ -25,7 +25,28 @@ Deno.serve(async (req: Request) => {
       apiVersion: "2023-10-16",
     });
 
-    const { user_id, price_id, success_url, cancel_url } = await req.json();
+    // Read request body as text first, then parse manually
+    // This provides better error handling and debugging
+    let body;
+    try {
+      const bodyText = await req.text();
+      console.log("Request body text:", bodyText);
+      body = JSON.parse(bodyText);
+    } catch (error) {
+      console.error("Failed to parse request body:", error);
+      return new Response(
+        JSON.stringify({ 
+          error: "Invalid request body",
+          details: error.message 
+        }),
+        {
+          status: 400,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        }
+      );
+    }
+
+    const { user_id, price_id, success_url, cancel_url } = body;
 
     if (!user_id || !price_id || !success_url || !cancel_url) {
       return new Response(

@@ -22,6 +22,13 @@ export default function Checkout() {
   const founderPrice = userData?.founder ? 19 : null;
 
   const handleCheckout = async () => {
+    // Check if user is logged in
+    if (!userData || !userData.id) {
+      toast.error('Please log in to continue with checkout.');
+      navigate('/login');
+      return;
+    }
+
     setLoading(true);
     try {
       const priceIds = {
