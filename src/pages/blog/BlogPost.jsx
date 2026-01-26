@@ -202,8 +202,17 @@ function BlogPost() {
             <h1 itemProp="headline">{post.title}</h1>
             
             {/* Lead Answer - Critical for AEO */}
-            <div className="lead-answer" itemProp="description">
-              <p>{post.leadAnswer}</p>
+            <div className="lead-answer" itemProp="description" style={{
+              fontSize: '1.125rem',
+              lineHeight: '1.75',
+              color: '#ffffff',
+              backgroundColor: 'rgba(59, 130, 246, 0.05)',
+              borderLeft: '4px solid #3b82f6',
+              padding: '1.5rem',
+              marginBottom: '2rem',
+              borderRadius: '0.375rem'
+            }}>
+              <p style={{ margin: 0, color: '#ffffff' }}>{post.leadAnswer}</p>
             </div>
             
             <div className="article-author" itemProp="author" itemScope itemType="https://schema.org/Organization">
