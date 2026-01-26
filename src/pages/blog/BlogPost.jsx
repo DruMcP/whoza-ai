@@ -199,7 +199,7 @@ function BlogPost() {
               <span className="post-read-time">{post.readTime}</span>
             </div>
             
-            <h1 itemProp="headline">{post.title}</h1>
+            <h1 itemProp="headline" style={{ color: '#ffffff', fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 700, margin: '20px 0', lineHeight: 1.2 }}>{post.title}</h1>
             
             {/* Lead Answer - Critical for AEO */}
             <div className="lead-answer" itemProp="description" style={{
