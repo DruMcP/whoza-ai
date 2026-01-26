@@ -310,18 +310,22 @@ export default function Home() {
             </div>
 
             <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: 'var(--spacing-2xl)',
-              marginBottom: 'var(--spacing-2xl)'
-            }}>
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 'var(--spacing-xl)',
+              marginBottom: 'var(--spacing-2xl)',
+              padding: '0 var(--spacing-md)'
+            }} className="three-step-container">
               <div style={{
                 background: 'linear-gradient(135deg, rgba(132, 204, 22, 0.08) 0%, rgba(132, 204, 22, 0.03) 100%)',
                 border: '2px solid rgba(132, 204, 22, 0.2)',
                 borderRadius: 'var(--radius-xl)',
                 padding: 'var(--spacing-xl)',
-                textAlign: 'center'
-              }}>
+                textAlign: 'center',
+                width: '100%',
+                maxWidth: '100%',
+                margin: '0 auto'
+              }} className="step-card">
                 <div style={{
                   width: '64px',
                   height: '64px',
@@ -360,8 +364,11 @@ export default function Home() {
                 border: '2px solid rgba(132, 204, 22, 0.2)',
                 borderRadius: 'var(--radius-xl)',
                 padding: 'var(--spacing-xl)',
-                textAlign: 'center'
-              }}>
+                textAlign: 'center',
+                width: '100%',
+                maxWidth: '100%',
+                margin: '0 auto'
+              }} className="step-card">
                 <div style={{
                   width: '64px',
                   height: '64px',
@@ -400,8 +407,11 @@ export default function Home() {
                 border: '2px solid rgba(132, 204, 22, 0.2)',
                 borderRadius: 'var(--radius-xl)',
                 padding: 'var(--spacing-xl)',
-                textAlign: 'center'
-              }}>
+                textAlign: 'center',
+                width: '100%',
+                maxWidth: '100%',
+                margin: '0 auto'
+              }} className="step-card">
                 <div style={{
                   width: '64px',
                   height: '64px',

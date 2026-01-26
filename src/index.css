@@ -11158,3 +11158,54 @@ section {
     width: 280px !important;
   }
 }
+
+/* ===================================
+   MOBILE FIX: Three-Step Section
+   (Measure / Fix / Track)
+   =================================== */
+
+/* Desktop layout: horizontal grid */
+@media (min-width: 768px) {
+  .three-step-container {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    flex-direction: row !important;
+    gap: var(--spacing-2xl) !important;
+    padding: 0 !important;
+  }
+  
+  .step-card {
+    max-width: none !important;
+  }
+}
+
+/* Mobile layout: vertical stack with proper spacing */
+@media (max-width: 767px) {
+  .three-step-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--spacing-xl) !important;
+    padding: 0 var(--spacing-md) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .step-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* Extra small mobile devices (≤430px) */
+@media (max-width: 430px) {
+  .three-step-container {
+    padding: 0 var(--spacing-sm) !important;
+    gap: var(--spacing-md) !important;
+  }
+  
+  .step-card {
+    padding: var(--spacing-md) !important;
+  }
+}
