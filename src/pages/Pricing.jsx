@@ -209,19 +209,19 @@ export default function Pricing() {
 
                 <div className="pricing-card-header" style={{ marginTop: plan.popular ? 'var(--spacing-md)' : 0 }}>
                   <div style={{
-                    fontSize: '14px',
-                    fontWeight: 600,
+                    fontSize: '20px',
+                    fontWeight: 700,
                     textTransform: 'uppercase',
                     letterSpacing: '1px',
-                    color: 'var(--color-primary-600)',
-                    marginBottom: 'var(--spacing-xs)'
+                    color: '#3B82F6',
+                    marginBottom: '8px'
                   }}>
                     {plan.name}
                   </div>
                   <h3 style={{
                     fontSize: '24px',
                     fontWeight: 700,
-                    marginBottom: 'var(--spacing-xs)',
+                    marginBottom: '6px',
                     color: '#ffffff'
                   }}>
                     {plan.headline}
@@ -230,22 +230,22 @@ export default function Pricing() {
                     fontSize: '15px',
                     color: '#4B5563',
                     fontStyle: 'italic',
-                    marginBottom: 'var(--spacing-lg)'
+                    marginBottom: '12px'
                   }}>
                     {plan.subheadline}
                   </p>
                 </div>
 
-                <div className="pricing-card-price" style={{ marginBottom: 'var(--spacing-lg)' }}>
+                <div className="pricing-card-price" style={{ marginBottom: '8px' }}>
                   <span className="price-currency">£</span>
                   <span className="price-amount">{plan.price}</span>
-                  <span className="price-period">/mo</span>
+                  <span className="price-period">/month</span>
                 </div>
 
                 <div style={{
                   fontSize: '13px',
                   color: '#6B7280',
-                  marginBottom: 'var(--spacing-md)',
+                  marginBottom: '12px',
                   textAlign: 'center'
                 }}>
                   billed monthly
@@ -256,7 +256,7 @@ export default function Pricing() {
                     fontSize: '13px',
                     color: 'var(--color-primary-600)',
                     fontWeight: 600,
-                    marginBottom: 'var(--spacing-lg)',
+                    marginBottom: '12px',
                     textAlign: 'center',
                     padding: 'var(--spacing-xs)',
                     background: 'rgba(132, 204, 22, 0.1)',
@@ -271,7 +271,7 @@ export default function Pricing() {
                   className={`pricing-cta btn-hover ${plan.popular ? 'button' : 'button-secondary'}`}
                   style={{
                     width: '100%',
-                    marginBottom: 'var(--spacing-md)'
+                    marginBottom: '10px'
                   }}
                 >
                   {plan.cta}
@@ -280,7 +280,7 @@ export default function Pricing() {
                 <div style={{
                   fontSize: '13px',
                   color: '#4B5563',
-                  marginBottom: 'var(--spacing-lg)',
+                  marginBottom: '12px',
                   textAlign: 'center',
                   minHeight: '40px',
                   display: 'flex',
@@ -300,8 +300,9 @@ export default function Pricing() {
                       display: 'flex',
                       alignItems: 'flex-start',
                       gap: 'var(--spacing-sm)',
-                      marginBottom: 'var(--spacing-sm)',
+                      marginBottom: '6px',
                       fontSize: '15px',
+                      lineHeight: '1.4',
                       color: feature.includes('Everything in') ? 'var(--color-primary-600)' : '#374151',
                       fontWeight: feature.includes('Everything in') ? 600 : 400
                     }}>
