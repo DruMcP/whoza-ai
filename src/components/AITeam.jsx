@@ -528,12 +528,14 @@ export default function AITeam({ onWaitlistSubmit }) {
           </p>
         </div>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '2rem',
-          marginBottom: '4rem'
-        }}>
+        <div 
+          className="ai-team-cards-container"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '2rem',
+            marginBottom: '4rem'
+          }}>
           {teamMembers.map((member) => (
             <TeamCard
               key={member.id}

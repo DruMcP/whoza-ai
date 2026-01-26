@@ -20,6 +20,7 @@ const Header = memo(function Header() {
   const navigate = useNavigate();
   const [isAnimating, setIsAnimating] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -49,6 +50,31 @@ const Header = memo(function Header() {
     navigate('/');
   }, [signOut, navigate]);
 
+  const toggleMobileMenu = useCallback(() => {
+    setIsMobileMenuOpen(prev => !prev);
+  }, []);
+
+  const closeMobileMenu = useCallback(() => {
+    setIsMobileMenuOpen(false);
+  }, []);
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    closeMobileMenu();
+  }, [window.location.pathname]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <header className={`header ${isScrolled ? 'header-scrolled' : ''}`} role="banner">
       <div className="header-inner">
@@ -64,19 +90,34 @@ const Header = memo(function Header() {
           </div>
         </div>
 
-        <nav className="header-navigation" aria-label="Main navigation">
+        {/* Mobile Hamburger Button */}
+        <button 
+          className="mobile-menu-toggle"
+          onClick={toggleMobileMenu}
+          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-navigation"
+        >
+          <span className="hamburger-icon">
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+          </span>
+        </button>
+
+        <nav className={`header-navigation ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`} id="mobile-navigation" aria-label="Main navigation">
           {!user ? (
             <>
               <ul className="header-nav-primary" role="list">
-                <li><Link to="/how-it-works" className="nav-link">How it works</Link></li>
-                <li><Link to="/case-studies" className="nav-link">Case Studies</Link></li>
-                <li><Link to="/pricing" className="nav-link">Pricing</Link></li>
-                <li><Link to="/trust" className="nav-link">Trust & Reviews</Link></li>
-                <li><Link to="/contact" className="nav-link">Contact</Link></li>
+                <li><Link to="/how-it-works" className="nav-link" onClick={closeMobileMenu}>How it works</Link></li>
+                <li><Link to="/case-studies" className="nav-link" onClick={closeMobileMenu}>Case Studies</Link></li>
+                <li><Link to="/pricing" className="nav-link" onClick={closeMobileMenu}>Pricing</Link></li>
+                <li><Link to="/trust" className="nav-link" onClick={closeMobileMenu}>Trust & Reviews</Link></li>
+                <li><Link to="/contact" className="nav-link" onClick={closeMobileMenu}>Contact</Link></li>
               </ul>
               <div className="header-nav-secondary">
                 <AccessibilityMenu />
-                <Link to="/start" className="button button-header-cta btn-hover" aria-label="Get started with whoza.ai">Get started</Link>
+                <Link to="/start" className="button button-header-cta btn-hover" aria-label="Get started with whoza.ai" onClick={closeMobileMenu}>Get started</Link>
               </div>
             </>
           ) : userData?.role === 'admin' ? (

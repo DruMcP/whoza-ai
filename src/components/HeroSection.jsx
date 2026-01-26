@@ -49,12 +49,14 @@ const HeroSection = () => {
           </p>
 
           {/* 3-STEP MENTAL MODEL */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '16px',
-            marginBottom: '40px'
-          }}>
+          <div 
+            className="hero-steps-container"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(3, 1fr)',
+              gap: '16px',
+              marginBottom: '40px'
+            }}>
             {/* STEP 1: MEASURE */}
             <div style={{
               background: 'rgba(132, 204, 22, 0.05)',

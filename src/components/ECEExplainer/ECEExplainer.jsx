@@ -153,12 +153,14 @@ export default function ECEExplainer() {
           </p>
         </div>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-          gap: '24px',
-          marginBottom: '48px'
-        }}>
+        <div 
+          className="ece-pillars-container"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+            gap: '24px',
+            marginBottom: '48px'
+          }}>
           {PILLAR_DATA.map((pillar, index) => {
             const IconComponent = pillar.icon;
             return (

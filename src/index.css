@@ -11209,3 +11209,372 @@ section {
     padding: var(--spacing-md) !important;
   }
 }
+
+
+/* ===================================
+   MOBILE FIX: Header Navigation
+   (Hamburger Menu for Mobile)
+   =================================== */
+
+/* Hide mobile menu toggle on desktop */
+.mobile-menu-toggle {
+  display: none;
+}
+
+/* Mobile-only styles (≤767px) */
+@media (max-width: 767px) {
+  /* Show hamburger button on mobile */
+  .mobile-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 24px;
+    right: 16px;
+    z-index: 1001;
+  }
+
+  .hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+  }
+
+  .hamburger-line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-text);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* Animate hamburger to X when menu is open */
+  .mobile-menu-open ~ .mobile-menu-toggle .hamburger-line:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+  }
+
+  .mobile-menu-open ~ .mobile-menu-toggle .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-open ~ .mobile-menu-toggle .hamburger-line:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+  }
+
+  /* Hide navigation by default on mobile */
+  .header-navigation {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background: var(--color-background);
+    box-shadow: -4px 0 16px rgba(0, 0, 0, 0.1);
+    padding: 80px 24px 24px;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    align-items: stretch;
+  }
+
+  /* Show navigation when mobile menu is open */
+  .header-navigation.mobile-menu-open {
+    right: 0;
+  }
+
+  /* Stack navigation items vertically */
+  .header-nav-primary {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    width: 100%;
+  }
+
+  .header-nav-primary li {
+    width: 100%;
+  }
+
+  .header-nav-primary .nav-link {
+    display: block;
+    padding: 12px 16px;
+    font-size: 16px;
+    text-align: left;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+  }
+
+  .header-nav-primary .nav-link:hover,
+  .header-nav-primary .nav-link:focus {
+    background-color: var(--color-neutral-100);
+  }
+
+  /* Secondary navigation (CTA buttons) */
+  .header-nav-secondary {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    width: 100%;
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--color-border-light);
+  }
+
+  .button-header-cta,
+  .button-header-secondary {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    min-height: 44px;
+  }
+
+  /* Overlay backdrop when menu is open */
+  .header-navigation.mobile-menu-open::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+
+  /* Adjust header inner to accommodate hamburger button */
+  .header-inner {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 60px; /* Space for hamburger button */
+  }
+
+  .header-left {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+}
+
+/* Extra small mobile devices (≤430px) */
+@media (max-width: 430px) {
+  .header-navigation {
+    width: 90%;
+    max-width: 100%;
+  }
+
+  .mobile-menu-toggle {
+    right: 12px;
+  }
+
+  .header-inner {
+    padding: var(--spacing-sm);
+    padding-right: 56px;
+  }
+
+  .header-logo {
+    height: 60px;
+    max-width: 240px;
+  }
+
+  .header-trust-badge {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+}
+
+
+/* ===================================
+   MOBILE FIX: Entity Confidence Engineering 5-Step Section
+   =================================== */
+
+/* Desktop layout: horizontal grid */
+@media (min-width: 768px) {
+  .ece-pillars-container {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+  }
+}
+
+/* Mobile layout: vertical stack */
+@media (max-width: 767px) {
+  .ece-pillars-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--spacing-lg) !important;
+    padding: 0 var(--spacing-md) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .ece-pillar-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* Extra small mobile devices (≤430px) */
+@media (max-width: 430px) {
+  .ece-pillars-container {
+    padding: 0 var(--spacing-sm) !important;
+    gap: var(--spacing-md) !important;
+  }
+
+  .ece-pillar-card {
+    padding: 20px !important;
+  }
+}
+
+
+/* ===================================
+   MOBILE FIX: Comparison Table
+   =================================== */
+
+/* Mobile optimization (≤767px) */
+@media (max-width: 767px) {
+  .comparison-table-container {
+    -webkit-overflow-scrolling: touch !important;
+    margin: 0 var(--spacing-sm) !important;
+  }
+
+  .comparison-table-container table {
+    min-width: 600px !important;
+  }
+
+  .comparison-table-container th,
+  .comparison-table-container td {
+    padding: 12px !important;
+    font-size: 13px !important;
+  }
+
+  .comparison-table-container th:first-child,
+  .comparison-table-container td:first-child {
+    min-width: 100px !important;
+    max-width: 100px !important;
+  }
+
+  .comparison-table-container th {
+    font-size: 12px !important;
+  }
+}
+
+/* Extra small mobile devices (≤430px) */
+@media (max-width: 430px) {
+  .comparison-table-container {
+    margin: 0 !important;
+    border-radius: 8px !important;
+  }
+
+  .comparison-table-container th,
+  .comparison-table-container td {
+    padding: 10px !important;
+    font-size: 12px !important;
+  }
+
+  .comparison-table-container th:first-child,
+  .comparison-table-container td:first-child {
+    min-width: 80px !important;
+    max-width: 80px !important;
+    font-size: 11px !important;
+  }
+}
+
+
+/* ===================================
+   MOBILE FIX: AI Team Cards (Rex, Chloe, Simon)
+   =================================== */
+
+/* Desktop layout: horizontal grid */
+@media (min-width: 768px) {
+  .ai-team-cards-container {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  }
+}
+
+/* Mobile layout: vertical stack */
+@media (max-width: 767px) {
+  .ai-team-cards-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--spacing-xl) !important;
+    padding: 0 var(--spacing-md) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .ai-team-cards-container > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* Extra small mobile devices (≤430px) */
+@media (max-width: 430px) {
+  .ai-team-cards-container {
+    padding: 0 var(--spacing-sm) !important;
+    gap: var(--spacing-lg) !important;
+  }
+}
+
+
+/* ===================================
+   MOBILE FIX: Hero Section 3-Step Grid
+   =================================== */
+
+/* Desktop layout: horizontal 3-column grid */
+@media (min-width: 768px) {
+  .hero-steps-container {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* Mobile layout: vertical stack */
+@media (max-width: 767px) {
+  .hero-steps-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--spacing-md) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .hero-steps-container > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-text-container {
+    max-width: 100% !important;
+  }
+
+  .hero-image-container {
+    max-width: 100% !important;
+    padding-bottom: 20px !important;
+  }
+}
+
+/* Extra small mobile devices (≤430px) */
+@media (max-width: 430px) {
+  .hero-steps-container {
+    gap: var(--spacing-sm) !important;
+  }
+
+  .hero-steps-container > div {
+    padding: 16px !important;
+  }
+}

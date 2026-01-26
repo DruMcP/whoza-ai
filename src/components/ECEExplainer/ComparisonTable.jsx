@@ -57,11 +57,13 @@ export default function ComparisonTable() {
         Why Choose whoza.ai?
       </h3>
 
-      <div style={{
-        overflowX: 'auto',
-        borderRadius: '16px',
-        border: '1px solid #1f2937'
-      }}>
+      <div 
+        className="comparison-table-container"
+        style={{
+          overflowX: 'auto',
+          borderRadius: '16px',
+          border: '1px solid #1f2937'
+        }}>
         <table style={{
           width: '100%',
           borderCollapse: 'separate',
