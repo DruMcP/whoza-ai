@@ -22,6 +22,7 @@
     "vite": "^7.3.0"
   },
   "devDependencies": {
+    "supabase": "^2.72.8",
     "vite-plugin-compression2": "^2.4.0"
   }
 }
