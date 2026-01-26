@@ -21,7 +21,7 @@ http://whoza.ai/*               https://whoza.ai/:splat          301!
 /privacy            /privacy/index.html         200
 /terms              /terms/index.html           200
 /contact            /contact/index.html         200
-/blog               /blog/index.html            200
+# /blog               /blog/index.html            200  # Commented out to allow React Router to handle blog post routes
 /signin             /signin/index.html          200
 
 # SPA catch-all comes AFTER pre-rendered pages
