@@ -307,6 +307,51 @@ Deno.serve(async (req: Request) => {
         break;
       }
 
+      case "customer.subscription.trial_will_end": {
+        const subscription = event.data.object as Stripe.Subscription;
+        const userId = subscription.metadata?.user_id;
+
+        if (userId) {
+          // Get user email
+          const { data: userData } = await supabaseClient
+            .from("users")
+            .select("email")
+            .eq("id", userId)
+            .maybeSingle();
+
+          if (userData?.email && supabaseUrl && supabaseAnonKey) {
+            // Send trial expiration warning email
+            try {
+              await fetch(`${supabaseUrl}/functions/v1/send-email`, {
+                method: 'POST',
+                headers: {
+                  'Authorization': `Bearer ${supabaseAnonKey}`,
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  templateName: 'trial_expiration_warning',
+                  userId: userId,
+                  recipientEmail: userData.email,
+                  variables: {
+                    days_remaining: 3, // Stripe sends this 3 days before expiration
+                  },
+                }),
+              });
+              console.log('Trial expiration warning email sent to:', userData.email);
+            } catch (error) {
+              console.error('Error sending trial expiration email:', error);
+            }
+          }
+
+          await supabaseClient.from("subscription_events").insert({
+            user_id: userId,
+            event_type: "trial_will_end",
+            subscription_id: subscription.id,
+          });
+        }
+        break;
+      }
+
       default:
         console.log(`Unhandled event type: ${event.type}`);
     }

@@ -39,6 +39,10 @@ export default function Start() {
   const navigate = useNavigate();
   const { signUp, signIn } = useAuth();
   const [isSignUp, setIsSignUp] = useState(true);
+  
+  // Get plan from URL parameters
+  const searchParams = new URLSearchParams(window.location.search);
+  const selectedPlan = searchParams.get('plan') || 'improve'; // Default to improve plan
   const [currentStep, setCurrentStep] = useState(1);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -439,7 +443,31 @@ export default function Start() {
           // TODO: Review error handling: console.error('Failed to start onboarding campaign:', emailError)
         });
 
-        navigate('/checkout');
+        // Check if user selected free trial plan
+        if (selectedPlan === 'free-trial') {
+          // Start free trial directly (no Stripe checkout required)
+          try {
+            const { data: trialData, error: trialError } = await supabase
+              .rpc('start_free_trial', { p_user_id: userId });
+            
+            if (trialError) {
+              console.error('Failed to start free trial:', trialError);
+              // Still navigate to portal, user can start trial later
+            }
+            
+            setSuccess('Free trial started! Redirecting to your dashboard...');
+            setTimeout(() => {
+              navigate('/portal');
+            }, 1500);
+          } catch (trialError) {
+            console.error('Error starting trial:', trialError);
+            // Navigate to portal anyway
+            navigate('/portal');
+          }
+        } else {
+          // Navigate to Stripe checkout for paid plans
+          navigate('/checkout');
+        }
       } else {
         const { error: signInError } = await signIn(
           formData.email,

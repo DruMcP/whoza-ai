@@ -8,20 +8,22 @@ import GuaranteeBadge from '../components/GuaranteeBadge';
 
 const pricingPlans = [
   {
-    id: 'monitor',
-    name: 'Monitor',
-    headline: 'See Where You Stand',
-    subheadline: 'Less than a takeaway. Know your AI visibility.',
-    price: 19,
+    id: 'free-trial',
+    name: 'Free Trial',
+    headline: 'Try Before You Buy',
+    subheadline: '3 months free. See your AI visibility grow.',
+    price: 0,
+    duration: '3 months',
     popular: false,
-    cta: 'Start Monitoring',
-    trustSignal: 'Cancel anytime. No commitment.',
-    targetPersona: 'Skeptical sole traders who need proof before investing',
+    cta: 'Start Free Trial',
+    trustSignal: 'No credit card required. No commitment.',
+    targetPersona: 'Businesses wanting to test AI visibility before committing',
     features: [
-      'Monthly Visibility Confidence Score™',
-      'AI visibility report across ChatGPT, Google AI, Perplexity',
-      'Email alerts when your score changes',
-      'Competitor visibility comparison (1 competitor)'
+      'Weekly AI visibility email updates',
+      'Generic tips to improve your AI presence',
+      'Whitelist access to upcoming features (Chloe & Simon)',
+      'Full access to Improve plan after trial',
+      '3-month trial period (one-time offer)'
     ]
   },
   {
@@ -68,22 +70,25 @@ const pricingPlans = [
 
 const comparisonFeatures = [
   { category: 'Core Features', features: [
-    { name: 'Monthly AI Visibility Score', monitor: true, improve: true, priority: true },
-    { name: 'Score Change Alerts', monitor: true, improve: true, priority: true },
-    { name: 'Competitor Tracking', monitor: '1', improve: '3', priority: '5' },
-    { name: 'Weekly Tasks from Rex', monitor: false, improve: true, priority: true },
-    { name: 'Action Plans You Approve', monitor: false, improve: true, priority: true },
-    { name: '5-Pillar Progress Tracking', monitor: false, improve: true, priority: true }
+    { name: 'Weekly AI Visibility Updates', freeTrial: 'Email only', improve: true, priority: true },
+    { name: 'Generic Tips & Advice', freeTrial: true, improve: false, priority: false },
+    { name: 'Detailed AI Visibility Score', freeTrial: false, improve: true, priority: true },
+    { name: 'Competitor Tracking', freeTrial: false, improve: '3', priority: '5' },
+    { name: 'Weekly Tasks from Rex', freeTrial: false, improve: true, priority: true },
+    { name: 'Action Plans You Approve', freeTrial: false, improve: true, priority: true },
+    { name: '5-Pillar Progress Tracking', freeTrial: false, improve: true, priority: true }
   ]},
   { category: 'Premium Features', features: [
-    { name: 'Human Review of Tasks', monitor: false, improve: false, priority: true },
-    { name: 'Conservative Approach', monitor: false, improve: false, priority: true },
-    { name: 'Account Manager Check-ins', monitor: false, improve: false, priority: true },
-    { name: 'Quarterly Strategy Calls', monitor: false, improve: false, priority: true }
+    { name: 'Whitelist Access (Chloe & Simon)', freeTrial: true, improve: false, priority: false },
+    { name: 'Human Review of Tasks', freeTrial: false, improve: false, priority: true },
+    { name: 'Conservative Approach', freeTrial: false, improve: false, priority: true },
+    { name: 'Account Manager Check-ins', freeTrial: false, improve: false, priority: true },
+    { name: 'Quarterly Strategy Calls', freeTrial: false, improve: false, priority: true }
   ]},
   { category: 'Support', features: [
-    { name: 'Email Support', monitor: '—', improve: 'Standard', priority: 'Priority (24hr)' },
-    { name: 'Money-Back Guarantee', monitor: '30 days', improve: '30 days', priority: '30 days' }
+    { name: 'Email Support', freeTrial: '—', improve: 'Standard', priority: 'Priority (24hr)' },
+    { name: 'Money-Back Guarantee', freeTrial: 'N/A (Free)', improve: '30 days', priority: '30 days' },
+    { name: 'Trial Duration', freeTrial: '3 months', improve: '—', priority: '—' }
   ]}
 ];
 
@@ -237,9 +242,17 @@ export default function Pricing() {
                 </div>
 
                 <div className="pricing-card-price" style={{ marginBottom: '8px' }}>
-                  <span className="price-currency">£</span>
-                  <span className="price-amount">{plan.price}</span>
-                  <span className="price-period">/month</span>
+                  {plan.id === 'free-trial' ? (
+                    <>
+                      <span className="price-currency" style={{ fontSize: '32px' }}>FREE</span>
+                    </>
+                  ) : (
+                    <>
+                      <span className="price-currency">£</span>
+                      <span className="price-amount">{plan.price}</span>
+                      <span className="price-period">/month</span>
+                    </>
+                  )}
                 </div>
 
                 <div style={{
@@ -248,7 +261,7 @@ export default function Pricing() {
                   marginBottom: '12px',
                   textAlign: 'center'
                 }}>
-                  billed monthly
+                  {plan.id === 'free-trial' ? `for ${plan.duration}` : 'billed monthly'}
                 </div>
 
                 {plan.comparisonAnchor && (
@@ -411,7 +424,7 @@ export default function Pricing() {
                             fontSize: '14px',
                             color: '#6B7280'
                           }}>
-                            £{plan.price}/month
+                            {plan.id === 'free-trial' ? `FREE for ${plan.duration}` : `£${plan.price}/month`}
                           </div>
                         </div>
                       </th>
@@ -443,7 +456,7 @@ export default function Pricing() {
                           }}>
                             {feature.name}
                           </td>
-                          {['monitor', 'improve', 'priority'].map((tier, tierIndex) => (
+                          {['freeTrial', 'improve', 'priority'].map((tier, tierIndex) => (
                             <td key={tier} className={`feature-value ${tier === 'improve' ? 'popular-column' : ''}`} style={{
                               textAlign: 'center',
                               padding: 'var(--spacing-md)',
@@ -503,20 +516,20 @@ export default function Pricing() {
                 transition: 'all 0.3s ease'
               }}>
                 <div style={{ fontSize: '16px', fontWeight: 600, color: 'var(--color-primary-600)', marginBottom: 'var(--spacing-sm)' }}>
-                  Monitor
+                  Free Trial
                 </div>
                 <div style={{ fontSize: '48px', fontWeight: 700, marginBottom: 'var(--spacing-xs)' }}>
-                  <span style={{ fontSize: '24px' }}>£</span>19<span style={{ fontSize: '18px', color: '#6B7280' }}>/month</span>
+                  <span style={{ fontSize: '32px' }}>FREE</span>
                 </div>
                 <p style={{ color: '#9CA3AF', fontSize: '16px', lineHeight: '1.6', minHeight: '75px' }}>
-                  Track your AI visibility score and trend.
+                  3 months free. Weekly updates & tips. No credit card required.
                 </p>
                 <Link
-                  to="/start?plan=monitor"
+                  to="/start?plan=free-trial"
                   className="button-secondary btn-hover"
                   style={{ width: '100%', marginTop: 'var(--spacing-md)' }}
                 >
-                  Start Monitoring
+                  Start Free Trial
                 </Link>
               </div>
 
