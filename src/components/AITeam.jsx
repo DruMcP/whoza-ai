@@ -253,7 +253,8 @@ const TeamCard = ({ member, onNotifyClick }) => {
           ? (isHovered ? '0 25px 50px -12px rgba(0, 0, 0, 0.3)' : '0 20px 25px -5px rgba(0, 0, 0, 0.1)')
           : 'none',
         transform: isHovered && isLive ? 'translateY(-4px)' : 'none',
-        borderColor: !isLive && isHovered ? 'rgba(170, 255, 0, 0.3)' : undefined
+        borderColor: !isLive && isHovered ? 'rgba(170, 255, 0, 0.3)' : undefined,
+        opacity: !isLive ? 0.85 : 1
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -298,6 +299,7 @@ const TeamCard = ({ member, onNotifyClick }) => {
         )}
       </div>
 
+      {/* Enhanced Avatar/Icon Section */}
       <div
         style={{
           width: '5rem',
@@ -312,13 +314,27 @@ const TeamCard = ({ member, onNotifyClick }) => {
             : 'rgba(255, 255, 255, 0.05)',
           background: isLive
             ? 'linear-gradient(135deg, rgba(170, 255, 0, 0.2), rgba(170, 255, 0, 0.05))'
-            : undefined
+            : member.gradientBg || undefined,
+          border: `2px solid ${isLive ? 'rgba(170, 255, 0, 0.3)' : 'rgba(255, 255, 255, 0.1)'}`,
+          position: 'relative',
+          overflow: 'hidden'
         }}
         aria-hidden="true"
       >
+        {/* Animated background effect for live card */}
+        {isLive && (
+          <div style={{
+            position: 'absolute',
+            inset: 0,
+            background: 'linear-gradient(135deg, transparent, rgba(170, 255, 0, 0.1), transparent)',
+            animation: 'shimmer 3s infinite'
+          }} />
+        )}
         <div style={{
           fontSize: '2.5rem',
-          color: isLive ? '#AAFF00' : '#6B7280'
+          color: isLive ? '#AAFF00' : member.iconColor || '#6B7280',
+          position: 'relative',
+          zIndex: 1
         }}>
           {member.icon}
         </div>
@@ -334,20 +350,50 @@ const TeamCard = ({ member, onNotifyClick }) => {
       </h3>
       <p style={{
         fontSize: '0.875rem',
-        fontWeight: 500,
+        fontWeight: 600,
         marginBottom: '1rem',
-        color: isLive ? '#AAFF00' : 'rgba(170, 255, 0, 0.7)'
+        color: isLive ? '#AAFF00' : member.roleColor || 'rgba(170, 255, 0, 0.7)',
+        textTransform: 'uppercase',
+        letterSpacing: '0.05em'
       }}>
         {member.role}
       </p>
       <p style={{
-        fontSize: '0.875rem',
+        fontSize: '0.9375rem',
         lineHeight: '1.6',
         marginBottom: '1.5rem',
         color: isLive ? '#4B5563' : '#9CA3AF'
       }}>
         {member.description}
       </p>
+
+      {/* Key Features List */}
+      {member.features && (
+        <ul style={{
+          listStyle: 'none',
+          padding: 0,
+          marginBottom: '1.5rem',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '0.5rem'
+        }}>
+          {member.features.map((feature, idx) => (
+            <li key={idx} style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              fontSize: '0.8125rem',
+              color: isLive ? '#6B7280' : '#6B7280'
+            }}>
+              <span style={{
+                color: isLive ? '#AAFF00' : 'rgba(170, 255, 0, 0.5)',
+                fontSize: '0.75rem'
+              }}>✓</span>
+              {feature}
+            </li>
+          ))}
+        </ul>
+      )}
 
       {isLive ? (
         <Link
@@ -400,8 +446,8 @@ const TeamCard = ({ member, onNotifyClick }) => {
             width: '100%',
             padding: '0.75rem 1.5rem',
             backgroundColor: 'transparent',
-            border: '2px solid rgba(170, 255, 0, 0.5)',
-            color: '#AAFF00',
+            border: '2px solid rgba(170, 255, 0, 0.3)',
+            color: 'rgba(170, 255, 0, 0.8)',
             fontWeight: 600,
             borderRadius: '9999px',
             cursor: 'pointer',
@@ -409,11 +455,13 @@ const TeamCard = ({ member, onNotifyClick }) => {
           }}
           onMouseEnter={(e) => {
             e.target.style.backgroundColor = 'rgba(170, 255, 0, 0.1)';
-            e.target.style.borderColor = '#AAFF00';
+            e.target.style.borderColor = 'rgba(170, 255, 0, 0.6)';
+            e.target.style.color = '#AAFF00';
           }}
           onMouseLeave={(e) => {
             e.target.style.backgroundColor = 'transparent';
-            e.target.style.borderColor = 'rgba(170, 255, 0, 0.5)';
+            e.target.style.borderColor = 'rgba(170, 255, 0, 0.3)';
+            e.target.style.color = 'rgba(170, 255, 0, 0.8)';
           }}
         >
           {member.ctaText}
@@ -424,6 +472,10 @@ const TeamCard = ({ member, onNotifyClick }) => {
         @keyframes pulse {
           0%, 100% { opacity: 1; }
           50% { opacity: 0.5; }
+        }
+        @keyframes shimmer {
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(100%); }
         }
       `}</style>
     </div>
@@ -439,31 +491,55 @@ export default function AITeam({ onWaitlistSubmit }) {
       id: 'rex',
       name: 'Rex',
       role: 'AI Visibility Expert',
-      description: 'Your dedicated AI employee who sends you one simple task each week to boost your visibility in AI search results like ChatGPT and Perplexity.',
+      description: 'Your dedicated AI employee who transforms your online presence into a customer magnet. Rex analyzes how AI search engines like ChatGPT, Perplexity, and Gemini see your business, then sends you one simple weekly task to dramatically boost your visibility.',
       status: 'live',
       ctaText: 'Get Started Free',
       ctaLink: '/free-score',
       icon: '🎯',
+      features: [
+        'Weekly AI visibility score & insights',
+        'One actionable task per week (5-15 min)',
+        'Tracks progress across ChatGPT, Perplexity & more',
+        'No technical knowledge required'
+      ]
     },
     {
       id: 'chloe',
       name: 'Chloe',
-      role: 'AI Receptionist',
-      description: 'Never miss a lead again. Chloe answers calls, books appointments, and handles customer enquiries 24/7 — so you can focus on the job.',
+      role: 'AI Receptionist & Lead Capture',
+      description: 'Your 24/7 virtual receptionist who never misses a beat. Chloe answers calls with natural conversation, books appointments directly into your calendar, qualifies leads, and handles customer enquiries—even while you sleep. Every call becomes an opportunity, not a missed connection.',
       status: 'coming-soon',
-      launchDate: 'Launching 2026',
-      ctaText: 'Notify Me',
+      launchDate: 'Q2 2026',
+      ctaText: 'Join Waitlist',
       icon: '📞',
+      iconColor: '#60A5FA',
+      roleColor: 'rgba(96, 165, 250, 0.9)',
+      gradientBg: 'linear-gradient(135deg, rgba(96, 165, 250, 0.15), rgba(96, 165, 250, 0.05))',
+      features: [
+        'Natural voice conversations (UK accents)',
+        'Instant calendar booking & SMS confirmations',
+        'Lead qualification & priority routing',
+        'After-hours call handling & emergency protocols'
+      ]
     },
     {
       id: 'simon',
       name: 'Simon',
       role: 'AI Social Media Manager',
-      description: 'Consistent, professional social media presence without the hassle. Simon creates and schedules posts that showcase your work and attract new customers.',
+      description: 'Your personal social media expert who builds your brand while you focus on your craft. Simon creates scroll-stopping posts, schedules content at optimal times, showcases your best work with professional copy, and maintains a consistent presence that attracts customers and builds trust.',
       status: 'coming-soon',
-      launchDate: 'Launching 2026',
-      ctaText: 'Notify Me',
+      launchDate: 'Q3 2026',
+      ctaText: 'Join Waitlist',
       icon: '📱',
+      iconColor: '#F472B6',
+      roleColor: 'rgba(244, 114, 182, 0.9)',
+      gradientBg: 'linear-gradient(135deg, rgba(244, 114, 182, 0.15), rgba(244, 114, 182, 0.05))',
+      features: [
+        'AI-generated posts with your brand voice',
+        'Automated scheduling (Facebook, Instagram, LinkedIn)',
+        'Before/after showcases & customer testimonials',
+        'Engagement monitoring & response suggestions'
+      ]
     },
   ];
 
@@ -532,7 +608,7 @@ export default function AITeam({ onWaitlistSubmit }) {
           className="ai-team-cards-container"
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
             gap: '2rem',
             marginBottom: '4rem'
           }}>
@@ -548,7 +624,7 @@ export default function AITeam({ onWaitlistSubmit }) {
         <div style={{ marginTop: '4rem', textAlign: 'center' }}>
           <p style={{ color: '#6B7280', fontSize: '0.875rem' }}>
             More AI team members coming soon.{' '}
-            <Link to="/pricing" style={{ color: '#AAFF00', textDecoration: 'none' }}>
+            <Link to="/pricing" style={{ color: '#AAFF00', textDecoration: 'none', fontWeight: 500 }}>
               View our roadmap →
             </Link>
           </p>
