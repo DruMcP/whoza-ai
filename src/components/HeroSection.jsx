@@ -20,7 +20,7 @@ const HeroSection = () => {
           gap: '40px'
         }}>
         {/* LEFT COLUMN - Text Content */}
-        <div className="hero-text-container" style={{ flex: '1 1 500px', minWidth: '300px', maxWidth: '600px' }}>
+        <div className="hero-text-container hero-fade-in" style={{ flex: '1 1 500px', minWidth: '300px', maxWidth: '600px' }}>
           <h1 style={{
             color: '#ffffff',
             fontSize: 'clamp(2rem, 5vw, 3.5rem)',
@@ -28,7 +28,7 @@ const HeroSection = () => {
             lineHeight: '1.2',
             marginBottom: '20px'
           }}>
-            Get Found in AI Search: The <span style={{ color: '#84CC16' }}>AI Employee</span> for UK Tradespeople
+            Get Found in AI Search: The <span className="hero-gradient-text">AI Employee</span> for UK Tradespeople
           </h1>
 
           <p style={{
@@ -190,6 +190,7 @@ const HeroSection = () => {
           <div style={{ marginBottom: '20px' }}>
             <Link
               to="/free-score"
+              className="hero-cta-pulse"
               style={{
                 display: 'inline-block',
                 backgroundColor: '#84CC16',
@@ -238,7 +239,7 @@ const HeroSection = () => {
 
         {/* RIGHT COLUMN - Rex Image */}
         <div
-          className="hero-image-container"
+          className="hero-image-container hero-float"
           style={{
             flex: '0 1 350px',
             minWidth: '280px',

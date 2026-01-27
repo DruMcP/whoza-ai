@@ -11771,3 +11771,107 @@ section {
     padding: 12px 20px !important;
   }
 }
+
+/* ============================================================================
+   HERO SECTION ANIMATIONS - Phase 1 Visual Enhancements
+   ============================================================================ */
+
+/* Fade-in animation for hero text content */
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-fade-in {
+  animation: heroFadeIn 0.8s ease-out forwards;
+}
+
+/* Gradient text effect for "AI Employee" */
+.hero-gradient-text {
+  background: linear-gradient(135deg, #84CC16 0%, #9EF01A 50%, #84CC16 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: heroGradientShift 3s ease-in-out infinite;
+}
+
+@keyframes heroGradientShift {
+  0%, 100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+}
+
+/* Pulse animation for CTA button */
+@keyframes heroPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(132, 204, 22, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(132, 204, 22, 0);
+  }
+}
+
+.hero-cta-pulse {
+  animation: heroPulse 2s ease-in-out infinite;
+}
+
+.hero-cta-pulse:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 30px rgba(132, 204, 22, 0.4) !important;
+}
+
+/* Float animation for hero image */
+@keyframes heroFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.hero-float {
+  animation: heroFloat 4s ease-in-out infinite;
+}
+
+/* Mobile optimizations for hero animations */
+@media (max-width: 768px) {
+  .hero-float {
+    animation: heroFloat 6s ease-in-out infinite; /* Slower on mobile */
+  }
+  
+  .hero-cta-pulse {
+    animation: heroPulse 3s ease-in-out infinite; /* Slower pulse on mobile */
+  }
+  
+  .hero-gradient-text {
+    animation: heroGradientShift 4s ease-in-out infinite; /* Slower gradient */
+  }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .hero-fade-in,
+  .hero-float,
+  .hero-cta-pulse,
+  .hero-gradient-text {
+    animation: none !important;
+  }
+  
+  .hero-gradient-text {
+    background: #84CC16;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}

@@ -1,6 +1,6 @@
 // Supabase Edge Function: send-weekly-trial-updates
-// Purpose: Send weekly AI visibility updates to Free Trial users
-// Trigger: Cron job (weekly) or manual invocation
+// Purpose: Send weekly AI visibility score updates to Free Trial users
+// Trigger: Cron job (weekly) - Every Monday at 4:00 AM (after scores are generated at 3:00 AM)
 
 import { serve } from 'https://deno.land/std@0.168.0/http/server.ts'
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
@@ -16,6 +16,22 @@ interface TrialUser {
   trial_started_at: string
   trial_ends_at: string
   days_remaining: number
+}
+
+interface TrialScore {
+  score_id: string
+  week_number: number
+  total_score: number
+  clarity_score: number
+  consensus_score: number
+  answerability_score: number
+  safety_score: number
+  context_score: number
+  insights: string
+  recommendations: string
+  positive_themes: string
+  negative_themes: string
+  created_at: string
 }
 
 serve(async (req) => {
@@ -55,6 +71,8 @@ serve(async (req) => {
     }
 
     const emailResults = []
+    let successCount = 0
+    let errorCount = 0
 
     // Send weekly update email to each trial user
     for (const user of trialUsers as TrialUser[]) {
@@ -62,8 +80,20 @@ serve(async (req) => {
         // Use days_remaining from database function
         const daysRemaining = user.days_remaining
 
-        // Generate AI visibility tips (placeholder - replace with actual logic)
-        const tips = generateVisibilityTips()
+        // Fetch the latest score for this user
+        const { data: scores, error: scoresError } = await supabase
+          .from('trial_visibility_scores')
+          .select('*')
+          .eq('user_id', user.user_id)
+          .order('created_at', { ascending: false })
+          .limit(1)
+
+        if (scoresError) {
+          console.error(`Error fetching score for ${user.email}:`, scoresError)
+          // Continue with generic email if score fetch fails
+        }
+
+        const latestScore: TrialScore | null = scores && scores.length > 0 ? scores[0] : null
 
         // Send email via Resend
         const emailResponse = await fetch('https://api.resend.com/emails', {
@@ -75,8 +105,10 @@ serve(async (req) => {
           body: JSON.stringify({
             from: 'Whoza AI <hello@whoza.ai>',
             to: [user.email],
-            subject: `Your Weekly AI Visibility Update - ${user.business_name}`,
-            html: generateWeeklyUpdateEmail(user, daysRemaining, tips),
+            subject: latestScore 
+              ? `Week ${latestScore.week_number}: Your AI Visibility Score is ${latestScore.total_score}/100 - ${user.business_name}`
+              : `Your Weekly AI Visibility Update - ${user.business_name}`,
+            html: generateWeeklyUpdateEmail(user, daysRemaining, latestScore),
           }),
         })
 
@@ -89,87 +121,199 @@ serve(async (req) => {
             success: false,
             error: errorData.message || 'Failed to send email'
           })
+          errorCount++
           continue
         }
 
         const emailData = await emailResponse.json()
 
-        // Log email sent
-        await supabase
-          .from('email_logs')
-          .insert({
-            user_id: user.user_id,
-            email_type: 'trial_weekly_update',
-            recipient_email: user.email,
-            sent_at: new Date().toISOString(),
-            status: 'sent',
-            resend_email_id: emailData.id
-          })
+        // Mark email as sent in database
+        if (latestScore) {
+          await supabase
+            .rpc('mark_trial_score_email_sent', { p_score_id: latestScore.score_id })
+        }
 
+        console.log(`Successfully sent email to ${user.email}`)
         emailResults.push({
           userId: user.user_id,
           email: user.email,
+          weekNumber: latestScore?.week_number,
+          score: latestScore?.total_score,
           success: true,
           emailId: emailData.id
         })
+        successCount++
 
       } catch (error) {
-        console.error(`Error sending email to ${user.email}:`, error)
+        console.error(`Error processing user ${user.email}:`, error)
         emailResults.push({
           userId: user.user_id,
           email: user.email,
           success: false,
-          error: error.message
+          error: String(error)
         })
+        errorCount++
       }
     }
-
-    const successCount = emailResults.filter(r => r.success).length
-    const failureCount = emailResults.filter(r => !r.success).length
 
     return new Response(
       JSON.stringify({
         success: true,
-        message: `Weekly trial updates sent`,
-        totalUsers: trialUsers.length,
-        successCount,
-        failureCount,
+        message: `Sent ${successCount} emails, ${errorCount} errors`,
+        total: trialUsers.length,
+        successful: successCount,
+        failed: errorCount,
         results: emailResults
       }),
       { status: 200, headers: { 'Content-Type': 'application/json' } }
     )
 
   } catch (error) {
-    console.error('Error in send-weekly-trial-updates:', error)
+    console.error('Fatal error:', error)
     return new Response(
-      JSON.stringify({ error: error.message }),
+      JSON.stringify({
+        success: false,
+        error: 'Internal server error',
+        details: String(error)
+      }),
       { status: 500, headers: { 'Content-Type': 'application/json' } }
     )
   }
 })
 
-// Generate AI visibility tips (placeholder - replace with actual logic)
-function generateVisibilityTips(): string[] {
-  return [
-    'Ensure your business name is consistent across all online platforms',
-    'Add location-specific keywords to your website content',
-    'Encourage customers to leave reviews on Google Business Profile',
-    'Keep your business information up-to-date on all directories'
-  ]
-}
-
-// Generate weekly update email HTML
 function generateWeeklyUpdateEmail(
-  user: TrialUser,
+  user: TrialUser, 
   daysRemaining: number,
-  tips: string[]
+  score: TrialScore | null
 ): string {
-  const trialEndDate = new Date(user.trial_ends_at).toLocaleDateString('en-GB', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric'
-  })
+  const weekNumber = score?.week_number || 1
+  const totalScore = score?.total_score || 0
+  
+  // Generate score badge color based on score
+  const getScoreColor = (score: number): string => {
+    if (score >= 80) return '#10b981' // green
+    if (score >= 60) return '#84cc16' // lime
+    if (score >= 40) return '#f59e0b' // amber
+    return '#ef4444' // red
+  }
 
+  const scoreColor = getScoreColor(totalScore)
+
+  // If we have a score, show detailed report
+  if (score) {
+    const recommendations = score.recommendations.split('; ').filter(r => r.trim())
+    const topRecommendations = recommendations.slice(0, 3)
+
+    return `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week ${weekNumber} AI Visibility Score</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #0f172a; color: #e2e8f0;">
+  
+  <div style="max-width: 600px; margin: 0 auto; padding: 40px 20px;">
+    
+    <!-- Header -->
+    <div style="text-align: center; margin-bottom: 40px;">
+      <h1 style="color: #84cc16; font-size: 28px; margin: 0 0 10px 0; font-weight: 700;">
+        Whoza AI
+      </h1>
+      <p style="color: #64748b; font-size: 14px; margin: 0;">
+        Free Trial Week ${weekNumber} of 12
+      </p>
+    </div>
+
+    <!-- Score Card -->
+    <div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border: 2px solid ${scoreColor}; border-radius: 16px; padding: 32px; margin-bottom: 32px; text-align: center;">
+      
+      <h2 style="color: #f1f5f9; font-size: 22px; margin: 0 0 20px 0; font-weight: 600;">
+        ${user.business_name}
+      </h2>
+
+      <div style="margin: 24px 0;">
+        <div style="display: inline-block; background: ${scoreColor}; color: #0f172a; font-size: 48px; font-weight: 800; padding: 20px 40px; border-radius: 12px; box-shadow: 0 8px 24px rgba(132, 204, 22, 0.3);">
+          ${totalScore}<span style="font-size: 24px; font-weight: 600;">/100</span>
+        </div>
+      </div>
+
+      <p style="color: #cbd5e1; font-size: 16px; margin: 20px 0 0 0;">
+        Your AI Visibility Score
+      </p>
+    </div>
+
+    <!-- 5 Pillar Breakdown -->
+    <div style="background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 24px; margin-bottom: 32px;">
+      <h3 style="color: #f1f5f9; font-size: 18px; margin: 0 0 20px 0; font-weight: 600;">
+        📊 5-Pillar Breakdown
+      </h3>
+
+      ${generatePillarBar('Clarity', score.clarity_score)}
+      ${generatePillarBar('Consensus', score.consensus_score)}
+      ${generatePillarBar('Answerability', score.answerability_score)}
+      ${generatePillarBar('Safety', score.safety_score)}
+      ${generatePillarBar('Context', score.context_score)}
+    </div>
+
+    <!-- Key Insights -->
+    <div style="background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 24px; margin-bottom: 32px;">
+      <h3 style="color: #f1f5f9; font-size: 18px; margin: 0 0 16px 0; font-weight: 600;">
+        💡 Key Insights
+      </h3>
+      <p style="color: #cbd5e1; font-size: 15px; line-height: 1.6; margin: 0;">
+        ${score.insights}
+      </p>
+    </div>
+
+    <!-- Top Recommendations -->
+    <div style="background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 24px; margin-bottom: 32px;">
+      <h3 style="color: #f1f5f9; font-size: 18px; margin: 0 0 16px 0; font-weight: 600;">
+        🎯 Top Recommendations
+      </h3>
+      ${topRecommendations.map((rec, i) => `
+        <div style="margin-bottom: ${i < topRecommendations.length - 1 ? '12px' : '0'};">
+          <div style="display: flex; align-items: start;">
+            <span style="color: #84cc16; font-weight: 700; margin-right: 8px;">${i + 1}.</span>
+            <span style="color: #cbd5e1; font-size: 15px; line-height: 1.5;">${rec}</span>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+
+    <!-- CTA Button -->
+    <div style="text-align: center; margin: 32px 0;">
+      <a href="https://whoza.ai/portal" style="display: inline-block; background: linear-gradient(135deg, #84cc16 0%, #65a30d 100%); color: #0f172a; text-decoration: none; padding: 16px 32px; border-radius: 8px; font-weight: 600; font-size: 16px; box-shadow: 0 4px 12px rgba(132, 204, 22, 0.4);">
+        View Full Report in Dashboard
+      </a>
+    </div>
+
+    <!-- Trial Reminder -->
+    <div style="background: rgba(132, 204, 22, 0.1); border: 1px solid rgba(132, 204, 22, 0.3); border-radius: 8px; padding: 16px; margin-bottom: 32px; text-align: center;">
+      <p style="color: #84cc16; font-size: 14px; margin: 0;">
+        ⏰ ${daysRemaining} days remaining in your free trial
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <div style="text-align: center; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+      <p style="color: #64748b; font-size: 13px; margin: 0 0 10px 0;">
+        © 2026 Whoza AI. All rights reserved.
+      </p>
+      <p style="color: #475569; font-size: 12px; margin: 0;">
+        <a href="https://whoza.ai/portal" style="color: #64748b; text-decoration: none;">Dashboard</a> • 
+        <a href="https://whoza.ai/pricing" style="color: #64748b; text-decoration: none;">Upgrade</a>
+      </p>
+    </div>
+
+  </div>
+</body>
+</html>
+    `.trim()
+  }
+
+  // Fallback: Generic email if no score available
   return `
 <!DOCTYPE html>
 <html lang="en">
@@ -179,72 +323,45 @@ function generateWeeklyUpdateEmail(
   <title>Your Weekly AI Visibility Update</title>
 </head>
 <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #0f172a; color: #e2e8f0;">
+  
   <div style="max-width: 600px; margin: 0 auto; padding: 40px 20px;">
     
-    <!-- Header -->
     <div style="text-align: center; margin-bottom: 40px;">
-      <h1 style="color: #84cc16; font-size: 28px; margin: 0 0 10px 0;">Whoza AI</h1>
-      <p style="color: #94a3b8; font-size: 14px; margin: 0;">Your Weekly AI Visibility Update</p>
+      <h1 style="color: #84cc16; font-size: 28px; margin: 0 0 10px 0; font-weight: 700;">
+        Whoza AI
+      </h1>
+      <p style="color: #64748b; font-size: 14px; margin: 0;">
+        Free Trial Update
+      </p>
     </div>
 
-    <!-- Main Content -->
-    <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 30px; margin-bottom: 30px;">
-      
-      <h2 style="color: #f1f5f9; font-size: 22px; margin: 0 0 20px 0;">
+    <div style="background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 32px; margin-bottom: 32px;">
+      <h2 style="color: #f1f5f9; font-size: 22px; margin: 0 0 16px 0; font-weight: 600;">
         Hi ${user.business_name}! 👋
       </h2>
-
-      <p style="color: #cbd5e1; font-size: 16px; line-height: 1.6; margin: 0 0 20px 0;">
-        Here's your weekly AI visibility update. We're tracking how AI systems like ChatGPT, Perplexity, and Google AI are recommending your business.
+      <p style="color: #cbd5e1; font-size: 15px; line-height: 1.6; margin: 0 0 16px 0;">
+        Your weekly AI visibility score is being calculated and will be available in your dashboard shortly.
       </p>
-
-      <!-- Trial Status -->
-      <div style="background: rgba(132, 204, 22, 0.1); border-left: 4px solid #84cc16; padding: 15px; border-radius: 8px; margin-bottom: 25px;">
-        <p style="color: #84cc16; font-weight: 600; margin: 0 0 5px 0; font-size: 14px;">FREE TRIAL STATUS</p>
-        <p style="color: #e2e8f0; margin: 0; font-size: 16px;">
-          ${daysRemaining} days remaining • Ends ${trialEndDate}
-        </p>
-      </div>
-
-      <!-- Tips Section -->
-      <h3 style="color: #f1f5f9; font-size: 18px; margin: 0 0 15px 0;">
-        💡 This Week's Tips to Improve Your AI Visibility
-      </h3>
-
-      <ul style="color: #cbd5e1; font-size: 15px; line-height: 1.8; margin: 0 0 25px 0; padding-left: 20px;">
-        ${tips.map(tip => `<li style="margin-bottom: 10px;">${tip}</li>`).join('')}
-      </ul>
-
-      <!-- CTA Button -->
-      <div style="text-align: center; margin-top: 30px;">
-        <a href="https://whoza.ai/portal" style="display: inline-block; background: linear-gradient(135deg, #84cc16 0%, #65a30d 100%); color: #0f172a; text-decoration: none; padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 16px;">
-          View Your Dashboard
-        </a>
-      </div>
-
+      <p style="color: #cbd5e1; font-size: 15px; line-height: 1.6; margin: 0;">
+        Check back soon to see your detailed report with personalized recommendations!
+      </p>
     </div>
 
-    <!-- Upgrade Prompt -->
-    <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 25px; margin-bottom: 30px; text-align: center;">
-      <h3 style="color: #f1f5f9; font-size: 18px; margin: 0 0 10px 0;">
-        Want More Detailed Insights?
-      </h3>
-      <p style="color: #94a3b8; font-size: 14px; line-height: 1.6; margin: 0 0 20px 0;">
-        Upgrade to our Improve or Priority plans for detailed AI visibility reports, personalized action plans, and priority support.
-      </p>
-      <a href="https://whoza.ai/pricing" style="display: inline-block; background: rgba(132, 204, 22, 0.1); color: #84cc16; text-decoration: none; padding: 10px 24px; border-radius: 6px; font-weight: 600; font-size: 14px; border: 1px solid rgba(132, 204, 22, 0.3);">
-        View Plans
+    <div style="text-align: center; margin: 32px 0;">
+      <a href="https://whoza.ai/portal" style="display: inline-block; background: linear-gradient(135deg, #84cc16 0%, #65a30d 100%); color: #0f172a; text-decoration: none; padding: 16px 32px; border-radius: 8px; font-weight: 600; font-size: 16px;">
+        Go to Dashboard
       </a>
     </div>
 
-    <!-- Footer -->
+    <div style="background: rgba(132, 204, 22, 0.1); border: 1px solid rgba(132, 204, 22, 0.3); border-radius: 8px; padding: 16px; margin-bottom: 32px; text-align: center;">
+      <p style="color: #84cc16; font-size: 14px; margin: 0;">
+        ⏰ ${daysRemaining} days remaining in your free trial
+      </p>
+    </div>
+
     <div style="text-align: center; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
       <p style="color: #64748b; font-size: 13px; margin: 0 0 10px 0;">
         © 2026 Whoza AI. All rights reserved.
-      </p>
-      <p style="color: #475569; font-size: 12px; margin: 0;">
-        <a href="https://whoza.ai/unsubscribe" style="color: #64748b; text-decoration: none;">Unsubscribe</a> • 
-        <a href="https://whoza.ai/privacy" style="color: #64748b; text-decoration: none;">Privacy Policy</a>
       </p>
     </div>
 
@@ -252,4 +369,21 @@ function generateWeeklyUpdateEmail(
 </body>
 </html>
   `.trim()
+}
+
+function generatePillarBar(name: string, score: number): string {
+  const percentage = score * 10 // Convert 0-10 to 0-100%
+  const color = score >= 8 ? '#10b981' : score >= 6 ? '#84cc16' : score >= 4 ? '#f59e0b' : '#ef4444'
+  
+  return `
+    <div style="margin-bottom: 16px;">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+        <span style="color: #cbd5e1; font-size: 14px; font-weight: 500;">${name}</span>
+        <span style="color: #f1f5f9; font-size: 14px; font-weight: 600;">${score}/10</span>
+      </div>
+      <div style="background: #0f172a; border-radius: 4px; height: 8px; overflow: hidden;">
+        <div style="background: ${color}; height: 100%; width: ${percentage}%; transition: width 0.3s ease;"></div>
+      </div>
+    </div>
+  `
 }
