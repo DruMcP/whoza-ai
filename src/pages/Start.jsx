@@ -445,14 +445,48 @@ export default function Start() {
 
         // Check if user selected free trial plan
         if (selectedPlan === 'free-trial') {
-          // Start free trial directly (no Stripe checkout required)
+          // Check eligibility first
           try {
+            const { data: eligibilityData, error: eligibilityError } = await supabase
+              .rpc('check_trial_eligibility', { p_user_id: userId });
+            
+            if (eligibilityError) {
+              console.error('Failed to check trial eligibility:', eligibilityError);
+              setError('Unable to verify trial eligibility. Please try again.');
+              setLoading(false);
+              return;
+            }
+            
+            // If user is not eligible (already used trial)
+            if (!eligibilityData) {
+              setError('You have already used your one-time free trial. Please choose a paid plan to continue.');
+              setLoading(false);
+              // Redirect to pricing page after 3 seconds
+              setTimeout(() => {
+                navigate('/pricing');
+              }, 3000);
+              return;
+            }
+            
+            // User is eligible, start the trial
             const { data: trialData, error: trialError } = await supabase
               .rpc('start_free_trial', { p_user_id: userId });
             
             if (trialError) {
               console.error('Failed to start free trial:', trialError);
-              // Still navigate to portal, user can start trial later
+              
+              // Check if error is due to already used trial
+              if (trialError.message && trialError.message.includes('already used')) {
+                setError('You have already used your one-time free trial. Redirecting to pricing...');
+                setTimeout(() => {
+                  navigate('/pricing');
+                }, 3000);
+                return;
+              }
+              
+              setError('Failed to start free trial. Please try again or contact support.');
+              setLoading(false);
+              return;
             }
             
             setSuccess('Free trial started! Redirecting to your dashboard...');
@@ -461,8 +495,8 @@ export default function Start() {
             }, 1500);
           } catch (trialError) {
             console.error('Error starting trial:', trialError);
-            // Navigate to portal anyway
-            navigate('/portal');
+            setError('An unexpected error occurred. Please try again.');
+            setLoading(false);
           }
         } else {
           // Navigate to Stripe checkout for paid plans

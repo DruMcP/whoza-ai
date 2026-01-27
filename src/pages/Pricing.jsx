@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ROICalculator from '../components/ROICalculator';
 import Icon from '../components/icons/Icon';
 import GuaranteeBadge from '../components/GuaranteeBadge';
+import { useAuth } from '../contexts/AuthContext';
+import { supabase } from '../lib/supabase';
 
 const pricingPlans = [
   {
@@ -131,10 +133,45 @@ const faqData = [
 
 export default function Pricing() {
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
+  const [trialEligible, setTrialEligible] = useState(true); // Default to true for non-logged-in users
+  const [checkingEligibility, setCheckingEligibility] = useState(false);
+  const { userData } = useAuth();
 
   const toggleFaq = (index) => {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
   };
+
+  // Check trial eligibility when component mounts (if user is logged in)
+  useEffect(() => {
+    const checkTrialEligibility = async () => {
+      if (!userData || !userData.id) {
+        // User not logged in, show trial option
+        setTrialEligible(true);
+        return;
+      }
+
+      setCheckingEligibility(true);
+      try {
+        const { data, error } = await supabase
+          .rpc('check_trial_eligibility', { p_user_id: userData.id });
+        
+        if (error) {
+          console.error('Failed to check trial eligibility:', error);
+          // On error, default to showing trial option
+          setTrialEligible(true);
+        } else {
+          setTrialEligible(data === true);
+        }
+      } catch (error) {
+        console.error('Error checking trial eligibility:', error);
+        setTrialEligible(true);
+      } finally {
+        setCheckingEligibility(false);
+      }
+    };
+
+    checkTrialEligibility();
+  }, [userData]);
 
   return (
     <>
@@ -183,8 +220,44 @@ export default function Pricing() {
             </p>
           </div>
 
+          {/* Show message if user is logged in and not eligible for trial */}
+          {userData && !trialEligible && (
+            <div style={{
+              background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%)',
+              border: '2px solid rgba(59, 130, 246, 0.3)',
+              borderRadius: 'var(--radius-xl)',
+              padding: 'var(--spacing-lg)',
+              marginBottom: 'var(--spacing-2xl)',
+              textAlign: 'center'
+            }}>
+              <p style={{
+                fontSize: '16px',
+                color: '#3B82F6',
+                fontWeight: 600,
+                marginBottom: '8px'
+              }}>
+                ℹ️ You've already used your free trial
+              </p>
+              <p style={{
+                fontSize: '14px',
+                color: '#6B7280',
+                margin: 0
+              }}>
+                Choose from our paid plans below to continue improving your AI visibility.
+              </p>
+            </div>
+          )}
+
           <div className="pricing-cards">
-            {pricingPlans.map((plan) => (
+            {pricingPlans
+              .filter(plan => {
+                // Hide Free Trial if user is not eligible
+                if (plan.id === 'free-trial' && !trialEligible) {
+                  return false;
+                }
+                return true;
+              })
+              .map((plan) => (
               <div
                 key={plan.id}
                 className={`pricing-card card-hover scroll-reveal ${plan.popular ? 'popular' : ''} ${plan.featured ? 'featured-trial' : ''}`}
