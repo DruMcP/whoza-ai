@@ -1803,6 +1803,55 @@ Both cities require:
       buttonText: 'Get My Free Score',
       buttonLink: '/free-score'
     }
+  },
+  {
+    id: "how-ai-chooses-plumber-manchester",
+    slug: "how-ai-search-engines-choose-plumber-recommendation-manchester",
+    title: "How Do AI Search Engines Choose Which Plumber to Recommend in Manchester?",
+    metaDescription: "Discover how AI like ChatGPT and Google decide which Manchester plumbers to recommend. Learn the key signals for AI visibility and how to ensure your trade business gets found in 2026.",
+    publishDate: "2026-01-27",
+    author: "Whoza.ai Team",
+    category: "AI Visibility",
+    tags: ["AEO", "AI search", "local SEO", "plumbers", "Manchester"],
+    readTime: "5 min read",
+    featured: false,
+    leadAnswer: "AI search engines recommend Manchester plumbers they can trust. This trust is built on clear, consistent, and verifiable online information. For plumbers in Manchester, this means having a strong digital presence with accurate business details, positive reviews, and content that directly answers customer questions is crucial for being recommended by AI.",
+    content: [
+      {
+        type: "section",
+        heading: "Why Your Plumbing Business Needs to Care About AI Recommendations",
+        content: `In 2026, when a homeowner in Manchester has a burst pipe, they are increasingly asking an AI assistant: "Find me an emergency plumber in Manchester." They are no longer just searching on Google and scrolling through a list of websites. AI provides a direct answer, and if your plumbing business isn't the one recommended, you've lost that customer. This shift to answer-based search is the single biggest change to local marketing in a decade, and tradespeople who adapt will win.`
+      },
+      {
+        type: "section",
+        heading: "What Does an AI Look for When Recommending a Plumber?",
+        content: `AI algorithms are designed to find the most trustworthy and relevant business for a user's query. They analyze several key signals to determine which Manchester plumber to recommend. These include the consistency of your business name, address, and phone number (NAP) across the web, the sentiment and volume of your customer reviews, the clarity of your service descriptions on your website, and your overall digital footprint. A strong, consistent online presence builds the AI's confidence in your business.`
+      },
+      {
+        type: "section",
+        heading: "How Can Manchester Plumbers Improve Their AI Visibility?",
+        content: `Improving your AI visibility is about sending clear and consistent signals. Start by ensuring your Google Business Profile is fully optimized with accurate information, detailed service descriptions, and high-quality photos. Build a dedicated FAQ page on your website that answers common customer questions. Encourage your happy customers to leave reviews on Google and other platforms. Finally, ensure your website has LocalBusiness schema markup to help AI understand your services and service area.`
+      }
+    ],
+    faqs: [
+      {
+        question: "Does traditional SEO still matter for plumbers in Manchester?",
+        answer: "Yes, but it's no longer enough. Traditional SEO helps you rank in search results, but AEO (Answer Engine Optimization) ensures you get recommended by AI. The two work together. A well-optimized website is a strong signal for both traditional search engines and AI."
+      },
+      {
+        question: "How can I check if AI can find my plumbing business?",
+        answer: "The easiest way is to ask. Use ChatGPT or another AI assistant and ask, \"Recommend a plumber in Manchester.\" If your business isn't mentioned, you have work to do on your AI visibility. Try a few different questions to see how you fare."
+      },
+      {
+        question: "What is the most important thing for AI visibility?",
+        answer: "Consistency. Your business name, address, and phone number must be identical across all online platforms, from your website to your Google Business Profile and local directories. Inconsistencies erode an AI's trust in your business."
+      }
+    ],
+    cta: {
+      text: "Is your plumbing business visible to AI in Manchester?",
+      buttonText: "Get Your Free AI Visibility Score",
+      buttonLink: "/free-score"
+    }
   }
 ];
 
