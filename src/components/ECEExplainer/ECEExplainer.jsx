@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Building2, BadgeCheck, Globe, Star, FileText } from 'lucide-react';
+import { motion, useInView } from 'framer-motion';
+import { Building2, BadgeCheck, Globe, Star, FileText, Check } from 'lucide-react';
+import { useRef } from 'react';
 import ECEModal from './ECEModal';
 import ComparisonTable from './ComparisonTable';
 import TrustBadge from './TrustBadge';
@@ -63,6 +64,70 @@ const PILLAR_DATA = [
   }
 ];
 
+// Animated checkmark component
+const AnimatedCheckmark = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ scale: 0, rotate: -180 }}
+      animate={isInView ? { scale: 1, rotate: 0 } : { scale: 0, rotate: -180 }}
+      transition={{ 
+        type: "spring", 
+        stiffness: 200, 
+        damping: 15,
+        delay: 0.2
+      }}
+      style={{
+        width: '48px',
+        height: '48px',
+        borderRadius: '50%',
+        background: 'linear-gradient(135deg, #c4f135, #a8d91f)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        boxShadow: '0 4px 20px rgba(196, 241, 53, 0.4)'
+      }}
+    >
+      <Check size={28} style={{ color: '#0a0f1a', strokeWidth: 3 }} />
+    </motion.div>
+  );
+};
+
+// Progress line component
+const ProgressLine = ({ totalSteps, currentStep }) => {
+  return (
+    <div
+      style={{
+        position: 'absolute',
+        top: '60px',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        width: '80%',
+        height: '2px',
+        background: 'rgba(34, 211, 238, 0.2)',
+        zIndex: 0,
+        display: 'none' // Hidden on mobile, shown on desktop
+      }}
+      className="progress-line-desktop"
+    >
+      <motion.div
+        initial={{ width: '0%' }}
+        whileInView={{ width: '100%' }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 1.5, ease: "easeInOut", delay: 0.3 }}
+        style={{
+          height: '100%',
+          background: 'linear-gradient(90deg, #22d3ee, #c4f135)',
+          boxShadow: '0 0 10px rgba(34, 211, 238, 0.5)'
+        }}
+      />
+    </div>
+  );
+};
+
 export default function ECEExplainer() {
   const [selectedPillar, setSelectedPillar] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -109,19 +174,29 @@ export default function ECEExplainer() {
         margin: '0 auto'
       }}>
         <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-          <div style={{
-            fontSize: '12px',
-            fontWeight: '600',
-            letterSpacing: '0.1em',
-            color: '#22d3ee',
-            textTransform: 'uppercase',
-            marginBottom: '16px'
-          }}>
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            style={{
+              fontSize: '12px',
+              fontWeight: '600',
+              letterSpacing: '0.1em',
+              color: '#22d3ee',
+              textTransform: 'uppercase',
+              marginBottom: '16px'
+            }}
+          >
             OUR PROVEN METHOD
-          </div>
+          </motion.div>
 
-          <h2
+          <motion.h2
             id="ece-heading"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             style={{
               fontSize: '48px',
               fontWeight: '700',
@@ -131,26 +206,38 @@ export default function ECEExplainer() {
             }}
           >
             Entity Confidence Engineering™
-          </h2>
+          </motion.h2>
 
-          <p style={{
-            fontSize: '20px',
-            fontWeight: '500',
-            color: '#c4f135',
-            marginBottom: '16px'
-          }}>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            style={{
+              fontSize: '20px',
+              fontWeight: '500',
+              color: '#c4f135',
+              marginBottom: '16px'
+            }}
+          >
             The system that makes AI trust and recommend your business
-          </p>
+          </motion.p>
 
-          <p style={{
-            fontSize: '18px',
-            color: '#94a3b8',
-            maxWidth: '800px',
-            margin: '0 auto',
-            lineHeight: '1.6'
-          }}>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            style={{
+              fontSize: '18px',
+              color: '#94a3b8',
+              maxWidth: '800px',
+              margin: '0 auto',
+              lineHeight: '1.6'
+            }}
+          >
             5 simple steps to get ChatGPT, Google AI, and other AI tools to recommend you by name
-          </p>
+          </motion.p>
         </div>
 
         <div 
@@ -159,17 +246,25 @@ export default function ECEExplainer() {
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
             gap: '24px',
-            marginBottom: '48px'
+            marginBottom: '48px',
+            position: 'relative'
           }}>
+          <ProgressLine totalSteps={5} />
+          
           {PILLAR_DATA.map((pillar, index) => {
             const IconComponent = pillar.icon;
             return (
               <motion.div
                 key={pillar.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ 
+                  duration: 0.5, 
+                  delay: index * 0.1,
+                  type: "spring",
+                  stiffness: 100
+                }}
               >
                 <button
                   onClick={() => handlePillarClick(pillar)}
@@ -188,19 +283,22 @@ export default function ECEExplainer() {
                     cursor: 'pointer',
                     transition: 'all 0.3s ease',
                     textAlign: 'left',
-                    position: 'relative'
+                    position: 'relative',
+                    zIndex: 1
                   }}
                   className="ece-pillar-card"
                   aria-label={`Learn more about ${pillar.title}`}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-4px)';
-                    e.currentTarget.style.boxShadow = '0 8px 24px rgba(34, 211, 238, 0.2)';
+                    e.currentTarget.style.transform = 'translateY(-8px) scale(1.02)';
+                    e.currentTarget.style.boxShadow = '0 12px 32px rgba(34, 211, 238, 0.3)';
                     e.currentTarget.style.borderColor = '#22d3ee';
+                    e.currentTarget.style.background = 'linear-gradient(135deg, #111827, #1a2332)';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
                     e.currentTarget.style.boxShadow = 'none';
                     e.currentTarget.style.borderColor = '#1f2937';
+                    e.currentTarget.style.background = '#111827';
                   }}
                   onFocus={(e) => {
                     e.currentTarget.style.outline = '2px solid #22d3ee';
@@ -216,25 +314,47 @@ export default function ECEExplainer() {
                     gap: '12px',
                     marginBottom: '16px'
                   }}>
-                    <div style={{
-                      width: '32px',
-                      height: '32px',
-                      borderRadius: '50%',
-                      background: 'rgba(34, 211, 238, 0.1)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      color: '#22d3ee',
-                      fontSize: '16px',
-                      fontWeight: '700'
-                    }}>
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ 
+                        delay: index * 0.1 + 0.3,
+                        type: "spring",
+                        stiffness: 200
+                      }}
+                      style={{
+                        width: '32px',
+                        height: '32px',
+                        borderRadius: '50%',
+                        background: 'rgba(34, 211, 238, 0.1)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        color: '#22d3ee',
+                        fontSize: '16px',
+                        fontWeight: '700',
+                        border: '2px solid rgba(34, 211, 238, 0.3)'
+                      }}
+                    >
                       {pillar.number}
-                    </div>
-                    <IconComponent
-                      size={28}
-                      style={{ color: '#22d3ee' }}
-                      aria-hidden="true"
-                    />
+                    </motion.div>
+                    <motion.div
+                      initial={{ scale: 0, rotate: -180 }}
+                      whileInView={{ scale: 1, rotate: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ 
+                        delay: index * 0.1 + 0.4,
+                        type: "spring",
+                        stiffness: 150
+                      }}
+                    >
+                      <IconComponent
+                        size={28}
+                        style={{ color: '#22d3ee' }}
+                        aria-hidden="true"
+                      />
+                    </motion.div>
                   </div>
 
                   <div style={{
@@ -276,7 +396,17 @@ export default function ECEExplainer() {
                     fontWeight: '600'
                   }}>
                     <span>Learn more</span>
-                    <span aria-hidden="true">→</span>
+                    <motion.span 
+                      aria-hidden="true"
+                      animate={{ x: [0, 4, 0] }}
+                      transition={{ 
+                        duration: 1.5, 
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                    >
+                      →
+                    </motion.span>
                   </div>
                 </button>
               </motion.div>
@@ -285,10 +415,10 @@ export default function ECEExplainer() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30, scale: 0.95 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
           style={{
             display: 'flex',
             flexDirection: 'column',
@@ -300,26 +430,18 @@ export default function ECEExplainer() {
           <div style={{
             display: 'flex',
             alignItems: 'center',
-            gap: '12px',
-            padding: '16px 24px',
-            background: 'rgba(34, 211, 238, 0.1)',
-            border: '1px solid rgba(34, 211, 238, 0.3)',
+            gap: '16px',
+            padding: '20px 32px',
+            background: 'linear-gradient(135deg, rgba(34, 211, 238, 0.1), rgba(196, 241, 53, 0.1))',
+            border: '2px solid rgba(34, 211, 238, 0.3)',
             borderRadius: '50px',
             fontSize: '16px',
-            color: '#ffffff'
+            color: '#ffffff',
+            boxShadow: '0 4px 20px rgba(34, 211, 238, 0.2)'
           }}>
-            <span
-              style={{
-                width: '8px',
-                height: '8px',
-                borderRadius: '50%',
-                background: '#c4f135',
-                animation: 'pulse 2s ease-in-out infinite'
-              }}
-              aria-hidden="true"
-            />
+            <AnimatedCheckmark />
             <span>
-              Get all 5 right and AI will <strong style={{ color: '#c4f135' }}>recommend you by name</strong>
+              Get all 5 right and AI will <strong style={{ color: '#c4f135', fontSize: '18px' }}>recommend you by name</strong>
             </span>
           </div>
 
@@ -339,14 +461,22 @@ export default function ECEExplainer() {
       )}
 
       <style>{`
-        @keyframes pulse {
-          0%, 100% {
-            opacity: 1;
-            transform: scale(1);
+        @media (min-width: 768px) {
+          .progress-line-desktop {
+            display: block !important;
           }
-          50% {
-            opacity: 0.5;
-            transform: scale(1.1);
+        }
+
+        .ece-pillar-card:active {
+          transform: translateY(-4px) scale(0.98) !important;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .ece-pillar-card {
+            transition: none !important;
+          }
+          .progress-line-desktop div {
+            animation: none !important;
           }
         }
       `}</style>
