@@ -10,10 +10,11 @@ const SUPABASE_URL = Deno.env.get('SUPABASE_URL')
 const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')
 
 interface TrialUser {
-  id: string
+  user_id: string
   email: string
   business_name: string
   trial_ends_at: string
+  days_remaining: number
 }
 
 serve(async (req) => {
@@ -31,18 +32,9 @@ serve(async (req) => {
       SUPABASE_SERVICE_ROLE_KEY!
     )
 
-    // Calculate date 7 days from now
-    const sevenDaysFromNow = new Date()
-    sevenDaysFromNow.setDate(sevenDaysFromNow.getDate() + 7)
-    const sevenDaysFromNowStr = sevenDaysFromNow.toISOString().split('T')[0]
-
-    // Get users whose trial expires in exactly 7 days
+    // Get users whose trial expires in 7 days using the database function
     const { data: expiringUsers, error: usersError } = await supabase
-      .from('users')
-      .select('id, email, business_name, trial_ends_at')
-      .eq('trial_active', true)
-      .gte('trial_ends_at', `${sevenDaysFromNowStr}T00:00:00`)
-      .lt('trial_ends_at', `${sevenDaysFromNowStr}T23:59:59`)
+      .rpc('get_expiring_trial_users', { days_before_expiry: 7 })
 
     if (usersError) {
       console.error('Error fetching expiring trial users:', usersError)
@@ -82,7 +74,7 @@ serve(async (req) => {
           const errorData = await emailResponse.json()
           console.error(`Failed to send expiration warning to ${user.email}:`, errorData)
           emailResults.push({
-            userId: user.id,
+            userId: user.user_id,
             email: user.email,
             success: false,
             error: errorData.message
@@ -95,7 +87,7 @@ serve(async (req) => {
         await supabase
           .from('email_logs')
           .insert({
-            user_id: user.id,
+            user_id: user.user_id,
             email_type: 'trial_expiration_warning',
             recipient_email: user.email,
             sent_at: new Date().toISOString(),
@@ -104,7 +96,7 @@ serve(async (req) => {
           })
 
         emailResults.push({
-          userId: user.id,
+          userId: user.user_id,
           email: user.email,
           success: true,
           emailId: emailData.id
@@ -113,7 +105,7 @@ serve(async (req) => {
       } catch (error) {
         console.error(`Error sending expiration warning to ${user.email}:`, error)
         emailResults.push({
-          userId: user.id,
+          userId: user.user_id,
           email: user.email,
           success: false,
           error: error.message

@@ -29,7 +29,7 @@ export default function ComparisonTable() {
     },
     {
       label: 'Cost',
-      whoza: '£19 / month',
+      whoza: 'From £59 / month',
       seo: '£500-£2000+ / month',
       diy: '"Free" (but costs you time)'
     }

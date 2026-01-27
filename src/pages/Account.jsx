@@ -101,7 +101,6 @@ const CancelSubscriptionModal = ({ isOpen, onClose, subscription, onConfirm }) =
       'Monthly strategy report'
     ],
     improve: [
-      'Everything in Monitor',
       'Weekly personalised tasks from Rex',
       'Step-by-step action plans you approve before doing',
       'Faster visibility growth',

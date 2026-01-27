@@ -14,7 +14,6 @@ export default function Checkout() {
   const [loading, setLoading] = useState(false);
 
   const plans = {
-    Monitor: { price: 19, name: 'Monitor' },
     Improve: { price: 59, name: 'Improve' },
     Priority: { price: 149, name: 'Priority' },
   };
@@ -32,7 +31,6 @@ export default function Checkout() {
     setLoading(true);
     try {
       const priceIds = {
-        Monitor: 'price_1So43gDN44gTlvjn8OyQ2VEB',
         Improve: 'price_1So458DN44gTlvjntt2UULvS',
         Priority: 'price_1So46EDN44gTlvjnaJdSGr7V',
       };
@@ -93,46 +91,6 @@ export default function Checkout() {
           )}
 
           <div className="grid">
-            <div className="card">
-              <label
-                style={{
-                  display: 'flex',
-                  alignItems: 'start',
-                  cursor: 'pointer',
-                  marginBottom: 0,
-                }}
-              >
-                <input
-                  type="radio"
-                  name="plan"
-                  value="Monitor"
-                  checked={selectedPlan === 'Monitor'}
-                  onChange={(e) => setSelectedPlan(e.target.value)}
-                  style={{ marginTop: '4px', marginRight: 'var(--spacing-sm)', flexShrink: 0 }}
-                />
-                <div>
-                  <h3 style={{ marginTop: 0, marginBottom: 'var(--spacing-xs)' }}>
-                    Monitor
-                  </h3>
-                  <p style={{ fontSize: '14px', color: 'var(--color-text-secondary)', marginBottom: 'var(--spacing-sm)' }}>
-                    See Where You Stand
-                  </p>
-                  <p className="score-display" style={{ marginBottom: 'var(--spacing-sm)' }}>
-                    £{userData?.founder ? founderPrice : plans.Monitor.price}
-                    <span style={{ fontSize: '19px', color: 'var(--color-text)' }}>
-                      / month
-                    </span>
-                  </p>
-                  <ul style={{ marginBottom: 0 }}>
-                    <li>Monthly Visibility Confidence Score™</li>
-                    <li>AI visibility report across ChatGPT, Google AI, Perplexity</li>
-                    <li>Email alerts when your score changes</li>
-                    <li>Competitor visibility comparison (1 competitor)</li>
-                  </ul>
-                </div>
-              </label>
-            </div>
-
             <div
               className="card"
               style={{
@@ -182,7 +140,6 @@ export default function Checkout() {
                     </span>
                   </p>
                   <ul style={{ marginBottom: 0 }}>
-                    <li>Everything in Monitor, plus:</li>
                     <li>Weekly personalised tasks from Rex</li>
                     <li>Step-by-step action plans you approve</li>
                     <li>Progress tracking across all 5 pillars</li>

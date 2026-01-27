@@ -4,7 +4,7 @@ export default function ROICalculator() {
   const [selectedTrade, setSelectedTrade] = useState('plumber');
   const [averageJobValue, setAverageJobValue] = useState(250);
   const [newJobsPerMonth, setNewJobsPerMonth] = useState(3);
-  const [selectedPlan, setSelectedPlan] = useState('monitor');
+  const [selectedPlan, setSelectedPlan] = useState('improve');
   const [showResults, setShowResults] = useState(false);
 
   const tradePresets = {
@@ -17,7 +17,6 @@ export default function ROICalculator() {
   };
 
   const planPrices = {
-    monitor: 19,
     improve: 59,
     priority: 149
   };
@@ -199,7 +198,6 @@ export default function ROICalculator() {
               onChange={(e) => setSelectedPlan(e.target.value)}
               aria-label="Select subscription plan"
             >
-              <option value="monitor">Monitor - £19/month</option>
               <option value="improve">Improve - £59/month</option>
               <option value="priority">Priority - £149/month</option>
             </select>
@@ -395,7 +393,7 @@ export default function ROICalculator() {
                   <div>
                     <strong style={{ color: '#1e293b' }}>whoza.ai</strong>
                     <div style={{ fontSize: '0.85rem', color: '#4d7c0f', marginTop: '2px' }}>
-                      £19/month - predictable cost, no per-lead fees
+                      From £59/month - predictable cost, no per-lead fees
                     </div>
                   </div>
                   <span style={{ color: '#16a34a', fontWeight: 'bold', fontSize: '0.9rem' }}>Fixed price</span>

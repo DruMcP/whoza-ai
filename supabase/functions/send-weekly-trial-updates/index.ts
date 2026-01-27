@@ -10,11 +10,12 @@ const SUPABASE_URL = Deno.env.get('SUPABASE_URL')
 const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')
 
 interface TrialUser {
-  id: string
+  user_id: string
   email: string
   business_name: string
   trial_started_at: string
   trial_ends_at: string
+  days_remaining: number
 }
 
 serve(async (req) => {
@@ -33,13 +34,9 @@ serve(async (req) => {
       SUPABASE_SERVICE_ROLE_KEY!
     )
 
-    // Get all active trial users
+    // Get all active trial users using the database function
     const { data: trialUsers, error: usersError } = await supabase
-      .from('users')
-      .select('id, email, business_name, trial_started_at, trial_ends_at')
-      .eq('trial_active', true)
-      .not('trial_ends_at', 'is', null)
-      .gte('trial_ends_at', new Date().toISOString())
+      .rpc('get_active_trial_users')
 
     if (usersError) {
       console.error('Error fetching trial users:', usersError)
@@ -62,10 +59,8 @@ serve(async (req) => {
     // Send weekly update email to each trial user
     for (const user of trialUsers as TrialUser[]) {
       try {
-        // Calculate days remaining in trial
-        const daysRemaining = Math.ceil(
-          (new Date(user.trial_ends_at).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24)
-        )
+        // Use days_remaining from database function
+        const daysRemaining = user.days_remaining
 
         // Generate AI visibility tips (placeholder - replace with actual logic)
         const tips = generateVisibilityTips()
@@ -89,7 +84,7 @@ serve(async (req) => {
           const errorData = await emailResponse.json()
           console.error(`Failed to send email to ${user.email}:`, errorData)
           emailResults.push({
-            userId: user.id,
+            userId: user.user_id,
             email: user.email,
             success: false,
             error: errorData.message || 'Failed to send email'
@@ -103,7 +98,7 @@ serve(async (req) => {
         await supabase
           .from('email_logs')
           .insert({
-            user_id: user.id,
+            user_id: user.user_id,
             email_type: 'trial_weekly_update',
             recipient_email: user.email,
             sent_at: new Date().toISOString(),
@@ -112,7 +107,7 @@ serve(async (req) => {
           })
 
         emailResults.push({
-          userId: user.id,
+          userId: user.user_id,
           email: user.email,
           success: true,
           emailId: emailData.id
@@ -121,7 +116,7 @@ serve(async (req) => {
       } catch (error) {
         console.error(`Error sending email to ${user.email}:`, error)
         emailResults.push({
-          userId: user.id,
+          userId: user.user_id,
           email: user.email,
           success: false,
           error: error.message

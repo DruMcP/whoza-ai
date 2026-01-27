@@ -34,7 +34,6 @@ export default function PaymentSuccess() {
       tagline: 'Get Found by AI',
       color: '#84cc16',
       features: [
-        'Everything in Monitor, plus:',
         'Weekly personalised tasks from Rex',
         'Step-by-step action plans you approve',
         'Progress tracking across all 5 pillars',

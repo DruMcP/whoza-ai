@@ -218,7 +218,7 @@ const HeroSection = () => {
               color: '#9CA3AF',
               marginTop: '0'
             }}>
-              £19/month pays for itself with just ONE extra job
+              £59/month pays for itself with just 1-2 extra jobs
             </p>
           </div>
 

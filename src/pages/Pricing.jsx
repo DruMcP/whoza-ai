@@ -19,8 +19,9 @@ const pricingPlans = [
     trustSignal: 'No credit card required. No commitment.',
     targetPersona: 'Businesses wanting to test AI visibility before committing',
     features: [
-      'Weekly AI visibility email updates',
-      'Generic tips to improve your AI presence',
+      'Weekly AI visibility score reports',
+      'Track your progress over 12 weeks',
+      'Personalized improvement insights',
       'Whitelist access to upcoming features (Chloe & Simon)',
       'Full access to Improve plan after trial',
       '3-month trial period (one-time offer)'
@@ -38,7 +39,7 @@ const pricingPlans = [
     comparisonAnchor: 'vs £600-£1,000/month for SEO agencies',
     targetPersona: 'Independent tradespeople and small firms ready to take action',
     features: [
-      'Everything in Monitor, plus:',
+      'Core features:',
       'Weekly personalised tasks from Rex (your AI employee)',
       'Step-by-step action plans you approve before doing',
       'Progress tracking across all 5 pillars',
@@ -70,9 +71,9 @@ const pricingPlans = [
 
 const comparisonFeatures = [
   { category: 'Core Features', features: [
-    { name: 'Weekly AI Visibility Updates', freeTrial: 'Email only', improve: true, priority: true },
-    { name: 'Generic Tips & Advice', freeTrial: true, improve: false, priority: false },
-    { name: 'Detailed AI Visibility Score', freeTrial: false, improve: true, priority: true },
+    { name: 'Weekly AI Visibility Score', freeTrial: true, improve: true, priority: true },
+    { name: 'Personalized Insights', freeTrial: true, improve: true, priority: true },
+    { name: 'Progress Tracking', freeTrial: '12 weeks', improve: 'Ongoing', priority: 'Ongoing' },
     { name: 'Competitor Tracking', freeTrial: false, improve: '3', priority: '5' },
     { name: 'Weekly Tasks from Rex', freeTrial: false, improve: true, priority: true },
     { name: 'Action Plans You Approve', freeTrial: false, improve: true, priority: true },
