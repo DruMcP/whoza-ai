@@ -10,21 +10,22 @@ const pricingPlans = [
   {
     id: 'free-trial',
     name: 'Free Trial',
-    headline: 'Try Before You Buy',
-    subheadline: '3 months free. See your AI visibility grow.',
+    headline: '🎁 Try Everything Risk-Free',
+    subheadline: 'Full access for 90 days. Zero risk. Zero commitment.',
     price: 0,
-    duration: '3 months',
-    popular: false,
-    cta: 'Start Free Trial',
-    trustSignal: 'No credit card required. No commitment.',
+    duration: '90 days',
+    popular: true,
+    featured: true,
+    cta: 'Start Your Free Trial →',
+    trustSignal: '✓ No credit card required  ✓ Cancel anytime  ✓ One-time offer',
     targetPersona: 'Businesses wanting to test AI visibility before committing',
     features: [
-      'Weekly AI visibility score reports',
-      'Track your progress over 12 weeks',
-      'Personalized improvement insights',
-      'Whitelist access to upcoming features (Chloe & Simon)',
-      'Full access to Improve plan after trial',
-      '3-month trial period (one-time offer)'
+      '✨ Weekly AI visibility score reports',
+      '📊 Track your progress over 12 weeks',
+      '💡 Personalized improvement insights',
+      '🎯 Whitelist access to new features (Chloe & Simon)',
+      '🚀 Full Improve plan access included',
+      '⏰ 90-day trial period (one-time offer)'
     ]
   },
   {
@@ -33,7 +34,7 @@ const pricingPlans = [
     headline: 'Get Found by AI',
     subheadline: 'One extra job pays for the whole year.',
     price: 59,
-    popular: true,
+    popular: false,
     cta: 'Start Improving',
     trustSignal: 'Significantly more affordable than SEO agencies. 30-day money-back guarantee.',
     comparisonAnchor: 'vs £600-£1,000/month for SEO agencies',
@@ -186,49 +187,65 @@ export default function Pricing() {
             {pricingPlans.map((plan) => (
               <div
                 key={plan.id}
-                className={`pricing-card card-hover scroll-reveal ${plan.popular ? 'popular' : ''}`}
+                className={`pricing-card card-hover scroll-reveal ${plan.popular ? 'popular' : ''} ${plan.featured ? 'featured-trial' : ''}`}
                 style={{
                   position: 'relative',
-                  transform: plan.popular ? 'scale(1.05)' : 'scale(1)',
-                  zIndex: plan.popular ? 2 : 1
+                  transform: plan.featured ? 'scale(1.15)' : plan.popular ? 'scale(1.05)' : 'scale(1)',
+                  zIndex: plan.featured ? 3 : plan.popular ? 2 : 1,
+                  ...(plan.featured && {
+                    background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%)',
+                    border: '3px solid transparent',
+                    backgroundImage: 'linear-gradient(135deg, #0f172a, #1e293b), linear-gradient(135deg, #84CC16, #9EF01A, #84CC16)',
+                    backgroundOrigin: 'border-box',
+                    backgroundClip: 'padding-box, border-box',
+                    boxShadow: '0 25px 70px rgba(132, 204, 22, 0.4), 0 0 50px rgba(132, 204, 22, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
+                    animation: 'pulse-glow 3s ease-in-out infinite'
+                  })
                 }}
               >
                 {plan.popular && (
                   <div className="popular-badge" style={{
-                    background: 'linear-gradient(135deg, var(--color-primary-600) 0%, #65a30d 100%)',
+                    background: plan.featured 
+                      ? 'linear-gradient(135deg, #84CC16 0%, #9EF01A 50%, #84CC16 100%)'
+                      : 'linear-gradient(135deg, var(--color-primary-600) 0%, #65a30d 100%)',
                     color: '#0f172a',
                     fontWeight: 700,
-                    fontSize: '14px',
+                    fontSize: plan.featured ? '15px' : '14px',
                     textTransform: 'uppercase',
                     letterSpacing: '0.5px',
-                    padding: 'var(--spacing-sm) var(--spacing-md)',
+                    padding: plan.featured ? '10px 24px' : 'var(--spacing-sm) var(--spacing-md)',
                     borderRadius: 'var(--radius-full)',
                     position: 'absolute',
-                    top: '-12px',
+                    top: '-14px',
                     left: '50%',
                     transform: 'translateX(-50%)',
-                    boxShadow: '0 4px 12px rgba(132, 204, 22, 0.3)'
+                    boxShadow: plan.featured 
+                      ? '0 6px 20px rgba(132, 204, 22, 0.5), 0 0 30px rgba(132, 204, 22, 0.3)'
+                      : '0 4px 12px rgba(132, 204, 22, 0.3)',
+                    animation: plan.featured ? 'pulse-badge 2s ease-in-out infinite' : 'none'
                   }}>
-                    Most Popular
+                    {plan.featured ? '⭐ MOST POPULAR - LIMITED TIME' : 'Most Popular'}
                   </div>
                 )}
 
                 <div className="pricing-card-header" style={{ marginTop: plan.popular ? 'var(--spacing-md)' : 0 }}>
                   <div style={{
-                    fontSize: '20px',
+                    fontSize: plan.featured ? '22px' : '20px',
                     fontWeight: 700,
                     textTransform: 'uppercase',
                     letterSpacing: '1px',
-                    color: '#3B82F6',
-                    marginBottom: '8px'
+                    color: plan.featured ? '#84CC16' : '#3B82F6',
+                    marginBottom: '8px',
+                    textShadow: plan.featured ? '0 0 20px rgba(132, 204, 22, 0.5)' : 'none'
                   }}>
                     {plan.name}
                   </div>
                   <h3 style={{
-                    fontSize: '24px',
+                    fontSize: plan.featured ? '28px' : '24px',
                     fontWeight: 700,
                     marginBottom: '6px',
-                    color: '#ffffff'
+                    color: '#ffffff',
+                    textShadow: plan.featured ? '0 2px 10px rgba(255, 255, 255, 0.1)' : 'none'
                   }}>
                     {plan.headline}
                   </h3>
@@ -245,7 +262,15 @@ export default function Pricing() {
                 <div className="pricing-card-price" style={{ marginBottom: '8px' }}>
                   {plan.id === 'free-trial' ? (
                     <>
-                      <span className="price-currency" style={{ fontSize: '32px' }}>FREE</span>
+                      <span className="price-currency" style={{ 
+                        fontSize: '48px', 
+                        fontWeight: 900,
+                        background: 'linear-gradient(135deg, #84CC16, #9EF01A)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        textShadow: '0 0 30px rgba(132, 204, 22, 0.5)',
+                        letterSpacing: '2px'
+                      }}>FREE</span>
                     </>
                   ) : (
                     <>
@@ -282,10 +307,23 @@ export default function Pricing() {
 
                 <Link
                   to={`/start?plan=${plan.id}`}
-                  className={`pricing-cta btn-hover ${plan.popular ? 'button' : 'button-secondary'}`}
+                  className={`pricing-cta btn-hover ${plan.featured ? 'button-featured' : plan.popular ? 'button' : 'button-secondary'}`}
                   style={{
                     width: '100%',
-                    marginBottom: '10px'
+                    marginBottom: '10px',
+                    ...(plan.featured && {
+                      background: 'linear-gradient(135deg, #84CC16 0%, #65A30D 100%)',
+                      color: '#0f172a',
+                      fontSize: '18px',
+                      fontWeight: 700,
+                      padding: '16px 32px',
+                      borderRadius: '12px',
+                      border: 'none',
+                      boxShadow: '0 10px 30px rgba(132, 204, 22, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3)',
+                      textTransform: 'none',
+                      letterSpacing: '0.3px',
+                      transition: 'all 0.3s ease'
+                    })
                   }}
                 >
                   {plan.cta}

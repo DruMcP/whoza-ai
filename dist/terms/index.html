@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Cache control handled by Cloudflare CDN -->
+    <meta http-equiv="Cache-Control" content="public, max-age=3600" />
+    
+    <!-- Preconnect to critical third-party origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://ryeqbewlmaqewsuvuhlm.supabase.co" crossorigin>
+    
+    <!-- DNS Prefetch for external resources -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    
+    <!-- Preload critical resources -->
+    <link rel="modulepreload" href="data:text/jsx;base64,aW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JwppbXBvcnQgUmVhY3RET00gZnJvbSAncmVhY3QtZG9tL2NsaWVudCcKaW1wb3J0ICogYXMgU2VudHJ5IGZyb20gJ0BzZW50cnkvcmVhY3QnCmltcG9ydCBSZWFjdEdBIGZyb20gJ3JlYWN0LWdhNCcKaW1wb3J0IEFwcCBmcm9tICcuL0FwcC5qc3gnCmltcG9ydCAnLi9pbmRleC5jc3MnCmltcG9ydCAnLi9tb2Rlcm4tdXBncmFkZS5jc3MnCmltcG9ydCAnLi9tb2Rlcm4tY29tcG9uZW50LW92ZXJyaWRlcy5jc3MnCmltcG9ydCAnLi92aXN1YWwtcG9saXNoLmNzcycKaW1wb3J0ICcuL2dsYXNzbW9ycGhpc20tbWljcm9pbnRlcmFjdGlvbnMuY3NzJwppbXBvcnQgeyBpbml0QWNjZXNzaWJpbGl0eSB9IGZyb20gJy4vdXRpbHMvYWNjZXNzaWJpbGl0eScKClNlbnRyeS5pbml0KHsKICBkc246ICdodHRwczovL2Q2YTQzYWRhZTcyMzgzOWRkNDVkZWU4Y2I2YjAyMTViQG80NTEwNjUyNTkwODUwMDQ4LmluZ2VzdC5kZS5zZW50cnkuaW8vNDUxMDY1MjU5NjY4MjgzMycsCiAgaW50ZWdyYXRpb25zOiBbCiAgICBTZW50cnkuYnJvd3NlclRyYWNpbmdJbnRlZ3JhdGlvbigpLAogICAgU2VudHJ5LnJlcGxheUludGVncmF0aW9uKCksCiAgXSwKICB0cmFjZXNTYW1wbGVSYXRlOiAxLjAsCiAgcmVwbGF5c1Nlc3Npb25TYW1wbGVSYXRlOiAwLjEsCiAgcmVwbGF5c09uRXJyb3JTYW1wbGVSYXRlOiAxLjAsCiAgZW52aXJvbm1lbnQ6IGltcG9ydC5tZXRhLmVudi5NT0RFLAogIC8vIElnbm9yZSBrbm93biBTdXBhYmFzZSBhdXRoLWpzIEFib3J0RXJyb3IgKEdpdEh1YiBpc3N1ZSAjNDE5NjgpCiAgLy8gVGhpcyBpcyBhIGJlbmlnbiByYWNlIGNvbmRpdGlvbiB0aGF0IGRvZXNuJ3QgYWZmZWN0IGZ1bmN0aW9uYWxpdHkKICBpZ25vcmVFcnJvcnM6IFsKICAgICdBYm9ydEVycm9yOiBzaWduYWwgaXMgYWJvcnRlZCB3aXRob3V0IHJlYXNvbicsCiAgICAvc2lnbmFsIGlzIGFib3J0ZWQgd2l0aG91dCByZWFzb24vLAogICAgL0Fib3J0RXJyb3IuKmxvY2tzXC5qcy8sCiAgXSwKICBiZWZvcmVTZW5kKGV2ZW50LCBoaW50KSB7CiAgICBjb25zdCBlcnJvciA9IGhpbnQub3JpZ2luYWxFeGNlcHRpb247CiAgICAvLyBGaWx0ZXIgb3V0IFN1cGFiYXNlIEFib3J0RXJyb3JzIHRoYXQgZG9uJ3QgYWZmZWN0IGZ1bmN0aW9uYWxpdHkKICAgIGlmIChlcnJvciAmJiBlcnJvci5uYW1lID09PSAnQWJvcnRFcnJvcicgJiYgCiAgICAgICAgZXJyb3IubWVzc2FnZSAmJiBlcnJvci5tZXNzYWdlLmluY2x1ZGVzKCdzaWduYWwgaXMgYWJvcnRlZCcpKSB7CiAgICAgIHJldHVybiBudWxsOyAvLyBEb24ndCBzZW5kIHRvIFNlbnRyeQogICAgfQogICAgcmV0dXJuIGV2ZW50OwogIH0sCn0pCgpSZWFjdEdBLmluaXRpYWxpemUoJ0ctVkNRTkQ5V1BXOScpCgpSZWFjdERPTS5jcmVhdGVSb290KGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdyb290JykpLnJlbmRlcigKICA8UmVhY3QuU3RyaWN0TW9kZT4KICAgIDxBcHAgLz4KICA8L1JlYWN0LlN0cmljdE1vZGU+LAopCgppZiAodHlwZW9mIHdpbmRvdyAhPT0gJ3VuZGVmaW5lZCcpIHsKICBkb2N1bWVudC5kb2N1bWVudEVsZW1lbnQuY2xhc3NMaXN0LmFkZCgnanMtbG9hZGVkJyk7CgogIHNldFRpbWVvdXQoKCkgPT4gewogICAgdHJ5IHsKICAgICAgaW5pdEFjY2Vzc2liaWxpdHkoKTsKICAgIH0gY2F0Y2ggKGVycm9yKSB7CiAgICAgIC8vIFRPRE86IFJldmlldyBlcnJvciBoYW5kbGluZzogY29uc29sZS5lcnJvcignRXJyb3IgaW5pdGlhbGl6aW5nIGFjY2Vzc2liaWxpdHk6JywgZXJyb3IpCiAgICB9CiAgfSwgNTAwKTsKfQo=" />
+    <meta name="build-timestamp" content="20251228194100" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#1a1a2e">
+    <meta name="msapplication-TileColor" content="#1a1a2e">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Review our terms of service. Transparent, fair terms for UK tradespeople using our AI marketing platform." />
+    <meta name="keywords" content="AI for tradespeople, AI visibility for trades, AI search optimization UK, GEO for local businesses, tradesperson AI marketing, get found in ChatGPT, AI employee for trades, plumber AI marketing, electrician AI visibility, builder AI search, roofer marketing, GDPR compliant AI marketing, UK trades AI specialist, AI-powered lead generation, local business AI visibility, ChatGPT business visibility, Google AI optimization, Perplexity business visibility" />
+    <meta name="author" content="whoza.ai" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="msvalidate.01" content="B6D3ACF2F126930811E983EEE49699D0" />
+    <!-- Canonical tag (fallback - dynamically updated by React Helmet in SEO component) -->
+    <link rel="canonical" href="https://whoza.ai/terms" />
+
+    <!-- Geo Targeting -->
+    <meta name="geo.region" content="GB" />
+    <meta name="geo.placename" content="United Kingdom" />
+    <meta name="language" content="en-GB" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://whoza.ai/terms" />
+    <meta property="og:site_name" content="Whoza.ai" />
+    <meta property="og:title" content="Terms of Service | Whoza.ai - Fair Terms for Tradespeople" />
+    <meta property="og:description" content="Review our terms of service. Transparent, fair terms for UK tradespeople using our AI marketing platform." />
+    <meta property="og:image" content="https://whoza.ai/favicon.svg" />
+    <meta property="og:image:secure_url" content="https://whoza.ai/favicon.svg" />
+    <meta property="og:image:alt" content="Whoza.ai - AI Employee for UK Tradespeople" />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:locale" content="en_GB" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@whozaai" />
+    <meta name="twitter:creator" content="@whozaai" />
+    <meta name="twitter:title" content="Terms of Service | Whoza.ai - Fair Terms for Tradespeople" />
+    <meta name="twitter:description" content="Review our terms of service. Transparent, fair terms for UK tradespeople using our AI marketing platform." />
+    <meta name="twitter:image" content="https://whoza.ai/favicon.svg" />
+    <meta name="twitter:image:alt" content="Rex AI Employee helping tradespeople get more local jobs" />
+
+    <title>Terms of Service | Whoza.ai - Fair Terms for Tradespeople</title>
+
+    <!-- Structured Data / Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Whoza.ai",
+      "alternateName": "Whoza",
+      "url": "https://whoza.ai",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://whoza.ai/favicon.svg",
+        "width": "100",
+        "height": "100"
+      },
+      "image": "https://whoza.ai/favicon.svg",
+      "description": "Rex is your AI employee that helps plumbers, electricians, roofers, builders and 50+ trades get more local jobs when customers ask AI for a tradesperson.",
+      "foundingDate": "2024",
+      "slogan": "Your AI employee for local visibility",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "availableLanguage": ["English", "en-GB"],
+        "areaServed": "GB"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Kingdom",
+        "sameAs": "https://en.wikipedia.org/wiki/United_Kingdom"
+      },
+      "sameAs": [
+        "https://twitter.com/whozaai"
+      ],
+      "keywords": "AI for tradespeople, AI visibility for trades, GEO for local businesses, AI search optimization UK, get found in ChatGPT, tradesperson AI marketing"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Whoza.ai - Rex AI Employee",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/InStock",
+        "url": "https://whoza.ai/pricing"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "200",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "description": "AI-powered visibility platform for UK tradespeople. Get found when customers ask ChatGPT, Google AI, and other AI tools for local services.",
+      "featureList": [
+        "AI-powered task generation",
+        "Weekly visibility tasks",
+        "Google Business Profile optimization",
+        "ChatGPT visibility optimization",
+        "Local SEO automation",
+        "Competitor analysis"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "AI Marketing Assistant for Tradespeople",
+      "name": "Rex AI Employee",
+      "provider": {
+        "@type": "Organization",
+        "name": "Whoza.ai",
+        "url": "https://whoza.ai"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "name": "Tradespeople and Local Service Providers"
+      },
+      "description": "Rex is your AI employee that helps plumbers, electricians, roofers, builders and 50+ trades get more local jobs when customers ask AI for a tradesperson.",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "GBP",
+        "price": "0",
+        "url": "https://whoza.ai/pricing"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://whoza.ai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How It Works",
+          "item": "https://whoza.ai/how-it-works"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Pricing",
+          "item": "https://whoza.ai/pricing"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Free Visibility Score",
+          "item": "https://whoza.ai/free-score"
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Whoza.ai",
+      "url": "https://whoza.ai",
+      "description": "AI for tradespeople - Get more local jobs with Rex, your AI employee",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://whoza.ai/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Whoza.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://whoza.ai/favicon.svg"
+        }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Whoza.ai",
+      "image": "https://whoza.ai/favicon.svg",
+      "description": "AI-powered visibility platform helping UK tradespeople get found when customers ask ChatGPT, Google AI, and other AI tools for local services.",
+      "url": "https://whoza.ai",
+      "telephone": "",
+      "priceRange": "££",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "GB",
+        "addressRegion": "United Kingdom"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "addressCountry": "GB"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "17:00"
+      },
+      "sameAs": [
+        "https://twitter.com/whozaai"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "200",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "SoftwareApplication",
+        "name": "Whoza.ai - Rex AI Employee",
+        "description": "AI marketing assistant for tradespeople"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Mike T."
+      },
+      "reviewBody": "I get one task each week by email. Takes 15 minutes. My Google reviews went up and now I'm showing up when people ask ChatGPT for local electricians.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Whoza.ai"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Get More Local Jobs with AI Visibility",
+      "description": "Simple steps to improve your trade business visibility when customers search on AI tools like ChatGPT and Google AI",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Check Your Free Visibility Score",
+          "text": "Get your free AI visibility score in 60 seconds to see how you currently rank on AI search tools.",
+          "url": "https://whoza.ai/free-score"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Create Your Account",
+          "text": "Sign up for Whoza.ai and let Rex analyze your online presence.",
+          "url": "https://whoza.ai/start"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Receive Weekly Tasks",
+          "text": "Rex emails you one simple task per week (10-15 minutes) to improve your AI visibility."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Approve and Complete Tasks",
+          "text": "Review each task, approve it, and complete it yourself. You stay in full control."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Track Your Progress",
+          "text": "Monitor your visibility improvements and see how AI tools start recommending your business.",
+          "url": "https://whoza.ai/portal"
+        }
+      ],
+      "totalTime": "PT15M"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "AI for Tradespeople | Whoza.ai - Get More Local Jobs with Rex",
+      "description": "Rex is your AI employee that helps plumbers, electricians, roofers, builders and 50+ trades get more local jobs when customers ask AI for a tradesperson. GDPR compliant.",
+      "url": "https://whoza.ai/",
+      "inLanguage": "en-GB",
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://whoza.ai"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://whoza.ai/favicon.svg",
+        "caption": "Whoza.ai - AI Employee for UK Tradespeople"
+      },
+      "datePublished": "2024-01-01",
+      "dateModified": "2025-12-29",
+      "author": {
+        "@type": "Organization",
+        "name": "Whoza.ai"
+      }
+    }
+    </script>
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "uyaruwh0gq");
+    </script>
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Preload critical resources -->
+    <link rel="prefetch" href="/how-it-works" as="document">
+    <link rel="prefetch" href="/pricing" as="document">
+    <link rel="prefetch" href="/free-score" as="document">
+
+    <!-- Theme and app meta tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- Additional SEO meta tags -->
+    <meta name="referrer" content="origin-when-cross-origin">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Resource hints for better performance -->
+    <link rel="dns-prefetch" href="https://whoza.ai">
+    <script type="module" crossorigin src="/assets/index-ciJ0G1ij.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-B34o3dbG.js">
+    <link rel="modulepreload" crossorigin href="/assets/analytics-vendor--TX1veYW.js">
+    <link rel="modulepreload" crossorigin href="/assets/react-vendor-ZcgRNTHg.js">
+    <link rel="modulepreload" crossorigin href="/assets/supabase-vendor-BK1OvjKo.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-DsQqbdOS.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

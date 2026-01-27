@@ -11578,3 +11578,196 @@ section {
     padding: 16px !important;
   }
 }
+
+/* ============================================================================
+   FREE TRIAL VISUAL ENHANCEMENTS - MOBILE OPTIMIZED
+   ============================================================================ */
+
+/* Pulse glow animation for featured Free Trial card */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 
+      0 20px 60px rgba(132, 204, 22, 0.3),
+      0 0 40px rgba(132, 204, 22, 0.2);
+  }
+  50% {
+    box-shadow: 
+      0 25px 70px rgba(132, 204, 22, 0.4),
+      0 0 50px rgba(132, 204, 22, 0.3);
+  }
+}
+
+/* Pulse animation for badge */
+@keyframes pulse-badge {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+    box-shadow: 0 6px 20px rgba(132, 204, 22, 0.5), 0 0 30px rgba(132, 204, 22, 0.3);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.05);
+    box-shadow: 0 8px 25px rgba(132, 204, 22, 0.6), 0 0 40px rgba(132, 204, 22, 0.4);
+  }
+}
+
+/* Featured trial card styling */
+.featured-trial {
+  margin: 20px 0 !important;
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+  /* Reduce scale on mobile for better fit */
+  .pricing-card.featured-trial {
+    transform: scale(1.05) !important;
+    margin: 15px 0 !important;
+  }
+  
+  /* Adjust badge size on mobile */
+  .featured-trial .popular-badge {
+    font-size: 12px !important;
+    padding: 8px 16px !important;
+    top: -12px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90%;
+  }
+  
+  /* Adjust headline size on mobile */
+  .featured-trial .pricing-card-header h3 {
+    font-size: 22px !important;
+    line-height: 1.3;
+  }
+  
+  /* Adjust FREE text size on mobile */
+  .featured-trial .price-currency {
+    font-size: 36px !important;
+  }
+  
+  /* Reduce glow effects on mobile for performance */
+  .featured-trial {
+    box-shadow: 
+      0 15px 40px rgba(132, 204, 22, 0.3),
+      0 0 30px rgba(132, 204, 22, 0.2) !important;
+  }
+  
+  /* Simplify animations on mobile */
+  @media (prefers-reduced-motion: reduce) {
+    .featured-trial {
+      animation: none !important;
+    }
+    .featured-trial .popular-badge {
+      animation: none !important;
+    }
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  /* Further reduce scale on small mobile */
+  .pricing-card.featured-trial {
+    transform: scale(1.02) !important;
+    margin: 10px 0 !important;
+  }
+  
+  /* Compact badge on small screens */
+  .featured-trial .popular-badge {
+    font-size: 10px !important;
+    padding: 6px 12px !important;
+    letter-spacing: 0.3px !important;
+  }
+  
+  /* Adjust plan name size */
+  .featured-trial .pricing-card-header > div:first-child {
+    font-size: 18px !important;
+  }
+  
+  /* Adjust headline size */
+  .featured-trial .pricing-card-header h3 {
+    font-size: 20px !important;
+  }
+  
+  /* Adjust FREE text size */
+  .featured-trial .price-currency {
+    font-size: 32px !important;
+  }
+  
+  /* Reduce padding for better fit */
+  .featured-trial {
+    padding: 24px 16px !important;
+  }
+}
+
+/* Tablet landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .pricing-card.featured-trial {
+    transform: scale(1.1) !important;
+  }
+}
+
+/* Ensure pricing cards grid is responsive */
+@media (max-width: 768px) {
+  .pricing-cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    align-items: stretch;
+  }
+  
+  .pricing-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Optimize text shadow for mobile */
+@media (max-width: 768px) {
+  .featured-trial h3,
+  .featured-trial .pricing-card-header > div:first-child {
+    text-shadow: none !important;
+  }
+}
+
+/* Ensure CTA buttons are touch-friendly on mobile */
+@media (max-width: 768px) {
+  .pricing-cta {
+    min-height: 48px;
+    font-size: 16px !important;
+    padding: 14px 24px !important;
+  }
+}
+
+/* Optimize gradient borders for mobile performance */
+@media (max-width: 768px) {
+  .featured-trial {
+    border: 2px solid #84CC16 !important;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+    background-image: none !important;
+  }
+}
+
+/* Featured CTA Button Enhancements */
+.button-featured:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 15px 40px rgba(132, 204, 22, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+}
+
+.button-featured:active {
+  transform: scale(0.98) !important;
+}
+
+/* Mobile optimization for featured button */
+@media (max-width: 768px) {
+  .button-featured {
+    font-size: 16px !important;
+    padding: 14px 24px !important;
+    min-height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button-featured {
+    font-size: 15px !important;
+    padding: 12px 20px !important;
+  }
+}
