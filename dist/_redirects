@@ -23,6 +23,7 @@ http://whoza.ai/*               https://whoza.ai/:splat          301!
 /contact            /contact/index.html         200
 # /blog               /blog/index.html            200  # Commented out to allow React Router to handle blog post routes
 /signin             /signin/index.html          200
+/deployment-assistant.html   /deployment-assistant.html  200
 
 # SPA catch-all comes AFTER pre-rendered pages
 /*    /index.html   200
