@@ -29,12 +29,21 @@ function BlogPost() {
       setPost(foundPost);
       setError(null);
       
-      // Get related posts (same category, excluding current)
+      // Get related posts (same category first, then others, excluding current)
       const allPosts = getPublishedPosts();
-      const related = allPosts
-        .filter(p => p.id !== foundPost.id)
+      const sameCategoryPosts = allPosts
+        .filter(p => p.id !== foundPost.id && p.category === foundPost.category)
         .slice(0, 3);
-      setRelatedPosts(related);
+      
+      // If we don't have 3 posts from same category, fill with other posts
+      if (sameCategoryPosts.length < 3) {
+        const otherPosts = allPosts
+          .filter(p => p.id !== foundPost.id && p.category !== foundPost.category)
+          .slice(0, 3 - sameCategoryPosts.length);
+        setRelatedPosts([...sameCategoryPosts, ...otherPosts]);
+      } else {
+        setRelatedPosts(sameCategoryPosts);
+      }
       
       // Scroll to top
       window.scrollTo(0, 0);

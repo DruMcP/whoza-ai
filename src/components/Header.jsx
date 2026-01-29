@@ -112,6 +112,7 @@ const Header = memo(function Header() {
                 <li><Link to="/how-it-works" className="nav-link" onClick={closeMobileMenu}>How it works</Link></li>
                 <li><Link to="/case-studies" className="nav-link" onClick={closeMobileMenu}>Case Studies</Link></li>
                 <li><Link to="/pricing" className="nav-link" onClick={closeMobileMenu}>Pricing</Link></li>
+                <li><Link to="/blog" className="nav-link" onClick={closeMobileMenu}>Resources</Link></li>
                 <li><Link to="/trust" className="nav-link" onClick={closeMobileMenu}>Trust & Reviews</Link></li>
                 <li><Link to="/contact" className="nav-link" onClick={closeMobileMenu}>Contact</Link></li>
               </ul>

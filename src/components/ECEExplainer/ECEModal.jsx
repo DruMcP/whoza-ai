@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X } from 'lucide-react';
+import { X, ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { getPrimaryPostForPillar } from '../../data/eceBlogMapping';
 
 export default function ECEModal({ pillar, onClose, onNavigate, totalPillars }) {
   const modalRef = useRef(null);
@@ -312,6 +314,44 @@ export default function ECEModal({ pillar, onClose, onNavigate, totalPillars }) 
                 ))}
               </div>
             </div>
+
+            {/* Blog Post Link for Internal Linking & Topical Authority */}
+            {getPrimaryPostForPillar(pillar.id) && (
+              <Link
+                to={`/blog/${getPrimaryPostForPillar(pillar.id).slug}`}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '8px',
+                  width: '100%',
+                  padding: '16px',
+                  background: 'linear-gradient(135deg, #22d3ee, #0ea5e9)',
+                  color: '#ffffff',
+                  border: 'none',
+                  borderRadius: '12px',
+                  fontSize: '16px',
+                  fontWeight: '600',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  textDecoration: 'none',
+                  marginBottom: '12px'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'linear-gradient(135deg, #0ea5e9, #0284c7)';
+                  e.currentTarget.style.transform = 'translateY(-1px)';
+                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(34, 211, 238, 0.4)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'linear-gradient(135deg, #22d3ee, #0ea5e9)';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                <span>📖 Read Detailed Guide</span>
+                <ExternalLink size={18} />
+              </Link>
+            )}
 
             <button
               onClick={onClose}
