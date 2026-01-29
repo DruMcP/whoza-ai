@@ -2,51 +2,135 @@ name: Daily KPI Reports
 
 on:
   schedule:
-    - cron: '0 9 * * *'
-  workflow_dispatch:
+    - cron: '0 9 * * *'  # 9:00 AM GMT daily
+  workflow_dispatch:  # Manual trigger
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   generate-report:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
       
-      - name: Create report
+      - name: Set up date variables
+        id: date
         run: |
+          echo "REPORT_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+          echo "BRANCH_NAME=daily-report-$(date +'%Y-%m-%d-%H%M%S')" >> $GITHUB_OUTPUT
+      
+      - name: Generate KPI report
+        id: generate
+        run: |
+          # Create reports directory
           mkdir -p reports
-          DATE=$(date +%Y-%m-%d)
-          cat > reports/daily_kpi_report_${DATE}.md << 'EOFMARKER'
-          # Daily KPI Report
           
-          **Date:** DATE_PLACEHOLDER
+          # Mock KPI data (replace with actual Google Analytics data later)
+          ENGAGEMENT=64.6
+          TRUST=42.3
+          CONVERSION=51.2
+          
+          # Set outputs for PR body
+          echo "ENGAGEMENT=$ENGAGEMENT" >> $GITHUB_OUTPUT
+          echo "TRUST=$TRUST" >> $GITHUB_OUTPUT
+          echo "CONVERSION=$CONVERSION" >> $GITHUB_OUTPUT
+          
+          # Generate report file
+          cat > reports/daily_kpi_report_${{ steps.date.outputs.REPORT_DATE }}.md << 'EOF'
+          # Daily KPI Report - ${{ steps.date.outputs.REPORT_DATE }}
           
           ## Summary
-          - Engagement Lift: 64.6%
-          - Trust Lift: 42.3%
-          - Conversion Lift: 51.2%
           
-          ## Status
-          All metrics meeting targets.
-          EOFMARKER
-          sed -i "s/DATE_PLACEHOLDER/$DATE/g" reports/daily_kpi_report_${DATE}.md
+          | KPI | Current Value | Target | Status |
+          |-----|---------------|--------|--------|
+          | Engagement Lift | ${ENGAGEMENT}% | 55% | $([ $(echo "$ENGAGEMENT >= 55" | bc -l) -eq 1 ] && echo "🎯 TARGET MET" || echo "⚠️ BELOW TARGET") |
+          | Trust Lift | ${TRUST}% | 40% | $([ $(echo "$TRUST >= 40" | bc -l) -eq 1 ] && echo "🎯 TARGET MET" || echo "⚠️ BELOW TARGET") |
+          | Conversion Lift | ${CONVERSION}% | 45% | $([ $(echo "$CONVERSION >= 45" | bc -l) -eq 1 ] && echo "🎯 TARGET MET" || echo "⚠️ BELOW TARGET") |
+          
+          ## Detailed Metrics
+          
+          ### Engagement Metrics
+          - ROI Calculator Usage: +30%
+          - ECE Section Time: +25%
+          - Testimonial Carousel Views: +30%
+          
+          ### Trust Metrics
+          - ECE Methodology Understanding: +20%
+          - Testimonial Credibility: +20%
+          
+          ### Conversion Metrics
+          - Waitlist Signups: +15%
+          - CTA Click Rate: +20%
+          - Overall Conversion: +10%
+          
+          ## Recommendations
+          
+          Based on today's performance:
+          - Continue monitoring engagement metrics
+          - Focus on trust-building elements
+          - Optimize conversion funnels
+          
+          ---
+          
+          *Report generated automatically by GitHub Actions*
+          *Data source: Mock data (configure Google Analytics for real data)*
+          EOF
+      
+      - name: Create feature branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b ${{ steps.date.outputs.BRANCH_NAME }}
       
       - name: Commit report
         run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
           git add reports/
-          git diff --staged --quiet || git commit -m "chore: Daily KPI report $(date +%Y-%m-%d)"
-          git push
+          git commit -m "chore: Add daily KPI report ${{ steps.date.outputs.REPORT_DATE }}"
       
-      - name: Summary
+      - name: Push branch
         run: |
-          echo "### Daily KPI Report Generated" >> $GITHUB_STEP_SUMMARY
-          echo "Date: $(date +%Y-%m-%d)" >> $GITHUB_STEP_SUMMARY
-          echo "Engagement: 64.6%" >> $GITHUB_STEP_SUMMARY
-          echo "Trust: 42.3%" >> $GITHUB_STEP_SUMMARY
-          echo "Conversion: 51.2%" >> $GITHUB_STEP_SUMMARY
+          git push origin ${{ steps.date.outputs.BRANCH_NAME }}
+      
+      - name: Create Pull Request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr create \
+            --title "📊 Daily KPI Report - ${{ steps.date.outputs.REPORT_DATE }}" \
+            --body "## Daily KPI Report Summary
+
+          **Date:** ${{ steps.date.outputs.REPORT_DATE }}
+
+          ### Key Performance Indicators
+
+          | Metric | Value | Target | Status |
+          |--------|-------|--------|--------|
+          | 📈 Engagement Lift | ${{ steps.generate.outputs.ENGAGEMENT }}% | 55% | $([ $(echo "${{ steps.generate.outputs.ENGAGEMENT }} >= 55" | bc -l) -eq 1 ] && echo "🎯 TARGET MET" || echo "⚠️ BELOW TARGET") |
+          | 🤝 Trust Lift | ${{ steps.generate.outputs.TRUST }}% | 40% | $([ $(echo "${{ steps.generate.outputs.TRUST }} >= 40" | bc -l) -eq 1 ] && echo "🎯 TARGET MET" || echo "⚠️ BELOW TARGET") |
+          | 💰 Conversion Lift | ${{ steps.generate.outputs.CONVERSION }}% | 45% | $([ $(echo "${{ steps.generate.outputs.CONVERSION }} >= 45" | bc -l) -eq 1 ] && echo "🎯 TARGET MET" || echo "⚠️ BELOW TARGET") |
+
+          ### 📄 Report Details
+
+          View the full report in \`reports/daily_kpi_report_${{ steps.date.outputs.REPORT_DATE }}.md\`
+
+          ---
+
+          🤖 *This PR was automatically generated by the Daily KPI Reports workflow*
+          
+          **To merge this PR:**
+          - Review the report file
+          - Approve and merge when ready
+          - Or enable auto-merge for future reports" \
+            --base main \
+            --head ${{ steps.date.outputs.BRANCH_NAME }}
+      
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-kpi-report-${{ steps.date.outputs.REPORT_DATE }}
+          path: reports/daily_kpi_report_${{ steps.date.outputs.REPORT_DATE }}.md
+          retention-days: 90
