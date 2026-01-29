@@ -91,8 +91,7 @@ jobs:
           TRUST="${{ steps.generate_report.outputs.trust }}"
           CONVERSION="${{ steps.generate_report.outputs.conversion }}"
           
-         COMMIT_MSG="chore: Add daily KPI report ${REPORT_DATE} - Engagement: ${ENGAGEMENT} | Trust: ${TRUST} | Conversion: ${CONVERSION}"
-
+          COMMIT_MSG="chore: Add daily KPI report ${REPORT_DATE} - Engagement: ${ENGAGEMENT} | Trust: ${TRUST} | Conversion: ${CONVERSION}"
           
           if git diff --staged --quiet; then
             echo "No changes to commit"
