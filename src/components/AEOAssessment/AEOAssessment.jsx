@@ -73,7 +73,7 @@ export default function AEOAssessment({
       <div className="aeo-assessment">
         <div className="aeo-score-display">
           <div className="aeo-score-header">
-            <h3>Your AI Readiness Score</h3>
+            <h3>Your AI Visibility Score</h3>
             <p className="aeo-score-subtitle">
               Based on your self-assessment
             </p>

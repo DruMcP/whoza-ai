@@ -160,7 +160,7 @@ export default function Home() {
           <div className="container" style={{ textAlign: 'center' }}>
             <div>
               <h2 style={{ fontSize: '36px', marginBottom: 'var(--spacing-md)' }}>
-                What's Your Visibility Confidence Score™?
+                What's Your AI Visibility Score?
               </h2>
               <p style={{
                 fontSize: '20px',
@@ -169,7 +169,7 @@ export default function Home() {
                 color: 'var(--color-text-secondary)',
                 lineHeight: '1.6'
               }}>
-                Find out in 60 seconds. Get a free Visibility Confidence Score™ showing how likely your business is to be named and recommended in AI answers (ChatGPT, Google AI, Perplexity).
+                Find out in 60 seconds. Get a free AI Visibility Score showing how likely your business is to be named and recommended in AI answers (ChatGPT, Google AI, Perplexity).
               </p>
             </div>
             <div style={{
@@ -183,7 +183,7 @@ export default function Home() {
                 fontSize: '18px',
                 padding: 'var(--spacing-md) var(--spacing-2xl)'
               }}>
-                Get your free AI readiness score
+                Get your free AI Visibility Score
               </Link>
               <Suspense fallback={<div style={{ minHeight: '60px' }} />}>
                 <GuaranteeBadge />
@@ -212,6 +212,56 @@ export default function Home() {
                   <Icon name="CheckIcon" size={20} color="var(--color-primary-600)" />
                   Instant results
                 </span>
+              </div>
+              
+              {/* What I Actually Get - Quick Win #7 */}
+              <div style={{
+                marginTop: 'var(--spacing-2xl)',
+                padding: 'var(--spacing-xl)',
+                background: 'linear-gradient(135deg, rgba(132, 204, 22, 0.05), rgba(132, 204, 22, 0.02))',
+                border: '2px solid rgba(132, 204, 22, 0.2)',
+                borderRadius: '16px',
+                maxWidth: '700px',
+                margin: 'var(--spacing-2xl) auto 0'
+              }}>
+                <h3 style={{
+                  fontSize: '24px',
+                  fontWeight: '700',
+                  color: 'var(--color-text-primary)',
+                  marginBottom: 'var(--spacing-md)',
+                  textAlign: 'center'
+                }}>
+                  What You Actually Get Every Week
+                </h3>
+                <div style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 'var(--spacing-md)',
+                  fontSize: '16px',
+                  color: 'var(--color-text-secondary)'
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <Icon name="CheckIcon" size={24} color="#84CC16" style={{ flexShrink: 0, marginTop: '2px' }} />
+                    <span><strong style={{ color: 'var(--color-text-primary)' }}>1 AI Visibility Score</strong> – See exactly where you stand</span>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <Icon name="CheckIcon" size={24} color="#84CC16" style={{ flexShrink: 0, marginTop: '2px' }} />
+                    <span><strong style={{ color: 'var(--color-text-primary)' }}>1 Simple Task</strong> – Takes 15 minutes, no jargon</span>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                    <Icon name="CheckIcon" size={24} color="#84CC16" style={{ flexShrink: 0, marginTop: '2px' }} />
+                    <span><strong style={{ color: 'var(--color-text-primary)' }}>Email Summary</strong> – Clear progress updates</span>
+                  </div>
+                </div>
+                <p style={{
+                  marginTop: 'var(--spacing-md)',
+                  fontSize: '14px',
+                  color: 'var(--color-text-tertiary)',
+                  textAlign: 'center',
+                  fontStyle: 'italic'
+                }}>
+                  No dashboards. No complexity. Just clear actions that work.
+                </p>
               </div>
             </div>
           </div>

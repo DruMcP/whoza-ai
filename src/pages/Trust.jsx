@@ -108,7 +108,7 @@ export default function Trust() {
             <li>Your business name, location, and trade type</li>
             <li>Your email address for task delivery</li>
             <li>Information about your services and credentials</li>
-            <li>Your Visibility Confidence Scores™ over time</li>
+            <li>Your AI Visibility Scores™ over time</li>
           </ul>
 
           <h3>What we don't collect</h3>

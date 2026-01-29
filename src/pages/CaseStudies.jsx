@@ -49,7 +49,7 @@ const caseStudies = [
     },
     results: {
       metrics: [
-        { label: 'Visibility Confidence Score™', before: '34', after: '78', unit: '/100', improvement: 'Significant improvement' },
+        { label: 'AI Visibility Score', before: '34', after: '78', unit: '/100', improvement: 'Significant improvement' },
         { label: 'Monthly Enquiries', before: '8', after: '24', unit: '', improvement: 'Significantly increased' },
         { label: 'Google Profile Views', before: '120', after: '336', unit: '/month', improvement: 'Strong growth' },
         { label: 'Review Rating', before: '4.2', after: '4.8', unit: '/5.0', improvement: 'Improved' }
@@ -113,7 +113,7 @@ const caseStudies = [
     },
     results: {
       metrics: [
-        { label: 'Visibility Confidence Score™', before: '28', after: '82', unit: '/100', improvement: 'Major improvement' },
+        { label: 'AI Visibility Score', before: '28', after: '82', unit: '/100', improvement: 'Major improvement' },
         { label: 'Monthly Enquiries', before: '15', after: '32', unit: '', improvement: 'Substantially increased' },
         { label: 'Website Traffic', before: '180', after: '301', unit: '/month', improvement: 'Grew steadily' },
         { label: 'Online Reviews', before: '12', after: '47', unit: '', improvement: 'Significantly increased' }
@@ -177,7 +177,7 @@ const caseStudies = [
     },
     results: {
       metrics: [
-        { label: 'Visibility Confidence Score™', before: '22', after: '76', unit: '/100', improvement: 'Substantial improvement' },
+        { label: 'AI Visibility Score', before: '22', after: '76', unit: '/100', improvement: 'Substantial improvement' },
         { label: 'Summer Bookings', before: '4', after: '14', unit: '/month', improvement: 'Significantly increased' },
         { label: 'Annual Revenue', before: '£48k', after: '£76k', unit: '', improvement: 'Strong growth' },
         { label: 'Customer Reviews', before: '6', after: '34', unit: '', improvement: 'Significantly increased' }

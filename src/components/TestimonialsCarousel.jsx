@@ -10,6 +10,7 @@ const testimonials = [
     role: 'Plumber',
     location: 'Birmingham',
     photo: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop',
+    headline: '3x increase in enquiries',
     quote: "Within two months of using Rex, I started appearing in ChatGPT responses for local plumbers. The weekly tasks are simple and actually make sense for my business.",
     metric: '3x increase in enquiries',
     rating: 5,
@@ -34,8 +35,8 @@ const testimonials = [
     role: 'Gardener',
     location: 'Bristol',
     photo: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop',
-    quote: "The best part is that it only takes 15 minutes a week. Rex tells me exactly what to do, and I can see my Visibility Confidence Score™ improving month by month.",
-    metric: 'Visibility Confidence Score™: 78/100',
+    quote: "The best part is that it only takes 15 minutes a week. Rex tells me exactly what to do, and I can see my AI Visibility Score improving month by month.",
+    metric: 'AI Visibility Score: 78/100',
     rating: 5,
     verified: true,
     caseStudyLink: '/case-studies'
@@ -267,6 +268,24 @@ const TestimonialsCarousel = memo(function TestimonialsCarousel() {
             textAlign: 'center',
             maxWidth: '700px'
           }}>
+            {currentTestimonial.headline && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                style={{
+                  fontSize: '24px',
+                  fontWeight: '700',
+                  color: '#AAFF00',
+                  marginBottom: '20px',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.5px'
+                }}
+              >
+                {currentTestimonial.headline}
+              </motion.div>
+            )}
+            
             <motion.svg
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}

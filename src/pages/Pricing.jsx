@@ -208,7 +208,7 @@ export default function Pricing() {
               the plan that matches your goals.
             </p>
             <Link to="/free-score" className="button button-large btn-hover">
-              Get your free AI readiness score
+              Get your free AI Visibility Score
             </Link>
             <p style={{
               fontSize: '14px',

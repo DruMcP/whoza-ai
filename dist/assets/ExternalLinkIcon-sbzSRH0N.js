@@ -1,2 +1,0 @@
-import{r as i,j as r}from"./react-vendor-ZcgRNTHg.js";const a=i.forwardRef(({width:t=24,height:e=24,color:s="currentColor",...o},n)=>r.jsx("svg",{ref:n,viewBox:"0 0 24 24",width:t,height:e,...o,children:r.jsxs("g",{fill:"none",stroke:s,strokeWidth:"1.5",strokeLinecap:"butt",strokeLinejoin:"miter",children:[r.jsx("path",{d:"M18 13 V19 H5 V6 H11"}),r.jsx("path",{d:"M15 3 H21 V9"}),r.jsx("path",{d:"M21 3 L12 12"})]})}));a.displayName="ExternalLinkIcon";export{a as E};
-//# sourceMappingURL=ExternalLinkIcon-sbzSRH0N.js.map

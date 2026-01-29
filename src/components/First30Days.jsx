@@ -11,7 +11,7 @@ export default function First30Days() {
       title: 'Setup & First Score',
       items: [
         'We analyse your current AI visibility across ChatGPT, Google AI, and Perplexity',
-        'You receive your personalised Visibility Confidence Score™',
+        'You receive your personalised AI Visibility Score',
         'Rex identifies your most impactful quick wins to improve immediately'
       ]
     },
@@ -38,7 +38,7 @@ export default function First30Days() {
       title: 'First Results',
       items: [
         'Most users see their first AI mention by week 4',
-        'Your Visibility Confidence Score™ shows measurable progress across all 5 pillars',
+        'Your AI Visibility Score shows measurable progress across all 5 pillars',
         'Monthly report shows exactly what changed and why'
       ]
     }

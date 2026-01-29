@@ -1169,7 +1169,8 @@ textarea {
 }
 
 .section {
-  padding: var(--spacing-xl) 0;
+  padding: var(--spacing-2xl) 0;
+  /* Quick Win #5: Increased from xl to 2xl for better breathing room */
 }
 
 .card {

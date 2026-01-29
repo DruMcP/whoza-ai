@@ -23,7 +23,7 @@ export default function PaymentSuccess() {
       tagline: 'See Where You Stand',
       color: '#84cc16',
       features: [
-        'Monthly Visibility Confidence Score™',
+        'Monthly AI Visibility Score',
         'AI visibility report across ChatGPT, Google AI, Perplexity',
         'Email alerts when your score changes',
         'Competitor visibility comparison (1 competitor)',

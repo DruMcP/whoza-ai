@@ -204,7 +204,7 @@ const HeroSection = () => {
                 cursor: 'pointer'
               }}
             >
-              Get your free AI readiness score
+              Get Your Free AI Visibility Score
             </Link>
             <p style={{
               fontSize: '0.9rem',
@@ -212,7 +212,7 @@ const HeroSection = () => {
               marginTop: '10px',
               marginBottom: '8px'
             }}>
-              Takes 60 seconds. No dashboards, no jargon.
+              Takes 60 seconds. No dashboards, no jargon. <span style={{ color: '#84CC16', fontWeight: '600' }}>First score ready in 48 hours.</span>
             </p>
             <p style={{
               fontSize: '0.85rem',

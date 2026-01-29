@@ -57,7 +57,7 @@ export default function StickyCTABar() {
           fontSize: '14px',
           color: '#F3F4F6'
         }}>
-          Get your free Visibility Confidence Score™ in 60 seconds
+          Get your free AI Visibility Score in 60 seconds
         </div>
       </div>
 

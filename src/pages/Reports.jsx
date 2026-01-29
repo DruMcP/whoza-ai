@@ -160,7 +160,7 @@ export default function Reports() {
                 <h3 style={{ marginBottom: '15px', color: 'var(--color-primary-500)' }}>Track your progress with:</h3>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                   <li style={{ padding: '10px 0', borderBottom: '1px solid var(--color-border)' }}>
-                    <strong>Visibility Confidence Score™</strong> - See how visible you are in AI search results
+                    <strong>AI Visibility Score</strong> - See how visible you are in AI search results
                   </li>
                   <li style={{ padding: '10px 0', borderBottom: '1px solid var(--color-border)' }}>
                     <strong>Monthly Reports</strong> - Track improvements over time with detailed analytics
@@ -233,7 +233,7 @@ export default function Reports() {
           {visibilityScores.length === 0 ? (
             <div className="panel">
               <p style={{ marginBottom: 0 }}>
-                Your first monthly Visibility Confidence Score™ will appear here.
+                Your first monthly AI Visibility Score will appear here.
                 Rex measures this once a month.
               </p>
             </div>
@@ -275,7 +275,7 @@ export default function Reports() {
           <h2>What does the score mean?</h2>
 
           <p>
-            Your Visibility Confidence Score™ shows how often your business appears in AI
+            Your AI Visibility Score shows how often your business appears in AI
             search results when people ask questions about services in your area.
           </p>
 
