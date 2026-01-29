@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Actions Workflow Deployment Assistant - Whoza.ai</title>
+    <meta name="description" content="Deploy automated daily KPI reports for Whoza.ai in 5 minutes with this step-by-step guide.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #ffffff;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #AAFF00 0%, #88cc00 100%);
+            border-radius: 12px;
+            color: #000;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+        
+        .steps {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .step {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(170, 255, 0, 0.3);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .step:hover {
+            border-color: #AAFF00;
+            background: rgba(170, 255, 0, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #AAFF00;
+            color: #000;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 15px;
+        }
+        
+        .step-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #AAFF00;
+        }
+        
+        .step-content {
+            margin-left: 55px;
+            font-size: 1.1rem;
+        }
+        
+        .code-box {
+            background: #000;
+            border: 1px solid #AAFF00;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            overflow-x: auto;
+            position: relative;
+        }
+        
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #AAFF00;
+            color: #000;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+        
+        .copy-btn:hover {
+            background: #88cc00;
+            transform: scale(1.05);
+        }
+        
+        .copy-btn:active {
+            transform: scale(0.95);
+        }
+        
+        .link-btn {
+            display: inline-block;
+            background: #AAFF00;
+            color: #000;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px 10px 10px 0;
+            transition: all 0.2s;
+        }
+        
+        .link-btn:hover {
+            background: #88cc00;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(170, 255, 0, 0.3);
+        }
+        
+        .success-box {
+            background: rgba(170, 255, 0, 0.1);
+            border: 2px solid #AAFF00;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .success-box h3 {
+            color: #AAFF00;
+            margin-bottom: 10px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .workflow-content {
+            display: none;
+            margin-top: 20px;
+        }
+        
+        .show-workflow-btn {
+            background: rgba(170, 255, 0, 0.2);
+            color: #AAFF00;
+            border: 2px solid #AAFF00;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .show-workflow-btn:hover {
+            background: rgba(170, 255, 0, 0.3);
+        }
+        
+        .alert {
+            background: rgba(255, 100, 100, 0.1);
+            border: 2px solid #ff6464;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            color: #ff6464;
+        }
+        
+        .info {
+            background: rgba(100, 150, 255, 0.1);
+            border: 2px solid #6496ff;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            color: #6496ff;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 30px;
+            border-top: 2px solid rgba(170, 255, 0, 0.3);
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 GitHub Actions Deployment Assistant</h1>
+            <p>Deploy your automated daily KPI reports in 5 minutes</p>
+        </div>
+
+        <div class="steps">
+            <!-- Step 1 -->
+            <div class="step" id="step1">
+                <h2 class="step-title">
+                    <span class="step-number">1</span>
+                    Open Your GitHub Repository
+                </h2>
+                <div class="step-content">
+                    <p>Click the button below to open your repository in a new tab:</p>
+                    <a href="https://github.com/DruMcP/whoza-ai" target="_blank" class="link-btn">
+                        📂 Open Repository
+                    </a>
+                    <div class="info">
+                        <strong>💡 Tip:</strong> Keep this page open in one tab and work in the GitHub tab. Come back here for each step.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step" id="step2">
+                <h2 class="step-title">
+                    <span class="step-number">2</span>
+                    Create New Workflow File
+                </h2>
+                <div class="step-content">
+                    <p>In your GitHub repository:</p>
+                    <ul>
+                        <li>Click the <strong>"Add file"</strong> dropdown button (top right)</li>
+                        <li>Select <strong>"Create new file"</strong></li>
+                    </ul>
+                    <div class="info">
+                        <strong>📍 Location:</strong> You should see a text input for the filename at the top of the page.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step" id="step3">
+                <h2 class="step-title">
+                    <span class="step-number">3</span>
+                    Enter Workflow File Path
+                </h2>
+                <div class="step-content">
+                    <p>In the filename field, copy and paste this exact path:</p>
+                    <div class="code-box">
+                        <button class="copy-btn" onclick="copyToClipboard('.github/workflows/daily-kpi-reports.yml', this)">Copy</button>
+                        <code>.github/workflows/daily-kpi-reports.yml</code>
+                    </div>
+                    <div class="alert">
+                        <strong>⚠️ Important:</strong> The path must be exact, including the dots and slashes. GitHub will automatically create the directories.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step" id="step4">
+                <h2 class="step-title">
+                    <span class="step-number">4</span>
+                    Copy Workflow Content
+                </h2>
+                <div class="step-content">
+                    <p>Click the button below to view and copy the workflow file content:</p>
+                    <button class="show-workflow-btn" onclick="toggleWorkflowContent()">
+                        📄 Show Workflow Content
+                    </button>
+                    <div class="workflow-content" id="workflowContent">
+                        <div class="code-box" style="max-height: 400px; overflow-y: auto;">
+                            <button class="copy-btn" onclick="copyWorkflowContent(this)">Copy All</button>
+                            <pre id="workflowCode"><code>Loading workflow content...</code></pre>
+                        </div>
+                    </div>
+                    <div class="info" style="margin-top: 15px;">
+                        <strong>📋 Instructions:</strong>
+                        <ol style="margin-left: 20px; margin-top: 10px;">
+                            <li>Click "Show Workflow Content" above</li>
+                            <li>Click the "Copy All" button</li>
+                            <li>Go back to GitHub tab</li>
+                            <li>Paste into the file editor (Ctrl+V or Cmd+V)</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step" id="step5">
+                <h2 class="step-title">
+                    <span class="step-number">5</span>
+                    Commit the File
+                </h2>
+                <div class="step-content">
+                    <p>Scroll to the bottom of the GitHub page and:</p>
+                    <ol style="margin-left: 20px;">
+                        <li>In the "Commit message" field, paste this:</li>
+                    </ol>
+                    <div class="code-box">
+                        <button class="copy-btn" onclick="copyToClipboard('feat: Add GitHub Actions workflow for automated daily KPI reports', this)">Copy</button>
+                        <code>feat: Add GitHub Actions workflow for automated daily KPI reports</code>
+                    </div>
+                    <ol start="2" style="margin-left: 20px;">
+                        <li>Leave "Commit directly to the main branch" selected</li>
+                        <li>Click the green <strong>"Commit new file"</strong> button</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="step" id="step6">
+                <h2 class="step-title">
+                    <span class="step-number">6</span>
+                    Verify Workflow Deployment
+                </h2>
+                <div class="step-content">
+                    <p>Let's confirm the workflow was deployed successfully:</p>
+                    <a href="https://github.com/DruMcP/whoza-ai/actions" target="_blank" class="link-btn">
+                        ⚙️ Open Actions Tab
+                    </a>
+                    <div class="success-box">
+                        <h3>✅ Success Indicators:</h3>
+                        <ul>
+                            <li>You should see <strong>"Daily KPI Reports"</strong> in the workflows list (left sidebar)</li>
+                            <li>Status should show "Waiting for first run" or similar</li>
+                            <li>No error messages displayed</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 7 -->
+            <div class="step" id="step7">
+                <h2 class="step-title">
+                    <span class="step-number">7</span>
+                    Enable Workflow Permissions
+                </h2>
+                <div class="step-content">
+                    <p>The workflow needs permission to commit reports to your repository:</p>
+                    <a href="https://github.com/DruMcP/whoza-ai/settings/actions" target="_blank" class="link-btn">
+                        🔒 Open Actions Settings
+                    </a>
+                    <div class="info">
+                        <strong>📝 Instructions:</strong>
+                        <ol style="margin-left: 20px; margin-top: 10px;">
+                            <li>Scroll down to <strong>"Workflow permissions"</strong></li>
+                            <li>Select <strong>"Read and write permissions"</strong></li>
+                            <li>Check <strong>"Allow GitHub Actions to create and approve pull requests"</strong></li>
+                            <li>Click <strong>"Save"</strong></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 8 -->
+            <div class="step" id="step8">
+                <h2 class="step-title">
+                    <span class="step-number">8</span>
+                    Test the Workflow
+                </h2>
+                <div class="step-content">
+                    <p>Let's run the workflow manually to verify everything works:</p>
+                    <a href="https://github.com/DruMcP/whoza-ai/actions/workflows/daily-kpi-reports.yml" target="_blank" class="link-btn">
+                        ▶️ Open Workflow
+                    </a>
+                    <div class="info">
+                        <strong>🎯 Test Instructions:</strong>
+                        <ol style="margin-left: 20px; margin-top: 10px;">
+                            <li>Click the <strong>"Run workflow"</strong> button (right side)</li>
+                            <li>Leave the date field empty (uses today)</li>
+                            <li>Leave "Send email notification" unchecked (for now)</li>
+                            <li>Click the green <strong>"Run workflow"</strong> button</li>
+                            <li>Wait 2-3 minutes for completion</li>
+                            <li>Refresh the page to see results</li>
+                        </ol>
+                    </div>
+                    <div class="success-box">
+                        <h3>✅ Expected Results:</h3>
+                        <ul>
+                            <li>Workflow run appears with green checkmark ✓</li>
+                            <li>Job summary shows KPI metrics</li>
+                            <li>New report file in <code>reports/</code> directory</li>
+                            <li>Artifacts available for download</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 9 -->
+            <div class="step" id="step9">
+                <h2 class="step-title">
+                    <span class="step-number">9</span>
+                    🎉 Deployment Complete!
+                </h2>
+                <div class="step-content">
+                    <div class="success-box">
+                        <h3>✅ Your automated daily KPI reports are now live!</h3>
+                        <p style="margin-top: 15px;"><strong>What happens next:</strong></p>
+                        <ul>
+                            <li>📊 Reports generate automatically every day at 9:00 AM GMT</li>
+                            <li>📈 Tracks Engagement (+55% target), Trust (+40% target), Conversion (+45% target)</li>
+                            <li>💾 Reports auto-commit to your repository</li>
+                            <li>📦 90-day artifact retention</li>
+                            <li>🔄 You can trigger manual reports anytime</li>
+                        </ul>
+                    </div>
+                    
+                    <h3 style="color: #AAFF00; margin-top: 30px; margin-bottom: 15px;">Optional Next Steps:</h3>
+                    
+                    <div class="info">
+                        <strong>📧 Configure Email Notifications (Optional):</strong>
+                        <ol style="margin-left: 20px; margin-top: 10px;">
+                            <li>Go to Settings → Secrets and variables → Actions</li>
+                            <li>Add secrets for SMTP (Gmail, SendGrid, etc.)</li>
+                            <li>See full guide in repository documentation</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="info">
+                        <strong>📊 Connect Real Google Analytics Data (Optional):</strong>
+                        <ol style="margin-left: 20px; margin-top: 10px;">
+                            <li>Create Google Cloud service account</li>
+                            <li>Enable Google Analytics Data API</li>
+                            <li>Add GA_CREDENTIALS secret</li>
+                            <li>See full guide in repository documentation</li>
+                        </ol>
+                    </div>
+                    
+                    <a href="https://github.com/DruMcP/whoza-ai/actions" target="_blank" class="link-btn" style="margin-top: 20px;">
+                        📊 View Your Workflows
+                    </a>
+                    <a href="https://github.com/DruMcP/whoza-ai/tree/main/reports" target="_blank" class="link-btn" style="margin-top: 20px;">
+                        📁 View Generated Reports
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Created for Whoza.ai | Automated Daily KPI Reports</p>
+            <p style="margin-top: 10px;">Questions? Check the <a href="https://github.com/DruMcP/whoza-ai" style="color: #AAFF00;">repository documentation</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Workflow content embedded directly
+        const workflowYAML = `name: Daily KPI Reports
+
+on:
+  # Run daily at 9:00 AM GMT
+  schedule:
+    - cron: '0 9 * * *'
+  
+  # Allow manual trigger for testing
+  workflow_dispatch:
+    inputs:
+      report_date:
+        description: 'Report date (YYYY-MM-DD, leave empty for today)'
+        required: false
+        default: ''
+      send_email:
+        description: 'Send email notification'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install google-analytics-data pandas tabulate
+      
+      - name: Create reports directory
+        run: |
+          mkdir -p reports
+          mkdir -p logs
+      
+      - name: Set up Google Analytics credentials
+        if: \${{ secrets.GA_CREDENTIALS != '' }}
+        run: |
+          echo "\${{ secrets.GA_CREDENTIALS }}" > /tmp/ga-credentials.json
+          echo "GA_CREDENTIALS_PATH=/tmp/ga-credentials.json" >> $GITHUB_ENV
+      
+      - name: Generate daily report
+        id: generate_report
+        run: |
+          if [ -n "\${{ github.event.inputs.report_date }}" ]; then
+            REPORT_DATE="\${{ github.event.inputs.report_date }}"
+          else
+            REPORT_DATE=$(date +%Y-%m-%d)
+          fi
+          
+          echo "report_date=$REPORT_DATE" >> $GITHUB_OUTPUT
+          
+          if [ -f "/tmp/ga-credentials.json" ]; then
+            python3 scripts/generate_daily_report.py --date "$REPORT_DATE" --credentials /tmp/ga-credentials.json --save-only
+          else
+            echo "Warning: GA credentials not configured, using mock data"
+            python3 scripts/generate_daily_report.py --date "$REPORT_DATE" --save-only
+          fi
+          
+          REPORT_FILE="reports/daily_kpi_report_\${REPORT_DATE}.md"
+          if [ -f "$REPORT_FILE" ]; then
+            ENGAGEMENT=$(grep "Engagement" "$REPORT_FILE" | grep -oP '\\d+\\.\\d+%' | head -1)
+            TRUST=$(grep "Trust" "$REPORT_FILE" | grep -oP '\\d+\\.\\d+%' | head -1)
+            CONVERSION=$(grep "Conversion" "$REPORT_FILE" | grep -oP '\\d+\\.\\d+%' | head -1)
+            
+            echo "engagement=$ENGAGEMENT" >> $GITHUB_OUTPUT
+            echo "trust=$TRUST" >> $GITHUB_OUTPUT
+            echo "conversion=$CONVERSION" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Commit and push report
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions Bot"
+          
+          git add reports/*.md reports/*.html
+          
+          REPORT_DATE="\${{ steps.generate_report.outputs.report_date }}"
+          ENGAGEMENT="\${{ steps.generate_report.outputs.engagement }}"
+          TRUST="\${{ steps.generate_report.outputs.trust }}"
+          CONVERSION="\${{ steps.generate_report.outputs.conversion }}"
+          
+          COMMIT_MSG="chore: Add daily KPI report \${REPORT_DATE}
+
+Engagement: \${ENGAGEMENT} | Trust: \${TRUST} | Conversion: \${CONVERSION}
+
+Generated by GitHub Actions"
+          
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "$COMMIT_MSG"
+            git push
+          fi
+      
+      - name: Upload report artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-kpi-report-\${{ steps.generate_report.outputs.report_date }}
+          path: |
+            reports/daily_kpi_report_*.md
+            reports/daily_kpi_report_*_email_preview.html
+          retention-days: 90`;
+
+        function toggleWorkflowContent() {
+            const content = document.getElementById('workflowContent');
+            const btn = event.target;
+            
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+                btn.textContent = '📄 Hide Workflow Content';
+                document.getElementById('workflowCode').textContent = workflowYAML;
+            } else {
+                content.style.display = 'none';
+                btn.textContent = '📄 Show Workflow Content';
+            }
+        }
+
+        function copyToClipboard(text, button) {
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = button.textContent;
+                button.textContent = '✓ Copied!';
+                button.style.background = '#88cc00';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = '#AAFF00';
+                }, 2000);
+            }).catch(err => {
+                alert('Failed to copy. Please select and copy manually.');
+            });
+        }
+
+        function copyWorkflowContent(button) {
+            copyToClipboard(workflowYAML, button);
+        }
+
+        // Smooth scroll to steps
+        document.querySelectorAll('.step').forEach((step, index) => {
+            step.addEventListener('click', () => {
+                step.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        });
+    </script>
+</body>
+</html>
