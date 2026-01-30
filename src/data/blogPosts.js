@@ -1852,6 +1852,60 @@ Both cities require:
       buttonText: "Get Your Free AI Visibility Score",
       buttonLink: "/free-score"
     }
+  },
+  {
+    id: "why-ai-search-wont-recommend-your-trade-business",
+    slug: "why-ai-search-wont-recommend-your-trade-business-and-how-to-fix-it",
+    title: "Why AI Search Won't Recommend Your Trade Business (And How to Fix It)",
+    metaDescription: "Is your trade business invisible to AI search? Learn why AI assistants like ChatGPT and Google AI ignore most local businesses and discover the actionable steps to get your plumbing, electrical, or building company recommended.",
+    publishDate: "2026-01-30",
+    author: "Whoza.ai Team",
+    category: "AI Visibility",
+    tags: ["AI search", "AEO", "local SEO", "tradespeople", "ChatGPT"],
+    readTime: "6 min read",
+    featured: true,
+    leadAnswer: "AI search engines overlook most trade businesses because they fail to meet a high threshold of trust and confidence. Unlike Google, which ranks based on relevance, AI assistants *recommend* based on verifiable data, consistent online presence, and strong customer sentiment. If your business has inconsistent details or a poor online reputation, AI will not recommend you.",
+    content: [
+      {
+        type: "section",
+        heading: "Why is AI Search Ignoring My Business?",
+        content: `If you've built your business on word-of-mouth and a decent Google ranking, you might be in for a shock. New data reveals that AI search is up to **30 times more selective** than traditional search. While your business might appear in Google's local 3-pack 36% of the time, it has only a 1-11% chance of being recommended by an AI assistant like ChatGPT or Gemini. The reason is simple: AI doesn't rank, it *recommends*. It acts as a risk-averse gatekeeper, and if it's not completely confident in your business, it will ignore you.\n\nThis new reality is a significant shift for UK tradespeople. Previously, proximity and a basic online presence were enough to get by. Now, AI demands a much higher standard of online credibility. It scrutinizes your digital footprint, from your website and Google Business Profile to online directories and customer reviews. Any inconsistencies or red flags will cause the AI to lose confidence and exclude you from its recommendations, leaving you invisible to a growing base of customers who are turning to AI for quick, trusted answers.`
+      },
+      {
+        type: "section",
+        heading: "How Can I Get My Business Recommended by AI?",
+        content: `To get your business recommended by AI, you need to shift your mindset from **optimization to qualification**. It's no longer about tricking an algorithm with keywords; it's about proving to a skeptical machine that your business is legitimate, trustworthy, and an expert in its field. This means building a robust and consistent online presence that leaves no room for doubt.\n\nStart by conducting a thorough audit of your digital footprint. Search for your business name, address, and phone number (NAP) across the web and ensure they are identical everywhere. A single discrepancy, like listing \"Ltd\" in one place and not another, can erode an AI's confidence. Your website must be secure (HTTPS), mobile-friendly, and clearly state what you do and where you do it. Your Google Business Profile must be 100% complete, with detailed service descriptions, precise service areas, and high-quality photos. Think of it as your digital CV for AI.`
+      },
+      {
+        type: "section",
+        heading: "What are the Key Signals for AI Trust?",
+        content: `AI builds trust by verifying information across multiple authoritative sources. The more consistent and positive signals it finds, the higher your 'Entity Confidence' score. For a UK tradesperson, the most critical signals are:\n\n*   **A Perfect Google Business Profile:** This is the AI's primary source of truth. A complete and active profile is non-negotiable.\n*   **Consistent NAP Information:** Your business name, address, and phone number must be identical across all platforms.\n*   **High-Quality Citations:** Listings in reputable UK-based directories (like Yell, Thomson Local) and trade-specific portals act as third-party verification.\n*   **A Professional Website:** Your website is your central hub. It should showcase your expertise, qualifications, and service areas.\n*   **Verifiable Credentials:** Display your Gas Safe registration, NICEIC certification, or other trade body memberships prominently. AI looks for these trust signals.`
+      },
+      {
+        type: "section",
+        heading: "Does My Online Reputation Matter to AI?",
+        content: `Yes, more than ever. AI assistants treat online reviews as a critical filter. Businesses recommended by ChatGPT have an average rating of **4.3 stars**. If your business has a low rating or a significant number of negative reviews, AI systems will likely exclude you entirely. They are designed to minimize risk for the user, and a business with a poor reputation is a significant risk.\n\nThis means you need to be proactive about managing your online reputation. Actively encourage satisfied customers to leave reviews on Google and other relevant platforms. Respond to all reviews, both positive and negative, to show that you are an engaged and customer-focused business. A steady stream of positive reviews is one of the strongest signals you can send to an AI that your business is a safe and reliable choice.`
+      }
+    ],
+    faqs: [
+      {
+        question: "How is AEO different from SEO?",
+        answer: "SEO (Search Engine Optimization) focuses on ranking in traditional search results, often by targeting keywords. AEO (Answer Engine Optimization) focuses on becoming a citable, trusted source for AI-powered answer engines. AEO prioritizes factual accuracy, data consistency, and demonstrable expertise over keyword density."
+      },
+      {
+        question: "Where should I focus my efforts first?",
+        answer: "Start with your Google Business Profile. It is the single most important data source for local AI search. Ensure every section is complete and accurate. Then, move on to auditing and correcting your business information across the web."
+      },
+      {
+        question: "Is it too late to start?",
+        answer: "Not at all. The shift to AI search is still in its early stages. By taking action now, you can build a significant competitive advantage over other tradespeople in your area who are still focused on outdated SEO tactics."
+      }
+    ],
+    cta: {
+      text: "Is your business ready for the AI revolution?",
+      buttonText: "Get Your Free AI Visibility Score",
+      buttonLink: "/free-score"
+    }
   }
 ];
 
