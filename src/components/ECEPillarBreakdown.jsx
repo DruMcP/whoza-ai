@@ -59,8 +59,9 @@ function ECEPillarBreakdown({ pillarScores, loading = false }) {
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-        gap: 'var(--spacing-lg)'
-      }}>
+        gap: 'var(--spacing-lg)',
+        justifyItems: 'center'
+      }} className="pillar-grid">
         {pillars.map((pillar) => {
           const percentage = getScorePercentage(pillar.id);
           const color = getScoreColor(percentage);
@@ -76,7 +77,9 @@ function ECEPillarBreakdown({ pillarScores, loading = false }) {
                 borderRadius: 'var(--radius-lg)',
                 padding: 'var(--spacing-lg)',
                 transition: 'all 0.2s ease',
-                cursor: 'help'
+                cursor: 'help',
+                width: '100%',
+                maxWidth: '500px'
               }}
             >
               <PillarTooltip pillarId={pillar.id}>
@@ -209,8 +212,16 @@ function ECEPillarBreakdown({ pillarScores, loading = false }) {
         }
 
         @media (max-width: 768px) {
-          .ece-pillar-breakdown {
-            grid-template-columns: 1fr;
+          .pillar-grid {
+            grid-template-columns: 1fr !important;
+            padding: 0 5%;
+            justify-items: center;
+          }
+          
+          .pillar-card {
+            width: 90% !important;
+            max-width: 100% !important;
+            margin: 0 auto;
           }
         }
       `}</style>
