@@ -87,11 +87,22 @@ function ECEPillarBreakdown({ pillarScores, loading = false }) {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',
-                  marginBottom: 'var(--spacing-md)'
+                  marginBottom: 'var(--spacing-md)',
+                  gap: 'var(--spacing-lg)'
                 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-sm)' }}>
-                    <span style={{ fontSize: '24px', lineHeight: 1 }}>{pillar.icon}</span>
-                    <div>
+                  <div style={{ 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    gap: 'var(--spacing-sm)',
+                    flex: '1',
+                    minWidth: 0
+                  }}>
+                    <span style={{ 
+                      fontSize: '24px', 
+                      lineHeight: 1,
+                      flexShrink: 0
+                    }}>{pillar.icon}</span>
+                    <div style={{ minWidth: 0 }}>
                       <h3 style={{
                         margin: 0,
                         fontSize: '16px',
@@ -103,19 +114,29 @@ function ECEPillarBreakdown({ pillarScores, loading = false }) {
                       <p style={{
                         margin: 0,
                         fontSize: '12px',
-                        color: 'var(--color-text-secondary)'
+                        color: 'var(--color-text-secondary)',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis'
                       }}>
                         {pillar.description}
                       </p>
                     </div>
                   </div>
-                  <div style={{ textAlign: 'right' }}>
+                  <div style={{ 
+                    textAlign: 'center',
+                    flexShrink: 0,
+                    minWidth: '80px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}>
                     <div style={{
-                      fontSize: '28px',
+                      fontSize: '32px',
                       fontWeight: 700,
                       lineHeight: 1,
                       color: color,
-                      marginBottom: '2px'
+                      marginBottom: '4px'
                     }}>
                       {percentage}
                     </div>
@@ -124,7 +145,8 @@ function ECEPillarBreakdown({ pillarScores, loading = false }) {
                       fontWeight: 600,
                       color: color,
                       textTransform: 'uppercase',
-                      letterSpacing: '0.5px'
+                      letterSpacing: '0.5px',
+                      whiteSpace: 'nowrap'
                     }}>
                       {label}
                     </div>
