@@ -295,44 +295,59 @@ export default function Pricing() {
                     boxShadow: plan.featured 
                       ? '0 6px 20px rgba(132, 204, 22, 0.5), 0 0 30px rgba(132, 204, 22, 0.3)'
                       : '0 4px 12px rgba(132, 204, 22, 0.3)',
-                    animation: plan.featured ? 'pulse-badge 2s ease-in-out infinite' : 'none'
+                    animation: plan.featured ? 'pulse-badge 2s ease-in-out infinite' : 'none',
+                    zIndex: 10
                   }}>
                     {plan.featured ? '⭐ MOST POPULAR' : 'Most Popular'}
                   </div>
                 )}
 
-                <div className="pricing-card-header" style={{ marginTop: plan.popular ? 'var(--spacing-md)' : 0 }}>
+                <div className="pricing-card-header" style={{ 
+                  marginTop: plan.popular ? 'var(--spacing-md)' : 0,
+                  marginBottom: plan.id === 'free-trial' ? 'var(--spacing-xs)' : 'var(--spacing-sm)'
+                }}>
                   <div style={{
                     fontSize: plan.featured ? '22px' : '20px',
                     fontWeight: 700,
                     textTransform: 'uppercase',
                     letterSpacing: '1px',
                     color: plan.featured ? '#84CC16' : '#3B82F6',
-                    marginBottom: '8px',
-                    textShadow: plan.featured ? '0 0 20px rgba(132, 204, 22, 0.5)' : 'none'
+                    marginBottom: plan.id === 'free-trial' ? '4px' : '6px',
+                    textShadow: plan.featured ? '0 0 20px rgba(132, 204, 22, 0.5)' : 'none',
+                    display: plan.id === 'free-trial' ? 'flex' : 'block',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '8px'
                   }}>
+                    {plan.id === 'free-trial' && <span style={{ fontSize: '28px' }}>🎁</span>}
                     {plan.name}
                   </div>
                   <h3 style={{
-                    fontSize: plan.featured ? '28px' : '24px',
+                    fontSize: plan.featured ? '24px' : '22px',
                     fontWeight: 700,
-                    marginBottom: '6px',
+                    marginBottom: plan.id === 'free-trial' ? '4px' : '6px',
                     color: '#ffffff',
-                    textShadow: plan.featured ? '0 2px 10px rgba(255, 255, 255, 0.1)' : 'none'
+                    textShadow: plan.featured ? '0 2px 10px rgba(255, 255, 255, 0.1)' : 'none',
+                    lineHeight: '1.2'
                   }}>
-                    {plan.headline}
+                    {plan.id === 'free-trial' ? plan.headline.replace('🎁 ', '') : plan.headline}
                   </h3>
                   <p className="plan-description" style={{
-                    fontSize: '15px',
+                    fontSize: '14px',
                     color: '#4B5563',
                     fontStyle: 'italic',
-                    marginBottom: '12px'
+                    marginBottom: plan.id === 'free-trial' ? '8px' : '10px',
+                    lineHeight: '1.3'
                   }}>
                     {plan.subheadline}
                   </p>
                 </div>
 
-                <div className="pricing-card-price" style={{ marginBottom: '8px' }}>
+                <div className="pricing-card-price" style={{ 
+                  marginBottom: plan.id === 'free-trial' ? '4px' : '6px',
+                  paddingTop: plan.id === 'free-trial' ? '8px' : '12px',
+                  paddingBottom: plan.id === 'free-trial' ? '8px' : '12px'
+                }}>
                   {plan.id === 'free-trial' ? (
                     <>
                       <span className="price-currency" style={{ 
@@ -357,7 +372,7 @@ export default function Pricing() {
                 <div style={{
                   fontSize: '13px',
                   color: '#6B7280',
-                  marginBottom: '12px',
+                  marginBottom: plan.id === 'free-trial' ? '8px' : '10px',
                   textAlign: 'center'
                 }}>
                   {plan.id === 'free-trial' ? `for ${plan.duration}` : 'billed monthly'}
@@ -383,13 +398,13 @@ export default function Pricing() {
                   className={`pricing-cta btn-hover ${plan.featured ? 'button-featured' : plan.popular ? 'button' : 'button-secondary'}`}
                   style={{
                     width: '100%',
-                    marginBottom: '10px',
+                    marginBottom: plan.id === 'free-trial' ? '8px' : '10px',
+                    padding: plan.id === 'free-trial' ? '14px 28px' : '14px 32px',
+                    fontSize: plan.featured ? '17px' : '16px',
                     ...(plan.featured && {
                       background: 'linear-gradient(135deg, #84CC16 0%, #65A30D 100%)',
                       color: '#0f172a',
-                      fontSize: '18px',
                       fontWeight: 700,
-                      padding: '16px 32px',
                       borderRadius: '12px',
                       border: 'none',
                       boxShadow: '0 10px 30px rgba(132, 204, 22, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3)',
@@ -403,14 +418,15 @@ export default function Pricing() {
                 </Link>
 
                 <div style={{
-                  fontSize: '13px',
+                  fontSize: '12px',
                   color: '#4B5563',
-                  marginBottom: '12px',
+                  marginBottom: plan.id === 'free-trial' ? '10px' : '12px',
                   textAlign: 'center',
-                  minHeight: '40px',
+                  minHeight: plan.id === 'free-trial' ? '32px' : '36px',
                   display: 'flex',
                   alignItems: 'center',
-                  justifyContent: 'center'
+                  justifyContent: 'center',
+                  lineHeight: '1.4'
                 }}>
                   {plan.trustSignal}
                 </div>
@@ -420,25 +436,30 @@ export default function Pricing() {
                   padding: 0,
                   margin: 0
                 }}>
-                  {plan.features.map((feature, index) => (
-                    <li key={index} style={{
-                      display: 'flex',
-                      alignItems: 'flex-start',
-                      gap: 'var(--spacing-sm)',
-                      marginBottom: '6px',
-                      fontSize: '15px',
-                      lineHeight: '1.4',
-                      color: feature.includes('Everything in') ? 'var(--color-primary-600)' : '#374151',
-                      fontWeight: feature.includes('Everything in') ? 600 : 400
-                    }}>
-                      <Icon name="CheckIcon" size={20} className="feature-check" style={{
-                        color: 'var(--color-primary-600)',
-                        flexShrink: 0,
-                        marginTop: '2px'
-                      }} />
-                      {feature}
-                    </li>
-                  ))}
+                  {plan.features.map((feature, index) => {
+                    const isHeader = feature.includes('Core features:') || feature.includes('Everything in');
+                    return (
+                      <li key={index} style={{
+                        display: 'flex',
+                        alignItems: 'flex-start',
+                        gap: isHeader ? '0' : 'var(--spacing-sm)',
+                        marginBottom: plan.id === 'free-trial' ? '4px' : '5px',
+                        fontSize: '14px',
+                        lineHeight: '1.35',
+                        color: isHeader ? 'var(--color-primary-600)' : '#374151',
+                        fontWeight: isHeader ? 600 : 400
+                      }}>
+                        {!isHeader && (
+                          <Icon name="CheckIcon" size={18} className="feature-check" style={{
+                            color: 'var(--color-primary-600)',
+                            flexShrink: 0,
+                            marginTop: '1px'
+                          }} />
+                        )}
+                        {feature}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             ))}
