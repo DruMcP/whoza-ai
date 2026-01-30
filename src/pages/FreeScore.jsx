@@ -1281,19 +1281,19 @@ export default function FreeScore() {
                           marginBottom: 'var(--spacing-xl)'
                         }}>
                           <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-sm)' }}>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ flexShrink: 0 }}>
                               <path d="M5 13l4 4L19 7" />
                             </svg>
                             <span>No credit card required</span>
                           </div>
                           <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-sm)' }}>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ flexShrink: 0 }}>
                               <path d="M5 13l4 4L19 7" />
                             </svg>
                             <span>Cancel anytime</span>
                           </div>
                           <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-sm)' }}>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ flexShrink: 0 }}>
                               <path d="M5 13l4 4L19 7" />
                             </svg>
                             <span>14-day money-back guarantee</span>
@@ -1312,9 +1312,18 @@ export default function FreeScore() {
                             border: 'none',
                             fontSize: '18px',
                             fontWeight: 700,
-                            padding: 'var(--spacing-md) var(--spacing-2xl)'
+                            padding: 'var(--spacing-lg) var(--spacing-xl)',
+                            textAlign: 'center',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            minHeight: '60px',
+                            maxWidth: '280px',
+                            margin: '0 auto'
                           }}>
-                            View Pricing & Start Free Trial
+                            <span style={{ display: 'inline-block', lineHeight: '1.3' }}>
+                              View Pricing &<br />Start Free Trial
+                            </span>
                             <span style={{ marginLeft: '8px' }}>→</span>
                           </Link>
                         </div>
