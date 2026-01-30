@@ -1319,7 +1319,12 @@ export default function FreeScore() {
                             justifyContent: 'center',
                             minHeight: '60px',
                             maxWidth: '280px',
-                            margin: '0 auto'
+                            margin: '0 auto',
+                            borderRadius: '12px',
+                            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.12)',
+                            transition: 'all 0.3s ease',
+                            cursor: 'pointer',
+                            width: '100%'
                           }}>
                             <span style={{ display: 'inline-block', lineHeight: '1.3' }}>
                               View Pricing &<br />Start Free Trial
