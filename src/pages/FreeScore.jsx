@@ -1235,23 +1235,6 @@ export default function FreeScore() {
                         boxShadow: '0 10px 40px rgba(0, 149, 255, 0.25)',
                         position: 'relative'
                       }}>
-                        <div style={{
-                          position: 'absolute',
-                          top: '-30px',
-                          left: '50%',
-                          transform: 'translateX(-50%)',
-                          background: '#22c55e',
-                          color: 'white',
-                          padding: 'var(--spacing-xs) var(--spacing-lg)',
-                          borderRadius: 'var(--radius-full)',
-                          fontSize: '14px',
-                          fontWeight: 700,
-                          boxShadow: '0 4px 12px rgba(34, 197, 94, 0.3)',
-                          animation: 'badgePop 0.6s ease backwards'
-                        }}>
-                          LIMITED TIME: 20% OFF
-                        </div>
-
                         <h2 style={{
                           marginTop: 'var(--spacing-md)',
                           fontSize: '32px',

@@ -297,7 +297,7 @@ export default function Pricing() {
                       : '0 4px 12px rgba(132, 204, 22, 0.3)',
                     animation: plan.featured ? 'pulse-badge 2s ease-in-out infinite' : 'none'
                   }}>
-                    {plan.featured ? '⭐ MOST POPULAR - LIMITED TIME' : 'Most Popular'}
+                    {plan.featured ? '⭐ MOST POPULAR' : 'Most Popular'}
                   </div>
                 )}
 
