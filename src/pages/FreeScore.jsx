@@ -24,6 +24,7 @@ export default function FreeScore() {
   const [animatedScore, setAnimatedScore] = useState(0);
   const [csrfToken, setCsrfToken] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [validationError, setValidationError] = useState(null);
   const [formData, setFormData] = useState({
     business_name: '',
     trade_type: '',
@@ -150,6 +151,9 @@ export default function FreeScore() {
     if (error) {
       clearError();
     }
+    if (validationError) {
+      setValidationError(null);
+    }
   };
 
   /**
@@ -167,6 +171,9 @@ export default function FreeScore() {
     // Set submission guard immediately
     setIsSubmitting(true);
 
+    // Clear previous validation errors
+    setValidationError(null);
+
     // CRITICAL VERIFICATION LOG
                 
                         
@@ -174,7 +181,7 @@ export default function FreeScore() {
     const validation = validateForm();
 
     if (!validation.valid) {
-      setError(validation.error || 'Please check your form and try again.');
+      setValidationError(validation.error || 'Please check your form and try again.');
       setIsSubmitting(false);
       return;
     }
@@ -501,14 +508,14 @@ export default function FreeScore() {
                   }}
                 />
 
-                {error && (
+                {(validationError || error) && (
                   <div
                     className="panel panel-error"
                     style={{ marginBottom: 'var(--spacing-lg)' }}
                     role="alert"
                     aria-live="polite"
                   >
-                    {error}
+                    {validationError || error}
                   </div>
                 )}
 
