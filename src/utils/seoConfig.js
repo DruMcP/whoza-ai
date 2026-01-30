@@ -1,7 +1,7 @@
 export const seoConfig = {
   '/': {
     title: 'AI for Tradespeople | Whoza.ai - Get More Local Jobs with Rex',
-    description: 'Rex is your AI employee that helps plumbers, electricians, roofers, builders and 50+ trades get more local jobs when customers ask AI for a tradesperson. GDPR compliant.',
+    description: 'Rex is your AI employee helping UK tradespeople get found in ChatGPT, Google AI & more. Boost your AI visibility and get more local jobs.',
     image: '/og-image.png'
   },
   '/how-it-works': {
