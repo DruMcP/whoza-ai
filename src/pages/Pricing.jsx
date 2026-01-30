@@ -303,16 +303,16 @@ export default function Pricing() {
                 )}
 
                 <div className="pricing-card-header" style={{ 
-                  marginTop: plan.popular ? 'var(--spacing-md)' : 0,
-                  marginBottom: plan.id === 'free-trial' ? 'var(--spacing-xs)' : 'var(--spacing-sm)'
+                  marginTop: plan.popular ? '16px' : 0,
+                  marginBottom: '8px'
                 }}>
                   <div style={{
-                    fontSize: plan.featured ? '22px' : '20px',
+                    fontSize: '20px',
                     fontWeight: 700,
                     textTransform: 'uppercase',
                     letterSpacing: '1px',
                     color: plan.featured ? '#84CC16' : '#3B82F6',
-                    marginBottom: plan.id === 'free-trial' ? '4px' : '6px',
+                    marginBottom: '4px',
                     textShadow: plan.featured ? '0 0 20px rgba(132, 204, 22, 0.5)' : 'none',
                     display: plan.id === 'free-trial' ? 'flex' : 'block',
                     alignItems: 'center',
@@ -323,9 +323,9 @@ export default function Pricing() {
                     {plan.name}
                   </div>
                   <h3 style={{
-                    fontSize: plan.featured ? '24px' : '22px',
+                    fontSize: '22px',
                     fontWeight: 700,
-                    marginBottom: plan.id === 'free-trial' ? '4px' : '6px',
+                    marginBottom: '4px',
                     color: '#ffffff',
                     textShadow: plan.featured ? '0 2px 10px rgba(255, 255, 255, 0.1)' : 'none',
                     lineHeight: '1.2'
@@ -336,17 +336,17 @@ export default function Pricing() {
                     fontSize: '14px',
                     color: '#4B5563',
                     fontStyle: 'italic',
-                    marginBottom: plan.id === 'free-trial' ? '8px' : '10px',
-                    lineHeight: '1.3'
+                    marginBottom: '8px',
+                    lineHeight: '1.25'
                   }}>
                     {plan.subheadline}
                   </p>
                 </div>
 
                 <div className="pricing-card-price" style={{ 
-                  marginBottom: plan.id === 'free-trial' ? '4px' : '6px',
-                  paddingTop: plan.id === 'free-trial' ? '8px' : '12px',
-                  paddingBottom: plan.id === 'free-trial' ? '8px' : '12px'
+                  marginBottom: '4px',
+                  paddingTop: '8px',
+                  paddingBottom: '8px'
                 }}>
                   {plan.id === 'free-trial' ? (
                     <>
@@ -372,7 +372,7 @@ export default function Pricing() {
                 <div style={{
                   fontSize: '13px',
                   color: '#6B7280',
-                  marginBottom: plan.id === 'free-trial' ? '8px' : '10px',
+                  marginBottom: '8px',
                   textAlign: 'center'
                 }}>
                   {plan.id === 'free-trial' ? `for ${plan.duration}` : 'billed monthly'}
@@ -380,14 +380,15 @@ export default function Pricing() {
 
                 {plan.comparisonAnchor && (
                   <div style={{
-                    fontSize: '13px',
+                    fontSize: '12px',
                     color: 'var(--color-primary-600)',
                     fontWeight: 600,
-                    marginBottom: '12px',
+                    marginBottom: '8px',
                     textAlign: 'center',
-                    padding: 'var(--spacing-xs)',
+                    padding: '6px 8px',
                     background: 'rgba(132, 204, 22, 0.1)',
-                    borderRadius: 'var(--radius-md)'
+                    borderRadius: '8px',
+                    lineHeight: '1.3'
                   }}>
                     {plan.comparisonAnchor}
                   </div>
@@ -398,14 +399,16 @@ export default function Pricing() {
                   className={`pricing-cta btn-hover ${plan.featured ? 'button-featured' : plan.popular ? 'button' : 'button-secondary'}`}
                   style={{
                     width: '100%',
-                    marginBottom: plan.id === 'free-trial' ? '8px' : '10px',
-                    padding: plan.id === 'free-trial' ? '14px 28px' : '14px 32px',
-                    fontSize: plan.featured ? '17px' : '16px',
+                    marginBottom: '8px',
+                    padding: '13px 24px',
+                    fontSize: '16px',
+                    fontWeight: 700,
+                    borderRadius: '10px',
+                    textAlign: 'center',
+                    lineHeight: '1.4',
                     ...(plan.featured && {
                       background: 'linear-gradient(135deg, #84CC16 0%, #65A30D 100%)',
                       color: '#0f172a',
-                      fontWeight: 700,
-                      borderRadius: '12px',
                       border: 'none',
                       boxShadow: '0 10px 30px rgba(132, 204, 22, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3)',
                       textTransform: 'none',
@@ -418,15 +421,15 @@ export default function Pricing() {
                 </Link>
 
                 <div style={{
-                  fontSize: '12px',
+                  fontSize: '11px',
                   color: '#4B5563',
-                  marginBottom: plan.id === 'free-trial' ? '10px' : '12px',
+                  marginBottom: '8px',
                   textAlign: 'center',
-                  minHeight: plan.id === 'free-trial' ? '32px' : '36px',
+                  minHeight: '28px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  lineHeight: '1.4'
+                  lineHeight: '1.3'
                 }}>
                   {plan.trustSignal}
                 </div>
@@ -442,10 +445,10 @@ export default function Pricing() {
                       <li key={index} style={{
                         display: 'flex',
                         alignItems: 'flex-start',
-                        gap: isHeader ? '0' : 'var(--spacing-sm)',
-                        marginBottom: plan.id === 'free-trial' ? '4px' : '5px',
-                        fontSize: '14px',
-                        lineHeight: '1.35',
+                        gap: isHeader ? '0' : '8px',
+                        marginBottom: '3px',
+                        fontSize: '13px',
+                        lineHeight: '1.25',
                         color: isHeader ? 'var(--color-primary-600)' : '#374151',
                         fontWeight: isHeader ? 600 : 400
                       }}>
