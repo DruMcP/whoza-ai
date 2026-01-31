@@ -6,6 +6,21 @@
 
 export const blogPosts = [
   {
+    id: "uk-trades-business-playbook-ai-search-visibility-2026",
+    slug: "uk-trades-business-playbook-ai-search-visibility-2026",
+    title: "The UK Trades Business Playbook for AI Search Visibility in 2026",
+    metaDescription: "A comprehensive, evidence-based playbook for UK plumbers, electricians, and tradespeople to achieve visibility in AI search. Learn the 90-day transformation timeline, technical schema implementation, and authority-building strategies to dominate ChatGPT, Google AI, and Perplexity recommendations.",
+    publishDate: "2026-01-31",
+    author: "Whoza.ai Team",
+    category: "AI Visibility",
+    tags: ["AI search", "AEO", "GEO", "ChatGPT", "Google AI", "schema markup", "UK tradespeople", "90-day plan"],
+    readTime: "35 min read",
+    featured: true,
+    leadAnswer: "The way customers find local trades is undergoing its most significant shift in a decade. Traditional Google searches are declining as users turn to AI assistants like ChatGPT, Siri, and Google AI for immediate, conversational answers. This comprehensive playbook provides a scientific, evidence-based framework with a 90-day transformation timeline for UK plumbers, electricians, locksmiths, and other trades to achieve visibility in this new AI-driven landscape.",
+    isPlaybook: true,
+    playbookPath: "/uk-trades-business-playbook-ai-search-visibility-2026"
+  },
+  {
     id: "how-ai-chooses-local-businesses",
     slug: "how-ai-search-engines-choose-which-local-businesses-to-recommend",
     title: "How AI Search Engines Choose Which Local Businesses to Recommend",

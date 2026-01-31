@@ -608,3 +608,419 @@
     text-align: center;
   }
 }
+
+/* ===== Playbook-Specific Styles ===== */
+.playbook-page {
+  background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0a0a0f 100%);
+}
+
+.playbook-header {
+  padding: 60px 0 40px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.playbook-header .container {
+  max-width: 900px;
+}
+
+.playbook-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #84CC16, #65A30D);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+}
+
+.playbook-header h1 {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 700;
+  margin: 20px 0;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.post-meta-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 20px 0;
+}
+
+.playbook-lead {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 800px;
+  margin: 24px auto 0;
+  text-align: left;
+}
+
+.playbook-content {
+  padding: 50px 0;
+}
+
+.playbook-content .container {
+  max-width: 900px;
+}
+
+.playbook-toc {
+  background: linear-gradient(135deg, rgba(132, 204, 22, 0.1) 0%, rgba(101, 163, 13, 0.1) 100%);
+  border: 1px solid rgba(132, 204, 22, 0.3);
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 48px;
+}
+
+.playbook-toc h2 {
+  font-size: 1.25rem;
+  color: #84CC16;
+  margin-bottom: 16px;
+}
+
+.playbook-toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.playbook-toc li {
+  margin: 12px 0;
+}
+
+.playbook-toc a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-size: 1rem;
+}
+
+.playbook-toc a:hover {
+  color: #84CC16;
+}
+
+.playbook-section {
+  margin-bottom: 60px;
+}
+
+.playbook-section h2 {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  color: #ffffff;
+  padding-top: 20px;
+  border-top: 2px solid rgba(132, 204, 22, 0.3);
+}
+
+.playbook-section h3 {
+  font-size: 1.5rem;
+  margin: 32px 0 16px;
+  color: #84CC16;
+}
+
+.playbook-section h4 {
+  font-size: 1.25rem;
+  margin: 24px 0 12px;
+  color: #ffffff;
+}
+
+.playbook-section p {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 20px;
+}
+
+.playbook-section ul,
+.playbook-section ol {
+  margin: 20px 0;
+  padding-left: 28px;
+}
+
+.playbook-section li {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 12px;
+}
+
+.playbook-section strong {
+  color: #84CC16;
+  font-weight: 600;
+}
+
+.playbook-section blockquote {
+  background: rgba(132, 204, 22, 0.1);
+  border-left: 4px solid #84CC16;
+  padding: 20px 24px;
+  margin: 24px 0;
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.playbook-image {
+  margin: 32px 0;
+  text-align: center;
+}
+
+.playbook-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.playbook-image figcaption {
+  margin-top: 12px;
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+
+.faq-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.faq-item h3 {
+  font-size: 1.25rem;
+  color: #84CC16;
+  margin-bottom: 16px;
+}
+
+.quick-win,
+.action-item,
+.pro-tip,
+.common-mistake,
+.bottom-line,
+.schema-enhancement,
+.why-this-matters,
+.why-this-works,
+.the-2026-standard,
+.action-plan,
+.competitive-advantage {
+  background: rgba(132, 204, 22, 0.1);
+  border-left: 4px solid #84CC16;
+  padding: 16px 20px;
+  margin: 20px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.common-mistake {
+  background: rgba(239, 68, 68, 0.1);
+  border-left-color: #ef4444;
+}
+
+.timeline-month {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+.timeline-month h3 {
+  font-size: 1.75rem;
+  color: #84CC16;
+  margin-bottom: 20px;
+}
+
+.timeline-month h4 {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin: 24px 0 12px;
+}
+
+.checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+.checklist li {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 16px;
+}
+
+.checklist li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #84CC16;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.scorecard-table {
+  overflow-x: auto;
+  margin: 32px 0;
+}
+
+.scorecard-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.scorecard-table th,
+.scorecard-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.scorecard-table th {
+  background: rgba(132, 204, 22, 0.2);
+  color: #84CC16;
+  font-weight: 600;
+}
+
+.scorecard-table td {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.scorecard-table tr:last-child td {
+  border-bottom: none;
+}
+
+.playbook-cta-section {
+  padding: 60px 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.playbook-cta-card {
+  background: linear-gradient(135deg, rgba(132, 204, 22, 0.15) 0%, rgba(101, 163, 13, 0.15) 100%);
+  border: 1px solid rgba(132, 204, 22, 0.3);
+  border-radius: 16px;
+  padding: 48px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.playbook-cta-card h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.playbook-cta-card p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.0625rem;
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+.cta-button-large {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #84CC16, #65A30D);
+  color: white;
+  padding: 16px 40px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.125rem;
+  transition: all 0.3s ease;
+  margin-top: 16px;
+}
+
+.cta-button-large:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(132, 204, 22, 0.4);
+}
+
+.playbook-faqs {
+  margin: 60px 0;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.playbook-faqs h2 {
+  font-size: 2rem;
+  margin-bottom: 32px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.faq-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.faq-card:hover {
+  border-color: rgba(132, 204, 22, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.faq-card h3 {
+  font-size: 1.125rem;
+  color: #84CC16;
+  margin-bottom: 12px;
+}
+
+.faq-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 768px) {
+  .playbook-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .playbook-toc {
+    padding: 20px;
+  }
+
+  .timeline-month {
+    padding: 24px;
+  }
+
+  .playbook-cta-card {
+    padding: 32px 24px;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .scorecard-table {
+    font-size: 0.875rem;
+  }
+
+  .scorecard-table th,
+  .scorecard-table td {
+    padding: 12px 8px;
+  }
+}
