@@ -26,14 +26,37 @@ Sentry.init({
     'AbortError: signal is aborted without reason',
     /signal is aborted without reason/,
     /AbortError.*locks\.js/,
+    // Ignore Sentry Replay IndexedDB errors (internal Sentry issue, not app functionality)
+    /Object Not Found Matching Id/,
+    /Non-Error promise rejection captured with value.*Object Not Found/,
   ],
   beforeSend(event, hint) {
     const error = hint.originalException;
+    
     // Filter out Supabase AbortErrors that don't affect functionality
     if (error && error.name === 'AbortError' && 
         error.message && error.message.includes('signal is aborted')) {
       return null; // Don't send to Sentry
     }
+    
+    // Filter out Sentry Replay IndexedDB errors (internal Sentry issue)
+    if (event.exception && event.exception.values) {
+      const exceptionValue = event.exception.values[0];
+      if (exceptionValue && exceptionValue.value && 
+          exceptionValue.value.includes('Object Not Found Matching Id')) {
+        return null; // Don't send to Sentry
+      }
+    }
+    
+    // Filter out non-Error promise rejections from Sentry Replay
+    if (event.exception && event.exception.values) {
+      const exceptionValue = event.exception.values[0];
+      if (exceptionValue && exceptionValue.type === 'UnhandledRejection' &&
+          exceptionValue.value && exceptionValue.value.includes('Object Not Found')) {
+        return null; // Don't send to Sentry
+      }
+    }
+    
     return event;
   },
 })
