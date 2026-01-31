@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import './Blog.css';
 
 function Playbook2026() {
@@ -45,12 +44,6 @@ function Playbook2026() {
 
   return (
     <>
-      <Helmet>
-        <title>The UK Trades Business Playbook for AI Search Visibility in 2026 | Whoza.ai</title>
-        <meta name="description" content="A comprehensive, evidence-based playbook for UK plumbers, electricians, and tradespeople to achieve visibility in AI search. Learn the 90-day transformation timeline, technical schema implementation, and authority-building strategies to dominate ChatGPT, Google AI, and Perplexity recommendations." />
-        <link rel="canonical" href="https://whoza.ai/blog/uk-trades-business-playbook-ai-search-visibility-2026" />
-      </Helmet>
-
       <main className="blog-post-page playbook-page" role="main">
         {/* Breadcrumb */}
         <div className="container">
