@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { getPostBySlug, getPublishedPosts } from '../../data/blogPosts';
+import Playbook2026 from './Playbook2026';
 import './Blog.css';
 
 function BlogPost() {
@@ -12,6 +13,14 @@ function BlogPost() {
 
   useEffect(() => {
     try {
+      // Check if this is the playbook slug - render dedicated component
+      if (slug === 'uk-trades-business-playbook-ai-search-visibility-2026') {
+        // Set a minimal post object for the playbook to pass validation
+        setPost({ isPlaybook: true });
+        setError(null);
+        return;
+      }
+      
       const foundPost = getPostBySlug(slug);
       
       if (!foundPost) {
@@ -180,6 +189,11 @@ function BlogPost() {
         <div className="loading-spinner"></div>
       </div>
     );
+  }
+
+  // If this is the playbook, render the dedicated component
+  if (post.isPlaybook) {
+    return <Playbook2026 />;
   }
 
   return (

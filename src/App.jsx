@@ -32,7 +32,6 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 const PaymentSuccess = lazy(() => import('./pages/PaymentSuccess'));
 const Blog = lazy(() => import('./pages/blog/Blog'));
 const BlogPost = lazy(() => import('./pages/blog/BlogPost'));
-const Playbook2026 = lazy(() => import('./pages/blog/Playbook2026'));
 
 const ProtectedRoute = memo(function ProtectedRoute({ children, adminOnly = false }) {
   const { user, userData, loading } = useAuth();
@@ -109,7 +108,6 @@ function AppRoutes() {
           <Route path="/free-score" element={<FreeScore />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/uk-trades-business-playbook-ai-search-visibility-2026" element={<Playbook2026 />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
 
           <Route
