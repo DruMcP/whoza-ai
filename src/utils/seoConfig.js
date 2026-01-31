@@ -65,3 +65,71 @@ export const seoConfig = {
     image: '/og-image.png'
   }
 };
+
+// Dynamic SEO update function for location pages and other dynamic content
+export const updateSEO = ({ title, description, keywords, url, type = 'website', image = '/og-image.png' }) => {
+  // Update title
+  if (title) {
+    document.title = title;
+    updateMetaTag('property', 'og:title', title);
+    updateMetaTag('name', 'twitter:title', title);
+  }
+
+  // Update description
+  if (description) {
+    updateMetaTag('name', 'description', description);
+    updateMetaTag('property', 'og:description', description);
+    updateMetaTag('name', 'twitter:description', description);
+  }
+
+  // Update keywords
+  if (keywords) {
+    updateMetaTag('name', 'keywords', keywords);
+  }
+
+  // Update URL
+  if (url) {
+    updateMetaTag('property', 'og:url', url);
+    updateLinkTag('canonical', url);
+  }
+
+  // Update type
+  if (type) {
+    updateMetaTag('property', 'og:type', type);
+  }
+
+  // Update image
+  if (image) {
+    const fullImageUrl = image.startsWith('http') ? image : `https://whoza.ai${image}`;
+    updateMetaTag('property', 'og:image', fullImageUrl);
+    updateMetaTag('name', 'twitter:image', fullImageUrl);
+  }
+};
+
+// Helper function to update or create meta tags
+const updateMetaTag = (attribute, attributeValue, content) => {
+  let element = document.querySelector(`meta[${attribute}="${attributeValue}"]`);
+  
+  if (element) {
+    element.setAttribute('content', content);
+  } else {
+    element = document.createElement('meta');
+    element.setAttribute(attribute, attributeValue);
+    element.setAttribute('content', content);
+    document.head.appendChild(element);
+  }
+};
+
+// Helper function to update or create link tags
+const updateLinkTag = (rel, href) => {
+  let element = document.querySelector(`link[rel="${rel}"]`);
+  
+  if (element) {
+    element.setAttribute('href', href);
+  } else {
+    element = document.createElement('link');
+    element.setAttribute('rel', rel);
+    element.setAttribute('href', href);
+    document.head.appendChild(element);
+  }
+};

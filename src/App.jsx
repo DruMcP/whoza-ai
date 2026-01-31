@@ -32,6 +32,7 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 const PaymentSuccess = lazy(() => import('./pages/PaymentSuccess'));
 const Blog = lazy(() => import('./pages/blog/Blog'));
 const BlogPost = lazy(() => import('./pages/blog/BlogPost'));
+const LocationPage = lazy(() => import('./pages/LocationPage'));
 
 const ProtectedRoute = memo(function ProtectedRoute({ children, adminOnly = false }) {
   const { user, userData, loading } = useAuth();
@@ -109,6 +110,22 @@ function AppRoutes() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+
+          <Route path="/ai-visibility-london" element={<LocationPage />} />
+          <Route path="/ai-visibility-manchester" element={<LocationPage />} />
+          <Route path="/ai-visibility-birmingham" element={<LocationPage />} />
+          <Route path="/ai-visibility-glasgow" element={<LocationPage />} />
+          <Route path="/ai-visibility-liverpool" element={<LocationPage />} />
+          <Route path="/ai-visibility-leeds" element={<LocationPage />} />
+          <Route path="/ai-visibility-newcastle" element={<LocationPage />} />
+          <Route path="/ai-visibility-bristol" element={<LocationPage />} />
+          <Route path="/ai-visibility-edinburgh" element={<LocationPage />} />
+          <Route path="/ai-visibility-sheffield" element={<LocationPage />} />
+          <Route path="/ai-visibility-cardiff" element={<LocationPage />} />
+          <Route path="/ai-visibility-leicester" element={<LocationPage />} />
+          <Route path="/ai-visibility-nottingham" element={<LocationPage />} />
+          <Route path="/ai-visibility-southampton" element={<LocationPage />} />
+          <Route path="/ai-visibility-belfast" element={<LocationPage />} />
 
           <Route
             path="/checkout"
