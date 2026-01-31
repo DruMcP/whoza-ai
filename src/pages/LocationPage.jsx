@@ -1,12 +1,15 @@
 import React, { useEffect } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import './LocationPage.css';
 import { locationData } from '../data/locationData';
 import { updateSEO } from '../utils/seoConfig';
 
 const LocationPage = () => {
-  const { city } = useParams();
   const navigate = useNavigate();
+  const locationPath = useLocation();
+  
+  // Extract city from URL path (e.g., /ai-visibility-london -> london)
+  const city = locationPath.pathname.replace('/ai-visibility-', '');
   const location = locationData[city];
 
   useEffect(() => {
