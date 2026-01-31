@@ -15,8 +15,22 @@ function BlogPost() {
     try {
       // Check if this is the playbook slug - render dedicated component
       if (slug === 'uk-trades-business-playbook-ai-search-visibility-2026') {
-        // Set a minimal post object for the playbook to pass validation
-        setPost({ isPlaybook: true });
+        // Get the full playbook post from blogPosts.js
+        const playbookPost = getPostBySlug(slug);
+        if (playbookPost) {
+          setPost({ ...playbookPost, isPlaybook: true });
+        } else {
+          // Fallback: create complete post object with all required fields
+          setPost({
+            isPlaybook: true,
+            title: "The UK Trades Business Playbook for AI Search Visibility in 2026",
+            metaDescription: "A comprehensive playbook for UK trades businesses",
+            slug: slug,
+            tags: ["AI search", "AEO", "UK tradespeople"],
+            publishDate: "2026-01-28",
+            author: "Whoza.ai Team"
+          });
+        }
         setError(null);
         return;
       }
@@ -65,6 +79,7 @@ function BlogPost() {
   // Set page title and meta tags
   useEffect(() => {
     if (!post) return;
+    if (post.isPlaybook) return;  // Skip SEO for playbook (it handles its own)
 
     // Set document title
     document.title = `${post.title} | Whoza.ai Blog`;
