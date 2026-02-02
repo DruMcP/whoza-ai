@@ -483,7 +483,7 @@ export default function CaseStudies() {
                 </Link>
               </div>
               <p className="cta-note">
-                <Link to="/pricing">View pricing</Link> · Starter from £19/month
+                <Link to="/pricing">View pricing</Link> · Try free for 90 days
               </p>
             </div>
           </section>

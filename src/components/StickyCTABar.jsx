@@ -76,7 +76,7 @@ export default function StickyCTABar() {
           gap: '6px'
         }}>
           <Icon name="check-circle" size={18} />
-          From £19/month
+          Start Free Trial
         </div>
 
         <Link

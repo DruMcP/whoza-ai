@@ -216,7 +216,7 @@ const HeroSection = () => {
               color: '#9CA3AF',
               marginTop: '0'
             }}>
-              £19/month pays for itself with just ONE extra job
+              Try free for 90 days - one extra job pays for the whole year
             </p>
           </div>
 

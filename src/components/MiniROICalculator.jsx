@@ -59,7 +59,7 @@ export default function MiniROICalculator() {
           color: '#64748b',
           margin: 0
         }}>
-          Select your trade to see how £19/month could grow your business
+          Select your trade to see your potential ROI with Whoza.ai
         </p>
       </div>
 
