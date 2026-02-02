@@ -5,33 +5,36 @@
 }
 
 .country-btn {
-  background: transparent;
-  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   cursor: pointer;
-  padding: 8px;
+  padding: 8px 10px;
   border-radius: 8px;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.6;
+  opacity: 0.9;
 }
 
 .country-btn:hover {
   opacity: 1;
-  background: rgba(255, 255, 255, 0.1);
-  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
 }
 
 .country-btn.active {
   opacity: 1;
-  background: rgba(179, 224, 48, 0.15);
+  background: rgba(179, 224, 48, 0.2);
+  border-color: rgba(179, 224, 48, 0.4);
 }
 
 .country-btn .flag {
-  font-size: 28px;
+  font-size: 32px;
   line-height: 1;
   display: block;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
 }
 
 .country-btn .label {
