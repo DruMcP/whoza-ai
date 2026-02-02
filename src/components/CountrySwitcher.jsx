@@ -18,8 +18,7 @@ export default function CountrySwitcher() {
         aria-pressed={country === 'GB'}
         aria-label="Switch to United Kingdom"
       >
-        <span className="flag" role="img" aria-label="United Kingdom flag">🇬🇧</span>
-        <span className="label">UK</span>
+        {/* CSS-based flag graphic renders via ::before and ::after pseudo-elements */}
       </button>
       <button
         onClick={() => handleCountryChange('US')}
@@ -27,8 +26,7 @@ export default function CountrySwitcher() {
         aria-pressed={country === 'US'}
         aria-label="Switch to United States"
       >
-        <span className="flag" role="img" aria-label="United States flag">🇺🇸</span>
-        <span className="label">US</span>
+        {/* CSS-based flag graphic renders via ::before and ::after pseudo-elements */}
       </button>
     </div>
   );
