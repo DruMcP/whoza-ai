@@ -1,7 +1,5 @@
 import { useLocalization } from '../contexts/LocalizationContext';
 import './CountrySwitcher.css';
-import UKFlag from '../assets/flags/uk-flag.svg';
-import USFlag from '../assets/flags/us-flag.svg';
 
 export default function CountrySwitcher() {
   const { country, setCountry } = useLocalization();
@@ -21,7 +19,7 @@ export default function CountrySwitcher() {
         aria-label="Switch to United Kingdom"
         title="Switch to United Kingdom"
       >
-        <img src={UKFlag} alt="UK Flag" className="flag-icon" />
+        <img src="/flags/uk-flag.svg" alt="UK Flag" className="flag-icon" />
       </button>
       <button
         onClick={() => handleCountryChange('US')}
@@ -30,7 +28,7 @@ export default function CountrySwitcher() {
         aria-label="Switch to United States"
         title="Switch to United States"
       >
-        <img src={USFlag} alt="US Flag" className="flag-icon" />
+        <img src="/flags/us-flag.svg" alt="US Flag" className="flag-icon" />
       </button>
     </div>
   );
