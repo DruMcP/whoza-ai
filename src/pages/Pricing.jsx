@@ -421,25 +421,33 @@ export default function Pricing() {
                   padding: 0,
                   margin: 0
                 }}>
-                  {plan.features.map((feature, index) => (
-                    <li key={index} style={{
-                      display: 'flex',
-                      alignItems: 'flex-start',
-                      gap: 'var(--spacing-sm)',
-                      marginBottom: '6px',
-                      fontSize: '15px',
-                      lineHeight: '1.4',
-                      color: feature.includes('Everything in') ? 'var(--color-primary-600)' : '#374151',
-                      fontWeight: feature.includes('Everything in') ? 600 : 400
-                    }}>
-                      <Icon name="CheckIcon" size={20} className="feature-check" style={{
-                        color: 'var(--color-primary-600)',
-                        flexShrink: 0,
-                        marginTop: '2px'
-                      }} />
-                      {feature}
-                    </li>
-                  ))}
+                  {plan.features.map((feature, index) => {
+                    const isHeader = feature.includes('Core features:') || feature.includes('Everything in');
+                    
+                    return (
+                      <li key={index} style={{
+                        display: 'flex',
+                        alignItems: 'flex-start',
+                        gap: isHeader ? 0 : 'var(--spacing-sm)',
+                        marginBottom: isHeader ? '8px' : '4px',
+                        marginTop: isHeader && index > 0 ? '12px' : 0,
+                        fontSize: '15px',
+                        lineHeight: '1.3',
+                        color: isHeader ? 'var(--color-primary-600)' : '#374151',
+                        fontWeight: isHeader ? 600 : 400,
+                        listStyle: 'none'
+                      }}>
+                        {!isHeader && (
+                          <Icon name="CheckIcon" size={18} className="feature-check" style={{
+                            color: 'var(--color-primary-600)',
+                            flexShrink: 0,
+                            marginTop: '2px'
+                          }} />
+                        )}
+                        {feature}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             ))}
