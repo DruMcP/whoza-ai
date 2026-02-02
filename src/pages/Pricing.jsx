@@ -1,29 +1,33 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import SEO from '../components/SEO';
 import ROICalculator from '../components/ROICalculator';
 import Icon from '../components/icons/Icon';
 import GuaranteeBadge from '../components/GuaranteeBadge';
-import { generatePricingPageSchemas, generateBreadcrumbSchema, generateFAQPageSchema } from '../utils/schemaOrg';
+import { useAuth } from '../contexts/AuthContext';
+import { supabase } from '../lib/supabase';
 
 const pricingPlans = [
   {
-    id: 'monitor',
-    name: 'Monitor',
-    headline: 'See Where You Stand',
-    subheadline: 'Less than a takeaway. Know your AI visibility.',
-    price: 19,
-    popular: false,
-    cta: 'Start Monitoring',
-    trustSignal: 'Cancel anytime. No commitment.',
-    targetPersona: 'Skeptical sole traders who need proof before investing',
+    id: 'free-trial',
+    name: 'Free Trial',
+    headline: '🎁 Try Everything Risk-Free',
+    subheadline: 'Full access for 90 days. Zero risk. Zero commitment.',
+    price: 0,
+    duration: '90 days',
+    popular: true,
+    featured: true,
+    cta: 'Start Your Free Trial →',
+    trustSignal: '✓ No credit card required  ✓ Cancel anytime  ✓ One-time offer',
+    targetPersona: 'Businesses wanting to test AI visibility before committing',
     features: [
-      'Monthly Visibility Confidence Score™',
-      'AI visibility report across ChatGPT, Google AI, Perplexity',
-      'Email alerts when your score changes',
-      'Competitor visibility comparison (1 competitor)'
+      '✨ Weekly AI visibility score reports',
+      '📊 Track your progress over 12 weeks',
+      '💡 Personalized improvement insights',
+      '🎯 Whitelist access to new features (Chloe & Simon)',
+      '🚀 Full Improve plan access included',
+      '⏰ 90-day trial period (one-time offer)'
     ]
   },
   {
@@ -32,13 +36,13 @@ const pricingPlans = [
     headline: 'Get Found by AI',
     subheadline: 'One extra job pays for the whole year.',
     price: 59,
-    popular: true,
+    popular: false,
     cta: 'Start Improving',
     trustSignal: 'Significantly more affordable than SEO agencies. 30-day money-back guarantee.',
     comparisonAnchor: 'vs £600-£1,000/month for SEO agencies',
     targetPersona: 'Independent tradespeople and small firms ready to take action',
     features: [
-      'Everything in Monitor, plus:',
+      'Core features:',
       'Weekly personalised tasks from Rex (your AI employee)',
       'Step-by-step action plans you approve before doing',
       'Progress tracking across all 5 pillars',
@@ -70,22 +74,25 @@ const pricingPlans = [
 
 const comparisonFeatures = [
   { category: 'Core Features', features: [
-    { name: 'Monthly AI Visibility Score', monitor: true, improve: true, priority: true },
-    { name: 'Score Change Alerts', monitor: true, improve: true, priority: true },
-    { name: 'Competitor Tracking', monitor: '1', improve: '3', priority: '5' },
-    { name: 'Weekly Tasks from Rex', monitor: false, improve: true, priority: true },
-    { name: 'Action Plans You Approve', monitor: false, improve: true, priority: true },
-    { name: '5-Pillar Progress Tracking', monitor: false, improve: true, priority: true }
+    { name: 'Weekly AI Visibility Score', freeTrial: true, improve: true, priority: true },
+    { name: 'Personalized Insights', freeTrial: true, improve: true, priority: true },
+    { name: 'Progress Tracking', freeTrial: '12 weeks', improve: 'Ongoing', priority: 'Ongoing' },
+    { name: 'Competitor Tracking', freeTrial: false, improve: '3', priority: '5' },
+    { name: 'Weekly Tasks from Rex', freeTrial: false, improve: true, priority: true },
+    { name: 'Action Plans You Approve', freeTrial: false, improve: true, priority: true },
+    { name: '5-Pillar Progress Tracking', freeTrial: false, improve: true, priority: true }
   ]},
   { category: 'Premium Features', features: [
-    { name: 'Human Review of Tasks', monitor: false, improve: false, priority: true },
-    { name: 'Conservative Approach', monitor: false, improve: false, priority: true },
-    { name: 'Account Manager Check-ins', monitor: false, improve: false, priority: true },
-    { name: 'Quarterly Strategy Calls', monitor: false, improve: false, priority: true }
+    { name: 'Whitelist Access (Chloe & Simon)', freeTrial: true, improve: false, priority: false },
+    { name: 'Human Review of Tasks', freeTrial: false, improve: false, priority: true },
+    { name: 'Conservative Approach', freeTrial: false, improve: false, priority: true },
+    { name: 'Account Manager Check-ins', freeTrial: false, improve: false, priority: true },
+    { name: 'Quarterly Strategy Calls', freeTrial: false, improve: false, priority: true }
   ]},
   { category: 'Support', features: [
-    { name: 'Email Support', monitor: '—', improve: 'Standard', priority: 'Priority (24hr)' },
-    { name: 'Money-Back Guarantee', monitor: '30 days', improve: '30 days', priority: '30 days' }
+    { name: 'Email Support', freeTrial: '—', improve: 'Standard', priority: 'Priority (24hr)' },
+    { name: 'Money-Back Guarantee', freeTrial: 'N/A (Free)', improve: '30 days', priority: '30 days' },
+    { name: 'Trial Duration', freeTrial: '3 months', improve: '—', priority: '—' }
   ]}
 ];
 
@@ -126,25 +133,48 @@ const faqData = [
 
 export default function Pricing() {
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
+  const [trialEligible, setTrialEligible] = useState(true); // Default to true for non-logged-in users
+  const [checkingEligibility, setCheckingEligibility] = useState(false);
+  const { userData } = useAuth();
 
   const toggleFaq = (index) => {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
   };
 
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: '/' },
-    { name: 'Pricing', url: '/pricing' }
-  ]);
+  // Check trial eligibility when component mounts (if user is logged in)
+  useEffect(() => {
+    const checkTrialEligibility = async () => {
+      if (!userData || !userData.id) {
+        // User not logged in, show trial option
+        setTrialEligible(true);
+        return;
+      }
 
-  const faqSchema = generateFAQPageSchema(faqData);
+      setCheckingEligibility(true);
+      try {
+        const { data, error } = await supabase
+          .rpc('check_trial_eligibility', { p_user_id: userData.id });
+        
+        if (error) {
+          console.error('Failed to check trial eligibility:', error);
+          // On error, default to showing trial option
+          setTrialEligible(true);
+        } else {
+          setTrialEligible(data === true);
+        }
+      } catch (error) {
+        console.error('Error checking trial eligibility:', error);
+        setTrialEligible(true);
+      } finally {
+        setCheckingEligibility(false);
+      }
+    };
 
-  const productSchemas = generatePricingPageSchemas(pricingPlans);
-
-  const schemas = [breadcrumbSchema, faqSchema, ...productSchemas];
+    checkTrialEligibility();
+  }, [userData]);
 
   return (
     <>
-      <SEO schemas={schemas} />
       <Header />
 
       <main id="main-content" role="main">
@@ -190,53 +220,105 @@ export default function Pricing() {
             </p>
           </div>
 
+          {/* Show message if user is logged in and not eligible for trial */}
+          {userData && !trialEligible && (
+            <div style={{
+              background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%)',
+              border: '2px solid rgba(59, 130, 246, 0.3)',
+              borderRadius: 'var(--radius-xl)',
+              padding: 'var(--spacing-lg)',
+              marginBottom: 'var(--spacing-2xl)',
+              textAlign: 'center'
+            }}>
+              <p style={{
+                fontSize: '16px',
+                color: '#3B82F6',
+                fontWeight: 600,
+                marginBottom: '8px'
+              }}>
+                ℹ️ You've already used your free trial
+              </p>
+              <p style={{
+                fontSize: '14px',
+                color: '#6B7280',
+                margin: 0
+              }}>
+                Choose from our paid plans below to continue improving your AI visibility.
+              </p>
+            </div>
+          )}
+
           <div className="pricing-cards">
-            {pricingPlans.map((plan) => (
+            {pricingPlans
+              .filter(plan => {
+                // Hide Free Trial if user is not eligible
+                if (plan.id === 'free-trial' && !trialEligible) {
+                  return false;
+                }
+                return true;
+              })
+              .map((plan) => (
               <div
                 key={plan.id}
-                className={`pricing-card card-hover scroll-reveal ${plan.popular ? 'popular' : ''}`}
+                className={`pricing-card card-hover scroll-reveal ${plan.popular ? 'popular' : ''} ${plan.featured ? 'featured-trial' : ''}`}
                 style={{
                   position: 'relative',
-                  transform: plan.popular ? 'scale(1.05)' : 'scale(1)',
-                  zIndex: plan.popular ? 2 : 1
+                  transform: plan.featured ? 'scale(1.15)' : plan.popular ? 'scale(1.05)' : 'scale(1)',
+                  zIndex: plan.featured ? 3 : plan.popular ? 2 : 1,
+                  ...(plan.featured && {
+                    background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%)',
+                    border: '3px solid transparent',
+                    backgroundImage: 'linear-gradient(135deg, #0f172a, #1e293b), linear-gradient(135deg, #84CC16, #9EF01A, #84CC16)',
+                    backgroundOrigin: 'border-box',
+                    backgroundClip: 'padding-box, border-box',
+                    boxShadow: '0 25px 70px rgba(132, 204, 22, 0.4), 0 0 50px rgba(132, 204, 22, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
+                    animation: 'pulse-glow 3s ease-in-out infinite'
+                  })
                 }}
               >
                 {plan.popular && (
                   <div className="popular-badge" style={{
-                    background: 'linear-gradient(135deg, var(--color-primary-600) 0%, #65a30d 100%)',
+                    background: plan.featured 
+                      ? 'linear-gradient(135deg, #84CC16 0%, #9EF01A 50%, #84CC16 100%)'
+                      : 'linear-gradient(135deg, var(--color-primary-600) 0%, #65a30d 100%)',
                     color: '#0f172a',
                     fontWeight: 700,
-                    fontSize: '14px',
+                    fontSize: plan.featured ? '15px' : '14px',
                     textTransform: 'uppercase',
                     letterSpacing: '0.5px',
-                    padding: 'var(--spacing-sm) var(--spacing-md)',
+                    padding: plan.featured ? '10px 24px' : 'var(--spacing-sm) var(--spacing-md)',
                     borderRadius: 'var(--radius-full)',
                     position: 'absolute',
-                    top: '-12px',
+                    top: '-14px',
                     left: '50%',
                     transform: 'translateX(-50%)',
-                    boxShadow: '0 4px 12px rgba(132, 204, 22, 0.3)'
+                    boxShadow: plan.featured 
+                      ? '0 6px 20px rgba(132, 204, 22, 0.5), 0 0 30px rgba(132, 204, 22, 0.3)'
+                      : '0 4px 12px rgba(132, 204, 22, 0.3)',
+                    animation: plan.featured ? 'pulse-badge 2s ease-in-out infinite' : 'none'
                   }}>
-                    Most Popular
+                    {plan.featured ? '⭐ MOST POPULAR - LIMITED TIME' : 'Most Popular'}
                   </div>
                 )}
 
                 <div className="pricing-card-header" style={{ marginTop: plan.popular ? 'var(--spacing-md)' : 0 }}>
                   <div style={{
-                    fontSize: '14px',
-                    fontWeight: 600,
+                    fontSize: plan.featured ? '22px' : '20px',
+                    fontWeight: 700,
                     textTransform: 'uppercase',
                     letterSpacing: '1px',
-                    color: 'var(--color-primary-600)',
-                    marginBottom: 'var(--spacing-xs)'
+                    color: plan.featured ? '#84CC16' : '#3B82F6',
+                    marginBottom: '8px',
+                    textShadow: plan.featured ? '0 0 20px rgba(132, 204, 22, 0.5)' : 'none'
                   }}>
                     {plan.name}
                   </div>
                   <h3 style={{
-                    fontSize: '24px',
+                    fontSize: plan.featured ? '28px' : '24px',
                     fontWeight: 700,
-                    marginBottom: 'var(--spacing-xs)',
-                    color: '#ffffff'
+                    marginBottom: '6px',
+                    color: '#ffffff',
+                    textShadow: plan.featured ? '0 2px 10px rgba(255, 255, 255, 0.1)' : 'none'
                   }}>
                     {plan.headline}
                   </h3>
@@ -244,25 +326,41 @@ export default function Pricing() {
                     fontSize: '15px',
                     color: '#4B5563',
                     fontStyle: 'italic',
-                    marginBottom: 'var(--spacing-lg)'
+                    marginBottom: '12px'
                   }}>
                     {plan.subheadline}
                   </p>
                 </div>
 
-                <div className="pricing-card-price" style={{ marginBottom: 'var(--spacing-lg)' }}>
-                  <span className="price-currency">£</span>
-                  <span className="price-amount">{plan.price}</span>
-                  <span className="price-period">/mo</span>
+                <div className="pricing-card-price" style={{ marginBottom: '8px' }}>
+                  {plan.id === 'free-trial' ? (
+                    <>
+                      <span className="price-currency" style={{ 
+                        fontSize: '48px', 
+                        fontWeight: 900,
+                        background: 'linear-gradient(135deg, #84CC16, #9EF01A)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        textShadow: '0 0 30px rgba(132, 204, 22, 0.5)',
+                        letterSpacing: '2px'
+                      }}>FREE</span>
+                    </>
+                  ) : (
+                    <>
+                      <span className="price-currency">£</span>
+                      <span className="price-amount">{plan.price}</span>
+                      <span className="price-period">/month</span>
+                    </>
+                  )}
                 </div>
 
                 <div style={{
                   fontSize: '13px',
                   color: '#6B7280',
-                  marginBottom: 'var(--spacing-md)',
+                  marginBottom: '12px',
                   textAlign: 'center'
                 }}>
-                  billed monthly
+                  {plan.id === 'free-trial' ? `for ${plan.duration}` : 'billed monthly'}
                 </div>
 
                 {plan.comparisonAnchor && (
@@ -270,7 +368,7 @@ export default function Pricing() {
                     fontSize: '13px',
                     color: 'var(--color-primary-600)',
                     fontWeight: 600,
-                    marginBottom: 'var(--spacing-lg)',
+                    marginBottom: '12px',
                     textAlign: 'center',
                     padding: 'var(--spacing-xs)',
                     background: 'rgba(132, 204, 22, 0.1)',
@@ -282,10 +380,23 @@ export default function Pricing() {
 
                 <Link
                   to={`/start?plan=${plan.id}`}
-                  className={`pricing-cta btn-hover ${plan.popular ? 'button' : 'button-secondary'}`}
+                  className={`pricing-cta btn-hover ${plan.featured ? 'button-featured' : plan.popular ? 'button' : 'button-secondary'}`}
                   style={{
                     width: '100%',
-                    marginBottom: 'var(--spacing-md)'
+                    marginBottom: '10px',
+                    ...(plan.featured && {
+                      background: 'linear-gradient(135deg, #84CC16 0%, #65A30D 100%)',
+                      color: '#0f172a',
+                      fontSize: '18px',
+                      fontWeight: 700,
+                      padding: '16px 32px',
+                      borderRadius: '12px',
+                      border: 'none',
+                      boxShadow: '0 10px 30px rgba(132, 204, 22, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3)',
+                      textTransform: 'none',
+                      letterSpacing: '0.3px',
+                      transition: 'all 0.3s ease'
+                    })
                   }}
                 >
                   {plan.cta}
@@ -294,7 +405,7 @@ export default function Pricing() {
                 <div style={{
                   fontSize: '13px',
                   color: '#4B5563',
-                  marginBottom: 'var(--spacing-lg)',
+                  marginBottom: '12px',
                   textAlign: 'center',
                   minHeight: '40px',
                   display: 'flex',
@@ -314,8 +425,9 @@ export default function Pricing() {
                       display: 'flex',
                       alignItems: 'flex-start',
                       gap: 'var(--spacing-sm)',
-                      marginBottom: 'var(--spacing-sm)',
+                      marginBottom: '6px',
                       fontSize: '15px',
+                      lineHeight: '1.4',
                       color: feature.includes('Everything in') ? 'var(--color-primary-600)' : '#374151',
                       fontWeight: feature.includes('Everything in') ? 600 : 400
                     }}>
@@ -424,7 +536,7 @@ export default function Pricing() {
                             fontSize: '14px',
                             color: '#6B7280'
                           }}>
-                            £{plan.price}/mo
+                            {plan.id === 'free-trial' ? `FREE for ${plan.duration}` : `£${plan.price}/month`}
                           </div>
                         </div>
                       </th>
@@ -456,7 +568,7 @@ export default function Pricing() {
                           }}>
                             {feature.name}
                           </td>
-                          {['monitor', 'improve', 'priority'].map((tier, tierIndex) => (
+                          {['freeTrial', 'improve', 'priority'].map((tier, tierIndex) => (
                             <td key={tier} className={`feature-value ${tier === 'improve' ? 'popular-column' : ''}`} style={{
                               textAlign: 'center',
                               padding: 'var(--spacing-md)',
@@ -516,20 +628,20 @@ export default function Pricing() {
                 transition: 'all 0.3s ease'
               }}>
                 <div style={{ fontSize: '16px', fontWeight: 600, color: 'var(--color-primary-600)', marginBottom: 'var(--spacing-sm)' }}>
-                  Monitor
+                  Free Trial
                 </div>
                 <div style={{ fontSize: '48px', fontWeight: 700, marginBottom: 'var(--spacing-xs)' }}>
-                  <span style={{ fontSize: '24px' }}>£</span>19<span style={{ fontSize: '18px', color: '#6B7280' }}>/mo</span>
+                  <span style={{ fontSize: '32px' }}>FREE</span>
                 </div>
                 <p style={{ color: '#9CA3AF', fontSize: '16px', lineHeight: '1.6', minHeight: '75px' }}>
-                  Track your AI visibility score and trend.
+                  3 months free. Weekly updates & tips. No credit card required.
                 </p>
                 <Link
-                  to="/start?plan=monitor"
+                  to="/start?plan=free-trial"
                   className="button-secondary btn-hover"
                   style={{ width: '100%', marginTop: 'var(--spacing-md)' }}
                 >
-                  Start Monitoring
+                  Start Free Trial
                 </Link>
               </div>
 
@@ -562,7 +674,7 @@ export default function Pricing() {
                   Improve
                 </div>
                 <div style={{ fontSize: '48px', fontWeight: 700, marginBottom: 'var(--spacing-xs)' }}>
-                  <span style={{ fontSize: '24px' }}>£</span>59<span style={{ fontSize: '18px', color: '#6B7280' }}>/mo</span>
+                  <span style={{ fontSize: '24px' }}>£</span>59<span style={{ fontSize: '18px', color: '#6B7280' }}>/month</span>
                 </div>
                 <p style={{ color: '#9CA3AF', fontSize: '16px', lineHeight: '1.6', minHeight: '75px' }}>
                   One approved improvement per week + monthly confidence score.
@@ -587,7 +699,7 @@ export default function Pricing() {
                   Priority
                 </div>
                 <div style={{ fontSize: '48px', fontWeight: 700, marginBottom: 'var(--spacing-xs)' }}>
-                  <span style={{ fontSize: '24px' }}>£</span>149<span style={{ fontSize: '18px', color: '#6B7280' }}>/mo</span>
+                  <span style={{ fontSize: '24px' }}>£</span>149<span style={{ fontSize: '18px', color: '#6B7280' }}>/month</span>
                 </div>
                 <p style={{ color: '#9CA3AF', fontSize: '16px', lineHeight: '1.6', minHeight: '75px' }}>
                   Faster reviews + extra caution for high-value or regulated services.
