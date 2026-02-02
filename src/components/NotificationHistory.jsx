@@ -20,7 +20,6 @@ export default function NotificationHistory() {
       const data = await notificationService.getNotificationHistory(user.id);
       setNotifications(data);
     } catch (error) {
-      // TODO: Review error handling: console.error('Error loading notifications:', error)
     } finally {
       setLoading(false);
     }

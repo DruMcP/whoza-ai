@@ -259,7 +259,6 @@ const HeroSection = () => {
               e.target.style.border = '2px solid red';
             }}
             onLoad={(e) => {
-              console.log('Hero image loaded successfully:', e.target.naturalWidth, 'x', e.target.naturalHeight);
             }}
             style={{
               width: '100%',

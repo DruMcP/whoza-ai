@@ -45,7 +45,6 @@ export default function Tasks() {
         .maybeSingle();
 
       if (profileError) {
-        // TODO: Review error handling: console.error('[Tasks] Error fetching business profile:', profileError)
       } else {
               }
 
@@ -57,14 +56,12 @@ export default function Tasks() {
           .order('created_at', { ascending: false });
 
         if (tasksError) {
-          // TODO: Review error handling: console.error('[Tasks] Error fetching tasks:', tasksError)
         } else {
                   }
 
         setTasks(data || []);
       }
     } catch (error) {
-      // TODO: Review error handling: console.error('[Tasks] Error loading tasks:', error)
     } finally {
             setLoading(false);
     }
@@ -84,7 +81,6 @@ export default function Tasks() {
 
       loadTasks();
     } catch (error) {
-      // TODO: Review error handling: console.error('Error approving task:', error)
     }
   };
 

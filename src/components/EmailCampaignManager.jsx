@@ -39,7 +39,6 @@ export default function EmailCampaignManager() {
         setStats(statsData);
       }
     } catch (error) {
-      // TODO: Review error handling: console.error('Error loading data:', error)
       setMessage({ type: 'error', text: error.message });
     } finally {
       setLoading(false);
@@ -60,7 +59,6 @@ export default function EmailCampaignManager() {
 
       loadData();
     } catch (error) {
-      // TODO: Review error handling: console.error('Error processing campaigns:', error)
       setMessage({ type: 'error', text: error.message });
     } finally {
       setProcessing(false);

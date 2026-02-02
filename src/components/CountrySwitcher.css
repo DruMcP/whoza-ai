@@ -1,0 +1,49 @@
+.country-switcher {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.country-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+}
+
+.country-btn:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+.country-btn.active {
+  opacity: 1;
+  background: rgba(179, 224, 48, 0.15);
+}
+
+.country-btn .flag {
+  font-size: 28px;
+  line-height: 1;
+  display: block;
+}
+
+.country-btn .label {
+  display: none;
+}
+
+/* Ensure flags are clickable and accessible */
+.country-btn:focus {
+  outline: 2px solid var(--color-primary-500, #b3e030);
+  outline-offset: 2px;
+}
+
+.country-btn:active {
+  transform: scale(0.95);
+}

@@ -255,7 +255,6 @@ export const taskGenerationService = {
         copyPasteText: customizedTask.copy_paste_text,
       });
     } catch (notificationError) {
-      // TODO: Review error handling: console.error('Failed to send task notification:', notificationError)
     }
 
     return newTask;
@@ -318,7 +317,6 @@ export const taskGenerationService = {
         completion_time: new Date().toISOString(),
       });
     } catch (error) {
-      // TODO: Review error handling: console.error('Failed to track task completion:', error)
     }
 
     return task;

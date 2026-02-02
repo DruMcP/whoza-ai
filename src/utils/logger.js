@@ -38,7 +38,6 @@ class Logger {
 
   info(message, context = {}) {
     if (isDevelopment) {
-      console.log('[INFO]', message, context);
     }
   }
 

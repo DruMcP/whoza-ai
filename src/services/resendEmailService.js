@@ -11,8 +11,6 @@ const RESEND_API_URL = 'https://api.resend.com/emails';
  */
 async function sendEmail({ from, to, subject, html }) {
   if (!RESEND_API_KEY) {
-    // TODO: Review error handling: console.error('[RESEND] ❌ API key not configured!')
-    // TODO: Review error handling: console.error('[RESEND] Check that VITE_RESEND_API_KEY is set in .env')
     return { success: false, error: 'API key not configured' };
   }
 
@@ -39,18 +37,11 @@ async function sendEmail({ from, to, subject, html }) {
     const data = await response.json();
     
     if (!response.ok) {
-      // TODO: Review error handling: console.error('[RESEND] ❌ API error!')
-      // TODO: Review error handling: console.error('[RESEND] Status:', response.status)
-      // TODO: Review error handling: console.error('[RESEND] Error data:', data)
       return { success: false, error: data.message || data.error || 'Failed to send email' };
     }
 
             return { success: true, data };
   } catch (error) {
-    // TODO: Review error handling: console.error('[RESEND] ❌ Exception sending email!')
-    // TODO: Review error handling: console.error('[RESEND] Error:', error)
-    // TODO: Review error handling: console.error('[RESEND] Error message:', error.message)
-    // TODO: Review error handling: console.error('[RESEND] Error stack:', error.stack)
     return { success: false, error: error.message };
   }
 }
@@ -292,12 +283,10 @@ export async function sendFreeScoreResultsEmail({
 
     if (result.success) {
           } else {
-      // TODO: Review error handling: console.error('[FREE SCORE EMAIL] Failed to send results email:', result.error)
     }
 
     return result;
   } catch (error) {
-    // TODO: Review error handling: console.error('[FREE SCORE EMAIL] Exception sending results email:', error)
     return { success: false, error: error.message };
   }
 }

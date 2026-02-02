@@ -31,7 +31,6 @@ export const apiCache = {
         .maybeSingle();
 
       if (error) {
-        // TODO: Review error handling: console.error('Cache lookup error:', error)
         return null;
       }
 
@@ -54,7 +53,6 @@ export const apiCache = {
 
       return data.response_data;
     } catch (error) {
-      // TODO: Review error handling: console.error('Cache get error:', error)
       return null;
     }
   },
@@ -81,13 +79,11 @@ export const apiCache = {
         });
 
       if (error) {
-        // TODO: Review error handling: console.error('Cache set error:', error)
         return false;
       }
 
       return true;
     } catch (error) {
-      // TODO: Review error handling: console.error('Cache set error:', error)
       return false;
     }
   },
@@ -100,13 +96,11 @@ export const apiCache = {
         .eq('cache_key', cacheKey);
 
       if (error) {
-        // TODO: Review error handling: console.error('Cache delete error:', error)
         return false;
       }
 
       return true;
     } catch (error) {
-      // TODO: Review error handling: console.error('Cache delete error:', error)
       return false;
     }
   },
@@ -125,13 +119,11 @@ export const apiCache = {
       const { error } = await query;
 
       if (error) {
-        // TODO: Review error handling: console.error('Cache invalidate error:', error)
         return false;
       }
 
       return true;
     } catch (error) {
-      // TODO: Review error handling: console.error('Cache invalidate error:', error)
       return false;
     }
   },
@@ -142,13 +134,11 @@ export const apiCache = {
         .rpc('cleanup_expired_cache');
 
       if (error) {
-        // TODO: Review error handling: console.error('Cache cleanup error:', error)
         return 0;
       }
 
       return data || 0;
     } catch (error) {
-      // TODO: Review error handling: console.error('Cache cleanup error:', error)
       return 0;
     }
   },

@@ -32,7 +32,7 @@ export default function LocationPageUK() {
     <div className="min-h-screen flex flex-col">
       <SEO
         title={`AI Visibility for ${getTerm('tradespeople')} in ${city.name}`}
-        description={`Get your AI Visibility Score in ${city.name}. Join over ${city.tradespeople.toLocaleString()} ${getTerm('tradespeople')} optimising their online presence. ${formatPrice(49)} to start.`}
+        description={`Get your AI Visibility Score in ${city.name}. Join over ${city.tradespeople.toLocaleString()} ${getTerm('tradespeople')} optimising their online presence. ${formatPrice(59)} to start.`}
       />
       <Header />
 
@@ -74,7 +74,7 @@ export default function LocationPageUK() {
               <div className="card p-6">
                 <h3 className="text-xl font-bold mb-4">Affordable Pricing</h3>
                 <p>
-                  Plans starting from just {formatPrice(49)}/month.
+                  Plans starting from just {formatPrice(59)}/month.
                   No long-term contracts, cancel anytime.
                 </p>
               </div>

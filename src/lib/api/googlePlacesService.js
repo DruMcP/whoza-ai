@@ -170,7 +170,6 @@ export async function findBusinessByName(businessName, location, userId, busines
 
     return result;
   } catch (error) {
-    // TODO: Review error handling: console.error('Error in findBusinessByName:', error)
     throw error;
   }
 }
@@ -222,7 +221,6 @@ export async function getPlaceDetails(placeId, userId, businessId) {
 
     return result;
   } catch (error) {
-    // TODO: Review error handling: console.error('Error in getPlaceDetails:', error)
     throw error;
   }
 }
@@ -336,7 +334,6 @@ export async function verifyAndFetchBusinessData(businessId, userId) {
 
     return verifiedData;
   } catch (error) {
-    // TODO: Review error handling: console.error('Error in verifyAndFetchBusinessData:', error)
     throw error;
   }
 }

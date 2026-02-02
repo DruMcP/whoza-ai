@@ -30,7 +30,6 @@ export default function TaskTemplateManager() {
       const data = await taskGenerationService.getAllTemplates();
       setTemplates(data);
     } catch (error) {
-      // TODO: Review error handling: console.error('Error loading templates:', error)
       setMessage({ type: 'error', text: 'Failed to load templates' });
     } finally {
       setLoading(false);
@@ -48,7 +47,6 @@ export default function TaskTemplateManager() {
         text: `Template ${!currentStatus ? 'activated' : 'deactivated'}`,
       });
     } catch (error) {
-      // TODO: Review error handling: console.error('Error updating template:', error)
       setMessage({ type: 'error', text: 'Failed to update template' });
     }
   };

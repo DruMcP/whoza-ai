@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import AccessibilityMenu from './AccessibilityMenu';
 import ExternalLinkIcon from './icons/ui/ExternalLinkIcon';
+import CountrySwitcher from './CountrySwitcher';
 
 const WhozaLogo = memo(() => (
   <img
@@ -71,10 +72,12 @@ const Header = memo(function Header() {
                 <li><Link to="/how-it-works" className="nav-link">How it works</Link></li>
                 <li><Link to="/case-studies" className="nav-link">Case Studies</Link></li>
                 <li><Link to="/pricing" className="nav-link">Pricing</Link></li>
+                <li><Link to="/blog" className="nav-link">Blog</Link></li>
                 <li><Link to="/trust" className="nav-link">Trust & Reviews</Link></li>
                 <li><Link to="/contact" className="nav-link">Contact</Link></li>
               </ul>
               <div className="header-nav-secondary">
+                <CountrySwitcher />
                 <AccessibilityMenu />
                 <Link to="/start" className="button button-header-cta btn-hover" aria-label="Get started with whoza.ai">Get started</Link>
               </div>

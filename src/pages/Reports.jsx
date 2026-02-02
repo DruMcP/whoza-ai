@@ -43,7 +43,6 @@ export default function Reports() {
         .maybeSingle();
 
       if (profileError) {
-        // TODO: Review error handling: console.error('[Reports] Error fetching business profile:', profileError)
       } else {
               }
 
@@ -56,7 +55,6 @@ export default function Reports() {
           .order('period_start', { ascending: false });
 
         if (scoresError) {
-          // TODO: Review error handling: console.error('[Reports] Error fetching visibility scores:', scoresError)
         } else {
                   }
 
@@ -67,7 +65,6 @@ export default function Reports() {
           .maybeSingle();
 
         if (benchmarkError) {
-          // TODO: Review error handling: console.error('[Reports] Error fetching benchmark:', benchmarkError)
         } else {
                   }
 
@@ -75,7 +72,6 @@ export default function Reports() {
         setBenchmark(benchmarkData);
       }
     } catch (error) {
-      // TODO: Review error handling: console.error('[Reports] Error loading reports:', error)
     } finally {
             setLoading(false);
     }

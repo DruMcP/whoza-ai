@@ -111,7 +111,6 @@ export default function Portal() {
 
       loadPortalData();
     } catch (error) {
-      // TODO: Review error handling: console.error('Error approving task:', error)
     }
   };
 

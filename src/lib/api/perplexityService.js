@@ -221,12 +221,10 @@ export async function checkBusinessVisibility(businessId, userId, queryType = 'g
       });
 
     if (checkError) {
-      // TODO: Review error handling: console.error('Failed to log visibility check:', checkError)
     }
 
     return result;
   } catch (error) {
-    // TODO: Review error handling: console.error('Error in checkBusinessVisibility:', error)
     throw error;
   }
 }
@@ -245,7 +243,6 @@ export async function getVisibilityHistory(businessId, limit = 10) {
 
     return data || [];
   } catch (error) {
-    // TODO: Review error handling: console.error('Error getting visibility history:', error)
     return [];
   }
 }

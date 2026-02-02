@@ -77,7 +77,6 @@ export default function Start() {
       if (!emailRegex.test(email)) return 'Please enter a valid email address';
       return '';
     } catch (err) {
-      // TODO: Review error handling: console.error('Email validation error:', err)
       return 'Invalid email';
     }
   };
@@ -89,7 +88,6 @@ export default function Start() {
       if (password.length < 8) return 'Consider using at least 8 characters for better security';
       return '';
     } catch (err) {
-      // TODO: Review error handling: console.error('Password validation error:', err)
       return 'Invalid password';
     }
   };
@@ -101,7 +99,6 @@ export default function Start() {
       if (!postcodeRegex.test(postcode)) return 'Please enter a valid UK postcode';
       return '';
     } catch (err) {
-      // TODO: Review error handling: console.error('Postcode validation error:', err)
       return 'Invalid postcode';
     }
   };
@@ -138,7 +135,6 @@ export default function Start() {
       const outward = cleaned.slice(0, -3);
       return `${outward} ${inward}`;
     } catch (err) {
-      // TODO: Review error handling: console.error('Error formatting postcode:', err)
       return value;
     }
   };
@@ -180,7 +176,6 @@ export default function Start() {
         setFieldErrors({ ...fieldErrors, [name]: error });
       }
     } catch (err) {
-      // TODO: Review error handling: console.error('Error updating field:', name, err)
     }
   };
 
@@ -190,7 +185,6 @@ export default function Start() {
       const error = validateField(name, formData[name] || '');
       setFieldErrors({ ...fieldErrors, [name]: error });
     } catch (err) {
-      // TODO: Review error handling: console.error('Error on field blur:', name, err)
     }
   };
 
@@ -205,7 +199,6 @@ export default function Start() {
       if (value) return 'success';
       return '';
     } catch (err) {
-      // TODO: Review error handling: console.error('Error getting field status:', name, err)
       return '';
     }
   };
@@ -240,7 +233,6 @@ export default function Start() {
           return false;
       }
     } catch (err) {
-      // TODO: Review error handling: console.error('Validation error:', err)
       return false;
     }
   };
@@ -257,7 +249,6 @@ export default function Start() {
         setError('Please fill in all required fields to continue.');
       }
     } catch (err) {
-      // TODO: Review error handling: console.error('Error advancing to next step:', err)
       setError('An unexpected error occurred. Please check all fields are filled correctly.');
     }
   };
@@ -402,7 +393,6 @@ export default function Start() {
           formData.email,
           formData.businessName
         ).catch((emailError) => {
-          // TODO: Review error handling: console.error('Failed to start onboarding campaign:', emailError)
         });
 
         navigate('/checkout');

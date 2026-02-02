@@ -57,10 +57,8 @@ export async function logApiUsage({
       });
 
     if (error) {
-      // TODO: Review error handling: console.error('Failed to log API usage:', error)
     }
   } catch (error) {
-    // TODO: Review error handling: console.error('Error in logApiUsage:', error)
   }
 }
 
@@ -108,7 +106,6 @@ export async function getApiUsageStats(userId = null, days = 30) {
 
     return stats;
   } catch (error) {
-    // TODO: Review error handling: console.error('Error getting API usage stats:', error)
     return null;
   }
 }

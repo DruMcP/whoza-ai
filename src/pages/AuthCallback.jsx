@@ -13,7 +13,6 @@ export default function AuthCallback() {
         const { data: { session }, error } = await supabase.auth.getSession();
 
         if (error) {
-          // TODO: Review error handling: console.error('Auth callback error:', error)
           navigate('/sign-in', { state: { error: 'Authentication failed. Please try again.' } });
           return;
         }
@@ -26,7 +25,6 @@ export default function AuthCallback() {
           navigate('/sign-in');
         }
       } catch (err) {
-        // TODO: Review error handling: console.error('Unexpected error in auth callback:', err)
         navigate('/sign-in', { state: { error: 'An unexpected error occurred.' } });
       }
     };

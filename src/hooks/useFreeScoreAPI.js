@@ -112,7 +112,6 @@ export function useFreeScoreAPI() {
           upgradeMessage: data.upgradeMessage
         });
       }
-      // TODO: Review error handling: console.error('[VERIFY SUBMISSION] ❌ Verification failed:', data.error)
       throw new Error(data.error || 'Verification failed');
     }
 
@@ -162,12 +161,10 @@ export function useFreeScoreAPI() {
       if (serviceError) {
         const errorType = getErrorType(serviceError, 0);
         const userMessage = getUserFriendlyMessage(errorType, serviceError.message);
-        // TODO: Review error handling: console.error('[FREE SCORE API] ❌ Service error:', userMessage)
         throw new Error(userMessage);
       }
 
       if (!data && !verifyData) {
-        // TODO: Review error handling: console.error('[FREE SCORE API] ❌ No data returned')
         throw new Error('Unable to calculate your score right now. Please try again.');
       }
 
@@ -191,7 +188,6 @@ export function useFreeScoreAPI() {
       }
       
     } catch (err) {
-      // TODO: Review error handling: console.error('[FREE SCORE API] ❌ Error:', err)
       const userMessage = err.message || getUserFriendlyMessage(ERROR_TYPES.UNKNOWN);
       setError(userMessage);
       throw err;

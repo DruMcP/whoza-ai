@@ -23,7 +23,6 @@ function HistoryChart({ userId }) {
       setScoreHistory(scores);
       setTaskHistory(tasks);
     } catch (error) {
-      // TODO: Review error handling: console.error('Error loading history:', error)
     } finally {
       setLoading(false);
     }

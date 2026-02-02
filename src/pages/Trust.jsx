@@ -19,7 +19,6 @@ export default function Trust() {
       .limit(5);
 
     if (error) {
-      // TODO: Review error handling: console.error('Error loading proof snippets:', error)
     } else {
       setProofSnippets(data || []);
     }

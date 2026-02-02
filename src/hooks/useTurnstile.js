@@ -28,7 +28,6 @@ export function useTurnstile() {
     };
 
     script.onerror = () => {
-      // TODO: Review error handling: console.error('[TURNSTILE] ❌ Failed to load script')
       setTurnstileError(true);
       if (timeoutId) {
         clearTimeout(timeoutId);

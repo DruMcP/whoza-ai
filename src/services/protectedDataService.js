@@ -63,7 +63,6 @@ export const fetchProtectedData = async (endpoint, options = {}) => {
 
     return await response.json();
   } catch (error) {
-    // TODO: Review error handling: console.error(`Error fetching protected data from ${endpoint}:`, error)
     throw error;
   }
 };

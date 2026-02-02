@@ -195,7 +195,6 @@ Focus on the BIGGEST gap that will most improve how AI answer engines (ChatGPT, 
 
     return result;
   } catch (error) {
-    // TODO: Review error handling: console.error('Error in generatePersonalizedTask:', error)
     throw error;
   }
 }

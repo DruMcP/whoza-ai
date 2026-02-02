@@ -16,11 +16,9 @@ export const analyticsService = {
       });
 
       if (error) {
-        // TODO: Review error handling: console.error('Error tracking event:', error)
       }
       return data;
     } catch (error) {
-      // TODO: Review error handling: console.error('Failed to track event:', error)
     }
   },
 

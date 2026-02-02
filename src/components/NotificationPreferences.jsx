@@ -36,7 +36,6 @@ export default function NotificationPreferences() {
         setPreferences(newPrefs);
       }
     } catch (error) {
-      // TODO: Review error handling: console.error('Error loading preferences:', error)
       setMessage({ type: 'error', text: error.message });
     } finally {
       setLoading(false);
@@ -59,7 +58,6 @@ export default function NotificationPreferences() {
       setMessage({ type: 'success', text: 'Preference updated successfully' });
       setTimeout(() => setMessage(null), 3000);
     } catch (error) {
-      // TODO: Review error handling: console.error('Error updating preference:', error)
       setMessage({ type: 'error', text: error.message });
     } finally {
       setSaving(false);

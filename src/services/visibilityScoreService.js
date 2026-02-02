@@ -140,7 +140,6 @@ export const visibilityScoreService = {
           nextSteps,
         });
       } catch (notificationError) {
-        // TODO: Review error handling: console.error('Failed to send score update notification:', notificationError)
       }
     }
 
@@ -152,7 +151,6 @@ export const visibilityScoreService = {
         score_date: scoreData.score_date,
       });
     } catch (error) {
-      // TODO: Review error handling: console.error('Failed to track score calculation:', error)
     }
 
     return savedScore;

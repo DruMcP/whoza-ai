@@ -18,7 +18,6 @@ export default function VisibilityScoreCard({ businessId }) {
       const latestScore = await visibilityScoreService.getLatestScore(businessId);
       setScore(latestScore);
     } catch (error) {
-      // TODO: Review error handling: console.error('Error loading score:', error)
     } finally {
       setLoading(false);
     }

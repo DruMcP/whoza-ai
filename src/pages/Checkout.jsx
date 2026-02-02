@@ -58,7 +58,6 @@ export default function Checkout() {
         throw new Error('No checkout URL returned');
       }
     } catch (error) {
-      // TODO: Review error handling: console.error('Error creating checkout:', error)
       toast.error('Error creating checkout session. Please try again.');
     } finally {
       setLoading(false);

@@ -336,7 +336,6 @@ export default function Account() {
       if (pmResponse.data) setPaymentMethod(pmResponse.data);
 
     } catch (error) {
-      // TODO: Review error handling: console.error('Error fetching account data:', error)
       setToast({ type: 'error', message: 'Failed to load account data' });
     } finally {
       setLoading(false);
@@ -366,7 +365,6 @@ export default function Account() {
         message: `Your subscription has been cancelled. You'll have access until ${new Date(subscription.current_period_end).toLocaleDateString('en-GB')}`
       });
     } catch (error) {
-      // TODO: Review error handling: console.error('Error cancelling subscription:', error)
       setToast({ type: 'error', message: 'Failed to cancel subscription. Please contact support.' });
     }
   };

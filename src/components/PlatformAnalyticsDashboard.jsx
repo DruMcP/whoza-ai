@@ -17,7 +17,6 @@ export default function PlatformAnalyticsDashboard() {
       const data = await analyticsService.getAdminDashboardData();
       setAnalytics(data);
     } catch (err) {
-      // TODO: Review error handling: console.error('Error loading platform analytics:', err)
       setError(err.message);
     } finally {
       setLoading(false);

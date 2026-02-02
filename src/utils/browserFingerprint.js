@@ -78,7 +78,6 @@ const generateFingerprint = async () => {
       components
     };
   } catch (error) {
-    // TODO: Review error handling: console.error('Fingerprint generation error:', error)
     return {
       id: 'error-' + Math.random().toString(36).substring(7),
       components: { error: error.message }

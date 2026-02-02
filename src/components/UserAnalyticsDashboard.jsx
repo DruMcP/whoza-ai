@@ -20,7 +20,6 @@ export default function UserAnalyticsDashboard() {
       const data = await analyticsService.getUserDashboardData(user.id);
       setAnalytics(data);
     } catch (err) {
-      // TODO: Review error handling: console.error('Error loading analytics:', err)
       setError(err.message);
     } finally {
       setLoading(false);

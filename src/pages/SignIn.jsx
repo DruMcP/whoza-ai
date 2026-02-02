@@ -59,7 +59,6 @@ export default function SignIn() {
       const from = location.state?.from?.pathname || '/portal';
       navigate(from, { replace: true });
     } catch (err) {
-      // TODO: Review error handling: console.error('Sign in error:', err)
       setError(err.message || 'Failed to sign in. Please check your credentials and try again.');
     } finally {
       setLoading(false);
@@ -91,7 +90,6 @@ export default function SignIn() {
         setResetEmailSent(false);
       }, 3000);
     } catch (err) {
-      // TODO: Review error handling: console.error('Password reset error:', err)
       setError(err.message || 'Failed to send password reset email');
     } finally {
       setLoading(false);

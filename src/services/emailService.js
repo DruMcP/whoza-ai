@@ -63,7 +63,6 @@ export const emailService = {
       .maybeSingle();
 
     if (campaignError) {
-      // TODO: Review error handling: console.error('Error fetching onboarding campaign:', campaignError)
       throw new Error('Failed to fetch onboarding campaign');
     }
 
@@ -79,7 +78,6 @@ export const emailService = {
       .maybeSingle();
 
     if (emailError) {
-      // TODO: Review error handling: console.error('Error fetching campaign emails:', emailError)
       throw new Error('Failed to fetch campaign emails');
     }
 

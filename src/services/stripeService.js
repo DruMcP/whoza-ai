@@ -21,7 +21,6 @@ export async function getStripeCustomer(userId) {
     if (error) throw error;
     return data;
   } catch (error) {
-    // TODO: Review error handling: console.error('Error fetching Stripe customer:', error)
     throw error;
   }
 }
@@ -44,7 +43,6 @@ export async function getStripeProducts() {
     if (error) throw error;
     return data || [];
   } catch (error) {
-    // TODO: Review error handling: console.error('Error fetching Stripe products:', error)
     throw error;
   }
 }
@@ -83,7 +81,6 @@ export async function createCheckoutSession(userId, priceId, successUrl, cancelU
 
     return await response.json();
   } catch (error) {
-    // TODO: Review error handling: console.error('Error creating checkout session:', error)
     throw error;
   }
 }
@@ -107,7 +104,6 @@ export async function getActiveSubscription(userId) {
     if (error) throw error;
     return data;
   } catch (error) {
-    // TODO: Review error handling: console.error('Error fetching active subscription:', error)
     throw error;
   }
 }
@@ -128,7 +124,6 @@ export async function getAllSubscriptions(userId) {
     if (error) throw error;
     return data || [];
   } catch (error) {
-    // TODO: Review error handling: console.error('Error fetching subscriptions:', error)
     throw error;
   }
 }
@@ -162,7 +157,6 @@ export async function cancelSubscription(subscriptionId) {
 
     return await response.json();
   } catch (error) {
-    // TODO: Review error handling: console.error('Error cancelling subscription:', error)
     throw error;
   }
 }
@@ -196,7 +190,6 @@ export async function resumeSubscription(subscriptionId) {
 
     return await response.json();
   } catch (error) {
-    // TODO: Review error handling: console.error('Error resuming subscription:', error)
     throw error;
   }
 }
@@ -232,7 +225,6 @@ export async function updateSubscription(subscriptionId, newPriceId) {
 
     return await response.json();
   } catch (error) {
-    // TODO: Review error handling: console.error('Error updating subscription:', error)
     throw error;
   }
 }
@@ -255,7 +247,6 @@ export async function getInvoices(userId, limit = 20) {
     if (error) throw error;
     return data || [];
   } catch (error) {
-    // TODO: Review error handling: console.error('Error fetching invoices:', error)
     throw error;
   }
 }
@@ -277,7 +268,6 @@ export async function getPaymentMethods(userId) {
     if (error) throw error;
     return data || [];
   } catch (error) {
-    // TODO: Review error handling: console.error('Error fetching payment methods:', error)
     throw error;
   }
 }
@@ -292,7 +282,6 @@ export async function hasActiveSubscription(userId) {
     const subscription = await getActiveSubscription(userId);
     return subscription !== null;
   } catch (error) {
-    // TODO: Review error handling: console.error('Error checking subscription status:', error)
     return false;
   }
 }
@@ -339,7 +328,6 @@ export async function getSubscriptionFeatures(userId) {
       }
     };
   } catch (error) {
-    // TODO: Review error handling: console.error('Error fetching subscription features:', error)
     return { tier: 'free', features: {} };
   }
 }

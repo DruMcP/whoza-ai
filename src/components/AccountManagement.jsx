@@ -24,7 +24,6 @@ export default function AccountManagement({ userId }) {
       const data = await dashboardService.getUserProfile(userId);
       setProfile(data);
     } catch (error) {
-      // TODO: Review error handling: console.error('Error loading profile:', error)
       setMessage({ type: 'error', text: 'Failed to load profile' });
     } finally {
       setLoading(false);
@@ -59,7 +58,6 @@ export default function AccountManagement({ userId }) {
 
       setMessage({ type: 'success', text: 'Profile updated successfully' });
     } catch (error) {
-      // TODO: Review error handling: console.error('Error updating profile:', error)
       setMessage({ type: 'error', text: 'Failed to update profile' });
     } finally {
       setSaving(false);
@@ -93,7 +91,6 @@ export default function AccountManagement({ userId }) {
       setMessage({ type: 'success', text: 'Password updated successfully' });
       setPasswordData({ currentPassword: '', newPassword: '', confirmPassword: '' });
     } catch (error) {
-      // TODO: Review error handling: console.error('Error updating password:', error)
       setMessage({ type: 'error', text: error.message || 'Failed to update password' });
     } finally {
       setSaving(false);

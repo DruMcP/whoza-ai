@@ -269,17 +269,13 @@ export async function submitFreeScore(formData) {
 
       
       if (error) {
-        // TODO: Review error handling: console.error('[FREE SCORE] ❌ Database error:', error)
-        // TODO: Review error handling: console.error('[FREE SCORE] Error details:', JSON.stringify(error, null, 2))
         saveError = error;
       } else if (data) {
                 savedData = data;
       } else {
-        // TODO: Review error handling: console.error('[FREE SCORE] No data returned from insert')
         saveError = new Error('No data returned from insert');
       }
     } catch (dbError) {
-      // TODO: Review error handling: console.error('[FREE SCORE] Database exception:', dbError)
       saveError = dbError;
     }
 
@@ -313,7 +309,6 @@ export async function submitFreeScore(formData) {
       warning: null
     };
   } catch (error) {
-    // TODO: Review error handling: console.error('[FREE SCORE] Fatal error:', error)
     return {
       data: null,
       error: error instanceof Error ? error : new Error('An unexpected error occurred')
@@ -335,7 +330,6 @@ export async function getUserFreeScores() {
 
     return { data, error: null };
   } catch (error) {
-    // TODO: Review error handling: console.error('Error fetching user free scores:', error)
     return { data: null, error };
   }
 }

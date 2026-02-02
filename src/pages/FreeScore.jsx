@@ -56,7 +56,6 @@ export default function FreeScore() {
                 const { data, error } = await supabase.rpc('generate_csrf_token');
 
         if (error) {
-          // TODO: Review error handling: console.error('[FREE SCORE] ❌ CSRF token generation error:', error)
           // Use fallback - backend should handle this gracefully
           setCsrfToken('fallback');
         } else if (data) {
@@ -65,7 +64,6 @@ export default function FreeScore() {
                     setCsrfToken('fallback');
         }
       } catch (err) {
-        // TODO: Review error handling: console.error('[FREE SCORE] ❌ CSRF token fetch failed:', err)
         // Use fallback - backend should handle this gracefully
         setCsrfToken('fallback');
       }
@@ -203,7 +201,6 @@ export default function FreeScore() {
         }
       );
           } catch (err) {
-      // TODO: Review error handling: console.error('[FREE SCORE] ❌ submitScore ERROR:', err)
       // Error already handled by hook
       resetTurnstile();
       setIsSubmitting(false);

@@ -34,7 +34,6 @@ export default function ScoreCalculator() {
       setBusinessInfo(profile);
       setMessage({ type: 'success', text: 'Business loaded successfully' });
     } catch (error) {
-      // TODO: Review error handling: console.error('Error loading business:', error)
       setMessage({ type: 'error', text: error.message || 'Failed to load business' });
     } finally {
       setCalculating(false);
@@ -59,7 +58,6 @@ export default function ScoreCalculator() {
         text: `Score calculated successfully: ${score.overall_score}/100`,
       });
     } catch (error) {
-      // TODO: Review error handling: console.error('Error calculating score:', error)
       setMessage({ type: 'error', text: error.message || 'Failed to calculate score' });
     } finally {
       setCalculating(false);

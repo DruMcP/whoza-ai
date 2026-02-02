@@ -27,7 +27,6 @@ export async function getAvailableIntegrations(category = null) {
     if (error) throw error;
     return data || [];
   } catch (error) {
-    // TODO: Review error handling: console.error('Error fetching available integrations:', error)
     throw error;
   }
 }
@@ -51,7 +50,6 @@ export async function getUserIntegrations(userId) {
     if (error) throw error;
     return data || [];
   } catch (error) {
-    // TODO: Review error handling: console.error('Error fetching user integrations:', error)
     throw error;
   }
 }
@@ -77,7 +75,6 @@ export async function getUserIntegration(userId, providerName) {
     if (error) throw error;
     return data;
   } catch (error) {
-    // TODO: Review error handling: console.error(`Error fetching ${providerName} integration:`, error)
     throw error;
   }
 }
@@ -107,7 +104,6 @@ export async function disconnectIntegration(integrationId) {
 
     if (credError) throw credError;
   } catch (error) {
-    // TODO: Review error handling: console.error('Error disconnecting integration:', error)
     throw error;
   }
 }
@@ -130,7 +126,6 @@ export async function updateIntegrationSettings(integrationId, settings) {
     if (error) throw error;
     return data;
   } catch (error) {
-    // TODO: Review error handling: console.error('Error updating integration settings:', error)
     throw error;
   }
 }
@@ -174,7 +169,6 @@ export async function triggerManualSync(integrationId) {
 
     return await response.json();
   } catch (error) {
-    // TODO: Review error handling: console.error('Error triggering manual sync:', error)
     throw error;
   }
 }
@@ -197,7 +191,6 @@ export async function getIntegrationSyncHistory(integrationId, limit = 20) {
     if (error) throw error;
     return data || [];
   } catch (error) {
-    // TODO: Review error handling: console.error('Error fetching sync history:', error)
     throw error;
   }
 }
@@ -220,7 +213,6 @@ export async function getIntegrationWebhooks(integrationId, limit = 50) {
     if (error) throw error;
     return data || [];
   } catch (error) {
-    // TODO: Review error handling: console.error('Error fetching webhook events:', error)
     throw error;
   }
 }
@@ -265,7 +257,6 @@ export async function getIntegrationHealth(integrationId) {
 
     return health;
   } catch (error) {
-    // TODO: Review error handling: console.error('Error checking integration health:', error)
     throw error;
   }
 }

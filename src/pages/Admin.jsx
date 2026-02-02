@@ -82,7 +82,6 @@ export default function Admin() {
       });
       toast.success('Task created successfully');
     } catch (error) {
-      // TODO: Review error handling: console.error('Error creating task:', error)
       toast.error('Error creating task. Please try again.');
     }
   };
@@ -109,7 +108,6 @@ export default function Admin() {
       });
       toast.success('Visibility Confidence Score™ uploaded successfully');
     } catch (error) {
-      // TODO: Review error handling: console.error('Error creating score:', error)
       toast.error('Error creating score. Please try again.');
     }
   };
@@ -132,7 +130,6 @@ export default function Admin() {
       });
       toast.success('Proof snippet added successfully');
     } catch (error) {
-      // TODO: Review error handling: console.error('Error creating proof snippet:', error)
       toast.error('Error creating proof snippet. Please try again.');
     }
   };

@@ -42,7 +42,6 @@ function TaskGenerator() {
         text: 'User analysis complete',
       });
     } catch (error) {
-      // TODO: Review error handling: console.error('Error analyzing user:', error)
       setMessage({ type: 'error', text: error.message || 'Failed to analyze user' });
     } finally {
       setGenerating(false);
@@ -74,7 +73,6 @@ function TaskGenerator() {
         await analyzeUser();
       }
     } catch (error) {
-      // TODO: Review error handling: console.error('Error generating task:', error)
       setMessage({ type: 'error', text: error.message || 'Failed to generate task' });
     } finally {
       setGenerating(false);

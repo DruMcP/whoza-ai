@@ -41,7 +41,6 @@ export async function createJob({
 
     return data;
   } catch (error) {
-    // TODO: Review error handling: console.error('Error creating background job:', error)
     throw error;
   }
 }
@@ -95,7 +94,6 @@ export async function updateJobStatus(jobId, status, result = null, error = null
 
     return data;
   } catch (error) {
-    // TODO: Review error handling: console.error('Error updating job status:', error)
     throw error;
   }
 }
