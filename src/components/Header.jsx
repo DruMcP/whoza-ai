@@ -121,7 +121,8 @@ const Header = memo(function Header() {
               <div className="header-nav-secondary">
                 <CountrySwitcher />
                 <AccessibilityMenu />
-                <Link to="/start" className="button button-header-cta btn-hover" aria-label="Get started with whoza.ai" onClick={closeMobileMenu}>Get started</Link>
+                <Link to="/start?mode=signin" className="button-secondary btn-hover" aria-label="Log in to your account" onClick={closeMobileMenu} style={{ marginRight: 'var(--spacing-sm)' }}>Log In</Link>
+                <Link to="/free-score" className="button button-header-cta btn-hover" aria-label="Get your free visibility score" onClick={closeMobileMenu}>Get Free Score</Link>
               </div>
             </>
           ) : userData?.role === 'admin' ? (

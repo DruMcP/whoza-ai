@@ -67,18 +67,6 @@ export default function StickyCTABar() {
         gap: 'var(--spacing-md)',
         flexWrap: 'wrap'
       }}>
-        <div style={{
-          fontSize: '14px',
-          color: '#84CC16',
-          fontWeight: 600,
-          display: 'flex',
-          alignItems: 'center',
-          gap: '6px'
-        }}>
-          <Icon name="check-circle" size={18} />
-          Start Free Trial
-        </div>
-
         <Link
           to="/free-score"
           className="button btn-hover"
