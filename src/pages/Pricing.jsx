@@ -9,7 +9,7 @@ import GuaranteeBadge from '../components/GuaranteeBadge';
 import { generatePricingPageSchemas, generateBreadcrumbSchema, generateFAQPageSchema } from '../utils/schemaOrg';
 import { useLocalization } from '../contexts/LocalizationContext';
 import { useAuth } from '../contexts/AuthContext';
-import { supabase } from '../config/supabaseClient';
+import { supabase } from '../lib/supabase';
 
 const pricingPlans = [
   {
