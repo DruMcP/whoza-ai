@@ -1,7 +1,9 @@
 import { memo } from 'react';
 import { Link } from 'react-router-dom';
+import { useLocalization } from '../contexts/LocalizationContext';
 
 const Footer = memo(function Footer() {
+  const { getTerm, country } = useLocalization();
   return (
     <footer className="footer" role="contentinfo" style={{
       backgroundColor: '#0a0f1a',
@@ -54,7 +56,7 @@ const Footer = memo(function Footer() {
                 paddingTop: '16px',
                 borderTop: '1px solid rgba(132, 204, 22, 0.2)'
               }}>
-                Built by a team passionate about helping UK tradespeople compete in the AI age.
+                Built by a team passionate about helping {country === 'US' ? 'US' : 'UK'} {getTerm('tradespeople')} compete in the AI age.
               </p>
             </div>
           </div>

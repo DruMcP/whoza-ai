@@ -3,6 +3,7 @@ import { useEffect, useState, useRef } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
+import { useLocalization } from '../contexts/LocalizationContext';
 import HeroSection from '../components/HeroSection';
 import TestimonialsCarousel from '../components/TestimonialsCarousel';
 import LiveResultsShowcase from '../components/LiveResultsShowcase';
@@ -87,6 +88,7 @@ const AnimatedCounter = ({ target, suffix = '' }) => {
 };
 
 export default function Home() {
+  const { getTerm } = useLocalization();
   const schemas = generateHomePageSchemas();
 
   useEffect(() => {
@@ -199,14 +201,14 @@ export default function Home() {
           <div className="container">
             <div className="social-proof-header">
               <h2>What Our Customers Are Saying</h2>
-              <p>Real tradespeople who are getting found by local customers through AI search</p>
+              <p>Real {getTerm('tradespeople')} who are getting found by local customers through AI search</p>
             </div>
             <div>
               <TestimonialsCarousel />
             </div>
             <div className="case-studies-cta">
               <h3>Want to See More Success Stories?</h3>
-              <p>Read detailed case studies showing how tradespeople are improving their AI visibility</p>
+              <p>Read detailed case studies showing how {getTerm('tradespeople')} are improving their AI visibility</p>
               <Link to="/case-studies" className="button btn-hover">
                 View Case Studies
               </Link>
@@ -224,7 +226,7 @@ export default function Home() {
             </p>
             <p>
               If your business isn't visible to these AI tools, you're missing
-              customers. Learn more about <Link to="/how-it-works" style={{ color: 'var(--color-primary-600)', textDecoration: 'underline' }}>how AI visibility works</Link> and why it matters for local tradespeople.
+              customers. Learn more about <Link to="/how-it-works" style={{ color: 'var(--color-primary-600)', textDecoration: 'underline' }}>how AI visibility works</Link> and why it matters for local {getTerm('tradespeople')}.
             </p>
           </div>
         </section>

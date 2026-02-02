@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
+import { useLocalization } from '../contexts/LocalizationContext';
 
 const HeroSection = () => {
+  const { getTerm, country } = useLocalization();
   return (
     <section style={{
         backgroundColor: '#0f172a',
@@ -28,7 +30,7 @@ const HeroSection = () => {
             lineHeight: '1.2',
             marginBottom: '20px'
           }}>
-            Get Found in AI Search: The <span style={{ color: '#84CC16' }}>AI Employee</span> for UK Tradespeople
+            Get Found in AI Search: The <span style={{ color: '#84CC16' }}>AI Employee</span> for {country === 'US' ? 'US' : 'UK'} {getTerm('tradespeople')}
           </h1>
 
           <p style={{
@@ -37,7 +39,7 @@ const HeroSection = () => {
             lineHeight: '1.6',
             marginBottom: '30px'
           }}>
-            Most tradespeople are invisible to AI search. We fix that. Get found when ChatGPT, Google AI, and Perplexity recommend local services.
+            Most {getTerm('tradespeople')} are invisible to AI search. We fix that. Get found when ChatGPT, Google AI, and Perplexity recommend local services.
           </p>
 
           <p style={{
@@ -45,7 +47,7 @@ const HeroSection = () => {
             fontSize: '1.05rem',
             marginBottom: '40px'
           }}>
-            For plumbers, electricians, roofers, builders, heating engineers and 50+ other trades across the UK
+            For plumbers, electricians, roofers, builders, heating engineers and 50+ other trades across the {country === 'US' ? 'US' : 'UK'}
           </p>
 
           {/* 3-STEP MENTAL MODEL */}

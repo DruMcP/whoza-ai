@@ -7,6 +7,7 @@ import ROICalculator from '../components/ROICalculator';
 import Icon from '../components/icons/Icon';
 import GuaranteeBadge from '../components/GuaranteeBadge';
 import { generatePricingPageSchemas, generateBreadcrumbSchema, generateFAQPageSchema } from '../utils/schemaOrg';
+import { useLocalization } from '../contexts/LocalizationContext';
 
 const pricingPlans = [
   {
@@ -35,7 +36,7 @@ const pricingPlans = [
     popular: true,
     cta: 'Start Improving',
     trustSignal: 'Significantly more affordable than SEO agencies. 30-day money-back guarantee.',
-    comparisonAnchor: 'vs £600-£1,000/month for SEO agencies',
+    comparisonAnchor: 'vs {currency}600-{currency}1,000/month for SEO agencies',
     targetPersona: 'Independent tradespeople and small firms ready to take action',
     features: [
       'Everything in Monitor, plus:',
@@ -104,7 +105,7 @@ const faqData = [
   },
   {
     question: 'Why is this so much cheaper than SEO agencies?',
-    answer: 'SEO agencies charge £600-£1,000/month because they do everything for you. We give you the exact tasks to do yourself - it takes 10-15 minutes per week and you stay in complete control.'
+    answer: 'SEO agencies charge {currency}600-{currency}1,000/month because they do everything for you. We give you the exact tasks to do yourself - it takes 10-15 minutes per week and you stay in complete control.'
   },
   {
     question: 'Can I upgrade or downgrade anytime?',
@@ -126,6 +127,7 @@ const faqData = [
 
 export default function Pricing() {
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
+  const { formatPrice, country } = useLocalization();
 
   const toggleFaq = (index) => {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
@@ -251,8 +253,7 @@ export default function Pricing() {
                 </div>
 
                 <div className="pricing-card-price" style={{ marginBottom: 'var(--spacing-lg)' }}>
-                  <span className="price-currency">£</span>
-                  <span className="price-amount">{plan.price}</span>
+                  <span className="price-amount">{formatPrice(plan.price)}</span>
                   <span className="price-period">/mo</span>
                 </div>
 
@@ -276,7 +277,7 @@ export default function Pricing() {
                     background: 'rgba(132, 204, 22, 0.1)',
                     borderRadius: 'var(--radius-md)'
                   }}>
-                    {plan.comparisonAnchor}
+                    {plan.comparisonAnchor.replace(/{currency}/g, country === 'US' ? '$' : '£')}
                   </div>
                 )}
 
@@ -683,7 +684,7 @@ export default function Pricing() {
                     <Icon name="ChevronDownIcon" size={20} className="faq-icon" />
                   </button>
                   <div className={`faq-answer ${openFaqIndex === index ? 'open' : ''}`}>
-                    <p>{faq.answer}</p>
+                    <p>{faq.answer.replace(/{currency}/g, country === 'US' ? '$' : '£')}</p>
                   </div>
                 </div>
               ))}
