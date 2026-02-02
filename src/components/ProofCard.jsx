@@ -53,19 +53,30 @@ export default function ProofCard() {
         <div style={{
           display: 'flex',
           alignItems: 'center',
-          gap: 'var(--spacing-sm)',
+          justifyContent: 'space-between',
           marginBottom: 'var(--spacing-xs)',
-          fontSize: '20px',
-          fontWeight: 700
+          flexWrap: 'wrap',
+          gap: 'var(--spacing-xs)'
         }}>
-          <span style={{ color: '#ef4444' }}>23</span>
-          <Icon name="arrow-right" size={20} style={{ color: 'var(--color-primary-600)' }} />
-          <span style={{ color: 'var(--color-primary-600)' }}>67</span>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 'var(--spacing-md)',
+            fontSize: '28px',
+            fontWeight: 700
+          }}>
+            <span style={{ color: '#ef4444' }}>23</span>
+            <span style={{ 
+              color: '#1a1a2e',
+              fontWeight: 600,
+              fontSize: '24px'
+            }}>→</span>
+            <span style={{ color: 'var(--color-primary-600)' }}>67</span>
+          </div>
           <span style={{
             fontSize: '14px',
             color: '#374151',
-            fontWeight: 400,
-            marginLeft: 'var(--spacing-xs)'
+            fontWeight: 400
           }}>
             Visibility Score
           </span>
