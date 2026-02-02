@@ -18,8 +18,8 @@ export function LocalizationProvider({ children }) {
         const detectedCountry = await detectUserCountry();
         setCountryState(detectedCountry);
 
-        const rate = await fetchExchangeRate();
-        setExchangeRate(rate);
+        // Exchange rate API removed to prevent CORS errors
+        // Using fallback rate in currency.js (1.27 GBP to USD)
 
         setIsLoading(false);
       } catch (error) {
