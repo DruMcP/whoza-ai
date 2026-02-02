@@ -1,52 +1,105 @@
 .country-switcher {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   align-items: center;
 }
 
 .country-btn {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  cursor: pointer;
-  padding: 8px 10px;
-  border-radius: 8px;
-  transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.9;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 3px solid #ffffff;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1f2937;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 0 0 2px rgba(16, 185, 129, 0.1);
+  position: relative;
 }
 
 .country-btn:hover {
-  opacity: 1;
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.3);
-  transform: scale(1.05);
+  border-color: #10b981;
+  background: linear-gradient(135deg, #ffffff 0%, #ecfdf5 100%);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(16, 185, 129, 0.25), 0 0 0 3px rgba(16, 185, 129, 0.2);
 }
 
 .country-btn.active {
-  opacity: 1;
-  background: rgba(179, 224, 48, 0.2);
-  border-color: rgba(179, 224, 48, 0.4);
+  border-color: #10b981;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  box-shadow: 0 6px 12px rgba(16, 185, 129, 0.4), 0 0 0 3px rgba(16, 185, 129, 0.3);
+  transform: translateY(-1px);
 }
 
 .country-btn .flag {
-  font-size: 32px;
+  font-size: 28px;
   line-height: 1;
-  display: block;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+  display: flex;
+  align-items: center;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+}
+
+.country-btn.active .flag {
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.35));
+  animation: flag-wave 0.6s ease-in-out;
+}
+
+@keyframes flag-wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
 }
 
 .country-btn .label {
-  display: none;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
-/* Ensure flags are clickable and accessible */
+/* Subtle pulse animation for non-active buttons to draw attention */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 0 0 2px rgba(16, 185, 129, 0.1);
+  }
+  50% {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 0 0 2px rgba(16, 185, 129, 0.25);
+  }
+}
+
+.country-btn:not(.active) {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+/* Focus state for accessibility */
 .country-btn:focus {
-  outline: 2px solid var(--color-primary-500, #b3e030);
-  outline-offset: 2px;
+  outline: 3px solid #10b981;
+  outline-offset: 3px;
 }
 
 .country-btn:active {
-  transform: scale(0.95);
+  transform: translateY(0) scale(0.98);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 640px) {
+  .country-btn {
+    padding: 8px 12px;
+    gap: 6px;
+    border-width: 2px;
+  }
+  
+  .country-btn .flag {
+    font-size: 24px;
+  }
+  
+  .country-btn .label {
+    font-size: 12px;
+  }
 }
