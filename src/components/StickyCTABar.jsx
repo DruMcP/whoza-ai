@@ -21,70 +21,61 @@ export default function StickyCTABar() {
   if (!isVisible) return null;
 
   return (
-    <div
-      style={{
-        position: 'fixed',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        backgroundColor: 'rgba(15, 23, 42, 0.95)',
-        backdropFilter: 'blur(10px)',
-        borderTop: '2px solid var(--color-primary-600)',
-        boxShadow: '0 -4px 20px rgba(0, 0, 0, 0.3)',
-        padding: 'var(--spacing-md) var(--spacing-lg)',
-        zIndex: 999,
-        animation: 'slideUp 0.3s ease-out',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        gap: 'var(--spacing-md)',
-        flexWrap: 'wrap'
-      }}
-    >
-      <div style={{
-        flex: '1',
-        minWidth: '200px',
-        color: 'white'
-      }}>
-        <div style={{
-          fontSize: '18px',
-          fontWeight: 600,
-          marginBottom: '4px'
-        }}>
-          Ready to improve your AI visibility?
-        </div>
-        <div style={{
-          fontSize: '14px',
-          color: '#F3F4F6'
-        }}>
-          Get your free Visibility Confidence Score™ in 60 seconds
-        </div>
-      </div>
-
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: 'var(--spacing-md)',
-        flexWrap: 'wrap'
-      }}>
-        <Link
-          to="/free-score"
-          className="button btn-hover"
-          style={{
-            fontSize: '16px',
-            padding: 'var(--spacing-sm) var(--spacing-lg)',
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: 'var(--spacing-sm)',
-            whiteSpace: 'nowrap'
-          }}
-        >
-          See if AI would recommend you
-          <Icon name="arrow-right" size={18} />
-        </Link>
-      </div>
-
+    <>
       <style>{`
+        .sticky-cta-bar {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-color: rgba(15, 23, 42, 0.95);
+          backdrop-filter: blur(10px);
+          border-top: 2px solid var(--color-primary-600);
+          box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+          padding: var(--spacing-md) var(--spacing-lg);
+          z-index: 999;
+          animation: slideUp 0.3s ease-out;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: var(--spacing-md);
+          flex-wrap: wrap;
+          box-sizing: border-box;
+        }
+
+        .sticky-cta-content {
+          flex: 1;
+          min-width: 200px;
+          color: white;
+        }
+
+        .sticky-cta-title {
+          font-size: 18px;
+          font-weight: 600;
+          margin-bottom: 4px;
+        }
+
+        .sticky-cta-subtitle {
+          font-size: 14px;
+          color: #F3F4F6;
+        }
+
+        .sticky-cta-actions {
+          display: flex;
+          align-items: center;
+          gap: var(--spacing-md);
+          flex-wrap: wrap;
+        }
+
+        .sticky-cta-button {
+          font-size: 16px;
+          padding: var(--spacing-sm) var(--spacing-lg);
+          display: inline-flex;
+          align-items: center;
+          gap: var(--spacing-sm);
+          white-space: nowrap;
+        }
+
         @keyframes slideUp {
           from {
             transform: translateY(100%);
@@ -96,62 +87,95 @@ export default function StickyCTABar() {
           }
         }
 
-        /* Mobile-first responsive design - reduce sticky footer height and center content */
+        /* Mobile optimization - centered and fully visible */
         @media (max-width: 768px) {
-          div[style*="position: fixed"][style*="bottom: 0"] {
-            padding: 12px 16px !important;
-            max-height: 25vh !important;
-            overflow: hidden;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+          .sticky-cta-bar {
+            padding: 16px !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            text-align: center !important;
+            gap: 12px !important;
+            max-height: none !important;
+            overflow: visible !important;
           }
           
-          div[style*="position: fixed"] > div:first-child {
-            min-width: 100% !important;
-            margin-bottom: 8px;
-            text-align: center;
-          }
-          
-          div[style*="position: fixed"] > div:first-child > div:first-child {
-            font-size: 16px !important;
-            margin-bottom: 2px !important;
-          }
-          
-          div[style*="position: fixed"] > div:first-child > div:last-child {
-            font-size: 13px !important;
-            display: none; /* Hide secondary text on mobile to save space */
-          }
-          
-          div[style*="position: fixed"] > div:last-child {
-            width: 100%;
-            justify-content: center;
-            gap: 8px !important;
-          }
-          
-          div[style*="position: fixed"] > div:last-child > div {
-            display: none; /* Hide pricing text on mobile */
-          }
-          
-          div[style*="position: fixed"] a.button {
-            font-size: 15px !important;
-            padding: 10px 20px !important;
-            width: 100%;
-            max-width: 300px;
-            justify-content: center;
-          }
-        }
-        
-        /* Ensure no horizontal overflow */
-        @media (max-width: 768px) {
-          div[style*="position: fixed"] {
-            left: 0 !important;
-            right: 0 !important;
+          .sticky-cta-content {
             width: 100% !important;
+            min-width: 100% !important;
+            flex: none !important;
+            margin: 0 !important;
+          }
+          
+          .sticky-cta-title {
+            font-size: 16px !important;
+            margin-bottom: 4px !important;
+            text-align: center !important;
+          }
+          
+          .sticky-cta-subtitle {
+            font-size: 13px !important;
+            text-align: center !important;
+          }
+          
+          .sticky-cta-actions {
+            width: 100% !important;
+            justify-content: center !important;
+            gap: 12px !important;
+            flex-direction: column !important;
+          }
+          
+          .sticky-cta-button {
+            width: 100% !important;
+            max-width: 320px !important;
+            font-size: 15px !important;
+            padding: 12px 24px !important;
+            justify-content: center !important;
+            text-align: center !important;
             box-sizing: border-box !important;
           }
         }
+
+        /* Extra small mobile devices */
+        @media (max-width: 480px) {
+          .sticky-cta-bar {
+            padding: 12px !important;
+          }
+          
+          .sticky-cta-title {
+            font-size: 15px !important;
+          }
+          
+          .sticky-cta-subtitle {
+            font-size: 12px !important;
+          }
+          
+          .sticky-cta-button {
+            font-size: 14px !important;
+            padding: 10px 20px !important;
+          }
+        }
       `}</style>
-    </div>
+      
+      <div className="sticky-cta-bar">
+        <div className="sticky-cta-content">
+          <div className="sticky-cta-title">
+            Ready to improve your AI visibility?
+          </div>
+          <div className="sticky-cta-subtitle">
+            Get your free Visibility Confidence Score™ in 60 seconds
+          </div>
+        </div>
+
+        <div className="sticky-cta-actions">
+          <Link
+            to="/free-score"
+            className="button btn-hover sticky-cta-button"
+          >
+            See if AI would recommend you
+            <Icon name="arrow-right" size={18} />
+          </Link>
+        </div>
+      </div>
+    </>
   );
 }
