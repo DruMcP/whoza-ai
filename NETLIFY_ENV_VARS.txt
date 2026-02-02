@@ -1,0 +1,47 @@
+═══════════════════════════════════════════════════════
+  📋 Netlify Environment Variables
+═══════════════════════════════════════════════════════
+
+Copy and paste these into Netlify:
+Site settings → Environment variables → Add a variable
+
+Set "Deploy context" to: All
+
+───────────────────────────────────────────────────────
+
+Variable 1:
+Key:   VITE_SUPABASE_URL
+Value: https://ryeqbewlmaqewsuvuhlm.supabase.co
+
+───────────────────────────────────────────────────────
+
+Variable 2:
+Key:   VITE_SUPABASE_ANON_KEY
+Value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ5ZXFiZXdsbWFxZXdzdXZ1aGxtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjcyNTk2MDIsImV4cCI6MjA4MjgzNTYwMn0.2z3ii0wYdSVEQqVaD60m9ND_vVM9I2guoIoYBKbG0j4
+
+───────────────────────────────────────────────────────
+
+Variable 3:
+Key:   VITE_RESEND_API_KEY
+Value: re_jCUyu7dS_BTwTPsfNyXyDcaM8n4FxMmhX
+
+───────────────────────────────────────────────────────
+
+Variable 4:
+Key:   VITE_GOOGLE_PLACES_API_KEY
+Value: AIzaSyDXpEGqFvcgWvUcKbSCZstbUYZSqpWL62A
+
+───────────────────────────────────────────────────────
+
+Variable 5:
+Key:   VITE_APP_URL
+Value: https://whoza.ai
+
+═══════════════════════════════════════════════════════
+
+✅ After adding all variables:
+   1. Click "Deploy site" in Netlify
+   2. Wait for build to complete
+   3. Test: https://whoza.ai
+
+═══════════════════════════════════════════════════════

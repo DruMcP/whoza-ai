@@ -1,0 +1,168 @@
+export const UK_CITIES = [
+  {
+    slug: 'london',
+    name: 'London',
+    county: 'Greater London',
+    fullName: 'London',
+    population: 9002488,
+    tradespeople: 150000,
+    region: 'Greater London',
+    description: 'The capital and largest city in the UK with a thriving tradespeople market',
+  },
+  {
+    slug: 'birmingham',
+    name: 'Birmingham',
+    county: 'West Midlands',
+    fullName: 'Birmingham',
+    population: 1141816,
+    tradespeople: 32000,
+    region: 'West Midlands',
+    description: 'Major city in the Midlands with a strong construction and trades industry',
+  },
+  {
+    slug: 'manchester',
+    name: 'Manchester',
+    county: 'Greater Manchester',
+    fullName: 'Manchester',
+    population: 547627,
+    tradespeople: 28000,
+    region: 'North West',
+    description: 'Northern powerhouse with growing demand for tradespeople',
+  },
+  {
+    slug: 'leeds',
+    name: 'Leeds',
+    county: 'West Yorkshire',
+    fullName: 'Leeds',
+    population: 793139,
+    tradespeople: 24000,
+    region: 'Yorkshire',
+    description: 'Major city in Yorkshire with robust tradespeople market',
+  },
+  {
+    slug: 'glasgow',
+    name: 'Glasgow',
+    county: 'Scotland',
+    fullName: 'Glasgow',
+    population: 633120,
+    tradespeople: 22000,
+    region: 'Scotland',
+    description: 'Scotland\'s largest city with established tradespeople community',
+  },
+  {
+    slug: 'liverpool',
+    name: 'Liverpool',
+    county: 'Merseyside',
+    fullName: 'Liverpool',
+    population: 494814,
+    tradespeople: 18000,
+    region: 'North West',
+    description: 'Historic port city with growing trades market',
+  },
+  {
+    slug: 'newcastle',
+    name: 'Newcastle',
+    county: 'Tyne and Wear',
+    fullName: 'Newcastle upon Tyne',
+    population: 302820,
+    tradespeople: 15000,
+    region: 'North East',
+    description: 'Major city in the North East with strong tradespeople presence',
+  },
+  {
+    slug: 'sheffield',
+    name: 'Sheffield',
+    county: 'South Yorkshire',
+    fullName: 'Sheffield',
+    population: 584853,
+    tradespeople: 19000,
+    region: 'Yorkshire',
+    description: 'South Yorkshire city with diverse tradespeople opportunities',
+  },
+  {
+    slug: 'bristol',
+    name: 'Bristol',
+    county: 'Bristol',
+    fullName: 'Bristol',
+    population: 463377,
+    tradespeople: 17000,
+    region: 'South West',
+    description: 'South West hub with thriving home services market',
+  },
+  {
+    slug: 'edinburgh',
+    name: 'Edinburgh',
+    county: 'Scotland',
+    fullName: 'Edinburgh',
+    population: 524930,
+    tradespeople: 16000,
+    region: 'Scotland',
+    description: 'Scotland\'s capital with premium tradespeople market',
+  },
+  {
+    slug: 'leicester',
+    name: 'Leicester',
+    county: 'Leicestershire',
+    fullName: 'Leicester',
+    population: 355218,
+    tradespeople: 12000,
+    region: 'East Midlands',
+    description: 'East Midlands city with steady tradespeople demand',
+  },
+  {
+    slug: 'nottingham',
+    name: 'Nottingham',
+    county: 'Nottinghamshire',
+    fullName: 'Nottingham',
+    population: 323632,
+    tradespeople: 13000,
+    region: 'East Midlands',
+    description: 'Midlands city with growing construction sector',
+  },
+  {
+    slug: 'cardiff',
+    name: 'Cardiff',
+    county: 'Wales',
+    fullName: 'Cardiff',
+    population: 364248,
+    tradespeople: 14000,
+    region: 'Wales',
+    description: 'Welsh capital with expanding tradespeople market',
+  },
+  {
+    slug: 'coventry',
+    name: 'Coventry',
+    county: 'West Midlands',
+    fullName: 'Coventry',
+    population: 345385,
+    tradespeople: 11000,
+    region: 'West Midlands',
+    description: 'Midlands city with strong home improvement sector',
+  },
+  {
+    slug: 'southampton',
+    name: 'Southampton',
+    county: 'Hampshire',
+    fullName: 'Southampton',
+    population: 269781,
+    tradespeople: 10000,
+    region: 'South East',
+    description: 'South coast city with growing tradespeople opportunities',
+  },
+];
+
+export function getCityBySlug(slug) {
+  return UK_CITIES.find(city => city.slug === slug);
+}
+
+export function getCityByName(name) {
+  return UK_CITIES.find(city => city.name.toLowerCase() === name.toLowerCase());
+}
+
+export function getAllUKCities() {
+  return UK_CITIES;
+}
+
+export function getCitiesByRegion(region) {
+  return UK_CITIES.filter(city => city.region === region);
+}

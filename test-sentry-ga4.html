@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentry & GA4 Test Page - Whoza.ai</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .container {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #2563eb;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      color: #666;
+      margin-bottom: 30px;
+    }
+    .section {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #f9fafb;
+      border-radius: 8px;
+      border-left: 4px solid #2563eb;
+    }
+    .section h2 {
+      margin-top: 0;
+      color: #1e40af;
+    }
+    button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 5px;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #1e40af;
+    }
+    button.success {
+      background: #10b981;
+    }
+    button.success:hover {
+      background: #059669;
+    }
+    .status {
+      padding: 15px;
+      border-radius: 6px;
+      margin: 10px 0;
+      font-weight: 500;
+    }
+    .status.success {
+      background: #d1fae5;
+      color: #065f46;
+      border: 1px solid #10b981;
+    }
+    .status.error {
+      background: #fee2e2;
+      color: #991b1b;
+      border: 1px solid #ef4444;
+    }
+    .status.info {
+      background: #dbeafe;
+      color: #1e40af;
+      border: 1px solid #3b82f6;
+    }
+    pre {
+      background: #1e293b;
+      color: #e2e8f0;
+      padding: 15px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 14px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-left: 10px;
+    }
+    .badge.green {
+      background: #d1fae5;
+      color: #065f46;
+    }
+    .badge.blue {
+      background: #dbeafe;
+      color: #1e40af;
+    }
+    .instructions {
+      background: #fef3c7;
+      border: 1px solid #f59e0b;
+      color: #92400e;
+      padding: 15px;
+      border-radius: 6px;
+      margin: 15px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔧 Sentry & GA4 Integration Test</h1>
+    <p class="subtitle">Use this page to verify Sentry and Google Analytics 4 are working correctly on Whoza.ai</p>
+
+    <div class="instructions">
+      <strong>⚠️ Instructions:</strong> After deploying, open this page from your production site (not localhost) and run the tests below. Then check your Sentry and GA4 dashboards to confirm events were received.
+    </div>
+
+    <!-- Sentry Tests -->
+    <div class="section">
+      <h2>🐛 Sentry Error Tracking <span class="badge green">Integrated</span></h2>
+
+      <p>Test Sentry error capture by clicking the buttons below:</p>
+
+      <button onclick="testSentryError()">Test Error Capture</button>
+      <button onclick="testSentryMessage()">Test Message Capture</button>
+      <button onclick="testSentryWarning()">Test Warning Capture</button>
+
+      <div id="sentry-status"></div>
+
+      <p style="margin-top: 20px;"><strong>What to check in Sentry:</strong></p>
+      <ul>
+        <li>Go to: <a href="https://sentry.io" target="_blank">Sentry Dashboard</a></li>
+        <li>Navigate to: Issues tab</li>
+        <li>Look for: "Test error from Whoza.ai Integration Test"</li>
+        <li>Verify: Stack trace, browser info, and user context appear</li>
+      </ul>
+
+      <p><strong>Expected in console:</strong></p>
+      <pre>Sentry DSN: https://d6a43adae723839dd45dee8cb6b0215b@o4510652590850048.ingest.de.sentry.io/4510652596682833</pre>
+    </div>
+
+    <!-- GA4 Tests -->
+    <div class="section">
+      <h2>📊 Google Analytics 4 <span class="badge blue">Integrated</span></h2>
+
+      <p>Test GA4 event tracking by clicking the buttons below:</p>
+
+      <button onclick="testGA4PageView()" class="success">Simulate Page View</button>
+      <button onclick="testGA4CustomEvent()" class="success">Test Custom Event</button>
+
+      <div id="ga4-status"></div>
+
+      <p style="margin-top: 20px;"><strong>What to check in GA4:</strong></p>
+      <ul>
+        <li>Go to: <a href="https://analytics.google.com" target="_blank">Google Analytics</a></li>
+        <li>Navigate to: Reports → Realtime</li>
+        <li>Verify: Your active session appears</li>
+        <li>Verify: Page views increment</li>
+        <li>Verify: Custom events appear (if tested)</li>
+      </ul>
+
+      <p><strong>Measurement ID:</strong></p>
+      <pre>G-VCQND9WPW9</pre>
+    </div>
+
+    <!-- Status Check -->
+    <div class="section">
+      <h2>✅ Integration Status</h2>
+
+      <button onclick="checkIntegrationStatus()">Check Integration Status</button>
+
+      <div id="integration-status"></div>
+    </div>
+  </div>
+
+  <script>
+    // Note: This test page won't work locally - it needs to be deployed
+    // Because Sentry and GA4 are initialized in the main app bundle
+
+    function testSentryError() {
+      try {
+        // Simulate error
+        throw new Error('Test error from Whoza.ai Integration Test');
+      } catch (error) {
+        if (window.Sentry) {
+          window.Sentry.captureException(error);
+          showStatus('sentry-status', 'success', '✅ Error sent to Sentry! Check your Sentry dashboard in 1-2 minutes.');
+        } else {
+          showStatus('sentry-status', 'error', '❌ Sentry not found. Make sure you\'re on the production site.');
+        }
+      }
+    }
+
+    function testSentryMessage() {
+      if (window.Sentry) {
+        window.Sentry.captureMessage('Test message from Whoza.ai Integration Test', 'info');
+        showStatus('sentry-status', 'success', '✅ Message sent to Sentry! Check your Sentry dashboard.');
+      } else {
+        showStatus('sentry-status', 'error', '❌ Sentry not found. Make sure you\'re on the production site.');
+      }
+    }
+
+    function testSentryWarning() {
+      if (window.Sentry) {
+        window.Sentry.captureMessage('Test warning from Whoza.ai Integration Test', 'warning');
+        showStatus('sentry-status', 'success', '✅ Warning sent to Sentry! Check your Sentry dashboard.');
+      } else {
+        showStatus('sentry-status', 'error', '❌ Sentry not found. Make sure you\'re on the production site.');
+      }
+    }
+
+    function testGA4PageView() {
+      if (window.ReactGA) {
+        window.ReactGA.send({ hitType: 'pageview', page: '/test-page' });
+        showStatus('ga4-status', 'success', '✅ Page view sent to GA4! Check Real-time report in 30-60 seconds.');
+      } else if (window.gtag) {
+        window.gtag('event', 'page_view', { page_path: '/test-page' });
+        showStatus('ga4-status', 'success', '✅ Page view sent to GA4! Check Real-time report in 30-60 seconds.');
+      } else {
+        showStatus('ga4-status', 'error', '❌ GA4 not found. Make sure you\'re on the production site.');
+      }
+    }
+
+    function testGA4CustomEvent() {
+      if (window.ReactGA) {
+        window.ReactGA.event({
+          category: 'Test',
+          action: 'Integration Test',
+          label: 'Custom Event Test'
+        });
+        showStatus('ga4-status', 'success', '✅ Custom event sent to GA4! Check Real-time report.');
+      } else if (window.gtag) {
+        window.gtag('event', 'integration_test', {
+          event_category: 'Test',
+          event_label: 'Custom Event Test'
+        });
+        showStatus('ga4-status', 'success', '✅ Custom event sent to GA4! Check Real-time report.');
+      } else {
+        showStatus('ga4-status', 'error', '❌ GA4 not found. Make sure you\'re on the production site.');
+      }
+    }
+
+    function checkIntegrationStatus() {
+      const sentryExists = !!window.Sentry;
+      const ga4Exists = !!(window.ReactGA || window.gtag);
+
+      let html = '<div style="margin-top: 15px;">';
+
+      if (sentryExists) {
+        html += '<div class="status success">✅ Sentry: Initialized and ready</div>';
+        try {
+          const dsn = window.Sentry.getCurrentHub().getClient().getDsn().toString();
+          html += `<div class="status info">📍 DSN: ${dsn}</div>`;
+        } catch (e) {
+          html += '<div class="status error">⚠️ Could not get Sentry DSN</div>';
+        }
+      } else {
+        html += '<div class="status error">❌ Sentry: Not found</div>';
+      }
+
+      if (ga4Exists) {
+        html += '<div class="status success">✅ GA4: Initialized and ready</div>';
+        html += '<div class="status info">📊 Measurement ID: G-VCQND9WPW9</div>';
+      } else {
+        html += '<div class="status error">❌ GA4: Not found</div>';
+      }
+
+      html += '</div>';
+
+      document.getElementById('integration-status').innerHTML = html;
+    }
+
+    function showStatus(elementId, type, message) {
+      const element = document.getElementById(elementId);
+      element.innerHTML = `<div class="status ${type}">${message}</div>`;
+    }
+
+    // Auto-check on load
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        checkIntegrationStatus();
+      }, 1000);
+    });
+  </script>
+</body>
+</html>

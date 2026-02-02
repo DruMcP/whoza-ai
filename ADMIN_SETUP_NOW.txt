@@ -1,0 +1,44 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    ADMIN WHITELIST - SETUP IN 30 SECONDS                     ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+📍 LOCATION: Supabase Dashboard → Edge Functions → Settings → Secrets
+
+📝 ADD THIS SECRET:
+
+   Name:  ADMIN_WHITELIST_EMAILS
+   Value: dru.mcpherson@gmail.com,eduard.hempel@gmail.com
+
+🚀 DEPLOY: Dashboard → Edge Functions → verify-free-score → [Deploy]
+
+⏱️  WAIT: 60 seconds for function restart
+
+✅ TEST: https://whoza.ai/free-score
+   - Email: dru.mcpherson@gmail.com OR eduard.hempel@gmail.com
+   - Submit unlimited times
+   - Zero rate limits
+   - Zero errors
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                              TESTING GUARANTEED                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+✅ Unlimited submissions
+✅ No rate limits
+✅ No waiting periods
+✅ Full ECE V2.1 scoring
+✅ Email delivery every time
+✅ Perfect for testing/demos
+✅ Both admins work independently
+
+Response will show: "whitelisted": true
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                ZERO ERRORS                                   ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+Documentation:
+- ADMIN_WHITELIST_SETUP.md (detailed guide)
+- ADMIN_TESTING_QUICK_START.md (quick reference)
+- ADMIN_WHITELIST_VERIFICATION.md (code verification)
+

@@ -1,0 +1,69 @@
+═══════════════════════════════════════════════════════
+  🚀 QUICK DEPLOY - Copy/Paste Commands
+═══════════════════════════════════════════════════════
+
+If you have the project on your local machine:
+
+# Navigate to project directory
+cd /path/to/whoza-ai-project
+
+# Run the automated build script
+./build-and-deploy.sh
+
+# OR manually:
+rm -rf dist node_modules/.vite
+NODE_ENV=production npm run build
+cd dist && zip -r ../whoza-dist-latest.zip . && cd ..
+
+# Then drag whoza-dist-latest.zip to Netlify
+# https://app.netlify.com → whoza-ai → Deploys
+
+═══════════════════════════════════════════════════════
+  📋 Files You Need (if starting fresh)
+═══════════════════════════════════════════════════════
+
+Essential files:
+✓ package.json
+✓ vite.config.js
+✓ netlify.toml
+✓ .env.production (with correct Supabase URL)
+✓ All /src files
+✓ All /public files
+✓ index.html
+
+═══════════════════════════════════════════════════════
+  ✅ Critical: .env.production Contents
+═══════════════════════════════════════════════════════
+
+VITE_SUPABASE_URL=https://ryeqbewlmaqewsuvuhlm.supabase.co
+VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ5ZXFiZXdsbWFxZXdzdXZ1aGxtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjcyNTk2MDIsImV4cCI6MjA4MjgzNTYwMn0.2z3ii0wYdSVEQqVaD60m9ND_vVM9I2guoIoYBKbG0j4
+VITE_RESEND_API_KEY=re_jCUyu7dS_BTwTPsfNyXyDcaM8n4FxMmhX
+VITE_GOOGLE_PLACES_API_KEY=AIzaSyDXpEGqFvcgWvUcKbSCZstbUYZSqpWL62A
+VITE_APP_URL=https://whoza.ai
+
+═══════════════════════════════════════════════════════
+  🔍 Verify After Deploy
+═══════════════════════════════════════════════════════
+
+1. Clear browser cache (Ctrl+Shift+Delete)
+2. Go to https://whoza.ai (in Incognito mode)
+3. Click "Sign In" → "Continue with Google"
+4. Check URL shows: ryeqbewlmaqewsuvuhlm.supabase.co
+5. Complete sign-in
+6. Test Free Score at https://whoza.ai/free-score
+
+═══════════════════════════════════════════════════════
+  ⚡ Netlify CLI Deploy
+═══════════════════════════════════════════════════════
+
+# One-time setup
+npm install -g netlify-cli
+netlify login
+netlify link
+
+# Deploy
+netlify deploy --prod --dir=dist
+
+═══════════════════════════════════════════════════════
+
+Questions? Check DEPLOY_FROM_LOCAL.md for full guide

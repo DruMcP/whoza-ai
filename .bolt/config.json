@@ -1,0 +1,12 @@
+{
+  "deployment": {
+    "provider": "netlify",
+    "siteName": "whoza-ai",
+    "publishDirectory": "dist",
+    "buildCommand": "npm run build"
+  },
+  "netlify": {
+    "siteName": "whoza-ai",
+    "publishDirectory": "dist"
+  }
+}

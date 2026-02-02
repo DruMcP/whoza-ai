@@ -1,0 +1,26 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow admin and protected routes
+Disallow: /admin
+Disallow: /portal
+Disallow: /tasks
+Disallow: /reports
+Disallow: /checkout
+
+# Disallow API endpoints
+Disallow: /api/
+
+# Allow search engines to crawl important pages
+Allow: /
+Allow: /how-it-works
+Allow: /pricing
+Allow: /trust
+Allow: /case-studies
+Allow: /free-score
+Allow: /privacy
+Allow: /terms
+
+# Sitemap location
+Sitemap: https://whoza.ai/sitemap.xml

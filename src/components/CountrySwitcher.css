@@ -1,0 +1,71 @@
+.country-switcher {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.country-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  background-color: transparent;
+  color: currentColor;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.country-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.country-btn:active {
+  transform: translateY(0);
+}
+
+.country-btn.active {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #1a202c;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.country-btn .flag {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.country-btn .label {
+  font-weight: 600;
+}
+
+.country-btn:focus-visible {
+  outline: 2px solid #4299e1;
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .country-btn .label {
+    display: none;
+  }
+
+  .country-btn .flag {
+    font-size: 1.5rem;
+  }
+
+  .country-switcher {
+    padding: 0.125rem;
+  }
+
+  .country-btn {
+    padding: 0.5rem;
+  }
+}
