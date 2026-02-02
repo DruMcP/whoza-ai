@@ -11618,3 +11618,64 @@ section {
     padding: 16px !important;
   }
 }
+
+/* ============================================
+   HERO THREE-STEP GRID - MOBILE RESPONSIVE FIX
+   ============================================ */
+
+/* Mobile-first approach: Stack vertically on small screens */
+@media (max-width: 430px) {
+  .hero-three-step-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 0 16px !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .hero-three-step-grid > div {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* Medium mobile devices: Still stack vertically for clarity */
+@media (min-width: 431px) and (max-width: 640px) {
+  .hero-three-step-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    padding: 0 20px !important;
+    max-width: 400px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .hero-three-step-grid > div {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+
+/* Tablets: 2 columns for better use of space */
+@media (min-width: 641px) and (max-width: 768px) {
+  .hero-three-step-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    padding: 0 20px !important;
+  }
+  
+  .hero-three-step-grid > div:last-child {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
+
+/* Desktop: Keep original 3-column layout (no changes needed) */
+@media (min-width: 769px) {
+  .hero-three-step-grid {
+    /* Original inline styles apply */
+  }
+}

@@ -49,7 +49,7 @@ const HeroSection = () => {
           </p>
 
           {/* 3-STEP MENTAL MODEL */}
-          <div style={{
+          <div className="hero-three-step-grid" style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(3, 1fr)',
             gap: '16px',
