@@ -64,6 +64,15 @@ export default function Start() {
   const [fieldErrors, setFieldErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false);
 
+  // Check URL parameter for sign-in mode
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const mode = params.get('mode');
+    if (mode === 'signin') {
+      setIsSignUp(false);
+    }
+  }, []);
+
   useEffect(() => {
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: 'instant' });

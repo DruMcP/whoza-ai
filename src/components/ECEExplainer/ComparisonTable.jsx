@@ -29,7 +29,7 @@ export default function ComparisonTable() {
     },
     {
       label: 'Cost',
-      whoza: 'Free Trial (90 days) then £59/month',
+      whoza: 'From £59/month (free score to start)',
       seo: '£500-£2000+ / month',
       diy: '"Free" (but costs you time)'
     }

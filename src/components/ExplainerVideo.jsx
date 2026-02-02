@@ -78,8 +78,8 @@ export default function ExplainerVideo() {
 
         <div className="video-cta">
           <p>Ready to boost your AI visibility?</p>
-          <a href="/start" className="button button-primary">
-            Get Started Free
+          <a href="/free-score" className="button button-primary">
+            Get Your Free Score
           </a>
         </div>
       </div>

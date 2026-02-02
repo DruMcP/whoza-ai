@@ -441,7 +441,7 @@ export default function AITeam({ onWaitlistSubmit }) {
       role: 'AI Visibility Expert',
       description: 'Your dedicated AI employee who sends you one simple task each week to boost your visibility in AI search results like ChatGPT and Perplexity.',
       status: 'live',
-      ctaText: 'Get Started Free',
+      ctaText: 'Get Free Score',
       ctaLink: '/free-score',
       icon: '🎯',
     },

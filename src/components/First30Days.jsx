@@ -254,7 +254,7 @@ export default function First30Days() {
 
         <div style={{ textAlign: 'center' }}>
           <Link
-            to="/start"
+            to="/free-score"
             className="button btn-hover"
             style={{
               display: 'inline-flex',
@@ -264,7 +264,7 @@ export default function First30Days() {
               padding: 'var(--spacing-md) var(--spacing-xl)'
             }}
           >
-            Start Your 30-Day Journey
+            Get Your Free Score
             <Icon name="arrow-right" size={20} />
           </Link>
           <p style={{
