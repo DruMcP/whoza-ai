@@ -1,6 +1,6 @@
 .country-switcher {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   align-items: center;
 }
 
@@ -8,98 +8,126 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 10px 16px;
-  border: 3px solid #ffffff;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+  width: 48px;
+  height: 36px;
+  padding: 0;
+  border: 2px solid #ffffff;
+  border-radius: 6px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 14px;
-  font-weight: 700;
-  color: #1f2937;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 0 0 2px rgba(16, 185, 129, 0.1);
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   position: relative;
+  overflow: hidden;
 }
 
+/* Hide emoji flags and labels */
+.country-btn .flag {
+  display: none;
+}
+
+.country-btn .label {
+  display: none;
+}
+
+/* UK Flag using CSS */
+.country-btn[aria-label*="United Kingdom"]::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(to bottom, 
+      #012169 0%, #012169 100%);
+}
+
+.country-btn[aria-label*="United Kingdom"]::after {
+  content: '🇬🇧';
+  position: absolute;
+  font-size: 32px;
+  line-height: 1;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+/* US Flag using CSS */
+.country-btn[aria-label*="United States"]::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(to bottom,
+      #B22234 0%, #B22234 100%);
+}
+
+.country-btn[aria-label*="United States"]::after {
+  content: '🇺🇸';
+  position: absolute;
+  font-size: 32px;
+  line-height: 1;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+/* Hover effects */
 .country-btn:hover {
+  transform: translateY(-2px) scale(1.08);
+  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
   border-color: #10b981;
-  background: linear-gradient(135deg, #ffffff 0%, #ecfdf5 100%);
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 6px 12px rgba(16, 185, 129, 0.25), 0 0 0 3px rgba(16, 185, 129, 0.2);
 }
 
+.country-btn:hover::after {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Active state */
 .country-btn.active {
   border-color: #10b981;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  color: white;
-  box-shadow: 0 6px 12px rgba(16, 185, 129, 0.4), 0 0 0 3px rgba(16, 185, 129, 0.3);
-  transform: translateY(-1px);
+  border-width: 3px;
+  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.4), 0 0 0 2px rgba(16, 185, 129, 0.2);
 }
 
-.country-btn .flag {
-  font-size: 28px;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
-}
-
-.country-btn.active .flag {
-  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.35));
+.country-btn.active::after {
   animation: flag-wave 0.6s ease-in-out;
 }
 
 @keyframes flag-wave {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(-5deg); }
-  75% { transform: rotate(5deg); }
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-3deg) scale(1.05); }
+  75% { transform: rotate(3deg) scale(1.05); }
 }
 
-.country-btn .label {
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-
-/* Subtle pulse animation for non-active buttons to draw attention */
-@keyframes pulse-glow {
+/* Subtle pulse for non-active buttons */
+@keyframes subtle-pulse {
   0%, 100% {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 0 0 2px rgba(16, 185, 129, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   }
   50% {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 0 0 2px rgba(16, 185, 129, 0.25);
+    box-shadow: 0 2px 6px rgba(16, 185, 129, 0.2);
   }
 }
 
 .country-btn:not(.active) {
-  animation: pulse-glow 2.5s ease-in-out infinite;
+  animation: subtle-pulse 3s ease-in-out infinite;
 }
 
 /* Focus state for accessibility */
 .country-btn:focus {
-  outline: 3px solid #10b981;
-  outline-offset: 3px;
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
 }
 
 .country-btn:active {
-  transform: translateY(0) scale(0.98);
+  transform: translateY(0) scale(1);
 }
 
 /* Mobile responsiveness */
 @media (max-width: 640px) {
   .country-btn {
-    padding: 8px 12px;
-    gap: 6px;
-    border-width: 2px;
+    width: 42px;
+    height: 32px;
   }
   
-  .country-btn .flag {
-    font-size: 24px;
-  }
-  
-  .country-btn .label {
-    font-size: 12px;
+  .country-btn[aria-label*="United Kingdom"]::after,
+  .country-btn[aria-label*="United States"]::after {
+    font-size: 28px;
   }
 }
