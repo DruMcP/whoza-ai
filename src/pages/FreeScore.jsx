@@ -138,6 +138,13 @@ export default function FreeScore() {
     'Kitchen Fitter',
     'Bathroom Fitter',
     'Handyman',
+    'Hair Salon / Barber',
+    'Beauty Salon',
+    'Nail Salon',
+    'Spa / Massage Therapist',
+    'Tattoo / Piercing Studio',
+    'Makeup Artist',
+    'Aesthetician / Skincare',
     'Other'
   ];
 

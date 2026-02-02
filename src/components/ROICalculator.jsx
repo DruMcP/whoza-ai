@@ -15,6 +15,13 @@ export default function ROICalculator() {
     roofer: { name: 'Roofer', value: 750 },
     builder: { name: 'Builder', value: 500 },
     heating: { name: 'Heating Engineer', value: 350 },
+    hairSalon: { name: 'Hair Salon / Barber', value: 45 },
+    beautySalon: { name: 'Beauty Salon', value: 65 },
+    nailSalon: { name: 'Nail Salon', value: 50 },
+    spa: { name: 'Spa / Massage', value: 80 },
+    tattoo: { name: 'Tattoo / Piercing', value: 150 },
+    makeup: { name: 'Makeup Artist', value: 120 },
+    aesthetician: { name: 'Aesthetician / Skincare', value: 90 },
     other: { name: 'Other', value: 250 }
   };
 

@@ -9,7 +9,12 @@ export default function MiniROICalculator() {
     electrician: { name: 'Electrician', avgJob: 300, monthlyJobs: 3 },
     roofer: { name: 'Roofer', avgJob: 750, monthlyJobs: 3 },
     builder: { name: 'Builder', avgJob: 500, monthlyJobs: 3 },
-    heating: { name: 'Heating Engineer', avgJob: 350, monthlyJobs: 3 }
+    heating: { name: 'Heating Engineer', avgJob: 350, monthlyJobs: 3 },
+    hairSalon: { name: 'Hair Salon / Barber', avgJob: 45, monthlyJobs: 3 },
+    beautySalon: { name: 'Beauty Salon', avgJob: 65, monthlyJobs: 3 },
+    nailSalon: { name: 'Nail Salon', avgJob: 50, monthlyJobs: 3 },
+    spa: { name: 'Spa / Massage', avgJob: 80, monthlyJobs: 3 },
+    tattoo: { name: 'Tattoo / Piercing', avgJob: 150, monthlyJobs: 3 }
   };
 
   const calculateQuickROI = () => {
