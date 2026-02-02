@@ -1,0 +1,1 @@
+{"bundles":[{"asset":"2e9e16f382052e31df97e10f463583e8517ab4cda96349bee48bef9a90dbade4.eszip","format":"eszip2"}],"routes":[{"function":"redirect-couk","pattern":"^(?:/(.*))/?$","excluded_patterns":[],"path":"/*"}],"post_cache_routes":[],"bundler_version":"14.9.2","layers":[],"import_map":"netlify:import-map","function_config":{}}

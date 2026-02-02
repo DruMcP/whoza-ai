@@ -1,0 +1,10 @@
+export { default as VisibilityIcon } from './VisibilityIcon';
+export { default as GuaranteeIcon } from './GuaranteeIcon';
+export { default as TaskIcon } from './TaskIcon';
+export { default as ScoreIcon } from './ScoreIcon';
+export { default as CompetitorIcon } from './CompetitorIcon';
+export { default as StrategyIcon } from './StrategyIcon';
+export { default as SupportIcon } from './SupportIcon';
+export { default as SecurityIcon } from './SecurityIcon';
+export { default as EmailIcon } from './EmailIcon';
+export { default as WhatsAppIcon } from './WhatsAppIcon';

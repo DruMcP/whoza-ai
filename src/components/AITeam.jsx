@@ -1,0 +1,568 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+const WaitlistModal = ({ isOpen, onClose, memberName, onSubmit }) => {
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState('');
+
+  if (!isOpen) return null;
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError('');
+
+    try {
+      await onSubmit(email);
+      setIsSuccess(true);
+      setEmail('');
+    } catch (err) {
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleClose = () => {
+    setIsSuccess(false);
+    setError('');
+    setEmail('');
+    onClose();
+  };
+
+  return (
+    <div
+      style={{
+        position: 'fixed',
+        inset: 0,
+        zIndex: 9999,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '1rem'
+      }}
+    >
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.7)',
+          backdropFilter: 'blur(8px)'
+        }}
+        onClick={handleClose}
+        aria-hidden="true"
+      />
+
+      <div
+        style={{
+          position: 'relative',
+          width: '100%',
+          maxWidth: '28rem',
+          backgroundColor: '#0F172A',
+          border: '1px solid rgba(170, 255, 0, 0.2)',
+          borderRadius: '1.5rem',
+          padding: '2rem',
+          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)'
+        }}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
+        <button
+          onClick={handleClose}
+          style={{
+            position: 'absolute',
+            top: '1rem',
+            right: '1rem',
+            color: '#9CA3AF',
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+            padding: '0.5rem',
+            transition: 'color 0.2s'
+          }}
+          onMouseEnter={(e) => e.target.style.color = '#FFFFFF'}
+          onMouseLeave={(e) => e.target.style.color = '#9CA3AF'}
+          aria-label="Close modal"
+        >
+          <svg style={{ width: '1.5rem', height: '1.5rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        {isSuccess ? (
+          <div style={{ textAlign: 'center', padding: '1rem 0' }}>
+            <div style={{
+              width: '4rem',
+              height: '4rem',
+              margin: '0 auto 1rem',
+              borderRadius: '50%',
+              backgroundColor: 'rgba(170, 255, 0, 0.2)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}>
+              <svg style={{ width: '2rem', height: '2rem', color: '#AAFF00' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 id="modal-title" style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#FFFFFF', marginBottom: '0.5rem' }}>
+              You're on the list!
+            </h3>
+            <p style={{ color: '#9CA3AF' }}>
+              We'll notify you as soon as {memberName} is ready to join your team.
+            </p>
+            <button
+              onClick={handleClose}
+              style={{
+                marginTop: '1.5rem',
+                padding: '0.75rem 1.5rem',
+                backgroundColor: '#AAFF00',
+                color: '#0F172A',
+                fontWeight: 600,
+                borderRadius: '9999px',
+                border: 'none',
+                cursor: 'pointer',
+                transition: 'all 0.2s'
+              }}
+              onMouseEnter={(e) => e.target.style.filter = 'brightness(1.1)'}
+              onMouseLeave={(e) => e.target.style.filter = 'brightness(1)'}
+            >
+              Got it
+            </button>
+          </div>
+        ) : (
+          <>
+            <h3 id="modal-title" style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#FFFFFF', marginBottom: '0.5rem' }}>
+              Get notified when {memberName} launches
+            </h3>
+            <p style={{ color: '#9CA3AF', marginBottom: '1.5rem' }}>
+              Be the first to know when {memberName} is ready to help grow your business.
+            </p>
+
+            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <div>
+                <label htmlFor="waitlist-email" style={{ position: 'absolute', width: '1px', height: '1px', padding: 0, margin: '-1px', overflow: 'hidden', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap', border: 0 }}>
+                  Email address
+                </label>
+                <input
+                  type="email"
+                  id="waitlist-email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  required
+                  style={{
+                    width: '100%',
+                    padding: '0.75rem 1rem',
+                    backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    borderRadius: '0.75rem',
+                    color: '#FFFFFF',
+                    fontSize: '1rem',
+                    outline: 'none',
+                    transition: 'all 0.2s'
+                  }}
+                  onFocus={(e) => {
+                    e.target.style.borderColor = 'rgba(170, 255, 0, 0.5)';
+                    e.target.style.boxShadow = '0 0 0 1px rgba(170, 255, 0, 0.5)';
+                  }}
+                  onBlur={(e) => {
+                    e.target.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                    e.target.style.boxShadow = 'none';
+                  }}
+                />
+              </div>
+
+              {error && (
+                <p style={{ color: '#EF4444', fontSize: '0.875rem' }} role="alert">{error}</p>
+              )}
+
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                style={{
+                  width: '100%',
+                  padding: '0.75rem 1.5rem',
+                  backgroundColor: '#AAFF00',
+                  color: '#0F172A',
+                  fontWeight: 600,
+                  borderRadius: '9999px',
+                  border: 'none',
+                  cursor: isSubmitting ? 'not-allowed' : 'pointer',
+                  opacity: isSubmitting ? 0.5 : 1,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '0.5rem',
+                  transition: 'all 0.2s'
+                }}
+                onMouseEnter={(e) => !isSubmitting && (e.target.style.filter = 'brightness(1.1)')}
+                onMouseLeave={(e) => e.target.style.filter = 'brightness(1)'}
+              >
+                {isSubmitting ? (
+                  <>
+                    <svg
+                      style={{
+                        animation: 'spin 1s linear infinite',
+                        width: '1.25rem',
+                        height: '1.25rem'
+                      }}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle style={{ opacity: 0.25 }} cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                      <path style={{ opacity: 0.75 }} fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                    </svg>
+                    <span>Joining...</span>
+                  </>
+                ) : (
+                  'Notify Me'
+                )}
+              </button>
+            </form>
+          </>
+        )}
+      </div>
+      <style>{`
+        @keyframes spin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+      `}</style>
+    </div>
+  );
+};
+
+const TeamCard = ({ member, onNotifyClick }) => {
+  const isLive = member.status === 'live';
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div
+      style={{
+        position: 'relative',
+        borderRadius: '1.5rem',
+        padding: '2rem',
+        transition: 'all 0.3s',
+        backgroundColor: isLive ? '#FFFFFF' : '#1A1F2E',
+        border: isLive ? 'none' : '1px solid rgba(255, 255, 255, 0.1)',
+        boxShadow: isLive
+          ? (isHovered ? '0 25px 50px -12px rgba(0, 0, 0, 0.3)' : '0 20px 25px -5px rgba(0, 0, 0, 0.1)')
+          : 'none',
+        transform: isHovered && isLive ? 'translateY(-4px)' : 'none',
+        borderColor: !isLive && isHovered ? 'rgba(170, 255, 0, 0.3)' : undefined
+      }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div style={{ position: 'absolute', top: '1rem', right: '1rem' }}>
+        {isLive ? (
+          <span style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '0.375rem',
+            padding: '0.25rem 0.75rem',
+            backgroundColor: '#AAFF00',
+            color: '#0F172A',
+            fontSize: '0.75rem',
+            fontWeight: 'bold',
+            borderRadius: '9999px',
+            textTransform: 'uppercase',
+            letterSpacing: '0.025em'
+          }}>
+            <span style={{
+              width: '0.5rem',
+              height: '0.5rem',
+              backgroundColor: '#0F172A',
+              borderRadius: '50%',
+              animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+            }} aria-hidden="true" />
+            Live Now
+          </span>
+        ) : (
+          <span style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            padding: '0.25rem 0.75rem',
+            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+            color: '#9CA3AF',
+            fontSize: '0.75rem',
+            fontWeight: 500,
+            borderRadius: '9999px'
+          }}>
+            {member.launchDate || 'Coming 2026'}
+          </span>
+        )}
+      </div>
+
+      <div
+        style={{
+          width: '5rem',
+          height: '5rem',
+          borderRadius: '1rem',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          marginBottom: '1.5rem',
+          backgroundColor: isLive
+            ? 'rgba(170, 255, 0, 0.1)'
+            : 'rgba(255, 255, 255, 0.05)',
+          background: isLive
+            ? 'linear-gradient(135deg, rgba(170, 255, 0, 0.2), rgba(170, 255, 0, 0.05))'
+            : undefined
+        }}
+        aria-hidden="true"
+      >
+        <div style={{
+          fontSize: '2.5rem',
+          color: isLive ? '#AAFF00' : '#6B7280'
+        }}>
+          {member.icon}
+        </div>
+      </div>
+
+      <h3 style={{
+        fontSize: '1.5rem',
+        fontWeight: 'bold',
+        marginBottom: '0.25rem',
+        color: isLive ? '#0F172A' : '#FFFFFF'
+      }}>
+        {member.name}
+      </h3>
+      <p style={{
+        fontSize: '0.875rem',
+        fontWeight: 500,
+        marginBottom: '1rem',
+        color: isLive ? '#AAFF00' : 'rgba(170, 255, 0, 0.7)'
+      }}>
+        {member.role}
+      </p>
+      <p style={{
+        fontSize: '0.875rem',
+        lineHeight: '1.6',
+        marginBottom: '1.5rem',
+        color: isLive ? '#4B5563' : '#9CA3AF'
+      }}>
+        {member.description}
+      </p>
+
+      {isLive ? (
+        <Link
+          to={member.ctaLink || '/free-score'}
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: '100%',
+            padding: '0.75rem 1.5rem',
+            backgroundColor: '#AAFF00',
+            color: '#0F172A',
+            fontWeight: 600,
+            borderRadius: '9999px',
+            textDecoration: 'none',
+            transition: 'all 0.2s'
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.filter = 'brightness(1.1)';
+            e.target.style.transform = 'scale(1.02)';
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.filter = 'brightness(1)';
+            e.target.style.transform = 'scale(1)';
+          }}
+        >
+          {member.ctaText}
+          <svg
+            style={{
+              width: '1.25rem',
+              height: '1.25rem',
+              marginLeft: '0.5rem',
+              transition: 'transform 0.2s'
+            }}
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </Link>
+      ) : (
+        <button
+          onClick={() => onNotifyClick(member)}
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: '100%',
+            padding: '0.75rem 1.5rem',
+            backgroundColor: 'transparent',
+            border: '2px solid rgba(170, 255, 0, 0.5)',
+            color: '#AAFF00',
+            fontWeight: 600,
+            borderRadius: '9999px',
+            cursor: 'pointer',
+            transition: 'all 0.2s'
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.backgroundColor = 'rgba(170, 255, 0, 0.1)';
+            e.target.style.borderColor = '#AAFF00';
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.backgroundColor = 'transparent';
+            e.target.style.borderColor = 'rgba(170, 255, 0, 0.5)';
+          }}
+        >
+          {member.ctaText}
+        </button>
+      )}
+
+      <style>{`
+        @keyframes pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.5; }
+        }
+      `}</style>
+    </div>
+  );
+};
+
+export default function AITeam({ onWaitlistSubmit }) {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedMember, setSelectedMember] = useState(null);
+
+  const teamMembers = [
+    {
+      id: 'rex',
+      name: 'Rex',
+      role: 'AI Visibility Expert',
+      description: 'Your dedicated AI employee who sends you one simple task each week to boost your visibility in AI search results like ChatGPT and Perplexity.',
+      status: 'live',
+      ctaText: 'Get Started Free',
+      ctaLink: '/free-score',
+      icon: '🎯',
+    },
+    {
+      id: 'chloe',
+      name: 'Chloe',
+      role: 'AI Receptionist',
+      description: 'Never miss a lead again. Chloe answers calls, books appointments, and handles customer enquiries 24/7 — so you can focus on the job.',
+      status: 'coming-soon',
+      launchDate: 'Launching 2026',
+      ctaText: 'Notify Me',
+      icon: '📞',
+    },
+    {
+      id: 'simon',
+      name: 'Simon',
+      role: 'AI Social Media Manager',
+      description: 'Consistent, professional social media presence without the hassle. Simon creates and schedules posts that showcase your work and attract new customers.',
+      status: 'coming-soon',
+      launchDate: 'Launching 2026',
+      ctaText: 'Notify Me',
+      icon: '📱',
+    },
+  ];
+
+  const handleNotifyClick = (member) => {
+    setSelectedMember(member);
+    setModalOpen(true);
+  };
+
+  const handleWaitlistSubmit = async (email) => {
+    if (onWaitlistSubmit && selectedMember) {
+      await onWaitlistSubmit(email, selectedMember.id);
+    } else {
+      await new Promise(resolve => setTimeout(resolve, 1000));
+    }
+  };
+
+  return (
+    <section
+      style={{
+        position: 'relative',
+        padding: '5rem 0 7rem',
+        backgroundColor: '#0A0F1C',
+        overflow: 'hidden'
+      }}
+      aria-labelledby="ai-team-heading"
+    >
+      <div style={{ position: 'absolute', top: 0, left: '25%', width: '24rem', height: '24rem', background: 'radial-gradient(circle, rgba(170, 255, 0, 0.05) 0%, transparent 70%)', pointerEvents: 'none' }} aria-hidden="true" />
+      <div style={{ position: 'absolute', bottom: 0, right: '25%', width: '24rem', height: '24rem', background: 'radial-gradient(circle, rgba(170, 255, 0, 0.05) 0%, transparent 70%)', pointerEvents: 'none' }} aria-hidden="true" />
+
+      <div style={{ position: 'relative', maxWidth: '1280px', margin: '0 auto', padding: '0 1rem' }}>
+        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+          <span style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            padding: '0.375rem 1rem',
+            backgroundColor: 'rgba(170, 255, 0, 0.1)',
+            border: '1px solid rgba(170, 255, 0, 0.2)',
+            color: '#AAFF00',
+            fontSize: '0.875rem',
+            fontWeight: 500,
+            borderRadius: '9999px',
+            marginBottom: '1.5rem'
+          }}>
+            Your AI Workforce
+          </span>
+          <h2 id="ai-team-heading" style={{
+            fontSize: 'clamp(2rem, 5vw, 3rem)',
+            fontWeight: 'bold',
+            color: '#FFFFFF',
+            marginBottom: '1rem'
+          }}>
+            Meet Your <span style={{ color: '#AAFF00' }}>AI Team</span>
+          </h2>
+          <p style={{
+            fontSize: '1.125rem',
+            color: '#9CA3AF',
+            maxWidth: '42rem',
+            margin: '0 auto'
+          }}>
+            Dedicated AI employees working around the clock to grow your business.
+            Start with Rex today, and expand your team as we launch new members.
+          </p>
+        </div>
+
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: '2rem',
+          marginBottom: '4rem'
+        }}>
+          {teamMembers.map((member) => (
+            <TeamCard
+              key={member.id}
+              member={member}
+              onNotifyClick={handleNotifyClick}
+            />
+          ))}
+        </div>
+
+        <div style={{ marginTop: '4rem', textAlign: 'center' }}>
+          <p style={{ color: '#6B7280', fontSize: '0.875rem' }}>
+            More AI team members coming soon.{' '}
+            <Link to="/pricing" style={{ color: '#AAFF00', textDecoration: 'none' }}>
+              View our roadmap →
+            </Link>
+          </p>
+        </div>
+      </div>
+
+      <WaitlistModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        memberName={selectedMember?.name || ''}
+        onSubmit={handleWaitlistSubmit}
+      />
+    </section>
+  );
+}
+
+export const AITeamSimple = () => {
+  return <AITeam />;
+};

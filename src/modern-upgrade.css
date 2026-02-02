@@ -1,0 +1,644 @@
+/* ========================================
+   whoza.ai MODERN DESIGN UPGRADE - 2024/2025
+   Gen Z Focused | State-of-the-Art UI
+   ======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* whoza.ai Modern Color Palette - Green & Black */
+  --modern-primary-900: #3d5c08;
+  --modern-primary-800: #567f0b;
+  --modern-primary-700: #70a30e;
+  --modern-primary-600: #89c612;
+  --modern-primary-500: #9EF01A;
+  --modern-primary-400: #b1f348;
+  --modern-primary-300: #c5f676;
+  --modern-primary-200: #d8f9a3;
+  --modern-primary-100: #ecfcd1;
+  --modern-primary-50: #f6fde8;
+
+  /* Black Accent Colors */
+  --modern-accent-900: #0a0a0a;
+  --modern-accent-800: #141414;
+  --modern-accent-700: #2a2a2a;
+  --modern-accent-600: #404040;
+  --modern-accent-500: #5a5a5a;
+  --modern-accent-400: #757575;
+  --modern-accent-300: #9e9e9e;
+  --modern-accent-200: #c7c7c7;
+  --modern-accent-100: #e8e8e8;
+
+  /* Secondary Green Palette */
+  --modern-secondary-600: #70a30e;
+  --modern-secondary-500: #89c612;
+  --modern-secondary-400: #b1f348;
+
+  /* Success/Warning/Error - Enhanced */
+  --modern-success-600: #2f855a;
+  --modern-success-500: #38a169;
+  --modern-success-400: #48bb78;
+
+  --modern-warning-600: #F59E0B;
+  --modern-warning-500: #FBBF24;
+
+  --modern-error-600: #e53e3e;
+  --modern-error-500: #F87171;
+
+  /* Neutral System - Enhanced Contrast */
+  --modern-neutral-950: #0a0a0a;
+  --modern-neutral-900: #141414;
+  --modern-neutral-800: #2a2a2a;
+  --modern-neutral-700: #4a4a4a;
+  --modern-neutral-600: #717171;
+  --modern-neutral-500: #a0a0a0;
+  --modern-neutral-400: #cbcbcb;
+  --modern-neutral-300: #e2e2e2;
+  --modern-neutral-200: #efefef;
+  --modern-neutral-100: #F5F5F5;
+  --modern-neutral-50: #fafafa;
+
+  /* Glassmorphism Variables */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --glass-shadow: 0 8px 32px 0 rgba(20, 20, 20, 0.15);
+
+  /* Modern Shadows - Multi-layered */
+  --shadow-subtle: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-soft: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 4px 16px 0 rgba(0, 0, 0, 0.12);
+  --shadow-strong: 0 8px 24px 0 rgba(0, 0, 0, 0.16);
+  --shadow-dramatic: 0 16px 48px 0 rgba(0, 0, 0, 0.20);
+  --shadow-colored: 0 8px 32px rgba(158, 240, 26, 0.25);
+  --shadow-accent: 0 8px 32px rgba(20, 20, 20, 0.25);
+
+  /* Enhanced Border Radius */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-2xl: 48px;
+  --radius-full: 9999px;
+
+  /* Modern Spacing Scale */
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+  --space-5xl: 128px;
+
+  /* Animation Easings - Modern Spring Physics */
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-sharp: cubic-bezier(0.4, 0, 0.6, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* Gradient Definitions */
+  --gradient-primary: linear-gradient(135deg, #9EF01A 0%, #70a30e 100%);
+  --gradient-accent: linear-gradient(135deg, #2a2a2a 0%, #141414 100%);
+  --gradient-hero: linear-gradient(135deg, #9EF01A 0%, #70a30e 50%, #141414 100%);
+  --gradient-subtle: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.1) 100%);
+
+  /* Modern Typography Scale */
+  --font-display: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'SF Mono', 'Monaco', 'Consolas', monospace;
+
+  --text-xs: 13px;
+  --text-sm: 15px;
+  --text-base: 17px;
+  --text-lg: 19px;
+  --text-xl: 22px;
+  --text-2xl: 28px;
+  --text-3xl: 36px;
+  --text-4xl: 48px;
+  --text-5xl: 64px;
+  --text-6xl: 80px;
+}
+
+/* ========================================
+   MODERN GLASSMORPHISM EFFECTS
+   ======================================== */
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: var(--radius-lg);
+}
+
+.glass-card-strong {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: var(--shadow-medium);
+  border-radius: var(--radius-xl);
+}
+
+/* ========================================
+   MODERN BUTTON SYSTEM
+   ======================================== */
+
+.button-modern {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 600;
+  padding: 16px 32px;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s var(--ease-spring);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: -0.01em;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.button-primary-modern {
+  background: var(--gradient-primary);
+  color: white;
+  box-shadow: var(--shadow-colored);
+}
+
+.button-primary-modern:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: var(--shadow-dramatic);
+}
+
+.button-primary-modern:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.button-accent-modern {
+  background: var(--gradient-accent);
+  color: white;
+  box-shadow: var(--shadow-accent);
+}
+
+.button-accent-modern:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: var(--shadow-dramatic);
+}
+
+.button-ghost-modern {
+  background: transparent;
+  color: var(--modern-primary-600);
+  border: 2px solid var(--modern-primary-300);
+}
+
+.button-ghost-modern:hover {
+  background: var(--modern-primary-50);
+  border-color: var(--modern-primary-500);
+  transform: translateY(-1px);
+}
+
+/* Button Shine Effect */
+.button-modern::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+  transform: rotate(45deg);
+  animation: button-shine 3s infinite;
+}
+
+@keyframes button-shine {
+  0%, 100% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  50% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+/* ========================================
+   ENHANCED CARDS & CONTAINERS
+   ======================================== */
+
+.modern-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s var(--ease-smooth);
+  border: 1px solid var(--modern-neutral-200);
+}
+
+.modern-card:hover {
+  box-shadow: var(--shadow-strong);
+  transform: translateY(-4px);
+  border-color: var(--modern-primary-300);
+}
+
+.modern-card-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #f7f7fa 100%);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-medium);
+  position: relative;
+  overflow: hidden;
+}
+
+.modern-card-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-hero);
+}
+
+/* ========================================
+   MODERN TYPOGRAPHY
+   ======================================== */
+
+.heading-display {
+  font-family: var(--font-display);
+  font-size: var(--text-5xl);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  background: var(--gradient-hero);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heading-xl {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: var(--modern-neutral-900);
+}
+
+.heading-lg {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--modern-neutral-800);
+}
+
+.text-body-lg {
+  font-size: var(--text-lg);
+  line-height: 1.7;
+  color: var(--modern-neutral-700);
+  max-width: 70ch;
+}
+
+.text-body {
+  font-size: var(--text-base);
+  line-height: 1.65;
+  color: var(--modern-neutral-600);
+  max-width: 65ch;
+}
+
+/* ========================================
+   MODERN BADGES & PILLS
+   ======================================== */
+
+.badge-modern {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  transition: all 0.2s var(--ease-smooth);
+}
+
+.badge-primary {
+  background: var(--modern-primary-100);
+  color: var(--modern-primary-700);
+}
+
+.badge-accent {
+  background: var(--modern-accent-100);
+  color: var(--modern-accent-700);
+}
+
+.badge-success {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--modern-success-600);
+}
+
+.badge-glow {
+  box-shadow: 0 0 20px rgba(158, 240, 26, 0.4);
+  animation: badge-pulse 2s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(158, 240, 26, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(158, 240, 26, 0.6);
+  }
+}
+
+/* ========================================
+   MODERN ANIMATIONS & MICRO-INTERACTIONS
+   ======================================== */
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(158, 240, 26, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(158, 240, 26, 0.6);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s var(--ease-smooth) both;
+}
+
+.animate-fade-in-scale {
+  animation: fade-in-scale 0.5s var(--ease-spring) both;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.6s var(--ease-smooth) both;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* Stagger animation delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+
+/* ========================================
+   MODERN INPUT FIELDS
+   ======================================== */
+
+.input-modern {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--modern-neutral-300);
+  background: white;
+  transition: all 0.2s var(--ease-smooth);
+  width: 100%;
+}
+
+.input-modern:focus {
+  outline: none;
+  border-color: var(--modern-primary-500);
+  box-shadow: 0 0 0 4px rgba(158, 240, 26, 0.1);
+}
+
+.input-modern:hover {
+  border-color: var(--modern-neutral-400);
+}
+
+/* ========================================
+   MODERN GRADIENTS & OVERLAYS
+   ======================================== */
+
+.gradient-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-hero);
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.gradient-text {
+  background: var(--gradient-hero);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========================================
+   MODERN SECTION STYLES
+   ======================================== */
+
+.section-modern {
+  padding: var(--space-5xl) 0;
+  position: relative;
+}
+
+.section-modern-hero {
+  padding: var(--space-5xl) 0;
+  background: linear-gradient(180deg, var(--modern-neutral-50) 0%, white 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-modern-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 60%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(158, 240, 26, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ========================================
+   LOADING STATES
+   ======================================== */
+
+.skeleton {
+  background: linear-gradient(90deg,
+    var(--modern-neutral-200) 25%,
+    var(--modern-neutral-100) 50%,
+    var(--modern-neutral-200) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+  border-radius: var(--radius-sm);
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.spinner-modern {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--modern-neutral-200);
+  border-top-color: var(--modern-primary-500);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================================
+   RESPONSIVE UTILITIES
+   ======================================== */
+
+@media (max-width: 768px) {
+  :root {
+    --text-xs: 12px;
+    --text-sm: 14px;
+    --text-base: 16px;
+    --text-lg: 18px;
+    --text-xl: 20px;
+    --text-2xl: 24px;
+    --text-3xl: 30px;
+    --text-4xl: 36px;
+    --text-5xl: 48px;
+    --text-6xl: 56px;
+  }
+
+  .heading-display {
+    font-size: var(--text-4xl);
+  }
+
+  .heading-xl {
+    font-size: var(--text-3xl);
+  }
+
+  .modern-card {
+    padding: var(--space-lg);
+  }
+
+  .button-modern {
+    padding: 14px 24px;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY ENHANCEMENTS
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.focus-visible:focus {
+  outline: 3px solid var(--modern-primary-500);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* ========================================
+   MODERN UTILITY CLASSES
+   ======================================== */
+
+.backdrop-blur { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.backdrop-blur-lg { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+
+.shadow-soft { box-shadow: var(--shadow-soft); }
+.shadow-medium { box-shadow: var(--shadow-medium); }
+.shadow-strong { box-shadow: var(--shadow-strong); }
+.shadow-dramatic { box-shadow: var(--shadow-dramatic); }
+
+.rounded-modern { border-radius: var(--radius-lg); }
+.rounded-modern-xl { border-radius: var(--radius-xl); }
+.rounded-modern-2xl { border-radius: var(--radius-2xl); }
+
+.text-gradient-primary {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-hero {
+  background: var(--gradient-hero);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

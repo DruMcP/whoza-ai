@@ -1,0 +1,15 @@
+# Domain redirects MUST come first - whoza.co.uk to whoza.ai
+https://whoza.co.uk/*           https://whoza.ai/:splat          308!
+https://www.whoza.co.uk/*       https://whoza.ai/:splat          308!
+http://whoza.co.uk/*            https://whoza.ai/:splat          308!
+http://www.whoza.co.uk/*        https://whoza.ai/:splat          308!
+
+# www to non-www redirects for whoza.ai
+https://www.whoza.ai/*          https://whoza.ai/:splat          308!
+http://www.whoza.ai/*           https://whoza.ai/:splat          308!
+
+# HTTP to HTTPS redirect for whoza.ai
+http://whoza.ai/*               https://whoza.ai/:splat          301!
+
+# SPA catch-all comes AFTER domain redirects
+/*    /index.html   200
