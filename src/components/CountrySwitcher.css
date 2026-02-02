@@ -8,39 +8,42 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
-  padding: 0;
+  width: 52px;
+  height: 38px;
+  padding: 4px;
   border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: all 0.2s ease;
-  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-.country-btn .flag {
-  font-size: 28px;
-  line-height: 1;
+.flag-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   display: block;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
 }
 
 .country-btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.05);
   border-color: rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .country-btn:active {
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 .country-btn.active {
   border-color: #22c55e;
   border-width: 3px;
-  background: rgba(34, 197, 94, 0.1);
-  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.4);
 }
 
 .country-btn:focus-visible {
@@ -51,22 +54,18 @@
 /* Responsive */
 @media (max-width: 768px) {
   .country-btn {
-    width: 44px;
-    height: 44px;
-  }
-  
-  .country-btn .flag {
-    font-size: 24px;
+    width: 46px;
+    height: 34px;
   }
 }
 
 @media (max-width: 640px) {
   .country-btn {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 32px;
   }
   
-  .country-btn .flag {
-    font-size: 22px;
+  .country-switcher {
+    gap: 6px;
   }
 }
