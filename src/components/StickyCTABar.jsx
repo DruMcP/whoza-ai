@@ -108,10 +108,59 @@ export default function StickyCTABar() {
           }
         }
 
+        /* Mobile-first responsive design - reduce sticky footer height and center content */
+        @media (max-width: 768px) {
+          div[style*="position: fixed"][style*="bottom: 0"] {
+            padding: 12px 16px !important;
+            max-height: 25vh !important;
+            overflow: hidden;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+          }
+          
+          div[style*="position: fixed"] > div:first-child {
+            min-width: 100% !important;
+            margin-bottom: 8px;
+            text-align: center;
+          }
+          
+          div[style*="position: fixed"] > div:first-child > div:first-child {
+            font-size: 16px !important;
+            margin-bottom: 2px !important;
+          }
+          
+          div[style*="position: fixed"] > div:first-child > div:last-child {
+            font-size: 13px !important;
+            display: none; /* Hide secondary text on mobile to save space */
+          }
+          
+          div[style*="position: fixed"] > div:last-child {
+            width: 100%;
+            justify-content: center;
+            gap: 8px !important;
+          }
+          
+          div[style*="position: fixed"] > div:last-child > div {
+            display: none; /* Hide pricing text on mobile */
+          }
+          
+          div[style*="position: fixed"] a.button {
+            font-size: 15px !important;
+            padding: 10px 20px !important;
+            width: 100%;
+            max-width: 300px;
+            justify-content: center;
+          }
+        }
+        
+        /* Ensure no horizontal overflow */
         @media (max-width: 768px) {
           div[style*="position: fixed"] {
-            flex-direction: column;
-            text-align: center;
+            left: 0 !important;
+            right: 0 !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
           }
         }
       `}</style>
