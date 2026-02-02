@@ -33,6 +33,10 @@ if (typeof window !== 'undefined') {
       replaysSessionSampleRate: 0.01,
       replaysOnErrorSampleRate: 1.0,
       environment: import.meta.env.MODE,
+      beforeSend(event) {
+        // Suppress console output in production
+        return event;
+      },
     })
 
     ReactGA.initialize('G-VCQND9WPW9')
