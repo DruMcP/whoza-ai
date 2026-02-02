@@ -6,6 +6,7 @@ import ROICalculator from '../components/ROICalculator';
 import Icon from '../components/icons/Icon';
 import GuaranteeBadge from '../components/GuaranteeBadge';
 import { useAuth } from '../contexts/AuthContext';
+import { useLocalization } from '../contexts/LocalizationContext';
 import { supabase } from '../lib/supabase';
 
 const pricingPlans = [
@@ -136,6 +137,7 @@ export default function Pricing() {
   const [trialEligible, setTrialEligible] = useState(true); // Default to true for non-logged-in users
   const [checkingEligibility, setCheckingEligibility] = useState(false);
   const { userData } = useAuth();
+  const { formatPrice, country } = useLocalization();
 
   const toggleFaq = (index) => {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
@@ -347,8 +349,7 @@ export default function Pricing() {
                     </>
                   ) : (
                     <>
-                      <span className="price-currency">£</span>
-                      <span className="price-amount">{plan.price}</span>
+                      <span className="price-amount">{formatPrice(plan.price)}</span>
                       <span className="price-period">/month</span>
                     </>
                   )}
@@ -374,7 +375,7 @@ export default function Pricing() {
                     background: 'rgba(132, 204, 22, 0.1)',
                     borderRadius: 'var(--radius-md)'
                   }}>
-                    {plan.comparisonAnchor}
+                    vs {formatPrice(600)}-{formatPrice(1000)}/month for SEO agencies
                   </div>
                 )}
 
@@ -674,7 +675,7 @@ export default function Pricing() {
                   Improve
                 </div>
                 <div style={{ fontSize: '48px', fontWeight: 700, marginBottom: 'var(--spacing-xs)' }}>
-                  <span style={{ fontSize: '24px' }}>£</span>59<span style={{ fontSize: '18px', color: '#6B7280' }}>/month</span>
+                  {formatPrice(59)}<span style={{ fontSize: '18px', color: '#6B7280' }}>/month</span>
                 </div>
                 <p style={{ color: '#9CA3AF', fontSize: '16px', lineHeight: '1.6', minHeight: '75px' }}>
                   One approved improvement per week + monthly confidence score.
@@ -699,7 +700,7 @@ export default function Pricing() {
                   Priority
                 </div>
                 <div style={{ fontSize: '48px', fontWeight: 700, marginBottom: 'var(--spacing-xs)' }}>
-                  <span style={{ fontSize: '24px' }}>£</span>149<span style={{ fontSize: '18px', color: '#6B7280' }}>/month</span>
+                  {formatPrice(149)}<span style={{ fontSize: '18px', color: '#6B7280' }}>/month</span>
                 </div>
                 <p style={{ color: '#9CA3AF', fontSize: '16px', lineHeight: '1.6', minHeight: '75px' }}>
                   Faster reviews + extra caution for high-value or regulated services.
@@ -795,7 +796,12 @@ export default function Pricing() {
                     <Icon name="ChevronDownIcon" size={20} className="faq-icon" />
                   </button>
                   <div className={`faq-answer ${openFaqIndex === index ? 'open' : ''}`}>
-                    <p>{faq.answer}</p>
+                    <p>
+                      {index === 0 && faq.question.includes('cheaper than SEO') 
+                        ? `SEO agencies charge ${formatPrice(600)}-${formatPrice(1000)}/month because they do everything for you. We give you the exact tasks to do yourself - it takes 10-15 minutes per week and you stay in complete control.`
+                        : faq.answer
+                      }
+                    </p>
                   </div>
                 </div>
               ))}

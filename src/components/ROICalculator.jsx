@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
+import { useLocalization } from '../contexts/LocalizationContext';
 
 export default function ROICalculator() {
+  const { formatPrice, getCurrencySymbol } = useLocalization();
   const [selectedTrade, setSelectedTrade] = useState('plumber');
   const [averageJobValue, setAverageJobValue] = useState(250);
   const [newJobsPerMonth, setNewJobsPerMonth] = useState(3);
@@ -59,12 +61,7 @@ export default function ROICalculator() {
   const isPositiveROI = results.netGain > 0;
 
   const formatCurrency = (amount) => {
-    return new Intl.NumberFormat('en-GB', {
-      style: 'currency',
-      currency: 'GBP',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0
-    }).format(amount);
+    return formatPrice(amount);
   };
 
   return (
@@ -148,11 +145,11 @@ export default function ROICalculator() {
                 aria-label="Adjust average job value with slider"
               />
               <div className="range-labels">
-                <span>£50</span>
-                <span>£1,000</span>
+                <span>{getCurrencySymbol()}50</span>
+                <span>{getCurrencySymbol()}1,000</span>
               </div>
             </div>
-            <p className="field-hint" id="average-job-hint" style={{ color: '#6B7280' }}>Based on our data, most tradespeople charge £150-£500 per job</p>
+            <p className="field-hint" id="average-job-hint" style={{ color: '#6B7280' }}>Based on our data, most tradespeople charge {formatPrice(150)}-{formatPrice(500)} per job</p>
           </div>
 
           <div className="roi-input-group">
@@ -199,9 +196,9 @@ export default function ROICalculator() {
               onChange={(e) => setSelectedPlan(e.target.value)}
               aria-label="Select subscription plan"
             >
-              <option value="starter">Improve - £59/month</option>
-              <option value="pro">Pro - £39/month</option>
-              <option value="max">Max - £79/month</option>
+              <option value="starter">Improve - {formatPrice(59)}/month</option>
+              <option value="pro">Pro - {formatPrice(39)}/month</option>
+              <option value="max">Max - {formatPrice(79)}/month</option>
             </select>
           </div>
         </div>
@@ -323,7 +320,7 @@ export default function ROICalculator() {
                   <div>
                     <strong style={{ color: '#1e293b' }}>Checkatrade</strong>
                     <div style={{ fontSize: '0.85rem', color: '#6B7280', marginTop: '2px' }}>
-                      £60-£209/month + lead fees
+                      {formatPrice(60)}-{formatPrice(209)}/month + lead fees
                     </div>
                   </div>
                   <span style={{ color: '#ef4444', fontWeight: 'bold', fontSize: '0.9rem' }}>Pay per lead</span>
@@ -341,7 +338,7 @@ export default function ROICalculator() {
                   <div>
                     <strong style={{ color: '#1e293b' }}>Bark</strong>
                     <div style={{ fontSize: '0.85rem', color: '#6B7280', marginTop: '2px' }}>
-                      £5-£30 per lead (avg 5 leads = £75-£150)
+                      {formatPrice(5)}-{formatPrice(30)} per lead (avg 5 leads = {formatPrice(75)}-{formatPrice(150)})
                     </div>
                   </div>
                   <span style={{ color: '#ef4444', fontWeight: 'bold', fontSize: '0.9rem' }}>Pay per lead</span>
@@ -359,7 +356,7 @@ export default function ROICalculator() {
                   <div>
                     <strong style={{ color: '#1e293b' }}>MyBuilder</strong>
                     <div style={{ fontSize: '0.85rem', color: '#6B7280', marginTop: '2px' }}>
-                      £2-£25 per shortlist
+                      {formatPrice(2)}-{formatPrice(25)} per shortlist
                     </div>
                   </div>
                   <span style={{ color: '#ef4444', fontWeight: 'bold', fontSize: '0.9rem' }}>Pay per lead</span>
@@ -377,7 +374,7 @@ export default function ROICalculator() {
                   <div>
                     <strong style={{ color: '#1e293b' }}>Traditional marketing agency</strong>
                     <div style={{ fontSize: '0.85rem', color: '#6B7280', marginTop: '2px' }}>
-                      £300-£1,000/month
+                      {formatPrice(300)}-{formatPrice(1000)}/month
                     </div>
                   </div>
                   <span style={{ color: '#f59e0b', fontWeight: 'bold', fontSize: '0.9rem' }}>Variable</span>
@@ -395,7 +392,7 @@ export default function ROICalculator() {
                   <div>
                     <strong style={{ color: '#1e293b' }}>whoza.ai</strong>
                     <div style={{ fontSize: '0.85rem', color: '#4d7c0f', marginTop: '2px' }}>
-                      £59/month - predictable cost, no per-lead fees
+                      {formatPrice(59)}/month - predictable cost, no per-lead fees
                     </div>
                   </div>
                   <span style={{ color: '#16a34a', fontWeight: 'bold', fontSize: '0.9rem' }}>Fixed price</span>
