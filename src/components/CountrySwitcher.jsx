@@ -17,16 +17,18 @@ export default function CountrySwitcher() {
         className={`country-btn ${country === 'GB' ? 'active' : ''}`}
         aria-pressed={country === 'GB'}
         aria-label="Switch to United Kingdom"
+        title="UK"
       >
-        {/* CSS-based flag graphic renders via ::before and ::after pseudo-elements */}
+        <span className="flag" role="img" aria-label="UK flag">🇬🇧</span>
       </button>
       <button
         onClick={() => handleCountryChange('US')}
         className={`country-btn ${country === 'US' ? 'active' : ''}`}
         aria-pressed={country === 'US'}
         aria-label="Switch to United States"
+        title="US"
       >
-        {/* CSS-based flag graphic renders via ::before and ::after pseudo-elements */}
+        <span className="flag" role="img" aria-label="US flag">🇺🇸</span>
       </button>
     </div>
   );
