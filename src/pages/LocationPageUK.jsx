@@ -1,4 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import { useLocalization } from '../contexts/LocalizationContext';
 import { getCityBySlug, getAllUKCities } from '../data/ukCities';
 import Header from '../components/Header';
@@ -7,7 +8,23 @@ import SEO from '../components/SEO';
 
 export default function LocationPageUK() {
   const { citySlug } = useParams();
-  const { getTerm, formatPrice } = useLocalization();
+  const { getTerm, formatPrice, setCountry, isLoading, country } = useLocalization();
+
+  useEffect(() => {
+    setCountry('GB');
+  }, [setCountry]);
+
+  if (isLoading || country !== 'GB') {
+    return (
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-grow container mx-auto px-4 py-16">
+          <div className="text-center">Loading...</div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   const city = getCityBySlug(citySlug);
 
