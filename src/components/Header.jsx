@@ -1,5 +1,5 @@
 import { useState, useEffect, memo, useCallback } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import AccessibilityMenu from './AccessibilityMenu';
 import ExternalLinkIcon from './icons/ui/ExternalLinkIcon';
@@ -19,8 +19,10 @@ const WhozaLogo = memo(() => (
 const Header = memo(function Header() {
   const { user, userData, signOut } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
   const [isAnimating, setIsAnimating] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -50,6 +52,31 @@ const Header = memo(function Header() {
     navigate('/');
   }, [signOut, navigate]);
 
+  const toggleMobileMenu = useCallback(() => {
+    setIsMobileMenuOpen(prev => !prev);
+  }, []);
+
+  const closeMobileMenu = useCallback(() => {
+    setIsMobileMenuOpen(false);
+  }, []);
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    closeMobileMenu();
+  }, [location.pathname, closeMobileMenu]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <header className={`header ${isScrolled ? 'header-scrolled' : ''}`} role="banner">
       <div className="header-inner">
@@ -65,29 +92,44 @@ const Header = memo(function Header() {
           </div>
         </div>
 
-        <nav className="header-navigation" aria-label="Main navigation">
+        {/* Mobile Hamburger Button */}
+        <button 
+          className="mobile-menu-toggle"
+          onClick={toggleMobileMenu}
+          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-navigation"
+        >
+          <span className="hamburger-icon">
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+          </span>
+        </button>
+
+        <nav className={`header-navigation ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`} id="mobile-navigation" aria-label="Main navigation">
           {!user ? (
             <>
               <ul className="header-nav-primary" role="list">
-                <li><Link to="/how-it-works" className="nav-link">How it works</Link></li>
-                <li><Link to="/case-studies" className="nav-link">Case Studies</Link></li>
-                <li><Link to="/pricing" className="nav-link">Pricing</Link></li>
-                <li><Link to="/blog" className="nav-link">Blog</Link></li>
-                <li><Link to="/trust" className="nav-link">Trust & Reviews</Link></li>
-                <li><Link to="/contact" className="nav-link">Contact</Link></li>
+                <li><Link to="/how-it-works" className="nav-link" onClick={closeMobileMenu}>How it works</Link></li>
+                <li><Link to="/case-studies" className="nav-link" onClick={closeMobileMenu}>Case Studies</Link></li>
+                <li><Link to="/pricing" className="nav-link" onClick={closeMobileMenu}>Pricing</Link></li>
+                <li><Link to="/blog" className="nav-link" onClick={closeMobileMenu}>Blog</Link></li>
+                <li><Link to="/trust" className="nav-link" onClick={closeMobileMenu}>Trust & Reviews</Link></li>
+                <li><Link to="/contact" className="nav-link" onClick={closeMobileMenu}>Contact</Link></li>
               </ul>
               <div className="header-nav-secondary">
                 <CountrySwitcher />
                 <AccessibilityMenu />
-                <Link to="/start" className="button button-header-cta btn-hover" aria-label="Get started with whoza.ai">Get started</Link>
+                <Link to="/start" className="button button-header-cta btn-hover" aria-label="Get started with whoza.ai" onClick={closeMobileMenu}>Get started</Link>
               </div>
             </>
           ) : userData?.role === 'admin' ? (
             <>
               <ul className="header-nav-primary" role="list">
-                <li><Link to="/admin" className="nav-link">Admin</Link></li>
-                <li><Link to="/account" className="nav-link">My Account</Link></li>
-                <li><Link to="/contact" className="nav-link">Contact</Link></li>
+                <li><Link to="/admin" className="nav-link" onClick={closeMobileMenu}>Admin</Link></li>
+                <li><Link to="/account" className="nav-link" onClick={closeMobileMenu}>My Account</Link></li>
+                <li><Link to="/contact" className="nav-link" onClick={closeMobileMenu}>Contact</Link></li>
               </ul>
               <div className="header-nav-secondary">
                 <AccessibilityMenu />
@@ -97,11 +139,11 @@ const Header = memo(function Header() {
           ) : (
             <>
               <ul className="header-nav-primary" role="list">
-                <li><Link to="/portal" className="nav-link">Portal</Link></li>
-                <li><Link to="/tasks" className="nav-link">Tasks</Link></li>
-                <li><Link to="/reports" className="nav-link">Reports</Link></li>
-                <li><Link to="/account" className="nav-link">My Account</Link></li>
-                <li><Link to="/contact" className="nav-link">Contact</Link></li>
+                <li><Link to="/portal" className="nav-link" onClick={closeMobileMenu}>Portal</Link></li>
+                <li><Link to="/tasks" className="nav-link" onClick={closeMobileMenu}>Tasks</Link></li>
+                <li><Link to="/reports" className="nav-link" onClick={closeMobileMenu}>Reports</Link></li>
+                <li><Link to="/account" className="nav-link" onClick={closeMobileMenu}>My Account</Link></li>
+                <li><Link to="/contact" className="nav-link" onClick={closeMobileMenu}>Contact</Link></li>
               </ul>
               <div className="header-nav-secondary">
                 {userData?.subscription_tier && (
@@ -140,6 +182,7 @@ const Header = memo(function Header() {
                     onBlur={(e) => {
                       e.currentTarget.style.outline = 'none';
                     }}
+                    onClick={closeMobileMenu}
                   >
                     <span>{userData.subscription_tier} Plan</span>
                     <ExternalLinkIcon width={14} height={14} color="currentColor" />
