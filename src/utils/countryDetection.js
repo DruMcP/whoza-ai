@@ -43,6 +43,28 @@ function getCountryFromBrowserLocale() {
   }
 }
 
+function getCountryFromURL() {
+  try {
+    if (typeof window === 'undefined') {
+      return null;
+    }
+
+    const pathname = window.location.pathname;
+
+    if (pathname.startsWith('/us/')) {
+      return 'US';
+    }
+
+    if (pathname.startsWith('/uk/')) {
+      return 'GB';
+    }
+
+    return null;
+  } catch (error) {
+    return null;
+  }
+}
+
 function getCountryFromStorage() {
   try {
     if (typeof window === 'undefined' || !window.localStorage) {
@@ -63,6 +85,11 @@ function getCountryFromStorage() {
 
 export async function detectUserCountry() {
   try {
+    const fromURL = getCountryFromURL();
+    if (fromURL) {
+      return fromURL;
+    }
+
     const fromStorage = getCountryFromStorage();
     if (fromStorage) {
       return fromStorage;
