@@ -16,7 +16,7 @@ export default function MiniROICalculator() {
     const trade = tradePresets[selectedTrade];
     const monthlyRevenue = trade.avgJob * trade.monthlyJobs;
     const annualRevenue = monthlyRevenue * 12;
-    const annualCost = 99 * 12;
+    const annualCost = 59 * 12;
     const annualProfit = annualRevenue - annualCost;
 
     return {
@@ -59,7 +59,7 @@ export default function MiniROICalculator() {
           color: '#64748b',
           margin: 0
         }}>
-          Select your trade to see how £19/month could grow your business
+          Select your trade to see how £59/month could grow your business
         </p>
       </div>
 

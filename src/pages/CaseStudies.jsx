@@ -2,9 +2,8 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import SEO from '../components/SEO';
 import { initScrollAnimations } from '../utils/animations';
-import { generateBreadcrumbSchema } from '../utils/schemaOrg';
+import { useLocalization } from '../contexts/LocalizationContext';
 
 const caseStudies = [
   {
@@ -202,20 +201,13 @@ const caseStudies = [
 ];
 
 export default function CaseStudies() {
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: '/' },
-    { name: 'Case Studies', url: '/case-studies' }
-  ]);
-
-  const schemas = [breadcrumbSchema];
-
+  const { formatPrice } = useLocalization();
   useEffect(() => {
     initScrollAnimations();
   }, []);
 
   return (
     <>
-      <SEO schemas={schemas} />
       <Header />
 
       <main id="main-content" role="main">
@@ -483,7 +475,7 @@ export default function CaseStudies() {
                 </Link>
               </div>
               <p className="cta-note">
-                <Link to="/pricing">View pricing</Link> · Starter from £19/month
+                <Link to="/pricing">View pricing</Link> · Improve from {formatPrice(59)}/month
               </p>
             </div>
           </section>

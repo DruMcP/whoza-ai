@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useLocalization } from '../contexts/LocalizationContext';
 
 const HeroSection = () => {
-  const { getTerm, country } = useLocalization();
+  const { formatPrice } = useLocalization();
   return (
     <section style={{
         backgroundColor: '#0f172a',
@@ -22,7 +22,7 @@ const HeroSection = () => {
           gap: '40px'
         }}>
         {/* LEFT COLUMN - Text Content */}
-        <div className="hero-text-container" style={{ flex: '1 1 500px', minWidth: '300px', maxWidth: '600px' }}>
+        <div className="hero-text-container hero-fade-in" style={{ flex: '1 1 500px', minWidth: '300px', maxWidth: '600px' }}>
           <h1 style={{
             color: '#ffffff',
             fontSize: 'clamp(2rem, 5vw, 3.5rem)',
@@ -30,7 +30,7 @@ const HeroSection = () => {
             lineHeight: '1.2',
             marginBottom: '20px'
           }}>
-            Get Found in AI Search: The <span style={{ color: '#84CC16' }}>AI Employee</span> for {country === 'US' ? 'US' : 'UK'} {getTerm('tradespeople')}
+            Get Found in AI Search: The <span className="hero-gradient-text">AI Employee</span> for UK Tradespeople
           </h1>
 
           <p style={{
@@ -39,7 +39,7 @@ const HeroSection = () => {
             lineHeight: '1.6',
             marginBottom: '30px'
           }}>
-            Most {getTerm('tradespeople')} are invisible to AI search. We fix that. Get found when ChatGPT, Google AI, and Perplexity recommend local services.
+            Most tradespeople are invisible to AI search. We fix that. Get found when ChatGPT, Google AI, and Perplexity recommend local services.
           </p>
 
           <p style={{
@@ -47,16 +47,18 @@ const HeroSection = () => {
             fontSize: '1.05rem',
             marginBottom: '40px'
           }}>
-            For plumbers, electricians, roofers, builders, heating engineers and 50+ other trades across the {country === 'US' ? 'US' : 'UK'}
+            For plumbers, electricians, roofers, builders, heating engineers and 50+ other trades across the UK
           </p>
 
           {/* 3-STEP MENTAL MODEL */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '16px',
-            marginBottom: '40px'
-          }}>
+          <div 
+            className="hero-steps-container"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(3, 1fr)',
+              gap: '16px',
+              marginBottom: '40px'
+            }}>
             {/* STEP 1: MEASURE */}
             <div style={{
               background: 'rgba(132, 204, 22, 0.05)',
@@ -190,6 +192,7 @@ const HeroSection = () => {
           <div style={{ marginBottom: '20px' }}>
             <Link
               to="/free-score"
+              className="hero-cta-pulse"
               style={{
                 display: 'inline-block',
                 backgroundColor: '#84CC16',
@@ -218,7 +221,7 @@ const HeroSection = () => {
               color: '#9CA3AF',
               marginTop: '0'
             }}>
-              £19/month pays for itself with just ONE extra job
+              {formatPrice(59)}/month pays for itself with just 1-2 extra jobs
             </p>
           </div>
 
@@ -238,7 +241,7 @@ const HeroSection = () => {
 
         {/* RIGHT COLUMN - Rex Image */}
         <div
-          className="hero-image-container"
+          className="hero-image-container hero-float"
           style={{
             flex: '0 1 350px',
             minWidth: '280px',
