@@ -28,6 +28,7 @@ export default function StickyCTABar() {
           bottom: 0;
           left: 0;
           right: 0;
+          width: 100%;
           background-color: rgba(15, 23, 42, 0.95);
           backdrop-filter: blur(10px);
           border-top: 2px solid var(--color-primary-600);
@@ -87,41 +88,65 @@ export default function StickyCTABar() {
           }
         }
 
-        /* Mobile optimization - centered and fully visible */
+        /* Mobile optimization - ABSOLUTE CENTERING */
         @media (max-width: 768px) {
           .sticky-cta-bar {
-            padding: 16px !important;
+            padding: 16px 20px !important;
             flex-direction: column !important;
             align-items: center !important;
+            justify-content: center !important;
             text-align: center !important;
             gap: 12px !important;
             max-height: none !important;
             overflow: visible !important;
+            left: 0 !important;
+            right: 0 !important;
+            width: 100% !important;
+            margin: 0 !important;
           }
           
           .sticky-cta-content {
             width: 100% !important;
             min-width: 100% !important;
+            max-width: 100% !important;
             flex: none !important;
-            margin: 0 !important;
+            margin: 0 auto !important;
+            padding: 0 !important;
+            text-align: center !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
           }
           
           .sticky-cta-title {
             font-size: 16px !important;
             margin-bottom: 4px !important;
             text-align: center !important;
+            width: 100% !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            padding: 0 !important;
           }
           
           .sticky-cta-subtitle {
             font-size: 13px !important;
             text-align: center !important;
+            width: 100% !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            padding: 0 !important;
           }
           
           .sticky-cta-actions {
             width: 100% !important;
+            max-width: 100% !important;
             justify-content: center !important;
             gap: 12px !important;
             flex-direction: column !important;
+            align-items: center !important;
+            margin: 0 auto !important;
+            padding: 0 !important;
           }
           
           .sticky-cta-button {
@@ -132,13 +157,16 @@ export default function StickyCTABar() {
             justify-content: center !important;
             text-align: center !important;
             box-sizing: border-box !important;
+            margin: 0 auto !important;
+            display: flex !important;
+            align-items: center !important;
           }
         }
 
         /* Extra small mobile devices */
         @media (max-width: 480px) {
           .sticky-cta-bar {
-            padding: 12px !important;
+            padding: 14px 16px !important;
           }
           
           .sticky-cta-title {
@@ -151,7 +179,8 @@ export default function StickyCTABar() {
           
           .sticky-cta-button {
             font-size: 14px !important;
-            padding: 10px 20px !important;
+            padding: 11px 20px !important;
+            max-width: 280px !important;
           }
         }
       `}</style>
