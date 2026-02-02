@@ -28,6 +28,10 @@ const FreeScore = lazy(() => import('./pages/FreeScore'));
 const Account = lazy(() => import('./pages/Account'));
 const Contact = lazy(() => import('./pages/Contact'));
 const NotFound = lazy(() => import('./pages/NotFound'));
+const Blog = lazy(() => import('./pages/blog/Blog'));
+const BlogPost = lazy(() => import('./pages/blog/BlogPost'));
+const LocationPageUS = lazy(() => import('./pages/LocationPageUS'));
+const LocationPageUK = lazy(() => import('./pages/LocationPageUK'));
 
 const ProtectedRoute = memo(function ProtectedRoute({ children, adminOnly = false }) {
   const { user, userData, loading } = useAuth();
@@ -102,6 +106,10 @@ function AppRoutes() {
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/free-score" element={<FreeScore />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/us/ai-visibility/:citySlug" element={<LocationPageUS />} />
+          <Route path="/uk/ai-visibility/:citySlug" element={<LocationPageUK />} />
 
           <Route
             path="/checkout"

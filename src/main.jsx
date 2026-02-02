@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import * as Sentry from '@sentry/react'
 import ReactGA from 'react-ga4'
 import App from './App.jsx'
+import { LocalizationProvider } from './contexts/LocalizationContext'
 import './index.css'
 import './modern-upgrade.css'
 import './modern-component-overrides.css'
@@ -12,7 +13,9 @@ import { initAccessibility } from './utils/accessibility'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <LocalizationProvider>
+      <App />
+    </LocalizationProvider>
   </React.StrictMode>,
 )
 
