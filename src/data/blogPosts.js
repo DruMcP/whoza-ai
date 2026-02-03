@@ -21,6 +21,91 @@ export const blogPosts = [
     playbookPath: "/uk-trades-business-playbook-ai-search-visibility-2026"
   },
   {
+    id: "why-bing-matters-for-ai-search-the-perplexity-connection",
+    slug: "why-bing-matters-for-ai-search-the-perplexity-connection",
+    title: "Why Bing Matters for AI Search: The Perplexity Connection",
+    metaDescription: "Discover why Bing is a critical component of your AEO strategy. Learn how Bing powers AI search engines like Perplexity and how to optimize your business for visibility.",
+    publishDate: "2026-02-03",
+    author: "Whoza.ai Team",
+    category: "AI Visibility",
+    tags: ["Bing AI search", "Perplexity Bing", "Bing Webmaster Tools", "IndexNow tradespeople", "AEO"],
+    readTime: "6 min read",
+    featured: false,
+    leadAnswer: "Bing is no longer just a secondary search engine; it's a primary data source for AI assistants like Perplexity. For tradespeople, this means optimizing for Bing is essential for AI visibility. By leveraging Bing Webmaster Tools and IndexNow, you can ensure your business is found and recommended in this new AI-driven search landscape.",
+    content: [
+      {
+        type: "section",
+        heading: "Introduction: The Search Landscape is Bigger Than Just Google",
+        content: `For the last decade, 'search' has been synonymous with Google. But the rise of AI is changing the game. Users are now turning to AI assistants for direct answers, and these assistants are drawing their information from a variety of sources. While Google is a major player, it's not the only one. Bing is quietly becoming a powerhouse in the world of AI search, and if you're not paying attention, you're missing out on a huge opportunity.`
+      },
+      {
+        type: "section",
+        heading: "The Perplexity Connection: How Bing Fuels AI Answers",
+        content: `Perplexity, one of the fastest-growing AI answer engines, has a strategic partnership with Microsoft. This means that Perplexity uses Bing's search index to inform its answers. When a user asks Perplexity a question, it's often Bing's data that's being used to generate the response. This makes Bing a critical gateway to AI visibility, especially for businesses targeting customers who are early adopters of new technology.`
+      },
+      {
+        type: "section",
+        heading: "Why Tradespeople Can't Afford to Ignore Bing",
+        content: `As a tradesperson, your customers are looking for quick, reliable answers. When they ask an AI for a recommendation, you want your business to be at the top of the list. Since Perplexity and other AI tools are using Bing, your presence on Bing directly impacts your visibility in these new channels. Ignoring Bing is like boarding up the front door of your shop – you're cutting off a vital source of new customers.`
+      },
+      {
+        type: "section",
+        heading: "Your Quick-Start Guide to Bing Optimization",
+        content: `Getting started with Bing is easier than you think. The principles of AEO are the same: clarity, consistency, and authority. Ensure your business name, address, and phone number (NAP) are consistent across the web. Build a strong profile on Bing Places for Business, the equivalent of Google Business Profile. And just like with Google, creating high-quality, helpful content is key.`
+      },
+      {
+        type: "section",
+        heading: "Bing Webmaster Tools: Your AEO Control Panel",
+        content: `Bing Webmaster Tools is a free service that gives you a wealth of data and control over how your site appears in Bing search. You can submit your sitemap, monitor your site's performance, and identify any issues that might be hurting your visibility. It's an essential tool for any serious AEO strategy.`
+      },
+      {
+        type: "section",
+        heading: "IndexNow: Get Your Content Seen in Real-Time",
+        content: `IndexNow is a game-changer for AEO. It's a protocol that allows you to instantly notify Bing (and other search engines) when you've updated your content. This means your new blog posts, services, and offers can be indexed and start driving traffic in minutes, not days or weeks. For tradespeople running special offers or needing to get emergency service information out quickly, IndexNow is a must-have.`
+      },
+      {
+        type: "section",
+        heading: "The Future is Multi-Engine: Diversify Your AEO Strategy",
+        content: `Relying solely on Google is a risky strategy in 2026. The future of search is multi-engine and multi-channel. By optimizing for Bing, you're not just reaching a new audience; you're future-proofing your business. A diversified AEO strategy that embraces both Google and Bing is the only way to ensure long-term visibility and success.`
+      }
+    ],
+    faqs: [
+      {
+        question: "What is the relationship between Bing and Perplexity?",
+        answer: "Perplexity has a strategic partnership with Microsoft, and uses Bing's search index to help generate its AI-powered answers. This makes Bing a crucial data source for Perplexity."
+      },
+      {
+        question: "Is Bing search as important as Google search for my business?",
+        answer: "While Google still has a larger market share, Bing's role in powering AI search engines like Perplexity makes it increasingly important. For a comprehensive AEO strategy, you need to be visible on both."
+      },
+      {
+        question: "What is IndexNow and why should I use it?",
+        answer: "IndexNow is a protocol that allows you to instantly notify search engines like Bing when your website content is updated. This is crucial for getting your latest information indexed and shown to potential customers as quickly as possible."
+      },
+      {
+        question: "How do I sign up for Bing Webmaster Tools?",
+        answer: "You can sign up for a free Bing Webmaster Tools account at bing.com/webmasters. You can even import your site directly from Google Search Console to get started quickly."
+      },
+      {
+        question: "What's the most important thing I can do to improve my Bing visibility?",
+        answer: "The most important first step is to claim and fully optimize your Bing Places for Business profile. This is the equivalent of Google Business Profile and is a critical source of information for Bing."
+      },
+      {
+        question: "Does whoza.ai help with Bing optimization?",
+        answer: "Yes, our platform is designed to optimize your online presence across all major search engines, including Bing. We help you build the authority and trust needed to be recommended by AI, no matter where it sources its information."
+      },
+      {
+        question: "How is AEO for Bing different from AEO for Google?",
+        answer: "The core principles of AEO are the same for both Bing and Google: provide clear, consistent, and authoritative information. However, the tools and specific ranking factors can differ. That's why it's important to use both Bing Webmaster Tools and Google Search Console to monitor your performance on each platform."
+      }
+    ],
+    cta: {
+      text: "Ready to see how your business scores in AI search?",
+      buttonText: "Get Your Free AI Visibility Score",
+      buttonLink: "/free-score"
+    }
+  },
+  {
     id: "how-ai-chooses-local-businesses",
     slug: "how-ai-search-engines-choose-which-local-businesses-to-recommend",
     title: "How AI Search Engines Choose Which Local Businesses to Recommend",
