@@ -11,7 +11,7 @@ const WhozaLogo = memo(() => (
     alt="Whoza.ai - AI for Tradespeople"
     className="header-logo"
     loading="eager"
-    width="300"
+    width="240"
     height="auto"
   />
 ));
@@ -84,12 +84,6 @@ const Header = memo(function Header() {
           <Link to="/" className="header-logo-link" aria-label="whoza.ai home">
             <WhozaLogo />
           </Link>
-          <div className="header-trust-badge" role="img" aria-label="GDPR Compliant">
-            <svg className="trust-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false">
-              <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
-            <span>GDPR Compliant</span>
-          </div>
         </div>
 
         {/* Mobile Hamburger Button */}
@@ -115,14 +109,25 @@ const Header = memo(function Header() {
                 <li><Link to="/case-studies" className="nav-link" onClick={closeMobileMenu}>Case Studies</Link></li>
                 <li><Link to="/pricing" className="nav-link" onClick={closeMobileMenu}>Pricing</Link></li>
                 <li><Link to="/blog" className="nav-link" onClick={closeMobileMenu}>Blog</Link></li>
-                <li><Link to="/trust" className="nav-link" onClick={closeMobileMenu}>Trust & Reviews</Link></li>
+                <li><Link to="/trust" className="nav-link" onClick={closeMobileMenu}>Trust</Link></li>
                 <li><Link to="/contact" className="nav-link" onClick={closeMobileMenu}>Contact</Link></li>
               </ul>
               <div className="header-nav-secondary">
-                <CountrySwitcher />
-                <AccessibilityMenu />
-                <Link to="/start?mode=signin" className="button-secondary btn-hover" aria-label="Log in to your account" onClick={closeMobileMenu} style={{ marginRight: 'var(--spacing-sm)' }}>Log In</Link>
-                <Link to="/free-score" className="button button-header-cta btn-hover" aria-label="Get your free visibility score" onClick={closeMobileMenu}>Get Free Score</Link>
+                <div className="header-utility-group">
+                  <CountrySwitcher />
+                  <AccessibilityMenu />
+                </div>
+                <div className="header-cta-group">
+                  <Link to="/start?mode=signin" className="header-login-btn btn-hover" aria-label="Log in to your account" onClick={closeMobileMenu}>
+                    <svg className="login-icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
+                      <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                    </svg>
+                    Log In
+                  </Link>
+                  <Link to="/free-score" className="header-cta-btn btn-hover" aria-label="Get your free visibility score" onClick={closeMobileMenu}>
+                    Get Free Score
+                  </Link>
+                </div>
               </div>
             </>
           ) : userData?.role === 'admin' ? (
@@ -133,8 +138,14 @@ const Header = memo(function Header() {
                 <li><Link to="/contact" className="nav-link" onClick={closeMobileMenu}>Contact</Link></li>
               </ul>
               <div className="header-nav-secondary">
-                <AccessibilityMenu />
-                <button onClick={handleSignOut} className="button-secondary button-header-secondary btn-hover" aria-label="Sign out of your account">Sign out</button>
+                <div className="header-utility-group">
+                  <AccessibilityMenu />
+                </div>
+                <div className="header-cta-group">
+                  <button onClick={handleSignOut} className="header-login-btn btn-hover" aria-label="Sign out of your account">
+                    Sign out
+                  </button>
+                </div>
               </div>
             </>
           ) : (
@@ -150,47 +161,22 @@ const Header = memo(function Header() {
                 {userData?.subscription_tier && (
                   <Link
                     to="/pricing"
-                    className="subscription-tier-badge"
+                    className="header-tier-badge"
                     aria-label={`Current plan: ${userData.subscription_tier}. Click to view pricing and upgrade options`}
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '6px',
-                      padding: '6px 12px',
-                      backgroundColor: 'var(--color-primary-500)',
-                      color: 'var(--color-dark-900)',
-                      borderRadius: '6px',
-                      fontSize: '13px',
-                      fontWeight: 700,
-                      textTransform: 'capitalize',
-                      marginRight: 'var(--spacing-md)',
-                      textDecoration: 'none',
-                      transition: 'all 0.2s ease',
-                      cursor: 'pointer'
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = '#b3e030';
-                      e.currentTarget.style.transform = 'translateY(-1px)';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = 'var(--color-primary-500)';
-                      e.currentTarget.style.transform = 'translateY(0)';
-                    }}
-                    onFocus={(e) => {
-                      e.currentTarget.style.outline = '2px solid var(--color-primary-500)';
-                      e.currentTarget.style.outlineOffset = '2px';
-                    }}
-                    onBlur={(e) => {
-                      e.currentTarget.style.outline = 'none';
-                    }}
                     onClick={closeMobileMenu}
                   >
                     <span>{userData.subscription_tier} Plan</span>
                     <ExternalLinkIcon width={14} height={14} color="currentColor" />
                   </Link>
                 )}
-                <AccessibilityMenu />
-                <button onClick={handleSignOut} className="button-secondary button-header-secondary btn-hover" aria-label="Sign out of your account">Sign out</button>
+                <div className="header-utility-group">
+                  <AccessibilityMenu />
+                </div>
+                <div className="header-cta-group">
+                  <button onClick={handleSignOut} className="header-login-btn btn-hover" aria-label="Sign out of your account">
+                    Sign out
+                  </button>
+                </div>
               </div>
             </>
           )}
