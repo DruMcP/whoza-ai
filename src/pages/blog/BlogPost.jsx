@@ -331,10 +331,10 @@ function BlogPost() {
               <h2>Frequently Asked Questions</h2>
               <div className="faq-list">
                 {post.faqs.map((faq, index) => (
-                  <div key={index} className="faq-item" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
-                    <h3 itemProp="name">{faq.question}</h3>
-                    <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                      <p itemProp="text">{faq.answer}</p>
+                  <div key={index} className="faq-item">
+                    <h3>{faq.question}</h3>
+                    <div>
+                      <p>{faq.answer}</p>
                     </div>
                   </div>
                 ))}
