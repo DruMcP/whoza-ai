@@ -527,7 +527,7 @@ textarea {
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-md);
-  min-height: 72px;
+  min-height: 96px;
 }
 
 .header-left {
@@ -549,8 +549,8 @@ textarea {
 }
 
 .header-logo {
-  height: 72px;
-  max-width: 240px;
+  height: 96px;
+  max-width: 320px;
   width: auto;
   transition: all var(--transition-fast);
   display: block;
@@ -1836,8 +1836,8 @@ button,
   }
 
   .header-logo {
-    height: 60px;
-    max-width: 200px;
+    height: 72px;
+    max-width: 240px;
   }
 
   .header-trust-badge {
@@ -11618,8 +11618,8 @@ section {
   }
 
   .header-logo {
-    height: 48px;
-    max-width: 160px;
+    height: 56px;
+    max-width: 180px;
   }
 
   .header-trust-badge {
