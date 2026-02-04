@@ -191,7 +191,7 @@ export default function StickyCTABar() {
             Ready to improve your AI visibility?
           </div>
           <div className="sticky-cta-subtitle">
-            Get your free Visibility Confidence Score™ in 60 seconds
+            Get your free Visibility Confidence Score™ in 60 seconds • From £19/month
           </div>
         </div>
 
