@@ -11,5 +11,10 @@ http://www.whoza.ai/*           https://whoza.ai/:splat          308!
 # HTTP to HTTPS redirect for whoza.ai
 http://whoza.ai/*               https://whoza.ai/:splat          301!
 
-# SPA catch-all comes AFTER domain redirects
+# Static files that should be served directly (not through SPA)
+/llms.txt    /llms.txt   200
+/robots.txt  /robots.txt 200
+/sitemap.xml /sitemap.xml 200
+
+# SPA catch-all comes AFTER domain redirects and static files
 /*    /index.html   200
