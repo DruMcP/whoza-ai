@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 import { initScrollAnimations } from '../utils/animations';
 import { generateBreadcrumbSchema } from '../utils/schemaOrg';
+import { useLocalization } from '../contexts/LocalizationContext';
 
-const caseStudies = [
+// UK Case Studies
+const ukCaseStudies = [
   {
     id: 1,
     name: 'Sarah Mitchell',
@@ -201,7 +203,217 @@ const caseStudies = [
   }
 ];
 
+// US Case Studies
+const usCaseStudies = [
+  {
+    id: 4,
+    name: 'Mike Johnson',
+    role: 'HVAC Contractor',
+    location: 'Austin, TX',
+    photo: 'https://images.pexels.com/photos/874158/pexels-photo-874158.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+    businessName: 'Austin Air & Heat',
+    established: '2018',
+    teamSize: '4 technicians',
+    challenge: {
+      headline: 'Struggling to Stand Out in a Competitive Market',
+      description: 'Mike\'s HVAC business was doing well through referrals, but he struggled to attract new customers online. When people in Austin searched for HVAC services using AI assistants like ChatGPT or Perplexity, his business was lost in the noise of larger competitors.',
+      painPoints: [
+        'Low visibility in AI search results',
+        'Inconsistent online business information',
+        'Not enough positive online reviews',
+        'Website not optimized for local AI search',
+        'High cost per lead from paid ads'
+      ]
+    },
+    solution: {
+      description: 'Rex provided a clear roadmap to improve Mike\'s AI visibility. The platform guided him through optimizing his online presence to stand out in the competitive Austin market.',
+      approach: [
+        {
+          week: 'Weeks 1-3',
+          focus: 'Local Presence Optimization',
+          outcome: 'Ensured Austin Air & Heat appeared with complete and accurate information across all major online directories and AI platforms.'
+        },
+        {
+          week: 'Weeks 4-8',
+          focus: 'Reputation Building',
+          outcome: 'Implemented a system to consistently generate positive reviews from satisfied customers, boosting trust and credibility for AI algorithms.'
+        },
+        {
+          week: 'Weeks 9-12',
+          focus: 'Content & Authority',
+          outcome: 'Developed content that answered common customer questions, positioning Mike as a local HVAC expert and increasing his visibility in AI search.'
+        }
+      ],
+      note: 'Rex provided Mike with simple, weekly tasks that took less than 20 minutes to complete, each designed to have the maximum impact on his AI visibility.',
+      timeInvested: '18 minutes per week'
+    },
+    results: {
+      metrics: [
+        { label: 'Visibility Confidence Score™', before: '31', after: '79', unit: '/100', improvement: 'Significant improvement' },
+        { label: 'Monthly Leads', before: '12', after: '28', unit: '', improvement: 'More than doubled' },
+        { label: 'Google Profile Views', before: '210', after: '550', unit: '/month', improvement: 'Strong growth' },
+        { label: 'Review Rating', before: '4.1', after: '4.9', unit: '/5.0', improvement: 'Improved' }
+      ],
+      achievements: [
+        'Now appears in ChatGPT responses for "best HVAC contractor Austin"',
+        'Featured in Perplexity AI recommendations for local AC repair',
+        'Google Business profile views more than doubled in 3 months',
+        'Reduced ad spend by 40% while increasing lead quality',
+        'Hired two new technicians to handle the increased workload'
+      ],
+      timeline: '10 weeks to see significant results'
+    },
+    quote: "Rex made it easy to improve my online presence. The weekly tasks were simple and effective. I'm now getting more high-quality leads than ever before, and I've been able to grow my team.",
+    visualData: {
+      scoreProgression: [31, 39, 48, 55, 62, 69, 74, 79],
+      enquiriesProgression: [12, 15, 18, 21, 24, 26, 28, 28]
+    }
+  },
+  {
+    id: 5,
+    name: 'David Garcia',
+    role: 'Roofing Contractor',
+    location: 'Denver, CO',
+    photo: 'https://images.pexels.com/photos/1139743/pexels-photo-1139743.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+    businessName: 'Garcia Roofing Solutions',
+    established: '2016',
+    teamSize: '6 employees',
+    challenge: {
+      headline: 'Invisible to AI-Powered Search',
+      description: 'David\'s roofing company had a great reputation built on quality work, but his online presence was lacking. When homeowners in Denver used AI search to find roofing contractors, his business was nowhere to be found.',
+      painPoints: [
+        'Zero visibility in AI search recommendations',
+        'Outdated website with poor mobile experience',
+        'Inconsistent business information online',
+        'Losing out on high-value roofing projects',
+        'Struggling to generate leads outside of referrals'
+      ]
+    },
+    solution: {
+      description: 'Rex created a customized strategy to boost David\'s AI visibility. The platform guided him through modernizing his online presence and showcasing his expertise to AI algorithms.',
+      approach: [
+        {
+          week: 'Weeks 1-4',
+          focus: 'Digital Footprint Audit & Cleanup',
+          outcome: 'Corrected all inconsistencies in online business information and optimized his website for AI crawlers and mobile users.'
+        },
+        {
+          week: 'Weeks 5-8',
+          focus: 'Authority & Trust Building',
+          outcome: 'Built strong credibility signals by showcasing completed projects, certifications, and positive customer reviews across multiple platforms.'
+        },
+        {
+          week: 'Weeks 9-12',
+          focus: 'AI Content Strategy',
+          outcome: 'Developed and distributed content that answered key customer questions about roofing in the Denver area, establishing Garcia Roofing as a trusted local authority.'
+        }
+      ],
+      note: 'Rex provided David with a clear, step-by-step plan to improve his AI visibility, with each task designed for maximum impact and minimal time commitment.',
+      timeInvested: '15 minutes per week'
+    },
+    results: {
+      metrics: [
+        { label: 'Visibility Confidence Score™', before: '25', after: '81', unit: '/100', improvement: 'Major improvement' },
+        { label: 'Monthly Project Bids', before: '5', after: '15', unit: '', improvement: 'Tripled' },
+        { label: 'Website Traffic', before: '150', after: '400', unit: '/month', improvement: 'Grew significantly' },
+        { label: 'Online Reviews', before: '8', after: '35', unit: '', improvement: 'Significantly increased' }
+      ],
+      achievements: [
+        'Now recommended by AI platforms for "roofing contractors Denver"',
+        'Secured three large commercial roofing projects from AI-driven leads',
+        'Website now ranks on the first page of Google for key local terms',
+        'Increased annual revenue by 35%',
+        'Expanded service area due to increased demand'
+      ],
+      timeline: '12 weeks to achieve market leadership in AI search'
+    },
+    quote: "I never realized how many customers I was missing out on by ignoring AI search. Rex gave me a simple plan to follow, and the results have been incredible. My business has grown more in the last six months than it did in the previous two years.",
+    visualData: {
+      scoreProgression: [25, 33, 42, 51, 60, 68, 75, 81],
+      enquiriesProgression: [5, 7, 9, 11, 13, 14, 15, 15]
+    }
+  },
+  {
+    id: 6,
+    name: 'Carlos Martinez',
+    role: 'Electrician',
+    location: 'Phoenix, AZ',
+    photo: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+    businessName: 'Martinez Electric Co.',
+    established: '2014',
+    teamSize: '3 electricians',
+    challenge: {
+      headline: 'Great Work, No Online Visibility',
+      description: 'Carlos had been running a successful electrical business for years, relying mostly on word-of-mouth and repeat customers. But as more homeowners started using AI tools to find contractors, his business was being overlooked in favor of competitors with stronger online presence.',
+      painPoints: [
+        'Minimal online presence despite years in business',
+        'Google Business profile incomplete and outdated',
+        'Only 5 online reviews',
+        'Not appearing in any AI search recommendations',
+        'Losing bids to less experienced competitors with better marketing'
+      ]
+    },
+    solution: {
+      description: 'Rex helped Carlos transform his offline reputation into online visibility. The platform provided a structured approach to building the digital presence that AI systems need to confidently recommend a business.',
+      approach: [
+        {
+          week: 'Weeks 1-3',
+          focus: 'Foundation Building',
+          outcome: 'Created a complete, professional online presence across all major platforms, ensuring AI systems could find and trust his business information.'
+        },
+        {
+          week: 'Weeks 4-7',
+          focus: 'Review Generation',
+          outcome: 'Implemented a systematic approach to collecting reviews from satisfied customers, building the social proof that AI algorithms prioritize.'
+        },
+        {
+          week: 'Weeks 8-12',
+          focus: 'Local Authority',
+          outcome: 'Established Carlos as a trusted local expert through content and community engagement, increasing his visibility in AI-powered local searches.'
+        }
+      ],
+      note: 'Rex gave Carlos specific, actionable tasks each week that fit into his busy schedule, with clear guidance on exactly what to do and why it matters.',
+      timeInvested: '15 minutes per week'
+    },
+    results: {
+      metrics: [
+        { label: 'Visibility Confidence Score™', before: '19', after: '74', unit: '/100', improvement: 'Major improvement' },
+        { label: 'Monthly Service Calls', before: '18', after: '38', unit: '', improvement: 'More than doubled' },
+        { label: 'Google Profile Views', before: '95', after: '320', unit: '/month', improvement: 'Strong growth' },
+        { label: 'Online Reviews', before: '5', after: '42', unit: '', improvement: 'Significantly increased' }
+      ],
+      achievements: [
+        'Now appears in ChatGPT responses for "licensed electrician Phoenix"',
+        'Featured in Perplexity AI for residential electrical services',
+        'Google Business profile views tripled within 3 months',
+        'Winning more bids against larger competitors',
+        'Hired an additional electrician to meet demand'
+      ],
+      timeline: '8 weeks to see meaningful results'
+    },
+    quote: "I wish I had found Rex years ago. The platform showed me exactly what I was missing online and gave me a simple plan to fix it. Now I'm getting calls from customers who found me through AI search—something I didn't even know was possible.",
+    visualData: {
+      scoreProgression: [19, 28, 38, 47, 55, 62, 68, 74],
+      enquiriesProgression: [18, 22, 26, 30, 33, 35, 37, 38]
+    }
+  }
+];
+
 export default function CaseStudies() {
+  const { country, isUS, getTerm } = useLocalization();
+  
+  // Select case studies based on country
+  const caseStudies = useMemo(() => {
+    return isUS ? usCaseStudies : ukCaseStudies;
+  }, [isUS]);
+
+  // Dynamic hero subtitle based on country
+  const heroSubtitle = useMemo(() => {
+    return isUS 
+      ? 'Anonymized examples from real contractors who improved their AI visibility with Rex. Names and specific business details have been changed to protect privacy.'
+      : 'Anonymised examples from real tradespeople who improved their AI visibility with Rex. Names and specific business details have been changed to protect privacy.';
+  }, [isUS]);
+
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: 'Home', url: '/' },
     { name: 'Case Studies', url: '/case-studies' }
@@ -224,7 +436,7 @@ export default function CaseStudies() {
             <div className="case-studies-hero-content">
               <h1>Real Success Stories</h1>
               <p className="hero-subtitle">
-                Anonymised examples from real UK tradespeople who improved their AI visibility with Rex. Names and specific business details have been changed to protect privacy.
+                {heroSubtitle}
               </p>
               <div className="case-studies-stats">
                 <div className="stat-badge">
@@ -350,26 +562,16 @@ export default function CaseStudies() {
                       border: '1px solid #bae6fd',
                       borderRadius: '8px',
                       padding: '16px',
-                      marginTop: '24px',
-                      display: 'flex',
-                      gap: '12px',
-                      alignItems: 'flex-start'
+                      marginTop: '24px'
                     }}>
-                      <svg viewBox="0 0 20 20" fill="currentColor" style={{ width: '20px', height: '20px', color: '#0284c7', flexShrink: 0, marginTop: '2px' }}>
-                        <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                      </svg>
-                      <p style={{ margin: 0, fontSize: '14px', lineHeight: '1.6', color: '#075985' }}>
-                        <strong>How the platform works:</strong> {study.solution.note}
+                      <p style={{ margin: 0, fontSize: '14px', color: '#0369a1', lineHeight: '1.6' }}>
+                        <strong>Note:</strong> {study.solution.note}
+                      </p>
+                      <p style={{ margin: '8px 0 0 0', fontSize: '14px', color: '#0369a1' }}>
+                        <strong>Time invested:</strong> {study.solution.timeInvested}
                       </p>
                     </div>
                   )}
-
-                  <div className="time-investment">
-                    <svg className="clock-icon" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-                    </svg>
-                    <strong>Time Investment:</strong> {study.solution.timeInvested}
-                  </div>
                 </div>
               </div>
 
@@ -381,113 +583,64 @@ export default function CaseStudies() {
                 </div>
                 <div className="section-content">
                   <h3>The Results</h3>
+                  <p className="results-timeline">
+                    <strong>Timeline:</strong> {study.results.timeline}
+                  </p>
 
-                  <div className="results-metrics-grid">
+                  <div className="metrics-grid">
                     {study.results.metrics.map((metric, idx) => (
-                      <div key={idx} className="metric-card card-hover">
-                        <div className="metric-label">{metric.label}</div>
+                      <div key={idx} className="metric-card">
+                        <span className="metric-label">{metric.label}</span>
                         <div className="metric-comparison">
-                          <div className="metric-before">
-                            <span className="metric-value">{metric.before}</span>
-                            <span className="metric-unit">{metric.unit}</span>
-                          </div>
-                          <svg className="arrow-icon" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                          <span className="metric-before">{metric.before}{metric.unit}</span>
+                          <svg className="metric-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                           </svg>
-                          <div className="metric-after">
-                            <span className="metric-value">{metric.after}</span>
-                            <span className="metric-unit">{metric.unit}</span>
-                          </div>
+                          <span className="metric-after">{metric.after}{metric.unit}</span>
                         </div>
-                        <div className="metric-improvement">{metric.improvement}</div>
+                        <span className="metric-improvement">{metric.improvement}</span>
                       </div>
                     ))}
                   </div>
 
-                  <div className="achievements-list">
+                  <div className="achievements">
                     <h4>Key Achievements:</h4>
                     <ul>
                       {study.results.achievements.map((achievement, idx) => (
                         <li key={idx}>
                           <svg className="achievement-icon" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                           </svg>
                           {achievement}
                         </li>
                       ))}
                     </ul>
                   </div>
-
-                  <div className="results-timeline-badge">
-                    <svg className="calendar-icon" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
-                    </svg>
-                    <strong>Timeline:</strong> {study.results.timeline}
-                  </div>
                 </div>
               </div>
 
-              <div className="case-study-quote-detailed">
-                <svg className="quote-icon-large" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+              <blockquote className="case-study-quote-detailed">
+                <svg className="quote-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
-                <blockquote>{study.quote}</blockquote>
-                <cite>
-                  <strong>{study.name}</strong>
-                  <span>{study.businessName}</span>
-                </cite>
-                <p style={{
-                  fontSize: '13px',
-                  color: '#6b7280',
-                  marginTop: '12px',
-                  marginBottom: 0,
-                  fontStyle: 'italic',
-                  textAlign: 'center'
-                }}>
-                  Results based on 12-week improvement journey
-                </p>
-              </div>
+                <p>{study.quote}</p>
+                <cite>— {study.name}, {study.businessName}</cite>
+              </blockquote>
             </article>
           ))}
+        </div>
 
-          <section className="case-studies-cta">
+        <section className="case-studies-cta">
+          <div className="container">
             <div className="cta-content">
               <h2>Ready to Write Your Success Story?</h2>
-              <p>Join 200+ tradespeople who are improving their AI visibility and growing their businesses with Rex</p>
-              <div className="cta-benefits">
-                <div className="benefit-item">
-                  <svg className="benefit-icon" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span>3-minute setup</span>
-                </div>
-                <div className="benefit-item">
-                  <svg className="benefit-icon" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span>First results in 6-8 weeks</span>
-                </div>
-                <div className="benefit-item">
-                  <svg className="benefit-icon" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span>15 minutes per week</span>
-                </div>
-              </div>
-              <div className="cta-buttons">
-                <Link to="/start" className="button button-large btn-hover">
-                  Get Started Free
-                </Link>
-                <Link to="/how-it-works" className="button-secondary button-large btn-hover">
-                  Learn How It Works
-                </Link>
-              </div>
-              <p className="cta-note">
-                <Link to="/pricing">View pricing</Link> · Try free for 90 days
-              </p>
+              <p>Join hundreds of {isUS ? 'contractors' : 'tradespeople'} who are already improving their AI visibility with Rex.</p>
+              <Link to="/free-score" className="btn btn-primary btn-large">
+                Get Your Free Visibility Score
+              </Link>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
       </main>
 
       <Footer />
