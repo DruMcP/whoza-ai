@@ -28,7 +28,7 @@ const HeroSection = () => {
             lineHeight: '1.2',
             marginBottom: '20px'
           }}>
-            Get Found in AI Search: The <span style={{ color: '#84CC16' }}>AI Employee</span> for UK Tradespeople
+            Get Found in AI Search: The <span style={{ color: '#84CC16' }}>AI Employee</span> for all Trades and Tradespeople
           </h1>
 
           <p style={{
