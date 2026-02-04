@@ -45,7 +45,7 @@ const HeroSection = () => {
             fontSize: '1.05rem',
             marginBottom: '40px'
           }}>
-            For plumbers, electricians, roofers, builders, heating engineers and 50+ other trades across the UK
+            For plumbers, electricians, roofers, builders, heating engineers and 50+ other trades
           </p>
 
           {/* 3-STEP MENTAL MODEL */}
