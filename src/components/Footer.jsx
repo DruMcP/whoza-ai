@@ -54,7 +54,7 @@ const Footer = memo(function Footer() {
                 paddingTop: '16px',
                 borderTop: '1px solid rgba(132, 204, 22, 0.2)'
               }}>
-                Built by a team passionate about helping UK tradespeople compete in the AI age.
+                Built by a team passionate about helping tradespeople compete in the AI age.
               </p>
             </div>
           </div>

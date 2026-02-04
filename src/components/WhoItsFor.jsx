@@ -47,7 +47,7 @@ export default function WhoItsFor() {
                 fontWeight: '500'
               }}>
                 <Icon name="CheckIcon" size={20} style={{ color: 'var(--color-primary-600)', flexShrink: 0 }} />
-                UK trades & local services
+                Trades & local services
               </li>
               <li style={{
                 display: 'flex',
