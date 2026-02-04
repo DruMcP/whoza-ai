@@ -1,5 +1,5 @@
-import { createContext, useContext, useEffect, useState, useCallback, useMemo } from 'react';
-import { supabase } from '../lib/supabase';
+import { createContext, useContext, useEffect, useState, useCallback, useMemo, useRef } from 'react';
+import { supabase, isAbortError } from '../lib/supabase';
 import { analyticsService } from '../services/analyticsService';
 import { logger } from '../utils/logger';
 
@@ -17,78 +17,164 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(true);
+  
+  // Track if component is mounted to prevent state updates after unmount
+  const isMountedRef = useRef(true);
 
   useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setUser(session?.user ?? null);
-      if (session?.user) {
-        fetchUserData(session.user.id);
-      } else {
-        setLoading(false);
+    // Create AbortController for cleanup
+    const abortController = new AbortController();
+    isMountedRef.current = true;
+
+    const initializeAuth = async () => {
+      try {
+        const { data: { session } } = await supabase.auth.getSession();
+        
+        // Only update state if component is still mounted
+        if (!isMountedRef.current) return;
+        
+        setUser(session?.user ?? null);
+        if (session?.user) {
+          await fetchUserData(session.user.id, abortController.signal);
+        } else {
+          setLoading(false);
+        }
+      } catch (error) {
+        // Handle AbortError gracefully
+        if (isAbortError(error)) {
+          console.debug('[AuthContext] Session initialization aborted');
+          return;
+        }
+        logger.error('Error initializing auth session', { error });
+        if (isMountedRef.current) {
+          setLoading(false);
+        }
       }
-    });
+    };
+
+    initializeAuth();
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (event, session) => {
+        // Don't process if component is unmounted
+        if (!isMountedRef.current) return;
+
         (async () => {
-          setUser(session?.user ?? null);
-          if (session?.user) {
-            await fetchUserData(session.user.id);
-            if (event === 'SIGNED_IN') {
-              try {
-                await analyticsService.trackUserLogin(session.user.id);
-              } catch (error) {
-                logger.error('Failed to track login', { error, userId: session.user.id });
+          try {
+            setUser(session?.user ?? null);
+            if (session?.user) {
+              await fetchUserData(session.user.id, abortController.signal);
+              if (event === 'SIGNED_IN' && isMountedRef.current) {
+                try {
+                  await analyticsService.trackUserLogin(session.user.id);
+                } catch (error) {
+                  if (!isAbortError(error)) {
+                    logger.error('Failed to track login', { error, userId: session.user.id });
+                  }
+                }
+              }
+            } else {
+              if (isMountedRef.current) {
+                setUserData(null);
+                setLoading(false);
               }
             }
-          } else {
-            setUserData(null);
-            setLoading(false);
+          } catch (error) {
+            if (isAbortError(error)) {
+              console.debug('[AuthContext] Auth state change handling aborted');
+              return;
+            }
+            logger.error('Error handling auth state change', { error });
           }
         })();
       }
     );
 
-    return () => subscription.unsubscribe();
+    // Cleanup function
+    return () => {
+      isMountedRef.current = false;
+      abortController.abort();
+      subscription.unsubscribe();
+    };
   }, []);
 
-  const fetchUserData = useCallback(async (userId) => {
+  const fetchUserData = useCallback(async (userId, signal) => {
     try {
       const { data, error } = await supabase
         .from('users')
         .select('id, email, business_name, trade_type, created_at, role, subscription_tier, subscription_status, founder')
         .eq('id', userId)
-        .maybeSingle();
+        .maybeSingle()
+        .abortSignal(signal);
 
-      if (error) throw error;
-      setUserData(data);
+      if (error) {
+        // Handle AbortError gracefully
+        if (isAbortError(error)) {
+          console.debug('[AuthContext] User data fetch aborted');
+          return;
+        }
+        throw error;
+      }
+      
+      if (isMountedRef.current) {
+        setUserData(data);
+      }
     } catch (error) {
+      if (isAbortError(error)) {
+        console.debug('[AuthContext] User data fetch aborted');
+        return;
+      }
       logger.error('Error fetching user data', { error, userId });
-      setUserData(null);
+      if (isMountedRef.current) {
+        setUserData(null);
+      }
     } finally {
-      setLoading(false);
+      if (isMountedRef.current) {
+        setLoading(false);
+      }
     }
   }, []);
 
   const signUp = useCallback(async (email, password) => {
-    const { data, error } = await supabase.auth.signUp({
-      email,
-      password,
-    });
-    return { data, error };
+    try {
+      const { data, error } = await supabase.auth.signUp({
+        email,
+        password,
+      });
+      return { data, error };
+    } catch (error) {
+      if (isAbortError(error)) {
+        return { data: null, error: null };
+      }
+      return { data: null, error };
+    }
   }, []);
 
   const signIn = useCallback(async (email, password) => {
-    const { data, error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
-    return { data, error };
+    try {
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
+      return { data, error };
+    } catch (error) {
+      if (isAbortError(error)) {
+        return { data: null, error: null };
+      }
+      return { data: null, error };
+    }
   }, []);
 
   const signOut = useCallback(async () => {
-    const { error } = await supabase.auth.signOut();
-    return { error };
+    try {
+      const { error } = await supabase.auth.signOut();
+      return { error };
+    } catch (error) {
+      if (isAbortError(error)) {
+        return { error: null };
+      }
+      return { error };
+    }
   }, []);
 
   const value = useMemo(() => ({
