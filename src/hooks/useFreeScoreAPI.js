@@ -1,6 +1,6 @@
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { submitFreeScore } from '../services/freeScoreService';
-import { supabaseUrl, supabaseAnonKey } from '../lib/supabase';
+import { supabaseUrl, supabaseAnonKey, isAbortError } from '../lib/supabase';
 
 /**
  * API error types
@@ -10,6 +10,7 @@ const ERROR_TYPES = {
   VALIDATION: 'validation',
   RATE_LIMIT: 'rate_limit',
   SERVER: 'server',
+  ABORTED: 'aborted',
   UNKNOWN: 'unknown'
 };
 
@@ -27,6 +28,8 @@ const REQUEST_DEBOUNCE_MS = 3000; // 3 seconds
  * @returns {string} Error type
  */
 function getErrorType(error, status) {
+  // Check for AbortError first
+  if (isAbortError(error)) return ERROR_TYPES.ABORTED;
   if (status === 429) return ERROR_TYPES.RATE_LIMIT;
   if (error.message?.includes('network') || error.message?.includes('fetch')) {
     return ERROR_TYPES.NETWORK;
@@ -46,6 +49,9 @@ function getErrorType(error, status) {
  */
 function getUserFriendlyMessage(errorType, originalMessage) {
   switch (errorType) {
+    case ERROR_TYPES.ABORTED:
+      // Don't show error message for aborted requests
+      return null;
     case ERROR_TYPES.NETWORK:
       return 'Connection issue. Please check your internet and try again.';
     case ERROR_TYPES.RATE_LIMIT:
@@ -68,6 +74,20 @@ export function useFreeScoreAPI() {
   const [error, setError] = useState(null);
   const [rateLimitInfo, setRateLimitInfo] = useState(null);
   const isProcessingRef = useRef(false);
+  const abortControllerRef = useRef(null);
+  const isMountedRef = useRef(true);
+
+  // Cleanup on unmount
+  useEffect(() => {
+    isMountedRef.current = true;
+    return () => {
+      isMountedRef.current = false;
+      // Abort any in-flight requests on unmount
+      if (abortControllerRef.current) {
+        abortControllerRef.current.abort();
+      }
+    };
+  }, []);
 
   /**
    * Verifies submission with abuse protection
@@ -91,13 +111,17 @@ export function useFreeScoreAPI() {
     const url = `${supabaseUrl}/functions/v1/verify-free-score`;
 
                             
+    // Create abort controller for this request
+    abortControllerRef.current = new AbortController();
+    
     const response = await fetch(url, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${supabaseAnonKey}`,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(payload)
+      body: JSON.stringify(payload),
+      signal: abortControllerRef.current.signal
     });
 
     
@@ -188,14 +212,25 @@ export function useFreeScoreAPI() {
       }
       
     } catch (err) {
-      const userMessage = err.message || getUserFriendlyMessage(ERROR_TYPES.UNKNOWN);
-      setError(userMessage);
+      // Handle AbortError gracefully - don't show error to user
+      if (isAbortError(err)) {
+        console.debug('[useFreeScoreAPI] Request aborted');
+        return;
+      }
+      const errorType = getErrorType(err, 0);
+      const userMessage = getUserFriendlyMessage(errorType, err.message);
+      if (userMessage && isMountedRef.current) {
+        setError(userMessage);
+      }
       throw err;
     } finally {
-      setLoading(false);
+      if (isMountedRef.current) {
+        setLoading(false);
+      }
       isProcessingRef.current = false;
-          }
-  }, []);
+      abortControllerRef.current = null;
+    }
+  }, [verifySubmission]);
 
   /**
    * Clears error state
