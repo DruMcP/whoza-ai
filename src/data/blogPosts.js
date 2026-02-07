@@ -6,6 +6,126 @@
 
 export const blogPosts = [
   {
+    "id": "aeo-geo-ai-search-visibility-faq",
+    "slug": "aeo-geo-ai-search-visibility-faq",
+    "title": "AEO + GEO: 10 FAQs to Get Your Business Recommended by AI Search (Whoza.ai)",
+    "metaDescription": "The 10 most asked questions about AI search visibility (AEO/GEO) with exact steps to show up in ChatGPT, Google AI Overviews, Perplexity, Gemini, and Copilot—plus copy-paste FAQ schema.",
+    "publishDate": "2026-02-07",
+    "author": "Whoza Team",
+    "category": "AI Visibility",
+    "tags": [
+        "AI Search",
+        "AEO",
+        "GEO",
+        "ChatGPT",
+        "Google AI",
+        "Perplexity",
+        "US Business"
+    ],
+    "readTime": "8 min read",
+    "featured": true,
+    "leadAnswer": "AI search has fundamentally changed what \"ranking\" means, with users now seeking **recommendations** from AI assistants like ChatGPT, Google's AI Overviews, Perplexity, Gemini, Copilot, and Claude. To succeed, businesses must focus on **Answer Engine Optimization (AEO)** to be cited within AI answers and **Generative Engine Optimization (GEO)** to ensure consistent inclusion across various AI engines [1]. This post addresses the most common, high-intent questions about AI search visibility with AI-visible, structured answers.",
+    "content": [
+        {
+            "type": "section",
+            "heading": "1) “How do I get my business to show up in ChatGPT recommendations?”",
+            "content": "To show up in ChatGPT-style answers, you need three things AI systems reliably reward:\n\n*   **Citable pages**: pages that answer a question directly, early, with clear headings and short, factual paragraphs AI can quote.\n*   **Trust signals**: real business identity + proof (About page, author/credentials, policies, reviews, case studies, contact info, citations).\n*   **Authority mentions**: third-party references (trade directories, associations, press, partner pages, reputable lists) that confirm you exist and do what you claim.\n\nThere’s **no guaranteed “submit to ChatGPT” button**, but you can dramatically increase inclusion by making your business easy to verify and easy to cite [3].\n\n**Whoza.ai shortcut:** we map the questions your customers ask, generate the right “answer pages,” and track whether AI engines start citing you."
+        },
+        {
+            "type": "section",
+            "heading": "2) “What’s the difference between SEO vs AEO vs GEO?”",
+            "content": "*   **SEO** = rank pages in classic search results.\n*   **AEO (Answer Engine Optimization)** = optimize to be **used/cited in direct answers** (AI Overviews, ChatGPT, voice answers, Copilot) [4].\n*   **GEO (Generative Engine Optimization)** = optimize your brand/content to appear consistently across **generative AI outputs** (multiple models, multiple prompt types, multiple contexts) [5].\n\nIn practice: **SEO builds the foundation**; AEO/GEO is the layer that turns that foundation into **AI recommendations** [6]."
+        },
+        {
+            "type": "section",
+            "heading": "3) “How do I optimize for Google AI Overviews?”",
+            "content": "Google’s own guidance boils down to: **create helpful, people-first content that’s accessible and crawlable**—AI Overviews still rely on web sources and visibility fundamentals [7].\n\nWhat works best for AI Overviews:\n\n*   Put the **best 2–3 sentence answer** immediately under the H1.\n*   Use **question-style H2s** (the way people speak/type).\n*   Add **step-by-step lists**, comparisons, and quick definitions.\n*   Include **first-hand experience** (photos, examples, numbers, “we tested…”), not generic fluff.\n*   Keep content updated and include clear dates where relevant."
+        },
+        {
+            "type": "section",
+            "heading": "4) “How do I get cited by Perplexity (and other ‘citation-first’ AI engines)?”",
+            "content": "Citation-first engines tend to prefer:\n\n*   **Specificity** (named methods, exact steps, clear scope)\n*   **Primary sources** (original research, official docs, unique data)\n*   **Structured formatting** (headings, bullets, tables)\n*   **Strong topical relevance** (one page answers one intent)\n\nCreate **one ‘best page’ per buyer question** (pricing, best option, how-to, checklist, comparison). Then strengthen it with **credible references and real-world proof**."
+        },
+        {
+            "type": "section",
+            "heading": "5) “Do I need schema markup (FAQ schema / LocalBusiness schema) for AI visibility?”",
+            "content": "Schema isn’t magic—but it *does* reduce ambiguity and makes your entity (business) machine-readable.\n\nImplement at minimum:\n\n*   `Organization` or `LocalBusiness`\n*   `WebSite` + `SearchAction` (optional)\n*   `FAQPage` (when you truly have FAQs)\n*   `Product` / `Service` (if relevant)\n*   `Review` (only if compliant and truthful)\n\nAEO/GEO is about being **understood and trusted**. Schema helps engines parse who you are, what you do, where you operate, and which page answers which question."
+        },
+        {
+            "type": "section",
+            "heading": "6) “What content should I publish to get recommended by AI?”",
+            "content": "The highest-performing formats for AI recommendations are:\n\n1.  **“Best for…” pages**\n    Example: *Best emergency plumber in Phoenix for weekend callouts*\n2.  **Comparison pages**\n    Example: *HVAC repair vs replacement costs (US)*\n3.  **Pricing + process pages**\n    Example: *How much does an electrician cost in Atlanta in 2026?*\n4.  **Problem → solution how-tos**\n    Example: *What to do if your AC stops working in summer*\n5.  **Trust pages**\n    Licenses, insurance, guarantees, service areas, response times, case studies, reviews\n\nWrite them so an AI can safely say: **“Here’s the best answer”** and point to *your page* as the source."
+        },
+        {
+            "type": "section",
+            "heading": "7) “How do I make my local business show up for ‘near me’ AI recommendations?”",
+            "content": "Local AI recommendations heavily depend on **entity consistency + local proof**:\n\n*   Exact **NAP consistency** (name/address/phone) everywhere\n*   Complete Google Business Profile (categories, services, photos, Q&A, updates)\n*   Location pages for each service area (not doorway spam—real info)\n*   Reviews that mention **specific services + locations**\n*   Listings on trusted US directories (trade bodies, local citations, niche directories)\n\nAI engines often synthesize from the most **consistent, verified** footprint. (If you’re inconsistent, you’re risky to recommend.)"
+        },
+        {
+            "type": "section",
+            "heading": "8) “How long does AEO/GEO take to work?”",
+            "content": "Typical pattern (assuming you publish the right assets and fix trust signals):\n\n*   **2–6 weeks:** crawl + indexing + early AI mentions for niche prompts\n*   **6–12 weeks:** more consistent citations/recommendations\n*   **3–6 months:** defensible visibility across a wider set of prompts\n\nIt’s faster if you already have: strong reviews, consistent listings, and a clean site structure."
+        },
+        {
+            "type": "section",
+            "heading": "9) “What’s the #1 reason AI won’t recommend my business?”",
+            "content": "The most common blockers:\n\n*   Thin or generic content (nothing citable)\n*   No real-world proof (no reviews, no case studies, no credentials)\n*   Inconsistent business identity (NAP mismatches, outdated pages)\n*   Poor crawlability (blocked pages, messy IA, duplicate content)\n*   No topical focus (trying to be “everything” instead of owning a niche)\n\nAI answers are trying to be safe. If you look unverifiable, you don’t get recommended."
+        },
+        {
+            "type": "section",
+            "heading": "10) “How do I measure AI visibility (and prove ROI)?”",
+            "content": "Track AEO/GEO with three simple metrics:\n\n*   **Share of Answers:** how often you appear for a set of tracked prompts\n*   **Citation/Link Capture:** how often your site is referenced as the source\n*   **Lead Attribution:** calls/forms that mention “I found you on ChatGPT/AI/Google’s AI answer”\n\nBecause AI search is prompt-driven, measurement must be prompt-driven too—this is exactly why benchmark-style AEO/GEO reporting is emerging now [1]."
+        }
+    ],
+    "faqs": [
+      {
+        "question": "How do I get my business to show up in ChatGPT recommendations?",
+        "answer": "Improve AI visibility by creating citable answer pages, strengthening trust signals (identity, reviews, credentials, policies), and earning third-party mentions. There is no guaranteed submission to ChatGPT, but you can increase the likelihood of being cited and recommended by being easy to verify and easy to quote."
+      },
+      {
+        "question": "What’s the difference between SEO vs AEO vs GEO?",
+        "answer": "SEO ranks pages in classic search. AEO (Answer Engine Optimization) improves the chance your content is used in direct AI answers. GEO (Generative Engine Optimization) improves consistent inclusion across generative AI engines and prompt types."
+      },
+      {
+        "question": "How do I optimize for Google AI Overviews?",
+        "answer": "Answer the question immediately under the H1, use question-style H2s, provide step-by-step lists and comparisons, add first-hand proof, keep content updated, and ensure pages are crawlable and helpful."
+      },
+      {
+        "question": "How do I get cited by Perplexity and other citation-first AI engines?",
+        "answer": "Publish highly specific pages that answer one intent, use structured headings and lists, cite reputable sources, include unique experience or data, and keep the content focused and easy to quote."
+      },
+      {
+        "question": "Do I need schema markup for AI visibility?",
+        "answer": "Schema helps machines understand your business and content. Implement LocalBusiness/Organization, Service/Product where relevant, and FAQPage for genuine FAQs to reduce ambiguity and improve machine readability."
+      },
+      {
+        "question": "What content should I publish to get recommended by AI?",
+        "answer": "Create best-for pages, comparisons, pricing and process pages, problem-solution how-tos, and trust pages (credentials, guarantees, case studies, reviews). Write in clear, quotable sections."
+      },
+      {
+        "question": "How do I make my local business show up for ‘near me’ AI recommendations?",
+        "answer": "Keep name/address/phone consistent everywhere, complete your Google Business Profile, build real service-area pages, earn reviews that mention services and locations, and be listed on trusted local and trade directories."
+      },
+      {
+        "question": "How long does AEO/GEO take to work?",
+        "answer": "Often 2–6 weeks for early signals, 6–12 weeks for more consistent inclusion, and 3–6 months for broader, defensible prompt coverage—faster if your trust signals and listings are already strong."
+      },
+      {
+        "question": "What’s the #1 reason AI won’t recommend my business?",
+        "answer": "Weak trust and verification: thin generic content, little proof, inconsistent business identity, crawl issues, or no niche focus. AI systems avoid recommending sources that look risky or unverifiable."
+      },
+      {
+        "question": "How do I measure AI visibility and ROI?",
+        "answer": "Track share of answers for a prompt set, citations/links captured in AI responses, and lead attribution (calls/forms mentioning AI). Prompt-driven monitoring is the clearest way to measure AEO/GEO progress."
+      }
+    ],
+    "cta": {
+      "text": "Is your business ready for the AI revolution?",
+      "buttonText": "Get Your Free AI Visibility Score",
+      "buttonLink": "/free-score"
+    }
+  },
+  {
     "id": "win-local-ai-search-uk-tradespeople-2026",
     "slug": "win-local-ai-search-uk-tradespeople-2026",
     "title": "How UK Tradespeople Can Win Local AI Search in 2026",
@@ -85,7 +205,7 @@ export const blogPosts = [
     ],
     "readTime": "10 min read",
     "featured": true,
-    "leadAnswer": "For tradespeople in Manchester and Birmingham, AI search visibility is the new local battleground. While Manchester businesses benefit from a high density of tech-forward users, Birmingham's market rewards broad regional authority. Success in both cities requires 'Entity Confidence'\u2014building a digital footprint that AI assistants like ChatGPT and Google AI can trust to recommend for plumbing, electrical, and construction services.",
+    "leadAnswer": "For tradespeople in Manchester and Birmingham, AI search visibility is the new local battleground. While Manchester businesses benefit from a high density of tech-forward users, Birmingham's market rewards broad regional authority. Success in both cities requires 'Entity Confidence'—building a digital footprint that AI assistants like ChatGPT and Google AI can trust to recommend for plumbing, electrical, and construction services.",
     "content": [
         {
             "type": "section",
@@ -100,7 +220,7 @@ export const blogPosts = [
         {
             "type": "section",
             "heading": "Birmingham: Scaling Visibility Across the West Midlands",
-            "content": "In Birmingham, the strategy shifts toward regional dominance. AI assistants often group Birmingham trades with the wider West Midlands area. To capture this traffic, Birmingham plumbers and builders should focus on 'Service Area Schema.' By explicitly telling AI that you serve Solihull, Dudley, and Wolverhampton alongside Birmingham city center, you increase the likelihood of being the primary recommendation for the entire region. Birmingham's diverse market means AI is looking for breadth\u2014ensure your website mentions specific landmarks and neighborhoods to anchor your local relevance."
+            "content": "In Birmingham, the strategy shifts toward regional dominance. AI assistants often group Birmingham trades with the wider West Midlands area. To capture this traffic, Birmingham plumbers and builders should focus on 'Service Area Schema.' By explicitly telling AI that you serve Solihull, Dudley, and Wolverhampton alongside Birmingham city center, you increase the likelihood of being the primary recommendation for the entire region. Birmingham's diverse market means AI is looking for breadth—ensure your website mentions specific landmarks and neighborhoods to anchor your local relevance."
         },
         {
             "type": "section",
