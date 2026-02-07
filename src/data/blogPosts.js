@@ -5,7 +5,7 @@
  */
 
 export const blogPosts = [
-  {
+{
     "id": "us-contractor-ai-visibility-checklist",
     "slug": "us-contractor-ai-visibility-checklist",
     "title": "10-Step AI Visibility Checklist for US Contractors in 2026",
@@ -30,39 +30,7 @@ export const blogPosts = [
         "heading": "The 10-Step AI Visibility Checklist",
         "content": "Follow these steps to elevate your contracting business in AI search results:\n\n| Step | Action Item | Details & Why It Matters | Expected Outcome |\n| :--- | :---------- | :----------------------- | :--------------- |\n| **1** | **Audit Your Google Business Profile (GBP)** | Ensure all information (name, address, phone, hours, services) is 100% accurate and consistent. AI engines heavily rely on GBP for local recommendations. | Enhanced local AI visibility, accurate business citations. |\n| **2** | **Optimize for Entity Confidence** | Consistently use your full business name and key service terms across all online properties. AI systems build a \'knowledge graph\' of your business based on these consistent signals. | Stronger brand recognition by AI, higher likelihood of direct citation. |\n| **3** | **Implement FAQ Schema on Key Pages** | For every common customer question (e.g., \"How much does a new roof cost?\" ), create a dedicated FAQ section with clear, concise answers and implement `FAQPage` Schema. AI loves structured Q&A content. | Direct answers in AI Overviews, increased topical authority. |\n| **4** | **Develop \'Best Pages\' for Buyer Questions** | Create dedicated pages for high-intent queries like \"Best HVAC Contractor in [City]\" or \"Roof Repair Cost Checklist.\" These pages should be comprehensive, authoritative, and structured for AI citation. | Capture high-value leads, establish thought leadership. |\n| **5** | **Cultivate a Strong Review Profile** | Actively solicit and respond to customer reviews on Google, Yelp, and industry-specific platforms. AI engines use sentiment and quantity of reviews as a trust signal for recommendations. | Increased AI trust signals, improved local ranking. |\n| **6** | **Ensure Mobile-First Responsiveness** | Your website must be fast and perfectly optimized for mobile devices. AI crawlers prioritize mobile-friendly experiences, and many AI searches originate from mobile. | Better user experience, higher AI crawlability. |\n| **7** | **Link to Primary Sources** | Where appropriate, link to official industry standards, government regulations, or academic research. This signals to AI engines that your content is well-researched and credible. | Boosted content authority, improved citation potential. |\n| **8** | **Create \'How-To\' Guides with Schema** | For common tasks or problems your customers face, create step-by-step guides (e.g., \"How to Choose the Right Plumber\" ). Implement `HowTo` Schema to provide structured instructions for AI. | Direct answers in AI search, position as an expert. |\n| **9** | **Monitor Your AI Visibility Score** | Use tools like Whoza.ai\'s Visibility Confidence Score™ to track your progress and identify areas for improvement. Data-driven optimization is key to sustained AI success. | Continuous improvement, proactive issue resolution. |\n| **10** | **Regularly Update & Refresh Content** | AI engines favor fresh, up-to-date information. Periodically review and update your existing content, especially \'Best Pages\' and FAQs, to ensure accuracy and relevance. | Sustained AI ranking, reduced content decay. |"
       },
-      {
-        "type": "section",
-        "heading": "Why This Checklist Matters for US Contractors",
-        "content": "The shift to AI-driven search is not just a technological change; it\'s a **behavioral shift** in how customers find and choose services. By proactively optimizing for AI visibility, US contractors can:\n\n*   **Gain a Competitive Edge**: Many competitors are still focused on outdated SEO tactics. Mastering AEO/GEO now positions you as a leader.\n*   **Attract Higher-Quality Leads**: Customers asking AI for recommendations are often further along in their buying journey, leading to higher conversion rates.\n*   **Build Long-Term Authority**: Consistent, credible AI citations build lasting trust and authority for your brand, making you the go-to choice in your service area.\n"
-      },
-      {
-        "type": "section",
-        "heading": "Conclusion: Your Path to AI Search Dominance",
-        "content": "This 10-step checklist provides a robust framework for US contractors to achieve world-class AI visibility. By focusing on specificity, primary sources, structured data, and topical relevance, you can ensure your business is not just found, but **recommended** by the AI engines that power modern search. Start implementing these steps today and secure your business\'s future in the AI-first economy."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "What is the most important step in the AI Visibility Checklist?",
-        "answer": "Auditing your Google Business Profile (GBP) is arguably the most critical first step. AI engines heavily rely on accurate and complete GBP information for local recommendations. Without a strong GBP foundation, other optimization efforts will be less effective."
-      },
-      {
-        "question": "How often should I review my AI Visibility?",
-        "answer": "AI search algorithms are constantly evolving. It\'s recommended to review your AI visibility and implement tasks at least weekly. Platforms like Whoza.ai provide continuous monitoring and weekly actionable tasks to keep your business optimized."
-      },
-      {
-        "question": "Can I use this checklist for other countries?",
-        "answer": "While the core principles of AI visibility are universal, this checklist is specifically tailored for US contractors, considering local platforms and market dynamics. For other regions, similar principles apply, but specific platforms and regulations may differ."
-      }
-    ],
-    "cta": {
-      "heading": "Ready to master AI search for your contracting business?",
-      "text": "Get your free Visibility Confidence Score™ and start your journey to AI search dominance today.",
-      "buttonText": "Get Your Free AI Visibility Score",
-      "buttonLink": "/free-score"
-    }
-  },
-  {
+{
     "id": "us-tradesperson-ai-search-pricing-guide",
     "slug": "us-tradesperson-ai-search-pricing-guide",
     "title": "US Tradesperson\'s Guide to AI Search Pricing: What to Expect in 2026",
@@ -87,53 +55,7 @@ export const blogPosts = [
         "heading": "Understanding AI Visibility Pricing Models",
         "content": "Unlike traditional SEO, which often bills for keywords or backlinks, AI visibility services typically focus on outcomes related to AI citation and entity confidence. Here\'s a breakdown of common pricing models:\n\n| Pricing Model | Description | Typical Range (USD/month) | Who it\'s for |\n| :------------ | :---------- | :------------------------ | :----------- |\n| **Subscription-based AI Tools** | Automated platforms providing tasks and insights for AEO/GEO. | $50 - $200 | Small to medium-sized businesses, owner-operators |\n| **AI-Focused Agencies** | Full-service agencies specializing in AEO/GEO strategy and implementation. | $500 - $2,000+ | Larger firms, multi-location businesses, those seeking hands-off management |\n| **Consulting & Training** | Expert guidance, audits, and training for in-house teams. | $200 - $500/hour | Businesses with existing marketing teams, those needing strategic direction |"
       },
-      {
-        "type": "section",
-        "heading": "Key Factors Influencing AI Visibility Pricing",
-        "content": "Several factors determine the cost and effectiveness of an AI visibility strategy:\n\n*   **Scope of Services**: Does the service include content creation, schema implementation, local citation building, or just analytics?\n*   **Geographic Targeting**: Optimizing for a single city is less complex (and thus less expensive) than optimizing for multiple states or a national presence.\n*   **Competitive Landscape**: Highly competitive markets (e.g., HVAC in major metropolitan areas) require more intensive and costly efforts.\n*   **Platform Integration**: Services that integrate directly with Google Business Profile, Apple Maps, and other key AI data sources often provide more value.\n*   **Reporting & Analytics**: Detailed reporting on AI citations, entity confidence scores, and lead generation justifies higher pricing."
-      },
-      {
-        "type": "section",
-        "heading": "Why Whoza.ai Offers a Unique Value Proposition",
-        "content": "Whoza.ai\'s approach is designed to be cost-effective and outcome-driven for US tradespeople. Our subscription model provides:\n\n*   **Predictable Costs**: A clear monthly fee with no hidden charges.\n*   **Actionable Tasks**: Weekly, personalized tasks delivered by Rex, our AI employee, directly to your inbox, focusing on high-impact AEO/GEO activities.\n*   **Visibility Confidence Score™**: A proprietary metric that tracks your business\'s likelihood of being recommended by AI engines.\n*   **Focus on Entity Confidence**: Our platform is built on the principle of Entity Confidence Engineering™, ensuring your business is consistently and credibly represented across the web, a critical factor for AI recommendations."
-      },
-      {
-        "type": "section",
-        "heading": "Frequently Asked Questions about AI Visibility Pricing",
-        "content": "### Q1: Is AI visibility more expensive than traditional SEO?\n\n**A:** Not necessarily. While traditional SEO can range from $500 to $2,000+ per month for agencies, AI visibility tools like Whoza.ai offer more affordable, task-driven solutions starting around $50-$200/month. The key is to understand the specific outcomes you\'re paying for.\n\n### Q2: Can I do AI visibility optimization myself?\n\n**A:** Yes, with the right guidance. Platforms like Whoza.ai provide the tools and step-by-step instructions to empower tradespeople to manage their own AI visibility. This significantly reduces costs compared to hiring an agency.\n\n### Q3: What\'s the ROI of investing in AI visibility?\n\n**A:** The ROI can be substantial. AI-recommended businesses often see higher conversion rates because customers trust AI recommendations more than traditional ads. By appearing in AI answers, you can capture high-intent leads that are further down the buying funnel.\n\n### Q4: How quickly will I see results?\n\n**A:** While results vary, businesses often see initial improvements in their Visibility Confidence Score™ within 30-60 days. Significant increases in AI citations and lead generation typically occur within 3-6 months of consistent effort."
-      },
-      {
-        "type": "section",
-        "heading": "Conclusion: Invest in Your Future with AI Visibility",
-        "content": "The shift to AI-driven search is not a trend; it\'s the new standard. Investing in AI visibility is no longer optional for US tradespeople who want to remain competitive. By understanding the pricing models and focusing on solutions that build **Entity Confidence** and drive **AI citations**, you can secure your business\'s future in the AI age."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Is AI visibility more expensive than traditional SEO?",
-        "answer": "Not necessarily. While traditional SEO can range from $500 to $2,000+ per month for agencies, AI visibility tools like Whoza.ai offer more affordable, task-driven solutions starting around $50-$200/month. The key is to understand the specific outcomes you\'re paying for."
-      },
-      {
-        "question": "Can I do AI visibility optimization myself?",
-        "answer": "Yes, with the right guidance. Platforms like Whoza.ai provide the tools and step-by-step instructions to empower tradespeople to manage their own AI visibility. This significantly reduces costs compared to hiring an agency."
-      },
-      {
-        "question": "What\'s the ROI of investing in AI visibility?",
-        "answer": "The ROI can be substantial. AI-recommended businesses often see higher conversion rates because customers trust AI recommendations more than traditional ads. By appearing in AI answers, you can capture high-intent leads that are further down the buying funnel."
-      },
-      {
-        "question": "How quickly will I see results?",
-        "answer": "While results vary, businesses often see initial improvements in their Visibility Confidence Score™ within 30-60 days. Significant increases in AI citations and lead generation typically occur within 3-6 months of consistent effort."
-      }
-    ],
-    "cta": {
-      "heading": "Ready to see how your business scores in AI search?",
-      "text": "Find out if AI can find your business. Get your free AI visibility score in 60 seconds.",
-      "buttonText": "Get Your Free AI Visibility Score",
-      "buttonLink": "/free-score"
-    }
-  },
-  {
+{
     "id": "manchester-vs-birmingham-local-seo-strategies-2026",
     "slug": "manchester-vs-birmingham-local-seo-strategies-2026",
     "title": "Manchester vs Birmingham: Local SEO Strategies",
@@ -157,49 +79,7 @@ export const blogPosts = [
         "heading": "Tale of Two Cities",
         "content": "Manchester and Birmingham are both major UK hubs, but they have distinct digital landscapes. This guide provides tailored advice for tradespeople in each city.\n\nUnderstanding the unique characteristics of your city helps you create content and build a presence that resonates with local customers and AI systems alike."
       },
-      {
-        "type": "section",
-        "heading": "Manchester: The Digital Hub",
-        "content": "Manchester has a thriving digital and media scene. Here\'s how to leverage it:\n\n**Focus on Media:** Manchester has a strong digital media presence. Connect with local bloggers and online magazines like Manchester Evening News, I Love MCR, and Confidentials.\n\n**Leverage Northern Quarter Cool:** If your trade has a design or craft element, align yourself with the city\'s creative identity. Showcase unique or bespoke work.\n\n**Student Population:** A large student population means high demand for rental property maintenance and repairs. Consider targeting landlords and letting agents.\n\n**Tech-Savvy Customers:** Manchester residents are often early adopters of technology, including AI search. They\'re more likely to ask ChatGPT for recommendations."
-      },
-      {
-        "type": "section",
-        "heading": "Birmingham: The Suburban Powerhouse",
-        "content": "Birmingham is a city of towns and suburbs. Here\'s how to optimise for it:\n\n**Hyper-Local Suburbs:** Target specific suburbs like Solihull, Sutton Coldfield, Harborne, Edgbaston, and Moseley. Each has its own identity and customer base.\n\n**Canal Network:** For trades related to properties near the canals, this is a unique local angle. Many canal-side properties have specific maintenance needs.\n\n**NEC and Events:** The NEC provides opportunities for tradespeople who service exhibition spaces and related businesses.\n\n**B2B Opportunities:** Birmingham\'s strong business district means opportunities for commercial work and B2B relationships."
-      },
-      {
-        "type": "section",
-        "heading": "Strategy Comparison",
-        "content": "| Feature | Manchester | Birmingham |\n| :--- | :--- | :--- |\n| **Digital Focus** | Media, creative, tech | Hyper-local, suburbs |\n| **Key Opportunity** | Align with digital culture | Dominate specific suburbs |\n| **Content Angle** | Design, innovation | Reliability, community |\n| **Target Audience** | Tech-savvy, students | Families, local businesses |"
-      },
-      {
-        "type": "section",
-        "heading": "Conclusion",
-        "content": "While both cities offer great opportunities, a one-size-fits-all approach won\'t work. Manchester rewards a digitally-savvy, creative approach, while Birmingham requires a more granular, community-focused strategy. By understanding these nuances, you can build a powerful local presence that AI engines will recognize and reward."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Which city is better for a new tradesperson?",
-        "answer": "It depends on your specialty. Manchester\'s strong rental market is great for maintenance trades, while Birmingham\'s suburban sprawl offers opportunities for larger domestic projects. Both have strong economies."
-      },
-      {
-        "question": "How important are online reviews in these cities?",
-        "answer": "Extremely important in both. A strong review profile on Google, Trustpilot, and other platforms is a key signal of trust for both customers and AI systems."
-      },
-      {
-        "question": "Should I have a different website for each city?",
-        "answer": "Not necessarily. You can create city-specific landing pages on your main website. This is more efficient for SEO and AEO and allows you to consolidate your authority."
-      }
-    ],
-    "cta": {
-      "heading": "Ready to conquer your city?",
-      "text": "Get your free AI visibility score and see how you stack up against the competition in your local area.",
-      "buttonText": "Get Your Free AI Visibility Score",
-      "buttonLink": "/free-score"
-    }
-  },
-  {
+{
     "id": "win-local-ai-search-uk-tradespeople-2026",
     "slug": "win-local-ai-search-uk-tradespeople-2026",
     "title": "How UK Tradespeople Can Win Local AI Search in 2026",
@@ -223,44 +103,7 @@ export const blogPosts = [
         "heading": "The Shift to AI-Powered Search",
         "content": "In 2026, customers are no longer just searching; they\'re asking. AI assistants like ChatGPT, Google\'s AI Overviews, and Perplexity are becoming the new local directory. If your business isn\'t being recommended by these AI engines, you\'re losing out on valuable leads."
       },
-      {
-        "type": "section",
-        "heading": "What is Entity Confidence?",
-        "content": "Entity Confidence is the level of trust an AI has in the information it finds about your business online. The more consistent and authoritative your business details (name, address, phone number, services) are across different websites, the higher your Entity Confidence. This is the foundation of AI visibility."
-      },
-      {
-        "type": "section",
-        "heading": "Actionable Steps for UK Tradespeople",
-        "content": "1.  **Perfect Your Google Business Profile:** This is the single most important source of information for local AI search. Fill out every section, add high-quality photos, and keep your hours and services up-to-date.\n2.  **Build a Review Powerhouse:** Actively encourage customers to leave reviews on Google, Trustpilot, and other relevant platforms. Respond to all reviews, both positive and negative.\n3.  **Create Question-Based Content:** Think about the questions your customers are asking and create blog posts or FAQ pages that answer them directly. For example, \'How much does it cost to replaster a room in the UK?\'\n4.  **Get Listed in Reputable Directories:** Make sure your business is listed in high-quality directories like Yell, Thomson Local, and trade-specific sites. Consistency is key."
-      },
-      {
-        "type": "section",
-        "heading": "Conclusion",
-        "content": "Winning local AI search in 2026 isn\'t about secret tricks; it\'s about building a strong, trustworthy online presence. By focusing on Entity Confidence and creating helpful, question-based content, UK tradespeople can ensure they are the first choice for AI-powered recommendations."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Do I need a website to be found by AI?",
-        "answer": "While a strong Google Business Profile is the most important factor, a well-structured website with locally relevant content significantly boosts your Entity Confidence and provides more opportunities to answer customer questions."
-      },
-      {
-        "question": "How is AI search different from traditional SEO?",
-        "answer": "Traditional SEO focuses on ranking for keywords. AI search (AEO) focuses on being *the answer* to a customer\'s question. It\'s about providing direct, trustworthy information that an AI can confidently recommend."
-      },
-      {
-        "question": "What\'s the best way to get more reviews?",
-        "answer": "The best way is to ask! Make it part of your process to send a follow-up email or text message to every customer with a direct link to your review profiles."
-      }
-    ],
-    "cta": {
-      "heading": "Ready to win local AI search?",
-      "text": "Get your free AI visibility score and see how your business stacks up.",
-      "buttonText": "Get Your Free AI Visibility Score",
-      "buttonLink": "/free-score"
-    }
-  },
-  {
+{
     "id": "aeo-geo-ai-search-visibility-faq",
     "slug": "aeo-geo-ai-search-visibility-faq",
     "title": "AEO + GEO: 10 FAQs to Get Your Business Recommended by AI Search (Whoza.ai)",
@@ -284,39 +127,7 @@ export const blogPosts = [
         "heading": "The New Rules of Search: AEO & GEO",
         "content": "The world of search is no longer just about keywords and backlinks. It\'s about providing direct, citable answers to customer questions. This is the essence of Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO). If you want to be recommended by AI, you need to think like an answer engine."
       },
-      {
-        "type": "section",
-        "heading": "10 Critical FAQs for AI Visibility",
-        "content": "1.  **What is the single most important factor for AI visibility?**\n    *Entity Confidence*. This is the AI\'s trust in the accuracy and consistency of your business information (name, address, phone, services) across the web.\n\n2.  **How do I optimize for \'near me\' searches in the AI era?**\n    By ensuring your Google Business Profile is perfectly optimized and your location data is consistent across all platforms. AI relies heavily on this data for geo-specific recommendations.\n\n3.  **What kind of content should I create?**\n    Content that directly answers customer questions. Think \'How to...\', \'What is...\', \'Cost of...\', and \'Best...\'. Each piece of content should be a definitive answer to a specific query.\n\n4.  **Are reviews still important?**\n    More than ever. AI engines use the sentiment, recency, and quantity of reviews as a primary trust signal. A strong review profile is non-negotiable.\n\n5.  **What is \'structured data\' and why does it matter?**\n    Structured data (like Schema.org) is a way of formatting your website\'s code to explicitly tell AI engines what your content is about. It\'s like giving them a cheat sheet to your business.\n\n6.  **How do I get cited in ChatGPT?**\n    By becoming a primary source of information. Publish original research, unique data, or expert insights that aren\'t available elsewhere. AI engines are designed to find and cite authoritative sources.\n\n7.  **Should I focus on my website or my Google Business Profile?**\n    Both. Your Google Business Profile is your foundation for local AI search, but your website is where you build deep topical authority and provide comprehensive answers.\n\n8.  **What\'s the difference between AEO and SEO?**\n    SEO is about ranking in a list of links. AEO is about *being the answer*. It\'s a shift from optimizing for clicks to optimizing for citation.\n\n9.  **How long does it take to see results?**\n    You can see initial improvements in your Entity Confidence within weeks. Significant increases in AI citations and leads typically take 3-6 months of consistent effort.\n\n10. **What is the future of local search?**\n    The future is conversational, answer-driven, and powered by AI. Businesses that adapt to this new reality will win the next decade of local search."
-      },
-      {
-        "type": "section",
-        "heading": "Conclusion",
-        "content": "Mastering AI visibility is not about gaming the system; it\'s about building a genuinely trustworthy and authoritative online presence. By focusing on these 10 core principles, you can position your business to be the go-to recommendation for AI search engines, driving high-intent customers directly to your door."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "What is Entity Confidence?",
-        "answer": "Entity Confidence is the AI\'s trust in the accuracy and consistency of your business information (name, address, phone, services) across the web. It\'s a critical factor for being recommended by AI search engines."
-      },
-      {
-        "question": "What is the difference between AEO and SEO?",
-        "answer": "SEO (Search Engine Optimization) is about ranking in a list of links. AEO (Answer Engine Optimization) is about *being the answer* to a customer\'s question. It\'s a shift from optimizing for clicks to optimizing for citation."
-      },
-      {
-        "question": "How do I get cited in ChatGPT?",
-        "answer": "By becoming a primary source of information. Publish original research, unique data, or expert insights that aren\'t available elsewhere. AI engines are designed to find and cite authoritative sources."
-      }
-    ],
-    "cta": {
-      "heading": "Ready to become the answer?",
-      "text": "Get your free AI visibility score and see how your business performs in the new world of AI-powered search.",
-      "buttonText": "Get Your Free AI Visibility Score",
-      "buttonLink": "/free-score"
-    }
-  },
-  {
+{
     "id": "uk-trades-playbook-2026",
     "slug": "uk-trades-playbook-2026",
     "title": "The UK Tradesperson\'s AI Visibility Playbook 2026",
@@ -340,44 +151,7 @@ export const blogPosts = [
         "heading": "The End of Traditional SEO for Tradespeople",
         "content": "For years, SEO for tradespeople was about keywords and local packs. That era is over. In 2026, a staggering 40% of local service searches are happening via conversational AI (Source: Gartner). If you\'re not optimized for AI, you\'re invisible to a huge chunk of your market."
       },
-      {
-        "type": "section",
-        "heading": "The Two Pillars of AI Visibility",
-        "content": "1.  **Entity Confidence:** This is the AI\'s trust in your business\'s existence and details. It\'s built by ensuring your Name, Address, and Phone Number (NAP) are perfectly consistent across the web, from your website to your Google Business Profile to niche trade directories.\n2.  **Topical Authority:** This is the AI\'s belief that you are an expert in your field. It\'s built by creating high-quality content that answers specific customer questions, like \'How much does a boiler service cost in London?\' or \'What are the signs of a leaking roof?\'."
-      },
-      {
-        "type": "section",
-        "heading": "The 5-Step Playbook for 2026",
-        "content": "1.  **The Foundation: Perfect Your Google Business Profile.** Your GBP is the single most important data source for local AI. Fill out every single field, upload high-res photos, and encourage reviews.\n2.  **The Content Engine: Answer Every Question.** Create a dedicated page on your website for every service you offer and every question a customer might have. Use clear headings and provide direct, unambiguous answers.\n3.  **The Trust Builder: A Five-Star Review Strategy.** Implement a system to consistently generate new reviews on Google, Trustpilot, and other key platforms. Respond to every review, good or bad.\n4.  **The Authority Signal: Hyper-Local Content.** Create content specific to your service area. For example, a blog post on \'The challenges of plumbing in Victorian houses in Manchester\' shows true local expertise.\n5.  **The Technical Edge: Schema Markup.** Implement `LocalBusiness`, `FAQPage`, and `Article` schema on your website. This is like speaking the AI\'s native language, making it easy for it to understand and trust your content."
-      },
-      {
-        "type": "section",
-        "heading": "Conclusion: Your Move",
-        "content": "The shift to AI search is the biggest opportunity for tradespeople in a decade. By following this playbook, you can build a defensible moat around your business, ensuring you are the go-to recommendation for AI-powered search, now and in the future."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "What is the most important part of the AI Visibility Playbook?",
-        "answer": "Perfecting your Google Business Profile is the most critical first step. It\'s the primary source of truth for local AI search engines."
-      },
-      {
-        "question": "How is this different from what my SEO agency does?",
-        "answer": "Most traditional SEO agencies are still focused on ranking for keywords. This playbook is about being *the answer* to a customer\'s question, which is a fundamental shift in strategy required for AI visibility."
-      },
-      {
-        "question": "Can I do this myself?",
-        "answer": "Absolutely. This playbook is designed to be actionable for any tradesperson. Platforms like Whoza.ai can also provide the tools and guidance to accelerate your progress."
-      }
-    ],
-    "cta": {
-      "heading": "Ready to implement the playbook?",
-      "text": "Get your free AI visibility score to see where you stand and get a personalized action plan.",
-      "buttonText": "Get Your Free AI Visibility Score",
-      "buttonLink": "/free-score"
-    }
-  },
-  {
+{
     "id": "why-bing-matters-for-tradespeople-in-2026",
     "slug": "why-bing-matters-for-tradespeople-in-2026",
     "title": "Why Bing Matters for Tradespeople in 2026",
@@ -401,44 +175,7 @@ export const blogPosts = [
         "heading": "The Bing-ChatGPT Connection",
         "content": "While Google dominates traditional search, Bing has a secret weapon: its deep integration with OpenAI. Many of the real-time, location-based answers provided by ChatGPT are powered by Bing\'s search index. This means that if you\'re not visible on Bing, you\'re invisible to a huge number of potential customers using ChatGPT to find local services."
       },
-      {
-        "type": "section",
-        "heading": "Three Reasons Bing is a Must-Win for Tradespeople",
-        "content": "1.  **Direct Line to ChatGPT:** Optimizing for Bing is the most direct way to influence your visibility in ChatGPT\'s local service recommendations.\n2.  **Less Competition:** Many businesses and SEO agencies still neglect Bing, meaning there\'s a golden opportunity to stand out with less effort.\n3.  **Affluent Demographic:** Bing users often have a higher disposable income, which can translate to higher-value jobs for tradespeople."
-      },
-      {
-        "type": "section",
-        "heading": "How to Optimize for Bing in 2026",
-        "content": "- **Claim and Optimize Your Bing Places Listing:** This is the equivalent of Google Business Profile. Ensure it\'s 100% complete and accurate.\n- **Submit Your Site to Bing Webmaster Tools:** This allows you to monitor your site\'s health and performance in Bing\'s index.\n- **Focus on High-Quality, Authoritative Content:** Just like with Google, Bing rewards content that demonstrates expertise, authoritativeness, and trustworthiness (E-A-T)."
-      },
-      {
-        "type": "section",
-        "heading": "Conclusion",
-        "content": "In the AI-first world of 2026, neglecting Bing is a major strategic error. By optimizing for Bing, you\'re not just reaching a different search engine audience; you\'re tapping directly into the AI recommendation ecosystem. For UK tradespeople, this is a powerful and often overlooked way to get ahead of the competition."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Is Bing more important than Google for AI search?",
-        "answer": "Not necessarily more important, but it\'s a critical and often neglected piece of the puzzle. A comprehensive AI visibility strategy must include both Google and Bing."
-      },
-      {
-        "question": "Does optimizing for Bing help my Google ranking?",
-        "answer": "While the algorithms are different, the core principles of creating high-quality content and building a trustworthy online presence will benefit your visibility on both platforms."
-      },
-      {
-        "question": "What is Bing Places?",
-        "answer": "Bing Places for Business is Bing\'s equivalent of Google Business Profile. It\'s a free platform where you can manage your business listing and ensure your information is accurate in Bing\'s search results and, by extension, in AI tools that use Bing\'s data."
-      }
-    ],
-    "cta": {
-      "heading": "Ready to get visible on Bing?",
-      "text": "Get your free AI visibility score to see how you perform on both Google and Bing, and get a personalized plan to improve.",
-      "buttonText": "Get Your Free AI Visibility Score",
-      "buttonLink": "/free-score"
-    }
-  },
-  {
+{
     "id": "google-ai-overviews-for-tradespeople",
     "slug": "google-ai-overviews-for-tradespeople",
     "title": "Google\'s AI Overviews: A Guide for Tradespeople",
@@ -461,39 +198,7 @@ export const blogPosts = [
         "heading": "What Are AI Overviews?",
         "content": "AI Overviews are Google\'s attempt to answer user queries directly within the search results page, using generative AI. Instead of just showing a list of links, Google now often provides a detailed, conversational answer that summarizes information from multiple sources. For local service queries, these overviews often include a list of recommended businesses."
       },
-      {
-        "type": "section",
-        "heading": "How to Get Your Business Featured in AI Overviews",
-        "content": "1.  **Master Your Google Business Profile:** This is the most important factor. Your GBP must be 100% complete, with accurate information, high-quality photos, and a steady stream of new reviews.\n2.  **Build Topical Authority on Your Website:** Your website needs to have detailed content that demonstrates your expertise. Create pages for each of your services and write blog posts that answer common customer questions.\n3.  **Focus on E-A-T (Expertise, Authoritativeness, Trustworthiness):** Google\'s algorithms are designed to reward businesses that demonstrate high levels of E-A-T. This means having a professional website, positive reviews, and content that is accurate and helpful."
-      },
-      {
-        "type": "section",
-        "heading": "The Future is Now",
-        "content": "AI Overviews are not a future trend; they are here now and are fundamentally changing how customers find local services. Tradespeople who adapt their strategy to this new reality will have a significant advantage over their competitors."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Are AI Overviews replacing the local map pack?",
-        "answer": "In many cases, yes. The AI Overview often includes a list of recommended businesses, which can push the traditional map pack further down the page or replace it entirely."
-      },
-      {
-        "question": "Do I need to pay to be in AI Overviews?",
-        "answer": "No, being featured in AI Overviews is organic and cannot be paid for. It\'s based on the quality and relevance of your online presence."
-      },
-      {
-        "question": "What\'s the best way to track if I\'m appearing in AI Overviews?",
-        "answer": "You can manually search for your key services and location, or use a platform like Whoza.ai which provides specific tracking and analytics for your visibility in AI-powered search results."
-      }
-    ],
-    "cta": {
-      "heading": "Ready to be featured in AI Overviews?",
-      "text": "Get your free AI visibility score to see how you\'re performing in Google\'s new AI-powered search results.",
-      "buttonText": "Get Your Free AI Visibility Score",
-      "buttonLink": "/free-score"
-    }
-  },
-  {
+{
     "id": "entity-confidence-for-tradespeople",
     "slug": "entity-confidence-for-tradespeople",
     "title": "What is Entity Confidence and Why It Matters for Tradespeople",
@@ -516,34 +221,615 @@ export const blogPosts = [
         "heading": "How AI \'Thinks\' About Your Business",
         "content": "AI doesn\'t \'see\' your website like a human does. Instead, it crawls the web and gathers data points about your business (your \'entity\'). It looks for your name, address, phone number, services, reviews, and mentions across thousands of websites. The more consistent and positive this information is, the higher your Entity Confidence."
       },
+{
+    "id": "manchester-vs-birmingham-local-ai-seo-strategies-tradespeople",
+    "slug": "manchester-vs-birmingham-local-ai-seo-strategies-tradespeople",
+    "title": "Manchester vs Birmingham: Local AI SEO Strategies for Tradespeople",
+    "metaDescription": "Compare local AI SEO strategies for tradespeople in Manchester and Birmingham. Learn how to optimize for ChatGPT and Google AI recommendations in the UK's two largest regional economies to dominate the local market.",
+    "publishDate": "2026-02-06",
+    "author": "Whoza.ai Team",
+    "category": "Local AI Visibility",
+    "tags": [
+      "Manchester tradesperson AI",
+      "Birmingham plumber ChatGPT",
+      "local AI SEO UK",
+      "regional AI visibility",
+      "UK trades",
+      "AEO"
+    ],
+    "readTime": "10 min read",
+    "featured": true,
+    "leadAnswer": "For tradespeople in Manchester and Birmingham, AI search visibility is the new local battleground. While Manchester businesses benefit from a high density of tech-forward users, Birmingham's market rewards broad regional authority. Success in both cities requires 'Entity Confidence'—building a digital footprint that AI assistants like ChatGPT and Google AI can trust to recommend for plumbing, electrical, and construction services.",
+    "content": [
       {
         "type": "section",
-        "heading": "How to Build Entity Confidence",
-        "content": "- **NAP Consistency:** Ensure your Name, Address, and Phone number are identical everywhere they appear online.\n- **Structured Data:** Use Schema.org markup on your website to explicitly tell AI what your business is and what you do.\n- **High-Quality Citations:** Get your business listed in reputable online directories and trade-specific websites.\n- **Positive Reviews:** A steady stream of positive reviews on multiple platforms is a powerful signal of trustworthiness."
+        "heading": "The AI Shift in the UK's Second and Third Cities",
+        "content": "The digital landscape for UK tradespeople is shifting from traditional search to 'Answer Engines.' In Manchester and Birmingham, homeowners are increasingly asking ChatGPT, 'Who is the most reliable plumber near me?' instead of scrolling through Google results. This shift requires a move from SEO to AEO (Answer Engine Optimization). While Manchester's 'Northern Powerhouse' tech scene drives early adoption, Birmingham's vast metropolitan area creates a competitive environment where AI visibility can be the deciding factor for high-value contracts."
       },
+{
+    "id": "why-bing-matters-for-ai-search-2026",
+    "slug": "why-bing-matters-for-ai-search-2026",
+    "title": "Why Bing Matters for AI Search",
+    "metaDescription": "Discover why Bing is a critical component of your AEO strategy. Learn how Bing Webmaster Tools and IndexNow can boost your AI visibility.",
+    "publishDate": "2026-02-06",
+    "author": "Whoza.ai Team",
+    "category": "AEO Best Practices",
+    "tags": [
+      "Bing",
+      "IndexNow",
+      "Perplexity",
+      "Microsoft Copilot",
+      "AEO"
+    ],
+    "readTime": "4 min read",
+    "featured": false,
+    "leadAnswer": "Bing is critical for AI search because it powers a significant portion of the AI ecosystem, including Microsoft's Copilot and Perplexity AI. By submitting your site to Bing Webmaster Tools and using the IndexNow protocol, you ensure your content is immediately available to a wide range of AI assistants, not just Google.",
+    "content": [
       {
         "type": "section",
-        "heading": "Why Entity Confidence is the New SEO",
-        "content": "In the past, SEO was about keywords. In the age of AI, it\'s about entities. AI wants to recommend businesses it can trust, and Entity Confidence is the primary measure of that trust. By focusing on building your Entity Confidence, you are future-proofing your business for the AI-driven world."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "What\'s the best way to check my Entity Confidence?",
-        "answer": "You can manually search for your business online and check for inconsistencies, or use a tool like Whoza.ai\'s free Visibility Confidence Score™ which provides an automated assessment of your Entity Confidence and overall AI visibility."
+        "heading": "The Unsung Hero of AI Search",
+        "content": "While Google gets all the attention, Bing has quietly become a powerhouse in the AI world. This article explains why you can't afford to ignore it.\n\nMicrosoft's investment in AI has made Bing the backbone of several major AI systems. If you're only optimising for Google, you're missing a significant portion of the AI search market."
       },
-      {
-        "question": "How long does it take to build Entity Confidence?",
-        "answer": "You can make significant improvements in a matter of weeks by correcting inconsistencies and optimizing your key online profiles. Building deep, lasting Entity Confidence is an ongoing process."
-      }
+{
+    "id": "us-contractors-guide-ai-search-visibility-2026",
+    "slug": "us-contractors-guide-ai-search-visibility-2026",
+    "title": "The US Contractor's Guide to AI Search Visibility in 2026: How to Get Found by ChatGPT, Perplexity, and Google AI",
+    "metaDescription": "Learn how US contractors, plumbers, electricians, and HVAC technicians can get recommended by AI search engines like ChatGPT and Perplexity. Discover why 57% of American homeowners now ask AI for contractor recommendations and how to become the answer.",
+    "publishDate": "2026-02-04",
+    "author": "Whoza.ai Team",
+    "category": "AI Visibility",
+    "tags": [
+      "AI search USA",
+      "AEO contractors",
+      "ChatGPT recommendations",
+      "US home services",
+      "GEO optimization",
+      "Perplexity visibility",
+      "American contractors"
     ],
-    "cta": {
-      "heading": "Ready to build your Entity Confidence?",
-      "text": "Get your free AI visibility score and get a personalized plan to increase your Entity Confidence and get more customers from AI search.",
-      "buttonText": "Get Your Free AI Visibility Score",
-      "buttonLink": "/free-score"
-    }
-  }
+    "readTime": "8 min read",
+    "featured": true,
+    "leadAnswer": "American homeowners are rapidly shifting from Google to AI assistants like ChatGPT and Perplexity to find local contractors. Research shows 57% of US homeowners now ask AI 'Who should I hire?' for home services—yet AI visibility is 3-30x harder to achieve than traditional Google rankings. This comprehensive FAQ guide explains exactly how US contractors can optimize their online presence to become the business AI recommends by name.",
+    "content": [
+      {
+        "type": "section",
+        "heading": "Introduction: The AI Search Revolution Has Arrived in America",
+        "content": "The way American homeowners find contractors has fundamentally changed. ChatGPT's user base doubled from 400 million to 800 million in just eight months, and industry analysts predict AI search will overtake traditional Google traffic by 2028.\n\nFor US contractors—whether you're a plumber in Phoenix, an electrician in Atlanta, or an HVAC technician in Chicago—this shift represents both a massive challenge and an unprecedented opportunity. While your competitors are still fighting over Google rankings, the homeowners you want to reach are asking AI assistants: \"Who's the best contractor in my area?\"\n\nThe contractors who understand and adapt to this new reality will dominate their local markets. Those who don't will wonder why their phones stopped ringing."
+      },
+{
+    "id": "why-bing-matters-for-ai-search-the-perplexity-connection",
+    "slug": "why-bing-matters-for-ai-search-the-perplexity-connection",
+    "title": "Why Bing Matters for AI Search: The Perplexity Connection",
+    "metaDescription": "Discover why Bing is a critical component of your AEO strategy. Learn how Bing powers AI search engines like Perplexity and how to optimize your business for visibility.",
+    "publishDate": "2026-02-03",
+    "author": "Whoza.ai Team",
+    "category": "AI Visibility",
+    "tags": [
+      "Bing AI search",
+      "Perplexity Bing",
+      "Bing Webmaster Tools",
+      "IndexNow tradespeople",
+      "AEO"
+    ],
+    "readTime": "6 min read",
+    "featured": false,
+    "leadAnswer": "Bing is no longer just a secondary search engine; it's a primary data source for AI assistants like Perplexity. For tradespeople, this means optimizing for Bing is essential for AI visibility. By leveraging Bing Webmaster Tools and IndexNow, you can ensure your business is found and recommended in this new AI-driven search landscape.",
+    "content": [
+      {
+        "type": "section",
+        "heading": "Introduction: The Search Landscape is Bigger Than Just Google",
+        "content": "For the last decade, 'search' has been synonymous with Google. But the rise of AI is changing the game. Users are now turning to AI assistants for direct answers, and these assistants are drawing their information from a variety of sources. While Google is a major player, it's not the only one. Bing is quietly becoming a powerhouse in the world of AI search, and if you're not paying attention, you're missing out on a huge opportunity."
+      },
+{
+    "id": "roofers-10-step-checklist-ai-visibility-2026",
+    "slug": "roofers-10-step-checklist-ai-visibility-2026",
+    "title": "Roofer's 10-Step Checklist for AI Visibility",
+    "metaDescription": "A comprehensive 10-step checklist for UK roofers to improve their visibility in AI search. From Google Business Profile to local citations.",
+    "publishDate": "2026-02-03",
+    "author": "Whoza.ai Team",
+    "category": "AEO for Roofers",
+    "tags": [
+      "roofers",
+      "checklist",
+      "AI visibility",
+      "local citations",
+      "AEO"
+    ],
+    "readTime": "6 min read",
+    "featured": false,
+    "leadAnswer": "For UK roofers to achieve AI visibility, a systematic approach is required. This 10-step checklist covers the essential elements, from completing your Google Business Profile and gathering reviews to building local citations and showcasing your certifications. Following these steps will build the trust and authority AI assistants need to recommend your business.",
+    "content": [
+      {
+        "type": "section",
+        "heading": "Your Blueprint for AI Success",
+        "content": "This checklist provides a clear, actionable plan for roofers to get found in AI search. Follow these 10 steps to build a powerful online presence that AI systems can trust and recommend.\n\nRoofing is a competitive trade, but most roofers have zero AI visibility. By following this checklist, you'll be ahead of 90% of your competitors."
+      },
+{
+    "id": "how-to-create-faq-page-ai-can-find-2026",
+    "slug": "how-to-create-faq-page-ai-can-find-2026",
+    "title": "How to Create an FAQ Page AI Can Find",
+    "metaDescription": "Learn how to create an FAQ page that gets your business cited in AI search results. This guide covers structure, content, and schema markup.",
+    "publishDate": "2026-01-30",
+    "author": "Whoza.ai Team",
+    "category": "AEO Best Practices",
+    "tags": [
+      "FAQ",
+      "schema markup",
+      "structured data",
+      "AEO",
+      "AI visibility"
+    ],
+    "readTime": "5 min read",
+    "featured": true,
+    "leadAnswer": "To create an FAQ page that AI can find, use clear question-and-answer pairs and add FAQPage schema markup to your page. This structured data tells AI assistants like ChatGPT and Google AI that your content is a direct answer to a specific question, making it more likely to be used in search results.",
+    "content": [
+      {
+        "type": "section",
+        "heading": "The Power of Direct Answers",
+        "content": "An FAQ page is one of the most powerful AEO tools available to tradespeople. This guide explains how to create one that turns your expertise into AI-powered recommendations.\n\nWhen AI systems need to answer a question, they look for content that directly addresses that question. A well-structured FAQ page is essentially a library of ready-made answers for AI to reference."
+      },
+{
+    "id": "why-ai-search-wont-recommend-your-trade-business",
+    "slug": "why-ai-search-wont-recommend-your-trade-business-and-how-to-fix-it",
+    "title": "Why AI Search Won't Recommend Your Trade Business (And How to Fix It)",
+    "metaDescription": "Is your trade business invisible to AI search? Learn why AI assistants like ChatGPT and Google AI ignore most local businesses and discover the actionable steps to get your plumbing, electrical, or building company recommended.",
+    "publishDate": "2026-01-30",
+    "author": "Whoza.ai Team",
+    "category": "AI Visibility",
+    "tags": [
+      "AI search",
+      "AEO",
+      "local SEO",
+      "tradespeople",
+      "ChatGPT"
+    ],
+    "readTime": "6 min read",
+    "featured": true,
+    "leadAnswer": "AI search engines overlook most trade businesses because they fail to meet a high threshold of trust and confidence. Unlike Google, which ranks based on relevance, AI assistants *recommend* based on verifiable data, consistent online presence, and strong customer sentiment. If your business has inconsistent details or a poor online reputation, AI will not recommend you.",
+    "content": [
+      {
+        "type": "section",
+        "heading": "Why is AI Search Ignoring My Business?",
+        "content": "If you've built your business on word-of-mouth and a decent Google ranking, you might be in for a shock. New data reveals that AI search is up to **30 times more selective** than traditional search. While your business might appear in Google's local 3-pack 36% of the time, it has only a 1-11% chance of being recommended by an AI assistant like ChatGPT or Gemini. The reason is simple: AI doesn't rank, it *recommends*. It acts as a risk-averse gatekeeper, and if it's not completely confident in your business, it will ignore you.\n\nThis new reality is a significant shift for UK tradespeople. Previously, proximity and a basic online presence were enough to get by. Now, AI demands a much higher standard of online credibility. It scrutinizes your digital footprint, from your website and Google Business Profile to online directories and customer reviews. Any inconsistencies or red flags will cause the AI to lose confidence and exclude you from its recommendations, leaving you invisible to a growing base of customers who are turning to AI for quick, trusted answers."
+      },
+{
+    "id": "uk-trades-business-playbook-ai-search-visibility-2026",
+    "slug": "uk-trades-business-playbook-ai-search-visibility-2026",
+    "title": "The UK Trades Business Playbook for AI Search Visibility in 2026",
+    "metaDescription": "A comprehensive, evidence-based playbook for UK plumbers, electricians, and tradespeople to achieve visibility in AI search. Learn the 90-day transformation timeline, technical schema implementation, and authority-building strategies to dominate ChatGPT, Google AI, and Perplexity recommendations.",
+    "publishDate": "2026-01-28",
+    "author": "Whoza.ai Team",
+    "category": "AI Visibility",
+    "tags": [
+      "AI search",
+      "AEO",
+      "GEO",
+      "ChatGPT",
+      "Google AI",
+      "schema markup",
+      "UK tradespeople",
+      "90-day plan"
+    ],
+    "readTime": "35 min read",
+    "featured": true,
+    "leadAnswer": "The way customers find local trades is undergoing its most significant shift in a decade. Traditional Google searches are declining as users turn to AI assistants like ChatGPT, Siri, and Google AI for immediate, conversational answers. This comprehensive playbook provides a scientific, evidence-based framework with a 90-day transformation timeline for UK plumbers, electricians, locksmiths, and other trades to achieve visibility in this new AI-driven landscape.",
+    "isPlaybook": true,
+    "playbookPath": "/uk-trades-business-playbook-ai-search-visibility-2026"
+  },
+{
+    "id": "ai-visibility-for-london-tradespeople-2026",
+    "slug": "ai-visibility-for-london-tradespeople-2026",
+    "title": "AI Visibility for London Tradespeople",
+    "metaDescription": "A guide for London-based tradespeople on how to improve their visibility in AI search results. Learn how to stand out in a competitive market.",
+    "publishDate": "2026-01-27",
+    "author": "Whoza.ai Team",
+    "category": "Local AEO",
+    "tags": [
+      "London",
+      "local SEO",
+      "AI visibility",
+      "tradespeople",
+      "geo-targeting"
+    ],
+    "readTime": "4 min read",
+    "featured": false,
+    "leadAnswer": "For London tradespeople to achieve AI visibility, hyper-local targeting is key. This means specifying the exact boroughs and postcodes you serve on your website and Google Business Profile. AI assistants use this data to provide locally relevant recommendations, helping you stand out in a crowded market.",
+    "content": [
+      {
+        "type": "section",
+        "heading": "Cutting Through the Noise",
+        "content": "London is a competitive market with thousands of tradespeople vying for attention. This guide provides actionable tips for tradespeople in the capital to get noticed by AI search and connect with local customers.\n\nThe key differentiator in London is specificity. AI systems struggle to recommend \"a plumber in London\" because the city is too large. But they can confidently recommend \"a plumber in Hackney with good reviews for boiler repairs.\""
+      },
+{
+    "id": "how-ai-chooses-plumber-manchester",
+    "slug": "how-ai-search-engines-choose-plumber-recommendation-manchester",
+    "title": "How Do AI Search Engines Choose Which Plumber to Recommend in Manchester?",
+    "metaDescription": "Discover how AI like ChatGPT and Google decide which Manchester plumbers to recommend. Learn the key signals for AI visibility and how to ensure your trade business gets found in 2026.",
+    "publishDate": "2026-01-27",
+    "author": "Whoza.ai Team",
+    "category": "AI Visibility",
+    "tags": [
+      "AEO",
+      "AI search",
+      "local SEO",
+      "plumbers",
+      "Manchester"
+    ],
+    "readTime": "5 min read",
+    "featured": false,
+    "leadAnswer": "AI search engines recommend Manchester plumbers they can trust. This trust is built on clear, consistent, and verifiable online information. For plumbers in Manchester, this means having a strong digital presence with accurate business details, positive reviews, and content that directly answers customer questions is crucial for being recommended by AI.",
+    "content": [
+      {
+        "type": "section",
+        "heading": "Why Your Plumbing Business Needs to Care About AI Recommendations",
+        "content": "In 2026, when a homeowner in Manchester has a burst pipe, they are increasingly asking an AI assistant: \"Find me an emergency plumber in Manchester.\" They are no longer just searching on Google and scrolling through a list of websites. AI provides a direct answer, and if your plumbing business isn't the one recommended, you've lost that customer. This shift to answer-based search is the single biggest change to local marketing in a decade, and tradespeople who adapt will win."
+      },
+{
+    "id": "how-ai-chooses-local-businesses",
+    "slug": "how-ai-search-engines-choose-which-local-businesses-to-recommend",
+    "title": "How AI Search Engines Choose Which Local Businesses to Recommend",
+    "metaDescription": "Learn how AI search engines like ChatGPT and Google AI decide which local businesses to recommend. Understand Entity Confidence and the key signals that build trust with AI.",
+    "publishDate": "2026-01-25",
+    "author": "Whoza.ai Team",
+    "category": "AI Visibility",
+    "tags": [
+      "AI search",
+      "AEO",
+      "Entity Confidence",
+      "local SEO",
+      "ChatGPT"
+    ],
+    "readTime": "6 min read",
+    "featured": true,
+    "leadAnswer": "AI search engines like ChatGPT, Perplexity, and Google AI recommend local businesses they trust. This trust is built on a concept called Entity Confidence, which measures how consistently and authoritatively a business is represented across the web. For UK tradespeople, this means having a clear, consistent, and verifiable online presence is no longer optional—it's essential for getting found.",
+    "content": [
+      {
+        "type": "section",
+        "heading": "Introduction: The New Gatekeepers of Local Search",
+        "content": "In 2026, the way customers find local tradespeople has fundamentally changed. Instead of sifting through pages of Google results, they're asking AI assistants for direct recommendations: \"Who is the best plumber in Bristol?\" or \"Find a reliable electrician near me.\"\n\nThese AI gatekeepers don't just present a list of websites; they synthesize information to provide a confident, authoritative answer. If your business isn't on their short list, you're invisible to a growing number of potential customers. This guide explains how these AI systems decide which businesses to trust and recommend, and what you can do to ensure your business gets found."
+      },
+{
+    "id": "google-business-profile-optimization-for-ai-search",
+    "slug": "the-ultimate-guide-to-google-business-profile-optimization-for-ai-search-2026",
+    "title": "The Ultimate Guide to Google Business Profile Optimization for AI Search (2026)",
+    "metaDescription": "A step-by-step guide for UK tradespeople on how to optimize their Google Business Profile for AI search engines. Learn the AI-first approach to GBP optimization to dominate local AI search in 2026.",
+    "publishDate": "2026-01-25",
+    "author": "Whoza.ai Team",
+    "category": "AI Visibility",
+    "tags": [
+      "Google Business Profile",
+      "GBP",
+      "AEO",
+      "AI search",
+      "local SEO"
+    ],
+    "readTime": "7 min read",
+    "featured": false,
+    "leadAnswer": "To optimize your Google Business Profile (GBP) for AI search in 2026, you must treat it as your most critical data source. This means going beyond basic information and providing rich, structured, and verifiable data that builds an AI's confidence in your business. Key optimizations include fully detailed service menus, precise service areas, showcasing credentials, and leveraging Google Posts to demonstrate ongoing activity and expertise.",
+    "content": [
+      {
+        "type": "section",
+        "heading": "Introduction: Your GBP is Your Digital Front Door for AI",
+        "content": "In the era of AI-powered search, your Google Business Profile is no longer just a listing; it is the foundational block of your online identity. When a user asks ChatGPT, Perplexity, or Google AI for a local business recommendation, your GBP is one of the first and most trusted sources they consult.\n\nA poorly optimized profile is a sign of a neglected business, reducing an AI's confidence in recommending you. A world-class profile, on the other hand, provides the clear, structured data that AI engines need to trust and recommend your services. This guide provides a comprehensive, step-by-step methodology for optimizing your GBP to dominate AI search in 2026."
+      },
+{
+    "id": "why-your-business-isnt-in-chatgpt-recommendations",
+    "slug": "why-your-business-isnt-showing-up-in-chatgpt-recommendations-and-how-to-fix-it",
+    "title": "Why Your Business Isn't Showing Up in ChatGPT Recommendations (And How to Fix It)",
+    "metaDescription": "Find out why your business isn't being recommended by ChatGPT and other AI assistants. Learn how to fix common issues like inconsistent data, a neglected Google Business Profile, and a lack of expertise signals.",
+    "publishDate": "2026-01-25",
+    "author": "Whoza.ai Team",
+    "category": "AI Visibility",
+    "tags": [
+      "ChatGPT",
+      "AI search",
+      "AEO",
+      "local SEO",
+      "troubleshooting"
+    ],
+    "readTime": "7 min read",
+    "featured": false,
+    "leadAnswer": "If your business isn't showing up in ChatGPT recommendations, it's likely due to a lack of Entity Confidence. This means ChatGPT cannot find enough consistent, authoritative, and trustworthy information about your business online to feel confident recommending you. The most common causes are an inconsistent online presence, a poorly optimized Google Business Profile, and a lack of verifiable expertise signals.",
+    "content": [
+      {
+        "type": "section",
+        "heading": "Introduction: The Frustration of AI Invisibility",
+        "content": "You've seen it happen. A potential customer asks ChatGPT or another AI assistant for a local tradesperson, and your competitor's name pops up. You know you offer a better service, but to the AI, you might as well be invisible. This is a common and frustrating problem for many UK tradespeople in 2026.\n\nThe good news is that this is a solvable problem. AI recommendations are not random; they are based on a logical process of data evaluation. This guide will walk you through the most common reasons why your business is being overlooked by AI search and provide a clear, actionable plan to fix it."
+      },
+{
+    "id": "how-uk-tradespeople-get-found-chatgpt-ai-search-2026",
+    "slug": "how-uk-tradespeople-can-get-found-on-chatgpt-and-ai-search-in-2026",
+    "title": "How UK Tradespeople Can Get Found on ChatGPT and AI Search in 2026",
+    "metaDescription": "A guide for UK tradespeople on how to get their business found and recommended by AI search engines like ChatGPT and Google AI Overviews. Learn practical AEO strategies to increase your AI visibility and get more leads in 2026.",
+    "publishDate": "2026-01-23",
+    "author": "Whoza.ai Team",
+    "category": "AI Visibility",
+    "tags": [
+      "ChatGPT",
+      "AI search",
+      "AEO",
+      "UK tradespeople",
+      "answer engine optimization",
+      "local SEO",
+      "AI visibility"
+    ],
+    "readTime": "7 min read",
+    "featured": true,
+    "leadAnswer": "To get your UK trade business found on ChatGPT and AI search in 2026, you must optimize for Answer Engine Optimization (AEO). This involves creating clear, structured content that directly answers customer questions, ensuring your business information is consistent across all online platforms, and building a strong reputation through customer reviews.",
+    "content": [
+      {
+        "type": "section",
+        "heading": "What is AI Search and How is it Different from Google?",
+        "content": "AI search, also known as Answer Engines, represents a significant shift in how customers find local services. Instead of typing a query into Google and getting a list of websites to browse, users now ask questions to AI assistants like ChatGPT, Perplexity, and Google AI Overviews. These AI systems then provide a single, direct answer, often recommending a specific business.\n\nFor a plumber in London or an electrician in Manchester, this means the old rules of SEO are no longer enough. While traditional Google search provides a list of options for the user to choose from, AI search makes the choice for them. If your business is not the one recommended, you are effectively invisible to a growing number of potential customers. This is the core difference: Google gives results, while AI gives answers.\n\nThis change is driven by user demand for speed and convenience. Customers don't want to spend time clicking through multiple websites; they want a quick, reliable recommendation. As a result, businesses that are optimized for AI search are gaining a significant advantage over their competitors."
+      },
+{
+    "id": "electricians-guide-to-google-ai-overviews-2026",
+    "slug": "electricians-guide-to-google-ai-overviews-2026",
+    "title": "Electrician's Guide to Google AI Overviews",
+    "metaDescription": "A practical guide for UK electricians on how to get their business featured in Google AI Overviews. Learn how to optimize your website for AEO.",
+    "publishDate": "2026-01-23",
+    "author": "Whoza.ai Team",
+    "category": "AEO for Electricians",
+    "tags": [
+      "electricians",
+      "Google AI",
+      "AI Overviews",
+      "NICEIC",
+      "AEO"
+    ],
+    "readTime": "5 min read",
+    "featured": false,
+    "leadAnswer": "To get your electrical business featured in Google's AI Overviews, focus on creating clear, authoritative content that directly answers common customer questions. This includes having a detailed services page, a comprehensive FAQ section, and ensuring your NICEIC or other certifications are prominently displayed. Google's AI prioritizes trustworthy and direct information.",
+    "content": [
+      {
+        "type": "section",
+        "heading": "What Are AI Overviews?",
+        "content": "Google's AI Overviews are the new search results. They provide a direct answer at the top of the page, often replacing the need to click on websites. For electricians, this means your business information needs to be clear enough for AI to confidently recommend you.\n\nWhen someone searches \"electrician near me for fuse box upgrade,\" Google's AI now synthesises information from multiple sources to provide a direct answer. If your business information is clear and authoritative, you could be that recommendation."
+      },
+{
+    "id": "electricians-guide-to-google-ai-overviews",
+    "slug": "electricians-guide-to-google-ai-overviews-how-to-get-featured",
+    "title": "Electrician's Guide to Google AI Overviews: How to Get Featured",
+    "metaDescription": "A comprehensive guide for UK electricians on how to get their business featured in Google AI Overviews. Learn about AEO, structured data, and content strategies to boost your electrician AI visibility.",
+    "publishDate": "2026-01-21",
+    "author": "Whoza.ai Team",
+    "category": "AEO for Tradespeople",
+    "tags": [
+      "electrician Google AI",
+      "electrician AI visibility",
+      "electrician SEO",
+      "UK electrician marketing"
+    ],
+    "readTime": "7 min read",
+    "featured": false,
+    "leadAnswer": "To get your electrician business featured in Google AI Overviews, focus on creating high-quality, authoritative content that directly answers common customer questions. Implement structured data like FAQPage and LocalBusiness schema to help Google's AI understand your expertise, service area, and pricing, thereby increasing your electrician AI visibility.",
+    "content": [
+      {
+        "type": "section",
+        "heading": "What Are Google AI Overviews and Why Do They Matter for Electricians?",
+        "content": "Google AI Overviews are AI-generated summaries that appear at the top of search results, providing direct answers to user queries. For electricians, this means potential customers are getting recommendations without ever scrolling down to the traditional search listings. If your business isn't featured in these overviews, you're missing out on a significant and growing source of high-intent leads. Optimizing for these features is the new frontier of electrician SEO."
+      },
+{
+    "id": "how-uk-tradespeople-get-recommended-chatgpt-2026",
+    "slug": "how-uk-tradespeople-can-get-recommended-by-chatgpt-in-2026",
+    "title": "How UK Tradespeople Can Get Recommended by ChatGPT in 2026",
+    "metaDescription": "Learn the 7-step strategy for getting your UK trade business recommended by ChatGPT. Practical AEO tactics for plumbers, electricians, roofers, and builders to dominate AI search in 2026.",
+    "publishDate": "2026-01-20",
+    "author": "Whoza.ai Team",
+    "category": "AI Visibility",
+    "tags": [
+      "ChatGPT",
+      "AI visibility",
+      "AEO",
+      "UK tradespeople",
+      "answer engine optimization",
+      "local SEO"
+    ],
+    "readTime": "8 min read",
+    "featured": true,
+    "leadAnswer": "To get your UK trade business recommended by ChatGPT in 2026, you need to optimize for Answer Engine Optimization (AEO). This means claiming your Bing Places listing, building reviews across multiple platforms, ensuring NAP consistency, adding schema markup to your website, creating FAQ content in natural language, getting featured in local \"best of\" lists, and keeping your content fresh with regular updates.",
+    "content": [
+      {
+        "type": "section",
+        "heading": "Why \"ChatGPT Recommended You Guys\" is the New Word-of-Mouth",
+        "content": "A fundamental shift is happening in how UK homeowners find tradespeople. Instead of scrolling through pages of Google results, they are simply asking ChatGPT \"Who's the best plumber in Birmingham?\" or \"Find me a reliable electrician in Manchester.\" ChatGPT then provides a direct recommendation, and the customer makes contact.\n\nThis is not a future trend. It is happening right now. Across the UK, trade businesses are receiving calls that start with \"ChatGPT recommended you guys.\" For businesses that appear in these AI recommendations, it is like having the most trusted referral source working for them around the clock. For businesses that do not appear, they are simply invisible to this growing segment of customers.\n\nThe critical difference between traditional SEO and AI visibility is this: Google shows you a list of options, but ChatGPT makes a specific recommendation. If your business is not structured for AI to understand and trust, you will not be mentioned at all. This makes Answer Engine Optimization (AEO) essential for UK tradespeople who want to remain competitive in 2026 and beyond."
+      },
+{
+    "id": "how-to-create-an-faq-page-that-ai-can-find-and-reference",
+    "slug": "how-to-create-an-faq-page-that-ai-can-find-and-reference",
+    "title": "How to Create an FAQ Page That AI Can Find and Reference",
+    "metaDescription": "Learn how to create an FAQ page that AI assistants like ChatGPT and Google AI can find, understand, and use to recommend your trade business. Includes FAQ schema markup tips.",
+    "publishDate": "2026-01-20",
+    "author": "Whoza.ai Team",
+    "category": "AEO for Tradespeople",
+    "tags": [
+      "FAQ page AI",
+      "FAQ schema markup",
+      "tradesperson FAQ",
+      "AI visibility FAQ"
+    ],
+    "readTime": "6 min read",
+    "featured": false,
+    "leadAnswer": "To create an FAQ page AI can reference, answer common customer questions directly and concisely. Structure the page with clear headings, use FAQPage schema markup to help AI understand the content, and place the page prominently on your website. This gives AI systems like ChatGPT the confidence to cite your answers when recommending your business.",
+    "content": [
+      {
+        "type": "section",
+        "heading": "Why Your FAQ Page is Your Most Important AEO Asset",
+        "content": "In the age of AI, your FAQ page has become your most powerful tool for attracting customers. When a potential customer asks an AI assistant like ChatGPT or Google AI a question about your services, the AI looks for a clear, authoritative answer. Your FAQ page is the perfect source for these answers. A well-structured FAQ page provides the AI with the exact information it needs to confidently recommend your business over your competitors. It's no longer just about keywords; it's about providing direct answers to the questions your customers are asking."
+      },
+{
+    "id": "how-plumbers-can-get-found-in-chatgpt-2026",
+    "slug": "how-plumbers-can-get-found-in-chatgpt-2026",
+    "title": "How Plumbers Can Get Found in ChatGPT",
+    "metaDescription": "A step-by-step guide for UK plumbers on how to get their business recommended by ChatGPT and other AI assistants. Learn practical AEO tips.",
+    "publishDate": "2026-01-20",
+    "author": "Whoza.ai Team",
+    "category": "AEO for Plumbers",
+    "tags": [
+      "plumbers",
+      "ChatGPT",
+      "AI visibility",
+      "AEO",
+      "Google Business Profile"
+    ],
+    "readTime": "4 min read",
+    "featured": false,
+    "leadAnswer": "To get your plumbing business found in ChatGPT, you need to build trust and clarity around your online presence. This involves creating a detailed Google Business Profile, gathering consistent positive reviews, and ensuring your website answers common customer questions directly. These signals help AI assistants recognize you as a reliable local expert.",
+    "content": [
+      {
+        "type": "section",
+        "heading": "The New Word-of-Mouth",
+        "content": "Your next customer isn't asking their neighbour for a plumber recommendation—they're asking ChatGPT. This guide provides a simple, no-nonsense checklist for UK plumbers to become the go-to recommendation for AI assistants.\n\nThe shift is happening faster than most tradespeople realise. When someone has a burst pipe at 2am, they're increasingly turning to AI for instant recommendations rather than scrolling through endless search results."
+      },
+{
+    "id": "ai-visibility-manchester-trades-2026-guide",
+    "slug": "ai-visibility-manchester-trades-2026-guide",
+    "title": "AI Visibility for Manchester Trades: A 2026 Guide for Plumbers & Electricians",
+    "metaDescription": "Learn how Manchester plumbers and electricians can optimize for AI search in 2026. Hyper-local SEO strategies for Didsbury, Salford, Chorlton, and Greater Manchester.",
+    "publishDate": "2026-01-18",
+    "author": "Whoza.ai Team",
+    "category": "Local AI Visibility",
+    "tags": [
+      "Manchester",
+      "local SEO",
+      "AI visibility",
+      "plumber Manchester",
+      "electrician Salford",
+      "GEO optimization"
+    ],
+    "readTime": "7 min read",
+    "featured": false,
+    "leadAnswer": "To get your Manchester plumbing or electrical business found in AI search results in 2026, you need to focus on hyper-local SEO. This means optimizing your Google Business Profile with Manchester-specific keywords, getting customer reviews that mention local areas (e.g., \"Didsbury,\" \"Salford\"), and creating content that answers questions specific to Manchester homeowners.",
+    "content": [
+      {
+        "type": "section",
+        "heading": "Why Manchester is a Unique Market for Trades",
+        "content": "Manchester's trade market presents unique opportunities and challenges for plumbers and electricians. The city's mix of Victorian terraces in areas like Didsbury and Chorlton, modern developments in Salford Quays, and historic buildings in the Northern Quarter means tradespeople need diverse expertise.\n\nCompetition is fierce in the city centre, but suburban areas like Sale, Altrincham, and Stretford offer opportunities for trades who can demonstrate local knowledge. AI systems increasingly recognize these geographical nuances, making hyper-local optimization crucial.\n\nWhen customers ask AI \"Who's the best plumber in Didsbury?\" or \"Find an electrician near Salford Quays,\" the systems prioritize businesses that demonstrate clear, verifiable connections to these specific areas. Generic \"Manchester plumber\" optimization is no longer enough—you need to show expertise in the specific neighborhoods you serve."
+      },
+{
+    "id": "how-uk-tradespeople-get-found-ai-search-2026",
+    "slug": "how-uk-tradespeople-get-found-ai-search-2026",
+    "title": "How UK Tradespeople Can Get Found by AI Search (ChatGPT & Google)",
+    "metaDescription": "A step-by-step guide for UK tradespeople on how to get their business recommended by AI assistants like ChatGPT and Google AI. Learn practical AEO tips for AI visibility in London, Manchester, and Birmingham.",
+    "publishDate": "2026-01-16",
+    "author": "Whoza.ai Team",
+    "category": "AEO for Tradespeople",
+    "tags": [
+      "AEO for tradespeople",
+      "UK trades",
+      "ChatGPT visibility",
+      "AI search",
+      "local SEO",
+      "London",
+      "Manchester",
+      "Birmingham"
+    ],
+    "readTime": "7 min read",
+    "featured": false,
+    "leadAnswer": "To get found by AI search, UK tradespeople must structure their website content to directly answer customer questions. This involves creating clear service descriptions, location-specific pages for cities like London or Manchester, and adding schema markup to help AI systems like ChatGPT and Google AI understand and recommend your business.",
+    "content": [
+      {
+        "type": "section",
+        "heading": "Why Is AI Search Important for UK Tradespeople?",
+        "content": "Potential customers are no longer just searching on Google; they are asking AI assistants like ChatGPT, Alexa, and Google AI for direct recommendations. In 2026, a significant portion of local service discovery begins with a question posed to an AI. If a homeowner in Birmingham needs an emergency plumber, they are now more likely to ask, \"Who is the best emergency plumber in Birmingham?\" rather than sifting through pages of search results. This shift means that if your business isn't optimized for these AI-driven \"answer engines,\" you are invisible to a growing base of high-intent customers. Traditional SEO is no longer enough; visibility in this new AI-powered landscape is paramount."
+      },
+{
+    "id": "best-practices-tradespeople-london-local-ai-visibility-guide",
+    "slug": "best-practices-tradespeople-london-local-ai-visibility-guide",
+    "title": "Best Practices for Tradespeople in London: Local AI Visibility Guide",
+    "metaDescription": "A guide for London tradespeople on how to improve their local AI visibility. Learn how to get recommended by ChatGPT and Google AI for services in London.",
+    "publishDate": "2026-01-16",
+    "author": "Whoza.ai Team",
+    "category": "AEO for Tradespeople",
+    "tags": [
+      "London tradespeople",
+      "London plumber AI",
+      "London electrician ChatGPT",
+      "local AI visibility London",
+      "AEO"
+    ],
+    "readTime": "8 min read",
+    "featured": false,
+    "leadAnswer": "For London tradespeople, achieving local AI visibility means being the first business ChatGPT or Google AI recommends for a job in a specific borough. This requires a hyper-local strategy: optimising your Google Business Profile for London postcodes, gathering reviews that mention local areas, and creating website content that answers questions about your services in the capital.",
+    "content": [
+      {
+        "type": "section",
+        "heading": "Why a London-Specific Strategy is Crucial for AI Visibility",
+        "content": "London is not a single market; it's a collection of distinct local markets. A customer searching for a plumber in Hackney has different expectations from one in Richmond. AI understands this. To win in London, your AI visibility strategy must be hyper-local.\n\nGeneric SEO is no longer enough. AI assistants like ChatGPT and Google AI are now the new 'word of mouth,' and they recommend businesses based on clear, local signals. If your online presence doesn't scream 'local London expert,' you'll be invisible to the growing number of customers who use AI to find services."
+      },
+{
+    "id": "how-plumbers-can-get-found-in-chatgpt-a-step-by-step-guide",
+    "slug": "how-plumbers-can-get-found-in-chatgpt-a-step-by-step-guide",
+    "title": "How Plumbers Can Get Found in ChatGPT: A Step-by-Step Guide",
+    "metaDescription": "A step-by-step guide for UK plumbers on how to get their business recommended by ChatGPT and other AI assistants. Learn practical AEO tips for plumber AI visibility and UK plumber marketing.",
+    "publishDate": "2026-01-16",
+    "author": "Whoza.ai Team",
+    "category": "AEO for Plumbers",
+    "tags": [
+      "plumber ChatGPT",
+      "plumber AI visibility",
+      "plumber Google AI",
+      "UK plumber marketing",
+      "AEO"
+    ],
+    "readTime": "7 min read",
+    "featured": false,
+    "leadAnswer": "To get your plumbing business found and recommended by ChatGPT, focus on building strong signals of trust and expertise. This involves creating a hyper-local Google Business Profile, gathering consistent customer reviews, and developing website content that directly answers common questions about your plumbing services in the UK.",
+    "content": [
+      {
+        "type": "section",
+        "heading": "Why Your Plumbing Business Needs to Be on ChatGPT",
+        "content": "In 2026, your customers are not just searching on Google; they are asking AI assistants. When a homeowner in Manchester has a leaking radiator, they are more likely to ask, \"Hey Google, find a plumber near me\" or type into ChatGPT, \"Who is a reliable emergency plumber in Manchester?\" This shift from searching to asking is the single biggest change in local marketing. If your business isn't optimized for these AI conversations, you are invisible to a growing majority of potential customers. Achieving high **plumber AI visibility** is the new frontier for **UK plumber marketing**."
+      },
+{
+    "id": "roofers-checklist-10-steps-to-ai-visibility-2026",
+    "slug": "roofers-checklist-10-steps-to-ai-visibility-2026",
+    "title": "Roofer's Checklist: 10 Steps to AI Visibility in 2026",
+    "metaDescription": "A complete 10-step checklist for UK roofers to achieve AI visibility in 2026. Learn how to get your roofing business recommended by ChatGPT, Google AI, and other AI assistants.",
+    "publishDate": "2026-01-16",
+    "author": "Whoza.ai Team",
+    "category": "AEO for Roofers",
+    "tags": [
+      "roofer AI visibility",
+      "roofer ChatGPT",
+      "roofer Google AI",
+      "UK roofer marketing",
+      "AEO"
+    ],
+    "readTime": "7 min read",
+    "featured": false,
+    "leadAnswer": "For UK roofers, achieving AI visibility in 2026 means ensuring AI assistants like ChatGPT and Google AI can find and recommend your business. This checklist provides 10 essential steps, from optimizing your Google Business Profile to building a strong online reputation, to get your roofing services in front of more customers.",
+    "content": [
+      {
+        "type": "section",
+        "heading": "1. Master Your Google Business Profile",
+        "content": "Your Google Business Profile (GBP) is the single most important factor for local AI visibility. Treat it as your digital shop window. Ensure every section is 100% complete: services, service areas, opening hours, photos, and a detailed business description. AI systems, especially Google AI, pull information directly from your GBP, so accuracy and detail are paramount."
+      },
+{
+    "id": "what-is-ai-visibility-uk-tradespeople-2026",
+    "slug": "what-is-ai-visibility-uk-tradespeople-2026",
+    "title": "What is AI Visibility and Why UK Tradespeople Need It in 2026",
+    "metaDescription": "AI visibility determines whether ChatGPT, Perplexity, and Google AI recommend your trade business. Learn why UK plumbers, electricians, and builders must optimise for AI search in 2026.",
+    "publishDate": "2026-01-14",
+    "author": "Whoza.ai Team",
+    "category": "AI Visibility",
+    "tags": [
+      "AI visibility",
+      "UK tradespeople",
+      "ChatGPT",
+      "Google AI",
+      "AEO",
+      "local SEO"
+    ],
+    "readTime": "6 min read",
+    "featured": true,
+    "leadAnswer": "AI visibility is how often and how accurately your trade business appears when customers ask AI assistants like ChatGPT, Google AI, or Perplexity for recommendations. In 2026, over 400 million people use AI search weekly, making AI visibility essential for UK plumbers, electricians, roofers, and builders who want to be found.",
+    "content": [
+      {
+        "type": "section",
+        "heading": "What is AI Visibility?",
+        "content": "AI visibility measures whether artificial intelligence systems can find, understand, and recommend your business when potential customers ask questions like \"Who's the best plumber near me?\" or \"Find a reliable electrician in Manchester.\"\n\nUnlike traditional SEO, which focuses on ranking in Google's blue links, AI visibility determines whether your business appears in:\n\n- **ChatGPT responses** when users ask for local service recommendations\n- **Google AI Overviews** that appear above traditional search results\n- **Perplexity answers** that synthesise information from across the web\n- **Voice assistant responses** from Alexa, Siri, and Google Assistant\n\nThe fundamental shift is this: AI doesn't just list websites—it recommends specific businesses. If AI can't find accurate, structured information about your trade business, it simply won't mention you."
+      }
 ];
 
 /**
@@ -563,37 +849,20 @@ export function getPublishedPosts() {
   const now = new Date();
   return allPosts.filter(post => {
     const publishDate = new Date(post.publishDate);
-    // Set hours, minutes, seconds, and milliseconds to 0 for a clean date comparison
     publishDate.setHours(0, 0, 0, 0);
     now.setHours(0, 0, 0, 0);
     return publishDate <= now;
   });
 }
 
-/**
- * Helper function to get a post by its slug
- * @param {string} slug - The slug of the post
- * @returns {Object|undefined} The blog post object or undefined if not found
- */
 export function getPostBySlug(slug) {
   return getPublishedPosts().find(post => post.slug === slug);
 }
 
-/**
- * Get featured posts
- * @returns {Array} Featured blog posts
- */
 export function getFeaturedPosts() {
   return getPublishedPosts().filter(post => post.featured);
 }
 
-/**
- * Get related posts (by category, excluding the current post)
- * @param {string} currentPostSlug - The slug of the current post
- * @param {string} category - The category to find related posts in
- * @param {number} limit - The number of related posts to return
- * @returns {Array} Related blog posts
- */
 export function getRelatedPosts(currentPostSlug, category, limit = 2) {
   return getPublishedPosts()
     .filter(post => post.category === category && post.slug !== currentPostSlug)
