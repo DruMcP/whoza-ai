@@ -360,9 +360,12 @@ export const getPostBySlug = (slug) => {
 
 // Helper function to get all published posts
 export const getPublishedPosts = () => {
-  const today = new Date().toISOString().split('T')[0];
+  // Use UTC to avoid timezone issues during date comparison
+  const now = new Date();
+  const today = now.toISOString().split('T')[0];
+  
   return blogPosts.filter(post => 
-    post.isPlaybook || post.publishDate <= today  // Always include playbook
+    post.isPlaybook || post.publishDate <= today
   );
 };
 
