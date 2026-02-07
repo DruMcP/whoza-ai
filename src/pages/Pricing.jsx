@@ -175,6 +175,67 @@ export default function Pricing() {
     checkTrialEligibility();
   }, [userData]);
 
+  // Inject Schema for AEO optimization
+  useEffect(() => {
+    // SoftwareApplication Schema
+    const softwareSchema = {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Whoza.ai AI Visibility Platform",
+      "operatingSystem": "Web",
+      "applicationCategory": "BusinessApplication",
+      "offers": pricingPlans.map(plan => ({
+        "@type": "Offer",
+        "name": plan.name,
+        "price": plan.price,
+        "priceCurrency": country === 'UK' ? 'GBP' : 'USD',
+        "description": plan.subheadline
+      })),
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "128"
+      }
+    };
+
+    // FAQ Schema
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqData.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    };
+
+    const scripts = [
+      { id: 'pricing-software-schema', data: softwareSchema },
+      { id: 'pricing-faq-schema', data: faqSchema }
+    ];
+
+    scripts.forEach(({ id, data }) => {
+      let script = document.getElementById(id);
+      if (!script) {
+        script = document.createElement('script');
+        script.id = id;
+        script.type = 'application/ld+json';
+        document.head.appendChild(script);
+      }
+      script.textContent = JSON.stringify(data);
+    });
+
+    return () => {
+      scripts.forEach(({ id }) => {
+        const script = document.getElementById(id);
+        if (script) script.remove();
+      });
+    };
+  }, [country]);
+
   return (
     <>
       <Header />
@@ -253,550 +314,126 @@ export default function Pricing() {
           <div className="pricing-cards">
             {pricingPlans
               .filter(plan => {
-                // Hide Free Trial if user is not eligible
-                if (plan.id === 'free-trial' && !trialEligible) {
-                  return false;
-                }
+                // Only show free trial if eligible
+                if (plan.id === 'free-trial') return trialEligible;
                 return true;
               })
               .map((plan) => (
-              <div
-                key={plan.id}
-                className={`pricing-card card-hover scroll-reveal ${plan.popular ? 'popular' : ''} ${plan.featured ? 'featured-trial' : ''}`}
-                style={{
-                  position: 'relative',
-                  transform: plan.featured ? 'scale(1.15)' : plan.popular ? 'scale(1.05)' : 'scale(1)',
-                  zIndex: plan.featured ? 3 : plan.popular ? 2 : 1,
-                  ...(plan.featured && {
-                    background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%)',
-                    border: '3px solid transparent',
-                    backgroundImage: 'linear-gradient(135deg, #0f172a, #1e293b), linear-gradient(135deg, #84CC16, #9EF01A, #84CC16)',
-                    backgroundOrigin: 'border-box',
-                    backgroundClip: 'padding-box, border-box',
-                    boxShadow: '0 25px 70px rgba(132, 204, 22, 0.4), 0 0 50px rgba(132, 204, 22, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
-                    animation: 'pulse-glow 3s ease-in-out infinite'
-                  })
-                }}
-              >
-                {plan.popular && (
-                  <div className="popular-badge" style={{
-                    background: plan.featured 
-                      ? 'linear-gradient(135deg, #84CC16 0%, #9EF01A 50%, #84CC16 100%)'
-                      : 'linear-gradient(135deg, var(--color-primary-600) 0%, #65a30d 100%)',
-                    color: '#0f172a',
-                    fontWeight: 700,
-                    fontSize: plan.featured ? '15px' : '14px',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.5px',
-                    padding: plan.featured ? '10px 24px' : 'var(--spacing-sm) var(--spacing-md)',
-                    borderRadius: 'var(--radius-full)',
-                    position: 'absolute',
-                    top: '-14px',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    boxShadow: plan.featured 
-                      ? '0 6px 20px rgba(132, 204, 22, 0.5), 0 0 30px rgba(132, 204, 22, 0.3)'
-                      : '0 4px 12px rgba(132, 204, 22, 0.3)',
-                    animation: plan.featured ? 'pulse-badge 2s ease-in-out infinite' : 'none'
-                  }}>
-                    {plan.featured ? '⭐ MOST POPULAR - LIMITED TIME' : 'Most Popular'}
+              <div key={plan.id} className={`pricing-card ${plan.featured ? 'featured' : ''}`}>
+                {plan.popular && <div className="popular-badge">Most Popular</div>}
+                <div className="card-header">
+                  <h3>{plan.name}</h3>
+                  <div className="headline">{plan.headline}</div>
+                  <p className="subheadline">{plan.subheadline}</p>
+                  <div className="price-container">
+                    <span className="price">{formatPrice(plan.price)}</span>
+                    <span className="duration">/{plan.duration || 'month'}</span>
                   </div>
-                )}
-
-                <div className="pricing-card-header" style={{ marginTop: plan.popular ? 'var(--spacing-md)' : 0 }}>
-                  <div style={{
-                    fontSize: plan.featured ? '22px' : '20px',
-                    fontWeight: 700,
-                    textTransform: 'uppercase',
-                    letterSpacing: '1px',
-                    color: plan.featured ? '#84CC16' : '#3B82F6',
-                    marginBottom: '8px',
-                    textShadow: plan.featured ? '0 0 20px rgba(132, 204, 22, 0.5)' : 'none'
-                  }}>
-                    {plan.name}
-                  </div>
-                  <h3 style={{
-                    fontSize: plan.featured ? '28px' : '24px',
-                    fontWeight: 700,
-                    marginBottom: '6px',
-                    color: '#ffffff',
-                    textShadow: plan.featured ? '0 2px 10px rgba(255, 255, 255, 0.1)' : 'none'
-                  }}>
-                    {plan.headline}
-                  </h3>
-                  <p className="plan-description" style={{
-                    fontSize: '15px',
-                    color: '#4B5563',
-                    fontStyle: 'italic',
-                    marginBottom: '12px'
-                  }}>
-                    {plan.subheadline}
-                  </p>
-                </div>
-
-                <div className="pricing-card-price" style={{ marginBottom: '8px' }}>
-                  {plan.id === 'free-trial' ? (
-                    <>
-                      <span className="price-currency" style={{ 
-                        fontSize: '48px', 
-                        fontWeight: 900,
-                        background: 'linear-gradient(135deg, #84CC16, #9EF01A)',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                        textShadow: '0 0 30px rgba(132, 204, 22, 0.5)',
-                        letterSpacing: '2px'
-                      }}>FREE</span>
-                    </>
-                  ) : (
-                    <>
-                      <span className="price-amount">{formatPrice(plan.price)}</span>
-                      <span className="price-period">/month</span>
-                    </>
+                  {plan.comparisonAnchor && (
+                    <div className="comparison-anchor">{plan.comparisonAnchor}</div>
                   )}
                 </div>
-
-                <div style={{
-                  fontSize: '13px',
-                  color: '#6B7280',
-                  marginBottom: '12px',
-                  textAlign: 'center'
-                }}>
-                  {plan.id === 'free-trial' ? `for ${plan.duration}` : 'billed monthly'}
-                </div>
-
-                {plan.comparisonAnchor && (
-                  <div style={{
-                    fontSize: '13px',
-                    color: 'var(--color-primary-600)',
-                    fontWeight: 600,
-                    marginBottom: '12px',
-                    textAlign: 'center',
-                    padding: 'var(--spacing-xs)',
-                    background: 'rgba(132, 204, 22, 0.1)',
-                    borderRadius: 'var(--radius-md)'
-                  }}>
-                    vs {formatPrice(600)}-{formatPrice(1000)}/month for SEO agencies
+                <div className="card-body">
+                  <div className="target-persona">
+                    <strong>Best for:</strong> {plan.targetPersona}
                   </div>
-                )}
-
-                <Link
-                  to={`/start?plan=${plan.id}`}
-                  className={`pricing-cta btn-hover ${plan.featured ? 'button-featured' : plan.popular ? 'button' : 'button-secondary'}`}
-                  style={{
-                    width: '100%',
-                    marginBottom: '10px',
-                    ...(plan.featured && {
-                      background: 'linear-gradient(135deg, #84CC16 0%, #65A30D 100%)',
-                      color: '#0f172a',
-                      fontSize: '18px',
-                      fontWeight: 700,
-                      padding: '16px 32px',
-                      borderRadius: '12px',
-                      border: 'none',
-                      boxShadow: '0 10px 30px rgba(132, 204, 22, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3)',
-                      textTransform: 'none',
-                      letterSpacing: '0.3px',
-                      transition: 'all 0.3s ease'
-                    })
-                  }}
-                >
-                  {plan.cta}
-                </Link>
-
-                <div style={{
-                  fontSize: '13px',
-                  color: '#4B5563',
-                  marginBottom: '12px',
-                  textAlign: 'center',
-                  minHeight: '40px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center'
-                }}>
-                  {plan.trustSignal}
-                </div>
-
-                <ul className="pricing-features" style={{
-                  listStyle: 'none',
-                  padding: 0,
-                  margin: 0
-                }}>
-                  {plan.features.map((feature, index) => {
-                    const isHeader = feature.includes('Core features:') || feature.includes('Everything in');
-                    
-                    return (
-                      <li key={index} style={{
-                        display: 'flex',
-                        alignItems: 'flex-start',
-                        gap: isHeader ? 0 : 'var(--spacing-sm)',
-                        marginBottom: isHeader ? '8px' : '4px',
-                        marginTop: isHeader && index > 0 ? '12px' : 0,
-                        fontSize: '15px',
-                        lineHeight: '1.3',
-                        color: isHeader ? 'var(--color-primary-600)' : '#374151',
-                        fontWeight: isHeader ? 600 : 400,
-                        listStyle: 'none'
-                      }}>
-                        {!isHeader && (
-                          <Icon name="CheckIcon" size={18} className="feature-check" style={{
-                            color: 'var(--color-primary-600)',
-                            flexShrink: 0,
-                            marginTop: '2px'
-                          }} />
+                  <ul className="feature-list">
+                    {plan.features.map((feature, index) => (
+                      <li key={index}>
+                        {feature.startsWith('Core features:') || feature.startsWith('Everything in Improve, plus:') ? (
+                          <strong>{feature}</strong>
+                        ) : (
+                          feature
                         )}
-                        {feature}
                       </li>
-                    );
-                  })}
-                </ul>
+                    ))}
+                  </ul>
+                </div>
+                <div className="card-footer">
+                  <Link 
+                    to={plan.id === 'free-trial' ? '/start?trial=true' : `/start?plan=${plan.id}`} 
+                    className={`button ${plan.featured ? '' : 'button-secondary'} full-width`}
+                  >
+                    {plan.cta}
+                  </Link>
+                  <div className="trust-signal">{plan.trustSignal}</div>
+                </div>
               </div>
             ))}
           </div>
 
-          <div className="guarantee-section" style={{
-            marginTop: 'var(--spacing-4xl)',
-            marginBottom: 'var(--spacing-4xl)'
-          }}>
-            <div style={{ textAlign: 'center', marginBottom: 'var(--spacing-lg)' }}>
-              <GuaranteeBadge />
-            </div>
-            <div className="guarantee-content" style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto' }}>
-              <h2 className="guarantee-title" style={{ fontSize: '28px', marginBottom: 'var(--spacing-md)' }}>
-                30-Day Money-Back Guarantee
-              </h2>
-              <p style={{
-                fontSize: '18px',
-                color: '#4B5563',
-                lineHeight: '1.7'
-              }}>
-                Try Whoza completely risk-free. If you're not seeing value within 30 days, we'll refund you completely. No questions asked.
-              </p>
-              <div className="guarantee-details" style={{
-                display: 'flex',
-                gap: 'var(--spacing-lg)',
-                justifyContent: 'center',
-                flexWrap: 'wrap',
-                marginTop: 'var(--spacing-lg)'
-              }}>
-                <div className="guarantee-detail" style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 'var(--spacing-xs)'
-                }}>
-                  <Icon name="CheckIcon" size={20} style={{ color: 'var(--color-primary-600)' }} />
-                  <span>No Risk</span>
-                </div>
-                <div className="guarantee-detail" style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 'var(--spacing-xs)'
-                }}>
-                  <Icon name="CheckIcon" size={20} style={{ color: 'var(--color-primary-600)' }} />
-                  <span>Cancel Anytime</span>
-                </div>
-                <div className="guarantee-detail" style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 'var(--spacing-xs)'
-                }}>
-                  <Icon name="CheckIcon" size={20} style={{ color: 'var(--color-primary-600)' }} />
-                  <span>No Long-Term Contracts</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <div className="comparison-section">
-            <h2 className="comparison-title">Compare Plans in Detail</h2>
-            <p className="comparison-subtitle">
-              See all features side-by-side to choose the perfect plan for your business
-            </p>
-
-            <div className="comparison-table-wrapper" style={{ overflowX: 'auto' }}>
-              <table className="comparison-table" style={{
-                width: '100%',
-                borderCollapse: 'collapse',
-                marginTop: 'var(--spacing-xl)'
-              }}>
+            <h2>Compare Plans</h2>
+            <div className="table-responsive">
+              <table className="comparison-table">
                 <thead>
                   <tr>
-                    <th className="feature-column" style={{
-                      textAlign: 'left',
-                      padding: 'var(--spacing-md)',
-                      borderBottom: '2px solid rgba(132, 204, 22, 0.3)',
-                      fontSize: '16px',
-                      fontWeight: 700
-                    }}>
-                      Feature
-                    </th>
-                    {pricingPlans.map((plan) => (
-                      <th key={plan.id} className={plan.popular ? 'popular-column' : ''} style={{
-                        textAlign: 'center',
-                        padding: 'var(--spacing-md)',
-                        borderBottom: '2px solid rgba(132, 204, 22, 0.3)',
-                        background: plan.popular ? 'rgba(132, 204, 22, 0.1)' : 'transparent',
-                        fontSize: '16px',
-                        fontWeight: 700
-                      }}>
-                        <div className="table-plan-header">
-                          <div className="table-plan-name">{plan.name}</div>
-                          <div className="table-plan-price" style={{
-                            marginTop: 'var(--spacing-xs)',
-                            fontSize: '14px',
-                            color: '#6B7280'
-                          }}>
-                            {plan.id === 'free-trial' ? `FREE for ${plan.duration}` : `£${plan.price}/month`}
-                          </div>
-                        </div>
-                      </th>
-                    ))}
+                    <th>Feature</th>
+                    {trialEligible && <th>Free Trial</th>}
+                    <th>Improve</th>
+                    <th>Priority</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {comparisonFeatures.map((section, sectionIndex) => (
-                    <>
-                      <tr key={`category-${sectionIndex}`} className="category-row">
-                        <td colSpan={4} className="category-cell" style={{
-                          padding: 'var(--spacing-md)',
-                          fontWeight: 700,
-                          fontSize: '15px',
-                          background: 'rgba(132, 204, 22, 0.05)',
-                          color: 'var(--color-primary-600)',
-                          textTransform: 'uppercase',
-                          letterSpacing: '0.5px'
-                        }}>
-                          {section.category}
-                        </td>
+                  {comparisonFeatures.map((category, catIndex) => (
+                    <React.Fragment key={catIndex}>
+                      <tr className="category-row">
+                        <td colSpan={trialEligible ? 4 : 3}>{category.category}</td>
                       </tr>
-                      {section.features.map((feature, featureIndex) => (
-                        <tr key={`feature-${sectionIndex}-${featureIndex}`}>
-                          <td className="feature-name" style={{
-                            padding: 'var(--spacing-md)',
-                            borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-                            fontSize: '15px'
-                          }}>
-                            {feature.name}
-                          </td>
-                          {['freeTrial', 'improve', 'priority'].map((tier, tierIndex) => (
-                            <td key={tier} className={`feature-value ${tier === 'improve' ? 'popular-column' : ''}`} style={{
-                              textAlign: 'center',
-                              padding: 'var(--spacing-md)',
-                              borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-                              background: tier === 'improve' ? 'rgba(132, 204, 22, 0.05)' : 'transparent'
-                            }}>
-                              {typeof feature[tier] === 'boolean' ? (
-                                feature[tier] ? (
-                                  <Icon name="CheckIcon" size={20} className="check-icon" style={{ color: 'var(--color-primary-600)' }} />
-                                ) : (
-                                  <span className="not-included" style={{ color: 'var(--color-text-secondary)' }}>—</span>
-                                )
-                              ) : (
-                                <span className="feature-text" style={{
-                                  fontSize: '14px',
-                                  color: feature[tier] === '—' ? 'var(--color-text-secondary)' : '#374151'
-                                }}>
-                                  {feature[tier]}
-                                </span>
-                              )}
+                      {category.features.map((feature, featIndex) => (
+                        <tr key={featIndex}>
+                          <td>{feature.name}</td>
+                          {trialEligible && (
+                            <td>
+                              {typeof feature.freeTrial === 'boolean' ? (
+                                feature.freeTrial ? <Icon name="CheckIcon" size={20} color="#10B981" /> : <Icon name="XIcon" size={20} color="#EF4444" />
+                              ) : feature.freeTrial}
                             </td>
-                          ))}
+                          )}
+                          <td>
+                            {typeof feature.improve === 'boolean' ? (
+                              feature.improve ? <Icon name="CheckIcon" size={20} color="#10B981" /> : <Icon name="XIcon" size={20} color="#EF4444" />
+                            ) : feature.improve}
+                          </td>
+                          <td>
+                            {typeof feature.priority === 'boolean' ? (
+                              feature.priority ? <Icon name="CheckIcon" size={20} color="#10B981" /> : <Icon name="XIcon" size={20} color="#EF4444" />
+                            ) : feature.priority}
+                          </td>
                         </tr>
                       ))}
-                    </>
+                    </React.Fragment>
                   ))}
                 </tbody>
               </table>
             </div>
           </div>
 
-          <section id="pricing-plans" style={{ marginTop: 'var(--spacing-4xl)' }}>
-            <div id="roi-calculator">
-              <ROICalculator />
-            </div>
-          </section>
-
-          <div className="simple-pricing-section" style={{
-            marginTop: 'var(--spacing-4xl)',
-            marginBottom: 'var(--spacing-4xl)',
-            textAlign: 'center'
-          }}>
-            <h2 style={{ fontSize: '32px', marginBottom: 'var(--spacing-lg)' }}>Choose Your Plan</h2>
-
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: 'var(--spacing-xl)',
-              maxWidth: '1000px',
-              margin: '0 auto var(--spacing-xl)'
-            }}>
-              <div className="simple-pricing-card card-hover" style={{
-                background: 'rgba(255, 255, 255, 0.03)',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
-                borderRadius: 'var(--radius-xl)',
-                padding: 'var(--spacing-2xl)',
-                transition: 'all 0.3s ease'
-              }}>
-                <div style={{ fontSize: '16px', fontWeight: 600, color: 'var(--color-primary-600)', marginBottom: 'var(--spacing-sm)' }}>
-                  Free Trial
-                </div>
-                <div style={{ fontSize: '48px', fontWeight: 700, marginBottom: 'var(--spacing-xs)' }}>
-                  <span style={{ fontSize: '32px' }}>FREE</span>
-                </div>
-                <p style={{ color: '#9CA3AF', fontSize: '16px', lineHeight: '1.6', minHeight: '75px' }}>
-                  3 months free. Weekly updates & tips. No credit card required.
+          <div className="guarantee-section">
+            <div className="guarantee-content">
+              <div className="guarantee-badge-container">
+                <GuaranteeBadge />
+              </div>
+              <div className="guarantee-text">
+                <h2>Our 30-Day Money-Back Guarantee</h2>
+                <p>
+                  We're confident Whoza.ai will help you get found by AI. If you're not completely 
+                  satisfied within your first 30 days, we'll refund your entire payment. 
+                  No questions asked, no hoops to jump through.
                 </p>
-                <Link
-                  to="/start?plan=free-trial"
-                  className="button-secondary btn-hover"
-                  style={{ width: '100%', marginTop: 'var(--spacing-md)' }}
-                >
-                  Start Free Trial
-                </Link>
               </div>
-
-              <div className="simple-pricing-card card-hover" style={{
-                background: 'linear-gradient(135deg, rgba(132, 204, 22, 0.15) 0%, rgba(132, 204, 22, 0.08) 100%)',
-                border: '2px solid var(--color-primary-600)',
-                borderRadius: 'var(--radius-xl)',
-                padding: 'var(--spacing-2xl)',
-                position: 'relative',
-                transform: 'scale(1.05)',
-                transition: 'all 0.3s ease'
-              }}>
-                <div style={{
-                  position: 'absolute',
-                  top: '-12px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  background: 'var(--color-primary-600)',
-                  color: '#0f172a',
-                  fontSize: '12px',
-                  fontWeight: 700,
-                  textTransform: 'uppercase',
-                  padding: 'var(--spacing-xs) var(--spacing-md)',
-                  borderRadius: 'var(--radius-full)',
-                  letterSpacing: '0.5px'
-                }}>
-                  Most Popular
-                </div>
-                <div style={{ fontSize: '16px', fontWeight: 600, color: 'var(--color-primary-600)', marginBottom: 'var(--spacing-sm)', marginTop: 'var(--spacing-sm)' }}>
-                  Improve
-                </div>
-                <div style={{ fontSize: '48px', fontWeight: 700, marginBottom: 'var(--spacing-xs)' }}>
-                  {formatPrice(59)}<span style={{ fontSize: '18px', color: '#6B7280' }}>/month</span>
-                </div>
-                <p style={{ color: '#9CA3AF', fontSize: '16px', lineHeight: '1.6', minHeight: '75px' }}>
-                  One approved improvement per week + monthly confidence score.
-                </p>
-                <Link
-                  to="/start?plan=improve"
-                  className="button btn-hover"
-                  style={{ width: '100%', marginTop: 'var(--spacing-md)' }}
-                >
-                  Start Improving
-                </Link>
-              </div>
-
-              <div className="simple-pricing-card card-hover" style={{
-                background: 'rgba(255, 255, 255, 0.03)',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
-                borderRadius: 'var(--radius-xl)',
-                padding: 'var(--spacing-2xl)',
-                transition: 'all 0.3s ease'
-              }}>
-                <div style={{ fontSize: '16px', fontWeight: 600, color: 'var(--color-primary-600)', marginBottom: 'var(--spacing-sm)' }}>
-                  Priority
-                </div>
-                <div style={{ fontSize: '48px', fontWeight: 700, marginBottom: 'var(--spacing-xs)' }}>
-                  {formatPrice(149)}<span style={{ fontSize: '18px', color: '#6B7280' }}>/month</span>
-                </div>
-                <p style={{ color: '#9CA3AF', fontSize: '16px', lineHeight: '1.6', minHeight: '75px' }}>
-                  Faster reviews + extra caution for high-value or regulated services.
-                </p>
-                <Link
-                  to="/start?plan=priority"
-                  className="button-secondary btn-hover"
-                  style={{ width: '100%', marginTop: 'var(--spacing-md)' }}
-                >
-                  Get Priority Access
-                </Link>
-              </div>
-            </div>
-
-            <p style={{
-              fontSize: '15px',
-              color: '#6B7280',
-              marginTop: 'var(--spacing-lg)'
-            }}>
-              30-day money-back guarantee • Cancel anytime • No contracts
-            </p>
-          </div>
-
-          <div className="trust-signals-section" style={{ marginTop: 'var(--spacing-4xl)' }}>
-            <h2 className="trust-signals-title">Why Choose Whoza?</h2>
-
-            <div className="trust-signals-grid">
-              <div className="trust-signal-card card-hover">
-                <div className="trust-signal-icon guarantee-icon">
-                  <Icon name="GuaranteeIcon" size={32} />
-                </div>
-                <h3>30-Day Money-Back Guarantee</h3>
-                <p>Not satisfied? Get a full refund within 30 days. No questions asked.</p>
-              </div>
-
-              <div className="trust-signal-card card-hover">
-                <div className="trust-signal-icon security-icon">
-                  <Icon name="SecurityIcon" size={32} />
-                </div>
-                <h3>Bank-Level Security</h3>
-                <p>Your payment data is encrypted and secured by Stripe, trusted by millions worldwide.</p>
-              </div>
-
-              <div className="trust-signal-card card-hover">
-                <div className="trust-signal-icon cancel-icon">
-                  <Icon name="CloseIcon" size={32} />
-                </div>
-                <h3>Cancel Anytime</h3>
-                <p>No contracts or commitments. Cancel your subscription whenever you want.</p>
-              </div>
-
-              <div className="trust-signal-card card-hover">
-                <div className="trust-signal-icon">
-                  <span style={{ fontSize: '32px' }}>🇬🇧</span>
-                </div>
-                <h3>GDPR Compliant</h3>
-                <p>Your data is protected under UK GDPR regulations. We never sell your information.</p>
-              </div>
-            </div>
-
-            <div className="stripe-badge" style={{
-              textAlign: 'center',
-              marginTop: 'var(--spacing-xl)',
-              padding: 'var(--spacing-md)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: 'var(--spacing-sm)',
-              flexWrap: 'wrap',
-              fontSize: '14px',
-              color: '#6B7280'
-            }}>
-              <span className="powered-by">Powered by</span>
-              <span className="stripe-text" style={{ fontWeight: 700, color: '#635bff' }}>Stripe</span>
-              <span style={{ color: '#6B7280' }}>·</span>
-              <span className="pci-badge">PCI DSS Compliant</span>
             </div>
           </div>
 
-          <div className="faq-section" style={{ marginTop: 'var(--spacing-4xl)', marginBottom: 'var(--spacing-4xl)' }}>
-            <h2 className="faq-title">Common Questions</h2>
-            <p className="faq-subtitle">Everything you need to know about Whoza pricing and plans</p>
-
-            <div className="faq-accordion">
+          <div className="faq-section">
+            <h2 style={{ textAlign: 'center', marginBottom: 'var(--spacing-3xl)' }}>
+              Frequently Asked Questions
+            </h2>
+            <div className="faq-grid">
               {faqData.map((faq, index) => (
                 <div key={index} className="faq-item">
-                  <button
-                    className={`faq-question ${openFaqIndex === index ? 'active' : ''}`}
+                  <button 
+                    className="faq-question" 
                     onClick={() => toggleFaq(index)}
                     aria-expanded={openFaqIndex === index}
                   >

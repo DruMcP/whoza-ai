@@ -45,11 +45,32 @@ export default function LocationPageUK() {
   const allCities = getAllUKCities();
   const otherCities = allCities.filter(c => c.slug !== citySlug).slice(0, 5);
 
+  // Schema for AEO optimization
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": `Whoza.ai ${city.name} - AI Visibility for ${getTerm('tradespeople')}`,
+    "description": `Helping ${getTerm('tradespeople')} in ${city.name} get found and recommended by AI search engines like ChatGPT and Google AI.`,
+    "url": `https://whoza.ai/uk/ai-visibility/${city.slug}`,
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": city.name,
+      "addressRegion": city.region,
+      "addressCountry": "GB"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": city.name
+    },
+    "priceRange": "££"
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <SEO
         title={`AI Visibility for ${getTerm('tradespeople')} in ${city.name}`}
         description={`Get your AI Visibility Score in ${city.name}. Join over ${city.tradespeople.toLocaleString()} ${getTerm('tradespeople')} optimising their online presence. ${formatPrice(59)} to start.`}
+        schemas={[localBusinessSchema]}
       />
       <Header />
 
@@ -115,7 +136,54 @@ export default function LocationPageUK() {
           </div>
         </section>
 
+        {/* AI Search vs Traditional SEO Comparison Table - World Class Specificity */}
         <section className="py-16">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-8 text-center">
+              AI Search vs. Traditional SEO in {city.name}
+            </h2>
+            <div className="max-w-4xl mx-auto overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-200">
+                <thead>
+                  <tr className="bg-blue-50">
+                    <th className="p-4 text-left border border-gray-200">Feature</th>
+                    <th className="p-4 text-left border border-gray-200">Traditional SEO</th>
+                    <th className="p-4 text-left border border-gray-200 bg-blue-100">Whoza.ai (AEO)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="p-4 border border-gray-200 font-bold">Goal</td>
+                    <td className="p-4 border border-gray-200">Rank high on Google Search</td>
+                    <td className="p-4 border border-gray-200">Get named & recommended by AI</td>
+                  </tr>
+                  <tr>
+                    <td className="p-4 border border-gray-200 font-bold">Strategy</td>
+                    <td className="p-4 border border-gray-200">Keywords & Backlinks</td>
+                    <td className="p-4 border border-gray-200">Entity Confidence Engineering™</td>
+                  </tr>
+                  <tr>
+                    <td className="p-4 border border-gray-200 font-bold">Timeline</td>
+                    <td className="p-4 border border-gray-200">6-12 months for results</td>
+                    <td className="p-4 border border-gray-200">Visible impact in 30-90 days</td>
+                  </tr>
+                  <tr>
+                    <td className="p-4 border border-gray-200 font-bold">Effort</td>
+                    <td className="p-4 border border-gray-200">Hours of content writing</td>
+                    <td className="p-4 border border-gray-200">15 mins/week actionable tasks</td>
+                  </tr>
+                  <tr>
+                    <td className="p-4 border border-gray-200 font-bold">Cost</td>
+                    <td className="p-4 border border-gray-200">£600 - £1,500 / month</td>
+                    <td className="p-4 border border-gray-200">From {formatPrice(59)} / month</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-8 text-center">
               How It Works in {city.name}
@@ -154,7 +222,7 @@ export default function LocationPageUK() {
         </section>
 
         {otherCities.length > 0 && (
-          <section className="py-16 bg-gray-50">
+          <section className="py-16">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl font-bold mb-8 text-center">
                 Also Serving These UK Cities
@@ -174,7 +242,7 @@ export default function LocationPageUK() {
           </section>
         )}
 
-        <section className="py-16">
+        <section className="py-16 bg-blue-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-6">
               Ready to Dominate AI Search in {city.name}?
@@ -183,7 +251,7 @@ export default function LocationPageUK() {
               Join {getTerm('tradespeople')} across {city.region} who are already
               winning more work with AI-{getTerm('optimised')} visibility.
             </p>
-            <Link to="/free-score" className="btn btn-primary btn-lg">
+            <Link to="/free-score" className="btn bg-white text-blue-600 hover:bg-gray-100 btn-lg">
               Get Your Free Visibility Score
             </Link>
           </div>
