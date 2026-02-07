@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 import SampleReport from '../components/SampleReport';
 import ECEBrandBadge from '../components/ECEBrandBadge';
-import { generateBreadcrumbSchema, generateHowToSchema } from '../utils/schemaOrg';
+import { generateBreadcrumbSchema, generateHowToSchema, generateOrganizationSchema } from '../utils/schemaOrg';
 
 export default function HowItWorks() {
   const [showReport, setShowReport] = useState(false);
@@ -19,17 +19,31 @@ export default function HowItWorks() {
 
   const howToSchema = generateHowToSchema({
     name: 'How to Improve Your AI Visibility with Whoza',
-    description: 'Step-by-step guide to improving your business visibility in AI search results',
+    description: 'Step-by-step guide to improving your business visibility in AI search results using Entity Confidence Engineering™.',
     totalTime: 'PT15M',
     steps: [
-      { name: 'Tell us about your business', text: 'Answer a few simple questions about your business. No technical knowledge needed.' },
-      { name: 'Rex studies your situation', text: 'Rex checks your current visibility across AI platforms and analyzes your competitors.' },
-      { name: 'Get one task each week', text: 'Rex sends one clear, actionable task by email. You review and approve before completing it.' },
-      { name: 'See your monthly score', text: 'Every month, Rex measures your visibility. Get a simple Visibility Confidence Score™ that shows if you\'re improving.' }
+      { 
+        name: 'Tell us about your business', 
+        text: 'Answer a few simple questions about your business, including your services, locations, and unique selling points. No technical knowledge needed.' 
+      },
+      { 
+        name: 'Rex studies your situation', 
+        text: 'Rex (your AI assistant) checks your current visibility across AI platforms (ChatGPT, Google AI, Perplexity) and analyzes your competitors to create your baseline Visibility Confidence Score™.' 
+      },
+      { 
+        name: 'Get one task each week', 
+        text: 'Rex sends one clear, actionable task by email based on the 5 pillars of ECE. You review and approve before completing it using our simple instructions.' 
+      },
+      { 
+        name: 'See your monthly score', 
+        text: 'Every month, Rex measures your visibility improvements. Get a detailed Visibility Confidence Score™ report that shows exactly how your AI presence is growing.' 
+      }
     ]
   });
 
-  const schemas = [breadcrumbSchema, howToSchema];
+  const orgSchema = generateOrganizationSchema();
+
+  const schemas = [breadcrumbSchema, howToSchema, orgSchema];
 
   return (
     <>
@@ -226,171 +240,13 @@ export default function HowItWorks() {
                       <p>Write a brief case study about a recent customer project. Include the problem, your solution, and the results.</p>
                       <div className="task-meta">
                         <div className="task-time">
-                          <svg viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"/>
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 6v6l4 2" />
                           </svg>
-                          <span>15 min</span>
+                          15 mins
                         </div>
-                        <div className="task-impact">
-                          <svg viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                          </svg>
-                          <span>High Impact</span>
-                        </div>
-                      </div>
-                      <button
-                        className="task-action-btn"
-                        onClick={() => setShowTaskDetails(!showTaskDetails)}
-                        aria-label="View task details for customer success story"
-                        aria-expanded={showTaskDetails}
-                      >
-                        {showTaskDetails ? 'Hide Details' : 'View Task Details'}
-                      </button>
-                      {showTaskDetails && (
-                        <div className="task-details-expanded" style={{
-                          marginTop: 'var(--spacing-md)',
-                          padding: 'var(--spacing-md)',
-                          background: '#f9fafb',
-                          borderRadius: '8px',
-                          border: '1px solid #e5e7eb'
-                        }}>
-                          <h5 style={{ marginTop: 0, marginBottom: 'var(--spacing-sm)', fontSize: '14px', fontWeight: 600 }}>
-                            Step-by-Step Instructions:
-                          </h5>
-                          <ol style={{ margin: 0, paddingLeft: '20px', fontSize: '14px', lineHeight: '1.6' }}>
-                            <li>Think of a recent project you completed that went well</li>
-                            <li>Write a brief description (3-4 sentences) about the problem, your solution, and the outcome</li>
-                            <li>Add this to your website's "Reviews" or "Projects" page</li>
-                            <li>Take a screenshot and mark the task as complete</li>
-                          </ol>
-                          <p style={{
-                            marginTop: 'var(--spacing-sm)',
-                            marginBottom: 0,
-                            fontSize: '13px',
-                            color: 'var(--color-text-secondary)'
-                          }}>
-                            This helps AI systems understand the quality of work you deliver. Real customer stories build trust.
-                          </p>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="dashboard-card history-card">
-                    <div className="card-header">
-                      <h3>Recent Activity</h3>
-                    </div>
-                    <div className="activity-list">
-                      <div className="activity-item completed">
-                        <div className="activity-icon">
-                          <svg viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-                          </svg>
-                        </div>
-                        <div className="activity-details">
-                          <p className="activity-title">Updated Google Business Profile</p>
-                          <p className="activity-date">3 days ago</p>
-                        </div>
-                      </div>
-                      <div className="activity-item completed">
-                        <div className="activity-icon">
-                          <svg viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-                          </svg>
-                        </div>
-                        <div className="activity-details">
-                          <p className="activity-title">Published blog post about services</p>
-                          <p className="activity-date">10 days ago</p>
-                        </div>
-                      </div>
-                      <div className="activity-item completed">
-                        <div className="activity-icon">
-                          <svg viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-                          </svg>
-                        </div>
-                        <div className="activity-details">
-                          <p className="activity-title">Added service area information</p>
-                          <p className="activity-date">17 days ago</p>
-                        </div>
-                      </div>
-                      <div className="activity-item completed">
-                        <div className="activity-icon">
-                          <svg viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-                          </svg>
-                        </div>
-                        <div className="activity-details">
-                          <p className="activity-title">Created FAQ page</p>
-                          <p className="activity-date">24 days ago</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="dashboard-card chart-card">
-                    <div className="card-header">
-                      <h3>Score History</h3>
-                      <div className="chart-period">Last 6 months</div>
-                    </div>
-                    <div className="progress-chart">
-                      <div className="chart-bars">
-                        <div className="chart-bar-group">
-                          <div className="chart-bar-value">51</div>
-                          <div className="chart-bar" style={{ height: '51%' }}>
-                            <div className="bar-fill"></div>
-                          </div>
-                          <div className="chart-bar-label">Jan</div>
-                        </div>
-                        <div className="chart-bar-group">
-                          <div className="chart-bar-value">56</div>
-                          <div className="chart-bar" style={{ height: '56%' }}>
-                            <div className="bar-fill"></div>
-                          </div>
-                          <div className="chart-bar-label">Feb</div>
-                        </div>
-                        <div className="chart-bar-group">
-                          <div className="chart-bar-value">59</div>
-                          <div className="chart-bar" style={{ height: '59%' }}>
-                            <div className="bar-fill"></div>
-                          </div>
-                          <div className="chart-bar-label">Mar</div>
-                        </div>
-                        <div className="chart-bar-group">
-                          <div className="chart-bar-value">63</div>
-                          <div className="chart-bar" style={{ height: '63%' }}>
-                            <div className="bar-fill"></div>
-                          </div>
-                          <div className="chart-bar-label">Apr</div>
-                        </div>
-                        <div className="chart-bar-group">
-                          <div className="chart-bar-value">68</div>
-                          <div className="chart-bar" style={{ height: '68%' }}>
-                            <div className="bar-fill"></div>
-                          </div>
-                          <div className="chart-bar-label">May</div>
-                        </div>
-                        <div className="chart-bar-group">
-                          <div className="chart-bar-value">75</div>
-                          <div className="chart-bar" style={{ height: '75%' }}>
-                            <div className="bar-fill"></div>
-                          </div>
-                          <div className="chart-bar-label">Jun</div>
-                        </div>
-                      </div>
-                      <div className="chart-footer">
-                        <div className="chart-stat">
-                          <span className="stat-label">Starting Score</span>
-                          <span className="stat-value">51</span>
-                        </div>
-                        <div className="chart-stat">
-                          <span className="stat-label">Current Score</span>
-                          <span className="stat-value highlight">75</span>
-                        </div>
-                        <div className="chart-stat">
-                          <span className="stat-label">Improvement</span>
-                          <span className="stat-value positive">Improved</span>
-                        </div>
+                        <button className="button button-small" onClick={() => setActiveTab('tasks')}>View Details</button>
                       </div>
                     </div>
                   </div>
@@ -398,106 +254,81 @@ export default function HowItWorks() {
                 )}
 
                 {activeTab === 'tasks' && (
-                  <div className="dashboard-grid">
-                    <div className="dashboard-card" style={{ gridColumn: '1 / -1' }}>
-                      <div className="card-header">
-                        <h3>Your Weekly Tasks</h3>
-                        <span className="task-status new">3 Active</span>
+                  <div className="dashboard-tasks-view">
+                    <div className="tasks-header">
+                      <h3>Your Tasks</h3>
+                    </div>
+                    <div className="task-item active">
+                      <div className="task-checkbox"></div>
+                      <div className="task-info">
+                        <h4>Add a customer success story to your website</h4>
+                        <p>Status: Available</p>
                       </div>
-                      <div style={{ padding: 'var(--spacing-lg)' }}>
-                        <div style={{ marginBottom: 'var(--spacing-lg)', paddingBottom: 'var(--spacing-lg)', borderBottom: '1px solid #e5e7eb' }}>
-                          <h4 style={{ marginTop: 0, marginBottom: 'var(--spacing-sm)' }}>Add a customer success story to your website</h4>
-                          <p style={{ color: 'var(--color-text-secondary)', fontSize: '14px' }}>
-                            Status: <strong style={{ color: '#f59e0b' }}>In Progress</strong> • Due: This week
-                          </p>
-                        </div>
-                        <div style={{ marginBottom: 'var(--spacing-lg)', paddingBottom: 'var(--spacing-lg)', borderBottom: '1px solid #e5e7eb' }}>
-                          <h4 style={{ marginTop: 0, marginBottom: 'var(--spacing-sm)' }}>Update your Google Business hours</h4>
-                          <p style={{ color: 'var(--color-text-secondary)', fontSize: '14px' }}>
-                            Status: <strong style={{ color: '#22c55e' }}>Ready to Start</strong> • Due: Next week
-                          </p>
-                        </div>
-                        <div>
-                          <h4 style={{ marginTop: 0, marginBottom: 'var(--spacing-sm)' }}>Add FAQ section to website</h4>
-                          <p style={{ color: 'var(--color-text-secondary)', fontSize: '14px' }}>
-                            Status: <strong style={{ color: '#94a3b8' }}>Scheduled</strong> • Due: 2 weeks
-                          </p>
-                        </div>
+                      <div className="task-due">This week</div>
+                    </div>
+                    <div className="task-item completed">
+                      <div className="task-checkbox checked">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3">
+                          <path d="M20 6L9 17L4 12" />
+                        </svg>
                       </div>
+                      <div className="task-info">
+                        <h4>Verify your Google Business Profile details</h4>
+                        <p>Status: Completed</p>
+                      </div>
+                      <div className="task-due">Last week</div>
                     </div>
                   </div>
                 )}
 
                 {activeTab === 'reports' && (
-                  <div className="dashboard-grid">
-                    <div className="dashboard-card" style={{ gridColumn: '1 / -1' }}>
-                      <div className="card-header">
-                        <h3>Monthly Reports</h3>
-                        <span className="score-badge positive">6 Reports Available</span>
+                  <div className="dashboard-reports-view">
+                    <div className="reports-header">
+                      <h3>Monthly Reports</h3>
+                    </div>
+                    <div className="report-item">
+                      <div className="report-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                          <path d="M14 2v6h6" />
+                          <path d="M16 13H8" />
+                          <path d="M16 17H8" />
+                          <path d="M10 9H8" />
+                        </svg>
                       </div>
-                      <div style={{ padding: 'var(--spacing-lg)' }}>
-                        <div style={{ display: 'grid', gap: 'var(--spacing-md)' }}>
-                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: 'var(--spacing-md)', background: '#f9fafb', borderRadius: '8px' }}>
-                            <div>
-                              <h4 style={{ margin: 0, marginBottom: '4px', fontSize: '16px' }}>June 2024 Report</h4>
-                              <p style={{ margin: 0, fontSize: '14px', color: 'var(--color-text-secondary)' }}>
-                                Score: <strong style={{ color: '#22c55e' }}>75/100</strong> (+12 from last month)
-                              </p>
-                            </div>
-                            <button className="button-secondary" style={{ fontSize: '14px', padding: '8px 16px' }}>View Report</button>
-                          </div>
-                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: 'var(--spacing-md)', background: '#f9fafb', borderRadius: '8px' }}>
-                            <div>
-                              <h4 style={{ margin: 0, marginBottom: '4px', fontSize: '16px' }}>May 2024 Report</h4>
-                              <p style={{ margin: 0, fontSize: '14px', color: 'var(--color-text-secondary)' }}>
-                                Score: <strong style={{ color: '#22c55e' }}>68/100</strong> (+5 from last month)
-                              </p>
-                            </div>
-                            <button className="button-secondary" style={{ fontSize: '14px', padding: '8px 16px' }}>View Report</button>
-                          </div>
-                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: 'var(--spacing-md)', background: '#f9fafb', borderRadius: '8px' }}>
-                            <div>
-                              <h4 style={{ margin: 0, marginBottom: '4px', fontSize: '16px' }}>April 2024 Report</h4>
-                              <p style={{ margin: 0, fontSize: '14px', color: 'var(--color-text-secondary)' }}>
-                                Score: <strong>63/100</strong> (+4 from last month)
-                              </p>
-                            </div>
-                            <button className="button-secondary" style={{ fontSize: '14px', padding: '8px 16px' }}>View Report</button>
-                          </div>
-                        </div>
+                      <div className="report-info">
+                        <h4>February 2026 Report</h4>
+                        <p>Score: 75 (+12)</p>
                       </div>
+                      <button className="button button-small button-secondary">Download</button>
                     </div>
                   </div>
                 )}
               </div>
             </div>
+          </div>
 
-            <div className="dashboard-features">
-              <h3>What You'll Get Access To</h3>
-              <ul className="feature-list">
+          <div className="features-grid-section">
+            <div className="feature-highlight-card">
+              <div className="feature-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+                </svg>
+              </div>
+              <h3>AI-Powered Assistant (Rex)</h3>
+              <p>Your dedicated AI employee who works 24/7 to analyze search trends and find visibility opportunities for your business.</p>
+              <ul className="feature-bullets">
                 <li>
                   <svg viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
                   </svg>
-                  <span><strong>Real-time visibility tracking</strong> updated monthly with your current Visibility Confidence Score™</span>
+                  <span><strong>Weekly task generation</strong> tailored to your specific trade and location</span>
                 </li>
                 <li>
                   <svg viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
                   </svg>
-                  <span><strong>Weekly actionable tasks</strong> delivered straight to your dashboard (and email)</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-                  </svg>
-                  <span><strong>Complete task history</strong> so you can see everything you've accomplished</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-                  </svg>
-                  <span><strong>Progress charts</strong> showing your improvement over time with month-by-month comparisons</span>
+                  <span><strong>Competitor monitoring</strong> to see how you rank against other local firms</span>
                 </li>
                 <li>
                   <svg viewBox="0 0 20 20" fill="currentColor">

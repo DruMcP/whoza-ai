@@ -211,6 +211,59 @@ function BlogPost() {
     return <Playbook2026 />;
   }
 
+  // Helper to parse markdown-style text (bold, links, etc.)
+  const renderText = (text) => {
+    if (typeof text !== 'string') return text;
+    
+    const parts = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g);
+    return parts.map((part, index) => {
+      if (part.startsWith('**') && part.endsWith('**')) {
+        return <strong key={index}>{part.slice(2, -2)}</strong>;
+      }
+      if (part.startsWith('[') && part.includes('](')) {
+        const match = part.match(/\[([^\]]+)\]\(([^)]+)\)/);
+        if (match) {
+          return <a key={index} href={match[2]} target="_blank" rel="noopener noreferrer">{match[1]}</a>;
+        }
+      }
+      return part;
+    });
+  };
+
+  // Helper to render markdown-style tables
+  const renderTable = (content) => {
+    const lines = content.trim().split('\n');
+    if (lines.length < 3) return <p>{content}</p>;
+
+    const headerRow = lines[0].split('|').filter(cell => cell.trim() !== '').map(cell => cell.trim());
+    const bodyRows = lines.slice(2).map(row => 
+      row.split('|').filter(cell => cell.trim() !== '').map(cell => cell.trim())
+    );
+
+    return (
+      <div className="table-responsive" style={{ overflowX: 'auto', margin: '2rem 0' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', border: '1px solid rgba(255,255,255,0.1)' }}>
+          <thead>
+            <tr style={{ backgroundColor: 'rgba(59, 130, 246, 0.1)' }}>
+              {headerRow.map((header, i) => (
+                <th key={i} style={{ padding: '12px', textAlign: 'left', border: '1px solid rgba(255,255,255,0.1)', color: '#3b82f6' }}>{header}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {bodyRows.map((row, i) => (
+              <tr key={i}>
+                {row.map((cell, j) => (
+                  <td key={j} style={{ padding: '12px', border: '1px solid rgba(255,255,255,0.1)' }}>{renderText(cell)}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
+  };
+
   return (
     <main className="blog-post-page" role="main">
       <article className="blog-article" itemScope itemType="https://schema.org/Article">
@@ -250,7 +303,7 @@ function BlogPost() {
               marginBottom: '2rem',
               borderRadius: '0.375rem'
             }}>
-              <p style={{ margin: 0, color: '#ffffff' }}>{post.leadAnswer}</p>
+              <p style={{ margin: 0, color: '#ffffff' }}>{renderText(post.leadAnswer)}</p>
             </div>
             
             <div className="article-author" itemProp="author" itemScope itemType="https://schema.org/Organization">
@@ -284,8 +337,13 @@ function BlogPost() {
               <section key={index} id={`section-${index}`} className="content-section">
                 <h2>{section.heading}</h2>
                 {section.content.split('\n\n').map((paragraph, pIndex) => {
+                  // Handle Tables
+                  if (paragraph.trim().startsWith('|')) {
+                    return <div key={pIndex}>{renderTable(paragraph)}</div>;
+                  }
+
                   // Handle lists
-                  if (paragraph.startsWith('- **') || paragraph.startsWith('1. ')) {
+                  if (paragraph.startsWith('- ') || paragraph.startsWith('1. ')) {
                     const items = paragraph.split('\n').filter(item => item.trim());
                     const isOrdered = paragraph.startsWith('1.');
                     const ListTag = isOrdered ? 'ol' : 'ul';
@@ -293,35 +351,14 @@ function BlogPost() {
                       <ListTag key={pIndex}>
                         {items.map((item, iIndex) => {
                           const cleanItem = item.replace(/^[-\d.]\s*/, '');
-                          // Parse bold text
-                          const parts = cleanItem.split(/(\*\*[^*]+\*\*)/g);
-                          return (
-                            <li key={iIndex}>
-                              {parts.map((part, partIndex) => {
-                                if (part.startsWith('**') && part.endsWith('**')) {
-                                  return <strong key={partIndex}>{part.slice(2, -2)}</strong>;
-                                }
-                                return part;
-                              })}
-                            </li>
-                          );
+                          return <li key={iIndex}>{renderText(cleanItem)}</li>;
                         })}
                       </ListTag>
                     );
                   }
                   
-                  // Handle regular paragraphs with bold text
-                  const parts = paragraph.split(/(\*\*[^*]+\*\*)/g);
-                  return (
-                    <p key={pIndex}>
-                      {parts.map((part, partIndex) => {
-                        if (part.startsWith('**') && part.endsWith('**')) {
-                          return <strong key={partIndex}>{part.slice(2, -2)}</strong>;
-                        }
-                        return part;
-                      })}
-                    </p>
-                  );
+                  // Handle regular paragraphs
+                  return <p key={pIndex}>{renderText(paragraph)}</p>;
                 })}
               </section>
             ))}
