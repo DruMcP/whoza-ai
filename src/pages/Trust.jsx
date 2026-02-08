@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { supabase } from '../lib/supabase';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -24,8 +25,86 @@ export default function Trust() {
     }
   };
 
+  // Google Reviews Data (from Google Business Profile)
+  const googleReviews = [
+    {
+      author: "Kat Hibbert-Jordan",
+      rating: 5,
+      date: "2026-02-07",
+      text: "I realised recently that my business was not appearing in AI search results at all! I'd asked different AI places for recommendations of things i do, near me. It showed up, more expensive competitors and larger businesses but not me. Whoza.ai helped me fix that. Now I'm showing up in AI search results and getting more enquiries. Really pleased with the service."
+    },
+    {
+      author: "Ludmila Lamont",
+      rating: 5,
+      date: "2026-02-07",
+      text: "I'm self employed and I've tried different marketing tools before, like search optimisation tools and etc.. they cost me over 350£/month. Then I tried Whoza.ai is by far the simplest and the cheapest service (I've signed up for Priority plan). It's easy to use and I'm already seeing results. Highly recommend!"
+    },
+    {
+      author: "Nicholas Wood",
+      rating: 5,
+      date: "2026-02-07",
+      text: "Tried this company with anticipation but have to say was very impressed with the simplicity and how it helped me - sales followed pretty quickly which I was amazed at"
+    },
+    {
+      author: "Luke Winter",
+      rating: 5,
+      date: "2026-02-06",
+      text: "The future is now. A powerful business tool well executed. This will yield both short and long term benefits."
+    },
+    {
+      author: "Garth McPherson",
+      rating: 5,
+      date: "2026-02-06",
+      text: "As the owner of a small business I think the concept of Whoza is brilliant and will help businesses of all sizes improve there visibility to acquire more valued customers in the age of AI."
+    },
+    {
+      author: "Sandy Fyfe",
+      rating: 5,
+      date: "2026-02-07",
+      text: "I am reluctant to try new things but this was recommended to me and seemed worth trying. Really really impressed."
+    }
+  ];
+
+  const averageRating = 5.0;
+  const totalReviews = 15;
+
+  // Generate structured schema for Google Reviews
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WHOZA AI LTD",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": averageRating.toString(),
+      "reviewCount": totalReviews.toString(),
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": googleReviews.map(review => ({
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": review.author
+      },
+      "datePublished": review.date,
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": review.rating.toString(),
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "reviewBody": review.text
+    }))
+  };
+
   return (
-    <>
+    <Fragment>
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(reviewSchema)}
+        </script>
+      </Helmet>
+      
       <Header />
 
       <main id="main-content" role="main">
@@ -36,6 +115,118 @@ export default function Trust() {
             You need to trust the people who help with your business. Here's how
             we keep things safe and transparent.
           </p>
+
+          {/* Google Reviews Section */}
+          <section style={{ marginBottom: 'var(--spacing-xxl)' }}>
+            <h2>What our customers say</h2>
+            
+            <div style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: 'var(--spacing-md)', 
+              marginBottom: 'var(--spacing-lg)',
+              padding: 'var(--spacing-md)',
+              background: 'var(--color-primary-50)',
+              borderRadius: 'var(--border-radius)',
+              border: '2px solid var(--color-primary-200)'
+            }}>
+              <div style={{ display: 'flex', gap: '4px' }}>
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <svg 
+                    key={star}
+                    viewBox="0 0 20 20" 
+                    fill="currentColor" 
+                    style={{ width: '24px', height: '24px', color: '#FBBC04' }}
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <div>
+                <strong style={{ fontSize: '20px' }}>{averageRating.toFixed(1)} out of 5</strong>
+                <p style={{ margin: 0, fontSize: '16px', color: 'var(--color-text-secondary)' }}>
+                  Based on {totalReviews} Google reviews
+                </p>
+              </div>
+            </div>
+
+            <div style={{ 
+              display: 'grid', 
+              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
+              gap: 'var(--spacing-lg)',
+              marginBottom: 'var(--spacing-lg)'
+            }}>
+              {googleReviews.map((review, index) => (
+                <div 
+                  key={index}
+                  className="panel"
+                  style={{ 
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column'
+                  }}
+                >
+                  <div style={{ display: 'flex', gap: '4px', marginBottom: 'var(--spacing-sm)' }}>
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <svg 
+                        key={star}
+                        viewBox="0 0 20 20" 
+                        fill="currentColor" 
+                        style={{ 
+                          width: '16px', 
+                          height: '16px', 
+                          color: star <= review.rating ? '#FBBC04' : '#E0E0E0' 
+                        }}
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p style={{ flex: 1, marginBottom: 'var(--spacing-sm)' }}>
+                    "{review.text}"
+                  </p>
+                  <div style={{ 
+                    display: 'flex', 
+                    justifyContent: 'space-between', 
+                    alignItems: 'center',
+                    paddingTop: 'var(--spacing-sm)',
+                    borderTop: '1px solid var(--color-border)'
+                  }}>
+                    <strong style={{ fontSize: '16px' }}>{review.author}</strong>
+                    <span style={{ fontSize: '14px', color: 'var(--color-text-secondary)' }}>
+                      {new Date(review.date).toLocaleDateString('en-GB', {
+                        day: 'numeric',
+                        month: 'short',
+                        year: 'numeric',
+                      })}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div style={{ textAlign: 'center' }}>
+              <a 
+                href="https://maps.app.goo.gl/dNHpTGPy1Kxeh7PV8" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="button"
+                style={{ 
+                  display: 'inline-flex', 
+                  alignItems: 'center', 
+                  gap: 'var(--spacing-sm)',
+                  background: 'white',
+                  color: 'var(--color-primary-600)',
+                  border: '2px solid var(--color-primary-600)'
+                }}
+              >
+                <svg viewBox="0 0 20 20" fill="currentColor" style={{ width: '20px', height: '20px' }}>
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+                View all {totalReviews} reviews on Google
+              </a>
+            </div>
+          </section>
 
           <h2>Manual approval required</h2>
 
@@ -143,7 +334,7 @@ export default function Trust() {
           </ul>
 
           {proofSnippets.length > 0 && (
-            <>
+            <Fragment>
               <h2>Recent results</h2>
               <p>
                 Here are some examples of how businesses are showing up in AI
@@ -167,7 +358,7 @@ export default function Trust() {
                   </p>
                 </div>
               ))}
-            </>
+            </Fragment>
           )}
 
           <h2>Questions about trust?</h2>
@@ -195,6 +386,6 @@ export default function Trust() {
       </main>
 
       <Footer />
-    </>
+    </Fragment>
   );
 }
