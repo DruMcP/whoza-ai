@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Fragment } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ROICalculator from '../components/ROICalculator';
@@ -376,7 +376,7 @@ export default function Pricing() {
                 </thead>
                 <tbody>
                   {comparisonFeatures.map((category, catIndex) => (
-                    <React.Fragment key={catIndex}>
+                    <Fragment key={catIndex}>
                       <tr className="category-row">
                         <td colSpan={trialEligible ? 4 : 3}>{category.category}</td>
                       </tr>
@@ -402,7 +402,7 @@ export default function Pricing() {
                           </td>
                         </tr>
                       ))}
-                    </React.Fragment>
+                    </Fragment>
                   ))}
                 </tbody>
               </table>
