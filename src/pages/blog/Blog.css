@@ -1024,3 +1024,67 @@
     padding: 12px 8px;
   }
 }
+
+/* ===== Listicle & Rich List Enhancements ===== */
+.listicle-item {
+  position: relative;
+  padding-left: 0;
+  margin-bottom: 60px;
+}
+
+.listicle-heading {
+  font-size: 2rem;
+  color: #00d4ff !important;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.rich-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 25px 0;
+}
+
+.rich-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.rich-list ul li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #00d4ff;
+  font-weight: bold;
+}
+
+.rich-list ol {
+  counter-reset: item;
+}
+
+.rich-list ol li::before {
+  content: counter(item) ".";
+  counter-increment: item;
+  position: absolute;
+  left: 0;
+  color: #8b5cf6;
+  font-weight: bold;
+}
+
+.article-author-info {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.article-author-info span {
+  color: #00d4ff;
+  font-weight: 500;
+}

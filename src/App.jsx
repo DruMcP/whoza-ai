@@ -8,6 +8,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
 import SEO from './components/SEO';
 import { initMicrointeractions } from './utils/microinteractions';
+import CookieConsent from './components/CookieConsent';
 
 const Home = lazy(() => import('./pages/Home'));
 const HowItWorks = lazy(() => import('./pages/HowItWorks'));
@@ -32,6 +33,7 @@ const Blog = lazy(() => import('./pages/blog/Blog'));
 const BlogPost = lazy(() => import('./pages/blog/BlogPost'));
 const LocationPageUS = lazy(() => import('./pages/LocationPageUS'));
 const LocationPageUK = lazy(() => import('./pages/LocationPageUK'));
+const CookiePolicy = lazy(() => import('./pages/CookiePolicy'));
 
 const ProtectedRoute = memo(function ProtectedRoute({ children, adminOnly = false }) {
   const { user, userData, loading } = useAuth();
@@ -102,7 +104,9 @@ function AppRoutes() {
           <Route path="/auth/callback" element={<AuthCallback />} />
           <Route path="/login" element={<Navigate to="/sign-in" replace />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/privacy-policy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/free-score" element={<FreeScore />} />
           <Route path="/contact" element={<Contact />} />
@@ -182,6 +186,7 @@ function App() {
         <AuthProvider>
           <BrowserRouter>
             <SkipLink />
+            <CookieConsent />
             <AppRoutes />
           </BrowserRouter>
         </AuthProvider>
