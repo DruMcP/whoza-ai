@@ -15,12 +15,10 @@ function BlogPost() {
     try {
       // Check if this is the playbook slug - render dedicated component
       if (slug === 'uk-trades-business-playbook-ai-search-visibility-2026') {
-        // Get the full playbook post from blogPosts.js
         const playbookPost = getPostBySlug(slug);
         if (playbookPost) {
           setPost({ ...playbookPost, isPlaybook: true });
         } else {
-          // Fallback: create complete post object with all required fields
           setPost({
             isPlaybook: true,
             title: "The UK Trades Business Playbook for AI Search Visibility in 2026",
@@ -42,7 +40,6 @@ function BlogPost() {
         return;
       }
       
-      // Check if post is published
       const today = new Date().toISOString().split('T')[0];
       if (foundPost.publishDate > today) {
         navigate('/blog', { replace: true });
@@ -52,13 +49,11 @@ function BlogPost() {
       setPost(foundPost);
       setError(null);
       
-      // Get related posts (same category first, then others, excluding current)
       const allPosts = getPublishedPosts();
       const sameCategoryPosts = allPosts
         .filter(p => p.id !== foundPost.id && p.category === foundPost.category)
         .slice(0, 3);
       
-      // If we don't have 3 posts from same category, fill with other posts
       if (sameCategoryPosts.length < 3) {
         const otherPosts = allPosts
           .filter(p => p.id !== foundPost.id && p.category !== foundPost.category)
@@ -68,7 +63,6 @@ function BlogPost() {
         setRelatedPosts(sameCategoryPosts);
       }
       
-      // Scroll to top
       window.scrollTo(0, 0);
     } catch (err) {
       console.error('Error loading blog post:', err);
@@ -76,19 +70,15 @@ function BlogPost() {
     }
   }, [slug, navigate]);
 
-  // Set page title and meta tags
   useEffect(() => {
     if (!post) return;
-    if (post.isPlaybook) return;  // Skip SEO for playbook (it handles its own)
+    if (post.isPlaybook) return;
 
-    // Set document title
     document.title = `${post.title} | Whoza.ai Blog`;
 
-    // Update meta description
     const metaDescription = document.querySelector("meta[name='description']");
     if (metaDescription) metaDescription.setAttribute('content', post.metaDescription);
 
-    // Update Open Graph tags
     const ogTitle = document.querySelector("meta[property='og:title']");
     if (ogTitle) ogTitle.setAttribute('content', post.title);
     
@@ -98,11 +88,9 @@ function BlogPost() {
     const ogUrl = document.querySelector("meta[property='og:url']");
     if (ogUrl) ogUrl.setAttribute('content', `https://whoza.ai/blog/${post.slug}`);
 
-    // Update canonical
     let canonicalLink = document.querySelector("link[rel='canonical']");
     if (canonicalLink) canonicalLink.setAttribute('href', `https://whoza.ai/blog/${post.slug}`);
 
-    // Add Article schema
     const articleSchema = {
       "@context": "https://schema.org",
       "@type": "Article",
@@ -132,7 +120,6 @@ function BlogPost() {
       "keywords": post.tags.join(', ')
     };
 
-    // Add FAQ schema
     const faqSchema = {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -146,7 +133,6 @@ function BlogPost() {
       }))
     };
 
-    // Add Breadcrumb schema
     const breadcrumbSchema = {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
@@ -172,7 +158,6 @@ function BlogPost() {
       ]
     };
 
-    // Add schema scripts
     const schemas = [
       { id: 'article-schema', data: articleSchema },
       { id: 'faq-schema', data: faqSchema },
@@ -206,12 +191,10 @@ function BlogPost() {
     );
   }
 
-  // If this is the playbook, render the dedicated component
   if (post.isPlaybook) {
     return <Playbook2026 />;
   }
 
-  // Helper to parse markdown-style text (bold, links, etc.)
   const renderText = (text) => {
     if (typeof text !== 'string') return text;
     
@@ -230,7 +213,6 @@ function BlogPost() {
     });
   };
 
-  // Helper to render markdown-style tables
   const renderTable = (content) => {
     const lines = content.trim().split('\n');
     if (lines.length < 3) return <p>{content}</p>;
@@ -267,7 +249,6 @@ function BlogPost() {
   return (
     <main className="blog-post-page" role="main">
       <article className="blog-article" itemScope itemType="https://schema.org/Article">
-        {/* Header */}
         <header className="article-header">
           <div className="container">
             <nav className="breadcrumb" aria-label="Breadcrumb">
@@ -292,7 +273,6 @@ function BlogPost() {
             
             <h1 itemProp="headline" style={{ color: '#ffffff', fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 700, margin: '20px 0', lineHeight: 1.2 }}>{post.title}</h1>
             
-            {/* Lead Answer - Critical for AEO */}
             <div className="lead-answer" itemProp="description" style={{
               fontSize: '1.125rem',
               lineHeight: '1.75',
@@ -306,14 +286,14 @@ function BlogPost() {
               <p style={{ margin: 0, color: '#ffffff' }}>{renderText(post.leadAnswer)}</p>
             </div>
             
-            <div className="article-author" itemProp="author" itemScope itemType="https://schema.org/Organization">
-              <span>By </span>
-              <span itemProp="name">{post.author}</span>
+            <div className="article-author-info">
+              <span itemProp="author" itemScope itemType="https://schema.org/Organization">
+                By <span itemProp="name">{post.author}</span>
+              </span>
             </div>
           </div>
         </header>
 
-        {/* Table of Contents */}
         <nav className="table-of-contents" aria-label="Table of Contents">
           <div className="container">
             <details open>
@@ -330,55 +310,54 @@ function BlogPost() {
           </div>
         </nav>
 
-        {/* Main Content */}
         <div className="article-content" itemProp="articleBody">
           <div className="container">
-            {post.content.map((section, index) => (
-              <section key={index} id={`section-${index}`} className="content-section">
-                <h2>{section.heading}</h2>
-                {section.content.split('\n\n').map((paragraph, pIndex) => {
-                  // Handle Tables
-                  if (paragraph.trim().startsWith('|')) {
-                    return <div key={pIndex}>{renderTable(paragraph)}</div>;
-                  }
+            {post.content.map((section, index) => {
+              // Check if heading starts with a number (listicle item)
+              const isListicleItem = /^\d+\./.test(section.heading);
+              
+              return (
+                <section key={index} id={`section-${index}`} className={`content-section ${isListicleItem ? 'listicle-item' : ''}`}>
+                  <h2 className={isListicleItem ? 'listicle-heading' : ''}>{section.heading}</h2>
+                  {section.content.split('\n\n').map((paragraph, pIndex) => {
+                    if (paragraph.trim().startsWith('|')) {
+                      return <div key={pIndex}>{renderTable(paragraph)}</div>;
+                    }
 
-                  // Handle lists
-                  if (paragraph.startsWith('- ') || paragraph.startsWith('1. ')) {
-                    const items = paragraph.split('\n').filter(item => item.trim());
-                    const isOrdered = paragraph.startsWith('1.');
-                    const ListTag = isOrdered ? 'ol' : 'ul';
-                    return (
-                      <ListTag key={pIndex}>
-                        {items.map((item, iIndex) => {
-                          const cleanItem = item.replace(/^[-\d.]\s*/, '');
-                          return <li key={iIndex}>{renderText(cleanItem)}</li>;
-                        })}
-                      </ListTag>
-                    );
-                  }
-                  
-                  // Handle regular paragraphs
-                  return <p key={pIndex}>{renderText(paragraph)}</p>;
-                })}
-              </section>
-            ))}
+                    if (paragraph.trim().startsWith('- ') || /^\d+\.\s/.test(paragraph.trim())) {
+                      const items = paragraph.trim().split('\n').filter(item => item.trim());
+                      const isOrdered = /^\d+\.\s/.test(items[0]);
+                      const ListTag = isOrdered ? 'ol' : 'ul';
+                      return (
+                        <ListTag key={pIndex} className="rich-list">
+                          {items.map((item, iIndex) => {
+                            const cleanItem = item.replace(/^[-\d.]\s*/, '');
+                            return <li key={iIndex}>{renderText(cleanItem)}</li>;
+                          })}
+                        </ListTag>
+                      );
+                    }
+                    
+                    return <p key={pIndex}>{renderText(paragraph)}</p>;
+                  })}
+                </section>
+              );
+            })}
 
-            {/* FAQ Section */}
             <section id="faq" className="faq-section">
               <h2>Frequently Asked Questions</h2>
               <div className="faq-list">
                 {post.faqs.map((faq, index) => (
-                  <div key={index} className="faq-item">
-                    <h3>{faq.question}</h3>
-                    <div>
-                      <p>{faq.answer}</p>
+                  <div key={index} className="faq-item" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+                    <h3 itemProp="name">{faq.question}</h3>
+                    <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                      <p itemProp="text">{faq.answer}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </section>
 
-            {/* CTA */}
             {post.cta && (
               <section className="article-cta">
                 <div className="cta-card">
@@ -391,7 +370,6 @@ function BlogPost() {
               </section>
             )}
 
-            {/* Tags */}
             <div className="article-tags">
               <span>Topics: </span>
               {post.tags.map(tag => (
@@ -402,7 +380,6 @@ function BlogPost() {
         </div>
       </article>
 
-      {/* Related Posts */}
       {relatedPosts.length > 0 && (
         <section className="related-posts">
           <div className="container">
@@ -422,7 +399,6 @@ function BlogPost() {
         </section>
       )}
 
-      {/* Bottom CTA */}
       <section className="blog-cta">
         <div className="container">
           <div className="cta-card">
