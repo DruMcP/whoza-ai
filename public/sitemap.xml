@@ -1,446 +1,269 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://whoza.ai/</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>daily</changefreq>
+    <loc>https://whoza.ai</loc>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://whoza.ai/rex_hero.png</image:loc>
-      <image:title>Rex AI Employee for Tradespeople</image:title>
-      <image:caption>AI for tradespeople - Get more local jobs with Rex</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://whoza.ai/how-it-works</loc>
-    <lastmod>2026-02-07</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://whoza.ai/pricing</loc>
-    <lastmod>2026-02-07</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://whoza.ai/case-studies</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://whoza.ai/contact</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://whoza.ai/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://whoza.ai/free-score</loc>
-    <lastmod>2026-02-07</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/trust</loc>
-    <lastmod>2026-02-07</lastmod>
+    <loc>https://whoza.ai/location/uk/london</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/case-studies</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/start</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/privacy</loc>
-    <lastmod>2026-02-07</lastmod>
+    <loc>https://whoza.ai/location/uk/birmingham</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/terms</loc>
-    <lastmod>2026-02-07</lastmod>
+    <loc>https://whoza.ai/location/uk/manchester</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/blog/us-contractor-ai-visibility-checklist</loc>
-    <lastmod>2026-02-07</lastmod>
+    <loc>https://whoza.ai/location/uk/leeds</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/blog/us-tradesperson-ai-search-pricing-guide</loc>
-    <lastmod>2026-02-07</lastmod>
+    <loc>https://whoza.ai/location/uk/glasgow</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/blog/manchester-vs-birmingham-local-seo-strategies-2026</loc>
-    <lastmod>2026-02-10</lastmod>
+    <loc>https://whoza.ai/location/uk/liverpool</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/blog/win-local-ai-search-uk-tradespeople-2026</loc>
-    <lastmod>2026-02-07</lastmod>
+    <loc>https://whoza.ai/location/uk/newcastle</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/blog/aeo-geo-ai-search-visibility-faq</loc>
-    <lastmod>2026-02-07</lastmod>
+    <loc>https://whoza.ai/location/uk/sheffield</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/blog/uk-trades-playbook-2026</loc>
-    <lastmod>2026-01-20</lastmod>
+    <loc>https://whoza.ai/location/uk/bristol</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/blog/why-bing-matters-for-tradespeople-in-2026</loc>
-    <lastmod>2026-01-15</lastmod>
+    <loc>https://whoza.ai/location/uk/edinburgh</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/blog/google-ai-overviews-for-tradespeople</loc>
-    <lastmod>2026-01-10</lastmod>
+    <loc>https://whoza.ai/location/uk/leicester</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/blog/entity-confidence-for-tradespeople</loc>
-    <lastmod>2026-01-05</lastmod>
+    <loc>https://whoza.ai/location/uk/nottingham</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/blog/manchester-vs-birmingham-local-ai-seo-strategies-tradespeople</loc>
-    <lastmod>2026-02-06</lastmod>
+    <loc>https://whoza.ai/location/uk/cardiff</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/blog/why-bing-matters-for-ai-search-2026</loc>
-    <lastmod>2026-02-06</lastmod>
+    <loc>https://whoza.ai/location/uk/coventry</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/blog/us-contractors-guide-ai-search-visibility-2026</loc>
-    <lastmod>2026-02-04</lastmod>
+    <loc>https://whoza.ai/location/uk/southampton</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/blog/why-bing-matters-for-ai-search-the-perplexity-connection</loc>
-    <lastmod>2026-02-03</lastmod>
+    <loc>https://whoza.ai/blog/top-10-ai-visibility-strategies-uk-tradespeople-2026</loc>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/blog/roofers-10-step-checklist-ai-visibility-2026</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/blog/how-to-create-faq-page-ai-can-find-2026</loc>
-    <lastmod>2026-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/blog/why-ai-search-wont-recommend-your-trade-business-and-how-to-fix-it</loc>
-    <lastmod>2026-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://whoza.ai/blog/uk-trades-business-playbook-ai-search-visibility-2026</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/blog/ai-visibility-for-london-tradespeople-2026</loc>
-    <lastmod>2026-01-27</lastmod>
+    <loc>https://whoza.ai/blog/us-contractors-guide-ai-search-visibility-2026</loc>
+    <lastmod>2026-02-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/blog/how-ai-search-engines-choose-plumber-recommendation-manchester</loc>
-    <lastmod>2026-01-27</lastmod>
+    <loc>https://whoza.ai/blog/why-bing-matters-for-ai-search-the-perplexity-connection</loc>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://whoza.ai/blog/how-ai-search-engines-choose-which-local-businesses-to-recommend</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://whoza.ai/blog/the-ultimate-guide-to-google-business-profile-optimization-for-ai-search-2026</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://whoza.ai/blog/why-your-business-isnt-showing-up-in-chatgpt-recommendations-and-how-to-fix-it</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://whoza.ai/blog/how-uk-tradespeople-can-get-found-on-chatgpt-and-ai-search-in-2026</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/blog/electricians-guide-to-google-ai-overviews-2026</loc>
-    <lastmod>2026-01-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/blog/electricians-guide-to-google-ai-overviews-how-to-get-featured</loc>
-    <lastmod>2026-01-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://whoza.ai/blog/how-uk-tradespeople-can-get-recommended-by-chatgpt-in-2026</loc>
     <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://whoza.ai/blog/electricians-guide-to-google-ai-overviews-how-to-get-featured</loc>
+    <lastmod>2026-01-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://whoza.ai/blog/how-to-create-an-faq-page-that-ai-can-find-and-reference</loc>
     <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/blog/how-plumbers-can-get-found-in-chatgpt-2026</loc>
-    <lastmod>2026-01-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://whoza.ai/blog/ai-visibility-manchester-trades-2026-guide</loc>
     <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/blog/how-uk-tradespeople-get-found-ai-search-2026</loc>
-    <lastmod>2026-01-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/blog/best-practices-tradespeople-london-local-ai-visibility-guide</loc>
-    <lastmod>2026-01-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/blog/how-plumbers-can-get-found-in-chatgpt-a-step-by-step-guide</loc>
-    <lastmod>2026-01-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/blog/roofers-checklist-10-steps-to-ai-visibility-2026</loc>
-    <lastmod>2026-01-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://whoza.ai/blog/what-is-ai-visibility-uk-tradespeople-2026</loc>
     <lastmod>2026-01-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/us/ai-visibility/new-york</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://whoza.ai/blog/how-uk-tradespeople-get-found-ai-search-2026</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/us/ai-visibility/los-angeles</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://whoza.ai/blog/best-practices-tradespeople-london-local-ai-visibility-guide</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/us/ai-visibility/chicago</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://whoza.ai/blog/how-plumbers-can-get-found-in-chatgpt-a-step-by-step-guide</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/us/ai-visibility/houston</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://whoza.ai/blog/how-plumbers-can-get-found-in-chatgpt-2026</loc>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/us/ai-visibility/phoenix</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://whoza.ai/blog/electricians-guide-to-google-ai-overviews-2026</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/us/ai-visibility/philadelphia</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://whoza.ai/blog/ai-visibility-for-london-tradespeople-2026</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/us/ai-visibility/san-antonio</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://whoza.ai/blog/how-to-create-faq-page-ai-can-find-2026</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/us/ai-visibility/san-diego</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://whoza.ai/blog/roofers-10-step-checklist-ai-visibility-2026</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/us/ai-visibility/dallas</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://whoza.ai/blog/why-bing-matters-for-ai-search-2026</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/us/ai-visibility/san-jose</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://whoza.ai/blog/manchester-vs-birmingham-local-seo-strategies-2026</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/us/ai-visibility/austin</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://whoza.ai/blog/roofers-checklist-10-steps-to-ai-visibility-2026</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/us/ai-visibility/jacksonville</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://whoza.ai/blog/how-ai-search-engines-choose-plumber-recommendation-manchester</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://whoza.ai/us/ai-visibility/fort-worth</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/us/ai-visibility/columbus</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/us/ai-visibility/charlotte</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/uk/ai-visibility/london</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/uk/ai-visibility/manchester</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/uk/ai-visibility/birmingham</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/uk/ai-visibility/leeds</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/uk/ai-visibility/glasgow</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/uk/ai-visibility/liverpool</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/uk/ai-visibility/newcastle</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/uk/ai-visibility/sheffield</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/uk/ai-visibility/bristol</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/uk/ai-visibility/edinburgh</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/uk/ai-visibility/leicester</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/uk/ai-visibility/nottingham</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/uk/ai-visibility/cardiff</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/uk/ai-visibility/belfast</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://whoza.ai/uk/ai-visibility/southampton</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://whoza.ai/blog/why-ai-search-wont-recommend-your-trade-business-and-how-to-fix-it</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
