@@ -31,6 +31,7 @@ import WhatWeDontDo from '../components/WhatWeDontDo';
 import AIAnswerShift from '../components/AIAnswerShift';
 import RexIllustration from '../components/illustrations/RexIllustration';
 import ECEExplainer from '../components/ECEExplainer/ECEExplainer';
+import LocationsWeServe from '../components/LocationsWeServe';
 import { generateHomePageSchemas } from '../utils/schemaOrg';
 
 const AnimatedCounter = ({ target, suffix = '' }) => {
@@ -467,6 +468,8 @@ export default function Home() {
         </section>
 
         <WhatWeDontDo />
+
+        <LocationsWeServe />
 
         <section className="section">
           <div className="container" style={{ textAlign: 'center' }}>
