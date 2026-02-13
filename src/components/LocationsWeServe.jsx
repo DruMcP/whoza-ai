@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import Icon from './icons/Icon';
 
 const LocationsWeServe = () => {
   const ukLocations = [
@@ -55,8 +54,7 @@ const LocationsWeServe = () => {
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text'
           }}>
-            <Icon name="map-pin" size={32} style={{ marginRight: '0.5rem', verticalAlign: 'middle' }} />
-            Locations We Serve
+            📍 Locations We Serve
           </h2>
           <p style={{
             fontSize: '1.125rem',
@@ -74,22 +72,9 @@ const LocationsWeServe = () => {
             fontSize: '1.5rem',
             fontWeight: '600',
             marginBottom: '1.5rem',
-            color: '#00f5a0',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.5rem'
+            color: '#00f5a0'
           }}>
-            <span style={{
-              display: 'inline-block',
-              width: '32px',
-              height: '32px',
-              borderRadius: '50%',
-              background: 'rgba(0, 245, 160, 0.1)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}>🇬🇧</span>
-            United Kingdom
+            🇬🇧 United Kingdom
           </h3>
           <div style={{
             display: 'grid',
@@ -108,9 +93,7 @@ const LocationsWeServe = () => {
                   textDecoration: 'none',
                   color: '#fff',
                   transition: 'all 0.3s ease',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.5rem'
+                  display: 'block'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = 'rgba(0, 245, 160, 0.1)';
@@ -123,8 +106,7 @@ const LocationsWeServe = () => {
                   e.currentTarget.style.transform = 'translateY(0)';
                 }}
               >
-                <Icon name="map-pin" size={16} style={{ color: '#00f5a0' }} />
-                {location.name}
+                📍 {location.name}
               </Link>
             ))}
           </div>
@@ -136,22 +118,9 @@ const LocationsWeServe = () => {
             fontSize: '1.5rem',
             fontWeight: '600',
             marginBottom: '1.5rem',
-            color: '#00d9f5',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.5rem'
+            color: '#00d9f5'
           }}>
-            <span style={{
-              display: 'inline-block',
-              width: '32px',
-              height: '32px',
-              borderRadius: '50%',
-              background: 'rgba(0, 217, 245, 0.1)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}>🇺🇸</span>
-            United States
+            🇺🇸 United States
           </h3>
           <div style={{
             display: 'grid',
@@ -170,9 +139,7 @@ const LocationsWeServe = () => {
                   textDecoration: 'none',
                   color: '#fff',
                   transition: 'all 0.3s ease',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.5rem'
+                  display: 'block'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = 'rgba(0, 217, 245, 0.1)';
@@ -185,8 +152,7 @@ const LocationsWeServe = () => {
                   e.currentTarget.style.transform = 'translateY(0)';
                 }}
               >
-                <Icon name="map-pin" size={16} style={{ color: '#00d9f5' }} />
-                {location.name}
+                📍 {location.name}
               </Link>
             ))}
           </div>
