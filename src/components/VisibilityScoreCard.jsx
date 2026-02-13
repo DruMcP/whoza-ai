@@ -51,7 +51,7 @@ export default function VisibilityScoreCard({ businessId }) {
     return (
       <div className="score-card loading">
         <div className="loading-spinner"></div>
-        <p>Calculating your Visibility Confidence Score™...</p>
+        <p>Calculating your AI Visibility Score...</p>
       </div>
     );
   }
@@ -63,7 +63,7 @@ export default function VisibilityScoreCard({ businessId }) {
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
         </svg>
         <h3>No Score Yet</h3>
-        <p>Your first Visibility Confidence Score™ will be calculated soon</p>
+        <p>Your first AI Visibility Score will be calculated soon</p>
       </div>
     );
   }
@@ -81,7 +81,7 @@ export default function VisibilityScoreCard({ businessId }) {
             <span className="score-max">/100</span>
           </div>
           <div className="score-info">
-            <h2>Visibility Confidence Score™</h2>
+            <h2>AI Visibility Score</h2>
             <div className="score-grade" style={{ background: scoreColor }}>
               Grade: {getScoreGrade(score.overall_score)}
             </div>

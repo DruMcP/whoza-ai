@@ -107,7 +107,7 @@ export default function DashboardOverview({ userId }) {
       <div className="overview-cards">
         <div className="score-card">
           <div className="score-card-header">
-            <h2>Visibility Confidence Score™ (VCS)</h2>
+            <h2>AI Visibility Score (VCS)</h2>
             <span className="score-label" style={{ color: scoreColor }}>
               {getScoreLabel(scoreValue)}
             </span>
@@ -145,7 +145,7 @@ export default function DashboardOverview({ userId }) {
             )}
             {!currentScore && (
               <p className="score-notes">
-                Your initial Visibility Confidence Score™ will be calculated once your baseline assessment is complete.
+                Your initial AI Visibility Score will be calculated once your baseline assessment is complete.
               </p>
             )}
           </div>

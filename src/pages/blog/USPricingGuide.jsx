@@ -141,7 +141,7 @@ function USPricingGuide() {
               <ul>
                 <li><strong>Predictable Costs</strong>: A clear monthly fee with no hidden charges.</li>
                 <li><strong>Actionable Tasks</strong>: Weekly, personalized tasks delivered by Rex, our AI employee, directly to your inbox, focusing on high-impact AEO/GEO activities.</li>
-                <li><strong>Visibility Confidence Score™</strong>: A proprietary metric that tracks your business's likelihood of being recommended by AI engines.</li>
+                <li><strong>AI Visibility Score</strong>: A proprietary metric that tracks your business's likelihood of being recommended by AI engines.</li>
                 <li><strong>Focus on Entity Confidence</strong>: Our platform is built on the principle of Entity Confidence Engineering™, ensuring your business is consistently and credibly represented across the web, a critical factor for AI recommendations [2].</li>
               </ul>
             </section>
@@ -162,7 +162,7 @@ function USPricingGuide() {
               </div>
               <div className="faq-item">
                 <h3>Q4: How quickly will I see results?</h3>
-                <p><strong>A:</strong> While results vary, businesses often see initial improvements in their Visibility Confidence Score™ within 30-60 days. Significant increases in AI citations and lead generation typically occur within 3-6 months of consistent effort [6].</p>
+                <p><strong>A:</strong> While results vary, businesses often see initial improvements in their AI Visibility Score within 30-60 days. Significant increases in AI citations and lead generation typically occur within 3-6 months of consistent effort [6].</p>
               </div>
             </section>
 

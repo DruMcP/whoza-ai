@@ -25,8 +25,8 @@ export const seoConfig = {
     image: '/og-image.png'
   },
   '/free-score': {
-    title: 'Free Visibility Confidence Score™ | Whoza.ai - Check Your Online Presence',
-    description: 'Get your free Visibility Confidence Score™ in 60 seconds. See how likely your trade business is to be named and recommended on ChatGPT, Google AI, and Perplexity.',
+    title: 'Free AI Visibility Score | Whoza.ai - Check Your Online Presence',
+    description: 'Get your free AI Visibility Score in 60 seconds. See how likely your trade business is to be named and recommended on ChatGPT, Google AI, and Perplexity.',
     image: '/og-image.png'
   },
   '/start': {

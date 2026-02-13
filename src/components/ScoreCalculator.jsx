@@ -74,9 +74,9 @@ export default function ScoreCalculator() {
   return (
     <div className="score-calculator">
       <div className="calculator-header">
-        <h2>Visibility Confidence Score™ Calculator</h2>
+        <h2>AI Visibility Score Calculator</h2>
         <p className="subtitle">
-          Calculate comprehensive Visibility Confidence Scores™ based on multi-factor analysis
+          Calculate comprehensive AI Visibility Scores based on multi-factor analysis
         </p>
       </div>
 
@@ -139,7 +139,7 @@ export default function ScoreCalculator() {
             className="button button-primary button-large"
             style={{ marginTop: 'var(--spacing-md)' }}
           >
-            {calculating ? 'Calculating Score...' : 'Calculate Visibility Confidence Score™'}
+            {calculating ? 'Calculating Score...' : 'Calculate AI Visibility Score'}
           </button>
         </div>
       )}
@@ -161,7 +161,7 @@ export default function ScoreCalculator() {
                 <span className="score-max">/100</span>
               </div>
               <div>
-                <h3>Overall Visibility Confidence Score™</h3>
+                <h3>Overall AI Visibility Score</h3>
                 <p className="score-percentile">
                   {calculatedScore.benchmark_percentile}th percentile
                   {calculatedScore.month_over_month_change !== 0 && (
@@ -382,7 +382,7 @@ export default function ScoreCalculator() {
             />
           </svg>
           <h3>Ready to Calculate Scores</h3>
-          <p>Enter a business ID above to calculate their Visibility Confidence Score™</p>
+          <p>Enter a business ID above to calculate their AI Visibility Score</p>
         </div>
       )}
     </div>

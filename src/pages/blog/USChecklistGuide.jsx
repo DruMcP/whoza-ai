@@ -152,7 +152,7 @@ function USChecklistGuide() {
                   <tr>
                     <td><strong>9</strong></td>
                     <td><strong>Monitor Your AI Visibility Score</strong></td>
-                    <td>Use tools like Whoza.ai's Visibility Confidence Score™ to track your progress and identify areas for improvement. Data-driven optimization is key to sustained AI success.</td>
+                    <td>Use tools like Whoza.ai's AI Visibility Score to track your progress and identify areas for improvement. Data-driven optimization is key to sustained AI success.</td>
                     <td>Continuous improvement, proactive issue resolution.</td>
                   </tr>
                   <tr>

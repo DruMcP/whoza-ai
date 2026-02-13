@@ -96,7 +96,7 @@ const CancelSubscriptionModal = ({ isOpen, onClose, subscription, onConfirm }) =
 
   const planFeatures = {
     monitor: [
-      'Monthly Visibility Confidence Score™',
+      'Monthly AI Visibility Score',
       'AI visibility report across ChatGPT, Google AI, Perplexity',
       'Competitor tracking',
       'Monthly strategy report'

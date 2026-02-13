@@ -49,7 +49,7 @@ export default function Privacy() {
 
           <ul>
             <li>Tasks we send you and your approval status</li>
-            <li>Your monthly Visibility Confidence Scores™</li>
+            <li>Your monthly AI Visibility Scores</li>
             <li>Payment information (processed by Stripe, not stored by us)</li>
           </ul>
 

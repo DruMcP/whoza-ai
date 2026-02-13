@@ -266,14 +266,14 @@ class RexDecisionEngine {
     }
 
     if (!recentScores || recentScores.length === 0) {
-      opportunities.push('No Visibility Confidence Score™ history to show improvement');
+      opportunities.push('No AI Visibility Score history to show improvement');
       score -= 10;
     } else if (recentScores.length >= 2) {
       const trend = recentScores[0].overall_score - recentScores[recentScores.length - 1].overall_score;
       if (trend > 0) {
         score += 25;
       } else {
-        opportunities.push('Visibility Confidence Scores™ are not trending upward');
+        opportunities.push('AI Visibility Scores are not trending upward');
         score -= 5;
       }
     }
@@ -569,7 +569,7 @@ class RexDecisionEngine {
       };
     }
 
-    if (opportunities.some(o => o.includes('Visibility Confidence Scores™'))) {
+    if (opportunities.some(o => o.includes('AI Visibility Scores'))) {
       return {
         action_type: 'complete_profile_section',
         title: 'Complete One Missing Profile Section',
