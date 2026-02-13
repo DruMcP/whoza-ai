@@ -26,7 +26,6 @@ const customFetch = async (url, options) => {
     if (error.name === 'AbortError') {
       // Return a minimal response object to prevent downstream errors
       // The calling code should handle this gracefully
-      console.debug('[Supabase] Request aborted:', url);
       throw error; // Re-throw but it's now expected behavior
     }
     throw error;
@@ -70,7 +69,6 @@ export const safeSupabaseCall = async (operation) => {
     return await operation();
   } catch (error) {
     if (isAbortError(error)) {
-      console.debug('[Supabase] Operation aborted gracefully');
       return null;
     }
     throw error;

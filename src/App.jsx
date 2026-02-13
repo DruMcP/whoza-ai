@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-route
 import ReactGA from 'react-ga4';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { ToastProvider } from './components/Toast';
+import { Toaster } from 'sonner';
 import SkipLink from './components/SkipLink';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
@@ -93,6 +94,7 @@ function AppRoutes() {
   return (
     <>
       <SEO />
+      <Toaster position="top-right" richColors />
       <Suspense fallback={loadingFallback}>
         <Routes>
           <Route path="/" element={<Home />} />
