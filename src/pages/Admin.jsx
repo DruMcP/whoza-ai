@@ -106,7 +106,7 @@ export default function Admin() {
         scoreValue: '',
         notes: '',
       });
-      toast.success('Visibility Confidence Score™ uploaded successfully');
+      toast.success('AI Visibility Score uploaded successfully');
     } catch (error) {
       toast.error('Error creating score. Please try again.');
     }
@@ -403,7 +403,7 @@ export default function Admin() {
 
           {activeTab === 'scores' && (
             <>
-              <h2>Upload Monthly Visibility Confidence Score™</h2>
+              <h2>Upload Monthly AI Visibility Score</h2>
               <form onSubmit={createVisibilityScore}>
                 <label htmlFor="score-customer-select">Customer</label>
                 <select
@@ -450,7 +450,7 @@ export default function Admin() {
                   required
                 />
 
-                <label htmlFor="score-value">Visibility Confidence Score™</label>
+                <label htmlFor="score-value">AI Visibility Score</label>
                 <input
                   id="score-value"
                   type="number"

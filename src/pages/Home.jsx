@@ -143,7 +143,7 @@ export default function Home() {
           <div className="container" style={{ textAlign: 'center' }}>
             <div>
               <h2 style={{ fontSize: '36px', marginBottom: 'var(--spacing-md)' }}>
-                What's Your Visibility Confidence Score™?
+                What's Your AI Visibility Score?
               </h2>
               <p style={{
                 fontSize: '20px',
@@ -152,7 +152,7 @@ export default function Home() {
                 color: 'var(--color-text-secondary)',
                 lineHeight: '1.6'
               }}>
-                Find out in 60 seconds. Get a free Visibility Confidence Score™ showing how likely your business is to be named and recommended in AI answers (ChatGPT, Google AI, Perplexity).
+                Find out in 60 seconds. Get a free AI Visibility Score showing how likely your business is to be named and recommended in AI answers (ChatGPT, Google AI, Perplexity).
               </p>
             </div>
             <div style={{
@@ -166,7 +166,7 @@ export default function Home() {
                 fontSize: '18px',
                 padding: 'var(--spacing-md) var(--spacing-2xl)'
               }}>
-                Get your free AI readiness score
+                Get your free AI Visibility Score
               </Link>
               <GuaranteeBadge />
               <ProofCard />

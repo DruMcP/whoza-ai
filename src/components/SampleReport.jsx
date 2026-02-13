@@ -167,7 +167,7 @@ export default function SampleReport({ onClose }) {
       <div className="report-modal-content" onClick={(e) => e.stopPropagation()}>
         <div className="report-header-bar no-print">
           <div className="report-header-bar-content">
-            <h3>Sample Visibility Confidence Score™ Report</h3>
+            <h3>Sample AI Visibility Score Report</h3>
             <div className="report-actions">
               <button onClick={handlePrint} className="button-secondary button-sm">
                 <svg viewBox="0 0 20 20" fill="currentColor" style={{ width: '18px', height: '18px', marginRight: '6px' }}>
@@ -189,7 +189,7 @@ export default function SampleReport({ onClose }) {
             <div className="report-brand-header">
               <div className="report-brand-info">
                 <div className="report-logo-text">Rex</div>
-                <div className="report-brand-tagline">Visibility Confidence Score™ Report</div>
+                <div className="report-brand-tagline">AI Visibility Score Report</div>
               </div>
               <div className="report-meta">
                 <div className="report-meta-item">{sampleData.reportDate}</div>
@@ -217,7 +217,7 @@ export default function SampleReport({ onClose }) {
                       <div className="report-score-max">/100</div>
                     </div>
                   </div>
-                  <div className="report-score-label">Visibility Confidence Score™</div>
+                  <div className="report-score-label">AI Visibility Score</div>
                 </div>
 
                 <div className="report-score-stats">
@@ -243,7 +243,7 @@ export default function SampleReport({ onClose }) {
 
               <div className="report-score-explanation">
                 <h3>What This Score Means</h3>
-                <p>Your Visibility Confidence Score™ measures how easily potential customers can find your business when using AI-powered search tools like ChatGPT, Perplexity AI, and Google's AI features.</p>
+                <p>Your AI Visibility Score measures how easily potential customers can find your business when using AI-powered search tools like ChatGPT, Perplexity AI, and Google's AI features.</p>
                 <div className="report-score-ranges">
                   <div className="report-score-range">
                     <div className="report-range-bar" style={{ background: 'var(--color-success-600)' }}></div>
@@ -308,7 +308,7 @@ export default function SampleReport({ onClose }) {
 
             <div className="report-section">
               <h2 className="report-section-title">Category Breakdown</h2>
-              <p className="report-section-subtitle">Detailed analysis of the five key components that make up your Visibility Confidence Score™</p>
+              <p className="report-section-subtitle">Detailed analysis of the five key components that make up your AI Visibility Score</p>
 
               {sampleData.categoryScores.map((category, index) => (
                 <div key={index} className="report-category">
@@ -375,7 +375,7 @@ export default function SampleReport({ onClose }) {
 
             <div className="report-section">
               <h2 className="report-section-title">Recommended Next Steps</h2>
-              <p className="report-section-subtitle">Prioritized actions to further improve your Visibility Confidence Score™</p>
+              <p className="report-section-subtitle">Prioritized actions to further improve your AI Visibility Score</p>
 
               <div className="report-next-steps">
                 {sampleData.nextSteps.map((step, index) => (
@@ -396,7 +396,7 @@ export default function SampleReport({ onClose }) {
               <div className="report-footer-content">
                 <div className="report-footer-section">
                   <h4>How Your Score is Calculated</h4>
-                  <p>Your Visibility Confidence Score™ is calculated using a proprietary algorithm that analyzes over 50 data points across five key categories. We continuously monitor your online presence and update your score weekly based on real-time data from Google, AI search platforms, and other authoritative sources.</p>
+                  <p>Your AI Visibility Score is calculated using a proprietary algorithm that analyzes over 50 data points across five key categories. We continuously monitor your online presence and update your score weekly based on real-time data from Google, AI search platforms, and other authoritative sources.</p>
                 </div>
                 <div className="report-footer-section">
                   <h4>Report Frequency</h4>

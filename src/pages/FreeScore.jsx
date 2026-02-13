@@ -16,7 +16,7 @@ import '../microinteractions.css';
 import '../FreeScore.css';
 
 /**
- * Free Visibility Confidence Score page component
+ * Free AI Visibility Score page component
  * Allows users to get a free assessment of their AI search visibility
  */
 export default function FreeScore() {
@@ -258,7 +258,7 @@ export default function FreeScore() {
             <>
               <div style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center' }}>
                 <h1 style={{ marginBottom: 'var(--spacing-md)' }}>
-                  Get Your Visibility Confidence Score™
+                  Get Your AI Visibility Score
                 </h1>
 
                 <p className="hero" style={{
@@ -703,7 +703,7 @@ export default function FreeScore() {
                 <div className="free-score-container" style={{ maxWidth: '900px', margin: '0 auto' }}>
                   <div style={{ textAlign: 'center', marginBottom: 'var(--spacing-3xl)' }}>
                     <h1 style={{ marginBottom: 'var(--spacing-md)' }}>
-                      Your Visibility Confidence Score™
+                      Your AI Visibility Score
                     </h1>
 
                     <div style={{

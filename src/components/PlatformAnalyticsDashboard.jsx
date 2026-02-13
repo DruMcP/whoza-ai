@@ -122,7 +122,7 @@ export default function PlatformAnalyticsDashboard() {
             <div className="kpi-card">
               <div className="kpi-icon">⭐</div>
               <div className="kpi-content">
-                <h3>Avg Visibility Confidence Score™</h3>
+                <h3>Avg AI Visibility Score</h3>
                 <p className="kpi-value">{analytics.overview.averageVisibilityScore}/100</p>
                 <p className="kpi-subtext">Platform average</p>
               </div>

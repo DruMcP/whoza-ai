@@ -41,7 +41,7 @@ export default function Terms() {
 
           <ul>
             <li>Weekly task recommendations to improve your AI search visibility</li>
-            <li>Monthly Visibility Confidence Scores™</li>
+            <li>Monthly AI Visibility Scores</li>
             <li>Email delivery of tasks</li>
           </ul>
 

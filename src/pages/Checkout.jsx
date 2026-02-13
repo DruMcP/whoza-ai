@@ -114,7 +114,7 @@ export default function Checkout() {
                   </p>
                   <ul style={{ marginBottom: 0 }}>
                     <li>One task per week</li>
-                    <li>Monthly Visibility Confidence Score™</li>
+                    <li>Monthly AI Visibility Score</li>
                     <li>Email delivery</li>
                   </ul>
                 </div>

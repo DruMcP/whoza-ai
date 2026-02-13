@@ -2,9 +2,9 @@ import { supabase, supabaseUrl, supabaseAnonKey } from '../lib/supabase';
 import { findBusinessByName } from '../lib/api/googlePlacesService';
 
 /**
- * Free Visibility Confidence Score™ Service - WITH REAL API DATA
+ * Free AI Visibility Score Service - WITH REAL API DATA
  *
- * Provides honest, verifiable Visibility Confidence Scores™ using Google Places API.
+ * Provides honest, verifiable AI Visibility Scores using Google Places API.
  * No artificial randomization - scores based on actual business verification.
  */
 

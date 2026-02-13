@@ -201,7 +201,7 @@ const HeroSection = () => {
                 cursor: 'pointer'
               }}
             >
-              Get your free AI readiness score
+              Get your free AI Visibility Score
             </Link>
             <p style={{
               fontSize: '0.9rem',

@@ -154,7 +154,7 @@ export default function UserAnalyticsDashboard() {
 
         {analytics.scoreTrend && analytics.scoreTrend.length > 0 && (
           <div className="chart-section">
-            <h3>Visibility Confidence Score™ Trend</h3>
+            <h3>AI Visibility Score Trend</h3>
             <div className="chart-container">
               <div className="simple-line-chart">
                 {analytics.scoreTrend.map((item, index) => {
