@@ -139,8 +139,144 @@ const ukCaseStudies = [
   }
 ];
 
+// US Case Studies
+const usCaseStudies = [
+  {
+    id: 1,
+    name: 'Mike Rodriguez',
+    role: 'HVAC Contractor',
+    location: 'Phoenix, AZ',
+    photo: 'https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+    businessName: 'Rodriguez HVAC Solutions',
+    established: '2016',
+    teamSize: '4 employees',
+    challenge: {
+      headline: 'Lost in the Digital Noise',
+      description: 'Mike had a thriving HVAC business built on referrals, but when potential customers searched for HVAC services in Phoenix using AI tools like ChatGPT or Perplexity, his business never appeared. He was losing opportunities to competitors with better online visibility.',
+      painPoints: [
+        'Zero presence in AI search recommendations',
+        'Outdated Yelp and Google Business profiles',
+        'Limited online reviews despite excellent service',
+        'Website not optimized for modern search methods',
+        'Spending heavily on ads with diminishing returns'
+      ]
+    },
+    solution: {
+      description: 'Rex analyzed Mike\'s digital footprint and created a customized 12-week improvement plan. The platform guided him through strategic updates that AI systems recognize and value, helping establish his business as a trusted local expert.',
+      approach: [
+        {
+          week: 'Weeks 1-3',
+          focus: 'Foundation Phase',
+          outcome: 'Created comprehensive, accurate business profiles across key platforms with information structured for AI understanding and trust signals.'
+        },
+        {
+          week: 'Weeks 4-8',
+          focus: 'Authority Phase',
+          outcome: 'Built credibility through strategic content and customer testimonials, helping AI systems recognize Mike as a knowledgeable HVAC expert in Phoenix.'
+        },
+        {
+          week: 'Weeks 9-12',
+          focus: 'Visibility Phase',
+          outcome: 'Optimized all digital touchpoints for maximum AI discoverability, ensuring consistent appearance in relevant local searches with compelling information.'
+        }
+      ],
+      note: 'Rex provided Mike with weekly tasks tailored to his HVAC business. Each task was straightforward and took 10-20 minutes to complete.',
+      timeInvested: '15 minutes per week'
+    },
+    results: {
+      metrics: [
+        { label: 'Visibility Confidence Score™', before: '31', after: '81', unit: '/100', improvement: 'Dramatic improvement' },
+        { label: 'Monthly Enquiries', before: '12', after: '31', unit: '', improvement: 'Significantly increased' },
+        { label: 'Google Profile Views', before: '95', after: '412', unit: '/month', improvement: 'Strong growth' },
+        { label: 'Review Rating', before: '4.1', after: '4.9', unit: '/5.0', improvement: 'Improved' }
+      ],
+      achievements: [
+        'Now appears in ChatGPT responses for "HVAC repair Phoenix"',
+        'Featured consistently in Perplexity AI recommendations for local HVAC contractors',
+        'Google Business profile views increased 334% in 3 months',
+        'Reduced advertising spend by 60% while increasing leads',
+        'Hired two additional technicians to handle increased demand'
+      ],
+      timeline: '9 weeks to see significant results'
+    },
+    quote: "Rex made it simple to improve my online presence. Within three months, I was showing up in ChatGPT searches for HVAC services in Phoenix. The weekly tasks are easy to follow, and I've been able to cut my ad spending while getting more qualified leads than ever.",
+    visualData: {
+      scoreProgression: [31, 39, 48, 56, 63, 69, 74, 78, 81, 81],
+      enquiriesProgression: [12, 14, 17, 21, 24, 26, 28, 30, 31, 31]
+    }
+  },
+  {
+    id: 2,
+    name: 'Jennifer Thompson',
+    role: 'General Contractor',
+    location: 'Austin, TX',
+    photo: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+    businessName: 'Thompson Construction & Remodeling',
+    established: '2013',
+    teamSize: '6 employees',
+    challenge: {
+      headline: 'Strong Reputation, Weak Digital Presence',
+      description: 'Jennifer had built an excellent reputation through quality work and word-of-mouth referrals, but her online presence didn\'t reflect her expertise. When homeowners searched for contractors using AI-powered tools, her business was invisible despite years of successful projects.',
+      painPoints: [
+        'Website hadn\'t been updated since 2017',
+        'Incomplete business listings on Google and Yelp',
+        'Only 8 online reviews despite hundreds of completed projects',
+        'No visibility in AI search results',
+        'Spending $1,200/month on Google Ads with declining ROI'
+      ]
+    },
+    solution: {
+      description: 'Rex identified critical gaps in Jennifer\'s digital presence and created a focused strategy to modernize her online footprint. The platform guided her through systematic improvements while leveraging her strong existing reputation.',
+      approach: [
+        {
+          week: 'Weeks 1-2',
+          focus: 'Quick Wins Phase',
+          outcome: 'Updated all business listings with accurate, complete information and began collecting reviews from satisfied clients.'
+        },
+        {
+          week: 'Weeks 3-6',
+          focus: 'Content & Authority Phase',
+          outcome: 'Created project showcases and helpful content that demonstrated expertise, helping AI systems recognize Jennifer as a trusted contractor.'
+        },
+        {
+          week: 'Weeks 7-10',
+          focus: 'Optimization Phase',
+          outcome: 'Fine-tuned all digital elements for maximum AI visibility, ensuring consistent appearance in searches with strong trust signals.'
+        }
+      ],
+      note: 'The platform provided Jennifer with specific weekly tasks matched to her construction business. Each task included clear instructions and took 15-25 minutes.',
+      timeInvested: '20 minutes per week'
+    },
+    results: {
+      metrics: [
+        { label: 'Visibility Confidence Score™', before: '26', after: '84', unit: '/100', improvement: 'Exceptional improvement' },
+        { label: 'Monthly Enquiries', before: '9', after: '28', unit: '', improvement: 'Significantly increased' },
+        { label: 'Google Profile Views', before: '78', after: '445', unit: '/month', improvement: 'Strong growth' },
+        { label: 'Review Rating', before: '3.9', after: '4.8', unit: '/5.0', improvement: 'Improved' }
+      ],
+      achievements: [
+        'Now appears in ChatGPT and Perplexity responses for "general contractor Austin"',
+        'Featured in AI recommendations for home remodeling projects',
+        'Reduced advertising costs by 70% while increasing quality leads',
+        'Project inquiry rate increased 211% within 10 weeks',
+        'Expanded team by 3 members due to sustained demand'
+      ],
+      timeline: '10 weeks to achieve strong AI visibility'
+    },
+    quote: "I was hesitant about AI and online marketing, but Rex made it manageable. The tasks are practical and actually help my business. I'm now showing up when people search for contractors in Austin, and I've been able to significantly reduce my advertising budget while growing my team.",
+    visualData: {
+      scoreProgression: [26, 34, 43, 51, 60, 67, 73, 78, 82, 84],
+      enquiriesProgression: [9, 11, 14, 17, 20, 23, 25, 27, 28, 28]
+    }
+  }
+];
+
 export default function CaseStudies() {
   const { getTerm, country } = useLocalization();
+  
+  // Select case studies based on current region
+  const displayedCaseStudies = country === 'GB' ? ukCaseStudies : usCaseStudies;
+  const countryCode = country === 'GB' ? 'GB' : 'US';
   
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: 'Home', url: '/' },
@@ -149,7 +285,7 @@ export default function CaseStudies() {
 
   // Case Study Schema for AEO optimization
   const caseStudySchemas = useMemo(() => {
-    return ukCaseStudies.map(cs => ({
+    return displayedCaseStudies.map(cs => ({
       "@context": "https://schema.org",
       "@type": "CreativeWork",
       "name": `${cs.role} Case Study: ${cs.name} in ${cs.location}`,
@@ -164,7 +300,7 @@ export default function CaseStudies() {
         "address": {
           "@type": "PostalAddress",
           "addressLocality": cs.location,
-          "addressCountry": "GB"
+          "addressCountry": countryCode
         }
       },
       "review": {
@@ -180,7 +316,7 @@ export default function CaseStudies() {
         }
       }
     }));
-  }, []);
+  }, [displayedCaseStudies, countryCode]);
 
   const schemas = [breadcrumbSchema, ...caseStudySchemas];
 
@@ -207,7 +343,7 @@ export default function CaseStudies() {
           </div>
 
           <div className="case-studies-grid">
-            {ukCaseStudies.map((cs) => (
+            {displayedCaseStudies.map((cs) => (
               <div key={cs.id} className="case-study-card">
                 <div className="card-header">
                   <div className="author-info">
