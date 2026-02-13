@@ -43,7 +43,6 @@ class Logger {
 
   debug(message, context = {}) {
     if (isDevelopment) {
-      console.debug('[DEBUG]', message, context);
     }
   }
 

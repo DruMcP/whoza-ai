@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { toast } from 'sonner';
 import { dashboardService } from '../services/dashboardService';
 import { supabase } from '../lib/supabase';
 
@@ -385,7 +386,7 @@ export default function AccountManagement({ userId }) {
                 {profile.user.stripe_customer_id && (
                   <button
                     className="button button-secondary"
-                    onClick={() => window.alert('This will open the Stripe customer portal. Integration pending.')}
+                    onClick={() => window.toast.info('This will open the Stripe customer portal. Integration pending.')}
                   >
                     View Billing History
                   </button>
