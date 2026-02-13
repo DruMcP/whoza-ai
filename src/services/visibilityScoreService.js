@@ -695,7 +695,7 @@ export const visibilityScoreService = {
     const direction = change > 0 ? 'increased' : 'decreased';
     const absChange = Math.abs(change);
 
-    return `Your Visibility Confidence Score™ has ${direction} by ${absChange.toFixed(1)} points this month. ${
+    return `Your AI Visibility Score has ${direction} by ${absChange.toFixed(1)} points this month. ${
       change > 0
         ? `Great work! Your efforts are paying off and you're becoming more visible in AI search results.`
         : `Don't worry - slight fluctuations are normal. Let's focus on the key areas that will boost your visibility.`
@@ -721,7 +721,7 @@ export const visibilityScoreService = {
     });
 
     if (achievements.length === 0) {
-      achievements.push('✓ Maintained your Visibility Confidence Score™');
+      achievements.push('✓ Maintained your AI Visibility Score');
     }
 
     return achievements.join('\n');

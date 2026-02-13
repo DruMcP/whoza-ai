@@ -53,7 +53,7 @@ const ukCaseStudies = [
     },
     results: {
       metrics: [
-        { label: 'Visibility Confidence Score™', before: '34', after: '78', unit: '/100', improvement: 'Significant improvement' },
+        { label: 'AI Visibility Score', before: '34', after: '78', unit: '/100', improvement: 'Significant improvement' },
         { label: 'Monthly Enquiries', before: '8', after: '24', unit: '', improvement: 'Significantly increased' },
         { label: 'Google Profile Views', before: '120', after: '336', unit: '/month', improvement: 'Strong growth' },
         { label: 'Review Rating', before: '4.2', after: '4.8', unit: '/5.0', improvement: 'Improved' }
@@ -117,7 +117,7 @@ const ukCaseStudies = [
     },
     results: {
       metrics: [
-        { label: 'Visibility Confidence Score™', before: '28', after: '82', unit: '/100', improvement: 'Major improvement' },
+        { label: 'AI Visibility Score', before: '28', after: '82', unit: '/100', improvement: 'Major improvement' },
         { label: 'Monthly Enquiries', before: '15', after: '32', unit: '', improvement: 'Substantially increased' },
         { label: 'Website Traffic', before: '180', after: '301', unit: '/month', improvement: 'Grew steadily' },
         { label: 'Online Reviews', before: '12', after: '47', unit: '', improvement: 'Significantly increased' }
@@ -185,7 +185,7 @@ const usCaseStudies = [
     },
     results: {
       metrics: [
-        { label: 'Visibility Confidence Score™', before: '31', after: '81', unit: '/100', improvement: 'Dramatic improvement' },
+        { label: 'AI Visibility Score', before: '31', after: '81', unit: '/100', improvement: 'Dramatic improvement' },
         { label: 'Monthly Enquiries', before: '12', after: '31', unit: '', improvement: 'Significantly increased' },
         { label: 'Google Profile Views', before: '95', after: '412', unit: '/month', improvement: 'Strong growth' },
         { label: 'Review Rating', before: '4.1', after: '4.9', unit: '/5.0', improvement: 'Improved' }
@@ -249,7 +249,7 @@ const usCaseStudies = [
     },
     results: {
       metrics: [
-        { label: 'Visibility Confidence Score™', before: '26', after: '84', unit: '/100', improvement: 'Exceptional improvement' },
+        { label: 'AI Visibility Score', before: '26', after: '84', unit: '/100', improvement: 'Exceptional improvement' },
         { label: 'Monthly Enquiries', before: '9', after: '28', unit: '', improvement: 'Significantly increased' },
         { label: 'Google Profile Views', before: '78', after: '445', unit: '/month', improvement: 'Strong growth' },
         { label: 'Review Rating', before: '3.9', after: '4.8', unit: '/5.0', improvement: 'Improved' }

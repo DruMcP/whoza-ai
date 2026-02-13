@@ -133,7 +133,7 @@ function generateFreeScoreEmailTemplate({
                 <tr>
                   <td style="text-align: center;">
                     <div style="font-size: 14px; font-weight: 600; color: #4ade80; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">
-                      Your Visibility Confidence Score™
+                      Your AI Visibility Score
                     </div>
                     <div style="font-size: 48px; font-weight: 700; color: #4ade80; line-height: 1; margin-bottom: 8px;">
                       ${score}/100
