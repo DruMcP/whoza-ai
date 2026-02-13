@@ -1784,6 +1784,75 @@ export const blogPosts = [
       "buttonText": "Get Your Free AI Visibility Score",
       "buttonLink": "/free-score"
     }
+  },
+  {
+    "id": "google-ai-overviews-stealing-clicks-guide-uk-tradespeople",
+    "slug": "google-ai-overviews-stealing-clicks-guide-uk-tradespeople",
+    "title": "Google AI Overviews Are Stealing Your Clicks: A Guide for UK Tradespeople",
+    "metaDescription": "Google AI Overviews now reduce clicks by 58% for top-ranking pages. Learn how UK plumbers, electricians, roofers, and builders can get cited inside AI answers and turn this threat into an opportunity.",
+    "publishDate": "2026-02-13",
+    "author": "Whoza.ai Team",
+    "category": "AI Visibility",
+    "tags": [
+      "Google AI Overviews",
+      "AEO",
+      "zero-click search",
+      "UK tradespeople",
+      "Entity Confidence",
+      "local SEO",
+      "GEO",
+      "Schema markup"
+    ],
+    "readTime": "7 min read",
+    "featured": true,
+    "leadAnswer": "Google AI Overviews are now the first thing your customers see, reducing website clicks by up to 58% for top-ranking tradespeople. To survive, you must shift from ranking on Google to being **cited** within the AI answer itself by building verifiable trust and providing structured, authoritative information about your services.",
+    "content": [
+      {
+        "type": "section",
+        "heading": "What Are Google AI Overviews and Why Should I Care?",
+        "content": "For the past two decades, getting your trade business onto the first page of Google—and ideally into the 'local pack' map results—was the key to a steady stream of customer enquiries. That era is now over. As of January 2026, Google has rolled out AI Overviews globally, a feature that sits at the very top of the search results page and directly answers a user's question, often eliminating the need to click on any website at all.\n\nInstead of seeing a list of plumbers in Bristol, a customer now gets a single, AI-generated paragraph recommending one or two businesses. Research from Ahrefs (February 2026) confirms the devastating impact: top-ranking websites are experiencing a 58% reduction in click-through rates. Position 1 CTR has dropped 78% in just two years. For a local trade business, that translates to more than half of your potential online leads vanishing overnight. If you've noticed your phone ringing less despite your search rankings remaining stable, this is almost certainly why."
+      },
+      {
+        "type": "section",
+        "heading": "How Do AI Overviews Decide Which Tradespeople to Recommend?",
+        "content": "Unlike traditional search which ranks a list of relevant websites, AI Overviews aim to provide a single, confident answer. The AI acts as a risk-averse gatekeeper, and it will only recommend a business it trusts completely. This trust is built on a concept called Entity Confidence, which is the AI's certainty about the facts of your business—who you are, what you do, where you operate, and how reputable you are.\n\nThe AI scours the web, cross-referencing information from your website, your Google Business Profile, local directories like Yell and Thomson Local, customer reviews, and even mentions in local news. If it finds inconsistent phone numbers, a different address on Facebook, or a lack of verifiable credentials, its confidence plummets, and you become invisible. It's no longer enough to have the right keywords; you must have a perfectly consistent and authoritative digital footprint that AI can verify across multiple sources."
+      },
+      {
+        "type": "section",
+        "heading": "Why Is Being Cited in AI Overviews the New 'Position One'?",
+        "content": "Here is the critical insight that changes everything for UK tradespeople: while AI Overviews destroy overall click-through rates, businesses that are actually cited as a source inside the AI answer earn 35% more clicks than brands that appear only in the organic results below. This data from Seer Interactive, published via Search Engine Land, reveals a stark new reality in local search.\n\nIf you are a plumber in Manchester and Google's AI Overview cites your website when answering 'Who is the best emergency plumber in Manchester?', you don't just survive the traffic decline—you thrive. You become the trusted recommendation that 800 million AI search users see first. The businesses that are not cited, however, are buried beneath an AI-generated wall of text that most users never scroll past. The gap between being cited and being buried is the new front line of search visibility for every electrician, roofer, builder, and heating engineer in the UK."
+      },
+      {
+        "type": "section",
+        "heading": "How Can My Trade Business Get Cited in Google AI Overviews?",
+        "content": "Getting cited requires a systematic approach to building the trust signals that AI needs. Here are the practical steps UK tradespeople in cities like London, Manchester, Birmingham, Leeds, and Bristol need to take right now.\n\nFirst, perfect your Google Business Profile. Your GBP is the AI's primary source of truth. Every single section must be filled out with meticulous detail, from your precise service areas down to the postcode to a full menu of your services with descriptions. Incompleteness is the fastest way to be ignored.\n\nSecond, achieve absolute NAP consistency. Your Name, Address, and Phone number must be identical everywhere online—your website, social media, and every single directory listing. Even a small variation like 'Ltd' versus 'Limited' can erode an AI's trust.\n\nThird, build high-quality local citations. Secure listings in reputable, UK-specific directories. A mention from a local council website or a high-authority trade association like the NICEIC or Gas Safe Register is worth more than a hundred random links.\n\nFourth, structure your website for AI. Implement LocalBusiness and FAQPage Schema.org markup on your website. This is the native language of AI, allowing it to parse your information without guesswork. An audit of 500 UK small business websites found that 97% have no AI discovery files, creating a massive opportunity for tradespeople who act now."
+      },
+      {
+        "type": "section",
+        "heading": "What Should Tradespeople in London, Manchester, and Birmingham Do First?",
+        "content": "The competitive landscape varies significantly by city. In London, the sheer volume of tradespeople means AI Overviews are even more selective—only businesses with the strongest Entity Confidence signals will be cited. In Manchester and Birmingham, the opportunity is wider because fewer local trades have optimised for AI search, but the window is closing fast.\n\nRegardless of your location, the first step is the same: audit your digital footprint. Search for your business name, address, and phone number across Google, Bing, Yell, Thomson Local, Checkatrade, and your social media profiles. Every inconsistency you find is a crack in your Entity Confidence that AI will penalise. Fix these first, then move on to enriching your Google Business Profile and adding structured data to your website.\n\nFor tradespeople in Leeds, Bristol, Glasgow, Edinburgh, and other major UK cities, the same principles apply. The AI doesn't care about your city's size—it cares about the quality and consistency of your data. A perfectly optimised heating engineer in Bristol will outperform a poorly optimised one in London every time."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is traditional SEO dead for UK tradespeople?",
+        "answer": "Traditional keyword-focused SEO is becoming less effective as AI Overviews reduce clicks by up to 58%. The new discipline is Answer Engine Optimisation (AEO), which focuses on becoming a verifiable, citable entity that AI trusts. It is a shift from optimising for rankings to qualifying for recommendations."
+      },
+      {
+        "question": "How long does it take to get cited in Google AI Overviews?",
+        "answer": "While cleaning up your data and fixing NAP inconsistencies can produce initial improvements in a few weeks, becoming a consistently cited source in AI Overviews typically takes 3 to 6 months of dedicated effort. The key is building a foundation of trust and authority that the AI can verify across multiple sources over time."
+      },
+      {
+        "question": "Do I need a new website to appear in AI Overviews?",
+        "answer": "Not necessarily, but your existing website must be optimised for AI. It needs to be secure with HTTPS, mobile-friendly, and contain structured data using Schema.org markup that clearly communicates your services, service areas, and expertise. Your website is the central hub of your digital identity and the one place where you control the narrative."
+      }
+    ],
+    "cta": {
+      "heading": "Ready to See Where You Stand?",
+      "text": "In this new AI-driven landscape, you are either a cited source or you are invisible. Get your Free AI Visibility Score today and see exactly where you stand against your local competitors in London, Manchester, Birmingham, and beyond.",
+      "buttonText": "Get Your Free AI Visibility Score",
+      "buttonLink": "/free-score"
+    }
   }
 ];
 
