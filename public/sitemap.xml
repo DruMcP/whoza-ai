@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main Pages -->
   <url>
-    <loc>https://whoza.ai</loc>
+    <loc>https://whoza.ai/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -37,7 +37,7 @@
     <priority>0.8</priority>
   </url>
   
-  <!-- UK Location Pages - CORRECTED URLs -->
+  <!-- UK Location Pages -->
   <url>
     <loc>https://whoza.ai/uk/ai-visibility/london</loc>
     <changefreq>monthly</changefreq>
@@ -114,7 +114,7 @@
     <priority>0.7</priority>
   </url>
   
-  <!-- US Location Pages - NEW ADDITIONS -->
+  <!-- US Location Pages -->
   <url>
     <loc>https://whoza.ai/us/ai-visibility/new-york</loc>
     <changefreq>monthly</changefreq>
@@ -190,133 +190,162 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  
+  <!-- Blog Posts -->
+  <url>
     <loc>https://whoza.ai/blog/top-10-ai-visibility-strategies-uk-tradespeople-2026</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
---
+  </url>
+  <url>
     <loc>https://whoza.ai/blog/uk-trades-business-playbook-ai-search-visibility-2026</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
---
+  </url>
+  <url>
     <loc>https://whoza.ai/blog/us-contractors-guide-ai-search-visibility-2026</loc>
     <lastmod>2026-02-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
---
+  </url>
+  <url>
     <loc>https://whoza.ai/blog/why-bing-matters-for-ai-search-the-perplexity-connection</loc>
     <lastmod>2026-02-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
---
+  </url>
+  <url>
     <loc>https://whoza.ai/blog/how-ai-search-engines-choose-which-local-businesses-to-recommend</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
---
+  </url>
+  <url>
     <loc>https://whoza.ai/blog/the-ultimate-guide-to-google-business-profile-optimization-for-ai-search-2026</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
---
+  </url>
+  <url>
     <loc>https://whoza.ai/blog/why-your-business-isnt-showing-up-in-chatgpt-recommendations-and-how-to-fix-it</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
---
+  </url>
+  <url>
     <loc>https://whoza.ai/blog/how-uk-tradespeople-can-get-found-on-chatgpt-and-ai-search-in-2026</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
---
+  </url>
+  <url>
     <loc>https://whoza.ai/blog/how-uk-tradespeople-can-get-recommended-by-chatgpt-in-2026</loc>
     <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
---
+  </url>
+  <url>
     <loc>https://whoza.ai/blog/electricians-guide-to-google-ai-overviews-how-to-get-featured</loc>
     <lastmod>2026-01-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
---
+  </url>
+  <url>
     <loc>https://whoza.ai/blog/how-to-create-an-faq-page-that-ai-can-find-and-reference</loc>
     <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
---
+  </url>
+  <url>
     <loc>https://whoza.ai/blog/ai-visibility-manchester-trades-2026-guide</loc>
     <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
---
+  </url>
+  <url>
     <loc>https://whoza.ai/blog/what-is-ai-visibility-uk-tradespeople-2026</loc>
     <lastmod>2026-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
---
+  </url>
+  <url>
     <loc>https://whoza.ai/blog/how-uk-tradespeople-get-found-ai-search-2026</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
---
+  </url>
+  <url>
     <loc>https://whoza.ai/blog/best-practices-tradespeople-london-local-ai-visibility-guide</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
---
+  </url>
+  <url>
     <loc>https://whoza.ai/blog/how-plumbers-can-get-found-in-chatgpt-a-step-by-step-guide</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
---
+  </url>
+  <url>
     <loc>https://whoza.ai/blog/how-plumbers-can-get-found-in-chatgpt-2026</loc>
     <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
---
+  </url>
+  <url>
     <loc>https://whoza.ai/blog/electricians-guide-to-google-ai-overviews-2026</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
---
+  </url>
+  <url>
     <loc>https://whoza.ai/blog/ai-visibility-for-london-tradespeople-2026</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
---
+  </url>
+  <url>
     <loc>https://whoza.ai/blog/how-to-create-faq-page-ai-can-find-2026</loc>
     <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
---
+  </url>
+  <url>
     <loc>https://whoza.ai/blog/roofers-10-step-checklist-ai-visibility-2026</loc>
     <lastmod>2026-02-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
---
+  </url>
+  <url>
     <loc>https://whoza.ai/blog/why-bing-matters-for-ai-search-2026</loc>
     <lastmod>2026-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
---
+  </url>
+  <url>
     <loc>https://whoza.ai/blog/manchester-vs-birmingham-local-seo-strategies-2026</loc>
     <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
---
+  </url>
+  <url>
     <loc>https://whoza.ai/blog/roofers-checklist-10-steps-to-ai-visibility-2026</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
---
+  </url>
+  <url>
     <loc>https://whoza.ai/blog/how-ai-search-engines-choose-plumber-recommendation-manchester</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
---
+  </url>
+  <url>
     <loc>https://whoza.ai/blog/why-ai-search-wont-recommend-your-trade-business-and-how-to-fix-it</loc>
     <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
 </urlset>
