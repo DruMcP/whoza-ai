@@ -325,12 +325,44 @@ export default function Pricing() {
                   <h3>{plan.name}</h3>
                   <div className="headline">{plan.headline}</div>
                   <p className="subheadline">{plan.subheadline}</p>
-                  <div className="price-container">
-                    <span className="price">{formatPrice(plan.price)}</span>
-                    <span className="duration">/{plan.duration || 'month'}</span>
+                  <div className="price-container" style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    padding: '24px 16px',
+                    margin: '20px 0',
+                    background: plan.featured 
+                      ? 'linear-gradient(135deg, rgba(132, 204, 22, 0.12) 0%, rgba(132, 204, 22, 0.06) 100%)'
+                      : 'linear-gradient(135deg, rgba(132, 204, 22, 0.05) 0%, rgba(132, 204, 22, 0.02) 100%)',
+                    borderRadius: '12px',
+                    border: plan.featured 
+                      ? '2px solid rgba(132, 204, 22, 0.3)'
+                      : '2px solid rgba(132, 204, 22, 0.15)',
+                    transition: 'all 0.2s ease'
+                  }} role="region" aria-label={`Pricing information: ${formatPrice(plan.price)} per ${plan.duration || 'month'}`}>
+                    <span className="price" style={{
+                      fontSize: 'clamp(42px, 5vw, 56px)',
+                      fontWeight: '900',
+                      lineHeight: '1',
+                      color: plan.featured ? '#84CC16' : '#1F2937',
+                      letterSpacing: '-0.02em',
+                      marginBottom: '4px'
+                    }}>{formatPrice(plan.price)}</span>
+                    <span className="duration" style={{
+                      fontSize: '18px',
+                      fontWeight: '500',
+                      color: '#6B7280',
+                      marginTop: '4px'
+                    }} aria-hidden="true">/{plan.duration || 'month'}</span>
                   </div>
                   {plan.comparisonAnchor && (
-                    <div className="comparison-anchor">{plan.comparisonAnchor}</div>
+                    <div className="comparison-anchor" style={{
+                      fontSize: '14px',
+                      color: '#84CC16',
+                      fontWeight: '600',
+                      textAlign: 'center',
+                      marginTop: '12px'
+                    }}>{plan.comparisonAnchor}</div>
                   )}
                 </div>
                 <div className="card-body">

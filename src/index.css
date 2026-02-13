@@ -2673,7 +2673,7 @@ button,
 
 .popular-badge {
   position: absolute;
-  top: -15px;
+  top: -8px;
   left: 50%;
   transform: translateX(-50%);
   background: var(--color-accent-500);
