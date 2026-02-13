@@ -42,7 +42,6 @@ export const AuthProvider = ({ children }) => {
       } catch (error) {
         // Handle AbortError gracefully
         if (isAbortError(error)) {
-          console.debug('[AuthContext] Session initialization aborted');
           return;
         }
         logger.error('Error initializing auth session', { error });
@@ -81,7 +80,6 @@ export const AuthProvider = ({ children }) => {
             }
           } catch (error) {
             if (isAbortError(error)) {
-              console.debug('[AuthContext] Auth state change handling aborted');
               return;
             }
             logger.error('Error handling auth state change', { error });
@@ -110,7 +108,6 @@ export const AuthProvider = ({ children }) => {
       if (error) {
         // Handle AbortError gracefully
         if (isAbortError(error)) {
-          console.debug('[AuthContext] User data fetch aborted');
           return;
         }
         throw error;
@@ -121,7 +118,6 @@ export const AuthProvider = ({ children }) => {
       }
     } catch (error) {
       if (isAbortError(error)) {
-        console.debug('[AuthContext] User data fetch aborted');
         return;
       }
       logger.error('Error fetching user data', { error, userId });

@@ -214,7 +214,6 @@ export function useFreeScoreAPI() {
     } catch (err) {
       // Handle AbortError gracefully - don't show error to user
       if (isAbortError(err)) {
-        console.debug('[useFreeScoreAPI] Request aborted');
         return;
       }
       const errorType = getErrorType(err, 0);

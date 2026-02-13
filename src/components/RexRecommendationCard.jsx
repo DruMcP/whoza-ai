@@ -30,7 +30,7 @@ export default function RexRecommendationCard({ recommendation, onApprove, onCom
   const handleComplete = async (e) => {
     e.preventDefault();
     if (!completionNotes.trim()) {
-      alert('Please provide completion notes');
+      toast.info('Please provide completion notes');
       return;
     }
 
@@ -48,7 +48,7 @@ export default function RexRecommendationCard({ recommendation, onApprove, onCom
   const handleDecline = async (e) => {
     e.preventDefault();
     if (!declineReason.trim()) {
-      alert('Please provide a reason for declining');
+      toast.info('Please provide a reason for declining');
       return;
     }
 
@@ -112,7 +112,7 @@ export default function RexRecommendationCard({ recommendation, onApprove, onCom
               <button
                 onClick={() => {
                   navigator.clipboard.writeText(recommendation.exact_copy);
-                  alert('Copied to clipboard!');
+                  toast.info('Copied to clipboard!');
                 }}
                 className="absolute top-2 right-2 px-3 py-1.5 bg-white text-gray-700 rounded-md text-xs font-semibold hover:bg-gray-100 transition-colors border border-gray-300"
               >
