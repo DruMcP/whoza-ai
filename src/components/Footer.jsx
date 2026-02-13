@@ -232,13 +232,104 @@ const Footer = memo(function Footer() {
           </div>
         </div>
 
+        {/* Locations Section */}
+        <div style={{
+          marginTop: '40px',
+          paddingTop: '40px',
+          borderTop: '1px solid rgba(132, 204, 22, 0.2)'
+        }}>
+          <h3 style={{
+            color: '#84CC16',
+            fontSize: '1.3rem',
+            fontWeight: 'bold',
+            marginBottom: '24px',
+            textAlign: 'center'
+          }}>
+            📍 AI Visibility Services by Location
+          </h3>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+            gap: '32px'
+          }}>
+            {/* UK Locations */}
+            <div>
+              <h4 style={{
+                color: '#a3e635',
+                fontSize: '1rem',
+                fontWeight: '600',
+                marginBottom: '16px'
+              }}>
+                🇬🇧 United Kingdom
+              </h4>
+              <nav aria-label="UK locations" style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))',
+                gap: '8px',
+                fontSize: '0.9rem'
+              }}>
+                <Link to="/uk/ai-visibility/london" style={{ color: '#94a3b8', textDecoration: 'none' }}>London</Link>
+                <Link to="/uk/ai-visibility/birmingham" style={{ color: '#94a3b8', textDecoration: 'none' }}>Birmingham</Link>
+                <Link to="/uk/ai-visibility/manchester" style={{ color: '#94a3b8', textDecoration: 'none' }}>Manchester</Link>
+                <Link to="/uk/ai-visibility/leeds" style={{ color: '#94a3b8', textDecoration: 'none' }}>Leeds</Link>
+                <Link to="/uk/ai-visibility/glasgow" style={{ color: '#94a3b8', textDecoration: 'none' }}>Glasgow</Link>
+                <Link to="/uk/ai-visibility/liverpool" style={{ color: '#94a3b8', textDecoration: 'none' }}>Liverpool</Link>
+                <Link to="/uk/ai-visibility/newcastle" style={{ color: '#94a3b8', textDecoration: 'none' }}>Newcastle</Link>
+                <Link to="/uk/ai-visibility/sheffield" style={{ color: '#94a3b8', textDecoration: 'none' }}>Sheffield</Link>
+                <Link to="/uk/ai-visibility/bristol" style={{ color: '#94a3b8', textDecoration: 'none' }}>Bristol</Link>
+                <Link to="/uk/ai-visibility/edinburgh" style={{ color: '#94a3b8', textDecoration: 'none' }}>Edinburgh</Link>
+                <Link to="/uk/ai-visibility/leicester" style={{ color: '#94a3b8', textDecoration: 'none' }}>Leicester</Link>
+                <Link to="/uk/ai-visibility/nottingham" style={{ color: '#94a3b8', textDecoration: 'none' }}>Nottingham</Link>
+                <Link to="/uk/ai-visibility/cardiff" style={{ color: '#94a3b8', textDecoration: 'none' }}>Cardiff</Link>
+                <Link to="/uk/ai-visibility/coventry" style={{ color: '#94a3b8', textDecoration: 'none' }}>Coventry</Link>
+                <Link to="/uk/ai-visibility/southampton" style={{ color: '#94a3b8', textDecoration: 'none' }}>Southampton</Link>
+              </nav>
+            </div>
+
+            {/* US Locations */}
+            <div>
+              <h4 style={{
+                color: '#a3e635',
+                fontSize: '1rem',
+                fontWeight: '600',
+                marginBottom: '16px'
+              }}>
+                🇺🇸 United States
+              </h4>
+              <nav aria-label="US locations" style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))',
+                gap: '8px',
+                fontSize: '0.9rem'
+              }}>
+                <Link to="/us/ai-visibility/new-york" style={{ color: '#94a3b8', textDecoration: 'none' }}>New York</Link>
+                <Link to="/us/ai-visibility/los-angeles" style={{ color: '#94a3b8', textDecoration: 'none' }}>Los Angeles</Link>
+                <Link to="/us/ai-visibility/chicago" style={{ color: '#94a3b8', textDecoration: 'none' }}>Chicago</Link>
+                <Link to="/us/ai-visibility/houston" style={{ color: '#94a3b8', textDecoration: 'none' }}>Houston</Link>
+                <Link to="/us/ai-visibility/phoenix" style={{ color: '#94a3b8', textDecoration: 'none' }}>Phoenix</Link>
+                <Link to="/us/ai-visibility/philadelphia" style={{ color: '#94a3b8', textDecoration: 'none' }}>Philadelphia</Link>
+                <Link to="/us/ai-visibility/san-antonio" style={{ color: '#94a3b8', textDecoration: 'none' }}>San Antonio</Link>
+                <Link to="/us/ai-visibility/san-diego" style={{ color: '#94a3b8', textDecoration: 'none' }}>San Diego</Link>
+                <Link to="/us/ai-visibility/dallas" style={{ color: '#94a3b8', textDecoration: 'none' }}>Dallas</Link>
+                <Link to="/us/ai-visibility/san-jose" style={{ color: '#94a3b8', textDecoration: 'none' }}>San Jose</Link>
+                <Link to="/us/ai-visibility/austin" style={{ color: '#94a3b8', textDecoration: 'none' }}>Austin</Link>
+                <Link to="/us/ai-visibility/jacksonville" style={{ color: '#94a3b8', textDecoration: 'none' }}>Jacksonville</Link>
+                <Link to="/us/ai-visibility/fort-worth" style={{ color: '#94a3b8', textDecoration: 'none' }}>Fort Worth</Link>
+                <Link to="/us/ai-visibility/columbus" style={{ color: '#94a3b8', textDecoration: 'none' }}>Columbus</Link>
+                <Link to="/us/ai-visibility/charlotte" style={{ color: '#94a3b8', textDecoration: 'none' }}>Charlotte</Link>
+              </nav>
+            </div>
+          </div>
+        </div>
+
         {/* Copyright */}
         <div style={{
           textAlign: 'center',
           paddingTop: '30px',
           borderTop: '1px solid rgba(132, 204, 22, 0.2)',
           color: '#64748b',
-          fontSize: '0.85rem'
+          fontSize: '0.85rem',
+          marginTop: '40px'
         }}>
           <p>© {new Date().getFullYear()} WHOZA AI LTD. All rights reserved.</p>
         </div>
