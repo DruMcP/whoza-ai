@@ -20,41 +20,6 @@ export default defineConfig(({ mode }) => {
   build: {
     rollupOptions: {
       output: {
-        manualChunks: (id) => {
-          if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'react-vendor';
-            }
-            if (id.includes('react-router')) {
-              return 'react-router-vendor';
-            }
-            if (id.includes('@supabase')) {
-              return 'supabase-vendor';
-            }
-            if (id.includes('framer-motion')) {
-              return 'animation-vendor';
-            }
-            if (id.includes('lucide-react')) {
-              return 'icons-vendor';
-            }
-            if (id.includes('@sentry')) {
-              return 'sentry-vendor';
-            }
-            return 'vendor';
-          }
-          if (id.includes('/components/')) {
-            return 'components';
-          }
-          if (id.includes('/pages/')) {
-            const match = id.match(/\/pages\/([^/]+)/);
-            if (match) {
-              return `page-${match[1].toLowerCase()}`;
-            }
-          }
-          if (id.includes('/services/')) {
-            return 'services';
-          }
-        },
         assetFileNames: 'assets/[name]-[hash][extname]',
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
