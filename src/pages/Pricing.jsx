@@ -178,18 +178,60 @@ export default function Pricing() {
   // Inject Schema for AEO optimization
   useEffect(() => {
     // SoftwareApplication Schema
+    const priceValidUntil = new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
+    const currency = country === 'UK' ? 'GBP' : 'USD';
+    const countryCode = country === 'UK' ? 'GB' : 'US';
     const softwareSchema = {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": "Whoza.ai AI Visibility Platform",
       "operatingSystem": "Web",
       "applicationCategory": "BusinessApplication",
+      "image": "https://whoza.ai/whoza-logo.png",
       "offers": pricingPlans.map(plan => ({
         "@type": "Offer",
         "name": plan.name,
         "price": plan.price,
-        "priceCurrency": country === 'UK' ? 'GBP' : 'USD',
-        "description": plan.subheadline
+        "priceCurrency": currency,
+        "description": plan.subheadline,
+        "availability": "https://schema.org/InStock",
+        "priceValidUntil": priceValidUntil,
+        "url": "https://whoza.ai/pricing",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": countryCode,
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": currency
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            }
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": countryCode
+          }
+        }
       })),
       "aggregateRating": {
         "@type": "AggregateRating",
