@@ -120,7 +120,8 @@ function BlogPost() {
       "keywords": post.tags.join(', ')
     };
 
-    const faqSchema = {
+    const hasFaqs = post.faqs && post.faqs.length > 0;
+    const faqSchema = hasFaqs ? {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": post.faqs.map(faq => ({
@@ -131,7 +132,7 @@ function BlogPost() {
           "text": faq.answer
         }
       }))
-    };
+    } : null;
 
     const breadcrumbSchema = {
       "@context": "https://schema.org",
@@ -160,7 +161,7 @@ function BlogPost() {
 
     const schemas = [
       { id: 'article-schema', data: articleSchema },
-      { id: 'faq-schema', data: faqSchema },
+      ...(faqSchema ? [{ id: 'faq-schema', data: faqSchema }] : []),
       { id: 'breadcrumb-schema', data: breadcrumbSchema }
     ];
 
@@ -304,7 +305,9 @@ function BlogPost() {
                     <a href={`#section-${index}`}>{section.heading}</a>
                   </li>
                 ))}
-                <li><a href="#faq">Frequently Asked Questions</a></li>
+                {post.faqs && post.faqs.length > 0 && (
+                  <li><a href="#faq">Frequently Asked Questions</a></li>
+                )}
               </ol>
             </details>
           </div>
@@ -344,6 +347,7 @@ function BlogPost() {
               );
             })}
 
+            {post.faqs && post.faqs.length > 0 && (
             <section id="faq" className="faq-section">
               <h2>Frequently Asked Questions</h2>
               <div className="faq-list">
@@ -357,6 +361,7 @@ function BlogPost() {
                 ))}
               </div>
             </section>
+            )}
 
             {post.cta && (
               <section className="article-cta">

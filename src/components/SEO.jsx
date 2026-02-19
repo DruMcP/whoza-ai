@@ -3,14 +3,16 @@ import { useLocation } from 'react-router-dom';
 import { seoConfig } from '../utils/seoConfig';
 import { injectSchema } from '../utils/schemaOrg';
 
-const SEO = ({ schemas = [] }) => {
+const SEO = ({ schemas = [], noindex = false, title: propTitle, description: propDescription }) => {
   const location = useLocation();
   const baseUrl = 'https://whoza.ai';
   const path = location.pathname;
   const canonicalUrl = `${baseUrl}${path}`;
 
   const pageSEO = seoConfig[path] || seoConfig['/'];
-  const { title, description, image } = pageSEO;
+  const title = propTitle || pageSEO.title;
+  const description = propDescription || pageSEO.description;
+  const { image } = pageSEO;
 
   useEffect(() => {
     if (schemas && schemas.length > 0) {
@@ -77,7 +79,20 @@ const SEO = ({ schemas = [] }) => {
 
     const ogUrl = document.querySelector("meta[property='og:url']");
     if (ogUrl) ogUrl.setAttribute('content', canonicalUrl);
-  }, [path, canonicalUrl, title, description, image, baseUrl]);
+
+    // Handle noindex
+    let robotsMeta = document.querySelector("meta[name='robots']");
+    if (!robotsMeta) {
+      robotsMeta = document.createElement('meta');
+      robotsMeta.setAttribute('name', 'robots');
+      document.head.appendChild(robotsMeta);
+    }
+    if (noindex) {
+      robotsMeta.setAttribute('content', 'noindex, nofollow');
+    } else {
+      robotsMeta.setAttribute('content', 'index, follow');
+    }
+  }, [path, canonicalUrl, title, description, image, baseUrl, noindex]);
 
   return null;
 };
