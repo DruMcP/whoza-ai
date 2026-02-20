@@ -31,16 +31,16 @@ export default function StickyCTABar() {
           width: 100%;
           background-color: rgba(15, 23, 42, 0.95);
           backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
           border-top: 2px solid var(--color-primary-600);
           box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
           padding: var(--spacing-md) var(--spacing-lg);
           z-index: 999;
-          animation: slideUp 0.3s ease-out;
+          animation: stickyCTASlideUp 0.3s ease-out;
           display: flex;
           align-items: center;
           justify-content: space-between;
           gap: var(--spacing-md);
-          flex-wrap: wrap;
           box-sizing: border-box;
         }
 
@@ -54,6 +54,7 @@ export default function StickyCTABar() {
           font-size: 18px;
           font-weight: 600;
           margin-bottom: 4px;
+          color: white;
         }
 
         .sticky-cta-subtitle {
@@ -65,19 +66,20 @@ export default function StickyCTABar() {
           display: flex;
           align-items: center;
           gap: var(--spacing-md);
-          flex-wrap: wrap;
+          flex-shrink: 0;
         }
 
         .sticky-cta-button {
           font-size: 16px;
           padding: var(--spacing-sm) var(--spacing-lg);
-          display: inline-flex;
+          display: inline-flex !important;
           align-items: center;
           gap: var(--spacing-sm);
           white-space: nowrap;
+          width: auto !important;
         }
 
-        @keyframes slideUp {
+        @keyframes stickyCTASlideUp {
           from {
             transform: translateY(100%);
             opacity: 0;
@@ -88,69 +90,57 @@ export default function StickyCTABar() {
           }
         }
 
-        /* Mobile optimization - ABSOLUTE CENTERING */
         @media (max-width: 768px) {
           .sticky-cta-bar {
-            padding: 16px 20px !important;
             flex-direction: column !important;
             align-items: center !important;
             justify-content: center !important;
             text-align: center !important;
+            padding: 16px 20px !important;
             gap: 12px !important;
-            max-height: none !important;
-            overflow: visible !important;
             left: 0 !important;
             right: 0 !important;
             width: 100% !important;
             margin: 0 !important;
+            box-sizing: border-box !important;
           }
-          
+
           .sticky-cta-content {
-            width: 100% !important;
-            min-width: 100% !important;
-            max-width: 100% !important;
             flex: none !important;
-            margin: 0 auto !important;
-            padding: 0 !important;
+            width: 100% !important;
+            min-width: 0 !important;
+            max-width: 100% !important;
             text-align: center !important;
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            justify-content: center !important;
+            margin: 0 !important;
+            padding: 0 !important;
           }
-          
+
           .sticky-cta-title {
             font-size: 16px !important;
-            margin-bottom: 4px !important;
             text-align: center !important;
             width: 100% !important;
-            margin-left: 0 !important;
-            margin-right: 0 !important;
+            margin: 0 0 4px 0 !important;
             padding: 0 !important;
           }
-          
+
           .sticky-cta-subtitle {
             font-size: 13px !important;
             text-align: center !important;
             width: 100% !important;
-            margin-left: 0 !important;
-            margin-right: 0 !important;
+            margin: 0 !important;
             padding: 0 !important;
           }
-          
+
           .sticky-cta-actions {
+            flex-shrink: unset !important;
             width: 100% !important;
-            max-width: 100% !important;
             justify-content: center !important;
-            gap: 12px !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            margin: 0 auto !important;
+            margin: 0 !important;
             padding: 0 !important;
           }
-          
+
           .sticky-cta-button {
-            width: 100% !important;
+            width: auto !important;
             max-width: 320px !important;
             font-size: 15px !important;
             padding: 12px 24px !important;
@@ -158,25 +148,23 @@ export default function StickyCTABar() {
             text-align: center !important;
             box-sizing: border-box !important;
             margin: 0 auto !important;
-            display: flex !important;
-            align-items: center !important;
+            display: inline-flex !important;
           }
         }
 
-        /* Extra small mobile devices */
         @media (max-width: 480px) {
           .sticky-cta-bar {
             padding: 14px 16px !important;
           }
-          
+
           .sticky-cta-title {
             font-size: 15px !important;
           }
-          
+
           .sticky-cta-subtitle {
             font-size: 12px !important;
           }
-          
+
           .sticky-cta-button {
             font-size: 14px !important;
             padding: 11px 20px !important;
@@ -184,7 +172,7 @@ export default function StickyCTABar() {
           }
         }
       `}</style>
-      
+
       <div className="sticky-cta-bar">
         <div className="sticky-cta-content">
           <div className="sticky-cta-title">
