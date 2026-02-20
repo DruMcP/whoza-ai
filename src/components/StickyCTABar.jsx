@@ -90,7 +90,8 @@ export default function StickyCTABar() {
           }
         }
 
-        @media (max-width: 768px) {
+        /* Cover all phones and tablets up to 1024px wide */
+        @media (max-width: 1024px) {
           .sticky-cta-bar {
             flex-direction: column !important;
             align-items: center !important;
@@ -141,7 +142,7 @@ export default function StickyCTABar() {
 
           .sticky-cta-button {
             width: auto !important;
-            max-width: 320px !important;
+            max-width: 360px !important;
             font-size: 15px !important;
             padding: 12px 24px !important;
             justify-content: center !important;
