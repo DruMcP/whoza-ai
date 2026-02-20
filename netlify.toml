@@ -5,7 +5,7 @@
 
 [build]
 publish = "dist"
-command = "npx vite build"
+command = "npx vite build && node scripts/prerender.mjs"
 
 [build.environment]
 NODE_VERSION = "20"
