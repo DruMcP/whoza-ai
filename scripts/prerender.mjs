@@ -178,13 +178,13 @@ for (const page of staticPages) {
 
 console.log('\n📝 Blog posts:');
 for (const post of blogPosts) {
-  const urlPath = `/blog/${post.slug}`;
+  const urlPath = `/blog/${post.slug}/`;
   writeHtml(urlPath, post.title, post.description);
 }
 
 console.log('\n🇬🇧 UK city pages:');
 for (const city of ukCities) {
-  const urlPath = `/uk/ai-visibility/${city.slug}`;
+  const urlPath = `/uk/ai-visibility/${city.slug}/`;
   const title = `AI Visibility for Tradespeople in ${city.name} | Whoza.ai`;
   const description = `Get your AI Visibility Score in ${city.name}. Join over ${city.tradespeople.toLocaleString()} tradespeople optimising their online presence for AI search. From £59/month.`;
   writeHtml(urlPath, title, description);
@@ -192,7 +192,7 @@ for (const city of ukCities) {
 
 console.log('\n🇺🇸 US city pages:');
 for (const city of usCities) {
-  const urlPath = `/us/ai-visibility/${city.slug}`;
+  const urlPath = `/us/ai-visibility/${city.slug}/`;
   const title = `AI Visibility for Contractors in ${city.name}, ${city.state} | Whoza.ai`;
   const description = `Get your AI Visibility Score in ${city.name}. Join over ${city.contractors.toLocaleString()} contractors optimising their online presence for AI search. From $79/month.`;
   writeHtml(urlPath, title, description);
