@@ -6,7 +6,7 @@ export default function ROICalculator() {
   const [selectedTrade, setSelectedTrade] = useState('plumber');
   const [averageJobValue, setAverageJobValue] = useState(250);
   const [newJobsPerMonth, setNewJobsPerMonth] = useState(3);
-  const [selectedPlan, setSelectedPlan] = useState('starter');
+  const [selectedPlan, setSelectedPlan] = useState('improve');
   const [showResults, setShowResults] = useState(false);
 
   const tradePresets = {
@@ -26,9 +26,8 @@ export default function ROICalculator() {
   };
 
   const planPrices = {
-    starter: 19,
-    pro: 39,
-    max: 79
+    improve: 59,
+    priority: 149
   };
 
   const handleTradeChange = (trade) => {
@@ -203,9 +202,8 @@ export default function ROICalculator() {
               onChange={(e) => setSelectedPlan(e.target.value)}
               aria-label="Select subscription plan"
             >
-              <option value="starter">Improve - {formatPrice(59)}/month</option>
-              <option value="pro">Pro - {formatPrice(39)}/month</option>
-              <option value="max">Max - {formatPrice(79)}/month</option>
+              <option value="improve">Improve - {formatPrice(59)}/month</option>
+              <option value="priority">Priority - {formatPrice(149)}/month</option>
             </select>
           </div>
         </div>

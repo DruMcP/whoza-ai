@@ -436,6 +436,11 @@ export default function Pricing() {
             ))}
           </div>
 
+          {/* ROI Calculator - linked from homepage MiniROICalculator "Calculate My Full ROI" button */}
+          <div id="roi-calculator" style={{ scrollMarginTop: '80px' }}>
+            <ROICalculator />
+          </div>
+
           <div className="comparison-section">
             <h2>Compare Plans</h2>
             <div className="table-responsive">
