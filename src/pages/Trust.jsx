@@ -68,13 +68,17 @@ export default function Trust() {
   const totalReviews = 15;
 
   // Generate structured schema for Google Reviews
+  // Per Google's Nov 2025 update: Reviews nested inside an Organization via the
+  // "review" property are Nested Reviews — omit itemReviewed on each nested Review.
+  // The parent Organization is the reviewed item. Only standalone Reviews need itemReviewed.
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "WHOZA AI LTD",
+    "url": "https://whoza.ai",
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": averageRating.toString(),
+      "ratingValue": averageRating.toFixed(1),
       "reviewCount": totalReviews.toString(),
       "bestRating": "5",
       "worstRating": "1"

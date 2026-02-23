@@ -284,35 +284,41 @@ export default function CaseStudies() {
   ]);
 
   // Case Study Schema for AEO optimization
+  // IMPORTANT: Google only supports Review snippets nested inside specific types.
+  // CreativeWork is NOT a supported parent type for Review snippets (causes
+  // "Invalid object type for field <parent_node>" error in Search Console).
+  // We use SoftwareApplication (a supported type) as the parent, with the
+  // case study customer's review nested inside it.
   const caseStudySchemas = useMemo(() => {
     return displayedCaseStudies.map(cs => ({
       "@context": "https://schema.org",
-      "@type": "CreativeWork",
-      "name": `${cs.role} Case Study: ${cs.name} in ${cs.location}`,
-      "description": cs.challenge.description,
-      "author": {
-        "@type": "Organization",
-        "name": "Whoza.ai"
-      },
-      "about": {
-        "@type": "LocalBusiness",
-        "name": cs.businessName,
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": cs.location,
-          "addressCountry": countryCode
-        }
+      "@type": "SoftwareApplication",
+      "name": "Whoza.ai - Rex AI Visibility Assistant",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web Browser",
+      "description": `How ${cs.name}, a ${cs.role} in ${cs.location}, improved their AI visibility using Whoza.ai`,
+      "url": "https://whoza.ai",
+      "offers": {
+        "@type": "Offer",
+        "price": "59",
+        "priceCurrency": "GBP"
       },
       "review": {
         "@type": "Review",
+        // Nested Review inside SoftwareApplication (a Google-supported type).
+        // Per Google's Nov 2025 update: omit itemReviewed for nested reviews;
+        // the parent SoftwareApplication is the reviewed item.
         "author": {
           "@type": "Person",
           "name": cs.name
         },
+        "datePublished": "2025-01-01",
         "reviewBody": cs.quote,
         "reviewRating": {
           "@type": "Rating",
-          "ratingValue": "5"
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1"
         }
       }
     }));
