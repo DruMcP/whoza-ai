@@ -149,6 +149,26 @@ export const UK_CITIES = [
     region: 'South East',
     description: 'South coast city with growing tradespeople opportunities',
   },
+  {
+    slug: 'bradford',
+    name: 'Bradford',
+    county: 'West Yorkshire',
+    fullName: 'Bradford',
+    population: 537173,
+    tradespeople: 16000,
+    region: 'Yorkshire',
+    description: 'West Yorkshire city with a large and growing tradespeople market',
+  },
+  {
+    slug: 'belfast',
+    name: 'Belfast',
+    county: 'Northern Ireland',
+    fullName: 'Belfast',
+    population: 345418,
+    tradespeople: 12000,
+    region: 'Northern Ireland',
+    description: 'Northern Ireland capital with a thriving construction and trades sector',
+  },
 ];
 
 export function getCityBySlug(slug) {

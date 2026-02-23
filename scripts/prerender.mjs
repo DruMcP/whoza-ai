@@ -67,6 +67,8 @@ const ukCities = [
   { slug: 'cardiff', name: 'Cardiff', region: 'Wales', tradespeople: 12000 },
   { slug: 'coventry', name: 'Coventry', region: 'West Midlands', tradespeople: 11000 },
   { slug: 'southampton', name: 'Southampton', region: 'South East', tradespeople: 10000 },
+  { slug: 'bradford', name: 'Bradford', region: 'Yorkshire', tradespeople: 16000 },
+  { slug: 'belfast', name: 'Belfast', region: 'Northern Ireland', tradespeople: 12000 },
 ];
 
 // ─── US Cities ────────────────────────────────────────────────────────────────
