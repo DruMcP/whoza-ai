@@ -92,15 +92,15 @@ const usCities = [
 
 // ─── Static Pages ─────────────────────────────────────────────────────────────
 const staticPages = [
-  { path: '/how-it-works', title: 'How It Works | Whoza.ai - AI Employee for Tradespeople', description: 'Learn how Rex, your AI employee, helps tradespeople improve visibility on Google, ChatGPT, and AI search tools with weekly actionable tasks.' },
-  { path: '/pricing', title: 'Pricing | Whoza.ai - Affordable AI Marketing for Tradespeople', description: 'Simple, transparent pricing for tradespeople. Get more local jobs with Rex for £99/month. No contracts, cancel anytime. GDPR compliant.' },
-  { path: '/case-studies', title: 'Case Studies | Whoza.ai - Real Results for UK Tradespeople', description: 'See how plumbers, electricians, roofers and other tradespeople are getting more local jobs through improved AI visibility with Rex.' },
-  { path: '/free-score', title: 'Free AI Visibility Score | Whoza.ai - Check Your Online Presence', description: 'Get your free AI Visibility Score in 60 seconds. See how likely your trade business is to be named and recommended on ChatGPT, Google AI, and Perplexity.' },
-  { path: '/contact', title: 'Contact Us | Whoza.ai - Get in Touch', description: 'Have questions about AI-powered visibility for tradespeople? Contact Whoza.ai for support, inquiries, or to learn more about our service.' },
-  { path: '/blog', title: 'Blog | Whoza.ai - AI Visibility Guides for Tradespeople', description: 'Expert guides on AI visibility, AEO, and digital marketing for UK plumbers, electricians, builders, and tradespeople.' },
-  { path: '/trust', title: 'Trust & Security | Whoza.ai - GDPR Compliant AI for Trades', description: 'Learn why UK tradespeople trust Whoza.ai. GDPR compliant, secure data handling, and human-approved tasks for peace of mind.' },
-  { path: '/privacy', title: 'Privacy Policy | Whoza.ai - Your Data is Protected', description: 'Read our privacy policy to learn how we protect your data. GDPR compliant AI marketing platform for UK tradespeople.' },
-  { path: '/terms', title: 'Terms of Service | Whoza.ai - Fair Terms for Tradespeople', description: 'Review our terms of service. Transparent, fair terms for UK tradespeople using our AI marketing platform.' },
+  { path: '/how-it-works/', title: 'How It Works | Whoza.ai - AI Employee for Tradespeople', description: 'Learn how Rex, your AI employee, helps tradespeople improve visibility on Google, ChatGPT, and AI search tools with weekly actionable tasks.' },
+  { path: '/pricing/', title: 'Pricing | Whoza.ai - Affordable AI Marketing for Tradespeople', description: 'Simple, transparent pricing for tradespeople. Get more local jobs with Rex for £99/month. No contracts, cancel anytime. GDPR compliant.' },
+  { path: '/case-studies/', title: 'Case Studies | Whoza.ai - Real Results for UK Tradespeople', description: 'See how plumbers, electricians, roofers and other tradespeople are getting more local jobs through improved AI visibility with Rex.' },
+  { path: '/free-score/', title: 'Free AI Visibility Score | Whoza.ai - Check Your Online Presence', description: 'Get your free AI Visibility Score in 60 seconds. See how likely your trade business is to be named and recommended on ChatGPT, Google AI, and Perplexity.' },
+  { path: '/contact/', title: 'Contact Us | Whoza.ai - Get in Touch', description: 'Have questions about AI-powered visibility for tradespeople? Contact Whoza.ai for support, inquiries, or to learn more about our service.' },
+  { path: '/blog/', title: 'Blog | Whoza.ai - AI Visibility Guides for Tradespeople', description: 'Expert guides on AI visibility, AEO, and digital marketing for UK plumbers, electricians, builders, and tradespeople.' },
+  { path: '/trust/', title: 'Trust & Security | Whoza.ai - GDPR Compliant AI for Trades', description: 'Learn why UK tradespeople trust Whoza.ai. GDPR compliant, secure data handling, and human-approved tasks for peace of mind.' },
+  { path: '/privacy/', title: 'Privacy Policy | Whoza.ai - Your Data is Protected', description: 'Read our privacy policy to learn how we protect your data. GDPR compliant AI marketing platform for UK tradespeople.' },
+  { path: '/terms/', title: 'Terms of Service | Whoza.ai - Fair Terms for Tradespeople', description: 'Review our terms of service. Transparent, fair terms for UK tradespeople using our AI marketing platform.' },
 ];
 
 // ─── Read base index.html ─────────────────────────────────────────────────────
