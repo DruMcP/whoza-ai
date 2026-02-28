@@ -125,6 +125,17 @@ Deno.serve(async (req: Request) => {
             metadata: { session_id: session.id },
           });
 
+          // Update users table to reflect active subscription
+          const planNameForUser = subscription.metadata?.plan_name ||
+            session.metadata?.plan_name ||
+            subscription.items.data[0]?.price?.nickname ||
+            "monitor";
+          await supabaseClient.from("users").update({
+            subscription_tier: planNameForUser,
+            subscription_status: "active",
+            updated_at: new Date().toISOString(),
+          }).eq("id", userId);
+
           // Send subscription confirmation email to the user
           try {
             const { data: userData } = await supabaseClient
@@ -264,6 +275,16 @@ Deno.serve(async (req: Request) => {
                 : "subscription_updated",
             subscription_id: subscription.id,
           });
+
+          // Keep users table in sync with subscription status
+          const planForUser = subscription.metadata?.plan_name ||
+            subscription.items.data[0]?.price?.nickname ||
+            "monitor";
+          await supabaseClient.from("users").update({
+            subscription_tier: planForUser,
+            subscription_status: subscription.status === "active" ? "active" : subscription.status,
+            updated_at: new Date().toISOString(),
+          }).eq("id", userId);
         }
         break;
       }
@@ -283,6 +304,13 @@ Deno.serve(async (req: Request) => {
             event_type: "subscription_cancelled",
             subscription_id: subscription.id,
           });
+
+          // Update users table to reflect cancellation
+          await supabaseClient.from("users").update({
+            subscription_tier: "free",
+            subscription_status: "cancelled",
+            updated_at: new Date().toISOString(),
+          }).eq("id", userId);
         }
         break;
       }
