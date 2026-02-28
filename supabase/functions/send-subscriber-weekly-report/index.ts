@@ -219,15 +219,18 @@ Deno.serve(async (req: Request) => {
         // Get AI insights
         const { insights, recommendations } = await getAIInsights(user, scores);
 
-        // Store score
+        // Store score (using actual table column names)
         await dbUpsert('trial_visibility_scores', {
           user_id: user.id,
           business_name: user.business_name,
           overall_score: overallScore,
-          google_score: googleData.score,
+          google_business_score: googleData.score,
           website_score: websiteScore,
-          review_score: reviewScore,
-          citation_score: citationScore,
+          reviews_score: reviewScore,
+          content_score: citationScore,
+          social_media_score: 0,
+          insights: { summary: insights },
+          recommendations: { actions: recommendations },
           score_date: new Date().toISOString(),
           week_number: weekNumber,
           email_sent: false,
