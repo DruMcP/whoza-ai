@@ -124,6 +124,111 @@ Deno.serve(async (req: Request) => {
             subscription_id: subscription.id,
             metadata: { session_id: session.id },
           });
+
+          // Send subscription confirmation email to the user
+          try {
+            const { data: userData } = await supabaseClient
+              .from("users")
+              .select("email, business_name")
+              .eq("id", userId)
+              .maybeSingle();
+
+            const userEmail = userData?.email || session.customer_details?.email;
+            const businessName = userData?.business_name || "there";
+
+            // Determine plan name from subscription metadata or price
+            const planName = subscription.metadata?.plan_name ||
+              session.metadata?.plan_name ||
+              subscription.items.data[0]?.price?.nickname ||
+              "monitor";
+
+            if (userEmail) {
+              // Upsert subscription in public.subscriptions table too
+              await supabaseClient.from("subscriptions").upsert({
+                user_id: userId,
+                stripe_customer_id: subscription.customer as string,
+                stripe_subscription_id: subscription.id,
+                stripe_price_id: subscription.items.data[0].price.id,
+                plan_name: planName,
+                status: subscription.status,
+                current_period_start: new Date(subscription.current_period_start * 1000).toISOString(),
+                current_period_end: new Date(subscription.current_period_end * 1000).toISOString(),
+                cancel_at_period_end: subscription.cancel_at_period_end,
+                customer_email: userEmail,
+                updated_at: new Date().toISOString(),
+              }, { onConflict: "user_id" });
+
+              // Send confirmation email via send-email function
+              const resendApiKey = Deno.env.get("RESEND_API_KEY");
+              if (resendApiKey) {
+                // Fetch the subscription_confirmation template
+                const { data: template } = await supabaseClient
+                  .from("email_templates")
+                  .select("subject, html_content, text_content")
+                  .eq("name", "subscription_confirmation")
+                  .eq("is_active", true)
+                  .maybeSingle();
+
+                if (template) {
+                  const periodEnd = new Date(subscription.current_period_end * 1000)
+                    .toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+
+                  const variables: Record<string, string> = {
+                    plan_name: planName,
+                    business_name: businessName,
+                    period_end: periodEnd,
+                    portal_url: "https://whoza.ai/portal",
+                  };
+
+                  let subject = template.subject;
+                  let html = template.html_content;
+                  let text = template.text_content || "";
+
+                  Object.entries(variables).forEach(([key, value]) => {
+                    const regex = new RegExp(`{{${key}}}`, "g");
+                    subject = subject.replace(regex, value);
+                    html = html.replace(regex, value);
+                    text = text.replace(regex, value);
+                  });
+
+                  const emailResp = await fetch("https://api.resend.com/emails", {
+                    method: "POST",
+                    headers: {
+                      "Authorization": `Bearer ${resendApiKey}`,
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                      from: "noreply@whoza.ai",
+                      to: userEmail,
+                      subject,
+                      html,
+                      text,
+                    }),
+                  });
+
+                  const emailStatus = emailResp.ok ? "sent" : "failed";
+                  const emailResult = await emailResp.json().catch(() => ({}));
+
+                  await supabaseClient.from("email_logs").insert({
+                    user_id: userId,
+                    template_name: "subscription_confirmation",
+                    recipient_email: userEmail,
+                    subject,
+                    status: emailStatus,
+                    resend_id: emailResult?.id || null,
+                    error_message: emailStatus === "failed" ? JSON.stringify(emailResult) : null,
+                    sent_at: new Date().toISOString(),
+                    metadata: { plan_name: planName, session_id: session.id },
+                  });
+
+                  console.log(`Subscription confirmation email ${emailStatus} to ${userEmail}`);
+                }
+              }
+            }
+          } catch (emailError) {
+            // Non-fatal — log but don't fail the webhook
+            console.error("Failed to send subscription confirmation email:", emailError);
+          }
         }
         break;
       }
