@@ -404,6 +404,29 @@ export default function Start() {
         ).catch((emailError) => {
         });
 
+        // Notify admin team of new signup (fire-and-forget, non-blocking)
+        const _supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+        const _supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+        fetch(`${_supabaseUrl}/functions/v1/notify-admin-signup`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${_supabaseAnonKey}`,
+            'apikey': _supabaseAnonKey,
+          },
+          body: JSON.stringify({
+            userEmail: formData.email,
+            userName: formData.businessName || formData.email,
+            businessName: formData.businessName || null,
+            tradeType: formData.tradeType || null,
+            postcode: formData.postcode || null,
+            websiteUrl: formData.websiteUrl ? normalizeUrl(formData.websiteUrl) : null,
+            userId: userId,
+          }),
+        }).catch(() => {
+          // Silent fail — admin notification is non-critical
+        });
+
         navigate('/checkout');
       } else {
         const { error: signInError } = await signIn(
