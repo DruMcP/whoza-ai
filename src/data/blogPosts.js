@@ -1853,6 +1853,90 @@ export const blogPosts = [
       "buttonText": "Get Your Free AI Visibility Score",
       "buttonLink": "/free-score"
     }
+  },
+  {
+    "id": "how-ai-search-engines-rank-local-tradespeople-aeo-geo-guide-2026",
+    "slug": "how-ai-search-engines-rank-local-tradespeople-aeo-geo-guide-2026",
+    "title": "How AI Search Engines Rank Local Tradespeople: The Complete AEO & GEO Guide for 2026",
+    "metaDescription": "Discover exactly how ChatGPT, Perplexity, and Google AI Overviews decide which plumbers, electricians, and roofers to recommend. Learn the seven proven AEO and GEO strategies to improve your AI visibility score and become the trusted answer for local trade searches in 2026.",
+    "publishDate": "2026-03-03",
+    "author": "Whoza.ai Team",
+    "category": "AI Visibility",
+    "tags": [
+      "AI visibility",
+      "AEO",
+      "GEO",
+      "LLM visibility",
+      "ChatGPT for tradespeople",
+      "AI search ranking",
+      "UK tradespeople",
+      "local business AI",
+      "generative engine optimisation",
+      "answer engine optimisation"
+    ],
+    "readTime": "14 min read",
+    "featured": true,
+    "leadAnswer": "AI search engines like ChatGPT, Perplexity, and Google AI Overviews do not rank websites — they recommend businesses they trust. For UK tradespeople, that trust is built on three pillars: Entity Confidence (consistent NAP data across the web), Reputation Signals (the volume, recency, and detail of customer reviews), and Topical Authority (structured, question-answering content that AI can directly cite). Businesses that master these three pillars will dominate local AI search in 2026. Those that do not will be invisible.",
+    "content": [
+      {
+        "type": "intro",
+        "heading": "Your Next Customer Is Asking AI, Not Google",
+        "content": "Something fundamental has changed in how people find local tradespeople. A homeowner in Manchester with a burst pipe no longer just types 'emergency plumber near me' into Google and scrolls through ten blue links. Increasingly, they open ChatGPT or Perplexity and ask a direct question: 'Who is the most reliable emergency plumber in Manchester?' And they expect a direct answer.\n\nThis shift is not a prediction — it is already happening at scale. Research published in early 2026 found that 37% of active AI users now start their information searches in AI tools rather than Google, and among those users, 59% believe AI gives them better answers for local services than traditional search. For tradespeople, this represents both the greatest threat and the greatest opportunity in a generation.\n\nThe threat: if your business is not visible to AI engines, you are invisible to a rapidly growing segment of your potential customers. The opportunity: most of your competitors have not yet adapted. The window to establish AI authority early — and lock in a compounding advantage — is open right now."
+      },
+      {
+        "type": "section",
+        "heading": "What Is AI Visibility, and How Is It Different from SEO?",
+        "content": "AI Visibility is a measure of how likely your business is to be recommended by an AI assistant when a user asks a question relevant to your services and location. It is distinct from traditional Search Engine Optimisation (SEO) in a fundamental way.\n\nWith SEO, you optimise your website to appear high in a ranked list of results. The user then does the work of comparing options and clicking through. With Answer Engine Optimisation (AEO) and Generative Engine Optimisation (GEO) — the two disciplines that govern AI search — you optimise your entire digital footprint so that an AI engine trusts you enough to recommend you directly, by name, as the answer.\n\nFor a plumber in Bristol, this means the goal is no longer to appear on page one of Google. The goal is to become the business that ChatGPT names when someone asks, 'Who should I call to fix a burst pipe in Bristol tonight?'"
+      },
+      {
+        "type": "section",
+        "heading": "The Three Pillars of AI Trust: How AI Engines Decide Who to Recommend",
+        "content": "AI engines are not searching the web in the traditional sense. They are building a knowledge model of entities — businesses, people, places — and their relationships. When a user asks a question, the AI draws on this model to identify the most trustworthy and relevant entity to recommend. That model is built on three core pillars.\n\n**Pillar 1: Entity Confidence (NAP Consistency)**\n\nAn entity in AI terms is a uniquely identifiable real-world thing — in this case, your business. AI engines build confidence in an entity by cross-referencing its core data (Name, Address, Phone number — NAP) across multiple independent sources. If your business name is listed as 'Smith Plumbing Ltd' on your website, 'Smith Plumbing Limited' on Yell, and 'Smith and Sons Plumbing' on Facebook, the AI treats these as three different entities and its confidence in any of them drops sharply. Absolute NAP consistency across every directory, social profile, and listing is the foundation of AI visibility.\n\n**Pillar 2: Reputation and Sentiment Signals**\n\nAI engines do not just count your star rating. They read the text of your reviews to build a nuanced understanding of your strengths. A review that says 'John arrived on time, diagnosed the boiler fault within 20 minutes, explained the repair clearly, and charged a fair price' provides rich, citable data about your punctuality, expertise, communication, and value. Research from Birdeye's 2026 AI visibility study found that for Home Services businesses, platforms like Yelp and the Better Business Bureau — which aggregate and display review data — are among the most heavily cited sources in AI-generated answers, reflecting a 31.4% reliance on universal review platforms for the sector.\n\n**Pillar 3: Topical Authority and Structured Content**\n\nWhen a user asks ChatGPT 'how much does it cost to replace a boiler in Leeds?', the AI needs a source to pull from. If your website contains a detailed, well-structured page that directly answers that question — with specific price ranges, factors that affect cost, and your service area — you become a citable source. This is the principle of Answer Capsule content: creating concise, factual, question-answering content that AI can directly extract and attribute to your business."
+      },
+      {
+        "type": "section",
+        "heading": "The AEO and GEO Playbook: Seven Proven Strategies for Tradespeople in 2026",
+        "content": "Understanding the theory is one thing. Here is the practical playbook — seven strategies that directly address the three pillars of AI trust and are proven to improve AI visibility for local tradespeople.\n\n**Strategy 1: Conduct a Full NAP Audit and Fix Every Inconsistency**\n\nSearch for your business name, address, and phone number across Google, Bing, Yell, Thomson Local, Checkatrade, TrustATrader, Facebook, and any other platform where you have a listing. Document every variation you find. Then systematically update each listing to use a single, canonical version of your business information. This is the single highest-leverage action you can take for AI visibility, and it costs nothing but time.\n\n**Strategy 2: Build a Review Fortress Across Multiple Platforms**\n\nAsk every satisfied customer for a detailed review. Do not just ask for a Google review — ask them to mention the specific work you did, the location, and what they valued about the experience. Distribute your review-gathering across Google, Yelp, Checkatrade, and Facebook to build a multi-platform reputation signal. The Birdeye study confirms that AI engines cross-reference reviews across platforms, so a business with 50 reviews on Google and 30 on Checkatrade will outperform one with 80 reviews on Google alone.\n\n**Strategy 3: Implement LocalBusiness Schema Markup on Your Website**\n\nSchema.org structured data is the native language of AI. By adding a LocalBusiness JSON-LD block to your website, you provide the AI with a perfectly formatted, machine-readable summary of your business: your name, address, phone, service areas, opening hours, and trade categories. This eliminates any ambiguity in how the AI interprets your business and dramatically increases your Entity Confidence score.\n\n**Strategy 4: Create FAQPage Schema for Your Most Common Customer Questions**\n\nIdentify the ten most common questions your customers ask before hiring you. Create a dedicated FAQ section on your website that answers each one directly and concisely. Then implement FAQPage Schema.org markup on that section. This tells the AI exactly which questions your content answers, making it far more likely to be cited when a user asks a similar question to ChatGPT or Perplexity.\n\n**Strategy 5: Publish Trade-Specific Answer Capsule Content**\n\nGo beyond FAQs and create dedicated blog posts or service pages that answer high-value, location-specific questions. Examples include: 'How much does it cost to rewire a three-bedroom house in Birmingham?', 'What are the signs that a roof needs replacing in the UK climate?', or 'How to find a Gas Safe registered engineer in Leeds.' Structure each piece with the question as the H1 heading, a direct answer in the first paragraph, and supporting detail below.\n\n**Strategy 6: Secure Citations on High-Authority Trade and Local Directories**\n\nBeyond the major review platforms, securing mentions on authoritative, trade-specific directories sends a powerful signal to AI engines. In the UK, a listing on the Gas Safe Register, NICEIC, Checkatrade, or a local council's approved contractor list carries significant weight. These are vertical specialist sources that AI engines treat as high-authority validators for trade businesses.\n\n**Strategy 7: Monitor Your AI Visibility Score and Iterate**\n\nYou cannot improve what you cannot measure. Your AI Visibility Score quantifies how frequently your business is being recommended by AI engines for relevant queries in your service area. Tracking this score over time allows you to identify which strategies are working, which areas need attention, and how you compare to your local competitors."
+      },
+      {
+        "type": "section",
+        "heading": "Why the Window of Opportunity Is Open Right Now",
+        "content": "The most compelling reason to act on AI visibility today is competitive timing. Research consistently shows that the majority of small businesses — and the vast majority of tradespeople — have not yet begun to optimise for AI search. An audit of UK small business websites found that 97% have no AI discovery files and no structured data markup. This means that in most local markets, the first tradesperson to establish strong AI visibility signals will dominate AI recommendations for their trade and area, potentially for years.\n\nEarly adoption in AI search creates a compounding advantage. As AI engines accumulate more data about your business — more reviews, more citations, more structured content — their confidence in recommending you grows. This is not a static ranking that can be easily displaced; it is a trust relationship that deepens over time.\n\nFor tradespeople in major UK cities — London, Manchester, Birmingham, Leeds, Bristol, Edinburgh, Glasgow — the window is narrowing faster than in smaller markets. For those in smaller towns and cities, the opportunity is even more pronounced: a single, well-optimised business can become the dominant AI recommendation for an entire service area with relatively modest effort."
+      },
+      {
+        "type": "section",
+        "heading": "What Does a World-Class AI-Visible Trade Business Look Like?",
+        "content": "To make this concrete, consider what a fully AI-optimised trade business looks like in practice. It has a clean, mobile-friendly website with LocalBusiness and FAQPage Schema.org markup correctly implemented. Its NAP data is identical across every platform it appears on. It has a minimum of 50 detailed, recent reviews spread across Google, Checkatrade, and at least one other platform. It has a blog or resources section with 10 to 15 well-structured Answer Capsule posts covering the most common questions in its trade and service area. It is listed in every relevant trade directory and local business association. And it tracks its AI Visibility Score monthly, using the data to prioritise its next actions.\n\nThis is not an unachievable standard. It is a systematic programme of work that any tradesperson — or their marketing partner — can execute over three to six months. The businesses that complete this programme will find themselves recommended by ChatGPT, Perplexity, and Google AI Overviews for queries that their competitors are not even aware are being asked."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between AEO and GEO for tradespeople?",
+        "answer": "Answer Engine Optimisation (AEO) focuses on getting your business cited in direct answers generated by AI assistants like ChatGPT and Perplexity. Generative Engine Optimisation (GEO) is a broader term that encompasses optimising for all generative AI platforms, including Google AI Overviews. In practice, the strategies overlap significantly: both require strong Entity Confidence, detailed reviews, structured data, and authoritative citations. For tradespeople, the terms are often used interchangeably, and the practical playbook is the same."
+      },
+      {
+        "question": "How long does it take to improve my AI visibility score?",
+        "answer": "Initial improvements can be seen within weeks of fixing NAP inconsistencies and adding structured data to your website, as AI engines re-crawl and update their models relatively quickly. Building a strong review profile and citation network takes longer — typically three to six months of consistent effort. However, because most competitors are not yet optimising for AI search, even modest early improvements can translate into significant competitive advantage in your local market."
+      },
+      {
+        "question": "Does my Google Business Profile still matter for AI visibility?",
+        "answer": "Yes — your Google Business Profile (GBP) remains one of the most important signals for AI visibility, particularly for Google AI Overviews. It is the primary source of truth for your business's location, services, and customer reviews in Google's ecosystem. Keeping your GBP fully optimised, with accurate categories, service descriptions, photos, and a consistent stream of responses to reviews, is a foundational requirement for AI visibility."
+      },
+      {
+        "question": "Can a small, one-person trade business compete with larger companies in AI search?",
+        "answer": "Absolutely — and this is one of the most exciting aspects of AI search for independent tradespeople. AI engines prioritise trust and relevance over brand size. A one-person plumbing business with 80 detailed, recent reviews, perfect NAP consistency, and well-structured website content will outperform a large national company with poor data hygiene and generic content. AI search is a meritocracy of trust signals, not a competition of marketing budgets."
+      },
+      {
+        "question": "What is an AI Visibility Score and how is it measured?",
+        "answer": "An AI Visibility Score quantifies how frequently your business is recommended by AI engines for relevant queries in your service area. It is measured by running a representative set of queries — such as 'best plumber in [your city]' or 'emergency electrician near [your postcode]' — across multiple AI platforms and tracking how often your business appears in the responses. Platforms like Whoza.ai automate this process and provide a monthly score with actionable recommendations for improvement."
+      }
+    ],
+    "cta": {
+      "heading": "Find Out If AI Is Recommending You",
+      "text": "In the new AI-driven search landscape, you are either a cited source or you are invisible. Get your Free AI Visibility Score from Whoza.ai today and discover exactly where you stand — and what to do next.",
+      "buttonText": "Get Your Free AI Visibility Score",
+      "buttonLink": "/free-score"
+    }
   }
 ];
 
