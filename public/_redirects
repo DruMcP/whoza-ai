@@ -11,12 +11,13 @@ http://www.whoza.ai/*           https://whoza.ai/:splat          308!
 # HTTP to HTTPS redirect for whoza.ai
 http://whoza.ai/*               https://whoza.ai/:splat          301!
 
-# ── SEO: Block ghost/invalid URLs that cause duplicate content issues ──────────
-# Redirect WordPress-style search query URLs to homepage (prevents duplicate/alternate page issues in GSC)
-/?s=*                           /                                301!
-/blog/?q=*                      /blog/                           301!
+# -- SEO: Block ghost/invalid URLs that cause duplicate content issues ----------
+# Redirect WordPress-style search query URLs using Netlify query param syntax
+# (prevents duplicate/alternate page issues in GSC)
+/  s=:s                         /                                301!
+/blog/  q=:q                    /blog/                           301!
 # Redirect /start with plan parameters to clean /start URL
-/start?plan=*                   /start                           301!
+/start  plan=:plan              /start                           301!
 # Redirect old-style /ai-visibility-{city} paths to correct /uk/ai-visibility/{city}/ paths
 /ai-visibility-edinburgh        /uk/ai-visibility/edinburgh/     301
 /ai-visibility-london           /uk/ai-visibility/london/        301
@@ -35,7 +36,7 @@ http://whoza.ai/*               https://whoza.ai/:splat          301!
 /ai-visibility-southampton      /uk/ai-visibility/southampton/   301
 /ai-visibility-bradford         /uk/ai-visibility/bradford/      301
 /ai-visibility-belfast          /uk/ai-visibility/belfast/       301
-# ─────────────────────────────────────────────────────────────────────────────
+# -------------------------------------------------------------------------
 
 # Static files that should be served directly (not through SPA)
 /llms.txt    /llms.txt   200
