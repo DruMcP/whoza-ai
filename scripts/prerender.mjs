@@ -2,10 +2,15 @@
  * Prerender Script for Whoza.ai
  * 
  * Generates static HTML files for each URL in the sitemap with correct:
- * - Canonical tags (fixes "Non-canonical page in sitemap" - 62 URLs)
- * - Title tags (fixes "H1 tag missing or empty" - 62 URLs)
+ * - Canonical tags
+ * - Title tags
  * - Meta descriptions
  * - Robots meta
+ * - Static nav/footer links (fixes "Page has no outgoing links" - 66 URLs)
+ *   Crawlers (Ahrefs, Googlebot) cannot execute JS, so the React-rendered
+ *   Header/Footer are invisible to them. We inject a visually-hidden but
+ *   fully-crawlable static nav block into every prerendered page body so
+ *   all pages have real <a href> outgoing links in the raw HTML.
  * 
  * This runs AFTER vite build and creates individual index.html files
  * in the dist/ directory for each route.
@@ -104,6 +109,38 @@ const staticPages = [
   { path: '/terms/', title: 'Terms of Service | Whoza.ai - Fair Terms for Tradespeople', description: 'Review our terms of service. Transparent, fair terms for UK tradespeople using our AI marketing platform.' },
 ];
 
+// ─── Static SEO Nav Block ─────────────────────────────────────────────────────
+// This block is injected into the <body> of every prerendered page.
+// It is visually hidden (position:absolute; width:1px; height:1px; overflow:hidden)
+// so it does not affect the visual layout, but is fully readable by crawlers.
+// This resolves the Ahrefs "Page has no outgoing links" critical error across all pages.
+const staticNavBlock = `
+<nav aria-label="Site navigation" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">
+  <a href="https://whoza.ai/">Home</a>
+  <a href="https://whoza.ai/how-it-works/">How It Works</a>
+  <a href="https://whoza.ai/pricing/">Pricing</a>
+  <a href="https://whoza.ai/case-studies/">Case Studies</a>
+  <a href="https://whoza.ai/free-score/">Free AI Visibility Score</a>
+  <a href="https://whoza.ai/blog/">Blog</a>
+  <a href="https://whoza.ai/trust/">Trust &amp; Security</a>
+  <a href="https://whoza.ai/contact/">Contact</a>
+  <a href="https://whoza.ai/privacy/">Privacy Policy</a>
+  <a href="https://whoza.ai/terms/">Terms of Service</a>
+  <a href="https://whoza.ai/uk/ai-visibility/london/">AI Visibility London</a>
+  <a href="https://whoza.ai/uk/ai-visibility/birmingham/">AI Visibility Birmingham</a>
+  <a href="https://whoza.ai/uk/ai-visibility/manchester/">AI Visibility Manchester</a>
+  <a href="https://whoza.ai/uk/ai-visibility/leeds/">AI Visibility Leeds</a>
+  <a href="https://whoza.ai/uk/ai-visibility/glasgow/">AI Visibility Glasgow</a>
+  <a href="https://whoza.ai/uk/ai-visibility/liverpool/">AI Visibility Liverpool</a>
+  <a href="https://whoza.ai/uk/ai-visibility/bristol/">AI Visibility Bristol</a>
+  <a href="https://whoza.ai/uk/ai-visibility/edinburgh/">AI Visibility Edinburgh</a>
+  <a href="https://whoza.ai/us/ai-visibility/new-york/">AI Visibility New York</a>
+  <a href="https://whoza.ai/us/ai-visibility/los-angeles/">AI Visibility Los Angeles</a>
+  <a href="https://whoza.ai/us/ai-visibility/chicago/">AI Visibility Chicago</a>
+  <a href="https://whoza.ai/us/ai-visibility/houston/">AI Visibility Houston</a>
+  <a href="https://whoza.ai/us/ai-visibility/dallas/">AI Visibility Dallas</a>
+</nav>`;
+
 // ─── Read base index.html ─────────────────────────────────────────────────────
 const baseHtml = fs.readFileSync(path.join(distDir, 'index.html'), 'utf-8');
 
@@ -157,6 +194,13 @@ function generateHtml(canonicalPath, title, description) {
   html = html.replace(
     /<meta name="twitter:description" content="[^"]*"\s*\/?>/,
     `<meta name="twitter:description" content="${description.replace(/"/g, '&quot;')}" />`
+  );
+
+  // Inject static nav block into <body> immediately after <div id="root"></div>
+  // This ensures crawlers see real outgoing links in the raw HTML (fixes Ahrefs error).
+  html = html.replace(
+    '<div id="root"></div>',
+    `<div id="root"></div>${staticNavBlock}`
   );
 
   return html;
