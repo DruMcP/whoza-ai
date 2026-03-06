@@ -126,27 +126,22 @@ to = "https://whoza.ai/:splat"
 status = 301
 force = true
 # -- SEO: Strip WordPress-style search query params (prevents GSC duplicate/alternate page issues)
-# These redirect /?s=anything and /blog/?q=anything to clean canonical URLs
+# Redirect /?s=anything to / (strips the ?s= WordPress search query param)
 [[redirects]]
-from = "/"
+from = "/?s=:s"
 to = "/"
 status = 301
 force = true
-[redirects.conditions]
-  Query = ["s"]
+# Redirect /blog/?q=anything to /blog/ (strips the ?q= query param)
 [[redirects]]
-from = "/blog/"
+from = "/blog/?q=:q"
 to = "/blog/"
 status = 301
 force = true
-[redirects.conditions]
-  Query = ["q"]
-# Redirect /start?plan=* to clean /start (plan param is handled client-side)
+# Redirect /start?plan=anything to /start (plan param is handled client-side, strip for cleaner URLs)
 [[redirects]]
-from = "/start"
+from = "/start?plan=:plan"
 to = "/start"
 status = 301
 force = true
-[redirects.conditions]
-  Query = ["plan"]
 # SPA routing is handled by public/_redirects file
