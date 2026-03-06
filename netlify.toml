@@ -2,164 +2,151 @@
 # Site Name: whoza-ai
 # Production URL: https://whoza.ai
 # IMPORTANT: This project MUST deploy to the 'whoza-ai' Netlify site
-
 [build]
 publish = "dist"
 command = "npx vite build && node scripts/prerender.mjs"
-
 [build.environment]
 NODE_VERSION = "20"
 # Google Places API key is a public, client-side key restricted by domain in Google Cloud Console
 # It's safe and expected to be in client-side code
 SECRETS_SCAN_SMART_DETECTION_OMIT_VALUES = "AIzaSyDXpEGqFvcgWvUcKbSCZstbUYZSqpWL62A"
-
 # Edge Functions - Domain redirects
 [[edge_functions]]
 function = "redirect-couk"
 path = "/*"
-
 [[headers]]
 for = "/*.html"
-
 [headers.values]
 Cache-Control = "public, max-age=0, must-revalidate"
 X-Content-Type-Options = "nosniff"
 X-Frame-Options = "DENY"
 X-XSS-Protection = "1; mode=block"
 Referrer-Policy = "strict-origin-when-cross-origin"
-
 [[headers]]
 for = "/assets/*"
-
 [headers.values]
 Cache-Control = "public, max-age=31536000, immutable"
-
 [[headers]]
 for = "*.svg"
-
 [headers.values]
 Cache-Control = "public, max-age=31536000, immutable"
-
 [[headers]]
 for = "*.png"
-
 [headers.values]
 Cache-Control = "public, max-age=31536000, immutable"
-
 [[headers]]
 for = "*.jpg"
-
 [headers.values]
 Cache-Control = "public, max-age=31536000, immutable"
-
 [[headers]]
 for = "*.webp"
-
 [headers.values]
 Cache-Control = "public, max-age=31536000, immutable"
-
 [[headers]]
 for = "*.avif"
-
 [headers.values]
 Cache-Control = "public, max-age=31536000, immutable"
-
 [[headers]]
 for = "*.woff2"
-
 [headers.values]
 Cache-Control = "public, max-age=31536000, immutable"
-
 [[headers]]
 for = "*.js"
-
 [headers.values]
 Cache-Control = "public, max-age=31536000, immutable"
-
 [[headers]]
 for = "*.css"
-
 [headers.values]
 Cache-Control = "public, max-age=31536000, immutable"
-
 [[headers]]
 for = "/*"
-
 [headers.values]
 X-Content-Type-Options = "nosniff"
 X-Frame-Options = "DENY"
 X-XSS-Protection = "1; mode=block"
 Referrer-Policy = "strict-origin-when-cross-origin"
 Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-
 # Domain redirects - whoza.co.uk to whoza.ai (308 permanent redirect)
 [[redirects]]
 from = "https://whoza.co.uk/*"
 to = "https://whoza.ai/:splat"
 status = 308
 force = true
-
 [[redirects]]
 from = "https://www.whoza.co.uk/*"
 to = "https://whoza.ai/:splat"
 status = 308
 force = true
-
 [[redirects]]
 from = "http://whoza.co.uk/*"
 to = "https://whoza.ai/:splat"
 status = 308
 force = true
-
 [[redirects]]
 from = "http://www.whoza.co.uk/*"
 to = "https://whoza.ai/:splat"
 status = 308
 force = true
-
 # www to non-www redirects for whoza.ai (308 permanent redirect)
 [[redirects]]
 from = "https://www.whoza.ai/*"
 to = "https://whoza.ai/:splat"
 status = 308
 force = true
-
 [[redirects]]
 from = "http://www.whoza.ai/*"
 to = "https://whoza.ai/:splat"
 status = 308
 force = true
-
 # HTTP to HTTPS redirect for whoza.ai
 [[redirects]]
 from = "http://whoza.ai/*"
 to = "https://whoza.ai/:splat"
 status = 301
 force = true
-
 # Legacy domain redirects (if any)
 [[redirects]]
 from = "http://whoza.co/*"
 to = "https://whoza.ai/:splat"
 status = 301
 force = true
-
 [[redirects]]
 from = "http://www.whoza.co/*"
 to = "https://whoza.ai/:splat"
 status = 301
 force = true
-
 [[redirects]]
 from = "https://whoza.co/*"
 to = "https://whoza.ai/:splat"
 status = 301
 force = true
-
 [[redirects]]
 from = "https://www.whoza.co/*"
 to = "https://whoza.ai/:splat"
 status = 301
 force = true
-
+# -- SEO: Strip WordPress-style search query params (prevents GSC duplicate/alternate page issues)
+# These redirect /?s=anything and /blog/?q=anything to clean canonical URLs
+[[redirects]]
+from = "/"
+to = "/"
+status = 301
+force = true
+[redirects.conditions]
+  Query = ["s"]
+[[redirects]]
+from = "/blog/"
+to = "/blog/"
+status = 301
+force = true
+[redirects.conditions]
+  Query = ["q"]
+# Redirect /start?plan=* to clean /start (plan param is handled client-side)
+[[redirects]]
+from = "/start"
+to = "/start"
+status = 301
+force = true
+[redirects.conditions]
+  Query = ["plan"]
 # SPA routing is handled by public/_redirects file
