@@ -11,6 +11,32 @@ http://www.whoza.ai/*           https://whoza.ai/:splat          308!
 # HTTP to HTTPS redirect for whoza.ai
 http://whoza.ai/*               https://whoza.ai/:splat          301!
 
+# ── SEO: Block ghost/invalid URLs that cause duplicate content issues ──────────
+# Redirect WordPress-style search query URLs to homepage (prevents duplicate/alternate page issues in GSC)
+/?s=*                           /                                301!
+/blog/?q=*                      /blog/                           301!
+# Redirect /start with plan parameters to clean /start URL
+/start?plan=*                   /start                           301!
+# Redirect old-style /ai-visibility-{city} paths to correct /uk/ai-visibility/{city}/ paths
+/ai-visibility-edinburgh        /uk/ai-visibility/edinburgh/     301
+/ai-visibility-london           /uk/ai-visibility/london/        301
+/ai-visibility-manchester       /uk/ai-visibility/manchester/    301
+/ai-visibility-birmingham       /uk/ai-visibility/birmingham/    301
+/ai-visibility-leeds            /uk/ai-visibility/leeds/         301
+/ai-visibility-glasgow          /uk/ai-visibility/glasgow/       301
+/ai-visibility-liverpool        /uk/ai-visibility/liverpool/     301
+/ai-visibility-newcastle        /uk/ai-visibility/newcastle/     301
+/ai-visibility-sheffield        /uk/ai-visibility/sheffield/     301
+/ai-visibility-bristol          /uk/ai-visibility/bristol/       301
+/ai-visibility-leicester        /uk/ai-visibility/leicester/     301
+/ai-visibility-nottingham       /uk/ai-visibility/nottingham/    301
+/ai-visibility-cardiff          /uk/ai-visibility/cardiff/       301
+/ai-visibility-coventry         /uk/ai-visibility/coventry/      301
+/ai-visibility-southampton      /uk/ai-visibility/southampton/   301
+/ai-visibility-bradford         /uk/ai-visibility/bradford/      301
+/ai-visibility-belfast          /uk/ai-visibility/belfast/       301
+# ─────────────────────────────────────────────────────────────────────────────
+
 # Static files that should be served directly (not through SPA)
 /llms.txt    /llms.txt   200
 /robots.txt  /robots.txt 200
