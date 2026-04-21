@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 
 export default function ExplainerVideo() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [videoError, setVideoError] = useState(false);
   const videoRef = useRef(null);
 
   const handlePlayClick = () => {
@@ -9,6 +10,10 @@ export default function ExplainerVideo() {
       videoRef.current.play();
       setIsPlaying(true);
     }
+  };
+
+  const handleVideoError = () => {
+    setVideoError(true);
   };
 
   return (
@@ -24,31 +29,58 @@ export default function ExplainerVideo() {
         <div className="video-wrapper glass-card">
           <div className="video-container">
             <div className="relative rounded-2xl overflow-hidden bg-black aspect-video max-w-4xl mx-auto shadow-2xl">
-              <video
-                ref={videoRef}
-                className="w-full h-full object-contain"
-                controls={isPlaying}
-                preload="metadata"
-                playsInline
-                poster=""
-              >
-                <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663026746483/pCbMHXOHmajxZOkK.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              {!isPlaying && (
-                <div
-                  className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-black/40 to-black/60 cursor-pointer z-10 backdrop-blur-sm"
-                  onClick={handlePlayClick}
-                >
-                  <button
-                    className="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 hover:shadow-green-500/50 transition-all duration-300 group"
-                    aria-label="Play video"
-                  >
-                    <svg className="w-10 h-10 text-green-600 ml-1.5 group-hover:text-green-700 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+              {videoError ? (
+                <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800 text-white p-8">
+                  <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mb-4">
+                    <svg className="w-10 h-10 text-green-400" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z" />
                     </svg>
-                  </button>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">Video Coming Soon</h3>
+                  <p className="text-slate-400 text-center max-w-md mb-6">
+                    We're putting the finishing touches on our explainer video.
+                    In the meantime, get your free AI Visibility Score and see how Rex works for yourself.
+                  </p>
+                  <a
+                    href="/free-score"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-full transition-colors"
+                  >
+                    Get Your Free Score
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
                 </div>
+              ) : (
+                <>
+                  <video
+                    ref={videoRef}
+                    className="w-full h-full object-contain"
+                    controls={isPlaying}
+                    preload="metadata"
+                    playsInline
+                    poster=""
+                    onError={handleVideoError}
+                  >
+                    <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663026746483/pCbMHXOHmajxZOkK.mp4" type="video/mp4" onError={handleVideoError} />
+                    Your browser does not support the video tag.
+                  </video>
+                  {!isPlaying && (
+                    <div
+                      className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-black/40 to-black/60 cursor-pointer z-10 backdrop-blur-sm"
+                      onClick={handlePlayClick}
+                    >
+                      <button
+                        className="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 hover:shadow-green-500/50 transition-all duration-300 group"
+                        aria-label="Play video"
+                      >
+                        <svg className="w-10 h-10 text-green-600 ml-1.5 group-hover:text-green-700 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </button>
+                    </div>
+                  )}
+                </>
               )}
             </div>
           </div>

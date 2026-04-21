@@ -46,7 +46,7 @@ export default function ComparisonTable() {
       <style>{`
         .comparison-table-section {
           margin-top: 64px;
-          padding-bottom: 180px; /* Space for sticky CTA bar */
+          padding-bottom: 40px;
         }
 
         .comparison-table-title {
