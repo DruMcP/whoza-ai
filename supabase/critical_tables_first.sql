@@ -380,22 +380,47 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- Apply updated_at triggers
-DO $$
-DECLARE
-  r RECORD;
+-- Apply updated_at triggers (drop first to avoid conflicts)
+CREATE OR REPLACE FUNCTION update_updated_at_column()
+RETURNS TRIGGER AS $$
 BEGIN
-  FOR r IN 
-    SELECT table_name 
-    FROM information_schema.tables 
-    WHERE table_schema = 'public' 
-    AND table_name IN ('business_profiles', 'tasks', 'task_templates', 'visibility_score_details',
-                       'notifications', 'stripe_customers', 'stripe_products', 'stripe_prices',
-                       'rex_ece_evaluations', 'rex_recommendations', 'analytics_events')
-  LOOP
-    EXECUTE format('CREATE TRIGGER IF NOT EXISTS update_%s_updated_at BEFORE UPDATE ON %I FOR EACH ROW EXECUTE FUNCTION update_updated_at_column()', r.table_name, r.table_name);
-  END LOOP;
-END $$;
+  NEW.updated_at = now();
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+DROP TRIGGER IF EXISTS update_business_profiles_updated_at ON business_profiles;
+CREATE TRIGGER update_business_profiles_updated_at BEFORE UPDATE ON business_profiles FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
+
+DROP TRIGGER IF EXISTS update_tasks_updated_at ON tasks;
+CREATE TRIGGER update_tasks_updated_at BEFORE UPDATE ON tasks FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
+
+DROP TRIGGER IF EXISTS update_task_templates_updated_at ON task_templates;
+CREATE TRIGGER update_task_templates_updated_at BEFORE UPDATE ON task_templates FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
+
+DROP TRIGGER IF EXISTS update_visibility_score_details_updated_at ON visibility_score_details;
+CREATE TRIGGER update_visibility_score_details_updated_at BEFORE UPDATE ON visibility_score_details FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
+
+DROP TRIGGER IF EXISTS update_notifications_updated_at ON notifications;
+CREATE TRIGGER update_notifications_updated_at BEFORE UPDATE ON notifications FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
+
+DROP TRIGGER IF EXISTS update_stripe_customers_updated_at ON stripe_customers;
+CREATE TRIGGER update_stripe_customers_updated_at BEFORE UPDATE ON stripe_customers FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
+
+DROP TRIGGER IF EXISTS update_stripe_products_updated_at ON stripe_products;
+CREATE TRIGGER update_stripe_products_updated_at BEFORE UPDATE ON stripe_products FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
+
+DROP TRIGGER IF EXISTS update_stripe_prices_updated_at ON stripe_prices;
+CREATE TRIGGER update_stripe_prices_updated_at BEFORE UPDATE ON stripe_prices FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
+
+DROP TRIGGER IF EXISTS update_rex_ece_evaluations_updated_at ON rex_ece_evaluations;
+CREATE TRIGGER update_rex_ece_evaluations_updated_at BEFORE UPDATE ON rex_ece_evaluations FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
+
+DROP TRIGGER IF EXISTS update_rex_recommendations_updated_at ON rex_recommendations;
+CREATE TRIGGER update_rex_recommendations_updated_at BEFORE UPDATE ON rex_recommendations FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
+
+DROP TRIGGER IF EXISTS update_analytics_events_updated_at ON analytics_events;
+CREATE TRIGGER update_analytics_events_updated_at BEFORE UPDATE ON analytics_events FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
 
 -- ============================================================================
 -- STEP 10: AUDIT OPTIMIZATION INDEXES
