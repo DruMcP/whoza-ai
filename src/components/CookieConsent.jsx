@@ -75,7 +75,7 @@ const CookieConsent = () => {
         <div className="cookie-consent-banner" role="dialog" aria-label="Cookie consent">
           <div className="cookie-consent-content">
             <div className="cookie-consent-text">
-              <h3>🍪 We value your privacy</h3>
+              <h3>We value your privacy</h3>
               <p>
                 We use cookies to enhance your browsing experience and analyze site traffic. 
                 Essential cookies are required for the site to function. Analytics cookies help us 

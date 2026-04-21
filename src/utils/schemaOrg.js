@@ -373,8 +373,8 @@ export function generateHomePageSchemas(baseUrl = 'https://whoza.ai') {
       name: 'Rex - AI Visibility Assistant',
       price: '59',
       rating: {
-        value: '4.8',
-        count: '200'
+        value: '5.0',
+        count: '15'
       }
     }, baseUrl)
   ];

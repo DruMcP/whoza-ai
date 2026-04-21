@@ -31,6 +31,7 @@ import WhatWeDontDo from '../components/WhatWeDontDo';
 import AIAnswerShift from '../components/AIAnswerShift';
 import RexIllustration from '../components/illustrations/RexIllustration';
 import ECEExplainer from '../components/ECEExplainer/ECEExplainer';
+import HomeFAQ, { homeFAQSchema } from '../components/HomeFAQ';
 
 import { generateHomePageSchemas } from '../utils/schemaOrg';
 
@@ -88,7 +89,7 @@ const AnimatedCounter = ({ target, suffix = '' }) => {
 };
 
 export default function Home() {
-  const schemas = generateHomePageSchemas();
+  const schemas = [...generateHomePageSchemas(), homeFAQSchema];
 
   useEffect(() => {
     initScrollAnimations();
@@ -469,7 +470,7 @@ export default function Home() {
 
         <WhatWeDontDo />
 
-
+        <HomeFAQ />
 
         <section className="section">
           <div className="container" style={{ textAlign: 'center' }}>

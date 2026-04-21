@@ -212,8 +212,8 @@ export const blogPosts = [
   {
     "id": "why-bing-matters-for-ai-search-the-perplexity-connection",
     "slug": "why-bing-matters-for-ai-search-the-perplexity-connection",
-    "title": "Why Bing Matters for AI Search: The Perplexity Connection",
-    "metaDescription": "Discover why Bing is a critical component of your AEO strategy. Learn how Bing powers AI search engines like Perplexity and how to optimize your business for visibility.",
+    "title": "Why Bing Matters for AI Search: The Complete Guide for Tradespeople 2026",
+    "metaDescription": "Discover why Bing is critical for AI search visibility. Learn how Bing powers Perplexity and Copilot, and how to optimise your trade business with Bing Webmaster Tools and IndexNow.",
     "publishDate": "2026-02-03",
     "author": "Whoza.ai Team",
     "category": "AI Visibility",
@@ -237,6 +237,11 @@ export const blogPosts = [
         "type": "section",
         "heading": "The Perplexity Connection: How Bing Fuels AI Answers",
         "content": "Perplexity, one of the fastest-growing AI answer engines, has a strategic partnership with Microsoft. This means that Perplexity uses Bing's search index to inform its answers. When a user asks Perplexity a question, it's often Bing's data that's being used to generate the response. This makes Bing a critical gateway to AI visibility, especially for businesses targeting customers who are early adopters of new technology."
+      },
+      {
+        "type": "section",
+        "heading": "Bing's AI Ecosystem: More Than Just Perplexity",
+        "content": "Bing powers more AI than you might realise. **Microsoft Copilot** uses Bing as its default search engine across Windows, Office, and Edge. **Perplexity AI** relies heavily on Bing's index for its answers. **DuckDuckGo** is also Bing-powered, and **ChatGPT with browsing** uses Bing when it searches the web. By optimising for Bing, you're optimising for all of these platforms simultaneously."
       },
       {
         "type": "section",
@@ -1453,63 +1458,6 @@ export const blogPosts = [
     "cta": {
       "heading": "Check Your Roofing Business AI Score",
       "text": "Find out if AI can find your roofing business. Get your free AI visibility score in 60 seconds.",
-      "buttonText": "Get Free Score",
-      "buttonLink": "/free-score"
-    }
-  },
-  {
-    "id": "why-bing-matters-for-ai-search-2026",
-    "slug": "why-bing-matters-for-ai-search-2026",
-    "title": "Why Bing Matters for AI Search",
-    "metaDescription": "Discover why Bing is a critical component of your AEO strategy. Learn how Bing Webmaster Tools and IndexNow can boost your AI visibility.",
-    "publishDate": "2026-02-06",
-    "author": "Whoza.ai Team",
-    "category": "AEO Best Practices",
-    "tags": [
-      "Bing",
-      "IndexNow",
-      "Perplexity",
-      "Microsoft Copilot",
-      "AEO"
-    ],
-    "readTime": "4 min read",
-    "featured": false,
-    "leadAnswer": "Bing is critical for AI search because it powers a significant portion of the AI ecosystem, including Microsoft's Copilot and Perplexity AI. By submitting your site to Bing Webmaster Tools and using the IndexNow protocol, you ensure your content is immediately available to a wide range of AI assistants, not just Google.",
-    "content": [
-      {
-        "type": "section",
-        "heading": "The Unsung Hero of AI Search",
-        "content": "While Google gets all the attention, Bing has quietly become a powerhouse in the AI world. This article explains why you can't afford to ignore it.\n\nMicrosoft's investment in AI has made Bing the backbone of several major AI systems. If you're only optimising for Google, you're missing a significant portion of the AI search market."
-      },
-      {
-        "type": "section",
-        "heading": "Bing's AI Ecosystem",
-        "content": "Bing powers more AI than you might realise:\n\n**Microsoft Copilot:** Bing is the default search engine for Microsoft's AI assistant, which is integrated into Windows, Office, and Edge.\n\n**Perplexity AI:** This popular answer engine relies heavily on Bing's index for its search results.\n\n**DuckDuckGo:** Also powered by Bing, with a focus on privacy.\n\n**ChatGPT (with browsing):** When ChatGPT searches the web, it often uses Bing.\n\nBy optimising for Bing, you're optimising for all of these platforms simultaneously."
-      },
-      {
-        "type": "section",
-        "heading": "IndexNow: The Instant Indexing Protocol",
-        "content": "IndexNow is a protocol developed by Microsoft that allows you to instantly notify search engines when your content is updated.\n\nBy using IndexNow, your new blog posts, service pages, or updated contact information are immediately available to Bing, Perplexity, and other participating search engines. No waiting for crawlers to find your changes.\n\nThis is particularly valuable for tradespeople who update their services, add new reviews, or change their service areas. The faster AI systems know about your updates, the faster they can recommend you accurately."
-      },
-      {
-        "type": "section",
-        "heading": "How to Get Started with Bing",
-        "content": "Getting started with Bing is straightforward:\n\n**1. Sign up for Bing Webmaster Tools**\nIt's free and easy to set up. Go to bing.com/webmasters and create an account.\n\n**2. Submit your sitemap**\nThis helps Bing understand the structure of your site and find all your pages.\n\n**3. Use the IndexNow API**\nMany plugins and tools can automatically submit your new content to IndexNow. If you use WordPress, several plugins support this feature.\n\n**4. Verify your site**\nAdd the verification code to your website to prove ownership."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Is Bing as important as Google for tradespeople?",
-        "answer": "For traditional search, Google is bigger. For AI search, Bing is a critical and often overlooked player. Optimising for Bing means optimising for Perplexity, Copilot, and other AI systems."
-      },
-      {
-        "question": "Is IndexNow hard to set up?",
-        "answer": "No. Many WordPress plugins and online tools can handle it for you with a few clicks. The setup process takes just a few minutes."
-      }
-    ],
-    "cta": {
-      "heading": "Check Your Bing Visibility",
-      "text": "Find out if Bing and AI systems can find your business. Get your free AI visibility score in 60 seconds.",
       "buttonText": "Get Free Score",
       "buttonLink": "/free-score"
     }
