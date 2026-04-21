@@ -15,7 +15,7 @@ export default function TrustBadge() {
         color: '#ffffff'
       }}
       role="img"
-      aria-label="4.8 out of 5 star rating from 200+ happy tradespeople"
+      aria-label="5.0 out of 5 star rating from 15 Google reviews"
     >
       <Star
         size={20}
@@ -23,7 +23,7 @@ export default function TrustBadge() {
         aria-hidden="true"
       />
       <span style={{ fontWeight: '600' }}>
-        4.8/5 rating from <strong style={{ color: '#c4f135' }}>200+ happy tradespeople</strong>
+        5.0/5 rating from <strong style={{ color: '#c4f135' }}>15 Google reviews</strong>
       </span>
     </div>
   );
