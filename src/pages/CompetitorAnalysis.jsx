@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import SEO from '../components/SEO';
 import { 
   findBusinessViaPlaces, 
   findCompetitorViaAI, 
@@ -140,26 +141,37 @@ export default function CompetitorAnalysis() {
   // Show loading screen
   if (isLoading) {
     return (
-      <LoadingScreen 
-        message="Analysing your AI visibility..."
-        submessage="Checking who AI recommends for your trade in your area"
-      />
+      <>
+        <SEO title="Analysing Your AI Visibility... | Whoza.ai" description="We're checking who AI recommends for your trade in your area. Get your free competitor analysis in 60 seconds." />
+        <LoadingScreen 
+          message="Analysing your AI visibility..."
+          submessage="Checking who AI recommends for your trade in your area"
+        />
+      </>
     );
   }
 
   // Show results
   if (results) {
     return (
-      <CompetitorResults 
-        results={results}
-        onEmailCapture={handleEmailCapture}
-      />
+      <>
+        <SEO title={`Your AI Visibility Results | ${results.business?.name || 'Competitor Analysis'} | Whoza.ai`} description={`See who AI recommends for ${results.trade || 'your trade'} in your area and get 3 quick fixes to start appearing in ChatGPT and Google AI results.`} />
+        <CompetitorResults 
+          results={results}
+          onEmailCapture={handleEmailCapture}
+        />
+      </>
     );
   }
 
   // Show form
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <SEO 
+        title="Why Is My Business Not in ChatGPT? Free Competitor Analysis | Whoza.ai"
+        description="Find out why AI search doesn't recommend your trade business. See who AI recommends for your trade in your area and get 3 quick fixes to start appearing in ChatGPT and Google AI results."
+        schemas={[]}
+      />
       {/* Hero Section */}
       <section className="relative py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 opacity-60" />
