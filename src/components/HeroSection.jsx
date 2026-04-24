@@ -21,31 +21,48 @@ const HeroSection = () => {
         }}>
         {/* LEFT COLUMN - Text Content */}
         <div className="hero-text-container" style={{ flex: '1 1 500px', minWidth: '300px', maxWidth: '600px' }}>
+          {/* AUDIENCE BADGE — immediately tells tradespeople this is for them */}
+          <div style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '6px 16px',
+            background: 'rgba(132, 204, 22, 0.15)',
+            border: '1px solid rgba(132, 204, 22, 0.3)',
+            borderRadius: 'var(--radius-full)',
+            marginBottom: '16px',
+          }}>
+            <span style={{ fontSize: '13px', fontWeight: 700, color: '#A3E635', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+              For UK Tradespeople
+            </span>
+          </div>
+
           <h1 style={{
             color: '#ffffff',
             fontSize: 'clamp(2rem, 5vw, 3.5rem)',
             fontWeight: 'bold',
             lineHeight: '1.2',
-            marginBottom: '20px'
+            marginBottom: '16px'
           }}>
             See Who's <span style={{ color: '#84CC16' }}>Stealing Your Customers</span> from AI Search
           </h1>
 
           <p style={{
-            color: '#ffffff',
-            fontSize: '1.2rem',
-            lineHeight: '1.6',
-            marginBottom: '30px'
+            color: '#D1D5DB',
+            fontSize: '1.1rem',
+            lineHeight: '1.5',
+            marginBottom: '16px'
           }}>
-            When people ask ChatGPT or Google AI for a tradesperson in your area, which business gets recommended? We show you — and why it's not you.
+            For plumbers, electricians, roofers, builders, heating engineers and 50+ other trades
           </p>
 
           <p style={{
-            color: '#D1D5DB',
-            fontSize: '1.05rem',
-            marginBottom: '40px'
+            color: '#ffffff',
+            fontSize: '1.2rem',
+            lineHeight: '1.6',
+            marginBottom: '32px'
           }}>
-            For plumbers, electricians, roofers, builders, heating engineers and 50+ other trades across the UK
+            When people ask ChatGPT or Google AI for a tradesperson in your area, which business gets recommended? We show you — and why it's not you.
           </p>
 
           {/* 3-STEP MENTAL MODEL */}
