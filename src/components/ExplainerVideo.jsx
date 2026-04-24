@@ -1,9 +1,19 @@
 import { useState, useRef } from 'react';
+import { generateVideoObjectSchema } from '../utils/schemaOrg';
+import SEO from './SEO';
 
+/**
+ * Explainer video section with VideoObject schema for LLM optimization.
+ * Video is self-hosted for reliability and performance.
+ */
 export default function ExplainerVideo() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [videoError, setVideoError] = useState(false);
   const videoRef = useRef(null);
+
+  const VIDEO_SRC = '/whoza-explainer.mp4';
+  const VIDEO_TITLE = 'How Whoza.ai Works - AI Search Optimization for Tradespeople';
+  const VIDEO_DESC = 'See how Rex, your AI visibility assistant, helps UK tradespeople get found when customers ask ChatGPT, Google AI, and Perplexity for local services. Weekly 10-minute tasks that improve your AI visibility score.';
 
   const handlePlayClick = () => {
     if (videoRef.current) {
@@ -16,11 +26,22 @@ export default function ExplainerVideo() {
     setVideoError(true);
   };
 
+  // VideoObject schema for LLM discovery
+  const videoSchema = generateVideoObjectSchema({
+    name: VIDEO_TITLE,
+    description: VIDEO_DESC,
+    thumbnailUrl: 'https://whoza.ai/og-image.png',
+    contentUrl: `https://whoza.ai${VIDEO_SRC}`,
+    uploadDate: '2026-04-24',
+    duration: 'PT60S'
+  });
+
   return (
     <section className="explainer-video-section">
+      <SEO schemas={[videoSchema]} />
       <div className="container">
         <div className="explainer-video-header">
-          <h2 className="gradient-text">See How whoza.ai Works in 60 Seconds</h2>
+          <h2 className="gradient-text">See How Whoza.ai Works in 60 Seconds</h2>
           <p className="section-subtitle">
             Watch how Rex transforms your online visibility with simple, weekly tasks
           </p>
@@ -36,16 +57,15 @@ export default function ExplainerVideo() {
                       <path d="M8 5v14l11-7z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">Video Coming Soon</h3>
+                  <h3 className="text-xl font-semibold mb-2">Video Temporarily Unavailable</h3>
                   <p className="text-slate-400 text-center max-w-md mb-6">
-                    We're putting the finishing touches on our explainer video.
-                    In the meantime, check who AI recommends for your trade and see how Rex works for yourself.
+                    We're experiencing a playback issue. Try refreshing, or see how Rex works by checking your competitor position.
                   </p>
                   <a
                     href="/competitor-analysis"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-full transition-colors"
                   >
-                    Get My Competitor
+                    Check My Competitor
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -59,16 +79,22 @@ export default function ExplainerVideo() {
                     controls={isPlaying}
                     preload="metadata"
                     playsInline
-                    poster=""
+                    muted={false}
                     onError={handleVideoError}
+                    aria-label={VIDEO_TITLE}
                   >
-                    <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663026746483/pCbMHXOHmajxZOkK.mp4" type="video/mp4" onError={handleVideoError} />
-                    Your browser does not support the video tag.
+                    <source src={VIDEO_SRC} type="video/mp4" onError={handleVideoError} />
+                    Your browser does not support the video tag. 
+                    <a href="/competitor-analysis">Try our free competitor analysis instead</a>.
                   </video>
                   {!isPlaying && (
                     <div
                       className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-black/40 to-black/60 cursor-pointer z-10 backdrop-blur-sm"
                       onClick={handlePlayClick}
+                      role="button"
+                      tabIndex={0}
+                      aria-label="Play explainer video"
+                      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') handlePlayClick(); }}
                     >
                       <button
                         className="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 hover:shadow-green-500/50 transition-all duration-300 group"
@@ -78,6 +104,9 @@ export default function ExplainerVideo() {
                           <path d="M8 5v14l11-7z" />
                         </svg>
                       </button>
+                      <div className="absolute bottom-4 left-4 right-4 text-center">
+                        <p className="text-white/80 text-sm font-medium">Click to play — 60 seconds</p>
+                      </div>
                     </div>
                   )}
                 </>
@@ -97,7 +126,7 @@ export default function ExplainerVideo() {
                 <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
                 <path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
               </svg>
-              <span>Subtitles included</span>
+              <span>Works for all trades</span>
             </div>
             <div className="video-feature">
               <svg className="feature-icon" viewBox="0 0 20 20" fill="currentColor">
@@ -111,7 +140,7 @@ export default function ExplainerVideo() {
         <div className="video-cta">
           <p>Ready to boost your AI visibility?</p>
           <a href="/competitor-analysis" className="button button-primary">
-            Get My Competitor
+            Check My Competitor
           </a>
         </div>
       </div>

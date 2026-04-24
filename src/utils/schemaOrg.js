@@ -402,3 +402,39 @@ export function generatePricingPageSchemas(plans, baseUrl = 'https://whoza.ai') 
 
   return [breadcrumbs, ...products];
 }
+
+/**
+ * Generate VideoObject schema for LLM/SEO optimization
+ * @param {Object} video - Video data
+ * @param {string} video.name - Video title
+ * @param {string} video.description - Video description
+ * @param {string} video.thumbnailUrl - Thumbnail URL
+ * @param {string} video.contentUrl - Direct video file URL
+ * @param {string} video.uploadDate - ISO upload date
+ * @param {string} video.duration - ISO 8601 duration (e.g., 'PT60S')
+ * @param {string} baseUrl - Base URL
+ * @returns {Object} VideoObject schema
+ */
+export function generateVideoObjectSchema(
+  { name, description, thumbnailUrl, contentUrl, uploadDate, duration },
+  baseUrl = 'https://whoza.ai'
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name,
+    description,
+    thumbnailUrl: thumbnailUrl.startsWith('http') ? thumbnailUrl : `${baseUrl}${thumbnailUrl}`,
+    contentUrl: contentUrl.startsWith('http') ? contentUrl : `${baseUrl}${contentUrl}`,
+    uploadDate,
+    duration,
+    publisher: {
+      '@type': 'Organization',
+      name: 'Whoza.ai',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${baseUrl}/favicon.svg`
+      }
+    }
+  };
+}
