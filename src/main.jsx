@@ -21,6 +21,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
 if (typeof window !== 'undefined') {
   document.documentElement.classList.add('js-loaded');
+  document.body.classList.add('js-active');
 
   const initNonCritical = () => {
     Sentry.init({
