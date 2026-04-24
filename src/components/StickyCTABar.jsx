@@ -177,19 +177,19 @@ export default function StickyCTABar() {
       <div className="sticky-cta-bar">
         <div className="sticky-cta-content">
           <div className="sticky-cta-title">
-            Ready to improve your AI visibility?
+            See who's stealing your customers from AI search
           </div>
           <div className="sticky-cta-subtitle">
-            Get your free AI Visibility Score in 60 seconds
+            Free competitor analysis — takes 60 seconds, no email required
           </div>
         </div>
 
         <div className="sticky-cta-actions">
           <Link
-            to="/free-score"
+            to="/competitor-analysis"
             className="button btn-hover sticky-cta-button"
           >
-            See if AI would recommend you
+            Check my competitor now
             <Icon name="arrow-right" size={18} />
           </Link>
         </div>

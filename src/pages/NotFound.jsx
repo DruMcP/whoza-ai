@@ -97,7 +97,7 @@ export default function NotFound() {
               </Link>
 
               <Link
-                to="/free-score"
+                to="/competitor-analysis"
                 className="p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow"
               >
                 <h4 className="font-semibold text-gray-900 mb-1">Free Score</h4>

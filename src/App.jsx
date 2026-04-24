@@ -27,6 +27,7 @@ const Reports = lazy(() => import('./pages/Reports'));
 const Admin = lazy(() => import('./pages/Admin'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const FreeScore = lazy(() => import('./pages/FreeScore'));
+const CompetitorAnalysis = lazy(() => import('./pages/CompetitorAnalysis'));
 const Account = lazy(() => import('./pages/Account'));
 const Contact = lazy(() => import('./pages/Contact'));
 const NotFound = lazy(() => import('./pages/NotFound'));
@@ -111,6 +112,9 @@ function AppRoutes() {
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/free-score" element={<FreeScore />} />
+          <Route path="/free-score" element={<Navigate to="/competitor-analysis" replace />} />
+          <Route path="/competitor-analysis" element={<CompetitorAnalysis />} />
+          <Route path="/competitor" element={<Navigate to="/competitor-analysis" replace />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />

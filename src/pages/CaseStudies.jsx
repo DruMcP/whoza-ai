@@ -401,7 +401,7 @@ export default function CaseStudies() {
           <div className="cta-section">
             <h2>Ready to be our next success story?</h2>
             <p>Get your free AI visibility score today and see where you stand.</p>
-            <Link to="/free-score" className="button button-large">
+            <Link to="/competitor-analysis" className="button button-large">
               Get Your Free Score
             </Link>
           </div>
