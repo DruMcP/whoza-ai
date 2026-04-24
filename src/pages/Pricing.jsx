@@ -77,7 +77,7 @@ const comparisonFeatures = [
   { category: 'Core Features', features: [
     { name: 'Weekly Competitor Reports', freeTrial: true, improve: true, priority: true },
     { name: 'Personalized Insights', freeTrial: true, improve: true, priority: true },
-    { name: 'Progress Tracking', freeTrial: '12 weeks', improve: 'Ongoing', priority: 'Ongoing' },
+    { name: 'Progress Tracking', freeTrial: '14 days', improve: 'Ongoing', priority: 'Ongoing' },
     { name: 'Competitor Tracking', freeTrial: false, improve: '3', priority: '5' },
     { name: 'Weekly Tasks from Rex', freeTrial: false, improve: true, priority: true },
     { name: 'Action Plans You Approve', freeTrial: false, improve: true, priority: true },
@@ -175,7 +175,7 @@ export default function Pricing() {
     checkTrialEligibility();
   }, [userData]);
 
-  // Inject Schema for AEO optimization
+  // Inject Schema for AI search optimization
   useEffect(() => {
     // SoftwareApplication Schema
     const priceValidUntil = new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
