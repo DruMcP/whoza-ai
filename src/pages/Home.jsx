@@ -483,7 +483,7 @@ export default function Home() {
             </Link>
             <GuaranteeBadge />
             <p style={{ marginTop: 'var(--spacing-md)', fontSize: '16px' }}>
-              <Link to="/pricing">View pricing</Link> · Try free for 90 days
+              <Link to="/pricing">View pricing</Link> · Try free for 14 days
             </p>
             <p style={{ marginTop: 'var(--spacing-xs)', fontSize: '14px', color: 'var(--color-text-secondary)' }}>
               Cancel anytime • 30-day money-back guarantee

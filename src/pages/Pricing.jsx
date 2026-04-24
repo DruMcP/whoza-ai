@@ -14,9 +14,9 @@ const pricingPlans = [
     id: 'free-trial',
     name: 'Free Trial',
     headline: '🎁 Try Everything Risk-Free',
-    subheadline: 'Full access for 90 days. Zero risk. Zero commitment.',
+    subheadline: 'Full access for 14 days. Zero risk. Zero commitment.',
     price: 0,
-    duration: '90 days',
+    duration: '14 days',
     popular: true,
     featured: true,
     cta: 'Start Your Free Trial →',
@@ -28,7 +28,7 @@ const pricingPlans = [
       '💡 Personalized improvement insights',
       '🎯 Whitelist access to new features (Chloe & Simon)',
       '🚀 Full Improve plan access included',
-      '⏰ 90-day trial period (one-time offer)'
+      '⏰ 14-day trial period (one-time offer)'
     ]
   },
   {
@@ -93,7 +93,7 @@ const comparisonFeatures = [
   { category: 'Support', features: [
     { name: 'Email Support', freeTrial: '—', improve: 'Standard', priority: 'Priority (24hr)' },
     { name: 'Money-Back Guarantee', freeTrial: 'N/A (Free)', improve: '30 days', priority: '30 days' },
-    { name: 'Trial Duration', freeTrial: '3 months', improve: '—', priority: '—' }
+    { name: 'Trial Duration', freeTrial: '14 days', improve: '—', priority: '—' }
   ]}
 ];
 

@@ -165,7 +165,7 @@ export default function LocationPageUK() {
                   <tr>
                     <td className="p-4 border border-gray-200 font-bold">Timeline</td>
                     <td className="p-4 border border-gray-200">6-12 months for results</td>
-                    <td className="p-4 border border-gray-200">Visible impact in 30-90 days</td>
+                    <td className="p-4 border border-gray-200">Visible impact in 14-30 days</td>
                   </tr>
                   <tr>
                     <td className="p-4 border border-gray-200 font-bold">Effort</td>
