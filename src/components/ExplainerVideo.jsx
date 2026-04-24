@@ -13,7 +13,7 @@ export default function ExplainerVideo() {
 
   const VIDEO_SRC = '/whoza-explainer.mp4';
   const VIDEO_TITLE = 'How Whoza.ai Works - AI Search Optimization for Tradespeople';
-  const VIDEO_DESC = 'See how Rex, your AI visibility assistant, helps UK tradespeople get found when customers ask ChatGPT, Google AI, and Perplexity for local services. Weekly 10-minute tasks that improve your AI visibility score.';
+  const VIDEO_DESC = 'See how Rex, your AI visibility assistant, helps tradespeople get found when customers ask ChatGPT, Google AI, and Perplexity for local services. Weekly 10-minute tasks that improve your AI visibility score.';
 
   const handlePlayClick = () => {
     if (videoRef.current) {

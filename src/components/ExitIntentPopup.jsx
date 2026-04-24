@@ -248,7 +248,7 @@ export default function ExitIntentPopup() {
                   'Why AI ignores most local businesses',
                   'The 3 signals AI uses to pick who to recommend',
                   '10-minute fixes you can do today',
-                  'Real examples from UK tradespeople',
+                  'Real examples from tradespeople',
                 ].map((item, i) => (
                   <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                     <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />

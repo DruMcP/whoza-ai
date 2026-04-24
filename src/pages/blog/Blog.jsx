@@ -25,8 +25,8 @@ function Blog() {
     const schema = {
       "@context": "https://schema.org",
       "@type": "Blog",
-      "name": "Whoza.ai Blog - AI Visibility for UK Tradespeople",
-      "description": "Expert guides on AI visibility, AEO, and digital marketing for UK plumbers, electricians, builders, and tradespeople.",
+      "name": "Whoza.ai Blog - AI Visibility for Tradespeople",
+      "description": "Expert guides on AI visibility and digital marketing for plumbers, electricians, builders, and tradespeople.",
       "url": "https://whoza.ai/blog",
       "publisher": {
         "@type": "Organization",
@@ -87,7 +87,7 @@ function Blog() {
           <h1>AI Visibility Blog</h1>
           <p className="blog-hero-subtitle">
             Expert guides on getting your trade business found by ChatGPT, Google AI, and Perplexity. 
-            Learn Answer Engine Optimization (AEO) strategies specifically for UK plumbers, electricians, 
+            Learn Answer Engine Optimization (AEO) strategies for plumbers, electricians, 
             builders, and tradespeople.
           </p>
         </div>

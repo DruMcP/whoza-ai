@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 const sampleData = {
   businessName: 'Mitchell Plumbing Services',
   owner: 'Sarah Mitchell',
-  location: 'Birmingham, UK',
+  location: 'Birmingham',
   industry: 'Plumbing',
   reportDate: 'December 2024',
   reportPeriod: '8 weeks',
