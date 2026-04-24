@@ -1,9 +1,71 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Icon from './icons/Icon';
+
+// Context-aware CTA configurations based on current page
+const ctaConfig = {
+  '/': {
+    title: 'See who\'s stealing your customers from AI search',
+    subtitle: 'Free competitor analysis — takes 60 seconds, no email required',
+    button: 'Check my competitor now',
+    link: '/competitor-analysis'
+  },
+  '/pricing': {
+    title: 'Start your 14-day free trial today',
+    subtitle: 'No credit card required. Cancel anytime.',
+    button: 'Start Free Trial',
+    link: '/start'
+  },
+  '/competitor-analysis': {
+    title: 'Get your full AI visibility report',
+    subtitle: 'See exactly how to beat your competitor',
+    button: 'Get My Full Report',
+    link: '/start'
+  },
+  '/how-it-works': {
+    title: 'See how whoza.ai works for your business',
+    subtitle: 'Free analysis — find out who AI recommends instead of you',
+    button: 'Check My Competitor',
+    link: '/competitor-analysis'
+  },
+  '/case-studies': {
+    title: 'Ready to get the same results?',
+    subtitle: 'Join tradespeople already improving their AI visibility',
+    button: 'Start Free Trial',
+    link: '/start'
+  },
+  '/blog': {
+    title: 'Want to appear in AI search results?',
+    subtitle: 'Find out who AI recommends for your trade',
+    button: 'Check My Competitor',
+    link: '/competitor-analysis'
+  },
+  '/trust': {
+    title: 'Join 200+ tradespeople improving their AI visibility',
+    subtitle: '14-day free trial. No credit card required.',
+    button: 'Start Free Trial',
+    link: '/start'
+  }
+};
+
+// Default CTA for unmatched pages
+const defaultCta = ctaConfig['/'];
+
+function getCtaForPath(pathname) {
+  // Exact match first
+  if (ctaConfig[pathname]) return ctaConfig[pathname];
+  // Check for partial matches (e.g., /blog/slug matches /blog)
+  for (const [key, value] of Object.entries(ctaConfig)) {
+    if (pathname.startsWith(key) && key !== '/') return value;
+  }
+  return defaultCta;
+}
 
 export default function StickyCTABar() {
   const [isVisible, setIsVisible] = useState(false);
+  const location = useLocation();
+
+  const cta = getCtaForPath(location.pathname);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,7 +80,8 @@ export default function StickyCTABar() {
     };
   }, []);
 
-  if (!isVisible) return null;
+  // Don't show on auth pages
+  if (!isVisible || location.pathname.startsWith('/start') || location.pathname.startsWith('/login') || location.pathname.startsWith('/portal')) return null;
 
   return (
     <>
@@ -177,19 +240,19 @@ export default function StickyCTABar() {
       <div className="sticky-cta-bar">
         <div className="sticky-cta-content">
           <div className="sticky-cta-title">
-            See who's stealing your customers from AI search
+            {cta.title}
           </div>
           <div className="sticky-cta-subtitle">
-            Free competitor analysis — takes 60 seconds, no email required
+            {cta.subtitle}
           </div>
         </div>
 
         <div className="sticky-cta-actions">
           <Link
-            to="/competitor-analysis"
+            to={cta.link}
             className="button btn-hover sticky-cta-button"
           >
-            Check my competitor now
+            {cta.button}
             <Icon name="arrow-right" size={18} />
           </Link>
         </div>

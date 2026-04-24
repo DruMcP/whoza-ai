@@ -5,10 +5,13 @@ import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 import HeroSection from '../components/HeroSection';
 import TestimonialsCarousel from '../components/TestimonialsCarousel';
+import GoogleReviewsCarousel from '../components/GoogleReviewsCarousel';
+import AIAnswerShiftCompact from '../components/AIAnswerShiftCompact';
 import LiveResultsShowcase from '../components/LiveResultsShowcase';
 import ExplainerVideo from '../components/ExplainerVideo';
 import MiniROICalculator from '../components/MiniROICalculator';
-import AITeam from '../components/AITeam';
+// Note: AITeam (AI Workforce) is hidden — features are on the roadmap with no confirmed date
+// import AITeam from '../components/AITeam';
 import Icon from '../components/icons/Icon';
 import { initScrollAnimations, addRippleEffect } from '../utils/animations';
 import HeroIllustration from '../components/illustrations/HeroIllustration';
@@ -129,6 +132,9 @@ export default function Home() {
       <main id="main-content" role="main">
         <HeroSection />
 
+        {/* Before/After AI answer — shows the #1 value proposition immediately */}
+        <AIAnswerShiftCompact />
+
         <WhoItsFor />
 
         <ECEExplainer />
@@ -206,6 +212,8 @@ export default function Home() {
             <div>
               <TestimonialsCarousel />
             </div>
+            {/* Real Google Reviews — verified customer reviews from Google */}
+            <GoogleReviewsCarousel />
             <div className="case-studies-cta">
               <h3>Want to See More Success Stories?</h3>
               <p>Read detailed case studies showing how tradespeople are improving their AI visibility</p>
@@ -237,26 +245,19 @@ export default function Home() {
           </div>
         </section>
 
-        <AITeam
-          onWaitlistSubmit={async (email, product) => {
-            const response = await fetch(
-              `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/ai-team-waitlist`,
-              {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                  'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
-                },
-                body: JSON.stringify({ email, product }),
-              }
-            );
-            if (!response.ok) {
-              const error = await response.json();
-              throw new Error(error.error || 'Failed to join waitlist');
-            }
-            return await response.json();
-          }}
-        />
+        {/* AI Workforce section — features on roadmap, displayed subtly */}
+        <section className="section" style={{ background: 'var(--color-bg-secondary)', padding: 'var(--spacing-xl) var(--spacing-lg)' }}>
+          <div className="container" style={{ textAlign: 'center' }}>
+            <p style={{
+              fontSize: '14px',
+              color: 'var(--color-text-secondary)',
+              margin: 0
+            }}>
+              <span role="img" aria-hidden="true">🔮</span> AI Receptionist and Social Media Manager coming in the future — 
+              <Link to="/contact" style={{ color: 'var(--color-primary-700)', fontWeight: 600 }}>join the waitlist</Link>
+            </p>
+          </div>
+        </section>
 
         <ExplainerVideo />
 
