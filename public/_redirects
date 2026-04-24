@@ -35,10 +35,50 @@ http://whoza.ai/*               https://whoza.ai/:splat          301!
 /free-score      /competitor-analysis/     301!
 /free-score/     /competitor-analysis/     301!
 
+# Serve prerendered static HTML pages (BEFORE SPA catch-all)
+/how-it-works/           /prerendered/how-it-works/index.html            200
+/pricing/                /prerendered/pricing/index.html                 200
+/case-studies/           /prerendered/case-studies/index.html            200
+/competitor-analysis/    /prerendered/competitor-analysis/index.html     200
+/start/                  /prerendered/start/index.html                   200
+/login/                  /prerendered/login/index.html                   200
+/sign-in/                /prerendered/sign-in/index.html                 200
+/contact/                /prerendered/contact/index.html                 200
+/blog/                   /prerendered/blog/index.html                    200
+/trust/                  /prerendered/trust/index.html                   200
+/privacy/                /prerendered/privacy/index.html                 200
+/terms/                  /prerendered/terms/index.html                   200
+/cookie-policy/          /prerendered/cookie-policy/index.html           200
+/video/                  /prerendered/video/index.html                   200
+
+# Blog posts (prerendered)
+/blog/why-your-business-isnt-showing-up-in-chatgpt-recommendations-and-how-to-fix-it/           /prerendered/blog/why-your-business-isnt-showing-up-in-chatgpt-recommendations-and-how-to-it/index.html            200
+/blog/why-your-business-isnt-showing-up-in-google-answers-and-how-to-fix-it/                   /prerendered/blog/why-your-business-isnt-showing-up-in-google-answers-and-how-to-fix-it/index.html                200
+/blog/ai-search-optimization-vs-traditional-seo-whats-the-difference/                          /prerendered/blog/ai-search-optimization-vs-traditional-seo-whats-the-difference/index.html                       200
+/blog/the-ultimate-guide-to-ai-search-optimization-for-tradespeople/                           /prerendered/blog/the-ultimate-guide-to-ai-search-optimization-for-tradespeople/index.html                    200
+/blog/what-is-ai-visibility-and-why-does-it-matter-for-your-trade-business/                    /prerendered/blog/what-is-ai-visibility-and-why-does-it-matter-for-your-trade-business/index.html             200
+/blog/ai-search-optimization-beginners-guide-get-found-chatgpt-perplexity-2026/                /prerendered/blog/ai-search-optimization-beginners-guide-get-found-chatgpt-perplexity-2026/index.html         200
+/blog/the-uk-trades-business-playbook-for-ai-search-visibility-in-2026/                        /prerendered/blog/the-uk-trades-business-playbook-for-ai-search-visibility-in-2026/index.html             200
+
+# UK location pages (prerendered)
+/uk/ai-visibility/london/       /prerendered/uk/ai-visibility/london/index.html        200
+/uk/ai-visibility/manchester/   /prerendered/uk/ai-visibility/manchester/index.html    200
+/uk/ai-visibility/birmingham/   /prerendered/uk/ai-visibility/birmingham/index.html    200
+/uk/ai-visibility/glasgow/      /prerendered/uk/ai-visibility/glasgow/index.html       200
+/uk/ai-visibility/leeds/        /prerendered/uk/ai-visibility/leeds/index.html         200
+/uk/ai-visibility/liverpool/    /prerendered/uk/ai-visibility/liverpool/index.html     200
+/uk/ai-visibility/bristol/      /prerendered/uk/ai-visibility/bristol/index.html       200
+/uk/ai-visibility/edinburgh/    /prerendered/uk/ai-visibility/edinburgh/index.html     200
+
+# US location pages (prerendered)
+/us/ai-visibility/new-york-city/    /prerendered/us/ai-visibility/new-york-city/index.html     200
+/us/ai-visibility/los-angeles/     /prerendered/us/ai-visibility/los-angeles/index.html      200
+/us/ai-visibility/chicago/         /prerendered/us/ai-visibility/chicago/index.html          200
+
 # Static files that should be served directly (not through SPA)
 /llms.txt    /llms.txt   200
 /robots.txt  /robots.txt 200
 /sitemap.xml /sitemap.xml 200
 
-# SPA catch-all comes AFTER all explicit redirects and static files
+# SPA catch-all — ONLY for routes not prerendered
 /*    /index.html   200
