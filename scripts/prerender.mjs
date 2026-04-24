@@ -101,7 +101,8 @@ const staticPages = [
   { path: '/how-it-works/', title: 'How It Works | Whoza.ai - AI Employee for Tradespeople', description: 'Learn how Rex, your AI employee, helps tradespeople improve visibility on Google, ChatGPT, and AI search tools with weekly actionable tasks.' },
   { path: '/pricing/', title: 'Pricing | Whoza.ai - Affordable AI Marketing for Tradespeople', description: 'Simple, transparent pricing for tradespeople. Get more local jobs with Rex for £99/month. No contracts, cancel anytime. GDPR compliant.' },
   { path: '/case-studies/', title: 'Case Studies | Whoza.ai - Real Results for UK Tradespeople', description: 'See how plumbers, electricians, roofers and other tradespeople are getting more local jobs through improved AI visibility with Rex.' },
-  { path: '/free-score/', title: 'Free AI Visibility Score | Whoza.ai - Check Your Online Presence', description: 'Get your free AI Visibility Score in 60 seconds. See how likely your trade business is to be named and recommended on ChatGPT, Google AI, and Perplexity.' },
+  { path: '/competitor-analysis/', title: 'Competitor Analysis - See Who AI Recommends | Whoza.ai', description: 'Find out who AI search recommends for your trade in your area. See your competitor and get 3 quick fixes to start appearing in AI results. Free analysis in 60 seconds.' },
+  { path: '/free-score/', title: 'Competitor Analysis - See Who AI Recommends | Whoza.ai', description: 'Find out who AI search recommends for your trade in your area. See your competitor and get 3 quick fixes to start appearing in AI results. Free analysis in 60 seconds.' },
   { path: '/contact/', title: 'Contact Us | Whoza.ai - Get in Touch', description: 'Have questions about AI-powered visibility for tradespeople? Contact Whoza.ai for support, inquiries, or to learn more about our service.' },
   { path: '/blog/', title: 'Blog | Whoza.ai - AI Visibility Guides for Tradespeople', description: 'Expert guides on AI visibility, AEO, and digital marketing for UK plumbers, electricians, builders, and tradespeople.' },
   { path: '/trust/', title: 'Trust & Security | Whoza.ai - GDPR Compliant AI for Trades', description: 'Learn why UK tradespeople trust Whoza.ai. GDPR compliant, secure data handling, and human-approved tasks for peace of mind.' },
@@ -120,7 +121,7 @@ const staticNavBlock = `
   <a href="https://whoza.ai/how-it-works/">How It Works</a>
   <a href="https://whoza.ai/pricing/">Pricing</a>
   <a href="https://whoza.ai/case-studies/">Case Studies</a>
-  <a href="https://whoza.ai/free-score/">Free AI Visibility Score</a>
+  <a href="https://whoza.ai/competitor-analysis/">Competitor Analysis</a>
   <a href="https://whoza.ai/blog/">Blog</a>
   <a href="https://whoza.ai/trust/">Trust &amp; Security</a>
   <a href="https://whoza.ai/contact/">Contact</a>
@@ -232,16 +233,16 @@ for (const post of blogPosts) {
 console.log('\n🇬🇧 UK city pages:');
 for (const city of ukCities) {
   const urlPath = `/uk/ai-visibility/${city.slug}/`;
-  const title = `AI Visibility for Tradespeople in ${city.name} | Whoza.ai`;
-  const description = `Get your AI Visibility Score in ${city.name}. Join over ${city.tradespeople.toLocaleString()} tradespeople optimising their online presence for AI search. From £59/month.`;
+  const title = `See Who AI Recommends in ${city.name} | Whoza.ai Competitor Analysis`;
+  const description = `See who AI recommends for your trade in ${city.name}. Check your competitor and get 3 quick fixes to start appearing in ChatGPT and Google AI results.`;
   writeHtml(urlPath, title, description);
 }
 
 console.log('\n🇺🇸 US city pages:');
 for (const city of usCities) {
   const urlPath = `/us/ai-visibility/${city.slug}/`;
-  const title = `AI Visibility for Contractors in ${city.name}, ${city.state} | Whoza.ai`;
-  const description = `Get your AI Visibility Score in ${city.name}. Join over ${city.contractors.toLocaleString()} contractors optimising their online presence for AI search. From $79/month.`;
+  const title = `See Who AI Recommends in ${city.name}, ${city.state} | Whoza.ai Competitor Analysis`;
+  const description = `See who AI recommends for your trade in ${city.name}, ${city.state}. Check your competitor and get 3 quick fixes to start appearing in ChatGPT and Google AI results.`;
   writeHtml(urlPath, title, description);
 }
 
