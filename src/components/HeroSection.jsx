@@ -21,18 +21,29 @@ const HeroSection = () => {
         }}>
         {/* LEFT COLUMN - Text Content */}
         <div className="hero-text-container" style={{ flex: '1 1 500px', minWidth: '300px', maxWidth: '600px' }}>
-          {/* AUDIENCE BADGE — immediately tells tradespeople this is for them */}
+          {/* AUDIENCE BADGE — THE most critical element on the entire page */}
           <div style={{
             display: 'inline-flex',
             alignItems: 'center',
-            gap: '8px',
-            padding: '6px 16px',
-            background: 'rgba(132, 204, 22, 0.15)',
-            border: '1px solid rgba(132, 204, 22, 0.3)',
-            borderRadius: 'var(--radius-full)',
-            marginBottom: '12px',
+            gap: '12px',
+            padding: '14px 28px',
+            background: 'linear-gradient(135deg, #84CC16, #65A30D)',
+            borderRadius: '16px',
+            marginBottom: '16px',
+            boxShadow: '0 8px 32px rgba(132, 204, 22, 0.4), 0 0 0 2px rgba(132, 204, 22, 0.2)',
           }}>
-            <span style={{ fontSize: '13px', fontWeight: 700, color: '#A3E635', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+            {/* Wrench icon */}
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+            </svg>
+            <span style={{
+              fontSize: '18px',
+              fontWeight: 800,
+              color: '#ffffff',
+              textTransform: 'uppercase',
+              letterSpacing: '0.12em',
+              textShadow: '0 1px 2px rgba(0,0,0,0.2)',
+            }}>
               For Tradespeople
             </span>
           </div>
