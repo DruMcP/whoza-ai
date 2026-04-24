@@ -162,7 +162,6 @@ export default function HomeFAQ() {
                   overflow: 'hidden',
                   transition: 'max-height 0.3s ease'
                 }}
-                className="faq-answer-collapsible"
               >
                 <div
                   style={{
@@ -175,22 +174,18 @@ export default function HomeFAQ() {
                   {faq.answer}
                 </div>
               </div>
-              {/* Always-visible answer for search engine indexing */}
-              <div
-                className="faq-answer-visible"
-                style={{
-                  padding: '0 var(--spacing-lg) var(--spacing-lg)',
-                  fontSize: '16px',
-                  lineHeight: '1.7',
-                  color: 'var(--color-text-secondary)'
-                }}
-                itemScope
-                itemProp="acceptedAnswer"
-                itemType="https://schema.org/Answer"
-              >
-                <meta itemProp="@type" content="Answer" />
-                <span itemProp="text">{faq.answer}</span>
-              </div>
+
+              {/* Hidden schema markup for search engines — NOT visible to users */}
+              <noscript>
+                <div
+                  itemScope
+                  itemProp="acceptedAnswer"
+                  itemType="https://schema.org/Answer"
+                >
+                  <meta itemProp="@type" content="Answer" />
+                  <span itemProp="text">{faq.answer}</span>
+                </div>
+              </noscript>
             </div>
           ))}
         </div>
