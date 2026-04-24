@@ -10,7 +10,12 @@ import {
   ExternalLink,
   Zap,
   ChevronDown,
-  ChevronUp
+  ChevronUp,
+  Share2,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Link2
 } from 'lucide-react';
 
 export default function CompetitorResults({ results, onEmailCapture }) {
@@ -301,6 +306,9 @@ export default function CompetitorResults({ results, onEmailCapture }) {
         </div>
       </section>
 
+      {/* Social Share */}
+      <SocialShareSection business={business} trade={trade} competitor={competitor} />
+
       {/* Trust Section */}
       <section className="py-12 bg-white">
         <div className="container max-w-4xl text-center">
@@ -322,5 +330,117 @@ export default function CompetitorResults({ results, onEmailCapture }) {
         </div>
       </section>
     </div>
+  );
+}
+
+/**
+ * Social Share Section — turns each user into a marketing channel
+ */
+function SocialShareSection({ business, trade, competitor }) {
+  const [copied, setCopied] = useState(false);
+
+  const shareUrl = typeof window !== 'undefined' ? window.location.href : 'https://whoza.ai/competitor-analysis';
+  const shareText = `I just found out that AI recommends ${competitor.name} instead of my ${trade} business when people ask ChatGPT for local services. Found out with @whoza_ai — check yours:`;
+  const shareTitle = `AI recommends ${competitor.name} for ${trade} in my area`;
+
+  const shareLinks = [
+    {
+      name: 'LinkedIn',
+      icon: Linkedin,
+      href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}&summary=${encodeURIComponent(shareText)}`,
+      color: '#0077B5',
+      bg: '#EFF6FF',
+    },
+    {
+      name: 'X / Twitter',
+      icon: Twitter,
+      href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`,
+      color: '#000000',
+      bg: '#F3F4F6',
+    },
+    {
+      name: 'Facebook',
+      icon: Facebook,
+      href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`,
+      color: '#1877F2',
+      bg: '#EFF6FF',
+    },
+  ];
+
+  const handleCopyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 3000);
+    } catch {
+      // Fallback
+      const input = document.createElement('input');
+      input.value = shareUrl;
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 3000);
+    }
+  };
+
+  return (
+    <section className="py-12 bg-slate-50 border-t border-slate-200">
+      <div className="container max-w-2xl text-center">
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-50 rounded-full mb-4">
+          <Share2 className="w-4 h-4 text-blue-600" />
+          <span className="text-sm font-medium text-blue-700">Share your discovery</span>
+        </div>
+
+        <h3 className="text-xl font-bold text-slate-900 mb-2">
+          Know a tradesperson who should see this?
+        </h3>
+        <p className="text-slate-600 mb-6">
+          Share your competitor analysis — help other tradespeople find out who AI recommends in their area.
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-3 mb-4">
+          {shareLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium text-sm transition-all hover:scale-105 hover:shadow-md"
+              style={{
+                background: link.bg,
+                color: link.color,
+                border: `1px solid ${link.color}20`,
+              }}
+            >
+              <link.icon className="w-4 h-4" />
+              {link.name}
+            </a>
+          ))}
+
+          <button
+            onClick={handleCopyLink}
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium text-sm transition-all hover:scale-105 hover:shadow-md bg-white border border-slate-200 text-slate-700"
+          >
+            {copied ? (
+              <>
+                <CheckCircle className="w-4 h-4 text-green-500" />
+                Copied!
+              </>
+            ) : (
+              <>
+                <Link2 className="w-4 h-4" />
+                Copy link
+              </>
+            )}
+          </button>
+        </div>
+
+        <p className="text-xs text-slate-400">
+          Sharing helps other tradespeople discover their AI competitors
+        </p>
+      </div>
+    </section>
   );
 }
