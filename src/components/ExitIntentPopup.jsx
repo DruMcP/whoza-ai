@@ -114,9 +114,21 @@ export default function ExitIntentPopup() {
       <style>{`
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        @media (max-width: 640px) {
+          .exit-intent-modal {
+            border-radius: 16px 16px 0 0 !important;
+            max-width: 100% !important;
+            position: fixed !important;
+            bottom: 0 !important;
+            top: auto !important;
+            max-height: 90vh !important;
+            overflow-y: auto !important;
+          }
+        }
       `}</style>
 
       <div
+        className="exit-intent-modal"
         style={{
           background: 'white',
           borderRadius: '20px',

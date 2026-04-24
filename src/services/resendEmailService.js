@@ -106,10 +106,10 @@ function generateFreeScoreEmailTemplate({
           <tr>
             <td style="background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%); padding: 40px 30px; text-align: center;">
               <h1 style="margin: 0; color: #0f172a; font-size: 28px; font-weight: 700; letter-spacing: -0.5px;">
-                Whoza
+                Whoza.ai
               </h1>
               <p style="margin: 8px 0 0; color: #0f172a; font-size: 14px; font-weight: 500;">
-                AI Visibility Platform for UK Trades
+                AI Visibility for UK Tradespeople
               </p>
             </td>
           </tr>
@@ -227,7 +227,7 @@ function generateFreeScoreEmailTemplate({
               <p style="margin: 16px 0 0; font-size: 15px; line-height: 1.6; color: #cbd5e1;">
                 Cheers,<br>
                 <strong>Rex</strong> 🤖<br>
-                <span style="color: #94a3b8; font-size: 14px;">Your AI Visibility Assistant</span>
+                <span style="color: #94a3b8; font-size: 14px;">Your AI Visibility Partner at Whoza.ai</span>
               </p>
             </td>
           </tr>
@@ -236,8 +236,8 @@ function generateFreeScoreEmailTemplate({
           <tr>
             <td style="padding: 20px 30px; background-color: rgba(15, 23, 42, 0.8); border-top: 1px solid rgba(74, 222, 128, 0.2); text-align: center;">
               <p style="margin: 0; font-size: 13px; color: #64748b;">
-                <strong>WHOZA AI LTD</strong> · Perth, Scotland<br>
-                AI Visibility Platform for UK Trades
+                <strong>Whoza.ai Ltd</strong> · Perth, Scotland<br>
+                AI Visibility for UK Tradespeople
               </p>
             </td>
           </tr>
@@ -275,9 +275,9 @@ export async function sendFreeScoreResultsEmail({
     });
 
     const result = await sendEmail({
-      from: 'Whoza AI <onboarding@resend.dev>',
+      from: 'Whoza.ai <hello@whoza.ai>',
       to: email,
-      subject: `Your AI Visibility Report: ${score}/100 - ${businessName}`,
+      subject: `Your Whoza.ai Report — See How ${businessName} Compares to ${competitorName || 'the Competition'}>`
       html
     });
 

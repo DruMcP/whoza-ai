@@ -45,9 +45,10 @@ const RecentActivityTicker = memo(function RecentActivityTicker() {
 
   return (
     <div
+      className="recent-activity-ticker"
       style={{
         position: 'fixed',
-        bottom: '80px',
+        bottom: '100px',
         left: '16px',
         zIndex: 998,
         maxWidth: '320px',
@@ -90,7 +91,14 @@ const RecentActivityTicker = memo(function RecentActivityTicker() {
             animation: 'pulse 2s infinite',
           }}
         />
-        <style>{`@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }`}</style>
+        <style>{`
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+        @media (max-width: 480px) {
+          .recent-activity-ticker {
+            display: none !important;
+          }
+        }
+      `}</style>
 
         <Activity className="w-3.5 h-3.5 text-slate-400 flex-shrink-0" />
 
