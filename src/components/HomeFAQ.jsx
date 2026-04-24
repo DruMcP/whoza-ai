@@ -175,17 +175,7 @@ export default function HomeFAQ() {
                 </div>
               </div>
 
-              {/* Hidden schema markup for search engines — NOT visible to users */}
-              <noscript>
-                <div
-                  itemScope
-                  itemProp="acceptedAnswer"
-                  itemType="https://schema.org/Answer"
-                >
-                  <meta itemProp="@type" content="Answer" />
-                  <span itemProp="text">{faq.answer}</span>
-                </div>
-              </noscript>
+              {/* FAQ schema is injected directly in index.html for crawlers */}
             </div>
           ))}
         </div>
