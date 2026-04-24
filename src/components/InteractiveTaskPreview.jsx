@@ -258,7 +258,7 @@ export default function InteractiveTaskPreview() {
                   <p className="success-question">Ready to get started with real tasks for your business?</p>
                   <div className="success-buttons">
                     <Link to="/competitor-analysis" className="button-primary">
-                      Get Your Free Score
+                      Get My Competitor
                       <Icon name="arrow-right" size="18" />
                     </Link>
                     <button onClick={handleReset} className="button-secondary">

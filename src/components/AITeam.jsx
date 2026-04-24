@@ -351,7 +351,7 @@ const TeamCard = ({ member, onNotifyClick }) => {
 
       {isLive ? (
         <Link
-          to={member.ctaLink || '/free-score'}
+          to={member.ctaLink || '/competitor-analysis'}
           style={{
             display: 'inline-flex',
             alignItems: 'center',
@@ -441,8 +441,8 @@ export default function AITeam({ onWaitlistSubmit }) {
       role: 'AI Visibility Expert',
       description: 'Your dedicated AI employee who sends you one simple task each week to boost your visibility in AI search results like ChatGPT and Perplexity.',
       status: 'live',
-      ctaText: 'Get Free Score',
-      ctaLink: '/free-score',
+      ctaText: 'Check My Competitor',
+      ctaLink: '/competitor-analysis',
       icon: '🎯',
     },
     {

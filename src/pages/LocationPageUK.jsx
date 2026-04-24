@@ -84,8 +84,8 @@ export default function LocationPageUK() {
               {city.description}. Get your AI Visibility Score and start winning more clients today.
             </p>
             <div className="flex flex-wrap gap-4 mb-8">
-              <Link to="/free-score" className="btn btn-primary btn-lg">
-                Get Your Free Score
+              <Link to="/competitor-analysis" className="btn btn-primary btn-lg">
+                Get My Competitor
               </Link>
               <Link to="/how-it-works" className="btn btn-secondary btn-lg">
                 How It Works
@@ -251,7 +251,7 @@ export default function LocationPageUK() {
               Join {getTerm('tradespeople')} across {city.region} who are already
               winning more work with AI-{getTerm('optimised')} visibility.
             </p>
-            <Link to="/free-score" className="btn bg-white text-blue-600 hover:bg-gray-100 btn-lg">
+            <Link to="/competitor-analysis" className="btn bg-white text-blue-600 hover:bg-gray-100 btn-lg">
               Get Your Free Visibility Score
             </Link>
           </div>

@@ -125,7 +125,7 @@ const Header = memo(function Header() {
                     Log In
                   </Link>
                   <Link to="/competitor-analysis" className="header-cta-btn btn-hover" aria-label="Get your free visibility score" onClick={closeMobileMenu}>
-                    Get Free Score
+                    Check My Competitor
                   </Link>
                 </div>
               </div>

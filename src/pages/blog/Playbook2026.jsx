@@ -626,7 +626,7 @@ function Playbook2026() {
               <h2>Ready to Transform Your AI Visibility?</h2>
               <p>Get your free AI visibility score and see where you stand today. whoza.ai provides the tools, automation, and guidance to implement this entire playbook for your business.</p>
               <Link to="/competitor-analysis" className="cta-button">
-                Get Free Score
+                Check My Competitor
               </Link>
             </div>
           </div>
