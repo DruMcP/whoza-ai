@@ -97,8 +97,24 @@ const usCities = [
 ];
 
 // ─── Static Pages ─────────────────────────────────────────────────────────────
+const videoPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "How Whoza.ai Works — AI Search Optimization for Tradespeople",
+  "description": "See how Rex, your AI visibility partner, helps tradespeople get found when customers ask ChatGPT, Google AI, and Perplexity for local services. Weekly 10-minute tasks that improve your AI visibility.",
+  "thumbnailUrl": "https://whoza.ai/og-image.png",
+  "contentUrl": "https://whoza.ai/whoza-explainer.mp4",
+  "uploadDate": "2026-04-24",
+  "duration": "PT60S",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Whoza.ai",
+    "logo": { "@type": "ImageObject", "url": "https://whoza.ai/favicon.svg" }
+  }
+};
+
 const staticPages = [
-  { path: '/how-it-works/', title: 'How AI Search Optimization Works for Tradespeople | Whoza.ai', description: 'Learn how Rex helps tradespeople appear in ChatGPT and AI search recommendations. Weekly 10-minute tasks that improve your AI visibility across all major platforms. No technical knowledge required.' },
+  { path: '/video/', title: 'How Whoza.ai Works — Video | AI Search Optimization for Tradespeople', description: 'Watch how Rex helps tradespeople get found in ChatGPT, Google AI, and Perplexity. Weekly 10-minute tasks. 60-second explainer video.' },, title: 'How AI Search Optimization Works for Tradespeople | Whoza.ai', description: 'Learn how Rex helps tradespeople appear in ChatGPT and AI search recommendations. Weekly 10-minute tasks that improve your AI visibility across all major platforms. No technical knowledge required.' },
   { path: '/pricing/', title: 'AI Search Optimization Pricing for Tradespeople | Whoza.ai', description: 'Simple pricing from £59/month. Get more local jobs through AI search visibility. 14-day free trial, no credit card required. No contracts, cancel anytime.' },
   { path: '/case-studies/', title: 'AI Search Optimization Results for Tradespeople | Whoza.ai', description: 'See how plumbers, electricians, roofers and other tradespeople are getting more local jobs by appearing in ChatGPT and AI search recommendations.' },
   { path: '/competitor-analysis/', title: 'Why Is My Business Not in ChatGPT? Free Competitor Analysis | Whoza.ai', description: 'Find out why AI search does not recommend your trade business. See who AI recommends for your trade in your area and get 3 quick fixes to start appearing in ChatGPT and Google AI results.' },
@@ -283,6 +299,12 @@ function generateHtml(canonicalPath, title, description) {
     /<meta name="twitter:description" content="[^"]*"\s*\/?>/,
     `<meta name="twitter:description" content="${description.replace(/"/g, '&quot;')}" />`
   );
+
+  // Inject VideoObject schema on /video page (required for Google Video indexing)
+  if (canonicalPath === '/video/') {
+    const videoScript = `\n<script type="application/ld+json">${JSON.stringify(videoPageSchema)}</script>`;
+    html = html.replace('</head>', `${videoScript}\n</head>`);
+  }
 
   // Inject FAQPage schema on homepage (fixes GSC 0 impressions for FAQ)
   if (canonicalPath === '/') {
