@@ -124,7 +124,7 @@ const Header = memo(function Header() {
                     </svg>
                     Log In
                   </Link>
-                  <Link to="/competitor-analysis" className="header-cta-btn btn-hover" aria-label="Get your free visibility score" onClick={closeMobileMenu}>
+                  <Link to="/competitor-analysis" className="header-cta-btn btn-hover" aria-label="Check who AI recommends for your trade" onClick={closeMobileMenu}>
                     Check My Competitor
                   </Link>
                 </div>
