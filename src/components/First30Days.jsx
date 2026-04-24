@@ -254,7 +254,7 @@ export default function First30Days() {
 
         <div style={{ textAlign: 'center' }}>
           <Link
-            to="/free-score"
+            to="/competitor-analysis"
             className="button btn-hover"
             style={{
               display: 'inline-flex',

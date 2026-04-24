@@ -575,7 +575,7 @@ function Playbook2026() {
                 <h2>Need Help Staying on Track?</h2>
                 <p>Following this 90-day timeline requires discipline, technical knowledge, and ongoing monitoring. whoza.ai is built specifically to automate this process for UK trades businesses.</p>
                 <p>We handle the technical complexity of schema implementation, monitor your AI visibility across all major platforms, and provide month-by-month guidance to ensure you're always progressing. Our platform is designed around this exact methodology: taking businesses from low or no AI visibility to becoming the trusted local authority in their area.</p>
-                <Link to="/free-score" className="cta-button-large">
+                <Link to="/competitor-analysis" className="cta-button-large">
                   Get Your Free AI Visibility Score
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -625,7 +625,7 @@ function Playbook2026() {
             <div className="cta-card">
               <h2>Ready to Transform Your AI Visibility?</h2>
               <p>Get your free AI visibility score and see where you stand today. whoza.ai provides the tools, automation, and guidance to implement this entire playbook for your business.</p>
-              <Link to="/free-score" className="cta-button">
+              <Link to="/competitor-analysis" className="cta-button">
                 Get Free Score
               </Link>
             </div>

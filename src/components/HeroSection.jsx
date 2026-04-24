@@ -28,7 +28,7 @@ const HeroSection = () => {
             lineHeight: '1.2',
             marginBottom: '20px'
           }}>
-            Get Found in AI Search: The <span style={{ color: '#84CC16' }}>AI Employee</span> for all Trades and Tradespeople
+            See Who's <span style={{ color: '#84CC16' }}>Stealing Your Customers</span> from AI Search
           </h1>
 
           <p style={{
@@ -37,7 +37,7 @@ const HeroSection = () => {
             lineHeight: '1.6',
             marginBottom: '30px'
           }}>
-            Most tradespeople are invisible to AI search. We fix that. Get found when ChatGPT, Google AI, and Perplexity recommend local services.
+            When people ask ChatGPT or Google AI for a tradesperson in your area, which business gets recommended? We show you — and why it's not you.
           </p>
 
           <p style={{
@@ -45,7 +45,7 @@ const HeroSection = () => {
             fontSize: '1.05rem',
             marginBottom: '40px'
           }}>
-            For plumbers, electricians, roofers, builders, heating engineers and 50+ other trades
+            For plumbers, electricians, roofers, builders, heating engineers and 50+ other trades across the UK
           </p>
 
           {/* 3-STEP MENTAL MODEL */}
@@ -55,7 +55,7 @@ const HeroSection = () => {
             gap: '16px',
             marginBottom: '40px'
           }}>
-            {/* STEP 1: MEASURE */}
+            {/* STEP 1: CHECK */}
             <div style={{
               background: 'rgba(132, 204, 22, 0.05)',
               border: '2px solid rgba(132, 204, 22, 0.2)',
@@ -86,7 +86,7 @@ const HeroSection = () => {
                 textTransform: 'uppercase',
                 letterSpacing: '0.5px'
               }}>
-                Measure
+                Check
               </h3>
               <p style={{
                 color: '#D1D5DB',
@@ -94,11 +94,11 @@ const HeroSection = () => {
                 lineHeight: '1.4',
                 margin: 0
               }}>
-                Get your free AI Visibility Score in 60 seconds
+                See who AI recommends for your trade in your area
               </p>
             </div>
 
-            {/* STEP 2: FIX */}
+            {/* STEP 2: COMPARE */}
             <div style={{
               background: 'rgba(132, 204, 22, 0.05)',
               border: '2px solid rgba(132, 204, 22, 0.2)',
@@ -129,7 +129,7 @@ const HeroSection = () => {
                 textTransform: 'uppercase',
                 letterSpacing: '0.5px'
               }}>
-                Fix
+                Compare
               </h3>
               <p style={{
                 color: '#D1D5DB',
@@ -137,11 +137,11 @@ const HeroSection = () => {
                 lineHeight: '1.4',
                 margin: 0
               }}>
-                Follow your personalised action plan
+                Side-by-side: you vs. your AI-recommended competitor
               </p>
             </div>
 
-            {/* STEP 3: TRACK */}
+            {/* STEP 3: FIX */}
             <div style={{
               background: 'rgba(132, 204, 22, 0.05)',
               border: '2px solid rgba(132, 204, 22, 0.2)',
@@ -172,7 +172,7 @@ const HeroSection = () => {
                 textTransform: 'uppercase',
                 letterSpacing: '0.5px'
               }}>
-                Track
+                Fix
               </h3>
               <p style={{
                 color: '#D1D5DB',
@@ -180,14 +180,14 @@ const HeroSection = () => {
                 lineHeight: '1.4',
                 margin: 0
               }}>
-                Watch your AI visibility grow monthly
+                Get 3 quick fixes to start appearing in AI results
               </p>
             </div>
           </div>
 
           <div style={{ marginBottom: '20px' }}>
             <Link
-              to="/free-score"
+              to="/competitor-analysis"
               style={{
                 display: 'inline-block',
                 backgroundColor: '#84CC16',
@@ -201,7 +201,7 @@ const HeroSection = () => {
                 cursor: 'pointer'
               }}
             >
-              Get your free AI Visibility Score
+              See Who's Stealing Your Customers
             </Link>
             <p style={{
               fontSize: '0.9rem',
@@ -209,14 +209,14 @@ const HeroSection = () => {
               marginTop: '10px',
               marginBottom: '8px'
             }}>
-              Takes 60 seconds. No dashboards, no jargon.
+              Free analysis. Takes 60 seconds. No email required to see results.
             </p>
             <p style={{
               fontSize: '0.85rem',
               color: '#9CA3AF',
               marginTop: '0'
             }}>
-              Try free for 90 days - one extra job pays for the whole year
+              Real competitor names from AI search. Get the full plan via email.
             </p>
           </div>
 

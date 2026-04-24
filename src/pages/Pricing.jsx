@@ -312,7 +312,7 @@ export default function Pricing() {
               Start with a free AI visibility check. Find out where you stand, then choose
               the plan that matches your goals.
             </p>
-            <Link to="/free-score" className="button button-large btn-hover">
+            <Link to="/competitor-analysis" className="button button-large btn-hover">
               Get your free AI Visibility Score
             </Link>
             <p style={{
@@ -557,7 +557,7 @@ export default function Pricing() {
               justifyContent: 'center',
               flexWrap: 'wrap'
             }}>
-              <Link to="/free-score" className="button button-large btn-hover">
+              <Link to="/competitor-analysis" className="button button-large btn-hover">
                 See if AI would recommend you
               </Link>
               <Link to="/start" className="button button-large button-secondary btn-hover">

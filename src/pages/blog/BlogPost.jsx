@@ -410,7 +410,7 @@ function BlogPost() {
             <h2>Ready to Improve Your AI Visibility?</h2>
             <p>Join UK tradespeople who are already getting found by ChatGPT, Google AI, and Perplexity.</p>
             <div className="cta-buttons">
-              <Link to="/free-score" className="cta-button">Get Free Score</Link>
+              <Link to="/competitor-analysis" className="cta-button">Get Free Score</Link>
               <Link to="/start" className="cta-button secondary">Start Free Trial</Link>
             </div>
           </div>

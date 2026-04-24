@@ -257,7 +257,7 @@ export default function InteractiveTaskPreview() {
                 <div className="success-cta">
                   <p className="success-question">Ready to get started with real tasks for your business?</p>
                   <div className="success-buttons">
-                    <Link to="/free-score" className="button-primary">
+                    <Link to="/competitor-analysis" className="button-primary">
                       Get Your Free Score
                       <Icon name="arrow-right" size="18" />
                     </Link>

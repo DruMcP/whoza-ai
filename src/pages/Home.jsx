@@ -163,7 +163,7 @@ export default function Home() {
               gap: 'var(--spacing-md)',
               marginBottom: 'var(--spacing-lg)'
             }}>
-              <Link to="/free-score" className="button button-large btn-hover" style={{
+              <Link to="/competitor-analysis" className="button button-large btn-hover" style={{
                 fontSize: '18px',
                 padding: 'var(--spacing-md) var(--spacing-2xl)'
               }}>
