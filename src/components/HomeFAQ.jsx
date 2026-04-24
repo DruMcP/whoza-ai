@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     question: "How long until I see results?",
-    answer: "Most tradespeople see their first AI mentions within 4 weeks. Your AI Visibility Score updates monthly, showing measurable progress across all 5 pillars: Clarity, Consensus, Answerability, Safety, and Context. The key is consistency — small weekly tasks compound into significant visibility gains."
+    answer: "Most tradespeople see their first AI mentions within 4 weeks. Your competitor position and visibility metrics update monthly, showing measurable progress across all 5 pillars: Clarity, Consensus, Answerability, Safety, and Context. The key is consistency — small weekly tasks compound into significant visibility gains."
   },
   {
     question: "Do I need technical knowledge?",

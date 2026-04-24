@@ -39,7 +39,7 @@ export default function ExplainerVideo() {
                   <h3 className="text-xl font-semibold mb-2">Video Coming Soon</h3>
                   <p className="text-slate-400 text-center max-w-md mb-6">
                     We're putting the finishing touches on our explainer video.
-                    In the meantime, get your free AI Visibility Score and see how Rex works for yourself.
+                    In the meantime, check who AI recommends for your trade and see how Rex works for yourself.
                   </p>
                   <a
                     href="/competitor-analysis"

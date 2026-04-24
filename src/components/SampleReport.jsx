@@ -167,7 +167,7 @@ export default function SampleReport({ onClose }) {
       <div className="report-modal-content" onClick={(e) => e.stopPropagation()}>
         <div className="report-header-bar no-print">
           <div className="report-header-bar-content">
-            <h3>Sample AI Visibility Score Report</h3>
+            <h3>Sample Competitor Analysis Report</h3>
             <div className="report-actions">
               <button onClick={handlePrint} className="button-secondary button-sm">
                 <svg viewBox="0 0 20 20" fill="currentColor" style={{ width: '18px', height: '18px', marginRight: '6px' }}>
@@ -189,7 +189,7 @@ export default function SampleReport({ onClose }) {
             <div className="report-brand-header">
               <div className="report-brand-info">
                 <div className="report-logo-text">Rex</div>
-                <div className="report-brand-tagline">AI Visibility Score Report</div>
+                <div className="report-brand-tagline">Competitor Analysis Report</div>
               </div>
               <div className="report-meta">
                 <div className="report-meta-item">{sampleData.reportDate}</div>
@@ -217,12 +217,12 @@ export default function SampleReport({ onClose }) {
                       <div className="report-score-max">/100</div>
                     </div>
                   </div>
-                  <div className="report-score-label">AI Visibility Score</div>
+                  <div className="report-score-label">AI Competitor Position</div>
                 </div>
 
                 <div className="report-score-stats">
                   <div className="report-stat-card">
-                    <div className="report-stat-label">Previous Score</div>
+                    <div className="report-stat-label">Previous Position</div>
                     <div className="report-stat-value">{sampleData.previousScore}</div>
                   </div>
                   <div className="report-stat-card report-stat-highlight">
@@ -243,7 +243,7 @@ export default function SampleReport({ onClose }) {
 
               <div className="report-score-explanation">
                 <h3>What This Score Means</h3>
-                <p>Your AI Visibility Score measures how easily potential customers can find your business when using AI-powered search tools like ChatGPT, Perplexity AI, and Google's AI features.</p>
+                <p>Your competitor analysis measures how visible your business is to AI-powered search tools like ChatGPT, Perplexity AI, and Google's AI features — and who gets recommended instead of you.</p>
                 <div className="report-score-ranges">
                   <div className="report-score-range">
                     <div className="report-range-bar" style={{ background: 'var(--color-success-600)' }}></div>
@@ -308,7 +308,7 @@ export default function SampleReport({ onClose }) {
 
             <div className="report-section">
               <h2 className="report-section-title">Category Breakdown</h2>
-              <p className="report-section-subtitle">Detailed analysis of the five key components that make up your AI Visibility Score</p>
+              <p className="report-section-subtitle">Detailed analysis of the five key components that determine your AI visibility</p>
 
               {sampleData.categoryScores.map((category, index) => (
                 <div key={index} className="report-category">
@@ -375,7 +375,7 @@ export default function SampleReport({ onClose }) {
 
             <div className="report-section">
               <h2 className="report-section-title">Recommended Next Steps</h2>
-              <p className="report-section-subtitle">Prioritized actions to further improve your AI Visibility Score</p>
+              <p className="report-section-subtitle">Prioritized actions to improve your AI visibility and get recommended ahead of competitors</p>
 
               <div className="report-next-steps">
                 {sampleData.nextSteps.map((step, index) => (

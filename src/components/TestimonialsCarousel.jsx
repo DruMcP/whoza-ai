@@ -25,8 +25,8 @@ const testimonials = [
     role: 'Gardener',
     location: 'Bristol',
     photo: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop',
-    quote: "The best part is that it only takes 15 minutes a week. Rex tells me exactly what to do, and I can see my AI Visibility Score improving month by month.",
-    metric: 'AI Visibility Score: 78/100'
+    quote: "The best part is that it only takes 15 minutes a week. Rex tells me exactly what to do, and I can see my competitor position improving month by month.",
+    metric: 'Now appears in 3 AI platforms'
   },
   {
     id: 4,
