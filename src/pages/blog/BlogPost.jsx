@@ -21,10 +21,10 @@ function BlogPost() {
         } else {
           setPost({
             isPlaybook: true,
-            title: "The UK Trades Business Playbook for AI Search Visibility in 2026",
-            metaDescription: "A comprehensive playbook for UK trades businesses",
+            title: "The Trades Business Playbook for AI Search Visibility in 2026",
+            metaDescription: "A comprehensive playbook for trades businesses",
             slug: slug,
-            tags: ["AI search", "AEO", "UK tradespeople"],
+            tags: ["AI search", "AEO", "tradespeople"],
             publishDate: "2026-01-28",
             author: "Whoza.ai Team"
           });
@@ -408,7 +408,7 @@ function BlogPost() {
         <div className="container">
           <div className="cta-card">
             <h2>Ready to Improve Your AI Visibility?</h2>
-            <p>Join UK tradespeople who are already getting found by ChatGPT, Google AI, and Perplexity.</p>
+            <p>Join tradespeople who are already getting found by ChatGPT, Google AI, and Perplexity.</p>
             <div className="cta-buttons">
               <Link to="/competitor-analysis" className="cta-button">Check My Competitor</Link>
               <Link to="/start" className="cta-button secondary">Start Free Trial</Link>

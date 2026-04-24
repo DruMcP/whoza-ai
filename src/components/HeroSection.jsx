@@ -30,12 +30,23 @@ const HeroSection = () => {
             background: 'rgba(132, 204, 22, 0.15)',
             border: '1px solid rgba(132, 204, 22, 0.3)',
             borderRadius: 'var(--radius-full)',
-            marginBottom: '16px',
+            marginBottom: '12px',
           }}>
             <span style={{ fontSize: '13px', fontWeight: 700, color: '#A3E635', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-              For UK Tradespeople
+              For Tradespeople
             </span>
           </div>
+
+          {/* UNIVERSAL TAGLINE — applies to every tradesperson, everywhere */}
+          <p style={{
+            color: '#94A3B8',
+            fontSize: '1rem',
+            fontStyle: 'italic',
+            marginBottom: '12px',
+            lineHeight: 1.4,
+          }}>
+            If your business is not visible to AI, your business is invisible.
+          </p>
 
           <h1 style={{
             color: '#ffffff',

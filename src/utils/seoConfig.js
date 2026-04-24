@@ -1,6 +1,6 @@
 export const seoConfig = {
   '/': {
-    title: 'Whoza.ai — See Who AI Recommends for Your Trade | UK Tradespeople',
+    title: 'Whoza.ai — See Who AI Recommends for Your Trade',
     description: 'Stop losing jobs to AI-recommended competitors. Rex helps plumbers, electricians, builders & 50+ trades get found when customers ask ChatGPT, Google AI & Perplexity for local services. Start your free competitor analysis.',
     image: '/og-image.png'
   },
@@ -11,17 +11,17 @@ export const seoConfig = {
   },
   '/pricing': {
     title: 'AI Search Optimization Pricing for Tradespeople | Whoza.ai',
-    description: 'Simple pricing from £59/month. Get more local jobs through AI search visibility. 14-day free trial, no credit card required. GDPR compliant.',
+    description: 'Simple pricing from £59/month. Get more local jobs through AI search visibility. 14-day free trial, no credit card required.',
     image: '/og-image.png'
   },
   '/trust': {
     title: 'Trust & Security | Whoza.ai - GDPR Compliant AI for Trades',
-    description: 'Learn why UK tradespeople trust Whoza.ai. GDPR compliant, ICO registered (ZC077271), secure data handling, and human-approved tasks for peace of mind.',
+    description: 'Learn why tradespeople trust Whoza.ai. GDPR compliant, ICO registered (ZC077271), secure data handling, and human-approved tasks for peace of mind.',
     image: '/og-image.png'
   },
   '/case-studies': {
     title: 'AI Search Optimization Results for Tradespeople | Whoza.ai',
-    description: 'See how plumbers, electricians, roofers and other UK tradespeople are getting more local jobs by appearing in ChatGPT and AI search recommendations.',
+    description: 'See how plumbers, electricians, roofers and other tradespeople are getting more local jobs by appearing in ChatGPT and AI search recommendations.',
     image: '/og-image.png'
   },
   '/competitor-analysis': {
@@ -36,12 +36,12 @@ export const seoConfig = {
   },
   '/privacy': {
     title: 'Privacy Policy | Whoza.ai - Your Data is Protected',
-    description: 'Read our privacy policy. GDPR compliant AI search optimization platform for UK tradespeople. ICO registered.',
+    description: 'Read our privacy policy. GDPR compliant AI search optimization platform. ICO registered.',
     image: '/og-image.png'
   },
   '/terms': {
     title: 'Terms of Service | Whoza.ai - Fair Terms for Tradespeople',
-    description: 'Review our terms of service. Transparent, fair terms for UK tradespeople using our AI search optimization platform.',
+    description: 'Review our terms of service. Transparent, fair terms for tradespeople using our AI search optimization platform.',
     image: '/og-image.png'
   },
   '/portal': {

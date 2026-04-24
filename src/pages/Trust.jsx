@@ -291,7 +291,7 @@ export default function Trust() {
 
           <h2>GDPR and ICO compliance</h2>
 
-          <p>whoza.ai is a UK-based service. We follow all UK data protection rules.</p>
+          <p>whoza.ai follows all applicable data protection rules, including GDPR and UK ICO regulations.</p>
 
           <div className="panel" style={{ background: 'var(--color-primary-50)', border: '2px solid var(--color-primary-200)', marginBottom: 'var(--spacing-xl)' }}>
             <p style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-sm)', marginBottom: 0 }}>
@@ -339,7 +339,7 @@ export default function Trust() {
             <li>Secure authentication for all accounts</li>
             <li>Regular security audits</li>
             <li>Staff access limited to essential personnel only</li>
-            <li>Hosted in secure, UK-based data centers</li>
+            <li>Hosted in secure, enterprise-grade data centers</li>
           </ul>
 
           {proofSnippets.length > 0 && (

@@ -62,7 +62,7 @@ const LocationsWeServe = () => {
             maxWidth: '600px',
             margin: '0 auto'
           }}>
-            Helping tradespeople improve their AI visibility in major cities across the UK and US
+            Helping tradespeople improve their AI visibility worldwide
           </p>
         </div>
 

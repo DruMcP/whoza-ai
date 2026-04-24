@@ -213,7 +213,7 @@ const Contact = memo(function Contact() {
                     borderTop: '1px solid rgba(37, 99, 235, 0.2)',
                     fontStyle: 'italic'
                   }}>
-                    Building tools to help UK tradespeople thrive in the AI age.
+                    Building tools to help tradespeople thrive in the AI age.
                   </p>
                 </div>
               </div>

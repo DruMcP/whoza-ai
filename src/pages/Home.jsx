@@ -116,7 +116,7 @@ export default function Home() {
           border: '1px solid rgba(6, 182, 212, 0.2)'
         }}>
           <span style={{ fontSize: '16px' }} role="img" aria-label="sparkles">✨</span>
-          <span>Now helping tradespeople across the UK</span>
+          <span>Now helping tradespeople worldwide</span>
         </div>
       </aside>
 

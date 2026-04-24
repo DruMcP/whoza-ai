@@ -312,7 +312,7 @@ export default function CompetitorResults({ results, onEmailCapture }) {
       {/* Trust Section */}
       <section className="py-12 bg-white">
         <div className="container max-w-4xl text-center">
-          <p className="text-sm text-slate-500 mb-4">Trusted by tradespeople across the UK</p>
+          <p className="text-sm text-slate-500 mb-4">Trusted by tradespeople</p>
           <div className="flex flex-wrap justify-center gap-8 text-slate-400">
             <span className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-green-500" />
