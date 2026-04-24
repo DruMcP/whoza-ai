@@ -3,6 +3,14 @@ import { useLocation } from 'react-router-dom';
 import { seoConfig } from '../utils/seoConfig';
 import { injectSchema } from '../utils/schemaOrg';
 
+/**
+ * SEO Component - Manages document title, meta tags, canonical URLs, and Schema.org JSON-LD
+ * @param {Object} props
+ * @param {Array<Object>} [props.schemas=[]] - Schema.org JSON-LD objects
+ * @param {boolean} [props.noindex=false] - Set robots to noindex
+ * @param {string} [props.title] - Override page title
+ * @param {string} [props.description] - Override meta description
+ */
 const SEO = ({ schemas = [], noindex = false, title: propTitle, description: propDescription }) => {
   const location = useLocation();
   const baseUrl = 'https://whoza.ai';
