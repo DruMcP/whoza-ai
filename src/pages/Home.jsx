@@ -12,6 +12,8 @@ import ExplainerVideo from '../components/ExplainerVideo';
 import MiniROICalculator from '../components/MiniROICalculator';
 // Note: AITeam (AI Workforce) is hidden — features are on the roadmap with no confirmed date
 // import AITeam from '../components/AITeam';
+import NewsletterSignup from '../components/NewsletterSignup';
+import LeadGenComparison from '../components/LeadGenComparison';
 import Icon from '../components/icons/Icon';
 import { initScrollAnimations, addRippleEffect } from '../utils/animations';
 import HeroIllustration from '../components/illustrations/HeroIllustration';
@@ -245,6 +247,9 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Comparison: whoza.ai vs Checkatrade/Bark/MyBuilder */}
+        <LeadGenComparison />
+
         {/* AI Workforce section — features on roadmap, displayed subtly */}
         <section className="section" style={{ background: 'var(--color-bg-secondary)', padding: 'var(--spacing-xl) var(--spacing-lg)' }}>
           <div className="container" style={{ textAlign: 'center' }}>
@@ -470,6 +475,9 @@ export default function Home() {
         </section>
 
         <WhatWeDontDo />
+
+        {/* Email newsletter capture — low-friction lead gen */}
+        <NewsletterSignup />
 
         <HomeFAQ />
 
