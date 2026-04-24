@@ -100,7 +100,7 @@ export default function NotFound() {
                 to="/competitor-analysis"
                 className="p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow"
               >
-                <h4 className="font-semibold text-gray-900 mb-1">Free Score</h4>
+                <h4 className="font-semibold text-gray-900 mb-1">Competitor Analysis</h4>
                 <p className="text-sm text-gray-600">Get your visibility score</p>
               </Link>
             </div>

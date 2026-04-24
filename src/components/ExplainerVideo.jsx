@@ -42,10 +42,10 @@ export default function ExplainerVideo() {
                     In the meantime, get your free AI Visibility Score and see how Rex works for yourself.
                   </p>
                   <a
-                    href="/free-score"
+                    href="/competitor-analysis"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-full transition-colors"
                   >
-                    Get Your Free Score
+                    Get My Competitor
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -110,8 +110,8 @@ export default function ExplainerVideo() {
 
         <div className="video-cta">
           <p>Ready to boost your AI visibility?</p>
-          <a href="/free-score" className="button button-primary">
-            Get Your Free Score
+          <a href="/competitor-analysis" className="button button-primary">
+            Get My Competitor
           </a>
         </div>
       </div>

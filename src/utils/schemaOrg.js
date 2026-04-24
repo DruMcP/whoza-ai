@@ -26,7 +26,7 @@ export function generateWebSiteSchema(config = {}) {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: `${baseUrl}/free-score?search={search_term_string}`
+        urlTemplate: `${baseUrl}/competitor-analysis?search={search_term_string}`
       },
       'query-input': 'required name=search_term_string'
     },

@@ -402,7 +402,7 @@ export default function CaseStudies() {
             <h2>Ready to be our next success story?</h2>
             <p>Get your free AI visibility score today and see where you stand.</p>
             <Link to="/competitor-analysis" className="button button-large">
-              Get Your Free Score
+              Get My Competitor
             </Link>
           </div>
         </div>

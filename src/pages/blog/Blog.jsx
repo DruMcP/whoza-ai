@@ -157,10 +157,10 @@ function Blog() {
       <section className="blog-cta">
         <div className="container">
           <div className="cta-card">
-            <h2>Check Your AI Visibility Score</h2>
-            <p>Find out how visible your trade business is to AI assistants like ChatGPT and Google AI. Get your free score in 60 seconds.</p>
+            <h2>See Who's Stealing Your Customers</h2>
+            <p>Find out who AI recommends for your trade in your area — and why it's not you. Free competitor analysis in 60 seconds.</p>
             <Link to="/competitor-analysis" className="cta-button">
-              Get Free Score
+              Check My Competitor
             </Link>
           </div>
         </div>

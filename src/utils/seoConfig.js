@@ -24,9 +24,9 @@ export const seoConfig = {
     description: 'See how plumbers, electricians, roofers and other tradespeople are getting more local jobs through improved AI visibility with Rex.',
     image: '/og-image.png'
   },
-  '/free-score': {
-    title: 'Free AI Visibility Score | Whoza.ai - Check Your Online Presence',
-    description: 'Get your free AI Visibility Score in 60 seconds. See how likely your trade business is to be named and recommended on ChatGPT, Google AI, and Perplexity.',
+  '/competitor-analysis': {
+    title: 'Competitor Analysis - See Who AI Recommends for Your Trade',
+    description: 'Find out who AI search recommends for your trade in your area. See your competitor and get 3 quick fixes to start appearing in AI results.',
     image: '/og-image.png'
   },
   '/start': {

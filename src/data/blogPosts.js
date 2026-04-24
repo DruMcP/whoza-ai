@@ -83,8 +83,8 @@ export const blogPosts = [
     "cta": {
       "heading": "Ready to dominate the Top 10?",
       "text": "Get your Free AI Visibility Score today and see exactly where you stand against your local competitors.",
-      "buttonText": "Get Free Score",
-      "buttonLink": "/free-score"
+      "buttonText": "Check My Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   },
   {
@@ -196,7 +196,7 @@ export const blogPosts = [
       },
       {
         "question": "How can whoza.ai help US contractors with AI visibility?",
-        "answer": "Whoza.ai provides a systematic approach to AI visibility through Entity Confidence Engineering. Our platform gives you a free AI Visibility Score showing where you stand, personalized weekly tasks that take just 10-15 minutes, guidance on optimizing your presence across Google, Bing, and key directories, and monthly tracking to show your progress. We help contractors across the US—from plumbers and electricians to HVAC technicians and general contractors—become the business AI recommends by name."
+        "answer": "Whoza.ai provides a systematic approach to AI visibility through Entity Confidence Engineering. Our platform gives you a free competitor analysis showing where you stand, personalized weekly tasks that take just 10-15 minutes, guidance on optimizing your presence across Google, Bing, and key directories, and monthly tracking to show your progress. We help contractors across the US—from plumbers and electricians to HVAC technicians and general contractors—become the business AI recommends by name."
       },
       {
         "question": "What's the ROI of investing in AI search visibility?",
@@ -205,8 +205,8 @@ export const blogPosts = [
     ],
     "cta": {
       "text": "Ready to see how your contracting business scores in AI search?",
-      "buttonText": "Get Your Free AI Visibility Score",
-      "buttonLink": "/free-score"
+      "buttonText": "Check My AI Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   },
   {
@@ -301,8 +301,8 @@ export const blogPosts = [
     ],
     "cta": {
       "text": "Ready to see how your business scores in AI search?",
-      "buttonText": "Get Your Free AI Visibility Score",
-      "buttonLink": "/free-score"
+      "buttonText": "Check My AI Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   },
   {
@@ -361,8 +361,8 @@ export const blogPosts = [
     ],
     "cta": {
       "text": "Ready to see how your business scores in AI search?",
-      "buttonText": "Get Your Free AI Visibility Score",
-      "buttonLink": "/free-score"
+      "buttonText": "Check My AI Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   },
   {
@@ -411,8 +411,8 @@ export const blogPosts = [
     ],
     "cta": {
       "text": "Whoza.ai helps UK tradespeople optimize their entire online presence for AI search, starting with a world-class Google Business Profile.",
-      "buttonText": "Get Your Free AI Visibility Score",
-      "buttonLink": "/free-score"
+      "buttonText": "Check My AI Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   },
   {
@@ -466,8 +466,8 @@ export const blogPosts = [
     ],
     "cta": {
       "text": "Whoza.ai provides the tools and weekly tasks to make this process simple.",
-      "buttonText": "Get Your Free AI Visibility Score",
-      "buttonLink": "/free-score"
+      "buttonText": "Check My AI Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   },
   {
@@ -533,8 +533,8 @@ export const blogPosts = [
     ],
     "cta": {
       "text": "Ready to see how your business stacks up in the new world of AI search?",
-      "buttonText": "Get Your Free AI Visibility Score",
-      "buttonLink": "/free-score"
+      "buttonText": "Check My AI Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   },
   {
@@ -624,8 +624,8 @@ export const blogPosts = [
     ],
     "cta": {
       "text": "Ready to see how your business stacks up in the new age of AI search?",
-      "buttonText": "Get Your Free AI Visibility Score",
-      "buttonLink": "/free-score"
+      "buttonText": "Check My AI Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   },
   {
@@ -705,8 +705,8 @@ export const blogPosts = [
     ],
     "cta": {
       "text": "Ready to boost your electrician AI visibility and get featured in Google AI Overviews?",
-      "buttonText": "Get Your Free AI Visibility Score",
-      "buttonLink": "/free-score"
+      "buttonText": "Check My AI Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   },
   {
@@ -777,8 +777,8 @@ export const blogPosts = [
     ],
     "cta": {
       "text": "Ready to see how your business scores for AI visibility?",
-      "buttonText": "Get Your Free AI Visibility Score",
-      "buttonLink": "/free-score"
+      "buttonText": "Check My AI Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   },
   {
@@ -855,8 +855,8 @@ export const blogPosts = [
     ],
     "cta": {
       "text": "Ready to see how your business scores for AI visibility in Manchester?",
-      "buttonText": "Get Your Free AI Visibility Score",
-      "buttonLink": "/free-score"
+      "buttonText": "Check My AI Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   },
   {
@@ -942,9 +942,9 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your AI Visibility Score",
-      "text": "Find out how visible your trade business is to AI assistants. Get your free AI visibility score in 60 seconds.",
-      "buttonText": "Get Free Score",
-      "buttonLink": "/free-score"
+      "text": "Find out how visible your trade business is to AI assistants. Get your free competitor analysis in 60 seconds.",
+      "buttonText": "Check My Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   },
   {
@@ -1011,9 +1011,9 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your AI Visibility Score",
-      "text": "Find out how visible your trade business is to AI assistants. Get your free AI visibility score in 60 seconds.",
-      "buttonText": "Get Free Score",
-      "buttonLink": "/free-score"
+      "text": "Find out how visible your trade business is to AI assistants. Get your free competitor analysis in 60 seconds.",
+      "buttonText": "Check My Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   },
   {
@@ -1094,9 +1094,9 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your London AI Visibility Score",
-      "text": "Find out how visible your trade business is to AI assistants in your part of London. Get your free AI visibility score in 60 seconds.",
-      "buttonText": "Get Free Score",
-      "buttonLink": "/free-score"
+      "text": "Find out how visible your trade business is to AI assistants in your part of London. Get your free competitor analysis in 60 seconds.",
+      "buttonText": "Check My Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   },
   {
@@ -1182,9 +1182,9 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your Plumbing Business AI Score",
-      "text": "Find out if ChatGPT and Google AI can find and recommend your plumbing business. Get your free AI visibility score in 60 seconds.",
-      "buttonText": "Get Free Score",
-      "buttonLink": "/free-score"
+      "text": "Find out if ChatGPT and Google AI can find and recommend your plumbing business. Get your free competitor analysis in 60 seconds.",
+      "buttonText": "Check My Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   },
   {
@@ -1239,9 +1239,9 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your Plumbing Business AI Score",
-      "text": "Find out if ChatGPT can find your plumbing business. Get your free AI visibility score in 60 seconds.",
-      "buttonText": "Get Free Score",
-      "buttonLink": "/free-score"
+      "text": "Find out if ChatGPT can find your plumbing business. Get your free competitor analysis in 60 seconds.",
+      "buttonText": "Check My Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   },
   {
@@ -1296,9 +1296,9 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your Electrical Business AI Score",
-      "text": "Find out if Google AI can find your electrical business. Get your free AI visibility score in 60 seconds.",
-      "buttonText": "Get Free Score",
-      "buttonLink": "/free-score"
+      "text": "Find out if Google AI can find your electrical business. Get your free competitor analysis in 60 seconds.",
+      "buttonText": "Check My Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   },
   {
@@ -1353,9 +1353,9 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your London Business AI Score",
-      "text": "Find out if AI can find your London trade business. Get your free AI visibility score in 60 seconds.",
-      "buttonText": "Get Free Score",
-      "buttonLink": "/free-score"
+      "text": "Find out if AI can find your London trade business. Get your free competitor analysis in 60 seconds.",
+      "buttonText": "Check My Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   },
   {
@@ -1410,9 +1410,9 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your FAQ Page Effectiveness",
-      "text": "Find out if your FAQ page is optimised for AI. Get your free AI visibility score in 60 seconds.",
-      "buttonText": "Get Free Score",
-      "buttonLink": "/free-score"
+      "text": "Find out if your FAQ page is optimised for AI. Get your free competitor analysis in 60 seconds.",
+      "buttonText": "Check My Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   },
   {
@@ -1457,9 +1457,9 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your Roofing Business AI Score",
-      "text": "Find out if AI can find your roofing business. Get your free AI visibility score in 60 seconds.",
-      "buttonText": "Get Free Score",
-      "buttonLink": "/free-score"
+      "text": "Find out if AI can find your roofing business. Get your free competitor analysis in 60 seconds.",
+      "buttonText": "Check My Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   },
   {
@@ -1514,9 +1514,9 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your Local AI Visibility",
-      "text": "Find out if AI can find your business in Manchester or Birmingham. Get your free AI visibility score in 60 seconds.",
-      "buttonText": "Get Free Score",
-      "buttonLink": "/free-score"
+      "text": "Find out if AI can find your business in Manchester or Birmingham. Get your free competitor analysis in 60 seconds.",
+      "buttonText": "Check My Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   },
   {
@@ -1614,8 +1614,8 @@ export const blogPosts = [
     "cta": {
       "heading": "Ready to Boost Your AI Visibility?",
       "text": "Take the first step towards getting your roofing business recommended by AI. Get your free, instant AI visibility score and discover your personalized action plan.",
-      "buttonText": "Get My Free Score",
-      "buttonLink": "/free-score"
+      "buttonText": "Check My Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   },
   {
@@ -1669,8 +1669,8 @@ export const blogPosts = [
     ],
     "cta": {
       "text": "Is your plumbing business visible to AI in Manchester?",
-      "buttonText": "Get Your Free AI Visibility Score",
-      "buttonLink": "/free-score"
+      "buttonText": "Check My AI Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   },
   {
@@ -1729,8 +1729,8 @@ export const blogPosts = [
     ],
     "cta": {
       "text": "Is your business ready for the AI revolution?",
-      "buttonText": "Get Your Free AI Visibility Score",
-      "buttonLink": "/free-score"
+      "buttonText": "Check My AI Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   },
   {
@@ -1798,8 +1798,8 @@ export const blogPosts = [
     "cta": {
       "heading": "Ready to See Where You Stand?",
       "text": "In this new AI-driven landscape, you are either a cited source or you are invisible. Get your Free AI Visibility Score today and see exactly where you stand against your local competitors in London, Manchester, Birmingham, and beyond.",
-      "buttonText": "Get Your Free AI Visibility Score",
-      "buttonLink": "/free-score"
+      "buttonText": "Check My AI Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   },
   {
@@ -1882,8 +1882,8 @@ export const blogPosts = [
     "cta": {
       "heading": "Find Out If AI Is Recommending You",
       "text": "In the new AI-driven search landscape, you are either a cited source or you are invisible. Get your Free AI Visibility Score from Whoza.ai today and discover exactly where you stand — and what to do next.",
-      "buttonText": "Get Your Free AI Visibility Score",
-      "buttonLink": "/free-score"
+      "buttonText": "Check My AI Competitor",
+      "buttonLink": "/competitor-analysis"
     }
   }
 ];

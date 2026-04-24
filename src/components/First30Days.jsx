@@ -264,7 +264,7 @@ export default function First30Days() {
               padding: 'var(--spacing-md) var(--spacing-xl)'
             }}
           >
-            Get Your Free Score
+            Get My Competitor
             <Icon name="arrow-right" size={20} />
           </Link>
           <p style={{
