@@ -255,8 +255,7 @@ const HeroSection = () => {
             decoding="async"
             crossOrigin="anonymous"
             onError={(e) => {
-              console.error('Hero image failed to load:', e.target.src);
-              e.target.style.border = '2px solid red';
+              e.target.style.display = 'none';
             }}
             onLoad={(e) => {
             }}

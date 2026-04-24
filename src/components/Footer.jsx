@@ -245,7 +245,7 @@ const Footer = memo(function Footer() {
             marginBottom: '24px',
             textAlign: 'center'
           }}>
-            📍 AI Visibility Services by Location
+            <span aria-hidden="true">📍</span> AI Visibility Services by Location
           </h3>
           <div style={{
             display: 'grid',
@@ -294,7 +294,7 @@ const Footer = memo(function Footer() {
                 fontWeight: '600',
                 marginBottom: '16px'
               }}>
-                🇺🇸 United States
+                <span aria-hidden="true">🇺🇸</span> United States
               </h4>
               <nav aria-label="US locations" style={{
                 display: 'grid',
