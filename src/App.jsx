@@ -10,6 +10,7 @@ import LoadingSpinner from './components/LoadingSpinner';
 import SEO from './components/SEO';
 import { initMicrointeractions } from './utils/microinteractions';
 import CookieConsent from './components/CookieConsent';
+import ExitIntentPopup from './components/ExitIntentPopup';
 
 const Home = lazy(() => import('./pages/Home'));
 const HowItWorks = lazy(() => import('./pages/HowItWorks'));
@@ -201,6 +202,7 @@ function App() {
             <SkipLink />
             <CookieConsent />
             <AppRoutes />
+            <ExitIntentPopup />
           </BrowserRouter>
         </AuthProvider>
       </ToastProvider>
