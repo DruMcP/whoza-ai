@@ -9,8 +9,7 @@ import Footer from '../components/Footer';
 const STEPS = [
   { id: 1, title: 'Account', description: 'Create your account' },
   { id: 2, title: 'Business', description: 'Tell us about your business' },
-  { id: 3, title: 'Services', description: 'What you offer' },
-  { id: 4, title: 'Finish', description: 'Final details' },
+  { id: 3, title: 'Plan', description: 'Choose your plan' },
 ];
 
 const TRADE_OPTIONS = [
@@ -64,12 +63,22 @@ export default function Start() {
   const [fieldErrors, setFieldErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false);
 
-  // Check URL parameter for sign-in mode
+  // Check URL parameters for sign-in mode and pre-filled email
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const mode = params.get('mode');
+    const email = params.get('email');
+    const source = params.get('source');
     if (mode === 'signin') {
       setIsSignUp(false);
+    }
+    if (email) {
+      setFormData(prev => ({ ...prev, email }));
+      setTouched(prev => ({ ...prev, email: true }));
+    }
+    if (source === 'competitor-analysis') {
+      // Auto-advance to step 2 (business details) since they already did competitor analysis
+      setCurrentStep(1);
     }
   }, []);
 
@@ -427,7 +436,7 @@ export default function Start() {
           // Silent fail — admin notification is non-critical
         });
 
-        navigate('/checkout');
+        navigate('/start/plan');
       } else {
         const { error: signInError } = await signIn(
           formData.email,
@@ -880,7 +889,7 @@ export default function Start() {
 
             <div className="form-field">
               <label htmlFor="serviceArea">
-                Where do you work? <span className="required-indicator">*</span>
+                Where do you work? <span style={{color: 'var(--text-secondary)', fontWeight: 'normal'}}>(optional)</span>
               </label>
               <div className="input-wrapper">
                 <input
@@ -891,7 +900,6 @@ export default function Start() {
                   onChange={(e) => handleFieldChange('serviceArea', e.target.value)}
                   onBlur={() => handleFieldBlur('serviceArea')}
                   className={`input-with-validation ${getFieldStatus('serviceArea')}`}
-                  required
                 />
                 {getFieldStatus('serviceArea') && (
                   <span className={`validation-icon ${getFieldStatus('serviceArea')}`}>

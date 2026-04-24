@@ -35,6 +35,7 @@ const BlogPost = lazy(() => import('./pages/blog/BlogPost'));
 const LocationPageUS = lazy(() => import('./pages/LocationPageUS'));
 const LocationPageUK = lazy(() => import('./pages/LocationPageUK'));
 const CookiePolicy = lazy(() => import('./pages/CookiePolicy'));
+const PlanSelection = lazy(() => import('./pages/PlanSelection'));
 
 const ProtectedRoute = memo(function ProtectedRoute({ children, adminOnly = false }) {
   const { user, userData, loading } = useAuth();
@@ -111,7 +112,6 @@ function AppRoutes() {
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/free-score" element={<Navigate to="/competitor-analysis" replace />} />
-          <Route path="/free-score" element={<Navigate to="/competitor-analysis" replace />} />
           <Route path="/competitor-analysis" element={<CompetitorAnalysis />} />
           <Route path="/competitor" element={<Navigate to="/competitor-analysis" replace />} />
           <Route path="/contact" element={<Contact />} />
@@ -120,6 +120,14 @@ function AppRoutes() {
           <Route path="/us/ai-visibility/:citySlug" element={<LocationPageUS />} />
           <Route path="/uk/ai-visibility/:citySlug" element={<LocationPageUK />} />
 
+          <Route
+            path="/start/plan"
+            element={
+              <ProtectedRoute>
+                <PlanSelection />
+              </ProtectedRoute>
+            }
+          />
           <Route
             path="/checkout"
             element={
