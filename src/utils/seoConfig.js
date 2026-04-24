@@ -1,62 +1,62 @@
 export const seoConfig = {
   '/': {
-    title: 'AI for Tradespeople | Whoza.ai - Get More Local Jobs with Rex',
-    description: 'Rex is your AI employee that helps plumbers, electricians, roofers, builders and 50+ trades get more local jobs when customers ask AI for a tradesperson. GDPR compliant.',
+    title: 'AI Search Optimization for Tradespeople | Whoza.ai - Get Found in ChatGPT',
+    description: 'Stop losing jobs to AI-recommended competitors. Rex helps plumbers, electricians, builders & 50+ trades get found when customers ask ChatGPT, Google AI & Perplexity for local services. Start your free competitor analysis.',
     image: '/og-image.png'
   },
   '/how-it-works': {
-    title: 'How It Works | Whoza.ai - AI Employee for Tradespeople',
-    description: 'Learn how Rex, your AI employee, helps tradespeople improve visibility on Google, ChatGPT, and AI search tools with weekly actionable tasks.',
+    title: 'How AI Search Optimization Works for Tradespeople | Whoza.ai',
+    description: 'Learn how Rex helps tradespeople appear in ChatGPT and AI search recommendations. Weekly 10-minute tasks that improve your AI visibility across all major platforms. No technical knowledge required.',
     image: '/og-image.png'
   },
   '/pricing': {
-    title: 'Pricing | Whoza.ai - Affordable AI Marketing for Tradespeople',
-    description: 'Simple, transparent pricing for tradespeople. Get more local jobs with Rex for £99/month. No contracts, cancel anytime. GDPR compliant.',
+    title: 'AI Search Optimization Pricing for Tradespeople | Whoza.ai',
+    description: 'Simple pricing from £59/month. Get more local jobs through AI search visibility. 14-day free trial, no credit card required. GDPR compliant.',
     image: '/og-image.png'
   },
   '/trust': {
     title: 'Trust & Security | Whoza.ai - GDPR Compliant AI for Trades',
-    description: 'Learn why UK tradespeople trust Whoza.ai. GDPR compliant, secure data handling, and human-approved tasks for peace of mind.',
+    description: 'Learn why UK tradespeople trust Whoza.ai. GDPR compliant, ICO registered (ZC077271), secure data handling, and human-approved tasks for peace of mind.',
     image: '/og-image.png'
   },
   '/case-studies': {
-    title: 'Case Studies | Whoza.ai - Real Results for UK Tradespeople',
-    description: 'See how plumbers, electricians, roofers and other tradespeople are getting more local jobs through improved AI visibility with Rex.',
+    title: 'AI Search Optimization Results for Tradespeople | Whoza.ai',
+    description: 'See how plumbers, electricians, roofers and other UK tradespeople are getting more local jobs by appearing in ChatGPT and AI search recommendations.',
     image: '/og-image.png'
   },
   '/competitor-analysis': {
-    title: 'Competitor Analysis - See Who AI Recommends for Your Trade',
-    description: 'Find out who AI search recommends for your trade in your area. See your competitor and get 3 quick fixes to start appearing in AI results.',
+    title: 'Why Is My Business Not in ChatGPT? Free Competitor Analysis | Whoza.ai',
+    description: 'Find out why AI search doesn\'t recommend your trade business. See who AI recommends for your trade in your area and get 3 quick fixes to start appearing in ChatGPT and Google AI results.',
     image: '/og-image.png'
   },
   '/start': {
-    title: 'Get Started | Whoza.ai - Start Getting More Local Jobs Today',
-    description: 'Create your free Whoza.ai account and let Rex help your trade business get found by more local customers on AI search tools.',
+    title: 'Start Your AI Search Optimization | Whoza.ai Free Trial',
+    description: 'Create your free account and let Rex help your trade business appear in ChatGPT, Google AI and Perplexity recommendations. 14-day free trial, no credit card required.',
     image: '/og-image.png'
   },
   '/privacy': {
     title: 'Privacy Policy | Whoza.ai - Your Data is Protected',
-    description: 'Read our privacy policy to learn how we protect your data. GDPR compliant AI marketing platform for UK tradespeople.',
+    description: 'Read our privacy policy. GDPR compliant AI search optimization platform for UK tradespeople. ICO registered.',
     image: '/og-image.png'
   },
   '/terms': {
     title: 'Terms of Service | Whoza.ai - Fair Terms for Tradespeople',
-    description: 'Review our terms of service. Transparent, fair terms for UK tradespeople using our AI marketing platform.',
+    description: 'Review our terms of service. Transparent, fair terms for UK tradespeople using our AI search optimization platform.',
     image: '/og-image.png'
   },
   '/portal': {
-    title: 'Portal | Whoza.ai - Your AI Marketing Dashboard',
-    description: 'Access your Whoza.ai portal to view tasks, track visibility improvements, and manage your AI marketing strategy.',
+    title: 'AI Visibility Dashboard | Whoza.ai Portal',
+    description: 'Access your AI visibility dashboard to view tasks, track how often AI recommends your business, and monitor your competitor position.',
     image: '/og-image.png'
   },
   '/tasks': {
-    title: 'Tasks | Whoza.ai - Your Weekly Visibility Tasks',
-    description: 'View and complete your weekly visibility tasks from Rex. Simple actions to improve your AI search presence.',
+    title: 'Weekly AI Visibility Tasks | Whoza.ai',
+    description: 'View and complete your weekly AI visibility tasks from Rex. Simple 10-minute actions to improve your ChatGPT and AI search presence.',
     image: '/og-image.png'
   },
   '/reports': {
-    title: 'Reports | Whoza.ai - Track Your AI Visibility Growth',
-    description: 'View detailed reports on your AI visibility improvements and track how your trade business is performing in AI search results.',
+    title: 'AI Visibility Reports | Track Your ChatGPT Growth | Whoza.ai',
+    description: 'Track how often ChatGPT, Google AI and Perplexity recommend your trade business. Monitor your visibility score and competitor position over time.',
     image: '/og-image.png'
   }
 };
