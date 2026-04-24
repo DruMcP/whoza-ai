@@ -23,10 +23,10 @@ const pricingPlans = [
     trustSignal: '✓ No credit card required  ✓ Cancel anytime  ✓ One-time offer',
     targetPersona: 'Businesses wanting to test AI visibility before committing',
     features: [
-      '✨ Weekly AI visibility score reports',
-      '📊 Track your progress over 12 weeks',
+      '✨ Weekly competitor position reports',
+      '📊 See how often AI recommends your business',
       '💡 Personalized improvement insights',
-      '🎯 Whitelist access to new features (Chloe & Simon)',
+      '🎯 Early access to new features',
       '🚀 Full Improve plan access included',
       '⏰ 14-day trial period (one-time offer)'
     ]
@@ -75,7 +75,7 @@ const pricingPlans = [
 
 const comparisonFeatures = [
   { category: 'Core Features', features: [
-    { name: 'Weekly AI Visibility Score', freeTrial: true, improve: true, priority: true },
+    { name: 'Weekly Competitor Reports', freeTrial: true, improve: true, priority: true },
     { name: 'Personalized Insights', freeTrial: true, improve: true, priority: true },
     { name: 'Progress Tracking', freeTrial: '12 weeks', improve: 'Ongoing', priority: 'Ongoing' },
     { name: 'Competitor Tracking', freeTrial: false, improve: '3', priority: '5' },
@@ -84,7 +84,7 @@ const comparisonFeatures = [
     { name: '5-Pillar Progress Tracking', freeTrial: false, improve: true, priority: true }
   ]},
   { category: 'Premium Features', features: [
-    { name: 'Whitelist Access (Chloe & Simon)', freeTrial: true, improve: false, priority: false },
+    { name: 'Early Access to New Features', freeTrial: true, improve: false, priority: false },
     { name: 'Human Review of Tasks', freeTrial: false, improve: false, priority: true },
     { name: 'Conservative Approach', freeTrial: false, improve: false, priority: true },
     { name: 'Account Manager Check-ins', freeTrial: false, improve: false, priority: true },
@@ -313,7 +313,7 @@ export default function Pricing() {
               the plan that matches your goals.
             </p>
             <Link to="/competitor-analysis" className="button button-large btn-hover">
-              Get your free AI Visibility Score
+              Check Your Competitor for Free
             </Link>
             <p style={{
               fontSize: '14px',

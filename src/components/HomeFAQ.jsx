@@ -8,7 +8,7 @@ import { generateFAQPageSchema } from '../utils/schemaOrg';
 const faqs = [
   {
     question: "What is AI search optimization and why does my trade business need it?",
-    answer: "AI search optimization (also called AEO or GEO) is the process of making your business discoverable by AI assistants like ChatGPT, Google AI, and Perplexity. When customers ask 'Who's the best plumber near me?' you want AI to name your business. It's the fastest-growing search channel — more people now ask AI for recommendations than use traditional Google search for local services."
+    answer: "AI search optimization is the process of making your business discoverable by AI assistants like ChatGPT, Google AI, and Perplexity. When customers ask 'Who's the best plumber near me?' you want AI to name your business. It's the fastest-growing search channel — more people now ask AI for recommendations than use traditional Google search for local services."
   },
   {
     question: "Why isn't my business showing up in ChatGPT recommendations?",
@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: "How does Rex, the AI visibility assistant, work?",
-    answer: "Rex analyses your business visibility across all major AI platforms, then sends one simple weekly task (takes 10-15 minutes) to improve your Entity Confidence Score. Tasks include optimizing your Google Business Profile, fixing directory inconsistencies, and adding FAQ schema markup. You review and approve every task before completing it."
+    answer: "Rex analyses your business visibility across all major AI platforms, then sends one simple weekly task (takes 10-15 minutes) to improve your chances of being recommended. Tasks include optimizing your Google Business Profile, fixing directory inconsistencies, and adding FAQ schema markup. You review and approve every task before completing it."
   },
   {
     question: "How long until I see results from AI search optimization?",
@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     question: "How is AI search optimization different from traditional SEO?",
-    answer: "Traditional SEO focuses on ranking high in Google's blue-link results. AI search optimization (AEO/GEO) focuses on becoming the business that ChatGPT and Google AI name directly as the answer. Instead of competing for position #1 on a search page, you're competing to be the single recommended answer when someone asks AI for a local tradesperson."
+    answer: "Traditional SEO focuses on ranking high in Google's blue-link results. AI search optimization focuses on becoming the business that ChatGPT and Google AI name directly as the answer. Instead of competing for position #1 on a search page, you're competing to be the single recommended answer when someone asks AI for a local tradesperson."
   },
   {
     question: "How is whoza.ai different from an SEO agency?",
