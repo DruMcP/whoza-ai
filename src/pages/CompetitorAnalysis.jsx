@@ -5,7 +5,8 @@ import {
   findCompetitorViaAI, 
   generateBlindSpotReasons,
   generateQuickFixes,
-  saveCompetitorAnalysis 
+  saveCompetitorAnalysis,
+  updateCompetitorAnalysis
 } from '../services/competitorService';
 import CompetitorResults from '../components/CompetitorResults';
 import LoadingScreen from '../components/LoadingScreen';
