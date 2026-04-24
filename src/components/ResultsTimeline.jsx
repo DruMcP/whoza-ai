@@ -87,7 +87,7 @@ export default function ResultsTimeline() {
         </div>
 
         <p className="timeline-disclaimer">
-          Over the first 30–90 days, most businesses see clearer AI descriptions, fewer generic answers, and more accurate local mentions — as their business becomes easier to understand and safer to recommend.
+          Over the first 14–30 days, most businesses see clearer AI descriptions, fewer generic answers, and more accurate local mentions — as their business becomes easier to understand and safer to recommend.
         </p>
       </div>
     </section>

@@ -149,7 +149,7 @@ function generateSummaryText(score, band, trade_type, factors, googleFound) {
     Low: [
       `Your ${trade_type} business has limited visibility when people use AI search tools.`,
       `While you're on Google, there are gaps preventing AI from confidently recommending you.`,
-      `Most businesses in your position see significant improvement within 60-90 days of focused work.`
+      `Most businesses in your position see significant improvement within 30-60 days of focused work.`
     ],
     Medium: [
       `Your ${trade_type} business appears in some AI search results, but not consistently.`,
@@ -355,7 +355,7 @@ export function getScoreExplanation(band, googleFound) {
       title: 'On The Right Track',
       description: 'You have some visibility, but not enough to consistently beat competitors.',
       canImprove: 'Rex will help you strengthen your presence and move into the top tier where AI actively recommends you.',
-      timeframe: 'Most businesses reach High scores within 90 days.',
+      timeframe: 'Most businesses reach High scores within 60 days.',
     },
     High: {
       title: 'Strong Starting Position',
