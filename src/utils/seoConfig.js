@@ -1,6 +1,6 @@
 export const seoConfig = {
   '/': {
-    title: 'AI Search Optimization for Tradespeople | Whoza.ai - Get Found in ChatGPT',
+    title: 'Whoza.ai — See Who AI Recommends for Your Trade | UK Tradespeople',
     description: 'Stop losing jobs to AI-recommended competitors. Rex helps plumbers, electricians, builders & 50+ trades get found when customers ask ChatGPT, Google AI & Perplexity for local services. Start your free competitor analysis.',
     image: '/og-image.png'
   },
