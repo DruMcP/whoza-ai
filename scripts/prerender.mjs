@@ -110,6 +110,88 @@ const staticPages = [
   { path: '/terms/', title: 'Terms of Service | Whoza.ai - Fair Terms for Tradespeople', description: 'Review our terms of service. Transparent, fair terms for UK tradespeople using our AI marketing platform.' },
 ];
 
+// ─── FAQPage Schema for Homepage ──────────────────────────────────────────────
+// Injected into the homepage HTML so crawlers see FAQ schema without executing JS.
+// This resolves Google Search Console "0 impressions" for FAQ rich results.
+const homeFAQSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is AI search optimization and why does my trade business need it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI search optimization (also called AEO or GEO) is the process of making your business discoverable by AI assistants like ChatGPT, Google AI, and Perplexity. When customers ask 'Who's the best plumber near me?' you want AI to name your business. It's the fastest-growing search channel — more people now ask AI for recommendations than use traditional Google search for local services."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why isn't my business showing up in ChatGPT recommendations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ChatGPT and other AI engines recommend businesses based on three factors: entity clarity (consistent name, address, phone across the web), consensus (mentions on trusted sites like Checkatrade, Google Reviews), and answerability (structured FAQ content on your website). If any of these are weak, AI won't trust you enough to recommend you. Our competitor analysis shows exactly which pillar needs fixing first."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Rex, the AI visibility assistant, work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rex analyses your business visibility across all major AI platforms, then sends one simple weekly task (takes 10-15 minutes) to improve your Entity Confidence Score. Tasks include optimizing your Google Business Profile, fixing directory inconsistencies, and adding FAQ schema markup. You review and approve every task before completing it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long until I see results from AI search optimization?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most tradespeople see their first AI mentions within 4 weeks. Your competitor position and visibility metrics update monthly, showing measurable progress across all 5 pillars: Clarity, Consensus, Answerability, Safety, and Context. The key is consistency — small weekly tasks compound into significant visibility gains over 90 days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need technical knowledge to improve my AI visibility?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not at all. Rex designs tasks specifically for non-technical business owners. Tasks are practical actions like 'Add this sentence to your Google Business description' or 'Reply to your latest review with this template.' Each task includes step-by-step instructions that anyone can follow."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is AI search optimization different from traditional SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Traditional SEO focuses on ranking high in Google's blue-link results. AI search optimization (AEO/GEO) focuses on becoming the business that ChatGPT and Google AI name directly as the answer. Instead of competing for position #1 on a search page, you're competing to be the single recommended answer when someone asks AI for a local tradesperson."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is whoza.ai different from an SEO agency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unlike traditional SEO agencies that charge £500-2000/month and focus on backlinks and blog posts, whoza.ai costs from £59/month and focuses specifically on the signals AI engines use to recommend businesses: your Google Business Profile, directory consistency, review strategy, and FAQ content with schema markup. You do the tasks yourself with Rex's guidance, staying in complete control."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my data secure with whoza.ai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We're GDPR compliant and registered with the ICO (registration ZC077271). Rex never has your passwords and can't post anything without your approval. We don't collect customer data or payment details (handled securely by Stripe). You can delete your account and all data at any time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I cancel my whoza.ai subscription anytime?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. There are no contracts and no cancellation fees. You can cancel your subscription at any time from your account dashboard. Your data belongs to you — if you cancel, you can export everything before leaving."
+      }
+    }
+  ]
+};
+
 // ─── Static SEO Nav Block ─────────────────────────────────────────────────────
 // This block is injected into the <body> of every prerendered page.
 // It is visually hidden (position:absolute; width:1px; height:1px; overflow:hidden)
@@ -196,6 +278,15 @@ function generateHtml(canonicalPath, title, description) {
     /<meta name="twitter:description" content="[^"]*"\s*\/?>/,
     `<meta name="twitter:description" content="${description.replace(/"/g, '&quot;')}" />`
   );
+
+  // Inject FAQPage schema on homepage (fixes GSC 0 impressions for FAQ)
+  if (canonicalPath === '/') {
+    const faqScript = `\n<script type="application/ld+json">${JSON.stringify(homeFAQSchema)}</script>`;
+    // Insert before closing </head> tag
+    html = html.replace('</head>', `${faqScript}\n</head>`);
+    // Add js-active class for CSS dual-visibility FAQ
+    html = html.replace('<body>', '<body class="js-active">');
+  }
 
   // Inject static nav block into <body> immediately after <div id="root"></div>
   // This ensures crawlers see real outgoing links in the raw HTML (fixes Ahrefs error).

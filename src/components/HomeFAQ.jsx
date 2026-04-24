@@ -2,33 +2,44 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { generateFAQPageSchema } from '../utils/schemaOrg';
 
+// LLM-optimized FAQ content
+// Answers kept to 40-80 words for optimal AI citation length
+// Questions target high-value queries from Search Console data
 const faqs = [
   {
-    question: "What is AI Visibility and why does my trade business need it?",
-    answer: "AI Visibility means how easily AI search engines like ChatGPT, Google AI, and Perplexity can find and recommend your business. When potential customers ask AI for 'a plumber near me' or 'best electrician in Manchester,' you want your business to be the one they name. Without AI Visibility optimisation, you're invisible to the fastest-growing search channel."
+    question: "What is AI search optimization and why does my trade business need it?",
+    answer: "AI search optimization (also called AEO or GEO) is the process of making your business discoverable by AI assistants like ChatGPT, Google AI, and Perplexity. When customers ask 'Who's the best plumber near me?' you want AI to name your business. It's the fastest-growing search channel — more people now ask AI for recommendations than use traditional Google search for local services."
   },
   {
-    question: "How does Rex work?",
-    answer: "Rex is your AI Visibility assistant. After you answer a few questions about your business, Rex analyses your current visibility across all major AI platforms. Each week, Rex sends you one simple, actionable task (takes 10-15 minutes) to improve your Entity Confidence Score. You review and approve every task before completing it."
+    question: "Why isn't my business showing up in ChatGPT recommendations?",
+    answer: "ChatGPT and other AI engines recommend businesses based on three factors: entity clarity (consistent name, address, phone across the web), consensus (mentions on trusted sites like Checkatrade, Google Reviews), and answerability (structured FAQ content on your website). If any of these are weak, AI won't trust you enough to recommend you. Our competitor analysis shows exactly which pillar needs fixing first."
   },
   {
-    question: "How long until I see results?",
-    answer: "Most tradespeople see their first AI mentions within 4 weeks. Your competitor position and visibility metrics update monthly, showing measurable progress across all 5 pillars: Clarity, Consensus, Answerability, Safety, and Context. The key is consistency — small weekly tasks compound into significant visibility gains."
+    question: "How does Rex, the AI visibility assistant, work?",
+    answer: "Rex analyses your business visibility across all major AI platforms, then sends one simple weekly task (takes 10-15 minutes) to improve your Entity Confidence Score. Tasks include optimizing your Google Business Profile, fixing directory inconsistencies, and adding FAQ schema markup. You review and approve every task before completing it."
   },
   {
-    question: "Do I need technical knowledge?",
-    answer: "Not at all. Rex designs tasks specifically for non-technical business owners. Tasks are things like 'Add this sentence to your Google Business description' or 'Reply to your latest review with this template.' Each task comes with step-by-step instructions."
+    question: "How long until I see results from AI search optimization?",
+    answer: "Most tradespeople see their first AI mentions within 4 weeks. Your competitor position and visibility metrics update monthly, showing measurable progress across all 5 pillars: Clarity, Consensus, Answerability, Safety, and Context. The key is consistency — small weekly tasks compound into significant visibility gains over 90 days."
+  },
+  {
+    question: "Do I need technical knowledge to improve my AI visibility?",
+    answer: "Not at all. Rex designs tasks specifically for non-technical business owners. Tasks are practical actions like 'Add this sentence to your Google Business description' or 'Reply to your latest review with this template.' Each task includes step-by-step instructions that anyone can follow."
+  },
+  {
+    question: "How is AI search optimization different from traditional SEO?",
+    answer: "Traditional SEO focuses on ranking high in Google's blue-link results. AI search optimization (AEO/GEO) focuses on becoming the business that ChatGPT and Google AI name directly as the answer. Instead of competing for position #1 on a search page, you're competing to be the single recommended answer when someone asks AI for a local tradesperson."
   },
   {
     question: "How is whoza.ai different from an SEO agency?",
-    answer: "Unlike traditional SEO agencies that charge £500-2000/month and focus on Google rankings, whoza.ai costs from £59/month and focuses specifically on AI search visibility. We don't build backlinks or write blog posts — we optimise the signals that AI engines use to recommend businesses: your Google Business Profile, directory consistency, review strategy, and FAQ content. Plus, you do the tasks yourself, so you stay in complete control."
+    answer: "Unlike traditional SEO agencies that charge £500-2000/month and focus on backlinks and blog posts, whoza.ai costs from £59/month and focuses specifically on the signals AI engines use to recommend businesses: your Google Business Profile, directory consistency, review strategy, and FAQ content with schema markup. You do the tasks yourself with Rex's guidance, staying in complete control."
   },
   {
-    question: "What happens to my data?",
-    answer: "Your data is secure and GDPR compliant. We're registered with the ICO (registration ZC077271). Rex never has your passwords and can't post anything without your approval. We don't collect customer data or payment details (handled by Stripe). You can delete your account and all data at any time."
+    question: "Is my data secure with whoza.ai?",
+    answer: "Yes. We're GDPR compliant and registered with the ICO (registration ZC077271). Rex never has your passwords and can't post anything without your approval. We don't collect customer data or payment details (handled securely by Stripe). You can delete your account and all data at any time."
   },
   {
-    question: "Can I cancel anytime?",
+    question: "Can I cancel my whoza.ai subscription anytime?",
     answer: "Yes. There are no contracts and no cancellation fees. You can cancel your subscription at any time from your account dashboard. Your data belongs to you — if you cancel, you can export everything before leaving."
   }
 ];
@@ -151,6 +162,7 @@ export default function HomeFAQ() {
                   overflow: 'hidden',
                   transition: 'max-height 0.3s ease'
                 }}
+                className="faq-answer-collapsible"
               >
                 <div
                   style={{
@@ -162,6 +174,22 @@ export default function HomeFAQ() {
                 >
                   {faq.answer}
                 </div>
+              </div>
+              {/* Always-visible answer for search engine indexing */}
+              <div
+                className="faq-answer-visible"
+                style={{
+                  padding: '0 var(--spacing-lg) var(--spacing-lg)',
+                  fontSize: '16px',
+                  lineHeight: '1.7',
+                  color: 'var(--color-text-secondary)'
+                }}
+                itemScope
+                itemProp="acceptedAnswer"
+                itemType="https://schema.org/Answer"
+              >
+                <meta itemProp="@type" content="Answer" />
+                <span itemProp="text">{faq.answer}</span>
               </div>
             </div>
           ))}

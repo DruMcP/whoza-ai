@@ -11873,3 +11873,19 @@ section {
     /* Original inline styles apply */
   }
 }
+
+/* ─── Dual-visibility FAQ for SEO + LLM indexing ─────────────────────────── */
+/* Crawlers without JS see the visible answer; users with JS see the accordion */
+.faq-answer-visible {
+  display: block;
+}
+.faq-answer-collapsible {
+  display: none;
+}
+/* When JS is active, swap visibility (handled by inline styles + accordion) */
+.js-active .faq-answer-visible {
+  display: none;
+}
+.js-active .faq-answer-collapsible {
+  display: block;
+}
