@@ -139,7 +139,7 @@ export default function Home() {
           <div className="container" style={{ textAlign: 'center' }}>
             <div>
               <h2 style={{ fontSize: '36px', marginBottom: 'var(--spacing-md)' }}>
-                What's Your AI Visibility Score?
+                Check Your AI Competitor Position
               </h2>
               <p style={{
                 fontSize: '20px',
@@ -148,7 +148,7 @@ export default function Home() {
                 color: 'var(--color-text-secondary)',
                 lineHeight: '1.6'
               }}>
-                Find out in 60 seconds. Get a free AI Visibility Score showing how likely your business is to be named and recommended in AI answers (ChatGPT, Google AI, Perplexity).
+                Find out in 60 seconds. See who AI recommends for your trade instead of your business — and get 3 quick fixes to start appearing in ChatGPT, Google AI, and Perplexity.
               </p>
             </div>
             <div style={{
@@ -162,7 +162,7 @@ export default function Home() {
                 fontSize: '18px',
                 padding: 'var(--spacing-md) var(--spacing-2xl)'
               }}>
-                Get your free AI Visibility Score
+                Check Your Competitor for Free
               </Link>
               <GuaranteeBadge />
               <ProofCard />
@@ -302,7 +302,7 @@ export default function Home() {
                   color: 'var(--color-text-secondary)',
                   lineHeight: '1.6'
                 }}>
-                  Get your free AI Visibility Score. See where you stand right now.
+                  Check who AI recommends for your trade. See where you stand right now.
                 </p>
               </div>
 
@@ -375,14 +375,14 @@ export default function Home() {
                   color: 'var(--color-primary-600)',
                   marginBottom: 'var(--spacing-sm)'
                 }}>
-                  Monthly confidence score
+                  Monthly progress report
                 </p>
                 <p style={{
                   fontSize: '16px',
                   color: 'var(--color-text-secondary)',
                   lineHeight: '1.6'
                 }}>
-                  Watch your AI visibility grow. See your score improve month by month.
+                  Watch your AI visibility grow. See your position improve month by month.
                 </p>
               </div>
             </div>
