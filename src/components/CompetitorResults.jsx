@@ -276,16 +276,25 @@ export default function CompetitorResults({ results, onEmailCapture }) {
                 </button>
               </div>
               <p className="text-sm text-green-200 mt-3">
-                Free analysis • No credit card • Unsubscribe anytime
+                Free analysis • No credit card • 14-day trial
               </p>
             </form>
           ) : (
-            <div className="bg-white rounded-xl p-8 max-w-md mx-auto">
+            <div className="bg-white rounded-xl p-8 max-w-lg mx-auto text-center">
               <CheckCircle className="w-12 h-12 text-green-600 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Check your inbox!</h3>
-              <p className="text-slate-600">
-                We've sent your personalised competitor analysis to {email}. 
-                If you don't see it in 2 minutes, check your spam folder.
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Your plan is ready!</h3>
+              <p className="text-slate-600 mb-6">
+                We've saved your competitor analysis. Now create your account to get week-by-week tasks from Rex.
+              </p>
+              <button
+                onClick={() => onEmailCapture(email)}
+                className="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-xl transition-colors"
+              >
+                Continue to your plan
+                <ArrowRight className="w-5 h-5" />
+              </button>
+              <p className="text-sm text-slate-500 mt-4">
+                Start your free 14-day trial — no credit card required
               </p>
             </div>
           )}
