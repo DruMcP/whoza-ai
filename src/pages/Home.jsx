@@ -115,8 +115,8 @@ export default function Home() {
           boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
           border: '1px solid rgba(6, 182, 212, 0.2)'
         }}>
-          <span style={{ fontSize: '16px' }} role="img" aria-label="rocket">🚀</span>
-          <span>BETA - We're in Early Access!</span>
+          <span style={{ fontSize: '16px' }} role="img" aria-label="sparkles">✨</span>
+          <span>Now helping tradespeople across the UK</span>
         </div>
       </aside>
 

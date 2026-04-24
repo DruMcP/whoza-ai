@@ -28,7 +28,7 @@ export default function HowItWorks() {
       },
       { 
         name: 'Rex studies your situation', 
-        text: 'Rex (your AI assistant) checks your current visibility across AI platforms (ChatGPT, Google AI, Perplexity) and analyzes your competitors to create your baseline AI Visibility Score.' 
+        text: 'Rex (your AI assistant) checks your current visibility across AI platforms (ChatGPT, Google AI, Perplexity) and analyzes your competitors to show you exactly where you stand.' 
       },
       { 
         name: 'Get one task each week', 
@@ -36,7 +36,7 @@ export default function HowItWorks() {
       },
       { 
         name: 'See your monthly score', 
-        text: 'Every month, Rex measures your visibility improvements. Get a detailed AI Visibility Score report that shows exactly how your AI presence is growing.' 
+        text: 'Every month, Rex measures your visibility improvements. Get a detailed report that shows exactly how your AI presence is growing.' 
       }
     ]
   });
@@ -93,7 +93,7 @@ export default function HowItWorks() {
               </div>
               <h3>Rex studies your situation</h3>
               <p className="step-time">Automated</p>
-              <p>Rex checks your current visibility across AI platforms and analyzes your competitors. This creates your baseline AI Visibility Score.</p>
+              <p>Rex checks your current visibility across AI platforms and analyzes your competitors. This shows you exactly where you stand.</p>
             </div>
 
             <div className="process-arrow">
@@ -133,7 +133,7 @@ export default function HowItWorks() {
               </div>
               <h3>See your monthly score</h3>
               <p className="step-time">2 minutes to review</p>
-              <p>Every month, Rex measures your visibility. Get a simple AI Visibility Score that shows if you're improving.</p>
+              <p>Every month, Rex measures your visibility. See your progress that shows if you're improving.</p>
             </div>
           </div>
 
@@ -153,7 +153,7 @@ export default function HowItWorks() {
 
           <p style={{ fontSize: '18px', marginBottom: 'var(--spacing-2xl)' }}>
             After signing up, you'll have access to a simple dashboard where you can track your progress,
-            view your weekly tasks, and watch your AI Visibility Score improve over time.
+            view your weekly tasks, and watch your visibility improve over time.
           </p>
 
           <div className="dashboard-preview-section">
@@ -192,7 +192,7 @@ export default function HowItWorks() {
                 <div className="dashboard-grid">
                   <div className="dashboard-card score-card">
                     <div className="card-header">
-                      <h3>AI Visibility Score</h3>
+                      <h3>Your Visibility Report</h3>
                       <span className="score-badge positive">+12 this month</span>
                     </div>
                     <div className="score-display">
@@ -374,10 +374,10 @@ export default function HowItWorks() {
             charge.
           </p>
 
-          <h2>Understanding Your AI Visibility Score</h2>
+          <h2>Understanding Your Reports</h2>
 
           <p>
-            Each month, you'll receive a detailed report showing your AI Visibility Score.
+            Each month, you'll receive a detailed report showing your progress.
             This score measures how easily potential customers can find your business when
             using AI-powered search tools like ChatGPT, Perplexity AI, and Google's AI features.
           </p>
@@ -391,7 +391,7 @@ export default function HowItWorks() {
                     <span></span>
                     <span></span>
                   </div>
-                  <div className="mockup-title">AI Visibility Score Report</div>
+                  <div className="mockup-title">Your Visibility Report</div>
                 </div>
                 <div className="mockup-content">
                   <div className="mockup-score-badge">
@@ -426,7 +426,7 @@ export default function HowItWorks() {
                   <svg viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Your overall AI Visibility Score (0-100)</span>
+                  <span>Your overall visibility score (0-100)</span>
                 </li>
                 <li>
                   <svg viewBox="0 0 20 20" fill="currentColor">
@@ -487,7 +487,7 @@ export default function HowItWorks() {
                 </ul>
               </div>
 
-              <button onClick={() => setShowReport(true)} className="button button-large" aria-label="View sample AI Visibility Score report">
+              <button onClick={() => setShowReport(true)} className="button button-large" aria-label="View sample visibility report">
                 <svg viewBox="0 0 20 20" fill="currentColor" style={{ width: '20px', height: '20px', marginRight: '8px' }} aria-hidden="true" focusable="false">
                   <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
                   <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
