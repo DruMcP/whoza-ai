@@ -94,7 +94,7 @@ function generateFreeScoreEmailTemplate({
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your AI Visibility Score</title>
+  <title>Your AI Visibility Report</title>
 </head>
 <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #1a1a2e; color: #e2e8f0;">
   <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #1a1a2e;">
@@ -121,7 +121,7 @@ function generateFreeScoreEmailTemplate({
                 Hi <strong>${businessName}</strong>,
               </p>
               <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.6; color: #e2e8f0;">
-                Thanks for checking your AI Visibility Score! Here are your results:
+                Thanks for checking your competitor position! Here are your results:
               </p>
             </td>
           </tr>
@@ -133,7 +133,7 @@ function generateFreeScoreEmailTemplate({
                 <tr>
                   <td style="text-align: center;">
                     <div style="font-size: 14px; font-weight: 600; color: #4ade80; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">
-                      Your AI Visibility Score
+                      Your AI Visibility Report
                     </div>
                     <div style="font-size: 48px; font-weight: 700; color: #4ade80; line-height: 1; margin-bottom: 8px;">
                       ${score}/100
@@ -277,7 +277,7 @@ export async function sendFreeScoreResultsEmail({
     const result = await sendEmail({
       from: 'Whoza AI <onboarding@resend.dev>',
       to: email,
-      subject: `Your AI Visibility Score: ${score}/100 - ${businessName}`,
+      subject: `Your AI Visibility Report: ${score}/100 - ${businessName}`,
       html
     });
 
