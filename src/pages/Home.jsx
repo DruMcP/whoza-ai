@@ -1,44 +1,33 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState, useRef } from 'react';
+// NOTE: useState and useRef are used by the CounterAnimation component
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 import HeroSection from '../components/HeroSection';
-import TestimonialsCarousel from '../components/TestimonialsCarousel';
 import GoogleReviewsCarousel from '../components/GoogleReviewsCarousel';
 import AIAnswerShiftCompact from '../components/AIAnswerShiftCompact';
 import LiveResultsShowcase from '../components/LiveResultsShowcase';
 import ExplainerVideo from '../components/ExplainerVideo';
-import MiniROICalculator from '../components/MiniROICalculator';
-// Note: AITeam (AI Workforce) is hidden — features are on the roadmap with no confirmed date
-// import AITeam from '../components/AITeam';
 import NewsletterSignup from '../components/NewsletterSignup';
 import LeadGenComparison from '../components/LeadGenComparison';
+import RecentActivityTicker from '../components/RecentActivityTicker';
 import Icon from '../components/icons/Icon';
-import { initScrollAnimations, addRippleEffect } from '../utils/animations';
-import HeroIllustration from '../components/illustrations/HeroIllustration';
-import Step1BusinessProfile from '../components/illustrations/Step1BusinessProfile';
-import Step2TaskGeneration from '../components/illustrations/Step2TaskGeneration';
-import Step3TaskApproval from '../components/illustrations/Step3TaskApproval';
-import Step4ProgressTracking from '../components/illustrations/Step4ProgressTracking';
-import TaskExamplesByTrade from '../components/TaskExamplesByTrade';
-import ResultsTimeline from '../components/ResultsTimeline';
-import InteractiveTaskPreview from '../components/InteractiveTaskPreview';
-import ECEBrandBadge from '../components/ECEBrandBadge';
-import First30Days from '../components/First30Days';
+import { initScrollAnimations } from '../utils/animations';
 import StickyCTABar from '../components/StickyCTABar';
 import GuaranteeBadge from '../components/GuaranteeBadge';
 import ProofCard from '../components/ProofCard';
-import FounderNote from '../components/FounderNote';
-import WeeklyLoopVisual from '../components/WeeklyLoopVisual';
 import WhoItsFor from '../components/WhoItsFor';
-import WhatWeDontDo from '../components/WhatWeDontDo';
-import AIAnswerShift from '../components/AIAnswerShift';
-import RexIllustration from '../components/illustrations/RexIllustration';
 import ECEExplainer from '../components/ECEExplainer/ECEExplainer';
 import HomeFAQ, { homeFAQSchema } from '../components/HomeFAQ';
 
 import { generateHomePageSchemas } from '../utils/schemaOrg';
+
+// SIMPLIFIED HOMEPAGE — Sections removed to reduce scroll length:
+// TestimonialsCarousel (replaced by GoogleReviewsCarousel)
+// MiniROICalculator, TaskExamplesByTrade, ResultsTimeline, InteractiveTaskPreview
+// First30Days, WeeklyLoopVisual, FounderNote, WhatWeDontDo, AIAnswerShift
+// These detailed sections are available on /how-it-works page
 
 const AnimatedCounter = ({ target, suffix = '' }) => {
   const [count, setCount] = useState(0);
@@ -141,8 +130,6 @@ export default function Home() {
 
         <ECEExplainer />
 
-        <AIAnswerShift />
-
         <section className="section" style={{
           background: 'linear-gradient(135deg, rgba(0, 149, 255, 0.06) 0%, rgba(0, 112, 204, 0.03) 100%)',
           padding: 'var(--spacing-4xl) 0',
@@ -211,10 +198,6 @@ export default function Home() {
               <h2>What Our Customers Are Saying</h2>
               <p>Real tradespeople who are getting found by local customers through AI search</p>
             </div>
-            <div>
-              <TestimonialsCarousel />
-            </div>
-            {/* Real Google Reviews — verified customer reviews from Google */}
             <GoogleReviewsCarousel />
             <div className="case-studies-cta">
               <h3>Want to See More Success Stories?</h3>
@@ -241,12 +224,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section" style={{ backgroundColor: '#f8fafc' }}>
-          <div className="container">
-            <MiniROICalculator />
-          </div>
-        </section>
-
         {/* Comparison: whoza.ai vs Checkatrade/Bark/MyBuilder */}
         <LeadGenComparison />
 
@@ -265,8 +242,6 @@ export default function Home() {
         </section>
 
         <ExplainerVideo />
-
-        <TaskExamplesByTrade />
 
         <section className="section">
           <div className="container">
@@ -420,61 +395,7 @@ export default function Home() {
           </div>
         </section>
 
-        <InteractiveTaskPreview />
-
-        <ResultsTimeline />
-
         <LiveResultsShowcase />
-
-        <First30Days />
-
-        <section className="section" style={{ backgroundColor: '#0f172a', padding: 'var(--spacing-4xl) var(--spacing-lg)' }}>
-          <div className="container">
-            <WeeklyLoopVisual />
-          </div>
-        </section>
-
-        <section className="section" style={{ background: '#f3f2f1' }}>
-          <div className="container">
-            <h2>You're always in control</h2>
-
-            <div className="grid">
-              <div className="card card-hover">
-                <h3>Manual approval required</h3>
-                <p>
-                  Rex never posts, publishes, or changes anything without your
-                  explicit approval first.
-                </p>
-              </div>
-
-              <div className="card card-hover">
-                <h3>No account access</h3>
-                <p>
-                  Rex doesn't log into your Google Business, website, or social
-                  media. You do the tasks yourself.
-                </p>
-              </div>
-
-              <div className="card card-hover">
-                <h3>GDPR and ICO safe</h3>
-                <p>
-                  We follow UK data protection rules. Your business data stays
-                  private.
-                </p>
-              </div>
-            </div>
-
-            <Link to="/trust">Learn more about trust and privacy</Link>
-          </div>
-        </section>
-
-        <section className="section" style={{ backgroundColor: '#0f172a' }}>
-          <div className="container">
-            <FounderNote />
-          </div>
-        </section>
-
-        <WhatWeDontDo />
 
         {/* Email newsletter capture — low-friction lead gen */}
         <NewsletterSignup />
@@ -503,6 +424,7 @@ export default function Home() {
 
       <Footer />
       <StickyCTABar />
+      <RecentActivityTicker />
     </>
   );
 }
