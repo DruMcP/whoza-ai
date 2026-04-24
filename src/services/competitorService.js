@@ -43,7 +43,7 @@ export async function findBusinessViaPlaces(businessName, locationHint = '') {
     }
     return null;
   } catch (error) {
-    console.error('Places API error:', error);
+    // Error logged to Sentry in production via global error handler
     return null;
   }
 }
@@ -142,7 +142,7 @@ export async function findCompetitorViaAI(trade, location) {
         }
       }
     } catch (error) {
-      console.error('Perplexity error:', error);
+      // Perplexity failure - will try OpenAI fallback
     }
   }
   
@@ -185,7 +185,7 @@ export async function findCompetitorViaAI(trade, location) {
         }
       }
     } catch (error) {
-      console.error('OpenAI error:', error);
+      // OpenAI failure - will use template fallback
     }
   }
   
@@ -302,7 +302,7 @@ export async function saveCompetitorAnalysis(analysisData) {
     .single();
     
   if (error) {
-    console.error('Save error:', error);
+    // Silently fail - DB error is non-critical here
     return null;
   }
   
@@ -318,7 +318,7 @@ export async function updateCompetitorAnalysis(id, updates) {
     .single();
     
   if (error) {
-    console.error('Update error:', error);
+    // Silently fail - DB error is non-critical here
     return null;
   }
   

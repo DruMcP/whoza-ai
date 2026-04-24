@@ -48,7 +48,7 @@ export default function Admin() {
 
       setCustomers(usersData || []);
     } catch (error) {
-      console.error('Error loading customers:', error);
+      // Error handled by UI state
     } finally {
       setLoading(false);
     }

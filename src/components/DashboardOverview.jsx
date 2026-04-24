@@ -22,7 +22,7 @@ export default function DashboardOverview({ userId }) {
       setCurrentScore(score);
       setLatestTask(task);
     } catch (error) {
-      console.error('Error loading dashboard data:', error);
+      // Error displayed in UI via setError
       setError('Failed to load dashboard data. Please try refreshing the page.');
     } finally {
       setLoading(false);

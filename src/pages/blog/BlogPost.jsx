@@ -65,7 +65,7 @@ function BlogPost() {
       
       window.scrollTo(0, 0);
     } catch (err) {
-      console.error('Error loading blog post:', err);
+      // Error displayed in UI via setError
       setError(err.message);
     }
   }, [slug, navigate]);
