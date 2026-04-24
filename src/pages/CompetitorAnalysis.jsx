@@ -117,7 +117,7 @@ export default function CompetitorAnalysis() {
       });
       
     } catch (err) {
-      console.error('Analysis error:', err);
+      // Error displayed in UI via setError
       setError('Something went wrong. Please try again or check your business name.');
     } finally {
       setIsLoading(false);

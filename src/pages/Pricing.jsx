@@ -158,14 +158,14 @@ export default function Pricing() {
           .rpc('check_trial_eligibility', { p_user_id: userData.id });
         
         if (error) {
-          console.error('Failed to check trial eligibility:', error);
+          // Non-critical: default to showing trial
           // On error, default to showing trial option
           setTrialEligible(true);
         } else {
           setTrialEligible(data === true);
         }
       } catch (error) {
-        console.error('Error checking trial eligibility:', error);
+        // Non-critical: default to showing trial
         setTrialEligible(true);
       } finally {
         setCheckingEligibility(false);

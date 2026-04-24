@@ -41,7 +41,7 @@ export default function Portal() {
         .maybeSingle();
 
       if (profileError) {
-        console.error('[Portal] Error fetching business profile:', profileError);
+        // Non-critical profile load error
       }
 
       setBusinessProfile(profile);
@@ -57,7 +57,7 @@ export default function Portal() {
           .maybeSingle();
 
         if (taskError) {
-          console.error('[Portal] Error fetching tasks:', taskError);
+          // Non-critical task load error
         }
 
         const { data: scoreData, error: scoreError } = await supabase
@@ -69,14 +69,14 @@ export default function Portal() {
           .maybeSingle();
 
         if (scoreError) {
-          console.error('[Portal] Error fetching scores:', scoreError);
+          // Non-critical score load error
         }
 
         setNextTask(taskData);
         setLatestScore(scoreData);
       }
     } catch (error) {
-      console.error('[Portal] Error loading portal data:', error);
+      // Handled by global error boundary
     } finally {
       setLoading(false);
     }
@@ -86,7 +86,7 @@ export default function Portal() {
     if (!authLoading) {
       if (userData) {
         loadPortalData();
-        analyticsService.trackPortalVisit(userData.id).catch(console.error);
+        analyticsService.trackPortalVisit(userData.id).catch(() => {});
       } else if (user) {
         setLoading(false);
       } else {
