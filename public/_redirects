@@ -31,10 +31,14 @@ http://whoza.ai/*               https://whoza.ai/:splat          301!
 /ai-visibility-bradford         /uk/ai-visibility/bradford/      301
 /ai-visibility-belfast          /uk/ai-visibility/belfast/       301
 
+# Redirect old /free-score to /competitor-analysis (301 = permanent, passes link equity)
+/free-score      /competitor-analysis/     301!
+/free-score/     /competitor-analysis/     301!
+
 # Static files that should be served directly (not through SPA)
 /llms.txt    /llms.txt   200
 /robots.txt  /robots.txt 200
 /sitemap.xml /sitemap.xml 200
 
-# SPA catch-all comes AFTER domain redirects and static files
+# SPA catch-all comes AFTER all explicit redirects and static files
 /*    /index.html   200

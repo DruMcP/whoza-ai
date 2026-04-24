@@ -98,16 +98,21 @@ const usCities = [
 
 // ─── Static Pages ─────────────────────────────────────────────────────────────
 const staticPages = [
-  { path: '/how-it-works/', title: 'How It Works | Whoza.ai - AI Employee for Tradespeople', description: 'Learn how Rex, your AI employee, helps tradespeople improve visibility on Google, ChatGPT, and AI search tools with weekly actionable tasks.' },
-  { path: '/pricing/', title: 'Pricing | Whoza.ai - Affordable AI Marketing for Tradespeople', description: 'Simple, transparent pricing for tradespeople. Get more local jobs with Rex for £99/month. No contracts, cancel anytime. GDPR compliant.' },
-  { path: '/case-studies/', title: 'Case Studies | Whoza.ai - Real Results for UK Tradespeople', description: 'See how plumbers, electricians, roofers and other tradespeople are getting more local jobs through improved AI visibility with Rex.' },
-  { path: '/competitor-analysis/', title: 'Competitor Analysis - See Who AI Recommends | Whoza.ai', description: 'Find out who AI search recommends for your trade in your area. See your competitor and get 3 quick fixes to start appearing in AI results. Free analysis in 60 seconds.' },
-  { path: '/free-score/', title: 'Competitor Analysis - See Who AI Recommends | Whoza.ai', description: 'Find out who AI search recommends for your trade in your area. See your competitor and get 3 quick fixes to start appearing in AI results. Free analysis in 60 seconds.' },
+  { path: '/how-it-works/', title: 'How AI Search Optimization Works for Tradespeople | Whoza.ai', description: 'Learn how Rex helps tradespeople appear in ChatGPT and AI search recommendations. Weekly 10-minute tasks that improve your AI visibility across all major platforms. No technical knowledge required.' },
+  { path: '/pricing/', title: 'AI Search Optimization Pricing for Tradespeople | Whoza.ai', description: 'Simple pricing from £59/month. Get more local jobs through AI search visibility. 14-day free trial, no credit card required. No contracts, cancel anytime.' },
+  { path: '/case-studies/', title: 'AI Search Optimization Results for Tradespeople | Whoza.ai', description: 'See how plumbers, electricians, roofers and other tradespeople are getting more local jobs by appearing in ChatGPT and AI search recommendations.' },
+  { path: '/competitor-analysis/', title: 'Why Is My Business Not in ChatGPT? Free Competitor Analysis | Whoza.ai', description: 'Find out why AI search does not recommend your trade business. See who AI recommends for your trade in your area and get 3 quick fixes to start appearing in ChatGPT and Google AI results.' },
+  // NOTE: /free-score/ is a 301 redirect to /competitor-analysis/ — do NOT prerender
+  // as a separate page. It exists in _redirects for legacy URL support only.
+  { path: '/start/', title: 'Start Your AI Search Optimization | Whoza.ai Free Trial', description: 'Create your free account and let Rex help your trade business appear in ChatGPT, Google AI and Perplexity recommendations. 14-day free trial, no credit card required.' },
+  { path: '/login/', title: 'Sign In | Whoza.ai', description: 'Sign in to your Whoza.ai account to view your AI visibility tasks, reports, and competitor analysis.' },
+  { path: '/sign-in/', title: 'Sign In | Whoza.ai', description: 'Sign in to your Whoza.ai account to view your AI visibility tasks, reports, and competitor analysis.' },
   { path: '/contact/', title: 'Contact Us | Whoza.ai - Get in Touch', description: 'Have questions about AI-powered visibility for tradespeople? Contact Whoza.ai for support, inquiries, or to learn more about our service.' },
-  { path: '/blog/', title: 'Blog | Whoza.ai - AI Visibility Guides for Tradespeople', description: 'Expert guides on AI visibility, AEO, and digital marketing for UK plumbers, electricians, builders, and tradespeople.' },
-  { path: '/trust/', title: 'Trust & Security | Whoza.ai - GDPR Compliant AI for Trades', description: 'Learn why UK tradespeople trust Whoza.ai. GDPR compliant, secure data handling, and human-approved tasks for peace of mind.' },
-  { path: '/privacy/', title: 'Privacy Policy | Whoza.ai - Your Data is Protected', description: 'Read our privacy policy to learn how we protect your data. GDPR compliant AI marketing platform for UK tradespeople.' },
-  { path: '/terms/', title: 'Terms of Service | Whoza.ai - Fair Terms for Tradespeople', description: 'Review our terms of service. Transparent, fair terms for UK tradespeople using our AI marketing platform.' },
+  { path: '/blog/', title: 'AI Visibility Guides for Tradespeople | Whoza.ai Blog', description: 'Expert guides on AI visibility and digital marketing for plumbers, electricians, builders, and tradespeople.' },
+  { path: '/trust/', title: 'Trust & Security | Whoza.ai - GDPR Compliant AI for Trades', description: 'Learn why tradespeople trust Whoza.ai. GDPR compliant, ICO registered (ZC077271), secure data handling, and human-approved tasks for peace of mind.' },
+  { path: '/privacy/', title: 'Privacy Policy | Whoza.ai - Your Data is Protected', description: 'Read our privacy policy. GDPR compliant AI search optimization platform. ICO registered.' },
+  { path: '/terms/', title: 'Terms of Service | Whoza.ai - Fair Terms for Tradespeople', description: 'Review our terms of service. Transparent, fair terms for tradespeople using our AI search optimization platform.' },
+  { path: '/cookie-policy/', title: 'Cookie Policy | Whoza.ai', description: 'Read our cookie policy to learn how we use cookies to improve your experience on Whoza.ai.' },
 ];
 
 // ─── FAQPage Schema for Homepage ──────────────────────────────────────────────
