@@ -285,7 +285,13 @@ export default function Pricing() {
       <main id="main-content" role="main">
         <div className="container">
           <div className="pricing-header">
-            <h1>Simple, Transparent Pricing</h1>
+            <h1 style={{
+            fontSize: '36px',
+            fontWeight: 'bold',
+            color: '#0f172a',
+            marginBottom: '16px',
+            textAlign: 'center',
+          }}>Simple, Transparent Pricing</h1>
             <p className="pricing-subtitle" style={{ color: '#4B5563' }}>
               Choose the plan that fits your business. All plans come with a 30-day money-back guarantee.
             </p>
@@ -299,7 +305,7 @@ export default function Pricing() {
             textAlign: 'center',
             borderRadius: 'var(--radius-2xl)'
           }}>
-            <h2 style={{ fontSize: '28px', marginTop: 0, marginBottom: 'var(--spacing-md)' }}>
+            <h2 style={{ fontSize: '22px', marginTop: 0, marginBottom: 'var(--spacing-md)' }}>
               Not Sure Which Plan You Need?
             </h2>
             <p style={{
@@ -383,7 +389,7 @@ export default function Pricing() {
                     transition: 'all 0.2s ease'
                   }} role="region" aria-label={`Pricing information: ${formatPrice(plan.price)} per ${plan.duration || 'month'}`}>
                     <span className="price" style={{
-                      fontSize: 'clamp(42px, 5vw, 56px)',
+                      fontSize: 'clamp(36px, 4vw, 48px)',
                       fontWeight: '900',
                       lineHeight: '1',
                       color: plan.featured ? '#84CC16' : '#1F2937',

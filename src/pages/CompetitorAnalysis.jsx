@@ -185,7 +185,7 @@ export default function CompetitorAnalysis() {
               </span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+            <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 leading-tight">
               See who's{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600">
                 stealing your customers
@@ -316,7 +316,7 @@ export default function CompetitorAnalysis() {
       {/* How It Works */}
       <section className="py-16 bg-white">
         <div className="container max-w-4xl">
-          <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-slate-900 mb-8">
             How the competitor analysis works
           </h2>
           
