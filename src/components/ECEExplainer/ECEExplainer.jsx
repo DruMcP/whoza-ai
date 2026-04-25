@@ -137,7 +137,8 @@ export default function ECEExplainer() {
             fontSize: '20px',
             fontWeight: '500',
             color: '#c4f135',
-            marginBottom: '16px'
+            marginBottom: '16px',
+            textAlign: 'center'
           }}>
             The system that makes AI trust and recommend your business
           </p>
@@ -147,7 +148,8 @@ export default function ECEExplainer() {
             color: '#94a3b8',
             maxWidth: '800px',
             margin: '0 auto',
-            lineHeight: '1.6'
+            lineHeight: '1.6',
+            textAlign: 'center'
           }}>
             5 simple steps to get ChatGPT, Google AI, and other AI tools to recommend you by name
           </p>
