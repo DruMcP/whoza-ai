@@ -288,26 +288,10 @@ export default function CompetitorAnalysis() {
                 Free analysis • No signup required • Results in 60 seconds • No credit card required
               </p>
 
-              {/* Trust badges — tiny, subtle icons */}
-              <div className="flex flex-wrap items-center justify-center gap-3 text-xs text-slate-400 pt-2">
-                <div className="flex items-center gap-1">
-                  <Shield className="w-2.5 h-2.5 opacity-60" />
-                  <span>GDPR Compliant</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <svg className="w-2.5 h-2.5 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                    <rect x="3" y="11" width="18" height="11" rx="2" />
-                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                  </svg>
-                  <span>Secure via Stripe</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <svg className="w-2.5 h-2.5 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                  </svg>
-                  <span>ICO Registered</span>
-                </div>
-              </div>
+              {/* Trust indicators — text only, no oversized icons */}
+              <p className="text-center text-xs text-slate-400 pt-2">
+                GDPR Compliant · Secure via Stripe · ICO Registered
+              </p>
             </form>
           </div>
         </div>
