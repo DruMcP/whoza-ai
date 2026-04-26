@@ -367,7 +367,7 @@ function generateHtml(canonicalPath, title, description) {
 
   // Add hreflang tags for UK/US pages
   if (isUK || isUS) {
-    const citySlug = canonicalPath.split('/').pop().replace(/\/$/, '');
+    const citySlug = canonicalPath.split('/').filter(Boolean).pop();
     const ukUrl = `${baseUrl}/uk/ai-visibility/${citySlug}/`;
     const usUrl = `${baseUrl}/us/ai-visibility/${citySlug}/`;
     const hreflangBlock = `\n    <link rel="alternate" hreflang="en-gb" href="${ukUrl}" />\n    <link rel="alternate" hreflang="en-us" href="${usUrl}" />\n    <link rel="alternate" hreflang="x-default" href="${ukUrl}" />`;
