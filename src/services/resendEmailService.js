@@ -75,9 +75,9 @@ function getScoreBandSummary(score) {
 }
 
 /**
- * Generate branded HTML email template for free score results
+ * Generate branded HTML email template for competitor analysis results
  */
-function generateFreeScoreEmailTemplate({
+function generateCompetitorAnalysisEmailTemplate({
   businessName,
   score,
   tradeType,
@@ -252,9 +252,9 @@ function generateFreeScoreEmailTemplate({
 }
 
 /**
- * Send free score results email
+ * Send competitor analysis results email
  */
-export async function sendFreeScoreResultsEmail({
+export async function sendCompetitorAnalysisResultsEmail({
   email,
   businessName,
   score,
@@ -265,7 +265,7 @@ export async function sendFreeScoreResultsEmail({
 }) {
   try {
     
-    const html = generateFreeScoreEmailTemplate({
+    const html = generateCompetitorAnalysisEmailTemplate({
       businessName,
       score,
       tradeType,
@@ -277,7 +277,7 @@ export async function sendFreeScoreResultsEmail({
     const result = await sendEmail({
       from: 'Whoza.ai <hello@whoza.ai>',
       to: email,
-      subject: `Your Whoza.ai Report — See How ${businessName} Compares to ${competitorName || 'the Competition'}>`
+      subject: `Your Whoza.ai Report — See How ${businessName} Compares to the Competition`,
       html
     });
 

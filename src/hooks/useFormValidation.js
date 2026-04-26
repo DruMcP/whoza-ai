@@ -1,5 +1,5 @@
 /**
- * Form validation hook for Free Score form
+ * Form validation hook for Competitor Analysis form
  * Handles client-side validation logic
  */
 
@@ -37,7 +37,7 @@ function checkClientSideCooldown(email) {
     return { allowed: true, whitelisted: true };
   }
 
-  const lastSubmission = localStorage.getItem('lastFreeScoreSubmission');
+  const lastSubmission = localStorage.getItem('lastCompetitorAnalysisSubmission');
   if (lastSubmission) {
     const timeSince = Date.now() - parseInt(lastSubmission);
     const cooldownMs = 60 * 1000;
