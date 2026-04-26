@@ -8933,6 +8933,54 @@ button,
   margin-bottom: var(--spacing-md);
 }
 
+.feature-icon-box {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-primary-100) 0%, var(--color-accent-100) 100%);
+  border-radius: var(--radius-lg);
+  color: var(--color-primary-600);
+  margin-bottom: var(--spacing-md);
+}
+
+.feature-icon-box svg {
+  width: 32px;
+  height: 32px;
+}
+
+.feature-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: var(--spacing-sm) 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.feature-bullets svg {
+  width: 20px;
+  height: 20px;
+  color: var(--color-success-600);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.feature-highlight-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+}
+
 .report-features {
   list-style: none;
   padding: 0;
