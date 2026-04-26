@@ -1891,7 +1891,7 @@ export const blogPosts = [
     "slug": "how-reviews-influence-ai-search-recommendations-tradespeople-2026",
     "title": "How Online Reviews and Ratings Influence AI Search Recommendations for Local Tradespeople",
     "metaDescription": "Discover why AI search engines like ChatGPT and Perplexity rely heavily on customer reviews to recommend local tradespeople. Learn the seven proven strategies to turn your review profile into a powerful AI trust signal and dominate local recommendations in 2026.",
-    "publishDate": "2026-04-27",
+    "publishDate": "2026-04-26",
     "author": "Whoza.ai Team",
     "category": "AI Visibility",
     "tags": [
