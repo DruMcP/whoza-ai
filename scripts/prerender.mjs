@@ -283,6 +283,11 @@ function generateHtml(canonicalPath, title, description) {
   const canonicalUrl = `${baseUrl}${canonicalPath}`;
   let html = baseHtml;
 
+  // Determine page type for geo/hreflang
+  const isUK = canonicalPath.startsWith('/uk/');
+  const isUS = canonicalPath.startsWith('/us/');
+  const isTrade = canonicalPath.startsWith('/trades/');
+  
   // Replace canonical tag
   html = html.replace(
     /<link rel="canonical" href="[^"]*"\s*\/?>/,
@@ -331,6 +336,61 @@ function generateHtml(canonicalPath, title, description) {
     `<meta name="twitter:description" content="${description.replace(/"/g, '&quot;')}" />`
   );
 
+  // Update geo tags for UK/US pages
+  if (isUK) {
+    html = html.replace(
+      /<meta name="geo\.region" content="[^"]*"\s*\/?>/,
+      `<meta name="geo.region" content="GB" />`
+    );
+    html = html.replace(
+      /<meta name="geo\.placename" content="[^"]*"\s*\/?>/,
+      `<meta name="geo.placename" content="United Kingdom" />`
+    );
+    html = html.replace(
+      /<meta property="og:locale" content="[^"]*"\s*\/?>/,
+      `<meta property="og:locale" content="en_GB" />`
+    );
+  } else if (isUS) {
+    html = html.replace(
+      /<meta name="geo\.region" content="[^"]*"\s*\/?>/,
+      `<meta name="geo.region" content="US" />`
+    );
+    html = html.replace(
+      /<meta name="geo\.placename" content="[^"]*"\s*\/?>/,
+      `<meta name="geo.placename" content="United States" />`
+    );
+    html = html.replace(
+      /<meta property="og:locale" content="[^"]*"\s*\/?>/,
+      `<meta property="og:locale" content="en_US" />`
+    );
+  }
+
+  // Add hreflang tags for UK/US pages
+  if (isUK || isUS) {
+    const citySlug = canonicalPath.split('/').pop().replace(/\/$/, '');
+    const ukUrl = `${baseUrl}/uk/ai-visibility/${citySlug}/`;
+    const usUrl = `${baseUrl}/us/ai-visibility/${citySlug}/`;
+    const hreflangBlock = `\n    <link rel="alternate" hreflang="en-gb" href="${ukUrl}" />\n    <link rel="alternate" hreflang="en-us" href="${usUrl}" />\n    <link rel="alternate" hreflang="x-default" href="${ukUrl}" />`;
+    html = html.replace(
+      /<link rel="canonical" href="[^"]*"\s*\/?>/,
+      `<link rel="canonical" href="${canonicalUrl}" />${hreflangBlock}`
+    );
+  } else if (isTrade) {
+    const tradeSlug = canonicalPath.split('/')[2];
+    const tradeUrl = `${baseUrl}/trades/${tradeSlug}/`;
+    const hreflangBlock = `\n    <link rel="alternate" hreflang="en-gb" href="${tradeUrl}" />\n    <link rel="alternate" hreflang="en-us" href="${tradeUrl}" />\n    <link rel="alternate" hreflang="x-default" href="${tradeUrl}" />`;
+    html = html.replace(
+      /<link rel="canonical" href="[^"]*"\s*\/?>/,
+      `<link rel="canonical" href="${canonicalUrl}" />${hreflangBlock}`
+    );
+  }
+
+  // Update dateModified in schema
+  html = html.replace(
+    /"dateModified": "2025-12-29"/g,
+    '"dateModified": "2026-04-26"'
+  );
+
   // Inject VideoObject schema on /video page (required for Google Video indexing)
   if (canonicalPath === '/video/') {
     const videoScript = `\n<script type="application/ld+json">${JSON.stringify(videoPageSchema)}</script>`;
@@ -351,6 +411,14 @@ function generateHtml(canonicalPath, title, description) {
   html = html.replace(
     '<div id="root"></div>',
     `<div id="root"></div>${staticNavBlock}`
+  );
+
+  // Add H1 tag for crawlers (visually hidden, helps SEO)
+  const h1Text = title.split(' | ')[0];
+  const h1Block = `\n<h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">${h1Text.replace(/"/g, '&quot;')}</h1>`;
+  html = html.replace(
+    '<div id="root"></div>',
+    `<div id="root"></div>${h1Block}`
   );
 
   return html;
