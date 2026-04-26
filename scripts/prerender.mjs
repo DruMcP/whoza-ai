@@ -97,6 +97,30 @@ const usCities = [
   { slug: 'charlotte', name: 'Charlotte', state: 'NC', contractors: 29000 },
 ];
 
+// ─── Trades ───────────────────────────────────────────────────────────────────
+const trades = [
+  { slug: 'plumber', name: 'Plumber', plural: 'Plumbers', description: 'Plumbers are one of the most searched-for trades in AI. When pipes burst or boilers fail, customers ask ChatGPT "Who is the best plumber near me?" — make sure AI names your business.', ukTradespeople: 85000, usTradespeople: 480000 },
+  { slug: 'electrician', name: 'Electrician', plural: 'Electricians', description: 'Electricians face fierce local competition. When homeowners need rewiring or businesses need commercial electrical work, AI assistants recommend the most visible electricians. Be that electrician.', ukTradespeople: 65000, usTradespeople: 380000 },
+  { slug: 'builder', name: 'Builder', plural: 'Builders', description: 'Builders and general contractors win the biggest jobs — extensions, renovations, and new builds. But AI only recommends builders with strong entity confidence. Let Rex fix that.', ukTradespeople: 120000, usTradespeople: 650000 },
+  { slug: 'roofer', name: 'Roofer', plural: 'Roofers', description: "Roofing is urgent — when a roof leaks, customers need someone fast. They ask AI 'Who is the best roofer near me?' Don't let your competitor be the answer.", ukTradespeople: 32000, usTradespeople: 210000 },
+  { slug: 'locksmith', name: 'Locksmith', plural: 'Locksmiths', description: "Locksmiths live and die by speed. When someone's locked out, they ask AI 'Emergency locksmith near me open now.' If you're not visible to AI, you're not visible at all.", ukTradespeople: 18000, usTradespeople: 95000 },
+  { slug: 'heating-engineer', name: 'Heating Engineer', plural: 'Heating Engineers', description: "When boilers break in winter or AC fails in summer, customers need heating engineers and HVAC technicians fast. AI assistants recommend the most visible and trusted professionals.", ukTradespeople: 42000, usTradespeople: 380000 },
+  { slug: 'painter-decorator', name: 'Painter & Decorator', plural: 'Painters & Decorators', description: "Painters and decorators thrive on referrals — but today's referrals come from AI. When customers ask 'Who is a reliable painter near me?' you need to be the answer.", ukTradespeople: 55000, usTradespeople: 290000 },
+  { slug: 'carpenter', name: 'Carpenter', plural: 'Carpenters', description: "Carpenters and joiners create bespoke work that AI can't replicate — but AI can recommend you. When customers ask for custom kitchens or fitted wardrobes, be the carpenter AI suggests.", ukTradespeople: 38000, usTradespeople: 180000 },
+  { slug: 'tiler', name: 'Tiler', plural: 'Tilers', description: "Tiling is detail work — customers want someone skilled and reliable. When they ask AI 'Who is a good tiler near me?' make sure your business is the one AI trusts.", ukTradespeople: 28000, usTradespeople: 145000 },
+  { slug: 'gardener', name: 'Gardener', plural: 'Gardeners', description: "Gardeners and landscapers create outdoor spaces that customers dream about. When they ask AI 'Who is the best landscaper near me?' make sure your beautiful work gets the recognition it deserves.", ukTradespeople: 45000, usTradespeople: 220000 },
+  { slug: 'window-installer', name: 'Window Installer', plural: 'Window Installers', description: "Window installers and glaziers handle some of the biggest home improvement investments. When customers ask AI about double glazing or window replacement costs, be the installer AI recommends.", ukTradespeople: 22000, usTradespeople: 115000 },
+  { slug: 'bathroom-fitter', name: 'Bathroom Fitter', plural: 'Bathroom Fitters', description: "Bathroom fitting is one of the most profitable trades — but also one of the most competitive. When customers ask AI about bathroom renovation costs, make sure your business is the one AI recommends.", ukTradespeople: 25000, usTradespeople: 135000 },
+  { slug: 'kitchen-fitter', name: 'Kitchen Fitter', plural: 'Kitchen Fitters', description: "Kitchen fitting represents the biggest home investment most people make. When customers ask AI 'Who is the best kitchen fitter near me?' you need to be the answer they get.", ukTradespeople: 22000, usTradespeople: 125000 },
+  { slug: 'plasterer', name: 'Plasterer', plural: 'Plasterers', description: "Plasterers and drywall contractors are the foundation of every renovation. When builders and homeowners ask AI for plastering services, make sure your smooth finish gets the credit it deserves.", ukTradespeople: 28000, usTradespeople: 145000 },
+  { slug: 'flooring-installer', name: 'Flooring Installer', plural: 'Flooring Installers', description: "Flooring installers transform homes room by room. When customers ask AI about hardwood, laminate, or carpet installation costs, make sure your expertise is the answer AI gives.", ukTradespeople: 24000, usTradespeople: 125000 },
+  { slug: 'drainage-engineer', name: 'Drainage Engineer', plural: 'Drainage Engineers', description: "Drainage engineers and drain specialists handle the emergencies nobody else wants. When drains block or pipes collapse, customers need someone fast. Be the drainage engineer AI recommends.", ukTradespeople: 15000, usTradespeople: 75000 },
+  { slug: 'gas-engineer', name: 'Gas Engineer', plural: 'Gas Engineers', description: "Gas engineers hold critical safety certifications that customers need to trust. When they ask AI for Gas Safe engineers, make sure your credentials and expertise are clearly visible.", ukTradespeople: 35000, usTradespeople: 185000 },
+  { slug: 'handyman', name: 'Handyman', plural: 'Handymen', description: "Handymen are the jack-of-all-trades that every homeowner needs. When customers ask AI 'Who is a reliable handyman near me?' you need to be visible for every small job that keeps your diary full.", ukTradespeople: 48000, usTradespeople: 250000 },
+  { slug: 'fencing-contractor', name: 'Fencing Contractor', plural: 'Fencing Contractors', description: "Fencing contractors protect what matters most — privacy, security, and property boundaries. When customers ask AI about fence installation costs, make sure your craftsmanship is the answer.", ukTradespeople: 18000, usTradespeople: 95000 },
+  { slug: 'scaffolder', name: 'Scaffolder', plural: 'Scaffolders', description: "Scaffolders enable every other trade to work safely at height. When builders and roofers ask AI for scaffolding quotes, make sure your safety record and availability are visible.", ukTradespeople: 15000, usTradespeople: 78000 },
+];
+
 // ─── Static Pages ─────────────────────────────────────────────────────────────
 const videoPageSchema = {
   "@context": "https://schema.org",
@@ -245,6 +269,11 @@ const staticNavBlock = `
   <a href="https://whoza.ai/us/ai-visibility/chicago/">AI Visibility Chicago</a>
   <a href="https://whoza.ai/us/ai-visibility/houston/">AI Visibility Houston</a>
   <a href="https://whoza.ai/us/ai-visibility/dallas/">AI Visibility Dallas</a>
+  <a href="https://whoza.ai/trades/plumber/">AI Visibility for Plumbers</a>
+  <a href="https://whoza.ai/trades/electrician/">AI Visibility for Electricians</a>
+  <a href="https://whoza.ai/trades/builder/">AI Visibility for Builders</a>
+  <a href="https://whoza.ai/trades/roofer/">AI Visibility for Roofers</a>
+  <a href="https://whoza.ai/trades/locksmith/">AI Visibility for Locksmiths</a>
 </nav>`;
 
 // ─── Read base index.html ─────────────────────────────────────────────────────
@@ -366,13 +395,22 @@ for (const city of usCities) {
   writeHtml(urlPath, title, description);
 }
 
+console.log('\n🔨 Trade pages:');
+for (const trade of trades) {
+  const urlPath = `/trades/${trade.slug}/`;
+  const title = `AI Visibility for ${trade.plural} | Get Recommended by ChatGPT | Whoza.ai`;
+  const description = trade.description;
+  writeHtml(urlPath, title, description);
+}
+
 console.log('\n✅ Prerender complete!\n');
 
 // ─── Summary ──────────────────────────────────────────────────────────────────
-const totalPages = staticPages.length + blogPosts.length + ukCities.length + usCities.length;
+const totalPages = staticPages.length + blogPosts.length + ukCities.length + usCities.length + trades.length;
 console.log(`📊 Summary:`);
 console.log(`   Static pages: ${staticPages.length}`);
 console.log(`   Blog posts:   ${blogPosts.length}`);
 console.log(`   UK cities:    ${ukCities.length}`);
 console.log(`   US cities:    ${usCities.length}`);
+console.log(`   Trade pages:  ${trades.length}`);
 console.log(`   Total:        ${totalPages} pages prerendered\n`);

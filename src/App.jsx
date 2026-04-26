@@ -35,6 +35,7 @@ const Blog = lazy(() => import('./pages/blog/Blog'));
 const BlogPost = lazy(() => import('./pages/blog/BlogPost'));
 const LocationPageUS = lazy(() => import('./pages/LocationPageUS'));
 const LocationPageUK = lazy(() => import('./pages/LocationPageUK'));
+const TradePage = lazy(() => import('./pages/TradePage'));
 const CookiePolicy = lazy(() => import('./pages/CookiePolicy'));
 const VideoWatch = lazy(() => import('./pages/VideoWatch'));
 const PlanSelection = lazy(() => import('./pages/PlanSelection'));
@@ -122,6 +123,7 @@ function AppRoutes() {
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/us/ai-visibility/:citySlug" element={<LocationPageUS />} />
           <Route path="/uk/ai-visibility/:citySlug" element={<LocationPageUK />} />
+          <Route path="/trades/:tradeSlug" element={<TradePage />} />
 
           <Route
             path="/start/plan"
