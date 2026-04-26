@@ -50,5 +50,6 @@ yarn.lock
 *.temp
 build-output.txt
 *.env*
+.env.admin-whitelist
 NETLIFY_ENV_VARS.txt
 *env_vars*
