@@ -49,3 +49,6 @@ yarn.lock
 *.tmp
 *.temp
 build-output.txt
+*.env*
+NETLIFY_ENV_VARS.txt
+*env_vars*
