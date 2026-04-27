@@ -2552,6 +2552,44 @@ button,
   }
 }
 
+/* ============================================
+   CASE STUDIES - RESULTS PREVIEW METRICS
+   ============================================ */
+
+.results-preview {
+  display: flex;
+  gap: var(--spacing-md);
+  margin: var(--spacing-md) 0;
+  padding: var(--spacing-sm) 0;
+}
+
+.results-preview .metric {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.results-preview .metric .label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-secondary, #64748b);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.results-preview .metric .value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text-primary, #0f172a);
+}
+
+@media (max-width: 768px) {
+  .results-preview {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+}
+
 .pricing-header {
   text-align: center;
   margin-bottom: var(--spacing-3xl);

@@ -311,7 +311,8 @@ export default function CompetitorAnalysis() {
               </div>
               <h3 className="font-semibold text-slate-900 mb-2">1. We search AI</h3>
               <p className="text-slate-600 text-sm">
-                We ask ChatGPT, Perplexity, and Google AI which {businessName ? 'your trade' : 'tradesperson'} 
+                We ask ChatGPT, Perplexity, and Google AI which{' '}
+                {businessName ? 'your trade' : 'tradesperson'}{' '}
                 they recommend in your area.
               </p>
             </div>
