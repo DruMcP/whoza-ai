@@ -540,6 +540,7 @@ export const blogPosts = [
   {
     "id": "how-uk-tradespeople-get-recommended-chatgpt-2026",
     "slug": "how-uk-tradespeople-can-get-recommended-by-chatgpt-in-2026",
+    "canonicalTo": "https://whoza.ai/blog/how-uk-tradespeople-can-get-found-on-chatgpt-and-ai-search-in-2026/",
     "title": "How UK Tradespeople Can Get Recommended by ChatGPT in 2026",
     "metaDescription": "Learn the 7-step strategy for getting your UK trade business recommended by ChatGPT. Practical AEO tactics for plumbers, electricians, roofers, and builders to dominate AI search in 2026.",
     "publishDate": "2026-01-20",
@@ -631,6 +632,7 @@ export const blogPosts = [
   {
     "id": "electricians-guide-to-google-ai-overviews",
     "slug": "electricians-guide-to-google-ai-overviews-how-to-get-featured",
+    "canonicalTo": "https://whoza.ai/blog/electricians-guide-to-google-ai-overviews-2026/",
     "title": "Electrician's Guide to Google AI Overviews: How to Get Featured",
     "metaDescription": "A comprehensive guide for UK electricians on how to get their business featured in Google AI Overviews. Learn about AEO, structured data, and content strategies to boost your electrician AI visibility.",
     "publishDate": "2026-01-21",
@@ -712,6 +714,7 @@ export const blogPosts = [
   {
     "id": "how-to-create-an-faq-page-that-ai-can-find-and-reference",
     "slug": "how-to-create-an-faq-page-that-ai-can-find-and-reference",
+    "canonicalTo": "https://whoza.ai/blog/how-to-create-faq-page-ai-can-find-2026/",
     "title": "How to Create an FAQ Page That AI Can Find and Reference",
     "metaDescription": "Learn how to create an FAQ page that AI assistants like ChatGPT and Google AI can find, understand, and use to recommend your trade business. Includes FAQ schema markup tips.",
     "publishDate": "2026-01-20",
@@ -950,6 +953,7 @@ export const blogPosts = [
   {
     "id": "how-uk-tradespeople-get-found-ai-search-2026",
     "slug": "how-uk-tradespeople-get-found-ai-search-2026",
+    "canonicalTo": "https://whoza.ai/blog/how-uk-tradespeople-can-get-found-on-chatgpt-and-ai-search-in-2026/",
     "title": "How UK Tradespeople Can Get Found by AI Search (ChatGPT & Google)",
     "metaDescription": "A step-by-step guide for UK tradespeople on how to get their business recommended by AI assistants like ChatGPT and Google AI. Learn practical AEO tips for AI visibility in London, Manchester, and Birmingham.",
     "publishDate": "2026-01-16",
@@ -1102,6 +1106,7 @@ export const blogPosts = [
   {
     "id": "how-plumbers-can-get-found-in-chatgpt-a-step-by-step-guide",
     "slug": "how-plumbers-can-get-found-in-chatgpt-a-step-by-step-guide",
+    "canonicalTo": "https://whoza.ai/blog/how-plumbers-can-get-found-in-chatgpt-2026/",
     "title": "How Plumbers Can Get Found in ChatGPT: A Step-by-Step Guide",
     "metaDescription": "A step-by-step guide for UK plumbers on how to get their business recommended by ChatGPT and other AI assistants. Learn practical AEO tips for plumber AI visibility and UK plumber marketing.",
     "publishDate": "2026-01-16",
@@ -1304,6 +1309,7 @@ export const blogPosts = [
   {
     "id": "ai-visibility-for-london-tradespeople-2026",
     "slug": "ai-visibility-for-london-tradespeople-2026",
+    "canonicalTo": "https://whoza.ai/blog/best-practices-tradespeople-london-local-ai-visibility-guide/",
     "title": "AI Visibility for London Tradespeople",
     "metaDescription": "A guide for London-based tradespeople on how to improve their visibility in AI search results. Learn how to stand out in a competitive market.",
     "publishDate": "2026-01-27",
@@ -1522,6 +1528,7 @@ export const blogPosts = [
   {
     "id": "roofers-checklist-10-steps-to-ai-visibility-2026",
     "slug": "roofers-checklist-10-steps-to-ai-visibility-2026",
+    "canonicalTo": "https://whoza.ai/blog/roofers-10-step-checklist-ai-visibility-2026/",
     "title": "Roofer's Checklist: 10 Steps to AI Visibility in 2026",
     "metaDescription": "A complete 10-step checklist for UK roofers to achieve AI visibility in 2026. Learn how to get your roofing business recommended by ChatGPT, Google AI, and other AI assistants.",
     "publishDate": "2026-01-16",
@@ -1621,6 +1628,7 @@ export const blogPosts = [
   {
     "id": "how-ai-chooses-plumber-manchester",
     "slug": "how-ai-search-engines-choose-plumber-recommendation-manchester",
+    "canonicalTo": "https://whoza.ai/blog/how-ai-search-engines-choose-which-local-businesses-to-recommend/",
     "title": "How Do AI Search Engines Choose Which Plumber to Recommend in Manchester?",
     "metaDescription": "Discover how AI like ChatGPT and Google decide which Manchester plumbers to recommend. Learn the key signals for AI visibility and how to ensure your trade business gets found in 2026.",
     "publishDate": "2026-01-27",

@@ -147,7 +147,9 @@ const staticPages = [
   // NOTE: /free-score/ was a 301 redirect to /competitor-analysis/ — do NOT prerender
   // as a separate page. It exists in _redirects for legacy URL support only.
   { path: '/start/', title: 'Start Your AI Search Optimization | Whoza.ai Free Trial', description: 'Create your free account and let Rex help your trade business appear in ChatGPT, Google AI and Perplexity recommendations. 14-day free trial, no credit card required.' },
-  { path: '/login/', title: 'Sign In | Whoza.ai', description: 'Sign in to your Whoza.ai account to view your AI visibility tasks, reports, and competitor analysis.' },
+  // NOTE: /login/ was a client-side redirect to /sign-in/ — do NOT prerender
+  // Server-side 301 redirect exists in _redirects for SEO.
+  // { path: '/login/', title: 'Sign In | Whoza.ai', description: 'Sign in to your Whoza.ai account to view your AI visibility tasks, reports, and competitor analysis.' },
   { path: '/sign-in/', title: 'Sign In | Whoza.ai', description: 'Sign in to your Whoza.ai account to view your AI visibility tasks, reports, and competitor analysis.' },
   { path: '/contact/', title: 'Contact Us | Whoza.ai - Get in Touch', description: 'Have questions about AI-powered visibility for tradespeople? Contact Whoza.ai for support, inquiries, or to learn more about our service.' },
   { path: '/blog/', title: 'AI Visibility Guides for Tradespeople | Whoza.ai Blog', description: 'Expert guides on AI visibility and digital marketing for plumbers, electricians, builders, and tradespeople.' },

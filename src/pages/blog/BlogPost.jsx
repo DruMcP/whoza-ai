@@ -89,7 +89,10 @@ function BlogPost() {
     if (ogUrl) ogUrl.setAttribute('content', `https://whoza.ai/blog/${post.slug}`);
 
     let canonicalLink = document.querySelector("link[rel='canonical']");
-    if (canonicalLink) canonicalLink.setAttribute('href', `https://whoza.ai/blog/${post.slug}`);
+    const canonicalUrl = post.canonicalTo
+      ? post.canonicalTo
+      : `https://whoza.ai/blog/${post.slug}`;
+    if (canonicalLink) canonicalLink.setAttribute('href', canonicalUrl);
 
     const articleSchema = {
       "@context": "https://schema.org",
@@ -165,15 +168,19 @@ function BlogPost() {
       { id: 'breadcrumb-schema', data: breadcrumbSchema }
     ];
 
+    // Clean up any existing schema scripts to prevent duplicates during hydration
+    // (prerendered HTML may already contain schema, and we want to ensure only one set exists)
+    schemas.forEach(({ id }) => {
+      const existingScript = document.getElementById(id);
+      if (existingScript) existingScript.remove();
+    });
+
     schemas.forEach(({ id, data }) => {
-      let script = document.getElementById(id);
-      if (!script) {
-        script = document.createElement('script');
-        script.id = id;
-        script.type = 'application/ld+json';
-        document.head.appendChild(script);
-      }
+      const script = document.createElement('script');
+      script.id = id;
+      script.type = 'application/ld+json';
       script.textContent = JSON.stringify(data);
+      document.head.appendChild(script);
     });
 
     return () => {

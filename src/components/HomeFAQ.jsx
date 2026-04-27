@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: "How does Rex, the AI visibility assistant, work?",
-    answer: "Rex analyses your business visibility across all major AI platforms, then sends one simple weekly task (takes 10-15 minutes) to improve your chances of being recommended. Tasks include optimizing your Google Business Profile, fixing directory inconsistencies, and adding FAQ schema markup. You review and approve every task before completing it."
+    answer: "Rex analyses your business visibility across all major AI platforms, then sends one simple weekly task (takes 10-15 minutes) to improve your Entity Confidence Score. Tasks include optimizing your Google Business Profile, fixing directory inconsistencies, and adding FAQ schema markup. You review and approve every task before completing it."
   },
   {
     question: "How long until I see results from AI search optimization?",

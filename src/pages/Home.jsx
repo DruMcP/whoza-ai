@@ -83,7 +83,7 @@ const AnimatedCounter = ({ target, suffix = '' }) => {
 };
 
 export default function Home() {
-  const schemas = [...generateHomePageSchemas(), homeFAQSchema];
+  const schemas = generateHomePageSchemas();
 
   useEffect(() => {
     initScrollAnimations();
