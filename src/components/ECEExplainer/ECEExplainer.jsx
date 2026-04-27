@@ -138,7 +138,10 @@ export default function ECEExplainer() {
             fontWeight: '500',
             color: '#c4f135',
             marginBottom: '16px',
-            textAlign: 'center'
+            textAlign: 'center',
+            maxWidth: '800px',
+            margin: '0 auto 16px',
+            lineHeight: '1.4'
           }}>
             The system that makes AI trust and recommend your business
           </p>

@@ -346,7 +346,7 @@ export default function CompetitorAnalysis() {
           <p className="text-center text-sm text-slate-500 mb-4">
             Popular searches right now
           </p>
-          <div className="flex flex-wrap justify-center gap-2">
+          <div className="flex flex-wrap justify-center gap-3">
             {popularTrades.map(trade => (
               <button
                 key={trade}
