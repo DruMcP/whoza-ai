@@ -65,12 +65,51 @@ export default function LocationPageUK() {
     "priceRange": "££"
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": `Why do ${getTerm('tradespeople')} in ${city.name} need AI search optimization?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `More customers in ${city.name} now ask AI assistants like ChatGPT and Google AI for local trade recommendations instead of using traditional search. When someone asks "Who is the best plumber or electrician in ${city.name}?" you want AI to recommend your business. Without AI search optimization, you're invisible to the fastest-growing customer acquisition channel in ${city.name}.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `How does whoza.ai help ${getTerm('tradespeople')} in ${city.name} get found in AI search?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `Rex, your AI visibility assistant, analyses your business across all major AI platforms and sends one simple weekly task to improve your Entity Confidence Score. Tasks include optimizing your Google Business Profile, fixing directory inconsistencies, adding FAQ schema markup, and building review strategies. Each task takes 10-15 minutes and is designed specifically for non-technical trade business owners in ${city.name}.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `How long until ${getTerm('tradespeople')} in ${city.name} see results from AI search optimization?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `Most ${getTerm('tradespeople')} in ${city.name} start seeing improved AI mentions within 4-6 weeks. The timeline depends on your starting Entity Confidence Score and how consistently you complete the weekly tasks. Businesses that follow Rex's full 12-week programme typically see a 3-5x increase in AI-driven customer enquiries within 90 days. Your ${city.name} competitor analysis shows your current baseline.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `What makes AI search optimization different from local SEO in ${city.name}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `Traditional local SEO in ${city.name} focuses on ranking high in Google's blue-link results for keywords like "plumber ${city.name}". AI search optimization focuses on becoming the business that ChatGPT and Google AI name directly as the answer when someone asks "Who's the best plumber in ${city.name}?" Instead of competing for position #1 on a search page, you're competing to be the single recommended answer — which gets 60-80% of AI-driven customer enquiries.`
+        }
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <SEO
         title={`AI Visibility for ${getTerm('tradespeople')} in ${city.name}`}
         description={`Get your AI Visibility Score in ${city.name}. Join over ${city.tradespeople.toLocaleString()} ${getTerm('tradespeople')} optimising their online presence. ${formatPrice(59)} to start.`}
-        schemas={[localBusinessSchema]}
+        schemas={[localBusinessSchema, faqSchema]}
       />
       <Header />
 
