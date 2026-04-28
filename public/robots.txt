@@ -1,16 +1,6 @@
-# Robots.txt for whoza.ai
+# Robots.txt for whoza.ai STAGING
 User-agent: *
-Allow: /
+Disallow: /
 
-# Disallow admin and protected routes
-Disallow: /admin
-Disallow: /portal
-Disallow: /tasks
-Disallow: /reports
-Disallow: /checkout
-
-# Disallow API endpoints
-Disallow: /api/
-
-# Sitemap location
-Sitemap: https://whoza.ai/sitemap.xml
+# Staging environment - block all crawlers
+# Sitemap: none (staging should not be indexed)
