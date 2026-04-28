@@ -72,19 +72,21 @@ netlify deploy --prod --build
 - [ ] Configure webhook URL: `https://whoza-ai-staging.netlify.app/.netlify/functions/trillet-webhook`
 
 ### 5. Voice Onboarding Wizard
-- [ ] Build 3-step onboarding: Business Profile → Voice Settings → Divert Setup
-- [ ] Add to `/start` flow when `plan_id` is voice bundle
+- [x] Build 3-step onboarding: Business Profile → Voice Settings → Divert Setup
+- [x] Add to `/start` flow when `plan_id` is voice bundle
+- [x] Accessible at `/voice/setup`
 
 ### 6. Portal Voice Dashboard
-- [ ] Add voice stats to `/portal` (calls today, minutes used, divert status)
-- [ ] Add "Test My AI" button
-- [ ] Add divert toggle (activate/deactivate)
+- [x] Add voice stats to `/portal` (calls today, minutes used, divert status)
+- [x] Add "Test My AI" button
+- [x] Add divert toggle (activate/deactivate)
+- [x] Add Voice tab to portal navigation
 
 ### 7. 14-Day Trial Flow
-- [ ] Build trial signup without credit card
-- [ ] Add trial expiry logic
+- [x] Build trial signup without credit card (configured in `.env.staging`)
+- [x] Add trial expiry logic (`TrialExpiryGate.jsx` component)
 - [ ] Add trial-to-paid conversion flow
-- [ ] Add trial expired gate
+- [ ] Add trial expired gate integration into portal
 
 ### 8. Testing Protocol
 - [ ] Test call divert with real phone
@@ -169,5 +171,5 @@ git push origin main
 
 ---
 
-**Last updated:** 2026-04-28
-**Staging branch:** `cb420fc`
+**Last updated:** 2026-04-28 22:45 UTC
+**Staging branch:** `d7f0109`
