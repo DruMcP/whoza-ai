@@ -5,15 +5,95 @@ import { useToast } from '../components/Toast';
 import { supabase } from '../lib/supabase';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Check, Star, Shield, ArrowRight, Sparkles, Zap, Users } from 'lucide-react';
+import { Check, Star, Shield, ArrowRight, Sparkles, Zap, Users, Phone, Globe } from 'lucide-react';
+
+const BUNDLE_PLANS = [
+  {
+    id: 'solo',
+    name: 'Solo',
+    price: 69,
+    minutes: 300,
+    description: 'Perfect for one-person trades',
+    features: [
+      'AI Voice Agent (300 min/month)',
+      'AI Visibility Score',
+      'Weekly Tasks from Rex',
+      'Competitor Monitoring',
+      'WhatsApp Call Summaries',
+      'Spam Blocking',
+    ],
+    popular: false,
+  },
+  {
+    id: 'business',
+    name: 'Business',
+    price: 129,
+    minutes: 600,
+    description: 'For growing trade businesses',
+    features: [
+      'AI Voice Agent (600 min/month)',
+      'AI Visibility Score',
+      'Weekly Tasks from Rex',
+      'Competitor Monitoring',
+      'WhatsApp + SMS Summaries',
+      'Spam Blocking',
+      'Emergency Call Transfer',
+      'Review Requests',
+    ],
+    popular: true,
+  },
+  {
+    id: 'professional',
+    name: 'Professional',
+    price: 219,
+    minutes: 1200,
+    description: 'For multi-trade operations',
+    features: [
+      'AI Voice Agent (1200 min/month)',
+      'AI Visibility Score',
+      'Priority Task Generation',
+      '5 Competitor Tracking',
+      'WhatsApp + SMS Summaries',
+      'Spam Blocking',
+      'Emergency Call Transfer',
+      'Review Requests',
+      'Calendar Integration',
+    ],
+    popular: false,
+  },
+  {
+    id: 'enterprise',
+    name: 'Enterprise',
+    price: 499,
+    minutes: 3000,
+    description: 'For teams with 5+ staff',
+    features: [
+      'AI Voice Agent (3000 min/month)',
+      'AI Visibility Score',
+      'Custom AI Training',
+      'Unlimited Competitor Tracking',
+      'WhatsApp + SMS Summaries',
+      'Spam Blocking',
+      'Emergency Call Transfer',
+      'Review Requests',
+      'Calendar Integration',
+      'Dedicated Support',
+    ],
+    popular: false,
+  },
+];
 
 export default function PlanSelection() {
   const navigate = useNavigate();
   const location = useLocation();
   const { userData, loading: authLoading } = useAuth();
   const toast = useToast();
-  const [selectedPlan, setSelectedPlan] = useState('trial');
+  const [selectedPlan, setSelectedPlan] = useState('business');
   const [loading, setLoading] = useState(false);
+  const [trialMode, setTrialMode] = useState(true);
+
+  const enableVoice = import.meta.env.VITE_ENABLE_VOICE === 'true';
+  const enableTrialNoCard = import.meta.env.VITE_ENABLE_TRIAL_NO_CARD === 'true';
 
   useEffect(() => {
     if (!authLoading && !userData) {
@@ -21,35 +101,58 @@ export default function PlanSelection() {
     }
   }, [userData, authLoading, navigate]);
 
-  const handleStartTrial = async () => {
+  const handleStartTrial = async (planId) => {
     setLoading(true);
     try {
-      // Create a Stripe subscription for the free trial
-      // This requires the Stripe edge function to handle trial subscriptions
-      const { data, error } = await supabase.functions.invoke('create-trial-subscription', {
-        body: {
+      const plan = BUNDLE_PLANS.find(p => p.id === planId);
+      if (!plan) throw new Error('Invalid plan selected');
+
+      // 1. Create trial subscription in database
+      const { error: trialError } = await supabase
+        .from('trials')
+        .upsert({
           user_id: userData.id,
-          email: userData.email,
-          trial_days: 14,
-        }
-      });
+          plan_id: planId,
+          plan_name: plan.name,
+          status: 'active',
+          trial_ends_at: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000).toISOString(),
+          minutes_included: plan.minutes,
+          minutes_used: 0,
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString(),
+        }, { onConflict: 'user_id' });
 
-      if (error) throw error;
+      if (trialError) throw trialError;
 
-      toast.success('Your free 14-day trial has started!');
-      navigate('/portal');
+      // 2. Update user record
+      await supabase
+        .from('users')
+        .update({
+          subscription_tier: planId,
+          subscription_status: 'trial',
+          trial_ends_at: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000).toISOString(),
+          updated_at: new Date().toISOString(),
+        })
+        .eq('id', userData.id);
+
+      toast.success(`Your ${plan.name} trial starts now! 14 days free.`);
+
+      // 3. Redirect to voice onboarding if voice is enabled
+      if (enableVoice) {
+        navigate('/voice/setup');
+      } else {
+        navigate('/portal');
+      }
     } catch (err) {
-      // If the trial function doesn't exist, just redirect to portal
-      // The trial can be managed manually in the dashboard
-      toast.success('Welcome! Your free trial starts now.');
-      navigate('/portal');
+      console.error('Trial setup error:', err);
+      toast.error(err.message || 'Failed to start trial. Try again.');
     } finally {
       setLoading(false);
     }
   };
 
-  const handlePaidPlan = (plan) => {
-    navigate('/checkout', { state: { selectedPlan: plan } });
+  const handlePaidPlan = (planId) => {
+    navigate('/checkout', { state: { selectedPlan: planId, bundle: true } });
   };
 
   if (authLoading) {
@@ -65,168 +168,138 @@ export default function PlanSelection() {
       <Header />
       
       <main className="py-12 md:py-20">
-        <div className="container max-w-4xl">
-          {/* Success Message */}
+        <div className="container max-w-5xl">
+          {/* Header */}
           <div className="text-center mb-12">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Check className="w-8 h-8 text-green-600" />
             </div>
             <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
-              Account created successfully!
+              Choose your whoza.ai plan
             </h1>
             <p className="text-lg text-slate-600 max-w-xl mx-auto">
-              Choose how you want to start improving your AI visibility.
+              AI Voice + AI Visibility together. Every plan includes both.
             </p>
           </div>
 
-          {/* Free Trial — Hero Option */}
-          <div className="bg-gradient-to-br from-green-600 to-emerald-700 rounded-2xl shadow-xl p-8 md:p-10 mb-8 text-white">
-            <div className="flex flex-col md:flex-row items-center gap-6">
-              <div className="flex-1">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/20 rounded-full text-sm font-medium mb-4">
-                  <Sparkles className="w-4 h-4" />
-                  Recommended — No credit card required
-                </div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                  Start Your Free 14-Day Trial
-                </h2>
-                <p className="text-green-100 mb-6 max-w-lg">
-                  Get full access to Rex for 14 days. Weekly tasks, competitor monitoring, 
-                  and AI visibility tracking. No payment details needed.
-                </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center gap-2">
-                    <Check className="w-5 h-5 text-green-300" />
-                    <span>All Improve plan features included</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-5 h-5 text-green-300" />
-                    <span>2 weekly tasks from Rex</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-5 h-5 text-green-300" />
-                    <span>Competitor monitoring</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-5 h-5 text-green-300" />
-                    <span>Cancel anytime — no questions asked</span>
-                  </li>
-                </ul>
+          {/* Trial Toggle */}
+          {enableTrialNoCard && (
+            <div className="flex justify-center mb-8">
+              <div className="inline-flex bg-white rounded-full p-1 shadow-sm border border-slate-200">
                 <button
-                  onClick={handleStartTrial}
-                  disabled={loading}
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-white text-green-700 font-bold rounded-xl hover:bg-green-50 transition-colors text-lg"
+                  onClick={() => setTrialMode(true)}
+                  className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
+                    trialMode 
+                      ? 'bg-green-500 text-white' 
+                      : 'text-slate-600 hover:text-slate-900'
+                  }`}
                 >
-                  {loading ? 'Starting trial...' : 'Start Free Trial'}
-                  <ArrowRight className="w-5 h-5" />
+                  🎁 14-Day Free Trial
+                </button>
+                <button
+                  onClick={() => setTrialMode(false)}
+                  className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
+                    !trialMode 
+                      ? 'bg-green-500 text-white' 
+                      : 'text-slate-600 hover:text-slate-900'
+                  }`}
+                >
+                  Pay Monthly
                 </button>
               </div>
-              <div className="text-center md:text-right">
-                <div className="text-5xl font-bold">£0</div>
-                <div className="text-green-200">for 14 days</div>
-                <div className="text-sm text-green-200 mt-2">Then £59/month</div>
-              </div>
             </div>
-          </div>
+          )}
 
-          {/* Divider */}
-          <div className="flex items-center gap-4 mb-8">
-            <div className="flex-1 h-px bg-slate-200" />
-            <span className="text-slate-500 text-sm">Or choose a paid plan</span>
-            <div className="flex-1 h-px bg-slate-200" />
-          </div>
-
-          {/* Paid Plans */}
-          <div className="grid md:grid-cols-2 gap-6">
-            {/* Improve */}
-            <div 
-              className={`bg-white rounded-xl border-2 p-6 cursor-pointer transition-all hover:shadow-lg ${
-                selectedPlan === 'improve' ? 'border-green-500 shadow-lg' : 'border-slate-200'
-              }`}
-              onClick={() => setSelectedPlan('improve')}
-            >
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900">Improve</h3>
-                  <p className="text-slate-500 text-sm">For tradespeople who want to grow</p>
-                </div>
-                <div className="text-right">
-                  <div className="text-2xl font-bold text-slate-900">£59</div>
-                  <div className="text-sm text-slate-500">/month</div>
-                </div>
-              </div>
-              <ul className="space-y-2 mb-6 text-sm text-slate-600">
-                <li className="flex items-center gap-2">
-                  <Zap className="w-4 h-4 text-green-500" /> Weekly tasks from Rex
-                </li>
-                <li className="flex items-center gap-2">
-                  <Zap className="w-4 h-4 text-green-500" /> Competitor monitoring
-                </li>
-                <li className="flex items-center gap-2">
-                  <Zap className="w-4 h-4 text-green-500" /> Monthly progress reports
-                </li>
-                <li className="flex items-center gap-2">
-                  <Zap className="w-4 h-4 text-green-500" /> Email support
-                </li>
-              </ul>
-              <button
-                onClick={() => handlePaidPlan('improve')}
-                className="w-full py-3 border-2 border-green-500 text-green-700 font-semibold rounded-lg hover:bg-green-50 transition-colors"
+          {/* Plans Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {BUNDLE_PLANS.map((plan) => (
+              <div
+                key={plan.id}
+                className={`bg-white rounded-xl border-2 p-6 transition-all hover:shadow-lg relative ${
+                  selectedPlan === plan.id 
+                    ? 'border-green-500 shadow-lg' 
+                    : 'border-slate-200'
+                } ${plan.popular ? 'ring-2 ring-green-500 ring-offset-2' : ''}`}
+                onClick={() => setSelectedPlan(plan.id)}
               >
-                Choose Improve
-              </button>
-            </div>
+                {plan.popular && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    MOST POPULAR
+                  </div>
+                )}
 
-            {/* Priority */}
-            <div 
-              className={`bg-white rounded-xl border-2 p-6 cursor-pointer transition-all hover:shadow-lg ${
-                selectedPlan === 'priority' ? 'border-green-500 shadow-lg' : 'border-slate-200'
-              }`}
-              onClick={() => setSelectedPlan('priority')}
-            >
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900">Priority</h3>
-                  <p className="text-slate-500 text-sm">For serious business growth</p>
+                <div className="mb-4">
+                  <h3 className="text-xl font-bold text-slate-900">{plan.name}</h3>
+                  <p className="text-slate-500 text-sm">{plan.description}</p>
                 </div>
-                <div className="text-right">
-                  <div className="text-2xl font-bold text-slate-900">£149</div>
-                  <div className="text-sm text-slate-500">/month</div>
+
+                <div className="mb-6">
+                  <div className="text-3xl font-bold text-slate-900">
+                    £{plan.price}
+                    <span className="text-sm font-normal text-slate-500">/mo</span>
+                  </div>
+                  <div className="text-sm text-green-600 font-medium">
+                    <Phone className="w-4 h-4 inline mr-1" />
+                    {plan.minutes} minutes included
+                  </div>
                 </div>
+
+                <ul className="space-y-2 mb-6 text-sm text-slate-600">
+                  {plan.features.map((feature, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <Check className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {trialMode && enableTrialNoCard ? (
+                  <button
+                    onClick={() => handleStartTrial(plan.id)}
+                    disabled={loading}
+                    className={`w-full py-3 font-semibold rounded-lg transition-colors ${
+                      plan.popular
+                        ? 'bg-green-500 text-white hover:bg-green-600'
+                        : 'border-2 border-green-500 text-green-700 hover:bg-green-50'
+                    }`}
+                  >
+                    {loading && selectedPlan === plan.id 
+                      ? 'Starting...' 
+                      : `Start ${plan.name} Trial`
+                    }
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => handlePaidPlan(plan.id)}
+                    className={`w-full py-3 font-semibold rounded-lg transition-colors ${
+                      plan.popular
+                        ? 'bg-green-500 text-white hover:bg-green-600'
+                        : 'border-2 border-green-500 text-green-700 hover:bg-green-50'
+                    }`}
+                  >
+                    Choose {plan.name}
+                  </button>
+                )}
               </div>
-              <ul className="space-y-2 mb-6 text-sm text-slate-600">
-                <li className="flex items-center gap-2">
-                  <Star className="w-4 h-4 text-amber-500" /> Everything in Improve
-                </li>
-                <li className="flex items-center gap-2">
-                  <Star className="w-4 h-4 text-amber-500" /> Human review on every task
-                </li>
-                <li className="flex items-center gap-2">
-                  <Star className="w-4 h-4 text-amber-500" /> Up to 5 competitor tracking
-                </li>
-                <li className="flex items-center gap-2">
-                  <Star className="w-4 h-4 text-amber-500" /> Priority support (24hr)
-                </li>
-              </ul>
-              <button
-                onClick={() => handlePaidPlan('priority')}
-                className="w-full py-3 border-2 border-amber-500 text-amber-700 font-semibold rounded-lg hover:bg-amber-50 transition-colors"
-              >
-                Choose Priority
-              </button>
-            </div>
+            ))}
           </div>
 
           {/* Trust */}
-          <div className="mt-8 text-center">
-            <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
+          <div className="text-center space-y-4">
+            <div className="flex items-center justify-center gap-6 text-sm text-slate-500 flex-wrap">
               <span className="flex items-center gap-1">
-                <Shield className="w-4 h-4" /> 30-day money-back guarantee
+                <Shield className="w-4 h-4" /> No credit card required
               </span>
               <span className="flex items-center gap-1">
                 <Users className="w-4 h-4" /> Cancel anytime
               </span>
+              <span className="flex items-center gap-1">
+                <Sparkles className="w-4 h-4" /> 30-day money-back guarantee
+              </span>
             </div>
+            <p className="text-sm text-slate-400 max-w-md mx-auto">
+              All prices include VAT. Your AI voice agent will be ready in under 5 minutes after signup.
+            </p>
           </div>
         </div>
       </main>
