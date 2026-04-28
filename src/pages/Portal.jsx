@@ -12,6 +12,7 @@ import NotificationPreferences from '../components/NotificationPreferences';
 import NotificationHistory from '../components/NotificationHistory';
 import RexDashboard from '../components/RexDashboard';
 import LoadingSpinner from '../components/LoadingSpinner';
+import VoiceDashboard from '../components/VoiceDashboard';
 
 export default function Portal() {
   const { user, userData, loading: authLoading } = useAuth();
@@ -381,6 +382,15 @@ export default function Portal() {
               </svg>
               Notifications
             </button>
+            <button
+              className={`portal-tab ${activeTab === 'voice' ? 'active' : ''}`}
+              onClick={() => setActiveTab('voice')}
+            >
+              <svg viewBox="0 0 20 20" fill="currentColor" width="20" height="20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+              </svg>
+              Voice
+            </button>
           </div>
 
           <div className="portal-content">
@@ -530,6 +540,10 @@ export default function Portal() {
                   </div>
                 </div>
               </div>
+            )}
+
+            {activeTab === 'voice' && (
+              <VoiceDashboard />
             )}
           </div>
         </div>

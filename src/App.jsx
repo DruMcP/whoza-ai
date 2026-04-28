@@ -39,6 +39,7 @@ const TradePage = lazy(() => import('./pages/TradePage'));
 const CookiePolicy = lazy(() => import('./pages/CookiePolicy'));
 const VideoWatch = lazy(() => import('./pages/VideoWatch'));
 const VoiceLanding = lazy(() => import('./pages/VoiceLanding'));
+const VoiceOnboarding = lazy(() => import('./components/VoiceOnboarding'));
 const PlanSelection = lazy(() => import('./pages/PlanSelection'));
 const PlanSelection = lazy(() => import('./pages/PlanSelection'));
 
@@ -108,6 +109,7 @@ function AppRoutes() {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/trust" element={<Trust />} />
           <Route path="/voice" element={<VoiceLanding />} />
+          <Route path="/voice/setup" element={<VoiceOnboarding />} />
           <Route path="/start" element={<Start />} />
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/auth/callback" element={<AuthCallback />} />
