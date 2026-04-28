@@ -106,6 +106,7 @@ const Header = memo(function Header() {
             <>
               <ul className="header-nav-primary" role="list">
                 <li><Link to="/how-it-works" className="nav-link" onClick={closeMobileMenu}>How it works</Link></li>
+                <li><Link to="/voice" className="nav-link" onClick={closeMobileMenu}>🎙️ Voice</Link></li>
                 <li><Link to="/case-studies" className="nav-link" onClick={closeMobileMenu}>Case Studies</Link></li>
                 <li><Link to="/pricing" className="nav-link" onClick={closeMobileMenu}>Pricing</Link></li>
                 <li><Link to="/blog" className="nav-link" onClick={closeMobileMenu}>Blog</Link></li>

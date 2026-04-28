@@ -38,6 +38,8 @@ const LocationPageUK = lazy(() => import('./pages/LocationPageUK'));
 const TradePage = lazy(() => import('./pages/TradePage'));
 const CookiePolicy = lazy(() => import('./pages/CookiePolicy'));
 const VideoWatch = lazy(() => import('./pages/VideoWatch'));
+const VoiceLanding = lazy(() => import('./pages/VoiceLanding'));
+const PlanSelection = lazy(() => import('./pages/PlanSelection'));
 const PlanSelection = lazy(() => import('./pages/PlanSelection'));
 
 const ProtectedRoute = memo(function ProtectedRoute({ children, adminOnly = false }) {
@@ -105,6 +107,7 @@ function AppRoutes() {
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/trust" element={<Trust />} />
+          <Route path="/voice" element={<VoiceLanding />} />
           <Route path="/start" element={<Start />} />
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/auth/callback" element={<AuthCallback />} />
