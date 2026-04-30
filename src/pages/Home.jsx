@@ -14,7 +14,7 @@ import TestimonialCarousel from '../components/TestimonialCarousel';
 import FAQAccordion from '../components/FAQAccordion';
 import FinalCTA from '../components/FinalCTA';
 import StickyCTA from '../components/StickyCTA';
-import LostRevenueCalculator from '../components/LostRevenueCalculator';
+import DashboardPreview from '../components/DashboardPreview';
 import AudioDemoPlayer from '../components/AudioDemoPlayer';
 import IntegrationLogoBand from '../components/IntegrationLogoBand';
 import ComparisonTable from '../components/ComparisonTable';
@@ -55,6 +55,7 @@ export default function Home() {
         <LostRevenueCalculator />
         <AudioDemoPlayer />
         <HowItWorks />
+        <DashboardPreview />
         <MeetTheTeam />
         <IntegrationLogoBand />
         <PricingTeaser />

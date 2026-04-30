@@ -13,9 +13,7 @@ const testimonials = [
     outcomeIcon: 'trending',
     quote: "I was missing 4-5 calls a week while I was on jobs. Since switching to whoza.ai, every call gets answered. I've picked up 3 extra jobs this month alone — that's an extra £750 in my pocket.",
     rating: 5,
-    portraitGradient: 'linear-gradient(135deg, #f5d0a9 0%, #e8b87d 50%, #c4956a 100%)',
-    portraitAccent: '#F59E0B',
-    portraitShape: 'electrician',
+    photo: '/images/testimonial-mike.jpg',
   },
   {
     name: 'Sarah Hendricks',
@@ -27,9 +25,7 @@ const testimonials = [
     outcomeIcon: 'pound',
     quote: "Before whoza.ai, my voicemail was full by Friday. Now Katie books jobs while I'm under sinks. My diary's never been fuller and I'm not working any harder — just not missing enquiries.",
     rating: 5,
-    portraitGradient: 'linear-gradient(135deg, #f0c0a0 0%, #d4a078 50%, #b88860 100%)',
-    portraitAccent: '#EC4899',
-    portraitShape: 'plumber',
+    photo: '/images/testimonial-sarah.jpg',
   },
   {
     name: "Dave O'Brien",
@@ -41,9 +37,7 @@ const testimonials = [
     outcomeIcon: 'star',
     quote: "Claire's review follow-ups are automatic. I went from 12 reviews to 67 in six months. Customers mention it when they call — 'saw your five stars on Google.' That alone pays for the subscription.",
     rating: 5,
-    portraitGradient: 'linear-gradient(135deg, #e8c9a8 0%, #c9a87c 50%, #a88860 100%)',
-    portraitAccent: '#D97706',
-    portraitShape: 'roofer',
+    photo: '/images/testimonial-dave.jpg',
   },
   {
     name: 'Aisha Patel',
@@ -55,9 +49,7 @@ const testimonials = [
     outcomeIcon: 'trending',
     quote: "Rex showed me I wasn't listed on two directories my competitors were on. Fixed that in an afternoon. Next week I got a £4,200 kitchen refit from a ChatGPT recommendation. Mental.",
     rating: 5,
-    portraitGradient: 'linear-gradient(135deg, #d4a574 0%, #b08050 50%, #8a6038 100%)',
-    portraitAccent: '#8B5CF6',
-    portraitShape: 'fitter',
+    photo: '/images/testimonial-aisha.jpg',
   },
   {
     name: 'Tom Walsh',
@@ -69,9 +61,7 @@ const testimonials = [
     outcomeIcon: 'pound',
     quote: "I had a call answering service at £180 a month. whoza.ai costs less, answers 24/7, and actually books appointments into my calendar. Sacked the answering service after week two.",
     rating: 5,
-    portraitGradient: 'linear-gradient(135deg, #e0b898 0%, #c09068 50%, #a07850 100%)',
-    portraitAccent: '#059669',
-    portraitShape: 'builder',
+    photo: '/images/testimonial-tom.jpg',
   },
   {
     name: 'Jenny Brooks',
@@ -83,9 +73,7 @@ const testimonials = [
     outcomeIcon: 'phone',
     quote: "I'm up ladders most days. Used to come down to 6 missed calls and a full voicemail. Now I get WhatsApp summaries within minutes. Customers think I have a secretary. I don't — I have Katie.",
     rating: 5,
-    portraitGradient: 'linear-gradient(135deg, #f0c8b0 0%, #d8a888 50%, #b88868 100%)',
-    portraitAccent: '#F59E0B',
-    portraitShape: 'painter',
+    photo: '/images/testimonial-jenny.jpg',
   },
 ];
 
@@ -106,102 +94,20 @@ const OutcomeIcon = ({ type }) => {
   }
 };
 
-const CSSPortrait = ({ testimonial }) => {
-  const { portraitGradient, portraitAccent, portraitShape, name } = testimonial;
-
-  const shapeStyles = {
-    electrician: {
-      hat: { top: '8%', left: '15%', width: '70%', height: '22%', borderRadius: '40% 40% 10% 10%', background: portraitAccent, opacity: 0.85 },
-      brim: { top: '22%', left: '10%', width: '80%', height: '6%', borderRadius: '4px', background: portraitAccent, opacity: 0.9 },
-    },
-    plumber: {
-      hat: { top: '12%', left: '20%', width: '60%', height: '18%', borderRadius: '50% 50% 0 0', background: portraitAccent, opacity: 0.8 },
-      tool: { bottom: '18%', left: '30%', width: '40%', height: '8%', borderRadius: '4px', background: portraitAccent, opacity: 0.6 },
-    },
-    roofer: {
-      hat: { top: '6%', left: '18%', width: '64%', height: '24%', borderRadius: '30% 30% 10% 10%', background: portraitAccent, opacity: 0.85 },
-      brim: { top: '24%', left: '12%', width: '76%', height: '5%', borderRadius: '3px', background: portraitAccent, opacity: 0.9 },
-    },
-    fitter: {
-      hat: { top: '14%', left: '22%', width: '56%', height: '16%', borderRadius: '8px', background: portraitAccent, opacity: 0.75 },
-      tool: { bottom: '20%', left: '25%', width: '50%', height: '6%', borderRadius: '3px', background: portraitAccent, opacity: 0.5 },
-    },
-    builder: {
-      hat: { top: '8%', left: '16%', width: '68%', height: '20%', borderRadius: '40% 40% 8% 8%', background: portraitAccent, opacity: 0.85 },
-      tool: { bottom: '16%', left: '28%', width: '44%', height: '8%', borderRadius: '4px', background: portraitAccent, opacity: 0.55 },
-    },
-    painter: {
-      hat: { top: '10%', left: '18%', width: '64%', height: '18%', borderRadius: '50% 50% 5% 5%', background: portraitAccent, opacity: 0.8 },
-      tool: { bottom: '18%', left: '32%', width: '36%', height: '7%', borderRadius: '3px', background: portraitAccent, opacity: 0.5 },
-    },
-  };
-
-  const shapes = shapeStyles[portraitShape] || shapeStyles.builder;
-
-  return (
-    <div
-      className="css-portrait"
-      style={{
-        width: 80,
-        height: 80,
-        borderRadius: '50%',
-        background: portraitGradient,
-        position: 'relative',
-        overflow: 'hidden',
-        flexShrink: 0,
-        border: '3px solid rgba(255,255,255,0.15)',
-        boxShadow: '0 4px 16px rgba(0,0,0,0.2)',
-      }}
-      aria-label={`Portrait of ${name}`}
-    >
-      {/* Abstract face shapes */}
-      <div style={{
-        position: 'absolute',
-        top: '35%',
-        left: '30%',
-        width: '18%',
-        height: '10%',
-        borderRadius: '50%',
-        background: 'rgba(0,0,0,0.15)',
-      }} />
-      <div style={{
-        position: 'absolute',
-        top: '35%',
-        right: '30%',
-        width: '18%',
-        height: '10%',
-        borderRadius: '50%',
-        background: 'rgba(0,0,0,0.15)',
-      }} />
-      <div style={{
-        position: 'absolute',
-        top: '52%',
-        left: '40%',
-        width: '20%',
-        height: '8%',
-        borderRadius: '0 0 50% 50%',
-        background: 'rgba(0,0,0,0.1)',
-      }} />
-
-      {/* Work-appropriate styling hint (hat/tool) */}
-      {Object.entries(shapes).map(([key, style]) => (
-        <div key={key} style={{ position: 'absolute', ...style }} />
-      ))}
-
-      {/* Subtle highlight */}
-      <div style={{
-        position: 'absolute',
-        top: '10%',
-        left: '20%',
-        width: '30%',
-        height: '20%',
-        borderRadius: '50%',
-        background: 'rgba(255,255,255,0.15)',
-        filter: 'blur(8px)',
-      }} />
-    </div>
-  );
-};
+const Photo = ({ photo, name }) => (
+  <img
+    src={photo}
+    alt={`Photo of ${name}`}
+    className="rounded-full flex-shrink-0"
+    style={{
+      width: 80,
+      height: 80,
+      objectFit: 'cover',
+      border: '3px solid rgba(255,255,255,0.15)',
+      boxShadow: '0 4px 16px rgba(0,0,0,0.2)',
+    }}
+  />
+);
 
 export default function TestimonialCarousel() {
   const [active, setActive] = useState(0);
@@ -360,8 +266,8 @@ export default function TestimonialCarousel() {
                     alignItems: 'flex-start',
                   }}
                 >
-                  {/* Left: CSS Portrait */}
-                  <CSSPortrait testimonial={current} />
+                  {/* Left: Photo */}
+                  <Photo photo={current.photo} name={current.name} />
 
                   {/* Right: Content */}
                   <div className="flex-1 min-w-0">

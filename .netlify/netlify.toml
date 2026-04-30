@@ -2,8 +2,11 @@ headersOrigin = "config"
 redirectsOrigin = "config"
 plugins = []
 
+[functions]
+
+[functions."*"]
+
 [build]
-edge_functions = "/root/.openclaw/workspace/whoza-ai/netlify/edge-functions"
 publish = "/root/.openclaw/workspace/whoza-ai/dist"
 publishOrigin = "config"
 commandOrigin = "config"
@@ -24,14 +27,6 @@ SECRETS_SCAN_SMART_DETECTION_OMIT_VALUES = "AIzaSyDXpEGqFvcgWvUcKbSCZstbUYZSqpWL
 [build.processing.js]
 
 [build.services]
-
-[[edge_functions]]
-function = "redirect-couk"
-path = "/*"
-
-[functions]
-
-[functions."*"]
 
 [[headers]]
 for = "/*.html"
