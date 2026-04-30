@@ -1,3 +1,5 @@
+import * as Sentry from '@sentry/react';
+
 const isDevelopment = import.meta.env.DEV;
 const isProduction = import.meta.env.PROD;
 
@@ -25,7 +27,7 @@ class Logger {
       console.error('[ERROR]', message, context);
     }
 
-    if (isProduction && context.error?.stack) {
+    if (isProduction) {
       this.sendToMonitoring(errorData);
     }
   }
@@ -46,15 +48,24 @@ class Logger {
     }
   }
 
-  async sendToMonitoring(errorData) {
+  sendToMonitoring(errorData) {
     try {
-      await fetch('/api/v1/errors', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(errorData)
-      });
+      // Send to Sentry if available (replaces broken /api/v1/errors endpoint)
+      if (Sentry && Sentry.captureMessage) {
+        Sentry.captureMessage(errorData.message, {
+          level: 'error',
+          extra: {
+            context: errorData.context,
+            url: errorData.url,
+            userAgent: errorData.userAgent,
+          },
+        });
+      }
     } catch (err) {
-      // Silent fail - don't break app if monitoring is down
+      // Silent fail — don't break app if monitoring is down
+      if (isDevelopment) {
+        console.warn('[Logger] Failed to send to Sentry:', err);
+      }
     }
   }
 
