@@ -53,3 +53,6 @@ build-output.txt
 .env.admin-whitelist
 NETLIFY_ENV_VARS.txt
 *env_vars*
+
+# Local Netlify folder
+.netlify

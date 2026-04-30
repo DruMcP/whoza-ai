@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
-import { generateVideoObjectSchema } from '../utils/schemaOrg';
+import { generateVideoObjectSchema, generateOrganizationSchema, generateBreadcrumbSchema, getBaseUrl } from '../utils/schemaOrg';
 
 /**
  * Dedicated video watch page — required for Google Video indexing.
@@ -25,18 +25,24 @@ export default function VideoWatch() {
   const videoSchema = generateVideoObjectSchema({
     name: 'How Whoza.ai Works — AI Search Optimization for Tradespeople',
     description: 'See how Rex, your AI visibility partner, helps tradespeople get found when customers ask ChatGPT, Google AI, and Perplexity for local services. Weekly 10-minute tasks that improve your AI visibility.',
-    thumbnailUrl: 'https://whoza.ai/og-image.png',
-    contentUrl: 'https://whoza.ai/whoza-explainer.mp4',
+    thumbnailUrl: `${getBaseUrl()}/og-image.png`,
+    contentUrl: `${getBaseUrl()}/whoza-explainer.mp4`,
     uploadDate: '2026-04-24',
     duration: 'PT60S',
   });
+
+  const orgSchema = generateOrganizationSchema();
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Video', url: '/video' }
+  ]);
 
   return (
     <div className="min-h-screen bg-slate-950">
       <SEO
         title="How Whoza.ai Works — Video | AI Search Optimization for Tradespeople"
         description="Watch how Rex helps tradespeople get found in ChatGPT, Google AI, and Perplexity. Weekly 10-minute tasks. 60-second explainer video."
-        schemas={[videoSchema]}
+        schemas={[videoSchema, orgSchema, breadcrumbSchema]}
       />
 
       {/* Header */}
@@ -60,7 +66,7 @@ export default function VideoWatch() {
           How Whoza.ai Works
         </h1>
         <p className="text-slate-400 text-center mb-6">
-          See how Rex helps your trade business get found in AI search — in 60 seconds
+          See how Rex helps your trade business get found in AI search — in under 2 minutes
         </p>
 
         {/* Video player — largest element on the page */}
@@ -111,7 +117,7 @@ export default function VideoWatch() {
         <div className="grid md:grid-cols-3 gap-6 mb-10">
           <div className="bg-slate-900 rounded-xl p-5 border border-slate-800">
             <p className="text-slate-500 text-sm mb-1">Duration</p>
-            <p className="text-white font-semibold">60 seconds</p>
+            <p className="text-white font-semibold">under 2 minutes</p>
           </div>
           <div className="bg-slate-900 rounded-xl p-5 border border-slate-800">
             <p className="text-slate-500 text-sm mb-1">Published</p>
@@ -135,7 +141,7 @@ export default function VideoWatch() {
               <li>How Rex, your AI visibility partner, analyses your business</li>
               <li>Simple weekly 10-minute tasks that improve your visibility</li>
               <li>Real results from tradespeople already using Whoza.ai</li>
-              <li>How to start with a free competitor analysis</li>
+              <li>How to start your 14-day free trial with Rex</li>
             </ul>
             <p className="text-slate-300 leading-relaxed">
               If your business is not visible to AI, your business is invisible. Whoza.ai fixes that with simple, actionable tasks designed for non-technical business owners. No coding, no complex setup — just follow Rex's weekly guidance and watch your visibility grow.
@@ -145,25 +151,25 @@ export default function VideoWatch() {
 
         {/* CTA */}
         <div className="text-center pb-10">
-          <p className="text-slate-400 mb-4">Ready to see who AI recommends for your trade?</p>
+          <p className="text-slate-400 mb-4">Ready to start your 14-day free trial?</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              to="/competitor-analysis"
+              to="/pricing"
               className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl text-lg transition-colors inline-flex items-center gap-2"
             >
-              Check Your Competitor — Free
+              Start Your Free Trial
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </Link>
             <Link
-              to="/pricing"
+              to="/how-it-works"
               className="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl text-lg transition-colors border border-slate-700"
             >
-              View Pricing
+              See How It Works
             </Link>
           </div>
-          <p className="text-slate-500 text-sm mt-3">No credit card required · Takes 60 seconds</p>
+          <p className="text-slate-500 text-sm mt-3">No credit card required · Cancel anytime</p>
         </div>
       </main>
     </div>

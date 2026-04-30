@@ -3,6 +3,8 @@
  * Handles sending branded emails via Resend API
  */
 
+import { getBaseUrl } from '../utils/schemaOrg';
+
 const RESEND_API_KEY = import.meta.env.VITE_RESEND_API_KEY;
 const RESEND_API_URL = 'https://api.resend.com/emails';
 
@@ -179,7 +181,7 @@ function generateCompetitorAnalysisEmailTemplate({
           <!-- CTA Button -->
           <tr>
             <td style="padding: 0 30px 30px; text-align: center;">
-              <a href="https://whoza.ai/pricing" style="display: inline-block; background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%); color: #0f172a; text-decoration: none; font-size: 16px; font-weight: 700; padding: 16px 32px; border-radius: 8px; box-shadow: 0 4px 12px rgba(74, 222, 128, 0.3);">
+              <a href={`${getBaseUrl()}/pricing`} style="display: inline-block; background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%); color: #0f172a; text-decoration: none; font-size: 16px; font-weight: 700; padding: 16px 32px; border-radius: 8px; box-shadow: 0 4px 12px rgba(74, 222, 128, 0.3);">
                 Start Improving for £59/month
               </a>
             </td>

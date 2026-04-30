@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { getPublishedPosts, getFeaturedPosts } from '../../data/blogPosts';
+import SEO from '../../components/SEO';
+import { generateOrganizationSchema, generateBreadcrumbSchema, getBaseUrl } from '../../utils/schemaOrg';
 import './Blog.css';
 
 function Blog() {
@@ -21,27 +23,28 @@ function Blog() {
 
   // Add structured data for blog listing
   useEffect(() => {
+    const baseUrl = getBaseUrl();
     const allPosts = getPublishedPosts();
     const schema = {
       "@context": "https://schema.org",
       "@type": "Blog",
       "name": "Whoza.ai Blog - AI Visibility for Tradespeople",
       "description": "Expert guides on AI visibility and digital marketing for plumbers, electricians, builders, and tradespeople.",
-      "url": "https://whoza.ai/blog",
+      "url": `${baseUrl}/blog`,
       "publisher": {
         "@type": "Organization",
         "name": "Whoza.ai",
-        "url": "https://whoza.ai",
+        "url": baseUrl,
         "logo": {
           "@type": "ImageObject",
-          "url": "https://whoza.ai/whoza-logo.png"
+          "url": `${baseUrl}/whoza-logo.png`
         }
       },
       "blogPost": allPosts.map(post => ({
         "@type": "BlogPosting",
         "headline": post.title,
         "description": post.metaDescription,
-        "url": `https://whoza.ai/blog/${post.slug}`,
+        "url": `${baseUrl}/blog/${post.slug}`,
         "datePublished": post.publishDate,
         "author": {
           "@type": "Organization",
@@ -67,7 +70,20 @@ function Blog() {
   }, []);
 
   return (
-    <main className="blog-page" role="main">
+    <>
+      <SEO
+        title="AI Visibility Blog | Expert Guides for Tradespeople"
+        description="Expert guides on AI visibility and digital marketing for plumbers, electricians, builders, and tradespeople."
+        canonical="/blog"
+        schemas={[
+          generateOrganizationSchema(),
+          generateBreadcrumbSchema([
+            { name: 'Home', url: '/' },
+            { name: 'Blog', url: '/blog' }
+          ])
+        ]}
+      />
+      <main className="blog-page" role="main">
       {/* Hero Section */}
       <section className="blog-hero">
         <div className="container">
@@ -157,15 +173,16 @@ function Blog() {
       <section className="blog-cta">
         <div className="container">
           <div className="cta-card">
-            <h2>See Who's Stealing Your Customers</h2>
-            <p>Find out who AI recommends for your trade in your area — and why it's not you. Free competitor analysis in 60 seconds.</p>
-            <Link to="/competitor-analysis" className="cta-button">
-              Check My Competitor
+            <h2>Stop Losing Customers to AI Search</h2>
+            <p>Rex monitors your competitors monthly and sends you weekly action plans to outrank them on ChatGPT, Google AI, and Perplexity.</p>
+            <Link to="/pricing" className="cta-button">
+              Start Your Free Trial
             </Link>
           </div>
         </div>
       </section>
     </main>
+    </>
   );
 }
 

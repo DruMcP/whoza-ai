@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { getPostBySlug, getPublishedPosts } from '../../data/blogPosts';
 import Playbook2026 from './Playbook2026';
+import { generateOrganizationSchema, generateBreadcrumbSchema, getBaseUrl } from '../../utils/schemaOrg';
 import './Blog.css';
 
 function BlogPost() {
@@ -74,6 +75,8 @@ function BlogPost() {
     if (!post) return;
     if (post.isPlaybook) return;
 
+    const baseUrl = getBaseUrl();
+
     document.title = `${post.title} | Whoza.ai Blog`;
 
     const metaDescription = document.querySelector("meta[name='description']");
@@ -86,12 +89,12 @@ function BlogPost() {
     if (ogDescription) ogDescription.setAttribute('content', post.metaDescription);
     
     const ogUrl = document.querySelector("meta[property='og:url']");
-    if (ogUrl) ogUrl.setAttribute('content', `https://whoza.ai/blog/${post.slug}`);
+    if (ogUrl) ogUrl.setAttribute('content', `${baseUrl}/blog/${post.slug}`);
 
     let canonicalLink = document.querySelector("link[rel='canonical']");
     const canonicalUrl = post.canonicalTo
       ? post.canonicalTo
-      : `https://whoza.ai/blog/${post.slug}`;
+      : `${baseUrl}/blog/${post.slug}`;
     if (canonicalLink) canonicalLink.setAttribute('href', canonicalUrl);
 
     const articleSchema = {
@@ -99,26 +102,26 @@ function BlogPost() {
       "@type": "Article",
       "headline": post.title,
       "description": post.metaDescription,
-      "image": "https://whoza.ai/whoza-logo.png",
+      "image": `${baseUrl}/whoza-logo.png`,
       "author": {
         "@type": "Organization",
         "name": post.author,
-        "url": "https://whoza.ai"
+        "url": baseUrl
       },
       "publisher": {
         "@type": "Organization",
         "name": "Whoza.ai",
-        "url": "https://whoza.ai",
+        "url": baseUrl,
         "logo": {
           "@type": "ImageObject",
-          "url": "https://whoza.ai/whoza-logo.png"
+          "url": `${baseUrl}/whoza-logo.png`
         }
       },
       "datePublished": post.publishDate,
       "dateModified": post.publishDate,
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": `https://whoza.ai/blog/${post.slug}`
+        "@id": `${baseUrl}/blog/${post.slug}`
       },
       "keywords": post.tags.join(', ')
     };
@@ -145,19 +148,19 @@ function BlogPost() {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://whoza.ai"
+          "item": baseUrl
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Blog",
-          "item": "https://whoza.ai/blog"
+          "item": `${baseUrl}/blog`
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": post.title,
-          "item": `https://whoza.ai/blog/${post.slug}`
+          "item": `${baseUrl}/blog/${post.slug}`
         }
       ]
     };

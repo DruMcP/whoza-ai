@@ -13,7 +13,9 @@ import { injectSchema } from '../utils/schemaOrg';
  */
 const SEO = ({ schemas = [], noindex = false, title: propTitle, description: propDescription }) => {
   const location = useLocation();
-  const baseUrl = 'https://whoza.ai';
+  const baseUrl = typeof window !== 'undefined'
+    ? window.location.origin
+    : 'https://whoza.ai';
   const path = location.pathname;
   const canonicalUrl = `${baseUrl}${path}`;
 

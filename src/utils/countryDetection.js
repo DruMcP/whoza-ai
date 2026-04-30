@@ -2,23 +2,9 @@ const STORAGE_KEY = 'whoza_country';
 const VALID_COUNTRIES = ['US', 'GB'];
 
 async function fetchCountryFromServer() {
-  try {
-    const response = await fetch('/.netlify/functions/detect-country', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-
-    if (!response.ok) {
-      return null;
-    }
-
-    const data = await response.json();
-    return data.country;
-  } catch (error) {
-    return null;
-  }
+  // detect-country Netlify function is not deployed — skip to avoid 404 console errors
+  // Fallback to browser locale detection (getCountryFromBrowserLocale) handles this gracefully
+  return null;
 }
 
 function getCountryFromBrowserLocale() {

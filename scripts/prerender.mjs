@@ -22,7 +22,9 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const distDir = path.join(__dirname, '..', 'dist');
-const baseUrl = 'https://whoza.ai';
+// ─── Config ─────────────────────────────────────────────────────────────────
+// Use env var for site URL so staging builds don't leak production URLs
+const baseUrl = process.env.SITE_URL || 'https://whoza.ai';
 
 // ─── Blog Posts ───────────────────────────────────────────────────────────────
 const blogPosts = [
@@ -158,6 +160,8 @@ const staticPages = [
   { path: '/privacy/', title: 'Privacy Policy | Whoza.ai - Your Data is Protected', description: 'Read our privacy policy. GDPR compliant AI search optimization platform. ICO registered.' },
   { path: '/terms/', title: 'Terms of Service | Whoza.ai - Fair Terms for Tradespeople', description: 'Review our terms of service. Transparent, fair terms for tradespeople using our AI search optimization platform.' },
   { path: '/cookie-policy/', title: 'Cookie Policy | Whoza.ai', description: 'Read our cookie policy to learn how we use cookies to improve your experience on Whoza.ai.' },
+  { path: '/voice/', title: 'AI Voice Agent for Tradespeople | Never Miss a Call', description: 'Your AI receptionist answers every call 24/7, books jobs into your diary, filters spam, and transfers emergencies. 14-day free trial.' },
+  { path: '/voice/setup/', title: 'Set Up AI Voice Agent | Whoza.ai', description: 'Set up your AI voice receptionist in 10 minutes. No technical skills needed.' },
 ];
 
 // ─── FAQPage Schema for Homepage ──────────────────────────────────────────────
@@ -247,36 +251,37 @@ const homeFAQSchema = {
 // It is visually hidden (position:absolute; width:1px; height:1px; overflow:hidden)
 // so it does not affect the visual layout, but is fully readable by crawlers.
 // This resolves the Ahrefs "Page has no outgoing links" critical error across all pages.
+// Uses relative URLs so staging builds don't leak production URLs.
 const staticNavBlock = `
 <nav aria-label="Site navigation" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">
-  <a href="https://whoza.ai/">Home</a>
-  <a href="https://whoza.ai/how-it-works/">How It Works</a>
-  <a href="https://whoza.ai/pricing/">Pricing</a>
-  <a href="https://whoza.ai/case-studies/">Case Studies</a>
-  <a href="https://whoza.ai/competitor-analysis/">Competitor Analysis</a>
-  <a href="https://whoza.ai/blog/">Blog</a>
-  <a href="https://whoza.ai/trust/">Trust &amp; Security</a>
-  <a href="https://whoza.ai/contact/">Contact</a>
-  <a href="https://whoza.ai/privacy/">Privacy Policy</a>
-  <a href="https://whoza.ai/terms/">Terms of Service</a>
-  <a href="https://whoza.ai/uk/ai-visibility/london/">AI Visibility London</a>
-  <a href="https://whoza.ai/uk/ai-visibility/birmingham/">AI Visibility Birmingham</a>
-  <a href="https://whoza.ai/uk/ai-visibility/manchester/">AI Visibility Manchester</a>
-  <a href="https://whoza.ai/uk/ai-visibility/leeds/">AI Visibility Leeds</a>
-  <a href="https://whoza.ai/uk/ai-visibility/glasgow/">AI Visibility Glasgow</a>
-  <a href="https://whoza.ai/uk/ai-visibility/liverpool/">AI Visibility Liverpool</a>
-  <a href="https://whoza.ai/uk/ai-visibility/bristol/">AI Visibility Bristol</a>
-  <a href="https://whoza.ai/uk/ai-visibility/edinburgh/">AI Visibility Edinburgh</a>
-  <a href="https://whoza.ai/us/ai-visibility/new-york/">AI Visibility New York</a>
-  <a href="https://whoza.ai/us/ai-visibility/los-angeles/">AI Visibility Los Angeles</a>
-  <a href="https://whoza.ai/us/ai-visibility/chicago/">AI Visibility Chicago</a>
-  <a href="https://whoza.ai/us/ai-visibility/houston/">AI Visibility Houston</a>
-  <a href="https://whoza.ai/us/ai-visibility/dallas/">AI Visibility Dallas</a>
-  <a href="https://whoza.ai/trades/plumber/">AI Visibility for Plumbers</a>
-  <a href="https://whoza.ai/trades/electrician/">AI Visibility for Electricians</a>
-  <a href="https://whoza.ai/trades/builder/">AI Visibility for Builders</a>
-  <a href="https://whoza.ai/trades/roofer/">AI Visibility for Roofers</a>
-  <a href="https://whoza.ai/trades/locksmith/">AI Visibility for Locksmiths</a>
+  <a href="/">Home</a>
+  <a href="/how-it-works/">How It Works</a>
+  <a href="/pricing/">Pricing</a>
+  <a href="/case-studies/">Case Studies</a>
+  <a href="/competitor-analysis/">Competitor Analysis</a>
+  <a href="/blog/">Blog</a>
+  <a href="/trust/">Trust &amp; Security</a>
+  <a href="/contact/">Contact</a>
+  <a href="/privacy/">Privacy Policy</a>
+  <a href="/terms/">Terms of Service</a>
+  <a href="/uk/ai-visibility/london/">AI Visibility London</a>
+  <a href="/uk/ai-visibility/birmingham/">AI Visibility Birmingham</a>
+  <a href="/uk/ai-visibility/manchester/">AI Visibility Manchester</a>
+  <a href="/uk/ai-visibility/leeds/">AI Visibility Leeds</a>
+  <a href="/uk/ai-visibility/glasgow/">AI Visibility Glasgow</a>
+  <a href="/uk/ai-visibility/liverpool/">AI Visibility Liverpool</a>
+  <a href="/uk/ai-visibility/bristol/">AI Visibility Bristol</a>
+  <a href="/uk/ai-visibility/edinburgh/">AI Visibility Edinburgh</a>
+  <a href="/us/ai-visibility/new-york/">AI Visibility New York</a>
+  <a href="/us/ai-visibility/los-angeles/">AI Visibility Los Angeles</a>
+  <a href="/us/ai-visibility/chicago/">AI Visibility Chicago</a>
+  <a href="/us/ai-visibility/houston/">AI Visibility Houston</a>
+  <a href="/us/ai-visibility/dallas/">AI Visibility Dallas</a>
+  <a href="/trades/plumber/">AI Visibility for Plumbers</a>
+  <a href="/trades/electrician/">AI Visibility for Electricians</a>
+  <a href="/trades/builder/">AI Visibility for Builders</a>
+  <a href="/trades/roofer/">AI Visibility for Roofers</a>
+  <a href="/trades/locksmith/">AI Visibility for Locksmiths</a>
 </nav>`;
 
 // ─── Read base index.html ─────────────────────────────────────────────────────
@@ -388,7 +393,11 @@ function generateHtml(urlPath, title, description, canonicalOverride = null) {
     );
   }
 
-  // Update dateModified in schema
+  // Update og:image and og:image:secure_url to use the correct domain
+  html = html.replace(
+    /https:\/\/whoza\.ai\/og-image\.png/g,
+    `${baseUrl}/og-image.png`
+  );
   html = html.replace(
     /"dateModified": "2025-12-29"/g,
     '"dateModified": "2026-04-26"'
@@ -414,14 +423,6 @@ function generateHtml(urlPath, title, description, canonicalOverride = null) {
   html = html.replace(
     '<div id="root"></div>',
     `<div id="root"></div>${staticNavBlock}`
-  );
-
-  // Add H1 tag for crawlers (visually hidden, helps SEO)
-  const h1Text = title.split(' | ')[0];
-  const h1Block = `\n<h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">${h1Text.replace(/"/g, '&quot;')}</h1>`;
-  html = html.replace(
-    '<div id="root"></div>',
-    `<div id="root"></div>${h1Block}`
   );
 
   return html;

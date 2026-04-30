@@ -1,9 +1,22 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
+import { generateOrganizationSchema, generateBreadcrumbSchema } from '../utils/schemaOrg';
 
 export default function Terms() {
+  const orgSchema = generateOrganizationSchema();
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Terms of Service', url: '/terms' },
+  ]);
+
   return (
     <>
+      <SEO 
+        title="Terms of Service | Whoza.ai" 
+        description="Terms of service for whoza.ai. Simple, fair terms for UK tradespeople using our AI visibility platform."
+        schemas={[orgSchema, breadcrumbSchema]}
+      />
       <Header />
 
       <main>

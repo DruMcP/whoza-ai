@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { TrendingUp, PiggyBank, Clock, CheckCircle2, Calculator, ArrowRight } from 'lucide-react';
 import { useLocalization } from '../contexts/LocalizationContext';
 
 export default function ROICalculator() {
@@ -6,7 +8,7 @@ export default function ROICalculator() {
   const [selectedTrade, setSelectedTrade] = useState('plumber');
   const [averageJobValue, setAverageJobValue] = useState(250);
   const [newJobsPerMonth, setNewJobsPerMonth] = useState(3);
-  const [selectedPlan, setSelectedPlan] = useState('improve');
+  const [selectedPlan, setSelectedPlan] = useState('starter');
   const [showResults, setShowResults] = useState(false);
 
   const tradePresets = {
@@ -26,8 +28,17 @@ export default function ROICalculator() {
   };
 
   const planPrices = {
-    improve: 59,
-    priority: 149
+    starter: 59,
+    growth: 119,
+    pro: 199,
+    scale: 349
+  };
+
+  const planNames = {
+    starter: 'Capture',
+    growth: 'Convert',
+    pro: 'Grow',
+    scale: 'Scale'
   };
 
   const handleTradeChange = (trade) => {
@@ -71,360 +82,335 @@ export default function ROICalculator() {
   };
 
   return (
-    <div className="roi-calculator">
-      <div className="roi-calculator-header">
-        <h2>Calculate Your ROI</h2>
-        <p>See how much you could gain by improving your AI visibility</p>
-      </div>
+    <section className="ds-section ds-bg-lightgray">
+      <div className="ds-container">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12"
+        >
+          <span className="ds-badge ds-badge-green mb-5">
+            <Calculator size={14} strokeWidth={2.5} />
+            ROI Calculator
+          </span>
+          <h2 className="ds-heading-2 mb-4">Calculate Your Return</h2>
+          <p className="ds-body max-w-xl mx-auto">
+            See how much additional revenue you could generate by capturing leads you're currently missing.
+          </p>
+        </motion.div>
 
-      <div className="roi-calculator-content">
-        <div className="roi-inputs">
-          <div className="roi-input-group">
-            <label htmlFor="tradeType">Select your trade</label>
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
-              gap: '10px',
-              marginBottom: '20px'
-            }}>
-              {Object.entries(tradePresets).map(([key, { name }]) => (
-                <button
-                  key={key}
-                  type="button"
-                  onClick={() => handleTradeChange(key)}
-                  style={{
-                    padding: '12px 16px',
-                    backgroundColor: selectedTrade === key ? '#84CC16' : '#ffffff',
-                    color: selectedTrade === key ? '#0f172a' : '#1e293b',
-                    border: `2px solid ${selectedTrade === key ? '#84CC16' : '#e2e8f0'}`,
-                    borderRadius: '8px',
-                    fontWeight: selectedTrade === key ? 'bold' : 'normal',
-                    cursor: 'pointer',
-                    transition: 'all 0.2s',
-                    fontSize: '0.9rem'
-                  }}
-                  onMouseEnter={(e) => {
-                    if (selectedTrade !== key) {
-                      e.currentTarget.style.borderColor = '#84CC16';
-                      e.currentTarget.style.backgroundColor = '#f0fdf4';
-                    }
-                  }}
-                  onMouseLeave={(e) => {
-                    if (selectedTrade !== key) {
-                      e.currentTarget.style.borderColor = '#e2e8f0';
-                      e.currentTarget.style.backgroundColor = '#ffffff';
-                    }
-                  }}
-                >
-                  {name}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div className="roi-input-group">
-            <label htmlFor="averageJobValue">
-              Average job value
-              <span className="input-tooltip" style={{ color: '#6B7280' }}>What do you typically charge for a job?</span>
-            </label>
-            <div className="currency-input-wrapper">
-              <span className="currency-symbol" aria-hidden="true">£</span>
-              <input
-                id="averageJobValue"
-                type="number"
-                min="0"
-                step="10"
-                value={averageJobValue}
-                onChange={(e) => setAverageJobValue(Number(e.target.value))}
-                aria-label="Average job value in pounds"
-                aria-describedby="average-job-hint"
-              />
-            </div>
-            <div className="input-range-wrapper">
-              <input
-                type="range"
-                min="50"
-                max="1000"
-                step="10"
-                value={averageJobValue}
-                onChange={(e) => setAverageJobValue(Number(e.target.value))}
-                aria-label="Adjust average job value with slider"
-              />
-              <div className="range-labels">
-                <span>{getCurrencySymbol()}50</span>
-                <span>{getCurrencySymbol()}1,000</span>
-              </div>
-            </div>
-            <p className="field-hint" id="average-job-hint" style={{ color: '#6B7280' }}>Based on our data, most tradespeople charge {formatPrice(150)}-{formatPrice(500)} per job</p>
-          </div>
-
-          <div className="roi-input-group">
-            <label htmlFor="newJobsPerMonth">
-              New jobs per month
-              <span className="input-tooltip" style={{ color: '#6B7280' }}>Conservative estimate from improved visibility</span>
-            </label>
-            <div className="number-input-wrapper">
-              <input
-                id="newJobsPerMonth"
-                type="number"
-                min="0"
-                max="50"
-                value={newJobsPerMonth}
-                onChange={(e) => setNewJobsPerMonth(Number(e.target.value))}
-                aria-label="Expected new jobs per month"
-                aria-describedby="new-jobs-hint"
-              />
-              <span className="input-unit">jobs</span>
-            </div>
-            <div className="input-range-wrapper">
-              <input
-                type="range"
-                min="1"
-                max="20"
-                step="1"
-                value={newJobsPerMonth}
-                onChange={(e) => setNewJobsPerMonth(Number(e.target.value))}
-                aria-label="Adjust new jobs per month with slider"
-              />
-              <div className="range-labels">
-                <span>1</span>
-                <span>20</span>
-              </div>
-            </div>
-            <p className="field-hint" id="new-jobs-hint" style={{ color: '#6B7280' }}>Our customers typically see 2-5 additional jobs per month</p>
-          </div>
-
-          <div className="roi-input-group">
-            <label htmlFor="selectedPlan">Choose a plan</label>
-            <select
-              id="selectedPlan"
-              value={selectedPlan}
-              onChange={(e) => setSelectedPlan(e.target.value)}
-              aria-label="Select subscription plan"
-            >
-              <option value="improve">Improve - {formatPrice(59)}/month</option>
-              <option value="priority">Priority - {formatPrice(149)}/month</option>
-            </select>
-          </div>
-        </div>
-
-        {showResults && (
-          <div className="roi-results" role="region" aria-live="polite" aria-label="ROI calculation results">
-            <div className={`roi-summary ${isPositiveROI ? 'positive' : 'negative'}`}>
-              <div className="roi-summary-main">
-                <div className="roi-metric-large">
-                  <span className="roi-label">Your Monthly Net Gain</span>
-                  <span className={`roi-value ${isPositiveROI ? 'positive' : 'negative'}`}>
-                    {formatCurrency(results.netGain)}
-                  </span>
-                  <span className="roi-sublabel" style={{ color: '#6B7280' }}>
-                    {formatCurrency(results.monthlyRevenue)} revenue - {formatCurrency(results.planCost)} subscription
-                  </span>
+        <div className="max-w-4xl mx-auto">
+          <div
+            className="rounded-2xl overflow-hidden"
+            style={{
+              background: 'var(--white)',
+              border: '1px solid var(--slate-200)',
+              boxShadow: 'var(--shadow-card)',
+            }}
+          >
+            {/* Inputs Panel */}
+            <div className="p-6 md:p-10" style={{ borderBottom: '1px solid var(--slate-200)' }}>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Trade Selection */}
+                <div>
+                  <label className="ds-label mb-3">Your Trade</label>
+                  <select
+                    value={selectedTrade}
+                    onChange={(e) => handleTradeChange(e.target.value)}
+                    className="ds-input"
+                    style={{ cursor: 'pointer' }}
+                  >
+                    {Object.entries(tradePresets).map(([key, { name }]) => (
+                      <option key={key} value={key}>{name}</option>
+                    ))}
+                  </select>
                 </div>
-              </div>
 
-              <div className="roi-metrics-grid">
-                <div className="roi-metric">
-                  <svg viewBox="0 0 20 20" fill="currentColor" className="roi-icon" aria-hidden="true">
-                    <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                  </svg>
-                  <div className="roi-metric-content">
-                    <span className="roi-metric-label" style={{ color: '#374151' }}>Return on Investment</span>
-                    <span className="roi-metric-value">{results.roi}%</span>
+                {/* Job Value */}
+                <div>
+                  <label className="ds-label mb-3">
+                    Average Job Value
+                    <span className="block text-xs font-normal mt-1" style={{ color: 'var(--slate-400)' }}>
+                      What you typically charge per job
+                    </span>
+                  </label>
+                  <div className="relative">
+                    <span
+                      className="absolute left-4 top-1/2 -translate-y-1/2 font-semibold"
+                      style={{ color: 'var(--slate-400)' }}
+                    >
+                      {getCurrencySymbol()}
+                    </span>
+                    <input
+                      type="number"
+                      min="0"
+                      step="10"
+                      value={averageJobValue}
+                      onChange={(e) => setAverageJobValue(Number(e.target.value))}
+                      className="ds-input"
+                      style={{ paddingLeft: '2.5rem' }}
+                    />
                   </div>
+                  <input
+                    type="range"
+                    min="50"
+                    max="1000"
+                    step="10"
+                    value={averageJobValue}
+                    onChange={(e) => setAverageJobValue(Number(e.target.value))}
+                    className="w-full mt-3"
+                    style={{
+                      accentColor: 'var(--katie-blue)',
+                      height: '4px',
+                      borderRadius: '2px',
+                      background: 'var(--slate-200)',
+                    }}
+                  />
                 </div>
 
-                <div className="roi-metric">
-                  <svg viewBox="0 0 20 20" fill="currentColor" className="roi-icon" aria-hidden="true">
-                    <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
-                  </svg>
-                  <div className="roi-metric-content">
-                    <span className="roi-metric-label" style={{ color: '#374151' }}>Annual Profit</span>
-                    <span className="roi-metric-value">{formatCurrency(results.annualProfit)}</span>
-                  </div>
-                </div>
-
-                <div className="roi-metric">
-                  <svg viewBox="0 0 20 20" fill="currentColor" className="roi-icon" aria-hidden="true">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-                  </svg>
-                  <div className="roi-metric-content">
-                    <span className="roi-metric-label" style={{ color: '#374151' }}>Break-even Point</span>
-                    <span className="roi-metric-value">
-                      {results.breakEvenJobs} {results.breakEvenJobs === 1 ? 'job' : 'jobs'}
+                {/* New Jobs */}
+                <div>
+                  <label className="ds-label mb-3">
+                    Extra Jobs/Month
+                    <span className="block text-xs font-normal mt-1" style={{ color: 'var(--slate-400)' }}>
+                      Conservative estimate from AI leads
+                    </span>
+                  </label>
+                  <div className="relative">
+                    <input
+                      type="number"
+                      min="0"
+                      max="50"
+                      value={newJobsPerMonth}
+                      onChange={(e) => setNewJobsPerMonth(Number(e.target.value))}
+                      className="ds-input"
+                    />
+                    <span
+                      className="absolute right-4 top-1/2 -translate-y-1/2 text-sm"
+                      style={{ color: 'var(--slate-400)' }}
+                    >
+                      jobs
                     </span>
                   </div>
+                  <input
+                    type="range"
+                    min="1"
+                    max="20"
+                    step="1"
+                    value={newJobsPerMonth}
+                    onChange={(e) => setNewJobsPerMonth(Number(e.target.value))}
+                    className="w-full mt-3"
+                    style={{
+                      accentColor: 'var(--katie-blue)',
+                      height: '4px',
+                      borderRadius: '2px',
+                      background: 'var(--slate-200)',
+                    }}
+                  />
                 </div>
               </div>
 
-              {isPositiveROI && (
-                <div className="roi-insight">
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                  </svg>
-                  <div>
-                    <strong>Great potential!</strong> You only need {results.breakEvenJobs} new {results.breakEvenJobs === 1 ? 'job' : 'jobs'} per month to cover your subscription.
-                    Everything beyond that is pure profit. With your estimate of {newJobsPerMonth} jobs,
-                    you'd earn an extra {formatCurrency(results.annualProfit)} per year.
-                  </div>
-                </div>
-              )}
-
-              {!isPositiveROI && (
-                <div className="roi-insight warning">
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-                  </svg>
-                  <div>
-                    Consider adjusting your expectations or try a lower-tier plan. Remember, even 1-2 additional jobs per month can make a significant difference to your bottom line.
-                  </div>
-                </div>
-              )}
-            </div>
-
-            <div className="roi-breakdown">
-              <h3>Annual Breakdown</h3>
-              <div className="roi-breakdown-items">
-                <div className="roi-breakdown-item">
-                  <span className="breakdown-label">Additional annual revenue</span>
-                  <span className="breakdown-value positive">{formatCurrency(results.annualRevenue)}</span>
-                </div>
-                <div className="roi-breakdown-item">
-                  <span className="breakdown-label">Annual subscription cost</span>
-                  <span className="breakdown-value">{formatCurrency(results.annualCost)}</span>
-                </div>
-                <div className="roi-breakdown-item total">
-                  <span className="breakdown-label"><strong>Your net profit increase</strong></span>
-                  <span className={`breakdown-value ${isPositiveROI ? 'positive' : 'negative'}`}>
-                    <strong>{formatCurrency(results.annualProfit)}</strong>
-                  </span>
+              {/* Plan Selection */}
+              <div className="mt-6">
+                <label className="ds-label mb-3">Choose Plan</label>
+                <div className="flex flex-wrap gap-3">
+                  {Object.entries(planPrices).map(([key, price]) => (
+                    <button
+                      key={key}
+                      type="button"
+                      onClick={() => setSelectedPlan(key)}
+                      className="ds-btn"
+                      style={{
+                        background: selectedPlan === key ? 'var(--katie-blue)' : 'var(--white)',
+                        color: selectedPlan === key ? 'var(--white)' : 'var(--navy-900)',
+                        border: `1.5px solid ${selectedPlan === key ? 'var(--katie-blue)' : 'var(--slate-200)'}`,
+                        minHeight: '40px',
+                        padding: 'var(--space-3) var(--space-5)',
+                        fontSize: 'var(--text-sm)',
+                      }}
+                    >
+                      {planNames[key]} — {formatPrice(price)}/mo
+                    </button>
+                  ))}
                 </div>
               </div>
             </div>
 
-            <div className="roi-comparison" style={{
-              backgroundColor: '#f8fafc',
-              borderRadius: '12px',
-              padding: '24px',
-              marginTop: '24px',
-              border: '1px solid #e2e8f0'
-            }}>
-              <h3 style={{ marginTop: 0, marginBottom: '20px', fontSize: '1.25rem', color: '#1e293b' }}>
-                Compare to alternatives
-              </h3>
-              <div style={{ display: 'grid', gap: '12px' }}>
-                <div style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  padding: '12px 16px',
-                  backgroundColor: '#ffffff',
-                  borderRadius: '8px',
-                  border: '1px solid #e2e8f0'
-                }}>
-                  <div>
-                    <strong style={{ color: '#1e293b' }}>Checkatrade</strong>
-                    <div style={{ fontSize: '0.85rem', color: '#6B7280', marginTop: '2px' }}>
-                      {formatPrice(60)}-{formatPrice(209)}/month + lead fees
-                    </div>
+            {/* Results Panel */}
+            {showResults && (
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4 }}
+                className="p-6 md:p-10"
+                style={{ background: 'var(--off-white)' }}
+              >
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                  {/* Net Gain */}
+                  <div
+                    className="rounded-xl p-6 text-center"
+                    style={{
+                      background: isPositiveROI
+                        ? 'linear-gradient(135deg, var(--rex-green-light) 0%, var(--white) 100%)'
+                        : 'linear-gradient(135deg, var(--color-red-100) 0%, var(--white) 100%)',
+                      border: `2px solid ${isPositiveROI ? 'var(--rex-green)' : 'var(--error)'}`,
+                    }}
+                  >
+                    <p className="text-sm font-medium mb-2" style={{ color: 'var(--slate-500)' }}>
+                      Monthly Net Gain
+                    </p>
+                    <p
+                      className="text-3xl font-extrabold"
+                      style={{
+                        color: isPositiveROI ? 'var(--rex-green)' : 'var(--error)',
+                        fontFamily: 'var(--font-heading)',
+                        fontVariantNumeric: 'tabular-nums',
+                      }}
+                    >
+                      {formatCurrency(results.netGain)}
+                    </p>
+                    <p className="text-xs mt-2" style={{ color: 'var(--slate-400)' }}>
+                      {formatCurrency(results.monthlyRevenue)} revenue − {formatCurrency(results.planCost)} cost
+                    </p>
                   </div>
-                  <span style={{ color: '#ef4444', fontWeight: 'bold', fontSize: '0.9rem' }}>Pay per lead</span>
+
+                  {/* ROI % */}
+                  <div
+                    className="rounded-xl p-6 text-center"
+                    style={{
+                      background: 'var(--white)',
+                      border: '1px solid var(--slate-200)',
+                    }}
+                  >
+                    <div className="flex justify-center mb-2">
+                      <TrendingUp size={20} style={{ color: 'var(--katie-blue)' }} />
+                    </div>
+                    <p className="text-sm font-medium mb-2" style={{ color: 'var(--slate-500)' }}>
+                      Return on Investment
+                    </p>
+                    <p
+                      className="text-3xl font-extrabold"
+                      style={{
+                        color: 'var(--navy-900)',
+                        fontFamily: 'var(--font-heading)',
+                        fontVariantNumeric: 'tabular-nums',
+                      }}
+                    >
+                      {results.roi}%
+                    </p>
+                  </div>
+
+                  {/* Break Even */}
+                  <div
+                    className="rounded-xl p-6 text-center"
+                    style={{
+                      background: 'var(--white)',
+                      border: '1px solid var(--slate-200)',
+                    }}
+                  >
+                    <div className="flex justify-center mb-2">
+                      <Clock size={20} style={{ color: 'var(--claire-amber)' }} />
+                    </div>
+                    <p className="text-sm font-medium mb-2" style={{ color: 'var(--slate-500)' }}>
+                      Break-even Point
+                    </p>
+                    <p
+                      className="text-3xl font-extrabold"
+                      style={{
+                        color: 'var(--navy-900)',
+                        fontFamily: 'var(--font-heading)',
+                        fontVariantNumeric: 'tabular-nums',
+                      }}
+                    >
+                      {results.breakEvenJobs} {results.breakEvenJobs === 1 ? 'job' : 'jobs'}
+                    </p>
+                  </div>
                 </div>
 
-                <div style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  padding: '12px 16px',
-                  backgroundColor: '#ffffff',
-                  borderRadius: '8px',
-                  border: '1px solid #e2e8f0'
-                }}>
-                  <div>
-                    <strong style={{ color: '#1e293b' }}>Bark</strong>
-                    <div style={{ fontSize: '0.85rem', color: '#6B7280', marginTop: '2px' }}>
-                      {formatPrice(5)}-{formatPrice(30)} per lead (avg 5 leads = {formatPrice(75)}-{formatPrice(150)})
+                {/* Annual Insight */}
+                <div
+                  className="rounded-xl p-6 mb-8"
+                  style={{
+                    background: 'var(--white)',
+                    border: '1px solid var(--slate-200)',
+                  }}
+                >
+                  <div className="flex items-start gap-4">
+                    <div
+                      className="w-10 h-10 rounded-full flex items-center justify-center shrink-0"
+                      style={{ background: 'var(--katie-blue-light)' }}
+                    >
+                      <PiggyBank size={20} style={{ color: 'var(--katie-blue)' }} />
+                    </div>
+                    <div>
+                      <p className="font-semibold mb-1" style={{ color: 'var(--navy-900)' }}>
+                        Annual projection
+                      </p>
+                      <p className="text-sm" style={{ color: 'var(--slate-500)', lineHeight: '1.6' }}>
+                        With {newJobsPerMonth} extra jobs per month at {formatCurrency(averageJobValue)} each,
+                        you'd generate <strong style={{ color: 'var(--navy-900)' }}>{formatCurrency(results.annualRevenue)}</strong> in additional annual revenue.
+                        After the {planNames[selectedPlan]} plan cost of {formatCurrency(results.annualCost)},
+                        your <strong style={{ color: 'var(--rex-green)' }}>annual profit is {formatCurrency(results.annualProfit)}</strong>.
+                        You only need {results.breakEvenJobs} {results.breakEvenJobs === 1 ? 'job' : 'jobs'} per month to cover costs.
+                      </p>
                     </div>
                   </div>
-                  <span style={{ color: '#ef4444', fontWeight: 'bold', fontSize: '0.9rem' }}>Pay per lead</span>
                 </div>
 
-                <div style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  padding: '12px 16px',
-                  backgroundColor: '#ffffff',
-                  borderRadius: '8px',
-                  border: '1px solid #e2e8f0'
-                }}>
-                  <div>
-                    <strong style={{ color: '#1e293b' }}>MyBuilder</strong>
-                    <div style={{ fontSize: '0.85rem', color: '#6B7280', marginTop: '2px' }}>
-                      {formatPrice(2)}-{formatPrice(25)} per shortlist
-                    </div>
-                  </div>
-                  <span style={{ color: '#ef4444', fontWeight: 'bold', fontSize: '0.9rem' }}>Pay per lead</span>
+                {/* Competitor Comparison */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                  {[
+                    { name: 'Bark / Rated People', cost: `${formatPrice(5)}-${formatPrice(30)} per lead`, model: 'Pay per lead', bad: true },
+                    { name: 'Traditional Agency', cost: `${formatPrice(300)}-${formatPrice(1000)}/mo`, model: 'Variable', bad: true },
+                    { name: 'whoza.ai', cost: `${formatPrice(planPrices[selectedPlan])}/mo fixed`, model: 'Predictable', bad: false },
+                  ].map((item, i) => (
+                    <motion.div
+                      key={item.name}
+                      initial={{ opacity: 0, x: i === 2 ? 0 : -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.3, delay: i * 0.1 }}
+                      className="flex items-center justify-between p-4 rounded-xl"
+                      style={{
+                        background: item.bad ? 'var(--white)' : 'var(--rex-green-light)',
+                        border: `1px solid ${item.bad ? 'var(--slate-200)' : 'var(--rex-green)'}`,
+                      }}
+                    >
+                      <div>
+                        <p className="font-semibold text-sm" style={{ color: 'var(--navy-900)' }}>{item.name}</p>
+                        <p className="text-xs mt-0.5" style={{ color: 'var(--slate-400)' }}>{item.cost}</p>
+                      </div>
+                      <span
+                        className="text-xs font-bold px-2 py-1 rounded-full"
+                        style={{
+                          background: item.bad ? 'var(--color-red-100)' : 'var(--rex-green)',
+                          color: item.bad ? 'var(--error)' : 'var(--white)',
+                        }}
+                      >
+                        {item.model}
+                      </span>
+                    </motion.div>
+                  ))}
                 </div>
 
-                <div style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  padding: '12px 16px',
-                  backgroundColor: '#ffffff',
-                  borderRadius: '8px',
-                  border: '1px solid #e2e8f0'
-                }}>
-                  <div>
-                    <strong style={{ color: '#1e293b' }}>Traditional marketing agency</strong>
-                    <div style={{ fontSize: '0.85rem', color: '#6B7280', marginTop: '2px' }}>
-                      {formatPrice(300)}-{formatPrice(1000)}/month
-                    </div>
-                  </div>
-                  <span style={{ color: '#f59e0b', fontWeight: 'bold', fontSize: '0.9rem' }}>Variable</span>
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                  <p className="text-sm" style={{ color: 'var(--slate-400)' }}>
+                    Based on real customer data. Most see results within 8-10 weeks.
+                  </p>
+                  <a
+                    href="#pricing-plans"
+                    className="ds-btn ds-btn-primary"
+                  >
+                    Choose Your Plan
+                    <ArrowRight size={16} />
+                  </a>
                 </div>
-
-                <div style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  padding: '12px 16px',
-                  backgroundColor: '#ecfccb',
-                  borderRadius: '8px',
-                  border: '2px solid #84CC16'
-                }}>
-                  <div>
-                    <strong style={{ color: '#1e293b' }}>whoza.ai</strong>
-                    <div style={{ fontSize: '0.85rem', color: '#4d7c0f', marginTop: '2px' }}>
-                      {formatPrice(59)}/month - predictable cost, no per-lead fees
-                    </div>
-                  </div>
-                  <span style={{ color: '#16a34a', fontWeight: 'bold', fontSize: '0.9rem' }}>Fixed price</span>
-                </div>
-              </div>
-              <p style={{
-                marginTop: '16px',
-                marginBottom: 0,
-                fontSize: '0.9rem',
-                color: '#6B7280',
-                fontStyle: 'italic'
-              }}>
-                Unlike traditional lead generation platforms, whoza.ai builds your AI visibility for long-term growth without pay-per-lead costs.
-              </p>
-            </div>
-
-            <div className="roi-cta">
-              <p className="roi-cta-text">
-                Based on real results from our customers, these numbers are achievable. Most tradespeople see results within 8-10 weeks.
-              </p>
-              <a href="#pricing-plans" className="button button-large">
-                Choose Your Plan
-              </a>
-            </div>
+              </motion.div>
+            )}
           </div>
-        )}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

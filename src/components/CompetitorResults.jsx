@@ -17,6 +17,7 @@ import {
   Facebook,
   Link2
 } from 'lucide-react';
+import { getBaseUrl } from '../utils/schemaOrg';
 
 export default function CompetitorResults({ results, onEmailCapture }) {
   const [email, setEmail] = useState('');
@@ -281,7 +282,7 @@ export default function CompetitorResults({ results, onEmailCapture }) {
                 </button>
               </div>
               <p className="text-sm text-green-200 mt-3">
-                Free analysis • No credit card • 14-day trial
+                14-day free trial • No credit card required • Cancel anytime
               </p>
             </form>
           ) : (
@@ -312,7 +313,7 @@ export default function CompetitorResults({ results, onEmailCapture }) {
       {/* Trust Section */}
       <section className="py-12 bg-white">
         <div className="container max-w-4xl text-center">
-          <p className="text-sm text-slate-500 mb-4">Trusted by tradespeople</p>
+          <p className="text-sm text-slate-500 mb-4">Join thousands of UK tradespeople</p>
           <div className="flex flex-wrap justify-center gap-8 text-slate-400">
             <span className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-green-500" />
@@ -339,7 +340,7 @@ export default function CompetitorResults({ results, onEmailCapture }) {
 function SocialShareSection({ business, trade, competitor }) {
   const [copied, setCopied] = useState(false);
 
-  const shareUrl = typeof window !== 'undefined' ? window.location.href : 'https://whoza.ai/competitor-analysis';
+  const shareUrl = typeof window !== 'undefined' ? window.location.href : `${getBaseUrl()}/competitor-analysis`;
   const shareText = `I just found out that AI recommends ${competitor.name} instead of my ${trade} business when people ask ChatGPT for local services. Found out with @whoza_ai — check yours:`;
   const shareTitle = `AI recommends ${competitor.name} for ${trade} in my area`;
 

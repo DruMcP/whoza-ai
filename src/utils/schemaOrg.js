@@ -3,13 +3,21 @@
  * Implements JSON-LD schemas for enhanced AI crawler discoverability
  */
 
+// Dynamic base URL — uses current domain on client, falls back to production
+export const getBaseUrl = () => {
+  if (typeof window !== 'undefined') {
+    return window.location.origin;
+  }
+  return 'https://whoza.ai';
+};
+
 /**
  * Generate WebSite schema with search action
  * @param {Object} config - Configuration object
  * @returns {Object} WebSite schema
  */
 export function generateWebSiteSchema(config = {}) {
-  const baseUrl = config.baseUrl || 'https://whoza.ai';
+  const baseUrl = config.baseUrl || getBaseUrl();
 
   return {
     '@context': 'https://schema.org',
@@ -40,7 +48,7 @@ export function generateWebSiteSchema(config = {}) {
  * @returns {Object} Organization schema
  */
 export function generateOrganizationSchema(config = {}) {
-  const baseUrl = config.baseUrl || 'https://whoza.ai';
+  const baseUrl = config.baseUrl || getBaseUrl();
 
   return {
     '@context': 'https://schema.org',
@@ -88,7 +96,7 @@ export function generateOrganizationSchema(config = {}) {
  * @param {string} baseUrl - Base URL
  * @returns {Object} BreadcrumbList schema
  */
-export function generateBreadcrumbSchema(breadcrumbs, baseUrl = 'https://whoza.ai') {
+export function generateBreadcrumbSchema(breadcrumbs, baseUrl = getBaseUrl()) {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -107,7 +115,7 @@ export function generateBreadcrumbSchema(breadcrumbs, baseUrl = 'https://whoza.a
  * @param {string} baseUrl - Base URL
  * @returns {Object} Article schema
  */
-export function generateArticleSchema(article, baseUrl = 'https://whoza.ai') {
+export function generateArticleSchema(article, baseUrl = getBaseUrl()) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -142,7 +150,7 @@ export function generateArticleSchema(article, baseUrl = 'https://whoza.ai') {
  * @param {string} baseUrl - Base URL
  * @returns {Object} Person schema
  */
-export function generatePersonSchema(person, baseUrl = 'https://whoza.ai') {
+export function generatePersonSchema(person, baseUrl = getBaseUrl()) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -164,7 +172,7 @@ export function generatePersonSchema(person, baseUrl = 'https://whoza.ai') {
  * @param {string} baseUrl - Base URL
  * @returns {Object} Product schema
  */
-export function generateProductSchema(product, baseUrl = 'https://whoza.ai') {
+export function generateProductSchema(product, baseUrl = getBaseUrl()) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -200,7 +208,7 @@ export function generateProductSchema(product, baseUrl = 'https://whoza.ai') {
  * @param {string} baseUrl - Base URL
  * @returns {Object} Service schema
  */
-export function generateServiceSchema(service, baseUrl = 'https://whoza.ai') {
+export function generateServiceSchema(service, baseUrl = getBaseUrl()) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -230,7 +238,7 @@ export function generateServiceSchema(service, baseUrl = 'https://whoza.ai') {
  * @param {string} baseUrl - Base URL
  * @returns {Object} FAQPage schema
  */
-export function generateFAQPageSchema(faqs, baseUrl = 'https://whoza.ai') {
+export function generateFAQPageSchema(faqs, baseUrl = getBaseUrl()) {
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -251,7 +259,7 @@ export function generateFAQPageSchema(faqs, baseUrl = 'https://whoza.ai') {
  * @param {string} baseUrl - Base URL
  * @returns {Object} HowTo schema
  */
-export function generateHowToSchema(howTo, baseUrl = 'https://whoza.ai') {
+export function generateHowToSchema(howTo, baseUrl = getBaseUrl()) {
   return {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
@@ -274,7 +282,7 @@ export function generateHowToSchema(howTo, baseUrl = 'https://whoza.ai') {
  * @param {string} baseUrl - Base URL
  * @returns {Object} LocalBusiness schema
  */
-export function generateLocalBusinessSchema(business, baseUrl = 'https://whoza.ai') {
+export function generateLocalBusinessSchema(business, baseUrl = getBaseUrl()) {
   return {
     '@context': 'https://schema.org',
     '@type': business.type || 'LocalBusiness',
@@ -311,7 +319,7 @@ export function generateLocalBusinessSchema(business, baseUrl = 'https://whoza.a
  * @param {string} baseUrl - Base URL
  * @returns {Object} SoftwareApplication schema
  */
-export function generateSoftwareApplicationSchema(app, baseUrl = 'https://whoza.ai') {
+export function generateSoftwareApplicationSchema(app, baseUrl = getBaseUrl()) {
   return {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
@@ -365,7 +373,7 @@ export function injectSchema(schema) {
  * @param {string} baseUrl - Base URL
  * @returns {Array} Array of schemas
  */
-export function generateHomePageSchemas(baseUrl = 'https://whoza.ai') {
+export function generateHomePageSchemas(baseUrl = getBaseUrl()) {
   return [
     generateWebSiteSchema({ baseUrl }),
     generateOrganizationSchema({ baseUrl }),
@@ -386,7 +394,7 @@ export function generateHomePageSchemas(baseUrl = 'https://whoza.ai') {
  * @param {string} baseUrl - Base URL
  * @returns {Array} Array of schemas
  */
-export function generatePricingPageSchemas(plans, baseUrl = 'https://whoza.ai') {
+export function generatePricingPageSchemas(plans, baseUrl = getBaseUrl()) {
   const breadcrumbs = generateBreadcrumbSchema([
     { name: 'Home', url: '/' },
     { name: 'Pricing', url: '/pricing' }
@@ -417,7 +425,7 @@ export function generatePricingPageSchemas(plans, baseUrl = 'https://whoza.ai') 
  */
 export function generateVideoObjectSchema(
   { name, description, thumbnailUrl, contentUrl, uploadDate, duration },
-  baseUrl = 'https://whoza.ai'
+  baseUrl = getBaseUrl()
 ) {
   return {
     '@context': 'https://schema.org',

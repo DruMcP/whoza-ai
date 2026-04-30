@@ -1,9 +1,22 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
+import { generateOrganizationSchema, generateBreadcrumbSchema } from '../utils/schemaOrg';
 
 export default function Privacy() {
+  const orgSchema = generateOrganizationSchema();
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Privacy Policy', url: '/privacy' },
+  ]);
+
   return (
     <>
+      <SEO 
+        title="Privacy Policy | Whoza.ai" 
+        description="Whoza.ai privacy policy. Registered with the ICO. We never sell your data. Bank-level encryption protects your business information."
+        schemas={[orgSchema, breadcrumbSchema]}
+      />
       <Header />
 
       <main>

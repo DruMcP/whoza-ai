@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
+import { generateOrganizationSchema, generateBreadcrumbSchema, getBaseUrl } from '../utils/schemaOrg';
 
 export default function Trust() {
   const [proofSnippets, setProofSnippets] = useState([]);
@@ -75,7 +77,7 @@ export default function Trust() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "WHOZA AI LTD",
-    "url": "https://whoza.ai",
+    "url": `${getBaseUrl()}`,
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": averageRating.toFixed(1),
@@ -114,6 +116,11 @@ export default function Trust() {
 
   return (
     <Fragment>
+      <SEO 
+        title="Trust & Privacy | Whoza.ai" 
+        description="Whoza.ai is ICO registered, SSL secured, and built with privacy by design. See our trust signals, certifications, and customer reviews."
+        schemas={[reviewSchema]}
+      />
       <Header />
 
       <main id="main-content" role="main">

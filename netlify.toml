@@ -4,7 +4,7 @@
 # IMPORTANT: This project MUST deploy to the 'whoza-ai' Netlify site
 [build]
 publish = "dist"
-command = "npx vite build && node scripts/prerender.mjs"
+command = "npx vite build && node scripts/prerender.mjs && node scripts/generate-sitemap.mjs"
 [build.environment]
 NODE_VERSION = "20"
 # Google Places API key is a public, client-side key restricted by domain in Google Cloud Console
@@ -20,8 +20,8 @@ for = "/*.html"
 Cache-Control = "public, max-age=0, must-revalidate"
 X-Content-Type-Options = "nosniff"
 X-Frame-Options = "DENY"
-X-XSS-Protection = "1; mode=block"
 Referrer-Policy = "strict-origin-when-cross-origin"
+Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self'; connect-src 'self' https://*.supabase.co https://api.openai.com https://js.stripe.com https://www.google-analytics.com https://*.netlify.app; frame-src https://js.stripe.com https://*.stripe.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;"
 [[headers]]
 for = "/assets/*"
 [headers.values]
@@ -63,7 +63,6 @@ for = "/*"
 [headers.values]
 X-Content-Type-Options = "nosniff"
 X-Frame-Options = "DENY"
-X-XSS-Protection = "1; mode=block"
 Referrer-Policy = "strict-origin-when-cross-origin"
 Permissions-Policy = "geolocation=(), microphone=(), camera=()"
 # Domain redirects - whoza.co.uk to whoza.ai (308 permanent redirect)

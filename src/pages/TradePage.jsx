@@ -5,6 +5,7 @@ import { getTradeBySlug, getAllTrades } from '../data/trades';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
+import { generateOrganizationSchema, generateBreadcrumbSchema, getBaseUrl } from '../utils/schemaOrg';
 
 export default function TradePage() {
   const { tradeSlug } = useParams();
@@ -55,13 +56,19 @@ export default function TradePage() {
   const stats = isUS ? trade.usStats : trade.ukStats;
   const peopleTerm = isUS ? 'contractors' : getTerm('tradespeople').toLowerCase();
 
+  const orgSchema = generateOrganizationSchema();
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: trade.plural, url: `/trades/${trade.slug}` }
+  ]);
+
   // Schema for AEO optimization
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": `Whoza.ai - AI Visibility for ${trade.plural}`,
     "description": `Helping ${trade.plural} get found and recommended by AI search engines like ChatGPT and Google AI.`,
-    "url": `https://whoza.ai/trades/${trade.slug}`,
+    "url": `${getBaseUrl()}/trades/${trade.slug}`,
     "areaServed": {
       "@type": "Country",
       "name": isUS ? "United States" : "United Kingdom"
@@ -117,7 +124,7 @@ export default function TradePage() {
       <SEO
         title={`AI Visibility for ${trade.plural} | Get Recommended by ChatGPT | Whoza.ai`}
         description={`Get your AI Visibility Score as a ${tradeName}. Join ${stats.tradespeople.toLocaleString()}+ ${peopleTerm} optimising their online presence. From ${formatPrice(59)}/month.`}
-        schemas={[localBusinessSchema, faqSchema]}
+        schemas={[orgSchema, breadcrumbSchema, localBusinessSchema, faqSchema]}
       />
       <Header />
 

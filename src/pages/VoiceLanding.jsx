@@ -3,18 +3,21 @@ import { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Icon from '../components/icons/Icon';
+import SEO from '../components/SEO';
+import { generateOrganizationSchema, generateBreadcrumbSchema } from '../utils/schemaOrg';
+import VoiceDemoPlayer from '../components/VoiceDemoPlayer';
 import { useAuth } from '../contexts/AuthContext';
 
 const voiceFeatures = [
   {
     icon: 'phone',
-    title: 'Answers Every Call 24/7',
-    description: 'Never miss a job again. Your AI receptionist works while you sleep, eat, and work on the tools.'
+    title: 'Katie or Mark Answers Every Call 24/7',
+    description: 'Never miss a job again. Your AI voice agent works while you sleep, eat, and work on the tools. You choose the name and voice.'
   },
   {
     icon: 'calendar',
     title: 'Books Jobs Into Your Diary',
-    description: 'AI checks your availability and books appointments directly into Google Calendar or Outlook. No back-and-forth.'
+    description: 'Katie checks your availability and books appointments directly into Google Calendar or Outlook. No back-and-forth.'
   },
   {
     icon: 'shield',
@@ -24,12 +27,12 @@ const voiceFeatures = [
   {
     icon: 'zap',
     title: 'Handles Emergencies Instantly',
-    description: '"Burst pipe" or "no heating" triggers instant live transfer to your mobile. No delay.'
+    description: '"Burst pipe" or "no heating" triggers instant live transfer to your mobile. Katie recognises emergencies and patches you through immediately.'
   },
   {
     icon: 'message-circle',
     title: 'Sends WhatsApp Summaries',
-    description: 'After every call, you get a full summary: who called, what they wanted, and what the AI did.'
+    description: 'After every call, Katie sends you a full summary: who called, what they wanted, and what she did.'
   },
   {
     icon: 'smartphone',
@@ -42,17 +45,17 @@ const howItWorksSteps = [
   {
     number: '1',
     title: 'Build Your Profile',
-    description: 'Tell us your business name, trade, services, pricing, and the postcodes you cover. Takes 10 minutes.'
+    description: 'Tell Katie your business name, trade, services, pricing, and the postcodes you cover. Choose whether you want Katie or Mark as your voice agent. Takes 10 minutes.'
   },
   {
     number: '2',
     title: 'Divert Your Calls',
-    description: 'Dial a short code on your phone — your calls forward to the AI when you\'re busy or after hours.'
+    description: 'Dial a short code on your phone — your calls forward to Katie or Mark when you\'re busy or after hours.'
   },
   {
     number: '3',
     title: 'Focus on the Job',
-    description: 'The AI answers, qualifies, books, and summarises. You check your phone between jobs and see a full diary.'
+    description: 'Katie answers, qualifies, books, and summarises. You check your phone between jobs and see a full diary.'
   }
 ];
 
@@ -82,56 +85,75 @@ const testimonials = [
 
 const pricingTiers = [
   {
-    name: 'Solo',
-    price: 69,
+    name: 'Capture',
+    price: 59,
     period: '/month',
-    description: 'One-person trade business',
-    minutes: '300 minutes included',
+    description: 'Never miss a lead. Basic Katie for call capture, limited usage. No Rex, no advanced Claire.',
+    minutes: 'Katie/Mark: 100 minutes included',
     popular: false,
     cta: 'Start Free Trial',
     features: [
-      '300 minutes voice answering',
-      '24/7 call coverage',
-      'Calendar booking',
-      'Spam filtering',
-      'WhatsApp summaries',
-      'Emergency routing',
-      'Google Business Profile optimisation',
-      '5 directory listings'
+      'Katie/Mark: 100 min voice answering',
+      'Katie/Mark: 24/7 call coverage',
+      'Katie/Mark: WhatsApp summaries',
+      'Basic call capture & qualification',
+      'Claire: Review monitoring',
+      '2 directory listings'
     ]
   },
   {
-    name: 'Business',
-    price: 129,
+    name: 'Convert',
+    price: 119,
     period: '/month',
-    description: 'Growing team (2–5 staff)',
-    minutes: '600 minutes included',
+    description: 'Where you want volume. Full Katie booking, Claire reviews, light Rex insights. Most popular.',
+    minutes: 'Katie/Mark: 300 minutes included',
     popular: true,
     cta: 'Start Free Trial',
     features: [
-      '600 minutes voice answering',
-      'Everything in Solo, plus:',
-      '15 directory listings',
-      'Review automation',
-      'Priority support',
-      'Competitor tracking'
+      'Katie/Mark: 300 min voice answering',
+      'Everything in Capture, plus:',
+      'Katie/Mark: Calendar booking',
+      'Rex: AI Visibility Score + monthly report',
+      'Claire: Automated review requests',
+      '5 directory listings',
+      'Priority support'
     ]
   },
   {
-    name: 'Professional',
-    price: 219,
+    name: 'Grow',
+    price: 199,
     period: '/month',
-    description: 'Established business',
-    minutes: '1,200 minutes included',
+    description: 'Your real product. Full stack: Katie + Claire + Rex. Actionable insights, higher usage.',
+    minutes: 'Katie/Mark: 800 minutes included',
     popular: false,
     cta: 'Start Free Trial',
     features: [
-      '1,200 minutes voice answering',
-      'Everything in Business, plus:',
-      '30 directory listings',
-      'Advanced local SEO',
-      'Competitor tracking',
+      'Katie/Mark: 800 min voice answering',
+      'Everything in Convert, plus:',
+      'Rex: Competitor tracking (10 locations)',
+      'Rex: Actionable competitor insights',
+      'Claire: Full review collection',
+      '10 directory listings',
+      'Team access (3 seats)',
       'Monthly strategy calls'
+    ]
+  },
+  {
+    name: 'Scale',
+    price: 349,
+    period: '/month',
+    description: 'Fair use, not unlimited. Everything + priority optimisation, multi-location, fair use policy.',
+    minutes: 'Katie/Mark: Fair use minutes included',
+    popular: false,
+    cta: 'Start Free Trial',
+    features: [
+      'Katie/Mark: Fair use voice answering',
+      'Everything in Grow, plus:',
+      'Rex: Priority optimisation + white-label',
+      'Claire: Multi-brand review management',
+      'Unlimited directory listings',
+      'Custom AI training',
+      'Dedicated account manager'
     ]
   }
 ];
@@ -169,6 +191,18 @@ export default function VoiceLanding() {
 
   return (
     <div className="voice-landing">
+      <SEO
+        title="AI Voice Agent for Tradespeople | Never Miss a Call"
+        description="Your AI receptionist answers every call 24/7, books jobs into your diary, filters spam, and transfers emergencies. 14-day free trial."
+        canonical="/voice"
+        schemas={[
+          generateOrganizationSchema(),
+          generateBreadcrumbSchema([
+            { name: 'Home', url: '/' },
+            { name: 'AI Voice Agent', url: '/voice' }
+          ])
+        ]}
+      />
       <Header />
 
       {/* Hero Section */}
@@ -182,9 +216,10 @@ export default function VoiceLanding() {
               <span className="gradient-text">Never Miss a Job.</span>
             </h1>
             <p className="subtitle">
-              Your AI receptionist answers every call in your business name — 24/7, 
-              weekends, bank holidays. Books jobs into your diary. Filters spam. 
-              Transfers emergencies. All while you work on the tools.
+              Meet Katie (or Mark) — your AI voice agent who answers every call in your business name — 24/7, 
+              weekends, bank holidays. She books jobs into your diary, filters spam, 
+              transfers emergencies, and sends you WhatsApp summaries. All while you work on the tools.
+              You choose the name and voice.
             </p>
             <div className="hero-cta-group">
               <Link to="/start" className="btn-primary btn-large">
@@ -224,7 +259,7 @@ export default function VoiceLanding() {
                 </div>
                 <div className="call-event ai">
                   <span className="time">00:02</span>
-                  <span className="event">🤖 "Good afternoon, Smith & Sons Plumbing. How can I help?"</span>
+                  <span className="event">🤖 "Good afternoon, Smith & Sons Plumbing. Katie speaking. How can I help?"</span>
                 </div>
                 <div className="call-event caller">
                   <span className="time">00:05</span>
@@ -232,7 +267,7 @@ export default function VoiceLanding() {
                 </div>
                 <div className="call-event ai">
                   <span className="time">00:08</span>
-                  <span className="event">🤖 "I'm sorry to hear that. Is it safe to turn off the stopcock? Don't worry if you're not sure — we can talk you through it."</span>
+                  <span className="event">🤖 "I'm sorry to hear that. Is it safe to turn off the stopcock? Don't worry if you're not sure — I can talk you through it."</span>
                 </div>
                 <div className="call-event caller">
                   <span className="time">00:15</span>
@@ -248,7 +283,7 @@ export default function VoiceLanding() {
                 </div>
                 <div className="call-event ai">
                   <span className="time">00:30</span>
-                  <span className="event">🤖 "Thank you James. I'll send someone between 2pm and 4pm today. You'll get a text confirmation. Is that okay?"</span>
+                  <span className="event">🤖 "Thank you James. I'll send someone between 2pm and 4pm today. You'll get a text confirmation from Katie. Is that okay?"</span>
                 </div>
                 <div className="call-event caller">
                   <span className="time">00:35</span>
@@ -256,7 +291,7 @@ export default function VoiceLanding() {
                 </div>
                 <div className="call-event ai">
                   <span className="time">00:37</span>
-                  <span className="event">🤖 "You're welcome. If anything changes, just call back. Take care."</span>
+                  <span className="event">🤖 "You're welcome. If anything changes, just call back and Katie will sort it. Take care."</span>
                 </div>
                 <div className="call-event result">
                   <span className="time">00:40</span>
@@ -268,11 +303,23 @@ export default function VoiceLanding() {
         </div>
       </section>
 
+      {/* Live Voice Demo */}
+      <section className="demo-section">
+        <div className="container">
+          <div className="section-header" style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <span className="section-tag">Hear It In Action</span>
+            <h2>Listen to a Real Call</h2>
+            <p>90 seconds. A boiler breakdown enquiry. Booked, confirmed, summarised.</p>
+          </div>
+          <VoiceDemoPlayer />
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="features-section">
         <div className="container">
-          <h2>What Your AI Receptionist Does</h2>
-          <p className="section-subtitle">Every feature designed specifically for UK tradespeople.</p>
+          <h2>What Katie (or Mark) Does For You</h2>
+          <p className="section-subtitle">Every feature designed specifically for UK tradespeople. You choose the name and voice.</p>
           <div className="features-grid">
             {voiceFeatures.map((feature, i) => (
               <div className="feature-card" key={i}>
@@ -303,7 +350,7 @@ export default function VoiceLanding() {
           </div>
           <div className="steps-cta">
             <Link to="/start" className="btn-primary btn-large">
-              Get Started →
+              Start Your Free Trial — See How Many Jobs Katie Books →
             </Link>
           </div>
         </div>
@@ -394,7 +441,7 @@ export default function VoiceLanding() {
           <h2>Stop Missing Calls. Start Booking Jobs.</h2>
           <p className="subtitle">14-day free trial. No credit card. No setup fee. Cancel anytime.</p>
           <Link to="/start" className="btn-primary btn-large">
-            Start Your Free Trial →
+            Start Your Free Trial — See How Many Jobs Katie Books →
           </Link>
           <p className="guarantee">
             💯 Guarantee: If whoza.ai doesn't book you at least one extra job in month one, month two is free.

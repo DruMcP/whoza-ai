@@ -71,7 +71,7 @@ const BUNDLE_PLANS = [
       'AI Voice Agent (3000 min/month)',
       'AI Visibility Score',
       'Custom AI Training',
-      'Unlimited Competitor Tracking',
+      'Full Competitor Tracking',
       'WhatsApp + SMS Summaries',
       'Spam Blocking',
       'Emergency Call Transfer',

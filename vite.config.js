@@ -23,6 +23,12 @@ export default defineConfig(({ mode }) => {
         assetFileNames: 'assets/[name]-[hash][extname]',
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
+        manualChunks: {
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          'vendor-motion': ['framer-motion'],
+          'vendor-supabase': ['@supabase/supabase-js'],
+          'vendor-icons': ['lucide-react'],
+        },
       },
     },
     chunkSizeWarningLimit: 500,

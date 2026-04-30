@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { getBaseUrl } from '../../utils/schemaOrg';
 import './Blog.css';
 
 function Playbook2026() {
@@ -10,7 +11,7 @@ function Playbook2026() {
       "@type": "Article",
       "headline": "The UK Trades Business Playbook for AI Search Visibility in 2026",
       "description": "A comprehensive, evidence-based playbook for UK plumbers, electricians, and tradespeople to achieve visibility in AI search. Learn the 90-day transformation timeline, technical schema implementation, and authority-building strategies.",
-      "image": "https://whoza.ai/blog-images/ai_search_visibility.jpg",
+      "image": `${getBaseUrl()}/blog-images/ai_search_visibility.jpg`,
       "datePublished": "2026-01-31",
       "dateModified": "2026-01-31",
       "author": {
@@ -22,7 +23,7 @@ function Playbook2026() {
         "name": "Whoza.ai",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://whoza.ai/whoza-logo.png"
+          "url": `${getBaseUrl()}/whoza-logo.png`
         }
       }
     };

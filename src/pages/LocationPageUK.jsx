@@ -5,6 +5,7 @@ import { getCityBySlug, getAllUKCities } from '../data/ukCities';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
+import { generateOrganizationSchema, generateBreadcrumbSchema, getBaseUrl } from '../utils/schemaOrg';
 
 export default function LocationPageUK() {
   const { citySlug } = useParams();
@@ -45,13 +46,19 @@ export default function LocationPageUK() {
   const allCities = getAllUKCities();
   const otherCities = allCities.filter(c => c.slug !== citySlug).slice(0, 5);
 
+  const orgSchema = generateOrganizationSchema();
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: city.name, url: `/uk/ai-visibility/${city.slug}` }
+  ]);
+
   // Schema for AEO optimization
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": `Whoza.ai ${city.name} - AI Visibility for ${getTerm('tradespeople')}`,
     "description": `Helping ${getTerm('tradespeople')} in ${city.name} get found and recommended by AI search engines like ChatGPT and Google AI.`,
-    "url": `https://whoza.ai/uk/ai-visibility/${city.slug}`,
+    "url": `${getBaseUrl()}/uk/ai-visibility/${city.slug}`,
     "address": {
       "@type": "PostalAddress",
       "addressLocality": city.name,
@@ -109,7 +116,7 @@ export default function LocationPageUK() {
       <SEO
         title={`AI Visibility for ${getTerm('tradespeople')} in ${city.name}`}
         description={`Get your AI Visibility Score in ${city.name}. Join over ${city.tradespeople.toLocaleString()} ${getTerm('tradespeople')} optimising their online presence. ${formatPrice(59)} to start.`}
-        schemas={[localBusinessSchema, faqSchema]}
+        schemas={[orgSchema, breadcrumbSchema, localBusinessSchema, faqSchema]}
       />
       <Header />
 

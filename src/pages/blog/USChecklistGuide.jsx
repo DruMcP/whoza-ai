@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { getBaseUrl } from '../../utils/schemaOrg';
 import './Blog.css';
 
 function USChecklistGuide() {
@@ -9,7 +10,7 @@ function USChecklistGuide() {
       "@type": "Article",
       "headline": "10-Step AI Visibility Checklist for US Contractors in 2026",
       "description": "A comprehensive 10-step checklist for US contractors to optimize their online presence for AI search engines and drive more leads.",
-      "image": "https://whoza.ai/blog-images/us_checklist_guide.jpg", // Placeholder image
+      "image": `${getBaseUrl()}/blog-images/us_checklist_guide.jpg`,
       "datePublished": "2026-02-07",
       "dateModified": "2026-02-07",
       "author": {
@@ -21,12 +22,12 @@ function USChecklistGuide() {
         "name": "Whoza.ai",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://whoza.ai/whoza-logo.png"
+          "url": `${getBaseUrl()}/whoza-logo.png`
         }
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://whoza.ai/blog/us-contractor-ai-visibility-checklist"
+        "@id": `${getBaseUrl()}/blog/us-contractor-ai-visibility-checklist`
       },
       "keywords": "AI visibility checklist, US contractors, AI search optimization, AEO checklist, GEO checklist, contractor marketing"
     };

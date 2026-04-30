@@ -3,14 +3,15 @@ redirectsOrigin = "config"
 plugins = []
 
 [build]
-edge_functions = "/tmp/cc-agent/61841550/project/netlify/edge-functions"
-publish = "/tmp/cc-agent/61841550/project/dist"
+edge_functions = "/root/.openclaw/workspace/whoza-ai/netlify/edge-functions"
+publish = "/root/.openclaw/workspace/whoza-ai/dist"
 publishOrigin = "config"
 commandOrigin = "config"
-command = "npx vite build"
+command = "npx vite build && node scripts/prerender.mjs && node scripts/generate-sitemap.mjs"
 
 [build.environment]
 NODE_VERSION = "20"
+SECRETS_SCAN_SMART_DETECTION_OMIT_VALUES = "AIzaSyDXpEGqFvcgWvUcKbSCZstbUYZSqpWL62A"
 
 [build.processing]
 
@@ -39,8 +40,8 @@ for = "/*.html"
 Cache-Control = "public, max-age=0, must-revalidate"
 X-Content-Type-Options = "nosniff"
 X-Frame-Options = "DENY"
-X-XSS-Protection = "1; mode=block"
 Referrer-Policy = "strict-origin-when-cross-origin"
+Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self'; connect-src 'self' https://*.supabase.co https://api.openai.com https://js.stripe.com https://www.google-analytics.com https://*.netlify.app; frame-src https://js.stripe.com https://*.stripe.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;"
 
 [[headers]]
 for = "/assets/*"
@@ -67,17 +68,466 @@ for = "*.jpg"
 Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
+for = "*.webp"
+
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "*.avif"
+
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "*.woff2"
+
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "*.js"
+
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "*.css"
+
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
 for = "/*"
 
 [headers.values]
 X-Content-Type-Options = "nosniff"
 X-Frame-Options = "DENY"
-X-XSS-Protection = "1; mode=block"
 Referrer-Policy = "strict-origin-when-cross-origin"
 Permissions-Policy = "geolocation=(), microphone=(), camera=()"
 
 [[redirects]]
-from = "/*"
+from = "/ai-visibility-edinburgh"
+to = "/uk/ai-visibility/edinburgh/"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/ai-visibility-london"
+to = "/uk/ai-visibility/london/"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/ai-visibility-manchester"
+to = "/uk/ai-visibility/manchester/"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/ai-visibility-birmingham"
+to = "/uk/ai-visibility/birmingham/"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/ai-visibility-leeds"
+to = "/uk/ai-visibility/leeds/"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/ai-visibility-glasgow"
+to = "/uk/ai-visibility/glasgow/"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/ai-visibility-liverpool"
+to = "/uk/ai-visibility/liverpool/"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/ai-visibility-newcastle"
+to = "/uk/ai-visibility/newcastle/"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/ai-visibility-sheffield"
+to = "/uk/ai-visibility/sheffield/"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/ai-visibility-bristol"
+to = "/uk/ai-visibility/bristol/"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/ai-visibility-leicester"
+to = "/uk/ai-visibility/leicester/"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/ai-visibility-nottingham"
+to = "/uk/ai-visibility/nottingham/"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/ai-visibility-cardiff"
+to = "/uk/ai-visibility/cardiff/"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/ai-visibility-coventry"
+to = "/uk/ai-visibility/coventry/"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/ai-visibility-southampton"
+to = "/uk/ai-visibility/southampton/"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/ai-visibility-bradford"
+to = "/uk/ai-visibility/bradford/"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/ai-visibility-belfast"
+to = "/uk/ai-visibility/belfast/"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/free-score"
+to = "/competitor-analysis/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/free-score/"
+to = "/competitor-analysis/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/login"
+to = "/sign-in/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/login/"
+to = "/sign-in/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/privacy-policy"
+to = "/privacy/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/privacy-policy/"
+to = "/privacy/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/competitor"
+to = "/competitor-analysis/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/competitor/"
+to = "/competitor-analysis/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/dashboard"
+to = "/portal/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/dashboard/"
+to = "/portal/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/portal/*"
+to = "/index.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/portal/"
+to = "/index.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/tasks/*"
+to = "/index.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/tasks/"
+to = "/index.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/reports/*"
+to = "/index.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/reports/"
+to = "/index.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/admin/*"
+to = "/index.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/admin/"
+to = "/index.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/portal-task-details.html"
 to = "/index.html"
 status = 200.0
 force = false
@@ -211,6 +661,42 @@ force = true
 [[redirects]]
 from = "https://www.whoza.co/*"
 to = "https://whoza.ai/:splat"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/?s=:s"
+to = "/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/blog/?q=:q"
+to = "/blog/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/start?plan=:plan"
+to = "/start"
 status = 301.0
 force = true
 

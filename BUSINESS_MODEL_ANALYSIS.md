@@ -109,73 +109,141 @@ The whoza.ai pitch is not "buy our software." The pitch is: **"You're already lo
 
 ---
 
-## 4. Business Model Assessment
+## 4. Revenue Model
 
-### 4.1 Model Architecture
+### 4.1 Subscription + Outcome Hybrid Model
 
-```
-[Client] → [whoza.ai branded portal] → [Stripe billing] → [Trillet API]
-                                         ↓
-                              [whooza.ai margin]
-```
+**The shift:** whoza.ai has moved from a flat SaaS subscription to a **hybrid pricing model** that combines a base monthly fee with performance-based charges per AI-booked job.
 
-- **whoza.ai is the brand.** Client never sees Trillet.
-- **whoza.ai handles:** marketing, sales, onboarding, support, billing, bundle positioning
-- **Trillet handles:** voice AI, number provisioning, call routing, transcription, uptime
-- **Unit economics:** whoza.ai pays Trillet; whoza.ai charges client; spread = gross margin
+**Why this changes everything:**
+- **Aligns incentives** — we only earn more when Katie delivers more value
+- **Eliminates price objections** — the base fee is modest; the real cost only kicks in when jobs are being booked
+- **Expands ARPU automatically** — heavy users naturally pay more without needing to "choose" a higher tier
+- **Reduces churn** — users feel the value every time Katie books a job; stopping means losing that revenue stream
 
-### 4.2 Unit Economics (Standalone Voice)
+**How it works:**
+- Every plan has a **base monthly fee** that covers platform access, AI voice agent, visibility tools, and a set number of included AI-booked jobs
+- Once the included jobs are used, each additional **AI-booked job** incurs a small overage fee (£2–£3)
+- Users only pay more when Katie is actively generating confirmed appointments
 
-| Plan | Monthly Price | Est. Min/Month | Trillet Cost | Gross Margin |
-|------|--------------|------------------|--------------|--------------|
-| **Starter** | £49 (~$63) | 75 | $6.75 | **89%** |
-| **Growth** | £99 (~$127) | 200 | $18.00 | **86%** |
-| **Pro** | £199 (~$255) | 500 | $45.00 | **82%** |
-| **Elite** | £499 (~$639) | 1,500 | $135.00 | **79%** |
-
-*Note: Trillet Agency at $0.09/min. 300-min included pool offsets ~$27/mo but approaches marginal cost at scale.*
-
-**Platform cost absorption:** The $299/mo Trillet Agency fee is a fixed cost spread across all clients.
-- At 10 clients: +£23.90/client effective cost
-- At 50 clients: +£4.78/client
-- At 100 clients: +£2.39/client
-
-### 4.3 Unit Economics (Bundle: Voice + Visibility)
-
-| Plan | Bundle Price | Standalone Sum | Discount | Est. Min/Month | Trillet Cost | Gross Margin |
-|------|-------------|----------------|----------|----------------|--------------|--------------|
-| **Solo** | £69 | £88 | 22% | 100 | $9.00 | **87%** |
-| **Business** | £129 | £178 | 28% | 250 | $22.50 | **83%** |
-| **Professional** | £219 | £348 | 37% | 600 | $54.00 | **76%** |
-| **Enterprise** | £499 | £698 | 29% | 1,500 | $135.00 | **73%** |
-
-**Key finding:** Bundling sacrifices 5–9 percentage points of margin but increases ARPU by 19% and creates a **growth loop** (visibility → calls → voice agent → reviews → higher ranking → more calls).
-
-### 4.4 Break-Even Analysis
-
-| Metric | Standalone Voice | Bundled |
-|--------|------------------|---------|
-| Platform cost | $299/mo | $299/mo |
-| Break-even clients (Starter/Solo) | 10 @ £49 | 9 @ £69 |
-| Break-even clients (Growth/Business) | 6 @ £99 | 5 @ £129 |
-| Break-even clients (Pro/Professional) | 4 @ £199 | 4 @ £219 |
-| Profitable at 50 clients? | Yes (~£2,200/mo net) | Yes (~£3,150/mo net) |
-
-### 4.5 Competitive Pricing Benchmark
-
-| Provider | UK? | Monthly | Included | Overage | Notes |
-|----------|-----|---------|----------|---------|-------|
-| **Moneypenny** | ✅ | £99 | 30 min | £1.65/min | Human hybrid, premium brand |
-| **AnswerConnect** | ✅ | £245 | 125 min | £1.96/min | US-backed, 24/7 human |
-| **AllDayPA** | ✅ | £210 | 150 min | £1.40/min | Long-established UK |
-| **CallChimps** | ✅ | £29 | 30 min | £0.97/min | Budget AI, limited features |
-| **Trade Receptionist** | ✅ | £? | ? | ? | Trade-specific competitor, 500+ users |
-| **VoiceFleet** | ✅ | £? | ? | ? | Trade-specific, ROI-focused messaging |
-| **whoza.ai (bundle)** | ✅ | £69–£499 | usage-based | £0.09/min pass-through | AI-only, trade-trained, +visibility |
-
-**Pricing position:** whoza.ai sits between CallChimps (budget) and Moneypenny (premium). The bundle at £69 undercuts Moneypenny by 30% while offering 24/7 AI + visibility platform. At £129, it's 48% cheaper than AnswerConnect with arguably superior technology.
+**Sales language:** "You get 15 jobs included, after that it's £3 per extra job." We never say "hybrid billing model" or "overage fees." The frame is: included jobs + fair pay-per-result.
 
 ---
+
+### 4.2 Pricing Tiers (Updated)
+
+| Tier | Base Price | Included Jobs | Overage | Total Value Prop |
+|------|-----------|--------------|---------|------------------|
+| **Starter (Capture)** | £59/mo | Lead capture only (no booking automation) | N/A | Never miss a lead |
+| **Growth (Convert)** | £119/mo | 15 AI-booked jobs included | £3/booking | Most popular, pays for itself in a week |
+| **Pro (Grow)** | £199/mo | 40 AI-booked jobs included | £2.50/booking | Full AI team, 24/7 |
+| **Scale** | £349/mo | 100 AI-booked jobs included | £2/booking | Multi-location ready |
+
+**Old flat model vs new hybrid — total monthly cost at different usage levels:**
+
+| Jobs/Month | Old Flat Model | New Hybrid (Growth) | New Hybrid (Pro) | New Hybrid (Scale) |
+|-----------|---------------|---------------------|------------------|-------------------|
+| 5 | £119 | £119 (15 incl.) | £199 (40 incl.) | £349 (100 incl.) |
+| 15 | £119 | £119 (15 incl.) | £199 (40 incl.) | £349 (100 incl.) |
+| 25 | £119 | £149 (£119 + 10×£3) | £199 (40 incl.) | £349 (100 incl.) |
+| 50 | £119 | £224 (£119 + 35×£3) | £224 (£199 + 10×£2.50) | £349 (100 incl.) |
+| 100 | £119 | £374 (£119 + 85×£3) | £349 (£199 + 60×£2.50) | £349 (100 incl.) |
+| 150 | £119 | £524 (£119 + 135×£3) | £474 (£199 + 110×£2.50) | £449 (£349 + 50×£2) |
+
+**Key insight:** Light users (≤15 jobs) pay the same or less. Medium users (25–50 jobs) see the model scale naturally. Heavy users (100+) are pushed toward Scale where the per-job cost drops to £2.
+
+---
+
+### 4.3 Revenue Projections (Updated)
+
+**Old model:**
+- ARPU ~£120/month flat
+- At 1,000 customers = £120k MRR = £1.44M ARR
+- Heavy users = same £120 (no upside capture)
+
+**New hybrid model:**
+- ARPU £150–£250 average (blended across all tiers and usage levels)
+- At 1,000 customers = £150k–£200k MRR = £1.8M–£2.4M ARR
+- Heavy users automatically generate £250+ ARPU without sales intervention
+
+**Usage-level math:**
+- Light user: 10 extra jobs on Growth = £119 + £0 = £119 (within included)
+- Medium user: 25 extra jobs on Growth = £119 + £30 = £149 (25−15=10×£3)
+- Heavy user: 50 extra jobs on Pro = £199 + £25 = £224 (50−40=10×£2.50)
+- Power user: 150 extra jobs on Scale = £349 + £100 = £449 (150−100=50×£2)
+
+**Automatic expansion revenue:** As a tradesperson's business grows, they naturally book more jobs. The hybrid model captures this growth without any sales effort — the same customer pays more because they're earning more.
+
+---
+
+### 4.4 Unit Economics (Updated)
+
+| Metric | Old Flat Model | New Hybrid Model |
+|--------|---------------|------------------|
+| CAC | £75 | £75 (unchanged) |
+| Base ARPU | £120 | £150–£250 (blended) |
+| Heavy user ARPU cap | £120 | £449+ |
+| Gross margin on base | 82–89% | 82–89% |
+| Gross margin on overage | N/A | ~95% (pure software margin) |
+| **LTV (24-month)** | £1,800 | £3,000–£5,000+ |
+| **LTV:CAC ratio** | **21.5:1** | **30:1+** |
+
+**Why LTV increases dramatically:**
+1. Heavy users stay longer — the more Katie books, the more embedded she becomes in their workflow
+2. Heavy users pay more — the same customer generates 2–3× revenue over their lifetime
+3. Churn drops — users feel tangible value every time a job is booked; "Katie booked me 3 jobs this week" is a retention story
+
+**Churn reduction mechanism:**
+- In flat SaaS: "Am I getting £119 worth of value this month?" (abstract, hard to answer)
+- In hybrid: "Katie booked 12 jobs. That's £2,000+ in revenue. I paid £119 + £0." (concrete, obvious)
+
+---
+
+### 4.5 Competitive Pricing (Updated)
+
+| Provider | UK? | Monthly | Pricing Model | Per-Job Equivalent |
+|----------|-----|---------|---------------|-------------------|
+| **Moneypenny** | ✅ | £99 + £1.65/min | Time-based | ~£8–£15 per call handled |
+| **AnswerConnect** | ✅ | £245 + £1.96/min | Time-based | ~£12–£20 per call handled |
+| **AllDayPA** | ✅ | £210 + £1.40/min | Time-based | ~£10–£18 per call handled |
+| **CallChimps** | ✅ | £29 + £0.97/min | Time-based | ~£3–£6 per call handled |
+| **Trade Receptionist** | ✅ | £? | Unknown | Unknown |
+| **VoiceFleet** | ✅ | £? | Unknown | Unknown |
+| **whoza.ai (new hybrid)** | ✅ | £59–£349 + £2–£3/job | **Outcome-based** | **£3 per BOOKED job** |
+
+**The critical difference:** Competitors charge per **minute** — whether the call converts or not. A 5-minute tyre-kicker costs £8–£10. whoza.ai charges per **booked job** — we only take £3 when Katie confirms an appointment that enters the calendar and sticks.
+
+**Positioning line:** "They charge £1.65 per minute for every caller. We charge £3 per job — only when it converts."
+
+---
+
+### 4.6 Booking Definition & Risk Mitigation
+
+**What counts as an AI-booked job:**
+1. Katie confirms the appointment with the caller
+2. Katie enters it into the customer's calendar (Google Calendar, Outlook, or Apple Calendar)
+3. The customer does not cancel within 24 hours of the booking
+
+**Qualification logic (before Katie books):**
+- Katie confirms the caller's postcode is within the business's service area
+- Katie confirms the requested service is offered by the business
+- Katie confirms availability in the calendar for the requested time slot
+- Katie gathers contact details (name, phone, address if needed)
+
+**Abuse prevention:**
+- First 5 bookings per new customer are flagged for manual review
+- After 5 confirmed valid bookings, the account switches to auto-counting
+- Unusual patterns (e.g., 20 bookings in one hour) trigger automatic review
+
+**Refund/credit policy:**
+- If a booking is cancelled by the customer within 24 hours, the £3 overage is credited back to the account
+- Credits apply to next month's invoice or can be refunded on request
+- No questions asked — if the job didn't stick, you don't pay
+
+**Fraud protection:**
+- Same phone number booking multiple "fake" jobs = flagged
+- Postcodes outside service area = booking blocked, not counted
+- Katie is trained to recognise and decline prank/callback test bookings
 
 ## 5. Competitive Positioning Analysis
 
@@ -414,6 +482,85 @@ This is a **12–18 month window** before the market saturates. Three forces are
 6. Scale paid acquisition once LTV:CAC is validated
 
 **The question is not whether this works. The question is whether whoza.ai moves fast enough to own the category before someone else does.**
+
+---
+
+## Appendix B: Competitive Benchmarking Intelligence (April 30, 2026)
+
+### B.1 Homepage Competitive Scorecard
+
+| Competitor | Focus | Price | Overall Score | Primary Threat Level |
+|------------|-------|-------|:-------------:|:--------------------:|
+| **TradeReceptionist.com** | Voice-only AI receptionist | £29-119/mo | **8.3/10** | 🔴 HIGH — executes voice extremely well, 500+ users, 4.9/5 rating |
+| **NextPhone.com** | General AI receptionist (US) | $200+/mo | **8.0/10** | 🟡 MEDIUM — strong demo, phone mockup, 7-day trial |
+| **VoiceFleet.ai** | General AI receptionist | $99-599/mo | **6.8/10** | 🟡 MEDIUM — live interactive demo, content marketing |
+| **Norango.ai** | Per-call AI answering | £69.95/mo | **4.9/10** | 🟢 LOW — limited features, generic positioning |
+| **Moneypenny** | Traditional human answering | £100-300/mo | **4.5/10** | 🟢 LOW — legacy brand, not AI-native |
+| **whoza.ai (current)** | 3-in-1 visibility + voice + reviews | £59-249/mo | **5.8/10** | — |
+
+### B.2 Dimensional Gap Analysis
+
+| Dimension | whoza.ai | TradeReceptionist | Gap | Priority |
+|-----------|:--------:|:-----------------:|:---:|----------|
+| Visual Design | 6.5 | 8.0 | -1.5 | Medium |
+| Conversion Architecture | 6.0 | 9.0 | **-3.0** | 🔴 Critical |
+| Trust & Social Proof | 5.5 | 8.5 | **-3.0** | 🔴 Critical |
+| Content & Messaging | 7.5 | 8.0 | -0.5 | Low |
+| Technical Performance | 7.0 | 7.5 | -0.5 | Low |
+| Feature Demonstration | 3.0 | 9.0 | **-6.0** | 🔴 Critical |
+| Pricing Clarity | 6.0 | 8.5 | -2.5 | Medium |
+| Mobile Experience | 6.5 | 8.0 | -1.5 | Medium |
+
+**Critical insight:** Feature demonstration is our weakest dimension (3.0/10 vs 9.0 for TradeReceptionist). We have zero audio demo, zero interactive preview, zero product visualization on the homepage. This is the single biggest conversion killer.
+
+### B.3 Competitor Tactics to Adopt
+
+#### From TradeReceptionist.com (Primary Threat)
+1. **Lost revenue calculator** — interactive sliders showing cost of missed calls ✅ Already implemented
+2. **Audio demo player** — 90-second real call sample with transcript ✅ Now implemented
+3. **Comparison table** — whoza.ai vs Voicemail vs Human VA vs Traditional Answering ✅ Now implemented
+4. **WhatsApp chat widget** — floating button for live support 🔲 Pending
+5. **Trust certification badges** — Gas Safe, NICEIC, FMB, TrustMark, CHAS 🔲 Pending
+6. **Named testimonials with photos** — real faces, locations, outcome tags 🔲 Pending
+7. **Urgency close** — "Every call you miss today is a job they book tomorrow" 🔲 Pending
+
+#### From NextPhone.com (Secondary Reference)
+1. **Phone mockup in hero** — animated phone showing AI answering a call 🔲 Pending
+2. **Stats band** — 5 key metrics in large type with dark background ✅ Now implemented
+3. **Process pipeline visualization** — Instant pickup → AI Qualification → Smart Intake → Real-time Booking → CRM Sync 🔲 Pending
+4. **Integration logo grid** — Google Calendar, WhatsApp, Outlook, ServiceM8, Apple Calendar ✅ Now implemented
+5. **Two-CTA hero** — "Try for Free" + "Book a Call" ✅ Partial — "Start Free Trial" + "See How It Works"
+6. **Extensive FAQ** — 20+ items covering every objection 🔲 In progress
+7. **"Hear us in action" audio player** — prominent button with real customer call ✅ Now implemented
+
+### B.4 whoza.ai Unique Moat (Maintain & Amplify)
+
+whoza.ai is the **only platform combining** three capabilities:
+- **AI visibility scoring (Rex)** — monitors how findable the business is to ChatGPT, Google AI, Perplexity. Nobody else has this.
+- **AI voice answering (Katie/Mark)** — answers calls, books appointments, sends WhatsApp summaries. TradeReceptionist has this alone.
+- **Review collection (Claire)** — automated review requests, star tracking, reputation alerts. Nobody else has this.
+
+The **3-in-1 positioning** is the core differentiator. Homepage must make this immediately obvious. TradeReceptionist wins "cheapest voice agent" customer; whoza.ai wins "I want to be found AND answer calls AND get reviews" customer.
+
+### B.5 Updated Strategic Assessment
+
+The competitive landscape has shifted since the original analysis (April 28). Key changes:
+
+1. **TradeReceptionist is a more credible threat than initially assessed.** Their 8.3/10 homepage score reflects real execution: 500+ users, 4.9/5 rating, audio demo, comparison table, WhatsApp widget. They are not a "generic competitor" — they are category-defining for UK trades.
+
+2. **NextPhone has validated the phone mockup + audio demo pattern.** Their $200+/mo pricing shows the market will pay premium for perceived quality. whoza.ai's £59-249 range is correctly positioned.
+
+3. **The "bundle moat" thesis is correct but insufficiently visible.** The homepage currently scores 5.8/10 (now 6.8 after Phase 1 enhancements) because the 3-in-1 value is described but not *demonstrated*. Visitors must see Katie answering, Rex scanning, Claire collecting — not read about them.
+
+4. **Execution priority:** World-class homepage (target 9.2+) must precede scale. A sub-7.0 homepage with paid traffic is burning CAC. Every competitor element is a conversion multiplier.
+
+**Updated recommendation:** Pause paid acquisition until homepage reaches 8.0+. The current 21.5:1 LTV:CAC assumes a converting landing page. At 5.8/10, actual CAC will be 2-3x higher. The full execution plan to reach 9+ is documented in `9_PLUS_WORLD_CLASS_PLAN.md`.
+
+**Score trajectory:**
+- Now: 6.8/10 (Phase 1 complete)
+- Week 4: 7.8/10 (conversion + trust improvements)
+- Week 8: 8.8/10 (feature demo + performance)
+- Week 10: 9.2/10 (world-class polish)
 
 ---
 

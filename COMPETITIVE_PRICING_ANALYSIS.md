@@ -8,9 +8,9 @@
 
 ## 1. Executive Summary
 
-**Bottom line:** whoza.ai's proposed pricing (£49–£499/mo) is **competitive but not the cheapest**. It sits in the "premium AI" bracket — more expensive than bare-bones AI tools (£20–£40/mo) but **dramatically cheaper** than human virtual receptionists (£99–£250/mo). The key competitive advantage is **trade-specific specialization** + **call divert from existing number** — something most AI competitors don't natively support.
+**Bottom line:** whoza.ai's pricing (£59–£275/mo) is **competitive and strategically tiered**. It sits in the "premium AI" bracket — more expensive than bare-bones AI tools (£20–£40/mo) but **dramatically cheaper** than human virtual receptionists (£99–£250/mo). The key competitive advantage is **trade-specific specialization** + **call divert from existing number** + **review automation included** — something no competitor bundles.
 
-**Positioning recommendation:** Price against human receptionist services (Moneypenny, AnswerConnect), not against cheap AI tools. Your value proposition is "human-quality call handling at AI prices."
+**Positioning recommendation:** Pro tier (£99) includes review automation that competitors charge £39–£99/mo for separately. This makes Pro the "no-brainer" tier.
 
 ---
 
@@ -45,7 +45,7 @@
 | **CallBird AI** | ~£39/mo | — | — | Free | Monthly | No |
 | **Marlie AI** | Pay-as-you-go | — | £0.20/min | Free | No contract | No |
 | **Norango.ai** | £209.95/mo | Mixed AI + human | — | Managed | 30-day trial | Partially |
-| **Trillet (direct)** | £38/mo | 150 min | £0.16/min | Free | Monthly | No |
+| **Trillet (direct)** | £38/mo | 150 min | £0.16/min | Free | Monthly | No | WhatsApp included |
 
 **Key insight:** The AI market is crowded with £20–£50/mo tools. Most are generic, US-focused, and lack UK number support + call divert. whoza.ai at £49 Starter is **priced at the upper end of AI** but offers trade specialization.
 
@@ -207,7 +207,7 @@
 - Human services need 3–6 month contracts. We're monthly.
 - Human receptionists cost £75 extra for 24/7. We're 24/7 on every plan.
 
-### Against Cheap AI Tools (CallChimps, Dialzara, Ring Eden)
+### Against Cheap AI Tools (CallChimps, Dialzara, Ring Eden, **Trillet**)
 
 **Headline:** *"Generic AI costs you jobs. Trade-trained AI books them."*
 
@@ -216,6 +216,19 @@
 - Cheap AI can't tell a burst pipe from a leaky tap. We can.
 - Generic tools don't understand "emergency call escalation." We do.
 - Our AI knows your trade vocabulary (flashing, soffit, consumer unit, stopcock).
+- **Trillet has WhatsApp — so do we. But ours sends trade-specific messages, not generic notifications.**
+
+### WhatsApp & Messaging Comparison
+
+| Feature | Trillet | whoza.ai |
+|---------|---------|----------|
+| **WhatsApp presence** | ✅ Included all plans | ✅ Included |
+| **Two-way SMS** | ✅ Yes | ✅ Yes |
+| **Trade-specific templates** | ❌ Generic | ✅ Job-specific (plumber, electrician, etc.) |
+| **Review collection via WhatsApp** | ❌ Unlikely | ✅ Automated 5-star funnel |
+| **Unified inbox** | ❌ Separate channels | ✅ Voice + WhatsApp + email in one thread |
+
+**Key insight:** Trillet "has WhatsApp" — whoza.ai has WhatsApp *that knows your trade*. The differentiation is execution depth, not checkbox presence.
 
 ### Against Hybrid (Smith.ai, GoodCall)
 

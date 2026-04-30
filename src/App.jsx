@@ -8,9 +8,10 @@ import SkipLink from './components/SkipLink';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
 import SEO from './components/SEO';
+import FloatingChatWidget from './components/FloatingChatWidget';
 import { initMicrointeractions } from './utils/microinteractions';
 import CookieConsent from './components/CookieConsent';
-import ExitIntentPopup from './components/ExitIntentPopup';
+import ExitIntentModal from './components/ExitIntentModal';
 
 const Home = lazy(() => import('./pages/Home'));
 const HowItWorks = lazy(() => import('./pages/HowItWorks'));
@@ -26,6 +27,7 @@ const Portal = lazy(() => import('./pages/Portal'));
 const Tasks = lazy(() => import('./pages/Tasks'));
 const Reports = lazy(() => import('./pages/Reports'));
 const Admin = lazy(() => import('./pages/Admin'));
+const AdminTrials = lazy(() => import('./pages/AdminTrials'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const CompetitorAnalysis = lazy(() => import('./pages/CompetitorAnalysis'));
 const Account = lazy(() => import('./pages/Account'));
@@ -40,7 +42,7 @@ const CookiePolicy = lazy(() => import('./pages/CookiePolicy'));
 const VideoWatch = lazy(() => import('./pages/VideoWatch'));
 const VoiceLanding = lazy(() => import('./pages/VoiceLanding'));
 const VoiceOnboarding = lazy(() => import('./components/VoiceOnboarding'));
-const PlanSelection = lazy(() => import('./pages/PlanSelection'));
+
 const PlanSelection = lazy(() => import('./pages/PlanSelection'));
 
 const ProtectedRoute = memo(function ProtectedRoute({ children, adminOnly = false }) {
@@ -194,6 +196,14 @@ function AppRoutes() {
               </ProtectedRoute>
             }
           />
+          <Route
+            path="/admin/trials"
+            element={
+              <ProtectedRoute adminOnly>
+                <AdminTrials />
+              </ProtectedRoute>
+            }
+          />
 
           <Route path="*" element={<NotFound />} />
         </Routes>
@@ -211,7 +221,8 @@ function App() {
             <SkipLink />
             <CookieConsent />
             <AppRoutes />
-            <ExitIntentPopup />
+            <ExitIntentModal />
+            <FloatingChatWidget />
           </BrowserRouter>
         </AuthProvider>
       </ToastProvider>

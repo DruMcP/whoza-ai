@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 import { initScrollAnimations } from '../utils/animations';
-import { generateBreadcrumbSchema } from '../utils/schemaOrg';
+import { generateBreadcrumbSchema, getBaseUrl } from '../utils/schemaOrg';
 import { useLocalization } from '../contexts/LocalizationContext';
 
 // UK Case Studies
@@ -297,7 +297,7 @@ export default function CaseStudies() {
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web Browser",
       "description": `How ${cs.name}, a ${cs.role} in ${cs.location}, improved their AI visibility using Whoza.ai`,
-      "url": "https://whoza.ai",
+      "url": `${getBaseUrl()}`,
       "offers": {
         "@type": "Offer",
         "price": "59",

@@ -945,7 +945,7 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your AI Visibility Score",
-      "text": "Find out how visible your trade business is to AI assistants. Get your free competitor analysis in 60 seconds.",
+      "text": "Find out how visible your trade business is to AI assistants. Get your free competitor analysis in under 2 minutes.",
       "buttonText": "Check My Competitor",
       "buttonLink": "/competitor-analysis"
     }
@@ -1015,7 +1015,7 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your AI Visibility Score",
-      "text": "Find out how visible your trade business is to AI assistants. Get your free competitor analysis in 60 seconds.",
+      "text": "Find out how visible your trade business is to AI assistants. Get your free competitor analysis in under 2 minutes.",
       "buttonText": "Check My Competitor",
       "buttonLink": "/competitor-analysis"
     }
@@ -1098,7 +1098,7 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your London AI Visibility Score",
-      "text": "Find out how visible your trade business is to AI assistants in your part of London. Get your free competitor analysis in 60 seconds.",
+      "text": "Find out how visible your trade business is to AI assistants in your part of London. Get your free competitor analysis in under 2 minutes.",
       "buttonText": "Check My Competitor",
       "buttonLink": "/competitor-analysis"
     }
@@ -1187,7 +1187,7 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your Plumbing Business AI Score",
-      "text": "Find out if ChatGPT and Google AI can find and recommend your plumbing business. Get your free competitor analysis in 60 seconds.",
+      "text": "Find out if ChatGPT and Google AI can find and recommend your plumbing business. Get your free competitor analysis in under 2 minutes.",
       "buttonText": "Check My Competitor",
       "buttonLink": "/competitor-analysis"
     }
@@ -1244,7 +1244,7 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your Plumbing Business AI Score",
-      "text": "Find out if ChatGPT can find your plumbing business. Get your free competitor analysis in 60 seconds.",
+      "text": "Find out if ChatGPT can find your plumbing business. Get your free competitor analysis in under 2 minutes.",
       "buttonText": "Check My Competitor",
       "buttonLink": "/competitor-analysis"
     }
@@ -1301,7 +1301,7 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your Electrical Business AI Score",
-      "text": "Find out if Google AI can find your electrical business. Get your free competitor analysis in 60 seconds.",
+      "text": "Find out if Google AI can find your electrical business. Get your free competitor analysis in under 2 minutes.",
       "buttonText": "Check My Competitor",
       "buttonLink": "/competitor-analysis"
     }
@@ -1359,7 +1359,7 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your London Business AI Score",
-      "text": "Find out if AI can find your London trade business. Get your free competitor analysis in 60 seconds.",
+      "text": "Find out if AI can find your London trade business. Get your free competitor analysis in under 2 minutes.",
       "buttonText": "Check My Competitor",
       "buttonLink": "/competitor-analysis"
     }
@@ -1416,7 +1416,7 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your FAQ Page Effectiveness",
-      "text": "Find out if your FAQ page is optimised for AI. Get your free competitor analysis in 60 seconds.",
+      "text": "Find out if your FAQ page is optimised for AI. Get your free competitor analysis in under 2 minutes.",
       "buttonText": "Check My Competitor",
       "buttonLink": "/competitor-analysis"
     }
@@ -1463,7 +1463,7 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your Roofing Business AI Score",
-      "text": "Find out if AI can find your roofing business. Get your free competitor analysis in 60 seconds.",
+      "text": "Find out if AI can find your roofing business. Get your free competitor analysis in under 2 minutes.",
       "buttonText": "Check My Competitor",
       "buttonLink": "/competitor-analysis"
     }
@@ -1520,7 +1520,7 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your Local AI Visibility",
-      "text": "Find out if AI can find your business in Manchester or Birmingham. Get your free competitor analysis in 60 seconds.",
+      "text": "Find out if AI can find your business in Manchester or Birmingham. Get your free competitor analysis in under 2 minutes.",
       "buttonText": "Check My Competitor",
       "buttonLink": "/competitor-analysis"
     }
