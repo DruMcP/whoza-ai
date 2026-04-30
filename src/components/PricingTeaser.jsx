@@ -15,8 +15,6 @@ const plans = [
   {
     name: 'Capture',
     price: '£59',
-    roiAnchor: '≈ 1 job/month',
-    roiColor: 'var(--katie-blue)',
     outcome: 'Lead capture only — no booking automation',
     includedJobs: 'Lead capture only',
     popular: false,
@@ -26,8 +24,6 @@ const plans = [
   {
     name: 'Convert',
     price: '£119',
-    roiAnchor: '≈ 2 jobs/month',
-    roiColor: 'var(--rex-green)',
     outcome: '15 jobs included, then £3 each',
     includedJobs: '15 AI-booked jobs included',
     overage: 'Then £3 per extra job',
@@ -38,8 +34,6 @@ const plans = [
   {
     name: 'Grow',
     price: '£199',
-    roiAnchor: '≈ 3 jobs/month',
-    roiColor: 'var(--claire-amber)',
     outcome: '40 jobs included, then £2.50 each',
     includedJobs: '40 AI-booked jobs included',
     overage: 'Then £2.50 per extra job',
@@ -50,8 +44,6 @@ const plans = [
   {
     name: 'Scale',
     price: '£349',
-    roiAnchor: '≈ 5 jobs/month',
-    roiColor: '#dc2626',
     outcome: '100 jobs included, then £2 each',
     includedJobs: '100 AI-booked jobs included',
     overage: 'Then £2 per extra job',
@@ -132,7 +124,6 @@ export default function PricingTeaser() {
                     </span>
                     <span className="text-xs" style={{ color: 'var(--slate-500)' }}>/mo</span>
                   </div>
-                  <p className="text-[11px] font-bold mt-1 leading-tight" style={{ color: plan.roiColor }}>{plan.roiAnchor}</p>
                   {plan.includedJobs && (
                     <p className="text-[10px] mt-0.5 leading-tight font-semibold" style={{ color: 'var(--rex-green)' }}>{plan.includedJobs}</p>
                   )}

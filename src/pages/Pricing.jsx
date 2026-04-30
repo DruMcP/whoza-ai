@@ -31,7 +31,6 @@ const tiers = [
     includedJobsLabel: 'Lead capture only',
     overageRate: null,
     overageLabel: 'No booking automation',
-    roiAnchor: '≈ 1 job/month pays for this',
     roiColor: 'var(--color-blue)',
     features: [
       'Katie answers every call (100 min/month)',
@@ -55,7 +54,6 @@ const tiers = [
     includedJobsLabel: '15 AI-booked jobs included',
     overageRate: 3,
     overageLabel: 'Then £3 per extra job',
-    roiAnchor: '≈ 2 jobs/month pays for this plan',
     roiColor: 'var(--color-green)',
     features: [
       'Everything in Capture',
@@ -83,7 +81,6 @@ const tiers = [
     includedJobsLabel: '40 AI-booked jobs included',
     overageRate: 2.5,
     overageLabel: 'Then £2.50 per extra job',
-    roiAnchor: '≈ 3 jobs/month pays for this plan',
     roiColor: 'var(--color-amber)',
     features: [
       'Everything in Convert',
@@ -111,7 +108,6 @@ const tiers = [
     includedJobsLabel: '100 AI-booked jobs included',
     overageRate: 2,
     overageLabel: 'Then £2 per extra job',
-    roiAnchor: '≈ 5 jobs/month pays for this plan',
     roiColor: '#dc2626',
     features: [
       'Everything in Grow',
