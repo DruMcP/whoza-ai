@@ -73,6 +73,7 @@ export function Pricing() {
       features: [
         { text: "Everything in Starter", included: true },
         { text: "15 booked jobs included", included: true },
+        { text: "Spam call filtering", included: true },
         { text: "Claire review engine", included: true },
         { text: "Monthly competitor tracking", included: true },
         { text: "Calendar sync (Google, Outlook, Apple)", included: true },
@@ -95,6 +96,7 @@ export function Pricing() {
       features: [
         { text: "Everything in Growth", included: true },
         { text: "40 booked jobs included", included: true },
+        { text: "Spam call filtering", included: true },
         { text: "Weekly AI visibility reports", included: true },
         { text: "Actionable recommendations", included: true },
         { text: "Full system (Katie/Mark + Claire + Rex)", included: true },
@@ -119,6 +121,7 @@ export function Pricing() {
       features: [
         { text: "Everything in Pro", included: true },
         { text: "100 booked jobs included", included: true },
+        { text: "Spam call filtering", included: true },
         { text: "Multi-location support", included: true },
         { text: "Multi-calendar team sync", included: true },
         { text: "Priority optimisation", included: true },
