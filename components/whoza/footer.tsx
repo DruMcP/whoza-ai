@@ -60,8 +60,7 @@ export function Footer() {
               />
             </a>
             <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-xs">
-              AI revenue system for {country === "uk" ? "UK" : "US"} {config.language.tradesPeople}. 
-              Captures demand, books jobs, delivers via WhatsApp, and grows your business every week.
+              Whoza helps trades capture missed work, book more jobs, and grow their business automatically.
             </p>
           </div>
 

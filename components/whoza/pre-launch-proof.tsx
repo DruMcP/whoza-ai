@@ -41,6 +41,8 @@ export function PreLaunchProof() {
                   EXAMPLE SCENARIO
                 </span>
               </div>
+              
+              <p className="text-sm text-[var(--slate-500)] mb-4">Typical for many trades.</p>
 
               {/* Flow */}
               <div className="space-y-2">

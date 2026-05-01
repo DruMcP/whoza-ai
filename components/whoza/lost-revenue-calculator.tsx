@@ -196,6 +196,10 @@ export function LostRevenueCalculator() {
                   That&apos;s work you&apos;re missing every week.
                 </p>
 
+                <p className="mt-3 text-sm text-white/80 font-semibold text-center">
+                  Whoza captures it and sends it straight to your phone.
+                </p>
+
                 <div className="mt-8 pt-6 border-t border-white/10">
                   <p className="text-sm text-white/60 mb-4">
                     Stop the leak. Katie answers every call from just{" "}

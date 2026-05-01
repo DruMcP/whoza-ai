@@ -63,7 +63,7 @@ export function Hero() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight text-balance">
               Turn Missed Calls Into{" "}
               <span className="text-[var(--rex-green)]">Booked Jobs</span>
-              {" "}— And More Work Every Week
+              {" "}— Sent Straight to Your Phone
             </h1>
 
             {/* Pain Line — added for clarity */}

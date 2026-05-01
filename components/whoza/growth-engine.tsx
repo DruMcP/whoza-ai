@@ -53,7 +53,7 @@ export function GrowthEngine() {
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 }}
+                  transition={{ delay: 0.15 }}
                   viewport={{ once: true }}
                   className="p-4 rounded-xl bg-[var(--claire-amber)]/10 border border-[var(--claire-amber)]/20"
                 >
@@ -71,7 +71,7 @@ export function GrowthEngine() {
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
+                  transition={{ delay: 0.2 }}
                   viewport={{ once: true }}
                   className="p-4 rounded-xl bg-[var(--rex-green)]/10 border border-[var(--rex-green)]/20"
                 >
@@ -80,8 +80,26 @@ export function GrowthEngine() {
                       <TrendingUp className="w-3 h-3 text-[var(--rex-green)]" />
                     </div>
                     <div>
+                      <div className="text-white text-sm font-medium">You need 5 more reviews to outrank competitors this week</div>
+                      <div className="text-[var(--rex-green)] text-xs mt-1 font-medium">→ Result: More visibility, more calls, more jobs</div>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.25 }}
+                  viewport={{ once: true }}
+                  className="p-4 rounded-xl bg-white/5 border border-white/10"
+                >
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-[var(--katie-blue)]/20 flex items-center justify-center shrink-0">
+                      <Zap className="w-3 h-3 text-[var(--katie-blue)]" />
+                    </div>
+                    <div>
                       <div className="text-white text-sm font-medium">Top recommendation: Add 3 more jobs to your portfolio</div>
-                      <div className="text-[var(--rex-green)] text-xs mt-1 font-medium">→ Result: Stronger AI visibility in 7 days</div>
+                      <div className="text-[var(--katie-blue)] text-xs mt-1 font-medium">→ Result: Stronger AI visibility in 7 days</div>
                     </div>
                   </div>
                 </motion.div>
