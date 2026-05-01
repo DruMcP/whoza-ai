@@ -196,7 +196,7 @@ export function LostRevenueCalculator() {
                   <p className="text-sm text-white/60 mb-4">
                     Stop the leak. Katie answers every call from just{" "}
                     <span className="text-white font-semibold">
-                      {config.currencySymbol}{country === "uk" ? "59" : "79"}/month
+                      {config.currencySymbol}{country === "uk" ? "59" : "79"}/month <span className="text-xs">ex VAT</span>
                     </span>
                   </p>
                   <Button 

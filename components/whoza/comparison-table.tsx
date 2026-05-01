@@ -18,7 +18,7 @@ const features = [
 ]
 
 const pricingConfig = {
-  uk: { whoza: "From £69/mo", traditional: "£800-2000/mo", competitor: "From £150/mo" },
+  uk: { whoza: "From £69/mo ex VAT", traditional: "£800-2000/mo", competitor: "From £150/mo" },
   us: { whoza: "From $89/mo", traditional: "$1200-3000/mo", competitor: "From $200/mo" },
 }
 

@@ -202,7 +202,7 @@ export function Pricing() {
                   <div className="mb-6">
                     <div className="flex items-baseline gap-1">
                       <span className="text-3xl font-bold text-[var(--navy-900)]">{config.currencySymbol}{plan.price}</span>
-                      <span className="text-[var(--slate-500)]">/{plan.period}</span>
+                      <span className="text-[var(--slate-500)]">/{plan.period} <span className="text-xs font-normal">ex VAT</span></span>
                     </div>
                     <div className="flex items-center gap-2 mt-2">
                       <span className="text-sm text-[var(--rex-green)] font-semibold">{config.currencySymbol}{plan.perJob}/job</span>

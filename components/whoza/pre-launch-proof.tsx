@@ -133,7 +133,7 @@ export function PreLaunchProof() {
                     Most customers recover their monthly cost in their first few jobs.
                   </div>
                   <div className="text-[var(--slate-500)] text-sm mt-1">
-                    At {config.currencySymbol}59/month with {config.currencySymbol}120 avg jobs, you only need 1 extra job to break even.
+                    At {config.currencySymbol}59/month ex VAT with {config.currencySymbol}120 avg jobs, you only need 1 extra job to break even.
                   </div>
                 </div>
               </div>
