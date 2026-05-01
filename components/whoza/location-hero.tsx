@@ -121,7 +121,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="relative flex justify-center lg:justify-end"
           >
-            <PhoneMockup />
+            <PhoneMockup city={city} trade={trade} />
           </motion.div>
         </div>
       </div>

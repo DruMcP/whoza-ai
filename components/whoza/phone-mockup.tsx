@@ -1,9 +1,63 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Phone, MessageCircle, Calendar, Star, Clock, CheckCircle2, MapPin } from "lucide-react"
+import { Phone, MessageCircle, Clock, CheckCircle2, MapPin } from "lucide-react"
+import { useLocale } from "@/lib/locale-context"
 
-export function PhoneMockup() {
+const cityPostcodes: Record<string, string> = {
+  london: "SW1A",
+  manchester: "M20",
+  birmingham: "B1",
+  leeds: "LS1",
+  glasgow: "G1",
+  bristol: "BS1",
+  liverpool: "L1",
+  edinburgh: "EH1",
+  "new-york": "10001",
+  "los-angeles": "90001",
+  chicago: "60601",
+  dallas: "75201",
+  houston: "77001",
+  phoenix: "85001",
+  miami: "33101",
+  atlanta: "30301",
+}
+
+const tradeJobs: Record<string, { uk: string; us: string }> = {
+  plumber: { uk: "Boiler repair - no heating", us: "Water heater repair - no hot water" },
+  hvac: { uk: "Boiler repair - no heating", us: "AC repair - no cooling" },
+  electrician: { uk: "Fuse box repair - power outage", us: "Panel repair - power outage" },
+  roofer: { uk: "Roof leak - water coming in", us: "Roof leak - storm damage" },
+  builder: { uk: "Kitchen extension consultation", us: "Room addition consultation" },
+  default: { uk: "Boiler repair - no heating", us: "AC repair - no cooling" },
+}
+
+const customerNames = [
+  "Mrs. Sarah Thompson",
+  "Mr. James Wilson",
+  "Ms. Emma Davies",
+  "Dr. Michael Brown",
+]
+
+export function PhoneMockup({ city, trade }: { city?: string; trade?: string }) {
+  const { country, config } = useLocale()
+
+  // Determine city display
+  const cityDisplay = city || (country === "uk" ? "Manchester" : "Dallas")
+  const postcode = city ? cityPostcodes[city.toLowerCase().replace(/\s+/g, "-")] : (country === "uk" ? "M20" : "75201")
+
+  // Determine job type
+  const jobKey = trade?.toLowerCase() || "default"
+  const jobText = tradeJobs[jobKey]?.[country] || tradeJobs.default[country]
+
+  // Determine price
+  const price = country === "uk" ? 140 : 180
+
+  // Format location line
+  const locationLine = country === "uk" 
+    ? `${cityDisplay}, ${postcode}`
+    : `${cityDisplay}, ${postcode}`
+
   return (
     <div className="relative">
       {/* Glow Effect */}
@@ -55,13 +109,13 @@ export function PhoneMockup() {
                   <Phone className="w-4 h-4 text-[#25d366] mt-0.5 shrink-0" />
                   <div>
                     <div className="text-sm font-semibold">Mrs. Sarah Thompson</div>
-                    <div className="text-xs text-white/70">Boiler repair - no heating</div>
+                    <div className="text-xs text-white/70">{jobText}</div>
                   </div>
                 </div>
                 
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-[#25d366] shrink-0" />
-                  <span className="text-xs">Manchester, M20</span>
+                  <span className="text-xs">{locationLine}</span>
                 </div>
                 
                 <div className="flex items-center gap-2">
@@ -70,7 +124,7 @@ export function PhoneMockup() {
                 </div>
                 
                 <div className="pt-2 border-t border-white/20 flex items-center justify-between">
-                  <span className="text-lg font-bold">£140</span>
+                  <span className="text-lg font-bold">{config.currencySymbol}{price}</span>
                   <span className="text-xs text-white/60">estimated</span>
                 </div>
               </div>
@@ -103,7 +157,7 @@ export function PhoneMockup() {
                 <CheckCircle2 className="w-5 h-5 text-[#25d366]" />
                 <div>
                   <div className="text-[#25d366] text-sm font-bold">JOB CONFIRMED</div>
-                  <div className="text-white text-xs">£140 boiler repair • Tomorrow 2pm</div>
+                  <div className="text-white text-xs">{config.currencySymbol}{price} {jobText.split(" - ")[0].toLowerCase()} • Tomorrow 2pm</div>
                 </div>
               </div>
             </motion.div>

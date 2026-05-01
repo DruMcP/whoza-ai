@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Phone, ClipboardCheck, MessageCircle, Star, Eye, TrendingUp, ArrowRight } from "lucide-react"
+import { Phone, ClipboardCheck, MessageCircle, TrendingUp, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLocale } from "@/lib/locale-context"
 
@@ -10,7 +10,7 @@ const stages = [
     number: "01",
     stage: "CAPTURE",
     title: "Answer Every Call",
-    description: "Katie answers within 3 seconds, 24/7. No missed calls. No voicemail. Every enquiry captured.",
+    description: "Katie or Mark answers within 3 seconds, 24/7. No missed calls. No voicemail. Every enquiry captured and qualified.",
     icon: Phone,
     color: "var(--katie-blue)",
     bgLight: "bg-[var(--katie-blue)]/10",
@@ -21,7 +21,7 @@ const stages = [
     number: "02",
     stage: "CONVERT",
     title: "Qualify + Book Jobs",
-    description: "AI gathers job details, filters time-wasters, and books qualified leads into your calendar.",
+    description: "AI gathers job details, filters time-wasters, and books qualified leads into your calendar. You only see the good ones.",
     icon: ClipboardCheck,
     color: "var(--rex-green)",
     bgLight: "bg-[var(--rex-green)]/10",
@@ -32,7 +32,7 @@ const stages = [
     number: "03",
     stage: "DELIVER",
     title: "Send to Your Phone",
-    description: "Qualified jobs land on WhatsApp instantly. Customer name, job type, location, time, and value.",
+    description: "Qualified jobs land on WhatsApp instantly. Customer name, job type, location, time, and estimated value. Tap to accept.",
     icon: MessageCircle,
     color: "var(--claire-amber)",
     bgLight: "bg-[var(--claire-amber)]/10",
@@ -42,13 +42,13 @@ const stages = [
   {
     number: "04",
     stage: "GROW",
-    title: "Post-Job Conversion",
-    description: "After every completed job, Claire automatically follows up via WhatsApp to turn happy customers into Google reviews — and more future work.",
+    title: "Post-Job + AI Visibility",
+    description: "Claire follows up for Google reviews after every job. Rex tracks competitors and tells you weekly how to show up more in ChatGPT and Google AI. More work every week.",
     icon: TrendingUp,
-    color: "var(--mark-grey)",
-    bgLight: "bg-[var(--mark-grey)]/10",
-    textColor: "text-[var(--mark-grey)]",
-    borderColor: "border-[var(--mark-grey)]/30",
+    color: "var(--rex-green)",
+    bgLight: "bg-[var(--rex-green)]/10",
+    textColor: "text-[var(--rex-green)]",
+    borderColor: "border-[var(--rex-green)]/30",
   },
 ]
 
@@ -76,18 +76,19 @@ export function RevenueSystem() {
             The Complete System
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
-            The Whoza Revenue System
+            Capture → Deliver →{" "}
+            <span className="text-[var(--rex-green)]">Grow</span>
           </h2>
           <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
             Not just an AI receptionist. A complete revenue engine that captures demand, 
-            books jobs, and grows your business automatically.
+            books jobs, delivers them to your phone, and grows your business automatically.
           </p>
         </motion.div>
 
         {/* System Flow */}
         <div className="relative">
           {/* Connecting Line (Desktop) */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-[var(--katie-blue)] via-[var(--rex-green)] via-[var(--claire-amber)] to-[var(--mark-grey)] rounded-full" style={{ transform: 'translateY(-50%)' }} />
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-[var(--katie-blue)] via-[var(--rex-green)] via-[var(--claire-amber)] to-[var(--rex-green)] rounded-full" style={{ transform: 'translateY(-50%)' }} />
 
           <div className="grid lg:grid-cols-4 gap-6">
             {stages.map((stage, index) => (

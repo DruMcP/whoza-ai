@@ -189,7 +189,7 @@ export function TestimonialCarousel() {
           </div>
         </div>
 
-        {/* Trust Stats - Consolidated metrics */}
+        {/* Trust Stats - Micro proof signals instead of false aggregate claims */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -197,10 +197,10 @@ export function TestimonialCarousel() {
           className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto"
         >
           {[
-            { value: "47,000+", label: "Calls Handled Monthly", color: "text-[var(--katie-blue)]" },
-            { value: country === "uk" ? "£2.3M" : "$3.1M", label: "Revenue Saved", color: "text-[var(--rex-green)]" },
-            { value: "8 sec", label: "Average Answer Time", color: "text-[var(--claire-amber)]" },
-            { value: "99.7%", label: "Uptime Guarantee", color: "text-[var(--mark-grey)]" },
+            { value: "3 sec", label: "Answer Time", color: "text-[var(--katie-blue)]" },
+            { value: "24/7", label: "Always Working", color: "text-[var(--rex-green)]" },
+            { value: "WhatsApp", label: "Job Delivery", color: "text-[var(--claire-amber)]" },
+            { value: "30 min", label: "Install Time", color: "text-[var(--mark-grey)]" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className={`text-2xl lg:text-3xl font-bold ${stat.color}`}>{stat.value}</div>

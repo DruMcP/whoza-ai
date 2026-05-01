@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Check, X, Phone, MapPin, Clock, PoundSterling, MessageCircle, CheckCircle2 } from "lucide-react"
+import { Check, X, Phone, MapPin, Clock, MessageCircle, CheckCircle2 } from "lucide-react"
 import { useLocale } from "@/lib/locale-context"
 
 const jobExamples = {
@@ -128,8 +128,7 @@ export function WhatsAppDelivery() {
                           </div>
                           
                           <div className="flex items-center gap-2">
-                            <PoundSterling className="w-4 h-4 text-[#25d366] shrink-0" />
-                            <span className="text-sm font-bold">{job.value} estimated</span>
+                            <span className="text-sm font-bold text-[#25d366]">{job.value} estimated</span>
                           </div>
                         </div>
 

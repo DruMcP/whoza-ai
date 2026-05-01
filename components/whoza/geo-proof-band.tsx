@@ -21,17 +21,27 @@ const geoStatsConfig = {
   },
 }
 
-export function GeoProofBand() {
-  const { country } = useLocale()
-  const config = geoStatsConfig[country]
+interface GeoProofBandProps {
+  city?: string
+  country?: "uk" | "us"
+  jobsThisWeek?: number
+}
+
+export function GeoProofBand({ city, country: forcedCountry, jobsThisWeek: forcedJobs }: GeoProofBandProps) {
+  const { country: ctxCountry } = useLocale()
+  const country = forcedCountry || ctxCountry
+  const geoConfig = geoStatsConfig[country]
   
-  const [jobsCount, setJobsCount] = useState(127)
+  const [jobsCount, setJobsCount] = useState(forcedJobs || 127)
   const [cityIndex, setCityIndex] = useState(0)
 
   // Rotate through cities and increment jobs count for realism
+  // But ONLY on homepage (no city prop). On location pages, stay fixed.
   useEffect(() => {
+    if (city) return // Fixed on location pages
+    
     const cityInterval = setInterval(() => {
-      setCityIndex((prev) => (prev + 1) % config.cities.length)
+      setCityIndex((prev) => (prev + 1) % geoConfig.cities.length)
     }, 4000)
     
     const jobsInterval = setInterval(() => {
@@ -42,11 +52,11 @@ export function GeoProofBand() {
       clearInterval(cityInterval)
       clearInterval(jobsInterval)
     }
-  }, [config.cities.length])
+  }, [geoConfig.cities.length, city])
 
-  const currentCity = config.cities[cityIndex]
-  const nearbyCity1 = config.cities[(cityIndex + 1) % config.cities.length]
-  const nearbyCity2 = config.cities[(cityIndex + 2) % config.cities.length]
+  const currentCity = city || geoConfig.cities[cityIndex]
+  const nearbyCity1 = geoConfig.cities[(cityIndex + 1) % geoConfig.cities.length]
+  const nearbyCity2 = geoConfig.cities[(cityIndex + 2) % geoConfig.cities.length]
 
   return (
     <section className="py-6 bg-[var(--navy-900)] border-y border-white/10">
@@ -65,7 +75,7 @@ export function GeoProofBand() {
             </div>
             <div>
               <div className="text-white font-bold text-lg">{jobsCount}+</div>
-              <div className="text-white/60 text-sm">{config.jobsPrefix} {currentCity}</div>
+              <div className="text-white/60 text-sm">{geoConfig.jobsPrefix} {currentCity}</div>
             </div>
           </motion.div>
 
@@ -78,7 +88,7 @@ export function GeoProofBand() {
               <Users className="w-5 h-5 text-[var(--katie-blue)]" />
             </div>
             <div>
-              <div className="text-white/60 text-sm">{config.trustedPrefix}</div>
+              <div className="text-white/60 text-sm">{geoConfig.trustedPrefix}</div>
               <div className="text-white font-medium text-sm">{currentCity}, {nearbyCity1}, {nearbyCity2}</div>
             </div>
           </div>
@@ -92,7 +102,7 @@ export function GeoProofBand() {
               <MapPin className="w-5 h-5 text-[var(--claire-amber)]" />
             </div>
             <div>
-              <div className="text-white font-medium text-sm">{config.localDemand}</div>
+              <div className="text-white font-medium text-sm">{geoConfig.localDemand}</div>
               <div className="text-white/60 text-sm">Customers in your area need you</div>
             </div>
           </div>

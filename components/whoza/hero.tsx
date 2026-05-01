@@ -6,22 +6,9 @@ import { Button } from "@/components/ui/button"
 import { PhoneMockup } from "./phone-mockup"
 import { useLocale } from "@/lib/locale-context"
 
-const statsConfig = {
-  uk: [
-    { value: "1,200+", label: "Tradespeople" },
-    { value: "94%", label: "Retention Rate" },
-    { value: "4.9/5", label: "Average Rating" },
-  ],
-  us: [
-    { value: "800+", label: "Contractors" },
-    { value: "94%", label: "Retention Rate" },
-    { value: "4.9/5", label: "Average Rating" },
-  ],
-}
-
 export function Hero() {
   const { country, config } = useLocale()
-  const stats = statsConfig[country]
+
   return (
     <section className="relative min-h-screen bg-[var(--navy-900)] overflow-hidden pt-20 lg:pt-24">
       {/* Urgency Strip */}
@@ -33,6 +20,7 @@ export function Hero() {
           </p>
         </div>
       </div>
+
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-[var(--katie-blue)]/20 rounded-full blur-[120px] opacity-50" />
@@ -80,7 +68,7 @@ export function Hero() {
 
             {/* Subheadline */}
             <p className="mt-6 text-lg sm:text-xl text-white/70 leading-relaxed max-w-xl mx-auto lg:mx-0 text-pretty">
-              Whoza installs an AI revenue system that captures those jobs, sends them to your phone, collects reviews, and helps you get more work every week.
+              Whoza installs an AI revenue system that captures those jobs and sends them directly to your phone.
               <span className="block mt-2 text-white font-semibold">Installed in 30 minutes. No risk.</span>
             </p>
 
@@ -113,7 +101,12 @@ export function Hero() {
               ))}
             </div>
 
-            {/* Live Activity Indicator */}
+            {/* CTA Urgency */}
+            <p className="mt-3 text-sm text-white/50 text-center lg:text-left">
+              Most customers see their first booked job within days.
+            </p>
+
+            {/* Micro Proof Signals */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -121,7 +114,7 @@ export function Hero() {
               className="mt-6 inline-flex items-center gap-3 px-4 py-2.5 rounded-full bg-white/10 border border-white/10"
             >
               <span className="w-2 h-2 rounded-full bg-[var(--rex-green)] animate-pulse" />
-              <span className="text-sm text-white/80">Job booked: {config.currencySymbol}140 boiler repair • Confirmed instantly</span>
+              <span className="text-sm text-white/80">Call answered in 3 seconds • Job booked: {config.currencySymbol}140 boiler repair • Confirmed instantly</span>
               <span className="text-xs text-white/40">2 min ago</span>
             </motion.div>
           </motion.div>
@@ -137,14 +130,18 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Stats Bar */}
+        {/* Stats Bar — Micro Proof Instead of False Claims */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
           className="mt-16 lg:mt-24 grid grid-cols-3 gap-8 max-w-2xl mx-auto"
         >
-          {stats.map((stat, index) => (
+          {[
+            { value: "3 sec", label: "Answer Time" },
+            { value: "24/7", label: "Always On" },
+            { value: "WhatsApp", label: "Job Delivery" },
+          ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
                 {stat.value}

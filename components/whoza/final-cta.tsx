@@ -7,9 +7,9 @@ import { useLocale } from "@/lib/locale-context"
 
 const teamMembers = [
   { name: "Katie", icon: Phone, bgClass: "bg-[var(--katie-blue)]/20 border-[var(--katie-blue)]/30", iconClass: "text-[var(--katie-blue)]" },
-  { name: "Mark", icon: BarChart3, bgClass: "bg-[var(--mark-grey)]/20 border-[var(--mark-grey)]/30", iconClass: "text-[var(--mark-grey)]" },
-  { name: "Rex", icon: Star, bgClass: "bg-[var(--rex-green)]/20 border-[var(--rex-green)]/30", iconClass: "text-[var(--rex-green)]" },
-  { name: "Claire", icon: Eye, bgClass: "bg-[var(--claire-amber)]/20 border-[var(--claire-amber)]/30", iconClass: "text-[var(--claire-amber)]" },
+  { name: "Mark", icon: Phone, bgClass: "bg-[var(--mark-grey)]/20 border-[var(--mark-grey)]/30", iconClass: "text-[var(--mark-grey)]" },
+  { name: "Claire", icon: Star, bgClass: "bg-[var(--claire-amber)]/20 border-[var(--claire-amber)]/30", iconClass: "text-[var(--claire-amber)]" },
+  { name: "Rex", icon: Eye, bgClass: "bg-[var(--rex-green)]/20 border-[var(--rex-green)]/30", iconClass: "text-[var(--rex-green)]" },
 ]
 
 export function FinalCTA() {
@@ -52,13 +52,17 @@ export function FinalCTA() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white tracking-tight text-balance">
-            Stop Losing Jobs{" "}
+            Stop Losing Revenue{" "}
             <span className="text-red-400">This Week</span>
           </h2>
           <p className="mt-8 text-xl lg:text-2xl text-white/70 max-w-2xl mx-auto text-pretty">
             Every day you wait = {config.currencySymbol}200+ walking to your competitors.
             <span className="block mt-3 font-bold text-[var(--rex-green)] text-2xl">Installed in 30 minutes. No risk.</span>
           </p>
+          <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/70 text-sm">
+            <CheckCircle2 className="w-4 h-4 text-[var(--rex-green)]" />
+            No results in 30 days? We extend free.
+          </div>
         </motion.div>
 
         {/* CTAs */}
@@ -84,6 +88,11 @@ export function FinalCTA() {
             Book Demo Call
           </Button>
         </motion.div>
+
+        {/* CTA Urgency */}
+        <p className="mt-3 text-sm text-white/50 text-center">
+          Most customers see their first booked job within days.
+        </p>
 
         {/* Risk Reversal */}
         <motion.div

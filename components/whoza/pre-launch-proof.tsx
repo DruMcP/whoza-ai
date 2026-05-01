@@ -43,50 +43,61 @@ export function PreLaunchProof() {
               </div>
 
               {/* Flow */}
-              <div className="space-y-6">
+              <div className="space-y-2">
+                {/* Step 1: 10 missed calls */}
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-red-100 flex items-center justify-center shrink-0">
                     <Phone className="w-6 h-6 text-red-500" />
                   </div>
                   <div>
-                    <div className="text-lg font-bold text-[var(--navy-900)]">10 missed calls in a day</div>
+                    <div className="text-lg font-bold text-[var(--navy-900)]">10 missed calls</div>
                     <div className="text-[var(--slate-500)]">While you were on site, in the van, or finishing a job</div>
                   </div>
                 </div>
 
-                <div className="border-l-2 border-dashed border-[var(--slate-200)] ml-6 h-8" />
+                {/* Arrow 1 */}
+                <div className="flex items-center ml-6">
+                  <div className="border-l-2 border-dashed border-[var(--slate-200)] h-6" />
+                </div>
+                <div className="flex items-center gap-3 ml-4">
+                  <ArrowRight className="w-4 h-4 text-[var(--slate-300)] rotate-90" />
+                  <span className="text-xs font-bold text-[var(--katie-blue)] uppercase tracking-wider">Katie answers + books</span>
+                </div>
+                <div className="flex items-center ml-6">
+                  <div className="border-l-2 border-dashed border-[var(--slate-200)] h-6" />
+                </div>
 
+                {/* Step 2: 4 booked jobs */}
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-[var(--katie-blue)]/10 flex items-center justify-center shrink-0">
                     <CheckCircle2 className="w-6 h-6 text-[var(--katie-blue)]" />
                   </div>
                   <div>
-                    <div className="text-lg font-bold text-[var(--navy-900)]">Katie answers them all</div>
-                    <div className="text-[var(--slate-500)]">Qualifies the job, books if possible, filters time-wasters</div>
+                    <div className="text-lg font-bold text-[var(--navy-900)]">4 booked jobs</div>
+                    <div className="text-[var(--slate-500)]">Qualified, sent to your phone via WhatsApp, ready to accept</div>
                   </div>
                 </div>
 
-                <div className="border-l-2 border-dashed border-[var(--slate-200)] ml-6 h-8" />
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-[var(--rex-green)]/10 flex items-center justify-center shrink-0">
-                    <span className="text-xl font-bold text-[var(--rex-green)]">4</span>
-                  </div>
-                  <div>
-                    <div className="text-lg font-bold text-[var(--navy-900)]">4 real jobs identified</div>
-                    <div className="text-[var(--slate-500)]">Sent to your phone via WhatsApp, ready to accept</div>
-                  </div>
+                {/* Arrow 2 */}
+                <div className="flex items-center ml-6">
+                  <div className="border-l-2 border-dashed border-[var(--slate-200)] h-6" />
+                </div>
+                <div className="flex items-center gap-3 ml-4">
+                  <ArrowRight className="w-4 h-4 text-[var(--slate-300)] rotate-90" />
+                  <span className="text-xs font-bold text-[var(--rex-green)] uppercase tracking-wider">You accept → job confirmed</span>
+                </div>
+                <div className="flex items-center ml-6">
+                  <div className="border-l-2 border-dashed border-[var(--slate-200)] h-6" />
                 </div>
 
-                <div className="border-l-2 border-dashed border-[var(--slate-200)] ml-6 h-8" />
-
+                {/* Step 3: £480 recovered */}
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-[var(--rex-green)] flex items-center justify-center shrink-0">
-                    <span className="text-xl font-bold text-white">{config.currencySymbol}</span>
+                    <span className="text-lg font-bold text-white">{config.currencySymbol}480</span>
                   </div>
                   <div>
-                    <div className="text-lg font-bold text-[var(--navy-900)]">Average job {config.currencySymbol}120</div>
-                    <div className="text-[var(--slate-500)]">You accept 4 jobs = <span className="font-bold text-[var(--rex-green)]">{config.currencySymbol}480 recovered</span></div>
+                    <div className="text-lg font-bold text-[var(--navy-900)]">{config.currencySymbol}480 recovered</div>
+                    <div className="text-[var(--slate-500)]">4 jobs at {config.currencySymbol}120 average = <span className="font-bold text-[var(--rex-green)]">{config.currencySymbol}480 in one day</span></div>
                   </div>
                 </div>
               </div>

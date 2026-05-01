@@ -8,7 +8,7 @@ const steps = [
   {
     number: "01",
     title: "We Answer Instantly",
-    description: "Customer calls, Katie answers within 3 seconds. No voicemail, no missed opportunity.",
+    description: "Customer calls, Katie or Mark answers within 3 seconds. No voicemail, no missed opportunity.",
     icon: Phone,
     bgClass: "bg-[var(--katie-blue)]",
     bgLightClass: "bg-[var(--katie-blue)]/10",

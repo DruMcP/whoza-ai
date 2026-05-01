@@ -36,92 +36,88 @@ const colorStyles = {
   },
 }
 
-const plans = [
-  {
-    name: "Starter",
-    description: "Capture + deliver jobs",
-    price: "59",
-    perJob: "4",
-    jobsIncluded: "15",
-    period: "month",
-    color: "blue" as keyof typeof colorStyles,
-    popular: false,
-    features: [
-      { text: "AI call answering 24/7", included: true },
-      { text: "15 booked jobs included", included: true },
-      { text: "WhatsApp job delivery", included: true },
-      { text: "Calendar integration", included: true },
-      { text: "SMS confirmations", included: true },
-    ],
-    cta: "Get 10 Free Jobs",
-  },
-  {
-    name: "Growth",
-    description: "Full revenue system",
-    price: "119",
-    perJob: "3",
-    jobsIncluded: "40",
-    period: "month",
-    color: "green" as keyof typeof colorStyles,
-    popular: true,
-    features: [
-      { text: "Everything in Starter", included: true },
-      { text: "40 booked jobs included", included: true },
-      { text: "Rex review engine", included: true },
-      { text: "Claire competitor intel", included: true },
-      { text: "Revenue dashboard", included: true },
-      { text: "Priority support", included: true },
-    ],
-    cta: "Get 10 Free Jobs",
-  },
-  {
-    name: "Pro",
-    description: "High-volume trades",
-    price: "199",
-    perJob: "2.50",
-    jobsIncluded: "80",
-    period: "month",
-    color: "amber" as keyof typeof colorStyles,
-    popular: false,
-    features: [
-      { text: "Everything in Growth", included: true },
-      { text: "80 booked jobs included", included: true },
-      { text: "Multiple phone lines", included: true },
-      { text: "Team access", included: true },
-      { text: "Advanced analytics", included: true },
-    ],
-    cta: "Get 10 Free Jobs",
-  },
-  {
-    name: "Scale",
-    description: "Multi-location businesses",
-    price: "349",
-    perJob: "2",
-    jobsIncluded: "175",
-    period: "month",
-    color: "grey" as keyof typeof colorStyles,
-    popular: false,
-    features: [
-      { text: "Everything in Pro", included: true },
-      { text: "175 booked jobs included", included: true },
-      { text: "Dedicated account manager", included: true },
-      { text: "API access", included: true },
-      { text: "Custom integrations", included: true },
-    ],
-    cta: "Contact Sales",
-  },
-]
-
-
-
 export function Pricing() {
-  const { config, formatPrice } = useLocale()
-  
-  // Adjust plans based on locale pricing
-  const localizedPlans = plans.map((plan) => ({
-    ...plan,
-    price: String(config.pricing[plan.name.toLowerCase() as keyof typeof config.pricing] || plan.price),
-  }))
+  const { config } = useLocale()
+  const cs = config.currencySymbol
+
+  // Plans defined inside component to access locale currency symbol
+  const plans = [
+    {
+      name: "Starter",
+      description: "Capture + deliver jobs",
+      price: String(config.pricing.starter),
+      perJob: "4.00",
+      jobsIncluded: "0",
+      period: "month",
+      color: "blue" as keyof typeof colorStyles,
+      popular: false,
+      features: [
+        { text: "AI call answering 24/7", included: true },
+        { text: "Lead capture + dashboard", included: true },
+        { text: "Booking automation", included: true },
+        { text: "WhatsApp job delivery", included: true },
+        { text: `${cs}4.00 per qualified job booked`, included: true },
+      ],
+      cta: "Get 10 Free Booked Jobs",
+    },
+    {
+      name: "Growth",
+      description: "Full revenue system",
+      price: String(config.pricing.growth),
+      perJob: "3.00",
+      jobsIncluded: "15",
+      period: "month",
+      color: "green" as keyof typeof colorStyles,
+      popular: true,
+      features: [
+        { text: "Everything in Starter", included: true },
+        { text: "15 booked jobs included", included: true },
+        { text: "Claire review engine", included: true },
+        { text: "Monthly competitor tracking", included: true },
+        { text: "Revenue dashboard", included: true },
+        { text: `${cs}3.00 per additional job`, included: true },
+      ],
+      cta: "Get 10 Free Booked Jobs",
+    },
+    {
+      name: "Pro",
+      description: "High-volume + AI visibility",
+      price: String(config.pricing.pro),
+      perJob: "2.50",
+      jobsIncluded: "40",
+      period: "month",
+      color: "amber" as keyof typeof colorStyles,
+      popular: false,
+      features: [
+        { text: "Everything in Growth", included: true },
+        { text: "40 booked jobs included", included: true },
+        { text: "Weekly AI visibility reports", included: true },
+        { text: "Actionable recommendations", included: true },
+        { text: "Full system (Katie/Mark + Claire + Rex)", included: true },
+        { text: `${cs}2.50 per additional job`, included: true },
+      ],
+      cta: "Get 10 Free Booked Jobs",
+    },
+    {
+      name: "Scale",
+      description: "Multi-location businesses",
+      price: String(config.pricing.scale),
+      perJob: "2.00",
+      jobsIncluded: "100",
+      period: "month",
+      color: "grey" as keyof typeof colorStyles,
+      popular: false,
+      features: [
+        { text: "Everything in Pro", included: true },
+        { text: "100 booked jobs included", included: true },
+        { text: "Multi-location support", included: true },
+        { text: "Priority optimisation", included: true },
+        { text: "Dedicated account manager", included: true },
+        { text: `${cs}2.00 per additional job`, included: true },
+      ],
+      cta: "Contact Sales",
+    },
+  ]
 
   return (
     <section id="pricing" className="py-24 lg:py-40 bg-[var(--off-white)]">
@@ -141,7 +137,7 @@ export function Pricing() {
             <span className="text-[var(--rex-green)]">You Get Work</span>
           </h2>
           <p className="mt-6 text-xl text-[var(--slate-500)] text-pretty max-w-2xl mx-auto">
-            Jobs included. {config.currencySymbol}2–{config.currencySymbol}4 per extra job. Scales as you grow.
+            Jobs included. {cs}2–{cs}4 per extra job. Scales as you grow.
             <span className="block mt-2 font-semibold text-[var(--navy-900)]">Most customers recover their subscription in their first few jobs.</span>
           </p>
           <div className="mt-4 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[var(--rex-green)]/10 text-[var(--rex-green)] font-bold border border-[var(--rex-green)]/20">
@@ -152,11 +148,11 @@ export function Pricing() {
           {/* Economics breakdown */}
           <div className="mt-8 flex flex-wrap justify-center gap-6 lg:gap-10 text-center">
             <div className="px-4 py-3 rounded-xl bg-white shadow-sm border border-[var(--border)]">
-              <div className="text-2xl font-bold text-[var(--navy-900)]">{config.currencySymbol}2–{config.currencySymbol}4</div>
+              <div className="text-2xl font-bold text-[var(--navy-900)]">{cs}2–{cs}4</div>
               <div className="text-sm text-[var(--slate-500)]">per booked job</div>
             </div>
             <div className="px-4 py-3 rounded-xl bg-[var(--rex-green)]/10 border border-[var(--rex-green)]/20">
-              <div className="text-2xl font-bold text-[var(--rex-green)]">{config.currencySymbol}140+</div>
+              <div className="text-2xl font-bold text-[var(--rex-green)]">{cs}140+</div>
               <div className="text-sm text-[var(--slate-500)]">avg job value</div>
             </div>
             <div className="px-4 py-3 rounded-xl bg-white shadow-sm border border-[var(--border)]">
@@ -168,7 +164,7 @@ export function Pricing() {
 
         {/* Pricing Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {localizedPlans.map((plan, index) => {
+          {plans.map((plan, index) => {
             const colors = colorStyles[plan.color]
             return (
               <motion.div
@@ -201,11 +197,11 @@ export function Pricing() {
                   {/* Price */}
                   <div className="mb-6">
                     <div className="flex items-baseline gap-1">
-                      <span className="text-3xl font-bold text-[var(--navy-900)]">{config.currencySymbol}{plan.price}</span>
+                      <span className="text-3xl font-bold text-[var(--navy-900)]">{cs}{plan.price}</span>
                       <span className="text-[var(--slate-500)]">/{plan.period} <span className="text-xs font-normal">ex VAT</span></span>
                     </div>
                     <div className="flex items-center gap-2 mt-2">
-                      <span className="text-sm text-[var(--rex-green)] font-semibold">{config.currencySymbol}{plan.perJob}/job</span>
+                      <span className="text-sm text-[var(--rex-green)] font-semibold">{cs}{plan.perJob}/job</span>
                       <span className="text-xs text-[var(--slate-400)]">• {plan.jobsIncluded} jobs included</span>
                     </div>
                   </div>
@@ -243,7 +239,22 @@ export function Pricing() {
           })}
         </div>
 
-        
+        {/* Pricing Psychology */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-12 text-center"
+        >
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 px-6 py-4 rounded-2xl bg-[var(--navy-900)] text-white">
+            <CheckCircle2 className="w-6 h-6 text-[var(--rex-green)] shrink-0" />
+            <p className="text-sm">
+              <span className="font-bold">We only get paid when you get work.</span>{" "}
+              Most customers recover their monthly cost in their first few jobs.{" "}
+              <span className="text-white/60">No results in 30 days? We extend free.</span>
+            </p>
+          </div>
+        </motion.div>
       </div>
     </section>
   )

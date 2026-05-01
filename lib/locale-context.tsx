@@ -14,12 +14,24 @@ const LocaleContext = createContext<LocaleContextType | null>(null)
 
 const STORAGE_KEY = "whoza-country"
 
-export function LocaleProvider({ children }: { children: ReactNode }) {
-  const [country, setCountryState] = useState<Country>(defaultCountry)
+interface LocaleProviderProps {
+  children: ReactNode
+  forcedCountry?: Country
+}
+
+export function LocaleProvider({ children, forcedCountry }: LocaleProviderProps) {
+  const [country, setCountryState] = useState<Country>(forcedCountry || defaultCountry)
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     setMounted(true)
+    // If forcedCountry is provided, always use it (location pages)
+    if (forcedCountry) {
+      setCountryState(forcedCountry)
+      localStorage.setItem(STORAGE_KEY, forcedCountry)
+      return
+    }
+
     // Check localStorage first
     const stored = localStorage.getItem(STORAGE_KEY) as Country | null
     if (stored && (stored === "uk" || stored === "us")) {
@@ -38,7 +50,7 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
       setCountryState("uk")
       localStorage.setItem(STORAGE_KEY, "uk")
     }
-  }, [])
+  }, [forcedCountry])
 
   const setCountry = (newCountry: Country) => {
     setCountryState(newCountry)

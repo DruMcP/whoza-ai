@@ -1,6 +1,7 @@
 "use client"
 
 import { Shield } from "lucide-react"
+import { useLocale } from "@/lib/locale-context"
 
 const footerLinks = {
   product: [
@@ -29,13 +30,22 @@ const footerLinks = {
   ],
 }
 
-const badges = [
+const ukBadges = [
   "ICO Registered",
   "GDPR Compliant",
   "UK Data Centers",
 ]
 
+const usBadges = [
+  "SOC 2 Compliant",
+  "CCPA Compliant",
+  "US Data Centers",
+]
+
 export function Footer() {
+  const { country, config } = useLocale()
+  const badges = country === "uk" ? ukBadges : usBadges
+
   return (
     <footer className="bg-[var(--navy-900)] border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -50,11 +60,9 @@ export function Footer() {
               />
             </a>
             <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-xs">
-              AI-powered business tools built specifically for UK tradespeople. 
-              Never miss a call, never lose a lead.
+              AI revenue system for {country === "uk" ? "UK" : "US"} {config.language.tradesPeople}. 
+              Captures demand, books jobs, delivers via WhatsApp, and grows your business every week.
             </p>
-            
-            
           </div>
 
           {/* Links */}

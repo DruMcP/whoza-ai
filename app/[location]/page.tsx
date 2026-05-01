@@ -18,6 +18,7 @@ import { FAQ } from "@/components/whoza/faq"
 import { FinalCTA } from "@/components/whoza/final-cta"
 import { Footer } from "@/components/whoza/footer"
 import { StickyCTA, FloatingChatWidget } from "@/components/whoza/sticky-cta"
+import { LocaleProvider } from "@/lib/locale-context"
 import { locations, getLocationBySlug } from "@/lib/locations"
 
 interface PageProps {
@@ -56,8 +57,10 @@ export default async function LocationPage({ params }: PageProps) {
     notFound()
   }
 
+  const jobsThisWeek = Math.floor(Math.random() * 80) + 100
+
   return (
-    <>
+    <LocaleProvider forcedCountry={locationData.country}>
       <Header />
       
       <main id="main-content" role="main">
@@ -65,9 +68,13 @@ export default async function LocationPage({ params }: PageProps) {
           city={locationData.city} 
           trade={locationData.trades?.[0]}
           region={locationData.region}
-          jobsThisWeek={Math.floor(Math.random() * 80) + 100}
+          jobsThisWeek={jobsThisWeek}
         />
-        <GeoProofBand />
+        <GeoProofBand 
+          city={locationData.city}
+          country={locationData.country}
+          jobsThisWeek={jobsThisWeek}
+        />
         <SocialProofBand />
         <LostRevenueCalculator />
         <ROICalculator />
@@ -87,6 +94,6 @@ export default async function LocationPage({ params }: PageProps) {
       <Footer />
       <FloatingChatWidget />
       <StickyCTA />
-    </>
+    </LocaleProvider>
   )
 }

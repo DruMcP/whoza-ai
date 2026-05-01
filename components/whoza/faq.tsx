@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     question: "How quickly can I get set up?",
-    answer: "Most tradespeople are fully set up in under 10 minutes. You'll forward your existing business number to your new whoza.ai number, customize Katie's greeting, connect your calendar, and you're live. No technical knowledge required.",
+    answer: "Most tradespeople are fully set up in under 30 minutes. You'll forward your existing business number to your new whoza.ai number, customize your agent's greeting, connect your calendar, and you're live. No technical knowledge required.",
   },
   {
     question: "What happens if Katie can't handle a call?",
@@ -29,19 +29,19 @@ const faqs = [
   },
   {
     question: "What trades do you support?",
-    answer: "We support all UK trades including plumbers, electricians, builders, roofers, painters & decorators, landscapers, heating engineers, carpenters, tilers, plasterers, and more. Katie is trained on trade-specific terminology and common customer queries for each profession.",
+    answer: "We support all trades including plumbers, electricians, builders, roofers, painters, landscapers, heating engineers, carpenters, tilers, plasterers, and more. Our agents are trained on trade-specific terminology and common customer queries for each profession.",
   },
   {
-    question: "Is my data safe and GDPR compliant?",
-    answer: "Absolutely. We're ICO registered and fully GDPR compliant. All call recordings and customer data are encrypted, stored in UK data centers, and you maintain full control. You can delete any data at any time from your dashboard.",
+    question: "Is my data safe and compliant?",
+    answer: "Absolutely. We're fully compliant with all relevant data protection regulations. All call recordings and customer data are encrypted, stored in secure local data centers, and you maintain full control. You can delete any data at any time from your dashboard.",
   },
   {
     question: "What if I want to cancel?",
-    answer: "Cancel anytime — no contracts, no cancellation fees, no hassle. We're confident you'll stay because Katie pays for herself many times over, but if it's not right for your business, you can cancel with one click from your dashboard.",
+    answer: "Cancel anytime — no contracts, no cancellation fees, no hassle. We're confident you'll stay because the system pays for itself many times over, but if it's not right for your business, you can cancel with one click from your dashboard.",
   },
   {
-    question: "How does the 14-day free trial work?",
-    answer: "Sign up, set up Katie in 10 minutes, and start answering calls immediately. No credit card required to start. At the end of 14 days, choose a plan that fits your business. If you don't upgrade, your account simply pauses — no surprise charges.",
+    question: "How does the free trial work?",
+    answer: "We give you 10 free booked jobs to start. No credit card required. Experience the full system — call answering, job booking, WhatsApp delivery, and review collection. After your 10 free jobs, choose a plan that fits your business. If you don't upgrade, your account simply pauses — no surprise charges.",
   },
 ]
 

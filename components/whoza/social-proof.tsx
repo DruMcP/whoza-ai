@@ -8,9 +8,9 @@ const badgesConfig = {
   uk: [
     { name: "ICO Registered", icon: Shield },
     { name: "GDPR Compliant", icon: CheckCircle2 },
-    { name: "Gas Safe Partner", icon: Award },
-    { name: "NICEIC Approved", icon: Award },
-    { name: "FMB Member", icon: Award },
+    { name: "Built for Gas Safe engineers", icon: Award },
+    { name: "Built for NICEIC electricians", icon: Award },
+    { name: "Built for FMB builders", icon: Award },
   ],
   us: [
     { name: "SOC 2 Compliant", icon: Shield },
@@ -94,11 +94,12 @@ export function TrustBadgeBand() {
 export function StatsBand() {
   const { country, config } = useLocale()
   
+  // Micro proof signals instead of false aggregate claims
   const stats = [
-    { value: "47,000+", label: "Calls Handled Monthly", colorClass: "text-[var(--katie-blue)]" },
-    { value: country === "uk" ? "£2.3M" : "$3.1M", label: "Revenue Saved for Customers", colorClass: "text-[var(--rex-green)]" },
-    { value: "8 seconds", label: "Average Answer Time", colorClass: "text-[var(--claire-amber)]" },
-    { value: "99.7%", label: "Uptime Guarantee", colorClass: "text-[var(--mark-grey)]" },
+    { value: "3 sec", label: "Answer Time", colorClass: "text-[var(--katie-blue)]" },
+    { value: "24/7", label: "Always Working", colorClass: "text-[var(--rex-green)]" },
+    { value: config.currencySymbol + "2–" + config.currencySymbol + "4", label: "Per Booked Job", colorClass: "text-[var(--claire-amber)]" },
+    { value: "30 min", label: "Install Time", colorClass: "text-[var(--mark-grey)]" },
   ]
 
   return (

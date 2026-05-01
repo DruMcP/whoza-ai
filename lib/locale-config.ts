@@ -14,10 +14,10 @@ export interface LocaleConfig {
     cities: string[]
   }
   pricing: {
-    solo: number
-    business: number
-    professional: number
-    enterprise: number
+    starter: number
+    growth: number
+    pro: number
+    scale: number
   }
 }
 
@@ -36,10 +36,10 @@ export const localeConfigs: Record<Country, LocaleConfig> = {
       cities: ["London", "Manchester", "Birmingham", "Leeds", "Glasgow", "Bristol"],
     },
     pricing: {
-      solo: 69,
-      business: 129,
-      professional: 219,
-      enterprise: 499,
+      starter: 59,
+      growth: 119,
+      pro: 199,
+      scale: 349,
     },
   },
   us: {
@@ -56,10 +56,10 @@ export const localeConfigs: Record<Country, LocaleConfig> = {
       cities: ["New York", "Dallas", "Chicago", "Los Angeles", "Houston", "Phoenix"],
     },
     pricing: {
-      solo: 89,
-      business: 169,
-      professional: 289,
-      enterprise: 649,
+      starter: 59,
+      growth: 119,
+      pro: 199,
+      scale: 349,
     },
   },
 }

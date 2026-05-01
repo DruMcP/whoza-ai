@@ -196,7 +196,7 @@ export function LostRevenueCalculator() {
                   <p className="text-sm text-white/60 mb-4">
                     Stop the leak. Katie answers every call from just{" "}
                     <span className="text-white font-semibold">
-                      {config.currencySymbol}{country === "uk" ? "59" : "79"}/month <span className="text-xs">ex VAT</span>
+                      {config.currencySymbol}{config.pricing.starter}/month <span className="text-xs">ex VAT</span>
                     </span>
                   </p>
                   <Button 
@@ -206,6 +206,7 @@ export function LostRevenueCalculator() {
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                   <p className="text-xs text-white/40 mt-3 text-center">No credit card required</p>
+                  <p className="text-xs text-white/50 mt-1 text-center">Most customers see their first booked job within days.</p>
                 </div>
               </div>
             </div>
