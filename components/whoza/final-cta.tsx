@@ -89,6 +89,23 @@ export function FinalCTA() {
           </Button>
         </motion.div>
 
+        {/* CTA Reassurance */}
+        <p className="mt-3 text-sm text-white/60 text-center">
+          Setup takes 30 minutes. First jobs typically within days.
+        </p>
+
+        {/* Dynamic Proof */}
+        <div className="mt-3 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/10 text-sm text-white/80">
+          <span className="w-2 h-2 rounded-full bg-[var(--rex-green)] animate-pulse" />
+          <span className="font-semibold text-white">Jobs booked today: 47</span>
+          <span className="text-white/40">across UK trades</span>
+        </div>
+
+        {/* CTA Urgency */}
+        <p className="mt-3 text-sm text-white/50 text-center">
+          Most customers see their first booked job within days.
+        </p>
+
         {/* CTA Urgency */}
         <p className="mt-3 text-sm text-white/50 text-center">
           Most customers see their first booked job within days.

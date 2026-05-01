@@ -26,7 +26,7 @@ export function Header() {
             <img 
               src="/production_logo.png" 
               alt="whoza.ai" 
-              className="h-8 w-auto brightness-0 invert"
+              className="h-8 w-auto"
             />
           </a>
 

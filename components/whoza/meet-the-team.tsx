@@ -17,6 +17,7 @@ const voiceAgents = [
     borderColor: "border-[var(--katie-blue)]/30",
     textColor: "text-[var(--katie-blue)]",
     roleIcon: Phone,
+    isVoiceAgent: true,
   },
   {
     name: "Mark",
@@ -30,32 +31,31 @@ const voiceAgents = [
     borderColor: "border-[var(--mark-grey)]/30",
     textColor: "text-[var(--mark-grey)]",
     roleIcon: Phone,
+    isVoiceAgent: true,
   },
   {
     name: "Claire",
     role: "Review Capture",
-    voice: "Female Voice",
     description: "Claire automatically follows up after every completed job to collect Google reviews. She also monitors review sites and alerts you when competitors get praised or criticised.",
-    audioSample: "Hi! Just checking in — how did your job go? We'd love your feedback on Google!",
     image: "/images/claire.jpg",
     color: "var(--claire-amber)",
     bgLight: "bg-[var(--claire-amber)]/10",
     borderColor: "border-[var(--claire-amber)]/30",
     textColor: "text-[var(--claire-amber)]",
     roleIcon: Star,
+    isVoiceAgent: false,
   },
   {
     name: "Rex",
     role: "AI Visibility + Competitor Tracking",
-    voice: "Male Voice",
     description: "Rex tracks which competitors are appearing in ChatGPT, Google AI, and search results — and gives you weekly recommendations on how to show up more. Get more work every week, without ads. Rex shows you what to fix this week so you get more calls and more jobs.",
-    audioSample: "Weekly insight: 3 competitors dropped their prices. Here's how to respond.",
     image: "/images/rex.jpg",
     color: "var(--rex-green)",
     bgLight: "bg-[var(--rex-green)]/10",
     borderColor: "border-[var(--rex-green)]/30",
     textColor: "text-[var(--rex-green)]",
     roleIcon: Eye,
+    isVoiceAgent: false,
   },
 ]
 
@@ -110,30 +110,36 @@ export function MeetTheTeam() {
                   />
                   <div>
                     <h3 className="text-2xl font-bold text-[var(--navy-900)]">{agent.name}</h3>
-                    <span className={`text-sm font-medium ${agent.textColor}`}>{agent.voice}</span>
+                    {agent.isVoiceAgent && (
+                      <span className={`text-sm font-medium ${agent.textColor}`}>{agent.voice}</span>
+                    )}
                   </div>
                 </div>
 
                 {/* Description */}
                 <p className="text-[var(--slate-500)] mb-6 text-sm leading-relaxed">{agent.description}</p>
 
-                {/* Audio Sample Preview */}
-                <div className={`p-4 rounded-xl ${agent.bgLight} mb-6`}>
-                  <div className="flex items-center gap-3 mb-2">
-                    <Volume2 className="w-4 h-4" style={{ color: agent.color }} />
-                    <span className="text-sm font-medium text-[var(--navy-900)]">Sample greeting:</span>
+                {/* Audio Sample Preview — Voice Agents Only */}
+                {agent.isVoiceAgent && agent.audioSample && (
+                  <div className={`p-4 rounded-xl ${agent.bgLight} mb-6`}>
+                    <div className="flex items-center gap-3 mb-2">
+                      <Volume2 className="w-4 h-4" style={{ color: agent.color }} />
+                      <span className="text-sm font-medium text-[var(--navy-900)]">Sample greeting:</span>
+                    </div>
+                    <p className="text-sm text-[var(--slate-500)] italic">"{agent.audioSample}"</p>
                   </div>
-                  <p className="text-sm text-[var(--slate-500)] italic">"{agent.audioSample}"</p>
-                </div>
+                )}
 
-                {/* CTA */}
-                <Button 
-                  variant="outline"
-                  className={`w-full ${agent.borderColor} ${agent.textColor} hover:bg-[${agent.color}]/5`}
-                >
-                  <Volume2 className="w-4 h-4 mr-2" />
-                  Hear {agent.name} in Action
-                </Button>
+                {/* CTA — Voice Agents Only */}
+                {agent.isVoiceAgent && (
+                  <Button 
+                    variant="outline"
+                    className={`w-full ${agent.borderColor} ${agent.textColor} hover:bg-[${agent.color}]/5`}
+                  >
+                    <Volume2 className="w-4 h-4 mr-2" />
+                    Hear {agent.name} in Action
+                  </Button>
+                )}
               </motion.div>
             )
           })}

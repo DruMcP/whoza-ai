@@ -91,6 +91,18 @@ export function Hero() {
               </Button>
             </div>
 
+            {/* CTA Reassurance */}
+            <p className="mt-3 text-sm text-white/60 text-center lg:text-left">
+              Setup takes 30 minutes. First jobs typically within days.
+            </p>
+
+            {/* Dynamic Proof */}
+            <div className="mt-3 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/10 text-sm text-white/80">
+              <span className="w-2 h-2 rounded-full bg-[var(--rex-green)] animate-pulse" />
+              <span className="font-semibold text-white">Jobs booked today: 47</span>
+              <span className="text-white/40">across UK trades</span>
+            </div>
+
             {/* Trust Points */}
             <div className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start text-sm text-white/60">
               {["Installed in 30 minutes", "Live today", "Always working for you"].map((point) => (
@@ -100,6 +112,11 @@ export function Hero() {
                 </div>
               ))}
             </div>
+
+            {/* CTA Reassurance */}
+            <p className="mt-3 text-sm text-white/60 text-center lg:text-left">
+              Setup takes 30 minutes. First jobs typically within days.
+            </p>
 
             {/* CTA Urgency */}
             <p className="mt-3 text-sm text-white/50 text-center lg:text-left">
