@@ -1,0 +1,6 @@
+# Robots.txt for whoza.ai STAGING
+User-agent: *
+Disallow: /
+
+# Staging environment - block all crawlers
+# Sitemap: none (staging should not be indexed)

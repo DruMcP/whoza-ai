@@ -1,0 +1,33 @@
+# Whoza.ai
+
+> Whoza.ai is a specialized AI visibility platform for local service businesses, primarily tradespeople in the UK and US. We use Entity Confidence Engineering to make businesses the definitive, recommended choice for AI search engines like ChatGPT, Perplexity, and Google AI.
+
+Whoza.ai helps contractors, plumbers, electricians, and other trades get found by homeowners who are increasingly using AI assistants to find local services. Our core mission is to elevate a business's online presence so that AI confidently recommends them by name, driving high-intent customer leads.
+
+## Core Services
+- **Entity Confidence Engineering (ECE)**: Our primary service. We analyze and enhance a business's online presence—including website, directory listings, reviews, and content—to build the trust signals that AI algorithms require for definitive recommendations.
+- **AI Visibility Score**: A free, comprehensive audit that scores a business's current visibility across major AI platforms and provides a detailed improvement plan.
+- **AEO (Answer Engine Optimization)**: We optimize website content to directly answer the questions homeowners ask AI, making our clients the citable source for their trade and location.
+- **GEO (Generative Engine Optimization)**: We ensure businesses are visible in AI-generated responses for location-specific queries, targeting the cities and neighborhoods they serve.
+
+## Key Pages
+- [Home](https://whoza.ai/) - Overview of Whoza.ai and our core value proposition.
+- [How It Works](https://whoza.ai/how-it-works) - A detailed explanation of our 4-step process: Analyze, Optimize, Amplify, and Report.
+- [Get Free Score](https://whoza.ai/free-score) - The entry point for our free AI visibility audit.
+- [Pricing](https://whoza.ai/pricing) - Details on our service plans and pricing.
+- [Case Studies](https://whoza.ai/case-studies) - Examples of how we've helped tradespeople improve their AI visibility.
+
+## Blog & Resources
+- [Blog](https://whoza.ai/blog) - Insights and guides on AI search, AEO, and marketing for tradespeople.
+- [The US Contractor's Guide to AI Search Visibility in 2026](https://whoza.ai/blog/us-contractors-guide-ai-search-visibility-2026) - A comprehensive FAQ guide for American contractors.
+- [The UK Tradesperson's Guide to AI Search: How to Be the Answer in 2026](https://whoza.ai/blog/uk-trades-guide-to-ai-search-2026) - A guide tailored for the UK market.
+
+## Company & Legal
+- [Trust Page](https://whoza.ai/trust) - Information on our commitment to transparency and data security.
+- [Contact Us](https://whoza.ai/contact) - How to get in touch with the Whoza.ai team.
+- [Privacy Policy](https://whoza.ai/privacy) - Our data handling and privacy practices.
+- [Terms of Service](https://whoza.ai/terms) - The terms and conditions for using our services.
+
+## Contact Information
+- Email: support@whoza.ai
+- Website: https://whoza.ai

@@ -1,0 +1,116 @@
+"use client"
+
+import { motion } from "framer-motion"
+import { MessageCircle } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+
+const faqs = [
+  {
+    question: "Will customers know they're talking to AI?",
+    answer: "No — that's the whole point. Katie sounds natural, understands context, and handles conversations just like a professional receptionist. We've had customers ask if 'Katie' was the business owner's daughter. The technology has come a long way from robotic IVR systems.",
+  },
+  {
+    question: "How quickly can I get set up?",
+    answer: "Most tradespeople are fully set up in under 10 minutes. You'll forward your existing business number to your new whoza.ai number, customize Katie's greeting, connect your calendar, and you're live. No technical knowledge required.",
+  },
+  {
+    question: "What happens if Katie can't handle a call?",
+    answer: "Katie is trained to recognize when she needs to transfer to a human. For complex queries, emergencies, or if the customer specifically requests you, she'll take a message and notify you immediately via SMS and email. You can call them back within seconds.",
+  },
+  {
+    question: "Does it work with my existing phone number?",
+    answer: "Yes. You simply forward your existing business number to your whoza.ai number. Your customers call the same number they always have — they just get answered every time instead of hitting voicemail.",
+  },
+  {
+    question: "What trades do you support?",
+    answer: "We support all UK trades including plumbers, electricians, builders, roofers, painters & decorators, landscapers, HVAC engineers, carpenters, tilers, plasterers, and more. Katie is trained on trade-specific terminology and common customer queries for each profession.",
+  },
+  {
+    question: "Is my data safe and GDPR compliant?",
+    answer: "Absolutely. We're ICO registered and fully GDPR compliant. All call recordings and customer data are encrypted, stored in UK data centers, and you maintain full control. You can delete any data at any time from your dashboard.",
+  },
+  {
+    question: "What if I want to cancel?",
+    answer: "Cancel anytime — no contracts, no cancellation fees, no hassle. We're confident you'll stay because Katie pays for herself many times over, but if it's not right for your business, you can cancel with one click from your dashboard.",
+  },
+  {
+    question: "How does the 14-day free trial work?",
+    answer: "Sign up, set up Katie in 10 minutes, and start answering calls immediately. No credit card required to start. At the end of 14 days, choose a plan that fits your business. If you don't upgrade, your account simply pauses — no surprise charges.",
+  },
+]
+
+export function FAQ() {
+  return (
+    <section id="faq" className="py-20 lg:py-32 bg-white">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <span className="inline-block px-4 py-1.5 rounded-full bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] text-sm font-medium mb-4">
+            Got Questions?
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
+            Frequently Asked Questions
+          </h2>
+          <p className="mt-6 text-lg text-[var(--slate-500)]">
+            Everything you need to know about whoza.ai
+          </p>
+        </motion.div>
+
+        {/* FAQ Accordion */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <Accordion type="single" collapsible className="space-y-4">
+            {faqs.map((faq, index) => (
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`}
+                className="bg-[var(--off-white)] rounded-2xl border border-[var(--border)] px-6 data-[state=open]:border-[var(--katie-blue)]/30 transition-colors"
+              >
+                <AccordionTrigger className="text-left text-[var(--navy-900)] font-semibold hover:no-underline py-5">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-[var(--slate-500)] pb-5 leading-relaxed">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </motion.div>
+
+        {/* Still have questions */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-12 p-8 bg-[var(--off-white)] rounded-3xl border border-[var(--border)] text-center"
+        >
+          <div className="w-16 h-16 rounded-2xl bg-[var(--katie-blue)]/10 flex items-center justify-center mx-auto mb-4">
+            <MessageCircle className="w-8 h-8 text-[var(--katie-blue)]" />
+          </div>
+          <h3 className="text-xl font-bold text-[var(--navy-900)] mb-2">Still have questions?</h3>
+          <p className="text-[var(--slate-500)] mb-6">
+            Our team is here to help you get started.
+          </p>
+          <Button className="bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 text-white">
+            <MessageCircle className="mr-2 w-4 h-4" />
+            Chat with Us
+          </Button>
+        </motion.div>
+      </div>
+    </section>
+  )
+}

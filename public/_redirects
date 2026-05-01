@@ -1,0 +1,62 @@
+# Domain redirects MUST come first - whoza.co.uk to whoza.ai
+https://whoza.co.uk/*           https://whoza.ai/:splat          308!
+https://www.whoza.co.uk/*       https://whoza.ai/:splat          308!
+http://whoza.co.uk/*            https://whoza.ai/:splat          308!
+http://www.whoza.co.uk/*        https://whoza.ai/:splat          308!
+
+# www to non-www redirects for whoza.ai
+https://www.whoza.ai/*          https://whoza.ai/:splat          308!
+http://www.whoza.ai/*           https://whoza.ai/:splat          308!
+
+# HTTP to HTTPS redirect for whoza.ai
+http://whoza.ai/*               https://whoza.ai/:splat          301!
+
+# -- SEO: Redirect old-style /ai-visibility-{city} paths to correct /uk/ai-visibility/{city}/ paths
+# (query param redirects for ?s= ?q= ?plan= are handled in netlify.toml)
+/ai-visibility-edinburgh        /uk/ai-visibility/edinburgh/     301
+/ai-visibility-london           /uk/ai-visibility/london/        301
+/ai-visibility-manchester       /uk/ai-visibility/manchester/    301
+/ai-visibility-birmingham       /uk/ai-visibility/birmingham/    301
+/ai-visibility-leeds            /uk/ai-visibility/leeds/         301
+/ai-visibility-glasgow          /uk/ai-visibility/glasgow/       301
+/ai-visibility-liverpool        /uk/ai-visibility/liverpool/     301
+/ai-visibility-newcastle        /uk/ai-visibility/newcastle/     301
+/ai-visibility-sheffield        /uk/ai-visibility/sheffield/     301
+/ai-visibility-bristol          /uk/ai-visibility/bristol/       301
+/ai-visibility-leicester        /uk/ai-visibility/leicester/     301
+/ai-visibility-nottingham       /uk/ai-visibility/nottingham/    301
+/ai-visibility-cardiff          /uk/ai-visibility/cardiff/       301
+/ai-visibility-coventry         /uk/ai-visibility/coventry/      301
+/ai-visibility-southampton      /uk/ai-visibility/southampton/   301
+/ai-visibility-bradford         /uk/ai-visibility/bradford/      301
+/ai-visibility-belfast          /uk/ai-visibility/belfast/       301
+
+# Redirect old /free-score to /competitor-analysis (301 = permanent, passes link equity)
+/free-score      /competitor-analysis/     301!
+/free-score/     /competitor-analysis/     301!
+
+# Redirect legacy URLs to canonical versions (fixes 51 "Page with redirect" in GSC)
+/login           /sign-in/                 301!
+/login/          /sign-in/                 301!
+/privacy-policy  /privacy/                 301!
+/privacy-policy/ /privacy/                 301!
+/competitor      /competitor-analysis/     301!
+/competitor/     /competitor-analysis/     301!
+/dashboard       /portal/                  301!
+/dashboard/      /portal/                  301!
+
+# NOTE: Prerendered HTML pages are served as static files automatically.
+# Netlify serves static files BEFORE processing redirects.
+# The prerender script writes to dist/<path>/index.html during build.
+# DO NOT add a SPA catch-all /* → /index.html — it breaks prerendered pages!
+
+# Protected app routes (SPA — no prerender, requires auth)
+/portal/*     /index.html   200
+/portal/      /index.html   200
+/tasks/*      /index.html   200
+/tasks/       /index.html   200
+/reports/*    /index.html   200
+/reports/     /index.html   200
+/admin/*      /index.html   200
+/admin/       /index.html   200
+/portal-task-details.html  /index.html  200
