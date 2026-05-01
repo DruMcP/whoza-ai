@@ -43,9 +43,11 @@ export function Footer() {
           {/* Brand Column */}
           <div className="col-span-2">
             <a href="/" className="flex items-center mb-6">
-              <span className="text-white font-bold text-2xl tracking-tight">
-                whoza<span className="text-[var(--katie-blue)]">.ai</span>
-              </span>
+              <img 
+                src="/production_logo.png" 
+                alt="whoza.ai" 
+                className="h-8 w-auto"
+              />
             </a>
             <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-xs">
               AI-powered business tools built specifically for UK tradespeople. 

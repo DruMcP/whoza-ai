@@ -32,7 +32,7 @@ const testimonialsConfig = {
       name: "Dave Thompson",
       trade: "Plumber",
       location: "Manchester",
-      avatar: "DT",
+      image: "/images/testimonial-dave.jpg",
       rating: 5,
       quote: "I was losing 10-15 calls a week when I was on jobs. Katie's paid for herself twenty times over. My wife says I'm less stressed too!",
       metric: { value: "£3,200", label: "Extra monthly revenue" },
@@ -42,7 +42,7 @@ const testimonialsConfig = {
       name: "Sarah M.",
       trade: "Electrician",
       location: "Birmingham",
-      avatar: "SM",
+      image: "/images/testimonial-sarah.jpg",
       rating: 5,
       quote: "Customers think Katie is a real person! She books jobs while I'm up a ladder. Best £129 I spend each month.",
       metric: { value: "£2,800", label: "Extra monthly revenue" },
@@ -52,7 +52,7 @@ const testimonialsConfig = {
       name: "James W.",
       trade: "Builder",
       location: "Leeds",
-      avatar: "JW",
+      image: "/images/testimonial-jenny.jpg",
       rating: 5,
       quote: "Paid for itself in the first week. 12 jobs booked in 7 days that I would've missed while on site.",
       metric: { value: "12", label: "Jobs in first week" },
@@ -62,7 +62,7 @@ const testimonialsConfig = {
       name: "Mike R.",
       trade: "Plumber",
       location: "Glasgow",
-      avatar: "MR",
+      image: "/images/testimonial-mike.jpg",
       rating: 5,
       quote: "Best investment I made this year. My wife noticed I'm less stressed and we're booking jobs I used to miss.",
       metric: { value: "£4,100", label: "Extra monthly revenue" },
@@ -74,7 +74,7 @@ const testimonialsConfig = {
       name: "Mike Johnson",
       trade: "HVAC Contractor",
       location: "Dallas",
-      avatar: "MJ",
+      image: "/images/testimonial-dave.jpg",
       rating: 5,
       quote: "I was missing 20+ calls a week while on jobs. Katie's paid for herself thirty times over. My stress level has dropped significantly.",
       metric: { value: "$4,800", label: "Extra monthly revenue" },
@@ -84,7 +84,7 @@ const testimonialsConfig = {
       name: "Jennifer R.",
       trade: "Plumber",
       location: "Chicago",
-      avatar: "JR",
+      image: "/images/testimonial-sarah.jpg",
       rating: 5,
       quote: "Customers think Katie is a real receptionist! She books jobs while I'm under a sink. Best $169 I spend each month.",
       metric: { value: "$3,600", label: "Extra monthly revenue" },
@@ -94,7 +94,7 @@ const testimonialsConfig = {
       name: "Carlos M.",
       trade: "Roofer",
       location: "Phoenix",
-      avatar: "CM",
+      image: "/images/testimonial-jenny.jpg",
       rating: 5,
       quote: "Paid for itself in the first week. 15 jobs booked in 7 days that I would've missed while on a roof.",
       metric: { value: "15", label: "Jobs in first week" },
@@ -104,7 +104,7 @@ const testimonialsConfig = {
       name: "David S.",
       trade: "Electrician",
       location: "Houston",
-      avatar: "DS",
+      image: "/images/testimonial-mike.jpg",
       rating: 5,
       quote: "Best investment I made this year. My wife noticed I'm less stressed and we're booking jobs I used to miss.",
       metric: { value: "$5,200", label: "Extra monthly revenue" },
@@ -236,9 +236,11 @@ function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] 
 
           {/* Author */}
           <div className="mt-6 flex items-center gap-4">
-            <div className={`w-12 h-12 rounded-full ${colors.avatar} flex items-center justify-center text-white font-bold`}>
-              {testimonial.avatar}
-            </div>
+            <img 
+              src={testimonial.image} 
+              alt={testimonial.name}
+              className={`w-12 h-12 rounded-full object-cover`}
+            />
             <div>
               <div className="font-semibold text-[var(--navy-900)]">{testimonial.name}</div>
               <div className="text-sm text-[var(--slate-500)]">

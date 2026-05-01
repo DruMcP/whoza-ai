@@ -23,9 +23,11 @@ export function Header() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <a href="/" className="flex items-center">
-            <span className="text-white font-bold text-2xl tracking-tight">
-              whoza<span className="text-[var(--katie-blue)]">.ai</span>
-            </span>
+            <img 
+              src="/production_logo.png" 
+              alt="whoza.ai" 
+              className="h-8 w-auto brightness-0 invert"
+            />
           </a>
 
           {/* Desktop Nav */}

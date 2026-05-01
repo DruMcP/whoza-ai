@@ -10,6 +10,7 @@ const voiceAgents = [
     voice: "Female Voice",
     description: "Professional, warm, and friendly. Perfect for customer-focused businesses.",
     audioSample: "Hi, you've reached ABC Plumbing. My name is Katie. How can I help you today?",
+    image: "/images/katie.jpg",
     color: "var(--katie-blue)",
     bgLight: "bg-[var(--katie-blue)]/10",
     borderColor: "border-[var(--katie-blue)]/30",
@@ -20,10 +21,33 @@ const voiceAgents = [
     voice: "Male Voice",
     description: "Confident, clear, and direct. Great for trade and technical businesses.",
     audioSample: "Hi, you've reached ABC Electrics. This is Mark speaking. What can I do for you?",
+    image: "/images/mark.jpg",
     color: "var(--mark-grey)",
     bgLight: "bg-[var(--mark-grey)]/10",
     borderColor: "border-[var(--mark-grey)]/30",
     textColor: "text-[var(--mark-grey)]",
+  },
+  {
+    name: "Claire",
+    voice: "Female Voice",
+    description: "Post-job conversion specialist. Turns completed jobs into future work through reviews.",
+    audioSample: "Hi! Just checking in — how did your boiler repair go? We'd love your feedback!",
+    image: "/images/claire.jpg",
+    color: "var(--claire-amber)",
+    bgLight: "bg-[var(--claire-amber)]/10",
+    borderColor: "border-[var(--claire-amber)]/30",
+    textColor: "text-[var(--claire-amber)]",
+  },
+  {
+    name: "Rex",
+    voice: "Male Voice",
+    description: "Growth strategist. Analyses your market and tells you where the next jobs are hiding.",
+    audioSample: "Weekly insight: 3 competitors dropped their prices. Here's how to respond.",
+    image: "/images/rex.jpg",
+    color: "var(--rex-green)",
+    bgLight: "bg-[var(--rex-green)]/10",
+    borderColor: "border-[var(--rex-green)]/30",
+    textColor: "text-[var(--rex-green)]",
   },
 ]
 
@@ -50,7 +74,7 @@ export function MeetTheTeam() {
         </motion.div>
 
         {/* Voice Agent Cards */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12">
           {voiceAgents.map((agent, index) => (
             <motion.div
               key={agent.name}
@@ -62,12 +86,11 @@ export function MeetTheTeam() {
             >
               {/* Avatar */}
               <div className="flex items-center gap-4 mb-6">
-                <div 
-                  className="w-16 h-16 rounded-2xl flex items-center justify-center"
-                  style={{ backgroundColor: `${agent.color}20` }}
-                >
-                  <Phone className="w-8 h-8" style={{ color: agent.color }} />
-                </div>
+                <img 
+                  src={agent.image} 
+                  alt={agent.name}
+                  className="w-16 h-16 rounded-2xl object-cover"
+                />
                 <div>
                   <h3 className="text-2xl font-bold text-[var(--navy-900)]">{agent.name}</h3>
                   <span className={`text-sm font-medium ${agent.textColor}`}>{agent.voice}</span>
