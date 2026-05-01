@@ -67,8 +67,9 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
 
             {/* Subheadline */}
             <p className="mt-6 text-lg sm:text-xl text-white/70 leading-relaxed max-w-xl mx-auto lg:mx-0 text-pretty">
-              Turn missed calls into booked jobs automatically. Katie answers your phone 24/7, 
-              qualifies local enquiries, and books customers in your area.
+              Turn missed calls into booked jobs — and completed jobs into more future work. 
+              Katie captures enquiries, Rex finds opportunities, and Claire turns every finished job into your next customer.
+              <span className="block mt-2 text-white font-semibold">Installed in 30 minutes. No risk.</span>
             </p>
 
             {/* Local Proof */}

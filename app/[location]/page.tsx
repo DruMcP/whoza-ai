@@ -6,6 +6,7 @@ import { GeoProofBand } from "@/components/whoza/geo-proof-band"
 import { SocialProofBand, TrustBadgeBand } from "@/components/whoza/social-proof"
 import { LostRevenueCalculator } from "@/components/whoza/lost-revenue-calculator"
 import { ROICalculator } from "@/components/whoza/roi-calculator"
+import { RevenueSystem } from "@/components/whoza/revenue-system"
 import { MeetTheTeam } from "@/components/whoza/meet-the-team"
 import { HowItWorks } from "@/components/whoza/how-it-works"
 import { AudioDemo } from "@/components/whoza/audio-demo"
@@ -71,6 +72,7 @@ export default async function LocationPage({ params }: PageProps) {
         <LostRevenueCalculator />
         <ROICalculator />
         <TrustBadgeBand />
+        <RevenueSystem />
         <MeetTheTeam />
         <HowItWorks />
         <AudioDemo />
