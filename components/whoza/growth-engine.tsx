@@ -130,7 +130,7 @@ export function GrowthEngine() {
             </h2>
             <p className="mt-6 text-lg text-white/60 text-pretty">
               When customers ask ChatGPT or Google AI for a tradesperson, Rex helps make sure your business is the one recommended.
-              <span className="block mt-2 font-semibold text-white">Get weekly AI recommendations telling you exactly what to do to win more jobs.</span>
+              <span className="block mt-2 font-semibold text-white">Rex tells you what to fix this week so you get more calls and more jobs.</span>
             </p>
 
             <div className="mt-10 space-y-4">

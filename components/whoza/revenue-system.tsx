@@ -10,7 +10,7 @@ const stages = [
     number: "01",
     stage: "CAPTURE",
     title: "Answer Every Call",
-    description: "Katie or Mark answers within 3 seconds, 24/7. No missed calls. No voicemail. Every enquiry captured and qualified.",
+    description: "Katie or Mark picks up in 3 seconds, 24/7. No missed calls. No voicemail. Every enquiry captured and qualified.",
     icon: Phone,
     color: "var(--katie-blue)",
     bgLight: "bg-[var(--katie-blue)]/10",
@@ -20,8 +20,8 @@ const stages = [
   {
     number: "02",
     stage: "CONVERT",
-    title: "Qualify + Book Jobs",
-    description: "AI gathers job details, filters time-wasters, and books qualified leads into your calendar. You only see the good ones.",
+    title: "Book the Job",
+    description: "AI gathers the details, filters spam, and books qualified leads. You only see real jobs with real money attached.",
     icon: ClipboardCheck,
     color: "var(--rex-green)",
     bgLight: "bg-[var(--rex-green)]/10",
@@ -32,7 +32,7 @@ const stages = [
     number: "03",
     stage: "DELIVER",
     title: "Send to Your Phone",
-    description: "Qualified jobs land on WhatsApp instantly. Customer name, job type, location, time, and estimated value. Tap to accept.",
+    description: "Qualified jobs hit your WhatsApp instantly. Customer name, job type, location, time, and estimated value. Tap to accept.",
     icon: MessageCircle,
     color: "var(--claire-amber)",
     bgLight: "bg-[var(--claire-amber)]/10",
@@ -42,8 +42,8 @@ const stages = [
   {
     number: "04",
     stage: "GROW",
-    title: "Post-Job + AI Visibility",
-    description: "Claire follows up for Google reviews after every job. Rex tracks competitors and tells you weekly how to show up more in ChatGPT and Google AI. More work every week.",
+    title: "Get More Work",
+    description: "Claire gets you reviews after every job. Rex tells you weekly what to fix so you show up more in ChatGPT and Google AI. More calls. More jobs.",
     icon: TrendingUp,
     color: "var(--rex-green)",
     bgLight: "bg-[var(--rex-green)]/10",
@@ -80,8 +80,7 @@ export function RevenueSystem() {
             <span className="text-[var(--rex-green)]">Grow</span>
           </h2>
           <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
-            Not just an AI receptionist. A complete revenue engine that captures demand, 
-            books jobs, delivers them to your phone, and grows your business automatically.
+            Not just an AI receptionist. A complete system that turns missed calls into booked jobs and booked jobs into more money.
           </p>
         </motion.div>
 

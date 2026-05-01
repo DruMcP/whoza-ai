@@ -148,11 +148,11 @@ export function Pricing() {
           </span>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
             We Only Get Paid When{" "}
-            <span className="text-[var(--rex-green)]">You Get Work</span>
+            <span className="text-[var(--rex-green)]">You Get Jobs</span>
           </h2>
           <p className="mt-6 text-xl text-[var(--slate-500)] text-pretty max-w-2xl mx-auto">
             Jobs included. {cs}2–{cs}4 per extra job. Scales as you grow.
-            <span className="block mt-2 font-semibold text-[var(--navy-900)]">Most customers recover their subscription in their first few jobs.</span>
+            <span className="block mt-2 font-semibold text-[var(--navy-900)]">Most customers cover their cost in their first few jobs.</span>
           </p>
           <div className="mt-4 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[var(--rex-green)]/10 text-[var(--rex-green)] font-bold border border-[var(--rex-green)]/20">
             <CheckCircle2 className="w-5 h-5" />
@@ -264,7 +264,7 @@ export function Pricing() {
             <CheckCircle2 className="w-6 h-6 text-[var(--rex-green)] shrink-0" />
             <p className="text-sm">
               <span className="font-bold">We only get paid when you get work.</span>{" "}
-              Most customers recover their monthly cost in their first few jobs.{" "}
+              Most customers cover their cost in their first few jobs.{" "}
               <span className="text-white/60">No results in 30 days? We extend free.</span>
             </p>
           </div>

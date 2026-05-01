@@ -68,7 +68,8 @@ export function Hero() {
 
             {/* Subheadline */}
             <p className="mt-6 text-lg sm:text-xl text-white/70 leading-relaxed max-w-xl mx-auto lg:mx-0 text-pretty">
-              Whoza installs an AI revenue system that captures those jobs and sends them directly to your phone.
+              Whoza answers your calls, books the job, and sends it straight to your phone.
+              <span className="block mt-2 text-white font-semibold">No apps. No logins. Just jobs sent to your phone.</span>
               <span className="block mt-2 text-white font-semibold">Installed in 30 minutes. No risk.</span>
             </p>
 
@@ -113,11 +114,6 @@ export function Hero() {
               ))}
             </div>
 
-            {/* CTA Reassurance */}
-            <p className="mt-3 text-sm text-white/60 text-center lg:text-left">
-              Setup takes 30 minutes. First jobs typically within days.
-            </p>
-
             {/* CTA Urgency */}
             <p className="mt-3 text-sm text-white/50 text-center lg:text-left">
               Most customers see their first booked job within days.
@@ -147,7 +143,7 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Stats Bar — Micro Proof Instead of False Claims */}
+        {/* Stats Bar — Missed calls → Jobs → Revenue */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -155,9 +151,9 @@ export function Hero() {
           className="mt-16 lg:mt-24 grid grid-cols-3 gap-8 max-w-2xl mx-auto"
         >
           {[
-            { value: "3 sec", label: "Answer Time" },
-            { value: "24/7", label: "Always On" },
-            { value: "WhatsApp", label: "Job Delivery" },
+            { value: "3 sec", label: "Missed call answered" },
+            { value: "1 tap", label: "Job booked" },
+            { value: "£140+", label: "Revenue per job" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">

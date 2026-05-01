@@ -28,7 +28,7 @@ export function ReviewsEngine() {
             </h2>
             <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
               Every completed job is a seed for the next one. Claire automatically reaches out via WhatsApp after you finish a job, guides happy customers to leave a Google review, and turns that trust into more enquiries.
-              <span className="block mt-2 font-semibold text-[var(--navy-900)]">More reviews → more trust → more jobs. On autopilot.</span>
+              <span className="block mt-2 font-semibold text-[var(--navy-900)]">More 5-star reviews means more customers choose you.</span>
             </p>
 
             <div className="mt-10 space-y-4">

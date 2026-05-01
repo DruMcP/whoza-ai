@@ -106,11 +106,6 @@ export function FinalCTA() {
           Most customers see their first booked job within days.
         </p>
 
-        {/* CTA Urgency */}
-        <p className="mt-3 text-sm text-white/50 text-center">
-          Most customers see their first booked job within days.
-        </p>
-
         {/* Risk Reversal */}
         <motion.div
           initial={{ opacity: 0 }}
