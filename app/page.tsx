@@ -21,6 +21,7 @@ import { FAQ } from "@/components/whoza/faq"
 import { FinalCTA } from "@/components/whoza/final-cta"
 import { Footer } from "@/components/whoza/footer"
 import { StickyCTA, FloatingChatWidget } from "@/components/whoza/sticky-cta"
+import { TrilletVoiceWidget } from "@/components/whoza/trillet-voice-widget"
 
 export default function Home() {
   return (
@@ -45,6 +46,14 @@ export default function Home() {
         {/* CALL CAPTURE - Choose your voice */}
         <MeetTheTeam />
         <AudioDemo />
+        
+        {/* VOICE AGENT DEMO - Talk to Katie live */}
+        <section className="py-12 bg-[var(--navy-900)]">
+          <div className="max-w-7xl mx-auto px-4 text-center">
+            <p className="text-white/60 text-sm mb-4">Try it now — no signup needed</p>
+            <TrilletVoiceWidget buttonLabel="Talk to Katie" />
+          </div>
+        </section>
         
         {/* CONTROL - You stay in control */}
         <ControlSection />
