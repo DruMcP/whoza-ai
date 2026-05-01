@@ -244,6 +244,7 @@ export function Pricing() {
                         ? `${colors.bg} ${colors.hover} text-white shadow-lg` 
                         : "bg-[var(--navy-900)] hover:bg-[var(--navy-800)] text-white"
                     }`}
+                    onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     {plan.cta}
                     <ArrowRight className="ml-2 w-4 h-4" />

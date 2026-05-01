@@ -4,6 +4,8 @@ import { motion } from "framer-motion"
 import { ArrowRight, Phone, BarChart3, Star, Eye, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLocale } from "@/lib/locale-context"
+import { WaitlistForm } from "./waitlist-form"
+import { TrialAvailabilityBadge } from "./trial-badge"
 
 const teamMembers = [
   { name: "Katie", icon: Phone, bgClass: "bg-[var(--katie-blue)]/20 border-[var(--katie-blue)]/30", iconClass: "text-[var(--katie-blue)]" },
@@ -16,7 +18,7 @@ export function FinalCTA() {
   const { country, config } = useLocale()
   
   return (
-    <section className="py-24 lg:py-40 bg-[var(--navy-900)] relative overflow-hidden">
+    <section id="final-cta" className="py-24 lg:py-40 bg-[var(--navy-900)] relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[var(--katie-blue)]/10 rounded-full blur-[120px]" />
@@ -65,28 +67,26 @@ export function FinalCTA() {
           </div>
         </motion.div>
 
-        {/* CTAs */}
+        {/* CTAs — Live Waitlist Form */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           viewport={{ once: true }}
-          className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
+          className="mt-10"
         >
-          <Button 
-            size="lg"
-            className="bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-bold px-12 py-7 text-xl gap-3 shadow-2xl shadow-[var(--rex-green)]/40 transition-all hover:scale-105"
-          >
-            Get Free Jobs Now
-            <ArrowRight className="w-6 h-6" />
-          </Button>
-          <Button 
-            size="lg"
-            variant="outline"
-            className="border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg"
-          >
-            Book Demo Call
-          </Button>
+          <WaitlistForm />
+          <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <TrialAvailabilityBadge />
+            <Button 
+              size="lg"
+              variant="outline"
+              className="border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg"
+              onClick={() => window.open('https://wa.me/447831643012', '_blank')}
+            >
+              Book Demo Call
+            </Button>
+          </div>
         </motion.div>
 
         {/* CTA Reassurance */}

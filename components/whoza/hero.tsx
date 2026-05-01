@@ -83,6 +83,7 @@ export function Hero() {
               <Button 
                 size="lg"
                 className="bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-bold px-10 py-7 text-xl gap-3 group shadow-2xl shadow-[var(--rex-green)]/40 transition-all hover:scale-105"
+                onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Get 10 Free Booked Jobs
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
@@ -91,6 +92,7 @@ export function Hero() {
                 size="lg"
                 variant="outline"
                 className="border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg gap-2"
+                onClick={() => window.open('https://wa.me/447831643012', '_blank')}
               >
                 <Play className="w-5 h-5" />
                 Book Demo
