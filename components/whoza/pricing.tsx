@@ -53,6 +53,7 @@ export function Pricing() {
       popular: false,
       features: [
         { text: "AI call answering 24/7", included: true },
+        { text: "Spam call filtering", included: true },
         { text: "Lead capture + dashboard", included: true },
         { text: "Booking automation", included: true },
         { text: "WhatsApp job delivery", included: true },
