@@ -75,11 +75,13 @@ export default function VoiceDashboard() {
     }
   };
 
+  const personaName = status?.persona_name || 'Katie';
+
   if (loading) {
     return (
       <div className="voice-dashboard-loading" style={{ textAlign: 'center', padding: '60px' }}>
         <div className="spinner" />
-        <p>Loading your voice agent...</p>
+        <p>Loading your {personaName}...</p>
       </div>
     );
   }
@@ -88,11 +90,11 @@ export default function VoiceDashboard() {
     return (
       <div className="voice-dashboard-empty" style={{ textAlign: 'center', padding: '60px' }}>
         <Icon name="phone" size={48} />
-        <h2>AI Voice Agent Not Set Up</h2>
+        <h2>{personaName} Not Set Up</h2>
         <p style={{ color: 'var(--color-text-secondary)', marginBottom: '24px' }}>
-          Complete the voice onboarding to start answering calls with AI.
+          Complete the voice onboarding to start answering calls with {personaName}.
         </p>
-        <a href="/voice/setup" className="btn-primary">Set Up Voice Agent →</a>
+        <a href="/voice/setup" className="btn-primary">Set Up {personaName} →</a>
       </div>
     );
   }
@@ -128,8 +130,36 @@ export default function VoiceDashboard() {
           </div>
           <p style={{ fontSize: '14px', color: 'var(--color-text-secondary)' }}>
             {status?.is_online 
-              ? 'Your AI is answering calls 24/7' 
+              ? `${personaName} is answering calls 24/7` 
               : 'Call divert is off — calls go to your phone'}
+          </p>
+        </div>
+
+        <div className="status-card" style={{ 
+          flex: '1 1 200px',
+          padding: '20px',
+          borderRadius: '12px',
+          background: 'var(--color-neutral-100)'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
+            <div style={{
+              width: '32px',
+              height: '32px',
+              borderRadius: '50%',
+              background: status?.voice_gender === 'female' ? 'var(--katie-blue-light)' : 'var(--color-neutral-200)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: '14px',
+              fontWeight: 700,
+              color: status?.voice_gender === 'female' ? 'var(--katie-blue)' : 'var(--color-text-primary)'
+            }}>
+              {personaName?.[0] || 'K'}
+            </div>
+            <span style={{ fontWeight: 600 }}>{personaName}</span>
+          </div>
+          <p style={{ fontSize: '14px', color: 'var(--color-text-secondary)' }}>
+            {status?.voice_gender === 'female' ? 'Female voice' : 'Male voice'} • {status?.language || 'en-GB'}
           </p>
         </div>
 
@@ -168,7 +198,7 @@ export default function VoiceDashboard() {
           onClick={handleTestCall}
           disabled={testCallStatus === 'calling'}
         >
-          {testCallStatus === 'idle' && '📞 Test My AI'}
+          {testCallStatus === 'idle' && `📞 Test My ${personaName}`}
           {testCallStatus === 'calling' && 'Calling...'}
           {testCallStatus === 'success' && '✓ Test sent!'}
           {testCallStatus === 'failed' && '✗ Failed'}
@@ -247,7 +277,7 @@ export default function VoiceDashboard() {
 
         {recentCalls.length === 0 ? (
           <p style={{ color: 'var(--color-text-secondary)', textAlign: 'center', padding: '20px' }}>
-            No calls yet. Your AI is ready — time to activate divert!
+            No calls yet. {personaName} is ready — time to activate divert!
           </p>
         ) : (
           <div className="calls-list">

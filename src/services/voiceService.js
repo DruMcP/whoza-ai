@@ -63,6 +63,7 @@ export async function createVoiceConfig(userId, config) {
         emergency_keywords: config.emergency_keywords || ['emergency', 'urgent', 'burst', 'flood', 'gas leak', 'no heat', 'no hot water'],
         voice_profile: config.voice_profile || 'trillet_ai',
         voice_gender: config.voice_gender || 'female',
+        persona_name: config.persona_name || 'Katie',
         language: config.language || 'en-GB',
         sms_summary: config.sms_summary !== false,
         whatsapp_summary: config.whatsapp_summary !== false,
@@ -268,7 +269,7 @@ export async function getRealtimeStatus(userId) {
   try {
     const { data, error } = await supabase
       .from('voice_configs')
-      .select('status, divert_active, trillet_number, last_call_at')
+      .select('status, divert_active, trillet_number, last_call_at, persona_name, voice_gender, language')
       .eq('user_id', userId)
       .single();
 
