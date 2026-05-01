@@ -56,3 +56,4 @@ NETLIFY_ENV_VARS.txt
 
 # Local Netlify folder
 .netlify
+brain/
