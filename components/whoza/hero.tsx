@@ -66,15 +66,20 @@ export function Hero() {
               {" "}— And More Work Every Week
             </h1>
 
-            {/* Subheadline */}
-            <p className="mt-6 text-lg sm:text-xl text-white/70 leading-relaxed max-w-xl mx-auto lg:mx-0 text-pretty">
-              Whoza answers your calls, books the job, and sends it straight to your phone.
+            {/* Pain Line — added for clarity */}
+            <p className="mt-4 text-xl text-red-400 font-bold text-center lg:text-left">
+              Every missed call is a lost job.
+            </p>
+
+            {/* Subheadline — sharpened for jobs/phone/immediacy */}
+            <p className="mt-4 text-lg sm:text-xl text-white/70 leading-relaxed max-w-xl mx-auto lg:mx-0 text-pretty">
+              Katie answers every call in 3 seconds, books the job, and sends it straight to your phone via WhatsApp.
               <span className="block mt-2 text-white font-semibold">No apps. No logins. Just jobs sent to your phone.</span>
-              <span className="block mt-2 text-white font-semibold">Installed in 30 minutes. No risk.</span>
+              <span className="block mt-2 text-white font-semibold">Installed in 30 minutes. First jobs typically within days.</span>
             </p>
 
             {/* CTA Buttons */}
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
                 size="lg"
                 className="bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-bold px-10 py-7 text-xl gap-3 group shadow-2xl shadow-[var(--rex-green)]/40 transition-all hover:scale-105"
@@ -97,7 +102,7 @@ export function Hero() {
               Setup takes 30 minutes. First jobs typically within days.
             </p>
 
-            {/* Dynamic Proof */}
+            {/* Live Signal */}
             <div className="mt-3 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/10 text-sm text-white/80">
               <span className="w-2 h-2 rounded-full bg-[var(--rex-green)] animate-pulse" />
               <span className="font-semibold text-white">Jobs booked today: 47</span>

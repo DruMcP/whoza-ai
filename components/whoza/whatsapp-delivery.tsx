@@ -68,6 +68,7 @@ export function WhatsAppDelivery() {
           <p className="mt-8 text-xl lg:text-2xl text-white/70 text-pretty max-w-2xl mx-auto">
             No apps. No logins. No dashboards. Just WhatsApp.
             <span className="block mt-3 text-[var(--rex-green)] font-bold text-2xl">This is how you actually get paid work.</span>
+            <span className="block mt-2 text-white/80 text-lg">Tap accept and the job is yours.</span>
           </p>
         </motion.div>
 

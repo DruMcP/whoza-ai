@@ -20,14 +20,14 @@ export function ReviewsEngine() {
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--rex-green)]/10 text-[var(--rex-green)] text-sm font-bold mb-6">
               <Star className="w-4 h-4 fill-current" />
-              Claire — Post-Job Conversion
+              Claire — Turn Jobs Into More Jobs
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
               Turn Completed Jobs Into{" "}
               <span className="text-[var(--rex-green)]">More Future Jobs</span>
             </h2>
             <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
-              Every completed job is a seed for the next one. Claire automatically reaches out via WhatsApp after you finish a job, guides happy customers to leave a Google review, and turns that trust into more enquiries.
+              Every completed job is a seed for the next one. Claire automatically reaches out via WhatsApp after you finish a job, guides happy customers to leave a Google review, and turns that trust into more calls.
               <span className="block mt-2 font-semibold text-[var(--navy-900)]">More 5-star reviews means more customers choose you.</span>
             </p>
 
@@ -36,7 +36,7 @@ export function ReviewsEngine() {
                 { icon: MessageSquare, text: "Automatic WhatsApp follow-up after every completed job", color: "text-[var(--rex-green)]" },
                 { icon: Star, text: "Smart timing — reaches out when customer satisfaction is highest", color: "text-[var(--claire-amber)]" },
                 { icon: ThumbsUp, text: "Handle issues privately before they become public feedback", color: "text-[var(--katie-blue)]" },
-                { icon: TrendingUp, text: "Track how reviews translate into new enquiries", color: "text-[var(--mark-grey)]" },
+                { icon: TrendingUp, text: "Track how reviews translate into more calls", color: "text-[var(--mark-grey)]" },
               ].map((feature, index) => (
                 <motion.div
                   key={feature.text}

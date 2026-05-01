@@ -61,7 +61,7 @@ export function PreLaunchProof() {
                 </div>
                 <div className="flex items-center gap-3 ml-4">
                   <ArrowRight className="w-4 h-4 text-[var(--slate-300)] rotate-90" />
-                  <span className="text-xs font-bold text-[var(--katie-blue)] uppercase tracking-wider">Katie answers + books</span>
+                  <span className="text-xs font-bold text-[var(--katie-blue)] uppercase tracking-wider">Missed calls → Jobs booked</span>
                 </div>
                 <div className="flex items-center ml-6">
                   <div className="border-l-2 border-dashed border-[var(--slate-200)] h-6" />
@@ -84,7 +84,7 @@ export function PreLaunchProof() {
                 </div>
                 <div className="flex items-center gap-3 ml-4">
                   <ArrowRight className="w-4 h-4 text-[var(--slate-300)] rotate-90" />
-                  <span className="text-xs font-bold text-[var(--rex-green)] uppercase tracking-wider">You accept → job confirmed</span>
+                  <span className="text-xs font-bold text-[var(--rex-green)] uppercase tracking-wider">Jobs → Money recovered</span>
                 </div>
                 <div className="flex items-center ml-6">
                   <div className="border-l-2 border-dashed border-[var(--slate-200)] h-6" />
@@ -113,7 +113,7 @@ export function PreLaunchProof() {
           >
             {/* Result Card */}
             <div className="bg-[var(--navy-900)] rounded-3xl p-8 text-center">
-              <div className="text-white/60 mb-2">Daily recovery potential</div>
+              <div className="text-white/60 mb-2">What you get back in a day</div>
               <div className="text-5xl lg:text-6xl font-bold text-[var(--rex-green)]">
                 {config.currencySymbol}480
               </div>

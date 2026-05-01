@@ -10,7 +10,7 @@ const stages = [
     number: "01",
     stage: "CAPTURE",
     title: "Answer Every Call",
-    description: "Katie or Mark picks up in 3 seconds, 24/7. No missed calls. No voicemail. Every enquiry captured and qualified.",
+    description: "Katie or Mark picks up in 3 seconds, 24/7. No missed calls. No voicemail. Every call captured and qualified.",
     icon: Phone,
     color: "var(--katie-blue)",
     bgLight: "bg-[var(--katie-blue)]/10",

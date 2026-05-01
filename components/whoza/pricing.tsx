@@ -152,6 +152,7 @@ export function Pricing() {
           </h2>
           <p className="mt-6 text-xl text-[var(--slate-500)] text-pretty max-w-2xl mx-auto">
             Jobs included. {cs}2–{cs}4 per extra job. Scales as you grow.
+            <span className="block mt-2 font-semibold text-[var(--navy-900)]">Start small. Only pay more as you get more work.</span>
             <span className="block mt-2 font-semibold text-[var(--navy-900)]">Most customers cover their cost in their first few jobs.</span>
           </p>
           <div className="mt-4 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[var(--rex-green)]/10 text-[var(--rex-green)] font-bold border border-[var(--rex-green)]/20">

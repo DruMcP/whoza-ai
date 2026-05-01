@@ -78,7 +78,7 @@ export function MeetTheTeam() {
             <span className="text-[var(--rex-green)]">Team</span>
           </h2>
           <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
-            Choose your call capture voice. Add review collection and competitor tracking for complete revenue automation.
+            Choose your call capture voice. Add review collection and competitor tracking for complete job capture.
           </p>
         </motion.div>
 

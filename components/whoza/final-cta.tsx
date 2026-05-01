@@ -52,12 +52,12 @@ export function FinalCTA() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white tracking-tight text-balance">
-            Stop Losing Revenue{" "}
+            Stop Losing Jobs{" "}
             <span className="text-red-400">This Week</span>
           </h2>
           <p className="mt-8 text-xl lg:text-2xl text-white/70 max-w-2xl mx-auto text-pretty">
             Every day you wait = {config.currencySymbol}200+ walking to your competitors.
-            <span className="block mt-3 font-bold text-[var(--rex-green)] text-2xl">Installed in 30 minutes. No risk.</span>
+            <span className="block mt-3 font-bold text-[var(--rex-green)] text-2xl">Installed in 30 minutes. First jobs typically within days.</span>
           </p>
           <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/70 text-sm">
             <CheckCircle2 className="w-4 h-4 text-[var(--rex-green)]" />

@@ -192,6 +192,10 @@ export function LostRevenueCalculator() {
                   />
                 </div>
 
+                <p className="mt-4 text-sm text-red-400 font-semibold text-center">
+                  That&apos;s work you&apos;re missing every week.
+                </p>
+
                 <div className="mt-8 pt-6 border-t border-white/10">
                   <p className="text-sm text-white/60 mb-4">
                     Stop the leak. Katie answers every call from just{" "}
