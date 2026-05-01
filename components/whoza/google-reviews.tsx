@@ -4,10 +4,12 @@ import { motion } from "framer-motion"
 import { Star } from "lucide-react"
 
 const reviews = [
-  { name: "Dave Thompson", trade: "Plumber", location: "Manchester", text: "I was losing 10-15 calls a week when I was on jobs. Katie's paid for herself twenty times over.", rating: 5 },
-  { name: "Sarah M.", trade: "Electrician", location: "Birmingham", text: "Customers think Katie is a real person! She books jobs while I'm up a ladder.", rating: 5 },
-  { name: "James W.", trade: "Builder", location: "Leeds", text: "Paid for itself in the first week. 12 jobs booked in 7 days that I would've missed.", rating: 5 },
-  { name: "Mike R.", trade: "Plumber", location: "Glasgow", text: "Best investment I made this year. We're booking jobs I used to miss.", rating: 5 },
+  { name: "Kat Hibbert-Jordan", date: "7 Feb 2026", text: "I realised recently that my business was not appearing in AI search results at all. Whoza.ai helped me fix that. Now I'm showing up in AI search results and getting more enquiries. Really pleased with the service.", rating: 5 },
+  { name: "Ludmila Lamont", date: "7 Feb 2026", text: "I've tried different marketing tools before — they cost me over £350/month. Whoza.ai is by far the simplest and the cheapest. It's easy to use and I'm already seeing results. Highly recommend!", rating: 5 },
+  { name: "Nicholas Wood", date: "7 Feb 2026", text: "Tried this company with anticipation but have to say was very impressed with the simplicity and how it helped me — sales followed pretty quickly which I was amazed at.", rating: 5 },
+  { name: "Luke Winter", date: "6 Feb 2026", text: "The future is now. A powerful business tool well executed. This will yield both short and long term benefits.", rating: 5 },
+  { name: "Garth McPherson", date: "6 Feb 2026", text: "As the owner of a small business I think the concept of Whoza is brilliant and will help businesses of all sizes improve their visibility to acquire more valued customers in the age of AI.", rating: 5 },
+  { name: "Sandy Fyfe", date: "7 Feb 2026", text: "I am reluctant to try new things but this was recommended to me and seemed worth trying. Really really impressed.", rating: 5 },
 ]
 
 export function GoogleReviews() {
@@ -30,14 +32,14 @@ export function GoogleReviews() {
             </svg>
             <div className="text-left">
               <div className="flex items-center gap-1">
-                <span className="text-lg font-bold text-[var(--navy-900)]">Real customer reviews</span>
+                <span className="text-lg font-bold text-[var(--navy-900)]">5.0 out of 5</span>
               </div>
-              <p className="text-xs text-[var(--slate-500)]">From tradespeople using Whoza</p>
+              <p className="text-xs text-[var(--slate-500)]">Based on 15 Google reviews · <a href="https://maps.app.goo.gl/dNHpTGPy1Kxeh7PV8" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--navy-900)]">View all on Google</a></p>
             </div>
           </div>
 
           {/* Mini Reviews */}
-          <div className="mt-2 grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="mt-2 grid grid-cols-2 md:grid-cols-3 gap-4">
             {reviews.map((review, index) => (
               <motion.div
                 key={index}
@@ -54,7 +56,7 @@ export function GoogleReviews() {
                 </div>
                 <p className="text-xs text-[var(--slate-500)] mb-2 line-clamp-3">{`"${review.text}"`}</p>
                 <p className="text-xs font-medium text-[var(--navy-900)]">{review.name}</p>
-                <p className="text-[10px] text-[var(--slate-400)]">{review.trade} • {review.location}</p>
+                <p className="text-[10px] text-[var(--slate-400)]">{review.date} · Google Review</p>
               </motion.div>
             ))}
           </div>
