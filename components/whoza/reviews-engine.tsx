@@ -20,23 +20,23 @@ export function ReviewsEngine() {
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--rex-green)]/10 text-[var(--rex-green)] text-sm font-bold mb-6">
               <Star className="w-4 h-4 fill-current" />
-              Claire — Review Engine
+              Claire — Post-Job Conversion
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
-              Turn More Enquiries Into{" "}
-              <span className="text-[var(--rex-green)]">Paying Customers</span>
+              Turn Completed Jobs Into{" "}
+              <span className="text-[var(--rex-green)]">More Future Jobs</span>
             </h2>
             <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
-              Automated WhatsApp review requests → more 5-star reviews → more jobs won.
-              <span className="block mt-2 font-semibold text-[var(--navy-900)]">Average customer sees +12 reviews/month.</span>
+              Every completed job is a seed for the next one. Claire automatically reaches out via WhatsApp after you finish a job, guides happy customers to leave a Google review, and turns that trust into more enquiries.
+              <span className="block mt-2 font-semibold text-[var(--navy-900)]">More reviews → more trust → more jobs. On autopilot.</span>
             </p>
 
             <div className="mt-10 space-y-4">
               {[
-                { icon: MessageSquare, text: "Automatic review request after job completion", color: "text-[var(--rex-green)]" },
-                { icon: Star, text: "Smart timing — requests when satisfaction is highest", color: "text-[var(--claire-amber)]" },
-                { icon: ThumbsUp, text: "Handle negative feedback privately first", color: "text-[var(--katie-blue)]" },
-                { icon: TrendingUp, text: "Track rating improvements over time", color: "text-[var(--mark-grey)]" },
+                { icon: MessageSquare, text: "Automatic WhatsApp follow-up after every completed job", color: "text-[var(--rex-green)]" },
+                { icon: Star, text: "Smart timing — reaches out when customer satisfaction is highest", color: "text-[var(--claire-amber)]" },
+                { icon: ThumbsUp, text: "Handle issues privately before they become public feedback", color: "text-[var(--katie-blue)]" },
+                { icon: TrendingUp, text: "Track how reviews translate into new enquiries", color: "text-[var(--mark-grey)]" },
               ].map((feature, index) => (
                 <motion.div
                   key={feature.text}
@@ -59,7 +59,7 @@ export function ReviewsEngine() {
                 <CheckCircle2 className="w-5 h-5 text-[var(--rex-green)]" />
                 <span className="font-semibold text-[var(--navy-900)]">Included in Growth plan and above</span>
               </div>
-              <p className="text-sm text-[var(--slate-500)]">Automatic WhatsApp review requests after every completed job.</p>
+              <p className="text-sm text-[var(--slate-500)]">Automatic post-job conversion after every completed job.</p>
             </div>
           </motion.div>
 
@@ -76,9 +76,9 @@ export function ReviewsEngine() {
                 <div className="w-16 h-16 rounded-full bg-[var(--rex-green)]/10 flex items-center justify-center mx-auto mb-4">
                   <Star className="w-8 h-8 text-[var(--rex-green)] fill-current" />
                 </div>
-                <h3 className="text-xl font-bold text-[var(--navy-900)]">Thanks for booking!</h3>
+                <h3 className="text-xl font-bold text-[var(--navy-900)]">How did we do?</h3>
                 <p className="text-[var(--slate-500)] text-sm mt-2">
-                  How was your experience with ABC Plumbing?
+                  Your boiler repair is complete — we'd love your feedback!
                 </p>
               </div>
 
@@ -121,7 +121,7 @@ export function ReviewsEngine() {
               viewport={{ once: true }}
               className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full bg-[var(--rex-green)] text-white text-sm font-medium shadow-lg"
             >
-              8,000+ reviews collected
+              8,000+ jobs converted into future work
             </motion.div>
           </motion.div>
         </div>

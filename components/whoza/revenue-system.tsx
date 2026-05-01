@@ -42,8 +42,8 @@ const stages = [
   {
     number: "04",
     stage: "GROW",
-    title: "Reviews + Visibility",
-    description: "Automated review requests boost your rating. Competitor tracking shows where you're losing work.",
+    title: "Post-Job Conversion",
+    description: "After every completed job, Claire automatically follows up via WhatsApp to turn happy customers into Google reviews — and more future work.",
     icon: TrendingUp,
     color: "var(--mark-grey)",
     bgLight: "bg-[var(--mark-grey)]/10",

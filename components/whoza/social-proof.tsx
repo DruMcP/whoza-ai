@@ -21,7 +21,7 @@ const badgesConfig = {
 }
 
 const tradesConfig = {
-  uk: ["Plumbers", "Electricians", "Builders", "Roofers", "Painters", "Landscapers", "HVAC Engineers", "Carpenters"],
+  uk: ["Plumbers", "Electricians", "Builders", "Roofers", "Painters", "Landscapers", "Heating Engineers", "Carpenters"],
   us: ["HVAC", "Roofing", "Plumbing", "Electrical", "Remodeling", "Landscaping", "General Contractors", "Flooring"],
 }
 

@@ -9,7 +9,7 @@ const features = [
   { name: "Books jobs (not just takes messages)", whoza: true, traditional: false, competitor: false },
   { name: "Sends job to your phone instantly", whoza: true, traditional: false, competitor: false },
   { name: "You accept/decline via WhatsApp", whoza: true, traditional: false, competitor: false },
-  { name: "Collects reviews automatically", whoza: true, traditional: false, competitor: false },
+  { name: "Converts completed jobs into future work", whoza: true, traditional: false, competitor: false },
   { name: "Tracks competitors weekly", whoza: true, traditional: false, competitor: false },
   { name: "Shows revenue dashboard", whoza: true, traditional: false, competitor: false },
   { name: "Customer gets instant confirmation", whoza: true, traditional: "partial", competitor: true },

@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     question: "What trades do you support?",
-    answer: "We support all UK trades including plumbers, electricians, builders, roofers, painters & decorators, landscapers, HVAC engineers, carpenters, tilers, plasterers, and more. Katie is trained on trade-specific terminology and common customer queries for each profession.",
+    answer: "We support all UK trades including plumbers, electricians, builders, roofers, painters & decorators, landscapers, heating engineers, carpenters, tilers, plasterers, and more. Katie is trained on trade-specific terminology and common customer queries for each profession.",
   },
   {
     question: "Is my data safe and GDPR compliant?",

@@ -4,8 +4,9 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { Calculator, TrendingUp, ArrowRight, Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useLocale } from "@/lib/locale-context"
 
-const tradePresets = [
+const tradePresetsUk = [
   { name: "Plumber", avgJob: 350, callsPerWeek: 12, conversion: 35 },
   { name: "Electrician", avgJob: 280, callsPerWeek: 15, conversion: 30 },
   { name: "Builder", avgJob: 2500, callsPerWeek: 8, conversion: 25 },
@@ -14,12 +15,24 @@ const tradePresets = [
   { name: "Landscaper", avgJob: 600, callsPerWeek: 8, conversion: 35 },
 ]
 
+const tradePresetsUs = [
+  { name: "Plumber", avgJob: 450, callsPerWeek: 12, conversion: 35 },
+  { name: "Electrician", avgJob: 350, callsPerWeek: 15, conversion: 30 },
+  { name: "General Contractor", avgJob: 3200, callsPerWeek: 8, conversion: 25 },
+  { name: "Roofer", avgJob: 2200, callsPerWeek: 6, conversion: 30 },
+  { name: "Painter", avgJob: 550, callsPerWeek: 10, conversion: 40 },
+  { name: "Landscaper", avgJob: 750, callsPerWeek: 8, conversion: 35 },
+  { name: "HVAC", avgJob: 1800, callsPerWeek: 10, conversion: 30 },
+]
+
 export function ROICalculator() {
+  const { country, config } = useLocale()
+  const tradePresets = country === "uk" ? tradePresetsUk : tradePresetsUs
   const [selectedTrade, setSelectedTrade] = useState(tradePresets[0])
   
   const monthlyRevenueSaved = selectedTrade.avgJob * selectedTrade.callsPerWeek * (selectedTrade.conversion / 100) * 4
   const yearlyRevenueSaved = monthlyRevenueSaved * 12
-  const monthlyPlan = 129 // Business plan
+  const monthlyPlan = config.pricing.business
   const roiRaw = Math.round((monthlyRevenueSaved / monthlyPlan) * 100)
   const roiDisplay = roiRaw > 2000 ? "2,000%+" : `${roiRaw.toLocaleString()}%`
 
@@ -79,13 +92,13 @@ export function ROICalculator() {
               <div className="text-center">
                 <div className="text-sm text-white/50 mb-2">Monthly Revenue Saved</div>
                 <div className="text-4xl font-bold text-[var(--rex-green)]">
-                  £{monthlyRevenueSaved.toLocaleString()}
+                  {config.currencySymbol}{monthlyRevenueSaved.toLocaleString()}
                 </div>
               </div>
               <div className="text-center">
                 <div className="text-sm text-white/50 mb-2">Yearly Revenue Saved</div>
                 <div className="text-4xl font-bold text-[var(--katie-blue)]">
-                  £{yearlyRevenueSaved.toLocaleString()}
+                  {config.currencySymbol}{yearlyRevenueSaved.toLocaleString()}
                 </div>
               </div>
               <div className="text-center">
@@ -101,7 +114,7 @@ export function ROICalculator() {
                 <div className="text-center sm:text-left">
                   <p className="text-white/60 text-sm">
                     Based on <span className="text-white font-medium">{selectedTrade.callsPerWeek} missed calls/week</span> at 
-                    <span className="text-white font-medium"> £{selectedTrade.avgJob} avg job value</span> with 
+                    <span className="text-white font-medium"> {config.currencySymbol}{selectedTrade.avgJob} avg job value</span> with 
                     <span className="text-white font-medium"> {selectedTrade.conversion}% conversion</span>
                   </p>
                 </div>
