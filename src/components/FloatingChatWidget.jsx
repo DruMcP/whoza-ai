@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X, Clock } from 'lucide-react';
 
-const WHATSAPP_NUMBER = '447000000000';
+const WHATSAPP_NUMBER = '447831643012';
 
 const QUICK_REPLIES = [
   {

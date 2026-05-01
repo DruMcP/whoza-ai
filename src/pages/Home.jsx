@@ -19,6 +19,8 @@ import AudioDemoPlayer from '../components/AudioDemoPlayer';
 import IntegrationLogoBand from '../components/IntegrationLogoBand';
 import ComparisonTable from '../components/ComparisonTable';
 import TrustBadgeBand from '../components/TrustBadgeBand';
+import LostRevenueCalculator from '../components/LostRevenueCalculator';
+import GoogleReviews from '../components/GoogleReviews';
 import { generateHomePageSchemas } from '../utils/schemaOrg';
 
 export default function Home() {
@@ -61,6 +63,7 @@ export default function Home() {
         <PricingTeaser />
         <ComparisonTable />
         <TestimonialCarousel />
+        <GoogleReviews />
         <FAQAccordion />
         <FinalCTA />
       </main>

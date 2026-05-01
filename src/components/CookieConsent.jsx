@@ -1,22 +1,20 @@
 import { useState, useEffect } from 'react';
+import { Shield, Cookie, X, ChevronRight } from 'lucide-react';
 import './CookieConsent.css';
 
 const CookieConsent = () => {
   const [showBanner, setShowBanner] = useState(false);
   const [showPreferences, setShowPreferences] = useState(false);
   const [preferences, setPreferences] = useState({
-    essential: true, // Always true, cannot be disabled
+    essential: true,
     analytics: false
   });
 
   useEffect(() => {
-    // Check if user has already made a choice
     const consent = localStorage.getItem('whoza_cookie_consent');
     if (!consent) {
-      // Show banner after a short delay for better UX
-      setTimeout(() => setShowBanner(true), 1000);
+      setTimeout(() => setShowBanner(true), 1200);
     } else {
-      // Load existing preferences
       const savedPrefs = JSON.parse(consent);
       setPreferences(savedPrefs);
       loadAnalytics(savedPrefs.analytics);
@@ -25,7 +23,6 @@ const CookieConsent = () => {
 
   const loadAnalytics = (enabled) => {
     if (enabled && !window.clarity) {
-      // Load Microsoft Clarity
       const script = document.createElement('script');
       script.innerHTML = `
         (function(c,l,a,r,i,t,y){
@@ -63,85 +60,86 @@ const CookieConsent = () => {
     localStorage.setItem('whoza_cookie_consent_date', new Date().toISOString());
   };
 
-  const handleManagePreferences = () => {
-    setShowPreferences(true);
-  };
-
   if (!showBanner && !showPreferences) return null;
 
   return (
     <>
       {showBanner && !showPreferences && (
-        <div className="cookie-consent-banner" role="dialog" aria-label="Cookie consent">
-          <div className="cookie-consent-content">
-            <div className="cookie-consent-text">
-              <h3>We value your privacy</h3>
-              <p>
-                We use cookies to enhance your browsing experience and analyze site traffic. 
-                Essential cookies are required for the site to function. Analytics cookies help us 
-                improve our service. You can choose which cookies to accept.
-              </p>
-              <a href="/cookie-policy" className="cookie-policy-link">
-                Read our Cookie Policy
-              </a>
-            </div>
-            <div className="cookie-consent-actions">
-              <button 
-                onClick={handleAcceptAll}
-                className="cookie-btn cookie-btn-accept"
-                aria-label="Accept all cookies"
-              >
-                Accept All
-              </button>
-              <button 
-                onClick={handleRejectAll}
-                className="cookie-btn cookie-btn-reject"
-                aria-label="Reject non-essential cookies"
-              >
-                Reject All
-              </button>
-              <button 
-                onClick={handleManagePreferences}
-                className="cookie-btn cookie-btn-manage"
-                aria-label="Manage cookie preferences"
-              >
-                Manage Preferences
-              </button>
+        <div className="cc-banner" role="dialog" aria-label="Cookie consent">
+          <div className="cc-glass">
+            <div className="cc-inner">
+              <div className="cc-icon">
+                <Cookie size={20} strokeWidth={2} />
+              </div>
+              <div className="cc-body">
+                <p className="cc-text">
+                  We use cookies to improve your experience and analyse traffic. 
+                  <a href="/cookie-policy" className="cc-link">Cookie Policy</a>
+                </p>
+              </div>
+              <div className="cc-actions">
+                <button 
+                  onClick={handleAcceptAll}
+                  className="cc-btn cc-btn-primary"
+                  aria-label="Accept all cookies"
+                >
+                  Accept All
+                </button>
+                <button 
+                  onClick={() => setShowPreferences(true)}
+                  className="cc-btn cc-btn-ghost"
+                  aria-label="Manage cookie preferences"
+                >
+                  Manage
+                </button>
+                <button 
+                  onClick={handleRejectAll}
+                  className="cc-btn cc-btn-icon"
+                  aria-label="Reject non-essential cookies"
+                >
+                  <X size={16} />
+                </button>
+              </div>
             </div>
           </div>
         </div>
       )}
 
       {showPreferences && (
-        <div className="cookie-preferences-modal" role="dialog" aria-label="Cookie preferences">
-          <div className="cookie-preferences-content">
-            <div className="cookie-preferences-header">
-              <h2>Cookie Preferences</h2>
+        <div className="cc-modal-backdrop" role="dialog" aria-label="Cookie preferences">
+          <div className="cc-modal">
+            <div className="cc-modal-header">
+              <div className="cc-modal-title">
+                <Shield size={20} strokeWidth={2} />
+                <h2>Privacy Preferences</h2>
+              </div>
               <button 
                 onClick={() => setShowPreferences(false)}
-                className="cookie-close-btn"
+                className="cc-modal-close"
                 aria-label="Close preferences"
               >
-                ✕
+                <X size={18} />
               </button>
             </div>
-            <div className="cookie-preferences-body">
-              <div className="cookie-category">
-                <div className="cookie-category-header">
-                  <h3>Essential Cookies</h3>
-                  <span className="cookie-required">Always Active</span>
+
+            <div className="cc-modal-body">
+              <div className="cc-category">
+                <div className="cc-category-row">
+                  <div>
+                    <h3>Essential</h3>
+                    <p>Required for the site to function</p>
+                  </div>
+                  <span className="cc-badge">Always On</span>
                 </div>
-                <p>
-                  These cookies are necessary for the website to function and cannot be disabled. 
-                  They are usually only set in response to actions made by you, such as logging in 
-                  or filling in forms.
-                </p>
               </div>
 
-              <div className="cookie-category">
-                <div className="cookie-category-header">
-                  <h3>Analytics Cookies</h3>
-                  <label className="cookie-toggle">
+              <div className="cc-category">
+                <div className="cc-category-row">
+                  <div>
+                    <h3>Analytics</h3>
+                    <p>Helps us improve by measuring how visitors use the site</p>
+                  </div>
+                  <label className="cc-toggle">
                     <input
                       type="checkbox"
                       checked={preferences.analytics}
@@ -151,21 +149,28 @@ const CookieConsent = () => {
                       })}
                       aria-label="Enable analytics cookies"
                     />
-                    <span className="cookie-toggle-slider"></span>
+                    <span className="cc-toggle-slider" />
                   </label>
                 </div>
-                <p>
-                  These cookies help us understand how visitors interact with our website by 
-                  collecting and reporting information anonymously. We use Microsoft Clarity to 
-                  improve user experience.
-                </p>
               </div>
             </div>
-            <div className="cookie-preferences-footer">
+
+            <div className="cc-modal-footer">
+              <button 
+                onClick={handleRejectAll}
+                className="cc-btn cc-btn-ghost"
+              >
+                Reject All
+              </button>
+              <button 
+                onClick={handleAcceptAll}
+                className="cc-btn cc-btn-primary"
+              >
+                Accept All
+              </button>
               <button 
                 onClick={handleSavePreferences}
-                className="cookie-btn cookie-btn-save"
-                aria-label="Save cookie preferences"
+                className="cc-btn cc-btn-primary"
               >
                 Save Preferences
               </button>
