@@ -92,7 +92,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
               <Button 
                 size="lg"
                 variant="outline"
-                className="border-white/20 text-white hover:bg-white/10 px-8 py-6 text-lg gap-2"
+                className="bg-transparent border-white/20 text-white hover:bg-white/10 px-8 py-6 text-lg gap-2"
               >
                 <Play className="w-5 h-5" />
                 Hear Katie in Action

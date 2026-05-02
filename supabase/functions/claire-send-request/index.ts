@@ -2,10 +2,11 @@ import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 /**
- * Claire Send Request — Sends WhatsApp/SMS review requests
+ * Claire Send Request — Sends WhatsApp/SMS review requests via Trillet
  * 
  * Triggered by cron or manual invoke.
  * Sends review request to customers whose scheduled time has arrived.
+ * Trillet handles both WhatsApp and SMS natively — no Twilio needed.
  */
 
 interface ReviewRequest {
@@ -17,6 +18,7 @@ interface ReviewRequest {
   review_url: string;
   metadata: {
     business_name?: string;
+    preferred_channel?: "whatsapp" | "sms";
   };
 }
 
@@ -63,75 +65,53 @@ serve(async (req) => {
 
     const results = [];
     const trilletKey = Deno.env.get("TRILLET_API_KEY");
-    const twilioSid = Deno.env.get("TWILIO_ACCOUNT_SID");
-    const twilioToken = Deno.env.get("TWILIO_AUTH_TOKEN");
-    const twilioPhone = Deno.env.get("TWILIO_PHONE_NUMBER");
+    const trilletSecret = Deno.env.get("TRILLET_API_SECRET");
 
     for (const request of requests) {
       try {
-        const message = TEMPLATES.whatsapp(
-          request.customer_name,
-          request.job_type,
-          request.metadata?.business_name || "",
-          request.review_url
-        );
+        const channel = request.metadata?.preferred_channel || "whatsapp";
+        const message = channel === "sms" 
+          ? TEMPLATES.sms(
+              request.customer_name,
+              request.job_type,
+              request.metadata?.business_name || "",
+              request.review_url
+            )
+          : TEMPLATES.whatsapp(
+              request.customer_name,
+              request.job_type,
+              request.metadata?.business_name || "",
+              request.review_url
+            );
 
         let sent = false;
-        let messageSid = null;
+        let messageId = null;
 
-        // Try Trillet WhatsApp first (if key available)
+        // Send via Trillet (handles both WhatsApp and SMS)
         if (trilletKey) {
           const trilletRes = await fetch("https://api.trillet.ai/v1/messages/send", {
             method: "POST",
             headers: {
               "Authorization": `Bearer ${trilletKey}`,
+              "X-API-Secret": trilletSecret || "",
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
               to: request.phone,
               body: message,
-              channel: "whatsapp",
+              channel: channel, // "whatsapp" or "sms"
+              agent_id: Deno.env.get("TRILLET_AGENT_ID") || "claire-agent",
             }),
           });
 
           if (trilletRes.ok) {
             const trilletData = await trilletRes.json();
-            messageSid = trilletData.message_id || trilletData.id;
+            messageId = trilletData.message_id || trilletData.id;
             sent = true;
-            console.log(`[Claire] WhatsApp sent to ${request.phone} via Trillet`);
-          }
-        }
-
-        // Fallback to Twilio SMS (if available and WhatsApp failed)
-        if (!sent && twilioSid && twilioToken) {
-          const smsMessage = TEMPLATES.sms(
-            request.customer_name,
-            request.job_type,
-            request.metadata?.business_name || "",
-            request.review_url
-          );
-
-          const twilioRes = await fetch(
-            `https://api.twilio.com/2010-04-01/Accounts/${twilioSid}/Messages.json`,
-            {
-              method: "POST",
-              headers: {
-                "Authorization": "Basic " + btoa(`${twilioSid}:${twilioToken}`),
-                "Content-Type": "application/x-www-form-urlencoded",
-              },
-              body: new URLSearchParams({
-                To: request.phone,
-                From: twilioPhone || "",
-                Body: smsMessage,
-              }),
-            }
-          );
-
-          if (twilioRes.ok) {
-            const twilioData = await twilioRes.json();
-            messageSid = twilioData.sid;
-            sent = true;
-            console.log(`[Claire] SMS sent to ${request.phone} via Twilio`);
+            console.log(`[Claire] ${channel} sent to ${request.phone} via Trillet`);
+          } else {
+            const errorText = await trilletRes.text();
+            console.error(`[Claire] Trillet failed: ${errorText}`);
           }
         }
 
@@ -142,13 +122,19 @@ serve(async (req) => {
             .update({
               status: "sent",
               sent_at: new Date().toISOString(),
-              twilio_message_sid: messageSid,
+              message_id: messageId,
+              channel: channel,
             })
             .eq("id", request.id);
 
-          results.push({ id: request.id, status: "sent", channel: trilletKey ? "whatsapp" : "sms" });
+          results.push({ 
+            id: request.id, 
+            status: "sent", 
+            channel: channel,
+            provider: "trillet"
+          });
         } else {
-          // No API keys configured — mark as "would send" for tomorrow
+          // No API keys configured — mark as queued
           await supabase
             .from("review_requests")
             .update({
@@ -157,12 +143,16 @@ serve(async (req) => {
                 ...request.metadata,
                 _queued_for_send: true,
                 _queued_at: now,
-                _reason: "API keys not configured",
+                _reason: "Trillet API keys not configured",
               },
             })
             .eq("id", request.id);
 
-          results.push({ id: request.id, status: "queued", reason: "API keys not configured" });
+          results.push({ 
+            id: request.id, 
+            status: "queued", 
+            reason: "Trillet API keys not configured" 
+          });
         }
 
       } catch (err) {

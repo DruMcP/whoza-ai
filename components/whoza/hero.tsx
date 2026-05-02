@@ -91,7 +91,7 @@ export function Hero() {
               <Button 
                 size="lg"
                 variant="outline"
-                className="border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg gap-2"
+                className="bg-transparent border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg gap-2"
                 onClick={() => window.open('https://wa.me/447831643012', '_blank')}
               >
                 <Play className="w-5 h-5" />

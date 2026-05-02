@@ -2,13 +2,15 @@ import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 /**
- * Claire Reminder — Sends follow-up review reminders
+ * Claire Reminder — Sends follow-up review reminders via Trillet
  * 
  * Triggered by cron every hour.
  * Finds review requests where:
  * - Status = "sent" (not clicked or completed)
  * - sent_at > 24 hours ago
  * - reminder_sent = false
+ * 
+ * Trillet handles both WhatsApp and SMS natively.
  */
 
 serve(async () => {
@@ -46,9 +48,7 @@ serve(async () => {
 
     const results = [];
     const trilletKey = Deno.env.get("TRILLET_API_KEY");
-    const twilioSid = Deno.env.get("TWILIO_ACCOUNT_SID");
-    const twilioToken = Deno.env.get("TWILIO_AUTH_TOKEN");
-    const twilioPhone = Deno.env.get("TWILIO_PHONE_NUMBER");
+    const trilletSecret = Deno.env.get("TRILLET_API_SECRET");
 
     for (const request of requests) {
       try {
@@ -56,48 +56,30 @@ serve(async () => {
 
         let sent = false;
 
-        // Try Trillet WhatsApp first
+        // Send reminder via Trillet (WhatsApp or SMS)
         if (trilletKey) {
+          const channel = request.channel || "whatsapp";
           const trilletRes = await fetch("https://api.trillet.ai/v1/messages/send", {
             method: "POST",
             headers: {
               "Authorization": `Bearer ${trilletKey}`,
+              "X-API-Secret": trilletSecret || "",
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
               to: request.phone,
               body: reminderMessage,
-              channel: "whatsapp",
+              channel: channel,
+              agent_id: Deno.env.get("TRILLET_AGENT_ID") || "claire-agent",
             }),
           });
 
           if (trilletRes.ok) {
             sent = true;
-            console.log(`[Claire Reminder] WhatsApp reminder sent to ${request.phone}`);
-          }
-        }
-
-        // Fallback to Twilio SMS
-        if (!sent && twilioSid && twilioToken) {
-          const twilioRes = await fetch(
-            `https://api.twilio.com/2010-04-01/Accounts/${twilioSid}/Messages.json`,
-            {
-              method: "POST",
-              headers: {
-                "Authorization": "Basic " + btoa(`${twilioSid}:${twilioToken}`),
-                "Content-Type": "application/x-www-form-urlencoded",
-              },
-              body: new URLSearchParams({
-                To: request.phone,
-                From: twilioPhone || "",
-                Body: `Quick reminder: would appreciate a review! ${request.review_url}`,
-              }),
-            }
-          );
-
-          if (twilioRes.ok) {
-            sent = true;
-            console.log(`[Claire Reminder] SMS reminder sent to ${request.phone}`);
+            console.log(`[Claire Reminder] ${channel} reminder sent to ${request.phone}`);
+          } else {
+            const errorText = await trilletRes.text();
+            console.error(`[Claire Reminder] Trillet failed: ${errorText}`);
           }
         }
 
@@ -111,10 +93,10 @@ serve(async () => {
             })
             .eq("id", request.id);
 
-          results.push({ id: request.id, status: "reminder_sent" });
+          results.push({ id: request.id, status: "reminder_sent", channel: request.channel || "whatsapp" });
         } else {
           // Queue for tomorrow when keys are available
-          results.push({ id: request.id, status: "queued", reason: "API keys not configured" });
+          results.push({ id: request.id, status: "queued", reason: "Trillet API keys not configured" });
         }
 
       } catch (err) {
