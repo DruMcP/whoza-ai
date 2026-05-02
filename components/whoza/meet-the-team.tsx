@@ -176,7 +176,7 @@ export function MeetTheTeam() {
                 <TrendingUp className="w-4 h-4 text-[var(--rex-green)] mt-0.5 shrink-0" />
                 <div>
                   <div className="font-semibold text-[var(--navy-900)]">Your competitor "Speedy Plumbers" dropped Google Ads spend by 40%</div>
-                  <div className="text-[var(--slate-500)] mt-1">Opportunity: Increase your review collection this week to capture their lost visibility.</div>
+                  <div className="text-[var(--slate-500)] mt-1">Opportunity: Increase your review collection this week so customers find you first.</div>
                 </div>
               </div>
 

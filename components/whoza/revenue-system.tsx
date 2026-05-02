@@ -153,7 +153,7 @@ export function RevenueSystem() {
               size="lg"
               className="bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-bold px-8"
             >
-              Start 14 Day Free Trial
+              Start Free Trial
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </div>

@@ -59,10 +59,7 @@ export function Pricing() {
         { text: "WhatsApp job delivery", included: true },
         { text: `${cs}4.00 per qualified job booked`, included: true },
       ],
-      cta: "Start 14 Day Free Trial",
-    },
-    {
-      name: "Growth",
+      cta: "Start Free Trial",
       description: "Full revenue system",
       price: String(config.pricing.growth),
       perJob: "3.00",
@@ -82,11 +79,8 @@ export function Pricing() {
         { text: "Revenue dashboard", included: true },
         { text: `${cs}3.00 per additional job`, included: true },
       ],
-      cta: "Start 14 Day Free Trial",
-    },
-    {
-      name: "Pro",
-      description: "High-volume + AI visibility",
+      cta: "Start Free Trial",
+      description: "High-volume + AI growth",
       price: String(config.pricing.pro),
       perJob: "2.50",
       jobsIncluded: "40",
@@ -97,7 +91,7 @@ export function Pricing() {
         { text: "Everything in Growth", included: true },
         { text: "40 booked jobs included", included: true },
         { text: "Spam call filtering", included: true },
-        { text: "Weekly AI visibility reports", included: true },
+        { text: "Weekly AI growth reports", included: true },
         { text: "Actionable recommendations", included: true },
         { text: "Full system (Katie/Mark + Claire + Rex)", included: true },
         { text: "Smart scheduling (checks calendar before booking)", included: true },
@@ -107,10 +101,7 @@ export function Pricing() {
         { text: "API access", included: true },
         { text: `${cs}2.50 per additional job`, included: true },
       ],
-      cta: "Start 14 Day Free Trial",
-    },
-    {
-      name: "Scale",
+      cta: "Start Free Trial",
       description: "Multi-location businesses",
       price: String(config.pricing.scale),
       perJob: "2.00",
@@ -124,7 +115,7 @@ export function Pricing() {
         { text: "Spam call filtering", included: true },
         { text: "Multi-location support", included: true },
         { text: "Multi-calendar team sync", included: true },
-        { text: "Priority optimisation", included: true },
+        { text: "Priority support", included: true },
         { text: "Custom integrations", included: true },
         { text: "Dedicated account manager", included: true },
         { text: `${cs}2.00 per additional job`, included: true },
@@ -147,8 +138,8 @@ export function Pricing() {
             Zero Risk
           </span>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
-            We Only Get Paid When{" "}
-            <span className="text-[var(--rex-green)]">You Get Jobs</span>
+            Simple Pricing That{" "}
+            <span className="text-[var(--rex-green)]">Scales With You</span>
           </h2>
           <p className="mt-6 text-xl text-[var(--slate-500)] text-pretty max-w-2xl mx-auto">
             Jobs included. {cs}2–{cs}4 per extra job. Scales as you grow.
@@ -175,6 +166,17 @@ export function Pricing() {
               <div className="text-sm text-[var(--slate-500)]">return on cost</div>
             </div>
           </div>
+        </motion.div>
+
+        {/* Pricing transition text */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <p className="text-lg text-[var(--slate-500)] font-semibold mb-2">Choose a plan based on how many enquiries you need.</p>
+          <p className="text-sm text-[var(--slate-500)]">After your trial, you choose a plan that includes enquiries, with additional ones priced per job.</p>
         </motion.div>
 
         {/* Pricing Cards */}
@@ -265,11 +267,22 @@ export function Pricing() {
           <div className="inline-flex flex-col sm:flex-row items-center gap-4 px-6 py-4 rounded-2xl bg-[var(--navy-900)] text-white">
             <CheckCircle2 className="w-6 h-6 text-[var(--rex-green)] shrink-0" />
             <p className="text-sm">
-              <span className="font-bold">We only get paid when you get work.</span>{" "}
+              <span className="font-bold">Simple pricing that scales with your business.</span>{" "}
               Most customers cover their cost in their first few jobs.{" "}
-              <span className="text-white/60">No results in 30 days? We extend free.</span>
+              <span className="text-white/60">Only continue if it's working for you.</span>
             </p>
           </div>
+        </motion.div>
+
+        {/* Pricing bottom text */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-8 text-center"
+        >
+          <p className="text-lg text-[var(--slate-500)] font-semibold">Each plan includes enquiries, with additional ones charged per job.</p>
+          <p className="text-sm text-[var(--slate-500)] mt-2">Start small. Only pay more as you get more work.</p>
         </motion.div>
       </div>
     </section>

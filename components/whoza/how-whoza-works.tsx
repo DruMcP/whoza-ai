@@ -104,7 +104,7 @@ export function HowWhozaWorks() {
           {[
             { phase: "CAPTURE", items: ["AI answers instantly", "Qualifies the job", "Books into calendar"], color: "var(--katie-blue)" },
             { phase: "DELIVER", items: ["Job sent via WhatsApp", "You accept or decline", "Customer confirmed"], color: "var(--claire-amber)" },
-            { phase: "GROW", items: ["Review requested", "Rating improves", "More visibility"], color: "var(--rex-green)" },
+            { phase: "GROW", items: ["Review requested", "Rating improves", "Get found"], color: "var(--rex-green)" },
           ].map((card, index) => (
             <motion.div
               key={card.phase}

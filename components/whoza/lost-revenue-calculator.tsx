@@ -210,7 +210,7 @@ export function LostRevenueCalculator() {
                   <Button 
                     className="w-full bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-bold py-6 text-lg"
                   >
-                    Start 14 Day Free Trial
+                    Start Free Trial
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                   <p className="text-xs text-white/40 mt-3 text-center">No credit card required</p>

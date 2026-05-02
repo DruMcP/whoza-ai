@@ -117,7 +117,7 @@ export default function RexDashboard() {
           <Award className="w-16 h-16 text-[var(--rex-green)] mx-auto mb-4" />
           <h2 className="text-2xl font-bold text-white mb-2">No Rex Analysis Yet</h2>
           <p className="text-white/60 mb-6">
-            Run your first ECE evaluation to see your AI visibility score and get personalized recommendations.
+            Run your first ECE evaluation to see your AI growth score and get personalized recommendations.
           </p>
           <button
             className="bg-[var(--rex-green)] text-white px-6 py-3 rounded-xl font-semibold hover:opacity-90 transition"

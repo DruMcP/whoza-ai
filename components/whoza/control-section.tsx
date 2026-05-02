@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { Shield, Check, X, Phone, Clock, FileText, Bell, MessageCircle, Mail, Smartphone, CheckCircle2 } from "lucide-react"
 
 const controlFeatures = [
-  { icon: Check, text: "Accept or decline any job instantly", color: "text-[var(--rex-green)]" },
+  { icon: Check, text: "Accept or decline every enquiry instantly", color: "text-[var(--rex-green)]" },
   { icon: Phone, text: "Request callback before deciding", color: "text-[var(--katie-blue)]" },
   { icon: Clock, text: "Adjust booking time if needed", color: "text-[var(--claire-amber)]" },
   { icon: FileText, text: "See full job details before accepting", color: "text-[var(--mark-grey)]" },
@@ -36,6 +36,7 @@ export function ControlSection() {
             </h2>
             <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
               Every job comes to you first. You decide which ones to take.
+              <span className="block mt-2 font-semibold text-[var(--navy-900)]">Choose how your calls are answered — tone, questions and job types.</span>
             </p>
 
             <div className="mt-10 space-y-4">

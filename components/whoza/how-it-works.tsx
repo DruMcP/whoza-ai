@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 const steps = [
   {
     number: "01",
-    title: "We Answer Instantly",
+    title: "We Answer Every Call",
     description: "Customer calls, Katie or Mark answers within 3 seconds. No voicemail, no missed opportunity.",
     icon: Phone,
     bgClass: "bg-[var(--katie-blue)]",
@@ -21,7 +21,7 @@ const steps = [
   },
   {
     number: "02",
-    title: "We Qualify the Job",
+    title: "We Book Real Enquiries",
     description: "Katie gathers all the details: what they need, when they need it, where they are.",
     icon: ClipboardCheck,
     bgClass: "bg-[var(--rex-green)]",
@@ -35,8 +35,8 @@ const steps = [
   },
   {
     number: "03",
-    title: "Job Sent via WhatsApp",
-    description: "Qualified job lands on your phone instantly. Customer name, job type, location, time, and value.",
+    title: "We Send Them to Your Phone",
+    description: "Qualified enquiry lands on your phone instantly. Customer name, job type, location, time, and value.",
     icon: MessageCircle,
     bgClass: "bg-[var(--claire-amber)]",
     bgLightClass: "bg-[var(--claire-amber)]/10",
@@ -49,7 +49,7 @@ const steps = [
   },
   {
     number: "04",
-    title: "You Accept → Job Booked",
+    title: "You Accept Jobs and Get Paid",
     description: "Tap accept. Customer gets confirmation. Job is in your calendar. Done.",
     icon: CheckCircle2,
     bgClass: "bg-[var(--mark-grey)]",
@@ -78,11 +78,11 @@ export function HowItWorks() {
             Installed in 30 Minutes
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
-            Call → Qualify → WhatsApp → Accept
+            Call → Enquiry → WhatsApp → Paid
           </h2>
           <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
             The complete loop from missed call to booked job. 
-            <span className="font-semibold text-[var(--navy-900)]"> You only deal with real jobs.</span>
+            <span className="font-semibold text-[var(--navy-900)]"> You only deal with real enquiries.</span>
           </p>
         </motion.div>
 
@@ -147,13 +147,13 @@ export function HowItWorks() {
           className="mt-16 text-center"
         >
           <p className="text-[var(--slate-500)] mb-6">
-            Set up in 30 minutes. Jobs start landing on your phone today.
+            Set up in 30 minutes. Enquiries start landing on your phone today.
           </p>
           <Button 
             size="lg"
             className="bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-semibold px-8"
           >
-            Start 14 Day Free Trial
+            Start Free Trial
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
         </motion.div>

@@ -63,7 +63,7 @@ export function GrowthEngine() {
                     </div>
                     <div>
                       <div className="text-white text-sm font-medium">Competitor X has more reviews and stronger profile data</div>
-                      <div className="text-[var(--claire-amber)] text-xs mt-1 font-medium">→ Action: Improve review count + optimise profile signals</div>
+                      <div className="text-[var(--claire-amber)] text-xs mt-1 font-medium">→ Action: Improve review count + get more jobs</div>
                     </div>
                   </div>
                 </motion.div>
@@ -81,7 +81,7 @@ export function GrowthEngine() {
                     </div>
                     <div>
                       <div className="text-white text-sm font-medium">You need 5 more reviews to outrank competitors this week</div>
-                      <div className="text-[var(--rex-green)] text-xs mt-1 font-medium">→ Result: More visibility, more calls, more jobs</div>
+                      <div className="text-[var(--rex-green)] text-xs mt-1 font-medium">→ Result: Get found, more calls, more jobs</div>
                     </div>
                   </div>
                 </motion.div>
@@ -99,7 +99,7 @@ export function GrowthEngine() {
                     </div>
                     <div>
                       <div className="text-white text-sm font-medium">Top recommendation: Add 3 more jobs to your portfolio</div>
-                      <div className="text-[var(--katie-blue)] text-xs mt-1 font-medium">→ Result: Stronger AI visibility in 7 days</div>
+                      <div className="text-[var(--katie-blue)] text-xs mt-1 font-medium">→ Result: Stronger AI recommendations in 7 days</div>
                     </div>
                   </div>
                 </motion.div>
@@ -114,7 +114,7 @@ export function GrowthEngine() {
                 className="mt-6 p-4 rounded-xl bg-white/5 border border-white/10 text-center"
               >
                 <div className="text-white/50 text-xs uppercase tracking-wider mb-2">The Result</div>
-                <div className="text-white font-bold">More visibility → More calls → More booked jobs</div>
+                <div className="text-white font-bold">Get found → More calls → More booked jobs</div>
               </motion.div>
             </div>
 

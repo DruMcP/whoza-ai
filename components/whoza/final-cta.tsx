@@ -84,14 +84,14 @@ export function FinalCTA() {
               className="bg-transparent border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg"
               onClick={() => window.open('https://wa.me/447831643012', '_blank')}
             >
-              Book Demo Call
+              Book Demo
             </Button>
           </div>
         </motion.div>
 
         {/* CTA Reassurance */}
         <p className="mt-3 text-sm text-white/60 text-center">
-          Setup takes 30 minutes. First jobs typically within days.
+          Setup takes 30 minutes. No risk.
         </p>
 
         {/* Dynamic Proof */}

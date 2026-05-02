@@ -23,12 +23,13 @@ export function ReviewsEngine() {
               Claire — Turn Jobs Into More Jobs
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
-              Turn Completed Jobs Into{" "}
-              <span className="text-[var(--rex-green)]">More Future Jobs</span>
+              Turn More Enquiries Into{" "}
+              <span className="text-[var(--rex-green)]">Paying Customers</span>
             </h2>
             <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
               Every completed job is a seed for the next one. Claire automatically reaches out via WhatsApp after you finish a job, guides happy customers to leave a Google review, and turns that trust into more calls.
               <span className="block mt-2 font-semibold text-[var(--navy-900)]">More 5-star reviews means more customers choose you.</span>
+              <span className="block mt-2 font-semibold text-[var(--navy-900)]">Claire turns completed jobs into future work automatically.</span>
             </p>
 
             <div className="mt-10 space-y-4">
