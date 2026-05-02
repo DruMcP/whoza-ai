@@ -38,6 +38,9 @@ export function ClaireDashboard({ clientId = "demo" }: ClaireDashboardProps) {
           conversionRate: 45,
           clickThroughRate: 67,
           averageRating: 4.7,
+          estimatedJobWinIncrease: 3,
+          estimatedRevenueImpact: 1050,
+          avgJobValue: 350,
           pendingCount: 5,
           reminderCount: 8,
           period,
@@ -127,6 +130,24 @@ export function ClaireDashboard({ clientId = "demo" }: ClaireDashboardProps) {
           />
         </div>
 
+        {/* Revenue Impact Metrics */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          <RevenueCard
+            icon={<TrendingUp className="w-6 h-6" />}
+            label="Estimated New Jobs"
+            value={`+${metrics.estimatedJobWinIncrease}`}
+            subtext={`Based on ${metrics.completedCount} reviews × ${metrics.averageRating?.toFixed(1)}★ × 3% lift per review`}
+            color="green"
+          />
+          <RevenueCard
+            icon={<Star className="w-6 h-6" />}
+            label="Estimated Revenue Impact"
+            value={`£${metrics.estimatedRevenueImpact.toLocaleString()}`}
+            subtext={`${metrics.estimatedJobWinIncrease} jobs × £${metrics.avgJobValue} avg job value`}
+            color="rex-green"
+          />
+        </div>
+
         {/* Impact Statement */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -139,8 +160,8 @@ export function ClaireDashboard({ clientId = "demo" }: ClaireDashboardProps) {
           </div>
           <p className="text-white/60">
             Your improved rating is helping you win more jobs. 
-            {metrics.completedCount > 10 
-              ? `You're in the top 15% of tradespeople for review velocity.`
+            {metrics.estimatedJobWinIncrease > 0
+              ? `Claire estimates ~${metrics.estimatedJobWinIncrease} additional jobs this ${period === "7d" ? "week" : period === "30d" ? "month" : "quarter"} from your reviews.`
               : `Keep going — every review compounds into future revenue.`}
           </p>
         </motion.div>
@@ -202,6 +223,39 @@ function MetricCard({
       <div className="text-3xl font-bold text-white mb-1">{value}</div>
       <div className="text-sm text-white/60 mb-1">{label}</div>
       <div className="text-xs text-white/40">{subtext}</div>
+    </motion.div>
+  )
+}
+
+function RevenueCard({
+  icon,
+  label,
+  value,
+  subtext,
+  color,
+}: {
+  icon: React.ReactNode
+  label: string
+  value: string | number
+  subtext: string
+  color: "green" | "rex-green"
+}) {
+  const colors = {
+    green: "bg-[var(--rex-green)]/20 text-[var(--rex-green)] border-[var(--rex-green)]/30",
+    "rex-green": "bg-[var(--rex-green)]/30 text-[var(--rex-green)] border-[var(--rex-green)]/40",
+  }
+
+  return (
+    <motion.div
+      whileHover={{ scale: 1.02 }}
+      className={`rounded-xl p-6 border ${colors[color]} flex items-center gap-4`}
+    >
+      <div className="flex-shrink-0">{icon}</div>
+      <div>
+        <div className="text-2xl font-bold text-white">{value}</div>
+        <div className="text-sm text-white/80 font-medium mb-1">{label}</div>
+        <div className="text-xs text-white/50">{subtext}</div>
+      </div>
     </motion.div>
   )
 }

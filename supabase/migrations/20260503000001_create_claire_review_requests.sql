@@ -57,4 +57,6 @@ CREATE POLICY "Service role can manage all review requests"
 
 -- Comments
 COMMENT ON TABLE review_requests IS 'Claire: Tracks review requests sent to customers after job completion';
-COMMENT ON COLUMN review_requests.status IS 'pending → sent → clicked → completed / declined';
+COMMENT ON COLUMN review_requests.job_value IS 'Job value in GBP for ROI calculation and revenue attribution';
+COMMENT ON COLUMN review_requests.rating IS '1-5 star rating when review completed';
+COMMENT ON COLUMN review_requests.metadata IS 'Extensible JSON for business_name, scheduled_send_at, revenue attribution, feedback sentiment';

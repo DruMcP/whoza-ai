@@ -19,6 +19,9 @@ export interface ClaireMetrics {
   averageRating: number | null;
   pendingCount: number;
   reminderCount: number;
+  estimatedJobWinIncrease: number; // calculated: completedCount * avgRating * 0.03
+  estimatedRevenueImpact: number; // calculated: estimatedJobWinIncrease * avgJobValue
+  avgJobValue: number;
   period: "7d" | "30d" | "90d" | "all";
 }
 
@@ -112,6 +115,10 @@ export async function getClaireMetrics(
     ? ratings.reduce((a, b) => a + b, 0) / ratings.length 
     : null;
 
+  const avgJobValue = 350; // £350 — typical trade job value, configurable per client
+  const estimatedJobWinIncrease = Math.round(completedCount * (avgRating || 4.5) * 0.03);
+  const estimatedRevenueImpact = Math.round(estimatedJobWinIncrease * avgJobValue);
+
   return {
     totalRequests: count || 0,
     sentCount: sent.length,
@@ -120,6 +127,9 @@ export async function getClaireMetrics(
     conversionRate: sent.length > 0 ? Math.round((completed.length / sent.length) * 100) : 0,
     clickThroughRate: sent.length > 0 ? Math.round((clicked.length / sent.length) * 100) : 0,
     averageRating: avgRating ? Math.round(avgRating * 10) / 10 : null,
+    estimatedJobWinIncrease,
+    estimatedRevenueImpact,
+    avgJobValue,
     pendingCount: pending.length,
     reminderCount: reminders.length,
     period,
