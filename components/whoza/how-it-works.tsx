@@ -152,6 +152,7 @@ export function HowItWorks() {
           <Button 
             size="lg"
             className="bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-semibold px-8"
+            onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Start Free Trial
             <ArrowRight className="ml-2 w-5 h-5" />

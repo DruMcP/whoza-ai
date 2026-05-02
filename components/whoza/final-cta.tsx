@@ -91,7 +91,7 @@ export function FinalCTA() {
 
         {/* CTA Reassurance */}
         <p className="mt-3 text-sm text-white/60 text-center">
-          Setup takes 30 minutes. No risk.
+          Setup takes 30 minutes. Most customers receive their first enquiries within days of going live.
         </p>
 
         {/* Dynamic Proof */}
@@ -103,7 +103,7 @@ export function FinalCTA() {
 
         {/* CTA Urgency */}
         <p className="mt-3 text-sm text-white/50 text-center">
-          Most customers see their first booked job within days.
+          Most customers receive their first enquiries within days of going live.
         </p>
 
         {/* Risk Reversal */}

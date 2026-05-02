@@ -257,6 +257,69 @@ export function Pricing() {
           })}
         </div>
 
+        {/* Optional Upgrades */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-16"
+        >
+          <div className="text-center mb-10">
+            <h3 className="text-2xl sm:text-3xl font-bold text-[var(--navy-900)]">
+              Optional Upgrades
+            </h3>
+            <p className="mt-2 text-[var(--slate-500)]">
+              Flexible add-ons to support your business as you grow.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {/* Minutes Bundle */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl p-6 border border-[var(--border)] shadow-sm"
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <h4 className="text-lg font-bold text-[var(--navy-900)]">100 Minute Bundle</h4>
+                  <p className="text-sm text-[var(--slate-500)] mt-1">Extra call handling minutes at a discounted rate.</p>
+                </div>
+                <div className="text-right">
+                  <div className="text-2xl font-bold text-[var(--navy-900)]">£20<span className="text-sm font-normal text-[var(--slate-500)]"> ex VAT</span></div>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-[var(--rex-green)] font-medium bg-[var(--rex-green)]/10 rounded-lg px-3 py-2">
+                <CheckCircle2 className="w-4 h-4" />
+                Lower cost than standard overage rate (£0.26/min)
+              </div>
+            </motion.div>
+
+            {/* Consultancy */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl p-6 border border-[var(--border)] shadow-sm"
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <h4 className="text-lg font-bold text-[var(--navy-900)]">White Glove AI & Automation Consultancy</h4>
+                  <p className="text-sm text-[var(--slate-500)] mt-1">Bespoke support to optimise your workflows, AI agents, and automation systems.</p>
+                </div>
+                <div className="text-right">
+                  <div className="text-2xl font-bold text-[var(--navy-900)]">£200<span className="text-sm font-normal text-[var(--slate-500)]">/hr</span></div>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-[var(--katie-blue)] font-medium bg-[var(--katie-blue)]/10 rounded-lg px-3 py-2">
+                <CheckCircle2 className="w-4 h-4" />
+                Ideal for scaling businesses and advanced optimisation
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+
         {/* Pricing Psychology */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -281,8 +344,19 @@ export function Pricing() {
           viewport={{ once: true }}
           className="mt-8 text-center"
         >
-          <p className="text-lg text-[var(--slate-500)] font-semibold">Each plan includes enquiries, with additional ones charged per job.</p>
+          <p className="text-lg text-[var(--slate-500)] font-semibold">Each plan includes enquiries, with additional ones charged per job — so you can scale as you grow.</p>
           <p className="text-sm text-[var(--slate-500)] mt-2">Start small. Only pay more as you get more work.</p>
+        </motion.div>
+        {/* Overage Footnote */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mt-8 text-center"
+        >
+          <p className="text-sm text-[var(--slate-400)]">
+            Additional call handling minutes are charged at £0.26 per minute across all plans. You can monitor and control usage at any time.
+          </p>
         </motion.div>
       </div>
     </section>

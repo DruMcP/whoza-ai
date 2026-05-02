@@ -12,7 +12,9 @@ const flowSteps = [
   { icon: Check, label: "You Accept", color: "var(--claire-amber)" },
   { icon: Star, label: "Job Completed", color: "var(--mark-grey)" },
   { icon: Star, label: "Review Requested", color: "var(--mark-grey)" },
-  { icon: TrendingUp, label: "Visibility Improves", color: "var(--rex-green)" },
+  { icon: TrendingUp, label: "Rex Analyses Competitors", color: "var(--rex-green)" },
+  { icon: TrendingUp, label: "You Get Weekly Actions", color: "var(--rex-green)" },
+  { icon: TrendingUp, label: "More Calls, More Jobs", color: "var(--rex-green)" },
 ]
 
 export function HowWhozaWorks() {
@@ -45,7 +47,7 @@ export function HowWhozaWorks() {
             {/* Connection Line */}
             <div className="absolute top-12 left-0 right-0 h-1 bg-gradient-to-r from-[var(--katie-blue)] via-[var(--rex-green)] via-[var(--claire-amber)] to-[var(--mark-grey)] rounded-full" />
             
-            <div className="grid grid-cols-9 gap-4">
+            <div className="grid grid-cols-11 gap-4">
               {flowSteps.map((step, index) => (
                 <motion.div
                   key={step.label}
@@ -104,7 +106,7 @@ export function HowWhozaWorks() {
           {[
             { phase: "CAPTURE", items: ["AI answers instantly", "Qualifies the job", "Books into calendar"], color: "var(--katie-blue)" },
             { phase: "DELIVER", items: ["Job sent via WhatsApp", "You accept or decline", "Customer confirmed"], color: "var(--claire-amber)" },
-            { phase: "GROW", items: ["Review requested", "Rating improves", "Get found"], color: "var(--rex-green)" },
+            { phase: "GROW", items: ["Review requested", "Rex analyses competitors", "You get clear weekly actions", "More calls, more jobs"], color: "var(--rex-green)" },
           ].map((card, index) => (
             <motion.div
               key={card.phase}
@@ -131,6 +133,46 @@ export function HowWhozaWorks() {
             </motion.div>
           ))}
         </div>
+
+        {/* Clarity Line */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-12 text-center"
+        >
+          <p className="text-lg text-[var(--navy-900)] font-semibold">
+            No guesswork. Just clear actions to get more work.
+          </p>
+        </motion.div>
+
+        {/* Micro Visual - Competitor Comparison */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-8 max-w-lg mx-auto"
+        >
+          <div className="bg-white rounded-2xl p-6 border border-[var(--border)] shadow-sm">
+            <p className="text-sm font-bold text-[var(--navy-900)] mb-4 text-center">Rex Weekly Action</p>
+            <div className="flex items-center justify-between mb-3">
+              <div className="text-center">
+                <p className="text-2xl font-bold text-[var(--navy-900)]">32</p>
+                <p className="text-xs text-[var(--slate-500)]">Your reviews</p>
+              </div>
+              <ArrowRight className="w-5 h-5 text-[var(--slate-300)]" />
+              <div className="text-center">
+                <p className="text-2xl font-bold text-[var(--rex-green)]">41</p>
+                <p className="text-xs text-[var(--slate-500)]">Competitor</p>
+              </div>
+            </div>
+            <div className="bg-[var(--rex-green)]/10 rounded-lg px-4 py-3 text-center">
+              <p className="text-sm font-semibold text-[var(--rex-green)]">
+                → Get 5 more reviews to outrank competitors this week
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   )

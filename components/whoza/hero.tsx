@@ -66,9 +66,12 @@ export function Hero() {
               {" "}— Sent Straight to Your Phone
             </h1>
 
-            {/* Pain Line — added for clarity */}
+            {/* Pain Line + Logic Line */}
             <p className="mt-4 text-xl text-red-400 font-bold text-center lg:text-left">
               Every missed call is a lost job.
+            </p>
+            <p className="mt-2 text-lg text-white/80 font-medium text-center lg:text-left">
+              You're already getting calls — Whoza makes sure you don't miss them.
             </p>
 
             {/* Subheadline — sharpened for jobs/phone/immediacy */}
@@ -104,7 +107,10 @@ export function Hero() {
               No upfront cost. Cancel anytime.
             </p>
             <p className="mt-1 text-sm text-white/60 text-center lg:text-left">
-              Setup takes 30 minutes. First enquiries typically within days.
+              Your trial includes live call answering and real enquiries sent to your phone — you only continue if it's working.
+            </p>
+            <p className="mt-1 text-sm text-white/60 text-center lg:text-left">
+              Setup takes 30 minutes. Most customers receive their first enquiries within days of going live.
             </p>
 
             {/* Live Signal */}
@@ -126,7 +132,7 @@ export function Hero() {
 
             {/* CTA Urgency */}
             <p className="mt-3 text-sm text-white/50 text-center lg:text-left">
-              Most customers see their first booked job within days.
+              You choose which enquiries to accept. Most customers receive their first enquiries within days of going live.
             </p>
 
             {/* Micro Proof Signals */}

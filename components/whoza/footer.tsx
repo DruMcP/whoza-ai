@@ -11,22 +11,16 @@ const footerLinks = {
     { label: "Testimonials", href: "#testimonials" },
   ],
   support: [
-    { label: "Help Centre", href: "#" },
-    { label: "Contact Us", href: "#" },
+    { label: "Help Centre", href: "https://wa.me/447831643012" },
+    { label: "Contact Us", href: "https://wa.me/447831643012" },
     { label: "FAQ", href: "#faq" },
-    { label: "Status", href: "#" },
   ],
   company: [
-    { label: "About Us", href: "#" },
-    { label: "Careers", href: "#" },
-    { label: "Blog", href: "#" },
-    { label: "Press", href: "#" },
+    { label: "Blog", href: "/blog" },
   ],
   legal: [
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Service", href: "#" },
-    { label: "Cookie Policy", href: "#" },
-    { label: "GDPR", href: "#" },
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Terms of Service", href: "/terms" },
   ],
 }
 
@@ -60,7 +54,7 @@ export function Footer() {
               />
             </a>
             <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-xs">
-              Whoza helps trades capture missed work, book more jobs, and grow their business automatically.
+              AI revenue system for UK tradespeople. Capture missed calls, book more jobs, grow automatically.
             </p>
           </div>
 

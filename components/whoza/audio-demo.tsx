@@ -8,49 +8,76 @@ import { Slider } from "@/components/ui/slider"
 
 const transcript = [
   { time: 0, speaker: "Katie", text: "Good morning, Thompson Plumbing, Katie speaking. How can I help you today?" },
-  { time: 3, speaker: "Customer", text: "Hi, I've got a leaky tap in my kitchen that's been dripping for a few days now." },
-  { time: 8, speaker: "Katie", text: "Oh no, that's frustrating! I can definitely help you get that sorted. Are you available for a visit this week?" },
-  { time: 14, speaker: "Customer", text: "Yeah, tomorrow afternoon would be ideal if possible?" },
-  { time: 18, speaker: "Katie", text: "Let me check Dave's calendar... Perfect, I've got 2pm or 4pm available tomorrow. Which works better for you?" },
-  { time: 24, speaker: "Customer", text: "2pm would be great." },
-  { time: 26, speaker: "Katie", text: "Lovely! I've booked you in for 2pm tomorrow. Can I take your address and a contact number?" },
-  { time: 32, speaker: "Customer", text: "Sure, it's 42 Oak Street, Manchester, M4 5PQ. And my number is 07700 900123." },
-  { time: 40, speaker: "Katie", text: "Perfect! You'll receive a confirmation text shortly. Dave will see you tomorrow at 2pm. Is there anything else I can help with?" },
-  { time: 48, speaker: "Customer", text: "No, that's everything. Thank you!" },
-  { time: 51, speaker: "Katie", text: "Brilliant, have a lovely day! Goodbye." },
+  { time: 4, speaker: "Customer", text: "Hi, I've got a leaky tap in my kitchen." },
+  { time: 7, speaker: "Katie", text: "Oh, a leaky tap? I can definitely help you get that sorted." },
+  { time: 11, speaker: "Customer", text: "Are you available for a visit this week?" },
+  { time: 14, speaker: "Katie", text: "Perfect, I've got 2 p.m. available tomorrow." },
+  { time: 18, speaker: "Customer", text: "That works great." },
+  { time: 20, speaker: "Katie", text: "Lovely! I've booked you in. Dave will see you tomorrow at 2 p.m." },
+  { time: 25, speaker: "Customer", text: "Brilliant, thank you!" },
+  { time: 27, speaker: "Katie", text: "Have a lovely day! Goodbye." },
 ]
 
 export function AudioDemo() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentTime, setCurrentTime] = useState(0)
+  const [duration, setDuration] = useState(0)
   const [isMuted, setIsMuted] = useState(false)
-  const intervalRef = useRef<NodeJS.Timeout | null>(null)
-  const totalDuration = 54 // seconds
+  const audioRef = useRef<HTMLAudioElement>(null)
 
   useEffect(() => {
-    if (isPlaying) {
-      intervalRef.current = setInterval(() => {
-        setCurrentTime((prev) => {
-          if (prev >= totalDuration) {
-            setIsPlaying(false)
-            return 0
-          }
-          return prev + 0.1
-        })
-      }, 100)
-    } else {
-      if (intervalRef.current) clearInterval(intervalRef.current)
-    }
+    const audio = audioRef.current
+    if (!audio) return
+
+    const updateTime = () => setCurrentTime(audio.currentTime)
+    const handleEnded = () => setIsPlaying(false)
+    const handleLoaded = () => setDuration(audio.duration || 30)
+
+    audio.addEventListener("timeupdate", updateTime)
+    audio.addEventListener("ended", handleEnded)
+    audio.addEventListener("loadedmetadata", handleLoaded)
+    audio.addEventListener("canplaythrough", handleLoaded)
 
     return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current)
+      audio.removeEventListener("timeupdate", updateTime)
+      audio.removeEventListener("ended", handleEnded)
+      audio.removeEventListener("loadedmetadata", handleLoaded)
+      audio.removeEventListener("canplaythrough", handleLoaded)
     }
-  }, [isPlaying])
+  }, [])
 
-  const togglePlay = () => setIsPlaying(!isPlaying)
+  const togglePlay = () => {
+    const audio = audioRef.current
+    if (!audio) return
+    if (isPlaying) {
+      audio.pause()
+    } else {
+      audio.play()
+    }
+    setIsPlaying(!isPlaying)
+  }
+
   const reset = () => {
+    const audio = audioRef.current
+    if (!audio) return
+    audio.pause()
+    audio.currentTime = 0
     setIsPlaying(false)
     setCurrentTime(0)
+  }
+
+  const handleSeek = ([value]: number[]) => {
+    const audio = audioRef.current
+    if (!audio) return
+    audio.currentTime = value
+    setCurrentTime(value)
+  }
+
+  const toggleMute = () => {
+    const audio = audioRef.current
+    if (!audio) return
+    audio.muted = !isMuted
+    setIsMuted(!isMuted)
   }
 
   const formatTime = (seconds: number) => {
@@ -80,10 +107,10 @@ export function AudioDemo() {
             Listen Now
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight text-balance">
-            Hear Katie in Action
+            Hear Whoza in Action
           </h2>
           <p className="mt-6 text-lg text-white/60">
-            A real conversation between Katie and a customer booking a plumbing job
+            This is exactly what your customers hear when they call you.
           </p>
         </motion.div>
 
@@ -94,6 +121,13 @@ export function AudioDemo() {
           viewport={{ once: true }}
           className="bg-[var(--navy-800)] rounded-3xl p-6 lg:p-8 border border-white/10"
         >
+          {/* Hidden audio element */}
+          <audio
+            ref={audioRef}
+            src="/audio/katie-demo.mp3"
+            preload="metadata"
+          />
+
           {/* Controls */}
           <div className="flex items-center gap-4 mb-6">
             <Button
@@ -110,19 +144,19 @@ export function AudioDemo() {
             <div className="flex-1">
               <Slider
                 value={[currentTime]}
-                onValueChange={([value]) => setCurrentTime(value)}
-                max={totalDuration}
+                onValueChange={handleSeek}
+                max={duration || 30}
                 step={0.1}
                 className="[&_[role=slider]]:bg-[var(--katie-blue)] [&_[role=slider]]:border-0 [&_.bg-primary]:bg-[var(--katie-blue)]"
               />
               <div className="flex justify-between text-xs text-white/40 mt-1">
                 <span>{formatTime(currentTime)}</span>
-                <span>{formatTime(totalDuration)}</span>
+                <span>{formatTime(duration || 30)}</span>
               </div>
             </div>
 
             <button
-              onClick={() => setIsMuted(!isMuted)}
+              onClick={toggleMute}
               className="p-2 text-white/60 hover:text-white transition-colors"
             >
               {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
@@ -140,7 +174,7 @@ export function AudioDemo() {
           <div className="space-y-3 max-h-80 overflow-y-auto pr-2">
             {transcript.map((item, index) => (
               <motion.div
-                key={index}
+                key={item.time}
                 initial={{ opacity: 0.4 }}
                 animate={{ 
                   opacity: index === activeTranscriptIndex ? 1 : 0.4,
@@ -166,14 +200,26 @@ export function AudioDemo() {
           </div>
         </motion.div>
 
-        {/* Note */}
+        {/* Result line */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-8 text-center"
+        >
+          <p className="text-lg text-white/80 font-semibold">
+            Calls answered. Enquiries booked. Sent to your phone.
+          </p>
+        </motion.div>
+
+        {/* Disclaimer */}
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           className="text-center text-white/40 text-sm mt-6"
         >
-          * Simulated transcript for demonstration. Actual AI conversations sound just as natural.
+          * This is a representative transcript. Actual AI conversations sound just as natural.
         </motion.p>
       </div>
     </section>

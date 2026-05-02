@@ -21,14 +21,19 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--navy-900)]/95 backdrop-blur-md border-b border-white/10">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <a href="/" className="flex items-center">
-            <img 
-              src="/production_logo.png" 
-              alt="whoza.ai" 
-              className="h-8 w-auto"
-            />
-          </a>
+          {/* Logo + Trust Line */}
+          <div className="flex items-center gap-3">
+            <a href="/" className="flex items-center">
+              <img 
+                src="/production_logo.png" 
+                alt="whoza.ai" 
+                className="h-10 w-auto lg:h-11"
+              />
+            </a>
+            <span className="hidden lg:block text-xs text-white/40 border-l border-white/20 pl-3">
+              Built for UK trades — expanding globally
+            </span>
+          </div>
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-8">
@@ -53,6 +58,7 @@ export function Header() {
             <CountrySwitcher />
             <Button 
               className="bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-bold px-6"
+              onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Start Free Trial
             </Button>
@@ -100,6 +106,7 @@ export function Header() {
                 </div>
                 <Button 
                   className="w-full bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-bold"
+                  onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Start Free Trial
                 </Button>

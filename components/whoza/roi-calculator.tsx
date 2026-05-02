@@ -120,6 +120,7 @@ export function ROICalculator() {
                 </div>
                 <Button 
                   className="bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 text-white font-semibold px-8 whitespace-nowrap"
+                  onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Start Free Trial
                   <ArrowRight className="ml-2 w-4 h-4" />

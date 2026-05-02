@@ -13,6 +13,7 @@ import { GrowthEngine } from "@/components/whoza/growth-engine"
 import { DashboardPreview } from "@/components/whoza/dashboard-preview"
 import { LostRevenueCalculator } from "@/components/whoza/lost-revenue-calculator"
 import { AudioDemo } from "@/components/whoza/audio-demo"
+import { TrialExplanation } from "@/components/whoza/trial-explanation"
 import { TestimonialCarousel } from "@/components/whoza/testimonials"
 import { GoogleReviews } from "@/components/whoza/google-reviews"
 import { ComparisonTable } from "@/components/whoza/comparison-table"
@@ -43,6 +44,9 @@ export default function Home() {
 
         {/* HOW IT WORKS - Full visual flow */}
         <HowWhozaWorks />
+
+        {/* TRIAL EXPLANATION - Risk-free trial steps */}
+        <TrialExplanation />
 
         {/* CALL CAPTURE - Choose your voice */}
         <MeetTheTeam />

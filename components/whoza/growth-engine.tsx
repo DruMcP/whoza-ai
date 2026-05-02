@@ -114,7 +114,7 @@ export function GrowthEngine() {
                 className="mt-6 p-4 rounded-xl bg-white/5 border border-white/10 text-center"
               >
                 <div className="text-white/50 text-xs uppercase tracking-wider mb-2">The Result</div>
-                <div className="text-white font-bold">Get found → More calls → More booked jobs</div>
+                <div className="text-white font-bold">More visibility → more calls → more booked jobs</div>
               </motion.div>
             </div>
 
