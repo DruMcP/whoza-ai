@@ -41,7 +41,7 @@ const faqs = [
   },
   {
     question: "How does the free trial work?",
-    answer: "We give you 10 free booked jobs to start. No credit card required. Experience the full system — call answering, job booking, WhatsApp delivery, and review collection. After your 10 free jobs, choose a plan that fits your business. If you don't upgrade, your account simply pauses — no surprise charges.",
+    answer: "We give you 14-day free trial. No credit card required. Experience the full system — call answering, job booking, WhatsApp delivery, and review collection. After your trial, choose a plan that fits your business. If you don't upgrade, your account simply pauses — no surprise charges.",
   },
 ]
 

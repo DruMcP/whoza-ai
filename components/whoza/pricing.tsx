@@ -59,7 +59,7 @@ export function Pricing() {
         { text: "WhatsApp job delivery", included: true },
         { text: `${cs}4.00 per qualified job booked`, included: true },
       ],
-      cta: "Get 10 Free Booked Jobs",
+      cta: "Start 14 Day Free Trial",
     },
     {
       name: "Growth",
@@ -82,7 +82,7 @@ export function Pricing() {
         { text: "Revenue dashboard", included: true },
         { text: `${cs}3.00 per additional job`, included: true },
       ],
-      cta: "Get 10 Free Booked Jobs",
+      cta: "Start 14 Day Free Trial",
     },
     {
       name: "Pro",
@@ -107,7 +107,7 @@ export function Pricing() {
         { text: "API access", included: true },
         { text: `${cs}2.50 per additional job`, included: true },
       ],
-      cta: "Get 10 Free Booked Jobs",
+      cta: "Start 14 Day Free Trial",
     },
     {
       name: "Scale",

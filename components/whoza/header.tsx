@@ -54,7 +54,7 @@ export function Header() {
             <Button 
               className="bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-bold px-6"
             >
-              Get Free Jobs
+              Start Free Trial
             </Button>
           </div>
 
@@ -101,7 +101,7 @@ export function Header() {
                 <Button 
                   className="w-full bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-bold"
                 >
-                  Get Free Jobs
+                  Start Free Trial
                 </Button>
               </div>
             </div>

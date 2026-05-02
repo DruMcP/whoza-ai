@@ -153,7 +153,7 @@ export function HowItWorks() {
             size="lg"
             className="bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-semibold px-8"
           >
-            Get 10 Free Booked Jobs
+            Start 14 Day Free Trial
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
         </motion.div>

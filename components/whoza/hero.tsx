@@ -85,7 +85,7 @@ export function Hero() {
                 className="bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-bold px-10 py-7 text-xl gap-3 group shadow-2xl shadow-[var(--rex-green)]/40 transition-all hover:scale-105"
                 onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Get 10 Free Booked Jobs
+                Start 14 Day Free Trial
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button 

@@ -100,7 +100,7 @@ export function WaitlistForm() {
                 </>
               ) : (
                 <>
-                  Get Free Jobs Now
+                  Start 14 Day Free Trial
                   <ArrowRight className="w-5 h-5" />
                 </>
               )}

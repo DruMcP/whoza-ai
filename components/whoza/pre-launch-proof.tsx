@@ -157,7 +157,7 @@ export function PreLaunchProof() {
                 size="lg"
                 className="bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-bold px-10 py-6 text-lg gap-3 shadow-xl shadow-[var(--rex-green)]/30 transition-all hover:scale-105"
               >
-                Get 10 Free Booked Jobs
+                Start 14 Day Free Trial
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </div>
