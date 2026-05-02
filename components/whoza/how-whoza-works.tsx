@@ -17,7 +17,7 @@ const flowSteps = [
 
 export function HowWhozaWorks() {
   return (
-    <section className="py-20 lg:py-32 bg-[var(--off-white)]">
+    <section id="how-it-works" className="py-20 lg:py-32 bg-[var(--off-white)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
