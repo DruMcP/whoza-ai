@@ -22,65 +22,67 @@ import { FinalCTA } from "@/components/whoza/final-cta"
 import { Footer } from "@/components/whoza/footer"
 import { StickyCTA, FloatingChatWidget } from "@/components/whoza/sticky-cta"
 import { TrilletVoiceWidget } from "@/components/whoza/trillet-voice-widget"
+import { ClaireDashboard } from "@/components/whoza/claire-dashboard"
 
 export default function Home() {
   return (
     <>
       <Header />
-      
+
       <main id="main-content" role="main">
         {/* HOOK - Financial urgency */}
         <Hero />
         <SocialProofBand />
-        
+
         {/* DOMINANT MOMENT - Pain → Solution sequence */}
         <LostRevenueCalculator />
         <WhatsAppDelivery />
-        
+
         {/* PRE-LAUNCH PROOF - Example scenario */}
         <PreLaunchProof />
-        
+
         {/* HOW IT WORKS - Full visual flow */}
         <HowWhozaWorks />
-        
+
         {/* CALL CAPTURE - Choose your voice */}
         <MeetTheTeam />
         <AudioDemo />
-        
+
         {/* VOICE AGENT DEMO - Talk to Katie live */}
         <section className="py-12 bg-[var(--navy-900)]">
           <div className="max-w-7xl mx-auto px-4 text-center">
-            <p className="text-white/60 text-sm mb-4">Try it now — no signup needed</p>
+            <p className="text-white/60 text-sm mb-4">Try it now - no signup needed</p>
             <TrilletVoiceWidget buttonLabel="Talk to Katie" />
           </div>
         </section>
-        
+
         {/* CONTROL - You stay in control */}
         <ControlSection />
-        
+
         {/* GROWTH ENGINE - Win more jobs */}
         <ReviewsEngine />
         <GrowthEngine />
-        
-        {/* DASHBOARD - See your ROI */}
+
+        {/* DASHBOARD — See your ROI + Claire Reviews */}
         <DashboardPreview />
+        <ClaireDashboard />
         
-        {/* STATS - Key metrics */}
+        {/* STATS — Key metrics */}
         <StatsBand />
-        
+
         {/* PROOF - Social proof */}
         <TestimonialCarousel />
         <GoogleReviews />
-        
+
         {/* WHY US - Comparison */}
         <ComparisonTable />
-        
+
         {/* OFFER - Pricing (no-brainer) */}
         <Pricing />
-        
+
         {/* OBJECTIONS - FAQ */}
         <FAQ />
-        
+
         {/* CLOSE - Hard close */}
         <FinalCTA />
       </main>
