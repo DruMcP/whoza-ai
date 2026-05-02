@@ -36,7 +36,12 @@ export function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-white/70 hover:text-white transition-colors duration-200"
+                onClick={(e) => {
+                  e.preventDefault()
+                  const el = document.querySelector(link.href)
+                  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                }}
+                className="text-sm text-white/70 hover:text-white transition-colors duration-200 cursor-pointer"
               >
                 {link.label}
               </a>
@@ -78,8 +83,13 @@ export function Header() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="block text-white/80 hover:text-white py-2 transition-colors"
-                  onClick={() => setIsOpen(false)}
+                  className="block text-white/80 hover:text-white py-2 transition-colors cursor-pointer"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    setIsOpen(false)
+                    const el = document.querySelector(link.href)
+                    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  }}
                 >
                   {link.label}
                 </a>
