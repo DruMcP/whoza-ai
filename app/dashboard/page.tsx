@@ -114,13 +114,6 @@ function formatDate(isoString: string): string {
 
 export default function DashboardPage() {
   const [enquiries] = useState<Enquiry[]>(MOCK_ENQUIRIES)
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) return null
 
   return (
     <div className="min-h-screen bg-[var(--navy-900)] text-white">

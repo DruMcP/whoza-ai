@@ -14,8 +14,10 @@ const ENDPOINTS = [
   { path: "/", name: "Homepage", method: "GET" },
   { path: "/privacy", name: "Privacy Policy", method: "GET" },
   { path: "/terms", name: "Terms of Service", method: "GET" },
+  { path: "/dashboard", name: "Dashboard", method: "GET" },
   { path: "/api/rex", name: "Rex API", method: "GET" },
   { path: "/api/trillet-webhook", name: "Trillet Webhook", method: "GET" },
+  { path: "/api/enquiries", name: "Enquiries API", method: "GET" },
 ];
 
 async function checkEndpoint({ path, name, method }) {
