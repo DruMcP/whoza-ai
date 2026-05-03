@@ -22,9 +22,7 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const distDir = path.join(__dirname, '..', 'dist');
-// ─── Config ─────────────────────────────────────────────────────────────────
-// Use env var for site URL so staging builds don't leak production URLs
-const baseUrl = process.env.SITE_URL || 'https://whoza.ai';
+const baseUrl = 'https://whoza.ai';
 
 // ─── Blog Posts ───────────────────────────────────────────────────────────────
 const blogPosts = [
@@ -36,27 +34,26 @@ const blogPosts = [
   { slug: 'the-ultimate-guide-to-google-business-profile-optimization-for-ai-search-2026', title: 'The Ultimate Guide to Google Business Profile Optimization for AI Search 2026 | Whoza.ai', description: 'Master Google Business Profile optimization to get recommended by AI search engines in 2026.' },
   { slug: 'why-your-business-isnt-showing-up-in-chatgpt-recommendations-and-how-to-fix-it', title: "Why Your Business Isn't Showing Up in ChatGPT Recommendations | Whoza.ai", description: 'Discover why your trade business is invisible to ChatGPT and AI search engines, and the exact steps to fix it.' },
   { slug: 'how-uk-tradespeople-can-get-found-on-chatgpt-and-ai-search-in-2026', title: 'How UK Tradespeople Can Get Found on ChatGPT and AI Search in 2026 | Whoza.ai', description: 'A step-by-step guide for UK plumbers, electricians, and builders to get found on ChatGPT and AI search engines.' },
-  { slug: 'how-uk-tradespeople-can-get-recommended-by-chatgpt-in-2026', title: 'How UK Tradespeople Can Get Recommended by ChatGPT in 2026 | Whoza.ai', description: 'Learn the proven strategies UK tradespeople use to get recommended by ChatGPT and AI assistants in 2026.', canonicalTo: 'https://whoza.ai/blog/how-uk-tradespeople-can-get-found-on-chatgpt-and-ai-search-in-2026/' },
-  { slug: 'electricians-guide-to-google-ai-overviews-how-to-get-featured', title: "Electrician's Guide to Google AI Overviews: How to Get Featured | Whoza.ai", description: 'A complete guide for electricians to get featured in Google AI Overviews and win more local customers.', canonicalTo: 'https://whoza.ai/blog/electricians-guide-to-google-ai-overviews-2026/' },
-  { slug: 'how-to-create-an-faq-page-that-ai-can-find-and-reference', title: 'How to Create an FAQ Page That AI Can Find and Reference | Whoza.ai', description: 'Learn how to create FAQ pages that AI search engines can easily find, parse, and reference in their answers.', canonicalTo: 'https://whoza.ai/blog/how-to-create-faq-page-ai-can-find-2026/' },
+  { slug: 'how-uk-tradespeople-can-get-recommended-by-chatgpt-in-2026', title: 'How UK Tradespeople Can Get Recommended by ChatGPT in 2026 | Whoza.ai', description: 'Learn the proven strategies UK tradespeople use to get recommended by ChatGPT and AI assistants in 2026.' },
+  { slug: 'electricians-guide-to-google-ai-overviews-how-to-get-featured', title: "Electrician's Guide to Google AI Overviews: How to Get Featured | Whoza.ai", description: 'A complete guide for electricians to get featured in Google AI Overviews and win more local customers.' },
+  { slug: 'how-to-create-an-faq-page-that-ai-can-find-and-reference', title: 'How to Create an FAQ Page That AI Can Find and Reference | Whoza.ai', description: 'Learn how to create FAQ pages that AI search engines can easily find, parse, and reference in their answers.' },
   { slug: 'ai-visibility-manchester-trades-2026-guide', title: 'AI Visibility for Manchester Tradespeople: 2026 Guide | Whoza.ai', description: 'The complete guide for Manchester plumbers, electricians, and builders to dominate AI search in 2026.' },
   { slug: 'what-is-ai-visibility-uk-tradespeople-2026', title: 'What Is AI Visibility? A Guide for UK Tradespeople in 2026 | Whoza.ai', description: 'Understand what AI visibility means for your trade business and why it matters more than traditional SEO in 2026.' },
-  { slug: 'how-uk-tradespeople-get-found-ai-search-2026', title: 'How UK Tradespeople Get Found in AI Search in 2026 | Whoza.ai', description: 'Discover the exact methods UK tradespeople are using to get found and recommended by AI search engines in 2026.', canonicalTo: 'https://whoza.ai/blog/how-uk-tradespeople-can-get-found-on-chatgpt-and-ai-search-in-2026/' },
+  { slug: 'how-uk-tradespeople-get-found-ai-search-2026', title: 'How UK Tradespeople Get Found in AI Search in 2026 | Whoza.ai', description: 'Discover the exact methods UK tradespeople are using to get found and recommended by AI search engines in 2026.' },
   { slug: 'best-practices-tradespeople-london-local-ai-visibility-guide', title: 'Best Practices for London Tradespeople: Local AI Visibility Guide | Whoza.ai', description: 'The definitive best practices guide for London tradespeople to improve their local AI visibility and win more clients.' },
-  { slug: 'how-plumbers-can-get-found-in-chatgpt-a-step-by-step-guide', title: 'How Plumbers Can Get Found in ChatGPT: A Step-by-Step Guide | Whoza.ai', description: 'A detailed step-by-step guide for plumbers to get recommended by ChatGPT and AI search engines.', canonicalTo: 'https://whoza.ai/blog/how-plumbers-can-get-found-in-chatgpt-2026/' },
+  { slug: 'how-plumbers-can-get-found-in-chatgpt-a-step-by-step-guide', title: 'How Plumbers Can Get Found in ChatGPT: A Step-by-Step Guide | Whoza.ai', description: 'A detailed step-by-step guide for plumbers to get recommended by ChatGPT and AI search engines.' },
   { slug: 'how-plumbers-can-get-found-in-chatgpt-2026', title: 'How Plumbers Can Get Found in ChatGPT in 2026 | Whoza.ai', description: 'Learn how plumbers can optimise their online presence to get recommended by ChatGPT and AI assistants in 2026.' },
   { slug: 'electricians-guide-to-google-ai-overviews-2026', title: "Electrician's Guide to Google AI Overviews in 2026 | Whoza.ai", description: 'How electricians can get featured in Google AI Overviews and dominate local AI search results in 2026.' },
-  { slug: 'ai-visibility-for-london-tradespeople-2026', title: 'AI Visibility for London Tradespeople in 2026 | Whoza.ai', description: 'How London plumbers, electricians, and builders can dominate AI search and get more local jobs in 2026.', canonicalTo: 'https://whoza.ai/blog/best-practices-tradespeople-london-local-ai-visibility-guide/' },
+  { slug: 'ai-visibility-for-london-tradespeople-2026', title: 'AI Visibility for London Tradespeople in 2026 | Whoza.ai', description: 'How London plumbers, electricians, and builders can dominate AI search and get more local jobs in 2026.' },
   { slug: 'how-to-create-faq-page-ai-can-find-2026', title: 'How to Create an FAQ Page AI Can Find in 2026 | Whoza.ai', description: 'Step-by-step guide to creating FAQ pages that AI search engines like ChatGPT and Perplexity will cite in 2026.' },
   { slug: 'roofers-10-step-checklist-ai-visibility-2026', title: "Roofer's 10-Step Checklist for AI Visibility in 2026 | Whoza.ai", description: 'A practical 10-step checklist for roofers to improve their AI visibility and get recommended by ChatGPT in 2026.' },
   { slug: 'why-bing-matters-for-ai-search-2026', title: 'Why Bing Matters for AI Search in 2026 | Whoza.ai', description: 'Understand why Bing is essential for AI search visibility and how to optimise your trade business for Bing in 2026.' },
   { slug: 'manchester-vs-birmingham-local-seo-strategies-2026', title: 'Manchester vs Birmingham: Local SEO Strategies for Tradespeople 2026 | Whoza.ai', description: 'Compare AI visibility strategies for tradespeople in Manchester and Birmingham, and learn which tactics work best.' },
-  { slug: 'roofers-checklist-10-steps-to-ai-visibility-2026', title: "Roofer's Checklist: 10 Steps to AI Visibility in 2026 | Whoza.ai", description: 'The essential 10-step checklist every roofer needs to achieve AI visibility and win more local jobs in 2026.', canonicalTo: 'https://whoza.ai/blog/roofers-10-step-checklist-ai-visibility-2026/' },
-  { slug: 'how-ai-search-engines-choose-plumber-recommendation-manchester', title: 'How AI Search Engines Choose a Plumber Recommendation in Manchester | Whoza.ai', description: 'Discover how AI search engines select which Manchester plumbers to recommend and how to be the one they choose.', canonicalTo: 'https://whoza.ai/blog/how-ai-search-engines-choose-which-local-businesses-to-recommend/' },
+  { slug: 'roofers-checklist-10-steps-to-ai-visibility-2026', title: "Roofer's Checklist: 10 Steps to AI Visibility in 2026 | Whoza.ai", description: 'The essential 10-step checklist every roofer needs to achieve AI visibility and win more local jobs in 2026.' },
+  { slug: 'how-ai-search-engines-choose-plumber-recommendation-manchester', title: 'How AI Search Engines Choose a Plumber Recommendation in Manchester | Whoza.ai', description: 'Discover how AI search engines select which Manchester plumbers to recommend and how to be the one they choose.' },
   { slug: 'why-ai-search-wont-recommend-your-trade-business-and-how-to-fix-it', title: "Why AI Search Won't Recommend Your Trade Business (And How to Fix It) | Whoza.ai", description: 'Understand the exact reasons AI search engines ignore your trade business and the proven fixes to get recommended.' },
   { slug: 'google-ai-overviews-stealing-clicks-guide-uk-tradespeople', title: 'Google AI Overviews Are Stealing Your Clicks: A Guide for UK Tradespeople | Whoza.ai', description: 'Learn how to turn Google AI Overviews from a threat into an opportunity for your UK trade business.' },
   { slug: 'how-ai-search-engines-rank-local-tradespeople-aeo-geo-guide-2026', title: 'How AI Search Engines Rank Local Tradespeople: The Complete AEO & GEO Guide for 2026 | Whoza.ai', description: 'Discover exactly how ChatGPT, Perplexity, and Google AI Overviews decide which plumbers, electricians, and roofers to recommend. Learn the seven proven AEO and GEO strategies to improve your AI visibility score and become the trusted answer for local trade searches in 2026.' },
-  { slug: 'how-reviews-influence-ai-search-recommendations-tradespeople-2026', title: 'How Online Reviews and Ratings Influence AI Search Recommendations for Local Tradespeople | Whoza.ai', description: 'Discover why AI search engines like ChatGPT and Perplexity rely heavily on customer reviews to recommend local tradespeople. Learn the seven proven strategies to turn your review profile into a powerful AI trust signal and dominate local recommendations in 2026.' },
 ];
 
 // ─── UK Cities ────────────────────────────────────────────────────────────────
@@ -99,30 +96,6 @@ const usCities = [
   { slug: 'charlotte', name: 'Charlotte', state: 'NC', contractors: 29000 },
 ];
 
-// ─── Trades ───────────────────────────────────────────────────────────────────
-const trades = [
-  { slug: 'plumber', name: 'Plumber', plural: 'Plumbers', description: 'Plumbers are one of the most searched-for trades in AI. When pipes burst or boilers fail, customers ask ChatGPT "Who is the best plumber near me?" — make sure AI names your business.', ukTradespeople: 85000, usTradespeople: 480000 },
-  { slug: 'electrician', name: 'Electrician', plural: 'Electricians', description: 'Electricians face fierce local competition. When homeowners need rewiring or businesses need commercial electrical work, AI assistants recommend the most visible electricians. Be that electrician.', ukTradespeople: 65000, usTradespeople: 380000 },
-  { slug: 'builder', name: 'Builder', plural: 'Builders', description: 'Builders and general contractors win the biggest jobs — extensions, renovations, and new builds. But AI only recommends builders with strong entity confidence. Let Rex fix that.', ukTradespeople: 120000, usTradespeople: 650000 },
-  { slug: 'roofer', name: 'Roofer', plural: 'Roofers', description: "Roofing is urgent — when a roof leaks, customers need someone fast. They ask AI 'Who is the best roofer near me?' Don't let your competitor be the answer.", ukTradespeople: 32000, usTradespeople: 210000 },
-  { slug: 'locksmith', name: 'Locksmith', plural: 'Locksmiths', description: "Locksmiths live and die by speed. When someone's locked out, they ask AI 'Emergency locksmith near me open now.' If you're not visible to AI, you're not visible at all.", ukTradespeople: 18000, usTradespeople: 95000 },
-  { slug: 'heating-engineer', name: 'Heating Engineer', plural: 'Heating Engineers', description: "When boilers break in winter or AC fails in summer, customers need heating engineers and HVAC technicians fast. AI assistants recommend the most visible and trusted professionals.", ukTradespeople: 42000, usTradespeople: 380000 },
-  { slug: 'painter-decorator', name: 'Painter & Decorator', plural: 'Painters & Decorators', description: "Painters and decorators thrive on referrals — but today's referrals come from AI. When customers ask 'Who is a reliable painter near me?' you need to be the answer.", ukTradespeople: 55000, usTradespeople: 290000 },
-  { slug: 'carpenter', name: 'Carpenter', plural: 'Carpenters', description: "Carpenters and joiners create bespoke work that AI can't replicate — but AI can recommend you. When customers ask for custom kitchens or fitted wardrobes, be the carpenter AI suggests.", ukTradespeople: 38000, usTradespeople: 180000 },
-  { slug: 'tiler', name: 'Tiler', plural: 'Tilers', description: "Tiling is detail work — customers want someone skilled and reliable. When they ask AI 'Who is a good tiler near me?' make sure your business is the one AI trusts.", ukTradespeople: 28000, usTradespeople: 145000 },
-  { slug: 'gardener', name: 'Gardener', plural: 'Gardeners', description: "Gardeners and landscapers create outdoor spaces that customers dream about. When they ask AI 'Who is the best landscaper near me?' make sure your beautiful work gets the recognition it deserves.", ukTradespeople: 45000, usTradespeople: 220000 },
-  { slug: 'window-installer', name: 'Window Installer', plural: 'Window Installers', description: "Window installers and glaziers handle some of the biggest home improvement investments. When customers ask AI about double glazing or window replacement costs, be the installer AI recommends.", ukTradespeople: 22000, usTradespeople: 115000 },
-  { slug: 'bathroom-fitter', name: 'Bathroom Fitter', plural: 'Bathroom Fitters', description: "Bathroom fitting is one of the most profitable trades — but also one of the most competitive. When customers ask AI about bathroom renovation costs, make sure your business is the one AI recommends.", ukTradespeople: 25000, usTradespeople: 135000 },
-  { slug: 'kitchen-fitter', name: 'Kitchen Fitter', plural: 'Kitchen Fitters', description: "Kitchen fitting represents the biggest home investment most people make. When customers ask AI 'Who is the best kitchen fitter near me?' you need to be the answer they get.", ukTradespeople: 22000, usTradespeople: 125000 },
-  { slug: 'plasterer', name: 'Plasterer', plural: 'Plasterers', description: "Plasterers and drywall contractors are the foundation of every renovation. When builders and homeowners ask AI for plastering services, make sure your smooth finish gets the credit it deserves.", ukTradespeople: 28000, usTradespeople: 145000 },
-  { slug: 'flooring-installer', name: 'Flooring Installer', plural: 'Flooring Installers', description: "Flooring installers transform homes room by room. When customers ask AI about hardwood, laminate, or carpet installation costs, make sure your expertise is the answer AI gives.", ukTradespeople: 24000, usTradespeople: 125000 },
-  { slug: 'drainage-engineer', name: 'Drainage Engineer', plural: 'Drainage Engineers', description: "Drainage engineers and drain specialists handle the emergencies nobody else wants. When drains block or pipes collapse, customers need someone fast. Be the drainage engineer AI recommends.", ukTradespeople: 15000, usTradespeople: 75000 },
-  { slug: 'gas-engineer', name: 'Gas Engineer', plural: 'Gas Engineers', description: "Gas engineers hold critical safety certifications that customers need to trust. When they ask AI for Gas Safe engineers, make sure your credentials and expertise are clearly visible.", ukTradespeople: 35000, usTradespeople: 185000 },
-  { slug: 'handyman', name: 'Handyman', plural: 'Handymen', description: "Handymen are the jack-of-all-trades that every homeowner needs. When customers ask AI 'Who is a reliable handyman near me?' you need to be visible for every small job that keeps your diary full.", ukTradespeople: 48000, usTradespeople: 250000 },
-  { slug: 'fencing-contractor', name: 'Fencing Contractor', plural: 'Fencing Contractors', description: "Fencing contractors protect what matters most — privacy, security, and property boundaries. When customers ask AI about fence installation costs, make sure your craftsmanship is the answer.", ukTradespeople: 18000, usTradespeople: 95000 },
-  { slug: 'scaffolder', name: 'Scaffolder', plural: 'Scaffolders', description: "Scaffolders enable every other trade to work safely at height. When builders and roofers ask AI for scaffolding quotes, make sure your safety record and availability are visible.", ukTradespeople: 15000, usTradespeople: 78000 },
-];
-
 // ─── Static Pages ─────────────────────────────────────────────────────────────
 const videoPageSchema = {
   "@context": "https://schema.org",
@@ -141,18 +114,15 @@ const videoPageSchema = {
 };
 
 const staticPages = [
-  { path: '/', title: 'Whoza.ai — See Who AI Recommends for Your Trade', description: 'Stop losing jobs to AI-recommended competitors. Rex helps plumbers, electricians, builders & 50+ trades get found when customers ask ChatGPT, Google AI & Perplexity for local services. Start your free competitor analysis.' },
   { path: '/video/', title: 'How Whoza.ai Works — Video | AI Search Optimization for Tradespeople', description: 'Watch how Rex helps tradespeople get found in ChatGPT, Google AI, and Perplexity. Weekly 10-minute tasks. 60-second explainer video.' },
   { path: '/how-it-works/', title: 'How AI Search Optimization Works for Tradespeople | Whoza.ai', description: 'Learn how Rex helps tradespeople appear in ChatGPT and AI search recommendations. Weekly 10-minute tasks that improve your AI visibility across all major platforms. No technical knowledge required.' },
   { path: '/pricing/', title: 'AI Search Optimization Pricing for Tradespeople | Whoza.ai', description: 'Simple pricing from £59/month. Get more local jobs through AI search visibility. 14-day free trial, no credit card required. No contracts, cancel anytime.' },
   { path: '/case-studies/', title: 'AI Search Optimization Results for Tradespeople | Whoza.ai', description: 'See how plumbers, electricians, roofers and other tradespeople are getting more local jobs by appearing in ChatGPT and AI search recommendations.' },
   { path: '/competitor-analysis/', title: 'Why Is My Business Not in ChatGPT? Free Competitor Analysis | Whoza.ai', description: 'Find out why AI search does not recommend your trade business. See who AI recommends for your trade in your area and get 3 quick fixes to start appearing in ChatGPT and Google AI results.' },
-  // NOTE: /free-score/ was a 301 redirect to /competitor-analysis/ — do NOT prerender
+  // NOTE: /free-score/ is a 301 redirect to /competitor-analysis/ — do NOT prerender
   // as a separate page. It exists in _redirects for legacy URL support only.
   { path: '/start/', title: 'Start Your AI Search Optimization | Whoza.ai Free Trial', description: 'Create your free account and let Rex help your trade business appear in ChatGPT, Google AI and Perplexity recommendations. 14-day free trial, no credit card required.' },
-  // NOTE: /login/ was a client-side redirect to /sign-in/ — do NOT prerender
-  // Server-side 301 redirect exists in _redirects for SEO.
-  // { path: '/login/', title: 'Sign In | Whoza.ai', description: 'Sign in to your Whoza.ai account to view your AI visibility tasks, reports, and competitor analysis.' },
+  { path: '/login/', title: 'Sign In | Whoza.ai', description: 'Sign in to your Whoza.ai account to view your AI visibility tasks, reports, and competitor analysis.' },
   { path: '/sign-in/', title: 'Sign In | Whoza.ai', description: 'Sign in to your Whoza.ai account to view your AI visibility tasks, reports, and competitor analysis.' },
   { path: '/contact/', title: 'Contact Us | Whoza.ai - Get in Touch', description: 'Have questions about AI-powered visibility for tradespeople? Contact Whoza.ai for support, inquiries, or to learn more about our service.' },
   { path: '/blog/', title: 'AI Visibility Guides for Tradespeople | Whoza.ai Blog', description: 'Expert guides on AI visibility and digital marketing for plumbers, electricians, builders, and tradespeople.' },
@@ -160,8 +130,6 @@ const staticPages = [
   { path: '/privacy/', title: 'Privacy Policy | Whoza.ai - Your Data is Protected', description: 'Read our privacy policy. GDPR compliant AI search optimization platform. ICO registered.' },
   { path: '/terms/', title: 'Terms of Service | Whoza.ai - Fair Terms for Tradespeople', description: 'Review our terms of service. Transparent, fair terms for tradespeople using our AI search optimization platform.' },
   { path: '/cookie-policy/', title: 'Cookie Policy | Whoza.ai', description: 'Read our cookie policy to learn how we use cookies to improve your experience on Whoza.ai.' },
-  { path: '/voice/', title: 'AI Voice Agent for Tradespeople | Never Miss a Call', description: 'Your AI receptionist answers every call 24/7, books jobs into your diary, filters spam, and transfers emergencies. 14-day free trial.' },
-  { path: '/voice/setup/', title: 'Set Up AI Voice Agent | Whoza.ai', description: 'Set up your AI voice receptionist in 10 minutes. No technical skills needed.' },
 ];
 
 // ─── FAQPage Schema for Homepage ──────────────────────────────────────────────
@@ -251,51 +219,40 @@ const homeFAQSchema = {
 // It is visually hidden (position:absolute; width:1px; height:1px; overflow:hidden)
 // so it does not affect the visual layout, but is fully readable by crawlers.
 // This resolves the Ahrefs "Page has no outgoing links" critical error across all pages.
-// Uses relative URLs so staging builds don't leak production URLs.
 const staticNavBlock = `
 <nav aria-label="Site navigation" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">
-  <a href="/">Home</a>
-  <a href="/how-it-works/">How It Works</a>
-  <a href="/pricing/">Pricing</a>
-  <a href="/case-studies/">Case Studies</a>
-  <a href="/competitor-analysis/">Competitor Analysis</a>
-  <a href="/blog/">Blog</a>
-  <a href="/trust/">Trust &amp; Security</a>
-  <a href="/contact/">Contact</a>
-  <a href="/privacy/">Privacy Policy</a>
-  <a href="/terms/">Terms of Service</a>
-  <a href="/uk/ai-visibility/london/">AI Visibility London</a>
-  <a href="/uk/ai-visibility/birmingham/">AI Visibility Birmingham</a>
-  <a href="/uk/ai-visibility/manchester/">AI Visibility Manchester</a>
-  <a href="/uk/ai-visibility/leeds/">AI Visibility Leeds</a>
-  <a href="/uk/ai-visibility/glasgow/">AI Visibility Glasgow</a>
-  <a href="/uk/ai-visibility/liverpool/">AI Visibility Liverpool</a>
-  <a href="/uk/ai-visibility/bristol/">AI Visibility Bristol</a>
-  <a href="/uk/ai-visibility/edinburgh/">AI Visibility Edinburgh</a>
-  <a href="/us/ai-visibility/new-york/">AI Visibility New York</a>
-  <a href="/us/ai-visibility/los-angeles/">AI Visibility Los Angeles</a>
-  <a href="/us/ai-visibility/chicago/">AI Visibility Chicago</a>
-  <a href="/us/ai-visibility/houston/">AI Visibility Houston</a>
-  <a href="/us/ai-visibility/dallas/">AI Visibility Dallas</a>
-  <a href="/trades/plumber/">AI Visibility for Plumbers</a>
-  <a href="/trades/electrician/">AI Visibility for Electricians</a>
-  <a href="/trades/builder/">AI Visibility for Builders</a>
-  <a href="/trades/roofer/">AI Visibility for Roofers</a>
-  <a href="/trades/locksmith/">AI Visibility for Locksmiths</a>
+  <a href="https://whoza.ai/">Home</a>
+  <a href="https://whoza.ai/how-it-works/">How It Works</a>
+  <a href="https://whoza.ai/pricing/">Pricing</a>
+  <a href="https://whoza.ai/case-studies/">Case Studies</a>
+  <a href="https://whoza.ai/competitor-analysis/">Competitor Analysis</a>
+  <a href="https://whoza.ai/blog/">Blog</a>
+  <a href="https://whoza.ai/trust/">Trust &amp; Security</a>
+  <a href="https://whoza.ai/contact/">Contact</a>
+  <a href="https://whoza.ai/privacy/">Privacy Policy</a>
+  <a href="https://whoza.ai/terms/">Terms of Service</a>
+  <a href="https://whoza.ai/uk/ai-visibility/london/">AI Visibility London</a>
+  <a href="https://whoza.ai/uk/ai-visibility/birmingham/">AI Visibility Birmingham</a>
+  <a href="https://whoza.ai/uk/ai-visibility/manchester/">AI Visibility Manchester</a>
+  <a href="https://whoza.ai/uk/ai-visibility/leeds/">AI Visibility Leeds</a>
+  <a href="https://whoza.ai/uk/ai-visibility/glasgow/">AI Visibility Glasgow</a>
+  <a href="https://whoza.ai/uk/ai-visibility/liverpool/">AI Visibility Liverpool</a>
+  <a href="https://whoza.ai/uk/ai-visibility/bristol/">AI Visibility Bristol</a>
+  <a href="https://whoza.ai/uk/ai-visibility/edinburgh/">AI Visibility Edinburgh</a>
+  <a href="https://whoza.ai/us/ai-visibility/new-york/">AI Visibility New York</a>
+  <a href="https://whoza.ai/us/ai-visibility/los-angeles/">AI Visibility Los Angeles</a>
+  <a href="https://whoza.ai/us/ai-visibility/chicago/">AI Visibility Chicago</a>
+  <a href="https://whoza.ai/us/ai-visibility/houston/">AI Visibility Houston</a>
+  <a href="https://whoza.ai/us/ai-visibility/dallas/">AI Visibility Dallas</a>
 </nav>`;
 
 // ─── Read base index.html ─────────────────────────────────────────────────────
 const baseHtml = fs.readFileSync(path.join(distDir, 'index.html'), 'utf-8');
 
-function generateHtml(urlPath, title, description, canonicalOverride = null) {
-  const canonicalUrl = canonicalOverride || `${baseUrl}${urlPath}`;
+function generateHtml(canonicalPath, title, description) {
+  const canonicalUrl = `${baseUrl}${canonicalPath}`;
   let html = baseHtml;
 
-  // Determine page type for geo/hreflang
-  const isUK = urlPath.startsWith('/uk/');
-  const isUS = urlPath.startsWith('/us/');
-  const isTrade = urlPath.startsWith('/trades/');
-  
   // Replace canonical tag
   html = html.replace(
     /<link rel="canonical" href="[^"]*"\s*\/?>/,
@@ -344,73 +301,14 @@ function generateHtml(urlPath, title, description, canonicalOverride = null) {
     `<meta name="twitter:description" content="${description.replace(/"/g, '&quot;')}" />`
   );
 
-  // Update geo tags for UK/US pages
-  if (isUK) {
-    html = html.replace(
-      /<meta name="geo\.region" content="[^"]*"\s*\/?>/,
-      `<meta name="geo.region" content="GB" />`
-    );
-    html = html.replace(
-      /<meta name="geo\.placename" content="[^"]*"\s*\/?>/,
-      `<meta name="geo.placename" content="United Kingdom" />`
-    );
-    html = html.replace(
-      /<meta property="og:locale" content="[^"]*"\s*\/?>/,
-      `<meta property="og:locale" content="en_GB" />`
-    );
-  } else if (isUS) {
-    html = html.replace(
-      /<meta name="geo\.region" content="[^"]*"\s*\/?>/,
-      `<meta name="geo.region" content="US" />`
-    );
-    html = html.replace(
-      /<meta name="geo\.placename" content="[^"]*"\s*\/?>/,
-      `<meta name="geo.placename" content="United States" />`
-    );
-    html = html.replace(
-      /<meta property="og:locale" content="[^"]*"\s*\/?>/,
-      `<meta property="og:locale" content="en_US" />`
-    );
-  }
-
-  // Add hreflang tags for UK/US pages
-  if (isUK || isUS) {
-    const citySlug = urlPath.split('/').filter(Boolean).pop();
-    const ukUrl = `${baseUrl}/uk/ai-visibility/${citySlug}/`;
-    const usUrl = `${baseUrl}/us/ai-visibility/${citySlug}/`;
-    const hreflangBlock = `\n    <link rel="alternate" hreflang="en-gb" href="${ukUrl}" />\n    <link rel="alternate" hreflang="en-us" href="${usUrl}" />\n    <link rel="alternate" hreflang="x-default" href="${ukUrl}" />`;
-    html = html.replace(
-      /<link rel="canonical" href="[^"]*"\s*\/?>/,
-      `<link rel="canonical" href="${canonicalUrl}" />${hreflangBlock}`
-    );
-  } else if (isTrade) {
-    const tradeSlug = urlPath.split('/')[2];
-    const tradeUrl = `${baseUrl}/trades/${tradeSlug}/`;
-    const hreflangBlock = `\n    <link rel="alternate" hreflang="en-gb" href="${tradeUrl}" />\n    <link rel="alternate" hreflang="en-us" href="${tradeUrl}" />\n    <link rel="alternate" hreflang="x-default" href="${tradeUrl}" />`;
-    html = html.replace(
-      /<link rel="canonical" href="[^"]*"\s*\/?>/,
-      `<link rel="canonical" href="${canonicalUrl}" />${hreflangBlock}`
-    );
-  }
-
-  // Update og:image and og:image:secure_url to use the correct domain
-  html = html.replace(
-    /https:\/\/whoza\.ai\/og-image\.png/g,
-    `${baseUrl}/og-image.png`
-  );
-  html = html.replace(
-    /"dateModified": "2025-12-29"/g,
-    '"dateModified": "2026-04-26"'
-  );
-
   // Inject VideoObject schema on /video page (required for Google Video indexing)
-  if (urlPath === '/video/') {
+  if (canonicalPath === '/video/') {
     const videoScript = `\n<script type="application/ld+json">${JSON.stringify(videoPageSchema)}</script>`;
     html = html.replace('</head>', `${videoScript}\n</head>`);
   }
 
   // Inject FAQPage schema on homepage (fixes GSC 0 impressions for FAQ)
-  if (urlPath === '/') {
+  if (canonicalPath === '/') {
     const faqScript = `\n<script type="application/ld+json">${JSON.stringify(homeFAQSchema)}</script>`;
     // Insert before closing </head> tag
     html = html.replace('</head>', `${faqScript}\n</head>`);
@@ -428,11 +326,11 @@ function generateHtml(urlPath, title, description, canonicalOverride = null) {
   return html;
 }
 
-function writeHtml(urlPath, title, description, canonicalOverride = null) {
+function writeHtml(urlPath, title, description) {
   const dirPath = path.join(distDir, urlPath.replace(/^\//, ''));
   fs.mkdirSync(dirPath, { recursive: true });
   const filePath = path.join(dirPath, 'index.html');
-  const html = generateHtml(urlPath, title, description, canonicalOverride);
+  const html = generateHtml(urlPath, title, description);
   fs.writeFileSync(filePath, html, 'utf-8');
   console.log(`  ✓ ${urlPath}`);
 }
@@ -448,7 +346,7 @@ for (const page of staticPages) {
 console.log('\n📝 Blog posts:');
 for (const post of blogPosts) {
   const urlPath = `/blog/${post.slug}/`;
-  writeHtml(urlPath, post.title, post.description, post.canonicalTo || null);
+  writeHtml(urlPath, post.title, post.description);
 }
 
 console.log('\n🇬🇧 UK city pages:');
@@ -467,22 +365,13 @@ for (const city of usCities) {
   writeHtml(urlPath, title, description);
 }
 
-console.log('\n🔨 Trade pages:');
-for (const trade of trades) {
-  const urlPath = `/trades/${trade.slug}/`;
-  const title = `AI Visibility for ${trade.plural} | Get Recommended by ChatGPT | Whoza.ai`;
-  const description = trade.description;
-  writeHtml(urlPath, title, description);
-}
-
 console.log('\n✅ Prerender complete!\n');
 
 // ─── Summary ──────────────────────────────────────────────────────────────────
-const totalPages = staticPages.length + blogPosts.length + ukCities.length + usCities.length + trades.length;
+const totalPages = staticPages.length + blogPosts.length + ukCities.length + usCities.length;
 console.log(`📊 Summary:`);
 console.log(`   Static pages: ${staticPages.length}`);
 console.log(`   Blog posts:   ${blogPosts.length}`);
 console.log(`   UK cities:    ${ukCities.length}`);
 console.log(`   US cities:    ${usCities.length}`);
-console.log(`   Trade pages:  ${trades.length}`);
 console.log(`   Total:        ${totalPages} pages prerendered\n`);

@@ -5,7 +5,6 @@ import { getCityBySlug, getAllUKCities } from '../data/ukCities';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
-import { generateOrganizationSchema, generateBreadcrumbSchema, getBaseUrl } from '../utils/schemaOrg';
 
 export default function LocationPageUK() {
   const { citySlug } = useParams();
@@ -46,19 +45,13 @@ export default function LocationPageUK() {
   const allCities = getAllUKCities();
   const otherCities = allCities.filter(c => c.slug !== citySlug).slice(0, 5);
 
-  const orgSchema = generateOrganizationSchema();
-  const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: '/' },
-    { name: city.name, url: `/uk/ai-visibility/${city.slug}` }
-  ]);
-
   // Schema for AEO optimization
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": `Whoza.ai ${city.name} - AI Visibility for ${getTerm('tradespeople')}`,
     "description": `Helping ${getTerm('tradespeople')} in ${city.name} get found and recommended by AI search engines like ChatGPT and Google AI.`,
-    "url": `${getBaseUrl()}/uk/ai-visibility/${city.slug}`,
+    "url": `https://whoza.ai/uk/ai-visibility/${city.slug}`,
     "address": {
       "@type": "PostalAddress",
       "addressLocality": city.name,
@@ -72,51 +65,12 @@ export default function LocationPageUK() {
     "priceRange": "££"
   };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": `Why do ${getTerm('tradespeople')} in ${city.name} need AI search optimization?`,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": `More customers in ${city.name} now ask AI assistants like ChatGPT and Google AI for local trade recommendations instead of using traditional search. When someone asks "Who is the best plumber or electrician in ${city.name}?" you want AI to recommend your business. Without AI search optimization, you're invisible to the fastest-growing customer acquisition channel in ${city.name}.`
-        }
-      },
-      {
-        "@type": "Question",
-        "name": `How does whoza.ai help ${getTerm('tradespeople')} in ${city.name} get found in AI search?`,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": `Rex, your AI visibility assistant, analyses your business across all major AI platforms and sends one simple weekly task to improve your Entity Confidence Score. Tasks include optimizing your Google Business Profile, fixing directory inconsistencies, adding FAQ schema markup, and building review strategies. Each task takes 10-15 minutes and is designed specifically for non-technical trade business owners in ${city.name}.`
-        }
-      },
-      {
-        "@type": "Question",
-        "name": `How long until ${getTerm('tradespeople')} in ${city.name} see results from AI search optimization?`,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": `Most ${getTerm('tradespeople')} in ${city.name} start seeing improved AI mentions within 4-6 weeks. The timeline depends on your starting Entity Confidence Score and how consistently you complete the weekly tasks. Businesses that follow Rex's full 12-week programme typically see a 3-5x increase in AI-driven customer enquiries within 90 days. Your ${city.name} competitor analysis shows your current baseline.`
-        }
-      },
-      {
-        "@type": "Question",
-        "name": `What makes AI search optimization different from local SEO in ${city.name}?`,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": `Traditional local SEO in ${city.name} focuses on ranking high in Google's blue-link results for keywords like "plumber ${city.name}". AI search optimization focuses on becoming the business that ChatGPT and Google AI name directly as the answer when someone asks "Who's the best plumber in ${city.name}?" Instead of competing for position #1 on a search page, you're competing to be the single recommended answer — which gets 60-80% of AI-driven customer enquiries.`
-        }
-      }
-    ]
-  };
-
   return (
     <div className="min-h-screen flex flex-col">
       <SEO
         title={`AI Visibility for ${getTerm('tradespeople')} in ${city.name}`}
         description={`Get your AI Visibility Score in ${city.name}. Join over ${city.tradespeople.toLocaleString()} ${getTerm('tradespeople')} optimising their online presence. ${formatPrice(59)} to start.`}
-        schemas={[orgSchema, breadcrumbSchema, localBusinessSchema, faqSchema]}
+        schemas={[localBusinessSchema]}
       />
       <Header />
 
@@ -300,53 +254,6 @@ export default function LocationPageUK() {
             <Link to="/competitor-analysis" className="btn bg-white text-blue-600 hover:bg-gray-100 btn-lg">
               Get Your Free Visibility Score
             </Link>
-          </div>
-        </section>
-
-        {/* FAQ Section — Visible content matching schema for AEO compliance */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <h2 className="text-3xl font-bold mb-12 text-center">
-              Frequently Asked Questions About AI Visibility in {city.name}
-            </h2>
-
-            <div className="space-y-6">
-              <div className="card p-6">
-                <h3 className="text-xl font-bold mb-3">
-                  Why do {getTerm('tradespeople')} in {city.name} need AI search optimization?
-                </h3>
-                <p>
-                  More customers in {city.name} now ask AI assistants like ChatGPT and Google AI for local trade recommendations instead of using traditional search. When someone asks "Who is the best plumber or electrician in {city.name}?" you want AI to recommend your business. Without AI search optimization, you're invisible to the fastest-growing customer acquisition channel in {city.name}.
-                </p>
-              </div>
-
-              <div className="card p-6">
-                <h3 className="text-xl font-bold mb-3">
-                  How does whoza.ai help {getTerm('tradespeople')} in {city.name} get found in AI search?
-                </h3>
-                <p>
-                  Rex, your AI visibility assistant, analyses your business across all major AI platforms and sends one simple weekly task to improve your Entity Confidence Score. Tasks include optimizing your Google Business Profile, fixing directory inconsistencies, adding FAQ schema markup, and building review strategies. Each task takes 10-15 minutes and is designed specifically for non-technical trade business owners in {city.name}.
-                </p>
-              </div>
-
-              <div className="card p-6">
-                <h3 className="text-xl font-bold mb-3">
-                  How long until {getTerm('tradespeople')} in {city.name} see results from AI search optimization?
-                </h3>
-                <p>
-                  Most {getTerm('tradespeople')} in {city.name} start seeing improved AI mentions within 4-6 weeks. The timeline depends on your starting Entity Confidence Score and how consistently you complete the weekly tasks. Businesses that follow Rex's full 12-week programme typically see a 3-5x increase in AI-driven customer enquiries within 90 days. Your {city.name} competitor analysis shows your current baseline.
-                </p>
-              </div>
-
-              <div className="card p-6">
-                <h3 className="text-xl font-bold mb-3">
-                  What makes AI search optimization different from local SEO in {city.name}?
-                </h3>
-                <p>
-                  Traditional local SEO in {city.name} focuses on ranking high in Google's blue-link results for keywords like "plumber {city.name}". AI search optimization focuses on becoming the business that ChatGPT and Google AI name directly as the answer when someone asks "Who's the best plumber in {city.name}?" Instead of competing for position #1 on a search page, you're competing to be the single recommended answer — which gets 60-80% of AI-driven customer enquiries.
-                </p>
-              </div>
-            </div>
           </div>
         </section>
       </main>

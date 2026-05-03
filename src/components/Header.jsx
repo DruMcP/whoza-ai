@@ -1,7 +1,9 @@
 import { useState, useEffect, memo, useCallback } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
-import { Menu, X } from 'lucide-react';
+import AccessibilityMenu from './AccessibilityMenu';
+import ExternalLinkIcon from './icons/ui/ExternalLinkIcon';
+import CountrySwitcher from './CountrySwitcher';
 
 const WhozaLogo = memo(() => (
   <img
@@ -9,9 +11,8 @@ const WhozaLogo = memo(() => (
     alt="Whoza.ai - AI for Tradespeople"
     className="header-logo"
     loading="eager"
-    width="200"
+    width="240"
     height="auto"
-    style={{ maxHeight: '40px', width: 'auto' }}
   />
 ));
 
@@ -19,8 +20,16 @@ const Header = memo(function Header() {
   const { user, userData, signOut } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
+  const [isAnimating, setIsAnimating] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsAnimating(false);
+    }, 1400);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     let ticking = false;
@@ -43,14 +52,20 @@ const Header = memo(function Header() {
     navigate('/');
   }, [signOut, navigate]);
 
+  const toggleMobileMenu = useCallback(() => {
+    setIsMobileMenuOpen(prev => !prev);
+  }, []);
+
   const closeMobileMenu = useCallback(() => {
     setIsMobileMenuOpen(false);
   }, []);
 
+  // Close mobile menu on route change
   useEffect(() => {
     closeMobileMenu();
   }, [location.pathname, closeMobileMenu]);
 
+  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -63,184 +78,110 @@ const Header = memo(function Header() {
   }, [isMobileMenuOpen]);
 
   return (
-    <header
-      className="fixed top-0 left-0 right-0 z-[100] transition-all duration-300"
-      style={{
-        background: isScrolled ? 'rgba(255,255,255,0.92)' : 'rgba(255,255,255,0.6)',
-        backdropFilter: isScrolled ? 'blur(12px)' : 'blur(4px)',
-        borderBottom: isScrolled ? '1px solid var(--color-border)' : '1px solid transparent',
-        boxShadow: isScrolled ? 'var(--shadow-sm)' : 'none',
-      }}
-      role="banner"
-    >
-      <div
-        className="flex items-center justify-between"
-        style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          padding: isScrolled ? '12px 24px' : '16px 24px',
-          transition: 'padding 0.3s ease',
-        }}
-      >
-        {/* Logo */}
-        <Link to="/" className="flex items-center shrink-0" aria-label="whoza.ai home">
-          <WhozaLogo />
-        </Link>
+    <header className={`header ${isScrolled ? 'header-scrolled' : ''}`} role="banner">
+      <div className="header-inner">
+        <div className="header-left">
+          <Link to="/" className="header-logo-link" aria-label="whoza.ai home">
+            <WhozaLogo />
+          </Link>
+        </div>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
-          <Link
-            to="/competitor-analysis"
-            className="text-sm font-medium transition-colors hover:text-blue-600"
-            style={{ color: 'var(--color-navy)', fontFamily: 'var(--font-body)' }}
-          >
-            Product
-          </Link>
-          <Link
-            to="/pricing"
-            className="text-sm font-medium transition-colors hover:text-blue-600"
-            style={{ color: 'var(--color-navy)', fontFamily: 'var(--font-body)' }}
-          >
-            Pricing
-          </Link>
-          <Link
-            to="/how-it-works"
-            className="text-sm font-medium transition-colors hover:text-blue-600"
-            style={{ color: 'var(--color-navy)', fontFamily: 'var(--font-body)' }}
-          >
-            About
-          </Link>
-        </nav>
+        {/* Mobile Hamburger Button */}
+        <button 
+          className="mobile-menu-toggle"
+          onClick={toggleMobileMenu}
+          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-navigation"
+        >
+          <span className="hamburger-icon">
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+          </span>
+        </button>
 
-        {/* Desktop CTA + Auth */}
-        <div className="hidden md:flex items-center gap-4">
+        <nav className={`header-navigation ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`} id="mobile-navigation" aria-label="Main navigation">
           {!user ? (
             <>
-              <Link
-                to="/start?mode=signin"
-                className="text-sm font-medium transition-colors hover:text-blue-600"
-                style={{ color: 'var(--color-slate)' }}
-              >
-                Log In
-              </Link>
-              <Link
-                to="/pricing"
-                className="ds-btn ds-btn-cta text-sm"
-                style={{ minHeight: '40px', padding: '8px 20px' }}
-              >
-                Start Free Trial
-              </Link>
+              <ul className="header-nav-primary" role="list">
+                <li><Link to="/how-it-works" className="nav-link" onClick={closeMobileMenu}>How it works</Link></li>
+                <li><Link to="/case-studies" className="nav-link" onClick={closeMobileMenu}>Case Studies</Link></li>
+                <li><Link to="/pricing" className="nav-link" onClick={closeMobileMenu}>Pricing</Link></li>
+                <li><Link to="/blog" className="nav-link" onClick={closeMobileMenu}>Blog</Link></li>
+                <li><Link to="/trust" className="nav-link" onClick={closeMobileMenu}>Trust</Link></li>
+                <li><Link to="/contact" className="nav-link" onClick={closeMobileMenu}>Contact</Link></li>
+              </ul>
+              <div className="header-nav-secondary">
+                <div className="header-utility-group">
+                  <CountrySwitcher />
+                  <AccessibilityMenu />
+                </div>
+                <div className="header-cta-group">
+                  <Link to="/start?mode=signin" className="header-login-btn btn-hover" aria-label="Log in to your account" onClick={closeMobileMenu}>
+                    <svg className="login-icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
+                      <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                    </svg>
+                    Log In
+                  </Link>
+                  <Link to="/competitor-analysis" className="header-cta-btn btn-hover" aria-label="Check who AI recommends for your trade" onClick={closeMobileMenu}>
+                    Check My Competitor
+                  </Link>
+                </div>
+              </div>
+            </>
+          ) : userData?.role === 'admin' ? (
+            <>
+              <ul className="header-nav-primary" role="list">
+                <li><Link to="/admin" className="nav-link" onClick={closeMobileMenu}>Admin</Link></li>
+                <li><Link to="/account" className="nav-link" onClick={closeMobileMenu}>My Account</Link></li>
+                <li><Link to="/contact" className="nav-link" onClick={closeMobileMenu}>Contact</Link></li>
+              </ul>
+              <div className="header-nav-secondary">
+                <div className="header-utility-group">
+                  <AccessibilityMenu />
+                </div>
+                <div className="header-cta-group">
+                  <button onClick={handleSignOut} className="header-login-btn btn-hover" aria-label="Sign out of your account">
+                    Sign out
+                  </button>
+                </div>
+              </div>
             </>
           ) : (
             <>
-              <Link
-                to="/portal"
-                className="text-sm font-medium transition-colors hover:text-blue-600"
-                style={{ color: 'var(--color-navy)' }}
-              >
-                Portal
-              </Link>
-              <button
-                onClick={handleSignOut}
-                className="text-sm font-medium transition-colors hover:text-red-500"
-                style={{ color: 'var(--color-slate)' }}
-              >
-                Sign Out
-              </button>
-            </>
-          )}
-        </div>
-
-        {/* Mobile Hamburger */}
-        <button
-          className="md:hidden p-2 rounded-lg"
-          style={{ color: 'var(--color-navy)' }}
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={isMobileMenuOpen}
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div
-          className="md:hidden absolute top-full left-0 right-0 border-b"
-          style={{
-            background: 'rgba(255,255,255,0.97)',
-            backdropFilter: 'blur(12px)',
-            borderColor: 'var(--color-border)',
-            boxShadow: 'var(--shadow-lg)',
-          }}
-        >
-          <div className="flex flex-col p-6 gap-4">
-            <Link
-              to="/competitor-analysis"
-              onClick={closeMobileMenu}
-              className="text-base font-medium py-2"
-              style={{ color: 'var(--color-navy)' }}
-            >
-              Product
-            </Link>
-            <Link
-              to="/pricing"
-              onClick={closeMobileMenu}
-              className="text-base font-medium py-2"
-              style={{ color: 'var(--color-navy)' }}
-            >
-              Pricing
-            </Link>
-            <Link
-              to="/how-it-works"
-              onClick={closeMobileMenu}
-              className="text-base font-medium py-2"
-              style={{ color: 'var(--color-navy)' }}
-            >
-              About
-            </Link>
-            <div className="border-t pt-4 mt-2" style={{ borderColor: 'var(--color-border)' }}>
-              {!user ? (
-                <>
-                  <Link
-                    to="/start?mode=signin"
-                    onClick={closeMobileMenu}
-                    className="block text-base font-medium py-2 mb-3"
-                    style={{ color: 'var(--color-slate)' }}
-                  >
-                    Log In
-                  </Link>
+              <ul className="header-nav-primary" role="list">
+                <li><Link to="/portal" className="nav-link" onClick={closeMobileMenu}>Portal</Link></li>
+                <li><Link to="/tasks" className="nav-link" onClick={closeMobileMenu}>Tasks</Link></li>
+                <li><Link to="/reports" className="nav-link" onClick={closeMobileMenu}>Reports</Link></li>
+                <li><Link to="/account" className="nav-link" onClick={closeMobileMenu}>My Account</Link></li>
+                <li><Link to="/contact" className="nav-link" onClick={closeMobileMenu}>Contact</Link></li>
+              </ul>
+              <div className="header-nav-secondary">
+                {userData?.subscription_tier && (
                   <Link
                     to="/pricing"
+                    className="header-tier-badge"
+                    aria-label={`Current plan: ${userData.subscription_tier}. Click to view pricing and upgrade options`}
                     onClick={closeMobileMenu}
-                    className="ds-btn ds-btn-cta w-full justify-center"
                   >
-                    Start Free Trial
+                    <span>{userData.subscription_tier} Plan</span>
+                    <ExternalLinkIcon width={14} height={14} color="currentColor" />
                   </Link>
-                </>
-              ) : (
-                <>
-                  <Link
-                    to="/portal"
-                    onClick={closeMobileMenu}
-                    className="block text-base font-medium py-2 mb-3"
-                    style={{ color: 'var(--color-navy)' }}
-                  >
-                    Portal
-                  </Link>
-                  <button
-                    onClick={() => { closeMobileMenu(); handleSignOut(); }}
-                    className="block text-base font-medium py-2 w-full text-left"
-                    style={{ color: 'var(--color-slate)' }}
-                  >
-                    Sign Out
+                )}
+                <div className="header-utility-group">
+                  <AccessibilityMenu />
+                </div>
+                <div className="header-cta-group">
+                  <button onClick={handleSignOut} className="header-login-btn btn-hover" aria-label="Sign out of your account">
+                    Sign out
                   </button>
-                </>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
+                </div>
+              </div>
+            </>
+          )}
+        </nav>
+      </div>
     </header>
   );
 });

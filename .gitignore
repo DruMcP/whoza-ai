@@ -49,11 +49,3 @@ yarn.lock
 *.tmp
 *.temp
 build-output.txt
-*.env*
-.env.admin-whitelist
-NETLIFY_ENV_VARS.txt
-*env_vars*
-
-# Local Netlify folder
-.netlify
-brain/

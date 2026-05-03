@@ -1,11 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
-import { generateOrganizationSchema, generateBreadcrumbSchema, getBaseUrl } from '../utils/schemaOrg';
 
 export default function Trust() {
   const [proofSnippets, setProofSnippets] = useState([]);
@@ -15,20 +12,15 @@ export default function Trust() {
   }, []);
 
   const loadProofSnippets = async () => {
-    try {
-      const { data, error } = await supabase
-        .from('proof_snippets')
-        .select('*')
-        .order('created_at', { ascending: false })
-        .limit(5);
+    const { data, error } = await supabase
+      .from('proof_snippets')
+      .select('*')
+      .order('created_at', { ascending: false })
+      .limit(5);
 
-      if (error) {
-        console.warn('Supabase proof_snippets fetch failed:', error);
-      } else {
-        setProofSnippets(data || []);
-      }
-    } catch (err) {
-      console.warn('Failed to load proof snippets:', err);
+    if (error) {
+    } else {
+      setProofSnippets(data || []);
     }
   };
 
@@ -75,11 +67,15 @@ export default function Trust() {
   const averageRating = 5.0;
   const totalReviews = 15;
 
+  // Generate structured schema for Google Reviews
+  // Per Google's Nov 2025 update: Reviews nested inside an Organization via the
+  // "review" property are Nested Reviews — omit itemReviewed on each nested Review.
+  // The parent Organization is the reviewed item. Only standalone Reviews need itemReviewed.
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "WHOZA AI LTD",
-    "url": `${getBaseUrl()}`,
+    "url": "https://whoza.ai",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": averageRating.toFixed(1),
@@ -104,89 +100,301 @@ export default function Trust() {
     }))
   };
 
-  const schemas = [
-    generateBreadcrumbSchema([
-      { name: 'Home', url: `${getBaseUrl()}/` },
-      { name: 'Trust & Security', url: `${getBaseUrl()}/trust/` }
-    ]),
-    reviewSchema
-  ];
+  // Inject schema into the page
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(reviewSchema);
+    document.head.appendChild(script);
+    
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
 
   return (
-    <>
-      <SEO
-        title="Trust & Security — Whoza.ai"
-        description="Learn about Whoza.ai's security practices, data protection, GDPR compliance, and how we keep your business information safe."
-        schemas={schemas}
-      />
+    <Fragment>
       <Header />
 
       <main id="main-content" role="main">
         <div className="container">
-          <div className="trust-header">
-            <h1>Trust & Security</h1>
-            <p className="subtitle">
-              Your business data is safe with us. Here's how we protect your information and maintain transparency.
-            </p>
-          </div>
+          <h1>Trust and privacy</h1>
 
-          <div className="trust-grid">
-            <div className="trust-card">
-              <div className="trust-icon">🔒</div>
-              <h3>GDPR Compliant</h3>
-              <p>We adhere to all UK and EU data protection regulations. Your data is processed lawfully, fairly, and transparently.</p>
+          <p style={{ fontSize: '24px', marginBottom: 'var(--spacing-xl)' }}>
+            You need to trust the people who help with your business. Here's how
+            we keep things safe and transparent.
+          </p>
+
+          {/* Google Reviews Section */}
+          <section style={{ marginBottom: 'var(--spacing-xxl)' }}>
+            <h2>What our customers say</h2>
+            
+            <div style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: 'var(--spacing-md)', 
+              marginBottom: 'var(--spacing-lg)',
+              padding: 'var(--spacing-md)',
+              background: 'var(--color-primary-50)',
+              borderRadius: 'var(--border-radius)',
+              border: '2px solid var(--color-primary-200)'
+            }}>
+              <div style={{ display: 'flex', gap: '4px' }}>
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <svg 
+                    key={star}
+                    viewBox="0 0 20 20" 
+                    fill="currentColor" 
+                    style={{ width: '24px', height: '24px', color: '#FBBC04' }}
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <div>
+                <strong style={{ fontSize: '20px' }}>{averageRating.toFixed(1)} out of 5</strong>
+                <p style={{ margin: 0, fontSize: '16px', color: 'var(--color-text-secondary)' }}>
+                  Based on {totalReviews} Google reviews
+                </p>
+              </div>
             </div>
 
-            <div className="trust-card">
-              <div className="trust-icon">🛡️</div>
-              <h3>Data Encryption</h3>
-              <p>All data is encrypted in transit (TLS 1.3) and at rest (AES-256). We use industry-standard security practices.</p>
-            </div>
-
-            <div className="trust-card">
-              <div className="trust-icon">📍</div>
-              <h3>UK-Based Infrastructure</h3>
-              <p>Our servers are hosted in the UK and EU, ensuring your data stays within appropriate jurisdictions.</p>
-            </div>
-
-            <div className="trust-card">
-              <div className="trust-icon">✅</div>
-              <h3>Transparent Practices</h3>
-              <p>Clear privacy policy, terms of service, and cookie policy. No hidden data selling or dark patterns.</p>
-            </div>
-          </div>
-
-          <div className="reviews-section">
-            <h2>What Our Customers Say</h2>
-            <div className="reviews-grid">
+            <div style={{ 
+              display: 'grid', 
+              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
+              gap: 'var(--spacing-lg)',
+              marginBottom: 'var(--spacing-lg)'
+            }}>
               {googleReviews.map((review, index) => (
-                <div key={index} className="review-card">
-                  <div className="review-header">
-                    <div className="review-rating">
-                      {Array.from({ length: review.rating }).map((_, i) => (
-                        <span key={i}>⭐</span>
-                      ))}
-                    </div>
-                    <span className="review-date">{review.date}</span>
+                <div 
+                  key={index}
+                  className="panel"
+                  style={{ 
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column'
+                  }}
+                >
+                  <div style={{ display: 'flex', gap: '4px', marginBottom: 'var(--spacing-sm)' }}>
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <svg 
+                        key={star}
+                        viewBox="0 0 20 20" 
+                        fill="currentColor" 
+                        style={{ 
+                          width: '16px', 
+                          height: '16px', 
+                          color: star <= review.rating ? '#FBBC04' : '#E0E0E0' 
+                        }}
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
                   </div>
-                  <p className="review-text">{review.text}</p>
-                  <div className="review-author">— {review.author}</div>
+                  <p style={{ flex: 1, marginBottom: 'var(--spacing-sm)' }}>
+                    "{review.text}"
+                  </p>
+                  <div style={{ 
+                    display: 'flex', 
+                    justifyContent: 'space-between', 
+                    alignItems: 'center',
+                    paddingTop: 'var(--spacing-sm)',
+                    borderTop: '1px solid var(--color-border)'
+                  }}>
+                    <strong style={{ fontSize: '16px' }}>{review.author}</strong>
+                    <span style={{ fontSize: '14px', color: 'var(--color-text-secondary)' }}>
+                      {new Date(review.date).toLocaleDateString('en-GB', {
+                        day: 'numeric',
+                        month: 'short',
+                        year: 'numeric',
+                      })}
+                    </span>
+                  </div>
                 </div>
               ))}
             </div>
+
+            <div style={{ textAlign: 'center' }}>
+              <a 
+                href="https://maps.app.goo.gl/dNHpTGPy1Kxeh7PV8" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="button"
+                style={{ 
+                  display: 'inline-flex', 
+                  alignItems: 'center', 
+                  gap: 'var(--spacing-sm)',
+                  background: 'white',
+                  color: 'var(--color-primary-600)',
+                  border: '2px solid var(--color-primary-600)'
+                }}
+              >
+                <svg viewBox="0 0 20 20" fill="currentColor" style={{ width: '20px', height: '20px' }}>
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+                View all {totalReviews} reviews on Google
+              </a>
+            </div>
+          </section>
+
+          <h2>Manual approval required</h2>
+
+          <p>
+            Rex never publishes, posts, or changes anything without your explicit
+            approval first.
+          </p>
+
+          <p>Every task follows this flow:</p>
+
+          <ol className="step-list">
+            <li>
+              <h3>Rex sends a recommendation</h3>
+              <p>You receive an email with a suggested task.</p>
+            </li>
+            <li>
+              <h3>You review and approve</h3>
+              <p>
+                You read the task, decide if it's right for your business, and
+                approve it if you want to proceed.
+              </p>
+            </li>
+            <li>
+              <h3>You do the task yourself</h3>
+              <p>
+                Rex provides simple instructions. You log into your own accounts
+                and complete the task.
+              </p>
+            </li>
+          </ol>
+
+          <p>
+            <strong>Nothing happens without your approval.</strong> If you don't
+            approve a task, it doesn't get done. Simple as that.
+          </p>
+
+          <h2>No account access</h2>
+
+          <p>
+            Rex doesn't have your passwords. Rex can't log into your Google
+            Business, website, social media, or any other accounts.
+          </p>
+
+          <p>
+            This means Rex can't accidentally post something you don't want, or
+            change settings without your knowledge.
+          </p>
+
+          <p>
+            You do all the tasks yourself, in your own accounts, when you're
+            ready.
+          </p>
+
+          <h2>GDPR and ICO compliance</h2>
+
+          <p>whoza.ai follows all applicable data protection rules, including GDPR and UK ICO regulations.</p>
+
+          <div className="panel" style={{ background: 'var(--color-primary-50)', border: '2px solid var(--color-primary-200)', marginBottom: 'var(--spacing-xl)' }}>
+            <p style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-sm)', marginBottom: 0 }}>
+              <svg viewBox="0 0 20 20" fill="currentColor" style={{ width: '24px', height: '24px', color: 'var(--color-primary-600)', flexShrink: 0 }}>
+                <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              <strong>Registered with the Information Commissioner's Office (ICO). Registration number: ZC077271</strong>
+            </p>
           </div>
 
-          <div className="trust-cta">
-            <h2>Have questions about security?</h2>
-            <p>We're happy to discuss our security practices in detail.</p>
-            <Link to="/contact" className="button button-large">
-              Contact Us
+          <h3>What data we collect</h3>
+          <ul>
+            <li>Your business name, location, and trade type</li>
+            <li>Your email address for task delivery</li>
+            <li>Information about your services and credentials</li>
+            <li>Your AI Visibility Scores over time</li>
+          </ul>
+
+          <h3>What we don't collect</h3>
+          <ul>
+            <li>Customer data or personal information about your clients</li>
+            <li>Payment details (handled securely by Stripe)</li>
+            <li>Account passwords or login credentials</li>
+            <li>Tracking or browsing data beyond basic analytics</li>
+          </ul>
+
+          <h3>Your data rights</h3>
+          <p>Under UK GDPR, you have the right to:</p>
+          <ul>
+            <li>See what data we hold about you</li>
+            <li>Request corrections to your data</li>
+            <li>Delete your account and all associated data</li>
+            <li>Export your data in a portable format</li>
+          </ul>
+
+          <p>
+            To exercise any of these rights, contact us. We'll respond within 30
+            days.
+          </p>
+
+          <h2>Security measures</h2>
+
+          <ul>
+            <li>All data encrypted in transit and at rest</li>
+            <li>Secure authentication for all accounts</li>
+            <li>Regular security audits</li>
+            <li>Staff access limited to essential personnel only</li>
+            <li>Hosted in secure, enterprise-grade data centers</li>
+          </ul>
+
+          {proofSnippets.length > 0 && (
+            <Fragment>
+              <h2>Recent results</h2>
+              <p>
+                Here are some examples of how businesses are showing up in AI
+                search results. All examples are anonymized.
+              </p>
+
+              {proofSnippets.map((snippet) => (
+                <div key={snippet.id} className="panel">
+                  <p>
+                    <strong>Search query:</strong> {snippet.query_text}
+                  </p>
+                  <p>
+                    <strong>Result:</strong> {snippet.result_text}
+                  </p>
+                  <p style={{ marginBottom: 0, fontSize: '16px', color: 'var(--color-text-secondary)' }}>
+                    {new Date(snippet.date).toLocaleDateString('en-GB', {
+                      day: 'numeric',
+                      month: 'long',
+                      year: 'numeric',
+                    })}
+                  </p>
+                </div>
+              ))}
+            </Fragment>
+          )}
+
+          <h2>Questions about trust?</h2>
+
+          <p>
+            If you have concerns about privacy, security, or how we handle your
+            data, we're happy to answer them.
+          </p>
+
+          <p>
+            Read our full <Link to="/privacy">Privacy Policy</Link> and{' '}
+            <Link to="/terms">Terms of Service</Link>.
+          </p>
+
+          <div style={{ marginTop: 'var(--spacing-xl)', textAlign: 'center' }}>
+            <Link to="/start" className="button">
+              Get started
             </Link>
+            <p style={{ marginTop: 'var(--spacing-md)' }}>
+              <Link to="/how-it-works">How it works</Link> ·{' '}
+              <Link to="/pricing">Pricing</Link>
+            </p>
           </div>
         </div>
       </main>
 
       <Footer />
-    </>
+    </Fragment>
   );
 }

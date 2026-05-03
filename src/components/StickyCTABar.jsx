@@ -5,10 +5,10 @@ import Icon from './icons/Icon';
 // Context-aware CTA configurations based on current page
 const ctaConfig = {
   '/': {
-    title: 'Stop losing customers to AI-recommended competitors',
-    subtitle: 'Rex monitors your competitors monthly and tells you exactly how to outrank them',
-    button: 'Start Free Trial',
-    link: '/pricing'
+    title: 'See who\'s stealing your customers from AI search',
+    subtitle: 'Free competitor analysis — takes 60 seconds, no email required',
+    button: 'Check my competitor now',
+    link: '/competitor-analysis'
   },
   '/pricing': {
     title: 'Start your 14-day free trial today',
@@ -17,16 +17,16 @@ const ctaConfig = {
     link: '/start'
   },
   '/competitor-analysis': {
-    title: 'Rex — Your AI Visibility Analyst',
-    subtitle: 'Monthly competitor reports + weekly action plans. Start your 14-day free trial.',
-    button: 'Start Free Trial',
-    link: '/pricing'
+    title: 'Get your full AI visibility report',
+    subtitle: 'See exactly how to beat your competitor',
+    button: 'Get My Full Report',
+    link: '/start'
   },
   '/how-it-works': {
     title: 'See how whoza.ai works for your business',
-    subtitle: 'Katie answers calls, Rex tracks competitors, Claire collects reviews',
-    button: 'Start Free Trial',
-    link: '/pricing'
+    subtitle: 'Free analysis — find out who AI recommends instead of you',
+    button: 'Check My Competitor',
+    link: '/competitor-analysis'
   },
   '/case-studies': {
     title: 'Ready to get the same results?',
@@ -36,9 +36,9 @@ const ctaConfig = {
   },
   '/blog': {
     title: 'Want to appear in AI search results?',
-    subtitle: 'Rex shows you exactly how to get recommended by ChatGPT and Google AI',
-    button: 'Start Free Trial',
-    link: '/pricing'
+    subtitle: 'Find out who AI recommends for your trade',
+    button: 'Check My Competitor',
+    link: '/competitor-analysis'
   },
   '/trust': {
     title: 'Join 200+ tradespeople improving their AI visibility',

@@ -3,8 +3,6 @@
  * Handles sending branded emails via Resend API
  */
 
-import { getBaseUrl } from '../utils/schemaOrg';
-
 const RESEND_API_KEY = import.meta.env.VITE_RESEND_API_KEY;
 const RESEND_API_URL = 'https://api.resend.com/emails';
 
@@ -77,9 +75,9 @@ function getScoreBandSummary(score) {
 }
 
 /**
- * Generate branded HTML email template for competitor analysis results
+ * Generate branded HTML email template for free score results
  */
-function generateCompetitorAnalysisEmailTemplate({
+function generateFreeScoreEmailTemplate({
   businessName,
   score,
   tradeType,
@@ -181,7 +179,7 @@ function generateCompetitorAnalysisEmailTemplate({
           <!-- CTA Button -->
           <tr>
             <td style="padding: 0 30px 30px; text-align: center;">
-              <a href={`${getBaseUrl()}/pricing`} style="display: inline-block; background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%); color: #0f172a; text-decoration: none; font-size: 16px; font-weight: 700; padding: 16px 32px; border-radius: 8px; box-shadow: 0 4px 12px rgba(74, 222, 128, 0.3);">
+              <a href="https://whoza.ai/pricing" style="display: inline-block; background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%); color: #0f172a; text-decoration: none; font-size: 16px; font-weight: 700; padding: 16px 32px; border-radius: 8px; box-shadow: 0 4px 12px rgba(74, 222, 128, 0.3);">
                 Start Improving for £59/month
               </a>
             </td>
@@ -254,9 +252,9 @@ function generateCompetitorAnalysisEmailTemplate({
 }
 
 /**
- * Send competitor analysis results email
+ * Send free score results email
  */
-export async function sendCompetitorAnalysisResultsEmail({
+export async function sendFreeScoreResultsEmail({
   email,
   businessName,
   score,
@@ -267,7 +265,7 @@ export async function sendCompetitorAnalysisResultsEmail({
 }) {
   try {
     
-    const html = generateCompetitorAnalysisEmailTemplate({
+    const html = generateFreeScoreEmailTemplate({
       businessName,
       score,
       tradeType,
@@ -279,7 +277,7 @@ export async function sendCompetitorAnalysisResultsEmail({
     const result = await sendEmail({
       from: 'Whoza.ai <hello@whoza.ai>',
       to: email,
-      subject: `Your Whoza.ai Report — See How ${businessName} Compares to the Competition`,
+      subject: `Your Whoza.ai Report — See How ${businessName} Compares to ${competitorName || 'the Competition'}>`
       html
     });
 

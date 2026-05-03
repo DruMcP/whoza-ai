@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { getBaseUrl } from '../../utils/schemaOrg';
 import './Blog.css';
 
 function USPricingGuide() {
@@ -10,7 +9,7 @@ function USPricingGuide() {
       "@type": "Article",
       "headline": "US Tradesperson's Guide to AI Search Pricing: What to Expect in 2026",
       "description": "A comprehensive guide to understanding AI visibility pricing models for US tradespeople, focusing on AEO and GEO strategies.",
-      "image": `${getBaseUrl()}/blog-images/us_pricing_guide.jpg`,
+      "image": "https://whoza.ai/blog-images/us_pricing_guide.jpg", // Placeholder image
       "datePublished": "2026-02-07",
       "dateModified": "2026-02-07",
       "author": {
@@ -22,12 +21,12 @@ function USPricingGuide() {
         "name": "Whoza.ai",
         "logo": {
           "@type": "ImageObject",
-          "url": `${getBaseUrl()}/whoza-logo.png`
+          "url": "https://whoza.ai/whoza-logo.png"
         }
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": `${getBaseUrl()}/blog/us-tradesperson-ai-search-pricing-guide`
+        "@id": "https://whoza.ai/blog/us-tradesperson-ai-search-pricing-guide"
       },
       "keywords": "AI search pricing, AEO pricing, GEO pricing, US tradespeople, AI visibility cost, Whoza.ai pricing"
     };

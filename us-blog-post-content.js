@@ -103,7 +103,7 @@ This is where Entity Confidence Engineering comes in. It's the systematic proces
   ],
   cta: {
     text: "Ready to see how your contracting business scores in AI search?",
-    buttonText: "Get Your Free Competitor Analysis",
-    buttonLink: "/competitor-analysis"
+    buttonText: "Get Your Free AI Visibility Score",
+    buttonLink: "/free-score"
   }
 };

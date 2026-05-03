@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { generateVideoObjectSchema, getBaseUrl } from '../utils/schemaOrg';
+import { generateVideoObjectSchema } from '../utils/schemaOrg';
 import SEO from './SEO';
 
 /**
@@ -30,8 +30,8 @@ export default function ExplainerVideo() {
   const videoSchema = generateVideoObjectSchema({
     name: VIDEO_TITLE,
     description: VIDEO_DESC,
-    thumbnailUrl: `${getBaseUrl()}/og-image.png`,
-    contentUrl: `${getBaseUrl()}${VIDEO_SRC}`,
+    thumbnailUrl: 'https://whoza.ai/og-image.png',
+    contentUrl: `https://whoza.ai${VIDEO_SRC}`,
     uploadDate: '2026-04-24',
     duration: 'PT60S'
   });
@@ -85,7 +85,7 @@ export default function ExplainerVideo() {
                   >
                     <source src={VIDEO_SRC} type="video/mp4" onError={handleVideoError} />
                     Your browser does not support the video tag. 
-                    <a href="/pricing">Start your free trial instead</a>.
+                    <a href="/competitor-analysis">Try our free competitor analysis instead</a>.
                   </video>
                   {!isPlaying && (
                     <div
@@ -105,7 +105,7 @@ export default function ExplainerVideo() {
                         </svg>
                       </button>
                       <div className="absolute bottom-4 left-4 right-4 text-center">
-                        <p className="text-white/80 text-sm font-medium">Click to play — under 2 minutes</p>
+                        <p className="text-white/80 text-sm font-medium">Click to play — 60 seconds</p>
                       </div>
                     </div>
                   )}
@@ -127,7 +127,7 @@ export default function ExplainerVideo() {
               <svg className="feature-icon" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
               </svg>
-              <span>under 2 minutes</span>
+              <span>60 seconds</span>
             </div>
             <div className="video-feature">
               <svg className="feature-icon" viewBox="0 0 20 20" fill="currentColor">

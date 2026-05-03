@@ -540,7 +540,6 @@ export const blogPosts = [
   {
     "id": "how-uk-tradespeople-get-recommended-chatgpt-2026",
     "slug": "how-uk-tradespeople-can-get-recommended-by-chatgpt-in-2026",
-    "canonicalTo": "https://whoza.ai/blog/how-uk-tradespeople-can-get-found-on-chatgpt-and-ai-search-in-2026/",
     "title": "How UK Tradespeople Can Get Recommended by ChatGPT in 2026",
     "metaDescription": "Learn the 7-step strategy for getting your UK trade business recommended by ChatGPT. Practical AEO tactics for plumbers, electricians, roofers, and builders to dominate AI search in 2026.",
     "publishDate": "2026-01-20",
@@ -632,7 +631,6 @@ export const blogPosts = [
   {
     "id": "electricians-guide-to-google-ai-overviews",
     "slug": "electricians-guide-to-google-ai-overviews-how-to-get-featured",
-    "canonicalTo": "https://whoza.ai/blog/electricians-guide-to-google-ai-overviews-2026/",
     "title": "Electrician's Guide to Google AI Overviews: How to Get Featured",
     "metaDescription": "A comprehensive guide for UK electricians on how to get their business featured in Google AI Overviews. Learn about AEO, structured data, and content strategies to boost your electrician AI visibility.",
     "publishDate": "2026-01-21",
@@ -714,7 +712,6 @@ export const blogPosts = [
   {
     "id": "how-to-create-an-faq-page-that-ai-can-find-and-reference",
     "slug": "how-to-create-an-faq-page-that-ai-can-find-and-reference",
-    "canonicalTo": "https://whoza.ai/blog/how-to-create-faq-page-ai-can-find-2026/",
     "title": "How to Create an FAQ Page That AI Can Find and Reference",
     "metaDescription": "Learn how to create an FAQ page that AI assistants like ChatGPT and Google AI can find, understand, and use to recommend your trade business. Includes FAQ schema markup tips.",
     "publishDate": "2026-01-20",
@@ -945,7 +942,7 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your AI Visibility Score",
-      "text": "Find out how visible your trade business is to AI assistants. Get your free competitor analysis in under 2 minutes.",
+      "text": "Find out how visible your trade business is to AI assistants. Get your free competitor analysis in 60 seconds.",
       "buttonText": "Check My Competitor",
       "buttonLink": "/competitor-analysis"
     }
@@ -953,7 +950,6 @@ export const blogPosts = [
   {
     "id": "how-uk-tradespeople-get-found-ai-search-2026",
     "slug": "how-uk-tradespeople-get-found-ai-search-2026",
-    "canonicalTo": "https://whoza.ai/blog/how-uk-tradespeople-can-get-found-on-chatgpt-and-ai-search-in-2026/",
     "title": "How UK Tradespeople Can Get Found by AI Search (ChatGPT & Google)",
     "metaDescription": "A step-by-step guide for UK tradespeople on how to get their business recommended by AI assistants like ChatGPT and Google AI. Learn practical AEO tips for AI visibility in London, Manchester, and Birmingham.",
     "publishDate": "2026-01-16",
@@ -1015,7 +1011,7 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your AI Visibility Score",
-      "text": "Find out how visible your trade business is to AI assistants. Get your free competitor analysis in under 2 minutes.",
+      "text": "Find out how visible your trade business is to AI assistants. Get your free competitor analysis in 60 seconds.",
       "buttonText": "Check My Competitor",
       "buttonLink": "/competitor-analysis"
     }
@@ -1098,7 +1094,7 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your London AI Visibility Score",
-      "text": "Find out how visible your trade business is to AI assistants in your part of London. Get your free competitor analysis in under 2 minutes.",
+      "text": "Find out how visible your trade business is to AI assistants in your part of London. Get your free competitor analysis in 60 seconds.",
       "buttonText": "Check My Competitor",
       "buttonLink": "/competitor-analysis"
     }
@@ -1106,7 +1102,6 @@ export const blogPosts = [
   {
     "id": "how-plumbers-can-get-found-in-chatgpt-a-step-by-step-guide",
     "slug": "how-plumbers-can-get-found-in-chatgpt-a-step-by-step-guide",
-    "canonicalTo": "https://whoza.ai/blog/how-plumbers-can-get-found-in-chatgpt-2026/",
     "title": "How Plumbers Can Get Found in ChatGPT: A Step-by-Step Guide",
     "metaDescription": "A step-by-step guide for UK plumbers on how to get their business recommended by ChatGPT and other AI assistants. Learn practical AEO tips for plumber AI visibility and UK plumber marketing.",
     "publishDate": "2026-01-16",
@@ -1187,7 +1182,7 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your Plumbing Business AI Score",
-      "text": "Find out if ChatGPT and Google AI can find and recommend your plumbing business. Get your free competitor analysis in under 2 minutes.",
+      "text": "Find out if ChatGPT and Google AI can find and recommend your plumbing business. Get your free competitor analysis in 60 seconds.",
       "buttonText": "Check My Competitor",
       "buttonLink": "/competitor-analysis"
     }
@@ -1244,7 +1239,7 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your Plumbing Business AI Score",
-      "text": "Find out if ChatGPT can find your plumbing business. Get your free competitor analysis in under 2 minutes.",
+      "text": "Find out if ChatGPT can find your plumbing business. Get your free competitor analysis in 60 seconds.",
       "buttonText": "Check My Competitor",
       "buttonLink": "/competitor-analysis"
     }
@@ -1301,7 +1296,7 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your Electrical Business AI Score",
-      "text": "Find out if Google AI can find your electrical business. Get your free competitor analysis in under 2 minutes.",
+      "text": "Find out if Google AI can find your electrical business. Get your free competitor analysis in 60 seconds.",
       "buttonText": "Check My Competitor",
       "buttonLink": "/competitor-analysis"
     }
@@ -1309,7 +1304,6 @@ export const blogPosts = [
   {
     "id": "ai-visibility-for-london-tradespeople-2026",
     "slug": "ai-visibility-for-london-tradespeople-2026",
-    "canonicalTo": "https://whoza.ai/blog/best-practices-tradespeople-london-local-ai-visibility-guide/",
     "title": "AI Visibility for London Tradespeople",
     "metaDescription": "A guide for London-based tradespeople on how to improve their visibility in AI search results. Learn how to stand out in a competitive market.",
     "publishDate": "2026-01-27",
@@ -1359,7 +1353,7 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your London Business AI Score",
-      "text": "Find out if AI can find your London trade business. Get your free competitor analysis in under 2 minutes.",
+      "text": "Find out if AI can find your London trade business. Get your free competitor analysis in 60 seconds.",
       "buttonText": "Check My Competitor",
       "buttonLink": "/competitor-analysis"
     }
@@ -1416,7 +1410,7 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your FAQ Page Effectiveness",
-      "text": "Find out if your FAQ page is optimised for AI. Get your free competitor analysis in under 2 minutes.",
+      "text": "Find out if your FAQ page is optimised for AI. Get your free competitor analysis in 60 seconds.",
       "buttonText": "Check My Competitor",
       "buttonLink": "/competitor-analysis"
     }
@@ -1463,7 +1457,7 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your Roofing Business AI Score",
-      "text": "Find out if AI can find your roofing business. Get your free competitor analysis in under 2 minutes.",
+      "text": "Find out if AI can find your roofing business. Get your free competitor analysis in 60 seconds.",
       "buttonText": "Check My Competitor",
       "buttonLink": "/competitor-analysis"
     }
@@ -1520,7 +1514,7 @@ export const blogPosts = [
     ],
     "cta": {
       "heading": "Check Your Local AI Visibility",
-      "text": "Find out if AI can find your business in Manchester or Birmingham. Get your free competitor analysis in under 2 minutes.",
+      "text": "Find out if AI can find your business in Manchester or Birmingham. Get your free competitor analysis in 60 seconds.",
       "buttonText": "Check My Competitor",
       "buttonLink": "/competitor-analysis"
     }
@@ -1528,7 +1522,6 @@ export const blogPosts = [
   {
     "id": "roofers-checklist-10-steps-to-ai-visibility-2026",
     "slug": "roofers-checklist-10-steps-to-ai-visibility-2026",
-    "canonicalTo": "https://whoza.ai/blog/roofers-10-step-checklist-ai-visibility-2026/",
     "title": "Roofer's Checklist: 10 Steps to AI Visibility in 2026",
     "metaDescription": "A complete 10-step checklist for UK roofers to achieve AI visibility in 2026. Learn how to get your roofing business recommended by ChatGPT, Google AI, and other AI assistants.",
     "publishDate": "2026-01-16",
@@ -1628,7 +1621,6 @@ export const blogPosts = [
   {
     "id": "how-ai-chooses-plumber-manchester",
     "slug": "how-ai-search-engines-choose-plumber-recommendation-manchester",
-    "canonicalTo": "https://whoza.ai/blog/how-ai-search-engines-choose-which-local-businesses-to-recommend/",
     "title": "How Do AI Search Engines Choose Which Plumber to Recommend in Manchester?",
     "metaDescription": "Discover how AI like ChatGPT and Google decide which Manchester plumbers to recommend. Learn the key signals for AI visibility and how to ensure your trade business gets found in 2026.",
     "publishDate": "2026-01-27",
@@ -1891,105 +1883,6 @@ export const blogPosts = [
       "heading": "Find Out If AI Is Recommending You",
       "text": "In the new AI-driven search landscape, you are either a cited source or you are invisible. Get your Free AI Visibility Score from Whoza.ai today and discover exactly where you stand — and what to do next.",
       "buttonText": "Check My AI Competitor",
-      "buttonLink": "/competitor-analysis"
-    }
-  },
-  {
-    "id": "how-reviews-influence-ai-search-recommendations-tradespeople-2026",
-    "slug": "how-reviews-influence-ai-search-recommendations-tradespeople-2026",
-    "title": "How Online Reviews and Ratings Influence AI Search Recommendations for Local Tradespeople",
-    "metaDescription": "Discover why AI search engines like ChatGPT and Perplexity rely heavily on customer reviews to recommend local tradespeople. Learn the seven proven strategies to turn your review profile into a powerful AI trust signal and dominate local recommendations in 2026.",
-    "publishDate": "2026-04-26",
-    "author": "Whoza.ai Team",
-    "category": "AI Visibility",
-    "tags": [
-      "AI visibility",
-      "online reviews",
-      "reputation management",
-      "ChatGPT recommendations",
-      "tradespeople",
-      "local SEO",
-      "customer reviews",
-      "AI trust signals",
-      "review strategy",
-      "Entity Confidence"
-    ],
-    "readTime": "10 min read",
-    "featured": true,
-    "leadAnswer": "AI search engines like ChatGPT, Perplexity, and Google AI Overviews rely on customer reviews as a primary trust signal when recommending local tradespeople. Research shows that businesses with 50+ detailed, recent reviews across multiple platforms are cited by AI up to **8x more frequently** than those with sparse or outdated reviews. AI doesn't just count stars — it analyses review sentiment, recency, platform diversity, and specific keywords to determine whether your business is trustworthy enough to recommend by name.",
-    "content": [
-      {
-        "type": "section",
-        "heading": "Why Reviews Matter More for AI Search Than Traditional Google Rankings",
-        "content": "Traditional Google search uses reviews as one of many ranking factors — typically weighted alongside backlinks, website content, and technical SEO. AI search engines operate differently. Because they generate conversational answers rather than displaying a list of links, they must be **confident** in every recommendation they make.\n\nWhen someone asks ChatGPT, \"Who's the best emergency plumber in Glasgow?\", the AI cannot afford to suggest a business with poor service or fake credentials. It needs verifiable proof that the business is competent and reliable. Reviews are the most accessible and abundant form of social proof available to AI crawlers.\n\nResearch from AI visibility audits in 2026 reveals a striking pattern: among UK tradespeople recommended by ChatGPT and Perplexity, **94% had at least 40 reviews across two or more platforms**, while only **23% of non-recommended businesses** met this threshold. The correlation is not coincidental — it is how AI engines validate real-world performance."
-      },
-      {
-        "type": "section",
-        "heading": "1. AI Reads the Words in Your Reviews, Not Just the Stars",
-        "content": "A common misconception is that AI recommendations are driven by average star ratings. While ratings matter, AI engines are far more interested in the **text content** of reviews. They use natural language processing to extract specific attributes about your business.\n\nConsider two electricians in Manchester. Electrician A has a 4.9-star average with 12 reviews that all say \"great service.\" Electrician B has a 4.7-star average with 47 reviews that mention specific details: \"arrived within 30 minutes,\" \"explained the fault clearly,\" \"fair pricing,\" \"left the work area spotless,\" \"issued a certificate promptly.\"\n\nAI engines will almost always recommend Electrician B. The granular detail provides **Entity Confidence** — the AI knows exactly what this business does well and can justify its recommendation with specific evidence. Vague praise offers no such confidence.\n\n**Action item:** Encourage customers to mention specific details in their reviews — your punctuality, professionalism, cleanliness, communication, and specific services performed."
-      },
-      {
-        "type": "section",
-        "heading": "2. Review Recency Is a Critical AI Signal",
-        "content": "AI engines heavily weight **recent reviews** because they indicate current relevance and operational status. A plumbing business with 100 glowing reviews from 2023 but none from 2026 raises a red flag: is this business still active? Have service standards declined?\n\nAnalysis of AI recommendation patterns shows that businesses with reviews from the **last 90 days** are cited **3.2x more often** than businesses whose most recent review is older than six months. AI engines interpret review freshness as a proxy for business health.\n\nThis creates a compounding effect for tradespeople who consistently collect reviews. Each new review doesn't just add to your total — it refreshes your entire review profile's credibility signal.\n\n**Action item:** Implement a systematic review collection process. Send a follow-up message to every satisfied customer within 48 hours of job completion, while their positive experience is still fresh."
-      },
-      {
-        "type": "section",
-        "heading": "3. Platform Diversity Builds AI Trust",
-        "content": "AI engines cross-reference reviews across multiple platforms to verify consistency and avoid manipulation. If your business has 50 five-star reviews exclusively on your own website, AI will treat this with extreme scepticism. If those same reviews are distributed across Google, Checkatrade, Trustpilot, Facebook, and Yell — with consistent themes and verified customer identities — AI confidence soars.\n\nThe most valuable review platforms for AI visibility in the UK are:\n\n- **Google Business Profile** — The primary source for Google AI Overviews and local trust signals\n- **Checkatrade** — Highly trusted in the trade sector; AI recognises this as a verified trade directory\n- **Trustpilot** — Broad consumer trust platform with strong AI crawler visibility\n- **Facebook** — Social proof with real-name verification\n- **Yell** — Established UK business directory with long-standing credibility\n\nA review profile spread across four or more platforms demonstrates that your reputation is **organic and verifiable**, not manufactured.\n\n**Action item:** Claim and optimise profiles on at least four review platforms. Ensure your NAP data (Name, Address, Phone) is identical across every platform to strengthen entity consistency."
-      },
-      {
-        "type": "section",
-        "heading": "4. How AI Analyses Review Sentiment for Trade-Specific Skills",
-        "content": "AI engines don't just read reviews — they **classify** them. Using sentiment analysis, they tag reviews with attributes relevant to your trade. For plumbers, AI looks for mentions of \"punctuality,\" \"emergency response,\" \"fair pricing,\" \"clean work area,\" and \"guarantee.\" For electricians, it prioritises \"safety,\" \"certification,\" \"explanation of work,\" and \"compliance.\"\n\nThis means a roofer with reviews praising their \"thorough inspection\" and \"clear photographic evidence of damage\" will be recommended for queries about roof assessments. A roofer with generic \"good job\" reviews will not — because AI cannot attribute specific competencies.\n\n**Action item:** Train your team to deliver (and subtly prompt customers to mention) the specific trade competencies that AI engines value. After completing work, verbally highlight what you did well: \"I'll make sure to leave everything tidy — customers often mention that in reviews!\""
-      },
-      {
-        "type": "section",
-        "heading": "5. Responding to Reviews Amplifies AI Confidence",
-        "content": "Businesses that actively respond to reviews — both positive and negative — signal professionalism and accountability to AI engines. A tradesperson who responds to every review, addressing specific concerns and thanking customers for detailed feedback, demonstrates **entity activity** and **customer care** — two signals AI engines weigh heavily.\n\nResearch shows that tradespeople who respond to **over 80% of their reviews** are cited by AI **2.1x more frequently** than those who rarely or never respond. This is particularly true for negative reviews: a thoughtful, professional response to a complaint signals maturity and reliability. AI engines interpret this as evidence that the business takes customer satisfaction seriously.\n\n**Action item:** Set aside 15 minutes weekly to respond to all new reviews. Use the reviewer's name, reference specific details from their review, and include your business name naturally in the response."
-      },
-      {
-        "type": "section",
-        "heading": "6. Negative Reviews Can Actually Help If Handled Correctly",
-        "content": "A perfect 5.0-star rating with no negative reviews looks suspicious to AI engines. They expect authentic businesses to have occasional complaints — what matters is **how those complaints are handled**.\n\nAI sentiment analysis can detect whether negative reviews were resolved satisfactorily. If a customer posts a complaint and the business responds promptly, apologises, and offers a remedy — and the customer later updates their review positively — AI interprets this as **strong evidence of reliability**.\n\nConversely, a business with multiple unresolved negative reviews mentioning the same issue (e.g., \"never turned up,\" \"overcharged,\" \"poor workmanship\") will be flagged as high-risk and actively avoided by AI recommendations.\n\n**Action item:** View negative reviews as opportunities. Respond within 24 hours, acknowledge the issue specifically, offer a concrete resolution, and follow through. Update the customer and ask if they'd consider revising their review once resolved."
-      },
-      {
-        "type": "section",
-        "heading": "7. The Review Volume Threshold for AI Recommendations",
-        "content": "While quality matters more than quantity, there is a **minimum threshold** of review volume that AI engines appear to require before recommending a business with confidence. Analysis of UK trade businesses recommended by ChatGPT and Perplexity reveals the following pattern:\n\n| AI Recommendation Frequency | Average Review Count | Platform Spread |\n| --- | --- | --- |\n| Highly recommended (top 3) | 85+ reviews | 4+ platforms |\n| Frequently cited | 50-84 reviews | 3+ platforms |\n| Occasionally mentioned | 25-49 reviews | 2+ platforms |\n| Rarely or never cited | Under 25 reviews | 1-2 platforms |\n\nThese are not hard rules coded into AI algorithms — they are emergent patterns based on how AI engines weight trust signals. The message is clear: review accumulation should be treated as a **strategic priority**, not an afterthought.\n\n**Action item:** Set a review target based on your current position. If you have under 25 reviews, aim for 50 within six months. If you have 50, push for 100. Treat every completed job as a review opportunity."
-      },
-      {
-        "type": "section",
-        "heading": "The Compounding Power of Reviews in AI Search",
-        "content": "Reviews create a compounding advantage in AI search that most tradespeople underestimate. Each new review doesn't just add one more data point — it reinforces every other signal about your business. A new detailed review on Google that mentions your punctuality and fair pricing corroborates the same themes in your Checkatrade reviews and your website's service descriptions.\n\nThis cross-platform consistency is what builds **Entity Confidence** — the AI's certainty that you are who you claim to be and that you deliver what you promise. Entity Confidence is the single most important factor in whether AI recommends your business by name or ignores you entirely.\n\nFor tradespeople in competitive markets like London, Manchester, Birmingham, and Glasgow, review strategy is no longer optional. It is the foundation of AI visibility. Those who treat reviews as a deliberate, systematic process will find themselves consistently recommended by ChatGPT, Perplexity, and Google AI. Those who don't will wonder why their phones have stopped ringing — even though their technical skills haven't changed."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Do AI search engines actually read my reviews, or just count them?",
-        "answer": "AI search engines absolutely read and analyse review text. They use natural language processing to extract sentiment, specific skills, service attributes, and customer satisfaction indicators. A review saying 'arrived on time, explained the problem clearly, and charged fairly' provides far more value to AI than a generic 'great service' review — even if both are five stars."
-      },
-      {
-        "question": "How many reviews do I need before AI starts recommending me?",
-        "answer": "While there's no fixed threshold, data shows that UK tradespeople with 50+ detailed reviews spread across 3+ platforms are cited by AI up to 8x more frequently than those with fewer reviews. The key is not just volume but quality, recency, and platform diversity. A business with 30 detailed, recent reviews across four platforms will often outperform one with 100 old, generic reviews on a single platform."
-      },
-      {
-        "question": "Should I respond to negative reviews, and does it affect AI visibility?",
-        "answer": "Yes — responding to negative reviews thoughtfully and professionally significantly improves AI trust signals. AI engines detect whether complaints were resolved satisfactorily. A prompt, specific response that addresses the customer's concern and offers a resolution demonstrates accountability. Businesses that respond to over 80% of reviews (positive and negative) are cited by AI 2.1x more frequently than non-responders."
-      },
-      {
-        "question": "Which review platforms matter most for AI visibility?",
-        "answer": "For UK tradespeople, the most impactful platforms are Google Business Profile (primary for Google AI Overviews), Checkatrade (trade-specific authority), Trustpilot (broad consumer trust), Facebook (social verification), and Yell (established UK directory). AI engines cross-reference reviews across multiple platforms to verify authenticity and avoid manipulation. Spreading reviews across 4+ platforms builds significantly more AI confidence than concentrating them on one."
-      },
-      {
-        "question": "Can I ask customers to mention specific things in their reviews?",
-        "answer": "Yes, and you should — ethically. After completing a job, it's perfectly acceptable to say something like: 'If you leave a review, mentioning specific details like punctuality, cleanliness, or how I explained the work really helps other customers find the right tradesperson.' This is not fake or manipulative; it simply guides satisfied customers to provide the detailed, useful feedback that both future customers and AI engines value."
-      }
-    ],
-    "cta": {
-      "heading": "See How Your Reviews Compare to Competitors",
-      "text": "Your review profile is either building AI confidence or eroding it. Get your free competitor analysis from Whoza.ai and discover exactly how your reviews stack up against local competitors — and what to do next.",
-      "buttonText": "Check My Competitor",
       "buttonLink": "/competitor-analysis"
     }
   }

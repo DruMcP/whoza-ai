@@ -1,164 +1,106 @@
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Fragment } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import ComparisonTable from '../components/ComparisonTable';
-import FAQAccordion from '../components/FAQAccordion';
-import SEO from '../components/SEO';
+import ROICalculator from '../components/ROICalculator';
+import Icon from '../components/icons/Icon';
+import GuaranteeBadge from '../components/GuaranteeBadge';
 import { useAuth } from '../contexts/AuthContext';
 import { useLocalization } from '../contexts/LocalizationContext';
 import { supabase } from '../lib/supabase';
-import { generateOrganizationSchema, generateBreadcrumbSchema, getBaseUrl } from '../utils/schemaOrg';
-import { Check, ArrowRight, Sparkles, Zap, Crown, TrendingUp, Users, Star, CheckCircle, ChevronDown, Calculator } from 'lucide-react';
 
-const formatCurrency = (amount) => {
-  return new Intl.NumberFormat('en-GB', {
-    style: 'currency',
-    currency: 'GBP',
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }).format(amount);
-};
-
-const tiers = [
+const pricingPlans = [
   {
-    name: 'Capture',
-    icon: Zap,
-    capability: 'Your first AI employee — answers calls, captures leads',
-    monthlyPrice: 59,
-    annualPrice: 590,
-    includedJobs: 0,
-    includedJobsLabel: 'Lead capture only',
-    overageRate: null,
-    overageLabel: 'No booking automation',
-    roiColor: 'var(--color-blue)',
+    id: 'free-trial',
+    name: 'Free Trial',
+    headline: '🎁 Try Everything Risk-Free',
+    subheadline: 'Full access for 14 days. Zero risk. Zero commitment.',
+    price: 0,
+    duration: '14 days',
+    popular: true,
+    featured: true,
+    cta: 'Start Your Free Trial →',
+    trustSignal: '✓ No credit card required  ✓ Cancel anytime  ✓ One-time offer',
+    targetPersona: 'Businesses wanting to test AI visibility before committing',
     features: [
-      'Katie answers every call (100 min/month)',
-      'Katie sends WhatsApp summaries after every call',
-      'Katie captures and qualifies every lead',
-      'Claire monitors your reviews',
-      'Rex watches 2 directory listings',
+      '✨ Weekly competitor position reports',
+      '📊 See how often AI recommends your business',
+      '💡 Personalized improvement insights',
+      '🎯 Early access to new features',
+      '🚀 Full Improve plan access included',
+      '⏰ 14-day trial period (one-time offer)'
+    ]
+  },
+  {
+    id: 'improve',
+    name: 'Improve',
+    headline: 'Get Found by AI',
+    subheadline: 'One extra job pays for the whole year.',
+    price: 59,
+    popular: false,
+    cta: 'Start Improving',
+    trustSignal: 'Significantly more affordable than SEO agencies. 30-day money-back guarantee.',
+    comparisonAnchor: 'vs £600-£1,000/month for SEO agencies',
+    targetPersona: 'Independent tradespeople and small firms ready to take action',
+    features: [
+      'Core features:',
+      'Weekly personalised tasks from Rex (your AI employee)',
+      'Step-by-step action plans you approve before doing',
+      'Progress tracking across all 5 pillars',
       'Email support',
-    ],
-    cta: 'Hire Katie — Start 14-Day Trial',
-    highlight: false,
-    starterNote: 'Lead capture only — no booking automation. Upgrade to Convert to get AI booking.',
+      'Monthly progress reports'
+    ]
   },
   {
-    name: 'Convert',
-    icon: Crown,
-    capability: 'Your AI team starter — books jobs + collects reviews',
-    monthlyPrice: 119,
-    annualPrice: 1190,
-    includedJobs: 15,
-    includedJobsLabel: '15 AI-booked jobs included',
-    overageRate: 3,
-    overageLabel: 'Then £3 per extra job',
-    roiColor: 'var(--color-green)',
+    id: 'priority',
+    name: 'Priority',
+    headline: 'For Businesses Where Reputation Matters',
+    subheadline: 'Extra scrutiny. Extra caution. Extra peace of mind.',
+    price: 149,
+    popular: false,
+    cta: 'Get Priority Access',
+    trustSignal: 'Ideal for regulated businesses, clinics, and professional services.',
+    targetPersona: 'Multi-van businesses, clinics, accountants, anyone reputation-sensitive',
     features: [
-      'Everything in Capture',
-      'Katie answers every call (300 min/month)',
-      'Katie books jobs into your calendar',
-      'Rex tracks your AI Visibility Score',
-      'Rex sends monthly competitor reports + weekly action plans',
-      'Claire follows up for reviews automatically',
-      'Rex manages 5 directory listings',
-      'Katie routes emergency calls straight to you',
-      'Katie filters spam calls',
-      'Priority email support',
-    ],
-    cta: 'Hire Katie + Claire — Start 14-Day Trial',
-    highlight: true,
-    badge: 'Most Popular',
-  },
-  {
-    name: 'Grow',
-    icon: Crown,
-    capability: 'Full AI department — 24/7 voice + visibility + reputation',
-    monthlyPrice: 199,
-    annualPrice: 1990,
-    includedJobs: 40,
-    includedJobsLabel: '40 AI-booked jobs included',
-    overageRate: 2.5,
-    overageLabel: 'Then £2.50 per extra job',
-    roiColor: 'var(--color-amber)',
-    features: [
-      'Everything in Convert',
-      'Katie answers every call (800 min/month)',
-      'Rex monitors competitors across 10 locations',
-      'Rex delivers actionable competitor insights',
-      'Claire handles full review collection & management',
-      'Rex manages unlimited directory listings',
-      '3 team seats included',
-      'Advanced analytics dashboard',
-      'WhatsApp Business integration',
-      'API access for integrations',
-      'Priority chat + phone support',
-    ],
-    cta: 'Hire Full AI Team — Start 14-Day Trial',
-    highlight: false,
-  },
-  {
-    name: 'Scale',
-    icon: Crown,
-    capability: 'Enterprise AI operations — multi-location, priority support',
-    monthlyPrice: 349,
-    annualPrice: 3490,
-    includedJobs: 100,
-    includedJobsLabel: '100 AI-booked jobs included',
-    overageRate: 2,
-    overageLabel: 'Then £2 per extra job',
-    roiColor: '#dc2626',
-    features: [
-      'Everything in Grow',
-      'Katie answers every call (fair use minutes)',
-      'Rex runs priority optimisation across all locations',
-      'Rex delivers white-label reports',
-      'Claire manages reviews across multiple brands',
-      'Rex manages unlimited directory listings',
-      'Multi-location support',
-      'White-label dashboard',
-      'Dedicated account manager',
-      'Priority phone support',
-    ],
-    cta: 'Build Your AI Department — Talk to Sales',
-    highlight: false,
-    ctaLink: '/contact',
-  },
+      'Everything in Improve, plus:',
+      'Priority task review (human oversight on every recommendation)',
+      'Conservative approach - we flag anything that could affect your reputation',
+      'Dedicated account manager check-ins',
+      'Competitor tracking (up to 5 competitors)',
+      'Quarterly strategy calls',
+      'Priority email support (24-hour response)'
+    ]
+  }
+];
+
+const comparisonFeatures = [
+  { category: 'Core Features', features: [
+    { name: 'Weekly Competitor Reports', freeTrial: true, improve: true, priority: true },
+    { name: 'Personalized Insights', freeTrial: true, improve: true, priority: true },
+    { name: 'Progress Tracking', freeTrial: '14 days', improve: 'Ongoing', priority: 'Ongoing' },
+    { name: 'Competitor Tracking', freeTrial: false, improve: '3', priority: '5' },
+    { name: 'Weekly Tasks from Rex', freeTrial: false, improve: true, priority: true },
+    { name: 'Action Plans You Approve', freeTrial: false, improve: true, priority: true },
+    { name: '5-Pillar Progress Tracking', freeTrial: false, improve: true, priority: true }
+  ]},
+  { category: 'Premium Features', features: [
+    { name: 'Early Access to New Features', freeTrial: true, improve: false, priority: false },
+    { name: 'Human Review of Tasks', freeTrial: false, improve: false, priority: true },
+    { name: 'Conservative Approach', freeTrial: false, improve: false, priority: true },
+    { name: 'Account Manager Check-ins', freeTrial: false, improve: false, priority: true },
+    { name: 'Quarterly Strategy Calls', freeTrial: false, improve: false, priority: true }
+  ]},
+  { category: 'Support', features: [
+    { name: 'Email Support', freeTrial: '—', improve: 'Standard', priority: 'Priority (24hr)' },
+    { name: 'Money-Back Guarantee', freeTrial: 'N/A (Free)', improve: '30 days', priority: '30 days' },
+    { name: 'Trial Duration', freeTrial: '14 days', improve: '—', priority: '—' }
+  ]}
 ];
 
 const faqData = [
   {
-    question: 'How does the outcome pricing work?',
-    answer: "You pay a base monthly fee that includes a set number of AI-booked jobs. After that, it's £3 (or £2.50/£2) per additional job. You only pay more when Katie books more jobs for you."
-  },
-  {
-    question: 'What counts as an AI-booked job?',
-    answer: "A confirmed appointment that Katie enters into your calendar, where the customer doesn't cancel within 24 hours. If they cancel, you don't pay."
-  },
-  {
-    question: 'What if I don\'t use all my included jobs?',
-    answer: "Included jobs don't roll over month to month — use them or lose them. But most tradespeople find Katie books more than their included amount within the first few weeks."
-  },
-  {
-    question: 'Is there a limit to how many jobs Katie can book?',
-    answer: "No limit. Katie works 24/7. Heavy users on the Scale plan pay £2 per extra job — the more you grow, the less you pay per booking."
-  },
-  {
-    question: 'Can I switch plans if my usage changes?',
-    answer: "Yes, upgrade or downgrade anytime. Your new included job count starts on your next billing cycle."
-  },
-  {
-    question: 'Is this software or a service?',
-    answer: "It's like hiring an AI employee. You pay a base monthly wage plus a small fee when Katie delivers results. We handle training, tools, and 24/7 availability. No sick days, no holidays, no recruitment fees."
-  },
-  {
     question: 'What if it doesn\'t work for me?',
     answer: 'Every plan comes with a 30-day money-back guarantee. If you\'re not seeing value, we\'ll refund you completely. No questions asked.'
-  },
-  {
-    question: 'Will the AI voice agent sound robotic?',
-    answer: 'No. We use advanced voice synthesis that sounds natural and human-like. Your callers won\'t know they\'re talking to AI unless you tell them. The agent uses your business name, knows your services, and handles conversations naturally.'
   },
   {
     question: 'How is this different from SEO?',
@@ -166,15 +108,15 @@ const faqData = [
   },
   {
     question: 'Do I need technical skills?',
-    answer: 'Not at all. We send you simple tasks like "add this sentence to your Google Business profile" or "post this to your Facebook page." Average time: 10-15 minutes per week.'
+    answer: 'Not at all. Rex sends you simple tasks like "add this sentence to your Google Business profile" or "post this to your Facebook page." Average time: 10-15 minutes per week.'
   },
   {
-    question: 'Why is this cheaper than SEO agencies?',
+    question: 'Why is this so much cheaper than SEO agencies?',
     answer: 'SEO agencies charge £600-£1,000/month because they do everything for you. We give you the exact tasks to do yourself - it takes 10-15 minutes per week and you stay in complete control.'
   },
   {
     question: 'Can I upgrade or downgrade anytime?',
-    answer: 'Yes. Change your plan anytime from your dashboard. No penalties, no hassle. If you downgrade, you\'ll keep features until your current billing period ends.'
+    answer: 'Yes. Change your plan anytime from your dashboard. No penalties, no hassle.'
   },
   {
     question: 'Can I cancel anytime?',
@@ -185,56 +127,59 @@ const faqData = [
     answer: 'We accept all major debit and credit cards via Stripe. No contracts or long-term commitments.'
   },
   {
-    question: 'What if I go over my voice agent minutes?',
-    answer: 'Additional voice minutes are charged at £0.22 per minute (incl VAT). You\'ll get a warning at 80% usage. You can also upgrade your plan anytime from your dashboard — no penalties.'
-  },
-  {
-    question: 'What\'s included in the 14-day free trial?',
-    answer: 'Full access to every feature in your chosen plan — including your full included job count. No credit card required. We\'ll remind you 3 days before the trial ends so you can decide whether to continue.'
-  },
-  {
-    question: 'How quickly will whoza.ai pay for itself?',
-    answer: 'Most tradespeople recover the full subscription cost within the first 3–7 days through captured leads alone. A single missed call can cost £180–400 in lost revenue. whoza.ai captures every call, books jobs while you work, and collects reviews automatically — turning missed calls into revenue from day one.'
-  },
+    question: 'How secure is my payment information?',
+    answer: 'We use Stripe for payment processing, which is PCI DSS Level 1 certified. We never store your card details on our servers.'
+  }
 ];
 
 export default function Pricing() {
-  const [isAnnual, setIsAnnual] = useState(false);
-  const [trialEligible, setTrialEligible] = useState(true);
+  const [openFaqIndex, setOpenFaqIndex] = useState(null);
+  const [trialEligible, setTrialEligible] = useState(true); // Default to true for non-logged-in users
   const [checkingEligibility, setCheckingEligibility] = useState(false);
-  const [showComparison, setShowComparison] = useState(false);
-  const [calculatorJobs, setCalculatorJobs] = useState(25);
   const { userData } = useAuth();
-  const { country } = useLocalization();
+  const { formatPrice, country } = useLocalization();
 
-  const currency = 'GBP';
+  const toggleFaq = (index) => {
+    setOpenFaqIndex(openFaqIndex === index ? null : index);
+  };
 
+  // Check trial eligibility when component mounts (if user is logged in)
   useEffect(() => {
     const checkTrialEligibility = async () => {
       if (!userData || !userData.id) {
+        // User not logged in, show trial option
         setTrialEligible(true);
         return;
       }
+
       setCheckingEligibility(true);
       try {
         const { data, error } = await supabase
           .rpc('check_trial_eligibility', { p_user_id: userData.id });
+        
         if (error) {
+          // Non-critical: default to showing trial
+          // On error, default to showing trial option
           setTrialEligible(true);
         } else {
           setTrialEligible(data === true);
         }
       } catch (error) {
+        // Non-critical: default to showing trial
         setTrialEligible(true);
       } finally {
         setCheckingEligibility(false);
       }
     };
+
     checkTrialEligibility();
   }, [userData]);
 
+  // Inject Schema for AI search optimization
   useEffect(() => {
+    // SoftwareApplication Schema
     const priceValidUntil = new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
+    const currency = country === 'UK' ? 'GBP' : 'USD';
     const countryCode = country === 'UK' ? 'GB' : 'US';
     const softwareSchema = {
       "@context": "https://schema.org",
@@ -242,16 +187,51 @@ export default function Pricing() {
       "name": "Whoza.ai AI Visibility Platform",
       "operatingSystem": "Web",
       "applicationCategory": "BusinessApplication",
-      "image": `${getBaseUrl()}/whoza-logo.png`,
-      "offers": tiers.map(t => ({
+      "image": "https://whoza.ai/whoza-logo.png",
+      "offers": pricingPlans.map(plan => ({
         "@type": "Offer",
-        "name": `Whoza.ai ${t.name}`,
-        "price": isAnnual ? Math.round(t.annualPrice / 12) : t.monthlyPrice,
+        "name": plan.name,
+        "price": plan.price,
         "priceCurrency": currency,
-        "description": t.capability,
+        "description": plan.subheadline,
         "availability": "https://schema.org/InStock",
         "priceValidUntil": priceValidUntil,
-        "url": `${getBaseUrl()}/pricing`,
+        "url": "https://whoza.ai/pricing",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": countryCode,
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": currency
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            }
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": countryCode
+          }
+        }
       })),
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -260,6 +240,7 @@ export default function Pricing() {
       }
     };
 
+    // FAQ Schema
     const faqSchema = {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -275,12 +256,7 @@ export default function Pricing() {
 
     const scripts = [
       { id: 'pricing-software-schema', data: softwareSchema },
-      { id: 'pricing-faq-schema', data: faqSchema },
-      { id: 'pricing-org-schema', data: generateOrganizationSchema() },
-      { id: 'pricing-breadcrumb-schema', data: generateBreadcrumbSchema([
-        { name: 'Home', path: '/' },
-        { name: 'Pricing', path: '/pricing' }
-      ]) }
+      { id: 'pricing-faq-schema', data: faqSchema }
     ];
 
     scripts.forEach(({ id, data }) => {
@@ -300,376 +276,309 @@ export default function Pricing() {
         if (script) script.remove();
       });
     };
-  }, [country, isAnnual, currency]);
-
-  const calcTotal = (tier, jobs) => {
-    const base = isAnnual ? Math.round(tier.annualPrice / 12) : tier.monthlyPrice;
-    if (!tier.includedJobs || tier.includedJobs === 0) return { base, overage: 0, total: base };
-    const extra = Math.max(0, jobs - tier.includedJobs);
-    const overage = extra * tier.overageRate;
-    return { base, overage, total: base + overage };
-  };
+  }, [country]);
 
   return (
     <>
-      <SEO title="Pricing — Only pay when Katie books a job | Whoza.ai" description="Hybrid outcome pricing for tradespeople: £59–£349/mo base + £2–£3 per AI-booked job. Includes 15–100 jobs. 14-day free trial." />
       <Header />
 
-      <main id="main-content" role="main" style={{ paddingTop: '80px' }}>
-        {/* Hero */}
-        <section className="py-16 md:py-20">
-          <div className="ds-container text-center">
-            <span className="ds-badge ds-badge-amber mb-5">
-              <Sparkles size={14} />
-              Only pay when it works
-            </span>
-            <h1 className="ds-heading-hero mb-4">
-              Base fee + £3 per booked job
-            </h1>
-            <p className="ds-body max-w-xl mx-auto">
-              We only make more money when you do. Your base fee covers the platform and a set number of AI-booked jobs. After that, it's £3 per extra job — and only when Katie confirms the appointment.
+      <main id="main-content" role="main">
+        <div className="container">
+          <div className="pricing-header">
+            <h1 style={{
+            fontSize: '36px',
+            fontWeight: 'bold',
+            color: '#0f172a',
+            marginBottom: '16px',
+            textAlign: 'center',
+          }}>Simple, Transparent Pricing</h1>
+            <p className="pricing-subtitle" style={{ color: '#4B5563' }}>
+              Choose the plan that fits your business. All plans come with a 30-day money-back guarantee.
             </p>
           </div>
-        </section>
 
-        {/* Social Proof Band */}
-        <section className="pb-6">
-          <div className="ds-container">
-            <div
-              className="flex flex-wrap items-center justify-center gap-6 py-4 px-6 rounded-xl"
-              style={{ background: 'var(--color-navy-50)', border: '1px solid var(--color-navy-100)' }}
-            >
-              <div className="flex items-center gap-2">
-                <Star size={16} style={{ color: 'var(--color-amber)' }} fill="var(--color-amber)" />
-                <span className="text-sm font-semibold" style={{ color: 'var(--color-navy)' }}>4.9/5</span>
-                <span className="text-xs" style={{ color: 'var(--color-slate)' }}>from 128 tradespeople</span>
-              </div>
-              <div className="hidden md:block w-px h-6" style={{ background: 'var(--color-border)' }} />
-              <div className="flex items-center gap-2">
-                <Users size={16} style={{ color: 'var(--color-blue)' }} />
-                <span className="text-sm font-semibold" style={{ color: 'var(--color-navy)' }}>94%</span>
-                <span className="text-xs" style={{ color: 'var(--color-slate)' }}>keep their plan after trial</span>
-              </div>
-              <div className="hidden md:block w-px h-6" style={{ background: 'var(--color-border)' }} />
-              <div className="flex items-center gap-2">
-                <TrendingUp size={16} style={{ color: 'var(--color-green)' }} />
-                <span className="text-sm font-semibold" style={{ color: 'var(--color-navy)' }}>£2,400/yr</span>
-                <span className="text-xs" style={{ color: 'var(--color-slate)' }}>average revenue recovered</span>
-              </div>
-            </div>
+          <div className="panel" style={{
+            background: 'linear-gradient(135deg, rgba(132, 204, 22, 0.08) 0%, rgba(132, 204, 22, 0.04) 100%)',
+            border: '2px solid rgba(132, 204, 22, 0.2)',
+            padding: 'var(--spacing-2xl)',
+            marginBottom: 'var(--spacing-3xl)',
+            textAlign: 'center',
+            borderRadius: 'var(--radius-2xl)'
+          }}>
+            <h2 style={{ fontSize: '22px', marginTop: 0, marginBottom: 'var(--spacing-md)' }}>
+              Not Sure Which Plan You Need?
+            </h2>
+            <p style={{
+              fontSize: '18px',
+              color: '#374151',
+              marginBottom: 'var(--spacing-xl)',
+              maxWidth: '650px',
+              margin: '0 auto var(--spacing-xl)'
+            }}>
+              Start with a free AI visibility check. Find out where you stand, then choose
+              the plan that matches your goals.
+            </p>
+            <Link to="/competitor-analysis" className="button button-large btn-hover">
+              Check Your Competitor for Free
+            </Link>
+            <p style={{
+              fontSize: '14px',
+              color: '#6B7280',
+              marginTop: 'var(--spacing-md)',
+              marginBottom: 0
+            }}>
+              Takes 60 seconds · No credit card required
+            </p>
           </div>
-        </section>
 
-        {/* Billing Toggle */}
-        <section className="pb-8">
-          <div className="ds-container">
-            <div className="flex justify-center">
-              <div 
-                className="inline-flex p-1 rounded-xl"
-                style={{ background: 'var(--color-lightgray)', border: '1px solid var(--color-border)' }}
-              >
-                <button
-                  onClick={() => setIsAnnual(false)}
-                  className="px-5 py-2.5 rounded-lg text-sm font-semibold transition-all"
-                  style={{
-                    background: !isAnnual ? 'var(--color-white)' : 'transparent',
-                    color: !isAnnual ? 'var(--color-navy)' : 'var(--color-slate)',
-                    boxShadow: !isAnnual ? 'var(--shadow-sm)' : 'none',
-                  }}
-                >
-                  Monthly
-                </button>
-                <button
-                  onClick={() => setIsAnnual(true)}
-                  className="px-5 py-2.5 rounded-lg text-sm font-semibold transition-all"
-                  style={{
-                    background: isAnnual ? 'var(--color-white)' : 'transparent',
-                    color: isAnnual ? 'var(--color-navy)' : 'var(--color-slate)',
-                    boxShadow: isAnnual ? 'var(--shadow-sm)' : 'none',
-                  }}
-                >
-                  Annual <span className="ds-badge ds-badge-green text-xs ml-1">2 months free</span>
-                </button>
-              </div>
+          {/* Show message if user is logged in and not eligible for trial */}
+          {userData && !trialEligible && (
+            <div style={{
+              background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%)',
+              border: '2px solid rgba(59, 130, 246, 0.3)',
+              borderRadius: 'var(--radius-xl)',
+              padding: 'var(--spacing-lg)',
+              marginBottom: 'var(--spacing-2xl)',
+              textAlign: 'center'
+            }}>
+              <p style={{
+                fontSize: '16px',
+                color: '#3B82F6',
+                fontWeight: 600,
+                marginBottom: '8px'
+              }}>
+                ℹ️ You've already used your free trial
+              </p>
+              <p style={{
+                fontSize: '14px',
+                color: '#6B7280',
+                margin: 0
+              }}>
+                Choose from our paid plans below to continue improving your AI visibility.
+              </p>
             </div>
-          </div>
-        </section>
+          )}
 
-        {/* Trust Line */}
-        <section className="pb-6">
-          <div className="ds-container">
-            <div className="flex items-center justify-center gap-2 text-sm italic" style={{ color: 'var(--color-slate-400)' }}>
-              <CheckCircle size={14} style={{ color: 'var(--color-slate-400)' }} />
-              We only make more money when you do.
-            </div>
-          </div>
-        </section>
-
-        {/* Four Tier Cards */}
-        <section className="pb-12">
-          <div className="ds-container">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-              {tiers.map((tier) => {
-                const Icon = tier.icon;
-                const price = isAnnual ? Math.round(tier.annualPrice / 12) : tier.monthlyPrice;
-                const annualTotal = tier.annualPrice;
-                
-                return (
-                  <div
-                    key={tier.name}
-                    className="rounded-2xl p-8 relative flex flex-col"
-                    style={{
-                      background: 'var(--color-white)',
-                      border: tier.highlight ? '2px solid var(--color-navy)' : '1px solid var(--color-border)',
-                      boxShadow: tier.highlight ? 'var(--shadow-lg)' : 'var(--shadow-card)',
-                    }}
+          <div className="pricing-cards">
+            {pricingPlans
+              .filter(plan => {
+                // Only show free trial if eligible
+                if (plan.id === 'free-trial') return trialEligible;
+                return true;
+              })
+              .map((plan) => (
+              <div key={plan.id} className={`pricing-card ${plan.featured ? 'featured' : ''}`}>
+                {plan.popular && <div className="popular-badge">Most Popular</div>}
+                <div className="card-header">
+                  <h3>{plan.name}</h3>
+                  <div className="headline">{plan.headline}</div>
+                  <p className="subheadline">{plan.subheadline}</p>
+                  <div className="price-container" style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    padding: '24px 16px',
+                    margin: '20px 0',
+                    background: plan.featured 
+                      ? 'linear-gradient(135deg, rgba(132, 204, 22, 0.12) 0%, rgba(132, 204, 22, 0.06) 100%)'
+                      : 'linear-gradient(135deg, rgba(132, 204, 22, 0.05) 0%, rgba(132, 204, 22, 0.02) 100%)',
+                    borderRadius: '12px',
+                    border: plan.featured 
+                      ? '2px solid rgba(132, 204, 22, 0.3)'
+                      : '2px solid rgba(132, 204, 22, 0.15)',
+                    transition: 'all 0.2s ease'
+                  }} role="region" aria-label={`Pricing information: ${formatPrice(plan.price)} per ${plan.duration || 'month'}`}>
+                    <span className="price" style={{
+                      fontSize: 'clamp(36px, 4vw, 48px)',
+                      fontWeight: '900',
+                      lineHeight: '1',
+                      color: plan.featured ? '#84CC16' : '#1F2937',
+                      letterSpacing: '-0.02em',
+                      marginBottom: '4px'
+                    }}>{formatPrice(plan.price)}</span>
+                    <span className="duration" style={{
+                      fontSize: '18px',
+                      fontWeight: '500',
+                      color: '#6B7280',
+                      marginTop: '4px'
+                    }} aria-hidden="true">/{plan.duration || 'month'}</span>
+                  </div>
+                  {plan.comparisonAnchor && (
+                    <div className="comparison-anchor" style={{
+                      fontSize: '14px',
+                      color: '#84CC16',
+                      fontWeight: '600',
+                      textAlign: 'center',
+                      marginTop: '12px'
+                    }}>{plan.comparisonAnchor}</div>
+                  )}
+                </div>
+                <div className="card-body">
+                  <div className="target-persona">
+                    <strong>Best for:</strong> {plan.targetPersona}
+                  </div>
+                  <ul className="feature-list">
+                    {plan.features.map((feature, index) => (
+                      <li key={index}>
+                        {feature.startsWith('Core features:') || feature.startsWith('Everything in Improve, plus:') ? (
+                          <strong>{feature}</strong>
+                        ) : (
+                          feature
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="card-footer">
+                  <Link 
+                    to={plan.id === 'free-trial' ? '/start?trial=true' : `/start?plan=${plan.id}`} 
+                    className={`button ${plan.featured ? '' : 'button-secondary'} full-width`}
                   >
-                    {tier.badge && (
-                      <span
-                        className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold"
-                        style={{
-                          background: 'var(--color-navy)',
-                          color: 'var(--color-white)',
-                        }}
-                      >
-                        {tier.badge}
-                      </span>
-                    )}
-                    {tier.name === 'Convert' && (
-                      <span
-                        className="absolute -top-3 right-4 px-3 py-1 rounded-full text-xs font-semibold"
-                        style={{
-                          background: 'var(--color-amber-100)',
-                          color: 'var(--color-amber-600)',
-                          border: '1px solid var(--color-amber-200)',
-                        }}
-                      >
-                        ⭐ 94% keep after trial
-                      </span>
-                    )}
-                    
-                    <div className="text-center mb-4">
-                      <div
-                        className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4"
-                        style={{ background: tier.highlight ? 'var(--color-blue-100)' : 'var(--color-lightgray)' }}
-                      >
-                        <Icon size={24} color={tier.highlight ? 'var(--color-blue-600)' : 'var(--color-slate)'} strokeWidth={2} />
-                      </div>
-                      <h2 className="font-bold text-xl mb-1" style={{ color: 'var(--color-navy)' }}>
-                        {tier.name}
-                      </h2>
-                      <p className="text-sm font-medium" style={{ color: 'var(--color-slate)' }}>
-                        {tier.capability}
-                      </p>
-                    </div>
+                    {plan.cta}
+                  </Link>
+                  <div className="trust-signal">{plan.trustSignal}</div>
+                </div>
+              </div>
+            ))}
+          </div>
 
-                    <div className="text-center mb-4">
-                      <div className="flex items-baseline justify-center gap-1">
-                        <span
-                          className="font-extrabold tracking-tighter"
-                          style={{ fontSize: '3rem', color: 'var(--color-navy)', fontFamily: 'var(--font-heading)', lineHeight: 1 }}
-                        >
-                          £{price}
-                        </span>
-                      </div>
-                      <p className="text-sm mt-1" style={{ color: 'var(--color-slate)' }}>
-                        /month inc VAT
-                      </p>
-                      <p className="text-xs mt-1" style={{ color: 'var(--color-slate-700)' }}>
-                        ({formatCurrency(price / 1.2)} + VAT)
-                      </p>
-                      {isAnnual && (
-                        <p className="text-xs mt-1" style={{ color: 'var(--color-slate)' }}>
-                          Billed annually at £{annualTotal} (saves £{Math.round(tier.monthlyPrice * 2.4)})
-                        </p>
-                      )}
-                      
-                      {/* Included Jobs Badge */}
-                      {tier.includedJobs > 0 ? (
-                        <div className="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold" style={{ background: 'var(--color-green-100)', color: 'var(--color-green-700)', border: '1px solid var(--color-green-200)' }}>
-                          <CheckCircle size={12} />
-                          {tier.includedJobsLabel}
-                        </div>
-                      ) : (
-                        <div className="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold" style={{ background: 'var(--color-blue-100)', color: 'var(--color-blue-700)', border: '1px solid var(--color-blue-200)' }}>
-                          <Zap size={12} />
-                          {tier.includedJobsLabel}
-                        </div>
-                      )}
-                      
-                      {tier.overageRate && (
-                        <p className="text-sm font-medium mt-2" style={{ color: 'var(--color-slate-600)' }}>
-                          {tier.overageLabel}
-                        </p>
-                      )}
-                      
-                      <p className="text-base font-bold mt-2" style={{ color: tier.roiColor }}>
-                        {tier.roiAnchor}
-                      </p>
-                    </div>
+          {/* ROI Calculator - linked from homepage MiniROICalculator "Calculate My Full ROI" button */}
+          <div id="roi-calculator" style={{ scrollMarginTop: '80px' }}>
+            <ROICalculator />
+          </div>
 
-                    {tier.starterNote && (
-                      <div className="mb-4 p-3 rounded-lg text-xs" style={{ background: 'var(--color-blue-50)', color: 'var(--color-blue-700)', border: '1px solid var(--color-blue-100)' }}>
-                        {tier.starterNote}
-                      </div>
-                    )}
-
-                    <div className="space-y-3 mb-8 flex-1">
-                      {tier.features.map((feature) => (
-                        <div key={feature} className="flex items-start gap-3">
-                          <div
-                            className="w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5"
-                            style={{ background: 'var(--color-green-100)' }}
-                          >
-                            <Check size={12} color="var(--color-green)" strokeWidth={3} />
-                          </div>
-                          <span className="text-sm" style={{ color: 'var(--color-navy)' }}>
-                            {feature}
-                          </span>
-                        </div>
+          <div className="comparison-section">
+            <h2>Compare Plans</h2>
+            <div className="table-responsive">
+              <table className="comparison-table">
+                <thead>
+                  <tr>
+                    <th>Feature</th>
+                    {trialEligible && <th>Free Trial</th>}
+                    <th>Improve</th>
+                    <th>Priority</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonFeatures.map((category, catIndex) => (
+                    <Fragment key={catIndex}>
+                      <tr className="category-row">
+                        <td colSpan={trialEligible ? 4 : 3}>{category.category}</td>
+                      </tr>
+                      {category.features.map((feature, featIndex) => (
+                        <tr key={featIndex}>
+                          <td>{feature.name}</td>
+                          {trialEligible && (
+                            <td>
+                              {typeof feature.freeTrial === 'boolean' ? (
+                                feature.freeTrial ? <Icon name="CheckIcon" size={20} color="#10B981" /> : <Icon name="XIcon" size={20} color="#EF4444" />
+                              ) : feature.freeTrial}
+                            </td>
+                          )}
+                          <td>
+                            {typeof feature.improve === 'boolean' ? (
+                              feature.improve ? <Icon name="CheckIcon" size={20} color="#10B981" /> : <Icon name="XIcon" size={20} color="#EF4444" />
+                            ) : feature.improve}
+                          </td>
+                          <td>
+                            {typeof feature.priority === 'boolean' ? (
+                              feature.priority ? <Icon name="CheckIcon" size={20} color="#10B981" /> : <Icon name="XIcon" size={20} color="#EF4444" />
+                            ) : feature.priority}
+                          </td>
+                        </tr>
                       ))}
-                    </div>
+                    </Fragment>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
 
-                    <Link
-                      to={tier.ctaLink || '/start'}
-                      className={`ds-btn ds-btn-lg w-full mb-3 ${tier.highlight ? 'ds-btn-cta' : 'ds-btn-primary'}`}
-                      style={tier.highlight ? { boxShadow: 'var(--shadow-amber-glow)' } : {}}
-                    >
-                      {tier.cta}
-                      <ArrowRight size={18} />
-                    </Link>
+          <div className="guarantee-section">
+            <div className="guarantee-content">
+              <div className="guarantee-badge-container">
+                <GuaranteeBadge />
+              </div>
+              <div className="guarantee-text">
+                <h2>Our 30-Day Money-Back Guarantee</h2>
+                <p>
+                  We're confident Whoza.ai will help you get found by AI. If you're not completely 
+                  satisfied within your first 30 days, we'll refund your entire payment. 
+                  No questions asked, no hoops to jump through.
+                </p>
+              </div>
+            </div>
+          </div>
 
-                    <p className="text-center text-xs" style={{ color: 'var(--color-slate)' }}>
-                      No credit card required · 14-day trial
+          <div className="faq-section">
+            <h2 style={{ textAlign: 'center', marginBottom: 'var(--spacing-3xl)' }}>
+              Frequently Asked Questions
+            </h2>
+            <div className="faq-grid">
+              {faqData.map((faq, index) => (
+                <div key={index} className="faq-item">
+                  <button 
+                    className="faq-question" 
+                    onClick={() => toggleFaq(index)}
+                    aria-expanded={openFaqIndex === index}
+                  >
+                    <span>{faq.question}</span>
+                    <Icon name="ChevronDownIcon" size={20} className="faq-icon" />
+                  </button>
+                  <div className={`faq-answer ${openFaqIndex === index ? 'open' : ''}`}>
+                    <p>
+                      {index === 0 && faq.question.includes('cheaper than SEO') 
+                        ? `SEO agencies charge ${formatPrice(600)}-${formatPrice(1000)}/month because they do everything for you. We give you the exact tasks to do yourself - it takes 10-15 minutes per week and you stay in complete control.`
+                        : faq.answer
+                      }
                     </p>
                   </div>
-                );
-              })}
-            </div>
-
-            {/* Not eligible message */}
-            {userData && !trialEligible && (
-              <div
-                className="mt-8 max-w-lg mx-auto p-4 rounded-xl text-center"
-                style={{ background: 'var(--color-blue-100)', border: '1px solid var(--color-blue-100)' }}
-              >
-                <p className="text-sm font-semibold" style={{ color: 'var(--color-blue-600)' }}>
-                  You've already used your free trial
-                </p>
-                <p className="text-xs mt-1" style={{ color: 'var(--color-slate)' }}>
-                  Choose a paid plan above to continue improving your AI visibility.
-                </p>
-              </div>
-            )}
-          </div>
-        </section>
-
-        {/* Calculator Widget */}
-        <section className="pb-12">
-          <div className="ds-container">
-            <div className="max-w-3xl mx-auto rounded-2xl p-8" style={{ background: 'var(--color-white)', border: '1px solid var(--color-border)', boxShadow: 'var(--shadow-card)' }}>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: 'var(--color-blue-100)' }}>
-                  <Calculator size={20} style={{ color: 'var(--color-blue-600)' }} />
                 </div>
-                <div>
-                  <h3 className="font-bold text-lg" style={{ color: 'var(--color-navy)' }}>Cost calculator</h3>
-                  <p className="text-sm" style={{ color: 'var(--color-slate)' }}>How many jobs do you book per month?</p>
-                </div>
-              </div>
-              
-              <div className="mb-6">
-                <input
-                  type="range"
-                  min="0"
-                  max="200"
-                  value={calculatorJobs}
-                  onChange={(e) => setCalculatorJobs(Number(e.target.value))}
-                  className="w-full accent-blue-600"
-                  style={{ accentColor: 'var(--color-blue-600)' }}
-                />
-                <div className="flex justify-between text-xs mt-1" style={{ color: 'var(--color-slate)' }}>
-                  <span>0 jobs</span>
-                  <span className="font-semibold" style={{ color: 'var(--color-navy)' }}>{calculatorJobs} jobs/month</span>
-                  <span>200 jobs</span>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                {tiers.filter(t => t.includedJobs > 0).map((tier) => {
-                  const { base, overage, total } = calcTotal(tier, calculatorJobs);
-                  return (
-                    <div key={tier.name} className="p-4 rounded-xl" style={{ background: tier.highlight ? 'var(--color-navy-50)' : 'var(--color-lightgray)', border: tier.highlight ? '2px solid var(--color-navy)' : '1px solid var(--color-border)' }}>
-                      <p className="text-sm font-semibold" style={{ color: 'var(--color-navy)' }}>{tier.name}</p>
-                      <p className="text-2xl font-extrabold mt-1" style={{ color: 'var(--color-navy)', fontFamily: 'var(--font-heading)' }}>
-                        £{total}<span className="text-sm font-normal" style={{ color: 'var(--color-slate)' }}>/mo</span>
-                      </p>
-                      <p className="text-xs mt-1" style={{ color: 'var(--color-slate)' }}>
-                        £{base} base + {overage > 0 ? `£${overage} overage` : '£0 overage'}
-                      </p>
-                      <p className="text-xs mt-1" style={{ color: tier.highlight ? 'var(--color-green-600)' : 'var(--color-slate-500)' }}>
-                        {calculatorJobs <= tier.includedJobs ? `${tier.includedJobs - calculatorJobs} jobs remaining` : `${calculatorJobs - tier.includedJobs} extra jobs @ £${tier.overageRate}`}
-                      </p>
-                    </div>
-                  );
-                })}
-              </div>
+              ))}
             </div>
           </div>
-        </section>
 
-        {/* Comparison Table — Collapsible */}
-        <section className="pb-12">
-          <div className="ds-container">
-            <div className="max-w-3xl mx-auto">
-              <button
-                onClick={() => setShowComparison(!showComparison)}
-                className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-xl text-sm font-semibold transition-all"
-                style={{
-                  background: 'var(--color-lightgray)',
-                  border: '1px solid var(--color-border)',
-                  color: 'var(--color-navy)',
-                }}
-              >
-                {showComparison ? 'Hide capability breakdown' : 'See full capability breakdown'}
-                <ChevronDown
-                  size={16}
-                  style={{
-                    transform: showComparison ? 'rotate(180deg)' : 'rotate(0deg)',
-                    transition: 'transform 0.2s',
-                  }}
-                />
-              </button>
-              {showComparison && (
-                <div className="mt-6">
-                  <ComparisonTable />
-                </div>
-              )}
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ */}
-        <FAQAccordion items={faqData} title="Pricing questions" />
-
-        {/* Final CTA */}
-        <section className="py-16 md:py-20" style={{ background: 'linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-800) 100%)' }}>
-          <div className="ds-container text-center">
-            <h2 className="font-extrabold text-2xl md:text-3xl mb-4" style={{ color: 'var(--color-white)', fontFamily: 'var(--font-heading)' }}>
-              Hire your AI team today
-            </h2>
-            <p className="mb-8 max-w-md mx-auto" style={{ color: 'var(--color-slate)', fontSize: 'var(--text-body)' }}>
-              Start your 14-day free trial — 15 jobs included. No credit card required. Cancel anytime.
+          <div style={{
+            textAlign: 'center',
+            marginTop: 'var(--spacing-4xl)',
+            marginBottom: 'var(--spacing-4xl)',
+            padding: 'var(--spacing-3xl)',
+            background: 'linear-gradient(135deg, rgba(132, 204, 22, 0.08) 0%, rgba(132, 204, 22, 0.04) 100%)',
+            border: '2px solid rgba(132, 204, 22, 0.2)',
+            borderRadius: 'var(--radius-2xl)'
+          }}>
+            <h2 style={{ marginBottom: 'var(--spacing-md)' }}>Ready to Get Started?</h2>
+            <p style={{
+              fontSize: '18px',
+              color: '#374151',
+              marginBottom: 'var(--spacing-lg)',
+              maxWidth: '600px',
+              margin: '0 auto var(--spacing-lg)'
+            }}>
+              Start with a free visibility check or choose a plan that fits your business.
             </p>
-            <Link
-              to="/start"
-              className="ds-btn ds-btn-cta ds-btn-lg"
-            >
-              Start Your 14-Day Free Trial — 15 Jobs Included
-              <ArrowRight size={20} />
-            </Link>
+            <div style={{
+              display: 'flex',
+              gap: 'var(--spacing-md)',
+              justifyContent: 'center',
+              flexWrap: 'wrap'
+            }}>
+              <Link to="/competitor-analysis" className="button button-large btn-hover">
+                See if AI would recommend you
+              </Link>
+              <Link to="/start" className="button button-large button-secondary btn-hover">
+                Choose a Plan
+              </Link>
+            </div>
+            <p style={{
+              marginTop: 'var(--spacing-md)',
+              fontSize: '14px',
+              color: '#6B7280'
+            }}>
+              <Link to="/how-it-works">How it works</Link> · <Link to="/trust">Trust and privacy</Link>
+            </p>
           </div>
-        </section>
+        </div>
       </main>
 
       <Footer />

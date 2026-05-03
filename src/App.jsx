@@ -11,7 +11,7 @@ import SEO from './components/SEO';
 import FloatingChatWidget from './components/FloatingChatWidget';
 import { initMicrointeractions } from './utils/microinteractions';
 import CookieConsent from './components/CookieConsent';
-import ExitIntentModal from './components/ExitIntentModal';
+import ExitIntentPopup from './components/ExitIntentPopup';
 
 const Home = lazy(() => import('./pages/Home'));
 const HowItWorks = lazy(() => import('./pages/HowItWorks'));
@@ -39,12 +39,8 @@ const Blog = lazy(() => import('./pages/blog/Blog'));
 const BlogPost = lazy(() => import('./pages/blog/BlogPost'));
 const LocationPageUS = lazy(() => import('./pages/LocationPageUS'));
 const LocationPageUK = lazy(() => import('./pages/LocationPageUK'));
-const TradePage = lazy(() => import('./pages/TradePage'));
 const CookiePolicy = lazy(() => import('./pages/CookiePolicy'));
 const VideoWatch = lazy(() => import('./pages/VideoWatch'));
-const VoiceLanding = lazy(() => import('./pages/VoiceLanding'));
-const VoiceOnboarding = lazy(() => import('./components/VoiceOnboarding'));
-
 const PlanSelection = lazy(() => import('./pages/PlanSelection'));
 
 const ProtectedRoute = memo(function ProtectedRoute({ children, adminOnly = false }) {
@@ -225,8 +221,7 @@ function App() {
             <SkipLink />
             <CookieConsent />
             <AppRoutes />
-            <ExitIntentModal />
-            <FloatingChatWidget />
+            <ExitIntentPopup />
           </BrowserRouter>
         </AuthProvider>
       </ToastProvider>

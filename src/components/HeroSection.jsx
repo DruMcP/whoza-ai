@@ -248,14 +248,14 @@ const HeroSection = () => {
               marginTop: '10px',
               marginBottom: '8px'
             }}>
-              14-day free trial. No credit card required. Start getting AI recommendations.
+              Free analysis. Takes 60 seconds. No email required to see results.
             </p>
             <p style={{
               fontSize: '0.85rem',
               color: '#9CA3AF',
               marginTop: '0'
             }}>
-              See who AI recommends for your trade — and how to outrank them.
+              Real competitor names from AI search. Get the full plan via email.
             </p>
           </div>
 

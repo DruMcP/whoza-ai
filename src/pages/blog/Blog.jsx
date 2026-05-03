@@ -38,7 +38,7 @@ function Blog() {
       "@type": "Blog",
       "name": "Whoza.ai Blog - AI Visibility for Tradespeople",
       "description": "Expert guides on AI visibility and digital marketing for plumbers, electricians, builders, and tradespeople.",
-      "url": `${baseUrl}/blog`,
+      "url": "https://whoza.ai/blog",
       "publisher": {
         "@type": "Organization",
         "name": "Whoza.ai",
@@ -224,10 +224,10 @@ function Blog() {
       <section className="blog-cta">
         <div className="container">
           <div className="cta-card">
-            <h2>Stop Losing Customers to AI Search</h2>
-            <p>Rex monitors your competitors monthly and sends you weekly action plans to outrank them on ChatGPT, Google AI, and Perplexity.</p>
-            <Link to="/pricing" className="cta-button">
-              Start Your Free Trial
+            <h2>See Who's Stealing Your Customers</h2>
+            <p>Find out who AI recommends for your trade in your area — and why it's not you. Free competitor analysis in 60 seconds.</p>
+            <Link to="/competitor-analysis" className="cta-button">
+              Check My Competitor
             </Link>
           </div>
         </div>
