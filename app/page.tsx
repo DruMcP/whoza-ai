@@ -45,17 +45,17 @@ export default function Home() {
         {/* HOW IT WORKS - Full visual flow */}
         <HowWhozaWorks />
 
-        {/* TRIAL EXPLANATION - Risk-free trial steps */}
+        {/* EARLY ACCESS - How it works */}
         <TrialExplanation />
 
         {/* CALL CAPTURE - Choose your voice */}
         <MeetTheTeam />
         <AudioDemo />
 
-        {/* VOICE AGENT DEMO - Talk to Katie live */}
+        {/* VOICE AGENT DEMO - Experience Katie */}
         <section className="py-12 bg-[var(--navy-900)]">
           <div className="max-w-7xl mx-auto px-4 text-center">
-            <p className="text-white/60 text-sm mb-4">Try it now - no signup needed</p>
+            <p className="text-white/60 text-sm mb-4">Experience the demo — no signup needed</p>
             <TrilletVoiceWidget buttonLabel="Talk to Katie" />
           </div>
         </section>

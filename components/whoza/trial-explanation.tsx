@@ -37,7 +37,7 @@ const steps = [
     title: "Only Continue If It's Working",
     description: "See real results first. No upfront cost. Cancel anytime if it's not right for you.",
     icon: CheckCircle2,
-    time: "Risk-free",
+    time: "No commitment",
     bgClass: "bg-[var(--mark-grey)]",
     textClass: "text-[var(--mark-grey)]",
   },

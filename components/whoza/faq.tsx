@@ -103,7 +103,7 @@ export function FAQ() {
           </div>
           <h3 className="text-xl font-bold text-[var(--navy-900)] mb-2">Still have questions?</h3>
           <p className="text-[var(--slate-500)] mb-6">
-            Our team is here to help you get started.
+            Our team is here to help you with early access.
           </p>
           <Button className="bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 text-white">
             <MessageCircle className="mr-2 w-4 h-4" />

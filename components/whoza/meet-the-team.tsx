@@ -204,8 +204,9 @@ export function MeetTheTeam() {
           <Button 
             size="lg"
             className="bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 text-white font-semibold px-8"
+            onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Get Started with Your AI Agent
+            Join Early Access
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
         </motion.div>
