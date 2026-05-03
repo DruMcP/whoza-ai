@@ -37,17 +37,12 @@ export function LostRevenueCalculator() {
 
   return (
     <section id="calculator" className="py-28 lg:py-44 bg-gradient-to-b from-red-50 via-red-50/50 to-[var(--off-white)] relative">
-      {/* Transition Bridge */}
-      <div className="absolute -top-6 left-1/2 -translate-x-1/2 px-8 py-3.5 rounded-full bg-[var(--navy-900)] text-white text-lg font-bold shadow-xl border-4 border-white z-10">
-        This is what you&apos;re losing → This is how you get it back
+      {/* Transition Bridge — responsive sizing */}
+      <div className="absolute top-3 sm:top-4 lg:top-6 left-1/2 -translate-x-1/2 px-4 py-2 sm:px-6 sm:py-2.5 lg:px-8 lg:py-3.5 rounded-full bg-[var(--navy-900)] text-white text-sm sm:text-base lg:text-lg font-bold shadow-xl border-2 sm:border-4 border-white z-10 text-center whitespace-nowrap sm:whitespace-normal max-w-[calc(100vw-2rem)] truncate sm:truncate-none">
+        See what you&apos;re missing → Join early access
       </div>
       
-      {/* Urgency indicator */}
-      <div className="absolute top-12 left-1/2 -translate-x-1/2 flex items-center gap-2 px-5 py-2.5 rounded-full bg-red-600 text-white text-sm font-bold shadow-lg">
-        <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-        <span>3 missed calls in the last hour cost you {config.currencySymbol}400+</span>
-      </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -57,11 +52,11 @@ export function LostRevenueCalculator() {
         >
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-600 text-white text-sm font-bold mb-4">
             <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-            You Are Losing Money Right Now
+            See What Missed Calls Cost You
           </span>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
-            How Much Are You Losing{" "}
-            <span className="text-red-600">This Week?</span>
+            How Much Could You Recover{" "}
+            <span className="text-red-600">With Whoza?</span>
           </h2>
           <p className="mt-6 text-xl text-[var(--slate-500)] text-pretty">
             Every missed call walks straight to your competitor.
@@ -79,7 +74,7 @@ export function LostRevenueCalculator() {
           <div className="bg-white rounded-3xl shadow-xl border border-[var(--border)] overflow-hidden">
             <div className="grid lg:grid-cols-2">
               {/* Inputs */}
-              <div className="p-8 lg:p-10 space-y-8">
+              <div className="p-6 sm:p-8 lg:p-10 space-y-8">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-2xl bg-[var(--katie-blue)]/10 flex items-center justify-center">
                     <Calculator className="w-6 h-6 text-[var(--katie-blue)]" />
@@ -166,7 +161,7 @@ export function LostRevenueCalculator() {
               </div>
 
               {/* Results */}
-              <div className="bg-[var(--navy-900)] p-8 lg:p-10 flex flex-col">
+              <div className="bg-[var(--navy-900)] p-6 sm:p-8 lg:p-10 flex flex-col">
                 <h3 className="text-lg font-semibold text-white mb-8">Your Lost Revenue</h3>
                 
                 <div className="flex-1 space-y-6">
@@ -207,14 +202,15 @@ export function LostRevenueCalculator() {
                       {config.currencySymbol}{config.pricing.starter}/month <span className="text-xs">ex VAT</span>
                     </span>
                   </p>
+                  <p className="text-sm text-white/70 mb-3 text-center">
+                    Whoza is launching soon. Join early access to be first.
+                  </p>
                   <Button 
                     className="w-full bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-bold py-6 text-lg"
                   >
-                    Start Free Trial
+                    Join Early Access
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
-                  <p className="text-xs text-white/40 mt-3 text-center">No credit card required</p>
-                  <p className="text-xs text-white/50 mt-1 text-center">Most customers see their first booked job within days.</p>
                 </div>
               </div>
             </div>

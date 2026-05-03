@@ -18,6 +18,7 @@ export interface LocaleConfig {
     growth: number
     pro: number
     scale: number
+    business: number
   }
 }
 
@@ -37,9 +38,10 @@ export const localeConfigs: Record<Country, LocaleConfig> = {
     },
     pricing: {
       starter: 59,
-      growth: 119,
-      pro: 199,
-      scale: 349,
+      growth: 125,
+      pro: 230,
+      scale: 399,
+      business: 59,
     },
   },
   us: {
@@ -57,9 +59,10 @@ export const localeConfigs: Record<Country, LocaleConfig> = {
     },
     pricing: {
       starter: 59,
-      growth: 119,
-      pro: 199,
-      scale: 349,
+      growth: 125,
+      pro: 230,
+      scale: 399,
+      business: 59,
     },
   },
 }

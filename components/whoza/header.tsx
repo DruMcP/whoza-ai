@@ -21,13 +21,13 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--navy-900)]/95 backdrop-blur-md border-b border-white/10">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo + Trust Line */}
-          <div className="flex items-center gap-3">
+          {/* Logo + Trust Line — pulled further left */}
+          <div className="flex items-center gap-3 -ml-1 lg:-ml-8">
             <a href="/" className="flex items-center">
               <img 
                 src="/production_logo.png" 
                 alt="whoza.ai" 
-                className="h-10 w-auto lg:h-11"
+                className="h-16 w-auto sm:h-[4.5rem] lg:h-[5rem]"
               />
             </a>
             <span className="hidden lg:block text-xs text-white/40 border-l border-white/20 pl-3">
@@ -55,23 +55,26 @@ export function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <CountrySwitcher />
             <Button 
               className="bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-bold px-6"
               onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Start Free Trial
+              Join Early Access
             </Button>
+            <CountrySwitcher />
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2 text-white"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile: Country Switcher + Menu Button */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <CountrySwitcher />
+            <button
+              className="p-2 text-white"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -108,7 +111,7 @@ export function Header() {
                   className="w-full bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-bold"
                   onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  Start Free Trial
+                  Join Early Access
                 </Button>
               </div>
             </div>

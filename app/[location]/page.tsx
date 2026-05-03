@@ -10,7 +10,7 @@ import { RevenueSystem } from "@/components/whoza/revenue-system"
 import { MeetTheTeam } from "@/components/whoza/meet-the-team"
 import { HowItWorks } from "@/components/whoza/how-it-works"
 import { AudioDemo } from "@/components/whoza/audio-demo"
-import { TestimonialCarousel } from "@/components/whoza/testimonials"
+import { Testimonials } from "@/components/whoza/testimonials"
 import { GoogleReviews } from "@/components/whoza/google-reviews"
 import { ComparisonTable } from "@/components/whoza/comparison-table"
 import { Pricing } from "@/components/whoza/pricing"
@@ -83,7 +83,7 @@ export default async function LocationPage({ params }: PageProps) {
         <MeetTheTeam />
         <HowItWorks />
         <AudioDemo />
-        <TestimonialCarousel />
+        <Testimonials />
         <GoogleReviews />
         <ComparisonTable />
         <Pricing />

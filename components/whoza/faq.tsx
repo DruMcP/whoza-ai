@@ -40,8 +40,8 @@ const faqs = [
     answer: "Cancel anytime — no contracts, no cancellation fees, no hassle. We're confident you'll stay because the system pays for itself many times over, but if it's not right for your business, you can cancel with one click from your dashboard.",
   },
   {
-    question: "How does the free trial work?",
-    answer: "We give you 14-day free trial. No credit card required. Experience the full system — call answering, job booking, WhatsApp delivery, and review collection. After your trial, choose a plan that fits your business. If you don't upgrade, your account simply pauses — no surprise charges.",
+    question: "How does early access work?",
+    answer: "Join early access to be among the first tradespeople to use Whoza when we launch. Early access members get priority onboarding, exclusive pricing, and direct input into product development. No credit card required to sign up — we'll notify you as soon as your slot is ready.",
   },
 ]
 

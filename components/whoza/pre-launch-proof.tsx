@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Phone, CheckCircle2, ArrowRight, Zap } from "lucide-react"
+import { Phone, CheckCircle2, ArrowRight, Zap, MessageSquare, Star, BarChart3, Target } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLocale } from "@/lib/locale-context"
 
@@ -40,66 +40,113 @@ export function PreLaunchProof() {
                 <span className="px-3 py-1 rounded-full bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] text-xs font-bold">
                   EXAMPLE SCENARIO
                 </span>
+                <span className="text-xs text-[var(--slate-500)">Illustrative projection</span>
               </div>
               
-              <p className="text-sm text-[var(--slate-500)] mb-4">Typical for many trades.</p>
+              <p className="text-sm text-[var(--slate-500)] mb-4">Typical for many trades. Projections based on industry averages.</p>
 
               {/* Flow */}
               <div className="space-y-2">
-                {/* Step 1: 10 missed calls */}
+                {/* Step 1: Calls captured */}
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-red-100 flex items-center justify-center shrink-0">
-                    <Phone className="w-6 h-6 text-red-500" />
+                  <div className="w-12 h-12 rounded-xl bg-[var(--katie-blue)]/10 flex items-center justify-center shrink-0">
+                    <Phone className="w-6 h-6 text-[var(--katie-blue)]" />
                   </div>
                   <div>
-                    <div className="text-lg font-bold text-[var(--navy-900)]">10 missed calls</div>
-                    <div className="text-[var(--slate-500)]">While you were on site, in the van, or finishing a job</div>
+                    <div className="text-lg font-bold text-[var(--navy-900)]">Calls captured</div>
+                    <div className="text-[var(--slate-500)]">Whoza answers every call</div>
                   </div>
                 </div>
 
                 {/* Arrow 1 */}
                 <div className="flex items-center ml-6">
-                  <div className="border-l-2 border-dashed border-[var(--slate-200)] h-6" />
+                  <div className="border-l-2 border-dashed border-[var(--slate-200)] h-4" />
                 </div>
                 <div className="flex items-center gap-3 ml-4">
                   <ArrowRight className="w-4 h-4 text-[var(--slate-300)] rotate-90" />
-                  <span className="text-xs font-bold text-[var(--katie-blue)] uppercase tracking-wider">Missed calls → Jobs booked</span>
+                  <span className="text-xs font-bold text-[var(--katie-blue)] uppercase tracking-wider">Katie answers</span>
                 </div>
                 <div className="flex items-center ml-6">
-                  <div className="border-l-2 border-dashed border-[var(--slate-200)] h-6" />
+                  <div className="border-l-2 border-dashed border-[var(--slate-200)] h-4" />
                 </div>
 
-                {/* Step 2: 4 booked jobs */}
+                {/* Step 2: Enquiries booked */}
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-[var(--katie-blue)]/10 flex items-center justify-center shrink-0">
-                    <CheckCircle2 className="w-6 h-6 text-[var(--katie-blue)]" />
+                  <div className="w-12 h-12 rounded-xl bg-[var(--rex-green)]/10 flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="w-6 h-6 text-[var(--rex-green)]" />
                   </div>
                   <div>
-                    <div className="text-lg font-bold text-[var(--navy-900)]">4 booked jobs</div>
-                    <div className="text-[var(--slate-500)]">Qualified, sent to your phone via WhatsApp, ready to accept</div>
+                    <div className="text-lg font-bold text-[var(--navy-900)]">Enquiries booked</div>
+                    <div className="text-[var(--slate-500)]">Real enquiries sent to your phone</div>
                   </div>
                 </div>
 
                 {/* Arrow 2 */}
                 <div className="flex items-center ml-6">
-                  <div className="border-l-2 border-dashed border-[var(--slate-200)] h-6" />
+                  <div className="border-l-2 border-dashed border-[var(--slate-200)] h-4" />
                 </div>
                 <div className="flex items-center gap-3 ml-4">
                   <ArrowRight className="w-4 h-4 text-[var(--slate-300)] rotate-90" />
-                  <span className="text-xs font-bold text-[var(--rex-green)] uppercase tracking-wider">Jobs → Money recovered</span>
+                  <span className="text-xs font-bold text-[var(--rex-green)] uppercase tracking-wider">Job confirmed</span>
                 </div>
                 <div className="flex items-center ml-6">
-                  <div className="border-l-2 border-dashed border-[var(--slate-200)] h-6" />
+                  <div className="border-l-2 border-dashed border-[var(--slate-200)] h-4" />
                 </div>
 
-                {/* Step 3: £480 recovered */}
+                {/* Step 3: Reviews collected */}
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-[var(--rex-green)] flex items-center justify-center shrink-0">
-                    <span className="text-lg font-bold text-white">{config.currencySymbol}480</span>
+                  <div className="w-12 h-12 rounded-xl bg-[var(--claire-amber)]/10 flex items-center justify-center shrink-0">
+                    <Star className="w-6 h-6 text-[var(--claire-amber)]" />
                   </div>
                   <div>
-                    <div className="text-lg font-bold text-[var(--navy-900)]">{config.currencySymbol}480 recovered</div>
-                    <div className="text-[var(--slate-500)]">4 jobs at {config.currencySymbol}120 average = <span className="font-bold text-[var(--rex-green)]">{config.currencySymbol}480 in one day</span></div>
+                    <div className="text-lg font-bold text-[var(--navy-900)]">Reviews collected</div>
+                    <div className="text-[var(--slate-500)]">Claire requests 5-star reviews</div>
+                  </div>
+                </div>
+
+                {/* Arrow 3 */}
+                <div className="flex items-center ml-6">
+                  <div className="border-l-2 border-dashed border-[var(--slate-200)] h-4" />
+                </div>
+                <div className="flex items-center gap-3 ml-4">
+                  <ArrowRight className="w-4 h-4 text-[var(--slate-300)] rotate-90" />
+                  <span className="text-xs font-bold text-[var(--claire-amber)] uppercase tracking-wider">Claire follows up</span>
+                </div>
+                <div className="flex items-center ml-6">
+                  <div className="border-l-2 border-dashed border-[var(--slate-200)] h-4" />
+                </div>
+
+                {/* Step 4: Competitors analysed */}
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-[var(--rex-green)]/10 flex items-center justify-center shrink-0">
+                    <BarChart3 className="w-6 h-6 text-[var(--rex-green)]" />
+                  </div>
+                  <div>
+                    <div className="text-lg font-bold text-[var(--navy-900)]">Competitors analysed</div>
+                    <div className="text-[var(--slate-500)]">Rex checks who is winning locally</div>
+                  </div>
+                </div>
+
+                {/* Arrow 4 */}
+                <div className="flex items-center ml-6">
+                  <div className="border-l-2 border-dashed border-[var(--slate-200)] h-4" />
+                </div>
+                <div className="flex items-center gap-3 ml-4">
+                  <ArrowRight className="w-4 h-4 text-[var(--slate-300)] rotate-90" />
+                  <span className="text-xs font-bold text-[var(--rex-green)] uppercase tracking-wider">Rex compares</span>
+                </div>
+                <div className="flex items-center ml-6">
+                  <div className="border-l-2 border-dashed border-[var(--slate-200)] h-4" />
+                </div>
+
+                {/* Step 5: Actions recommended */}
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-[var(--rex-green)] flex items-center justify-center shrink-0">
+                    <Target className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <div className="text-lg font-bold text-[var(--navy-900)]">Actions recommended</div>
+                    <div className="text-[var(--slate-500)]">Rex tells you what to fix next</div>
                   </div>
                 </div>
               </div>
@@ -115,13 +162,13 @@ export function PreLaunchProof() {
           >
             {/* Result Card */}
             <div className="bg-[var(--navy-900)] rounded-3xl p-8 text-center">
-              <div className="text-white/60 mb-2">What you get back in a day</div>
+              <div className="text-white/60 mb-2">Example: What you could recover in a day</div>
               <div className="text-5xl lg:text-6xl font-bold text-[var(--rex-green)]">
                 {config.currencySymbol}480
               </div>
-              <div className="text-white/60 mt-2">from just 10 missed calls</div>
+              <div className="text-white/60 mt-2">from 10 missed calls (illustrative)</div>
 
-              <div className="mt-6 grid grid-cols-3 gap-4 text-center">
+              <div className="mt-6 grid grid-cols-3 gap-2 sm:gap-4 text-center">
                 <div className="p-3 rounded-xl bg-white/5">
                   <div className="text-2xl font-bold text-white">{config.currencySymbol}2,400</div>
                   <div className="text-xs text-white/50">per week</div>
@@ -143,21 +190,24 @@ export function PreLaunchProof() {
                 <CheckCircle2 className="w-6 h-6 text-[var(--rex-green)] shrink-0 mt-0.5" />
                 <div>
                   <div className="font-bold text-[var(--navy-900)]">
-                    Most customers recover their monthly cost in their first few jobs.
+                    Most trades break even with just 1 extra job per month.
                   </div>
                   <div className="text-[var(--slate-500)] text-sm mt-1">
-                    At {config.currencySymbol}59/month ex VAT with {config.currencySymbol}120 avg jobs, you only need 1 extra job to break even.
+                    At {config.currencySymbol}59/month with {config.currencySymbol}120 average job value, one extra booking covers your cost.
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="text-center">
+              <p className="text-sm text-[var(--slate-500)] mb-2">
+                Whoza is launching soon. Join early access to be first.
+              </p>
               <Button 
                 size="lg"
                 className="bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-bold px-10 py-6 text-lg gap-3 shadow-xl shadow-[var(--rex-green)]/30 transition-all hover:scale-105"
               >
-                Start Free Trial
+                Join Early Access
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </div>

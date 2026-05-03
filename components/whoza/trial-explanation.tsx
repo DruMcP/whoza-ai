@@ -59,11 +59,11 @@ export function TrialExplanation() {
             Zero Risk
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
-            How the Risk-Free Trial Works
+            How Whoza Works
           </h2>
           <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
-            Try Whoza with zero commitment. 
-            <span className="font-semibold text-[var(--navy-900)]">Most customers receive their first enquiries within days.</span>
+            From missed call to booked job — automatically.
+            <span className="font-semibold text-[var(--navy-900)]">Join early access to be first.</span>
           </p>
         </motion.div>
 
@@ -120,31 +120,34 @@ export function TrialExplanation() {
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-[var(--rex-green)]/10 border border-[var(--rex-green)]/20">
             <CheckCircle2 className="w-5 h-5 text-[var(--rex-green)]" />
             <span className="text-[var(--navy-900)] font-semibold">
-              Most customers receive their first enquiries within days of going live.
+              Be the first to experience AI call answering for trades.
             </span>
           </div>
         </motion.div>
 
-        {/* Scarcity */}
+        {/* Pre-Launch CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
+          <p className="text-lg text-[var(--slate-500)] mb-2">
+            Whoza is launching soon.
+          </p>
           <p className="text-lg text-[var(--slate-500)] mb-6">
-            We limit onboarding to <span className="font-semibold text-[var(--navy-900)]">ensure every client gets real results.</span>
+            Join early access to be first in line.
           </p>
           <Button 
             size="lg"
             className="bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-bold px-10 py-7 text-xl gap-3 shadow-2xl shadow-[var(--rex-green)]/40 transition-all hover:scale-105"
             onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Start Free Trial
+            Join Early Access
             <ArrowRight className="w-6 h-6" />
           </Button>
           <p className="mt-3 text-sm text-[var(--slate-500)]">
-            Setup takes 30 minutes. No upfront cost. Cancel anytime.
+            Be the first to experience AI call answering for trades.
           </p>
         </motion.div>
       </div>

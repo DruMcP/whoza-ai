@@ -54,16 +54,15 @@ export function FinalCTA() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white tracking-tight text-balance">
-            Stop Losing Jobs{" "}
-            <span className="text-red-400">This Week</span>
+            Don't Miss Another Job
           </h2>
           <p className="mt-8 text-xl lg:text-2xl text-white/70 max-w-2xl mx-auto text-pretty">
-            Every day you wait = {config.currencySymbol}200+ walking to your competitors.
-            <span className="block mt-3 font-bold text-[var(--rex-green)] text-2xl">Installed in 30 minutes. First jobs typically within days.</span>
+            Every missed call is a job going to your competitor.
+            <span className="block mt-3 font-bold text-[var(--rex-green)] text-2xl">Join early access — be first when we launch.</span>
           </p>
           <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/70 text-sm">
             <CheckCircle2 className="w-4 h-4 text-[var(--rex-green)]" />
-            No results in 30 days? We extend free.
+            No credit card required to join early access.
           </div>
         </motion.div>
 
@@ -84,29 +83,29 @@ export function FinalCTA() {
               className="bg-transparent border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg"
               onClick={() => window.open('https://wa.me/447831643012', '_blank')}
             >
-              Book Demo
+              Hear the Demo
             </Button>
           </div>
         </motion.div>
 
-        {/* CTA Reassurance */}
+        {/* Pre-Launch Context */}
         <p className="mt-3 text-sm text-white/60 text-center">
-          Setup takes 30 minutes. Most customers receive their first enquiries within days of going live.
+          Whoza is launching soon. Join early access to be first in line.
         </p>
 
-        {/* Dynamic Proof */}
+        {/* Early Access Pulse */}
         <div className="mt-3 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/10 text-sm text-white/80">
           <span className="w-2 h-2 rounded-full bg-[var(--rex-green)] animate-pulse" />
-          <span className="font-semibold text-white">Jobs booked today: 47</span>
-          <span className="text-white/40">across UK trades</span>
+          <span className="font-semibold text-white">Launching soon</span>
+          <span className="text-white/40">— join early access</span>
         </div>
 
-        {/* CTA Urgency */}
+        {/* Reassurance */}
         <p className="mt-3 text-sm text-white/50 text-center">
-          Most customers receive their first enquiries within days of going live.
+          Be the first to experience AI call answering for trades.
         </p>
 
-        {/* Risk Reversal */}
+        {/* Early Access Promise */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -115,7 +114,7 @@ export function FinalCTA() {
           className="mt-8 px-6 py-3 rounded-full bg-[var(--rex-green)]/20 border border-[var(--rex-green)]/30 inline-flex items-center gap-2"
         >
           <CheckCircle2 className="w-5 h-5 text-[var(--rex-green)]" />
-          <span className="text-white font-semibold">No results in 30 days? We extend free.</span>
+          <span className="text-white font-semibold">Early access members get priority onboarding.</span>
         </motion.div>
 
         {/* Trust Points */}

@@ -149,11 +149,14 @@ export function RevenueSystem() {
           </div>
           
           <div className="mt-8">
+            <p className="text-sm text-[var(--slate-500)] mb-4">
+              Whoza is launching soon. Join early access to be first.
+            </p>
             <Button 
               size="lg"
               className="bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-bold px-8"
             >
-              Start Free Trial
+              Join Early Access
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </div>

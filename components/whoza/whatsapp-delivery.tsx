@@ -72,7 +72,7 @@ export function WhatsAppDelivery() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center overflow-hidden">
           {/* WhatsApp Mockup */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -228,7 +228,7 @@ export function WhatsAppDelivery() {
               className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full bg-[var(--rex-green)] text-white text-sm font-bold shadow-lg flex items-center gap-2"
             >
               <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-              2 taps to confirm
+              Demo: tap to try
             </motion.div>
             
             {/* Live Activity Indicator */}
@@ -238,7 +238,7 @@ export function WhatsAppDelivery() {
               transition={{ delay: 1 }}
               className="absolute -top-2 -right-2 px-3 py-1.5 rounded-full bg-[var(--katie-blue)] text-white text-xs font-medium shadow-lg"
             >
-              Call answered in 3 sec
+              Interactive demo
             </motion.div>
           </motion.div>
 

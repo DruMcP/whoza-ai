@@ -14,7 +14,7 @@ import { DashboardPreview } from "@/components/whoza/dashboard-preview"
 import { LostRevenueCalculator } from "@/components/whoza/lost-revenue-calculator"
 import { AudioDemo } from "@/components/whoza/audio-demo"
 import { TrialExplanation } from "@/components/whoza/trial-explanation"
-import { TestimonialCarousel } from "@/components/whoza/testimonials"
+import { Testimonials } from "@/components/whoza/testimonials"
 import { GoogleReviews } from "@/components/whoza/google-reviews"
 import { ComparisonTable } from "@/components/whoza/comparison-table"
 import { Pricing } from "@/components/whoza/pricing"
@@ -75,7 +75,7 @@ export default function Home() {
         <StatsBand />
 
         {/* PROOF - Social proof */}
-        <TestimonialCarousel />
+        <Testimonials />
         <GoogleReviews />
 
         {/* WHY US - Comparison */}
