@@ -26,23 +26,6 @@ import { generateHomePageSchemas } from '../utils/schemaOrg';
 export default function Home() {
   const schemas = generateHomePageSchemas();
 
-  useEffect(() => {
-    // Simple scroll reveal observer
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
-    );
-
-    document.querySelectorAll('.ds-reveal').forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <>
       <SEO schemas={schemas} />

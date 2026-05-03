@@ -33,6 +33,8 @@ const CompetitorAnalysis = lazy(() => import('./pages/CompetitorAnalysis'));
 const Account = lazy(() => import('./pages/Account'));
 const Contact = lazy(() => import('./pages/Contact'));
 const NotFound = lazy(() => import('./pages/NotFound'));
+const Testimonials = lazy(() => import('./pages/Testimonials'));
+const FreeTrial = lazy(() => import('./pages/FreeTrial'));
 const Blog = lazy(() => import('./pages/blog/Blog'));
 const BlogPost = lazy(() => import('./pages/blog/BlogPost'));
 const LocationPageUS = lazy(() => import('./pages/LocationPageUS'));
@@ -122,6 +124,8 @@ function AppRoutes() {
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/video" element={<VideoWatch />} />
           <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/free-trial" element={<FreeTrial />} />
           <Route path="/free-score" element={<Navigate to="/competitor-analysis" replace />} />
           <Route path="/competitor-analysis" element={<CompetitorAnalysis />} />
           <Route path="/competitor" element={<Navigate to="/competitor-analysis" replace />} />

@@ -8,6 +8,8 @@ import './Blog.css';
 function Blog() {
   const [posts, setPosts] = useState([]);
   const [featuredPost, setFeaturedPost] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 9;
 
   useEffect(() => {
     const publishedPosts = getPublishedPosts();
@@ -21,7 +23,13 @@ function Blog() {
     }
   }, []);
 
-  // Add structured data for blog listing
+  const totalPages = Math.ceil(posts.length / postsPerPage);
+  const paginatedPosts = posts.slice((currentPage - 1) * postsPerPage, currentPage * postsPerPage);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   useEffect(() => {
     const baseUrl = getBaseUrl();
     const allPosts = getPublishedPosts();
@@ -140,9 +148,9 @@ function Blog() {
       {/* Post Grid */}
       <section className="blog-grid-section">
         <div className="container">
-          {posts.length > 0 ? (
+          {paginatedPosts.length > 0 ? (
             <div className="blog-grid">
-              {posts.map(post => (
+              {paginatedPosts.map(post => (
                 <article key={post.id} className="post-card">
                   <div className="post-meta">
                     <span className="post-category">{post.category}</span>
@@ -166,6 +174,49 @@ function Blog() {
               <p>New content coming soon. Check back for expert guides on AI visibility for tradespeople.</p>
             </div>
           ) : null}
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <nav className="blog-pagination" aria-label="Blog pagination">
+              <div className="flex items-center justify-center gap-2 mt-10">
+                <button
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage === 1}
+                  className="px-4 py-2 rounded-lg text-sm font-medium transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+                  style={{ background: currentPage === 1 ? 'transparent' : 'rgba(255,255,255,0.05)', color: 'var(--slate-400)', border: '1px solid rgba(255,255,255,0.08)' }}
+                >
+                  ← Previous
+                </button>
+
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                  <button
+                    key={page}
+                    onClick={() => handlePageChange(page)}
+                    className="w-10 h-10 rounded-lg text-sm font-medium transition-all"
+                    style={{
+                      background: currentPage === page ? 'var(--katie-blue)' : 'transparent',
+                      color: currentPage === page ? 'white' : 'var(--slate-400)',
+                      border: `1px solid ${currentPage === page ? 'var(--katie-blue)' : 'rgba(255,255,255,0.08)'}`,
+                    }}
+                  >
+                    {page}
+                  </button>
+                ))}
+
+                <button
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                  className="px-4 py-2 rounded-lg text-sm font-medium transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+                  style={{ background: currentPage === totalPages ? 'transparent' : 'rgba(255,255,255,0.05)', color: 'var(--slate-400)', border: '1px solid rgba(255,255,255,0.08)' }}
+                >
+                  Next →
+                </button>
+              </div>
+              <p className="text-center text-xs mt-3" style={{ color: 'var(--slate-500)' }}>
+                Showing {((currentPage - 1) * postsPerPage) + 1}-{Math.min(currentPage * postsPerPage, posts.length)} of {posts.length} articles
+              </p>
+            </nav>
+          )}
         </div>
       </section>
 

@@ -216,11 +216,14 @@
   border-radius: var(--radius-md);
   border: none;
   cursor: pointer;
-  transition: transform var(--duration-fast) var(--ease-out),
-              box-shadow var(--duration-fast) var(--ease-out),
-              background-color var(--duration-fast) var(--ease-out);
+  transition: transform 0.2s var(--ease-out),
+              box-shadow 0.2s var(--ease-out),
+              background-color 0.2s var(--ease-out);
   text-decoration: none;
   min-height: 48px;
+  position: relative;
+  overflow: hidden;
+  will-change: transform;
 }
 
 .ds-btn:focus-visible {
@@ -229,11 +232,39 @@
 }
 
 .ds-btn:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.15);
 }
 
 .ds-btn:active {
-  transform: translateY(0);
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.1);
+}
+
+/* Magnetic hover ripple */
+.ds-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ds-btn:hover::after {
+  width: 200%;
+  height: 200%;
+}
+
+.ds-btn > * {
+  position: relative;
+  z-index: 1;
 }
 
 .ds-btn-primary {
@@ -244,7 +275,7 @@
 
 .ds-btn-primary:hover {
   background-color: var(--katie-blue-dark);
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 8px 28px rgba(37, 99, 235, 0.4);
 }
 
 .ds-btn-secondary {
@@ -255,6 +286,7 @@
 
 .ds-btn-secondary:hover {
   background-color: var(--slate-100);
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
 }
 
 .ds-btn-cta {
@@ -264,7 +296,7 @@
 }
 
 .ds-btn-cta:hover {
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 8px 28px rgba(37, 99, 235, 0.4);
 }
 
 .ds-btn-katie {

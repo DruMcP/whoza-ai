@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export default function LostRevenueCalculator() {
   const [missedCalls, setMissedCalls] = useState(5);
@@ -31,19 +32,29 @@ export default function LostRevenueCalculator() {
     }).format(val);
 
   return (
-    <section
+    <motion.section
       id="revenue-calculator"
-      className={`revenue-calculator-section ${isVisible ? 'visible' : ''}`}
+      className="revenue-calculator-section visible"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-50px' }}
+      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
     >
       <div className="container">
-        <div className="section-header">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          className="section-header"
+        >
           <span className="section-tag">Quick Check</span>
           <h2>How Much Is Voicemail Costing You?</h2>
           <p>
             Most tradespeople miss 3–8 calls per week. Every missed call is a
             potential job going to a competitor.
           </p>
-        </div>
+        </motion.div>
 
         <div className="calculator-grid">
           {/* Inputs */}
@@ -113,58 +124,38 @@ export default function LostRevenueCalculator() {
           {/* Results */}
           <div className="calculator-results">
             <div className="result-card">
-              <span className="result-period">Every week</span>
+              <span className="result-period">Weekly</span>
               <span className="result-amount">{formatCurrency(weeklyLost)}</span>
-              <span className="result-label">lost to voicemail</span>
+              <span className="result-label">missed revenue</span>
             </div>
-
-            <div className="result-card highlight">
-              <span className="result-period">Every month</span>
-              <span className="result-amount">
-                {formatCurrency(monthlyLost)}
-              </span>
-              <span className="result-label">lost to voicemail</span>
-            </div>
-
             <div className="result-card">
-              <span className="result-period">Every year</span>
-              <span className="result-amount">
-                {formatCurrency(yearlyLost)}
-              </span>
-              <span className="result-label">lost to voicemail</span>
+              <span className="result-period">Monthly</span>
+              <span className="result-amount">{formatCurrency(monthlyLost)}</span>
+              <span className="result-label">missed revenue</span>
+            </div>
+            <div className="result-card highlight">
+              <span className="result-period">Yearly</span>
+              <span className="result-amount">{formatCurrency(yearlyLost)}</span>
+              <span className="result-label">potential revenue lost</span>
             </div>
 
             <div className="calculator-cta">
               <p className="cta-line">
-                whoza.ai costs{' '}
-                <strong>{formatCurrency(59)}</strong> per month.{' '}
-                {monthlyLost > 500 ? (
-                  <>
-                    You could recover{' '}
-                    <strong>
-                      {formatCurrency(monthlyLost - 59)}
-                      /mo
-                    </strong>{' '}
-                    in lost jobs.
-                  </>
-                ) : (
-                  <>That's the price of a few missed calls.</>
-                )}
+                With whoza.ai, <strong>Katie answers every call 24/7</strong> and
+                books jobs while you work.
               </p>
-              <Link
-                to="/start"
-                className="btn btn-primary btn-lg"
-              >
-                Stop Losing Jobs — Start Free Trial
+              <Link to="/start" className="btn-primary">
+                Start Free Trial
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
               </Link>
-              <span className="cta-guarantee">
-                14 days free · No card required · Cancel anytime
-              </span>
+              <span className="cta-guarantee">14-day free trial. No credit card required.</span>
             </div>
           </div>
         </div>
 
-        {/* Social proof strip */}
+        {/* Proof Strip */}
         <div className="calculator-proof">
           <div className="proof-item">
             <strong>£2,400</strong>
@@ -180,6 +171,6 @@ export default function LostRevenueCalculator() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
