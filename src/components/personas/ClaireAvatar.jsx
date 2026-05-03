@@ -1,9 +1,13 @@
 import { motion } from 'framer-motion';
 
 /**
- * Claire — Review Collector Avatar
+ * Claire — Post-Job Conversion Engine
  * Amber/gold tones, warm, trustworthy
  * Real AI-generated human portrait photo
+ * 
+ * Claire is NOT review software. Claire IS a mechanism that
+ * compounds revenue after every job — turning completed jobs
+ * into more future jobs automatically.
  */
 export default function ClaireAvatar({ size = 'md', floating = true, className = '' }) {
   const sizeMap = {
@@ -25,7 +29,7 @@ export default function ClaireAvatar({ size = 'md', floating = true, className =
       <div className="relative" style={{ width: s, height: s }}>
         <img
           src="/images/claire.jpg"
-          alt="Claire — Review Collector"
+          alt="Claire — Post-Job Conversion Engine"
           className="rounded-full"
           style={{
             width: s,

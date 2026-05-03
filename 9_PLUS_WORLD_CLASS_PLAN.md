@@ -194,6 +194,8 @@ These sites share:
 - ✅ Integration logos
 - ✅ Trust badges
 - ✅ Expanded FAQ
+- 🆕 Claire trigger engine (n8n + Supabase schema)
+- 🆕 Claire messaging (WhatsApp/SMS template + send logic)
 
 ### Weeks 3-4: Conversion & Trust (Phase 2)
 - Exit-intent modal
@@ -203,6 +205,9 @@ These sites share:
 - Multi-step lead form
 - Phone mockup in hero
 - Trustpilot integration
+- 🆕 Claire dashboard widget (client-facing metrics)
+- 🆕 Claire follow-up engine + tracking
+
 
 ### Weeks 5-6: Feature Demo & Content (Phase 3)
 - LIVE demo number
@@ -248,7 +253,226 @@ These sites share:
 
 ---
 
-## 5. Resource Requirements
+## 5. Claire — Post-Job Conversion Engine (MVP)
+
+> **LOCKED SPECIFICATION — 2026-05-02**
+
+### 5.1 Claire is NOT / Claire IS
+
+| Claire is NOT | Claire IS |
+|---------------|-----------|
+| Review software | A post-job conversion engine |
+| Reputation management tool | A mechanism that compounds revenue after every job |
+| Add-on feature | Core revenue multiplier inside Whoza |
+
+### 5.2 Core System Flow (LOCKED)
+
+```
+Call → Booked → Job Completed → Claire Trigger → WhatsApp Review → Google Review → Higher Trust → More Jobs
+```
+
+### 5.3 MVP Architecture
+
+#### Layer 1 — Trigger Engine
+- **Condition:** Job status = "Completed" OR "Accepted + time elapsed"
+- **Data input:** Customer name, Phone number, Job type, Job value (optional), Timestamp
+- **Source:** Trillet flow / job completion webhook
+
+#### Layer 2 — Timing Engine
+| Job type | Delay |
+|----------|-------|
+| Emergency | 2 hours |
+| Standard | 4 hours |
+| Install | 24 hours |
+- **MVP default:** 4 hours
+
+#### Layer 3 — Messaging Engine
+- **Channel priority:** WhatsApp (primary), SMS (fallback)
+- **Template:**
+  ```
+  Hi {{name}}, thanks again for today's {{job_type}}.
+  
+  Would you mind leaving a quick review? It really helps.
+  
+  {{review_link}}
+  
+  – {{business_name}}
+  ```
+- **World-class detail:** Job type inserted, tone friendly (not robotic), no AI mention
+
+#### Layer 4 — Smart Routing (Phase 2)
+- **MVP:** Single path → Google review
+- **Phase 2:** Sentiment check → 😊 Google review / 😐😞 Private feedback form
+
+#### Layer 5 — Follow-up Engine
+- **Rule:** If no review after 24h → send 1 reminder
+- **Message:** Gentle reminder with review link
+- **Constraint:** Only ONE follow-up (avoid spam)
+
+#### Layer 6 — Tracking Engine
+- Requests sent
+- Link clicked
+- Review completed (manual or inferred)
+
+### 5.4 Claire Dashboard (Client-Facing)
+
+**Purpose:** Make Claire feel like a revenue driver, not a tool.
+
+**MVP metrics:**
+- Reviews requested / received / conversion rate
+- Rating growth (e.g. 4.3 → 4.6)
+- Total reviews
+- **Impact statement:** "Your improved rating is helping you win more jobs"
+
+**UX principle:** Outcome + Trend + Simple metrics. Do NOT overwhelm.
+
+**Section title in Whoza platform:** "Win More Jobs with Reviews"
+
+### 5.5 Tech Stack (MVP)
+
+| Layer | Tool |
+|-------|------|
+| Orchestration | n8n |
+| Storage | Supabase (`review_requests` table) |
+| Messaging | Trillet (preferred) or Twilio |
+| Review link | Google Business Profile direct link |
+
+### 5.6 Data Model (Supabase)
+
+**Table:** `review_requests`
+
+| Field | Type |
+|-------|------|
+| id | uuid |
+| client_id | uuid |
+| customer_name | text |
+| phone | text |
+| job_type | text |
+| status | enum |
+| sent_at | timestamp |
+| reminder_sent | boolean |
+| review_completed | boolean |
+
+### 5.7 n8n Workflow (Simplified)
+
+1. Webhook → job completed
+2. Wait node (delay logic)
+3. Send WhatsApp message
+4. Wait 24h
+5. If no click → send reminder
+6. Log result
+
+### 5.8 Positioning (CRITICAL)
+
+**NOT:** "Collect reviews"
+**BUT:** "Turn completed jobs into more future jobs automatically"
+
+### 5.9 Future Expansion
+
+| Phase | Feature |
+|-------|---------|
+| Phase 2 | Sentiment routing, Multi-platform reviews |
+| Phase 3 | AI-generated responses, Review-based lead ranking |
+| Phase 4 | "Review → referral → new job" loop |
+
+### 5.10 What Makes This World-Class
+
+1. **Perfect integration** — Trigger = job completion, Channel = same WhatsApp thread
+2. **Zero friction** — No login, no app, one tap
+3. **Revenue linkage** — Reviews → trust → more jobs
+4. **Massive margin** — Cost: £1–£3, Value: huge
+
+### 5.11 Success Metrics
+
+| Metric | Target |
+|--------|--------|
+| Review request conversion rate | >30% |
+| Average rating improvement | +0.3 stars in 90 days |
+| Revenue attribution | Track jobs won from "highly reviewed" status |
+
+---
+
+## 6. Location Pages & Country Switching — Upgrade Spec
+
+**Status:** Foundation built (UK/US locale context, 16 cities, auto-detection). **Needs upgrade to align with new business model.**
+
+### 6.1 Current State
+- **16 location pages:** 8 UK cities + 8 US cities (prerendered at build time)
+- **Auto-detection:** Timezone + browser locale + localStorage override
+- **Manual switcher:** Header dropdown (flag + country name)
+- **Dynamic content:** Currency, pricing, terminology, trade examples
+- **Country configs:** UK (tradespeople, £, Gas Safe) / US (contractors, $, state licensing)
+
+### 6.2 Upgrade Required (Align with New Business Model)
+
+**The location pages currently position whoza as "AI call answering." They must now position it as the full revenue system: Capture → Deliver → Grow.**
+
+| Component | Current | Upgrade |
+|---|---|---|
+| **Meta title** | "AI Call Answering for [trades] in [city]" | "AI Revenue System for [tradespeople] in [city] — Missed Calls to Booked Jobs to Reviews" |
+| **Hero H1** | "Stop Losing Jobs to Missed Calls" | "Turn Missed Calls in [city] Into Booked Jobs and More Work Every Week" |
+| **Hero subhead** | "Katie answers your phone 24/7" | "Katie captures the jobs. Rex finds more. Claire turns completed work into future work." |
+| **Social proof** | "Plumbers in Manchester trust whoza" | "[X] [tradespeople] in [city] recovered £[Y] last month" |
+| **Revenue system** | Not shown on location pages | **Add full Capture → Deliver → Grow flow + Claire mockup** |
+| **Pricing** | Generic | **City-specific job value references** ("Average boiler repair in Manchester: £140") |
+| **Lost revenue calculator** | Generic sliders | **Pre-populated with city-specific averages** |
+| **CTA** | "Get 10 Free Booked Jobs" | Same — reinforce full system |
+| **FAQ** | Generic | **Add 2-3 city-specific FAQs** ("Do you work with Gas Safe engineers in [city]?") |
+
+### 6.3 Location Page Architecture (Locked)
+
+```
+/[location] (e.g., /manchester, /dallas)
+├── LocationHero (city-specific H1, trade focus, social proof)
+├── GeoProofBand ("Join 200+ plumbers in Manchester")
+├── LostRevenueCalculator (city-specific job values pre-filled)
+├── RevenueSystem (full Capture → Deliver → Grow flow)
+├── MeetTheTeam (all 4 personas with images)
+├── HowItWorks (location-aware examples)
+├── Testimonials (city/region-matched)
+├── GoogleReviews (local review integration)
+├── ComparisonTable (local vs. traditional vs. competitor)
+├── Pricing (country-aware, ex VAT)
+├── FAQ (country-specific compliance + city-specific)
+└── FinalCTA
+```
+
+### 6.4 UK vs. US Demographic Alignment
+
+**Same target demographic:** Independent tradespeople/contractors, 1-10 employees, phone-dependent for bookings.
+
+| Aspect | UK | US |
+|---|---|---|
+| **Terminology** | Tradespeople, plumbers, electricians, Gas Safe | Contractors, HVAC, plumbing, electrical, licensed |
+| **Compliance** | Gas Safe Register, Part P, GDPR, ICO | State licensing, EPA 608, CCPA |
+| **Job types** | Boiler repair, central heating, rewiring, roof repair | AC repair, furnace, roof replacement, remodeling |
+| **Average job value** | £120-250 (plumbing), £80-150 (electrical) | $150-400 (HVAC), $200-500 (plumbing) |
+| **Peak seasons** | Winter (heating), Autumn (roofing) | Summer (AC), Spring (roofing) |
+| **Review platforms** | Google Business Profile, Checkatrade, Trustpilot | Google Business Profile, Angi, HomeAdvisor |
+
+### 6.5 Build Tasks
+
+| Week | Task | Effort |
+|------|------|--------|
+| W1 | Update LocationHero with city-specific copy + revenue system positioning | 1 day |
+| W1 | Add RevenueSystem component to location pages | 1 day |
+| W1 | Create city-specific job value config (JSON: city → trade → avg value) | 2 days |
+| W2 | Pre-populate LostRevenueCalculator with city values | 1 day |
+| W2 | Add city-specific FAQ entries | 1 day |
+| W2 | Test all 16 location pages for UK/US consistency | 1 day |
+
+### 6.6 Success Metrics
+
+| Metric | Target |
+|--------|--------|
+| Location page organic traffic | +50% vs. generic homepage |
+| Location page conversion rate | Match or exceed homepage |
+| Country switcher usage | >30% of visitors change country |
+| Local search ranking | Top 3 for "AI call answering [city]" within 90 days |
+
+---
+
+## 7. Resource Requirements
 
 | Resource | Weeks 1-4 | Weeks 5-8 | Weeks 9-10 |
 |----------|-----------|-----------|------------|
@@ -264,7 +488,7 @@ These sites share:
 
 ---
 
-## 6. Key Decisions Required
+## 8. Key Decisions Required
 
 | Decision | Options | Impact | Timeline |
 |----------|---------|--------|----------|
@@ -274,11 +498,13 @@ These sites share:
 | **Live demo number** | Partner provides, or Twilio direct | Feature demonstration | Week 3 |
 | **A/B testing tool** | Vercel Experiments, Optimizely, DIY | Conversion optimization | Week 6 |
 | **Chat widget** | Intercom, Drift, Tidio, Crisp | Support + conversion | Week 2 |
+| **Claire messaging platform** | Trillet (existing), Twilio fallback, n8n orchestration | Post-job review engine | Week 1 |
+| **Claire review destination** | Google Business Profile (MVP), Trustpilot (Phase 2) | Review collection impact | Week 1 |
 | **Email platform** | Resend (existing), Mailchimp, ConvertKit | Nurture sequences | Week 4 |
 
 ---
 
-## 7. Success Metrics
+## 9. Success Metrics
 
 | Metric | Current | W4 Target | W10 Target |
 |--------|---------|-----------|------------|
@@ -292,10 +518,12 @@ These sites share:
 | Organic traffic | — | +20% | +100% |
 | CAC (paid) | — | £75 | £50 |
 | NPS | — | — | 50+ |
+| **Claire review conv. rate** | — | **>30%** | **>40%** |
+| **Claire rating improvement** | — | **+0.2 stars** | **+0.5 stars** |
 
 ---
 
-## 8. Risk Mitigation
+## 10. Risk Mitigation
 
 | Risk | Probability | Impact | Mitigation |
 |------|-------------|--------|------------|
@@ -307,7 +535,7 @@ These sites share:
 
 ---
 
-## 9. Weekly Score Check-In Ritual
+## 11. Weekly Score Check-In Ritual
 
 **Every Friday, 30 minutes:**
 1. Measure each dimension (1-10)

@@ -67,6 +67,12 @@ export async function createVoiceConfig(userId, config) {
         language: config.language || 'en-GB',
         sms_summary: config.sms_summary !== false,
         whatsapp_summary: config.whatsapp_summary !== false,
+        review_enabled: config.review_enabled !== false,
+        google_review_link: config.google_review_link || null,
+        tradesperson_photo_url: config.tradesperson_photo_url || null,
+        tradesperson_name: config.tradesperson_name || null,
+        tradesperson_bio: config.tradesperson_bio || null,
+        tradesperson_credentials: config.tradesperson_credentials || [],
         forward_number: config.forward_number || null,
         status: 'pending_setup',
         created_at: new Date().toISOString()

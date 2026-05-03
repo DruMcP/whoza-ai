@@ -46,7 +46,7 @@ Deno.serve(async (req: Request) => {
       .eq("user_id", user_id)
       .single();
 
-    if (!config || !config.review_enabled) {
+    if (!config || config.review_enabled === false) {
       return new Response(
         JSON.stringify({ success: true, message: "Review requests disabled" }),
         { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }

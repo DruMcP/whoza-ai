@@ -132,10 +132,29 @@ Deno.serve(async (req: Request) => {
 
         // Send confirmation to customer if phone available
         if (callData.customer_phone) {
+          // Get tradesperson details for safety photo
+          const { data: vc } = await supabaseClient
+            .from("voice_configs")
+            .select("tradesperson_photo_url, tradesperson_name, business_name, tradesperson_credentials")
+            .eq("user_id", userId)
+            .single();
+
+          let message = `Hi ${callData.customer_name || "there"}, your ${callData.service || "appointment"} with ${vc?.business_name || "us"} is confirmed for ${callData.appointment_time}. Reference: ${callData.call_id?.slice(-6)}.`;
+          
+          if (vc?.tradesperson_name) {
+            message += ` Your tradesperson: ${vc.tradesperson_name}.`;
+          }
+          if (vc?.tradesperson_credentials?.length > 0) {
+            message += ` Credentials: ${vc.tradesperson_credentials.join(", ")}.`;
+          }
+          if (vc?.tradesperson_photo_url) {
+            message += ` View photo: ${vc.tradesperson_photo_url}`;
+          }
+
           await supabaseClient.functions.invoke("send-sms", {
             body: {
               to: callData.customer_phone,
-              message: `Hi ${callData.customer_name || "there"}, your ${callData.service || "appointment"} is confirmed for ${callData.appointment_time}. Reference: ${callData.call_id?.slice(-6)}.`,
+              message: message,
               user_id: userId,
             },
           });
