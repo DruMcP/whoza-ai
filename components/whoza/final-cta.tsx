@@ -88,11 +88,6 @@ export function FinalCTA() {
           </div>
         </motion.div>
 
-        {/* Pre-Launch Context */}
-        <p className="mt-3 text-sm text-white/60 text-center">
-          Early access is now open for selected UK trades businesses.
-        </p>
-
         {/* Early Access Pulse */}
         <div className="mt-3 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/10 text-sm text-white/80">
           <span className="w-2 h-2 rounded-full bg-[var(--rex-green)] animate-pulse" />
@@ -104,18 +99,6 @@ export function FinalCTA() {
         <p className="mt-3 text-sm text-white/50 text-center">
           Set up in 30 minutes and start catching more calls.
         </p>
-
-        {/* Early Access Promise */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          viewport={{ once: true }}
-          className="mt-8 px-6 py-3 rounded-full bg-[var(--rex-green)]/20 border border-[var(--rex-green)]/30 inline-flex items-center gap-2"
-        >
-          <CheckCircle2 className="w-5 h-5 text-[var(--rex-green)]" />
-          <span className="text-white font-semibold">Early access members get priority onboarding.</span>
-        </motion.div>
 
         {/* Trust Points */}
         <motion.div

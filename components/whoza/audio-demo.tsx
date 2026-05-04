@@ -107,7 +107,7 @@ export function AudioDemo() {
             Listen Now
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight text-balance">
-            Hear Whoza in Action
+            Hear Katie Answer a Real Customer Call
           </h2>
           <p className="mt-6 text-lg text-white/60">
             This is exactly what your customers hear when they call you.
@@ -219,7 +219,7 @@ export function AudioDemo() {
           viewport={{ once: true }}
           className="text-center text-white/40 text-sm mt-6"
         >
-          * This is a representative transcript. Actual AI conversations sound just as natural.
+          * This is an example AI conversation. Actual AI conversations sound just as natural.
         </motion.p>
       </div>
     </section>

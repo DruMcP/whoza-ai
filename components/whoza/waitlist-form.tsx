@@ -40,11 +40,9 @@ export function WaitlistForm() {
             className="bg-[var(--rex-green)]/20 border border-[var(--rex-green)]/30 rounded-2xl p-6 text-center"
           >
             <CheckCircle2 className="w-10 h-10 text-[var(--rex-green)] mx-auto mb-3" />
-            <h3 className="text-xl font-bold text-white mb-2">You&apos;re on the list!</h3>
+            <h3 className="text-xl font-bold text-white mb-2">You're on the list!</h3>
             <p className="text-white/70 text-sm">
-              {result.position
-                ? `Position #${result.position}. We&apos;ll be in touch when your slot opens.`
-                : "We'll be in touch when your slot opens."}
+              We'll be in touch to confirm your details and get you set up.
             </p>
           </motion.div>
         ) : (
@@ -65,26 +63,6 @@ export function WaitlistForm() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full pl-10 pr-4 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-[var(--rex-green)] focus:border-transparent transition-all"
-              />
-            </div>
-            <div className="relative">
-              <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" />
-              <input
-                type="text"
-                placeholder="Business name (optional)"
-                value={company}
-                onChange={(e) => setCompany(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-[var(--rex-green)] focus:border-transparent transition-all"
-              />
-            </div>
-            <div className="relative">
-              <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" />
-              <input
-                type="text"
-                placeholder="Your name (optional)"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-[var(--rex-green)] focus:border-transparent transition-all"
               />
             </div>
             <Button

@@ -50,7 +50,7 @@ export function Footer() {
               <img 
                 src="/production_logo.png" 
                 alt="whoza.ai" 
-                className="h-8 w-auto"
+                className="h-16 w-auto"
               />
             </a>
             <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-xs">

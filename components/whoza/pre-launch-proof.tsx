@@ -40,7 +40,7 @@ export function PreLaunchProof() {
                 <span className="px-3 py-1 rounded-full bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] text-xs font-bold">
                   EXAMPLE SCENARIO
                 </span>
-                <span className="text-xs text-[var(--slate-500)">Illustrative projection</span>
+                <span className="text-xs text-[var(--slate-500)">Example based on typical trades</span>
               </div>
               
               <p className="text-sm text-[var(--slate-500)] mb-4">Typical for many trades. Projections based on industry averages.</p>
