@@ -58,11 +58,11 @@ export function FinalCTA() {
           </h2>
           <p className="mt-8 text-xl lg:text-2xl text-white/70 max-w-2xl mx-auto text-pretty">
             Every missed call is a job going to your competitor.
-            <span className="block mt-3 font-bold text-[var(--rex-green)] text-2xl">Join early access — be first when we launch.</span>
+            <span className="block mt-3 font-bold text-[var(--rex-green)] text-2xl">Try Whoza risk-free during early access.</span>
           </p>
           <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/70 text-sm">
             <CheckCircle2 className="w-4 h-4 text-[var(--rex-green)]" />
-            No credit card required to join early access.
+            Try Whoza risk-free during early access. If it is not working for you, you can cancel before billing starts.
           </div>
         </motion.div>
 
@@ -83,26 +83,26 @@ export function FinalCTA() {
               className="bg-transparent border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg"
               onClick={() => window.open('https://wa.me/447831643012', '_blank')}
             >
-              Hear the Demo
+              Get Whoza Answering Your Calls
             </Button>
           </div>
         </motion.div>
 
         {/* Pre-Launch Context */}
         <p className="mt-3 text-sm text-white/60 text-center">
-          Whoza is launching soon. Join early access to be first in line.
+          Early access is now open for selected UK trades businesses.
         </p>
 
         {/* Early Access Pulse */}
         <div className="mt-3 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/10 text-sm text-white/80">
           <span className="w-2 h-2 rounded-full bg-[var(--rex-green)] animate-pulse" />
-          <span className="font-semibold text-white">Launching soon</span>
-          <span className="text-white/40">— join early access</span>
+          <span className="font-semibold text-white">Early access now open</span>
+          <span className="text-white/40">— selected trades only</span>
         </div>
 
         {/* Reassurance */}
         <p className="mt-3 text-sm text-white/50 text-center">
-          Be the first to experience AI call answering for trades.
+          Set up in 30 minutes and start catching more calls.
         </p>
 
         {/* Early Access Promise */}

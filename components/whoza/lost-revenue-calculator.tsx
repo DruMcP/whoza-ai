@@ -203,12 +203,12 @@ export function LostRevenueCalculator() {
                     </span>
                   </p>
                   <p className="text-sm text-white/70 mb-3 text-center">
-                    Whoza is launching soon. Join early access to be first.
+                    Early access is now open for selected UK trades businesses.
                   </p>
                   <Button 
-                    className="w-full bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-bold py-6 text-lg"
+                    className="w-full bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold py-6 text-lg"
                   >
-                    Join Early Access
+                    Check What You're Losing
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </div>

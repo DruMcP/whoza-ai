@@ -133,17 +133,17 @@ export function TrialExplanation() {
           className="mt-16 text-center"
         >
           <p className="text-lg text-[var(--slate-500)] mb-2">
-            Whoza is launching soon.
+            Early access is now open for selected UK trades businesses.
           </p>
           <p className="text-lg text-[var(--slate-500)] mb-6">
             Join early access to be first in line.
           </p>
           <Button 
             size="lg"
-            className="bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-bold px-10 py-7 text-xl gap-3 shadow-2xl shadow-[var(--rex-green)]/40 transition-all hover:scale-105"
+            className="bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-10 py-7 text-xl gap-3 shadow-2xl shadow-[var(--rex-green)]/40 transition-all hover:scale-105"
             onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Join Early Access
+            Get Started
             <ArrowRight className="w-6 h-6" />
           </Button>
           <p className="mt-3 text-sm text-[var(--slate-500)]">

@@ -201,13 +201,13 @@ export function PreLaunchProof() {
 
             <div className="text-center">
               <p className="text-sm text-[var(--slate-500)] mb-2">
-                Whoza is launching soon. Join early access to be first.
+                Early access is now open for selected UK trades businesses.
               </p>
               <Button 
                 size="lg"
-                className="bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-bold px-10 py-6 text-lg gap-3 shadow-xl shadow-[var(--rex-green)]/30 transition-all hover:scale-105"
+                className="bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-10 py-6 text-lg gap-3 shadow-xl shadow-[var(--rex-green)]/30 transition-all hover:scale-105"
               >
-                Join Early Access
+                Get Whoza Answering Your Calls
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </div>

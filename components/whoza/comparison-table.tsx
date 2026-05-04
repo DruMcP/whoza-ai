@@ -24,7 +24,8 @@ const groups = [
     phase: "Convert",
     rows: [
       { outcome: "Completed job → review requested", whoza: true, typical: false },
-      { outcome: "Competitor ranking tracked weekly", whoza: true, typical: false },
+      { outcome: "Monthly competitor analysis", whoza: true, typical: false },
+      { outcome: "Weekly AI visibility actions", whoza: true, typical: false },
       { outcome: "Clear action to get more calls", whoza: true, typical: false },
     ],
   },

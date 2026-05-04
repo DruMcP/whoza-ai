@@ -48,7 +48,7 @@ const voiceAgents = [
   {
     name: "Rex",
     role: "AI Visibility + Competitor Tracking",
-    description: "Rex tracks which competitors are appearing in ChatGPT, Google AI, and search results — and gives you weekly recommendations on how to show up more. Get more work every week, without ads. Rex shows you what to fix this week so you get more calls and more jobs.",
+    description: "Rex analyses your competitors every month on every plan. Growth and above receive weekly actions showing what to fix so ChatGPT, Google AI and customers are more likely to recommend your business.",
     image: "/images/rex.jpg",
     color: "var(--rex-green)",
     bgLight: "bg-[var(--rex-green)]/10",
@@ -71,7 +71,7 @@ export function MeetTheTeam() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] text-sm font-medium mb-4">
-            Meet Your AI Agents
+            Meet Katie & The Team
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
             Meet the{" "}

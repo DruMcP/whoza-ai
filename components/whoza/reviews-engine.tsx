@@ -20,16 +20,14 @@ export function ReviewsEngine() {
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--rex-green)]/10 text-[var(--rex-green)] text-sm font-bold mb-6">
               <Star className="w-4 h-4 fill-current" />
-              Claire — Turn Jobs Into More Jobs
+              Claire — Every Job Becomes Your Next Review
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
-              Turn More Enquiries Into{" "}
-              <span className="text-[var(--rex-green)]">Paying Customers</span>
+              Every Completed Job Becomes Your Next Review — And Your Next Customer
             </h2>
             <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
-              Every completed job is a seed for the next one. Claire automatically reaches out via WhatsApp after you finish a job, guides happy customers to leave a Google review, and turns that trust into more calls.
-              <span className="block mt-2 font-semibold text-[var(--navy-900)]">More 5-star reviews means more customers choose you.</span>
-              <span className="block mt-2 font-semibold text-[var(--navy-900)]">Claire turns completed jobs into future work automatically.</span>
+              Claire automatically turns completed work into 5-star Google reviews, helping more customers choose you.
+              <span className="block mt-2 font-semibold text-[var(--navy-900)]">Post-job review capture that builds trust and brings future work.</span>
             </p>
 
             <div className="mt-10 space-y-4">
@@ -114,7 +112,7 @@ export function ReviewsEngine() {
               </div>
             </div>
 
-            {/* Stats Badge */}
+            {/* Social proof badge - no unverified claims */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -122,7 +120,7 @@ export function ReviewsEngine() {
               viewport={{ once: true }}
               className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full bg-[var(--rex-green)] text-white text-sm font-medium shadow-lg"
             >
-              8,000+ jobs converted into future work
+              Built for UK trades — early access now open
             </motion.div>
           </motion.div>
         </div>

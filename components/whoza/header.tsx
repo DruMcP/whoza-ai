@@ -56,10 +56,10 @@ export function Header() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <Button 
-              className="bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-bold px-6"
+              className="bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-6"
               onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Join Early Access
+              Get Whoza
             </Button>
             <CountrySwitcher />
           </div>
@@ -108,10 +108,10 @@ export function Header() {
                   <CountrySwitcher />
                 </div>
                 <Button 
-                  className="w-full bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-bold"
+                  className="w-full bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold"
                   onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  Join Early Access
+                  Get Whoza
                 </Button>
               </div>
             </div>

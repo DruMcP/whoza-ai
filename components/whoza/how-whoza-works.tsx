@@ -12,9 +12,9 @@ const flowSteps = [
   { icon: Check, label: "You Accept", color: "var(--claire-amber)" },
   { icon: Star, label: "Job Completed", color: "var(--mark-grey)" },
   { icon: Star, label: "Review Requested", color: "var(--mark-grey)" },
-  { icon: TrendingUp, label: "Rex Analyses Competitors", color: "var(--rex-green)" },
-  { icon: TrendingUp, label: "You Get Weekly Actions", color: "var(--rex-green)" },
-  { icon: TrendingUp, label: "More Calls, More Jobs", color: "var(--rex-green)" },
+  { icon: TrendingUp, label: "Rex analyses competitors monthly", color: "var(--rex-green)" },
+  { icon: TrendingUp, label: "Growth+ get weekly actions", color: "var(--rex-green)" },
+  { icon: TrendingUp, label: "More calls, more jobs", color: "var(--rex-green)" },
 ]
 
 export function HowWhozaWorks() {
@@ -106,7 +106,7 @@ export function HowWhozaWorks() {
           {[
             { phase: "CAPTURE", items: ["AI answers instantly", "Qualifies the job", "Books into calendar"], color: "var(--katie-blue)" },
             { phase: "DELIVER", items: ["Job sent via WhatsApp", "You accept or decline", "Customer confirmed"], color: "var(--claire-amber)" },
-            { phase: "GROW", items: ["Review requested", "Rex analyses competitors", "You get clear weekly actions", "More calls, more jobs"], color: "var(--rex-green)" },
+            { phase: "GROW", items: ["Review requested", "Rex analyses competitors monthly", "Growth+ get weekly AI visibility actions", "More calls, more jobs"], color: "var(--rex-green)" },
           ].map((card, index) => (
             <motion.div
               key={card.phase}

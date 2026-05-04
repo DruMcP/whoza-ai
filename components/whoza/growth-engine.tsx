@@ -153,10 +153,10 @@ export function GrowthEngine() {
 
             <div className="mt-10 space-y-4">
               {[
-                { text: "See where you're being recommended (and where you're not)", color: "text-red-400" },
-                { text: "Understand why competitors are winning jobs", color: "text-[var(--claire-amber)]" },
-                { text: "Know exactly what to fix to get more work", color: "text-[var(--katie-blue)]" },
-                { text: "Get simple weekly actions — not reports", color: "text-[var(--rex-green)]" },
+                { text: "Monthly competitor analysis on every plan", color: "text-[var(--rex-green)]" },
+                { text: "Weekly AI visibility actions from Growth upwards", color: "text-[var(--claire-amber)]" },
+                { text: "Advanced Rex reporting on Pro and Scale", color: "text-[var(--katie-blue)]" },
+                { text: "Multi-location intelligence on Scale", color: "text-white" },
               ].map((feature, index) => (
                 <motion.div
                   key={feature.text}
@@ -192,9 +192,9 @@ export function GrowthEngine() {
             <div className="mt-6 p-4 rounded-xl bg-[var(--claire-amber)]/10 border border-[var(--claire-amber)]/20">
               <div className="flex items-center gap-2 mb-2">
                 <CheckCircle2 className="w-5 h-5 text-[var(--claire-amber)]" />
-                <span className="font-semibold text-white">Included in Growth plan and above</span>
+                <span className="font-semibold text-white">Every plan includes monthly competitor analysis</span>
               </div>
-              <p className="text-sm text-white/60">Simple weekly actions to help you get recommended and win more work.</p>
+              <p className="text-sm text-white/60">Growth and above unlock weekly actionable AI visibility insights that show what to fix so AI search and customers are more likely to recommend your business.</p>
             </div>
           </motion.div>
         </div>
