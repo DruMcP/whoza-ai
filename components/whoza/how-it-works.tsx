@@ -146,18 +146,12 @@ export function HowItWorks() {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <p className="text-[var(--slate-500)] mb-2">
-            Set up in 30 minutes once we go live.
-          </p>
-          <p className="text-sm text-[var(--slate-500)] mb-6">
-            Early access is now open for selected UK trades businesses.
-          </p>
           <Button 
             size="lg"
             className="bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-semibold px-8"
             onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            See How It Works
+            Get Started
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
         </motion.div>

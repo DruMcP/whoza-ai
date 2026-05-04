@@ -12,8 +12,16 @@ import {
 
 const faqs = [
   {
-    question: "Will customers know they're talking to AI?",
-    answer: "No — that's the whole point. Katie sounds natural, understands context, and handles conversations just like a professional receptionist. We've had customers ask if 'Katie' was the business owner's daughter. The technology has come a long way from robotic IVR systems.",
+    question: "How much does Whoza cost in total?",
+    answer: "You pay a monthly plan fee (Starter £59, Growth £125, Pro £230, Scale £399 — all ex VAT). Each plan includes a set number of call handling minutes and booked enquiries. Additional enquiries beyond your included amount are charged per booking. Overage minutes are billed at £0.22 per minute. There are no hidden setup fees or long-term contracts.",
+  },
+  {
+    question: "Is there a free trial or early access?",
+    answer: "Early access is now open for selected UK trades businesses. You can join the early access list and we will onboard you as slots become available. There is no credit card required to sign up for early access.",
+  },
+  {
+    question: "What happens to my data if I cancel?",
+    answer: "You can cancel anytime with one click. Your call recordings, customer data, and enquiry history are yours. We can export your data on request, and all stored data is deleted in line with GDPR requirements after cancellation.",
   },
   {
     question: "How quickly can I get set up?",

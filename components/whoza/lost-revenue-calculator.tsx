@@ -50,13 +50,13 @@ export function LostRevenueCalculator() {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto mb-12"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-600 text-white text-sm font-bold mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--rex-green)]/10 text-[var(--rex-green)] text-sm font-bold mb-4">
             <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
             See What Missed Calls Cost You
           </span>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
             How Much Could You Recover{" "}
-            <span className="text-red-600">With Whoza?</span>
+            <span className="text-[var(--rex-green)]">With Whoza?</span>
           </h2>
           <p className="mt-6 text-xl text-[var(--slate-500)] text-pretty">
             Every missed call walks straight to your competitor.
