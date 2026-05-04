@@ -3,6 +3,13 @@
  * Implements JSON-LD schemas for enhanced AI crawler discoverability
  */
 
+export function getBaseUrl() {
+  if (typeof window !== 'undefined') {
+    return window.location.origin;
+  }
+  return 'https://whoza.ai';
+}
+
 /**
  * Generate WebSite schema with search action
  * @param {Object} config - Configuration object
