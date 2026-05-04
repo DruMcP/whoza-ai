@@ -91,7 +91,7 @@ export function WaitlistForm() {
               type="submit"
               disabled={status === "loading"}
               size="lg"
-              className="w-full bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-bold py-6 text-lg gap-3 shadow-2xl shadow-[var(--rex-green)]/40 transition-all hover:scale-[1.02] disabled:opacity-70"
+              className="w-full bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold py-6 text-lg gap-3 shadow-2xl shadow-[var(--rex-green)]/40 transition-all hover:scale-[1.02] disabled:opacity-70"
             >
               {status === "loading" ? (
                 <>
@@ -100,7 +100,7 @@ export function WaitlistForm() {
                 </>
               ) : (
                 <>
-                  Join Early Access
+                  Get Early Access
                   <ArrowRight className="w-5 h-5" />
                 </>
               )}

@@ -18,7 +18,7 @@ const colorStyles = {
     bg: "bg-[var(--rex-green)]",
     bgLight: "bg-[var(--rex-green)]/10",
     text: "text-[var(--rex-green)]",
-    hover: "hover:bg-[var(--rex-green)]/90",
+    hover: "hover:bg-[var(--rex-green-hover)]",
   },
   amber: {
     border: "border-[var(--claire-amber)]",
@@ -57,9 +57,10 @@ export function Pricing() {
         { text: "Lead capture + dashboard", included: true },
         { text: "Booking automation", included: true },
         { text: "WhatsApp job delivery", included: true },
-        { text: `${cs}4.50 per qualified job booked`, included: true },
+        { text: "Monthly competitor analysis", included: true },
+        { text: `${cs}4.50 per booked enquiry — no enquiries included`, included: true },
       ],
-      cta: "Join Early Access",
+      cta: "Choose Your Plan",
     },
     {
       name: "Growth",
@@ -73,16 +74,17 @@ export function Pricing() {
       popular: true,
       features: [
         { text: "Everything in Starter", included: true },
-        { text: "15 booked jobs included", included: true },
+        { text: "15 booked enquiries included", included: true },
         { text: "Claire review engine", included: true },
-        { text: "Monthly competitor tracking", included: true },
+        { text: "Monthly competitor analysis", included: true },
+        { text: "Weekly actionable AI visibility insights", included: true },
         { text: "Calendar sync (Google, Outlook, Apple)", included: true },
         { text: "Post-call email summary", included: true },
         { text: "Voicemail detection + auto-callback", included: true },
-        { text: "Revenue dashboard", included: true },
-        { text: `${cs}3.25 per additional job`, included: true },
+        { text: "Jobs and enquiries dashboard", included: true },
+        { text: `${cs}3.25 per additional booked enquiry`, included: true },
       ],
-      cta: "Join Early Access",
+      cta: "Choose Your Plan",
     },
     {
       name: "Pro",
@@ -96,18 +98,19 @@ export function Pricing() {
       popular: false,
       features: [
         { text: "Everything in Growth", included: true },
-        { text: "40 booked jobs included", included: true },
-        { text: "Weekly AI growth reports", included: true },
-        { text: "Actionable recommendations", included: true },
+        { text: "40 booked enquiries included", included: true },
+        { text: "Monthly competitor analysis", included: true },
+        { text: "Weekly actionable AI visibility insights", included: true },
+        { text: "Advanced Rex AI visibility reporting", included: true },
         { text: "Full system (Katie/Mark + Claire + Rex)", included: true },
         { text: "Smart scheduling (checks calendar before booking)", included: true },
         { text: "SMS + WhatsApp follow-up sequences", included: true },
         { text: "Outbound callback campaigns", included: true },
         { text: "CRM integration (Jobber, ServiceTitan)", included: true },
-        { text: "API access", included: true },
-        { text: `${cs}2.75 per additional job`, included: true },
+        { text: "connects to your existing tools", included: true },
+        { text: `${cs}2.75 per additional booked enquiry`, included: true },
       ],
-      cta: "Join Early Access",
+      cta: "Choose Your Plan",
     },
     {
       name: "Scale",
@@ -121,15 +124,19 @@ export function Pricing() {
       popular: false,
       features: [
         { text: "Everything in Pro", included: true },
-        { text: "100 booked jobs included", included: true },
+        { text: "100 booked enquiries included", included: true },
+        { text: "Monthly competitor analysis", included: true },
+        { text: "Weekly actionable AI visibility insights", included: true },
+        { text: "Advanced Rex reporting", included: true },
+        { text: "Multi-location competitor intelligence", included: true },
         { text: "Multi-location support", included: true },
         { text: "Multi-calendar team sync", included: true },
         { text: "Priority support", included: true },
         { text: "Custom integrations", included: true },
         { text: "Dedicated account manager", included: true },
-        { text: `${cs}2.25 per additional job`, included: true },
+        { text: `${cs}2.25 per additional booked enquiry`, included: true },
       ],
-      cta: "Join Early Access",
+      cta: "Choose Your Plan",
     },
   ]
 
@@ -233,7 +240,11 @@ export function Pricing() {
                     </div>
                     <div className="flex items-center gap-2 mt-2">
                       <span className="text-sm text-[var(--rex-green)] font-semibold">{cs}{plan.perJob}/job</span>
-                      <span className="text-xs text-[var(--slate-400)]">• {plan.jobsIncluded} jobs included</span>
+                      {plan.jobsIncluded ? (
+                        <span className="text-xs text-[var(--slate-400)]">• {plan.jobsIncluded} jobs included</span>
+                      ) : (
+                        <span className="text-xs text-[var(--slate-400)]">• no enquiries included</span>
+                      )}
                     </div>
                     <div className="mt-2 text-sm text-[var(--slate-500)]">
                       Includes {plan.includedMinutes} call handling minutes/month
@@ -344,8 +355,8 @@ export function Pricing() {
             >
               <div className="flex items-start justify-between mb-4">
                 <div>
-                  <h4 className="text-lg font-bold text-[var(--navy-900)]">White Glove AI & Automation Consultancy</h4>
-                  <p className="text-sm text-[var(--slate-500)] mt-1">Bespoke support to optimise your workflows, AI agents, and automation systems.</p>
+                  <h4 className="text-lg font-bold text-[var(--navy-900)]">Done-for-you AI & Automation Support</h4>
+                  <p className="text-sm text-[var(--slate-500)] mt-1">Bespoke support to get your setup working smoothly, your AI agents, and your automation systems.</p>
                 </div>
                 <div className="text-right">
                   <div className="text-2xl font-bold text-[var(--navy-900)]">£200<span className="text-sm font-normal text-[var(--slate-500)]">/hr</span></div>

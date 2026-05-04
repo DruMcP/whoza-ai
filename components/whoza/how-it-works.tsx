@@ -150,14 +150,14 @@ export function HowItWorks() {
             Set up in 30 minutes once we go live.
           </p>
           <p className="text-sm text-[var(--slate-500)] mb-6">
-            Whoza is launching soon. Join early access to be first.
+            Early access is now open for selected UK trades businesses.
           </p>
           <Button 
             size="lg"
-            className="bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-semibold px-8"
+            className="bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-semibold px-8"
             onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Join Early Access
+            See How It Works
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
         </motion.div>

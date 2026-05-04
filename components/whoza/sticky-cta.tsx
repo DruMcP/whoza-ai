@@ -33,13 +33,13 @@ export function StickyCTA() {
           <div className="bg-[var(--navy-900)] border-t border-white/10 p-4 shadow-2xl">
             <div className="flex items-center gap-3">
               <div className="flex-1">
-                <div className="text-white font-semibold text-sm">Join Early Access</div>
+                <div className="text-white font-semibold text-sm">Get Whoza</div>
                 <div className="text-white/60 text-xs">Be first when we launch</div>
               </div>
               <Button 
                 className="bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 text-white font-semibold px-6"
               >
-                Join Early Access
+                Get Whoza
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
               <button 

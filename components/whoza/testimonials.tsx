@@ -16,14 +16,14 @@ export function Testimonials() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--rex-green)]/10 border border-[var(--rex-green)]/20 mb-6">
               <Sparkles className="w-4 h-4 text-[var(--rex-green)]" />
-              <span className="text-sm font-semibold text-[var(--rex-green)]">Coming Soon</span>
+              <span className="text-sm font-semibold text-[var(--rex-green)]">Built for UK trades — early access now open</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
               Real Results from Real Tradespeople
             </h2>
             <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
-              Our pilot programme is underway with select tradespeople across the UK. 
-              <span className="font-semibold text-[var(--navy-900)]">Join early access to be among the first to share your story.</span>
+              Our pilot programme is underway with select tradespeople across the UK.
+              <span className="font-semibold text-[var(--navy-900)]">Now onboarding selected UK trades businesses.</span>
             </p>
           </motion.div>
         </div>
@@ -66,14 +66,14 @@ export function Testimonials() {
           className="mt-16 text-center"
         >
           <p className="text-lg text-[var(--slate-500)] mb-6">
-            Whoza is launching soon. Join early access to be first.
+            Early access is now open for selected UK trades businesses.
           </p>
           <Button
             size="lg"
-            className="bg-[var(--rex-green)] hover:bg-[var(--rex-green)]/90 text-white font-bold px-10 py-7 text-xl gap-3 shadow-xl shadow-[var(--rex-green)]/30"
+            className="bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-10 py-7 text-xl gap-3 shadow-xl shadow-[var(--rex-green)]/30"
             onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Join Early Access
+            Hear From Real Tradespeople
             <ArrowRight className="w-6 h-6" />
           </Button>
         </motion.div>
