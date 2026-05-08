@@ -39,6 +39,22 @@ const faqs = [
     answer: "We support all trades including plumbers, electricians, builders, roofers, painters, landscapers, heating engineers, carpenters, tilers, plasterers, and more. Our agents are trained on trade-specific terminology and common customer queries for each profession.",
   },
   {
+    question: "Does Whoza work for roofers and emergency callouts?",
+    answer: "Absolutely. Katie understands roofing emergencies — storm damage, leaks, loose tiles, insurance work. She triages urgency immediately: water coming through the ceiling gets flagged as emergency and pushed to your phone instantly. She captures the address, damage type, and whether it's insurance or private pay. For routine inspections or quotes, she books them directly into your calendar at a time that works for you.",
+  },
+  {
+    question: "Can Whoza handle locksmith enquiries at 2am?",
+    answer: "Yes — and that's exactly when you need it most. Lockouts at 2am are urgent by default. Katie recognises emergency locksmith language ('locked out', 'lost keys', 'can't get in') and immediately classifies it as urgent. She captures the location, lock type (front door, car, safe), and sends you the enquiry within seconds. You decide: accept the callout, or decline and go back to sleep. The customer gets an instant response either way, instead of hearing your voicemail at 2am.",
+  },
+  {
+    question: "Will it book site surveys for builders?",
+    answer: "Yes. Katie is trained to handle builder-specific enquiry types — extensions, renovations, new builds, and site surveys. For larger projects, she doesn't just take a message. She captures budget range, timeline, project type (residential/commercial), and parking access. She then books the site survey directly into your calendar with all the details attached. No more 'can you come and have a look' callbacks where you show up blind.",
+  },
+  {
+    question: "Can it triage drainage emergencies vs. routine cleans?",
+    answer: "Yes — Katie knows the difference between 'sewage backing up into the garden' and 'annual drain clean.' She asks the right follow-up questions: is there flooding, how many drains are affected, is it a business or home, and how quickly do you need someone there? Emergency drainage calls get pushed to your phone immediately with an urgency tag. Routine maintenance gets booked into your diary at a convenient time. She even notes access constraints like narrow driveways or shared drains so you're prepared before you arrive.",
+  },
+  {
     question: "Is my data safe and compliant?",
     answer: "Absolutely. We're fully compliant with all relevant data protection regulations. All call recordings and customer data are encrypted, stored in secure local data centers, and you maintain full control. You can delete any data at any time from your dashboard.",
   },
