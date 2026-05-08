@@ -1,8 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Check, ArrowRight, Sparkles, X, CheckCircle2 } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Check, ArrowRight, Sparkles, X, CheckCircle2, User, Mic, Database, PhoneCall, Rocket } from "lucide-react"
 import { useLocale } from "@/lib/locale-context"
 
 const colorStyles = {
@@ -164,7 +163,7 @@ export function Pricing() {
           </p>
           <div className="mt-4 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[var(--rex-green)]/10 text-[var(--rex-green)] font-bold border border-[var(--rex-green)]/20">
             <CheckCircle2 className="w-5 h-5" />
-            No results in 30 days? We extend free.
+            30-day money-back guarantee — no questions asked.
           </div>
 
           {/* Economics breakdown */}
@@ -192,10 +191,9 @@ export function Pricing() {
           className="text-center mb-12"
         >
           <p className="text-lg text-[var(--slate-500)] font-semibold mb-2">Choose a plan based on how many enquiries you need.</p>
-          <p className="text-sm text-[var(--slate-500)] mb-2">All plans available through early access. Join now to secure your spot and lock in launch pricing.</p>
           <div className="mt-3 inline-flex flex-col sm:flex-row items-center gap-3 px-5 py-3 rounded-xl bg-[var(--rex-green)]/10 border border-[var(--rex-green)]/20 text-sm">
             <CheckCircle2 className="w-4 h-4 text-[var(--rex-green)] shrink-0" />
-            <span className="text-[var(--navy-900)] font-medium">Early access members get priority onboarding and exclusive launch pricing.</span>
+            <span className="text-[var(--navy-900)] font-medium">30-day money-back guarantee on all plans.</span>
           </div>
           <p className="mt-2 text-sm text-[var(--slate-500)]">Upgrade anytime as your business grows.</p>
         </motion.div>
@@ -213,7 +211,7 @@ export function Pricing() {
                 viewport={{ once: true }}
                 className={`relative bg-white rounded-3xl border ${
                   plan.popular 
-                    ? `${colors.border} border-2 shadow-2xl scale-105 z-10` 
+                    ? `${colors.border} border-2 shadow-2xl md:scale-105 z-10` 
                     : "border-[var(--border)]"
                 } overflow-hidden`}
               >
@@ -236,7 +234,7 @@ export function Pricing() {
                   <div className="mb-6">
                     <div className="flex items-baseline gap-1">
                       <span className="text-3xl font-bold text-[var(--navy-900)]">{cs}{plan.price}</span>
-                      <span className="text-[var(--slate-500)]">/{plan.period} <span className="text-xs font-normal">ex VAT</span></span>
+                      <span className="text-[var(--slate-500)]">/{plan.period} <span className="text-xs font-normal">+VAT</span></span>
                     </div>
                     <div className="flex items-center gap-2 mt-2">
                       <span className="text-sm text-[var(--rex-green)] font-semibold">{cs}{plan.perJob}/job</span>
@@ -249,11 +247,11 @@ export function Pricing() {
                     <div className="mt-2 text-sm text-[var(--slate-500)]">
                       Includes {plan.includedMinutes} call handling minutes/month
                     </div>
-                    {/* Early access badge */}
+                    {/* Trial badge */}
                     {(plan.name === "Starter" || plan.name === "Growth") && (
                       <div className="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[var(--rex-green)]/10 border border-[var(--rex-green)]/20 text-xs font-medium text-[var(--rex-green)]">
                         <Sparkles className="w-3 h-3" />
-                        Early access pricing
+                        14-day free trial
                       </div>
                     )}
                   </div>
@@ -274,18 +272,18 @@ export function Pricing() {
                     ))}
                   </ul>
 
-                  {/* CTA */}
-                  <Button 
-                    className={`w-full font-bold transition-all hover:scale-105 ${
+                  {/* CTA — SEO: using <a> tag for crawlability */}
+                  <a 
+                    href="#final-cta"
+                    className={`inline-flex items-center justify-center w-full font-bold transition-all hover:scale-105 py-2 px-4 rounded-md ${
                       plan.popular 
                         ? `${colors.bg} ${colors.hover} text-white shadow-lg` 
                         : "bg-[var(--navy-900)] hover:bg-[var(--navy-800)] text-white"
                     }`}
-                    onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     {plan.cta}
                     <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
+                  </a>
                 </div>
               </motion.div>
             )
@@ -300,10 +298,7 @@ export function Pricing() {
           className="mt-8 text-center"
         >
           <p className="text-sm text-[var(--slate-500)]">
-            Need more call time? Add 100-minute bundles for {cs}20 ex VAT, or pay {cs}0.26/min for additional usage.
-          </p>
-          <p className="text-xs text-[var(--slate-400)] mt-1">
-            Need more call time? Add bundles or pay as you go.
+            Need more call time? Add 100-minute bundles for {cs}20 +VAT, or pay {cs}0.26/min for additional usage.
           </p>
         </motion.div>
 
@@ -337,7 +332,7 @@ export function Pricing() {
                   <p className="text-sm text-[var(--slate-500)] mt-1">Extra call handling minutes at a discounted rate.</p>
                 </div>
                 <div className="text-right">
-                  <div className="text-2xl font-bold text-[var(--navy-900)]">£20<span className="text-sm font-normal text-[var(--slate-500)]"> ex VAT</span></div>
+                  <div className="text-2xl font-bold text-[var(--navy-900)]">£20<span className="text-sm font-normal text-[var(--slate-500)]"> +VAT</span></div>
                 </div>
               </div>
               <div className="flex items-center gap-2 text-sm text-[var(--rex-green)] font-medium bg-[var(--rex-green)]/10 rounded-lg px-3 py-2">
@@ -356,7 +351,7 @@ export function Pricing() {
               <div className="flex items-start justify-between mb-4">
                 <div>
                   <h4 className="text-lg font-bold text-[var(--navy-900)]">Done-for-you AI & Automation Support</h4>
-                  <p className="text-sm text-[var(--slate-500)] mt-1">Bespoke support to get your setup working smoothly, your AI agents, and your automation systems.</p>
+                  <p className="text-sm text-[var(--slate-500)] mt-1">Extra help setting up your AI assistant, call flows and business automations.</p>
                 </div>
                 <div className="text-right">
                   <div className="text-2xl font-bold text-[var(--navy-900)]">£200<span className="text-sm font-normal text-[var(--slate-500)]">/hr</span></div>
@@ -367,6 +362,86 @@ export function Pricing() {
                 Ideal for scaling businesses and advanced optimisation
               </div>
             </motion.div>
+          </div>
+        </motion.div>
+
+        {/* What Happens After You Sign Up */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-16"
+        >
+          <div className="text-center mb-10">
+            <h3 className="text-2xl sm:text-3xl font-bold text-[var(--navy-900)]">
+              What happens after you sign up?
+            </h3>
+            <p className="mt-2 text-[var(--slate-500)]">
+              Live in less than 30 minutes. Here&apos;s how.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-5 gap-4 max-w-6xl mx-auto">
+            {[
+              {
+                icon: User,
+                title: "Choose your AI assistant",
+                body: "Pick Katie, Mark, or choose any male or female assistant name you prefer.",
+                color: "var(--katie-blue)",
+              },
+              {
+                icon: Mic,
+                title: "Select your voice and add your business details",
+                body: "Choose a male or female voice from the dropdown, then add your services, service area, hours, FAQs and preferred job types.",
+                color: "var(--claire-amber)",
+              },
+              {
+                icon: Database,
+                title: "We build your AI call profile and business knowledge base",
+                body: "Whoza creates the information your assistant uses to answer calls, qualify enquiries and route details correctly.",
+                color: "var(--rex-green)",
+              },
+              {
+                icon: PhoneCall,
+                title: "You approve a test call",
+                body: "Listen to how your assistant handles a real-style customer enquiry and request edits if needed.",
+                color: "var(--mark-grey)",
+              },
+              {
+                icon: Rocket,
+                title: "Your Whoza agent goes live on your number",
+                body: "Once approved, your AI assistant starts answering calls and sending qualified enquiries straight to your phone.",
+                color: "var(--katie-blue)",
+              },
+            ].map((step, index) => (
+              <motion.div
+                key={step.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="relative bg-white rounded-2xl p-5 border border-[var(--border)] shadow-sm"
+              >
+                <div className="flex items-center gap-2 mb-3">
+                  <div
+                    className="w-8 h-8 rounded-lg flex items-center justify-center"
+                    style={{ backgroundColor: `${step.color}20` }}
+                  >
+                    <step.icon className="w-4 h-4" style={{ color: step.color }} />
+                  </div>
+                  <span className="text-xs font-bold text-[var(--navy-900)] uppercase tracking-wider">
+                    Step {index + 1}
+                  </span>
+                </div>
+                <h4 className="text-sm font-bold text-[var(--navy-900)] mb-2 leading-snug">{step.title}</h4>
+                <p className="text-xs text-[var(--slate-500)] leading-relaxed">{step.body}</p>
+                {index < 4 && (
+                  <div className="hidden md:block absolute top-1/2 -right-2 transform -translate-y-1/2 z-10">
+                    <ArrowRight className="w-4 h-4 text-[var(--slate-300)]" />
+                  </div>
+                )}
+              </motion.div>
+            ))}
           </div>
         </motion.div>
 

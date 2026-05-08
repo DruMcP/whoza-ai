@@ -7,14 +7,14 @@ import { useLocale } from "@/lib/locale-context"
 const statsConfig = {
   uk: [
     { label: "Calls Answered", value: "147", change: "+23%", icon: Phone, color: "var(--katie-blue)" },
-    { label: "Jobs Booked", value: "89", change: "+18%", icon: Calendar, color: "var(--rex-green)" },
-    { label: "Revenue Recovered", value: "£12,340", change: "+34%", icon: TrendingUp, color: "var(--claire-amber)" },
+    { label: "Enquiries Captured", value: "89", change: "+18%", icon: Calendar, color: "var(--rex-green)" },
+    { label: "Estimated Value Captured", value: "£12,340", change: "+34%", icon: TrendingUp, color: "var(--claire-amber)" },
     { label: "Reviews Generated", value: "34", change: "+12", icon: Star, color: "var(--mark-grey)" },
   ],
   us: [
     { label: "Calls Answered", value: "147", change: "+23%", icon: Phone, color: "var(--katie-blue)" },
-    { label: "Jobs Booked", value: "89", change: "+18%", icon: Calendar, color: "var(--rex-green)" },
-    { label: "Revenue Recovered", value: "$16,450", change: "+34%", icon: TrendingUp, color: "var(--claire-amber)" },
+    { label: "Enquiries Captured", value: "89", change: "+18%", icon: Calendar, color: "var(--rex-green)" },
+    { label: "Estimated Value Captured", value: "$16,450", change: "+34%", icon: TrendingUp, color: "var(--claire-amber)" },
     { label: "Reviews Generated", value: "34", change: "+12", icon: Star, color: "var(--mark-grey)" },
   ],
 }
@@ -44,7 +44,7 @@ export function DashboardPreview() {
             Real-Time Dashboard
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight text-balance">
-            See Exactly What Whoza Makes You
+            See What Whoza Captures for You
           </h2>
           <p className="mt-6 text-lg text-white/60 text-pretty">
             Track every call, job, and pound recovered. 
@@ -107,7 +107,7 @@ export function DashboardPreview() {
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <div className="flex items-center justify-between mb-6">
                   <div>
-                    <div className="text-white font-semibold">Revenue Recovered</div>
+                    <div className="text-white font-semibold">Estimated Value Captured</div>
                     <div className="text-white/50 text-sm">Last 30 days</div>
                   </div>
                   <div className="text-2xl font-bold text-[var(--rex-green)]">
@@ -135,7 +135,7 @@ export function DashboardPreview() {
                 <div className="text-white font-semibold mb-4">Recent Activity</div>
                 <div className="space-y-3">
                   {[
-                    { action: "Job booked", detail: "Boiler repair • £140", time: "2 min ago", color: "var(--rex-green)" },
+                    { action: "Enquiry captured", detail: "Boiler repair • £140", time: "2 min ago", color: "var(--rex-green)" },
                     { action: "Call answered", detail: "New enquiry from Manchester", time: "5 min ago", color: "var(--katie-blue)" },
                     { action: "Review received", detail: "5 stars from David T.", time: "12 min ago", color: "var(--claire-amber)" },
                   ].map((item, i) => (

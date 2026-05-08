@@ -1,5 +1,84 @@
+# ============================================================
+# whoza.ai — AI Voice Agents for UK Tradespeople
+# Updated: 2026-05-08
+# ============================================================
+
+# ------------------- Standard Crawlers -------------------
 User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /admin/
+Disallow: /portal/
+Disallow: /checkout/
+Disallow: /login/
+Disallow: /sign-in/
+Disallow: /dashboard/
+Disallow: /_next/
+Disallow: /cdn-cgi/
+Disallow: /*.json$
+Disallow: /*?nocache=
 
+# ------------------- AI Search Crawlers -------------------
+# OpenAI (ChatGPT Search, GPTBot)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Anthropic (Claude)
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google (Gemini, AI Overviews, Bard)
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing (Copilot, MSNBot)
+User-agent: Bingbot
+Allow: /
+
+# Meta (AI search products)
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Naver (Korean AI search)
+User-agent: Naverbot
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Common Crawl (used by many AI models)
+User-agent: CCBot
+Allow: /
+
+# ------------------- Sitemap -------------------
 Sitemap: https://whoza.ai/sitemap.xml

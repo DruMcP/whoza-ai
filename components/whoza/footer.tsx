@@ -6,14 +6,16 @@ import { useLocale } from "@/lib/locale-context"
 const footerLinks = {
   product: [
     { label: "Features", href: "#team" },
-    { label: "Pricing", href: "#pricing" },
+    { label: "Pricing", href: "/pricing" },
     { label: "How It Works", href: "#how-it-works" },
     { label: "Testimonials", href: "#testimonials" },
   ],
   support: [
     { label: "Help Centre", href: "https://wa.me/447831643012" },
     { label: "Contact Us", href: "https://wa.me/447831643012" },
-    { label: "FAQ", href: "#faq" },
+    { label: "Email Support", href: "mailto:support@whoza.ai" },
+    { label: "Support Centre", href: "/support" },
+    { label: "FAQ", href: "/pricing#faq" },
   ],
   company: [
     { label: "Blog", href: "/blog" },

@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import { Star, MessageSquare, TrendingUp, CheckCircle2, ArrowRight, ThumbsUp } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { useLocale } from "@/lib/locale-context"
 
 export function ReviewsEngine() {
@@ -120,7 +119,7 @@ export function ReviewsEngine() {
               viewport={{ once: true }}
               className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full bg-[var(--rex-green)] text-white text-sm font-medium shadow-lg"
             >
-              Built for UK trades — early access now open
+              Part of your AI Revenue Team
             </motion.div>
           </motion.div>
         </div>

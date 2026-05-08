@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import { ArrowRight, Phone, BarChart3, Star, Eye, CheckCircle2 } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { useLocale } from "@/lib/locale-context"
 import { WaitlistForm } from "./waitlist-form"
 import { TrialAvailabilityBadge } from "./trial-badge"
@@ -18,7 +17,7 @@ export function FinalCTA() {
   const { country, config } = useLocale()
   
   return (
-    <section id="final-cta" className="py-24 lg:py-40 bg-[var(--navy-900)] relative overflow-hidden">
+    <section id="final-cta" className="section-padding-xl bg-[var(--navy-900)] relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[var(--katie-blue)]/10 rounded-full blur-[120px]" />
@@ -77,14 +76,14 @@ export function FinalCTA() {
           <WaitlistForm />
           <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
             <TrialAvailabilityBadge />
-            <Button 
-              size="lg"
-              variant="outline"
-              className="bg-transparent border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg"
-              onClick={() => window.open('https://wa.me/447831643012', '_blank')}
+            <a
+              href="https://wa.me/447831643012"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-transparent border border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg rounded-lg transition-colors"
             >
               Get Whoza Answering Your Calls
-            </Button>
+            </a>
           </div>
         </motion.div>
 

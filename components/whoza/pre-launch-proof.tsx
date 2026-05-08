@@ -2,14 +2,13 @@
 
 import { motion } from "framer-motion"
 import { Phone, CheckCircle2, ArrowRight, Zap, MessageSquare, Star, BarChart3, Target } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { useLocale } from "@/lib/locale-context"
 
 export function PreLaunchProof() {
   const { config } = useLocale()
 
   return (
-    <section className="py-20 lg:py-32 bg-[var(--off-white)]">
+    <section className="section-padding-lg bg-[var(--off-white)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -200,16 +199,13 @@ export function PreLaunchProof() {
             </div>
 
             <div className="text-center">
-              <p className="text-sm text-[var(--slate-500)] mb-2">
-                Early access is now open for selected UK trades businesses.
-              </p>
-              <Button 
-                size="lg"
-                className="bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-10 py-6 text-lg gap-3 shadow-xl shadow-[var(--rex-green)]/30 transition-all hover:scale-105"
-              >
-                Get Whoza Answering Your Calls
-                <ArrowRight className="w-5 h-5" />
-              </Button>
+              <a 
+              href="#final-cta"
+              className="inline-flex items-center justify-center rounded-lg bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-10 py-6 text-lg gap-3 shadow-xl shadow-[var(--rex-green)]/30 transition-all hover:scale-105"
+            >
+              Get Whoza Answering Your Calls
+              <ArrowRight className="w-5 h-5" />
+            </a>
             </div>
           </motion.div>
         </div>

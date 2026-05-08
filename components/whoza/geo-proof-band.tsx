@@ -9,13 +9,13 @@ import { useEffect, useState } from "react"
 const geoStatsConfig = {
   uk: {
     cities: ["London", "Manchester", "Birmingham", "Leeds", "Glasgow", "Bristol", "Liverpool", "Edinburgh"],
-    jobsPrefix: "jobs booked this week in",
+    jobsPrefix: "enquiries captured this week in",
     trustedPrefix: "Trusted by trades across",
     localDemand: "Local demand is high",
   },
   us: {
     cities: ["Dallas", "Houston", "Phoenix", "Chicago", "Los Angeles", "Miami", "Atlanta", "New York"],
-    jobsPrefix: "jobs booked this week in",
+    jobsPrefix: "enquiries captured this week in",
     trustedPrefix: "Trusted by contractors across",
     localDemand: "Local demand is high",
   },
@@ -62,7 +62,7 @@ export function GeoProofBand({ city, country: forcedCountry, jobsThisWeek: force
     <section className="py-6 bg-[var(--navy-900)] border-y border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-12">
-          {/* Jobs Booked Stat */}
+          {/* Enquiries Captured Stat */}
           <motion.div
             key={currentCity}
             initial={{ opacity: 0, y: 10 }}

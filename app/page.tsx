@@ -3,6 +3,7 @@
 import { Header } from "@/components/whoza/header"
 import { Hero } from "@/components/whoza/hero"
 import { SocialProofBand, StatsBand } from "@/components/whoza/social-proof"
+import { VideoExplainer } from "@/components/whoza/video-explainer"
 import { HowWhozaWorks } from "@/components/whoza/how-whoza-works"
 import { MeetTheTeam } from "@/components/whoza/meet-the-team"
 import { WhatsAppDelivery } from "@/components/whoza/whatsapp-delivery"
@@ -24,19 +25,27 @@ import { Footer } from "@/components/whoza/footer"
 import { StickyCTA, FloatingChatWidget } from "@/components/whoza/sticky-cta"
 import { TrilletVoiceWidget } from "@/components/whoza/trillet-voice-widget"
 import { ClaireDashboard } from "@/components/whoza/claire-dashboard"
+import { HomepageSchema } from "@/components/whoza/schema-markup"
 
 export default function Home() {
   return (
     <>
       <Header />
 
-      <main id="main-content" role="main">
+      <main id="main-content" role="main" className="pb-24 lg:pb-0">
         {/* HOOK - Financial urgency */}
         <Hero />
         <SocialProofBand />
 
+        {/* VIDEO EXPLAINER - See Whoza in action */}
+        <VideoExplainer />
+
         {/* DOMINANT MOMENT - Pain → Solution sequence */}
         <LostRevenueCalculator />
+
+        {/* AUDIO DEMO - Hear Katie handle a customer enquiry */}
+        <AudioDemo />
+
         <WhatsAppDelivery />
 
         {/* PRE-LAUNCH PROOF - Example scenario */}
@@ -50,7 +59,6 @@ export default function Home() {
 
         {/* CALL CAPTURE - Choose your voice */}
         <MeetTheTeam />
-        <AudioDemo />
 
         {/* VOICE AGENT DEMO - Experience Katie */}
         <section className="py-12 bg-[var(--navy-900)]">
@@ -92,6 +100,7 @@ export default function Home() {
       </main>
 
       <Footer />
+      <HomepageSchema />
       <FloatingChatWidget />
       <StickyCTA />
     </>

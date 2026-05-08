@@ -11,14 +11,14 @@ const controlFeatures = [
 ]
 
 const channels = [
-  { icon: MessageCircle, name: "WhatsApp", primary: true },
-  { icon: Smartphone, name: "SMS backup", primary: false },
-  { icon: Mail, name: "Email", primary: false },
+  { icon: MessageCircle, name: "WhatsApp" },
+  { icon: Smartphone, name: "SMS" },
+  { icon: Mail, name: "Email" },
 ]
 
 export function ControlSection() {
   return (
-    <section className="py-20 lg:py-32 bg-white">
+    <section className="section-padding-lg bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left - Control Features */}
@@ -73,6 +73,7 @@ export function ControlSection() {
               </div>
 
               <div className="space-y-4">
+                <p className="text-white/90 text-sm mb-4">WhatsApp, SMS or email — your choice.</p>
                 {channels.map((channel, index) => (
                   <motion.div
                     key={channel.name}
@@ -80,15 +81,10 @@ export function ControlSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className={`flex items-center gap-4 p-4 rounded-xl ${
-                      channel.primary ? "bg-[var(--rex-green)]/20 border border-[var(--rex-green)]/30" : "bg-white/5"
-                    }`}
+                    className="flex items-center gap-4 p-4 rounded-xl bg-white/5"
                   >
-                    <channel.icon className={`w-6 h-6 ${channel.primary ? "text-[var(--rex-green)]" : "text-white/60"}`} />
-                    <span className={channel.primary ? "font-semibold" : "text-white/70"}>{channel.name}</span>
-                    {channel.primary && (
-                      <span className="ml-auto text-xs bg-[var(--rex-green)] px-2 py-1 rounded-full">Primary</span>
-                    )}
+                    <channel.icon className="w-6 h-6 text-[var(--rex-green)]" />
+                    <span className="font-semibold">{channel.name}</span>
                   </motion.div>
                 ))}
               </div>

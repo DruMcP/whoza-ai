@@ -1,8 +1,19 @@
-"use client"
-
+import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { Shield, Phone, Database, Clock, Lock, UserCheck, FileText, Globe } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | whoza.ai",
+  description: "whoza.ai privacy policy — ICO-registered, UK GDPR compliant. Learn how we protect your data.",
+  alternates: {
+    canonical: "https://whoza.ai/privacy",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+}
 
 export default function PrivacyPolicy() {
   return (
@@ -179,7 +190,7 @@ export default function PrivacyPolicy() {
               </li>
             </ul>
             <p className="text-white/70 leading-relaxed mt-4">
-              To exercise any of these rights, contact us at <a href="mailto:dru@whoz.ai" className="text-emerald-400 hover:underline">dru@whoz.ai</a> or via WhatsApp at <a href="https://wa.me/447831643012" className="text-emerald-400 hover:underline">+44 7831 643012</a>. We will respond within 30 days.
+              To exercise any of these rights, contact us at <a href="mailto:dru@whoza.ai" className="text-emerald-400 hover:underline">dru@whoza.ai</a> or via WhatsApp at <a href="https://wa.me/447831643012" className="text-emerald-400 hover:underline">+44 7831 643012</a>. We will respond within 30 days.
             </p>
           </section>
 
@@ -230,7 +241,7 @@ export default function PrivacyPolicy() {
             <div className="mt-4 bg-white/5 rounded-lg p-6">
               <p className="text-white/70">Data Protection Officer</p>
               <p className="text-white font-medium mt-1">Whoza.ai</p>
-              <p className="text-white/70 mt-2">Email: <a href="mailto:dru@whoz.ai" className="text-emerald-400 hover:underline">dru@whoz.ai</a></p>
+              <p className="text-white/70 mt-2">Email: <a href="mailto:dru@whoza.ai" className="text-emerald-400 hover:underline">dru@whoza.ai</a></p>
               <p className="text-white/70">WhatsApp: <a href="https://wa.me/447831643012" className="text-emerald-400 hover:underline">+44 7831 643012</a></p>
             </div>
           </section>

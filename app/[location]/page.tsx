@@ -44,8 +44,32 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const tradesText = locationData.trades?.slice(0, 2).join(", ") || "tradespeople"
   
   return {
+    metadataBase: new URL("https://whoza.ai"),
     title: `AI Call Answering for ${tradesText} in ${locationData.city} | whoza.ai`,
     description: `Stop losing jobs to missed calls. Katie answers your phone 24/7 for ${tradesText} in ${locationData.city}. Book appointments automatically.`,
+    alternates: {
+      canonical: `https://whoza.ai/${location}`,
+    },
+    openGraph: {
+      type: "website",
+      locale: "en_GB",
+      url: `https://whoza.ai/${location}`,
+      siteName: "Whoza.ai",
+      title: `AI Call Answering for ${tradesText} in ${locationData.city} | whoza.ai`,
+      description: `Stop losing jobs to missed calls. Katie answers your phone 24/7 for ${tradesText} in ${locationData.city}.`,
+      images: [{ url: "https://whoza.ai/og-image.png", width: 1200, height: 630, alt: `whoza.ai — AI Call Answering in ${locationData.city}` }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@whozaai",
+      title: `AI Call Answering for ${tradesText} in ${locationData.city} | whoza.ai`,
+      description: `Stop losing jobs to missed calls in ${locationData.city}.`,
+      images: ["https://whoza.ai/og-image.png"],
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
   }
 }
 

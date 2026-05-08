@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import { ArrowRight, Sparkles } from "lucide-react"
-import { Button } from "@/components/ui/button"
 
 export function Testimonials() {
   return (
@@ -16,7 +15,7 @@ export function Testimonials() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--rex-green)]/10 border border-[var(--rex-green)]/20 mb-6">
               <Sparkles className="w-4 h-4 text-[var(--rex-green)]" />
-              <span className="text-sm font-semibold text-[var(--rex-green)]">Built for UK trades — early access now open</span>
+              <span className="text-sm font-semibold text-[var(--rex-green)]">Verified Google Reviews · 5.0 Rating</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
               Real Results from Real Tradespeople
@@ -58,24 +57,20 @@ export function Testimonials() {
           ))}
         </div>
 
-        {/* Pre-Launch CTA */}
+        {/* CTA — SEO: using <a> tag for crawlability */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <p className="text-lg text-[var(--slate-500)] mb-6">
-            Early access is now open for selected UK trades businesses.
-          </p>
-          <Button
-            size="lg"
-            className="bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-10 py-7 text-xl gap-3 shadow-xl shadow-[var(--rex-green)]/30"
-            onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
+          <a
+            href="#final-cta"
+            className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-10 py-7 text-xl gap-3 shadow-xl shadow-[var(--rex-green)]/30 rounded-lg transition-all hover:scale-105"
           >
             Hear From Real Tradespeople
             <ArrowRight className="w-6 h-6" />
-          </Button>
+          </a>
         </motion.div>
       </div>
     </section>

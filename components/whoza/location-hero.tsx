@@ -56,7 +56,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             >
               <MapPin className="w-4 h-4 text-[var(--rex-green)]" />
               <span className="text-sm text-white font-medium">
-                {jobsThisWeek}+ jobs booked this week in {city}
+                {jobsThisWeek}+ enquiries captured this week in {city}
               </span>
             </motion.div>
 
@@ -67,7 +67,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
 
             {/* Subheadline */}
             <p className="mt-6 text-lg sm:text-xl text-white/70 leading-relaxed max-w-xl mx-auto lg:mx-0 text-pretty">
-              Turn missed calls into booked jobs — and completed jobs into more future work. 
+              Turn missed calls into enquiries — and completed jobs into more future work. 
               Katie captures calls, Rex finds opportunities, and Claire turns every finished job into your next customer.
               <span className="block mt-2 text-white font-semibold">Installed in 30 minutes. No risk.</span>
             </p>

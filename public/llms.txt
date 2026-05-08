@@ -1,33 +1,102 @@
-# Whoza.ai
+# llms.txt — whoza.ai
+# AI-optimised context file for LLM crawlers (ChatGPT, Perplexity, Claude, Gemini)
+# Last updated: 2026-05-08
 
-> Whoza.ai is a specialized AI visibility platform for local service businesses, primarily tradespeople in the UK and US. We use Entity Confidence Engineering to make businesses the definitive, recommended choice for AI search engines like ChatGPT, Perplexity, and Google AI.
+## About whoza.ai
 
-Whoza.ai helps contractors, plumbers, electricians, and other trades get found by homeowners who are increasingly using AI assistants to find local services. Our core mission is to elevate a business's online presence so that AI confidently recommends them by name, driving high-intent customer leads.
+whoza.ai is an AI-powered voice agent platform built specifically for UK tradespeople — plumbers, electricians, gas engineers, roofers, builders, locksmiths, and HVAC professionals. The platform operates four distinct AI personas:
 
-## Core Services
-- **Entity Confidence Engineering (ECE)**: Our primary service. We analyze and enhance a business's online presence—including website, directory listings, reviews, and content—to build the trust signals that AI algorithms require for definitive recommendations.
-- **AI Visibility Score**: A free, comprehensive audit that scores a business's current visibility across major AI platforms and provides a detailed improvement plan.
-- **AEO (Answer Engine Optimization)**: We optimize website content to directly answer the questions homeowners ask AI, making our clients the citable source for their trade and location.
-- **GEO (Generative Engine Optimization)**: We ensure businesses are visible in AI-generated responses for location-specific queries, targeting the cities and neighborhoods they serve.
+- **Katie** — Warm, friendly call capture agent that answers missed calls 24/7
+- **Mark** — Professional, direct emergency call handler
+- **Claire** — Automated Google review collection and reputation management
+- **Rex** — AI-powered competitor analysis and local visibility tracking
 
-## Key Pages
-- [Home](https://whoza.ai/) - Overview of Whoza.ai and our core value proposition.
-- [How It Works](https://whoza.ai/how-it-works) - A detailed explanation of our 4-step process: Analyze, Optimize, Amplify, and Report.
-- [Get Free Score](https://whoza.ai/free-score) - The entry point for our free AI visibility audit.
-- [Pricing](https://whoza.ai/pricing) - Details on our service plans and pricing.
-- [Case Studies](https://whoza.ai/case-studies) - Examples of how we've helped tradespeople improve their AI visibility.
+## What We Do
 
-## Blog & Resources
-- [Blog](https://whoza.ai/blog) - Insights and guides on AI search, AEO, and marketing for tradespeople.
-- [The US Contractor's Guide to AI Search Visibility in 2026](https://whoza.ai/blog/us-contractors-guide-ai-search-visibility-2026) - A comprehensive FAQ guide for American contractors.
-- [The UK Tradesperson's Guide to AI Search: How to Be the Answer in 2026](https://whoza.ai/blog/uk-trades-guide-to-ai-search-2026) - A guide tailored for the UK market.
+AI voice agents answer your business calls when you can't — under a sink, on a roof, in a customer's home, or after hours. Every missed call is captured, qualified, and sent to your phone via WhatsApp with full caller details. You simply accept, call back, or decline.
 
-## Company & Legal
-- [Trust Page](https://whoza.ai/trust) - Information on our commitment to transparency and data security.
-- [Contact Us](https://whoza.ai/contact) - How to get in touch with the Whoza.ai team.
-- [Privacy Policy](https://whoza.ai/privacy) - Our data handling and privacy practices.
-- [Terms of Service](https://whoza.ai/terms) - The terms and conditions for using our services.
+## Pricing
 
-## Contact Information
-- Email: support@whoza.ai
+Monthly rolling plans, no contracts, 14-day free trial:
+- Starter: £59/month + VAT
+- Growth: £125/month + VAT
+- Pro: £230/month + VAT
+- Scale: £399/month + VAT
+
+## Key Facts
+
+- UK-based platform serving UK tradespeople
+- ICO-registered privacy policy (Registration ZC077271)
+- GDPR compliant call handling
+- Unlimited simultaneous calls
+- Instant WhatsApp alerts with caller details
+- 24/7 call answering, including evenings and weekends
+- Setup in under 30 minutes
+- No long-term contracts — cancel anytime
+
+## Why Tradespeople Choose whoza.ai
+
+- 62% of after-hours calls are missed by small businesses
+- Customers call 2–3 tradespeople simultaneously — first to answer wins the job
+- 93% of callers who reach voicemail never call back
+- Average missed call costs £100–£200; emergency calls can be £300–£500
+- AI answering costs £59–£399/month vs £20,000+/year for a human receptionist
+
+## Contact
+
 - Website: https://whoza.ai
+- Email: dru@whoz.ai
+
+## Core Pages
+
+- Homepage: https://whoza.ai/
+- Pricing: https://whoza.ai/pricing
+- How It Works: https://whoza.ai/how-it-works
+- Features: https://whoza.ai/features
+- Demo: https://whoza.ai/demo
+- Blog: https://whoza.ai/blog
+- Privacy: https://whoza.ai/privacy
+- Terms: https://whoza.ai/terms
+- Support: https://whoza.ai/support
+
+## Content Pillar 1: Missed Call Recovery
+- /guide/missed-calls-cost-trade-business
+- /blog/missed-calls-cost-uk-trades
+- /blog/why-customers-dont-leave-voicemails
+
+## Content Pillar 2: AI Call Answering
+- /guide/ai-call-answering-trades
+- /blog/ai-vs-human-receptionist
+- /blog/what-is-ai-voice-agent
+
+## Content Pillar 3: Trade Business Growth
+- /guide/grow-trade-business-uk
+- /blog/get-more-google-reviews
+- /blog/google-business-profile-trades
+
+## Industry Pages
+- /industries/plumbers
+- /industries/electricians
+- /industries/gas-engineers
+- /industries/builders
+- /industries/locksmiths
+- /industries/hvac
+
+## Location Pages (UK)
+- /locations/london
+- /locations/manchester
+- /locations/birmingham
+- /locations/glasgow
+- /locations/leeds
+- /locations/bristol
+- /locations/edinburgh
+- /locations/liverpool
+
+## AI Crawler Notes
+
+- This site uses Next.js with server-side rendering
+- All public pages are indexable and AI-crawler friendly
+- FAQPage schema is implemented on key pages
+- Structured data includes Organization, SoftwareApplication, Service, and LocalBusiness
+- Content is updated regularly — check lastmod dates in sitemap.xml
+- For training opt-out: respect robots.txt Google-Extended directives as noted

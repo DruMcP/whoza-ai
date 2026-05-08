@@ -3,15 +3,15 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { CountrySwitcher } from "./country-switcher"
 
 const navLinks = [
-  { href: "#how-it-works", label: "How It Works" },
-  { href: "#team", label: "Meet the Team" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#testimonials", label: "Testimonials" },
-  { href: "#faq", label: "FAQ" },
+  { href: "#how-it-works", label: "How It Works", isPageLink: false },
+  { href: "#team", label: "Meet the Team", isPageLink: false },
+  { href: "/pricing", label: "Pricing", isPageLink: true },
+  { href: "#testimonials", label: "Testimonials", isPageLink: false },
+  { href: "/support", label: "Support", isPageLink: true },
+  { href: "/pricing#faq", label: "FAQ", isPageLink: true },
 ]
 
 export function Header() {
@@ -27,7 +27,7 @@ export function Header() {
               <img 
                 src="/production_logo.png" 
                 alt="whoza.ai" 
-                className="h-16 w-auto sm:h-[4.5rem] lg:h-[5rem]"
+                className="h-12 w-auto sm:h-16 lg:h-[5rem]"
               />
             </a>
             <span className="hidden lg:block text-xs text-white/40 border-l border-white/20 pl-3">
@@ -42,9 +42,11 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => {
-                  e.preventDefault()
-                  const el = document.querySelector(link.href)
-                  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  if (!link.isPageLink) {
+                    e.preventDefault()
+                    const el = document.querySelector(link.href)
+                    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  }
                 }}
                 className="text-sm text-white/70 hover:text-white transition-colors duration-200 cursor-pointer"
               >
@@ -55,12 +57,13 @@ export function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <Button 
-              className="bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-6"
-              onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
+
+            <a 
+              href="#final-cta"
+              className="inline-flex items-center justify-center rounded-md bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-6 h-10 text-sm transition-colors"
             >
               Get Whoza
-            </Button>
+            </a>
             <CountrySwitcher />
           </div>
 
@@ -94,10 +97,14 @@ export function Header() {
                   href={link.href}
                   className="block text-white/80 hover:text-white py-2 transition-colors cursor-pointer"
                   onClick={(e) => {
-                    e.preventDefault()
-                    setIsOpen(false)
-                    const el = document.querySelector(link.href)
-                    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                    if (!link.isPageLink) {
+                      e.preventDefault()
+                      setIsOpen(false)
+                      const el = document.querySelector(link.href)
+                      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                    } else {
+                      setIsOpen(false)
+                    }
                   }}
                 >
                   {link.label}
@@ -107,12 +114,12 @@ export function Header() {
                 <div className="flex justify-center">
                   <CountrySwitcher />
                 </div>
-                <Button 
-                  className="w-full bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold"
-                  onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
+                <a 
+                  href="#final-cta"
+                  className="inline-flex items-center justify-center w-full rounded-md bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold h-10 text-sm transition-colors"
                 >
                   Get Whoza
-                </Button>
+                </a>
               </div>
             </div>
           </motion.div>
