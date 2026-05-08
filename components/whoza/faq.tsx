@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import { MessageCircle } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import {
   Accordion,
   AccordionContent,
@@ -13,7 +12,7 @@ import {
 const faqs = [
   {
     question: "How much does Whoza cost in total?",
-    answer: "You pay a monthly plan fee (Starter £59, Growth £125, Pro £230, Scale £399 — all ex VAT). Each plan includes a set number of call handling minutes and booked enquiries. Additional enquiries beyond your included amount are charged per booking. Overage minutes are billed at £0.22 per minute. There are no hidden setup fees or long-term contracts.",
+    answer: "You pay a monthly plan fee (Starter £59, Growth £125, Pro £230, Scale £399 — all +VAT). Each plan includes a set number of call handling minutes and booked enquiries. Additional enquiries beyond your included amount are charged per booking. Overage minutes are billed at £0.22 per minute. There are no hidden setup fees or long-term contracts.",
   },
   {
     question: "Is there a free trial or early access?",
@@ -55,7 +54,7 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="py-20 lg:py-32 bg-white">
+    <section id="faq" className="section-padding-lg bg-white relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -113,11 +112,19 @@ export function FAQ() {
           <p className="text-[var(--slate-500)] mb-6">
             Our team is here to help you with early access.
           </p>
-          <Button className="bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 text-white">
+          <a 
+            href="https://wa.me/447831643012"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+          >
             <MessageCircle className="mr-2 w-4 h-4" />
             Chat with Us
-          </Button>
+          </a>
         </motion.div>
+
+        {/* Gradient Transition to Dark Section */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-[var(--navy-900)]" />
       </div>
     </section>
   )

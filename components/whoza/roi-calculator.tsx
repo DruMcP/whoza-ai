@@ -3,7 +3,6 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Calculator, TrendingUp, ArrowRight, Check } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { useLocale } from "@/lib/locale-context"
 
 const tradePresetsUk = [
@@ -118,13 +117,13 @@ export function ROICalculator() {
                     <span className="text-white font-medium"> {selectedTrade.conversion}% conversion</span>
                   </p>
                 </div>
-                <Button 
-                  className="bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 text-white font-semibold px-8 whitespace-nowrap"
-                  onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
+                <a 
+                  href="#final-cta"
+                  className="inline-flex items-center justify-center rounded-lg bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 text-white font-semibold px-8 h-10 text-sm whitespace-nowrap transition-colors"
                 >
                   See Your ROI
                   <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
+                </a>
               </div>
             </div>
           </div>

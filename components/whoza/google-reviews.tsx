@@ -39,7 +39,7 @@ export function GoogleReviews() {
           </div>
 
           {/* Mini Reviews */}
-          <div className="mt-2 grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="mt-2 grid grid-cols-1 md:grid-cols-3 gap-4">
             {reviews.map((review, index) => (
               <motion.div
                 key={index}

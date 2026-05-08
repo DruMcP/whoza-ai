@@ -9,7 +9,7 @@ const groups = [
     rows: [
       { outcome: "Every call answered 24/7", whoza: true, typical: false },
       { outcome: "Caller qualified as real job (not spam)", whoza: true, typical: false },
-      { outcome: "Job booked into your calendar", whoza: true, typical: false },
+      { outcome: "Qualified enquiry captured", whoza: true, typical: false },
     ],
   },
   {
@@ -17,7 +17,7 @@ const groups = [
     rows: [
       { outcome: "Job sent to your phone instantly", whoza: true, typical: false },
       { outcome: "You accept or decline via WhatsApp", whoza: true, typical: false },
-      { outcome: "Customer gets instant confirmation", whoza: true, typical: false },
+      { outcome: "Customer follow-up sent", whoza: true, typical: false },
     ],
   },
   {
@@ -58,7 +58,7 @@ function Cell({ value }: { value: boolean }) {
 
 export function ComparisonTable() {
   return (
-    <section className="py-20 lg:py-32 bg-[var(--off-white)]">
+    <section className="section-padding-lg bg-[var(--off-white)]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div

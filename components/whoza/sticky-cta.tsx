@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ArrowRight, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
 
 export function StickyCTA() {
   const [isVisible, setIsVisible] = useState(false)
@@ -36,12 +35,13 @@ export function StickyCTA() {
                 <div className="text-white font-semibold text-sm">Get Whoza</div>
                 <div className="text-white/60 text-xs">Early access now open</div>
               </div>
-              <Button 
-                className="bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 text-white font-semibold px-6"
+              <a 
+                href="#final-cta"
+                className="inline-flex items-center justify-center bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
               >
                 Get Whoza
                 <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
+              </a>
               <button 
                 onClick={() => setIsDismissed(true)}
                 className="p-2 text-white/40 hover:text-white transition-colors"
@@ -82,7 +82,7 @@ export function FloatingChatWidget() {
     `https://wa.me/447831643012?text=${encodeURIComponent(text)}`
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-24 lg:bottom-6 right-6 z-50">
       <AnimatePresence>
         {isOpen && (
           <motion.div

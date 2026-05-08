@@ -1,52 +1,80 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Shield, Award, CheckCircle2 } from "lucide-react"
 import { useLocale } from "@/lib/locale-context"
 
-const badgesConfig = {
+const tradesConfig = {
   uk: [
-    { name: "ICO Registered", icon: Shield },
-    { name: "GDPR Compliant", icon: CheckCircle2 },
-    { name: "Built for Gas Safe engineers", icon: Award },
-    { name: "Built for NICEIC electricians", icon: Award },
-    { name: "Built for FMB builders", icon: Award },
+    { name: "Plumbers", icon: "🔧" },
+    { name: "Electricians", icon: "⚡" },
+    { name: "Roofers", icon: "🏠" },
+    { name: "Locksmiths", icon: "🔐" },
+    { name: "Drainage", icon: "🌊" },
+    { name: "Landscapers", icon: "🌳" },
+    { name: "Pest Control", icon: "🐜" },
+    { name: "Cleaners", icon: "🧹" },
+    { name: "Heating Engineers", icon: "🔥" },
+    { name: "Builders", icon: "🔨" },
   ],
   us: [
-    { name: "SOC 2 Compliant", icon: Shield },
-    { name: "CCPA Compliant", icon: CheckCircle2 },
-    { name: "BBB Accredited", icon: Award },
-    { name: "Licensed & Insured", icon: Award },
+    { name: "Plumbers", icon: "🔧" },
+    { name: "Electricians", icon: "⚡" },
+    { name: "Roofers", icon: "🏠" },
+    { name: "HVAC", icon: "❄️" },
+    { name: "Landscapers", icon: "🌳" },
+    { name: "Pest Control", icon: "🐜" },
+    { name: "Cleaners", icon: "🧹" },
+    { name: "General Contractors", icon: "🔨" },
+    { name: "Painters", icon: "🎨" },
+    { name: "Flooring", icon: "🏗️" },
   ],
-}
-
-const tradesConfig = {
-  uk: ["Plumbers", "Electricians", "Builders", "Roofers", "Painters", "Landscapers", "Heating Engineers", "Carpenters"],
-  us: ["HVAC", "Roofing", "Plumbing", "Electrical", "Remodeling", "Landscaping", "General Contractors", "Flooring"],
 }
 
 export function SocialProofBand() {
   const { country } = useLocale()
-  const badges = badgesConfig[country]
+  const trades = tradesConfig[country]
 
   return (
-    <section className="py-8 bg-[var(--off-white)] border-y border-[var(--border)]">
+    <section className="py-6 bg-[var(--navy-900)] border-y border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap items-center justify-center gap-6">
-            {badges.map((badge, index) => (
+        {/* Label */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="text-center text-xs text-white/40 uppercase tracking-wider font-medium mb-4"
+        >
+          Built for {country === "uk" ? "UK" : "US"} trades & home services
+        </motion.p>
+
+        {/* Horizontal scroll container */}
+        <div className="relative">
+          {/* Fade edges on mobile */}
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-[var(--navy-900)] to-transparent z-10 sm:hidden" />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-[var(--navy-900)] to-transparent z-10 sm:hidden" />
+
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex gap-3 overflow-x-auto pb-2 sm:flex-wrap sm:justify-center sm:overflow-visible scrollbar-hide"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {trades.map((trade, index) => (
               <motion.div
-                key={badge.name}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
+                key={trade.name}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="flex items-center gap-2 text-[var(--slate-500)]"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-colors cursor-default shrink-0"
               >
-                <badge.icon className="w-4 h-4" />
-                <span className="text-xs font-medium">{badge.name}</span>
+                <span className="text-lg leading-none">{trade.icon}</span>
+                <span className="text-sm font-medium text-white/90 whitespace-nowrap">{trade.name}</span>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   )
@@ -73,16 +101,16 @@ export function TrustBadgeBand() {
         {/* Trade Types Grid - No duplication */}
         <div className="flex flex-wrap justify-center gap-3">
           {trades.map((trade, index) => (
-            <motion.div 
-              key={trade}
+            <motion.div
+              key={trade.name}
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.05 }}
               viewport={{ once: true }}
               className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--border)]"
             >
-              <CheckCircle2 className="w-4 h-4 text-[var(--rex-green)]" />
-              <span className="text-sm font-medium text-[var(--navy-900)]">{trade}</span>
+              <span className="text-base">{trade.icon}</span>
+              <span className="text-sm font-medium text-[var(--navy-900)]">{trade.name}</span>
             </motion.div>
           ))}
         </div>

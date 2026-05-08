@@ -1,0 +1,1 @@
+cd /root/.openclaw/workspace/whoza-ai-v0 && npm run build 2>&1 | tail -15

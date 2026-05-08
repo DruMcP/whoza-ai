@@ -7,14 +7,68 @@ import { useLocale } from "@/lib/locale-context"
 
 const jobExamples = {
   uk: [
-    { customer: "Mrs. Sarah Thompson", job: "Boiler repair - no heating", location: "Manchester, M20", time: "Tomorrow 2pm", value: "£140" },
-    { customer: "Mr. David Wilson", job: "Blocked drain - kitchen", location: "Birmingham, B15", time: "Today 5pm", value: "£85" },
-    { customer: "Ms. Emma Clarke", job: "New bathroom tap install", location: "Leeds, LS1", time: "Friday 10am", value: "£95" },
+    { 
+      label: "WhatsApp Enquiry Received",
+      heading: "New Customer Enquiry",
+      jobType: "Boiler Repair",
+      name: "Sarah Thompson",
+      area: "Aberdeen",
+      urgency: "Today",
+      time: "ASAP",
+      value: "£180–£260",
+    },
+    { 
+      label: "WhatsApp Enquiry Received",
+      heading: "New Customer Enquiry",
+      jobType: "Blocked Drain",
+      name: "David Wilson",
+      area: "Birmingham",
+      urgency: "Today",
+      time: "5pm",
+      value: "£85–£120",
+    },
+    { 
+      label: "WhatsApp Enquiry Received",
+      heading: "New Customer Enquiry",
+      jobType: "Tap Install",
+      name: "Emma Clarke",
+      area: "Leeds",
+      urgency: "This Week",
+      time: "Friday 10am",
+      value: "£95–£140",
+    },
   ],
   us: [
-    { customer: "Sarah Johnson", job: "HVAC repair - no cooling", location: "Dallas, TX 75201", time: "Tomorrow 2pm", value: "$180" },
-    { customer: "Mike Williams", job: "Clogged drain - kitchen", location: "Chicago, IL 60601", time: "Today 5pm", value: "$120" },
-    { customer: "Jennifer Davis", job: "Faucet replacement", location: "Houston, TX 77001", time: "Friday 10am", value: "$150" },
+    { 
+      label: "WhatsApp Enquiry Received",
+      heading: "New Customer Enquiry",
+      jobType: "HVAC Repair",
+      name: "Sarah Johnson",
+      area: "Dallas, TX",
+      urgency: "Today",
+      time: "ASAP",
+      value: "$180–$260",
+    },
+    { 
+      label: "WhatsApp Enquiry Received",
+      heading: "New Customer Enquiry",
+      jobType: "Drain Cleaning",
+      name: "Mike Williams",
+      area: "Chicago, IL",
+      urgency: "Today",
+      time: "5pm",
+      value: "$120–$180",
+    },
+    { 
+      label: "WhatsApp Enquiry Received",
+      heading: "New Customer Enquiry",
+      jobType: "Faucet Replacement",
+      name: "Jennifer Davis",
+      area: "Houston, TX",
+      urgency: "This Week",
+      time: "Friday 10am",
+      value: "$150–$220",
+    },
   ],
 }
 
@@ -72,7 +126,7 @@ export function WhatsAppDelivery() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center overflow-hidden">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* WhatsApp Mockup */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -107,33 +161,73 @@ export function WhatsAppDelivery() {
                     >
                       {/* Job Card Message */}
                       <div className="bg-[#005c4b] rounded-xl p-4 max-w-[280px] ml-auto">
-                        <div className="text-[#25d366] text-xs font-semibold mb-2">NEW JOB AVAILABLE</div>
+                        {/* Top Label */}
+                        <div className="flex items-center justify-between mb-3">
+                          <div className="px-2 py-0.5 rounded bg-[#25d366] text-white text-[10px] font-bold uppercase tracking-wider">
+                            {job.label}
+                          </div>
+                          <div className="text-[#25d366] text-[10px]">Just now</div>
+                        </div>
                         
-                        <div className="space-y-3 text-white">
+                        {/* Main Heading */}
+                        <div className="text-white/90 text-xs font-medium mb-3">
+                          {job.heading}
+                        </div>
+                        
+                        {/* Job Type — Bold & Prominent */}
+                        <div className="text-white font-bold text-base mb-3 leading-tight">
+                          {job.jobType}
+                        </div>
+                        
+                        {/* Details Grid */}
+                        <div className="space-y-2 text-white">
                           <div className="flex items-start gap-2">
-                            <Phone className="w-4 h-4 text-[#25d366] mt-0.5 shrink-0" />
+                            <Phone className="w-3.5 h-3.5 text-[#25d366] mt-0.5 shrink-0" />
                             <div>
-                              <div className="text-sm font-medium">{job.customer}</div>
-                              <div className="text-xs text-white/70">{job.job}</div>
+                              <span className="text-[10px] text-white/50 uppercase tracking-wider">Name</span>
+                              <div className="text-sm font-medium">{job.name}</div>
                             </div>
                           </div>
                           
-                          <div className="flex items-center gap-2">
-                            <MapPin className="w-4 h-4 text-[#25d366] shrink-0" />
-                            <span className="text-sm">{job.location}</span>
+                          <div className="flex items-start gap-2">
+                            <MapPin className="w-3.5 h-3.5 text-[#25d366] mt-0.5 shrink-0" />
+                            <div>
+                              <span className="text-[10px] text-white/50 uppercase tracking-wider">Area</span>
+                              <div className="text-sm">{job.area}</div>
+                            </div>
                           </div>
                           
-                          <div className="flex items-center gap-2">
-                            <Clock className="w-4 h-4 text-[#25d366] shrink-0" />
-                            <span className="text-sm">{job.time}</span>
+                          <div className="flex items-start gap-2">
+                            <Clock className="w-3.5 h-3.5 text-[#25d366] mt-0.5 shrink-0" />
+                            <div>
+                              <span className="text-[10px] text-white/50 uppercase tracking-wider">Urgency</span>
+                              <div className="text-sm">
+                                <span className="inline-flex items-center gap-1">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
+                                  {job.urgency}
+                                </span>
+                              </div>
+                            </div>
                           </div>
                           
-                          <div className="flex items-center gap-2">
-                            <span className="text-sm font-bold text-[#25d366]">{job.value} estimated</span>
+                          <div className="flex items-start gap-2">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-[#25d366] mt-0.5 shrink-0" />
+                            <div>
+                              <span className="text-[10px] text-white/50 uppercase tracking-wider">Preferred Time</span>
+                              <div className="text-sm font-medium text-[#25d366]">{job.time}</div>
+                            </div>
                           </div>
                         </div>
-
-                        <div className="text-[10px] text-white/50 text-right mt-2">10:32 AM</div>
+                        
+                        {/* Estimated Value */}
+                        <div className="mt-3 pt-3 border-t border-white/20">
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <span className="text-[10px] text-white/50 uppercase tracking-wider">Estimated Value</span>
+                              <div className="text-lg font-bold text-[#25d366]">{job.value}</div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
 
                       {/* Action Buttons */}
@@ -142,20 +236,25 @@ export function WhatsAppDelivery() {
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.3 }}
-                          className="flex gap-2 justify-end"
+                          className="flex gap-2 justify-end flex-wrap"
                         >
                           <button
                             onClick={handleAccept}
-                            className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#25d366] text-white text-sm font-medium hover:bg-[#25d366]/90 transition-colors"
+                            className="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#25d366] text-white text-sm font-bold shadow-lg hover:bg-[#128c7e] transition-colors"
                           >
-                            <Check className="w-4 h-4" />
-                            Accept Job
+                            <CheckCircle2 className="w-4 h-4" />
+                            Accept
+                          </button>
+                          <button
+                            className="flex items-center gap-1.5 px-3 py-2.5 rounded-full bg-[var(--katie-blue)] text-white text-sm font-medium hover:bg-[var(--katie-blue)]/90 transition-colors shadow-lg"
+                          >
+                            <Phone className="w-4 h-4" />
+                            Call Back
                           </button>
                           <button
                             onClick={handleDecline}
-                            className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white text-sm font-medium hover:bg-white/20 transition-colors"
+                            className="flex items-center gap-1.5 px-3 py-2.5 rounded-full bg-red-500 text-white text-sm hover:bg-red-600 transition-colors shadow-lg"
                           >
-                            <X className="w-4 h-4" />
                             Decline
                           </button>
                         </motion.div>
@@ -174,8 +273,8 @@ export function WhatsAppDelivery() {
                                 <CheckCircle2 className="w-6 h-6 text-white" />
                               </div>
                               <div>
-                                <div className="text-[#25d366] font-bold text-sm">JOB CONFIRMED!</div>
-                                <div className="text-white text-xs">{job.value} • {job.time}</div>
+                                <div className="text-[#25d366] font-bold text-sm">ENQUIRY ACCEPTED</div>
+                                <div className="text-white text-xs">{job.jobType} • {job.area}</div>
                               </div>
                             </div>
                           </div>
@@ -225,7 +324,7 @@ export function WhatsAppDelivery() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
               viewport={{ once: true }}
-              className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full bg-[var(--rex-green)] text-white text-sm font-bold shadow-lg flex items-center gap-2"
+              className="absolute -bottom-8 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full bg-[var(--rex-green)] text-white text-sm font-bold shadow-lg flex items-center gap-2"
             >
               <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
               Demo: tap to try
@@ -236,7 +335,7 @@ export function WhatsAppDelivery() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1 }}
-              className="absolute -top-2 -right-2 px-3 py-1.5 rounded-full bg-[var(--katie-blue)] text-white text-xs font-medium shadow-lg"
+              className="absolute -top-4 -right-4 px-3 py-1.5 rounded-full bg-[var(--katie-blue)] text-white text-xs font-medium shadow-lg"
             >
               Interactive demo
             </motion.div>
@@ -282,21 +381,21 @@ export function WhatsAppDelivery() {
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div>
                   <div className="w-12 h-12 rounded-full bg-[var(--rex-green)]/20 flex items-center justify-center mx-auto mb-2">
-                    <Check className="w-6 h-6 text-[var(--rex-green)]" />
+                    <CheckCircle2 className="w-6 h-6 text-[var(--rex-green)]" />
                   </div>
-                  <div className="text-white text-sm">Accept Job</div>
-                </div>
-                <div>
-                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-2">
-                    <X className="w-6 h-6 text-white/60" />
-                  </div>
-                  <div className="text-white text-sm">Decline</div>
+                  <div className="text-white text-sm">Accept</div>
                 </div>
                 <div>
                   <div className="w-12 h-12 rounded-full bg-[var(--katie-blue)]/20 flex items-center justify-center mx-auto mb-2">
                     <Phone className="w-6 h-6 text-[var(--katie-blue)]" />
                   </div>
-                  <div className="text-white text-sm">Call back</div>
+                  <div className="text-white text-sm">Call Back</div>
+                </div>
+                <div>
+                  <div className="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center mx-auto mb-2">
+                    <X className="w-6 h-6 text-red-500" />
+                  </div>
+                  <div className="text-white text-sm">Decline</div>
                 </div>
               </div>
             </div>

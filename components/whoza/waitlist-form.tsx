@@ -85,7 +85,7 @@ export function WaitlistForm() {
             </Button>
             {status === "error" && (
               <p className="text-red-400 text-sm text-center">
-                Something went wrong. Please try again or email dru@whoz.ai
+                Something went wrong. Please try again or email dru@whoza.ai
               </p>
             )}
           </motion.form>

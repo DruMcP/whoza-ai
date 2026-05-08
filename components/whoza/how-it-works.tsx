@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import { Phone, ClipboardCheck, MessageCircle, CheckCircle2, ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
 
 const steps = [
   {
@@ -49,15 +48,15 @@ const steps = [
   },
   {
     number: "04",
-    title: "You Accept Jobs and Get Paid",
-    description: "Tap accept. Customer gets confirmation. Job is in your calendar. Done.",
+    title: "You Accept, Call Back or Decline",
+    description: "Qualified enquiry lands on your phone. Tap to accept, call back or decline. You control every job.",
     icon: CheckCircle2,
     bgClass: "bg-[var(--mark-grey)]",
     bgLightClass: "bg-[var(--mark-grey)]/10",
     textClass: "text-[var(--mark-grey)]",
     details: [
-      "Customer confirmed instantly",
-      "Calendar synced automatically",
+      "Enquiry captured instantly",
+      "Details sent to your phone",
       "You only deal with real jobs",
     ],
   },
@@ -65,7 +64,7 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-20 lg:py-32 bg-white">
+    <section id="how-it-works" className="section-padding-lg bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -81,7 +80,7 @@ export function HowItWorks() {
             Call → Enquiry → WhatsApp → Paid
           </h2>
           <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
-            The complete loop from missed call to booked job. 
+            The complete loop from missed call to captured enquiry. 
             <span className="font-semibold text-[var(--navy-900)]"> You only deal with real enquiries.</span>
           </p>
         </motion.div>
@@ -139,21 +138,20 @@ export function HowItWorks() {
           </div>
         </div>
 
-        {/* CTA */}
+        {/* CTA — SEO: using <a> tag for crawlability */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <Button 
-            size="lg"
-            className="bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-semibold px-8"
-            onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
+          <a 
+            href="#final-cta"
+            className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-semibold px-8 py-4 rounded-lg transition-all hover:scale-105"
           >
             Get Started
             <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
+          </a>
         </motion.div>
       </div>
     </section>

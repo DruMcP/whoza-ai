@@ -1,15 +1,15 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Phone, ArrowRight, Volume2, Eye, Star, TrendingUp } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Phone, ArrowRight, Volume2, Eye, Star } from "lucide-react"
 
 const voiceAgents = [
   {
     name: "Katie",
     role: "Call Capture",
     voice: "Female Voice",
-    description: "Katie answers your calls 24/7 in seconds. She books qualified jobs and sends them to your WhatsApp while you work. You pick which jobs to accept.",
+    description: "Katie answers calls 24/7, qualifies real customer enquiries, and sends them to WhatsApp while you work. Friendly, professional and calm under pressure — she helps customers feel heard before the enquiry reaches you.",
+    outcome: "Ready to accept, call back or decline.",
     audioSample: "Hi, you've reached Thompson Plumbing. My name is Katie. How can I help you today?",
     image: "/images/katie.jpg",
     color: "var(--katie-blue)",
@@ -23,7 +23,8 @@ const voiceAgents = [
     name: "Mark",
     role: "Call Capture",
     voice: "Male Voice",
-    description: "Mark answers your calls 24/7 in seconds. He books qualified jobs and sends them to your WhatsApp while you work. You pick which jobs to accept.",
+    description: "Mark answers calls 24/7, qualifies real customer enquiries, and sends them to WhatsApp while you work. Clear, efficient and professional — ideal if you prefer a direct male voice.",
+    outcome: "Job type, urgency, location and customer details captured.",
     audioSample: "Hi, you've reached Wilson Electrics. This is Mark speaking. What can I do for you?",
     image: "/images/mark.jpg",
     color: "var(--mark-grey)",
@@ -35,8 +36,12 @@ const voiceAgents = [
   },
   {
     name: "Claire",
-    role: "Review Capture",
-    description: "Claire automatically follows up after every completed job to collect Google reviews. She also monitors review sites and alerts you when competitors get praised or criticised.",
+    role: "Review Collection",
+    headline: "Claire turns completed jobs into reviews",
+    description: "Claire follows up after completed work to request reviews while the customer still remembers the good service. Polite, timely and consistent — she helps turn good jobs into future trust.",
+    outcome: "More reviews. More trust. More customers choosing you.",
+    entitlement: "Included in Growth plan and above.",
+    whatsappMessage: "Hi John, thanks for choosing Thompson Plumbing yesterday. If you were happy with the service, would you mind leaving us a quick review? It really helps. [Google review link]",
     image: "/images/claire.jpg",
     color: "var(--claire-amber)",
     bgLight: "bg-[var(--claire-amber)]/10",
@@ -47,8 +52,12 @@ const voiceAgents = [
   },
   {
     name: "Rex",
-    role: "AI Visibility + Competitor Tracking",
-    description: "Rex analyses your competitors every month on every plan. Growth and above receive weekly actions showing what to fix so ChatGPT, Google AI and customers are more likely to recommend your business.",
+    role: "Competitor Insights",
+    headline: "Rex shows what to fix next",
+    description: "Rex checks your competitors, reviews and AI visibility, then turns the data into simple actions you can use each week.",
+    outcome: "Clear weekly actions to improve visibility and help AI search recommend your business.",
+    entitlement: "Monthly competitor analysis on every plan. Weekly actions from Growth upwards.",
+    insightCard: "Your nearest competitor has 41 reviews. You have 32.\n\nAction this week: request 5 more reviews from recent customers and reply to your last 3 Google reviews.",
     image: "/images/rex.jpg",
     color: "var(--rex-green)",
     bgLight: "bg-[var(--rex-green)]/10",
@@ -61,7 +70,7 @@ const voiceAgents = [
 
 export function MeetTheTeam() {
   return (
-    <section id="team" className="py-20 lg:py-32 bg-[var(--off-white)]">
+    <section id="team" className="section-padding-lg bg-[var(--off-white)] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -71,18 +80,18 @@ export function MeetTheTeam() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] text-sm font-medium mb-4">
-            Meet Katie & The Team
+            Your AI Revenue Team
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
-            Meet the{" "}
-            <span className="text-[var(--rex-green)]">Team</span>
+            Meet{" "}
+            <span className="text-[var(--rex-green)]">Katie, Mark, Claire & Rex</span>
           </h2>
           <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
-            Choose your call capture voice. Add review collection and competitor tracking for complete job capture.
+            Four AI specialists working together to answer calls, capture enquiries, collect reviews and show you what to improve next.
           </p>
         </motion.div>
 
-        {/* Voice Agent Cards */}
+        {/* Agent Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12">
           {voiceAgents.map((agent, index) => {
             const RoleIcon = agent.roleIcon
@@ -93,7 +102,7 @@ export function MeetTheTeam() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative bg-white rounded-3xl p-8 border-2 ${agent.borderColor} shadow-lg hover:shadow-xl transition-shadow`}
+                className={`relative bg-white rounded-3xl p-8 border-2 ${agent.borderColor} shadow-lg hover:shadow-xl transition-shadow flex flex-col`}
               >
                 {/* Role Badge */}
                 <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full ${agent.bgLight} ${agent.textColor} text-xs font-bold mb-4`}>
@@ -111,10 +120,22 @@ export function MeetTheTeam() {
                   <div>
                     <h3 className="text-2xl font-bold text-[var(--navy-900)]">{agent.name}</h3>
                     {agent.isVoiceAgent && (
-                      <span className={`text-sm font-medium ${agent.textColor}`}>{agent.voice}</span>
+                      <div className="flex items-center gap-2 mt-1">
+                        <span className={`text-sm font-medium ${agent.textColor}`}>{agent.voice}</span>
+                        <span className="px-2 py-0.5 rounded-full bg-[var(--rex-green)]/10 text-[var(--rex-green)] text-[10px] font-bold uppercase tracking-wider border border-[var(--rex-green)]/20">
+                          Name & Voice: Your Choice
+                        </span>
+                      </div>
                     )}
                   </div>
                 </div>
+
+                {/* Headline (for Claire/Rex) */}
+                {agent.headline && (
+                  <h4 className="text-lg font-semibold text-[var(--navy-900)] mb-3 leading-snug">
+                    {agent.headline}
+                  </h4>
+                )}
 
                 {/* Description */}
                 <p className="text-[var(--slate-500)] mb-6 text-sm leading-relaxed">{agent.description}</p>
@@ -130,66 +151,64 @@ export function MeetTheTeam() {
                   </div>
                 )}
 
+                {/* WhatsApp Message Block — Claire */}
+                {agent.whatsappMessage && (
+                  <div 
+                    className="p-3 mb-4 rounded-lg border-l-[3px]"
+                    style={{ 
+                      backgroundColor: "#F5F5F5", 
+                      borderLeftColor: agent.color === "var(--claire-amber)" ? "#F59E0B" : agent.color 
+                    }}
+                  >
+                    <p className="text-sm" style={{ color: "#555555" }}>
+                      {agent.whatsappMessage}
+                    </p>
+                  </div>
+                )}
+
+                {/* Insight Card — Rex */}
+                {agent.insightCard && (
+                  <div 
+                    className="p-3 mb-4 rounded-lg border-l-[3px]"
+                    style={{ 
+                      backgroundColor: "#F5F5F5", 
+                      borderLeftColor: "#047857" 
+                    }}
+                  >
+                    <p className="text-sm whitespace-pre-line" style={{ color: "#555555" }}>
+                      {agent.insightCard}
+                    </p>
+                  </div>
+                )}
+
+                {/* Outcome line — desktop only (hidden on mobile < 768px) */}
+                {agent.outcome && (
+                  <p className="hidden md:block text-sm font-medium text-[var(--navy-900)] mt-auto pt-4 mb-2">
+                    {agent.outcome}
+                  </p>
+                )}
+
+                {/* Entitlement note */}
+                {agent.entitlement && (
+                  <p className="text-xs text-[var(--slate-400)] mt-auto pt-2">
+                    {agent.entitlement}
+                  </p>
+                )}
+
                 {/* CTA — Voice Agents Only */}
                 {agent.isVoiceAgent && (
-                  <Button 
-                    variant="outline"
-                    className={`w-full ${agent.borderColor} ${agent.textColor} hover:bg-[${agent.color}]/5`}
+                  <a 
+                    href="#final-cta"
+                    className={`mt-4 inline-flex items-center justify-center w-full rounded-lg border-2 ${agent.borderColor} ${agent.textColor} hover:bg-[${agent.color}]/5 font-medium px-4 h-10 text-sm transition-colors`}
                   >
                     <Volume2 className="w-4 h-4 mr-2" />
                     Hear {agent.name} in Action
-                  </Button>
+                  </a>
                 )}
               </motion.div>
             )
           })}
         </div>
-
-        {/* Rex Weekly Output Example */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-3xl mx-auto mb-12"
-        >
-          <div className="bg-white rounded-2xl p-6 border border-[var(--border)] shadow-lg">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-[var(--rex-green)]/20 flex items-center justify-center">
-                <Eye className="w-5 h-5 text-[var(--rex-green)]" />
-              </div>
-              <div>
-                <div className="text-sm font-bold text-[var(--navy-900)]">Weekly AI Visibility Report — Rex</div>
-                <div className="text-xs text-[var(--slate-500)]">Delivered every Monday at 8am</div>
-              </div>
-            </div>
-
-            <div className="space-y-3 text-sm">
-              <div className="flex items-start gap-3 p-3 rounded-lg bg-red-50 border border-red-100">
-                <TrendingUp className="w-4 h-4 text-red-500 mt-0.5 shrink-0" />
-                <div>
-                  <div className="font-semibold text-red-700">3 competitors appeared in ChatGPT results for "emergency plumber near me"</div>
-                  <div className="text-red-600 mt-1">You were not listed. Action: Add "24/7 emergency plumber" to your website meta description.</div>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3 p-3 rounded-lg bg-[var(--rex-green)]/10 border border-[var(--rex-green)]/20">
-                <TrendingUp className="w-4 h-4 text-[var(--rex-green)] mt-0.5 shrink-0" />
-                <div>
-                  <div className="font-semibold text-[var(--navy-900)]">Your competitor "Speedy Plumbers" dropped Google Ads spend by 40%</div>
-                  <div className="text-[var(--slate-500)] mt-1">Opportunity: Increase your review collection this week so customers find you first.</div>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3 p-3 rounded-lg bg-[var(--katie-blue)]/10 border border-[var(--katie-blue)]/20">
-                <Eye className="w-4 h-4 text-[var(--katie-blue)] mt-0.5 shrink-0" />
-                <div>
-                  <div className="font-semibold text-[var(--navy-900)]">Google AI Overviews now show 5 local plumbers — you're in position 3</div>
-                  <div className="text-[var(--slate-500)] mt-1">To reach position 1: Add 2 more Google reviews this week (you're at 12, position 1 has 18).</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
 
         {/* Bottom Note */}
         <motion.div
@@ -201,15 +220,16 @@ export function MeetTheTeam() {
           <p className="text-[var(--slate-500)] mb-6">
             Choose the voice and name that fits your business. Switch anytime.
           </p>
-          <Button 
-            size="lg"
-            className="bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 text-white font-semibold px-8"
-            onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
+          <a 
+            href="#final-cta"
+            className="inline-flex items-center justify-center rounded-lg bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 text-white font-semibold px-8 h-11 text-base transition-colors"
           >
             Get Whoza Answering Your Calls
             <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
+          </a>
         </motion.div>
+        {/* Gradient Transition to Dark Section */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-[var(--off-white)] to-[var(--navy-900)]" />
       </div>
     </section>
   )

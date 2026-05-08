@@ -142,6 +142,38 @@
   }
 }
 
+/* whoza.ai Design System — Section Spacing */
+@layer utilities {
+  .section-padding {
+    @apply py-12 md:py-16 lg:py-24;
+  }
+  .section-padding-lg {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+  .section-padding-xl {
+    @apply py-20 md:py-28 lg:py-40;
+  }
+  .card-base {
+    @apply rounded-2xl p-6 shadow-sm;
+  }
+  .card-lg {
+    @apply rounded-3xl p-8 shadow-lg;
+  }
+}
+
+/* Typography Scale */
+@layer base {
+  h1, .h1 {
+    @apply text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight;
+  }
+  h2, .h2 {
+    @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tight;
+  }
+  h3, .h3 {
+    @apply text-xl sm:text-2xl font-bold;
+  }
+}
+
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }

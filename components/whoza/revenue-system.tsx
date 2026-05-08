@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import { Phone, ClipboardCheck, MessageCircle, TrendingUp, ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { useLocale } from "@/lib/locale-context"
 
 const stages = [
@@ -56,7 +55,7 @@ export function RevenueSystem() {
   const { config } = useLocale()
 
   return (
-    <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
+    <section className="section-padding-lg bg-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.02]" style={{
         backgroundImage: `radial-gradient(circle at 1px 1px, var(--navy-900) 1px, transparent 0)`,
@@ -80,7 +79,7 @@ export function RevenueSystem() {
             <span className="text-[var(--rex-green)]">Grow</span>
           </h2>
           <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
-            Not just an AI receptionist. A complete system that turns missed calls into booked jobs and booked jobs into more money.
+            Not just an AI receptionist. A complete system that turns missed calls into captured enquiries and completed jobs into more money.
           </p>
         </motion.div>
 
@@ -149,16 +148,13 @@ export function RevenueSystem() {
           </div>
           
           <div className="mt-8">
-            <p className="text-sm text-[var(--slate-500)] mb-4">
-              Early access is now open for selected UK trades businesses.
-            </p>
-            <Button 
-              size="lg"
-              className="bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8"
-            >
-              See The Full System
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            <a 
+            href="#final-cta"
+            className="inline-flex items-center justify-center rounded-lg bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 h-11 text-base transition-colors"
+          >
+            See The Full System
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </a>
           </div>
         </motion.div>
       </div>

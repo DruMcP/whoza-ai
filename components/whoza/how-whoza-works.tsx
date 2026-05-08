@@ -7,9 +7,9 @@ const flowSteps = [
   { icon: Phone, label: "Call Comes In", color: "var(--katie-blue)" },
   { icon: ClipboardCheck, label: "AI Answers", color: "var(--katie-blue)" },
   { icon: MessageCircle, label: "Job Qualified", color: "var(--rex-green)" },
-  { icon: Calendar, label: "Job Booked", color: "var(--rex-green)" },
   { icon: MessageCircle, label: "Sent to Phone", color: "var(--claire-amber)" },
   { icon: Check, label: "You Accept", color: "var(--claire-amber)" },
+  { icon: Calendar, label: "Enquiry Captured", color: "var(--rex-green)" },
   { icon: Star, label: "Job Completed", color: "var(--mark-grey)" },
   { icon: Star, label: "Review Requested", color: "var(--mark-grey)" },
   { icon: TrendingUp, label: "Rex analyses competitors monthly", color: "var(--rex-green)" },
@@ -19,7 +19,7 @@ const flowSteps = [
 
 export function HowWhozaWorks() {
   return (
-    <section id="how-it-works" className="py-20 lg:py-32 bg-[var(--off-white)]">
+    <section id="how-it-works" className="section-padding-lg bg-[var(--off-white)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -104,8 +104,8 @@ export function HowWhozaWorks() {
         {/* Summary Cards */}
         <div className="mt-16 grid md:grid-cols-3 gap-6">
           {[
-            { phase: "CAPTURE", items: ["AI answers instantly", "Qualifies the job", "Books into calendar"], color: "var(--katie-blue)" },
-            { phase: "DELIVER", items: ["Job sent via WhatsApp", "You accept or decline", "Customer confirmed"], color: "var(--claire-amber)" },
+            { phase: "CAPTURE", items: ["AI answers instantly", "Qualifies the job", "Enquiry captured"], color: "var(--katie-blue)" },
+            { phase: "DELIVER", items: ["Job sent via WhatsApp", "You accept or decline", "Customer follow-up sent"], color: "var(--claire-amber)" },
             { phase: "GROW", items: ["Review requested", "Rex analyses competitors monthly", "Growth+ get weekly AI visibility actions", "More calls, more jobs"], color: "var(--rex-green)" },
           ].map((card, index) => (
             <motion.div

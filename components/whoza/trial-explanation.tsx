@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import { Clock, Phone, MessageCircle, CheckCircle2, ArrowRight, Shield } from "lucide-react"
-import { Button } from "@/components/ui/button"
 
 const steps = [
   {
@@ -26,7 +25,7 @@ const steps = [
   {
     number: "03",
     title: "You Accept Jobs and Get Paid",
-    description: "Real enquiries land on your phone. Tap accept. Customer confirmed. Job booked.",
+    description: "Real enquiries land on your phone. Tap to accept, call back or decline. Enquiry captured.",
     icon: MessageCircle,
     time: "Instant",
     bgClass: "bg-[var(--claire-amber)]",
@@ -45,7 +44,7 @@ const steps = [
 
 export function TrialExplanation() {
   return (
-    <section id="trial" className="py-20 lg:py-32 bg-[var(--off-white)]">
+    <section id="trial" className="section-padding-lg bg-[var(--off-white)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -62,8 +61,7 @@ export function TrialExplanation() {
             How Whoza Works
           </h2>
           <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
-            From missed call to booked job — automatically.
-            <span className="font-semibold text-[var(--navy-900)]">Join early access to be first.</span>
+            From missed call to captured enquiry — automatically.
           </p>
         </motion.div>
 
@@ -110,6 +108,26 @@ export function TrialExplanation() {
           ))}
         </div>
 
+        {/* No Website? No Problem */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-10 max-w-2xl mx-auto"
+        >
+          <div className="flex items-start gap-4 p-5 rounded-2xl bg-[var(--katie-blue)]/10 border border-[var(--katie-blue)]/20">
+            <div className="w-10 h-10 rounded-xl bg-[var(--katie-blue)]/20 flex items-center justify-center shrink-0">
+              <MessageCircle className="w-5 h-5 text-[var(--katie-blue)]" />
+            </div>
+            <div>
+              <h4 className="text-base font-bold text-[var(--navy-900)]">No website? No problem.</h4>
+              <p className="text-sm text-[var(--slate-500)] mt-1">
+                We build your AI call profile from your services, FAQs, prices, service areas and preferred job types during onboarding.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Speed proof */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -132,20 +150,16 @@ export function TrialExplanation() {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <p className="text-lg text-[var(--slate-500)] mb-2">
-            Early access is now open for selected UK trades businesses.
-          </p>
           <p className="text-lg text-[var(--slate-500)] mb-6">
-            Join early access to be first in line.
+            See how AI call answering works for your trade.
           </p>
-          <Button 
-            size="lg"
-            className="bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-10 py-7 text-xl gap-3 shadow-2xl shadow-[var(--rex-green)]/40 transition-all hover:scale-105"
-            onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
+          <a 
+            href="#final-cta"
+            className="inline-flex items-center justify-center rounded-lg bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-10 py-7 text-xl gap-3 shadow-2xl shadow-[var(--rex-green)]/40 transition-all hover:scale-105"
           >
             Get Started
             <ArrowRight className="w-6 h-6" />
-          </Button>
+          </a>
           <p className="mt-3 text-sm text-[var(--slate-500)]">
             Be the first to experience AI call answering for trades.
           </p>

@@ -1,8 +1,19 @@
-"use client"
-
+import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { FileText, Phone, CreditCard, AlertTriangle, Clock, Lock, Globe, Scale } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Terms of Service | whoza.ai",
+  description: "whoza.ai terms of service — no contracts, monthly rolling, 14-day free trial. Read our full terms.",
+  alternates: {
+    canonical: "https://whoza.ai/terms",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+}
 
 export default function TermsOfService() {
   return (
@@ -261,7 +272,7 @@ export default function TermsOfService() {
             <div className="bg-white/5 rounded-lg p-6">
               <p className="text-white/70">For questions about these Terms:</p>
               <p className="text-white font-medium mt-1">Whoza.ai</p>
-              <p className="text-white/70 mt-2">Email: <a href="mailto:dru@whoz.ai" className="text-emerald-400 hover:underline">dru@whoz.ai</a></p>
+              <p className="text-white/70 mt-2">Email: <a href="mailto:dru@whoza.ai" className="text-emerald-400 hover:underline">dru@whoza.ai</a></p>
               <p className="text-white/70">WhatsApp: <a href="https://wa.me/447831643012" className="text-emerald-400 hover:underline">+44 7831 643012</a></p>
             </div>
           </section>
