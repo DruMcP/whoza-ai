@@ -11,6 +11,18 @@
   --rex-green-hover: #065F46;
   --claire-amber: oklch(0.65 0.18 65);
   
+  /* New Hero Design System Tokens */
+  --charcoal: #1A1D23;
+  --green-primary: #10B981;
+  --green-secondary: #059669;
+  --text-primary: #FFFFFF;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
+  --border-subtle: rgba(255,255,255,0.06);
+  --announcement-bg: #111418;
+  --announcement-text: #D1D5DB;
+  --modal-bg: #1E2229;
+  
   /* Core Palette */
   --navy-900: oklch(0.18 0.03 260);
   --navy-800: oklch(0.22 0.03 260);
