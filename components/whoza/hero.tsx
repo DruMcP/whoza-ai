@@ -5,7 +5,7 @@ import { Play, X, ArrowRight, Loader2 } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { KatieAvatar } from "./katie-avatar"
 import { SignupModal } from "./signup-modal"
-import { AudioModal } from "./audio-modal"
+import { KatieAudioPlayer } from "./katie-audio-player"
 import { MissedCallSimulator } from "./missed-call-simulator"
 
 const trustItems = [
@@ -164,7 +164,7 @@ export function Hero() {
                 aria-label="Hear Katie handle a boiler enquiry"
               >
                 <Play className="w-3.5 h-3.5 fill-current" />
-                Or hear Katie handle a boiler enquiry — 30 seconds
+                Or hear Katie handle a boiler enquiry — 35 seconds
               </button>
             </div>
 
@@ -207,7 +207,7 @@ export function Hero() {
       {/* Modals */}
       <AnimatePresence>
         {showSignup && <SignupModal onClose={() => setShowSignup(false)} />}
-        {showAudio && <AudioModal onClose={() => setShowAudio(false)} />}
+        {showAudio && <KatieAudioPlayer isOpen={showAudio} onClose={() => setShowAudio(false)} />}
       </AnimatePresence>
     </section>
   )

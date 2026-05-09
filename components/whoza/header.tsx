@@ -62,8 +62,8 @@ export function Header() {
 
             <button 
               onClick={() => setShowSignup(true)}
-              className="inline-flex items-center justify-center rounded-md text-white font-bold px-4 h-9 text-sm transition-colors whitespace-nowrap"
-              style={{ background: "linear-gradient(135deg, #059669, #10B981)" }}
+              className="inline-flex items-center justify-center rounded-md text-white font-bold px-3 py-1.5 text-xs transition-colors whitespace-nowrap"
+              style={{ background: "linear-gradient(135deg, #059669, #10B981)", height: 32 }}
             >
               Get Katie answering my calls
             </button>
