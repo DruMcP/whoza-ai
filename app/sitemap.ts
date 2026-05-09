@@ -68,6 +68,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.2,
     },
+    {
+      url: `${baseUrl}/modern-slavery`,
+      lastModified: lastMod,
+      changeFrequency: 'yearly',
+      priority: 0.2,
+    },
+    {
+      url: `${baseUrl}/accessibility`,
+      lastModified: lastMod,
+      changeFrequency: 'yearly',
+      priority: 0.2,
+    },
+    {
+      url: `${baseUrl}/vat-info`,
+      lastModified: lastMod,
+      changeFrequency: 'yearly',
+      priority: 0.2,
+    },
+    {
+      url: `${baseUrl}/complaints`,
+      lastModified: lastMod,
+      changeFrequency: 'yearly',
+      priority: 0.2,
+    },
   ]
 
   // Dynamic trade pages

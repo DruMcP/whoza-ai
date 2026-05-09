@@ -28,6 +28,7 @@ const footerLinks = {
     { label: "Fair Use Policy", href: "/fair-use" },
     { label: "SLA", href: "/sla" },
     { label: "Refund Policy", href: "/refund-policy" },
+    { label: "Cookie Settings", href: "#", onClick: () => { window.dispatchEvent(new CustomEvent('openCookieConsent')); } },
   ],
 }
 
@@ -110,9 +111,18 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-sm text-white/60 hover:text-white transition-colors">
-                    {link.label}
-                  </a>
+                  {link.onClick ? (
+                    <button 
+                      onClick={link.onClick}
+                      className="text-sm text-white/60 hover:text-white transition-colors text-left bg-transparent border-none cursor-pointer p-0"
+                    >
+                      {link.label}
+                    </button>
+                  ) : (
+                    <a href={link.href} className="text-sm text-white/60 hover:text-white transition-colors">
+                      {link.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
