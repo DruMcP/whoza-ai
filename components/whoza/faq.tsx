@@ -15,8 +15,8 @@ const faqs = [
     answer: "You pay a monthly plan fee (Starter £59, Growth £125, Pro £230, Scale £399 — all +VAT). Each plan includes a set number of call handling minutes and booked enquiries. Additional enquiries beyond your included amount are charged per booking. Overage minutes are billed at £0.22 per minute. There are no hidden setup fees or long-term contracts.",
   },
   {
-    question: "Is there a free trial or early access?",
-    answer: "Early access is now open for selected UK trades businesses. You can join the early access list and we will onboard you as slots become available. There is no credit card required to sign up for early access.",
+    question: "Is there a free trial?",
+    answer: "Yes — every new account starts with a 7-day free trial on the Starter plan. Your trial includes 20 minutes of call handling and up to 4 booked enquiries at no charge. No credit card required to start. If Whoza works for your business, your trial automatically converts to a paid plan. If not, you can cancel anytime during the trial with no charge.",
   },
   {
     question: "What happens to my data if I cancel?",
@@ -63,8 +63,8 @@ const faqs = [
     answer: "Cancel anytime — no contracts, no cancellation fees, no hassle. We're confident you'll stay because the system pays for itself many times over, but if it's not right for your business, you can cancel with one click from your dashboard.",
   },
   {
-    question: "How does early access work?",
-    answer: "Join early access to be among the first tradespeople to use Whoza when we launch. Early access members get priority onboarding, exclusive pricing, and direct input into product development. No credit card required to sign up — we'll notify you as soon as your slot is ready.",
+    question: "What does the free trial include?",
+    answer: "Your 7-day free trial includes: 20 minutes of AI call handling, up to 4 booked enquiries, full access to the WhatsApp delivery system, and the complete dashboard. This gives you enough time to see real results from actual customer calls. Fair usage applies — the trial is designed for genuine business evaluation, not extended free service.",
   },
 ]
 
@@ -126,7 +126,7 @@ export function FAQ() {
           </div>
           <h3 className="text-xl font-bold text-[var(--navy-900)] mb-2">Still have questions?</h3>
           <p className="text-[var(--slate-500)] mb-6">
-            Our team is here to help you with early access.
+            Our team is here to help you get started with your free trial.
           </p>
           <a 
             href="https://wa.me/447831643012"

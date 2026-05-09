@@ -57,11 +57,11 @@ export function FinalCTA() {
           </h2>
           <p className="mt-8 text-xl lg:text-2xl text-white/70 max-w-2xl mx-auto text-pretty">
             Every missed call is a job going to your competitor.
-            <span className="block mt-3 font-bold text-[var(--rex-green)] text-2xl">Try Whoza risk-free during early access.</span>
+            <span className="block mt-3 font-bold text-[var(--rex-green)] text-2xl">Try Whoza free for 7 days.</span>
           </p>
           <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/70 text-sm">
             <CheckCircle2 className="w-4 h-4 text-[var(--rex-green)]" />
-            Try Whoza risk-free during early access. If it is not working for you, you can cancel before billing starts.
+            7-day free trial: 20 minutes + 4 jobs included. Cancel anytime.
           </div>
         </motion.div>
 
@@ -87,11 +87,11 @@ export function FinalCTA() {
           </div>
         </motion.div>
 
-        {/* Early Access Pulse */}
+        {/* Free Trial Pulse */}
         <div className="mt-3 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/10 text-sm text-white/80">
           <span className="w-2 h-2 rounded-full bg-[var(--rex-green)] animate-pulse" />
-          <span className="font-semibold text-white">Early access now open</span>
-          <span className="text-white/40">— selected trades only</span>
+          <span className="font-semibold text-white">7-day free trial</span>
+          <span className="text-white/40">— 20 min + 4 jobs included</span>
         </div>
 
         {/* Reassurance */}
