@@ -10,12 +10,12 @@ const jobExamples = {
     { 
       label: "WhatsApp Enquiry Received",
       heading: "New Customer Enquiry",
-      jobType: "Boiler Repair",
-      name: "Sarah Thompson",
-      area: "Aberdeen",
+      jobType: "Boiler Repair — No Hot Water",
+      name: "Sarah Mitchell",
+      area: "Bristol, BS3",
       urgency: "Today",
       time: "ASAP",
-      value: "£180–£260",
+      value: "£180–£240",
     },
     { 
       label: "WhatsApp Enquiry Received",
@@ -42,7 +42,7 @@ const jobExamples = {
     { 
       label: "WhatsApp Enquiry Received",
       heading: "New Customer Enquiry",
-      jobType: "HVAC Repair",
+      jobType: "HVAC Repair — No Heat",
       name: "Sarah Johnson",
       area: "Dallas, TX",
       urgency: "Today",

@@ -85,11 +85,12 @@ export function Hero() {
 
             {/* Clarifier */}
             <p
-              className="mt-6 max-w-xl"
+              className="mt-6 max-w-[560px]"
               style={{
-                fontSize: "clamp(18px, 1.5vw, 20px)",
+                fontSize: 18,
+                fontWeight: 500,
                 lineHeight: 1.5,
-                color: "#9CA3AF",
+                color: "#D1D5DB",
                 fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
               }}
             >
@@ -98,11 +99,12 @@ export function Hero() {
 
             {/* Sub-headline */}
             <p
-              className="mt-4 max-w-xl"
+              className="mt-4 max-w-[560px]"
               style={{
-                fontSize: "clamp(18px, 1.5vw, 20px)",
-                lineHeight: 1.5,
-                color: "#9CA3AF",
+                fontSize: 15,
+                fontWeight: 400,
+                lineHeight: 1.6,
+                color: "#6B7280",
                 fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
               }}
             >
@@ -167,14 +169,17 @@ export function Hero() {
             </div>
 
             {/* Trust Row */}
-            <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-2">
+            <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-3">
               {trustItems.map((item) => (
-                <div key={item} className="flex items-center gap-2">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                    <path d="M2.5 7L5.5 10L11.5 4" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
+                <div key={item} className="flex items-center gap-2.5">
+                  <div className="w-5 h-5 rounded-full bg-[var(--rex-green)]/10 flex items-center justify-center shrink-0">
+                    <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                      <path d="M2.5 7L5.5 10L11.5 4" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
                   <span
-                    style={{ fontSize: 13, color: "#6B7280", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif" }}
+                    className="text-sm leading-tight"
+                    style={{ color: "#9CA3AF", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif" }}
                   >
                     {item}
                   </span>
