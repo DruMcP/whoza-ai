@@ -62,7 +62,7 @@ export function Header() {
               href="#final-cta"
               className="inline-flex items-center justify-center rounded-md bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-6 h-10 text-sm transition-colors"
             >
-              Get Whoza
+              Get Katie answering my calls
             </a>
             <CountrySwitcher />
           </div>
@@ -118,7 +118,7 @@ export function Header() {
                   href="#final-cta"
                   className="inline-flex items-center justify-center w-full rounded-md bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold h-10 text-sm transition-colors"
                 >
-                  Get Whoza
+                  Get Katie answering my calls
                 </a>
               </div>
             </div>
