@@ -1,38 +1,62 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { CheckCircle2, ArrowRight, Play } from "lucide-react"
-import { PhoneMockup } from "./phone-mockup"
-import { useLocale } from "@/lib/locale-context"
+import { useState, useCallback } from "react"
+import { Play, X, ArrowRight, Loader2 } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
+import { KatieAvatar } from "./katie-avatar"
+import { SignupModal } from "./signup-modal"
+import { AudioModal } from "./audio-modal"
+import { MissedCallSimulator } from "./missed-call-simulator"
+
+const trustItems = [
+  "Built for UK trades",
+  "No new number needed",
+  "Live in around 30 minutes",
+  "WhatsApp, SMS or email alerts",
+  "Cancel anytime",
+]
 
 export function Hero() {
-  const { country, config } = useLocale()
+  const [showSignup, setShowSignup] = useState(false)
+  const [showAudio, setShowAudio] = useState(false)
+  const [ctaLoading, setCtaLoading] = useState(false)
+
+  const handlePrimaryCTA = useCallback(() => {
+    setCtaLoading(true)
+    setTimeout(() => {
+      setCtaLoading(false)
+      setShowSignup(true)
+    }, 800)
+  }, [])
 
   return (
-    <section className="relative min-h-screen bg-[var(--navy-900)] overflow-hidden pt-16 lg:pt-20">
-      {/* AI Revenue Team Banner — flows naturally, pushes content down */}
-      <div className="bg-[var(--rex-green)]/20 border-b border-[var(--rex-green)]/30 py-2 lg:py-3 z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center gap-2 flex-wrap">
-          <span className="w-2 h-2 rounded-full bg-[var(--rex-green)] animate-pulse shrink-0" />
-          <p className="text-center text-[var(--rex-green)] text-xs sm:text-sm lg:text-lg font-bold leading-snug">
-            Your 24/7 AI Revenue Team for answering calls, capturing enquiries and winning more work
-          </p>
-        </div>
+    <section className="relative min-h-screen overflow-hidden pt-16 lg:pt-20" style={{ background: "#1A1D23" }}>
+      {/* Announcement Bar */}
+      <div className="w-full flex items-center justify-center" style={{ background: "#111418", height: 40 }}>
+        <p className="text-sm font-medium" style={{ color: "#D1D5DB", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif" }}>
+          Built for UK trades · <span style={{ color: "#10B981" }}>From £59/month</span> · 14-day trial, no card needed
+        </p>
       </div>
 
-      {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-[var(--katie-blue)]/20 rounded-full blur-[120px] opacity-50" />
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[var(--rex-green)]/15 rounded-full blur-[100px] opacity-40" />
+      {/* Subtle Background Effects */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div
+          className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full opacity-30"
+          style={{ background: "rgba(16,185,129,0.12)", filter: "blur(120px)" }}
+        />
+        <div
+          className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full opacity-20"
+          style={{ background: "rgba(16,185,129,0.08)", filter: "blur(100px)" }}
+        />
       </div>
 
       {/* Grid Pattern */}
-      <div 
-        className="absolute inset-0 opacity-[0.03]"
+      <div
+        className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-                            linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-          backgroundSize: "60px 60px"
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                            linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)`,
+          backgroundSize: "60px 60px",
         }}
       />
 
@@ -43,103 +67,143 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="text-center lg:text-left"
           >
-            {/* H1 */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight text-balance">
-              Turn missed calls into booked jobs, 5-star reviews, and more work every week — automatically.
+            {/* Headline */}
+            <h1
+              className="font-bold tracking-tight text-balance"
+              style={{
+                fontSize: "clamp(48px, 5vw, 72px)",
+                lineHeight: 1.1,
+                color: "#FFFFFF",
+                fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+              }}
+            >
+              Your phone&apos;s ringing.
+              <br />
+              <span style={{ color: "#10B981" }}>Katie&apos;s got it.</span>
             </h1>
 
-            {/* Support Paragraph */}
-            <p className="mt-6 text-lg sm:text-xl text-white/80 leading-relaxed max-w-xl mx-auto lg:mx-0 text-pretty">
-              Whoza answers your calls, qualifies real customer enquiries, and sends them to WhatsApp — ready to accept, call back or decline.
-              <span className="block mt-2 text-white font-semibold">No apps. No contracts. No logins. Just real enquiries sent to your phone.</span>
+            {/* Clarifier */}
+            <p
+              className="mt-6 max-w-xl"
+              style={{
+                fontSize: "clamp(18px, 1.5vw, 20px)",
+                lineHeight: 1.5,
+                color: "#9CA3AF",
+                fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+              }}
+            >
+              The AI call handler for UK trades — answers missed calls, qualifies real enquiries and sends jobs straight to WhatsApp.
             </p>
 
-            {/* CTA Buttons — SEO: using <a> tags for crawlability */}
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a 
-                href="https://wa.me/447831643012"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-6 py-5 text-lg sm:px-10 sm:py-7 sm:text-xl gap-3 group shadow-2xl shadow-[var(--rex-green)]/40 transition-all hover:scale-105 rounded-lg"
+            {/* Sub-headline */}
+            <p
+              className="mt-4 max-w-xl"
+              style={{
+                fontSize: "clamp(18px, 1.5vw, 20px)",
+                lineHeight: 1.5,
+                color: "#9CA3AF",
+                fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+              }}
+            >
+              On a job, up a ladder or driving between sites? Katie answers professionally, asks the right questions, filters time-wasters and sends the customer details to WhatsApp — accept, call back or decline in two taps.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="mt-8 flex flex-col gap-4">
+              {/* Primary CTA */}
+              <button
+                onClick={handlePrimaryCTA}
+                disabled={ctaLoading}
+                className="inline-flex items-center justify-center gap-3 font-semibold text-white transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 w-full sm:w-auto sm:min-w-[280px] group"
+                style={{
+                  background: "linear-gradient(135deg, #059669, #10B981)",
+                  fontSize: 18,
+                  height: "clamp(52px, 6vh, 56px)",
+                  borderRadius: 12,
+                  boxShadow: "0 4px 14px rgba(16,185,129,0.35)",
+                  fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+                  minHeight: 48,
+                }}
+                aria-label="Get Katie answering my calls"
               >
-                <Play className="w-5 h-5 sm:w-6 sm:h-6" />
-                Hear Katie Answer a Call
-              </a>
-              <a 
-                href="#final-cta"
-                className="inline-flex items-center justify-center bg-transparent border border-white/30 text-white hover:bg-white/10 px-6 py-5 text-lg sm:px-8 sm:py-6 gap-2 rounded-lg transition-colors"
+                {ctaLoading ? (
+                  <>
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                    Setting up Katie…
+                  </>
+                ) : (
+                  <>
+                    Get Katie answering my calls
+                    <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                  </>
+                )}
+              </button>
+
+              {/* Micro-copy */}
+              <p
+                className="text-center sm:text-left"
+                style={{ fontSize: 13, color: "#6B7280", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif" }}
               >
-                Join Early Access
-                <ArrowRight className="w-5 h-5" />
-              </a>
+                14-day free trial · No card required · Works with your existing number · Cancel anytime
+              </p>
+
+              {/* Secondary CTA */}
+              <button
+                onClick={() => setShowAudio(true)}
+                className="inline-flex items-center gap-2 transition-colors hover:underline text-left"
+                style={{
+                  fontSize: 15,
+                  color: "#10B981",
+                  fontWeight: 500,
+                  fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+                  minHeight: 48,
+                }}
+                aria-label="Hear Katie handle a boiler enquiry"
+              >
+                <Play className="w-3.5 h-3.5 fill-current" />
+                Or hear Katie handle a boiler enquiry — 30 seconds
+              </button>
             </div>
 
-            {/* Audio Cue — SEO: using <a> tag for crawlability */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-              className="mt-4 flex items-center gap-2 justify-center lg:justify-start"
-            >
-              <span className="w-2 h-2 rounded-full bg-[var(--rex-green)] animate-pulse" />
-              <a 
-                href="https://wa.me/447831643012"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-white/60 hover:text-white/80 transition-colors"
-              >
-                Hear Katie answer a call — 30 second demo
-              </a>
-            </motion.div>
-
-            {/* Trust Points */}
-            <div className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start text-sm text-white/60">
-              {["Set up in 30 minutes", "Works with your phone", "No app required"].map((point) => (
-                <div key={point} className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[var(--rex-green)]" />
-                  <span>{point}</span>
+            {/* Trust Row */}
+            <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-2">
+              {trustItems.map((item) => (
+                <div key={item} className="flex items-center gap-2">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                    <path d="M2.5 7L5.5 10L11.5 4" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <span
+                    style={{ fontSize: 13, color: "#6B7280", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif" }}
+                  >
+                    {item}
+                  </span>
                 </div>
               ))}
             </div>
           </motion.div>
 
-          {/* Phone Mockup */}
+          {/* Right Side — Simulator + Avatar */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="relative flex justify-center lg:justify-end"
+            className="relative flex flex-col items-center justify-center gap-6"
           >
-            <PhoneMockup />
+            <KatieAvatar />
+            <MissedCallSimulator />
           </motion.div>
         </div>
-
-        {/* Stats Bar — Missed calls → Jobs → Revenue */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-16 lg:mt-24 grid grid-cols-3 gap-4 sm:gap-8 max-w-2xl mx-auto"
-        >
-          {[
-            { value: "3 sec", label: "Missed call answered" },
-            { value: "1 tap", label: "Enquiry captured" },
-            { value: "£140+", label: "Revenue per job" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="text-xl sm:text-3xl lg:text-4xl font-bold text-white">
-                {stat.value}
-              </div>
-              <div className="mt-1 text-xs sm:text-sm text-white/50">{stat.label}</div>
-            </div>
-          ))}
-        </motion.div>
       </div>
 
-      {/* Bottom Gradient */}
+      {/* Bottom Gradient to off-white sections below */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[var(--off-white)] to-transparent" />
+
+      {/* Modals */}
+      <AnimatePresence>
+        {showSignup && <SignupModal onClose={() => setShowSignup(false)} />}
+        {showAudio && <AudioModal onClose={() => setShowAudio(false)} />}
+      </AnimatePresence>
     </section>
   )
 }
