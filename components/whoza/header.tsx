@@ -62,9 +62,10 @@ export function Header() {
 
             <button 
               onClick={() => setShowSignup(true)}
-              className="inline-flex items-center justify-center rounded-md bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-4 h-9 text-sm transition-colors whitespace-nowrap"
+              className="inline-flex items-center justify-center rounded-md text-white font-bold px-4 h-9 text-sm transition-colors whitespace-nowrap"
+              style={{ background: "linear-gradient(135deg, #059669, #10B981)" }}
             >
-              Get Whoza Now
+              Get Katie answering my calls
             </button>
             <CountrySwitcher />
           </div>
@@ -121,9 +122,10 @@ export function Header() {
                     setIsOpen(false)
                     setShowSignup(true)
                   }}
-                  className="inline-flex items-center justify-center w-full rounded-md bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold h-10 text-sm transition-colors"
+                  className="inline-flex items-center justify-center w-full rounded-md text-white font-bold h-10 text-sm transition-colors"
+                  style={{ background: "linear-gradient(135deg, #059669, #10B981)" }}
                 >
-                  Get Whoza Now
+                  Get Katie answering my calls
                 </button>
               </div>
             </div>

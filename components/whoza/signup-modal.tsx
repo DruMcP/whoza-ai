@@ -337,6 +337,21 @@ export function SignupModal({ onClose }: SignupModalProps) {
             Starter plan only · Fair use applies · Cancel anytime
           </p>
 
+          {/* Escape hatch to pricing */}
+          <p className="text-center" style={{ fontSize: 14, color: "#9CA3AF", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif" }}>
+            Want Starter, Growth or Pro now?{' '}
+            <a
+              href="/pricing"
+              className="group inline-flex items-center gap-1 transition-colors"
+              style={{ color: "#10B981", fontWeight: 500, fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif" }}
+            >
+              <span className="underline underline-offset-2 decoration-transparent group-hover:decoration-current transition-all">
+                View all plans
+              </span>
+              <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+            </a>
+          </p>
+
           {/* WhatsApp alternative */}
           <a
             href="https://wa.me/447831643012"
