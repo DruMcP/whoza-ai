@@ -34,7 +34,7 @@ export function Hero() {
       {/* Announcement Bar */}
       <div className="w-full flex items-center justify-center" style={{ background: "#111418", height: 40 }}>
         <p className="text-sm font-medium" style={{ color: "#D1D5DB", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif" }}>
-          Built for UK trades · <span style={{ color: "#10B981" }}>From £59/month</span> · 7-day trial, no card needed
+          Built for UK trades · <span style={{ color: "#10B981" }}>Starter from £59/month</span> · Try Katie free for 7 days
         </p>
       </div>
 
@@ -93,7 +93,7 @@ export function Hero() {
                 fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
               }}
             >
-              The AI call handler for UK trades — answers missed calls, qualifies real enquiries and sends jobs straight to WhatsApp.
+              The AI call handler for UK trades — answers missed calls, filters time-wasters and sends real job enquiries straight to WhatsApp.
             </p>
 
             {/* Sub-headline */}
@@ -106,7 +106,7 @@ export function Hero() {
                 fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
               }}
             >
-              On a job, up a ladder or driving between sites? Katie answers professionally, asks the right questions, filters time-wasters and sends the customer details to WhatsApp — accept, call back or decline in two taps.
+              On a job, up a ladder or driving between sites? Katie answers professionally, asks the right questions and sends the customer details to WhatsApp — accept, call back or decline in two taps.
             </p>
 
             {/* CTA Buttons */}
@@ -145,7 +145,7 @@ export function Hero() {
                 className="text-center sm:text-left"
                 style={{ fontSize: 13, color: "#6B7280", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif" }}
               >
-                7-day free trial · No card required · Works with your existing number · Cancel anytime
+                Try Katie free for 7 days · No card required · Works with your existing number
               </p>
 
               {/* Secondary CTA */}

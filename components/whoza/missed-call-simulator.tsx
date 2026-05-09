@@ -89,7 +89,7 @@ export function MissedCallSimulator({ className = "" }: MissedCallSimulatorProps
               />
             </div>
             <p style={{ fontSize: 14, color: "#9CA3AF" }}>
-              2 missed calls today
+              Sarah — Boiler repair
             </p>
             <button
               onClick={handleSeeKatieAnswer}
@@ -211,19 +211,8 @@ export function MissedCallSimulator({ className = "" }: MissedCallSimulatorProps
         {/* State 3: Result + CTA */}
         {state === 3 && (
           <div className="flex flex-col items-center justify-center gap-4 py-4">
-            <div
-              className="w-12 h-12 rounded-full flex items-center justify-center"
-              style={{ background: "rgba(16,185,129,0.15)" }}
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M5 12l5 5L20 7" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </div>
-            <p className="text-center font-medium" style={{ fontSize: 16, color: "#FFFFFF" }}>
-              Job captured in 8 seconds
-            </p>
-            <p className="text-center" style={{ fontSize: 13, color: "#9CA3AF" }}>
-              Katie qualified the enquiry, estimated value and sent it to WhatsApp — ready to accept.
+            <p className="text-center" style={{ fontSize: 18, color: "#9CA3AF" }}>
+              That enquiry would have been missed. Katie captured it.
             </p>
             <button
               onClick={handleReplay}
@@ -235,8 +224,11 @@ export function MissedCallSimulator({ className = "" }: MissedCallSimulatorProps
                 minHeight: 48,
               }}
             >
-              Watch again
+              Get Katie answering my calls
             </button>
+            <p style={{ fontSize: 13, color: "#6B7280" }}>
+              Try Katie free for 7 days · No card required · Works with your existing number
+            </p>
           </div>
         )}
       </div>
