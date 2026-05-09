@@ -321,10 +321,10 @@ export function HomepageSchema() {
         },
         {
           "@type": "Question",
-          "name": "Is there a free trial or early access?",
+          "name": "Is there a free trial?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Early access is now open for selected UK trades businesses. You can join the early access list and we will onboard you as slots become available. There is no credit card required to sign up for early access."
+            "text": "Yes — every new account starts with a 7-day free trial on the Starter plan. Your trial includes 20 minutes of call handling and up to 4 booked enquiries at no charge. No credit card required to start. If Whoza works for your business, your trial automatically converts to a paid plan. If not, you can cancel anytime during the trial with no charge."
           }
         },
         {
@@ -471,7 +471,7 @@ export function PricingSchema() {
           "name": "What is included in the 7-day free trial?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The 7-day free trial includes full access to all features of your chosen plan: AI call answering, WhatsApp alerts, review collection, and competitor tracking."
+            "text": "Your 7-day free trial on the Starter plan includes: 20 minutes of AI call handling, up to 4 booked enquiries, full access to the WhatsApp delivery system, and the complete dashboard. This gives you enough time to see real results from actual customer calls. Fair usage applies — the trial is designed for genuine business evaluation, not extended free service."
           }
         },
         {

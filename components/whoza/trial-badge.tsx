@@ -29,7 +29,7 @@ export function TrialAvailabilityBadge() {
     >
       <Sparkles className="w-4 h-4 text-[var(--rex-green)]" />
       <span className="text-white/80">
-        Limited early access available
+        7-day free trial — 20 min + 4 jobs
       </span>
     </motion.div>
   )
