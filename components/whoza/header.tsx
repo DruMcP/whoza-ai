@@ -4,6 +4,7 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { CountrySwitcher } from "./country-switcher"
+import { SignupModal } from "./signup-modal"
 
 const navLinks = [
   { href: "#how-it-works", label: "How It Works", isPageLink: false },
@@ -16,6 +17,7 @@ const navLinks = [
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const [showSignup, setShowSignup] = useState(false)
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--navy-900)]/95 backdrop-blur-md border-b border-white/10">
@@ -58,12 +60,12 @@ export function Header() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
 
-            <a 
-              href="#final-cta"
+            <button 
+              onClick={() => setShowSignup(true)}
               className="inline-flex items-center justify-center rounded-md bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-4 h-9 text-sm transition-colors whitespace-nowrap"
             >
-              Start free trial
-            </a>
+              Get Whoza Now
+            </button>
             <CountrySwitcher />
           </div>
 
@@ -114,16 +116,23 @@ export function Header() {
                 <div className="flex justify-center">
                   <CountrySwitcher />
                 </div>
-                <a 
-                  href="#final-cta"
+                <button 
+                  onClick={() => {
+                    setIsOpen(false)
+                    setShowSignup(true)
+                  }}
                   className="inline-flex items-center justify-center w-full rounded-md bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold h-10 text-sm transition-colors"
                 >
-                  Start free trial
-                </a>
+                  Get Whoza Now
+                </button>
               </div>
             </div>
           </motion.div>
         )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {showSignup && <SignupModal onClose={() => setShowSignup(false)} />}
       </AnimatePresence>
     </header>
   )

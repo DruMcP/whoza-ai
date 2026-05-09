@@ -248,7 +248,7 @@ export function Pricing() {
                       Includes {plan.includedMinutes} call handling minutes/month
                     </div>
                     {/* Trial badge */}
-                    {(plan.name === "Starter" || plan.name === "Growth") && (
+                    {(plan.name === "Starter") && (
                       <div className="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[var(--rex-green)]/10 border border-[var(--rex-green)]/20 text-xs font-medium text-[var(--rex-green)]">
                         <Sparkles className="w-3 h-3" />
                         7-day free trial
