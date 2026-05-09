@@ -22,9 +22,9 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--navy-900)]/95 backdrop-blur-md border-b border-white/10">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center h-16 lg:h-20">
           {/* Logo + Trust Line — pulled further left */}
-          <div className="flex items-center gap-3 -ml-1 lg:-ml-8">
+          <div className="flex items-center gap-3 -ml-1 lg:-ml-8 shrink-0">
             <a href="/" className="flex items-center">
               <img 
                 src="/production_logo.png" 
@@ -38,7 +38,7 @@ export function Header() {
           </div>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-8 mr-8">
+          <div className="hidden lg:flex items-center gap-8 ml-auto mr-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -58,7 +58,7 @@ export function Header() {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4 shrink-0">
 
             <button 
               onClick={() => setShowSignup(true)}
@@ -71,7 +71,7 @@ export function Header() {
           </div>
 
           {/* Mobile: Country Switcher + Menu Button */}
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="flex items-center gap-2 lg:hidden ml-auto">
             <CountrySwitcher />
             <button
               className="p-2 text-white"
