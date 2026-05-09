@@ -38,7 +38,7 @@ export function Header() {
           </div>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-8 mr-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -58,7 +58,7 @@ export function Header() {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center gap-4 ml-8">
+          <div className="hidden lg:flex items-center gap-4">
 
             <button 
               onClick={() => setShowSignup(true)}
