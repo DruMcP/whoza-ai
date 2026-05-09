@@ -36,6 +36,12 @@ export default function TermsOfService() {
             <p className="text-white/70 leading-relaxed">
               These Terms of Service govern your use of whoza.ai, an AI-powered revenue system for UK tradespeople and local service businesses. By accessing or using our service, you agree to be bound by these terms. If you do not agree, you must not use the service.
             </p>
+            <div className="bg-white/5 rounded-lg p-6 mt-4">
+              <p className="text-white/70"><strong>WHOZA AI LTD</strong></p>
+              <p className="text-white/70 mt-2">Registered in Scotland: Company Number SC874716</p>
+              <p className="text-white/70 mt-2">ICO Registration: ZC077271</p>
+              <p className="text-white/70 mt-2">Registered Address: 6 Atholl Crescent, 6, Perth, PH1 5JN, United Kingdom</p>
+            </div>
           </section>
 
           <section className="mb-10">
@@ -256,7 +262,7 @@ export default function TermsOfService() {
               10. Governing Law
             </h2>
             <p className="text-white/70 leading-relaxed">
-              These Terms are governed by the laws of England and Wales. Any disputes arising from these terms or your use of the service shall be subject to the exclusive jurisdiction of the courts of England and Wales.
+              These Terms are governed by the laws of <strong>Scotland</strong>. Any disputes arising from these terms or your use of the service shall be subject to the exclusive jurisdiction of the courts of Scotland. WHOZA AI LTD is a company registered in Scotland (Company Number SC874716).
             </p>
           </section>
 
@@ -271,9 +277,10 @@ export default function TermsOfService() {
             <h2 className="text-xl font-semibold mb-4">12. Contact</h2>
             <div className="bg-white/5 rounded-lg p-6">
               <p className="text-white/70">For questions about these Terms:</p>
-              <p className="text-white font-medium mt-1">Whoza.ai</p>
+              <p className="text-white font-medium mt-1">WHOZA AI LTD</p>
               <p className="text-white/70 mt-2">Email: <a href="mailto:dru@whoza.ai" className="text-emerald-400 hover:underline">dru@whoza.ai</a></p>
               <p className="text-white/70">WhatsApp: <a href="https://wa.me/447831643012" className="text-emerald-400 hover:underline">+44 7831 643012</a></p>
+              <p className="text-white/70 mt-2">Post: WHOZA AI LTD, 6 Atholl Crescent, 6, Perth, PH1 5JN, Scotland</p>
             </div>
           </section>
         </div>

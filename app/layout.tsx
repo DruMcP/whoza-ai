@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { LocaleProvider } from '@/lib/locale-context'
+import { CookieBanner } from '@/components/whoza/cookie-banner'
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -87,6 +88,7 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         <LocaleProvider>
           {children}
+          <CookieBanner />
         </LocaleProvider>
       </body>
     </html>
