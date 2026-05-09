@@ -24,7 +24,7 @@ export function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center h-16 lg:h-20">
           {/* Logo + Trust Line — pulled further left */}
-          <div className="flex items-center gap-3 -ml-1 lg:-ml-8 shrink-0 lg:mr-8">
+          <div className="flex items-center gap-3 -ml-1 lg:-ml-8 shrink-0 lg:mr-12">
             <a href="/" className="flex items-center">
               <img 
                 src="/production_logo.png" 
@@ -38,7 +38,7 @@ export function Header() {
           </div>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-8 ml-auto mr-8">
+          <div className="hidden lg:flex items-center gap-6 ml-auto mr-6">
             {navLinks.map((link) => (
               <a
                 key={link.href}
