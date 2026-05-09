@@ -24,7 +24,7 @@ export function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center h-16 lg:h-20">
           {/* Logo + Trust Line — pulled further left */}
-          <div className="flex items-center gap-3 -ml-1 lg:-ml-8 shrink-0">
+          <div className="flex items-center gap-3 -ml-1 lg:-ml-8 shrink-0 lg:mr-8">
             <a href="/" className="flex items-center">
               <img 
                 src="/production_logo.png" 
