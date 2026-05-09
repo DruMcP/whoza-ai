@@ -332,7 +332,7 @@ export function Pricing() {
                   <p className="text-sm text-[var(--slate-500)] mt-1">Extra call handling minutes at a discounted rate.</p>
                 </div>
                 <div className="text-right">
-                  <div className="text-2xl font-bold text-[var(--navy-900)] whitespace-nowrap">£20 +VAT</div>
+                  <div className="text-2xl font-bold text-[var(--navy-900)] whitespace-nowrap">£20 + VAT</div>
                 </div>
               </div>
               <div className="flex items-center gap-2 text-sm text-[var(--rex-green)] font-medium bg-[var(--rex-green)]/10 rounded-lg px-3 py-2">
@@ -354,7 +354,7 @@ export function Pricing() {
                   <p className="text-sm text-[var(--slate-500)] mt-1">Extra help setting up your AI assistant, call flows and business automations.</p>
                 </div>
                 <div className="text-right">
-                  <div className="text-2xl font-bold text-[var(--navy-900)] whitespace-nowrap">£200/hr +VAT</div>
+                  <div className="text-2xl font-bold text-[var(--navy-900)] whitespace-nowrap">£200 per hour + VAT</div>
                 </div>
               </div>
               <div className="flex items-center gap-2 text-sm text-[var(--katie-blue)] font-medium bg-[var(--katie-blue)]/10 rounded-lg px-3 py-2">
