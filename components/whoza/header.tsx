@@ -60,9 +60,9 @@ export function Header() {
 
             <a 
               href="#final-cta"
-              className="inline-flex items-center justify-center rounded-md bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-6 h-10 text-sm transition-colors"
+              className="inline-flex items-center justify-center rounded-md bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-4 h-9 text-sm transition-colors whitespace-nowrap"
             >
-              Get Katie answering my calls
+              Start free trial
             </a>
             <CountrySwitcher />
           </div>
@@ -118,7 +118,7 @@ export function Header() {
                   href="#final-cta"
                   className="inline-flex items-center justify-center w-full rounded-md bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold h-10 text-sm transition-colors"
                 >
-                  Get Katie answering my calls
+                  Start free trial
                 </a>
               </div>
             </div>
