@@ -10,20 +10,20 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Whoza.ai Pricing — Plans from £59/month | AI Voice Agents",
-  description: "Choose from 4 plans: Starter £59, Growth £125, Pro £230, Scale £399/month. All include 14-day free trial. AI voice agents for UK tradespeople.",
+  description: "Choose from 4 plans: Starter £59, Growth £125, Pro £230, Scale £399/month. All include 7-day free trial. AI voice agents for UK tradespeople.",
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "https://whoza.ai/pricing",
     siteName: "whoza.ai",
     title: "Whoza.ai Pricing — AI Voice Agents for UK Tradespeople",
-    description: "Plans from £59/month. 14-day free trial. No contracts.",
+    description: "Plans from £59/month. 7-day free trial. No contracts.",
     images: [{ url: "https://whoza.ai/og-image.png", width: 1200, height: 630, alt: "whoza.ai Pricing" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Whoza.ai Pricing — AI Voice Agents for UK Tradespeople",
-    description: "Plans from £59/month. 14-day free trial.",
+    description: "Plans from £59/month. 7-day free trial.",
     images: ["https://whoza.ai/og-image.png"],
   },
   alternates: {
@@ -48,7 +48,7 @@ export default function PricingPage() {
                 Choose Your Plan
               </h1>
               <p className="text-white/60 max-w-2xl mx-auto text-lg mb-6">
-                Start capturing missed calls and booking more jobs today. All plans include a 14-day free trial.
+                Start capturing missed calls and booking more jobs today. All plans include a 7-day free trial.
               </p>
               <div className="flex flex-wrap justify-center gap-4 text-sm">
                 <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full">

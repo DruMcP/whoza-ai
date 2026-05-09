@@ -5,7 +5,7 @@ import { FileText, Phone, CreditCard, AlertTriangle, Clock, Lock, Globe, Scale }
 
 export const metadata: Metadata = {
   title: "Terms of Service | whoza.ai",
-  description: "whoza.ai terms of service — no contracts, monthly rolling, 14-day free trial. Read our full terms.",
+  description: "whoza.ai terms of service — no contracts, monthly rolling, 7-day free trial. Read our full terms.",
   alternates: {
     canonical: "https://whoza.ai/terms",
   },
@@ -125,7 +125,7 @@ export default function TermsOfService() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
-                <span><strong>Trial:</strong> 14-day free trial available on Starter and Growth plans. Trial includes reduced minute allowances</span>
+                <span><strong>Trial:</strong> 7-day free trial available on Starter and Growth plans. Trial includes reduced minute allowances</span>
               </li>
             </ul>
           </section>

@@ -34,7 +34,7 @@ export function Hero() {
       {/* Announcement Bar */}
       <div className="w-full flex items-center justify-center" style={{ background: "#111418", height: 40 }}>
         <p className="text-sm font-medium" style={{ color: "#D1D5DB", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif" }}>
-          Built for UK trades · <span style={{ color: "#10B981" }}>From £59/month</span> · 14-day trial, no card needed
+          Built for UK trades · <span style={{ color: "#10B981" }}>From £59/month</span> · 7-day trial, no card needed
         </p>
       </div>
 
@@ -145,7 +145,7 @@ export function Hero() {
                 className="text-center sm:text-left"
                 style={{ fontSize: 13, color: "#6B7280", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif" }}
               >
-                14-day free trial · No card required · Works with your existing number · Cancel anytime
+                7-day free trial · No card required · Works with your existing number · Cancel anytime
               </p>
 
               {/* Secondary CTA */}

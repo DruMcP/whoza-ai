@@ -145,7 +145,7 @@ export function HomepageSchema() {
         "Google review collection",
         "Competitor tracking",
         "No contracts",
-        "14-day free trial"
+        "7-day free trial"
       ],
       "screenshot": {
         "@type": "ImageObject",
@@ -447,7 +447,7 @@ export function PricingSchema() {
           "name": "How much does whoza.ai cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "whoza.ai offers four plans: Starter at £59/month, Growth at £125/month, Pro at £230/month, and Scale at £399/month. All plans include a 14-day free trial and are on a monthly rolling basis with no long-term contracts."
+            "text": "whoza.ai offers four plans: Starter at £59/month, Growth at £125/month, Pro at £230/month, and Scale at £399/month. All plans include a 7-day free trial and are on a monthly rolling basis with no long-term contracts."
           }
         },
         {
@@ -468,10 +468,10 @@ export function PricingSchema() {
         },
         {
           "@type": "Question",
-          "name": "What is included in the 14-day free trial?",
+          "name": "What is included in the 7-day free trial?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The 14-day free trial includes full access to all features of your chosen plan: AI call answering, WhatsApp alerts, review collection, and competitor tracking."
+            "text": "The 7-day free trial includes full access to all features of your chosen plan: AI call answering, WhatsApp alerts, review collection, and competitor tracking."
           }
         },
         {
@@ -479,7 +479,7 @@ export function PricingSchema() {
           "name": "Do I need a credit card for the free trial?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No credit card required to start your 14-day free trial. You only add payment details when you choose to continue after the trial period."
+            "text": "No credit card required to start your 7-day free trial. You only add payment details when you choose to continue after the trial period."
           }
         }
       ]
