@@ -106,7 +106,7 @@ export function Hero() {
                 fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
               }}
             >
-              On a job, up a ladder or driving between sites? Katie answers professionally, asks the right questions and sends the customer details to WhatsApp — accept, call back or decline in two taps.
+              On a job, up a ladder or driving between sites? Katie answers professionally, asks the right questions and sends the customer details to WhatsApp — accept, call back or decline in two taps. Then Katie helps you get more from every job.
             </p>
 
             {/* CTA Buttons */}
