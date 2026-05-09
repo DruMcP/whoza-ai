@@ -3,8 +3,6 @@
 import { motion } from "framer-motion"
 import { ArrowRight, Phone, BarChart3, Star, Eye, CheckCircle2 } from "lucide-react"
 import { useLocale } from "@/lib/locale-context"
-import { WaitlistForm } from "./waitlist-form"
-import { TrialAvailabilityBadge } from "./trial-badge"
 
 const teamMembers = [
   { name: "Katie", icon: Phone, bgClass: "bg-[var(--katie-blue)]/20 border-[var(--katie-blue)]/30", iconClass: "text-[var(--katie-blue)]" },
@@ -65,26 +63,32 @@ export function FinalCTA() {
           </div>
         </motion.div>
 
-        {/* CTAs — Live Waitlist Form */}
+        {/* CTAs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           viewport={{ once: true }}
-          className="mt-10"
+          className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <WaitlistForm />
-          <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <TrialAvailabilityBadge />
-            <a
-              href="https://wa.me/447831643012"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-transparent border border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg rounded-lg transition-colors"
-            >
-              Get Whoza Answering Your Calls
-            </a>
-          </div>
+          <button
+            onClick={() => {
+              const modal = document.getElementById('signup-modal-trigger')
+              if (modal) modal.click()
+            }}
+            className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-6 text-lg rounded-lg transition-all hover:scale-[1.02] shadow-2xl shadow-[var(--rex-green)]/40"
+          >
+            Get Katie answering my calls
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </button>
+          <a
+            href="https://wa.me/447831643012"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center bg-transparent border border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg rounded-lg transition-colors"
+          >
+            Get Katie answering my calls
+          </a>
         </motion.div>
 
         {/* Free Trial Pulse */}
