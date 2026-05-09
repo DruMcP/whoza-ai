@@ -32,7 +32,7 @@ export const trades: TradeData[] = [
     display: "Plumbers",
     headline: "AI Call Answering for Plumbers — Never Miss an Emergency Again",
     subheadline: "Burst pipes, boiler breakdowns, blocked drains. Customers call when it hurts. Katie answers every call, qualifies the job, and sends the details to your phone in 30 seconds.",
-    metaDescription: "Stop losing emergency plumbing jobs to missed calls. AI call answering for plumbers in the UK. Katie answers 24/7, qualifies jobs, and sends WhatsApp alerts. 14-day free trial.",
+    metaDescription: "Stop losing emergency plumbing jobs to missed calls. AI call answering for plumbers in the UK. Katie answers 24/7, qualifies jobs, and sends WhatsApp alerts. 7-day free trial.",
     problemStatements: [
       "Emergency calls go to voicemail — customer calls the next plumber on Google",
       "Quoting jobs over the phone wastes time you could spend fixing",
@@ -52,7 +52,7 @@ export const trades: TradeData[] = [
       { step: 4, title: "Accept, callback or decline", description: "Tap to accept the job, schedule a callback, or decline if you're fully booked — customer gets an instant SMS update" }
     ],
     faqs: [
-      { question: "How much does AI call answering cost for a plumber?", answer: "Whoza starts at £59/month + VAT for the Starter plan. That's less than the cost of one missed emergency call. Every plan includes unlimited AI calls, WhatsApp delivery, and 14-day free trial. Overage minutes are £0.26/minute." },
+      { question: "How much does AI call answering cost for a plumber?", answer: "Whoza starts at £59/month + VAT for the Starter plan. That's less than the cost of one missed emergency call. Every plan includes unlimited AI calls, WhatsApp delivery, and 7-day free trial. Overage minutes are £0.26/minute." },
       { question: "Can Katie handle emergency plumbing calls at 2am?", answer: "Yes. Katie answers 24/7, including nights, weekends, and bank holidays. She identifies emergency calls (burst pipes, no heating, gas leaks) and marks them as high urgency in your WhatsApp alert so you see them first." },
       { question: "What information does Katie collect from plumbing customers?", answer: "Katie collects: full name, phone number, postcode, property type (house/flat/commercial), problem description, urgency level (routine/urgent/emergency), preferred appointment time, and how they found you." },
       { question: "Will customers know they're talking to AI?", answer: "Yes — Katie introduces herself as your AI assistant. Customers appreciate the honesty and the instant response. Most prefer a friendly AI that answers immediately over voicemail or a ringing phone." },
@@ -112,7 +112,7 @@ export const trades: TradeData[] = [
     display: "Builders",
     headline: "AI Call Answering for Builders — From Enquiry to Project Brief",
     subheadline: "Extensions, renovations, new builds. Big jobs start with a phone call. Katie captures the full project scope, budget signals, and timeline — so you walk into every quote meeting prepared.",
-    metaDescription: "AI call answering for builders and construction companies. Katie qualifies extension, renovation, and new build enquiries 24/7. Captures budget range, timeline, and project scope. Free 14-day trial.",
+    metaDescription: "AI call answering for builders and construction companies. Katie qualifies extension, renovation, and new build enquiries 24/7. Captures budget range, timeline, and project scope. Free 7-day trial.",
     problemStatements: [
       "Extension and renovation enquiries need detailed qualification — but you miss the call on site",
       "Unqualified site visits waste half a day and cost £200+ in fuel and labour",
@@ -256,7 +256,7 @@ export const trades: TradeData[] = [
       { question: "How does AI call answering handle heat pump enquiries?", answer: "Katie recognises heat pump interest and asks about: property age, insulation status, current heating system, garden space (for ground source), grant interest (Boiler Upgrade Scheme), and MCS certification requirements. These enquiries are tagged 'heat-pump' for specialist follow-up." },
       { question: "Can Katie handle landlord and service contract calls?", answer: "Yes. Katie identifies landlords and letting agents and asks about: number of properties, service contract status, certificate requirements (Gas Safety, EPC), and preferred service frequency. These are tagged 'landlord' for your service contract team." },
       { question: "What happens when a customer has an emergency breakdown?", answer: "Katie identifies emergency keywords (no heating, no hot water, leaking, error code, cold house) and marks the enquiry as emergency priority. You get an immediate WhatsApp with an 'EMERGENCY' header. Customer receives SMS: 'Emergency call logged. Engineer callback within 15 minutes.'" },
-      { question: "How does the 14-day free trial work for HVAC companies?", answer: "Sign up, choose a UK number or forward your existing one, and Katie starts answering immediately. Full access to all features: AI answering, WhatsApp alerts, enquiry dashboard, and review collection. Cancel anytime before day 14 — no charge. Most HVAC companies see ROI within the first week." }
+      { question: "How does the 7-day free trial work for HVAC companies?", answer: "Sign up, choose a UK number or forward your existing one, and Katie starts answering immediately. Full access to all features: AI answering, WhatsApp alerts, enquiry dashboard, and review collection. Cancel anytime before day 14 — no charge. Most HVAC companies see ROI within the first week." }
     ],
     stats: [
       { label: "HVAC calls missed in winter", value: "67%" },
@@ -272,7 +272,7 @@ export const trades: TradeData[] = [
     display: "Painters",
     headline: "AI Call Answering for Painters & Decorators — Colour Every Call with Revenue",
     subheadline: "Interior refresh, exterior repaints, commercial projects. Customers often underestimate the scope ('just a quick lick of paint'). Katie gently draws out the full job details — rooms, surfaces, access, timeline — so you quote with confidence.",
-    metaDescription: "AI call answering for painters and decorators. Katie qualifies interior, exterior, and commercial painting jobs 24/7. Captures room count, surface types, access details, and budget. Free 14-day trial.",
+    metaDescription: "AI call answering for painters and decorators. Katie qualifies interior, exterior, and commercial painting jobs 24/7. Captures room count, surface types, access details, and budget. Free 7-day trial.",
     problemStatements: [
       "'Just a quick paint job' often turns into 3 rooms + ceilings + woodwork — but you find out too late",
       "You're up a ladder with paint on your hands — answering calls is dangerous and messy",

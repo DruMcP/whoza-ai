@@ -251,7 +251,7 @@ export function Pricing() {
                     {(plan.name === "Starter" || plan.name === "Growth") && (
                       <div className="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[var(--rex-green)]/10 border border-[var(--rex-green)]/20 text-xs font-medium text-[var(--rex-green)]">
                         <Sparkles className="w-3 h-3" />
-                        14-day free trial
+                        7-day free trial
                       </div>
                     )}
                   </div>
