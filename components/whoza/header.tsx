@@ -58,7 +58,7 @@ export function Header() {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4 ml-8">
 
             <button 
               onClick={() => setShowSignup(true)}
