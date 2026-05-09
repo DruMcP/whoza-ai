@@ -32,8 +32,8 @@ export function Header() {
                 className="h-12 w-auto sm:h-16 lg:h-[5rem]"
               />
             </a>
-            <span className="hidden lg:block text-xs text-white/40 border-l border-white/20 pl-3">
-              Built for UK trades — expanding globally
+            <span className="hidden lg:block text-sm font-medium border-l border-white/20 pl-3" style={{ color: '#10B981', fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif" }}>
+              Built for UK Trades and Home Services
             </span>
           </div>
 
