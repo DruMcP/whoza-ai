@@ -56,6 +56,16 @@ export function CookieBanner() {
     }
   }, [])
 
+  useEffect(() => {
+    const handleOpenCookieConsent = () => {
+      setShowModal(true)
+    }
+    window.addEventListener('openCookieConsent', handleOpenCookieConsent)
+    return () => {
+      window.removeEventListener('openCookieConsent', handleOpenCookieConsent)
+    }
+  }, [])
+
   const acceptAll = () => {
     setStoredConsent({ essential: true, analytics: true, functional: true })
     setAnalytics(true)
