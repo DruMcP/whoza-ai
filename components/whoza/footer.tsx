@@ -23,6 +23,11 @@ const footerLinks = {
   legal: [
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms of Service", href: "/terms" },
+    { label: "Cookie Policy", href: "/cookie-policy" },
+    { label: "Data Processing Agreement", href: "/dpa" },
+    { label: "Fair Use Policy", href: "/fair-use" },
+    { label: "SLA", href: "/sla" },
+    { label: "Refund Policy", href: "/refund-policy" },
   ],
 }
 
@@ -124,10 +129,24 @@ export function Footer() {
                   <span>{badge}</span>
                 </div>
               ))}
+              <div className="flex items-center gap-2 text-white/50 text-sm">
+                <Shield className="w-4 h-4" />
+                <span>ICO Registration: <a href="https://ico.org.uk/ESDWebPages/Entry/ZC077271" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">ZC077271</a></span>
+              </div>
             </div>
             <div className="text-sm text-white/40">
               © {new Date().getFullYear()} whoza.ai. All rights reserved.
             </div>
+          </div>
+          
+          {/* Company details */}
+          <div className="mt-6 pt-6 border-t border-white/5 text-center">
+            <p className="text-xs text-white/30">
+              WHOZA AI LTD · Registered in Scotland — Company Number SC874716 · ICO Registration: ZC077271
+            </p>
+            <p className="text-xs text-white/30 mt-1">
+              6 Atholl Crescent, 6, Perth, PH1 5JN, United Kingdom
+            </p>
           </div>
         </div>
       </div>

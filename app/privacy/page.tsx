@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
-import { Shield, Phone, Database, Clock, Lock, UserCheck, FileText, Globe } from "lucide-react"
+import { Shield, Phone, Database, Clock, Lock, UserCheck, FileText, Globe, ExternalLink } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Privacy Policy | whoza.ai",
@@ -37,8 +37,17 @@ export default function PrivacyPolicy() {
               1. Data Controller
             </h2>
             <p className="text-white/70 leading-relaxed">
-              Whoza.ai is the data controller for personal information processed through our AI revenue system for UK tradespeople. We are registered with the Information Commissioner's Office (ICO) and process data in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.
+              WHOZA AI LTD is the data controller for personal information processed through our AI revenue system for UK tradespeople. We are registered with the Information Commissioner's Office (ICO) and process data in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.
             </p>
+            <div className="bg-white/5 rounded-lg p-6 mt-4">
+              <p className="text-white/70"><strong>WHOZA AI LTD</strong> is registered with the Information Commissioner's Office (ICO) as a data controller and processor.</p>
+              <p className="text-white/70 mt-2">ICO Registration Number: <strong className="text-white">ZC077271</strong></p>
+              <p className="text-white/70 mt-2">
+                <a href="https://ico.org.uk/ESDWebPages/Entry/ZC077271" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:underline inline-flex items-center gap-1">
+                  Verify our registration <ExternalLink className="w-3 h-3" />
+                </a>
+              </p>
+            </div>
           </section>
 
           <section className="mb-10">
@@ -240,9 +249,10 @@ export default function PrivacyPolicy() {
             </p>
             <div className="mt-4 bg-white/5 rounded-lg p-6">
               <p className="text-white/70">Data Protection Officer</p>
-              <p className="text-white font-medium mt-1">Whoza.ai</p>
+              <p className="text-white font-medium mt-1">WHOZA AI LTD</p>
               <p className="text-white/70 mt-2">Email: <a href="mailto:dru@whoza.ai" className="text-emerald-400 hover:underline">dru@whoza.ai</a></p>
               <p className="text-white/70">WhatsApp: <a href="https://wa.me/447831643012" className="text-emerald-400 hover:underline">+44 7831 643012</a></p>
+              <p className="text-white/70 mt-2">Post: WHOZA AI LTD, 6 Atholl Crescent, 6, Perth, PH1 5JN, Scotland</p>
             </div>
           </section>
 

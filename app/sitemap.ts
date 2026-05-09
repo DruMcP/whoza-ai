@@ -38,6 +38,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.3,
     },
+    {
+      url: `${baseUrl}/cookie-policy`,
+      lastModified: lastMod,
+      changeFrequency: 'yearly',
+      priority: 0.2,
+    },
+    {
+      url: `${baseUrl}/dpa`,
+      lastModified: lastMod,
+      changeFrequency: 'yearly',
+      priority: 0.2,
+    },
+    {
+      url: `${baseUrl}/fair-use`,
+      lastModified: lastMod,
+      changeFrequency: 'yearly',
+      priority: 0.2,
+    },
+    {
+      url: `${baseUrl}/sla`,
+      lastModified: lastMod,
+      changeFrequency: 'yearly',
+      priority: 0.2,
+    },
+    {
+      url: `${baseUrl}/refund-policy`,
+      lastModified: lastMod,
+      changeFrequency: 'yearly',
+      priority: 0.2,
+    },
   ]
 
   // Dynamic trade pages
