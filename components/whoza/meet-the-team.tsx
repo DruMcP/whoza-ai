@@ -11,7 +11,7 @@ const voiceAgents = [
     description: "Katie answers calls 24/7, qualifies real customer enquiries, and sends them to WhatsApp while you work. Friendly, professional and calm under pressure — she helps customers feel heard before the enquiry reaches you.",
     outcome: "Ready to accept, call back or decline.",
     audioSample: "Hi, you've reached Thompson Plumbing. My name is Katie. How can I help you today?",
-    image: "/images/katie.jpg",
+    image: "/images/katie.png",
     color: "var(--katie-blue)",
     bgLight: "bg-[var(--katie-blue)]/10",
     borderColor: "border-[var(--katie-blue)]/30",

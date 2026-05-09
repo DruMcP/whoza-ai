@@ -35,7 +35,7 @@ export function KatieAvatar({ className = "" }: KatieAvatarProps) {
         }}
       >
         <img
-          src="/images/katie.jpg"
+          src="/images/katie.png"
           alt="Katie - AI call handler"
           className="w-full h-full object-cover"
         />
