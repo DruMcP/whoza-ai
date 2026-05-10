@@ -1,5 +1,6 @@
 "use client"
 
+import { useState, useEffect, useCallback } from "react"
 import { motion } from "framer-motion"
 import { MessageCircle } from "lucide-react"
 import {
@@ -69,6 +70,17 @@ const faqs = [
 ]
 
 export function FAQ() {
+  const [openItem, setOpenItem] = useState<string | undefined>(undefined)
+
+  // Sync .open class with Radix state for prompt compatibility
+  useEffect(() => {
+    document.querySelectorAll('.faq-item').forEach((el) => {
+      const item = el as HTMLElement
+      const isOpen = item.getAttribute('data-state') === 'open'
+      item.classList.toggle('open', isOpen)
+    })
+  }, [openItem])
+
   return (
     <section id="faq" className="section-padding-lg bg-white relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -96,7 +108,23 @@ export function FAQ() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <Accordion type="single" collapsible className="space-y-4 reveal-stagger">
+          <Accordion 
+            type="single" 
+            collapsible 
+            className="space-y-4 reveal-stagger"
+            value={openItem}
+            onValueChange={(val) => {
+              setOpenItem(val)
+              // Also sync .open class immediately
+              setTimeout(() => {
+                document.querySelectorAll('.faq-item').forEach((el) => {
+                  const item = el as HTMLElement
+                  const isOpen = item.getAttribute('data-state') === 'open'
+                  item.classList.toggle('open', isOpen)
+                })
+              }, 0)
+            }}
+          >
             {faqs.map((faq, index) => (
               <AccordionItem 
                 key={index} 
@@ -105,6 +133,19 @@ export function FAQ() {
               >
                 <AccordionTrigger className="faq-toggle text-left text-[var(--navy-900)] font-semibold hover:no-underline py-5">
                   {faq.question}
+                  {/* Chevron icon for prompt compatibility */}
+                  <svg 
+                    className="faq-chevron w-5 h-5 text-[var(--slate-400)] shrink-0 ml-2" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    strokeWidth="2" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
                 </AccordionTrigger>
                 <AccordionContent className="faq-answer text-[var(--slate-500)] pb-5 leading-relaxed">
                   {faq.answer}

@@ -29,205 +29,44 @@
 }
 
 /* =========================================
-   PHONE MOCKUP -- FLAT FLOAT (NO WARP)
+   PHONE MOCKUP — PHOTOREALISTIC FRAME
    ========================================= */
 
 .phoneMockup{
   width:300px;
-  height:580px;
-  background:#1a1a2e;
-  border-radius:44px;
-  padding:10px;
+  height:420px;
   position:relative;
   z-index:2;
   
-  /* FLAT -- no rotateY. No perspective. Just a gentle top-tilt. */
+  /* FLAT — no rotateY. Just a gentle top-tilt. */
   transform:translateZ(0) rotateX(1deg);
-  /* rotateX(1deg) = imperceptible, just enough to feel alive */
   
-  /* Gentle floating -- Y-axis only, no rotation */
+  /* Gentle floating — Y-axis only */
   animation:phoneFloat 6s ease-in-out infinite;
   will-change:transform;
   contain:layout style paint;
   
-  /* Frame edge -- visible against dark bg */
-  box-shadow:
-    /* Inner rim light */
-    inset 1px 1px 2px rgba(255,255,255,.08),
-    inset -1px -1px 2px rgba(0,0,0,.5),
-    /* Contact shadow */
-    0 0 0 1px rgba(0,0,0,.3),
-    /* Directional shadow (light from top-left) */
-    16px 32px 64px rgba(0,0,0,.45),
-    32px 64px 120px rgba(0,0,0,.3),
-    /* Ambient glow separating from bg */
-    0 0 80px rgba(16,185,129,.06);
+  /* Soft shadow to ground the phone */
+  filter:drop-shadow(0 24px 48px rgba(0,0,0,.4))
+         drop-shadow(0 8px 16px rgba(0,0,0,.2));
 }
 
-/* Metal band -- the physical frame */
-.phoneMockup::before{
-  content:'';
-  position:absolute;
-  inset:-2px;
-  border-radius:46px;
-  padding:2px;
-  background:linear-gradient(
-    135deg,
-    #c8c8e0 0%,
-    #a0a0c0 15%,
-    #707090 40%,
-    #505070 60%,
-    #8080a0 80%,
-    #c0c0d8 100%
-  );
-  -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite:xor;
-  mask-composite:exclude;
-  pointer-events:none;
-  z-index:-1;
-}
+/* =========================================
+   PHOTOREALISTIC PHONE IMAGE
+   ========================================= */
 
-/* Inner bezel -- transition from metal to glass */
-.phoneMockup::after{
-  content:'';
+.phoneFrameImage{
   position:absolute;
   inset:0;
+  z-index:1;
   border-radius:44px;
-  background:linear-gradient(
-    160deg,
-    rgba(255,255,255,.06) 0%,
-    transparent 50%,
-    rgba(0,0,0,.1) 100%
-  );
-  box-shadow:
-    inset 0 2px 6px rgba(0,0,0,.5);
-  z-index:10;
-  pointer-events:none;
-}
-
-/* =========================================
-   DYNAMIC ISLAND (Modern -- replaces notch)
-   ========================================= */
-
-.dynamicIsland{
-  position:absolute;
-  top:16px;
-  left:50%;
-  transform:translateX(-50%);
-  width:96px;
-  height:30px;
-  background:#000;
-  border-radius:15px;
-  z-index:25;
-  box-shadow:
-    inset 0 2px 5px rgba(0,0,0,.8),
-    inset 0 1px 1px rgba(255,255,255,.04),
-    0 1px 0 rgba(255,255,255,.06),
-    0 3px 8px rgba(0,0,0,.4);
-  display:flex;
-  align-items:center;
-  justify-content:flex-end;
-  padding:0 10px;
-}
-
-/* Camera lens */
-.dynamicIsland::before{
-  content:'';
-  width:10px;
-  height:10px;
-  background:radial-gradient(
-    circle at 35% 35%,
-    #3a3a5a 0%,
-    #1a1a3a 40%,
-    #0a0a20 100%
-  );
-  border-radius:50%;
-  box-shadow:
-    inset 0 1px 2px rgba(0,0,0,.6),
-    0 0 1px rgba(255,255,255,.08);
-}
-
-/* Glass edge around island */
-.dynamicIslandEdge{
-  position:absolute;
-  inset:-1px;
-  border-radius:16px;
-  background:linear-gradient(
-    145deg,
-    rgba(255,255,255,.1) 0%,
-    transparent 30%,
-    transparent 70%,
-    rgba(255,255,255,.04) 100%
-  );
-  z-index:-1;
-  pointer-events:none;
-}
-
-/* =========================================
-   SIDE BUTTONS (Volume + Power)
-   ========================================= */
-
-.phoneBtn{
-  position:absolute;
-  width:4px;
-  background:linear-gradient(180deg, #d0d0e0, #9090b0);
-  border-radius:2px;
-  z-index:-1;
-  box-shadow:
-    inset 1px 0 1px rgba(255,255,255,.2),
-    -2px 3px 6px rgba(0,0,0,.3);
-}
-
-.phoneBtnVolumeUp{
-  left:-5px;
-  top:100px;
-  height:30px;
-  border-radius:2px 0 0 2px;
-}
-
-.phoneBtnVolumeDown{
-  left:-5px;
-  top:138px;
-  height:30px;
-  border-radius:2px 0 0 2px;
-}
-
-.phoneBtnPower{
-  right:-5px;
-  top:110px;
-  height:38px;
-  background:linear-gradient(180deg, #d0d0e0, #8888a8);
-  border-radius:0 2px 2px 0;
-  box-shadow:
-    inset -1px 0 1px rgba(255,255,255,.2),
-    2px 3px 6px rgba(0,0,0,.3);
-}
-
-/* =========================================
-   PHONE SCREEN
-   ========================================= */
-
-.phoneScreen{
-  position:absolute;
-  top:11px;
-  left:11px;
-  right:11px;
-  bottom:11px;
-  background:#F0F2F5;
-  border-radius:38px;
   overflow:hidden;
-  overflow-y:auto;
-  scrollbar-width:none;
-  z-index:5;
-  /* Micro-bezel creating recessed screen */
-  border:1.5px solid rgba(0,0,0,.35);
-  box-shadow:
-    inset 0 0 40px rgba(255,255,255,.02),
-    inset 0 0 80px rgba(16,185,129,.012);
 }
 
-.phoneScreen::-webkit-scrollbar{
-  display:none
+.phoneFrameImage img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
 }
 
 /* =========================================
@@ -237,7 +76,7 @@
 .phoneGlass{
   position:absolute;
   inset:0;
-  border-radius:48px;
+  border-radius:44px;
   background:linear-gradient(
     155deg,
     rgba(255,255,255,.12) 0%,
@@ -250,41 +89,6 @@
   background-size:150% 150%;
   z-index:15;
   pointer-events:none;
-}
-
-/* Screen gloss overlay */
-.screenGloss{
-  position:absolute;
-  top:10px;
-  left:10px;
-  right:10px;
-  height:45%;
-  background:linear-gradient(
-    165deg,
-    rgba(255,255,255,.14) 0%,
-    rgba(255,255,255,.04) 35%,
-    transparent 55%
-  );
-  border-radius:36px 36px 0 0;
-  z-index:12;
-  pointer-events:none;
-}
-
-/* Horizontal sheen line */
-.screenGloss::after{
-  content:'';
-  position:absolute;
-  top:28%;
-  left:10%;
-  right:10%;
-  height:1px;
-  background:linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255,255,255,.12) 30%,
-    rgba(255,255,255,.04) 70%,
-    transparent 100%
-  );
 }
 
 /* =========================================
@@ -356,7 +160,7 @@
    ANIMATIONS
    ========================================= */
 
-/* FLOAT ANIMATION -- Y-axis only. No rotation. */
+/* FLOAT ANIMATION — Y-axis only. No rotation. */
 @keyframes phoneFloat{
   0%,100%{
     transform:translateZ(0) rotateX(1deg) translateY(0);
@@ -373,7 +177,7 @@
 }
 
 /* =========================================
-   MOUSE TILT (Desktop only -- via JS)
+   MOUSE TILT (Desktop only — via JS)
    ========================================= */
 
 .phoneMockup.tiltActive{
@@ -382,19 +186,14 @@
 }
 
 /* =========================================
-   RESPONSIVE -- keep flat on all sizes
+   RESPONSIVE
    ========================================= */
 
 @media(max-width:1024px) and (min-width:641px){
   .phoneMockup{
     transform:translateZ(0) rotateX(1deg) scale(.9);
-    box-shadow:
-      inset 1px 1px 2px rgba(255,255,255,.08),
-      inset -1px -1px 2px rgba(0,0,0,.5),
-      0 0 0 1px rgba(0,0,0,.3),
-      12px 24px 48px rgba(0,0,0,.45),
-      24px 48px 96px rgba(0,0,0,.3),
-      0 0 60px rgba(16,185,129,.06);
+    filter:drop-shadow(0 20px 40px rgba(0,0,0,.35))
+           drop-shadow(0 6px 12px rgba(0,0,0,.15));
   }
   .heroVisual{
     min-width:auto;
@@ -420,37 +219,16 @@
     width:260px;
     height:500px;
     transform:translateZ(0) rotateX(0.5deg);
-    box-shadow:
-      inset 1px 1px 2px rgba(255,255,255,.06),
-      inset -1px -1px 2px rgba(0,0,0,.4),
-      0 0 0 1px rgba(0,0,0,.3),
-      8px 16px 32px rgba(0,0,0,.45),
-      16px 32px 64px rgba(0,0,0,.3),
-      0 0 40px rgba(16,185,129,.05);
-  }
-  .phoneMockup::before{
-    inset:-2px;
-    border-radius:46px;
-    padding:2px;
-  }
-  .phoneBtnVolumeUp{top:90px;height:24px}
-  .phoneBtnVolumeDown{top:120px;height:24px}
-  .phoneBtnPower{top:100px;height:32px}
-  .dynamicIsland{
-    width:82px;
-    height:26px;
-    border-radius:13px;
+    filter:drop-shadow(0 16px 32px rgba(0,0,0,.35))
+           drop-shadow(0 4px 8px rgba(0,0,0,.15));
   }
   .phoneGlass{
-    border-radius:48px;
+    border-radius:40px;
   }
   .phoneShadow{
     bottom:-35px;
     height:60px;
     filter:blur(20px);
-  }
-  .screenGloss{
-    height:45%;
   }
   @keyframes phoneFloatMobile{
     0%,100%{transform:translateZ(0) rotateX(0.5deg) translateY(0)}
@@ -477,144 +255,41 @@
 }
 
 /* =========================================
-   LEAD ITEM (inline within screen)
+   LEGACY / UNUSED CLASSES (kept for safety)
    ========================================= */
 
-.leadItem{
-  display:flex;
-  flex-direction:column;
-}
-
-.leadItemLabel{
-  font-size:12px;
-  color:#718096;
-}
-
-.leadItemValue{
-  font-size:14px;
-  font-weight:600;
+.dynamicIsland,
+.phoneBtn,
+.phoneBtnVolumeUp,
+.phoneBtnVolumeDown,
+.phoneBtnPower,
+.screenGloss{
+  display:none;
 }
 
 /* =========================================
-   SCREEN CONTENT STYLES
+   SCREEN CONTENT STYLES (legacy reference)
    ========================================= */
 
-.waHeader{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  padding:40px 16px 12px;
-  background:#075E54;
-}
+.leadItem{display:flex;flex-direction:column;}
+.leadItemLabel{font-size:12px;color:#718096;}
+.leadItemValue{font-size:14px;font-weight:600;}
 
-.waHeaderAvatar{
-  width:40px;
-  height:40px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-  background:#128C7E;
-}
-
-.waHeaderTitle{
-  color:#fff;
-  font-weight:600;
-  font-size:14px;
-}
-
-.waHeaderSubtitle{
-  color:#a7f3d0;
-  font-size:12px;
-}
-
-.waDate{
-  text-align:center;
-  padding:8px 0;
-  font-size:12px;
-  color:#6B7280;
-}
-
-.notifyBanner{
-  margin:0 16px 8px;
-  padding:8px 12px;
-  border-radius:8px;
-  font-size:14px;
-  font-weight:500;
-  display:flex;
-  align-items:center;
-  gap:8px;
-  background:#FEF3C7;
-  color:#92400E;
-}
-
-.chatBubble{
-  margin:0 16px 8px;
-  padding:12px;
-  border-radius:8px;
-  background:#fff;
-  box-shadow:0 1px 2px rgba(0,0,0,.08);
-  border-left:4px solid #D63031;
-}
-
-.chatBubbleTitle{
-  font-size:14px;
-  font-weight:600;
-  margin-bottom:4px;
-  color:#1A1A2E;
-}
-
-.chatBubbleMeta{
-  font-size:12px;
-  margin-bottom:8px;
-  color:#6B7280;
-}
-
-.chatBubbleBody{
-  font-size:14px;
-  line-height:1.6;
-  color:#374151;
-}
-
-.chatBubbleTime{
-  text-align:right;
-  font-size:12px;
-  margin-top:4px;
-  color:#9CA3AF;
-}
-
-.leadCard{
-  margin:0 16px 8px;
-  padding:16px;
-  border-radius:12px;
-  background:#F8FAFC;
-  border:1px solid #E2E8F0;
-}
-
-.leadCardTitle{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  margin-bottom:12px;
-  font-size:14px;
-  font-weight:600;
-  color:#1A1A2E;
-}
-
-.leadGrid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:8px;
-}
-
-.waActions{
-  display:grid;
-  gap:6px;
-  padding:0 12px 8px;
-  grid-template-columns:1fr 1fr;
-  grid-template-areas:"accept callback" "decline decline";
-}
+.waHeader{display:flex;align-items:center;gap:12px;padding:40px 16px 12px;background:#075E54;}
+.waHeaderAvatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#128C7E;}
+.waHeaderTitle{color:#fff;font-weight:600;font-size:14px;}
+.waHeaderSubtitle{color:#a7f3d0;font-size:12px;}
+.waDate{text-align:center;padding:8px 0;font-size:12px;color:#6B7280;}
+.notifyBanner{margin:0 16px 8px;padding:8px 12px;border-radius:8px;font-size:14px;font-weight:500;display:flex;align-items:center;gap:8px;background:#FEF3C7;color:#92400E;}
+.chatBubble{margin:0 16px 8px;padding:12px;border-radius:8px;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.08);border-left:4px solid #D63031;}
+.chatBubbleTitle{font-size:14px;font-weight:600;margin-bottom:4px;color:#1A1A2E;}
+.chatBubbleMeta{font-size:12px;margin-bottom:8px;color:#6B7280;}
+.chatBubbleBody{font-size:14px;line-height:1.6;color:#374151;}
+.chatBubbleTime{text-align:right;font-size:12px;margin-top:4px;color:#9CA3AF;}
+.leadCard{margin:0 16px 8px;padding:16px;border-radius:12px;background:#F8FAFC;border:1px solid #E2E8F0;}
+.leadCardTitle{display:flex;align-items:center;gap:8px;margin-bottom:12px;font-size:14px;font-weight:600;color:#1A1A2E;}
+.leadGrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.waActions{display:grid;gap:6px;padding:0 12px 8px;grid-template-columns:1fr 1fr;grid-template-areas:"accept callback" "decline decline";}
 
 /* ACCEPT -- Uses site emerald */
 .btnAccept{

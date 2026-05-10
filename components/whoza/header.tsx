@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { CountrySwitcher } from "./country-switcher"
@@ -18,9 +18,29 @@ const navLinks = [
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [showSignup, setShowSignup] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const hero = document.querySelector('.hero')
+      const heroBottom = hero ? hero.offsetTop + hero.offsetHeight : 400
+      setIsVisible(window.scrollY > heroBottom * 0.3)
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--navy-900)]/95 backdrop-blur-md border-b border-white/10">
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
+      style={{ 
+        background: 'rgba(15,23,41,0.85)', 
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
+        borderBottom: '1px solid rgba(255,255,255,0.08)'
+      }}
+    >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center h-16 lg:h-20">
           {/* Logo + Trust Line — pulled further left */}

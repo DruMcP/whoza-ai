@@ -70,20 +70,31 @@ export function CookieBanner() {
     setStoredConsent({ essential: true, analytics: true, functional: true })
     setAnalytics(true)
     setFunctional(true)
-    setVisible(false)
+    // Add .dismissed class for prompt compatibility
+    const banner = document.querySelector('.cookie-banner')
+    if (banner) banner.classList.add('dismissed')
+    setTimeout(() => setVisible(false), 300)
   }
 
   const acceptEssential = () => {
     setStoredConsent({ essential: true, analytics: false, functional: false })
     setAnalytics(false)
     setFunctional(false)
-    setVisible(false)
+    // Add .dismissed class for prompt compatibility
+    const banner = document.querySelector('.cookie-banner')
+    if (banner) banner.classList.add('dismissed')
+    setTimeout(() => setVisible(false), 300)
   }
 
   const saveCustom = () => {
     setStoredConsent({ essential: true, analytics, functional })
-    setVisible(false)
-    setShowModal(false)
+    // Add .dismissed class for prompt compatibility
+    const banner = document.querySelector('.cookie-banner')
+    if (banner) banner.classList.add('dismissed')
+    setTimeout(() => {
+      setVisible(false)
+      setShowModal(false)
+    }, 300)
   }
 
   if (!visible && !showModal) return null
@@ -92,7 +103,7 @@ export function CookieBanner() {
     <>
       {/* Banner */}
       {visible && (
-        <div className="fixed bottom-0 left-0 right-0 z-[100] bg-[var(--navy-900)] border-t border-white/10 shadow-2xl">
+        <div className="cookie-banner fixed bottom-0 left-0 right-0 z-[100] bg-[var(--navy-900)] border-t border-white/10 shadow-2xl">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div className="flex items-start gap-3 flex-1">
@@ -111,7 +122,7 @@ export function CookieBanner() {
                 </button>
                 <button
                   onClick={acceptEssential}
-                  className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white text-sm font-medium rounded-lg transition-colors min-h-[44px]"
+                  className="cookie-dismiss px-4 py-2 bg-white/10 hover:bg-white/20 text-white text-sm font-medium rounded-lg transition-colors min-h-[44px]"
                 >
                   Essential Only
                 </button>
