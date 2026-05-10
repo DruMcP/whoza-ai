@@ -149,7 +149,7 @@ export function HowItWorks() {
             href="#final-cta"
             className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-semibold px-8 py-4 rounded-lg transition-all hover:scale-105"
           >
-            Get Started
+            Get Katie answering my calls
             <ArrowRight className="ml-2 w-5 h-5" />
           </a>
         </motion.div>

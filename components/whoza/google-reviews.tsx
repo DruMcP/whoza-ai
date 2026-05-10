@@ -8,7 +8,6 @@ const reviews = [
   { name: "Ludmila Lamont", date: "", text: "I've tried different marketing tools before — they cost me over £350/month. Whoza.ai is by far the simplest and the cheapest. It's easy to use and I'm already seeing results. Highly recommend!", rating: 5 },
   { name: "Nicholas Wood", date: "", text: "Tried this company with anticipation but have to say was very impressed with the simplicity and how it helped me — sales followed pretty quickly which I was amazed at.", rating: 5 },
   { name: "Luke Winter", date: "", text: "The future is now. A powerful business tool well executed. This will yield both short and long term benefits.", rating: 5 },
-  { name: "Garth McPherson", date: "", text: "As the owner of a small business I think the concept of Whoza is brilliant and will help businesses of all sizes improve their visibility to acquire more valued customers in the age of AI.", rating: 5 },
   { name: "Sandy Fyfe", date: "", text: "I am reluctant to try new things but this was recommended to me and seemed worth trying. Really really impressed.", rating: 5 },
 ]
 
@@ -31,10 +30,7 @@ export function GoogleReviews() {
               <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
             </svg>
             <div className="text-left">
-              <div className="flex items-center gap-1">
-                <span className="text-lg font-bold text-[var(--navy-900)]">5.0 out of 5</span>
-              </div>
-              <p className="text-xs text-[var(--slate-500)]">Verified Google reviews · <a href="https://maps.app.goo.gl/dNHpTGPy1Kxeh7PV8" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--navy-900)]">View all on Google</a></p>
+              <p className="text-sm text-[var(--slate-500)]">Feedback from our UK pilot programme · <a href="https://maps.app.goo.gl/dNHpTGPy1Kxeh7PV8" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--navy-900)]">View on Google</a></p>
             </div>
           </div>
 

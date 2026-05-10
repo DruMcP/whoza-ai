@@ -11,7 +11,7 @@ const voiceAgents = [
     description: "Katie answers calls 24/7, qualifies real customer enquiries, and sends them to WhatsApp while you work. Friendly, professional and calm under pressure — she helps customers feel heard before the enquiry reaches you.",
     outcome: "Ready to accept, call back or decline.",
     audioSample: "Hi, you've reached Thompson Plumbing. My name is Katie. How can I help you today?",
-    image: "/images/katie.png",
+    image: "/assets/icons/katie-icon.png",
     color: "var(--katie-blue)",
     bgLight: "bg-[var(--katie-blue)]/10",
     borderColor: "border-[var(--katie-blue)]/30",
@@ -26,7 +26,7 @@ const voiceAgents = [
     description: "Mark answers calls 24/7, qualifies real customer enquiries, and sends them to WhatsApp while you work. Clear, efficient and professional — ideal if you prefer a direct male voice.",
     outcome: "Job type, urgency, location and customer details captured.",
     audioSample: "Hi, you've reached Wilson Electrics. This is Mark speaking. What can I do for you?",
-    image: "/images/mark.jpg",
+    image: "/assets/icons/mark-icon.png",
     color: "var(--mark-grey)",
     bgLight: "bg-[var(--mark-grey)]/10",
     borderColor: "border-[var(--mark-grey)]/30",
@@ -42,7 +42,7 @@ const voiceAgents = [
     outcome: "More reviews. More trust. More customers choosing you.",
     entitlement: "Included in Growth plan and above.",
     whatsappMessage: "Hi John, thanks for choosing Thompson Plumbing yesterday. If you were happy with the service, would you mind leaving us a quick review? It really helps. [Google review link]",
-    image: "/images/claire.jpg",
+    image: "/assets/icons/claire-icon.png",
     color: "var(--claire-amber)",
     bgLight: "bg-[var(--claire-amber)]/10",
     borderColor: "border-[var(--claire-amber)]/30",
@@ -58,7 +58,7 @@ const voiceAgents = [
     outcome: "Clear weekly actions to improve visibility and help AI search recommend your business.",
     entitlement: "Monthly competitor analysis on every plan. Weekly actions from Growth upwards.",
     insightCard: "Your nearest competitor has 41 reviews. You have 32.\n\nAction this week: request 5 more reviews from recent customers and reply to your last 3 Google reviews.",
-    image: "/images/rex.jpg",
+    image: "/assets/icons/rex-icon.png",
     color: "var(--rex-green)",
     bgLight: "bg-[var(--rex-green)]/10",
     borderColor: "border-[var(--rex-green)]/30",
@@ -112,10 +112,11 @@ export function MeetTheTeam() {
 
                 {/* Avatar */}
                 <div className="flex items-center gap-4 mb-6">
-                  <img 
-                    src={agent.image} 
+                  <img
+                    src={agent.image}
                     alt={agent.name}
-                    className="w-16 h-16 rounded-2xl object-cover"
+                    className="w-16 h-16 rounded-2xl object-contain flex-shrink-0 p-1.5"
+                    style={{ background: agent.color }}
                   />
                   <div>
                     <h3 className="text-2xl font-bold text-[var(--navy-900)]">{agent.name}</h3>
@@ -224,7 +225,7 @@ export function MeetTheTeam() {
             href="#final-cta"
             className="inline-flex items-center justify-center rounded-lg bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 text-white font-semibold px-8 h-11 text-base transition-colors"
           >
-            Get Whoza Answering Your Calls
+            Get Katie answering my calls
             <ArrowRight className="ml-2 w-5 h-5" />
           </a>
         </motion.div>

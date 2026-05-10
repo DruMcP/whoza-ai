@@ -1,7 +1,7 @@
 "use client"
 
 import { Header } from "@/components/whoza/header"
-import { Hero } from "@/components/whoza/hero"
+import { Hero, SocialProofBar, MissedCallCounter } from "@/components/whoza/hero"
 import { SocialProofBand, StatsBand } from "@/components/whoza/social-proof"
 import { VideoExplainer } from "@/components/whoza/video-explainer"
 import { HowWhozaWorks } from "@/components/whoza/how-whoza-works"
@@ -35,6 +35,8 @@ export default function Home() {
       <main id="main-content" role="main" className="pb-24 lg:pb-0">
         {/* HOOK - Financial urgency */}
         <Hero />
+        <MissedCallCounter />
+        <SocialProofBar />
         <SocialProofBand />
 
         {/* VIDEO EXPLAINER - See Whoza in action */}

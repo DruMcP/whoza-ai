@@ -32,21 +32,12 @@ export function LocaleProvider({ children, forcedCountry }: LocaleProviderProps)
       return
     }
 
-    // Check localStorage first
+    // Default to UK for all visitors. Only switch to US if user explicitly toggled.
     const stored = localStorage.getItem(STORAGE_KEY) as Country | null
     if (stored && (stored === "uk" || stored === "us")) {
       setCountryState(stored)
-      return
-    }
-
-    // Auto-detect from browser timezone/locale
-    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone
-    const locale = navigator.language
-
-    if (timezone.startsWith("America/") || locale.startsWith("en-US")) {
-      setCountryState("us")
-      localStorage.setItem(STORAGE_KEY, "us")
     } else {
+      // First-time visitor: always UK
       setCountryState("uk")
       localStorage.setItem(STORAGE_KEY, "uk")
     }

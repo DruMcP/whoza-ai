@@ -269,9 +269,9 @@ export function KatieAudioPlayer({ isOpen, onClose }: KatieAudioPlayerProps) {
                   }}
                 >
                   <img
-                    src="/images/katie-new.png"
+                    src="/assets/icons/katie-icon.png"
                     alt="Katie"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain p-1.5"
                     style={{ filter: isLoading ? "grayscale(100%)" : "none" }}
                   />
                 </div>

@@ -11,7 +11,7 @@ const footerLinks = {
     { label: "Testimonials", href: "#testimonials" },
   ],
   support: [
-    { label: "Help Centre", href: "https://wa.me/447831643012" },
+    { label: "Help Centre", href: "/support" },
     { label: "Contact Us", href: "https://wa.me/447831643012" },
     { label: "Email Support", href: "mailto:support@whoza.ai" },
     { label: "Support Centre", href: "/support" },

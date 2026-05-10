@@ -35,9 +35,9 @@ export function KatieAvatar({ className = "" }: KatieAvatarProps) {
         }}
       >
         <img
-          src="/images/katie.png"
+          src="/assets/icons/katie-icon.png"
           alt="Katie - AI call handler"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain p-2"
         />
 
         {/* Live indicator badge */}
