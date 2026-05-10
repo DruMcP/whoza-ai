@@ -20,7 +20,7 @@ export function VideoExplainer() {
   }
 
   return (
-    <section className="py-16 lg:py-20 bg-[var(--off-white)]">
+    <section id="video-explainer" className="py-16 lg:py-20 bg-[var(--off-white)]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -164,13 +164,13 @@ export function VideoExplainer() {
           className="mt-8 text-center"
         >
           <p className="text-sm text-[var(--slate-500)] mb-4">
-            Sign up now — live in less than 30 minutes.
+            See Katie capture a missed enquiry in under 60 seconds.
           </p>
           <a
             href="#final-cta"
             className="inline-flex items-center justify-center rounded-lg bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-6 text-lg gap-2 shadow-xl shadow-[var(--rex-green)]/30 transition-all hover:scale-105"
           >
-            Get Whoza
+            Get Katie answering my calls
             <ArrowRight className="w-5 h-5" />
           </a>
         </motion.div>

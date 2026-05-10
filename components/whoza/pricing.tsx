@@ -332,12 +332,12 @@ export function Pricing() {
                   <p className="text-sm text-[var(--slate-500)] mt-1">Extra call handling minutes at a discounted rate.</p>
                 </div>
                 <div className="text-right">
-                  <div className="text-2xl font-bold text-[var(--navy-900)] whitespace-nowrap">£20 + VAT</div>
+                  <div className="text-2xl font-bold text-[var(--navy-900)] whitespace-nowrap">{cs}20 + VAT</div>
                 </div>
               </div>
               <div className="flex items-center gap-2 text-sm text-[var(--rex-green)] font-medium bg-[var(--rex-green)]/10 rounded-lg px-3 py-2">
                 <CheckCircle2 className="w-4 h-4" />
-                Lower cost than standard overage rate (£0.26/min)
+                Lower cost than standard overage rate ({cs}0.26/min)
               </div>
             </motion.div>
 
@@ -354,7 +354,7 @@ export function Pricing() {
                   <p className="text-sm text-[var(--slate-500)] mt-1">Extra help setting up your AI assistant, call flows and business automations.</p>
                 </div>
                 <div className="text-right">
-                  <div className="text-lg font-bold text-[var(--navy-900)] whitespace-nowrap">£200 per hour + VAT</div>
+                  <div className="text-lg font-bold text-[var(--navy-900)] whitespace-nowrap">{cs}200 per hour + VAT</div>
                 </div>
               </div>
               <div className="flex items-center gap-2 text-sm text-[var(--katie-blue)] font-medium bg-[var(--katie-blue)]/10 rounded-lg px-3 py-2">
@@ -480,7 +480,7 @@ export function Pricing() {
           className="mt-8 text-center"
         >
           <p className="text-sm text-[var(--slate-400)]">
-            Additional call handling minutes are charged at £0.26 per minute across all plans. You can monitor and control usage at any time.
+            Additional call handling minutes are charged at {cs}0.26 per minute across all plans. You can monitor and control usage at any time.
           </p>
         </motion.div>
       </div>

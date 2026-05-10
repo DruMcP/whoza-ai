@@ -157,7 +157,7 @@ export function TrialExplanation() {
             href="#final-cta"
             className="inline-flex items-center justify-center rounded-lg bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-10 py-7 text-xl gap-3 shadow-2xl shadow-[var(--rex-green)]/40 transition-all hover:scale-105"
           >
-            Get Started
+            Get Katie answering my calls
             <ArrowRight className="w-6 h-6" />
           </a>
           <p className="mt-3 text-sm text-[var(--slate-500)]">

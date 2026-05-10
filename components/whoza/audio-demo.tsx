@@ -227,7 +227,7 @@ export function AudioDemo() {
             href="#final-cta"
             className="inline-flex items-center justify-center rounded-lg bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 text-white font-semibold px-8 h-12 text-base transition-colors"
           >
-            Get Whoza Answering Your Calls
+            Get Katie answering my calls
             <ArrowRight className="ml-2 w-5 h-5" />
           </a>
           <p className="mt-4 text-sm text-white/50">

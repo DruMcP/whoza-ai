@@ -45,7 +45,7 @@ export default function PricingPage() {
                 Simple Pricing
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Choose Your Plan
+                AI Call Answering Plans for UK Tradespeople
               </h1>
               <p className="text-white/60 max-w-2xl mx-auto text-lg mb-6">
                 Start capturing missed calls and booking more jobs today. All plans include a 7-day free trial.

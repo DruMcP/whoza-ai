@@ -1,18 +1,19 @@
 "use client"
 
 import { useState, useCallback } from "react"
-import { Play, X, ArrowRight, Loader2 } from "lucide-react"
+import { Play, ArrowRight, Loader2 } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
-import { KatieAvatar } from "./katie-avatar"
+import { HeroPhoneMockup } from "./hero-phone-mockup"
 import { SignupModal } from "./signup-modal"
 import { KatieAudioPlayer } from "./katie-audio-player"
-import { MissedCallSimulator } from "./missed-call-simulator"
+import { SocialProofBar } from "./social-proof-bar"
+import { MissedCallCounter } from "./missed-call-counter"
 
+// Reordered by psychological impact (highest conversion trigger first)
 const trustItems = [
-  "Built for UK trades",
-  "No new number needed",
-  "Live in around 30 minutes",
-  "WhatsApp, SMS or email alerts",
+  "7-day free trial — no card required",
+  "Live in 30 minutes",
+  "Works with your existing number",
   "Cancel anytime",
 ]
 
@@ -27,6 +28,13 @@ export function Hero() {
       setCtaLoading(false)
       setShowSignup(true)
     }, 800)
+  }, [])
+
+  const scrollToVideo = useCallback(() => {
+    const videoSection = document.getElementById("video-explainer")
+    if (videoSection) {
+      videoSection.scrollIntoView({ behavior: "smooth" })
+    }
   }, [])
 
   return (
@@ -83,32 +91,46 @@ export function Hero() {
               <span style={{ color: "#10B981" }}>Katie&apos;s got it.</span>
             </h1>
 
-            {/* Clarifier */}
+            {/* Secondary headline — bridges emotion to outcome */}
             <p
-              className="mt-6 max-w-[560px]"
+              className="mt-3 max-w-[560px]"
+              style={{
+                fontSize: 20,
+                fontWeight: 600,
+                lineHeight: 1.4,
+                color: "#10B981",
+                fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+              }}
+            >
+              While you work, we book.
+            </p>
+
+            {/* Subhead — 9.5 refinement */}
+            <p
+              className="mt-4 max-w-[560px]"
               style={{
                 fontSize: 18,
-                fontWeight: 500,
-                lineHeight: 1.5,
+                fontWeight: 400,
+                lineHeight: 1.6,
                 color: "#D1D5DB",
                 fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
               }}
             >
-              The AI call handler for UK trades — answers missed calls, filters time-wasters and sends real job enquiries straight to WhatsApp.
+              The AI call handler built for UK trades. Answers every missed call, qualifies real jobs, and sends them straight to your WhatsApp — so you accept, call back, or decline in two taps.
             </p>
 
-            {/* Sub-headline */}
+            {/* Outcome punchline */}
             <p
-              className="mt-4 max-w-[560px]"
+              className="mt-2 max-w-[560px]"
               style={{
                 fontSize: 15,
-                fontWeight: 400,
-                lineHeight: 1.6,
+                fontWeight: 500,
+                lineHeight: 1.5,
                 color: "#6B7280",
                 fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
               }}
             >
-              On a job, up a ladder or driving between sites? Katie answers professionally, asks the right questions and sends the customer details to WhatsApp — accept, call back or decline in two taps. Then Katie helps you get more from every job.
+              No apps. No dashboards. Just more work.
             </p>
 
             {/* CTA Buttons */}
@@ -127,7 +149,7 @@ export function Hero() {
                   fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
                   minHeight: 48,
                 }}
-                aria-label="Get Katie answering my calls"
+                aria-label="Try Katie Free — Start Catching Calls"
               >
                 {ctaLoading ? (
                   <>
@@ -136,7 +158,7 @@ export function Hero() {
                   </>
                 ) : (
                   <>
-                    Get Katie answering my calls
+                    Try Katie Free — Start Catching Calls
                     <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                   </>
                 )}
@@ -147,12 +169,12 @@ export function Hero() {
                 className="text-center sm:text-left"
                 style={{ fontSize: 13, color: "#6B7280", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif" }}
               >
-                Try Katie free for 7 days · No card required · Works with your existing number
+                7-day free trial · No card required · Works with your existing number
               </p>
 
-              {/* Secondary CTA */}
+              {/* Secondary CTA — links to video explainer */}
               <button
-                onClick={() => setShowAudio(true)}
+                onClick={scrollToVideo}
                 className="inline-flex items-center gap-2 transition-colors hover:underline text-left"
                 style={{
                   fontSize: 15,
@@ -161,25 +183,27 @@ export function Hero() {
                   fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
                   minHeight: 48,
                 }}
-                aria-label="Hear Katie handle a boiler enquiry"
+                aria-label="See how it works"
               >
                 <Play className="w-3.5 h-3.5 fill-current" />
-                Or hear Katie handle a boiler enquiry — 35 seconds
+                See how it works →
               </button>
             </div>
 
-            {/* Trust Row */}
-            <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-3">
+            {/* Trust Pills — reordered by psychological impact */}
+            <div className="mt-8 flex flex-wrap gap-2">
               {trustItems.map((item) => (
-                <div key={item} className="flex items-center gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-[var(--rex-green)]/10 flex items-center justify-center shrink-0">
-                    <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                      <path d="M2.5 7L5.5 10L11.5 4" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
+                <div
+                  key={item}
+                  className="inline-flex items-center gap-2 px-3 py-2 rounded-full"
+                  style={{ background: "#F1F5F9" }}
+                >
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                    <path d="M2.5 7L5.5 10L11.5 4" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
                   <span
-                    className="text-sm leading-tight"
-                    style={{ color: "#9CA3AF", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif" }}
+                    className="text-sm font-medium"
+                    style={{ color: "#475569", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif" }}
                   >
                     {item}
                   </span>
@@ -188,15 +212,14 @@ export function Hero() {
             </div>
           </motion.div>
 
-          {/* Right Side — Simulator + Avatar */}
+          {/* Right Side — Phone Mockup */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="relative flex flex-col items-center justify-center gap-6"
+            className="relative flex items-center justify-center"
           >
-            <KatieAvatar />
-            <MissedCallSimulator />
+            <HeroPhoneMockup />
           </motion.div>
         </div>
       </div>
@@ -212,3 +235,6 @@ export function Hero() {
     </section>
   )
 }
+
+// Export these for use in page.tsx
+export { SocialProofBar, MissedCallCounter }
