@@ -430,12 +430,18 @@
   contain-intrinsic-size: auto 400px;
 }
 
-/* ===== FAQ ACCORDION (shadcn/ui compatible) ===== */
+/* ===== FAQ ACCORDION (shadcn/ui + prompt compatible) ===== */
 .faq-item {
   @apply border border-[var(--border)] rounded-2xl bg-[var(--off-white)] overflow-hidden transition-all duration-300;
 }
 
+/* Radix Accordion state */
 .faq-item[data-state="open"] {
+  @apply border-[var(--katie-blue)]/30 bg-white;
+}
+
+/* Prompt .open class state */
+.faq-item.open {
   @apply border-[var(--katie-blue)]/30 bg-white;
 }
 
@@ -451,16 +457,49 @@
   @apply px-6 pb-5 text-[var(--slate-500)] leading-relaxed;
 }
 
+/* Prompt expects max-height animation */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height .4s cubic-bezier(.16, 1, .3, 1), opacity .3s ease, padding .3s ease;
+  padding: 0 24px;
+}
+
+.faq-item[data-state="open"] .faq-answer,
+.faq-item.open .faq-answer {
+  max-height: 500px;
+  opacity: 1;
+  padding: 0 24px 20px;
+}
+
 .faq-chevron {
   @apply w-5 h-5 text-[var(--slate-400)] transition-transform duration-300;
 }
 
-.faq-item[data-state="open"] .faq-chevron {
+.faq-item[data-state="open"] .faq-chevron,
+.faq-item.open .faq-chevron {
   @apply rotate-180 text-[var(--katie-blue)];
 }
 
 /* Section Divider */
 .section-divider {
   @apply h-px bg-gradient-to-r from-transparent via-[var(--border)] to-transparent my-0;
+}
+
+/* ===== COOKIE BANNER (prompt compatible) ===== */
+.cookie-banner {
+  @apply fixed bottom-0 left-0 right-0 z-[100] bg-[var(--navy-900)] border-t border-white/10 shadow-2xl;
+  transition: transform .3s ease, opacity .3s ease;
+}
+
+.cookie-banner.dismissed {
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cookie-dismiss {
+  @apply px-4 py-2 bg-white/10 hover:bg-white/20 text-white text-sm font-medium rounded-lg transition-colors min-h-[44px];
 }
 

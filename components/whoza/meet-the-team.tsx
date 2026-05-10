@@ -92,7 +92,7 @@ export function MeetTheTeam() {
         </motion.div>
 
         {/* Agent Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12 reveal-stagger">
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12 reveal-stagger">
           {voiceAgents.map((agent, index) => {
             const RoleIcon = agent.roleIcon
             return (
@@ -112,20 +112,20 @@ export function MeetTheTeam() {
                 </div>
 
                 {/* Avatar */}
-                <div className="flex items-center gap-3 mb-6">
+                <div className="flex items-center gap-3 mb-4">
                   <img
                     src={agent.image}
                     alt={agent.name}
                     className="w-14 h-14 rounded-full object-contain flex-shrink-0 p-1.5"
                     style={{ background: agent.color }}
                   />
-                  <div>
+                  <div className="min-w-0">
                     <h3 className="text-2xl font-bold text-[var(--navy-900)]">{agent.name}</h3>
                     {agent.isVoiceAgent && (
-                      <div className="flex items-center gap-2 mt-1 flex-wrap">
+                      <div className="flex flex-col gap-1 mt-1">
                         <span className={`text-sm font-medium ${agent.textColor}`}>{agent.voice}</span>
-                        <span className="px-2 py-0.5 rounded-full bg-[var(--rex-green)]/10 text-[var(--rex-green)] text-[10px] font-bold uppercase border border-[var(--rex-green)]/20 whitespace-nowrap">
-                          Name & Voice: Your Choice
+                        <span className="self-start px-2 py-0.5 rounded-full bg-[var(--rex-green)]/10 text-[var(--rex-green)] text-[10px] font-bold uppercase border border-[var(--rex-green)]/20 leading-tight max-w-full break-words">
+                          Customisable
                         </span>
                       </div>
                     )}

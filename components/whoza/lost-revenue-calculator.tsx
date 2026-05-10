@@ -1,7 +1,7 @@
 "use client"
 
 // v2.1 - Updated priming stats + UK defaults
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import { Calculator, Phone, PoundSterling, DollarSign, TrendingUp, ArrowRight, AlertTriangle } from "lucide-react"
 import { Slider } from "@/components/ui/slider"
@@ -34,6 +34,41 @@ export function LostRevenueCalculator() {
   const weeklyLoss = missedCalls[0] * (avgJobValue[0] * (conversionRate[0] / 100))
   const monthlyLoss = weeklyLoss * 4
   const yearlyLoss = monthlyLoss * 12
+
+  // Animated number states
+  const [animatedWeekly, setAnimatedWeekly] = useState(0)
+  const [animatedMonthly, setAnimatedMonthly] = useState(0)
+  const [animatedYearly, setAnimatedYearly] = useState(0)
+  const [hasAnimated, setHasAnimated] = useState(false)
+  const resultsRef = useRef<HTMLDivElement>(null)
+
+  // Number animation when results come into view
+  useEffect(() => {
+    const el = resultsRef.current
+    if (!el) return
+    const obs = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !hasAnimated) {
+          setHasAnimated(true)
+          animateNumber(setAnimatedWeekly, 0, weeklyLoss, 800)
+          animateNumber(setAnimatedMonthly, 0, monthlyLoss, 1000)
+          animateNumber(setAnimatedYearly, 0, yearlyLoss, 1200)
+        }
+      },
+      { threshold: 0.3 }
+    )
+    obs.observe(el)
+    return () => obs.disconnect()
+  }, [weeklyLoss, monthlyLoss, yearlyLoss, hasAnimated])
+
+  // Update animated values when slider changes (after initial animation)
+  useEffect(() => {
+    if (hasAnimated) {
+      setAnimatedWeekly(weeklyLoss)
+      setAnimatedMonthly(monthlyLoss)
+      setAnimatedYearly(yearlyLoss)
+    }
+  }, [missedCalls, avgJobValue, conversionRate, hasAnimated, weeklyLoss, monthlyLoss, yearlyLoss])
 
   return (
     <section id="calculator" className="py-28 lg:py-44 bg-gradient-to-b from-red-50 via-red-50/50 to-[var(--off-white)] relative">
@@ -187,26 +222,26 @@ export function LostRevenueCalculator() {
               </div>
 
               {/* Results */}
-              <div className="bg-[var(--navy-900)] p-6 sm:p-8 lg:p-10 flex flex-col">
+              <div ref={resultsRef} className="bg-[var(--navy-900)] p-6 sm:p-8 lg:p-10 flex flex-col">
                 <h3 className="text-lg font-semibold text-white mb-8">Your Lost Revenue</h3>
                 
                 <div className="flex-1 space-y-6">
                   <ResultCard 
                     label="Weekly Loss"
-                    value={weeklyLoss}
+                    value={animatedWeekly}
                     color="white/60"
                     country={country}
                   />
                   <ResultCard 
                     label="Monthly Loss"
-                    value={monthlyLoss}
+                    value={animatedMonthly}
                     color="white/80"
                     highlight
                     country={country}
                   />
                   <ResultCard 
                     label="Yearly Loss"
-                    value={yearlyLoss}
+                    value={animatedYearly}
                     color="red-400"
                     isYearly
                     country={country}
@@ -281,4 +316,22 @@ function ResultCard({
       )}
     </div>
   )
+}
+
+// Animate number counting up
+function animateNumber(
+  setter: (val: number) => void,
+  start: number,
+  target: number,
+  duration: number
+) {
+  const startTime = performance.now()
+  function step(timestamp: number) {
+    const elapsed = timestamp - startTime
+    const progress = Math.min(elapsed / duration, 1)
+    const eased = 1 - Math.pow(1 - progress, 3)
+    setter(Math.floor(start + (target - start) * eased))
+    if (progress < 1) requestAnimationFrame(step)
+  }
+  requestAnimationFrame(step)
 }
