@@ -31,7 +31,7 @@ export function HowWhozaWorks() {
           <span className="inline-block px-4 py-2 rounded-full bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] text-sm font-bold mb-4">
             The Complete Revenue System
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance reveal">
             From Missed Call to{" "}
             <span className="text-[var(--rex-green)]">5-Star Review</span>
           </h2>
@@ -102,7 +102,7 @@ export function HowWhozaWorks() {
         </div>
 
         {/* Summary Cards */}
-        <div className="mt-16 grid md:grid-cols-3 gap-6">
+        <div className="mt-16 grid md:grid-cols-3 gap-6 reveal-stagger">
           {[
             { phase: "CAPTURE", items: ["AI answers instantly", "Qualifies the job", "Enquiry captured"], color: "var(--katie-blue)" },
             { phase: "DELIVER", items: ["Job sent via WhatsApp", "You accept or decline", "Customer follow-up sent"], color: "var(--claire-amber)" },

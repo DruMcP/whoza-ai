@@ -57,7 +57,7 @@ export function TrialExplanation() {
             <Shield className="w-4 h-4" />
             Zero Risk
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance reveal">
             How Whoza Works
           </h2>
           <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
@@ -66,7 +66,7 @@ export function TrialExplanation() {
         </motion.div>
 
         {/* Steps */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 reveal-stagger">
           {steps.map((step, index) => (
             <motion.div
               key={step.number}

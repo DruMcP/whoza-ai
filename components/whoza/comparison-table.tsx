@@ -71,7 +71,7 @@ export function ComparisonTable() {
             <MessageCircle className="w-4 h-4" />
             Why Whoza Wins
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance reveal">
             From Call to More Work — Every Week
           </h2>
         </motion.div>

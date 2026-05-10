@@ -30,7 +30,7 @@ export function VideoExplainer() {
           transition={{ duration: 0.6 }}
           className="text-center mb-10"
         >
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[var(--navy-900)] mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[var(--navy-900)] mb-4 reveal">
             Watch Whoza capture a missed enquiry in 60 seconds
           </h2>
           <p className="text-base sm:text-lg text-[var(--slate-500)] max-w-2xl mx-auto">

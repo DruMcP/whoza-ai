@@ -17,7 +17,7 @@ export function Testimonials() {
               <Sparkles className="w-4 h-4 text-[var(--rex-green)]" />
               <span className="text-sm font-semibold text-[var(--rex-green)]">Feedback from our UK pilot programme</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance reveal">
               What Early Users Are Saying
             </h2>
             <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
@@ -28,7 +28,7 @@ export function Testimonials() {
         </div>
 
         {/* What to Expect */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto reveal-stagger">
           {[
             {
               title: "More Enquiries",

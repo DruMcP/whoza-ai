@@ -97,7 +97,7 @@ export function WhatsAppDelivery() {
   }
 
   return (
-    <section className="py-28 lg:py-44 bg-[var(--navy-900)] relative overflow-hidden">
+    <section className="py-28 lg:py-44 bg-[var(--navy-900)] relative overflow-hidden dark-section">
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-[var(--rex-green)]/10 rounded-full blur-[120px]" />
@@ -115,7 +115,7 @@ export function WhatsAppDelivery() {
             <MessageCircle className="w-5 h-5" />
             THE CORE EXPERIENCE
           </span>
-          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white tracking-tight text-balance">
+          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white tracking-tight text-balance reveal">
             Jobs Land On{" "}
             <span className="text-[var(--rex-green)]">Your Phone</span>
           </h2>
@@ -126,7 +126,7 @@ export function WhatsAppDelivery() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center reveal-stagger">
           {/* WhatsApp Mockup */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -348,7 +348,7 @@ export function WhatsAppDelivery() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <div className="space-y-6">
+            <div className="space-y-6 reveal-stagger">
               {[
                 { title: "Customer name & details", desc: "Know who's calling before you decide" },
                 { title: "Job type & requirements", desc: "Full job description from the call" },
@@ -378,7 +378,7 @@ export function WhatsAppDelivery() {
             {/* Actions Available */}
             <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
               <div className="text-white font-semibold mb-4">Your options:</div>
-              <div className="grid grid-cols-3 gap-4 text-center">
+              <div className="grid grid-cols-3 gap-4 text-center reveal-stagger">
                 <div>
                   <div className="w-12 h-12 rounded-full bg-[var(--rex-green)]/20 flex items-center justify-center mx-auto mb-2">
                     <CheckCircle2 className="w-6 h-6 text-[var(--rex-green)]" />

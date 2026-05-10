@@ -15,7 +15,7 @@ export function FinalCTA() {
   const { country, config } = useLocale()
   
   return (
-    <section id="final-cta" className="section-padding-xl bg-[var(--navy-900)] relative overflow-hidden">
+    <section id="final-cta" className="section-padding-xl bg-[var(--navy-900)] relative overflow-hidden dark-section">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[var(--katie-blue)]/10 rounded-full blur-[120px]" />
@@ -50,7 +50,7 @@ export function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white tracking-tight text-balance">
+          <h2 className="heading-gradient text-4xl sm:text-5xl lg:text-7xl font-bold text-white tracking-tight text-balance reveal">
             Don't Miss Another Job
           </h2>
           <p className="mt-8 text-xl lg:text-2xl text-white/70 max-w-2xl mx-auto text-pretty">

@@ -10,7 +10,7 @@
   --rex-green: #047857;
   --rex-green-hover: #065F46;
   --claire-amber: oklch(0.65 0.18 65);
-  
+
   /* New Hero Design System Tokens */
   --charcoal: #1A1D23;
   --green-primary: #10B981;
@@ -22,7 +22,7 @@
   --announcement-bg: #111418;
   --announcement-text: #D1D5DB;
   --modal-bg: #1E2229;
-  
+
   /* Core Palette */
   --navy-900: oklch(0.18 0.03 260);
   --navy-800: oklch(0.22 0.03 260);
@@ -31,7 +31,7 @@
   --slate-400: oklch(0.65 0.02 250);
   --slate-300: oklch(0.75 0.01 250);
   --off-white: oklch(0.98 0.005 260);
-  
+
   /* Design System */
   --background: var(--off-white);
   --foreground: var(--navy-900);
@@ -66,6 +66,34 @@
   --sidebar-accent-foreground: var(--navy-900);
   --sidebar-border: var(--border);
   --sidebar-ring: var(--katie-blue);
+
+  /* ===== V9 DESIGN SYSTEM (WCAG 2.2 AA) ===== */
+  --color-navy: #1A1A2E;
+  --color-navy-dark: #0F1729;
+  --color-coral: #D63031;
+  --color-coral-hover: #B82020;
+  --color-teal: #10B981;
+  --color-teal-dark: #059669;
+  --color-emerald: #008B6B;
+  --color-gold: #B07D12;
+  --color-teal-secondary: #0F4C75;
+  --bg-white-v9: #FFFFFF;
+  --bg-subtle-v9: #F8FAFC;
+  --focus-ring-v9: 0 0 0 2px #1A1A2E, 0 0 0 5px #0F4C75;
+  --font-primary-v9: 'Inter', system-ui, -apple-system, sans-serif;
+  --section-py-xl: 120px;
+  --section-py-lg: 96px;
+  --section-py-md: 64px;
+  --section-px: 24px;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --section-py-xl: 80px;
+    --section-py-lg: 64px;
+    --section-py-md: 48px;
+    --section-px: 16px;
+  }
 }
 
 .dark {
@@ -151,10 +179,22 @@
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
     overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    font-size: 100%;
   }
 }
 
-/* whoza.ai Design System — Section Spacing */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring-v9);
+  border-radius: 2px;
+}
+
+/* whoza.ai Design System - Section Spacing */
 @layer utilities {
   .section-padding {
     @apply py-12 md:py-16 lg:py-24;
@@ -186,11 +226,241 @@
   }
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+/* ===== PROMPT KEYFRAMES ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.animate-float {
-  animation: float 6s ease-in-out infinite;
+@keyframes livePulse {
+  0%, 100% { opacity: 0; transform: scale(1); }
+  50%      { opacity: 0.3; transform: scale(1.2); }
 }
+
+/* Float keyframe already defined in hero-phone.module.css */
+
+.animate-float {
+  animation: phoneFloat 6s ease-in-out infinite;
+}
+
+/* ===== SCROLL ENTRANCE SYSTEM (Every section) ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .7s cubic-bezier(.16, 1, .3, 1),
+    transform .7s cubic-bezier(.16, 1, .3, 1);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .6s cubic-bezier(.16, 1, .3, 1),
+    transform .6s cubic-bezier(.16, 1, .3, 1);
+}
+
+.reveal-stagger.revealed > *:nth-child(1) {
+  transition-delay: 0s;
+}
+
+.reveal-stagger.revealed > *:nth-child(2) {
+  transition-delay: .08s;
+}
+
+.reveal-stagger.revealed > *:nth-child(3) {
+  transition-delay: .16s;
+}
+
+.reveal-stagger.revealed > *:nth-child(4) {
+  transition-delay: .24s;
+}
+
+.reveal-stagger.revealed > *:nth-child(5) {
+  transition-delay: .32s;
+}
+
+.reveal-stagger.revealed > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .reveal,
+  .reveal-stagger > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ===== HOVER STATE SYSTEM ===== */
+.card-interactive {
+  transition: transform .3s cubic-bezier(.34, 1.56, .64, 1),
+    box-shadow .3s ease, border-color .2s ease;
+}
+
+.card-interactive:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, .12);
+  border-color: rgba(16, 185, 129, .3);
+}
+
+.link-animated {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-animated::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-teal);
+  transition: width .3s ease;
+}
+
+.link-animated:hover::after {
+  width: 100%;
+}
+
+.btn-primary {
+  transition: transform .2s cubic-bezier(.34, 1.56, .64, 1),
+    box-shadow .2s ease, background .2s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, .25);
+}
+
+.btn-primary:active {
+  transform: scale(.97);
+}
+
+.pricing-card {
+  transition: transform .3s ease, box-shadow .3s ease, border-color .2s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .15);
+  border-color: var(--color-teal);
+}
+
+.faq-item {
+  transition: background .2s ease, border-color .2s ease;
+}
+
+.faq-item:hover {
+  background: rgba(16, 185, 129, .04);
+  border-color: rgba(16, 185, 129, .2);
+}
+
+.trade-pill {
+  transition: transform .2s ease, background .2s ease,
+    color .2s ease, box-shadow .2s ease;
+}
+
+.trade-pill:hover {
+  transform: translateY(-2px);
+  background: rgba(16, 185, 129, .1);
+  color: var(--color-teal);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, .1);
+}
+
+/* Gradient text on dark sections */
+.dark-section h2 {
+  background: linear-gradient(180deg, #fff 0%, #e2e8f0 60%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Noise texture for dark sections */
+.dark-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.dark-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  background-size: 128px 128px;
+  pointer-events: none;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.dark-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-teal), var(--color-teal-dark));
+  z-index: 9999;
+  transform-origin: left;
+  transform: scaleX(var(--progress, 0));
+  transition: transform .1s linear;
+}
+
+/* Content-visibility for below-fold */
+.counter-section,
+.trade-categories,
+.demo-section,
+.testimonials-section,
+.pricing-section,
+.faq-section,
+.footer-cta-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 400px;
+}
+
+/* ===== FAQ ACCORDION (shadcn/ui compatible) ===== */
+.faq-item {
+  @apply border border-[var(--border)] rounded-2xl bg-[var(--off-white)] overflow-hidden transition-all duration-300;
+}
+
+.faq-item[data-state="open"] {
+  @apply border-[var(--katie-blue)]/30 bg-white;
+}
+
+.faq-toggle {
+  @apply flex items-center justify-between w-full px-6 py-5 text-left font-semibold text-[var(--navy-900)] hover:no-underline transition-colors;
+}
+
+.faq-toggle:hover {
+  @apply text-[var(--katie-blue)];
+}
+
+.faq-answer {
+  @apply px-6 pb-5 text-[var(--slate-500)] leading-relaxed;
+}
+
+.faq-chevron {
+  @apply w-5 h-5 text-[var(--slate-400)] transition-transform duration-300;
+}
+
+.faq-item[data-state="open"] .faq-chevron {
+  @apply rotate-180 text-[var(--katie-blue)];
+}
+
+/* Section Divider */
+.section-divider {
+  @apply h-px bg-gradient-to-r from-transparent via-[var(--border)] to-transparent my-0;
+}
+

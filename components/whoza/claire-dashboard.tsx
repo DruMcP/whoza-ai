@@ -65,14 +65,14 @@ export function ClaireDashboard({ clientId = "demo" }: ClaireDashboardProps) {
   if (!metrics) return null
 
   return (
-    <section className="py-16 bg-[var(--navy-900)]">
+    <section className="py-16 bg-[var(--navy-900)] dark-section">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
           <p className="text-[var(--rex-green)] font-semibold text-sm uppercase tracking-wider mb-2">
             Win More Jobs with Reviews
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 reveal">
             Your Review Engine
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto">
@@ -99,7 +99,7 @@ export function ClaireDashboard({ clientId = "demo" }: ClaireDashboardProps) {
         </div>
 
         {/* Metrics Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 reveal-stagger">
           <MetricCard
             icon={<MessageSquare className="w-5 h-5" />}
             label="Reviews Requested"

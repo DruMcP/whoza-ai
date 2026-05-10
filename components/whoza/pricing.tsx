@@ -152,7 +152,7 @@ export function Pricing() {
           <span className="inline-block px-4 py-2 rounded-full bg-[var(--rex-green)] text-white text-sm font-bold mb-4">
             Zero Risk
           </span>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--navy-900)] tracking-tight text-balance reveal">
             Simple Pricing That{" "}
             <span className="text-[var(--rex-green)]">Scales With You</span>
           </h2>
@@ -199,7 +199,7 @@ export function Pricing() {
         </motion.div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto reveal-stagger">
           {plans.map((plan, index) => {
             const colors = colorStyles[plan.color]
             return (
@@ -211,8 +211,8 @@ export function Pricing() {
                 viewport={{ once: true }}
                 className={`relative bg-white rounded-3xl border ${
                   plan.popular 
-                    ? `${colors.border} border-2 shadow-2xl md:scale-105 z-10` 
-                    : "border-[var(--border)]"
+                    ? `pricing-card popular ${colors.border} border-2 shadow-2xl md:scale-105 z-10` 
+                    : "pricing-card border-[var(--border)]"
                 } overflow-hidden`}
               >
                 {/* Popular Badge */}

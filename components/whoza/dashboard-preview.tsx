@@ -24,7 +24,7 @@ export function DashboardPreview() {
   const stats = statsConfig[country]
 
   return (
-    <section className="py-20 lg:py-32 bg-[var(--navy-900)] relative overflow-hidden">
+    <section className="py-20 lg:py-32 bg-[var(--navy-900)] relative overflow-hidden dark-section">
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[var(--katie-blue)]/10 rounded-full blur-[120px]" />
@@ -43,7 +43,7 @@ export function DashboardPreview() {
             <Eye className="w-4 h-4" />
             Real-Time Dashboard
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight text-balance">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight text-balance reveal">
             See What Whoza Captures for You
           </h2>
           <p className="mt-6 text-lg text-white/60 text-pretty">
@@ -78,7 +78,7 @@ export function DashboardPreview() {
             {/* Dashboard Content */}
             <div className="p-6 lg:p-8">
               {/* Stats Grid */}
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8 reveal-stagger">
                 {stats.map((stat, index) => (
                   <motion.div
                     key={stat.label}
@@ -140,7 +140,7 @@ export function DashboardPreview() {
                     { action: "Review received", detail: "5 stars from David T.", time: "12 min ago", color: "var(--claire-amber)" },
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3 text-sm">
-                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: item.color }} />
+                      <div className="w-2 h-2 rounded-full live-dot" style={{ backgroundColor: item.color }} />
                       <span className="text-white">{item.action}</span>
                       <span className="text-white/50">{item.detail}</span>
                       <span className="ml-auto text-white/30">{item.time}</span>
