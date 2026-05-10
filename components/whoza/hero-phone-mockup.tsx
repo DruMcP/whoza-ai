@@ -1,199 +1,393 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { useEffect, useRef } from "react"
 import Image from "next/image"
+import styles from "./styles/hero-phone.module.css"
 
 export function HeroPhoneMockup() {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-      className="relative mx-auto"
-      style={{ width: 320 }}
-      role="img"
-      aria-label="Demo showing how a qualified job enquiry appears in WhatsApp after Katie answers a missed call"
-    >
-      {/* Pilot corner badge */}
-      <div
-        className="absolute -top-2 -right-2 z-30 px-3 py-1.5 rounded-full text-xs font-bold"
-        style={{
-          background: "#10B981",
-          color: "#FFFFFF",
-          boxShadow: "0 2px 8px rgba(16,185,129,0.4)",
-        }}
-      >
-        PILOT
-      </div>
+  const visualRef = useRef<HTMLDivElement>(null)
+  const phoneRef = useRef<HTMLDivElement>(null)
 
-      {/* Phone Frame */}
-      <div
-        className="relative"
-        style={{
-          background: "#FFFFFF",
-          borderRadius: 40,
-          padding: 12,
-          boxShadow: "0 25px 50px -12px rgba(0,0,0,0.25), 0 0 0 1px rgba(0,0,0,0.05), inset 0 0 0 8px #1A1A2E",
-          overflow: "hidden",
-        }}
-      >
-        {/* DEMO label */}
-        <div
-          className="absolute top-14 left-1/2 -translate-x-1/2 z-20 px-3 py-1 rounded-md text-xs font-bold tracking-wider"
-          style={{
-            background: "rgba(0,0,0,0.6)",
-            color: "#FFFFFF",
-            backdropFilter: "blur(4px)",
-          }}
-        >
-          DEMO
+  /* Mouse tilt interaction — glass reflection only, no phone transform */
+  useEffect(() => {
+    const visual = visualRef.current
+    const phone = phoneRef.current
+    if (!visual || !phone) return
+    if ("ontouchstart" in window) return
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return
+
+    const handleMouseMove = (e: MouseEvent) => {
+      const rect = visual.getBoundingClientRect()
+      const x = (e.clientX - rect.left) / rect.width - 0.5
+      const y = (e.clientY - rect.top) / rect.height - 0.5
+
+      phone.classList.add(styles.tiltActive)
+
+      const glass = phone.querySelector(`.${styles.phoneGlass}`) as HTMLElement | null
+      if (glass) {
+        glass.style.backgroundPosition = `${50 + x * 25}% ${50 + y * 25}%`
+      }
+    }
+
+    const handleMouseLeave = () => {
+      phone.classList.remove(styles.tiltActive)
+      const glass = phone.querySelector(`.${styles.phoneGlass}`) as HTMLElement | null
+      if (glass) {
+        glass.style.backgroundPosition = ""
+      }
+    }
+
+    visual.addEventListener("mousemove", handleMouseMove)
+    visual.addEventListener("mouseleave", handleMouseLeave)
+
+    return () => {
+      visual.removeEventListener("mousemove", handleMouseMove)
+      visual.removeEventListener("mouseleave", handleMouseLeave)
+    }
+  }, [])
+
+  return (
+    <div
+      ref={visualRef}
+      className={styles.heroVisual}
+      role="img"
+      aria-label="Demo: WhatsApp preview showing how a qualified plumbing lead from Sarah Williams in Bristol BS16 appears in your WhatsApp, with options to Accept, Call Back, or Decline"
+    >
+      {/* Phone mockup */}
+      <div ref={phoneRef} id="phone-mockup" className={styles.phoneMockup}>
+
+        {/* Dynamic Island */}
+        <div className={styles.dynamicIsland}>
+          <div className={styles.dynamicIslandEdge} />
         </div>
 
-        {/* Notch */}
-        <div
-          className="absolute top-0 left-1/2 -translate-x-1/2 z-10"
-          style={{
-            width: 120,
-            height: 28,
-            background: "#1A1A2E",
-            borderBottomLeftRadius: 16,
-            borderBottomRightRadius: 16,
-          }}
-        />
+        {/* Side buttons */}
+        <div className={`${styles.phoneBtn} ${styles.phoneBtnVolumeUp}`} />
+        <div className={`${styles.phoneBtn} ${styles.phoneBtnVolumeDown}`} />
+        <div className={`${styles.phoneBtn} ${styles.phoneBtnPower}`} />
 
-        {/* Screen Content */}
-        <div className="rounded-[28px] overflow-hidden" style={{ background: "#FFFFFF" }}>
-          {/* WhatsApp Header */}
+        {/* Glass reflection layer */}
+        <div className={styles.phoneGlass} />
+
+        {/* Screen gloss */}
+        <div className={styles.screenGloss} />
+
+        {/* ── Screen content — updated per prompt v6 ── */}
+        <div className={styles.phoneScreen}>
+          {/* WhatsApp Header with gradient */}
           <div
-            className="flex items-center gap-3 px-4 pt-10 pb-3"
-            style={{ background: "#075E54" }}
+            style={{
+              background: "linear-gradient(180deg, #075E54, #054A42)",
+              padding: "8px 10px",
+              display: "flex",
+              alignItems: "center",
+              gap: 8,
+              flexShrink: 0,
+              minHeight: 44,
+              position: "relative",
+            }}
           >
             <div
-              className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden"
-              style={{ background: "#128C7E" }}
+              style={{
+                width: 32,
+                height: 32,
+                background: "#128C7E",
+                borderRadius: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                overflow: "hidden",
+                flexShrink: 0,
+              }}
             >
-              <Image 
-                src="/assets/icons/katie-icon.png" 
-                alt="" 
-                width={32} 
-                height={32} 
+              <Image
+                src="/assets/icons/katie-icon.png"
+                alt=""
+                width={20}
+                height={20}
                 className="object-contain"
+                style={{ filter: "brightness(0) invert(1)" }}
                 aria-hidden="true"
               />
             </div>
-            <div>
-              <div className="text-white font-semibold text-sm">Whoza AI</div>
-              <div className="text-emerald-200 text-xs">Business Account</div>
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div
+                style={{
+                  color: "#fff",
+                  fontSize: 13,
+                  fontWeight: 600,
+                  lineHeight: 1.2,
+                }}
+              >
+                Whoza AI
+              </div>
+              <div
+                style={{
+                  color: "rgba(255,255,255,0.6)",
+                  fontSize: 10,
+                  lineHeight: 1.2,
+                }}
+              >
+                online
+              </div>
+            </div>
+            {/* PILOT badge inside header */}
+            <div
+              style={{
+                background: "linear-gradient(135deg, #10B981, #059669)",
+                color: "#fff",
+                fontSize: 10,
+                fontWeight: 700,
+                padding: "4px 10px",
+                borderRadius: 8,
+                pointerEvents: "none",
+                letterSpacing: "0.02em",
+              }}
+            >
+              <span aria-hidden="true">🌱</span> PILOT
             </div>
           </div>
 
           {/* Date */}
-          <div className="text-center py-2 text-xs" style={{ color: "#6B7280" }}>
+          <div
+            style={{
+              textAlign: "center",
+              fontSize: 10,
+              color: "#8696A0",
+              padding: "6px 0",
+              textTransform: "uppercase",
+              letterSpacing: "0.04em",
+              flexShrink: 0,
+              background: "#F0F2F5",
+            }}
+          >
             Today
           </div>
 
-          {/* Notification Banner */}
+          {/* Notification */}
           <div
-            className="mx-4 mb-2 px-3 py-2 rounded-lg text-sm font-medium flex items-center gap-2"
-            style={{ background: "#FEF3C7", color: "#92400E" }}
-          >
-            <span aria-hidden="true">🔔</span>
-            Whoza AI captured a new lead
-          </div>
-
-          {/* Chat Bubble */}
-          <div
-            className="mx-4 mb-2 p-3 rounded-lg"
             style={{
-              background: "#FFFFFF",
-              boxShadow: "0 1px 2px rgba(0,0,0,0.08)",
-              borderLeft: "4px solid #D63031",
+              background: "#FFF9C4",
+              margin: "0 10px 6px",
+              padding: "6px 10px",
+              borderRadius: 7,
+              fontSize: 11,
+              color: "#1A1A2E",
+              textAlign: "center",
+              fontWeight: 500,
+              lineHeight: 1.3,
+              flexShrink: 0,
             }}
           >
-            <div className="text-sm font-semibold mb-1" style={{ color: "#1A1A2E" }}>
+            <span>🔔</span> Whoza AI captured a new lead
+          </div>
+
+          {/* Chat bubble */}
+          <div
+            style={{
+              background: "#fff",
+              margin: "0 10px 6px",
+              padding: "8px 10px",
+              borderRadius: 8,
+              boxShadow: "0 1px 2px rgba(0,0,0,0.06)",
+              borderLeft: "3px solid #D63031",
+              flexShrink: 0,
+            }}
+          >
+            <div
+              style={{
+                fontSize: 12,
+                fontWeight: 600,
+                color: "#1A1A2E",
+                marginBottom: 2,
+                lineHeight: 1.2,
+              }}
+            >
               New enquiry from Sarah Williams
             </div>
-            <div className="text-xs mb-2" style={{ color: "#6B7280" }}>🔧 Plumbing</div>
-            <div className="text-sm leading-relaxed" style={{ color: "#374151" }}>
-              "Hi, I have a leaking boiler in my kitchen and no hot water. Can someone come out today please?"
+            <div
+              style={{
+                fontSize: 10,
+                color: "#475569",
+                marginBottom: 4,
+                lineHeight: 1.2,
+              }}
+            >
+              <span>🔧</span> Plumbing — Leaking Boiler
             </div>
-            <div className="text-right text-xs mt-1" style={{ color: "#9CA3AF" }}>09:41</div>
+            <div
+              style={{
+                fontSize: 12,
+                color: "#1A1A2E",
+                lineHeight: 1.35,
+                marginBottom: 4,
+              }}
+            >
+              "Leaking boiler, no hot water. Can you come today?"
+            </div>
+            <div
+              style={{
+                fontSize: 9,
+                color: "#8696A0",
+                textAlign: "right",
+              }}
+            >
+              09:41
+            </div>
           </div>
 
-          {/* Lead Summary Card */}
+          {/* Lead Card */}
           <div
-            className="mx-4 mb-2 p-4 rounded-xl"
             style={{
-              background: "#F8FAFC",
-              border: "1px solid #E2E8F0",
+              background: "#fff",
+              margin: "0 10px 6px",
+              padding: "8px 10px",
+              borderRadius: 8,
+              boxShadow: "0 1px 2px rgba(0,0,0,0.06)",
+              flexShrink: 0,
             }}
           >
-            <div className="flex items-center gap-2 mb-3 text-sm font-semibold" style={{ color: "#1A1A2E" }}>
-              <span aria-hidden="true">📋</span> Lead Summary
+            <div
+              style={{
+                fontSize: 11,
+                fontWeight: 700,
+                color: "#1A1A2E",
+                marginBottom: 6,
+                display: "flex",
+                alignItems: "center",
+                gap: 5,
+              }}
+            >
+              <span>📋</span> Lead Summary
             </div>
-            <div className="grid grid-cols-2 gap-2">
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                gap: 4,
+              }}
+            >
               <LeadItem label="Name" value="Sarah Williams" />
               <LeadItem label="Job Type" value="Boiler Repair" />
               <LeadItem label="Location" value="Bristol, BS16" />
-              <LeadItem label="Priority" value="High" valueColor="#D63031" />
+              <LeadItem label="Priority" value="🔴 High" valueColor="#D63031" srOnly="(Urgent)" />
               <LeadItem label="Job Value" value="£250 – £450" />
-              <LeadItem label="AI Verified" value="Verified" valueColor="#008B6B" />
+              <LeadItem label="AI Verified" value="✓ Verified" valueColor="#008B6B" />
             </div>
           </div>
 
           {/* Action Buttons */}
-          <div className="grid grid-cols-2 gap-2 mx-4 mb-2">
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gridTemplateAreas: "'accept callback' 'decline decline'",
+              gap: 5,
+              padding: "0 10px 6px",
+              flexShrink: 0,
+            }}
+          >
             <button
-              className="px-3 py-2.5 rounded-lg text-xs font-semibold text-white"
-              style={{ background: "#008B6B" }}
-              aria-label="Accept this job enquiry"
+              style={{
+                gridArea: "accept",
+                background: "#008B6B",
+                color: "#fff",
+                border: "none",
+                padding: "8px 0",
+                borderRadius: 7,
+                fontSize: 11,
+                fontWeight: 600,
+                cursor: "default",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: 4,
+                lineHeight: 1,
+              }}
+              tabIndex={-1}
+              aria-hidden="true"
             >
-              👍 Accept Job
+              <span>👍</span> Accept
             </button>
             <button
-              className="px-3 py-2.5 rounded-lg text-xs font-semibold text-white"
-              style={{ background: "#0F4C75" }}
-              aria-label="Call the customer back"
+              style={{
+                gridArea: "callback",
+                background: "rgba(16,185,129,0.12)",
+                color: "#059669",
+                border: "1px solid rgba(16,185,129,0.2)",
+                padding: "8px 0",
+                borderRadius: 7,
+                fontSize: 11,
+                fontWeight: 600,
+                cursor: "default",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: 4,
+                lineHeight: 1,
+              }}
+              tabIndex={-1}
+              aria-hidden="true"
             >
-              📞 Call Back
+              <span>📞</span> Call Back
             </button>
             <button
-              className="px-3 py-2.5 rounded-lg text-xs font-semibold"
-              style={{ background: "#F3F4F6", color: "#6B7280" }}
-              aria-label="Decline this job enquiry"
+              style={{
+                gridArea: "decline",
+                background: "rgba(214,48,49,0.08)",
+                color: "#D63031",
+                border: "1px solid rgba(214,48,49,0.15)",
+                padding: "8px 0",
+                borderRadius: 7,
+                fontSize: 11,
+                fontWeight: 600,
+                cursor: "default",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: 4,
+                lineHeight: 1,
+              }}
+              tabIndex={-1}
+              aria-hidden="true"
             >
-              ❌ Decline
-            </button>
-            <button
-              className="px-3 py-2.5 rounded-lg text-xs font-semibold"
-              style={{ background: "#F3F4F6", color: "#6B7280" }}
-              aria-label="Reschedule this job for later"
-            >
-              ⏰ Reschedule
+              <span>❌</span> Decline
             </button>
           </div>
 
           {/* AI Qualification Badge */}
           <div
-            className="mx-4 mb-4 px-3 py-2 rounded-lg text-xs flex items-center gap-2"
             style={{
               background: "#F0FDF4",
-              border: "1px solid #BBF7D0",
+              borderTop: "1px solid #BBF7D0",
+              padding: "6px 10px",
+              fontSize: 9,
               color: "#166534",
+              display: "flex",
+              alignItems: "center",
+              gap: 5,
+              lineHeight: 1.3,
+              flexShrink: 0,
+              marginTop: "auto",
             }}
           >
-            <span aria-hidden="true">🤖</span>
-            AI Qualification: Verified — Not spam | Real postcode | Job confirmed
+            <span>🤖</span>
+            <span>AI Qualification: Verified — Not spam | Real postcode | Job confirmed</span>
           </div>
         </div>
 
-        {/* Side button detail */}
-        <div
-          className="absolute right-0 top-28 w-1 h-8 rounded-l-sm"
-          style={{ background: "#2D2D44" }}
-        />
+        {/* Demo label */}
+        <div className={styles.demoLabel} aria-hidden="true">DEMO</div>
+
+        {/* PILOT badge on phone frame */}
+        <div className={styles.phonePilotBadge} aria-hidden="true">
+          <span>🌱</span> PILOT
+        </div>
       </div>
-    </motion.div>
+
+      {/* Contact shadow */}
+      <div className={styles.phoneShadow} />
+    </div>
   )
 }
 
@@ -201,16 +395,21 @@ function LeadItem({
   label,
   value,
   valueColor,
+  srOnly,
 }: {
   label: string
   value: string
   valueColor?: string
+  srOnly?: string
 }) {
   return (
-    <div className="flex flex-col">
-      <span className="text-xs" style={{ color: "#718096" }}>{label}</span>
-      <span className="text-sm font-semibold" style={{ color: valueColor || "#1A1A2E" }}>
+    <div style={{ display: "flex", flexDirection: "column", gap: 1 }}>
+      <span style={{ fontSize: 9, color: "#8696A0", textTransform: "uppercase" }}>
+        {label}
+      </span>
+      <span style={{ fontSize: 11, fontWeight: 600, color: valueColor || "#1A1A2E" }}>
         {value}
+        {srOnly && <span className="sr-only">{srOnly}</span>}
       </span>
     </div>
   )

@@ -82,7 +82,7 @@ export function MeetTheTeam() {
           <span className="inline-block px-4 py-1.5 rounded-full bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] text-sm font-medium mb-4">
             Your AI Revenue Team
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance reveal">
             Meet{" "}
             <span className="text-[var(--rex-green)]">Katie, Mark, Claire & Rex</span>
           </h2>
@@ -92,7 +92,7 @@ export function MeetTheTeam() {
         </motion.div>
 
         {/* Agent Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12 reveal-stagger">
           {voiceAgents.map((agent, index) => {
             const RoleIcon = agent.roleIcon
             return (
@@ -102,7 +102,8 @@ export function MeetTheTeam() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative bg-white rounded-3xl p-8 border-2 ${agent.borderColor} shadow-lg hover:shadow-xl transition-shadow flex flex-col`}
+                className={`persona-card relative bg-white rounded-3xl p-6 border-2 ${agent.borderColor} shadow-lg hover:shadow-xl transition-all flex flex-col`}
+                data-persona={agent.name.toLowerCase()}
               >
                 {/* Role Badge */}
                 <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full ${agent.bgLight} ${agent.textColor} text-xs font-bold mb-4`}>
@@ -111,19 +112,19 @@ export function MeetTheTeam() {
                 </div>
 
                 {/* Avatar */}
-                <div className="flex items-center gap-4 mb-6">
+                <div className="flex items-center gap-3 mb-6">
                   <img
                     src={agent.image}
                     alt={agent.name}
-                    className="w-16 h-16 rounded-2xl object-contain flex-shrink-0 p-1.5"
+                    className="w-14 h-14 rounded-full object-contain flex-shrink-0 p-1.5"
                     style={{ background: agent.color }}
                   />
                   <div>
                     <h3 className="text-2xl font-bold text-[var(--navy-900)]">{agent.name}</h3>
                     {agent.isVoiceAgent && (
-                      <div className="flex items-center gap-2 mt-1">
+                      <div className="flex items-center gap-2 mt-1 flex-wrap">
                         <span className={`text-sm font-medium ${agent.textColor}`}>{agent.voice}</span>
-                        <span className="px-2 py-0.5 rounded-full bg-[var(--rex-green)]/10 text-[var(--rex-green)] text-[10px] font-bold uppercase tracking-wider border border-[var(--rex-green)]/20">
+                        <span className="px-2 py-0.5 rounded-full bg-[var(--rex-green)]/10 text-[var(--rex-green)] text-[10px] font-bold uppercase border border-[var(--rex-green)]/20 whitespace-nowrap">
                           Name & Voice: Your Choice
                         </span>
                       </div>

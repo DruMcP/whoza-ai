@@ -98,7 +98,7 @@ export function AudioDemo() {
   }
 
   return (
-    <section className="py-20 lg:py-28 bg-[var(--navy-900)]">
+    <section className="py-20 lg:py-28 bg-[var(--navy-900)] dark-section">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -110,7 +110,7 @@ export function AudioDemo() {
           <span className="inline-block px-4 py-1.5 rounded-full bg-[var(--katie-blue)]/20 text-[var(--katie-blue)] text-sm font-medium mb-4">
             Listen Now
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight text-balance">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight text-balance reveal">
             Hear Katie handle a{" "}
             <span className="text-[var(--katie-blue)]">customer enquiry</span>
           </h2>
@@ -180,7 +180,7 @@ export function AudioDemo() {
           </div>
 
           {/* 4-step flow */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-6 reveal-stagger">
             {flowSteps.map((step, index) => {
               const StepIcon = step.icon
               return (

@@ -31,7 +31,7 @@ export function ControlSection() {
               <Shield className="w-4 h-4" />
               Full Control
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance reveal">
               You Stay In Control
             </h2>
             <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
@@ -39,7 +39,7 @@ export function ControlSection() {
               <span className="block mt-2 font-semibold text-[var(--navy-900)]">Choose how your calls are answered — tone, questions and job types.</span>
             </p>
 
-            <div className="mt-10 space-y-4">
+            <div className="mt-10 space-y-4 reveal-stagger">
               {controlFeatures.map((feature, index) => (
                 <motion.div
                   key={feature.text}

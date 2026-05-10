@@ -42,30 +42,38 @@ export default function Home() {
         <SocialProofBand />
 
         {/* VIDEO EXPLAINER - See Whoza in action */}
+        <div className="section-divider" />
         <VideoExplainer />
 
         {/* DOMINANT MOMENT - Pain → Solution sequence */}
+        <div className="section-divider" />
         <LostRevenueCalculator />
 
         {/* AUDIO DEMO - Hear Katie handle a customer enquiry */}
+        <div className="section-divider" />
         <AudioDemo />
 
         <WhatsAppDelivery />
 
         {/* PRE-LAUNCH PROOF - Example scenario */}
+        <div className="section-divider" />
         <PreLaunchProof />
 
         {/* HOW IT WORKS - Full visual flow */}
+        <div className="section-divider" />
         <HowWhozaWorks />
 
         {/* EARLY ACCESS - How it works */}
+        <div className="section-divider" />
         <TrialExplanation />
 
         {/* CALL CAPTURE - Choose your voice */}
+        <div className="section-divider" />
         <MeetTheTeam />
 
         {/* VOICE AGENT DEMO - Experience Katie */}
-        <section className="py-12 bg-[var(--navy-900)]">
+        <div className="section-divider" />
+        <section className="py-12 bg-[var(--navy-900)] dark-section">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <p className="text-white/60 text-sm mb-4">Experience the demo — no signup needed</p>
             <TrilletVoiceWidget buttonLabel="Talk to Katie" />
@@ -73,33 +81,42 @@ export default function Home() {
         </section>
 
         {/* CONTROL - You stay in control */}
+        <div className="section-divider" />
         <ControlSection />
 
         {/* GROWTH ENGINE - Win more jobs */}
+        <div className="section-divider" />
         <ReviewsEngine />
         <GrowthEngine />
 
         {/* DASHBOARD — See your ROI + Claire Reviews */}
+        <div className="section-divider" />
         <DashboardPreview />
         <ClaireDashboard />
         
         {/* STATS — Key metrics */}
+        <div className="section-divider" />
         <StatsBand />
 
         {/* PROOF - Social proof */}
+        <div className="section-divider" />
         <Testimonials />
         <GoogleReviews />
 
         {/* WHY US - Comparison */}
+        <div className="section-divider" />
         <ComparisonTable />
 
         {/* OFFER - Pricing (no-brainer) */}
+        <div className="section-divider" />
         <Pricing />
 
         {/* OBJECTIONS - FAQ */}
+        <div className="section-divider" />
         <FAQ />
 
         {/* CLOSE - Hard close */}
+        <div className="section-divider" />
         <FinalCTA />
       </main>
 

@@ -50,7 +50,7 @@ export function LostRevenueCalculator() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto mb-12"
         >
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 reveal-stagger">
             <div className="bg-white rounded-2xl p-6 text-center shadow-sm border border-[var(--border)]">
               <div className="text-3xl font-bold text-[var(--navy-900)]">62%</div>
               <p className="text-sm text-[var(--slate-500)] mt-2">of calls to small trade businesses go unanswered</p>
@@ -80,7 +80,7 @@ export function LostRevenueCalculator() {
             <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
             The numbers don't lie
           </span>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--navy-900)] tracking-tight text-balance reveal">
             What Are Missed Calls{" "}
             <span className="text-[var(--rex-green)]">Costing You?</span>
           </h2>

@@ -8,7 +8,7 @@ export function GrowthEngine() {
   const { config } = useLocale()
 
   return (
-    <section className="py-20 lg:py-32 bg-[var(--navy-900)]">
+    <section className="py-20 lg:py-32 bg-[var(--navy-900)] dark-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left - Visual */}
@@ -142,7 +142,7 @@ export function GrowthEngine() {
               <Eye className="w-4 h-4" />
               Rex — Your Growth Advisor
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight text-balance">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight text-balance reveal">
               Get More Work Every Week{" "}
               <span className="text-[var(--claire-amber)]">— Without Ads</span>
             </h2>
@@ -151,7 +151,7 @@ export function GrowthEngine() {
               <span className="block mt-2 font-semibold text-white">Rex tells you what to fix this week so you get more calls and more jobs.</span>
             </p>
 
-            <div className="mt-10 space-y-4">
+            <div className="mt-10 space-y-4 reveal-stagger">
               {[
                 { text: "Monthly competitor analysis on every plan", color: "text-[var(--rex-green)]" },
                 { text: "Weekly AI visibility actions from Growth upwards", color: "text-[var(--claire-amber)]" },

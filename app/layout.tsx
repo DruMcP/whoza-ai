@@ -1,8 +1,11 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import '@/components/whoza/styles/premium-v8.module.css'
 import { LocaleProvider } from '@/lib/locale-context'
 import { CookieBanner } from '@/components/whoza/cookie-banner'
+import { RevealObserver } from '@/components/whoza/reveal-observer'
+import { ScrollProgress } from '@/components/whoza/scroll-progress'
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -94,8 +97,10 @@ export default function RootLayout({
           Skip to main content
         </a>
         <LocaleProvider>
+          <ScrollProgress />
           {children}
           <CookieBanner />
+          <RevealObserver />
         </LocaleProvider>
       </body>
     </html>

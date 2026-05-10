@@ -21,7 +21,7 @@ export function ReviewsEngine() {
               <Star className="w-4 h-4 fill-current" />
               Claire — Every Job Becomes Your Next Review
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance reveal">
               Every Completed Job Becomes Your Next Review — And Your Next Customer
             </h2>
             <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
@@ -29,7 +29,7 @@ export function ReviewsEngine() {
               <span className="block mt-2 font-semibold text-[var(--navy-900)]">Post-job review capture that builds trust and brings future work.</span>
             </p>
 
-            <div className="mt-10 space-y-4">
+            <div className="mt-10 space-y-4 reveal-stagger">
               {[
                 { icon: MessageSquare, text: "Automatic WhatsApp follow-up after every completed job", color: "text-[var(--rex-green)]" },
                 { icon: Star, text: "Smart timing — reaches out when customer satisfaction is highest", color: "text-[var(--claire-amber)]" },

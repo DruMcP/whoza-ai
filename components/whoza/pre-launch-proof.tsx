@@ -21,7 +21,7 @@ export function PreLaunchProof() {
             <Zap className="w-4 h-4" />
             What This Looks Like in Practice
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance reveal">
             A Typical Day{" "}
             <span className="text-[var(--rex-green)]">With Whoza</span>
           </h2>
