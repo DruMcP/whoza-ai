@@ -84,8 +84,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en-GB" className={inter.variable}>
       <body className="font-sans antialiased">
+        {/* Skip link — WCAG 2.4.1 */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-[10000] focus:bg-[#1A1A2E] focus:text-white focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:rounded-br-lg focus:no-underline"
+        >
+          Skip to main content
+        </a>
         <LocaleProvider>
           {children}
           <CookieBanner />

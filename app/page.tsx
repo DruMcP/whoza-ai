@@ -1,7 +1,9 @@
 "use client"
 
 import { Header } from "@/components/whoza/header"
-import { Hero, SocialProofBar, MissedCallCounter } from "@/components/whoza/hero"
+import { Hero } from "@/components/whoza/hero"
+import { SocialProofBar } from "@/components/whoza/social-proof-bar"
+import { MissedCallCounter } from "@/components/whoza/missed-call-counter"
 import { SocialProofBand, StatsBand } from "@/components/whoza/social-proof"
 import { VideoExplainer } from "@/components/whoza/video-explainer"
 import { HowWhozaWorks } from "@/components/whoza/how-whoza-works"
