@@ -69,7 +69,7 @@ export function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           viewport={{ once: true }}
-          className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="mt-10 flex justify-center"
         >
           <button
             onClick={() => {
@@ -81,22 +81,7 @@ export function FinalCTA() {
             Get Katie answering my calls
             <ArrowRight className="w-5 h-5 ml-2" />
           </button>
-          <a
-            href="https://wa.me/447831643012"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-transparent border border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg rounded-lg transition-colors"
-          >
-            Get Katie answering my calls
-          </a>
         </motion.div>
-
-        {/* Free Trial Pulse */}
-        <div className="mt-3 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/10 text-sm text-white/80">
-          <span className="w-2 h-2 rounded-full bg-[var(--rex-green)] animate-pulse" />
-          <span className="font-semibold text-white">7-day free trial</span>
-          <span className="text-white/40">— 20 min + 4 jobs included</span>
-        </div>
 
         {/* Reassurance */}
         <p className="mt-3 text-sm text-white/50 text-center">
