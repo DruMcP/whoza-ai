@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import './hero-widget-fix.css'
 import '@/components/whoza/styles/premium-v8.module.css'
 import { LocaleProvider } from '@/lib/locale-context'
 import { CookieBanner } from '@/components/whoza/cookie-banner'

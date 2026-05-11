@@ -248,8 +248,6 @@
 .waPillAccept,
 .waPillCallback,
 .waPillDecline{
-  background:#fff;
-  border:1px solid #e0e0e0;
   padding:8px 14px;
   border-radius:18px;
   font-size:13px;
@@ -263,18 +261,20 @@
   line-height:1;
   transition:background .15s ease,transform .15s ease;
   width:fit-content;
+  color:#fff;
+  border:none;
 }
 
 .waPillAccept{
-  color:#008B6B;
+  background:#008B6B;
 }
 
 .waPillCallback{
-  color:#059669;
+  background:#0F4C75;
 }
 
 .waPillDecline{
-  color:#D63031;
+  background:#D63031;
 }
 
 /* Typing indicator */
