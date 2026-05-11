@@ -168,7 +168,7 @@ export function Hero() {
               letterSpacing: "0.01em",
             }}
           >
-            The <abbr title="Artificial Intelligence">AI</abbr> call handler built for
+            The <abbr title="Artificial Intelligence">AI</abbr> call handler and Revenue Team built for
             UK trades. Answers every missed call, qualifies real jobs, and sends them
             straight to your WhatsApp — so you accept, call back, or decline in two taps.
           </motion.p>
