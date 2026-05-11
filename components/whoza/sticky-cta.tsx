@@ -60,12 +60,9 @@ export function StickyCTA() {
 export function FloatingChatWidget() {
   const [isOpen, setIsOpen] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
-  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setMounted(true)
     const handleScroll = () => {
-      // Hide on hero section, show after scrolling past hero
       const scrolled = window.scrollY > window.innerHeight * 0.6
       setIsVisible(scrolled)
     }
@@ -96,11 +93,14 @@ export function FloatingChatWidget() {
   const waLink = (text: string) =>
     `https://wa.me/447831643012?text=${encodeURIComponent(text)}`
 
-  if (!mounted) return null
   if (!isVisible) return null
 
   return (
-    <div className="fixed bottom-24 lg:bottom-6 right-6 z-50">
+    <div 
+      className="fixed bottom-24 lg:bottom-6 right-6 z-50" 
+      style={{ display: isVisible ? 'block' : 'none' }}
+      data-visible={isVisible}
+    >
       <AnimatePresence>
         {isOpen && (
           <motion.div
