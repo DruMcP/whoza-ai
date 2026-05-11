@@ -530,13 +530,13 @@ export function Hero() {
         </p>
         <p
           style={{
-            fontSize: 15,
-            fontWeight: 600,
-            color: "#FFFFFF",
+            fontSize: 22,
+            fontWeight: 700,
+            color: "#D63031",
             margin: "8px 0 0",
           }}
         >
-          That&apos;s why we built Katie.
+          That&apos;s why we built Katie&apos;s Revenue Team
         </p>
       </div>
 
