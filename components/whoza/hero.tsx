@@ -456,35 +456,50 @@ export function Hero() {
             overflow: "visible",
           }}
         >
-          {/* Ambient glow — enhanced multi-layer */}
+          {/* Ambient glow — amplified multi-layer aura */}
           <div
             style={{
               position: "absolute",
-              width: 700,
-              height: 700,
+              width: 900,
+              height: 900,
               background:
-                "radial-gradient(ellipse at center, rgba(16,185,129,0.12) 0%, rgba(30,35,70,0.25) 30%, rgba(20,25,50,0.1) 55%, transparent 75%)",
+                "radial-gradient(ellipse at center, rgba(16,185,129,0.35) 0%, rgba(16,185,129,0.15) 25%, rgba(30,35,70,0.2) 50%, transparent 70%)",
               pointerEvents: "none",
               zIndex: 0,
               top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
-              filter: "blur(40px)",
+              filter: "blur(60px)",
             }}
           />
           <div
             style={{
               position: "absolute",
-              width: 500,
-              height: 600,
+              width: 600,
+              height: 700,
               background:
-                "radial-gradient(ellipse at 40% 45%, rgba(255,255,255,0.06) 0%, transparent 60%)",
+                "radial-gradient(ellipse at 40% 45%, rgba(255,255,255,0.12) 0%, rgba(16,185,129,0.08) 40%, transparent 65%)",
               pointerEvents: "none",
               zIndex: 0,
               top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
-              filter: "blur(20px)",
+              filter: "blur(30px)",
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              width: 300,
+              height: 400,
+              background:
+                "radial-gradient(ellipse at 50% 40%, rgba(16,185,129,0.25) 0%, transparent 60%)",
+              pointerEvents: "none",
+              zIndex: 0,
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              filter: "blur(15px)",
             }}
           />
 
@@ -554,57 +569,6 @@ export function Hero() {
         >
           That&apos;s why we built Katie&apos;s Revenue Team
         </p>
-      </div>
-
-      {/* ══ TRADE CATEGORIES ══ */}
-      <div
-        className="reveal-stagger"
-        style={{
-          textAlign: "center",
-          padding: "var(--section-py-md) var(--section-px)",
-          borderTop: "1px solid rgba(255,255,255,0.06)",
-        }}
-      >
-        <p
-          style={{
-            fontSize: 14,
-            fontWeight: 500,
-            color: "#6B7280",
-            marginBottom: 20,
-            letterSpacing: "0.02em",
-          }}
-        >
-          Built for UK trades &amp; home services
-        </p>
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            gap: 10,
-          }}
-        >
-          {tradeCategories.map((trade) => (
-            <span
-              key={trade.label}
-              className="trade-pill"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 6,
-                background: "rgba(255,255,255,0.04)",
-                color: "#94A3B8",
-                fontSize: 13,
-                padding: "8px 16px",
-                borderRadius: 20,
-                border: "1px solid rgba(255,255,255,0.06)",
-              }}
-            >
-              <span aria-hidden="true">{trade.icon}</span>
-              {trade.label}
-            </span>
-          ))}
-        </div>
       </div>
 
       {/* ── Bottom gradient to off-white ── */}
