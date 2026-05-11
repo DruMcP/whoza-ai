@@ -69,6 +69,11 @@ export function HeroPhoneMockup() {
           />
         </div>
 
+        {/* Rim lighting overlays */}
+        <div className={styles.phoneRimLeft} aria-hidden="true" />
+        <div className={styles.phoneRimRight} aria-hidden="true" />
+        <div className={styles.phoneRimTop} aria-hidden="true" />
+
         {/* Glass reflection layer */}
         <div className={styles.phoneGlass} />
 
