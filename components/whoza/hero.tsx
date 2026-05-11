@@ -117,7 +117,7 @@ export function Hero() {
           display: "grid",
           gridTemplateColumns: "55% 45%",
           gap: "clamp(40px, 4vw, 80px)",
-          alignItems: "center",
+          alignItems: "start",
           paddingBottom: 80,
         }}
       >
@@ -450,7 +450,8 @@ export function Hero() {
             height: 660,
             display: "flex",
             justifyContent: "center",
-            alignItems: "center",
+            alignItems: "flex-start",
+            paddingTop: 0,
             contain: "layout style paint",
             overflow: "visible",
           }}
