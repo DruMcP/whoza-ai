@@ -39,13 +39,13 @@ export default function Home() {
         <SocialProofBar />
         <SocialProofBand />
 
-        {/* VIDEO EXPLAINER - See Whoza in action */}
-        <div className="section-divider" />
-        <VideoExplainer />
-
         {/* DOMINANT MOMENT - Pain → Solution sequence */}
         <div className="section-divider" />
         <LostRevenueCalculator />
+
+        {/* VIDEO EXPLAINER - See Whoza in action */}
+        <div className="section-divider" />
+        <VideoExplainer />
 
         {/* AUDIO DEMO - Hear Katie handle a customer enquiry */}
         <div className="section-divider" />
