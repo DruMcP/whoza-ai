@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { CountrySwitcher } from "./country-switcher"
@@ -18,18 +18,8 @@ const navLinks = [
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [showSignup, setShowSignup] = useState(false)
-  const [isVisible, setIsVisible] = useState(true)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const hero = document.querySelector('.hero')
-      const heroBottom = hero ? hero.offsetTop + hero.offsetHeight : 400
-      setIsVisible(window.scrollY > heroBottom * 0.3)
-    }
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    handleScroll()
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  // Header always visible — no auto-hide
+  const isVisible = true
 
   return (
     <header 
