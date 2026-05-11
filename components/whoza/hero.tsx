@@ -185,7 +185,7 @@ export function Hero() {
               margin: "0 0 20px",
             }}
           >
-            No apps. No dashboards. Just more work.
+            No apps. No Contract. Just more work.
           </motion.p>
 
           {/* Pilot badge */}
@@ -456,19 +456,35 @@ export function Hero() {
             overflow: "visible",
           }}
         >
-          {/* Ambient glow */}
+          {/* Ambient glow — enhanced multi-layer */}
+          <div
+            style={{
+              position: "absolute",
+              width: 700,
+              height: 700,
+              background:
+                "radial-gradient(ellipse at center, rgba(16,185,129,0.12) 0%, rgba(30,35,70,0.25) 30%, rgba(20,25,50,0.1) 55%, transparent 75%)",
+              pointerEvents: "none",
+              zIndex: 0,
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              filter: "blur(40px)",
+            }}
+          />
           <div
             style={{
               position: "absolute",
               width: 500,
               height: 600,
               background:
-                "radial-gradient(ellipse at center, rgba(30,35,70,0.4) 0%, rgba(20,25,50,0.15) 50%, transparent 70%)",
+                "radial-gradient(ellipse at 40% 45%, rgba(255,255,255,0.06) 0%, transparent 60%)",
               pointerEvents: "none",
               zIndex: 0,
               top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
+              filter: "blur(20px)",
             }}
           />
 
