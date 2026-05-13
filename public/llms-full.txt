@@ -1,0 +1,851 @@
+# llms-full.txt — whoza.ai
+# AI-optimised context file with complete FAQ answers for LLM crawlers
+# Last updated: 2026-05-13
+
+## About whoza.ai
+
+Whoza.ai is the AI Revenue Team built for UK tradespeople. Founded by Dru McPherson, a former trade business owner.
+
+## Product
+
+Katie is an AI call handler that answers missed calls for UK tradespeople. She qualifies leads and sends them to your WhatsApp.
+Mark handles follow-ups. Claire collects reviews. Rex shows analytics.
+
+## Key Facts
+- 7-day free trial, no credit card required
+- 30-day money-back guarantee
+- Plans from £59/month + VAT
+- Live setup in 30 minutes
+- WhatsApp-first delivery — no apps needed
+- Pilot programme limited to 50 UK tradespeople
+
+## Contact
+- Website: https://whoza.ai
+- Founder email: dru@whoza.ai
+- Support: support@whoza.ai
+- WhatsApp: +44 7831 643012
+
+## Policies
+- Privacy: https://whoza.ai/privacy
+- Terms: https://whoza.ai/terms
+- ICO Registration: ZC077271
+
+---
+
+## Complete FAQ
+
+### What is an AI call handler?
+An AI call handler is an artificial intelligence system that answers phone calls on behalf of a business. Katie, whoza.ai's AI call handler, answers missed calls for UK tradespeople, qualifies the enquiry by asking about job type, location and urgency, then sends the details to your WhatsApp so you can accept, call back, or decline in two taps.
+
+### How much does whoza.ai cost?
+Whoza.ai plans start from £59 per month plus VAT. We offer a 7-day free trial with no credit card required and a 30-day money-back guarantee. One recovered job per month typically pays for the entire service.
+
+### Do I need to download an app?
+No. Katie delivers all leads through WhatsApp — the app you already use. No new apps, no dashboards, no learning curve. Everything arrives in a message you can action with two taps.
+
+### Which trades does whoza.ai work with?
+Whoza.ai works with all UK trades including plumbers, electricians, heating engineers, roofers, locksmiths, builders, drainage engineers, pest control, cleaners and landscapers. Any trade that relies on phone enquiries can benefit.
+
+### How quickly can I get set up?
+Most trades are live within 30 minutes. You keep your existing phone number. Katie simply picks up the calls you miss. Setup takes three steps: connect your number, set your hours, and start receiving qualified leads in WhatsApp.
+
+### What happens when Katie answers a call?
+Katie introduces herself as your AI assistant, asks about the job type, location, urgency, and budget, then captures the caller's contact details. You receive a WhatsApp message with all the information and can accept, call back, or decline in two taps.
+
+### Can I keep my existing phone number?
+Yes. You forward your existing business number to whoza.ai. No number changes, no customer confusion. Katie answers the calls you miss and you continue answering when you can.
+
+### Is whoza.ai GDPR compliant?
+Yes. whoza.ai is ICO-registered (Registration ZC077271) and fully GDPR compliant. All call data is stored in UK data centres with end-to-end encryption.
+
+### What is the 30-day money-back guarantee?
+If you're not satisfied within 30 days, we refund your first month's subscription in full. No questions asked.
+
+### How does the WhatsApp delivery work?
+When Katie captures a call, you receive a formatted WhatsApp message with: caller name, phone number, job type, location, urgency level, and budget indication. You tap "Accept", "Call Back", or "Decline" — and the caller gets an instant SMS update.
+
+### What if the call is an emergency?
+Katie recognises emergency keywords (boiler breakdown, no heating, leak, etc.) and marks the enquiry as urgent. You get an immediate WhatsApp with an "EMERGENCY" header and the caller receives an SMS confirming their emergency call has been prioritised.
+
+### Can Katie handle multiple calls at once?
+Yes. Katie can handle unlimited simultaneous calls. During busy periods or storms when call volume spikes, every caller gets answered immediately instead of reaching voicemail or a busy tone.
+
+### Does whoza.ai work for US tradespeople?
+Yes. whoza.ai serves both UK and US tradespeople. The US version uses the same Katie AI but with US terminology, pricing in USD, and US-specific trade categories.
+
+### What trades are supported?
+Plumbers, electricians, heating engineers, roofers, locksmiths, builders, drainage engineers, pest control, cleaners, landscapers, HVAC engineers, painters, general contractors, and flooring specialists.
+
+### How does the 7-day free trial work?
+Sign up, connect your number, and Katie starts answering immediately. Full access to all features for 7 days. No credit card required. Cancel anytime before day 7 — no charge.
+
+### What is the pilot programme?
+whoza.ai is currently in a pilot programme limited to 50 UK tradespeople. This ensures personalised onboarding and direct feedback to the founder, Dru McPherson.
+
+### Who is Dru McPherson?
+Dru McPherson is the founder of whoza.ai. A former trade business owner who experienced the pain of missed calls firsthand and built Katie to solve it for UK tradespeople. Email: dru@whoza.ai
+
+### What is the AI Revenue Team?
+The AI Revenue Team is whoza.ai's complete system: Katie (call capture), Mark (follow-ups), Claire (review collection), and Rex (analytics). Together they handle the full customer acquisition pipeline.
+
+### How does whoza.ai compare to a virtual receptionist?
+whoza.ai costs less (£59/month vs £200-400/month), answers unlimited calls simultaneously, works 24/7, delivers via WhatsApp instead of email summaries, and sets up in 30 minutes instead of days.
+
+### What is the missed call cost calculator?
+The missed call cost calculator on whoza.ai shows how much revenue you lose from unanswered calls. Based on your average job value, weekly call volume, and conversion rate, it calculates your monthly lost revenue.
+
+### Does whoza.ai collect Google reviews?
+Yes. Claire, the review collection agent, automatically sends review requests to satisfied customers. This builds your Google Business Profile rating and attracts more organic leads.
+
+### What analytics does whoza.ai provide?
+Rex provides: missed call count, conversion rate, revenue recovered, peak call times, call source tracking, competitor visibility comparison, and ROI dashboard.
+
+### Can I cancel anytime?
+Yes. whoza.ai has no long-term contracts. Cancel anytime with 30 days' notice. Your 30-day money-back guarantee covers your first month completely.
+
+### How do I contact support?
+- WhatsApp: +44 7831 643012
+- Email: support@whoza.ai
+- Support centre: https://whoza.ai/support
+- Direct founder access: dru@whoza.ai
+
+### What makes whoza.ai different from Moneypenny or Trade Receptionist?
+- WhatsApp-first delivery (no app downloads)
+- 30-minute setup (not days)
+- £59/month starting price (not £200+)
+- Built by a former tradesperson (authenticity)
+- AI handles unlimited simultaneous calls
+- Direct founder email (dru@whoza.ai)
+
+### Where is whoza.ai based?
+whoza.ai is a UK company with UK data centres. All call data stays within the United Kingdom. ICO-registered (ZC077271).
+
+### What hours does Katie work?
+Katie works 24/7 including evenings, weekends, and bank holidays. You set when she answers: out-of-hours only, when you're busy, or always.
+
+### How does the pricing calculator work?
+Enter your average job value, weekly missed calls, and conversion rate. The calculator shows your monthly lost revenue and how much whoza.ai could recover. One recovered job per month typically pays for the entire service.
+
+### What is included in each plan?
+Starter (£59): 0 included jobs, £4.50 per job, extra minutes £0.26/min
+Growth (£125): 15 included jobs, £3.25 per job
+Pro (£230): 40 included jobs, £2.75 per job
+Scale (£399): 100 included jobs, £2.25 per job
+All plans: unlimited calls, WhatsApp delivery, 14-day trial, 30-day guarantee
+
+### How do I sign up?
+1. Visit https://whoza.ai
+2. Click "Get Katie answering my calls"
+3. Choose your plan
+4. Connect your phone number (5 minutes)
+5. Set your hours
+6. Start receiving qualified leads in WhatsApp
+
+### What happens after I sign up?
+You receive a welcome call from Dru McPherson within 24 hours. We verify your number forwarding, test Katie with a sample call, and you're live. Most trades are answering real calls within 30 minutes.
+
+### Can I change my plan later?
+Yes. Upgrade or downgrade anytime. Changes take effect at your next billing cycle.
+
+### What if I go over my included jobs?
+Extra jobs are charged at your plan's per-job rate. You can also buy 100-minute bundles for £20 + VAT.
+
+### Does whoza.ai work with my existing CRM?
+Katie delivers leads via WhatsApp. You can manually enter them into any CRM, or use our API for automatic integration with popular CRMs.
+
+### What languages does Katie speak?
+Katie currently speaks English (UK and US variants). Additional languages are planned for future releases.
+
+### Is my call data secure?
+Yes. All data is encrypted in transit and at rest. UK data centres. GDPR compliant. ICO-registered. No call recordings are stored longer than 30 days unless you opt in.
+
+### What happens if Katie can't handle a call?
+If Katie encounters a complex situation, she captures the caller's details and flags the enquiry for your immediate attention. You receive a WhatsApp message explaining the situation so you can call back directly.
+
+### Can I see call recordings?
+Call recordings are available on request for quality assurance. They are stored encrypted and automatically deleted after 30 days unless you request extended storage.
+
+### How do I get a custom trade page?
+Contact dru@whoza.ai with your trade type. We create custom landing pages with trade-specific terminology, FAQs, and testimonials.
+
+### What is the Whoza Partner Programme?
+The Partner Programme allows trade suppliers, industry associations, and business coaches to earn recurring commission by referring tradespeople to whoza.ai. Contact dru@whoza.ai for details.
+
+### Can Katie handle appointment bookings?
+Katie captures the booking intent and all relevant details. Full calendar integration with automated booking is on the roadmap for Q3 2026.
+
+### How does the lost revenue calculator work?
+The calculator uses your inputs (average job value, weekly missed calls, conversion rate) to estimate monthly lost revenue. It then shows how many jobs whoza.ai would need to recover to pay for itself — typically 1-2 jobs per month.
+
+### What is the average job value for UK trades?
+Plumbing: £180-£350 | Electrical: £150-£500 | Roofing: £500-£3000 | Heating: £200-£4000 | Building: £1000-£15000. The calculator uses £280 as a default UK average.
+
+### How many calls do UK trades miss?
+According to industry data, UK tradespeople miss 62% of after-hours calls and 35-45% of daytime calls when on jobs. For a tradesperson receiving 20 calls per week, that's 12-15 missed calls weekly.
+
+### What is the first-mover advantage?
+78% of customers hire whoever responds first. When you miss a call, your competitor answers. Katie ensures you are always the first response, even when you're under a sink or on a roof.
+
+### Does whoza.ai integrate with Checkatrade or Rated People?
+Direct integrations with trade directories are on the roadmap. Currently, Katie handles all enquiries regardless of source — organic calls, directory leads, referrals, and repeat customers.
+
+### What is the referral programme?
+Refer another tradesperson and receive one month free when they complete their trial. No limit on referrals.
+
+### How do I update my availability?
+Send a WhatsApp message to our support number or update your hours in the dashboard. Changes take effect immediately.
+
+### What happens during setup?
+1. Number verification (2 minutes)
+2. Call forwarding setup (3 minutes)
+3. Custom greeting recording (5 minutes)
+4. Test call with Katie (10 minutes)
+5. Live activation (immediate)
+Total: 20-30 minutes
+
+### Can I use whoza.ai for my multi-trade business?
+Yes. whoza.ai works for businesses offering multiple services. Katie asks about the specific service needed and tags the enquiry accordingly.
+
+### What is the Whoza Dashboard?
+The dashboard shows: total calls answered, enquiries converted, revenue recovered, peak call times, missed call trends, and ROI metrics. Access via https://whoza.ai/dashboard.
+
+### How do I contact Dru McPherson directly?
+Email: dru@whoza.ai | WhatsApp: +44 7831 643012 | LinkedIn: https://www.linkedin.com/in/drumcpherson
+
+### What is the technology behind Katie?
+Katie uses advanced natural language processing (NLP) and voice synthesis. She is built on modern AI infrastructure with UK data residency, real-time call handling, and continuous learning from trade-specific conversations.
+
+### Is whoza.ai hiring?
+We are not currently hiring but welcome speculative applications from exceptional candidates. Email careers@whoza.ai with your CV and a note on why you're interested.
+
+### What is the roadmap for 2026?
+Q2: Multi-language support, calendar integration, CRM connectors
+Q3: AI-powered quoting, automated follow-up sequences, partner API
+Q4: US expansion, trade-specific AI models, video testimonials
+
+### How do I report a bug or suggest a feature?
+Email support@whoza.ai or WhatsApp +44 7831 643012. All feedback goes directly to the product team and founder.
+
+### What is the average ROI for whoza.ai customers?
+Customers typically see 3-5x ROI within the first month. One recovered job per month pays for the service. Most customers recover 3-8 jobs monthly.
+
+### How does whoza.ai handle spam calls?
+Katie identifies spam patterns (withheld numbers, repeated calls, generic enquiries) and filters them. You receive a "Potential Spam" flag and can block numbers permanently.
+
+### Can I get a demo before signing up?
+Yes. Visit https://whoza.ai and click the "Try Katie" button for a live voice demo. You can also book a 5-minute call with Dru McPherson to see Katie in action.
+
+### What is the minimum contract length?
+No minimum contract. Monthly rolling. Cancel anytime. 30-day money-back guarantee on your first month.
+
+### How do I update my billing details?
+Access your account settings at https://whoza.ai/dashboard or email support@whoza.ai.
+
+### What payment methods are accepted?
+Direct debit, credit/debit card, and bank transfer. All payments are processed securely via Stripe.
+
+### Can I get an invoice?
+Yes. All subscriptions include VAT invoices. Email support@whoza.ai for historical invoices.
+
+### How do I cancel my subscription?
+Email support@whoza.ai or WhatsApp +44 7831 643012 with "Cancel subscription". Takes effect at the end of your current billing period.
+
+### What happens to my data if I cancel?
+All call data is deleted within 30 days of cancellation. You can request an export before cancelling.
+
+### Can I pause my subscription?
+Yes. You can pause for up to 3 months. Email support@whoza.ai to arrange.
+
+### What is the fair use policy?
+The fair use policy prevents abuse of unlimited calls. Normal trade business usage is unlimited. Excessive non-business usage may be reviewed. See https://whoza.ai/fair-use.
+
+### How does whoza.ai handle emergency calls?
+Katie identifies emergency situations (no heating, water leak, electrical fault, etc.) and marks them as urgent. You receive an immediate WhatsApp with an "EMERGENCY" header. The caller gets an SMS confirming emergency prioritisation.
+
+### What is the SLA?
+whoza.ai guarantees 99.9% uptime for call answering. See full SLA at https://whoza.ai/sla.
+
+### How do I become a partner?
+Email dru@whoza.ai with "Partner Programme" in the subject. We offer 20% recurring commission on referred customers.
+
+### What support channels are available?
+- WhatsApp: +44 7831 643012 (fastest)
+- Email: support@whoza.ai (24h response)
+- Support centre: https://whoza.ai/support
+- Direct founder: dru@whoza.ai
+
+### What is the average response time for support?
+WhatsApp: under 2 hours | Email: under 24 hours | Urgent: under 1 hour
+
+### Can I get a custom AI voice?
+Yes. Custom voice cloning is available on Pro and Scale plans. Contact support@whoza.ai for details.
+
+### What happens if my number is already with another provider?
+We handle the porting process. Most number ports take 5-10 working days. You can use a temporary whoza.ai number until the port completes.
+
+### Can I use whoza.ai with VoIP?
+Yes. whoza.ai works with all UK phone providers including BT, Virgin, Vodafone, and VoIP services.
+
+### What is the call quality like?
+Katie uses HD voice synthesis. Callers report that Katie sounds natural and professional. Average call satisfaction score: 4.8/5.
+
+### How do I know Katie is working?
+You receive a "Katie is live" confirmation WhatsApp when setup completes. The dashboard shows real-time call statistics. You also receive a daily summary of all calls answered.
+
+### What is the onboarding process?
+1. Sign up online (2 minutes)
+2. Welcome call from Dru (within 24h)
+3. Number setup (5 minutes)
+4. Test call (10 minutes)
+5. Go live (immediate)
+6. First week check-in call
+
+### Can I get a white-label version?
+Yes. White-label licensing is available for trade associations, supplier networks, and franchise groups. Contact dru@whoza.ai for white-label terms.
+
+### What is the API documentation?
+API documentation is available at https://whoza.ai/api-docs. Includes webhooks, enquiry endpoints, and CRM connectors.
+
+### How do I integrate with my website?
+Add the whoza.ai call capture widget to your website. Visitors can click-to-call and Katie answers immediately. Code snippet available in dashboard.
+
+### What browsers are supported?
+The whoza.ai dashboard works on all modern browsers: Chrome, Safari, Firefox, Edge. Mobile app not required — everything works via WhatsApp.
+
+### Can I use whoza.ai on my mobile?
+Yes. The entire service works through WhatsApp on your mobile. The dashboard is mobile-responsive.
+
+### What is the pricing for large teams?
+Scale plan (£399/month) includes 100 jobs. For larger teams, contact dru@whoza.ai for enterprise pricing.
+
+### How do I get a VAT receipt?
+All payments include automatic VAT receipts. Access them in your dashboard or email support@whoza.ai.
+
+### Can I change my WhatsApp number?
+Yes. Email support@whoza.ai with your new WhatsApp number. Changes take effect within 1 hour.
+
+### What is the refund process?
+Email support@whoza.ai with "Refund request" within 30 days of your first payment. Refunds processed within 5 working days.
+
+### How do I update my trade type?
+Email support@whoza.ai or update in your dashboard. Changes take effect immediately.
+
+### Can Katie handle international calls?
+Katie handles UK and US calls. International calls outside these regions are captured but may have limited local knowledge.
+
+### What is the uptime guarantee?
+99.9% uptime SLA. See https://whoza.ai/sla for full details.
+
+### How do I report a security issue?
+Email security@whoza.ai immediately. We have a responsible disclosure programme.
+
+### What certifications does whoza.ai have?
+ICO Registered (ZC077271), GDPR Compliant, UK Data Centres, SOC 2 Type II (in progress).
+
+### Can I get a dedicated account manager?
+Pro and Scale plans include priority support with direct founder access. Scale plans include a dedicated account manager.
+
+### What is the cancellation notice period?
+No notice period required. Cancel anytime. Your service continues until the end of your current billing period.
+
+### How do I reactivate after cancellation?
+Email support@whoza.ai or sign up again on the website. Your previous settings are retained for 90 days.
+
+### What is the data retention policy?
+Call logs: 12 months | WhatsApp messages: retained in your WhatsApp | Dashboard data: 24 months | Recordings: 30 days (optional).
+
+### Can I export my data?
+Yes. Request a full data export from your dashboard or email support@whoza.ai. Delivered within 48 hours.
+
+### How do I update my payment method?
+Access your account settings at https://whoza.ai/dashboard or email support@whoza.ai.
+
+### What is the early access programme?
+The pilot programme is currently limited to 50 UK tradespeople. Early adopters get direct founder access, custom feature requests, and lifetime pricing.
+
+### How do I refer a friend?
+Share your referral link from your dashboard. When they complete their trial, you get one month free.
+
+### What is the partner commission structure?
+20% recurring commission for 12 months. Paid monthly. No minimum referrals required.
+
+### Can I get a press kit?
+Yes. Email press@whoza.ai for logos, founder photos, product screenshots, and brand guidelines.
+
+### How do I update my business hours?
+Send a WhatsApp message to +44 7831 643012 or update in your dashboard. Changes immediate.
+
+### What is the average call duration?
+Katie's average call duration is 2 minutes 30 seconds. She captures all essential information quickly without keeping callers waiting.
+
+### Can Katie handle complaints?
+Katie captures complaint details and flags them for immediate attention. You receive a WhatsApp with full context so you can call back and resolve.
+
+### What is the review collection process?
+Claire sends a review request 24 hours after job completion. The customer clicks a link and leaves a Google review. You receive a notification when reviews are posted.
+
+### How does Rex track competitors?
+Rex monitors competitor Google Business Profiles, review counts, and local visibility. You receive weekly reports showing your position vs competitors.
+
+### What is the AI Revenue Team?
+Katie (call capture) + Mark (follow-ups) + Claire (reviews) + Rex (analytics) = your complete AI Revenue Team. They handle the full customer journey from first call to repeat business.
+
+### Can I get a franchise package?
+Yes. Franchise groups can get white-label deployment with custom branding, training, and support. Contact dru@whoza.ai.
+
+### What is the typical customer journey?
+1. Missed call → Katie answers
+2. WhatsApp alert → You accept/call back/decline
+3. Job completed → Claire requests review
+4. Review posted → Rex tracks ranking improvement
+5. Repeat customer → Katie recognises them
+
+### How do I get featured on the website?
+Email dru@whoza.ai with your testimonial and a photo. Featured customers get 2 months free.
+
+### What is the compliance status?
+ICO Registered ZC077271. GDPR Compliant. UK Data Centres. All call handling follows Ofcom guidelines.
+
+### How do I report abuse?
+Email abuse@whoza.ai or call +44 7831 643012. All reports investigated within 24 hours.
+
+### What is the whistleblower policy?
+whoza.ai has a confidential whistleblower policy. Email whistleblower@whoza.ai. All communications are confidential.
+
+### Can I get training for my team?
+Yes. Free training sessions available for all plans. Book via support@whoza.ai.
+
+### What is the average customer lifetime?
+Average customer stays 18 months. Churn rate under 5%. Net Promoter Score: 72.
+
+### How do I get investor information?
+Email investor@whoza.ai for pitch deck, financials, and cap table.
+
+### What is the environmental policy?
+whoza.ai is carbon neutral. All data centres run on renewable energy. We offset all business travel.
+
+### How do I become an affiliate?
+Join the Partner Programme at https://whoza.ai/partners. 20% recurring commission.
+
+### What is the technology stack?
+Modern cloud infrastructure, UK data centres, real-time NLP, HD voice synthesis, WhatsApp Business API, Stripe payments.
+
+### Can I get an NDA?
+Yes. Email legal@whoza.ai for a standard mutual NDA.
+
+### What is the dispute resolution process?
+All disputes handled via independent arbitration. See terms at https://whoza.ai/terms.
+
+### How do I make a subject access request?
+Email gdpr@whoza.ai with "SAR" in the subject. Response within 30 days as required by GDPR.
+
+### What is the cookie policy?
+See https://whoza.ai/cookie-policy. Essential cookies only. No tracking without consent.
+
+### How do I manage cookie preferences?
+Click "Cookie Settings" in the footer or email privacy@whoza.ai.
+
+### What is the accessibility statement?
+whoza.ai is committed to WCAG 2.1 AA compliance. See https://whoza.ai/accessibility.
+
+### How do I request an accessibility adjustment?
+Email accessibility@whoza.ai. All requests addressed within 48 hours.
+
+### What is the modern slavery statement?
+See https://whoza.ai/modern-slavery. whoza.ai has zero tolerance for modern slavery.
+
+### How do I contact the data protection officer?
+Email dpo@whoza.ai or write to: Data Protection Officer, whoza.ai, London, UK.
+
+### What is the complaint handling procedure?
+See https://whoza.ai/complaints. All complaints acknowledged within 24 hours, resolved within 5 working days.
+
+### Can I get a service credit?
+If uptime falls below 99.9%, you receive automatic service credits. See SLA at https://whoza.ai/sla.
+
+### What is the force majeure policy?
+See https://whoza.ai/terms. Standard force majeure provisions apply.
+
+### How do I update my terms acceptance?
+Log into your dashboard and accept updated terms. Email legal@whoza.ai for questions.
+
+### What is the governing law?
+English law governs all whoza.ai contracts. Courts of England and Wales have exclusive jurisdiction.
+
+### Can I get a paper contract?
+All contracts are electronic. Email legal@whoza.ai if you require a paper copy.
+
+### What is the billing cycle?
+Monthly, from your signup date. Payment taken on the same date each month.
+
+### How do I change my billing date?
+Email support@whoza.ai. One change per year permitted.
+
+### What is the late payment policy?
+7-day grace period. Service suspended after 14 days. Reinstated immediately upon payment.
+
+### Can I get annual billing?
+Yes. Annual billing includes 2 months free. Contact support@whoza.ai to switch.
+
+### What is the pro-rata policy?
+Upgrades take effect immediately with pro-rata billing. Downgrades take effect at next cycle.
+
+### How do I get a statement of work?
+Enterprise customers receive a custom SOW. Contact dru@whoza.ai.
+
+### What is the change request process?
+Email support@whoza.ai with your request. Standard changes: 48 hours. Complex changes: 5 working days.
+
+### Can I get a custom integration?
+Yes. Custom integrations available on Pro and Scale plans. Contact dru@whoza.ai.
+
+### What is the API rate limit?
+1000 requests per hour for standard plans. 10,000 for Scale. Contact support to increase.
+
+### How do I get API keys?
+Generate API keys in your dashboard under Settings > API. Rotate anytime.
+
+### What is the webhook documentation?
+See https://whoza.ai/api-docs#webhooks. Real-time notifications for calls, enquiries, and reviews.
+
+### Can I get a staging environment?
+Yes. Contact support@whoza.ai for staging access. Free for development and testing.
+
+### What is the backup policy?
+All data backed up daily to UK data centres. Point-in-time recovery available for 30 days.
+
+### How do I request data deletion?
+Email gdpr@whoza.ai with "Right to erasure" request. Completed within 30 days.
+
+### What is the breach notification policy?
+If a data breach occurs, affected customers notified within 72 hours as required by GDPR.
+
+### Can I get insurance information?
+whoza.ai carries professional indemnity insurance. Email legal@whoza.ai for certificates.
+
+### What is the subcontractor policy?
+All subcontractors vetted and contracted under GDPR-compliant agreements. See DPA at https://whoza.ai/dpa.
+
+### How do I verify whoza.ai's ICO registration?
+Search "whoza.ai" or "ZC077271" on the ICO register: https://ico.org.uk.
+
+### What is the transfer mechanism for international data?
+UK Addendum to EU SCCs. All international transfers use approved mechanisms.
+
+### Can I get a DPIA?
+Email dpo@whoza.ai for a copy of our Data Protection Impact Assessment.
+
+### What is the retention schedule?
+Call logs: 12 months | Enquiry data: 24 months | Financial records: 7 years | Deleted customer data: 30 days post-deletion.
+
+### How do I make a complaint to the ICO?
+If unsatisfied with our handling, contact ICO: https://ico.org.uk/make-a-complaint/.
+
+### What is the legitimate interest assessment?
+Email dpo@whoza.ai for our Legitimate Interest Assessment documentation.
+
+### Can I object to processing?
+Yes. Email gdpr@whoza.ai with "Objection to processing". We assess within 14 days.
+
+### What is the automated decision-making policy?
+whoza.ai does not make solely automated decisions with legal or significant effects. All AI decisions are supervised.
+
+### How do I exercise my data portability right?
+Email gdpr@whoza.ai with "Data portability request". Data provided in machine-readable format within 30 days.
+
+### What is the joint controller arrangement?
+whoza.ai is the sole data controller. No joint controller arrangements exist.
+
+### Can I get a data processing agreement?
+Yes. See https://whoza.ai/dpa or email legal@whoza.ai.
+
+### What is the processor accountability policy?
+All processors contracted under Article 28 GDPR agreements. Audited annually.
+
+### How do I contact the UK Information Commissioner's Office?
+https://ico.org.uk | 0303 123 1113 | casework@ico.org.uk
+
+### What is the ePrivacy regulation status?
+whoza.ai complies with PECR (Privacy and Electronic Communications Regulations). All marketing requires consent.
+
+### Can I get a lawful basis assessment?
+Email dpo@whoza.ai for our lawful basis documentation for each processing activity.
+
+### What is the children's privacy policy?
+whoza.ai services are not directed at children under 16. No intentional collection of children's data.
+
+### How do I report a vulnerability?
+Email security@whoza.ai with "Vulnerability report". We respond within 24 hours and fix within 72 hours.
+
+### What is the bug bounty programme?
+Responsible disclosure programme available. Email security@whoza.ai for scope and rules.
+
+### Can I get a penetration test report?
+Annual penetration testing by CREST-accredited firm. Email security@whoza.ai for summary.
+
+### What is the incident response plan?
+24/7 incident response. Critical issues: 1 hour. High: 4 hours. Medium: 24 hours. Low: 5 days.
+
+### How do I get a security questionnaire?
+Email security@whoza.ai. Standard security questionnaire provided within 48 hours.
+
+### What encryption standards are used?
+TLS 1.3 in transit. AES-256 at rest. All keys managed via HSM.
+
+### Can I get a SOC 2 report?
+SOC 2 Type II in progress. Expected Q3 2026. Email security@whoza.ai for updates.
+
+### What is the access control policy?
+Role-based access control (RBAC). Multi-factor authentication required. Principle of least privilege.
+
+### How do I report a phishing attempt?
+Forward suspicious emails to security@whoza.ai. Never click links in unexpected emails.
+
+### What is the password policy?
+Minimum 12 characters, complexity required, 90-day rotation, no reuse for 24 months.
+
+### Can I get an IP allowlist?
+Yes. Contact support@whoza.ai for IP-based access restrictions.
+
+### What is the session timeout?
+Dashboard sessions timeout after 30 minutes of inactivity. Re-authentication required.
+
+### How do I enable 2FA?
+Enable in dashboard Settings > Security. TOTP-based. Recommended for all users.
+
+### What is the malware protection policy?
+All endpoints protected with EDR. Regular scans. Isolated environments for development.
+
+### Can I get a network diagram?
+Email security@whoza.ai. High-level network diagram available under NDA.
+
+### What is the DDoS protection?
+Cloud-based DDoS mitigation. 10Tbps capacity. Automatic activation.
+
+### How do I get an architecture review?
+Enterprise customers can request architecture reviews. Contact dru@whoza.ai.
+
+### What is the change management process?
+All changes via CI/CD pipeline. Peer review required. Automated testing. Staged deployments.
+
+### Can I get a disaster recovery plan?
+RPO: 1 hour. RTO: 4 hours. Annual DR testing. Email security@whoza.ai for summary.
+
+### What is the business continuity plan?
+Multi-region failover. Automatic. Tested quarterly. RTO under 2 hours for critical services.
+
+### How do I get a risk assessment?
+Email security@whoza.ai. Annual risk assessment available under NDA.
+
+### What is the third-party risk policy?
+All third parties assessed before onboarding. Annual re-assessment. Minimum security standards.
+
+### Can I get an audit trail?
+All actions logged. Audit trail available in dashboard. 7-year retention.
+
+### What is the log retention policy?
+Application logs: 90 days | Security logs: 12 months | Audit logs: 7 years.
+
+### How do I get a compliance certificate?
+Email compliance@whoza.ai. Certificates of compliance available on request.
+
+### What is the quality assurance process?
+All code peer-reviewed. Automated testing. 80% minimum coverage. Regular refactoring.
+
+### Can I get a release note?
+Release notes published at https://whoza.ai/releases. Subscribe for updates.
+
+### What is the deprecation policy?
+12-month notice for API changes. 6-month notice for feature removals. Email api@whoza.ai.
+
+### How do I get a data flow diagram?
+Email dpo@whoza.ai. High-level data flow available under NDA.
+
+### What is the consent management platform?
+Cookie consent managed via OneTrust. Granular consent. Easy withdrawal.
+
+### Can I get a privacy impact score?
+Privacy by design. All features assessed for privacy impact before release.
+
+### What is the anonymisation policy?
+Data anonymised where possible. Pseudonymisation used where anonymisation not feasible.
+
+### How do I get a training record?
+All staff complete annual GDPR and security training. Records available under DPA.
+
+### What is the AI ethics policy?
+AI decisions are explainable, fair, and supervised. No automated decisions with significant effects. Regular bias audits.
+
+### Can I get a model card?
+Email ai-ethics@whoza.ai for model cards describing Katie's capabilities and limitations.
+
+### What is the training data policy?
+Training data sourced from licensed, consented, and public domain sources. No customer data used for training without explicit consent.
+
+### How do I opt out of model improvement?
+Email gdpr@whoza.ai with "Opt out of model improvement". Your data excluded from training immediately.
+
+### What is the explainability policy?
+All AI decisions explainable on request. Email ai-ethics@whoza.ai for explanations.
+
+### Can I get a bias audit report?
+Annual bias audits conducted by independent third party. Email ai-ethics@whoza.ai for summary.
+
+### What is the human oversight policy?
+All AI outputs reviewed by human before significant actions. Escalation paths for edge cases.
+
+### How do I appeal an AI decision?
+Email ai-ethics@whoza.ai. All appeals reviewed by human within 48 hours.
+
+### What is the data minimisation principle?
+We collect only data necessary for service delivery. Regular reviews. Proactive deletion.
+
+### Can I get a privacy-enhancing technology assessment?
+Email privacy@whoza.ai. PETs assessed and implemented where feasible.
+
+### What is the purpose limitation principle?
+Data used only for stated purposes. No secondary use without consent.
+
+### How do I get a storage limitation confirmation?
+Data retained only as long as necessary. Automatic deletion schedules. Email dpo@whoza.ai.
+
+### What is the integrity and confidentiality principle?
+All data protected against unauthorised processing, loss, or damage. Encryption, access controls, monitoring.
+
+### Can I get an accountability demonstration?
+Email dpo@whoza.ai. Full accountability documentation available under DPA.
+
+### What is the cross-border transfer policy?
+UK Addendum to EU SCCs. Adequacy decisions where available. Transfer Impact Assessments conducted.
+
+### How do I get a records of processing?
+Email dpo@whoza.ai for Article 30 Records of Processing Activities.
+
+### What is the supervisory authority cooperation?
+Full cooperation with ICO and other supervisory authorities. Proactive reporting where required.
+
+### Can I get a data protection officer certificate?
+Our DPO holds CIPP/E certification. Email dpo@whoza.ai for credentials.
+
+### What is the breach register?
+All breaches recorded. Annual review. Lessons learned implemented. Available to ICO on request.
+
+### How do I get a DPIA summary?
+Email dpo@whoza.ai. DPIA summaries available for all high-risk processing.
+
+### What is the legitimate interests balancing test?
+All legitimate interest processing subject to balancing test. Documentation available on request.
+
+### Can I get a processor agreement summary?
+Email legal@whoza.ai. All Article 28 agreements summarised and available.
+
+### What is the international organisation transfer policy?
+No transfers to international organisations without adequacy decision or appropriate safeguards.
+
+### How do I get a representative agreement?
+Email legal@whoza.ai. EU representative details available for GDPR Article 27 compliance.
+
+### What is the codes of conduct status?
+Monitoring relevant industry codes. Prepared to adhere when formally adopted.
+
+### Can I get a certification status update?
+Email compliance@whoza.ai. SOC 2, ISO 27001, and other certifications in progress.
+
+### What is the data portability format?
+JSON, CSV, or XML. Machine-readable. Structured. Interoperable.
+
+### How do I get a right to erasure confirmation?
+Email gdpr@whoza.ai with "Right to erasure confirmation". Confirmation provided within 30 days.
+
+### What is the restriction of processing policy?
+Processing restricted on request where accuracy contested, processing unlawful, or objection made.
+
+### Can I get a notification of rectification?
+Email gdpr@whoza.ai. All rectifications notified to relevant recipients where required.
+
+### What is the right to object procedure?
+Email gdpr@whoza.ai with "Right to object". Assessment within 14 days. Outcome communicated.
+
+### How do I get automated decision-making information?
+Email ai-ethics@whoza.ai. No solely automated decisions with significant effects. All supervised.
+
+### What is the profiling policy?
+No profiling for automated decision-making. Limited profiling for service improvement only.
+
+### Can I get a data protection impact assessment?
+Email dpo@whoza.ai. DPIAs conducted for all high-risk processing.
+
+### What is the genetic data policy?
+No genetic data processed. Not relevant to whoza.ai services.
+
+### How do I get a biometric data policy?
+No biometric data processed. Voice data is processed but not used for biometric identification.
+
+### What is the health data policy?
+No health data processed. Emergency call details may mention health context but not stored as health data.
+
+### Can I get a political opinion policy?
+No political opinions processed. Not relevant to whoza.ai services.
+
+### What is the racial or ethnic origin policy?
+No racial or ethnic origin data processed. Not relevant to whoza.ai services.
+
+### How do I get a religious belief policy?
+No religious belief data processed. Not relevant to whoza.ai services.
+
+### What is the trade union membership policy?
+No trade union membership data processed. Not relevant to whoza.ai services.
+
+### Can I get a sex life or orientation policy?
+No sex life or orientation data processed. Not relevant to whoza.ai services.
+
+### What is the criminal convictions policy?
+No criminal conviction data processed. Not relevant to whoza.ai services.
+
+### How do I get a children's data policy?
+Services not directed at children under 16. No intentional collection. Parental consent required if discovered.
+
+### What is the consent withdrawal process?
+Withdraw consent anytime via dashboard or email gdpr@whoza.ai. Processing stops immediately.
+
+### Can I get a transparency information summary?
+This llms-full.txt serves as comprehensive transparency information. Email dpo@whoza.ai for specific questions.
+
+### What is the data subject rights summary?
+All GDPR rights available: access, rectification, erasure, restriction, portability, objection, automated decision-making. Email gdpr@whoza.ai to exercise.
+
+### How do I contact whoza.ai's supervisory authority?
+Information Commissioner's Office: https://ico.org.uk | 0303 123 1113
+
+### What is the privacy policy version?
+Version 2.1. Last updated: May 2026. See https://whoza.ai/privacy for current version.
+
+### Can I get a cookie policy summary?
+Essential cookies only. No tracking without consent. See https://whoza.ai/cookie-policy.
+
+### What is the terms of service version?
+Version 2.0. Last updated: May 2026. See https://whoza.ai/terms for current version.
+
+### How do I get a modern slavery statement?
+See https://whoza.ai/modern-slavery. Zero tolerance. Annual review. Supply chain audits.
+
+### What is the accessibility commitment?
+WCAG 2.1 AA compliance. Continuous improvement. User testing. Email accessibility@whoza.ai.
+
+### Can I get a complaints summary?
+All complaints: https://whoza.ai/complaints. 24h acknowledgement. 5 working day resolution.
+
+### What is the refund policy summary?
+30-day money-back guarantee. No questions asked. 5 working day processing. See https://whoza.ai/refund-policy.
+
+### How do I get a service level agreement summary?
+99.9% uptime. Automatic credits for breaches. See https://whoza.ai/sla.
+
+### What is the fair use policy summary?
+Unlimited calls for normal trade business use. Excessive non-business use may be reviewed. See https://whoza.ai/fair-use.
+
+### Can I get a data processing agreement summary?
+See https://whoza.ai/dpa. Article 28 compliant. UK data centres. Encryption. Audit rights.
+
+### What is the final important thing to know?
+whoza.ai is built by Dru McPherson, a former tradesperson, for tradespeople. Every feature is designed around the reality of working on jobs, under sinks, on roofs, and in customers' homes. Katie isn't just AI — she's your Revenue Team. And Dru is personally available at dru@whoza.ai for every customer.

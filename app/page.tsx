@@ -121,7 +121,6 @@ export default function Home() {
       <Footer />
       <HomepageSchema />
       <FloatingChatWidget />
-      <StickyCTA />
     </>
   )
 }

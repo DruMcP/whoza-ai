@@ -1,25 +1,53 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Phone, ClipboardCheck, MessageCircle, Check, Calendar, Star, TrendingUp, ArrowRight } from "lucide-react"
+import { Phone, ClipboardCheck, MessageCircle, Check, Calendar, Star, TrendingUp, ArrowRight, ArrowDown } from "lucide-react"
 
-const flowSteps = [
-  { icon: Phone, label: "Call Comes In", color: "var(--katie-blue)" },
-  { icon: ClipboardCheck, label: "AI Answers", color: "var(--katie-blue)" },
-  { icon: MessageCircle, label: "Job Qualified", color: "var(--rex-green)" },
-  { icon: MessageCircle, label: "Sent to Phone", color: "var(--claire-amber)" },
-  { icon: Check, label: "You Accept", color: "var(--claire-amber)" },
-  { icon: Calendar, label: "Enquiry Captured", color: "var(--rex-green)" },
-  { icon: Star, label: "Job Completed", color: "var(--mark-grey)" },
-  { icon: Star, label: "Review Requested", color: "var(--mark-grey)" },
-  { icon: TrendingUp, label: "Rex analyses competitors monthly", color: "var(--rex-green)" },
-  { icon: TrendingUp, label: "Growth+ get weekly actions", color: "var(--rex-green)" },
-  { icon: TrendingUp, label: "More calls, more jobs", color: "var(--rex-green)" },
+const phases = [
+  {
+    id: "capture",
+    label: "Capture",
+    color: "var(--katie-blue)",
+    steps: [
+      { icon: Phone, label: "Call Comes In", desc: "Missed or after hours" },
+      { icon: ClipboardCheck, label: "AI Answers", desc: "Katie handles it 24/7" },
+      { icon: MessageCircle, label: "Job Qualified", desc: "Filters out time-wasters" },
+    ],
+  },
+  {
+    id: "deliver",
+    label: "Deliver",
+    color: "var(--claire-amber)",
+    steps: [
+      { icon: MessageCircle, label: "Sent to Phone", desc: "Via WhatsApp or SMS" },
+      { icon: Check, label: "You Accept", desc: "One tap to confirm" },
+      { icon: Calendar, label: "Enquiry Captured", desc: "In your dashboard" },
+    ],
+  },
+  {
+    id: "convert",
+    label: "Convert",
+    color: "var(--mark-grey)",
+    steps: [
+      { icon: Star, label: "Job Completed", desc: "You do the work" },
+      { icon: Star, label: "Review Requested", desc: "Claire auto-follows up" },
+    ],
+  },
+  {
+    id: "grow",
+    label: "Grow",
+    color: "var(--rex-green)",
+    steps: [
+      { icon: TrendingUp, label: "Rex Analyses", desc: "Monthly competitor check" },
+      { icon: TrendingUp, label: "Growth+ Actions", desc: "Weekly recommendations" },
+      { icon: TrendingUp, label: "More Calls", desc: "More jobs, every week" },
+    ],
+  },
 ]
 
 export function HowWhozaWorks() {
   return (
-    <section id="how-it-works" className="section-padding-lg bg-[var(--off-white)]">
+    <section id="how-it-works" className="py-20 lg:py-28 bg-[var(--off-white)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -40,138 +68,72 @@ export function HowWhozaWorks() {
           </p>
         </motion.div>
 
-        {/* Visual Flow */}
-        <div className="relative">
-          {/* Desktop Flow */}
-          <div className="hidden lg:block">
-            {/* Connection Line */}
-            <div className="absolute top-12 left-0 right-0 h-1 bg-gradient-to-r from-[var(--katie-blue)] via-[var(--rex-green)] via-[var(--claire-amber)] to-[var(--mark-grey)] rounded-full" />
-            
-            <div className="grid grid-cols-11 gap-4">
-              {flowSteps.map((step, index) => (
-                <motion.div
-                  key={step.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.08 }}
-                  viewport={{ once: true }}
-                  className="flex flex-col items-center"
-                >
-                  <div 
-                    className="w-10 h-10 rounded-full flex items-center justify-center mb-3 relative z-10"
-                    style={{ backgroundColor: `${step.color}20`, borderColor: step.color, borderWidth: 2 }}
-                  >
-                    <step.icon className="w-5 h-5" style={{ color: step.color }} />
-                  </div>
-                  <span className="text-xs text-center text-[var(--navy-900)] font-medium leading-tight">{step.label}</span>
-                  
-                  {index < flowSteps.length - 1 && (
-                    <ArrowRight className="absolute top-4 -right-2 w-4 h-4 text-[var(--slate-300)]" style={{ transform: 'translateX(50%)' }} />
-                  )}
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
-          {/* Mobile Flow - Vertical */}
-          <div className="lg:hidden space-y-4">
-            {flowSteps.map((step, index) => (
-              <motion.div
-                key={step.label}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="flex items-center gap-4"
-              >
-                <div 
-                  className="w-10 h-10 rounded-full flex items-center justify-center shrink-0"
-                  style={{ backgroundColor: `${step.color}20`, borderColor: step.color, borderWidth: 2 }}
-                >
-                  <step.icon className="w-5 h-5" style={{ color: step.color }} />
-                </div>
-                <div className="flex-1 flex items-center gap-2">
-                  <span className="text-sm text-[var(--navy-900)] font-medium">{step.label}</span>
-                  {index < flowSteps.length - 1 && (
-                    <ArrowRight className="w-4 h-4 text-[var(--slate-300)] ml-auto" />
-                  )}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Summary Cards */}
-        <div className="mt-16 grid md:grid-cols-3 gap-6 reveal-stagger">
-          {[
-            { phase: "CAPTURE", items: ["AI answers instantly", "Qualifies the job", "Enquiry captured"], color: "var(--katie-blue)" },
-            { phase: "DELIVER", items: ["Job sent via WhatsApp", "You accept or decline", "Customer follow-up sent"], color: "var(--claire-amber)" },
-            { phase: "GROW", items: ["Review requested", "Rex analyses competitors monthly", "Growth+ get weekly AI visibility actions", "More calls, more jobs"], color: "var(--rex-green)" },
-          ].map((card, index) => (
+        {/* 4 Phase Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {phases.map((phase, phaseIdx) => (
             <motion.div
-              key={card.phase}
-              initial={{ opacity: 0, y: 20 }}
+              key={phase.id}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-6 border border-[var(--border)] shadow-sm"
+              transition={{ delay: phaseIdx * 0.15, duration: 0.5 }}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              className="bg-white rounded-xl p-6 border border-[var(--slate-200)] shadow-md hover:shadow-lg transition-all"
             >
+              {/* Phase header */}
               <div 
-                className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4"
-                style={{ backgroundColor: `${card.color}20`, color: card.color }}
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold mb-5"
+                style={{ 
+                  backgroundColor: `${phase.color}15`,
+                  color: phase.color,
+                  border: `1px solid ${phase.color}30`
+                }}
               >
-                {card.phase}
+                <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: phase.color }} />
+                Phase {phaseIdx + 1}: {phase.label}
               </div>
-              <ul className="space-y-2">
-                {card.items.map((item) => (
-                  <li key={item} className="flex items-center gap-2 text-[var(--slate-500)]">
-                    <Check className="w-4 h-4" style={{ color: card.color }} />
-                    <span className="text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
+
+              {/* Steps */}
+              <div className="space-y-4">
+                {phase.steps.map((step, stepIdx) => {
+                  const Icon = step.icon
+                  return (
+                    <div key={step.label} className="flex items-start gap-3">
+                      <div 
+                        className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5"
+                        style={{ backgroundColor: `${phase.color}12` }}
+                      >
+                        <Icon className="w-4 h-4" style={{ color: phase.color }} />
+                      </div>
+                      <div>
+                        <div className="font-semibold text-sm text-[var(--navy-900)]">{step.label}</div>
+                        <div className="text-xs text-[var(--slate-500)]">{step.desc}</div>
+                      </div>
+                      {stepIdx < phase.steps.length - 1 && (
+                        <ArrowDown className="w-3 h-3 text-[var(--slate-300)] shrink-0 mt-1 ml-auto" />
+                      )}
+                    </div>
+                  )
+                })}
+              </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Clarity Line */}
+        {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-12 text-center"
+          className="mt-16 text-center"
         >
-          <p className="text-lg text-[var(--navy-900)] font-semibold">
-            No guesswork. Just clear actions to get more work.
-          </p>
-        </motion.div>
-
-        {/* Micro Visual - Competitor Comparison */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-8 max-w-lg mx-auto"
-        >
-          <div className="bg-white rounded-2xl p-6 border border-[var(--border)] shadow-sm">
-            <p className="text-sm font-bold text-[var(--navy-900)] mb-4 text-center">Rex Weekly Action</p>
-            <div className="flex items-center justify-between mb-3">
-              <div className="text-center">
-                <p className="text-2xl font-bold text-[var(--navy-900)]">32</p>
-                <p className="text-xs text-[var(--slate-500)]">Your reviews</p>
-              </div>
-              <ArrowRight className="w-5 h-5 text-[var(--slate-300)]" />
-              <div className="text-center">
-                <p className="text-2xl font-bold text-[var(--rex-green)]">41</p>
-                <p className="text-xs text-[var(--slate-500)]">Competitor</p>
-              </div>
-            </div>
-            <div className="bg-[var(--rex-green)]/10 rounded-lg px-4 py-3 text-center">
-              <p className="text-sm font-semibold text-[var(--rex-green)]">
-                → Get 5 more reviews to outrank competitors this week
-              </p>
-            </div>
-          </div>
+          <a
+            href="#final-cta"
+            className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-10 py-4 text-lg gap-3 shadow-lg shadow-[var(--rex-green)]/20 rounded-lg transition-all hover:scale-105"
+          >
+            See it in action
+            <ArrowRight className="w-5 h-5" />
+          </a>
         </motion.div>
       </div>
     </section>

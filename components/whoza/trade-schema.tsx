@@ -23,7 +23,7 @@ export function TradeSchema({ tradeData }: TradeSchemaProps) {
   const howToSchema = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    "name": `How to Set Up AI Call Answering for ${tradeData.display}`,
+    "name": `How to Set Up AI Call Handling for ${tradeData.display}`,
     "description": `Four-step process to get Katie answering calls for your ${tradeData.singular} business`,
     "totalTime": "PT30M",
     "supply": [
@@ -50,7 +50,7 @@ export function TradeSchema({ tradeData }: TradeSchemaProps) {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": `AI Call Answering for ${tradeData.display}`,
+    "name": `AI Call Handling for ${tradeData.display}`,
     "description": tradeData.metaDescription,
     "provider": {
       "@type": "Organization",

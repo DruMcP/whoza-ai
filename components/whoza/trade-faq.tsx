@@ -22,7 +22,7 @@ export function TradeFAQ({ tradeData }: TradeFAQProps) {
             viewport={{ once: true }}
             className="text-3xl sm:text-4xl font-bold text-[var(--navy-900)]"
           >
-            Questions {tradeData.display} Ask About AI Call Answering
+            Questions {tradeData.display} Ask About AI Call Handling
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

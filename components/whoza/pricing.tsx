@@ -51,7 +51,7 @@ export function Pricing() {
       color: "blue" as keyof typeof colorStyles,
       popular: false,
       features: [
-        { text: "AI call answering 24/7", included: true },
+        { text: "AI call handling 24/7", included: true },
         { text: "Spam call filtering", included: true },
         { text: "Lead capture + dashboard", included: true },
         { text: "Booking automation", included: true },
@@ -209,21 +209,25 @@ export function Pricing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative bg-white rounded-3xl border ${
+                className={`relative bg-white rounded-xl border ${
                   plan.popular 
-                    ? `pricing-card popular ${colors.border} border-2 shadow-2xl md:scale-105 z-10` 
-                    : "pricing-card border-[var(--border)]"
-                } overflow-hidden`}
+                    ? `pricing-card popular ${colors.border} border-2 shadow-xl md:scale-105 z-10` 
+                    : "pricing-card border-[var(--border)] shadow-md hover:shadow-lg transition-shadow overflow-hidden"
+                }`}
               >
                 {/* Popular Badge */}
                 {plan.popular && (
-                  <div className={`absolute top-0 left-0 right-0 py-2 ${colors.bg} text-white text-center text-sm font-medium`}>
-                    <Sparkles className="inline w-4 h-4 mr-1" />
-                    Most Popular
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20"
+                  >
+                    <span className={`px-4 py-1.5 rounded-full ${colors.bg} text-white text-xs font-bold shadow-lg`}
+                    >
+                      <Sparkles className="inline w-3 h-3 mr-1" />
+                      Most Popular
+                    </span>
                   </div>
                 )}
 
-                <div className={`p-6 ${plan.popular ? "pt-12" : ""}`}>
+                <div className={`p-6 ${plan.popular ? "pt-8" : ""}`}>
                   {/* Plan Header */}
                   <div className="mb-4">
                     <h3 className="text-xl font-bold text-[var(--navy-900)]">{plan.name}</h3>

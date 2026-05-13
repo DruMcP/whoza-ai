@@ -77,7 +77,7 @@ export function TradeHero({ tradeData }: TradeHeroProps) {
                 size="lg"
                 className="bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 text-white font-semibold px-8 py-6 text-lg gap-2 group"
               >
-                Start Free 14-Day Trial
+                Start Free 7-Day Trial
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button 

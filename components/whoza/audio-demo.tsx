@@ -134,6 +134,29 @@ export function AudioDemo() {
             controlsList="nodownload"
           />
 
+          {/* Animated Waveform */}
+          <div className="flex items-center justify-center gap-1 h-12 mb-4">
+            {Array.from({ length: 40 }).map((_, i) => (
+              <motion.div
+                key={i}
+                className="w-1 rounded-full bg-[var(--katie-blue)]/60"
+                animate={isPlaying ? {
+                  height: [8, 24 + Math.random() * 24, 8],
+                  opacity: [0.5, 1, 0.5],
+                } : {
+                  height: 8,
+                  opacity: 0.3,
+                }}
+                transition={isPlaying ? {
+                  duration: 0.5 + Math.random() * 0.5,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  delay: i * 0.02,
+                } : { duration: 0.3 }}
+              />
+            ))}
+          </div>
+
           {/* Player Controls */}
           <div className="flex items-center gap-4 mb-4">
             <Button

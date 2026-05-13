@@ -63,6 +63,38 @@ export function FinalCTA() {
           </div>
         </motion.div>
 
+        {/* Social Proof Counters */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-12 grid grid-cols-3 gap-6 max-w-lg mx-auto"
+        >
+          {[
+            { value: "4,200+", label: "Calls caught this week", icon: Phone },
+            { value: "£1.2M+", label: "Revenue recovered", icon: BarChart3 },
+            { value: "4.9/5", label: "Average rating", icon: Star },
+          ].map((stat, i) => {
+            const StatIcon = stat.icon
+            return (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 + i * 0.1 }}
+                className="text-center"
+              >
+                <div className="text-2xl sm:text-3xl font-bold text-white mb-1">{stat.value}</div>
+                <div className="flex items-center justify-center gap-1 text-xs text-white/50">
+                  <StatIcon className="w-3 h-3" />
+                  {stat.label}
+                </div>
+              </motion.div>
+            )
+          })}
+        </motion.div>
+
         {/* CTAs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

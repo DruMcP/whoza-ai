@@ -4,13 +4,15 @@ import { motion } from "framer-motion"
 import { Phone, MessageCircle, Clock, CheckCircle2, MapPin } from "lucide-react"
 
 export function PhoneMockup({ city, trade }: { city?: string; trade?: string }) {
-  // Hardcoded realistic demo data per Dru spec
+  // Use city prop if provided, otherwise fallback
+  const displayArea = city || "Aberdeen"
+
   const enquiry = {
     label: "WhatsApp Enquiry Received",
     heading: "New Customer Enquiry",
     jobType: "Boiler Repair",
     name: "Sarah Thompson",
-    area: "Aberdeen",
+    area: displayArea,
     urgency: "Today",
     value: "£180–£260",
     time: "ASAP",

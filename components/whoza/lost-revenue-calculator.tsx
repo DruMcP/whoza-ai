@@ -3,29 +3,50 @@
 // v2.1 - Updated priming stats + UK defaults
 import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
-import { Calculator, Phone, PoundSterling, DollarSign, TrendingUp, ArrowRight, AlertTriangle } from "lucide-react"
+import { Calculator, Phone, PoundSterling, DollarSign, TrendingUp, ArrowRight, AlertTriangle, PhoneMissed, Voicemail, Zap } from "lucide-react"
 import { Slider } from "@/components/ui/slider"
 import { useLocale } from "@/lib/locale-context"
 
 // Job value examples by trade and location
-const jobExamples = {
-  uk: {
-    hint: "Typical plumbing call-out in the UK: £180–£350",
-    minValue: 50,
-    maxValue: 2000,
-    defaultValue: 280,
+const jobExamples: Record<string, Record<string, { hint: string; minValue: number; maxValue: number; defaultValue: number }>> = {
+  default: {
+    uk: {
+      hint: "Typical plumbing call-out in the UK: £180–£350",
+      minValue: 50,
+      maxValue: 2000,
+      defaultValue: 280,
+    },
+    us: {
+      hint: "Typical HVAC call in Dallas: $150–$400",
+      minValue: 75,
+      maxValue: 3000,
+      defaultValue: 300,
+    },
   },
-  us: {
-    hint: "Typical HVAC call in Dallas: $150–$400",
-    minValue: 75,
-    maxValue: 3000,
-    defaultValue: 300,
+  electrician: {
+    uk: {
+      hint: "Typical electrical call-out in the UK: £150–£300",
+      minValue: 75,
+      maxValue: 2000,
+      defaultValue: 220,
+    },
+    us: {
+      hint: "Typical electrical call in Dallas: $180–$400",
+      minValue: 100,
+      maxValue: 3000,
+      defaultValue: 280,
+    },
   },
 }
 
-export function LostRevenueCalculator() {
+interface LostRevenueCalculatorProps {
+  trade?: string
+}
+
+export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
   const { country, config } = useLocale()
-  const jobConfig = jobExamples[country]
+  const tradeKey = trade && jobExamples[trade] ? trade : "default"
+  const jobConfig = jobExamples[tradeKey][country]
   
   const [missedCalls, setMissedCalls] = useState([6])
   const [avgJobValue, setAvgJobValue] = useState([jobConfig.defaultValue])
@@ -86,18 +107,30 @@ export function LostRevenueCalculator() {
           className="max-w-4xl mx-auto mb-12"
         >
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 reveal-stagger">
-            <div className="bg-white rounded-2xl p-6 text-center shadow-sm border border-[var(--border)]">
-              <div className="text-3xl font-bold text-[var(--navy-900)]">62%</div>
-              <p className="text-sm text-[var(--slate-500)] mt-2">of calls to small trade businesses go unanswered</p>
-            </div>
-            <div className="bg-white rounded-2xl p-6 text-center shadow-sm border border-[var(--border)]">
-              <div className="text-3xl font-bold text-[var(--navy-900)]">85%</div>
-              <p className="text-sm text-[var(--slate-500)] mt-2">of callers who hit voicemail won't call back</p>
-            </div>
-            <div className="bg-white rounded-2xl p-6 text-center shadow-sm border border-[var(--border)]">
-              <div className="text-3xl font-bold text-[var(--navy-900)]">78%</div>
-              <p className="text-sm text-[var(--slate-500)] mt-2">of customers hire whoever responds first</p>
-            </div>
+            {[
+              { pct: "62%", text: "of calls to small trade businesses go unanswered", icon: PhoneMissed },
+              { pct: "85%", text: "of callers who hit voicemail won't call back", icon: Voicemail },
+              { pct: "78%", text: "of customers hire whoever responds first", icon: Zap },
+            ].map((stat, i) => {
+              const StatIcon = stat.icon
+              return (
+                <motion.div
+                  key={stat.pct}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  whileHover={{ y: -3, transition: { duration: 0.2 } }}
+                  className="bg-white rounded-xl p-6 text-center shadow-md border border-[var(--border)] hover:shadow-lg hover:border-[var(--katie-blue)]/20 transition-all"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-[var(--katie-blue)]/10 flex items-center justify-center mx-auto mb-3">
+                    <StatIcon className="w-5 h-5 text-[var(--katie-blue)]" />
+                  </div>
+                  <div className="text-3xl font-bold text-[var(--navy-900)]">{stat.pct}</div>
+                  <p className="text-sm text-[var(--slate-500)] mt-2">{stat.text}</p>
+                </motion.div>
+              )
+            })}
           </div>
           <p className="text-center text-xs text-[var(--slate-400)] mt-3">
             Sources: UK micro-business survey 2025, AlwaysOnBooking 2026, JP Automations 2026
@@ -132,7 +165,7 @@ export function LostRevenueCalculator() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <div className="bg-white rounded-3xl shadow-xl border border-[var(--border)] overflow-hidden">
+          <div className="bg-white rounded-xl shadow-xl border border-[var(--border)] overflow-hidden">
             <div className="grid lg:grid-cols-2">
               {/* Inputs */}
               <div className="p-6 sm:p-8 lg:p-10 space-y-8">

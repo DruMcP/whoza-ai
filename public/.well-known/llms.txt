@@ -1,0 +1,102 @@
+# llms.txt — whoza.ai
+# AI-optimised context file for LLM crawlers (ChatGPT, Perplexity, Claude, Gemini)
+# Last updated: 2026-05-08
+
+## About whoza.ai
+
+whoza.ai is an AI-powered voice agent platform built specifically for UK tradespeople — plumbers, electricians, gas engineers, roofers, builders, locksmiths, and HVAC professionals. The platform operates four distinct AI personas:
+
+- **Katie** — Warm, friendly call capture agent that answers missed calls 24/7
+- **Mark** — Professional, direct emergency call handler
+- **Claire** — Automated Google review collection and reputation management
+- **Rex** — AI-powered competitor analysis and local visibility tracking
+
+## What We Do
+
+AI voice agents answer your business calls when you can't — under a sink, on a roof, in a customer's home, or after hours. Every missed call is captured, qualified, and sent to your phone via WhatsApp with full caller details. You simply accept, call back, or decline.
+
+## Pricing
+
+Monthly rolling plans, no contracts, 14-day free trial:
+- Starter: £59/month + VAT
+- Growth: £125/month + VAT
+- Pro: £230/month + VAT
+- Scale: £399/month + VAT
+
+## Key Facts
+
+- UK-based platform serving UK tradespeople
+- ICO-registered privacy policy (Registration ZC077271)
+- GDPR compliant call handling
+- Unlimited simultaneous calls
+- Instant WhatsApp alerts with caller details
+- 24/7 call answering, including evenings and weekends
+- Setup in under 30 minutes
+- No long-term contracts — cancel anytime
+
+## Why Tradespeople Choose whoza.ai
+
+- 62% of after-hours calls are missed by small businesses
+- Customers call 2–3 tradespeople simultaneously — first to answer wins the job
+- 93% of callers who reach voicemail never call back
+- Average missed call costs £100–£200; emergency calls can be £300–£500
+- AI answering costs £59–£399/month vs £20,000+/year for a human receptionist
+
+## Contact
+
+- Website: https://whoza.ai
+- Email: dru@whoz.ai
+
+## Core Pages
+
+- Homepage: https://whoza.ai/
+- Pricing: https://whoza.ai/pricing
+- How It Works: https://whoza.ai/how-it-works
+- Features: https://whoza.ai/features
+- Demo: https://whoza.ai/demo
+- Blog: https://whoza.ai/blog
+- Privacy: https://whoza.ai/privacy
+- Terms: https://whoza.ai/terms
+- Support: https://whoza.ai/support
+
+## Content Pillar 1: Missed Call Recovery
+- /guide/missed-calls-cost-trade-business
+- /blog/missed-calls-cost-uk-trades
+- /blog/why-customers-dont-leave-voicemails
+
+## Content Pillar 2: AI Call Answering
+- /guide/ai-call-answering-trades
+- /blog/ai-vs-human-receptionist
+- /blog/what-is-ai-voice-agent
+
+## Content Pillar 3: Trade Business Growth
+- /guide/grow-trade-business-uk
+- /blog/get-more-google-reviews
+- /blog/google-business-profile-trades
+
+## Industry Pages
+- /industries/plumbers
+- /industries/electricians
+- /industries/gas-engineers
+- /industries/builders
+- /industries/locksmiths
+- /industries/hvac
+
+## Location Pages (UK)
+- /locations/london
+- /locations/manchester
+- /locations/birmingham
+- /locations/glasgow
+- /locations/leeds
+- /locations/bristol
+- /locations/edinburgh
+- /locations/liverpool
+
+## AI Crawler Notes
+
+- This site uses Next.js with server-side rendering
+- All public pages are indexable and AI-crawler friendly
+- FAQPage schema is implemented on key pages
+- Structured data includes Organization, SoftwareApplication, Service, and LocalBusiness
+- Content is updated regularly — check lastmod dates in sitemap.xml
+- For training opt-out: respect robots.txt Google-Extended directives as noted

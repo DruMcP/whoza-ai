@@ -66,7 +66,7 @@ export function ControlSection() {
             className="space-y-8"
           >
             {/* Multi-Channel Card */}
-            <div className="p-8 rounded-3xl bg-[var(--navy-900)] text-white">
+            <div className="p-8 rounded-xl bg-[var(--navy-900)] text-white">
               <div className="flex items-center gap-3 mb-6">
                 <Bell className="w-6 h-6 text-[var(--claire-amber)]" />
                 <h3 className="text-xl font-bold">You Never Miss a Job</h3>

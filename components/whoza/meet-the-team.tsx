@@ -102,7 +102,7 @@ export function MeetTheTeam() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`persona-card relative bg-white rounded-3xl p-6 border-2 ${agent.borderColor} shadow-lg hover:shadow-xl transition-all flex flex-col`}
+                className={`persona-card relative bg-white rounded-xl p-6 border-2 ${agent.borderColor} shadow-md hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col`}
                 data-persona={agent.name.toLowerCase()}
               >
                 {/* Role Badge */}

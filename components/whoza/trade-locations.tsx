@@ -36,7 +36,7 @@ export function TradeLocations({ tradeData }: TradeLocationsProps) {
             viewport={{ once: true }}
             className="text-2xl sm:text-3xl font-bold text-[var(--navy-900)]"
           >
-            AI Call Answering for {tradeData.display} Across the UK
+            AI Call Handling for {tradeData.display} Across the UK
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

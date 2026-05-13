@@ -7,10 +7,10 @@ import { CountrySwitcher } from "./country-switcher"
 import { SignupModal } from "./signup-modal"
 
 const navLinks = [
-  { href: "#how-it-works", label: "How It Works", isPageLink: false },
-  { href: "#team", label: "Meet the Team", isPageLink: false },
+  { href: "/#how-it-works", label: "How It Works", isPageLink: false },
+  { href: "/#team", label: "Meet the Team", isPageLink: false },
   { href: "/pricing", label: "Pricing", isPageLink: true },
-  { href: "#testimonials", label: "Testimonials", isPageLink: false },
+  { href: "/#testimonials", label: "Testimonials", isPageLink: false },
   { href: "/support", label: "Support", isPageLink: true },
   { href: "/pricing#faq", label: "FAQ", isPageLink: true },
 ]
@@ -72,8 +72,8 @@ export function Header() {
 
             <button 
               onClick={() => setShowSignup(true)}
-              className="inline-flex items-center justify-center rounded-md text-white font-bold px-3 py-1.5 text-xs transition-colors whitespace-nowrap"
-              style={{ background: "linear-gradient(135deg, #059669, #10B981)", height: 32 }}
+              className="inline-flex items-center justify-center rounded-lg text-white font-semibold px-5 py-2.5 text-sm transition-all whitespace-nowrap hover:shadow-lg hover:shadow-emerald-500/25 hover:-translate-y-0.5"
+              style={{ background: "linear-gradient(135deg, #059669, #10B981)" }}
             >
               Get Katie answering my calls
             </button>

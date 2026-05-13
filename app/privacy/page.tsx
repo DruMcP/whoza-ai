@@ -56,7 +56,7 @@ export default function PrivacyPolicy() {
               2. What Data We Collect
             </h2>
             <p className="text-white/70 leading-relaxed mb-4">
-              When you use whoza.ai's AI call answering service, we collect and process the following categories of data:
+              When you use whoza.ai's AI call handling service, we collect and process the following categories of data:
             </p>
             <ul className="space-y-3 text-white/70">
               <li className="flex items-start gap-3">
