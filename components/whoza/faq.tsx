@@ -14,63 +14,84 @@ const faqs = [
   {
     question: "How much does Whoza cost in total?",
     answer: "You pay a monthly plan fee (Starter £59, Growth £125, Pro £230, Scale £399 — all +VAT). Each plan includes a set number of call handling minutes and booked enquiries. Additional enquiries beyond your included amount are charged per booking. Overage minutes are billed at £0.22 per minute. There are no hidden setup fees or long-term contracts.",
+    category: "Pricing",
   },
   {
     question: "Is there a free trial?",
     answer: "Yes — every new account starts with a 7-day free trial on the Starter plan. Your trial includes 20 minutes of call handling and up to 4 booked enquiries at no charge. No credit card required to start. If Whoza works for your business, your trial automatically converts to a paid plan. If not, you can cancel anytime during the trial with no charge.",
+    category: "General",
   },
   {
     question: "What happens to my data if I cancel?",
     answer: "You can cancel anytime with one click. Your call recordings, customer data, and enquiry history are yours. We can export your data on request, and all stored data is deleted in line with GDPR requirements after cancellation.",
+    category: "General",
   },
   {
     question: "How quickly can I get set up?",
     answer: "Most tradespeople are fully set up in under 30 minutes. You'll forward your existing business number to your new whoza.ai number, customize your agent's greeting, connect your calendar, and you're live. No technical knowledge required.",
+    category: "Setup",
   },
   {
     question: "What happens if Katie can't handle a call?",
     answer: "Katie is trained to recognize when she needs to transfer to a human. For complex queries, emergencies, or if the customer specifically requests you, she'll take a message and notify you immediately via SMS and email. You can call them back within seconds.",
+    category: "General",
   },
   {
     question: "Does it work with my existing phone number?",
     answer: "Yes. You simply forward your existing business number to your whoza.ai number. Your customers call the same number they always have — they just get answered every time instead of hitting voicemail.",
+    category: "Setup",
   },
   {
     question: "What trades do you support?",
     answer: "We support all trades including plumbers, electricians, builders, roofers, painters, landscapers, heating engineers, carpenters, tilers, plasterers, and more. Our agents are trained on trade-specific terminology and common customer queries for each profession.",
+    category: "Trades",
   },
   {
     question: "Does Whoza work for roofers and emergency callouts?",
     answer: "Absolutely. Katie understands roofing emergencies — storm damage, leaks, loose tiles, insurance work. She triages urgency immediately: water coming through the ceiling gets flagged as emergency and pushed to your phone instantly. She captures the address, damage type, and whether it's insurance or private pay. For routine inspections or quotes, she books them directly into your calendar at a time that works for you.",
+    category: "Trades",
   },
   {
     question: "Can Whoza handle locksmith enquiries at 2am?",
     answer: "Yes — and that's exactly when you need it most. Lockouts at 2am are urgent by default. Katie recognises emergency locksmith language ('locked out', 'lost keys', 'can't get in') and immediately classifies it as urgent. She captures the location, lock type (front door, car, safe), and sends you the enquiry within seconds. You decide: accept the callout, or decline and go back to sleep. The customer gets an instant response either way, instead of hearing your voicemail at 2am.",
+    category: "Trades",
   },
   {
     question: "Will it book site surveys for builders?",
     answer: "Yes. Katie is trained to handle builder-specific enquiry types — extensions, renovations, new builds, and site surveys. For larger projects, she doesn't just take a message. She captures budget range, timeline, project type (residential/commercial), and parking access. She then books the site survey directly into your calendar with all the details attached. No more 'can you come and have a look' callbacks where you show up blind.",
+    category: "Trades",
   },
   {
     question: "Can it triage drainage emergencies vs. routine cleans?",
     answer: "Yes — Katie knows the difference between 'sewage backing up into the garden' and 'annual drain clean.' She asks the right follow-up questions: is there flooding, how many drains are affected, is it a business or home, and how quickly do you need someone there? Emergency drainage calls get pushed to your phone immediately with an urgency tag. Routine maintenance gets booked into your diary at a convenient time. She even notes access constraints like narrow driveways or shared drains so you're prepared before you arrive.",
+    category: "Trades",
   },
   {
     question: "Is my data safe and compliant?",
     answer: "Absolutely. We're fully compliant with all relevant data protection regulations. All call recordings and customer data are encrypted, stored in secure local data centers, and you maintain full control. You can delete any data at any time from your dashboard.",
+    category: "General",
   },
   {
     question: "What if I want to cancel?",
     answer: "Cancel anytime — no contracts, no cancellation fees, no hassle. We're confident you'll stay because the system pays for itself many times over, but if it's not right for your business, you can cancel with one click from your dashboard.",
+    category: "Pricing",
   },
   {
     question: "What does the free trial include?",
     answer: "Your 7-day free trial includes: 20 minutes of AI call handling, up to 4 booked enquiries, full access to the WhatsApp delivery system, and the complete dashboard. This gives you enough time to see real results from actual customer calls. Fair usage applies — the trial is designed for genuine business evaluation, not extended free service.",
+    category: "General",
   },
 ]
 
 export function FAQ() {
   const [openItem, setOpenItem] = useState<string | undefined>(undefined)
+  const [activeCategory, setActiveCategory] = useState("All")
+  
+  const categories = ["All", "General", "Pricing", "Setup", "Trades"]
+  
+  const filteredFaqs = activeCategory === "All" 
+    ? faqs 
+    : faqs.filter(faq => faq.category === activeCategory)
 
   // Sync .open class with Radix state for prompt compatibility
   useEffect(() => {
@@ -108,6 +129,31 @@ export function FAQ() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
+          {/* Category Tabs */}
+          <div className="flex flex-wrap gap-2 mb-6">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => {
+                  setActiveCategory(cat)
+                  setOpenItem(undefined)
+                }}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                  activeCategory === cat
+                    ? 'bg-[var(--katie-blue)] text-white shadow-md'
+                    : 'bg-[var(--off-white)] text-[var(--slate-500)] hover:bg-[var(--slate-100)]'
+                }`}
+              >
+                {cat}
+                {cat !== "All" && (
+                  <span className={`ml-1.5 text-xs ${activeCategory === cat ? 'text-white/70' : 'text-[var(--slate-400)]'}`}>
+                    {faqs.filter(f => f.category === cat).length}
+                  </span>
+                )}
+              </button>
+            ))}
+          </div>
+
           <Accordion 
             type="single" 
             collapsible 
@@ -125,11 +171,11 @@ export function FAQ() {
               }, 0)
             }}
           >
-            {faqs.map((faq, index) => (
+            {filteredFaqs.map((faq, index) => (
               <AccordionItem 
-                key={index} 
-                value={`item-${index}`}
-                className="faq-item bg-[var(--off-white)] rounded-2xl border border-[var(--border)] px-6 data-[state=open]:border-[var(--katie-blue)]/30 transition-all duration-300 hover:bg-[var(--rex-green)]/4"
+                key={`${activeCategory}-${index}`}
+                value={`item-${activeCategory}-${index}`}
+                className="faq-item bg-[var(--off-white)] rounded-xl border border-[var(--border)] px-6 data-[state=open]:border-[var(--katie-blue)]/30 transition-all duration-300 hover:bg-[var(--rex-green)]/4"
               >
                 <AccordionTrigger className="faq-toggle text-left text-[var(--navy-900)] font-semibold hover:no-underline py-5">
                   {faq.question}
@@ -160,7 +206,7 @@ export function FAQ() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-12 p-8 bg-[var(--off-white)] rounded-3xl border border-[var(--border)] text-center"
+          className="mt-12 p-8 bg-[var(--off-white)] rounded-xl border border-[var(--border)] text-center"
         >
           <div className="w-16 h-16 rounded-2xl bg-[var(--katie-blue)]/10 flex items-center justify-center mx-auto mb-4">
             <MessageCircle className="w-8 h-8 text-[var(--katie-blue)]" />

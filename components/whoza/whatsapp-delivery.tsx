@@ -5,76 +5,41 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Check, X, Phone, MapPin, Clock, MessageCircle, CheckCircle2 } from "lucide-react"
 import { useLocale } from "@/lib/locale-context"
 
-const jobExamples = {
-  uk: [
-    { 
-      label: "WhatsApp Enquiry Received",
-      heading: "New Customer Enquiry",
-      jobType: "Boiler Repair — No Hot Water",
-      name: "Sarah Mitchell",
-      area: "Bristol, BS3",
-      urgency: "Today",
-      time: "ASAP",
-      value: "£180–£240",
-    },
-    { 
-      label: "WhatsApp Enquiry Received",
-      heading: "New Customer Enquiry",
-      jobType: "Blocked Drain",
-      name: "David Wilson",
-      area: "Birmingham",
-      urgency: "Today",
-      time: "5pm",
-      value: "£85–£120",
-    },
-    { 
-      label: "WhatsApp Enquiry Received",
-      heading: "New Customer Enquiry",
-      jobType: "Tap Install",
-      name: "Emma Clarke",
-      area: "Leeds",
-      urgency: "This Week",
-      time: "Friday 10am",
-      value: "£95–£140",
-    },
-  ],
-  us: [
-    { 
-      label: "WhatsApp Enquiry Received",
-      heading: "New Customer Enquiry",
-      jobType: "HVAC Repair — No Heat",
-      name: "Sarah Johnson",
-      area: "Dallas, TX",
-      urgency: "Today",
-      time: "ASAP",
-      value: "$180–$260",
-    },
-    { 
-      label: "WhatsApp Enquiry Received",
-      heading: "New Customer Enquiry",
-      jobType: "Drain Cleaning",
-      name: "Mike Williams",
-      area: "Chicago, IL",
-      urgency: "Today",
-      time: "5pm",
-      value: "$120–$180",
-    },
-    { 
-      label: "WhatsApp Enquiry Received",
-      heading: "New Customer Enquiry",
-      jobType: "Faucet Replacement",
-      name: "Jennifer Davis",
-      area: "Houston, TX",
-      urgency: "This Week",
-      time: "Friday 10am",
-      value: "$150–$220",
-    },
-  ],
+const jobExamples: Record<string, Record<string, Array<{label: string; heading: string; jobType: string; name: string; area: string; urgency: string; time: string; value: string}>>> = {
+  default: {
+    uk: [
+      { label: "WhatsApp Enquiry Received", heading: "New Customer Enquiry", jobType: "Boiler Repair — No Hot Water", name: "Sarah Mitchell", area: "Bristol, BS3", urgency: "Today", time: "ASAP", value: "£180–£240" },
+      { label: "WhatsApp Enquiry Received", heading: "New Customer Enquiry", jobType: "Blocked Drain", name: "David Wilson", area: "Birmingham", urgency: "Today", time: "5pm", value: "£85–£120" },
+      { label: "WhatsApp Enquiry Received", heading: "New Customer Enquiry", jobType: "Tap Install", name: "Emma Clarke", area: "Leeds", urgency: "This Week", time: "Friday 10am", value: "£95–£140" },
+    ],
+    us: [
+      { label: "WhatsApp Enquiry Received", heading: "New Customer Enquiry", jobType: "HVAC Repair — No Heat", name: "Sarah Johnson", area: "Dallas, TX", urgency: "Today", time: "ASAP", value: "$180–$260" },
+      { label: "WhatsApp Enquiry Received", heading: "New Customer Enquiry", jobType: "Drain Cleaning", name: "Mike Williams", area: "Chicago, IL", urgency: "Today", time: "5pm", value: "$120–$180" },
+      { label: "WhatsApp Enquiry Received", heading: "New Customer Enquiry", jobType: "Faucet Replacement", name: "Jennifer Davis", area: "Houston, TX", urgency: "This Week", time: "Friday 10am", value: "$150–$220" },
+    ],
+  },
+  electrician: {
+    uk: [
+      { label: "WhatsApp Enquiry Received", heading: "New Customer Enquiry", jobType: "Emergency Fault — No Power", name: "Sarah Mitchell", area: "Bristol, BS3", urgency: "Today", time: "ASAP", value: "£180–£260" },
+      { label: "WhatsApp Enquiry Received", heading: "New Customer Enquiry", jobType: "EICR Certificate — Landlord", name: "David Wilson", area: "Birmingham", urgency: "This Week", time: "Wednesday 2pm", value: "£150–£220" },
+      { label: "WhatsApp Enquiry Received", heading: "New Customer Enquiry", jobType: "EV Charger Install", name: "Emma Clarke", area: "Leeds", urgency: "This Week", time: "Friday 10am", value: "£400–£650" },
+    ],
+    us: [
+      { label: "WhatsApp Enquiry Received", heading: "New Customer Enquiry", jobType: "Emergency Fault — No Power", name: "Sarah Johnson", area: "Dallas, TX", urgency: "Today", time: "ASAP", value: "$220–$320" },
+      { label: "WhatsApp Enquiry Received", heading: "New Customer Enquiry", jobType: "Panel Upgrade — 200A", name: "Mike Williams", area: "Chicago, IL", urgency: "This Week", time: "Wednesday 2pm", value: "$1,800–$2,500" },
+      { label: "WhatsApp Enquiry Received", heading: "New Customer Enquiry", jobType: "EV Charger Install", name: "Jennifer Davis", area: "Houston, TX", urgency: "This Week", time: "Friday 10am", value: "$500–$850" },
+    ],
+  },
 }
 
-export function WhatsAppDelivery() {
+interface WhatsAppDeliveryProps {
+  trade?: string
+}
+
+export function WhatsAppDelivery({ trade }: WhatsAppDeliveryProps) {
   const { country, config } = useLocale()
-  const jobs = jobExamples[country]
+  const tradeKey = trade && jobExamples[trade] ? trade : "default"
+  const jobs = jobExamples[tradeKey][country]
   const [currentJob, setCurrentJob] = useState(0)
   const [jobStatus, setJobStatus] = useState<"pending" | "accepted" | "declined">("pending")
 

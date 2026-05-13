@@ -86,7 +86,7 @@ export function ROICalculator() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <div className="bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 p-8 lg:p-12">
+          <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-8 lg:p-12">
             <div className="grid md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
                 <div className="text-sm text-white/50 mb-2">Monthly Revenue Saved</div>

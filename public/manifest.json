@@ -1,0 +1,16 @@
+{
+  "name": "Whoza.ai — AI Call Handler for UK Trades",
+  "short_name": "Whoza.ai",
+  "description": "Katie answers your missed calls and sends qualified leads to WhatsApp. Built for UK tradespeople.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#0F1729",
+  "background_color": "#0F1729",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

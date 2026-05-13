@@ -43,7 +43,7 @@ export function TradeProblems({ tradeData }: TradeProblemsProps) {
           >
             <h3 className="text-xl font-semibold text-red-600 flex items-center gap-2 mb-6">
               <XCircle className="w-6 h-6" />
-              Without AI Call Answering
+              Without AI Call Handling
             </h3>
             {tradeData.problemStatements.map((problem, i) => (
               <div

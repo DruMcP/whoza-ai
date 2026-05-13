@@ -115,8 +115,11 @@ export function DashboardPreview() {
                   </div>
                 </div>
                 
-                {/* Fake Chart Bars */}
-                <div className="flex items-end gap-2 h-32">
+                {/* Chart Bars with gradient fill effect */}
+                <div className="relative flex items-end gap-2 h-32"
+                >
+                  {/* Gradient fill background */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--rex-green)]/10 to-transparent rounded-lg pointer-events-none" />
                   {[40, 65, 45, 80, 55, 90, 70, 85, 60, 95, 75, 100].map((height, i) => (
                     <motion.div
                       key={i}
@@ -124,7 +127,7 @@ export function DashboardPreview() {
                       whileInView={{ height: `${height}%` }}
                       transition={{ delay: i * 0.05, duration: 0.5 }}
                       viewport={{ once: true }}
-                      className="flex-1 rounded-t-sm bg-gradient-to-t from-[var(--rex-green)] to-[var(--rex-green)]/50"
+                      className="flex-1 rounded-t-md bg-gradient-to-t from-[var(--rex-green)] to-[var(--rex-green)]/40 hover:from-[var(--rex-green)] hover:to-[var(--rex-green)]/70 transition-all cursor-pointer"
                     />
                   ))}
                 </div>

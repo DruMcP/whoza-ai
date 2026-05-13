@@ -34,7 +34,7 @@ export function PreLaunchProof() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <div className="bg-white rounded-3xl p-8 shadow-xl border border-[var(--border)]">
+            <div className="bg-white rounded-xl p-8 shadow-xl border border-[var(--border)]">
               <div className="flex items-center gap-2 mb-6">
                 <span className="px-3 py-1 rounded-full bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] text-xs font-bold">
                   EXAMPLE SCENARIO
@@ -160,7 +160,7 @@ export function PreLaunchProof() {
             className="space-y-8"
           >
             {/* Result Card */}
-            <div className="bg-[var(--navy-900)] rounded-3xl p-8 text-center">
+            <div className="bg-[var(--navy-900)] rounded-xl p-8 text-center">
               <div className="text-white/60 mb-2">Example: What you could recover in a day</div>
               <div className="text-5xl lg:text-6xl font-bold text-[var(--rex-green)]">
                 {config.currencySymbol}480

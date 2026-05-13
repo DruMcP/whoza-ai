@@ -76,7 +76,7 @@ export function TrialExplanation() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="bg-white rounded-3xl p-8 border border-[var(--border)] h-full shadow-sm">
+              <div className="bg-white rounded-xl p-8 border border-[var(--border)] h-full shadow-sm">
                 {/* Number Badge */}
                 <div className={`w-10 h-10 rounded-xl ${step.bgClass} flex items-center justify-center text-white font-bold text-sm shadow-lg mb-6`}>
                   {step.number}
@@ -138,7 +138,7 @@ export function TrialExplanation() {
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-[var(--rex-green)]/10 border border-[var(--rex-green)]/20">
             <CheckCircle2 className="w-5 h-5 text-[var(--rex-green)]" />
             <span className="text-[var(--navy-900)] font-semibold">
-              Be the first to experience AI call answering for trades.
+              Be the first to experience AI call handling for trades.
             </span>
           </div>
         </motion.div>
@@ -151,7 +151,7 @@ export function TrialExplanation() {
           className="mt-16 text-center"
         >
           <p className="text-lg text-[var(--slate-500)] mb-6">
-            See how AI call answering works for your trade.
+            See how AI call handling works for your trade.
           </p>
           <a 
             href="#final-cta"
@@ -161,7 +161,7 @@ export function TrialExplanation() {
             <ArrowRight className="w-6 h-6" />
           </a>
           <p className="mt-3 text-sm text-[var(--slate-500)]">
-            Be the first to experience AI call answering for trades.
+            Be the first to experience AI call handling for trades.
           </p>
         </motion.div>
       </div>

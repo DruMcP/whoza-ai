@@ -4,8 +4,16 @@ import { motion } from "framer-motion"
 import { Star, MessageSquare, TrendingUp, CheckCircle2, ArrowRight, ThumbsUp } from "lucide-react"
 import { useLocale } from "@/lib/locale-context"
 
-export function ReviewsEngine() {
+interface ReviewsEngineProps {
+  trade?: string
+}
+
+export function ReviewsEngine({ trade }: ReviewsEngineProps) {
   const { country } = useLocale()
+
+  const reviewContext = trade === "electrician" 
+    ? "Your electrical work is complete — we'd love your feedback!"
+    : "Your boiler repair is complete — we'd love your feedback!"
 
   return (
     <section className="py-20 lg:py-32 bg-[var(--rex-green)]/5">
@@ -69,14 +77,14 @@ export function ReviewsEngine() {
             className="relative"
           >
             {/* Phone showing review request */}
-            <div className="bg-white rounded-3xl p-6 shadow-2xl border border-[var(--border)] max-w-sm mx-auto">
+            <div className="bg-white rounded-xl p-6 shadow-2xl border border-[var(--border)] max-w-sm mx-auto">
               <div className="text-center mb-6">
                 <div className="w-16 h-16 rounded-full bg-[var(--rex-green)]/10 flex items-center justify-center mx-auto mb-4">
                   <Star className="w-8 h-8 text-[var(--rex-green)] fill-current" />
                 </div>
                 <h3 className="text-xl font-bold text-[var(--navy-900)]">How did we do?</h3>
                 <p className="text-[var(--slate-500)] text-sm mt-2">
-                  Your boiler repair is complete — we'd love your feedback!
+                  {reviewContext}
                 </p>
               </div>
 

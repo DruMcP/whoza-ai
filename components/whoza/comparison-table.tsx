@@ -93,7 +93,7 @@ export function ComparisonTable() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-white rounded-3xl shadow-xl border border-[var(--border)] overflow-x-auto"
+          className="bg-white rounded-xl shadow-xl border border-[var(--border)] overflow-x-auto"
         >
           <table className="w-full min-w-[340px]">
               <thead>

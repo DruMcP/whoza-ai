@@ -13,8 +13,22 @@ import { ComparisonTable } from "@/components/whoza/comparison-table"
 import { Pricing } from "@/components/whoza/pricing"
 import { FinalCTA } from "@/components/whoza/final-cta"
 import { Footer } from "@/components/whoza/footer"
-import { FloatingChatWidget, StickyCTA } from "@/components/whoza/sticky-cta"
+import { FloatingChatWidget } from "@/components/whoza/sticky-cta"
 import { TradeSchema } from "@/components/whoza/trade-schema"
+import { SocialProofBand } from "@/components/whoza/social-proof"
+import { VideoExplainer } from "@/components/whoza/video-explainer"
+import { LostRevenueCalculator } from "@/components/whoza/lost-revenue-calculator"
+import { WhatsAppDelivery } from "@/components/whoza/whatsapp-delivery"
+import { PreLaunchProof } from "@/components/whoza/pre-launch-proof"
+import { HowWhozaWorks } from "@/components/whoza/how-whoza-works"
+import { TrialExplanation } from "@/components/whoza/trial-explanation"
+import { MeetTheTeam } from "@/components/whoza/meet-the-team"
+import { TrilletVoiceWidget } from "@/components/whoza/trillet-voice-widget"
+import { ControlSection } from "@/components/whoza/control-section"
+import { ReviewsEngine } from "@/components/whoza/reviews-engine"
+import { GrowthEngine } from "@/components/whoza/growth-engine"
+import { DashboardPreview } from "@/components/whoza/dashboard-preview"
+import { ClaireDashboard } from "@/components/whoza/claire-dashboard"
 import { trades, getTradeBySlug, getAllTradeSlugs } from "@/lib/trades"
 
 interface PageProps {
@@ -51,7 +65,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       siteName: "Whoza.ai",
       title: tradeData.headline,
       description: tradeData.metaDescription,
-      images: [{ url: "https://whoza.ai/og-image.png", width: 1200, height: 630, alt: `whoza.ai — AI Call Answering for ${tradeData.display}` }],
+      images: [{ url: "https://whoza.ai/og-image.png", width: 1200, height: 630, alt: `whoza.ai — AI Call Handling for ${tradeData.display}` }],
     },
     twitter: {
       card: "summary_large_image",
@@ -80,23 +94,75 @@ export default async function TradePage({ params }: PageProps) {
       <TradeSchema tradeData={tradeData} />
       <Header />
       
-      <main id="main-content" role="main">
+      <main id="main-content" role="main" className="pb-24 lg:pb-0">
         <TradeHero tradeData={tradeData} />
-        <TradeStats tradeData={tradeData} />
-        <TradeProblems tradeData={tradeData} />
-        <TradeHowItWorks tradeData={tradeData} />
+        <div className="section-divider" />
+        <SocialProofBand />
+        <div className="section-divider" />
+        
+        <VideoExplainer />
+        <div className="section-divider" />
+        
+        <LostRevenueCalculator trade={tradeData.slug} />
+        <div className="section-divider" />
+        
         <AudioDemo />
-        <TradeFAQ tradeData={tradeData} />
+        <div className="section-divider" />
+        
+        <WhatsAppDelivery trade={tradeData.slug} />
+        <div className="section-divider" />
+        
+        <PreLaunchProof />
+        <div className="section-divider" />
+        
+        <HowWhozaWorks />
+        <div className="section-divider" />
+        
+        <TrialExplanation />
+        <div className="section-divider" />
+        
+        <MeetTheTeam />
+        <div className="section-divider" />
+        
+        <TrilletVoiceWidget />
+        <div className="section-divider" />
+        
+        <ControlSection />
+        <div className="section-divider" />
+        
+        <ReviewsEngine trade={tradeData.slug} />
+        <div className="section-divider" />
+        
+        <GrowthEngine />
+        <div className="section-divider" />
+        
+        <DashboardPreview />
+        <div className="section-divider" />
+        
+        <ClaireDashboard />
+        <div className="section-divider" />
+        
+        <TradeStats tradeData={tradeData} />
+        <div className="section-divider" />
+        
         <Testimonials />
+        <div className="section-divider" />
+        
         <ComparisonTable />
+        <div className="section-divider" />
+        
         <Pricing />
+        <div className="section-divider" />
+        
+        <TradeFAQ tradeData={tradeData} />
+        <div className="section-divider" />
+        
         <TradeLocations tradeData={tradeData} />
         <FinalCTA />
       </main>
 
       <Footer />
       <FloatingChatWidget />
-      <StickyCTA />
     </>
   )
 }

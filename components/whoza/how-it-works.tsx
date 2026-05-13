@@ -101,7 +101,7 @@ export function HowItWorks() {
                 className="relative"
               >
                 {/* Step Card */}
-                <div className="relative bg-[var(--off-white)] rounded-3xl p-8 border border-[var(--border)] h-full">
+                <div className="relative bg-[var(--off-white)] rounded-xl p-8 border border-[var(--border)] h-full">
                   {/* Number Badge */}
                   <div className={`absolute -top-4 left-8 w-10 h-10 rounded-xl ${step.bgClass} flex items-center justify-center text-white font-bold text-sm shadow-lg z-10`}>
                     {step.number}

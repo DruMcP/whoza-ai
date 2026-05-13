@@ -37,7 +37,7 @@ export default function ServiceLevelAgreement() {
           <section className="mb-10">
             <h2 className="text-xl font-semibold mb-4">1. Uptime Guarantee</h2>
             <p className="text-white/70 leading-relaxed">
-              We guarantee <strong>99.5% uptime</strong> for our AI call answering service, measured monthly. Uptime is calculated as the percentage of time the service is available to answer calls, excluding scheduled maintenance.
+              We guarantee <strong>99.5% uptime</strong> for our AI call handling service, measured monthly. Uptime is calculated as the percentage of time the service is available to answer calls, excluding scheduled maintenance.
             </p>
             <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-lg p-6 mt-4">
               <p className="text-white/70">

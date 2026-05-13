@@ -50,7 +50,7 @@ export default function TermsOfService() {
               2. Description of Service
             </h2>
             <p className="text-white/70 leading-relaxed mb-4">
-              Whoza.ai provides AI call answering, enquiry qualification, WhatsApp/SMS delivery, booking support, review collection, competitor analysis, and business growth recommendations. The service includes:
+              Whoza.ai provides AI call handling, enquiry qualification, WhatsApp/SMS delivery, booking support, review collection, competitor analysis, and business growth recommendations. The service includes:
             </p>
             <ul className="space-y-3 text-white/70">
               <li className="flex items-start gap-3">

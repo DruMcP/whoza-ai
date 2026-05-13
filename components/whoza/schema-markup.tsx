@@ -64,6 +64,7 @@ export function HomepageSchema() {
         { "@type": "Thing", "name": "Google AI Overviews" }
       ],
       "foundingDate": "2024",
+      "founder": {"@id": "https://whoza.ai/#dru-mcpherson"},
       "description": "AI-powered voice agent platform for UK tradespeople"
     },
     {
@@ -100,10 +101,10 @@ export function HomepageSchema() {
           "closes": "23:59"
         }
       ],
-      "serviceType": "AI Call Answering Service",
+      "serviceType": "AI Call Handling Service",
       "knowsAbout": [
         "AI Voice Agents",
-        "Call Answering",
+        "Call Handling",
         "Missed Call Recovery",
         "Lead Qualification",
         "Google Review Collection",
@@ -139,7 +140,7 @@ export function HomepageSchema() {
         "worstRating": "1"
       },
       "featureList": [
-        "24/7 AI call answering",
+        "24/7 AI call handling",
         "Instant WhatsApp alerts",
         "Lead qualification",
         "Google review collection",
@@ -158,7 +159,7 @@ export function HomepageSchema() {
       "@context": "https://schema.org",
       "@type": "Service",
       "@id": "https://whoza.ai/#service",
-      "serviceType": "AI Call Answering for UK Tradespeople",
+      "serviceType": "AI Call Handling for UK Tradespeople",
       "provider": {
         "@id": "https://whoza.ai/#organization"
       },
@@ -223,12 +224,25 @@ export function HomepageSchema() {
     {
       "@context": "https://schema.org",
       "@type": "Person",
+      "@id": "https://whoza.ai/#dru-mcpherson",
+      "name": "Dru McPherson",
+      "jobTitle": "Founder",
+      "worksFor": {"@id": "https://whoza.ai/#organization"},
+      "knowsAbout": ["Trade Business", "Plumbing", "AI Voice Agents", "Customer Service", "UK Tradespeople"],
+      "description": "Dru McPherson is the founder of whoza.ai, a former trade business owner who built Katie the AI call handler for UK tradespeople.",
+      "sameAs": ["https://www.linkedin.com/in/drumcpherson"],
+      "url": "https://whoza.ai",
+      "email": "dru@whoza.ai"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
       "@id": "https://whoza.ai/#katie",
       "name": "Katie",
       "alternateName": "Katie by whoza.ai",
       "jobTitle": "AI Receptionist",
       "affiliation": { "@id": "https://whoza.ai/#organization" },
-      "knowsAbout": ["Plumbing", "Electrical", "HVAC", "Building", "Roofing", "Customer Service", "Call Answering"],
+      "knowsAbout": ["Plumbing", "Electrical", "HVAC", "Building", "Roofing", "Customer Service", "Call Handling"],
       "description": "Katie is an AI voice agent that answers missed calls for UK tradespeople 24/7, qualifies customer enquiries, and sends them to WhatsApp for instant response."
     },
     {
@@ -239,7 +253,7 @@ export function HomepageSchema() {
       "alternateName": "Mark by whoza.ai",
       "jobTitle": "AI Receptionist",
       "affiliation": { "@id": "https://whoza.ai/#organization" },
-      "knowsAbout": ["Plumbing", "Electrical", "HVAC", "Building", "Roofing", "Customer Service", "Call Answering"],
+      "knowsAbout": ["Plumbing", "Electrical", "HVAC", "Building", "Roofing", "Customer Service", "Call Handling"],
       "description": "Mark is an AI voice agent with a male voice that answers missed calls for UK tradespeople 24/7, qualifies customer enquiries, and sends them to WhatsApp for instant response."
     },
     {
@@ -488,7 +502,7 @@ export function PricingSchema() {
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "whoza.ai Starter Plan",
-      "description": "AI call answering for small trade businesses. 0 included jobs, pay per booking.",
+      "description": "AI call handling for small trade businesses. 0 included jobs, pay per booking.",
       "brand": { "@id": "https://whoza.ai/#organization" },
       "offers": {
         "@type": "Offer",
@@ -511,7 +525,7 @@ export function PricingSchema() {
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "whoza.ai Growth Plan",
-      "description": "AI call answering for growing trade businesses. 15 included jobs per month.",
+      "description": "AI call handling for growing trade businesses. 15 included jobs per month.",
       "brand": { "@id": "https://whoza.ai/#organization" },
       "offers": {
         "@type": "Offer",
@@ -534,7 +548,7 @@ export function PricingSchema() {
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "whoza.ai Pro Plan",
-      "description": "AI call answering for established trade businesses. 40 included jobs per month.",
+      "description": "AI call handling for established trade businesses. 40 included jobs per month.",
       "brand": { "@id": "https://whoza.ai/#organization" },
       "offers": {
         "@type": "Offer",
@@ -557,7 +571,7 @@ export function PricingSchema() {
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "whoza.ai Scale Plan",
-      "description": "AI call answering for multi-person trade businesses. 100 included jobs per month.",
+      "description": "AI call handling for multi-person trade businesses. 100 included jobs per month.",
       "brand": { "@id": "https://whoza.ai/#organization" },
       "offers": {
         "@type": "Offer",

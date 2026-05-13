@@ -54,7 +54,7 @@ export default function ModernSlaveryPage() {
                 <strong className="text-white">Registered Office:</strong> 6 Atholl Crescent, Perth, PH1 5JN, United Kingdom
               </p>
               <p>
-                <strong className="text-white">Nature of Business:</strong> WHOZA AI LTD develops and operates an AI-powered voice call answering platform for UK tradespeople. We provide software-as-a-service (SaaS) technology.
+                <strong className="text-white">Nature of Business:</strong> WHOZA AI LTD develops and operates an AI-powered voice call handling platform for UK tradespeople. We provide software-as-a-service (SaaS) technology.
               </p>
               <p>
                 <strong className="text-white">Supply Chain:</strong> Our supply chain is primarily technology-focused, comprising software vendors, cloud infrastructure providers, telecommunications providers, and professional services firms. All suppliers are based in jurisdictions with strong labour protections (UK, EU, and US).

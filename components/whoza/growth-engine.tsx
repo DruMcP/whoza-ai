@@ -19,7 +19,7 @@ export function GrowthEngine() {
             className="relative order-2 lg:order-1"
           >
             {/* Weekly AI Recommendation Card */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-6 border border-white/10 max-w-md mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-md mx-auto">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-lg bg-[var(--claire-amber)]/20 flex items-center justify-center">
                   <Zap className="w-5 h-5 text-[var(--claire-amber)]" />
