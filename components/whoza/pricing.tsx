@@ -1,8 +1,10 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Check, ArrowRight, Sparkles, X, CheckCircle2, User, Mic, Database, PhoneCall, Rocket } from "lucide-react"
+import { Check, ArrowRight, Sparkles, X, CheckCircle2, User, Mic, Database, PhoneCall, Rocket, Loader2 } from "lucide-react"
 import { useLocale } from "@/lib/locale-context"
+import { useStripeCheckout } from "@/lib/use-stripe-checkout"
+import { STRIPE_PRODUCTS } from "@/lib/stripe-config"
 
 const colorStyles = {
   blue: {
@@ -38,6 +40,7 @@ const colorStyles = {
 export function Pricing() {
   const { config } = useLocale()
   const cs = config.currencySymbol
+  const { checkout, loading } = useStripeCheckout()
 
   // Plans defined inside component to access locale currency symbol
   const plans = [
@@ -60,6 +63,7 @@ export function Pricing() {
         { text: `${cs}4.50 per booked enquiry — no enquiries included`, included: true },
       ],
       cta: "Choose Your Plan",
+      stripePlanId: "starter",
     },
     {
       name: "Growth",
@@ -84,6 +88,7 @@ export function Pricing() {
         { text: `${cs}3.25 per additional booked enquiry`, included: true },
       ],
       cta: "Choose Your Plan",
+      stripePlanId: "growth",
     },
     {
       name: "Pro",
@@ -110,6 +115,7 @@ export function Pricing() {
         { text: `${cs}2.75 per additional booked enquiry`, included: true },
       ],
       cta: "Choose Your Plan",
+      stripePlanId: "pro",
     },
     {
       name: "Scale",
@@ -136,6 +142,7 @@ export function Pricing() {
         { text: `${cs}2.25 per additional booked enquiry`, included: true },
       ],
       cta: "Choose Your Plan",
+      stripePlanId: "scale",
     },
   ]
 
@@ -276,18 +283,28 @@ export function Pricing() {
                     ))}
                   </ul>
 
-                  {/* CTA — SEO: using <a> tag for crawlability */}
-                  <a 
-                    href="#final-cta"
-                    className={`inline-flex items-center justify-center w-full font-bold transition-all hover:scale-105 py-2 px-4 rounded-md ${
+                  {/* CTA — Stripe Checkout */}
+                  <button
+                    onClick={() => plan.stripePlanId && checkout(plan.stripePlanId)}
+                    disabled={loading}
+                    className={`inline-flex items-center justify-center w-full font-bold transition-all hover:scale-105 py-2 px-4 rounded-md cursor-pointer ${
                       plan.popular 
                         ? `${colors.bg} ${colors.hover} text-white shadow-lg` 
                         : "bg-[var(--navy-900)] hover:bg-[var(--navy-800)] text-white"
                     }`}
                   >
-                    {plan.cta}
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </a>
+                    {loading ? (
+                      <>
+                        <Loader2 className="mr-2 w-4 h-4 animate-spin" />
+                        Loading...
+                      </>
+                    ) : (
+                      <>
+                        {plan.cta}
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </>
+                    )}
+                  </button>
                 </div>
               </motion.div>
             )
