@@ -31,5 +31,32 @@ export function useStripeCheckout() {
     }
   }
 
-  return { checkout, loading }
+  const checkoutAddon = async (addonId: string, quantity = 1) => {
+    setLoading(true)
+    try {
+      const res = await fetch("/api/stripe/checkout/addon", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          addonId,
+          quantity,
+          successUrl: `${window.location.origin}/dashboard?addon_success=true`,
+          cancelUrl: `${window.location.origin}/pricing?addon_canceled=true`,
+        }),
+      })
+
+      const data = await res.json()
+      if (data.url) {
+        window.location.href = data.url
+      } else {
+        throw new Error(data.error || "Checkout failed")
+      }
+    } catch (err: any) {
+      alert(err.message || "Payment setup error. Please try again.")
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  return { checkout, checkoutAddon, loading }
 }

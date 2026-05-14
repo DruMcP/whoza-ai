@@ -356,10 +356,19 @@ export function Pricing() {
                   <div className="text-2xl font-bold text-[var(--navy-900)] whitespace-nowrap">{cs}20 + VAT</div>
                 </div>
               </div>
-              <div className="flex items-center gap-2 text-sm text-[var(--rex-green)] font-medium bg-[var(--rex-green)]/10 rounded-lg px-3 py-2">
+              <div className="flex items-center gap-2 text-sm text-[var(--rex-green)] font-medium bg-[var(--rex-green)]/10 rounded-lg px-3 py-2 mb-4">
                 <CheckCircle2 className="w-4 h-4" />
                 Lower cost than standard overage rate ({cs}0.26/min)
               </div>
+              <button
+                onClick={() => checkoutAddon("minutesBundle", 1)}
+                disabled={loading}
+                className="w-full py-2.5 px-4 rounded-lg bg-[var(--navy-900)] hover:bg-[var(--navy-800)] text-white font-semibold transition-colors cursor-pointer inline-flex items-center justify-center gap-2"
+              >
+                {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : null}
+                Buy Bundle
+                <ArrowRight className="w-4 h-4" />
+              </button>
             </motion.div>
 
             {/* Consultancy */}
@@ -378,10 +387,19 @@ export function Pricing() {
                   <div className="text-lg font-bold text-[var(--navy-900)] whitespace-nowrap">{cs}200 per hour + VAT</div>
                 </div>
               </div>
-              <div className="flex items-center gap-2 text-sm text-[var(--katie-blue)] font-medium bg-[var(--katie-blue)]/10 rounded-lg px-3 py-2">
+              <div className="flex items-center gap-2 text-sm text-[var(--katie-blue)] font-medium bg-[var(--katie-blue)]/10 rounded-lg px-3 py-2 mb-4">
                 <CheckCircle2 className="w-4 h-4" />
                 Ideal for scaling businesses and advanced optimisation
               </div>
+              <button
+                onClick={() => checkoutAddon("consultancy", 1)}
+                disabled={loading}
+                className="w-full py-2.5 px-4 rounded-lg bg-[var(--navy-900)] hover:bg-[var(--navy-800)] text-white font-semibold transition-colors cursor-pointer inline-flex items-center justify-center gap-2"
+              >
+                {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : null}
+                Book Session
+                <ArrowRight className="w-4 h-4" />
+              </button>
             </motion.div>
           </div>
         </motion.div>
