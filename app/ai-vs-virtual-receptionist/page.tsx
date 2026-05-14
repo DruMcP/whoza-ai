@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { ArrowRight, Check, X, Bot, UserCheck, Clock, PoundSterling, MessageCircle } from "lucide-react"
@@ -84,6 +85,10 @@ export default function AIVsVirtualReceptionistPage() {
       })}} />
 
       <Header />
+      <BreadcrumbSchema items={[
+        { name: "Home", item: "https://whoza.ai" },
+        { name: "AI vs Virtual Receptionist", item: "https://whoza.ai/ai-vs-virtual-receptionist" },
+      ]} />
 
       <main className="pb-24 lg:pb-0">
         {/* Hero */}

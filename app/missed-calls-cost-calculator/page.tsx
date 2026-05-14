@@ -1,5 +1,6 @@
 import { CalculatorForm } from "@/components/whoza/calculator-form"
 import { Metadata } from "next"
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { ArrowRight, Calculator, PoundSterling, TrendingUp, AlertTriangle } from "lucide-react"
@@ -74,6 +75,10 @@ export default function MissedCallsCalculatorPage() {
       })}} />
 
       <Header />
+      <BreadcrumbSchema items={[
+        { name: "Home", item: "https://whoza.ai" },
+        { name: "Missed Call Calculator", item: "https://whoza.ai/missed-calls-cost-calculator" },
+      ]} />
 
       <main className="pb-24 lg:pb-0">
         {/* Hero */}

@@ -5,6 +5,7 @@ import { FAQ } from "@/components/whoza/faq"
 import { FinalCTA } from "@/components/whoza/final-cta"
 import { ComparisonTable } from "@/components/whoza/comparison-table"
 import { PricingSchema } from "@/components/whoza/schema-markup"
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -15,10 +16,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     url: "https://whoza.ai/pricing",
-    siteName: "whoza.ai",
+    siteName: "Whoza.ai",
     title: "Whoza.ai Pricing — AI Voice Agents for UK Tradespeople",
     description: "Plans from £59/month. 7-day free trial. No contracts.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai Pricing" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Whoza.ai Pricing" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -35,6 +36,10 @@ export default function PricingPage() {
   return (
     <div className="min-h-screen bg-[var(--navy-900)] text-white">
       <Header />
+      <BreadcrumbSchema items={[
+        { name: "Home", item: "https://whoza.ai" },
+        { name: "Pricing", item: "https://whoza.ai/pricing" },
+      ]} />
       
       <main>
         {/* Pricing Section */}

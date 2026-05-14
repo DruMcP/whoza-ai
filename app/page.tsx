@@ -31,6 +31,7 @@ const TrilletVoiceWidget = dynamic(
   { ssr: false, loading: () => <p className="text-white/60 text-sm">Loading demo...</p> }
 )
 
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { ClaireDashboard } from "@/components/whoza/claire-dashboard"
 import { HomepageSchema } from "@/components/whoza/schema-markup"
 
@@ -38,6 +39,7 @@ export default function Home() {
   return (
     <>
       <Header />
+      <BreadcrumbSchema items={[{ name: "Home", item: "https://whoza.ai" }]} />
 
       <main id="main-content" role="main" className="pb-24 lg:pb-0">
         {/* HOOK - Financial urgency */}

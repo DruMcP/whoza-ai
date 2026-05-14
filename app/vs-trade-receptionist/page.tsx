@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { Pricing } from "@/components/whoza/pricing"
@@ -88,6 +89,10 @@ export default function VsTradeReceptionistPage() {
       })}} />
 
       <Header />
+      <BreadcrumbSchema items={[
+        { name: "Home", item: "https://whoza.ai" },
+        { name: "vs Trade Receptionist", item: "https://whoza.ai/vs-trade-receptionist" },
+      ]} />
 
       <main className="pb-24 lg:pb-0">
         {/* Hero */}

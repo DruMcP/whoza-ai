@@ -1,11 +1,31 @@
 import { Metadata } from "next"
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { Mail, MessageSquare, Phone, Clock, Ticket, HelpCircle, Zap, ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Support Centre | whoza.ai",
+  title: "Support Centre | Whoza.ai",
   description: "Get help with whoza.ai — email support, WhatsApp, and callback requests. Response within 24 hours.",
+  openGraph: {
+    title: "Support Centre | Whoza.ai",
+    description: "Get help with whoza.ai — email support, WhatsApp, and callback requests. Response within 24 hours.",
+    url: "https://whoza.ai/support",
+    images: [
+      {
+        url: "https://whoza.ai/og-image.webp",
+        width: 1200,
+        height: 630,
+        alt: "Whoza.ai Support Centre",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Support Centre | Whoza.ai",
+    description: "Get help with whoza.ai — email support, WhatsApp, and callback requests. Response within 24 hours.",
+    images: ["https://whoza.ai/og-image.webp"],
+  },
   alternates: {
     canonical: "https://whoza.ai/support",
   },
@@ -69,6 +89,10 @@ export default function SupportPage() {
   return (
     <div className="min-h-screen bg-[var(--navy-900)] text-white">
       <Header />
+      <BreadcrumbSchema items={[
+        { name: "Home", item: "https://whoza.ai" },
+        { name: "Support Centre", item: "https://whoza.ai/support" },
+      ]} />
 
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Hero */}
@@ -232,13 +256,6 @@ export default function SupportPage() {
               "opens": "09:00",
               "closes": "17:00"
             }
-          },
-          "breadcrumb": {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://whoza.ai/" },
-              { "@type": "ListItem", "position": 2, "name": "Support", "item": "https://whoza.ai/support" }
-            ]
           }
         })}}
       />
