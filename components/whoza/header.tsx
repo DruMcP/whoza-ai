@@ -21,11 +21,17 @@ export function Header() {
 
   const handleNavClick = (href: string, isPageLink: boolean) => {
     setMenuOpen(false)
-    if (!isPageLink && typeof window !== "undefined") {
-      const el = document.querySelector(href)
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" })
-      }
+    if (isPageLink) return // Let <a> handle page links
+    if (typeof window === "undefined") return
+
+    // Extract id from "/#section" → "section"
+    const id = href.replace(/^\/#/, "")
+    const el = document.getElementById(id)
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" })
+    } else {
+      // On subpages: navigate to homepage with hash
+      window.location.href = href
     }
   }
 
