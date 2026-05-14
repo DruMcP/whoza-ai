@@ -19,19 +19,24 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [showSignup, setShowSignup] = useState(false)
 
-  const handleNavClick = (href: string, isPageLink: boolean) => {
-    setMenuOpen(false)
-    if (isPageLink) return // Let <a> handle page links
-    if (typeof window === "undefined") return
+  const handleNavClick = (e: React.MouseEvent, href: string, isPageLink: boolean) => {
+    if (!isPageLink) {
+      e.preventDefault()
+      setMenuOpen(false)
+      if (typeof window === "undefined") return
 
-    // Extract id from "/#section" → "section"
-    const id = href.replace(/^\/#/, "")
-    const el = document.getElementById(id)
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" })
+      // Extract id from "/#section" → "section"
+      const id = href.replace(/^\/#/, "")
+      const el = document.getElementById(id)
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" })
+      } else {
+        // On subpages: navigate to homepage with hash
+        window.location.href = href
+      }
     } else {
-      // On subpages: navigate to homepage with hash
-      window.location.href = href
+      setMenuOpen(false)
+      // Let <a> handle page links normally
     }
   }
 
@@ -59,23 +64,14 @@ export function Header() {
             {/* Desktop links */}
             <div className="hidden md:flex items-center gap-6">
               {navLinks.map((link) =>
-                link.isPageLink ? (
                   <a
                     key={link.href}
                     href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href, link.isPageLink)}
                     className="text-white/70 hover:text-white text-sm font-medium no-underline transition-colors min-h-[44px] flex items-center"
                   >
                     {link.label}
                   </a>
-                ) : (
-                  <button
-                    key={link.href}
-                    onClick={() => handleNavClick(link.href, false)}
-                    className="text-white/70 hover:text-white text-sm font-medium cursor-pointer transition-colors min-h-[44px]"
-                  >
-                    {link.label}
-                  </button>
-                )
               )}
               <button
                 onClick={() => setShowSignup(true)}
@@ -111,24 +107,14 @@ export function Header() {
             >
               <div className="max-w-[1200px] mx-auto px-4 py-4 flex flex-col gap-3">
                 {navLinks.map((link) =>
-                  link.isPageLink ? (
-                    <a
-                      key={link.href}
-                      href={link.href}
-                      onClick={() => setMenuOpen(false)}
-                      className="text-white/70 hover:text-white text-sm font-medium no-underline transition-colors py-2"
-                    >
-                      {link.label}
-                    </a>
-                  ) : (
-                    <button
-                      key={link.href}
-                      onClick={() => handleNavClick(link.href, false)}
-                      className="text-left text-white/70 hover:text-white text-sm font-medium cursor-pointer transition-colors py-2"
-                    >
-                      {link.label}
-                    </button>
-                  )
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href, link.isPageLink)}
+                    className="text-white/70 hover:text-white text-sm font-medium no-underline transition-colors py-2"
+                  >
+                    {link.label}
+                  </a>
                 )}
                 <button
                   onClick={() => {

@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { Shield, Phone, Database, Clock, Lock, UserCheck, FileText, Globe, ExternalLink } from "lucide-react"
@@ -19,6 +20,10 @@ export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-[var(--navy-900)] text-white">
       <Header />
+      <BreadcrumbSchema items={[
+        { name: "Home", item: "https://whoza.ai" },
+        { name: "Privacy Policy", item: "https://whoza.ai/privacy" },
+      ]} />
       
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="mb-12">
