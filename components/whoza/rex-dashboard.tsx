@@ -79,7 +79,7 @@ export default function RexDashboard() {
         setRecommendations(recs || [])
       }
     } catch (error) {
-      console.error("Error loading Rex data:", error)
+      // Silent fail — dashboard errors shouldn't crash production UI
     } finally {
       setLoading(false)
     }

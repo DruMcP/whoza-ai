@@ -1,4 +1,6 @@
-# Trillet API Types and Interfaces
+/*
+ * Trillet API Types and Interfaces
+ */
 
 export interface TrilletCallEvent {
   event: 'call.started' | 'call.completed' | 'call.transferred' | 'appointment.booked' | 'lead.captured' | 'voicemail.left';

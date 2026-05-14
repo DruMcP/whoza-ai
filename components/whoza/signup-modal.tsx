@@ -93,7 +93,7 @@ export function SignupModal({ onClose }: SignupModalProps) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
-      style={{ background: "rgba(0,0,0,0.7)", backdropFilter: "blur(8px)" }}
+      className="bg-black/70 backdrop-blur"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
@@ -104,21 +104,13 @@ export function SignupModal({ onClose }: SignupModalProps) {
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: 20, scale: 0.95 }}
         transition={{ duration: 0.25, ease: [0.34, 1.56, 0.64, 1] }}
-        className="relative w-full overflow-y-auto"
-        style={{
-          maxWidth: 480,
-          maxHeight: "90vh",
-          background: "#1E2229",
-          borderRadius: 16,
-          padding: 32,
-        }}
+        className="relative w-full overflow-y-auto max-w-[480px] max-h-[90vh] bg-[#1E2229] rounded-2xl p-8"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 rounded-lg transition-colors hover:bg-white/10"
-          style={{ color: "#9CA3AF", minHeight: 48, minWidth: 48 }}
+          className="absolute top-4 right-4 p-2 rounded-lg transition-colors hover:bg-white/10 text-slate-400 min-h-[48px] min-w-[48px]"
           aria-label="Close signup modal"
         >
           <X className="w-5 h-5" />
@@ -127,12 +119,11 @@ export function SignupModal({ onClose }: SignupModalProps) {
         {/* Header */}
         <h2
           id="signup-title"
-          className="text-2xl font-bold pr-8"
-          style={{ color: "#FFFFFF", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif" }}
+          className="text-2xl font-bold pr-8 text-white font-sans"
         >
           Get Katie answering your calls
         </h2>
-        <p className="mt-2" style={{ fontSize: 14, color: "#9CA3AF", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif" }}>
+        <p className="mt-2 text-sm text-slate-400 font-sans">
           Try Katie free for 7 days on Starter. No card required.
         </p>
 
@@ -140,43 +131,36 @@ export function SignupModal({ onClose }: SignupModalProps) {
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">
           {/* Name */}
           <div>
-            <label htmlFor="signup-name" className="block text-sm font-medium mb-1" style={{ color: "#D1D5DB" }}>
-              Full name <span style={{ color: "#EF4444" }}>*</span>
+            <label htmlFor="signup-name" className="block text-sm font-medium mb-1 text-gray-300">
+              Full name <span className="text-red-500">*</span>
             </label>
             <input
               id="signup-name"
               type="text"
               value={formData.name}
               onChange={(e) => handleChange("name", e.target.value)}
-              className="w-full px-4 py-3 rounded-lg outline-none transition-colors focus:ring-2"
+            className="w-full px-4 py-3 rounded-lg outline-none transition-colors focus:ring-2 bg-[#111418] text-white text-[15px] font-sans"
               style={{
-                background: "#111418",
                 border: errors.name ? "1px solid #EF4444" : "1px solid rgba(255,255,255,0.06)",
-                color: "#FFFFFF",
-                fontSize: 15,
-                fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
               }}
               placeholder="e.g. John Smith"
             />
-            {errors.name && <p style={{ fontSize: 12, color: "#EF4444", marginTop: 4 }}>{errors.name}</p>}
+            {errors.name && <p className="text-xs text-red-500 mt-1">{errors.name}</p>}
           </div>
 
           {/* Trade type */}
           <div>
-            <label htmlFor="signup-trade" className="block text-sm font-medium mb-1" style={{ color: "#D1D5DB" }}>
-              Trade type <span style={{ color: "#EF4444" }}>*</span>
+            <label htmlFor="signup-trade" className="block text-sm font-medium mb-1 text-gray-300">
+              Trade type <span className="text-red-500">*</span>
             </label>
             <select
               id="signup-trade"
               value={formData.trade}
               onChange={(e) => handleChange("trade", e.target.value)}
-              className="w-full px-4 py-3 rounded-lg outline-none transition-colors focus:ring-2 appearance-none"
+            className="w-full px-4 py-3 rounded-lg outline-none transition-colors focus:ring-2 appearance-none bg-[#111418] text-[15px] font-sans"
               style={{
-                background: "#111418",
                 border: errors.trade ? "1px solid #EF4444" : "1px solid rgba(255,255,255,0.06)",
                 color: formData.trade ? "#FFFFFF" : "#6B7280",
-                fontSize: 15,
-                fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
               }}
             >
               <option value="" disabled>Select your trade</option>
@@ -184,82 +168,67 @@ export function SignupModal({ onClose }: SignupModalProps) {
                 <option key={t} value={t}>{t}</option>
               ))}
             </select>
-            {errors.trade && <p style={{ fontSize: 12, color: "#EF4444", marginTop: 4 }}>{errors.trade}</p>}
+            {errors.trade && <p className="text-xs text-red-500 mt-1">{errors.trade}</p>}
           </div>
 
           {/* Business name (optional) */}
           <div>
-            <label htmlFor="signup-business" className="block text-sm font-medium mb-1" style={{ color: "#D1D5DB" }}>
-              Business name <span style={{ color: "#6B7280" }}>(optional)</span>
+            <label htmlFor="signup-business" className="block text-sm font-medium mb-1 text-gray-300">
+              Business name <span className="text-gray-500">(optional)</span>
             </label>
             <input
               id="signup-business"
               type="text"
               value={formData.businessName}
               onChange={(e) => handleChange("businessName", e.target.value)}
-              className="w-full px-4 py-3 rounded-lg outline-none transition-colors focus:ring-2"
-              style={{
-                background: "#111418",
-                border: "1px solid rgba(255,255,255,0.06)",
-                color: "#FFFFFF",
-                fontSize: 15,
-                fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
-              }}
+              className="w-full px-4 py-3 rounded-lg outline-none transition-colors focus:ring-2 bg-[#111418] text-white text-[15px] font-sans border border-white/[0.06]"
               placeholder="e.g. Smith Plumbing Ltd"
             />
           </div>
 
           {/* Mobile */}
           <div>
-            <label htmlFor="signup-mobile" className="block text-sm font-medium mb-1" style={{ color: "#D1D5DB" }}>
-              Mobile number <span style={{ color: "#EF4444" }}>*</span>
+            <label htmlFor="signup-mobile" className="block text-sm font-medium mb-1 text-gray-300">
+              Mobile number <span className="text-red-500">*</span>
             </label>
             <input
               id="signup-mobile"
               type="tel"
               value={formData.mobile}
               onChange={(e) => handleChange("mobile", e.target.value)}
-              className="w-full px-4 py-3 rounded-lg outline-none transition-colors focus:ring-2"
+              className="w-full px-4 py-3 rounded-lg outline-none transition-colors focus:ring-2 bg-[#111418] text-white text-[15px] font-sans"
               style={{
-                background: "#111418",
                 border: errors.mobile ? "1px solid #EF4444" : "1px solid rgba(255,255,255,0.06)",
-                color: "#FFFFFF",
-                fontSize: 15,
-                fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
               }}
               placeholder="e.g. 07700 900123"
             />
-            {errors.mobile && <p style={{ fontSize: 12, color: "#EF4444", marginTop: 4 }}>{errors.mobile}</p>}
+            {errors.mobile && <p className="text-xs text-red-500 mt-1">{errors.mobile}</p>}
           </div>
 
           {/* Email */}
           <div>
-            <label htmlFor="signup-email" className="block text-sm font-medium mb-1" style={{ color: "#D1D5DB" }}>
-              Email address <span style={{ color: "#EF4444" }}>*</span>
+            <label htmlFor="signup-email" className="block text-sm font-medium mb-1 text-gray-300">
+              Email address <span className="text-red-500">*</span>
             </label>
             <input
               id="signup-email"
               type="email"
               value={formData.email}
               onChange={(e) => handleChange("email", e.target.value)}
-              className="w-full px-4 py-3 rounded-lg outline-none transition-colors focus:ring-2"
+              className="w-full px-4 py-3 rounded-lg outline-none transition-colors focus:ring-2 bg-[#111418] text-white text-[15px] font-sans"
               style={{
-                background: "#111418",
                 border: errors.email ? "1px solid #EF4444" : "1px solid rgba(255,255,255,0.06)",
-                color: "#FFFFFF",
-                fontSize: 15,
-                fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
               }}
               placeholder="e.g. john@smithplumbing.co.uk"
             />
-            {errors.email && <p style={{ fontSize: 12, color: "#EF4444", marginTop: 4 }}>{errors.email}</p>}
+            {errors.email && <p className="text-xs text-red-500 mt-1">{errors.email}</p>}
           </div>
 
           {/* Business phone */}
           <div>
-            <label htmlFor="signup-phone" className="block text-sm font-medium mb-1" style={{ color: "#D1D5DB" }}>
-              Business phone number <span style={{ color: "#EF4444" }}>*</span>
-              <span className="block font-normal" style={{ fontSize: 12, color: "#6B7280" }}>
+            <label htmlFor="signup-phone" className="block text-sm font-medium mb-1 text-gray-300">
+              Business phone number <span className="text-red-500">*</span>
+              <span className="block font-normal text-xs text-gray-500">
                 The number Katie will answer
               </span>
             </label>
@@ -268,35 +237,27 @@ export function SignupModal({ onClose }: SignupModalProps) {
               type="tel"
               value={formData.businessPhone}
               onChange={(e) => handleChange("businessPhone", e.target.value)}
-              className="w-full px-4 py-3 rounded-lg outline-none transition-colors focus:ring-2"
+              className="w-full px-4 py-3 rounded-lg outline-none transition-colors focus:ring-2 bg-[#111418] text-white text-[15px] font-sans"
               style={{
-                background: "#111418",
                 border: errors.businessPhone ? "1px solid #EF4444" : "1px solid rgba(255,255,255,0.06)",
-                color: "#FFFFFF",
-                fontSize: 15,
-                fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
               }}
               placeholder="e.g. 0117 123 4567"
             />
-            {errors.businessPhone && <p style={{ fontSize: 12, color: "#EF4444", marginTop: 4 }}>{errors.businessPhone}</p>}
+            {errors.businessPhone && <p className="text-xs text-red-500 mt-1">{errors.businessPhone}</p>}
           </div>
 
           {/* Preferred alerts */}
           <div>
-            <label htmlFor="signup-alerts" className="block text-sm font-medium mb-1" style={{ color: "#D1D5DB" }}>
+            <label htmlFor="signup-alerts" className="block text-sm font-medium mb-1 text-gray-300">
               Preferred alert method
             </label>
             <select
               id="signup-alerts"
               value={formData.alerts}
               onChange={(e) => handleChange("alerts", e.target.value)}
-              className="w-full px-4 py-3 rounded-lg outline-none transition-colors focus:ring-2 appearance-none"
+              className="w-full px-4 py-3 rounded-lg outline-none transition-colors focus:ring-2 appearance-none bg-[#111418] text-white text-[15px] font-sans border border-white/[0.06]"
               style={{
-                background: "#111418",
-                border: "1px solid rgba(255,255,255,0.06)",
                 color: "#FFFFFF",
-                fontSize: 15,
-                fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
               }}
             >
               {alertOptions.map((o) => (
@@ -333,17 +294,16 @@ export function SignupModal({ onClose }: SignupModalProps) {
           </button>
 
           {/* Footer */}
-          <p className="text-center" style={{ fontSize: 12, color: "#6B7280", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif" }}>
+          <p className="text-center text-xs text-gray-500 font-sans">
             Starter plan only · Fair use applies · Cancel anytime
           </p>
 
           {/* Escape hatch to pricing */}
-          <p className="text-center" style={{ fontSize: 14, color: "#9CA3AF", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif" }}>
+          <p className="text-center text-sm text-slate-400 font-sans">
             Want Starter, Growth or Pro now?{' '}
             <a
               href="/pricing"
-              className="group inline-flex items-center gap-1 transition-colors"
-              style={{ color: "#10B981", fontWeight: 500, fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif" }}
+              className="group inline-flex items-center gap-1 transition-colors text-emerald-500 font-medium font-sans"
             >
               <span className="underline underline-offset-2 decoration-transparent group-hover:decoration-current transition-all">
                 View all plans
@@ -358,7 +318,7 @@ export function SignupModal({ onClose }: SignupModalProps) {
             target="_blank"
             rel="noopener noreferrer"
             className="block text-center transition-colors hover:underline"
-            style={{ fontSize: 14, color: "#10B981", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif" }}
+            className="text-sm text-emerald-500 font-sans"
           >
             Prefer WhatsApp? Start via chat →
           </a>

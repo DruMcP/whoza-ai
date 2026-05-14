@@ -1,25 +1,28 @@
 "use client"
 
+import { useId } from "react"
 import { useLocale } from "@/lib/locale-context"
 import { Country } from "@/lib/locale-config"
 
-const UK_FLAG = (
-  <svg viewBox="0 0 60 30" className="w-5 h-3 rounded-sm">
-    <clipPath id="s">
-      <path d="M0,0 v30 h60 v-30 z"/>
-    </clipPath>
-    <clipPath id="t">
-      <path d="M30,15 h30 v15 z v-15 h-30 z h-30 v-15 z v15 h30 z"/>
-    </clipPath>
-    <g clipPath="url(#s)">
-      <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
-      <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" strokeWidth="6"/>
-      <path d="M0,0 L60,30 M60,0 L0,30" clipPath="url(#t)" stroke="#C8102E" strokeWidth="4"/>
-      <path d="M30,0 v30 M0,15 h60" stroke="#fff" strokeWidth="10"/>
-      <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" strokeWidth="6"/>
-    </g>
-  </svg>
-)
+function UK_FLAG({ id }: { id: string }) {
+  return (
+    <svg viewBox="0 0 60 30" className="w-5 h-3 rounded-sm">
+      <clipPath id={`uk-s-${id}`}>
+        <path d="M0,0 v30 h60 v-30 z"/>
+      </clipPath>
+      <clipPath id={`uk-t-${id}`}>
+        <path d="M30,15 h30 v15 z v-15 h-30 z h-30 v-15 z v15 h30 z"/>
+      </clipPath>
+      <g clipPath={`url(#uk-s-${id})`}>
+        <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+        <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" strokeWidth="6"/>
+        <path d="M0,0 L60,30 M60,0 L0,30" clipPath={`url(#uk-t-${id})`} stroke="#C8102E" strokeWidth="4"/>
+        <path d="M30,0 v30 M0,15 h60" stroke="#fff" strokeWidth="10"/>
+        <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" strokeWidth="6"/>
+      </g>
+    </svg>
+  )
+}
 
 const US_FLAG = (
   <svg viewBox="0 0 60 30" className="w-5 h-3 rounded-sm">
@@ -29,13 +32,19 @@ const US_FLAG = (
   </svg>
 )
 
-const flags: { code: Country; icon: React.ReactNode; label: string }[] = [
-  { code: "uk", icon: UK_FLAG, label: "United Kingdom" },
-  { code: "us", icon: US_FLAG, label: "United States" },
-]
+const labels: Record<Country, string> = {
+  uk: "United Kingdom",
+  us: "United States",
+}
 
 export function CountrySwitcher() {
   const { country, setCountry } = useLocale()
+  const id = useId()
+
+  const flags = [
+    { code: "uk" as Country, icon: <UK_FLAG id={id} />, label: labels.uk },
+    { code: "us" as Country, icon: US_FLAG, label: labels.us },
+  ]
 
   return (
     <div className="flex items-center gap-1 bg-white/10 rounded-lg p-1">

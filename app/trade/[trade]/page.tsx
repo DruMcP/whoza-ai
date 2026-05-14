@@ -65,14 +65,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       siteName: "Whoza.ai",
       title: tradeData.headline,
       description: tradeData.metaDescription,
-      images: [{ url: "https://whoza.ai/og-image.png", width: 1200, height: 630, alt: `whoza.ai — AI Call Handling for ${tradeData.display}` }],
+      images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: `whoza.ai — AI Call Handling for ${tradeData.display}` }],
     },
     twitter: {
       card: "summary_large_image",
       site: "@whozaai",
       title: tradeData.headline,
       description: tradeData.metaDescription,
-      images: ["https://whoza.ai/og-image.png"],
+      images: ["https://whoza.ai/og-image.webp"],
     },
     robots: {
       index: true,

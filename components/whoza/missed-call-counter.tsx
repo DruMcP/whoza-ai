@@ -59,26 +59,25 @@ export function MissedCallCounter() {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="w-full py-3"
-      style={{ background: "linear-gradient(90deg, rgba(239,68,68,0.08), rgba(239,68,68,0.02))" }}
+      className="w-full py-3 bg-gradient-to-r from-red-500/[0.08] to-red-500/[0.02]"
     >
       <div 
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
         aria-live="polite"
         aria-atomic="true"
       >
-        <p className="text-sm" style={{ color: "#9CA3AF" }}>
+        <p className="text-sm text-gray-400">
           <span className="sr-only">Live statistics from the Office for National Statistics: </span>
           Since you opened this page, UK trades have missed{" "}
-          <span className="font-bold" style={{ color: "#EF4444" }}>{formattedCalls}</span>{" "}
+          <span className="font-bold text-red-500">{formattedCalls}</span>{" "}
           calls. That&apos;s approximately{" "}
-          <span className="font-bold" style={{ color: "#EF4444" }}>{formattedRevenue}</span>{" "}
+          <span className="font-bold text-red-500">{formattedRevenue}</span>{" "}
           in lost work.
         </p>
-        <p className="text-xs mt-1" style={{ color: "#6B7280" }}>
+        <p className="text-xs mt-1 text-gray-500">
           Source: ONS Business Population Estimates 2025, 62% unanswered rate
         </p>
-        <p className="text-xs mt-1 font-medium" style={{ color: "#10B981" }}>
+        <p className="text-xs mt-1 font-medium text-emerald-500">
           That&apos;s why we built Katie&apos;s Revenue Team
         </p>
       </div>

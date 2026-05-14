@@ -97,8 +97,7 @@ export function FloatingChatWidget() {
 
   return (
     <div 
-      className="fixed bottom-24 lg:bottom-6 right-6 z-50" 
-      style={{ display: isVisible ? 'block' : 'none' }}
+      className={`fixed bottom-24 lg:bottom-6 right-6 z-50 ${isVisible ? 'block' : 'hidden'}`}
       data-visible={isVisible}
     >
       <AnimatePresence>

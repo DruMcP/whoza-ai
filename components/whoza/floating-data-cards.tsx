@@ -48,7 +48,7 @@ export function FloatingDataCards() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.8 + card.delay, ease: [0.16, 1, 0.3, 1] }}
           className="bg-white rounded-xl px-4 py-3 shadow-lg border border-[#E2E8F0] flex items-center gap-3"
-          style={{ willChange: "transform" }}
+          className="will-change-transform"
         >
           <div
             className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"

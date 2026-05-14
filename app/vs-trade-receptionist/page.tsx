@@ -16,14 +16,14 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "Whoza.ai vs Trade Receptionist: Which is Better for UK Trades?",
     description: "Compare whoza.ai and Trade Receptionist for UK tradespeople. Price, setup time, WhatsApp delivery, and more.",
-    images: [{ url: "https://whoza.ai/og-image.png", width: 1200, height: 630, alt: "Whoza.ai vs Trade Receptionist comparison" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Whoza.ai vs Trade Receptionist comparison" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "Whoza.ai vs Trade Receptionist: Which is Better for UK Trades?",
     description: "Compare whoza.ai and Trade Receptionist for UK tradespeople. Price, setup time, WhatsApp delivery, and more.",
-    images: ["https://whoza.ai/og-image.png"],
+    images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {
     canonical: "https://whoza.ai/vs-trade-receptionist",

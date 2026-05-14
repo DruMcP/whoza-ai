@@ -57,31 +57,26 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
 
   return (
     <section
-      className="hero dark-section relative overflow-hidden"
-      style={{
-        background: "linear-gradient(135deg, #0F1729 0%, #1A1A2E 50%, #0F1729 100%)",
-        paddingTop: "var(--section-py-xl)",
-      }}
+      className="hero dark-section relative overflow-hidden bg-gradient-to-br from-[#0F1729] via-[#1A1A2E] to-[#0F1729] pt-[var(--section-py-xl)]"
       aria-label={`AI call handling for ${trade || "trades"} in ${city}`}
     >
       {/* ── Background atmosphere ── */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div
           className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full"
-          style={{ background: "rgba(16,185,129,0.08)", filter: "blur(120px)" }}
+          className="bg-emerald-500/[0.08] blur-[120px]"
         />
         <div
           className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full"
-          style={{ background: "rgba(16,185,129,0.05)", filter: "blur(100px)" }}
+          className="bg-emerald-500/[0.05] blur-[100px]"
         />
       </div>
 
       {/* Subtle grid */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none bg-[length:60px_60px]"
         style={{
           backgroundImage: `linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)`,
-          backgroundSize: "60px 60px",
         }}
         aria-hidden="true"
       />
@@ -98,7 +93,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
         }}
       >
         {/* ══ LEFT: Text column ══ */}
-        <div style={{ maxWidth: 540 }}>
+        <div className="max-w-[540px]">
           {/* Location Badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -127,19 +122,10 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            style={{
-              fontFamily: "var(--font-inter), Inter, system-ui, -apple-system, sans-serif",
-              fontSize: "clamp(36px, 5vw, 56px)",
-              fontWeight: 800,
-              lineHeight: 1.05,
-              letterSpacing: "-0.03em",
-              color: "#fff",
-              margin: "0 0 16px",
-              whiteSpace: "pre-line",
-            }}
+            className="font-sans text-[clamp(36px,5vw,56px)] font-extrabold leading-[1.05] tracking-tight text-white mb-4 whitespace-pre-line"
           >
-            <span style={{ display: "block" }}>Your phone&apos;s ringing.</span>
-            <span style={{ display: "block", color: "#D63031" }}>
+            <span className="block">Your phone&apos;s ringing.</span>
+            <span className="block text-[#D63031]">
               Katie&apos;s got it — in {city}.
             </span>
           </motion.h1>
@@ -149,15 +135,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.28, ease: [0.16, 1, 0.3, 1] }}
-            style={{
-              fontFamily: "var(--font-inter), Inter, system-ui, -apple-system, sans-serif",
-              fontSize: 18,
-              fontWeight: 600,
-              color: "#10B981",
-              margin: "0 0 16px",
-              lineHeight: 1.3,
-              letterSpacing: "-0.01em",
-            }}
+            className="font-sans text-lg font-semibold text-emerald-500 mb-4 leading-snug tracking-tight"
           >
             While you work, we book.
           </motion.p>
@@ -167,14 +145,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.38, ease: [0.16, 1, 0.3, 1] }}
-            style={{
-              fontFamily: "var(--font-inter), Inter, system-ui, -apple-system, sans-serif",
-              fontSize: 17,
-              lineHeight: 1.55,
-              color: "#94A3B8",
-              margin: "0 0 12px",
-              letterSpacing: "0.01em",
-            }}
+            className="font-sans text-[17px] leading-relaxed text-slate-400 mb-3 tracking-wide"
           >
             The <abbr title="Artificial Intelligence">AI</abbr> call handler and Revenue Team built for{" "}
             {country === "uk" ? "UK" : "US"} {config.language.tradesPeople}. Answers every missed call,
@@ -187,14 +158,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.48, ease: [0.16, 1, 0.3, 1] }}
-            style={{
-              fontFamily: "var(--font-inter), Inter, system-ui, -apple-system, sans-serif",
-              fontSize: 17,
-              fontWeight: 600,
-              lineHeight: 1.4,
-              color: "#FFFFFF",
-              margin: "0 0 20px",
-            }}
+            className="font-sans text-[17px] font-semibold leading-snug text-white mb-5"
           >
             No apps. No contract. Just more work.
           </motion.p>
@@ -204,13 +168,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.58, ease: [0.16, 1, 0.3, 1] }}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: 12,
-              marginBottom: 16,
-              alignItems: "flex-start",
-            }}
+            className="flex flex-col gap-3 mb-4 items-start"
           >
             <a
               href="#pricing"
@@ -238,51 +196,23 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
 
-            <span style={{ fontSize: 13, color: "#94A3B8", letterSpacing: "0.01em" }}>
+            <span className="text-[13px] text-slate-400 tracking-wide">
               No credit card required · 30-day money-back guarantee
             </span>
 
             <a
               href="#demo"
-              className="inline-flex items-center gap-2 transition-colors hover:underline text-left"
-              style={{
-                fontSize: 15,
-                color: "#94A3B8",
-                fontWeight: 500,
-                fontFamily: "var(--font-inter), Inter, system-ui, -apple-system, sans-serif",
-                minHeight: 44,
-                textDecoration: "none",
-              }}
+              className="inline-flex items-center gap-2 transition-colors hover:underline text-left text-[15px] text-slate-400 font-medium font-sans min-h-[44px] no-underline"
               aria-label="See Katie handle a call — 60 second demo, no signup required"
             >
-              <span
-                style={{
-                  width: 32,
-                  height: 32,
-                  borderRadius: "50%",
-                  background: "rgba(255,255,255,0.1)",
-                  border: "1px solid rgba(255,255,255,0.2)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: 10,
-                  color: "#fff",
-                }}
-              >
-                <Play className="w-3 h-3 fill-current" />
+              <span className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-[10px] text-white">
               </span>
               Hear Katie in Action (60 sec — no signup)
             </a>
 
             {/* Pricing anchor */}
-            <p
-              style={{
-                fontSize: 14,
-                color: "#94A3B8",
-                marginTop: 4,
-              }}
-            >
-              From <strong style={{ color: "#fff" }}>{config.currencySymbol}59/month</strong> + VAT{" "}
+            <p className="text-sm text-slate-400 mt-1">
+              From <strong className="text-white">{config.currencySymbol}59/month</strong> + VAT{" "}
               — one recovered job pays for the entire year
             </p>
 
@@ -314,7 +244,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
               marginBottom: 16,
             }}
           >
-            <span style={{ animation: "livePulse 2s infinite", display: "inline-block", width: 8, height: 8, borderRadius: "50%", background: "#10B981", marginRight: 8 }} />
+            <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse" />
             Limited to 50 {country === "uk" ? "UK" : "US"} trades in our pilot programme
           </motion.p>
 
@@ -324,31 +254,14 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.78, ease: [0.16, 1, 0.3, 1] }}
             aria-label="Key benefits"
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: 10,
-              marginBottom: 20,
-              listStyle: "none",
-              padding: 0,
-            }}
+            className="flex flex-wrap gap-2.5 mb-5 list-none p-0"
           >
             {trustItems.map((item) => (
               <li
                 key={item}
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 6,
-                  background: "rgba(255,255,255,0.06)",
-                  color: "#94A3B8",
-                  fontSize: 13,
-                  padding: "8px 14px",
-                  borderRadius: 20,
-                  border: "1px solid rgba(255,255,255,0.08)",
-                }}
+                className="inline-flex items-center gap-1.5 bg-white/[0.06] text-slate-400 text-[13px] px-3.5 py-2 rounded-[20px] border border-white/[0.08]"
               >
-                <span style={{ color: "#D63031", fontWeight: 700 }}>✓</span>
+                <span className="text-[#D63031] font-bold">✓</span>
                 {item}
               </li>
             ))}
@@ -359,28 +272,19 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.88, ease: [0.16, 1, 0.3, 1] }}
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(3, 1fr)",
-              gap: 12,
-              marginBottom: 20,
-              padding: 16,
-              background: "rgba(255,255,255,0.04)",
-              border: "1px solid rgba(255,255,255,0.08)",
-              borderRadius: 12,
-            }}
+            className="grid grid-cols-3 gap-3 mb-5 p-4 bg-white/[0.04] border border-white/[0.08] rounded-xl"
           >
-            <div style={{ textAlign: "center" }}>
-              <div style={{ fontSize: 20, fontWeight: 700, color: "#10B981" }}>{stats.businesses}</div>
-              <div style={{ fontSize: 12, color: "#94A3B8", marginTop: 4 }}>trade businesses<br />in {city}</div>
+            <div className="text-center">
+              <div className="text-xl font-bold text-emerald-500">{stats.businesses}</div>
+              <div className="text-xs text-slate-400 mt-1">trade businesses<br />in {city}</div>
             </div>
-            <div style={{ textAlign: "center" }}>
-              <div style={{ fontSize: 20, fontWeight: 700, color: "#3B82F6" }}>{stats.households}</div>
-              <div style={{ fontSize: 12, color: "#94A3B8", marginTop: 4 }}>households<br />in {city}</div>
+            <div className="text-center">
+              <div className="text-xl font-bold text-blue-500">{stats.households}</div>
+              <div className="text-xs text-slate-400 mt-1">households<br />in {city}</div>
             </div>
-            <div style={{ textAlign: "center" }}>
-              <div style={{ fontSize: 20, fontWeight: 700, color: "#F59E0B" }}>{stats.avgJob}</div>
-              <div style={{ fontSize: 12, color: "#94A3B8", marginTop: 4 }}>average job<br />in {city}</div>
+            <div className="text-center">
+              <div className="text-xl font-bold text-amber-500">{stats.avgJob}</div>
+              <div className="text-xs text-slate-400 mt-1">average job<br />in {city}</div>
             </div>
           </motion.div>
 
@@ -414,9 +318,9 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
                 justifyContent: "center",
               }}
             >
-              <span style={{ fontSize: 20 }}>👤</span>
+              <span className="text-xl">👤</span>
             </div>
-            <div style={{ minWidth: 0 }}>
+            <div className="min-w-0">
               <p
                 style={{
                   fontSize: 14,
@@ -428,11 +332,11 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
               >
                 Built by Dru McPherson for {city} trades
               </p>
-              <p style={{ fontSize: 13, color: "#94A3B8", margin: 0 }}>
+              <p className="text-[13px] text-slate-400 m-0">
                 Got questions?{" "}
                 <a
                   href="mailto:dru@whoza.ai"
-                  style={{ color: "#10B981", textDecoration: "none" }}
+                  className="text-emerald-500 no-underline"
                 >
                   dru@whoza.ai
                 </a>
@@ -464,11 +368,11 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             >
               &ldquo;By far the simplest and the cheapest. I&apos;m already seeing results.&rdquo;
             </p>
-            <footer style={{ display: "flex", alignItems: "center", gap: 12 }}>
-              <cite style={{ fontSize: 13, color: "#64748B", fontStyle: "normal" }}>
+            <footer className="flex items-center gap-3">
+              <cite className="text-[13px] text-slate-500 not-italic">
                 — Ludmila Lamont, {city}
               </cite>
-              <span style={{ fontSize: 13, color: "#10B981" }}>★★★★★ Google Review</span>
+              <span className="text-[13px] text-emerald-500">★★★★★ Google Review</span>
             </footer>
           </motion.blockquote>
 
@@ -493,7 +397,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          style={{ display: "flex", justifyContent: "flex-end", paddingTop: 40 }}
+          className="flex justify-end pt-10"
         >
           <PhoneMockup city={city} trade={trade} />
         </motion.div>

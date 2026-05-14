@@ -17,7 +17,7 @@ const footerLinks = {
     { label: "FAQ", href: "/pricing#faq" },
   ],
   company: [
-    { label: "Blog", href: "/blog" },
+    { label: "Blog", href: "https://medium.com/@whozaai" },
   ],
   legal: [
     { label: "Privacy Policy", href: "/privacy" },
@@ -55,9 +55,11 @@ export function Footer() {
           <div className="col-span-2">
             <a href="/" className="flex items-center mb-6">
               <img 
-                src="/production_logo.png" 
+                src="/production_logo.webp" 
                 alt="whoza.ai" 
+                width="64" height="64"
                 className="h-16 w-auto"
+                loading="lazy"
               />
             </a>
             <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-xs">

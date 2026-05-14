@@ -14,14 +14,14 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "AI Call Handler vs Virtual Receptionist: Which Wins?",
     description: "AI call handler or human virtual receptionist? Compare cost, availability, accuracy, and setup time.",
-    images: [{ url: "https://whoza.ai/og-image.png", width: 1200, height: 630, alt: "AI vs virtual receptionist comparison" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "AI vs virtual receptionist comparison" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "AI Call Handler vs Virtual Receptionist: Which Wins?",
     description: "AI call handler or human virtual receptionist? Compare cost, availability, accuracy, and setup time.",
-    images: ["https://whoza.ai/og-image.png"],
+    images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {
     canonical: "https://whoza.ai/ai-vs-virtual-receptionist",

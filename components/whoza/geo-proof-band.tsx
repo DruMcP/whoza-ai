@@ -65,7 +65,7 @@ export function GeoProofBand({ city, country: forcedCountry, jobsThisWeek: force
           {/* Enquiries Captured Stat */}
           <motion.div
             key={currentCity}
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             className="flex items-center gap-3"

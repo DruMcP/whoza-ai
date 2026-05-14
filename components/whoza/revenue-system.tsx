@@ -86,7 +86,7 @@ export function RevenueSystem() {
         {/* System Flow */}
         <div className="relative">
           {/* Connecting Line (Desktop) */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-[var(--katie-blue)] via-[var(--rex-green)] via-[var(--claire-amber)] to-[var(--rex-green)] rounded-full" style={{ transform: 'translateY(-50%)' }} />
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-[var(--katie-blue)] via-[var(--rex-green)] via-[var(--claire-amber)] to-[var(--rex-green)] rounded-full" className="-translate-y-1/2" />
 
           <div className="grid lg:grid-cols-4 gap-6">
             {stages.map((stage, index) => (
@@ -118,7 +118,7 @@ export function RevenueSystem() {
 
                 {/* Arrow (Desktop) */}
                 {index < stages.length - 1 && (
-                  <div className="hidden lg:flex absolute top-1/2 -right-3 z-20 w-6 h-6 rounded-full bg-white border-2 border-[var(--border)] items-center justify-center" style={{ transform: 'translateY(-50%)' }}>
+                  <div className="hidden lg:flex absolute top-1/2 -right-3 z-20 w-6 h-6 rounded-full bg-white border-2 border-[var(--border)] items-center justify-center" className="-translate-y-1/2">
                     <ArrowRight className="w-3 h-3 text-[var(--slate-400)]" />
                   </div>
                 )}

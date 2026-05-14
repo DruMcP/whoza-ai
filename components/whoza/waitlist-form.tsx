@@ -23,7 +23,6 @@ export function WaitlistForm() {
       setResult({ position: data.position, message: data.message })
       setStatus("success")
     } catch (err) {
-      console.error("Waitlist error:", err)
       setStatus("error")
     }
   }
