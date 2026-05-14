@@ -59,12 +59,12 @@ export function HeroPhoneMockup() {
         {/* Frame image (photorealistic) */}
         <div className={styles.phoneFrameImage}>
           <Image
-            src="/images/phone-frame.png"
+            src="/images/phone-frame.webp"
             alt=""
             fill
             priority
             sizes="(max-width: 768px) 280px, 380px"
-            style={{ objectFit: "contain" }}
+            className="object-contain"
             aria-hidden="true"
           />
         </div>
@@ -81,7 +81,7 @@ export function HeroPhoneMockup() {
                   <path d="M8 12h8M12 8v8"/>
                 </svg>
               </div>
-              <div style={{ flex: 1, minWidth: 0 }}>
+              <div className="flex-1 min-w-0">
                 <div className={styles.waHeaderTitle}>Whoza AI</div>
                 <div className={styles.waHeaderSubtitle}>online</div>
               </div>
@@ -103,21 +103,21 @@ export function HeroPhoneMockup() {
             <div className={styles.waMessageBubble}>
               <div className={styles.waSenderHeader}>&#128222; New Lead</div>
               <div className={styles.waLeadText}>
-                <div style={{ marginBottom: "2px" }}><strong>Sarah Williams</strong></div>
+                <div className="mb-0.5"><strong>Sarah Williams</strong></div>
                 <div>&#128295; Boiler Repair</div>
                 <div>&#128205; Bristol, BS16</div>
                 <div>&#128176; &#163;250 &#8211; &#163;450</div>
-                <div style={{ color: "#D63031" }}>&#9889; High Priority</div>
+                <div className="text-[#D63031]">&#9889; High Priority</div>
               </div>
               {/* Time + read receipts */}
               <div className={styles.waMessageTime}>
-                09:41 <span style={{ color: "#53BDEB" }}>&#10003;&#10003;</span>
+                09:41 <span className="text-[#53BDEB]">&#10003;&#10003;</span>
               </div>
             </div>
 
             {/* Verified stamp (inline, authentic) */}
             <div className={styles.waVerified}>
-              <span style={{ fontSize: "13px" }}>&#10003;</span>
+              <span className="text-[13px]">&#10003;</span>
               <span>Verified by Katie AI</span>
             </div>
 

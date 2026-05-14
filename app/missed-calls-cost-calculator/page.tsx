@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "Missed Call Cost Calculator | How Much Revenue Are You Losing?",
     description: "Calculate how much missed calls cost your trade business. Free calculator for UK tradespeople.",
-    images: [{ url: "https://whoza.ai/og-image.png", width: 1200, height: 630, alt: "Missed call cost calculator" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Missed call cost calculator" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "Missed Call Cost Calculator | How Much Revenue Are You Losing?",
     description: "Calculate how much missed calls cost your trade business. Free calculator for UK tradespeople.",
-    images: ["https://whoza.ai/og-image.png"],
+    images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {
     canonical: "https://whoza.ai/missed-calls-cost-calculator",

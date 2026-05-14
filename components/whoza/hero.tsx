@@ -2,19 +2,9 @@
 
 import { useState, useCallback, useEffect, useRef } from "react"
 import { ArrowRight, Loader2, Play } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 import { HeroPhoneMockup } from "./hero-phone-mockup"
 import { SignupModal } from "./signup-modal"
-
-/* ── Trade categories ── */
-const tradeCategories = [
-  { icon: "🔧", label: "Plumbers" },
-  { icon: "⚡", label: "Electricians" },
-  { icon: "🏠", label: "Roofers" },
-  { icon: "🔒", label: "Locksmiths" },
-  { icon: "🔥", label: "Heating Engineers" },
-  { icon: "🔨", label: "Builders" },
-]
 
 /* ── Trust pills ── */
 const trustItems = [
@@ -30,34 +20,78 @@ const CALL_RATE = 0.31        // calls per second across UK trades
 const AVG_JOB_VALUE = 120     // £
 const CONVERSION_RATE = 0.35  // ~35% of missed calls = lost jobs
 
+/* ── Framer-motion helpers ── */
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] },
+})
+
+const fadeUpVisible = (delay = 0) => ({
+  initial: { opacity: 1, y: 0 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] },
+})
+
+const fadeInRightVisible = (delay = 0) => ({
+  initial: { opacity: 1, x: 0 },
+  animate: { opacity: 1, x: 0 },
+  transition: { duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] },
+})
+
+const fadeInRight = (delay = 0) => ({
+  initial: { opacity: 0, x: 50 },
+  animate: { opacity: 1, x: 0 },
+  transition: { duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] },
+})
+
 export function Hero() {
   const [showSignup, setShowSignup] = useState(false)
   const [ctaLoading, setCtaLoading] = useState(false)
 
-  /* ── Live counter state ── */
-  const [elapsed, setElapsed] = useState(0)
-  const [isVisible, setIsVisible] = useState(false)
+  /* ── Live counter refs (no React re-renders) ── */
   const counterRef = useRef<HTMLDivElement>(null)
+  const missedCallsRef = useRef<HTMLSpanElement>(null)
+  const lostValueRef = useRef<HTMLSpanElement>(null)
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
 
   useEffect(() => {
     const el = counterRef.current
     if (!el) return
     const obs = new IntersectionObserver(
-      (entries) => setIsVisible(entries[0].isIntersecting),
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          if (timerRef.current) return
+          let elapsed = 0
+          timerRef.current = setInterval(() => {
+            elapsed += 1
+            const missedCalls = Math.floor(elapsed * CALL_RATE)
+            const lostValue = Math.floor(missedCalls * AVG_JOB_VALUE * CONVERSION_RATE)
+            if (missedCallsRef.current) {
+              missedCallsRef.current.textContent = missedCalls.toLocaleString("en-GB")
+            }
+            if (lostValueRef.current) {
+              lostValueRef.current.textContent = `£${lostValue.toLocaleString("en-GB")}`
+            }
+          }, 1000)
+        } else {
+          if (timerRef.current) {
+            clearInterval(timerRef.current)
+            timerRef.current = null
+          }
+        }
+      },
       { threshold: 0 }
     )
     obs.observe(el)
-    return () => obs.disconnect()
+    return () => {
+      obs.disconnect()
+      if (timerRef.current) {
+        clearInterval(timerRef.current)
+        timerRef.current = null
+      }
+    }
   }, [])
-
-  useEffect(() => {
-    if (!isVisible) return
-    const id = setInterval(() => setElapsed((e) => e + 1), 1000)
-    return () => clearInterval(id)
-  }, [isVisible])
-
-  const missedCalls = Math.floor(elapsed * CALL_RATE)
-  const lostValue = Math.floor(missedCalls * AVG_JOB_VALUE * CONVERSION_RATE)
 
   const handlePrimaryCTA = useCallback(() => {
     setCtaLoading(true)
@@ -72,72 +106,43 @@ export function Hero() {
     if (el) el.scrollIntoView({ behavior: "smooth" })
   }, [])
 
-  /* ── Animation variants ── */
-  const fadeUp = (delay: number) => ({
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] },
-  })
-
   return (
     <section
-      className="hero dark-section relative overflow-hidden"
-      style={{
-        background: "linear-gradient(135deg, #0F1729 0%, #1A1A2E 50%, #0F1729 100%)",
-        paddingTop: "var(--section-py-xl)",
-      }}
+      className="hero dark-section relative overflow-hidden bg-gradient-to-br from-[#0F1729] via-[#1A1A2E] to-[#0F1729] pt-[var(--section-py-xl)]"
       aria-label="Introduction"
     >
       {/* ── Background atmosphere ── */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div
-          className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full"
-          style={{ background: "rgba(16,185,129,0.08)", filter: "blur(120px)" }}
+          className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full bg-emerald-500/[0.08] blur-[120px]"
         />
         <div
-          className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full"
-          style={{ background: "rgba(16,185,129,0.05)", filter: "blur(100px)" }}
+          className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-emerald-500/[0.05] blur-[100px]"
         />
       </div>
 
       {/* Subtle grid */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none bg-[length:60px_60px]"
         style={{
           backgroundImage: `linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)`,
-          backgroundSize: "60px 60px",
         }}
         aria-hidden="true"
       />
 
       {/* ── Main grid ── */}
       <div
-        className="relative max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8"
-        style={{
-          display: "grid",
-          gridTemplateColumns: "55% 45%",
-          gap: "clamp(40px, 4vw, 80px)",
-          alignItems: "start",
-          paddingBottom: 80,
-        }}
+        className="relative max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-[55%_45%] gap-[clamp(40px,4vw,80px)] items-start pb-20"
       >
         {/* ══ LEFT: Text column ══ */}
-        <div style={{ maxWidth: 540 }}>
+        <div className="max-w-[540px]">
           {/* H1 */}
           <motion.h1
-            {...fadeUp(0.1)}
-            style={{
-              fontFamily: "var(--font-inter), Inter, system-ui, -apple-system, sans-serif",
-              fontSize: "clamp(36px, 5vw, 56px)",
-              fontWeight: 800,
-              lineHeight: 1.05,
-              letterSpacing: "-0.03em",
-              color: "#fff",
-              margin: "0 0 16px",
-            }}
+            {...fadeUpVisible(0.1)}
+            className="font-sans text-[clamp(36px,5vw,56px)] font-extrabold leading-[1.05] tracking-tight text-white mb-4"
           >
-            <span style={{ display: "block" }}>Your phone&apos;s ringing.</span>
-            <span style={{ display: "block", color: "#D63031" }}>Katie&apos;s got it.</span>
+            <span className="block">Your phone&apos;s ringing.</span>
+            <span className="block text-[#D63031]">Katie&apos;s got it.</span>
           </motion.h1>
 
           {/* Entity definitions for AI consumption — visually hidden but machine-readable */}
@@ -158,31 +163,16 @@ export function Hero() {
 
           {/* Secondary headline */}
           <motion.p
-            {...fadeUp(0.28)}
-            style={{
-              fontFamily: "var(--font-inter), Inter, system-ui, -apple-system, sans-serif",
-              fontSize: 18,
-              fontWeight: 600,
-              color: "#10B981",
-              margin: "0 0 16px",
-              lineHeight: 1.3,
-              letterSpacing: "-0.01em",
-            }}
+            {...fadeUpVisible(0.3)}
+            className="font-sans text-lg font-semibold text-emerald-500 mb-4 leading-snug tracking-tight"
           >
             While you work, we book.
           </motion.p>
 
           {/* Subhead */}
           <motion.p
-            {...fadeUp(0.38)}
-            style={{
-              fontFamily: "var(--font-inter), Inter, system-ui, -apple-system, sans-serif",
-              fontSize: 17,
-              lineHeight: 1.55,
-              color: "#94A3B8",
-              margin: "0 0 12px",
-              letterSpacing: "0.01em",
-            }}
+            {...fadeUpVisible(0.4)}
+            className="font-sans text-[17px] leading-relaxed text-slate-400 mb-3 tracking-wide"
           >
             The <abbr title="Artificial Intelligence">AI</abbr> call handler and Revenue Team built for
             UK trades. Answers every missed call, qualifies real jobs, and sends them
@@ -191,35 +181,16 @@ export function Hero() {
 
           {/* Outcome punchline */}
           <motion.p
-            {...fadeUp(0.48)}
-            style={{
-              fontFamily: "var(--font-inter), Inter, system-ui, -apple-system, sans-serif",
-              fontSize: 17,
-              fontWeight: 600,
-              lineHeight: 1.4,
-              color: "#FFFFFF",
-              margin: "0 0 20px",
-            }}
+            {...fadeUpVisible(0.5)}
+            className="font-sans text-[17px] font-semibold leading-snug text-white mb-5"
           >
             No apps. No Contract. Just more work.
           </motion.p>
 
           {/* Pilot badge */}
           <motion.div
-            {...fadeUp(0.55)}
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 8,
-              background: "rgba(16,185,129,0.15)",
-              border: "1px solid rgba(16,185,129,0.3)",
-              color: "#10B981",
-              fontSize: 13,
-              fontWeight: 600,
-              padding: "8px 16px",
-              borderRadius: 20,
-              marginBottom: 20,
-            }}
+            {...fadeUpVisible(0.6)}
+            className="inline-flex items-center gap-2 bg-emerald-500/[0.15] border border-emerald-500/[0.3] text-emerald-500 text-[13px] font-semibold px-4 py-2 rounded-[20px] mb-5"
           >
             <span aria-hidden="true">🌱</span>
             UK Pilot Programme — Limited to 50 tradespeople
@@ -227,37 +198,13 @@ export function Hero() {
 
           {/* CTA Group */}
           <motion.div
-            {...fadeUp(0.65)}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: 12,
-              marginBottom: 20,
-              alignItems: "flex-start",
-            }}
+            {...fadeUpVisible(0.7)}
+            className="flex flex-col gap-3 mb-5 items-start"
           >
             <button
               onClick={handlePrimaryCTA}
               disabled={ctaLoading}
-              className="btn-primary"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                background: "#fff",
-                color: "#1A1A2E",
-                fontFamily: "var(--font-inter), Inter, system-ui, -apple-system, sans-serif",
-                fontSize: 17,
-                fontWeight: 700,
-                padding: "16px 32px",
-                borderRadius: 12,
-                textDecoration: "none",
-                border: "none",
-                cursor: "pointer",
-                minHeight: 56,
-                whiteSpace: "nowrap",
-                boxShadow: "0 4px 14px rgba(255,255,255,0.15)",
-              }}
+              className="btn-primary inline-flex items-center justify-center bg-white text-[#1A1A2E] font-sans text-[17px] font-bold px-8 py-4 rounded-xl no-underline border-none cursor-pointer min-h-[56px] whitespace-nowrap shadow-[0_4px_14px_rgba(255,255,255,0.15)]"
               aria-label="Try Katie Free for 7 Days"
             >
               {ctaLoading ? (
@@ -273,36 +220,16 @@ export function Hero() {
               )}
             </button>
 
-            <span style={{ fontSize: 13, color: "#94A3B8", letterSpacing: "0.01em" }}>
+            <span className="text-[13px] text-slate-400 tracking-wide">
               No credit card required · 30-day money-back guarantee
             </span>
 
             <button
               onClick={scrollToDemo}
-              className="inline-flex items-center gap-2 transition-colors hover:underline text-left"
-              style={{
-                fontSize: 15,
-                color: "#94A3B8",
-                fontWeight: 500,
-                fontFamily: "var(--font-inter), Inter, system-ui, -apple-system, sans-serif",
-                minHeight: 44,
-              }}
+              className="inline-flex items-center gap-2 transition-colors hover:underline text-left text-[15px] text-slate-400 font-medium font-sans min-h-[44px]"
               aria-label="See Katie handle a call — 60 second demo, no signup required"
             >
-              <span
-                style={{
-                  width: 32,
-                  height: 32,
-                  borderRadius: "50%",
-                  background: "rgba(255,255,255,0.1)",
-                  border: "1px solid rgba(255,255,255,0.2)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: 10,
-                  color: "#fff",
-                }}
-              >
+              <span className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-[10px] text-white">
                 <Play className="w-3 h-3 fill-current" />
               </span>
               See Katie handle a call (60 sec — no signup)
@@ -311,33 +238,16 @@ export function Hero() {
 
           {/* Trust Pills */}
           <motion.ul
-            {...fadeUp(0.75)}
+            {...fadeUpVisible(0.8)}
             aria-label="Key benefits"
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: 10,
-              marginBottom: 24,
-              listStyle: "none",
-              padding: 0,
-            }}
+            className="flex flex-wrap gap-2.5 mb-6 list-none p-0"
           >
             {trustItems.map((item) => (
               <li
                 key={item}
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 6,
-                  background: "rgba(255,255,255,0.06)",
-                  color: "#94A3B8",
-                  fontSize: 13,
-                  padding: "8px 14px",
-                  borderRadius: 20,
-                  border: "1px solid rgba(255,255,255,0.08)",
-                }}
+                className="inline-flex items-center gap-1.5 bg-white/[0.06] text-slate-400 text-[13px] px-3.5 py-2 rounded-[20px] border border-white/[0.08]"
               >
-                <span style={{ color: "#D63031", fontWeight: 700 }}>✓</span>
+                <span className="text-[#D63031] font-bold">✓</span>
                 {item}
               </li>
             ))}
@@ -345,51 +255,21 @@ export function Hero() {
 
           {/* Founder Bar */}
           <motion.div
-            {...fadeUp(0.85)}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 14,
-              padding: 16,
-              background: "rgba(255,255,255,0.04)",
-              border: "1px solid rgba(255,255,255,0.08)",
-              borderRadius: 12,
-              marginBottom: 20,
-            }}
+            {...fadeUpVisible(0.9)}
+            className="flex items-center gap-3.5 p-4 bg-white/[0.04] border border-white/[0.08] rounded-xl mb-5"
           >
-            <div
-              style={{
-                width: 48,
-                height: 48,
-                borderRadius: "50%",
-                overflow: "hidden",
-                flexShrink: 0,
-                border: "2px solid rgba(255,255,255,0.1)",
-                background: "#1A1A2E",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <span style={{ fontSize: 20 }}>👤</span>
+            <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-white/10 bg-[#1A1A2E] flex items-center justify-center">
+              <span className="text-xl">👤</span>
             </div>
-            <div style={{ minWidth: 0 }}>
-              <p
-                style={{
-                  fontSize: 14,
-                  fontWeight: 500,
-                  color: "#FFFFFF",
-                  margin: "0 0 4px",
-                  lineHeight: 1.3,
-                }}
-              >
+            <div className="min-w-0">
+              <p className="text-sm font-medium text-white mb-1 leading-snug">
                 Built by Dru McPherson, former trade business owner
               </p>
-              <p style={{ fontSize: 13, color: "#94A3B8", margin: 0 }}>
+              <p className="text-[13px] text-slate-400 m-0">
                 Got questions? I answer every email:{" "}
                 <a
                   href="mailto:dru@whoza.ai"
-                  style={{ color: "#10B981", textDecoration: "none" }}
+                  className="text-emerald-500 no-underline"
                 >
                   dru@whoza.ai
                 </a>
@@ -399,40 +279,19 @@ export function Hero() {
 
           {/* Real Review */}
           <motion.blockquote
-            {...fadeUp(0.95)}
-            style={{
-              margin: 0,
-              padding: "16px 20px",
-              background: "rgba(255,255,255,0.04)",
-              borderLeft: "3px solid #B07D12",
-              borderRadius: "0 12px 12px 0",
-            }}
+            {...fadeUpVisible(1.0)}
+            className="m-0 px-5 py-4 bg-white/[0.04] border-l-[3px] border-[#B07D12] rounded-r-xl"
           >
             <p
-              style={{
-                fontSize: 15,
-                fontStyle: "italic",
-                color: "#94A3B8",
-                lineHeight: 1.5,
-                margin: "0 0 10px",
-              }}
+              className="text-[15px] italic text-slate-400 leading-relaxed mb-2.5"
             >
               &ldquo;By far the simplest and the cheapest. I&apos;m already seeing results.&rdquo;
             </p>
             <footer
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 12,
-                flexWrap: "wrap",
-              }}
+              className="flex items-center gap-3 flex-wrap"
             >
               <cite
-                style={{
-                  fontSize: 13,
-                  fontStyle: "normal",
-                  color: "#6B7280",
-                }}
+                className="text-[13px] not-italic text-gray-500"
               >
                 — Ludmila Lamont, Early User
               </cite>
@@ -440,13 +299,7 @@ export function Hero() {
                 href="https://g.page/r/CaV8r9vL8v9vEAI/review"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="link-animated"
-                style={{
-                  fontSize: 13,
-                  color: "#10B981",
-                  fontWeight: 500,
-                  textDecoration: "none",
-                }}
+                className="link-animated text-[13px] text-emerald-500 font-medium no-underline"
               >
                 View on Google →
               </a>
@@ -456,66 +309,30 @@ export function Hero() {
 
         {/* ══ RIGHT: Phone mockup ══ */}
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          style={{
-            position: "relative",
-            width: "100%",
-            minWidth: 300,
-            height: 660,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "flex-start",
-            paddingTop: 0,
-            contain: "layout style paint",
-            overflow: "visible",
-          }}
+          {...fadeInRightVisible(0.3)}
+          className="relative w-full min-w-[300px] h-[660px] flex justify-center items-start pt-0 overflow-visible"
+          style={{ contain: "layout style paint" }}
         >
           {/* Ambient glow — amplified multi-layer aura */}
           <div
+            className="absolute w-[900px] h-[900px] pointer-events-none z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 blur-[60px]"
             style={{
-              position: "absolute",
-              width: 900,
-              height: 900,
               background:
                 "radial-gradient(ellipse at center, rgba(16,185,129,0.35) 0%, rgba(16,185,129,0.15) 25%, rgba(30,35,70,0.2) 50%, transparent 70%)",
-              pointerEvents: "none",
-              zIndex: 0,
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              filter: "blur(60px)",
             }}
           />
           <div
+            className="absolute w-[600px] h-[700px] pointer-events-none z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 blur-[30px]"
             style={{
-              position: "absolute",
-              width: 600,
-              height: 700,
               background:
                 "radial-gradient(ellipse at 40% 45%, rgba(255,255,255,0.12) 0%, rgba(16,185,129,0.08) 40%, transparent 65%)",
-              pointerEvents: "none",
-              zIndex: 0,
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              filter: "blur(30px)",
             }}
           />
           <div
+            className="absolute w-[300px] h-[400px] pointer-events-none z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 blur-[15px]"
             style={{
-              position: "absolute",
-              width: 300,
-              height: 400,
               background:
                 "radial-gradient(ellipse at 50% 40%, rgba(16,185,129,0.25) 0%, transparent 60%)",
-              pointerEvents: "none",
-              zIndex: 0,
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              filter: "blur(15px)",
             }}
           />
 
@@ -526,62 +343,42 @@ export function Hero() {
       {/* ══ LIVE COUNTER ══ */}
       <div
         ref={counterRef}
+        className="text-center"
         style={{
-          textAlign: "center",
           padding: "40px var(--section-px)",
           borderTop: "1px solid rgba(255,255,255,0.06)",
         }}
       >
         <p
-          style={{
-            fontSize: 16,
-            color: "#94A3B8",
-            lineHeight: 1.6,
-            margin: 0,
-          }}
+          className="text-base text-slate-400 leading-normal m-0"
         >
           <span className="sr-only">
             Live statistics from the Office for National Statistics:
           </span>
           Since you opened this page, UK trades have missed{" "}
           <span
-            style={{
-              fontWeight: 700,
-              color: "#D63031",
-              fontVariantNumeric: "tabular-nums",
-            }}
+            ref={missedCallsRef}
+            className="font-bold text-[#D63031] [font-variant-numeric:tabular-nums]"
             aria-live="polite"
           >
-            {missedCalls.toLocaleString("en-GB")}
+            0
           </span>{" "}
           calls. That&apos;s approximately{" "}
           <span
-            style={{
-              fontWeight: 700,
-              color: "#D63031",
-              fontVariantNumeric: "tabular-nums",
-            }}
+            ref={lostValueRef}
+            className="font-bold text-[#D63031] [font-variant-numeric:tabular-nums]"
           >
-            £{lostValue.toLocaleString("en-GB")}
+            £0
           </span>{" "}
           in lost work.
         </p>
         <p
-          style={{
-            fontSize: 12,
-            color: "#6B7280",
-            margin: "8px 0 4px",
-          }}
+          className="text-xs text-gray-500 my-2 mb-1"
         >
           Source: ONS Business Population Estimates 2025, 62% unanswered rate
         </p>
         <p
-          style={{
-            fontSize: 22,
-            fontWeight: 700,
-            color: "#D63031",
-            margin: "8px 0 0",
-          }}
+          className="text-[22px] font-bold text-[#D63031] mt-2 mb-0"
         >
           That&apos;s why we built Katie&apos;s Revenue Team
         </p>
@@ -597,9 +394,7 @@ export function Hero() {
       />
 
       {/* ── Modals ── */}
-      <AnimatePresence>
-        {showSignup && <SignupModal onClose={() => setShowSignup(false)} />}
-      </AnimatePresence>
+      {showSignup && <SignupModal onClose={() => setShowSignup(false)} />}
     </section>
   )
 }

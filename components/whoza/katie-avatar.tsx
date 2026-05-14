@@ -16,41 +16,24 @@ export function KatieAvatar({ className = "" }: KatieAvatarProps) {
     >
       {/* Live pulse ring */}
       <div
-        className="absolute inset-0 rounded-full animate-ping opacity-25"
-        style={{
-          border: "2px solid #10B981",
-          transform: "scale(1.2)",
-        }}
+        className="absolute inset-0 rounded-full animate-ping opacity-25 border-2 border-emerald-500 scale-[1.2]"
         aria-hidden="true"
       />
 
       {/* Avatar container */}
       <div
-        className="relative rounded-full overflow-hidden"
-        style={{
-          width: "clamp(100px, 12vw, 140px)",
-          height: "clamp(100px, 12vw, 140px)",
-          border: "3px solid #10B981",
-          boxShadow: "0 0 30px rgba(16,185,129,0.25), 0 4px 20px rgba(0,0,0,0.3)",
-        }}
+        className="relative rounded-full overflow-hidden w-[clamp(100px,12vw,140px)] h-[clamp(100px,12vw,140px)] border-[3px] border-emerald-500 shadow-[0_0_30px_rgba(16,185,129,0.25),0_4px_20px_rgba(0,0,0,0.3)]"
       >
         <img
-          src="/assets/icons/katie-icon.png"
+          src="/assets/icons/katie-icon.webp"
           alt="Katie - AI call handler"
+          width="140" height="140"
           className="w-full h-full object-contain p-2"
         />
 
         {/* Live indicator badge */}
         <div
-          className="absolute -bottom-1 -right-1 flex items-center gap-1 px-2 py-0.5 rounded-full"
-          style={{
-            background: "#10B981",
-            fontSize: 10,
-            fontWeight: 600,
-            color: "#FFFFFF",
-            fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
-            boxShadow: "0 2px 8px rgba(16,185,129,0.4)",
-          }}
+          className="absolute -bottom-1 -right-1 flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500 text-white text-[10px] font-semibold font-sans shadow-[0_2px_8px_rgba(16,185,129,0.4)]"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
           LIVE
@@ -59,12 +42,7 @@ export function KatieAvatar({ className = "" }: KatieAvatarProps) {
 
       {/* Name label */}
       <p
-        className="text-center mt-2 font-medium"
-        style={{
-          fontSize: 14,
-          color: "#9CA3AF",
-          fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
-        }}
+        className="text-center mt-2 font-medium text-sm text-gray-400 font-sans"
       >
         Katie
       </p>

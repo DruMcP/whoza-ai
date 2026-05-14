@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     description: 'AI voice agents that answer your trade business calls 24/7. Never miss a job again.',
     images: [
       {
-        url: 'https://whoza.ai/og-image.png',
+        url: 'https://whoza.ai/og-image.webp',
         width: 1200,
         height: 630,
         alt: 'whoza.ai — AI Voice Agents for UK Tradespeople',
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     creator: '@whozaai',
     title: 'Whoza.ai — AI Voice Agents for UK Tradespeople',
     description: 'AI voice agents that answer your trade business calls 24/7. Never miss a job again.',
-    images: ['https://whoza.ai/og-image.png'],
+    images: ['https://whoza.ai/og-image.webp'],
   },
   alternates: {
     canonical: 'https://whoza.ai',
@@ -89,6 +89,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-GB" className={inter.variable}>
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/_next/image?url=%2Fimages%2Fphone-frame.webp&w=384&q=75"
+          imagesrcset="/_next/image?url=%2Fimages%2Fphone-frame.webp&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fphone-frame.webp&w=384&q=75 384w"
+          imagesizes="(max-width: 768px) 280px, 380px"
+        />
+      </head>
       <body className="font-sans antialiased">
         {/* Skip link — WCAG 2.4.1 */}
         <a

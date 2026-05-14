@@ -11,7 +11,7 @@ const voiceAgents = [
     description: "Katie answers calls 24/7, qualifies real customer enquiries, and sends them to WhatsApp while you work. Friendly, professional and calm under pressure — she helps customers feel heard before the enquiry reaches you.",
     outcome: "Ready to accept, call back or decline.",
     audioSample: "Hi, you've reached Thompson Plumbing. My name is Katie. How can I help you today?",
-    image: "/assets/icons/katie-icon.png",
+    image: "/assets/icons/katie-icon.webp",
     color: "var(--katie-blue)",
     bgLight: "bg-[var(--katie-blue)]/10",
     borderColor: "border-[var(--katie-blue)]/30",
@@ -26,7 +26,7 @@ const voiceAgents = [
     description: "Mark answers calls 24/7, qualifies real customer enquiries, and sends them to WhatsApp while you work. Clear, efficient and professional — ideal if you prefer a direct male voice.",
     outcome: "Job type, urgency, location and customer details captured.",
     audioSample: "Hi, you've reached Wilson Electrics. This is Mark speaking. What can I do for you?",
-    image: "/assets/icons/mark-icon.png",
+    image: "/assets/icons/mark-icon.webp",
     color: "var(--mark-grey)",
     bgLight: "bg-[var(--mark-grey)]/10",
     borderColor: "border-[var(--mark-grey)]/30",
@@ -42,7 +42,7 @@ const voiceAgents = [
     outcome: "More reviews. More trust. More customers choosing you.",
     entitlement: "Included in Growth plan and above.",
     whatsappMessage: "Hi John, thanks for choosing Thompson Plumbing yesterday. If you were happy with the service, would you mind leaving us a quick review? It really helps. [Google review link]",
-    image: "/assets/icons/claire-icon.png",
+    image: "/assets/icons/claire-icon.webp",
     color: "var(--claire-amber)",
     bgLight: "bg-[var(--claire-amber)]/10",
     borderColor: "border-[var(--claire-amber)]/30",
@@ -58,7 +58,7 @@ const voiceAgents = [
     outcome: "Clear weekly actions to improve visibility and help AI search recommend your business.",
     entitlement: "Monthly competitor analysis on every plan. Weekly actions from Growth upwards.",
     insightCard: "Your nearest competitor has 41 reviews. You have 32.\n\nAction this week: request 5 more reviews from recent customers and reply to your last 3 Google reviews.",
-    image: "/assets/icons/rex-icon.png",
+    image: "/assets/icons/rex-icon.webp",
     color: "var(--rex-green)",
     bgLight: "bg-[var(--rex-green)]/10",
     borderColor: "border-[var(--rex-green)]/30",
@@ -116,8 +116,10 @@ export function MeetTheTeam() {
                   <img
                     src={agent.image}
                     alt={agent.name}
+                    width="56" height="56"
                     className="w-14 h-14 rounded-full object-contain flex-shrink-0 p-1.5"
                     style={{ background: agent.color }}
+                    loading="lazy"
                   />
                   <div className="min-w-0">
                     <h3 className="text-2xl font-bold text-[var(--navy-900)]">{agent.name}</h3>
@@ -156,13 +158,12 @@ export function MeetTheTeam() {
                 {/* WhatsApp Message Block — Claire */}
                 {agent.whatsappMessage && (
                   <div 
-                    className="p-3 mb-4 rounded-lg border-l-[3px]"
+                    className="p-3 mb-4 rounded-lg border-l-[3px] bg-[#F5F5F5]"
                     style={{ 
-                      backgroundColor: "#F5F5F5", 
                       borderLeftColor: agent.color === "var(--claire-amber)" ? "#F59E0B" : agent.color 
                     }}
                   >
-                    <p className="text-sm" style={{ color: "#555555" }}>
+                    <p className="text-sm text-[#555555]">
                       {agent.whatsappMessage}
                     </p>
                   </div>
@@ -171,13 +172,9 @@ export function MeetTheTeam() {
                 {/* Insight Card — Rex */}
                 {agent.insightCard && (
                   <div 
-                    className="p-3 mb-4 rounded-lg border-l-[3px]"
-                    style={{ 
-                      backgroundColor: "#F5F5F5", 
-                      borderLeftColor: "#047857" 
-                    }}
+                    className="p-3 mb-4 rounded-lg border-l-[3px] bg-[#F5F5F5] border-l-[#047857]"
                   >
-                    <p className="text-sm whitespace-pre-line" style={{ color: "#555555" }}>
+                    <p className="text-sm whitespace-pre-line text-[#555555]">
                       {agent.insightCard}
                     </p>
                   </div>

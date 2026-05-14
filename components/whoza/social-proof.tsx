@@ -66,7 +66,6 @@ export function SocialProofBand() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="flex gap-3 overflow-x-auto pb-2 sm:flex-wrap sm:justify-center sm:overflow-visible scrollbar-hide"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {trades.map((trade, index) => {
               const Icon = iconMap[trade.name]

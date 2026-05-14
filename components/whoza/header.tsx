@@ -12,140 +12,138 @@ const navLinks = [
   { href: "/pricing", label: "Pricing", isPageLink: true },
   { href: "/#testimonials", label: "Testimonials", isPageLink: false },
   { href: "/support", label: "Support", isPageLink: true },
-  { href: "/pricing#faq", label: "FAQ", isPageLink: true },
+  { href: "/#faq", label: "FAQ", isPageLink: false },
 ]
 
 export function Header() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
   const [showSignup, setShowSignup] = useState(false)
-  // Header always visible — no auto-hide
-  const isVisible = true
+
+  const handleNavClick = (href: string, isPageLink: boolean) => {
+    setMenuOpen(false)
+    if (!isPageLink && typeof window !== "undefined") {
+      const el = document.querySelector(href)
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" })
+      }
+    }
+  }
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
-      style={{ 
-        background: 'rgba(15,23,41,0.85)', 
-        backdropFilter: 'blur(12px)',
-        WebkitBackdropFilter: 'blur(12px)',
-        borderBottom: '1px solid rgba(255,255,255,0.08)'
-      }}
-    >
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center h-16 lg:h-20">
-          {/* Logo + Trust Line — pulled further left */}
-          <div className="flex items-center gap-3 -ml-1 lg:-ml-8 shrink-0 lg:mr-12">
-            <a href="/" className="flex items-center">
-              <img 
-                src="/production_logo.png" 
-                alt="whoza.ai" 
-                className="h-12 w-auto sm:h-16 lg:h-[5rem]"
-              />
-            </a>
-            <span className="hidden lg:block text-sm font-medium border-l border-white/20 pl-3" style={{ color: '#10B981', fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif" }}>
-              Built for UK Trades and Home Services
-            </span>
-          </div>
-
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-6 ml-auto mr-6">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={(e) => {
-                  if (!link.isPageLink) {
-                    e.preventDefault()
-                    const el = document.querySelector(link.href)
-                    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                  }
-                }}
-                className="text-sm text-white/70 hover:text-white transition-colors duration-200 cursor-pointer"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-
-          {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center gap-4 shrink-0">
-
-            <button 
-              onClick={() => setShowSignup(true)}
-              className="inline-flex items-center justify-center rounded-lg text-white font-semibold px-5 py-2.5 text-sm transition-all whitespace-nowrap hover:shadow-lg hover:shadow-emerald-500/25 hover:-translate-y-0.5"
-              style={{ background: "linear-gradient(135deg, #059669, #10B981)" }}
+    <>
+      <motion.header
+        initial={{ y: 0, opacity: 1 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+        className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#111418]/80 border-b border-white/[0.08]"
+        role="banner"
+        aria-label="Main navigation"
+      >
+        <nav className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8" aria-label="Primary">
+          <div className="flex items-center justify-between h-[56px]">
+            {/* Logo */}
+            <a
+              href="/"
+              className="font-sans text-xl font-extrabold text-white hover:opacity-90 transition-opacity no-underline shrink-0"
+              aria-label="Whoza.ai Home"
             >
-              Get Katie answering my calls
-            </button>
-            <CountrySwitcher />
-          </div>
+              Whoza.ai
+            </a>
 
-          {/* Mobile: Country Switcher + Menu Button */}
-          <div className="flex items-center gap-2 lg:hidden ml-auto">
-            <CountrySwitcher />
+            {/* Desktop links */}
+            <div className="hidden md:flex items-center gap-6">
+              {navLinks.map((link) =>
+                link.isPageLink ? (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="text-white/70 hover:text-white text-sm font-medium no-underline transition-colors min-h-[44px] flex items-center"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <button
+                    key={link.href}
+                    onClick={() => handleNavClick(link.href, false)}
+                    className="text-white/70 hover:text-white text-sm font-medium cursor-pointer transition-colors min-h-[44px]"
+                  >
+                    {link.label}
+                  </button>
+                )
+              )}
+              <button
+                onClick={() => setShowSignup(true)}
+                className="btn-primary text-[13px] font-bold px-4 py-2 rounded-lg border border-white/20 bg-white/10 text-white hover:bg-white/20 no-underline cursor-pointer transition-colors whitespace-nowrap min-h-[44px]"
+                aria-label="Start free trial"
+              >
+                Start Free Trial
+              </button>
+              <CountrySwitcher />
+            </div>
+
+            {/* Mobile hamburger */}
             <button
-              className="p-2 text-white"
-              onClick={() => setIsOpen(!isOpen)}
+              className="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
+              onClick={() => setMenuOpen((p) => !p)}
+              aria-expanded={menuOpen}
               aria-label="Toggle menu"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
-        </div>
-      </nav>
+        </nav>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-[var(--navy-900)] border-t border-white/10"
-          >
-            <div className="px-4 py-6 space-y-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="block text-white/80 hover:text-white py-2 transition-colors cursor-pointer"
-                  onClick={(e) => {
-                    if (!link.isPageLink) {
-                      e.preventDefault()
-                      setIsOpen(false)
-                      const el = document.querySelector(link.href)
-                      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                    } else {
-                      setIsOpen(false)
-                    }
-                  }}
-                >
-                  {link.label}
-                </a>
-              ))}
-              <div className="pt-4 border-t border-white/10 space-y-4">
-                <div className="flex justify-center">
-                  <CountrySwitcher />
-                </div>
-                <button 
+        {/* Mobile menu */}
+        <AnimatePresence>
+          {menuOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              className="md:hidden bg-[#111418]/95 backdrop-blur-md border-t border-white/[0.08] overflow-hidden"
+            >
+              <div className="max-w-[1200px] mx-auto px-4 py-4 flex flex-col gap-3">
+                {navLinks.map((link) =>
+                  link.isPageLink ? (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setMenuOpen(false)}
+                      className="text-white/70 hover:text-white text-sm font-medium no-underline transition-colors py-2"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <button
+                      key={link.href}
+                      onClick={() => handleNavClick(link.href, false)}
+                      className="text-left text-white/70 hover:text-white text-sm font-medium cursor-pointer transition-colors py-2"
+                    >
+                      {link.label}
+                    </button>
+                  )
+                )}
+                <button
                   onClick={() => {
-                    setIsOpen(false)
+                    setMenuOpen(false)
                     setShowSignup(true)
                   }}
-                  className="inline-flex items-center justify-center w-full rounded-md text-white font-bold h-10 text-sm transition-colors"
-                  style={{ background: "linear-gradient(135deg, #059669, #10B981)" }}
+                  className="btn-primary text-center text-[13px] font-bold px-4 py-3 rounded-lg bg-white text-[#111418] no-underline cursor-pointer mt-2 min-h-[44px]"
                 >
-                  Get Katie answering my calls
+                  Start Free Trial
                 </button>
               </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.header>
 
       <AnimatePresence>
-        {showSignup && <SignupModal onClose={() => setShowSignup(false)} />}
+        {showSignup && (
+          <SignupModal onClose={() => setShowSignup(false)} />
+        )}
       </AnimatePresence>
-    </header>
+    </>
   )
 }

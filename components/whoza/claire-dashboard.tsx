@@ -47,7 +47,7 @@ export function ClaireDashboard({ clientId = "demo" }: ClaireDashboardProps) {
         }
         setMetrics(mockData)
       } catch (err) {
-        console.error("[Claire Dashboard] Failed to load metrics:", err)
+        // Silent fail — metrics unavailable, show demo data
       } finally {
         setLoading(false)
       }

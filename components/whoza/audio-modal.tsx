@@ -63,8 +63,7 @@ export function AudioModal({ onClose }: AudioModalProps) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-50 flex items-center justify-center p-4"
-      style={{ background: "rgba(0,0,0,0.7)", backdropFilter: "blur(8px)" }}
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
@@ -75,20 +74,13 @@ export function AudioModal({ onClose }: AudioModalProps) {
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: 20, scale: 0.95 }}
         transition={{ duration: 0.25, ease: [0.34, 1.56, 0.64, 1] }}
-        className="relative w-full"
-        style={{
-          maxWidth: 420,
-          background: "#1E2229",
-          borderRadius: 16,
-          padding: 32,
-        }}
+        className="relative w-full max-w-[420px] bg-[#1E2229] rounded-2xl p-8"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 rounded-lg transition-colors hover:bg-white/10"
-          style={{ color: "#9CA3AF", minHeight: 48, minWidth: 48 }}
+          className="absolute top-4 right-4 p-2 rounded-lg transition-colors hover:bg-white/10 text-slate-400 min-h-[48px] min-w-[48px]"
           aria-label="Close audio modal"
         >
           <X className="w-5 h-5" />
@@ -98,11 +90,11 @@ export function AudioModal({ onClose }: AudioModalProps) {
         <h2
           id="audio-title"
           className="text-xl font-bold pr-8"
-          style={{ color: "#FFFFFF", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif" }}
+          className="text-white font-sans"
         >
           Hear Katie handle a boiler enquiry
         </h2>
-        <p className="mt-1" style={{ fontSize: 14, color: "#9CA3AF", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif" }}>
+        <p className="mt-1" className="text-sm text-slate-400 font-sans">
           Real AI voice demo — 30 seconds
         </p>
 
@@ -161,28 +153,28 @@ export function AudioModal({ onClose }: AudioModalProps) {
 
           {/* Progress bar + time */}
           <div className="flex items-center gap-3">
-            <span style={{ fontSize: 12, color: "#6B7280", fontVariantNumeric: "tabular-nums" }}>
+            <span className="text-xs text-gray-500 tabular-nums">
               {formatTime(currentTime)}
             </span>
-            <div className="flex-1 h-1 rounded-full" style={{ background: "rgba(255,255,255,0.1)" }}>
+            <div className="flex-1 h-1 rounded-full bg-white/10">
               <div
                 className="h-full rounded-full transition-all"
                 style={{ width: `${progress}%`, background: "#10B981" }}
               />
             </div>
-            <span style={{ fontSize: 12, color: "#6B7280", fontVariantNumeric: "tabular-nums" }}>
+            <span className="text-xs text-gray-500 tabular-nums">
               {formatTime(duration || 30)}
             </span>
           </div>
 
           {/* Fallback note if audio file doesn't exist */}
-          <p style={{ fontSize: 12, color: "#6B7280", fontStyle: "italic" }}>
+          <p className="text-xs text-gray-500 italic">
             Note: Place your demo audio file at /public/audio/katie-boiler-demo.mp3
           </p>
         </div>
 
         {/* CTA after listening */}
-        <div className="mt-6 pt-4" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+        <div className="mt-6 pt-4" className="border-t border-white/[0.06]">
           <button
             onClick={onClose}
             className="w-full flex items-center justify-center gap-2 font-semibold text-white transition-all hover:scale-[1.01] active:scale-[0.99]"

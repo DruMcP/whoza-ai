@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     siteName: "whoza.ai",
     title: "Whoza.ai Pricing — AI Voice Agents for UK Tradespeople",
     description: "Plans from £59/month. 7-day free trial. No contracts.",
-    images: [{ url: "https://whoza.ai/og-image.png", width: 1200, height: 630, alt: "whoza.ai Pricing" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai Pricing" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Whoza.ai Pricing — AI Voice Agents for UK Tradespeople",
     description: "Plans from £59/month. 7-day free trial.",
-    images: ["https://whoza.ai/og-image.png"],
+    images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {
     canonical: "https://whoza.ai/pricing",

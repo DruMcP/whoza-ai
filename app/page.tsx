@@ -24,7 +24,13 @@ import { FAQ } from "@/components/whoza/faq"
 import { FinalCTA } from "@/components/whoza/final-cta"
 import { Footer } from "@/components/whoza/footer"
 import { StickyCTA, FloatingChatWidget } from "@/components/whoza/sticky-cta"
-import { TrilletVoiceWidget } from "@/components/whoza/trillet-voice-widget"
+import dynamic from "next/dynamic"
+
+const TrilletVoiceWidget = dynamic(
+  () => import("@/components/whoza/trillet-voice-widget").then((mod) => mod.TrilletVoiceWidget),
+  { ssr: false, loading: () => <p className="text-white/60 text-sm">Loading demo...</p> }
+)
+
 import { ClaireDashboard } from "@/components/whoza/claire-dashboard"
 import { HomepageSchema } from "@/components/whoza/schema-markup"
 

@@ -232,7 +232,7 @@ export function KatieAudioPlayer({ isOpen, onClose }: KatieAudioPlayerProps) {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
           className="fixed inset-0 z-[9999] flex items-center justify-center p-4"
-          style={{ background: "rgba(0,0,0,0.85)", backdropFilter: "blur(8px)" }}
+          className="bg-black/[0.85] backdrop-blur"
           onClick={onClose}
         >
           <motion.div
@@ -253,7 +253,7 @@ export function KatieAudioPlayer({ isOpen, onClose }: KatieAudioPlayerProps) {
             <button
               onClick={onClose}
               className="absolute top-4 right-4 p-2 rounded-lg transition-colors hover:bg-white/10"
-              style={{ color: "#6B7280", minHeight: 44, minWidth: 44 }}
+              className="text-gray-500 min-h-[44px] min-w-[44px]"
               aria-label="Close audio player"
             >
               <X className="w-5 h-5" />
@@ -269,8 +269,9 @@ export function KatieAudioPlayer({ isOpen, onClose }: KatieAudioPlayerProps) {
                   }}
                 >
                   <img
-                    src="/assets/icons/katie-icon.png"
+                    src="/assets/icons/katie-icon.webp"
                     alt="Katie"
+                    width="48" height="48"
                     className="w-full h-full object-contain p-1.5"
                     style={{ filter: isLoading ? "grayscale(100%)" : "none" }}
                   />
@@ -282,7 +283,7 @@ export function KatieAudioPlayer({ isOpen, onClose }: KatieAudioPlayerProps) {
 
               <p
                 className="mt-3 text-base font-medium"
-                style={{ color: "#10B981", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif" }}
+                className="text-emerald-500 font-sans"
               >
                 {isLoading ? "Loading Katie's voice…" : isEnded ? "Katie finished" : isPlaying ? "Katie speaking…" : "Katie paused"}
               </p>
@@ -295,7 +296,7 @@ export function KatieAudioPlayer({ isOpen, onClose }: KatieAudioPlayerProps) {
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                       <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
                     </span>
-                    <span className="text-xs font-medium" style={{ color: "#10B981" }}>LIVE</span>
+                    <span className="text-xs font-medium" className="text-emerald-500">LIVE</span>
                   </>
                 )}
               </div>
@@ -333,7 +334,7 @@ export function KatieAudioPlayer({ isOpen, onClose }: KatieAudioPlayerProps) {
             <div
               ref={transcriptRef}
               className="mt-4 space-y-2 max-h-32 overflow-y-auto pr-1"
-              style={{ scrollBehavior: "smooth" }}
+              className="scroll-smooth"
             >
               {TRANSCRIPT_SEGMENTS.map((seg, i) => (
                 <p
@@ -355,7 +356,7 @@ export function KatieAudioPlayer({ isOpen, onClose }: KatieAudioPlayerProps) {
             <div className="mt-4">
               <div
                 className="w-full h-1 rounded-full overflow-hidden"
-                style={{ background: "rgba(255,255,255,0.1)" }}
+                className="bg-white/10"
               >
                 <div
                   className="h-full rounded-full transition-all duration-100"
@@ -366,10 +367,10 @@ export function KatieAudioPlayer({ isOpen, onClose }: KatieAudioPlayerProps) {
                 />
               </div>
               <div className="flex justify-between mt-1">
-                <span className="text-xs" style={{ color: "#6B7280", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif" }}>
+                <span className="text-xs" className="text-gray-500 font-sans">
                   {formatTime(currentTime)}
                 </span>
-                <span className="text-xs" style={{ color: "#6B7280", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif" }}>
+                <span className="text-xs" className="text-gray-500 font-sans">
                   {formatTime(duration)}
                 </span>
               </div>
@@ -378,17 +379,17 @@ export function KatieAudioPlayer({ isOpen, onClose }: KatieAudioPlayerProps) {
             {/* Controls */}
             <div className="flex items-center justify-center gap-4 mt-4">
               {isLoading ? (
-                <div className="flex items-center gap-2 text-sm" style={{ color: "#9CA3AF" }}>
+                <div className="flex items-center gap-2 text-sm" className="text-slate-400">
                   <Loader2 className="w-5 h-5 animate-spin" />
                   Loading...
                 </div>
               ) : hasError ? (
                 <div className="text-center">
-                  <p className="text-sm mb-2" style={{ color: "#9CA3AF" }}>Sorry, Katie's voice didn't load.</p>
+                  <p className="text-sm mb-2" className="text-slate-400">Sorry, Katie's voice didn't load.</p>
                   <button
                     onClick={retryLoad}
                     className="text-sm font-medium px-4 py-2 rounded-lg"
-                    style={{ color: "#10B981", background: "rgba(16,185,129,0.1)" }}
+                    className="text-emerald-500 bg-emerald-500/[0.1]"
                   >
                     Try again
                   </button>
@@ -397,7 +398,7 @@ export function KatieAudioPlayer({ isOpen, onClose }: KatieAudioPlayerProps) {
                 <button
                   onClick={togglePlay}
                   className="flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-white"
-                  style={{ background: "linear-gradient(135deg, #059669, #10B981)", minHeight: 44 }}
+                  className="bg-gradient-to-br from-emerald-600 to-emerald-500 min-h-[44px]"
                 >
                   <Play className="w-5 h-5" />
                   Tap to play
@@ -406,7 +407,7 @@ export function KatieAudioPlayer({ isOpen, onClose }: KatieAudioPlayerProps) {
                 <button
                   onClick={replay}
                   className="flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-white"
-                  style={{ background: "linear-gradient(135deg, #059669, #10B981)", minHeight: 44 }}
+                  className="bg-gradient-to-br from-emerald-600 to-emerald-500 min-h-[44px]"
                 >
                   <RotateCcw className="w-5 h-5" />
                   Hear it again
@@ -417,7 +418,7 @@ export function KatieAudioPlayer({ isOpen, onClose }: KatieAudioPlayerProps) {
                   <button
                     onClick={rewind10}
                     className="p-3 rounded-lg transition-colors hover:bg-white/10"
-                    style={{ color: "#FFFFFF", minHeight: 44, minWidth: 44 }}
+                    className="text-white min-h-[44px] min-w-[44px]"
                     aria-label="Rewind 10 seconds"
                     title="Rewind 10s"
                   >
@@ -443,7 +444,7 @@ export function KatieAudioPlayer({ isOpen, onClose }: KatieAudioPlayerProps) {
                   <button
                     onClick={toggleMute}
                     className="p-3 rounded-lg transition-colors hover:bg-white/10"
-                    style={{ color: "#FFFFFF", minHeight: 44, minWidth: 44 }}
+                    className="text-white min-h-[44px] min-w-[44px]"
                     aria-label={isMuted ? "Unmute" : "Mute"}
                     title={isMuted ? "Unmute" : "Mute"}
                   >
@@ -456,7 +457,7 @@ export function KatieAudioPlayer({ isOpen, onClose }: KatieAudioPlayerProps) {
             {/* Volume slider (only show when not loading/error) */}
             {!isLoading && !hasError && !needsTapToPlay && !isEnded && (
               <div className="flex items-center justify-center gap-2 mt-2">
-                <VolumeX className="w-3 h-3" style={{ color: "#6B7280" }} />
+                <VolumeX className="w-3 h-3" className="text-gray-500" />
                 <input
                   type="range"
                   min={0}
@@ -467,7 +468,7 @@ export function KatieAudioPlayer({ isOpen, onClose }: KatieAudioPlayerProps) {
                   className="w-24 h-1 accent-emerald-500"
                   aria-label="Volume"
                 />
-                <Volume2 className="w-3 h-3" style={{ color: "#6B7280" }} />
+                <Volume2 className="w-3 h-3" className="text-gray-500" />
               </div>
             )}
           </motion.div>

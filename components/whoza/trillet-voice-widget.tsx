@@ -51,19 +51,18 @@ export function TrilletVoiceWidget({
 
         // Event listeners
         agentRef.current.on("connected", (details: any) => {
-          console.log("[Trillet] Connected:", details)
+          // Trillet connected successfully
           setIsConnecting(false)
           setIsCallActive(true)
         })
 
         agentRef.current.on("disconnected", () => {
-          console.log("[Trillet] Disconnected")
+          // Trillet disconnected
           setIsCallActive(false)
           setIsConnecting(false)
         })
 
         agentRef.current.on("error", (err: any) => {
-          console.error("[Trillet] Error:", err)
           setError("Call failed. Please try again.")
           setIsConnecting(false)
           setIsCallActive(false)
@@ -74,7 +73,6 @@ export function TrilletVoiceWidget({
         })
 
       } catch (err) {
-        console.error("[Trillet] SDK load failed:", err)
         setError("Voice agent unavailable")
       }
     }
@@ -101,7 +99,6 @@ export function TrilletVoiceWidget({
     try {
       await agentRef.current.startPublicCall()
     } catch (err) {
-      console.error("[Trillet] Start call failed:", err)
       setError("Could not start call. Please try again.")
       setIsConnecting(false)
     }

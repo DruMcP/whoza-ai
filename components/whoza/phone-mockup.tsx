@@ -25,8 +25,7 @@ export function PhoneMockup({ city, trade }: { city?: string; trade?: string }) 
       
       {/* Phone Frame */}
       <motion.div 
-        className="relative w-[280px] sm:w-[320px] h-[580px] sm:h-[640px] bg-[#0b141a] rounded-[50px] p-3 shadow-2xl animate-float"
-        style={{ boxShadow: "0 50px 100px -20px rgba(0,0,0,0.5), 0 30px 60px -30px rgba(5,150,105,0.3)" }}
+        className="relative w-[280px] sm:w-[320px] h-[580px] sm:h-[640px] bg-[#0b141a] rounded-[50px] p-3 shadow-2xl animate-float shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5),0_30px_60px_-30px_rgba(5,150,105,0.3)]"
       >
         {/* Screen */}
         <div className="w-full h-full bg-[#0b141a] rounded-[40px] overflow-hidden relative">

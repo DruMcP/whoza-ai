@@ -14,14 +14,14 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "7 Best AI Call Handlers for UK Tradespeople [2026]",
     description: "The definitive 2026 guide to AI call handling services for UK trades. Compare features, pricing, and setup time.",
-    images: [{ url: "https://whoza.ai/og-image.png", width: 1200, height: 630, alt: "Best AI call handlers for UK trades 2026" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Best AI call handlers for UK trades 2026" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "7 Best AI Call Handlers for UK Tradespeople [2026]",
     description: "The definitive 2026 guide to AI call handling services for UK trades. Compare features, pricing, and setup time.",
-    images: ["https://whoza.ai/og-image.png"],
+    images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {
     canonical: "https://whoza.ai/best-ai-call-handler-uk-trades",

@@ -8,7 +8,7 @@ export function HomepageSchema() {
       "url": "https://whoza.ai",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://whoza.ai/logo.png",
+        "url": "https://whoza.ai/logo.webp",
         "width": 512,
         "height": 512
       },
@@ -73,8 +73,8 @@ export function HomepageSchema() {
       "@id": "https://whoza.ai/#localbusiness",
       "name": "whoza.ai",
       "url": "https://whoza.ai",
-      "logo": "https://whoza.ai/logo.png",
-      "image": "https://whoza.ai/og-image.png",
+      "logo": "https://whoza.ai/logo.webp",
+      "image": "https://whoza.ai/og-image.webp",
       "description": "AI voice agents for UK tradespeople — answer missed calls 24/7, capture enquiries, collect reviews, and track competitors.",
       "address": {
         "@type": "PostalAddress",
@@ -150,7 +150,7 @@ export function HomepageSchema() {
       ],
       "screenshot": {
         "@type": "ImageObject",
-        "url": "https://whoza.ai/dashboard-screenshot.png"
+        "url": "https://whoza.ai/og-image.webp"
       },
       "softwareVersion": "2025.1",
       "releaseNotes": "https://whoza.ai/changelog"
