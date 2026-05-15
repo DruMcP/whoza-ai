@@ -1,10 +1,10 @@
 "use client"
 
+import { useState } from "react"
 import { motion } from "framer-motion"
 import { Check, ArrowRight, Sparkles, X, CheckCircle2, User, Mic, Database, PhoneCall, Rocket, Loader2 } from "lucide-react"
 import { useLocale } from "@/lib/locale-context"
-import { useStripeCheckout } from "@/lib/use-stripe-checkout"
-import { STRIPE_PRODUCTS } from "@/lib/stripe-config"
+import { WaitlistModal } from "./waitlist-modal"
 
 const colorStyles = {
   blue: {
@@ -40,12 +40,16 @@ const colorStyles = {
 export function Pricing() {
   const { config } = useLocale()
   const cs = config.currencySymbol
-  const { checkout, loading } = useStripeCheckout()
+  const [showWaitlist, setShowWaitlist] = useState(false)
+  const [waitlistPlan, setWaitlistPlan] = useState("")
 
-  // Plans defined inside component to access locale currency symbol
+  const openWaitlist = (plan: string) => {
+    setWaitlistPlan(plan)
+    setShowWaitlist(true)
+  }
+
   const plans = [
     {
-      name: "Starter",
       description: "Capture + deliver jobs",
       price: String(config.pricing.starter),
       perJob: "4.50",
@@ -283,33 +287,39 @@ export function Pricing() {
                     ))}
                   </ul>
 
-                  {/* CTA — Stripe Checkout */}
+                  {/* CTA — Waitlist */}
                   <button
-                    onClick={() => plan.stripePlanId && checkout(plan.stripePlanId)}
-                    disabled={loading}
+                    onClick={() => openWaitlist(plan.name)}
                     className={`inline-flex items-center justify-center w-full font-bold transition-all hover:scale-105 py-2 px-4 rounded-md cursor-pointer ${
                       plan.popular 
                         ? `${colors.bg} ${colors.hover} text-white shadow-lg` 
                         : "bg-[var(--navy-900)] hover:bg-[var(--navy-800)] text-white"
                     }`}
                   >
-                    {loading ? (
-                      <>
-                        <Loader2 className="mr-2 w-4 h-4 animate-spin" />
-                        Loading...
-                      </>
-                    ) : (
-                      <>
-                        {plan.cta}
-                        <ArrowRight className="ml-2 w-4 h-4" />
-                      </>
-                    )}
+                    {plan.cta}
+                    <ArrowRight className="ml-2 w-4 h-4" />
                   </button>
                 </div>
               </motion.div>
             )
           })}
         </div>
+
+        {/* Pricing disclaimer */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-8 text-center"
+        >
+          <p className="text-sm text-[var(--slate-500)] max-w-xl mx-auto">
+            Pricing shown is for our full launch. Pilot users will lock in
+            introductory rates.{" "}
+            <span className="font-semibold text-[var(--navy-900)]">
+              Join the pilot to secure your price.
+            </span>
+          </p>
+        </motion.div>
 
         {/* Usage Clarity Note */}
         <motion.div
@@ -361,11 +371,9 @@ export function Pricing() {
                 Lower cost than standard overage rate ({cs}0.26/min)
               </div>
               <button
-                onClick={() => checkoutAddon("minutesBundle", 1)}
-                disabled={loading}
+                onClick={() => openWaitlist("Minutes Bundle")}
                 className="w-full py-2.5 px-4 rounded-lg bg-[var(--navy-900)] hover:bg-[var(--navy-800)] text-white font-semibold transition-colors cursor-pointer inline-flex items-center justify-center gap-2"
               >
-                {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : null}
                 Buy Bundle
                 <ArrowRight className="w-4 h-4" />
               </button>
@@ -392,11 +400,9 @@ export function Pricing() {
                 Ideal for scaling businesses and advanced optimisation
               </div>
               <button
-                onClick={() => checkoutAddon("consultancy", 1)}
-                disabled={loading}
+                onClick={() => openWaitlist("Consultancy")}
                 className="w-full py-2.5 px-4 rounded-lg bg-[var(--navy-900)] hover:bg-[var(--navy-800)] text-white font-semibold transition-colors cursor-pointer inline-flex items-center justify-center gap-2"
               >
-                {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : null}
                 Book Session
                 <ArrowRight className="w-4 h-4" />
               </button>
@@ -523,6 +529,14 @@ export function Pricing() {
           </p>
         </motion.div>
       </div>
+      {/* Waitlist Modal */}
+      {showWaitlist && (
+        <WaitlistModal
+          onClose={() => setShowWaitlist(false)}
+          source="pricing-page"
+          plan={waitlistPlan}
+        />
+      )}
     </section>
   )
 }

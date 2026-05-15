@@ -1,8 +1,10 @@
 "use client"
 
+import { useState } from "react"
 import { motion } from "framer-motion"
 import { ArrowRight, Phone, BarChart3, Star, Eye, CheckCircle2 } from "lucide-react"
 import { useLocale } from "@/lib/locale-context"
+import { WaitlistModal } from "./waitlist-modal"
 
 const teamMembers = [
   { name: "Katie", icon: Phone, bgClass: "bg-[var(--katie-blue)]/20 border-[var(--katie-blue)]/30", iconClass: "text-[var(--katie-blue)]" },
@@ -13,8 +15,10 @@ const teamMembers = [
 
 export function FinalCTA() {
   const { country, config } = useLocale()
+  const [showWaitlist, setShowWaitlist] = useState(false)
   
   return (
+    <>
     <section id="final-cta" className="section-padding-xl bg-[var(--navy-900)] relative overflow-hidden dark-section">
       {/* Background Effects */}
       <div className="absolute inset-0">
@@ -104,10 +108,7 @@ export function FinalCTA() {
           className="mt-10 flex justify-center"
         >
           <button
-            onClick={() => {
-              const modal = document.getElementById('signup-modal-trigger')
-              if (modal) modal.click()
-            }}
+            onClick={() => setShowWaitlist(true)}
             className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-6 text-lg rounded-lg transition-all hover:scale-[1.02] shadow-2xl shadow-[var(--rex-green)]/40"
           >
             Get Katie answering my calls
@@ -136,6 +137,8 @@ export function FinalCTA() {
           ))}
         </motion.div>
       </div>
+      {showWaitlist && <WaitlistModal onClose={() => setShowWaitlist(false)} source="final-cta" />}
     </section>
+    </>
   )
 }

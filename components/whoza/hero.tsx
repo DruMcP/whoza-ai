@@ -4,15 +4,15 @@ import { useState, useCallback, useEffect, useRef } from "react"
 import { ArrowRight, Loader2, Play } from "lucide-react"
 import { motion } from "framer-motion"
 import { HeroPhoneMockup } from "./hero-phone-mockup"
-import { SignupModal } from "./signup-modal"
+import { WaitlistModal } from "./waitlist-modal"
 
 /* ── Trust pills ── */
 const trustItems = [
-  "7-day free trial — no card required",
+  "UK Pilot Programme — 50 tradespeople only",
+  "7-day free trial when we go live",
   "30-day money-back guarantee",
-  "Live in 30 minutes",
-  "Works with your existing number",
-  "Cancel anytime",
+  "Dru personally sets you up",
+  "No credit card needed to join",
 ]
 
 /* ── Live counter constants (ONS-derived) ── */
@@ -46,7 +46,7 @@ const fadeInRight = (delay = 0) => ({
 })
 
 export function Hero() {
-  const [showSignup, setShowSignup] = useState(false)
+  const [showWaitlist, setShowWaitlist] = useState(false)
   const [ctaLoading, setCtaLoading] = useState(false)
 
   /* ── Live counter refs (no React re-renders) ── */
@@ -97,7 +97,7 @@ export function Hero() {
     setCtaLoading(true)
     setTimeout(() => {
       setCtaLoading(false)
-      setShowSignup(true)
+      setShowWaitlist(true)
     }, 800)
   }, [])
 
@@ -394,7 +394,7 @@ export function Hero() {
       />
 
       {/* ── Modals ── */}
-      {showSignup && <SignupModal onClose={() => setShowSignup(false)} />}
+      {showWaitlist && <WaitlistModal onClose={() => setShowWaitlist(false)} source="hero" />}
     </section>
   )
 }
