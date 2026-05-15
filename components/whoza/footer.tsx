@@ -17,7 +17,8 @@ const footerLinks = {
     { label: "FAQ", href: "/pricing#faq" },
   ],
   company: [
-    { label: "Blog", href: "https://medium.com/@whozaai" },
+    { label: "Blog", href: "/blog" },
+    { label: "Case Studies", href: "/case-studies" },
   ],
   legal: [
     { label: "Privacy Policy", href: "/privacy" },
