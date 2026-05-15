@@ -51,7 +51,7 @@ export function Footer() {
   return (
     <footer className="bg-[var(--navy-900)] border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-10">
           {/* Brand + Newsletter Column */}
           <div className="col-span-2">
             <a href="/" className="flex items-center mb-6">
@@ -102,6 +102,19 @@ export function Footer() {
             <h4 className="text-white font-semibold mb-4">Support</h4>
             <ul className="space-y-3">
               {footerLinks.support.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="text-sm text-white/60 hover:text-white transition-colors">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold mb-4">Company</h4>
+            <ul className="space-y-3">
+              {footerLinks.company.map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className="text-sm text-white/60 hover:text-white transition-colors">
                     {link.label}
