@@ -17,7 +17,6 @@
   to = "/"
   status = 301
 
-# Old UK location pages → new location pages (8 cities with equivalents)
 [[redirects]]
   from = "/uk/ai-visibility/london/*"
   to = "/london"
@@ -58,19 +57,16 @@
   to = "/edinburgh"
   status = 301
 
-# All other UK cities → homepage
 [[redirects]]
   from = "/uk/ai-visibility/*"
   to = "/"
   status = 301
 
-# All US cities → homepage
 [[redirects]]
   from = "/us/ai-visibility/*"
   to = "/"
   status = 301
 
-# Old trade pages → new trade pages (4 with equivalents)
 [[redirects]]
   from = "/trades/plumber/*"
   to = "/trade/plumber"
@@ -91,7 +87,6 @@
   to = "/trade/roofer"
   status = 301
 
-# Approximate trade redirects
 [[redirects]]
   from = "/trades/heating-engineer/*"
   to = "/trade/hvac"
@@ -112,13 +107,11 @@
   to = "/trade/hvac"
   status = 301
 
-# All other trades → homepage
 [[redirects]]
   from = "/trades/*"
   to = "/"
   status = 301
 
-# Legacy content pages
 [[redirects]]
   from = "/video/*"
   to = "/"
@@ -154,7 +147,6 @@
   to = "/"
   status = 301
 
-# Trailing slash normalization (old /page/ → new /page)
 [[redirects]]
   from = "/pricing/"
   to = "/pricing"
