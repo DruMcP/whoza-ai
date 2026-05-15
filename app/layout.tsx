@@ -71,8 +71,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    // TODO: Add real Google Search Console verification code from https://search.google.com/search-console
-    // Placeholder removed — re-add when you have the real code
+    google: 'HcL1Z5FshVtABkMZHyWoQMPp9Qyd7raEUoWi3_15S3U',
   },
   other: {
     'geo.region': 'GB',
