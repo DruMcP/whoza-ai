@@ -5,8 +5,8 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+[context.production.environment]
+  NODE_ENV = "production"
 
 # === SEO MIGRATION: Old URLs → New Build (2026-05-14) ===
 # All old indexed URLs redirect to preserve backlink equity
@@ -294,54 +294,6 @@
   from = "/trade/painter/"
   to = "/trade/painter"
   status = 301
-
-[context.production.environment]
-  NODE_ENV = "production"
-
-[[redirects]]
-  from = "/cookie-policy"
-  to = "/cookie-policy.html"
-  status = 200
-
-[[redirects]]
-  from = "/dpa"
-  to = "/dpa.html"
-  status = 200
-
-[[redirects]]
-  from = "/fair-use"
-  to = "/fair-use.html"
-  status = 200
-
-[[redirects]]
-  from = "/sla"
-  to = "/sla.html"
-  status = 200
-
-[[redirects]]
-  from = "/refund-policy"
-  to = "/refund-policy.html"
-  status = 200
-
-[[redirects]]
-  from = "/modern-slavery"
-  to = "/modern-slavery.html"
-  status = 200
-
-[[redirects]]
-  from = "/accessibility"
-  to = "/accessibility.html"
-  status = 200
-
-[[redirects]]
-  from = "/vat-info"
-  to = "/vat-info.html"
-  status = 200
-
-[[redirects]]
-  from = "/complaints"
-  to = "/complaints.html"
-  status = 200
 
 [[headers]]
   for = "/*"
