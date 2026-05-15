@@ -7,7 +7,7 @@ import { TradeProblems } from "@/components/whoza/trade-problems"
 import { TradeHowItWorks } from "@/components/whoza/trade-how-it-works"
 import { TradeFAQ } from "@/components/whoza/trade-faq"
 import { TradeLocations } from "@/components/whoza/trade-locations"
-import { AudioDemo } from "@/components/whoza/audio-demo"
+// import { AudioDemo } from "@/components/whoza/audio-demo"
 import { Testimonials } from "@/components/whoza/testimonials"
 import { ComparisonTable } from "@/components/whoza/comparison-table"
 import { Pricing } from "@/components/whoza/pricing"
@@ -106,7 +106,8 @@ export default async function TradePage({ params }: PageProps) {
         <LostRevenueCalculator trade={tradeData.slug} />
         <div className="section-divider" />
         
-        <AudioDemo />
+        {/* AUDIO DEMO - removed for soft launch */}
+        {/* <AudioDemo /> */}
         <div className="section-divider" />
         
         <WhatsAppDelivery trade={tradeData.slug} />

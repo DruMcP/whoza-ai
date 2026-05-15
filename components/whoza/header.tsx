@@ -4,7 +4,7 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { CountrySwitcher } from "./country-switcher"
-import { SignupModal } from "./signup-modal"
+import { WaitlistModal } from "./waitlist-modal"
 
 const navLinks = [
   { href: "/#how-it-works", label: "How It Works", isPageLink: false },
@@ -17,7 +17,7 @@ const navLinks = [
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [showSignup, setShowSignup] = useState(false)
+  const [showWaitlist, setShowWaitlist] = useState(false)
 
   const handleNavClick = (e: React.MouseEvent, href: string, isPageLink: boolean) => {
     if (!isPageLink) {
@@ -74,7 +74,7 @@ export function Header() {
                   </a>
               )}
               <button
-                onClick={() => setShowSignup(true)}
+                onClick={() => setShowWaitlist(true)}
                 className="btn-primary text-[13px] font-bold px-4 py-2 rounded-lg border border-white/20 bg-white/10 text-white hover:bg-white/20 no-underline cursor-pointer transition-colors whitespace-nowrap min-h-[44px]"
                 aria-label="Start free trial"
               >
@@ -119,7 +119,7 @@ export function Header() {
                 <button
                   onClick={() => {
                     setMenuOpen(false)
-                    setShowSignup(true)
+                    setShowWaitlist(true)
                   }}
                   className="btn-primary text-center text-[13px] font-bold px-4 py-3 rounded-lg bg-white text-[#111418] no-underline cursor-pointer mt-2 min-h-[44px]"
                 >
@@ -132,8 +132,8 @@ export function Header() {
       </motion.header>
 
       <AnimatePresence>
-        {showSignup && (
-          <SignupModal onClose={() => setShowSignup(false)} />
+        {showWaitlist && (
+          <WaitlistModal onClose={() => setShowWaitlist(false)} source="nav-bar" />
         )}
       </AnimatePresence>
     </>

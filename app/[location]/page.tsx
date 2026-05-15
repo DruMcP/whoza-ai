@@ -7,7 +7,7 @@ import { SocialProofBar } from "@/components/whoza/social-proof-bar"
 import { SocialProofBand, StatsBand } from "@/components/whoza/social-proof"
 import { LostRevenueCalculator } from "@/components/whoza/lost-revenue-calculator"
 import { VideoExplainer } from "@/components/whoza/video-explainer"
-import { AudioDemo } from "@/components/whoza/audio-demo"
+// import { AudioDemo } from "@/components/whoza/audio-demo"
 import { WhatsAppDelivery } from "@/components/whoza/whatsapp-delivery"
 import { PreLaunchProof } from "@/components/whoza/pre-launch-proof"
 import { HowWhozaWorks } from "@/components/whoza/how-whoza-works"
@@ -122,7 +122,8 @@ export default async function LocationPage({ params }: PageProps) {
 
         {/* AUDIO DEMO — Hear Katie handle a customer enquiry */}
         <div className="section-divider" />
-        <AudioDemo />
+        {/* AUDIO DEMO - removed for soft launch */}
+        {/* <AudioDemo /> */}
 
         <WhatsAppDelivery />
 
