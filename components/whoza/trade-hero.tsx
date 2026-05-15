@@ -83,10 +83,12 @@ export function TradeHero({ tradeData }: TradeHeroProps) {
               <Button 
                 size="lg"
                 variant="outline"
-                className="bg-transparent border-white/20 text-white hover:bg-white/10 px-8 py-6 text-lg gap-2"
+                className="bg-transparent border-white/10 text-white/40 hover:bg-transparent hover:text-white/40 px-8 py-6 text-lg gap-2 cursor-default"
+                disabled
+                aria-label="Audio demo coming soon"
               >
-                <Play className="w-5 h-5" />
-                Hear Katie in Action
+                <Play className="w-5 h-5 opacity-40" />
+                Audio demo — coming soon
               </Button>
             </div>
 

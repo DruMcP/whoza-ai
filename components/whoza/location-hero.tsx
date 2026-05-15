@@ -201,13 +201,16 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             </span>
 
             <a
-              href="#demo"
-              className="inline-flex items-center gap-2 transition-colors hover:underline text-left text-[15px] text-slate-400 font-medium font-sans min-h-[44px] no-underline"
-              aria-label="See Katie handle a call — 60 second demo, no signup required"
+              href="#"
+              onClick={(e) => e.preventDefault()}
+              className="inline-flex items-center gap-2 text-left text-[15px] text-slate-400/50 font-medium font-sans min-h-[44px] no-underline cursor-default"
+              aria-label="Audio demo coming soon"
+              style={{ pointerEvents: "none" }}
             >
-              <span className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-[10px] text-white">
+              <span className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[10px] text-white/30">
+                <Play className="w-3 h-3 fill-current" />
               </span>
-              Hear Katie in Action (60 sec — no signup)
+              Audio demo — coming soon
             </a>
 
             {/* Pricing anchor */}
