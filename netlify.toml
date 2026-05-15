@@ -9,13 +9,9 @@
   NODE_ENV = "production"
 
 # === SEO MIGRATION: Old URLs → New Build (2026-05-14) ===
-# All old indexed URLs redirect to preserve backlink equity
-
-# Blog posts → homepage (all 30 posts)
-[[redirects]]
-  from = "/blog/*"
-  to = "/"
-  status = 301
+# NOTE: Removed redirects for /blog, /how-it-works, /case-studies, /trust, /contact
+# These pages exist in the app and should NOT be redirected
+# Also removed trailing slash normalization — handled by Next.js Netlify plugin
 
 [[redirects]]
   from = "/uk/ai-visibility/london/*"
@@ -123,168 +119,8 @@
   status = 301
 
 [[redirects]]
-  from = "/how-it-works/*"
-  to = "/"
-  status = 301
-
-[[redirects]]
-  from = "/case-studies/*"
-  to = "/"
-  status = 301
-
-[[redirects]]
-  from = "/trust/*"
-  to = "/"
-  status = 301
-
-[[redirects]]
-  from = "/contact/*"
-  to = "/support"
-  status = 301
-
-[[redirects]]
   from = "/start/*"
   to = "/"
-  status = 301
-
-[[redirects]]
-  from = "/pricing/"
-  to = "/pricing"
-  status = 301
-
-[[redirects]]
-  from = "/privacy/"
-  to = "/privacy"
-  status = 301
-
-[[redirects]]
-  from = "/terms/"
-  to = "/terms"
-  status = 301
-
-[[redirects]]
-  from = "/support/"
-  to = "/support"
-  status = 301
-
-[[redirects]]
-  from = "/cookie-policy/"
-  to = "/cookie-policy"
-  status = 301
-
-[[redirects]]
-  from = "/accessibility/"
-  to = "/accessibility"
-  status = 301
-
-[[redirects]]
-  from = "/vat-info/"
-  to = "/vat-info"
-  status = 301
-
-[[redirects]]
-  from = "/refund-policy/"
-  to = "/refund-policy"
-  status = 301
-
-[[redirects]]
-  from = "/fair-use/"
-  to = "/fair-use"
-  status = 301
-
-[[redirects]]
-  from = "/sla/"
-  to = "/sla"
-  status = 301
-
-[[redirects]]
-  from = "/dpa/"
-  to = "/dpa"
-  status = 301
-
-[[redirects]]
-  from = "/modern-slavery/"
-  to = "/modern-slavery"
-  status = 301
-
-[[redirects]]
-  from = "/complaints/"
-  to = "/complaints"
-  status = 301
-
-[[redirects]]
-  from = "/london/"
-  to = "/london"
-  status = 301
-
-[[redirects]]
-  from = "/manchester/"
-  to = "/manchester"
-  status = 301
-
-[[redirects]]
-  from = "/birmingham/"
-  to = "/birmingham"
-  status = 301
-
-[[redirects]]
-  from = "/glasgow/"
-  to = "/glasgow"
-  status = 301
-
-[[redirects]]
-  from = "/leeds/"
-  to = "/leeds"
-  status = 301
-
-[[redirects]]
-  from = "/liverpool/"
-  to = "/liverpool"
-  status = 301
-
-[[redirects]]
-  from = "/bristol/"
-  to = "/bristol"
-  status = 301
-
-[[redirects]]
-  from = "/edinburgh/"
-  to = "/edinburgh"
-  status = 301
-
-[[redirects]]
-  from = "/trade/plumber/"
-  to = "/trade/plumber"
-  status = 301
-
-[[redirects]]
-  from = "/trade/electrician/"
-  to = "/trade/electrician"
-  status = 301
-
-[[redirects]]
-  from = "/trade/builder/"
-  to = "/trade/builder"
-  status = 301
-
-[[redirects]]
-  from = "/trade/roofer/"
-  to = "/trade/roofer"
-  status = 301
-
-[[redirects]]
-  from = "/trade/landscaper/"
-  to = "/trade/landscaper"
-  status = 301
-
-[[redirects]]
-  from = "/trade/hvac/"
-  to = "/trade/hvac"
-  status = 301
-
-[[redirects]]
-  from = "/trade/painter/"
-  to = "/trade/painter"
   status = 301
 
 [[headers]]
