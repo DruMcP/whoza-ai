@@ -36,14 +36,14 @@ http://whoza.ai/*               https://whoza.ai/:splat          301!
 /free-score/     /competitor-analysis/     301!
 
 # Redirect legacy URLs to canonical versions (fixes 51 "Page with redirect" in GSC)
-/login           /sign-in/                 301!
-/login/          /sign-in/                 301!
+/login           /                         301!
+/login/          /                         301!
 /privacy-policy  /privacy/                 301!
 /privacy-policy/ /privacy/                 301!
 /competitor      /competitor-analysis/     301!
 /competitor/     /competitor-analysis/     301!
-/dashboard       /portal/                  301!
-/dashboard/      /portal/                  301!
+/dashboard       /                         301!
+/dashboard/      /                         301!
 
 # NOTE: Prerendered HTML pages are served as static files automatically.
 # Netlify serves static files BEFORE processing redirects.

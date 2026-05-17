@@ -17,6 +17,15 @@ Disallow: /_next/
 Disallow: /cdn-cgi/
 Disallow: /*.json$
 Disallow: /*?nocache=
+Disallow: /*?
+Disallow: /roadmap
+Disallow: /account
+Disallow: /free-score
+Disallow: /start
+Disallow: /ai-visibility-*
+Disallow: /uk/ai-visibility/
+Disallow: /us/ai-visibility/
+Disallow: /trades/
 
 # ------------------- AI Search Crawlers -------------------
 # OpenAI (ChatGPT Search, GPTBot)

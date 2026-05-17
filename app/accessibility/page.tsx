@@ -4,6 +4,9 @@ import { ChevronRight, Accessibility, CheckCircle2 } from "lucide-react"
 export const metadata: Metadata = {
   title: "Accessibility Statement | Whoza.ai",
   description: "WHOZA AI LTD's commitment to making our website and services accessible to everyone, including users with disabilities.",
+  alternates: {
+    canonical: "https://whoza.ai/accessibility",
+  },
   robots: { index: true, follow: true },
 }
 

@@ -14,31 +14,6 @@
 # Also removed trailing slash normalization — handled by Next.js Netlify plugin
 
 [[redirects]]
-  from = "/roadmap"
-  to = "/"
-  status = 301
-
-[[redirects]]
-  from = "/account"
-  to = "/"
-  status = 301
-
-[[redirects]]
-  from = "/free-score"
-  to = "/"
-  status = 301
-
-[[redirects]]
-  from = "/free-score/*"
-  to = "/"
-  status = 301
-
-[[redirects]]
-  from = "/ai-visibility-*"
-  to = "/"
-  status = 301
-
-[[redirects]]
   from = "/uk/ai-visibility/london/*"
   to = "/london"
   status = 301

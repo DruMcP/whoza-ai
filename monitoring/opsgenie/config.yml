@@ -1,0 +1,92 @@
+# Opsgenie Integration Configuration for whoza.ai
+# https://docs.opsgenie.com/docs/alert-api
+#
+# Setup: Set OPSGENIE_API_KEY in GitHub Secrets
+# Integration ID from Better Uptime → Opsgenie webhook
+
+# ─── Alert Policies ───
+
+## P1 - Voice Webhook Failure (Immediate Page)
+# Trigger: trillet-webhook-health monitor DOWN
+# Escalation: Slack → SMS → Phone
+# Response SLA: 3 minutes
+
+p1_policy:
+  name: "whoza-ai-voice-outage"
+  priority: P1
+  conditions:
+    - monitor_name: "trillet-webhook-health"
+      status: "down"
+    - monitor_name: "trillet-webhook-receiver"
+      status: "down"
+  escalation:
+    - step: 1
+      delay_minutes: 0
+      notify: "slack-#whoza-alerts"
+    - step: 2
+      delay_minutes: 2
+      notify: "sms-dru-mcpherson"
+    - step: 3
+      delay_minutes: 5
+      notify: "phone-dru-mcpherson"
+  tags: ["voice", "webhook", "critical", "production"]
+
+## P2 - Page Latency Degradation
+# Trigger: Any page monitor response time > 3000ms for 5 minutes
+# Escalation: Slack only (non-urgent)
+
+p2_policy:
+  name: "whoza-ai-latency-alert"
+  priority: P2
+  conditions:
+    - response_time_ms: "> 3000"
+      duration_minutes: 5
+  escalation:
+    - step: 1
+      delay_minutes: 0
+      notify: "slack-#whoza-alerts"
+  tags: ["performance", "latency", "staging", "production"]
+
+## P3 - Staging Issue
+# Trigger: Staging monitor down
+# Escalation: Slack only (low priority)
+
+p3_policy:
+  name: "whoza-ai-staging-issue"
+  priority: P3
+  conditions:
+    - monitor_name_pattern: "staging-*"
+      status: "down"
+  escalation:
+    - step: 1
+      delay_minutes: 0
+      notify: "slack-#whoza-alerts"
+  tags: ["staging", "non-critical"]
+
+# ─── On-Call Schedule ───
+# Soft launch: Single user (Dru McPherson)
+# Expand to rotation as team grows
+
+on_call:
+  schedule_name: "whoza-ai-primary"
+  timezone: "Europe/London"
+  participants:
+    - user: "dru.mcpherson@whoza.ai"
+      name: "Dru McPherson"
+      phone: "+44XXXXXXXXXX"  # Update with real number
+  rotation_type: "daily"
+  handoff_time: "09:00"
+
+# ─── Integration Webhook URLs ───
+# Add these to Better Uptime as notification channels:
+
+better_uptime_integrations:
+  - name: "Opsgenie Critical"
+    webhook_url: "https://api.opsgenie.com/v2/alerts"
+    headers:
+      Authorization: "GenieKey ${OPSGENIE_API_KEY}"
+    conditions: ["P1", "P2"]
+    
+  - name: "Slack Alerts"
+    webhook_url: "https://hooks.slack.com/services/YOUR/SLACK/WEBHOOK"
+    conditions: ["P1", "P2", "P3"]

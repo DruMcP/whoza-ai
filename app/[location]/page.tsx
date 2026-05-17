@@ -26,6 +26,7 @@ import { Pricing } from "@/components/whoza/pricing"
 import { FAQ } from "@/components/whoza/faq"
 import { FinalCTA } from "@/components/whoza/final-cta"
 import { Footer } from "@/components/whoza/footer"
+import { CityContentSection } from "@/components/whoza/city-content-section"
 import { StickyCTA, FloatingChatWidget } from "@/components/whoza/sticky-cta"
 import { LocaleProvider } from "@/lib/locale-context"
 import { locations, getLocationBySlug } from "@/lib/locations"
@@ -51,11 +52,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const tradesText = locationData.trades?.slice(0, 2).join(", ") || "tradespeople"
+  const citySpecificDescription = locationData.description || `Stop losing jobs to missed calls. Katie answers your phone 24/7 for ${tradesText} in ${locationData.city}. Book appointments automatically.`
   
   return {
     metadataBase: new URL("https://whoza.ai"),
     title: `AI Call Handling for ${tradesText} in ${locationData.city} | whoza.ai`,
-    description: `Stop losing jobs to missed calls. Katie answers your phone 24/7 for ${tradesText} in ${locationData.city}. Book appointments automatically.`,
+    description: citySpecificDescription,
     alternates: {
       canonical: `https://whoza.ai/${location}`,
     },
@@ -65,14 +67,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: `https://whoza.ai/${location}`,
       siteName: "Whoza.ai",
       title: `AI Call Handling for ${tradesText} in ${locationData.city} | whoza.ai`,
-      description: `Stop losing jobs to missed calls. Katie answers your phone 24/7 for ${tradesText} in ${locationData.city}.`,
+      description: citySpecificDescription,
       images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: `whoza.ai — AI Call Handling in ${locationData.city}` }],
     },
     twitter: {
       card: "summary_large_image",
       site: "@whozaai",
       title: `AI Call Handling for ${tradesText} in ${locationData.city} | whoza.ai`,
-      description: `Stop losing jobs to missed calls in ${locationData.city}.`,
+      description: citySpecificDescription,
       images: ["https://whoza.ai/og-image.webp"],
     },
     robots: {
@@ -112,6 +114,11 @@ export default async function LocationPage({ params }: PageProps) {
         />
         <SocialProofBand />
 
+        {/* CITY-SPECIFIC CONTENT — Unique value for each location */}
+        <div className="section-divider" />
+        <CityContentSection locationData={locationData} />
+
+
         {/* DOMINANT MOMENT — Pain → Solution sequence */}
         <div className="section-divider" />
         <LostRevenueCalculator />
@@ -135,7 +142,7 @@ export default async function LocationPage({ params }: PageProps) {
         <div className="section-divider" />
         <HowWhozaWorks />
 
-        {/* TRIAL EXPLANATION — How the 14-day free trial works */}
+        {/* TRIAL EXPLANATION — How the 7-day free trial works */}
         <div className="section-divider" />
         <TrialExplanation />
 

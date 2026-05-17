@@ -1,0 +1,93 @@
+# whoza.ai Status Page Configuration
+# Target: status.whoza.ai (CNAME setup required at domain registrar)
+# Platform: Instatus (recommended) or Statuspage.io
+#
+# Setup:
+# 1. Create account at instatus.com or statuspage.io
+# 2. Configure custom domain: status.whoza.ai
+# 3. Add CNAME record at domain registrar
+# 4. Connect Better Uptime monitors as data sources
+
+page_config:
+  name: "Whoza.ai Status"
+  description: "Real-time status of whoza.ai voice AI service for UK tradespeople"
+  logo: "https://whoza.ai/logo.svg"
+  favicon: "https://whoza.ai/favicon.ico"
+  timezone: "Europe/London"
+  
+  # Public-facing components
+  components:
+    - id: "website"
+      name: "Website"
+      description: "whoza.ai homepage and pages"
+      group: "Core Services"
+      
+    - id: "voice-ai"
+      name: "Voice AI Service"
+      description: "Katie & Mark - AI call answering"
+      group: "Core Services"
+      
+    - id: "dashboard"
+      name: "Dashboard"
+      description: "Customer portal and analytics"
+      group: "Core Services"
+      
+    - id: "api"
+      name: "API"
+      description: "Webhook endpoints and data APIs"
+      group: "Core Services"
+      
+    - id: "database"
+      name: "Supabase Database"
+      description: "Call records, user data, analytics"
+      group: "Infrastructure"
+      
+    - id: "whatsapp-delivery"
+      name: "WhatsApp Delivery"
+      description: "Enquiry delivery to tradespeople"
+      group: "Core Services"
+
+  # Auto-status from Better Uptime monitors
+  monitor_mappings:
+    - component: "website"
+      monitors: ["prod-homepage", "prod-plumber", "prod-electrician", "prod-heating", "prod-pricing"]
+      
+    - component: "voice-ai"
+      monitors: ["trillet-webhook-health", "trillet-webhook-receiver"]
+      
+    - component: "dashboard"
+      monitors: ["prod-dashboard"]
+      
+    - component: "api"
+      monitors: ["trillet-webhook-receiver"]
+      
+    - component: "database"
+      monitors: ["supabase-auth"]
+      
+    - component: "whatsapp-delivery"
+      monitors: ["trillet-webhook-health"]
+
+  # Subscriber options
+  subscriptions:
+    - type: "email"
+      description: "Get email alerts for incidents"
+    - type: "rss"
+      description: "Subscribe to incident RSS feed"
+    - type: "slack"
+      description: "Subscribe via Slack webhook"
+
+  # Footer links
+  links:
+    - name: "Support"
+      url: "https://whoza.ai/support"
+    - name: "Documentation"
+      url: "https://whoza.ai/how-it-works"
+    - name: "Contact"
+      url: "mailto:dru@whoza.ai"
+
+# CNAME Setup Required:
+# Add at domain registrar (e.g., Cloudflare, Namecheap):
+# Type: CNAME
+# Name: status
+# Target: [provided by Instatus/Statuspage]
+# TTL: Auto
