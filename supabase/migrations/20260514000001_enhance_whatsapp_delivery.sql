@@ -9,9 +9,17 @@ ALTER TABLE enquiries
 -- Index for WhatsApp provider queries
 CREATE INDEX IF NOT EXISTS idx_enquiries_whatsapp_provider ON enquiries(whatsapp_provider) WHERE whatsapp_sent = true;
 
--- Add call_id index on leads and appointments if not exists
-CREATE INDEX IF NOT EXISTS idx_leads_client_id ON leads(client_id) WHERE client_id IS NOT NULL;
-CREATE INDEX IF NOT EXISTS idx_appointments_client_id ON appointments(client_id) WHERE client_id IS NOT NULL;
+-- Add call_id index on leads and appointments if not exists (only if column exists)
+DO $$
+BEGIN
+  IF EXISTS (SELECT 1 FROM information_schema.columns WHERE table_name = 'leads' AND column_name = 'client_id') THEN
+    CREATE INDEX IF NOT EXISTS idx_leads_client_id ON leads(client_id) WHERE client_id IS NOT NULL;
+  END IF;
+  
+  IF EXISTS (SELECT 1 FROM information_schema.columns WHERE table_name = 'appointments' AND column_name = 'client_id') THEN
+    CREATE INDEX IF NOT EXISTS idx_appointments_client_id ON appointments(client_id) WHERE client_id IS NOT NULL;
+  END IF;
+END $$;
 
 -- Add webhook delivery log table for debugging
 CREATE TABLE IF NOT EXISTS webhook_deliveries (
