@@ -4,6 +4,9 @@ import { ChevronRight, Receipt } from "lucide-react"
 export const metadata: Metadata = {
   title: "VAT Information | Whoza.ai",
   description: "VAT registration details and tax information for WHOZA AI LTD, including UK VAT number and invoicing policies.",
+  alternates: {
+    canonical: "https://whoza.ai/vat-info",
+  },
   robots: { index: true, follow: true },
 }
 

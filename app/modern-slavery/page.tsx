@@ -4,6 +4,9 @@ import { ChevronRight, ShieldCheck } from "lucide-react"
 export const metadata: Metadata = {
   title: "Modern Slavery Statement | Whoza.ai",
   description: "WHOZA AI LTD's commitment to preventing modern slavery and human trafficking in our operations and supply chain.",
+  alternates: {
+    canonical: "https://whoza.ai/modern-slavery",
+  },
   robots: { index: true, follow: true },
 }
 

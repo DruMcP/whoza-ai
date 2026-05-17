@@ -7,6 +7,7 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
   },
+  trailingSlash: false,
   allowedDevOrigins: [
     'vm-6ndpnuoz41hduvbfu6ks15wb.vusercontent.net',
     '*.vusercontent.net',

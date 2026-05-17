@@ -20,6 +20,13 @@ const footerLinks = {
     { label: "Blog", href: "/blog" },
     { label: "Case Studies", href: "/case-studies" },
   ],
+  tools: [
+    { label: "Lost Jobs Calculator", href: "/tools/lost-jobs-calculator" },
+    { label: "Quote Generator", href: "/tools/quote-generator" },
+    { label: "Emergency Pricing", href: "/tools/emergency-pricing" },
+    { label: "Hourly Rate Checker", href: "/tools/rate-checker" },
+    { label: "Voicemail Scripts", href: "/tools/voicemail-scripts" },
+  ],
   legal: [
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms of Service", href: "/terms" },
@@ -51,7 +58,7 @@ export function Footer() {
   return (
     <footer className="bg-[var(--navy-900)] border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-8 lg:gap-6">
           {/* Brand + Newsletter Column */}
           <div className="col-span-2">
             <a href="/" className="flex items-center mb-6">
@@ -89,6 +96,19 @@ export function Footer() {
             <h4 className="text-white font-semibold mb-4">Product</h4>
             <ul className="space-y-3">
               {footerLinks.product.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="text-sm text-white/60 hover:text-white transition-colors">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold mb-4">Tools</h4>
+            <ul className="space-y-3">
+              {footerLinks.tools.map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className="text-sm text-white/60 hover:text-white transition-colors">
                     {link.label}

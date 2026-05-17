@@ -4,6 +4,9 @@ import { ChevronRight, MessageSquareWarning } from "lucide-react"
 export const metadata: Metadata = {
   title: "Complaints Procedure | Whoza.ai",
   description: "How to make a complaint about WHOZA AI LTD's services and how we handle complaints fairly and promptly.",
+  alternates: {
+    canonical: "https://whoza.ai/complaints",
+  },
   robots: { index: true, follow: true },
 }
 

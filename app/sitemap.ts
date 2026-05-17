@@ -4,7 +4,7 @@ import { trades } from '@/lib/trades'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://whoza.ai'
-  const lastMod = '2026-05-08'
+  const lastMod = '2026-05-17'
 
   // Core pages
   const corePages: MetadataRoute.Sitemap = [
@@ -49,6 +49,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastMod,
       changeFrequency: 'monthly',
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/tools/lost-jobs-calculator`,
+      lastModified: lastMod,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/tools/quote-generator`,
+      lastModified: lastMod,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/tools/emergency-pricing`,
+      lastModified: lastMod,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/tools/rate-checker`,
+      lastModified: lastMod,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/tools/voicemail-scripts`,
+      lastModified: lastMod,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/watch`,
+      lastModified: lastMod,
+      changeFrequency: 'weekly',
+      priority: 0.85,
     },
     {
       url: `${baseUrl}/privacy`,

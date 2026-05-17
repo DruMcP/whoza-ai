@@ -50,6 +50,7 @@ export function Pricing() {
 
   const plans = [
     {
+      name: "Starter",
       description: "Capture + deliver jobs",
       price: String(config.pricing.starter),
       perJob: "4.50",
@@ -287,17 +288,20 @@ export function Pricing() {
                     ))}
                   </ul>
 
-                  {/* CTA — Waitlist */}
+                  {/* CTA — Starter only opens waitlist */}
                   <button
-                    onClick={() => openWaitlist(plan.name)}
-                    className={`inline-flex items-center justify-center w-full font-bold transition-all hover:scale-105 py-2 px-4 rounded-md cursor-pointer ${
-                      plan.popular 
-                        ? `${colors.bg} ${colors.hover} text-white shadow-lg` 
-                        : "bg-[var(--navy-900)] hover:bg-[var(--navy-800)] text-white"
+                    onClick={plan.name === "Starter" ? () => openWaitlist(plan.name) : undefined}
+                    disabled={plan.name !== "Starter"}
+                    className={`inline-flex items-center justify-center w-full font-bold transition-all py-2 px-4 rounded-md ${
+                      plan.name === "Starter"
+                        ? plan.popular
+                          ? `${colors.bg} ${colors.hover} text-white shadow-lg hover:scale-105 cursor-pointer`
+                          : `bg-[var(--navy-900)] hover:bg-[var(--navy-800)] text-white hover:scale-105 cursor-pointer`
+                        : "bg-[var(--slate-200)] text-[var(--slate-400)] cursor-not-allowed opacity-60"
                     }`}
                   >
-                    {plan.cta}
-                    <ArrowRight className="ml-2 w-4 h-4" />
+                    {plan.name === "Starter" ? plan.cta : "Start with Starter Trial"}
+                    {plan.name === "Starter" && <ArrowRight className="ml-2 w-4 h-4" />}
                   </button>
                 </div>
               </motion.div>
