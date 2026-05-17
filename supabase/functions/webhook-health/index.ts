@@ -10,16 +10,16 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.0";
  * 2. Supabase calls table has records in last 15 min (business hours)
  * 3. Response body schema is valid
  * 
- * On failure: Creates agent_metrics record + alerts via Opsgenie if critical
+ * On failure: Creates agent_metrics record + alerts via AlertOps if critical
  * 
  * @trigger pg_cron: every 5 minutes
- * @environment SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPSGENIE_API_KEY
+ * @environment SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, ALERTOPS_API_KEY
  */
 
 const WEBHOOK_URL = Deno.env.get("WEBHOOK_HEALTH_URL") || "https://www.whoza.ai/api/health/trillet";
 const SUPABASE_URL = Deno.env.get("DB_URL") || Deno.env.get("SUPABASE_URL")!;
 const SUPABASE_KEY = Deno.env.get("SERVICE_ROLE_KEY") || Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-const OPSGENIE_KEY = Deno.env.get("OPSGENIE_API_KEY");
+const ALERTOPS_KEY = Deno.env.get("ALERTOPS_API_KEY") || Deno.env.get("OPSGENIE_API_KEY");
 
 // Business hours: 07:00 - 19:00 UK time
 const BUSINESS_HOURS = { start: 7, end: 19 };
@@ -106,9 +106,9 @@ Deno.serve(async (req) => {
       created_at: now.toISOString(),
     });
 
-    // ─── 5. Send Opsgenie alert if critical ───
-    if (result.alert_triggered && OPSGENIE_KEY) {
-      await sendOpsgenieAlert(result);
+    // ─── 5. Send alert if critical ───
+    if (result.alert_triggered && ALERTOPS_KEY) {
+      await sendAlert(result);
     }
 
     const duration = Date.now() - startTime;
@@ -139,13 +139,17 @@ Deno.serve(async (req) => {
   }
 });
 
-async function sendOpsgenieAlert(result: HealthCheckResult) {
+async function sendAlert(result: HealthCheckResult) {
   const priority = result.webhook_status >= 500 ? "P1" : "P2";
+  const title = `[${priority}] Whoza.ai Voice Webhook Issue`;
+  const message = `Webhook health check failed: ${result.alert_reason}`;
   
+  // AlertOps webhook format (generic — works with most alerting platforms)
   const alertPayload = {
-    message: `[${priority}] Whoza.ai Voice Webhook Issue`,
-    description: `Webhook health check failed: ${result.alert_reason}`,
+    title,
+    message,
     priority,
+    source: "whoza-webhook-health",
     alias: `whoza-webhook-${new Date().toISOString().split("T")[0]}`,
     tags: ["voice", "webhook", "autonomous-agent"],
     details: {
@@ -155,20 +159,47 @@ async function sendOpsgenieAlert(result: HealthCheckResult) {
       business_hours: String(result.business_hours),
       timestamp: result.timestamp,
     },
+    // Opsgenie compatibility (legacy fallback)
+    ...(Deno.env.get("OPSGENIE_API_KEY") && {
+      description: message,
+    }),
   };
 
-  const res = await fetch("https://api.opsgenie.com/v2/alerts", {
-    method: "POST",
-    headers: {
-      "Authorization": `GenieKey ${OPSGENIE_KEY}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(alertPayload),
-  });
+  // Determine alert endpoint — AlertOps preferred, Opsgenie fallback
+  const opsgenieKey = Deno.env.get("OPSGENIE_API_KEY");
+  const alertopsKey = Deno.env.get("ALERTOPS_API_KEY");
+  
+  if (alertopsKey) {
+    // AlertOps webhook endpoint
+    const res = await fetch("https://api.alertops.com/v2/alerts", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${alertopsKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(alertPayload),
+    });
 
-  if (!res.ok) {
-    console.error("Failed to send Opsgenie alert:", await res.text());
-  } else {
-    console.log(`✅ Opsgenie ${priority} alert sent`);
+    if (!res.ok) {
+      console.error("Failed to send AlertOps alert:", await res.text());
+    } else {
+      console.log(`✅ AlertOps ${priority} alert sent`);
+    }
+  } else if (opsgenieKey) {
+    // Legacy Opsgenie fallback
+    const res = await fetch("https://api.opsgenie.com/v2/alerts", {
+      method: "POST",
+      headers: {
+        "Authorization": `GenieKey ${opsgenieKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(alertPayload),
+    });
+
+    if (!res.ok) {
+      console.error("Failed to send Opsgenie alert:", await res.text());
+    } else {
+      console.log(`✅ Opsgenie ${priority} alert sent (legacy)`);
+    }
   }
 }

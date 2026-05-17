@@ -10,16 +10,16 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.0";
  * 2. Latest WAL archive age < 24 hours
  * 3. Storage bucket for backups is accessible
  * 
- * On failure: Creates GitHub issue + Opsgenie alert
+ * On failure: Creates GitHub issue + AlertOps alert
  * 
  * @trigger pg_cron: daily at 02:00 UTC
- * @environment SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, GITHUB_TOKEN, OPSGENIE_API_KEY
+ * @environment SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, GITHUB_TOKEN, ALERTOPS_API_KEY
  */
 
 const SUPABASE_URL = Deno.env.get("DB_URL") || Deno.env.get("SUPABASE_URL")!;
 const SUPABASE_KEY = Deno.env.get("SERVICE_ROLE_KEY") || Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 const GITHUB_TOKEN = Deno.env.get("GITHUB_TOKEN");
-const OPSGENIE_KEY = Deno.env.get("OPSGENIE_API_KEY");
+const ALERTOPS_KEY = Deno.env.get("ALERTOPS_API_KEY") || Deno.env.get("OPSGENIE_API_KEY");
 const REPO = "DruMcP/whoza-ai";
 
 interface BackupCheckResult {
@@ -93,8 +93,8 @@ Deno.serve(async (req) => {
       if (GITHUB_TOKEN) {
         await createGitHubIssue(result, now);
       }
-      if (OPSGENIE_KEY) {
-        await sendOpsgenieAlert(result);
+      if (ALERTOPS_KEY) {
+        await sendAlert(result);
       }
     }
 
@@ -152,11 +152,12 @@ ${result.issues.map(i => `- ${i}`).join("\n")}
   }
 }
 
-async function sendOpsgenieAlert(result: BackupCheckResult) {
+async function sendAlert(result: BackupCheckResult) {
   const alertPayload = {
-    message: "[P2] whoza.ai PITR Backup Verification Failed",
-    description: `Backup check issues: ${result.issues.join(", ")}`,
+    title: "[P2] whoza.ai PITR Backup Verification Failed",
+    message: `Backup check issues: ${result.issues.join(", ")}`,
     priority: "P2",
+    source: "whoza-verify-backup",
     alias: `whoza-backup-${new Date().toISOString().split("T")[0]}`,
     tags: ["backup", "pitr", "autonomous-agent"],
     details: {
@@ -166,16 +167,38 @@ async function sendOpsgenieAlert(result: BackupCheckResult) {
     },
   };
 
-  const res = await fetch("https://api.opsgenie.com/v2/alerts", {
-    method: "POST",
-    headers: {
-      "Authorization": `GenieKey ${OPSGENIE_KEY}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(alertPayload),
-  });
+  const alertopsKey = Deno.env.get("ALERTOPS_API_KEY");
+  const opsgenieKey = Deno.env.get("OPSGENIE_API_KEY");
+  
+  if (alertopsKey) {
+    const res = await fetch("https://api.alertops.com/v2/alerts", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${alertopsKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(alertPayload),
+    });
 
-  if (!res.ok) {
-    console.error("Failed to send Opsgenie alert:", await res.text());
+    if (!res.ok) {
+      console.error("Failed to send AlertOps alert:", await res.text());
+    } else {
+      console.log(`✅ AlertOps P2 alert sent`);
+    }
+  } else if (opsgenieKey) {
+    const res = await fetch("https://api.opsgenie.com/v2/alerts", {
+      method: "POST",
+      headers: {
+        "Authorization": `GenieKey ${opsgenieKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(alertPayload),
+    });
+
+    if (!res.ok) {
+      console.error("Failed to send Opsgenie alert:", await res.text());
+    } else {
+      console.log(`✅ Opsgenie P2 alert sent (legacy)`);
+    }
   }
 }

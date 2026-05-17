@@ -11,16 +11,17 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.0";
  * 3. Connection pool usage < 80%
  * 4. RLS policies active on all tables
  * 
- * On anomaly: Creates GitHub issue + Slack notification
+ * On failure: Creates GitHub issue + AlertOps/Slack notification
  * 
  * @trigger pg_cron: daily at 04:00 UTC
- * @environment SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, GITHUB_TOKEN, SLACK_WEBHOOK
+ * @environment SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, GITHUB_TOKEN, SLACK_WEBHOOK_URL, ALERTOPS_API_KEY
  */
 
 const SUPABASE_URL = Deno.env.get("DB_URL") || Deno.env.get("SUPABASE_URL")!;
 const SUPABASE_KEY = Deno.env.get("SERVICE_ROLE_KEY") || Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 const GITHUB_TOKEN = Deno.env.get("GITHUB_TOKEN");
 const SLACK_WEBHOOK = Deno.env.get("SLACK_WEBHOOK_URL");
+const ALERTOPS_KEY = Deno.env.get("ALERTOPS_API_KEY") || Deno.env.get("OPSGENIE_API_KEY");
 const REPO = "DruMcP/whoza-ai";
 
 interface IntegrityCheck {
@@ -127,6 +128,9 @@ Deno.serve(async (req) => {
       }
       if (SLACK_WEBHOOK) {
         await sendSlackNotification(checks, now);
+      }
+      if (ALERTOPS_KEY) {
+        await sendAlert(checks, now);
       }
     }
 
