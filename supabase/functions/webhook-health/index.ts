@@ -17,8 +17,8 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.0";
  */
 
 const WEBHOOK_URL = Deno.env.get("WEBHOOK_HEALTH_URL") || "https://www.whoza.ai/api/health/trillet";
-const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
-const SUPABASE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+const SUPABASE_URL = Deno.env.get("SUPABASE_DB_URL") || Deno.env.get("SUPABASE_URL")!;
+const SUPABASE_KEY = Deno.env.get("SERVICE_ROLE_KEY") || Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 const OPSGENIE_KEY = Deno.env.get("OPSGENIE_API_KEY");
 
 // Business hours: 07:00 - 19:00 UK time
