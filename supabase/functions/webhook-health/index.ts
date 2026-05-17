@@ -12,7 +12,7 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.0";
  * 
  * On failure: Creates agent_metrics record + alerts via Opsgenie if critical
  * 
- * @trigger pg_cron: */5 * * * *
+ * @trigger pg_cron: every 5 minutes
  * @environment SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPSGENIE_API_KEY
  */
 
