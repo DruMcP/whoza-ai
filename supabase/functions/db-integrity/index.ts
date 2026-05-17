@@ -13,7 +13,7 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.0";
  * 
  * On anomaly: Creates GitHub issue + Slack notification
  * 
- * @trigger pg_cron: 0 4 * * *
+ * @trigger pg_cron: daily at 04:00 UTC
  * @environment SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, GITHUB_TOKEN, SLACK_WEBHOOK
  */
 

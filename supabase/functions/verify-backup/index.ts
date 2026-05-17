@@ -12,7 +12,7 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.0";
  * 
  * On failure: Creates GitHub issue + Opsgenie alert
  * 
- * @trigger pg_cron: 0 2 * * * (daily at 02:00 UTC)
+ * @trigger pg_cron: daily at 02:00 UTC
  * @environment SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, GITHUB_TOKEN, OPSGENIE_API_KEY
  */
 
