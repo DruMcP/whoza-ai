@@ -178,8 +178,8 @@ Deno.serve(async (req) => {
     if (result.alert_triggered) {
       console.log(`🚨 ANOMALY DETECTED: ${result.alert_reason}`);
       
-      if (OPSGENIE_KEY) {
-        await sendOpsgenieAlert(result);
+    if (ALERTOPS_KEY) {
+        await sendAlert(result);
       }
       
       if (SLACK_WEBHOOK) {
@@ -213,13 +213,14 @@ Deno.serve(async (req) => {
   }
 });
 
-async function sendOpsgenieAlert(result: AnomalyCheck) {
+async function sendAlert(result: AnomalyCheck) {
   const priority = result.volume_anomaly && result.current_calls === 0 ? "P1" : "P2";
   
   const alertPayload = {
-    message: `[${priority}] Whoza.ai Call Anomaly Detected`,
-    description: result.alert_reason,
+    title: `[${priority}] Whoza.ai Call Anomaly Detected`,
+    message: result.alert_reason || "Anomaly detected",
     priority,
+    source: "whoza-call-anomaly",
     alias: `whoza-anomaly-${result.day_of_week}-${result.hour_of_day}-${new Date().toISOString().split("T")[0]}`,
     tags: ["voice", "anomaly", "autonomous-agent"],
     details: {
@@ -232,19 +233,39 @@ async function sendOpsgenieAlert(result: AnomalyCheck) {
     },
   };
 
-  const res = await fetch("https://api.opsgenie.com/v2/alerts", {
-    method: "POST",
-    headers: {
-      "Authorization": `GenieKey ${OPSGENIE_KEY}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(alertPayload),
-  });
+  const alertopsKey = Deno.env.get("ALERTOPS_API_KEY");
+  const opsgenieKey = Deno.env.get("OPSGENIE_API_KEY");
+  
+  if (alertopsKey) {
+    const res = await fetch("https://api.alertops.com/v2/alerts", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${alertopsKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(alertPayload),
+    });
 
-  if (!res.ok) {
-    console.error("Failed to send Opsgenie alert:", await res.text());
-  } else {
-    console.log(`✅ Opsgenie ${priority} alert sent`);
+    if (!res.ok) {
+      console.error("Failed to send AlertOps alert:", await res.text());
+    } else {
+      console.log(`✅ AlertOps ${priority} alert sent`);
+    }
+  } else if (opsgenieKey) {
+    const res = await fetch("https://api.opsgenie.com/v2/alerts", {
+      method: "POST",
+      headers: {
+        "Authorization": `GenieKey ${opsgenieKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(alertPayload),
+    });
+
+    if (!res.ok) {
+      console.error("Failed to send Opsgenie alert:", await res.text());
+    } else {
+      console.log(`✅ Opsgenie ${priority} alert sent (legacy)`);
+    }
   }
 }
 
