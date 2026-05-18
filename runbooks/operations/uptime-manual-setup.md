@@ -109,6 +109,7 @@ Log into [uptime.com](https://uptime.com) → Monitoring → Add Check
 | **Interval** | 10 minutes |
 | **Locations** | UK, US-East |
 | **Expected Status** | 200 |
+| **Custom Headers** | `apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxpZ2pzdHB4cXRrdXJ2dGV5eWh3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc0NTA4MTksImV4cCI6MjA5MzAyNjgxOX0.ep7ipBwRgh6TmjEw87xJGDXfLRBHRKh1mgDq3_eUHrI` |
 | **Tags** | whoza, infrastructure, supabase, api |
 
 ---

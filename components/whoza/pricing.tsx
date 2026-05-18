@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { Check, ArrowRight, Sparkles, X, CheckCircle2, User, Mic, Database, PhoneCall, Rocket, Loader2 } from "lucide-react"
 import { useLocale } from "@/lib/locale-context"
 import { WaitlistModal } from "./waitlist-modal"
+import { PilotSpotCounter } from "./pilot-spot-counter"
 
 const colorStyles = {
   blue: {
@@ -194,6 +195,11 @@ export function Pricing() {
             </div>
           </div>
         </motion.div>
+
+        {/* Pilot spots banner */}
+        <div className="max-w-xl mx-auto mb-10">
+          <PilotSpotCounter variant="banner" />
+        </div>
 
         {/* Pricing transition text */}
         <motion.div

@@ -170,7 +170,7 @@ export function VideoExplainer() {
             href="#final-cta"
             className="inline-flex items-center justify-center rounded-lg bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-6 text-lg gap-2 shadow-xl shadow-[var(--rex-green)]/30 transition-all hover:scale-105"
           >
-            Get Katie answering my calls
+            Watch the demo
             <ArrowRight className="w-5 h-5" />
           </a>
         </motion.div>

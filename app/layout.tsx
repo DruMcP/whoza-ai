@@ -20,6 +20,9 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
+  verification: {
+    google: 'G-VCQND9WPW9',
+  },
   metadataBase: new URL('https://whoza.ai'),
   title: 'Whoza.ai — AI Voice Agents for UK Tradespeople',
   description: 'AI voice agents Katie & Mark answer your trade business calls 24/7. Claire collects reviews, Rex tracks competitors. Plans from £59/month. 7-day free trial.',
@@ -89,6 +92,8 @@ export default function RootLayout({
   return (
     <html lang="en-GB" className={inter.variable}>
       <head>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/favicon.ico" />
         <link
           rel="preload"
           as="image"
@@ -96,7 +101,16 @@ export default function RootLayout({
           imagesrcset="/_next/image?url=%2Fimages%2Fphone-frame.webp&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fphone-frame.webp&w=384&q=75 384w"
           imagesizes="(max-width: 768px) 280px, 380px"
         />
-      </head>
+        {/* Google Tag Manager */}
+      <Script
+        id="gtm-script"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WBCCZVB4');`,
+        }}
+      />
+      {/* End Google Tag Manager */}
+    </head>
       <body className="font-sans antialiased">
         {/* Skip link — WCAG 2.4.1 */}
         <a

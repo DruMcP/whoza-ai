@@ -219,3 +219,18 @@ SELECT cron.schedule(
   '0 3 * * 0',
   $$ SELECT public.recalculate_call_baselines() $$
 );
+
+-- Schedule call-anomaly hourly during business hours (07:00-19:00 UK)
+-- Note: pg_cron doesn't support hour ranges natively, so we run every hour
+-- and let the edge function itself check if it's within business hours
+SELECT cron.schedule(
+  'call-anomaly-check',
+  '0 * * * *',
+  $$ SELECT net.http_get(
+    url := 'https://ligjstpxqtkurvteyyhw.supabase.co/functions/v1/call-anomaly',
+    headers := jsonb_build_object(
+      'Authorization', 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxpZ2pzdHB4cXRrdXJ2dGV5eWh3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc0NTA4MTksImV4cCI6MjA5MzAyNjgxOX0.ep7ipBwRgh6TmjEw87xJGDXfLRBHRKh1mgDq3_eUHrI',
+      'Content-Type', 'application/json'
+    )
+  ) $$
+);

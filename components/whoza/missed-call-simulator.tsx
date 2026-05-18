@@ -185,7 +185,7 @@ export function MissedCallSimulator({ className = "" }: MissedCallSimulatorProps
                 background: "linear-gradient(135deg, #059669, #10B981)",
               }}
             >
-              Get Katie answering my calls
+              See it in action
             </button>
             <p className="text-[13px] text-gray-500">
               Try Katie free for 7 days · No card required · Works with your existing number

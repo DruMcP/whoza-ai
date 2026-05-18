@@ -34,6 +34,7 @@ const TrilletVoiceWidget = dynamic(
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { ClaireDashboard } from "@/components/whoza/claire-dashboard"
 import { HomepageSchema } from "@/components/whoza/schema-markup"
+import { ExitIntentModal } from "@/components/whoza/exit-intent-modal"
 
 export default function Home() {
   return (
@@ -130,6 +131,7 @@ export default function Home() {
       <Footer />
       <HomepageSchema />
       <FloatingChatWidget />
+      <ExitIntentModal />
     </>
   )
 }

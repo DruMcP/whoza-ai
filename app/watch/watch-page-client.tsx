@@ -396,7 +396,7 @@ export function WatchPageClient() {
               href="/pricing"
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-4 text-lg transition-all hover:scale-105 shadow-xl shadow-[var(--rex-green)]/30"
             >
-              Get Katie Answering My Calls
+              Start free trial
               <ArrowRight className="w-5 h-5" />
             </a>
           </motion.div>

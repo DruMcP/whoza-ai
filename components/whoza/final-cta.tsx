@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { ArrowRight, Phone, BarChart3, Star, Eye, CheckCircle2 } from "lucide-react"
 import { useLocale } from "@/lib/locale-context"
 import { WaitlistModal } from "./waitlist-modal"
+import { PilotSpotCounter } from "./pilot-spot-counter"
 
 const teamMembers = [
   { name: "Katie", icon: Phone, bgClass: "bg-[var(--katie-blue)]/20 border-[var(--katie-blue)]/30", iconClass: "text-[var(--katie-blue)]" },
@@ -99,6 +100,10 @@ export function FinalCTA() {
           })}
         </motion.div>
 
+        <div className="mt-4 flex justify-center">
+          <PilotSpotCounter variant="badge" />
+        </div>
+
         {/* CTAs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -111,7 +116,7 @@ export function FinalCTA() {
             onClick={() => setShowWaitlist(true)}
             className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-6 text-lg rounded-lg transition-all hover:scale-[1.02] shadow-2xl shadow-[var(--rex-green)]/40"
           >
-            Get Katie answering my calls
+            Start your free week
             <ArrowRight className="w-5 h-5 ml-2" />
           </button>
         </motion.div>

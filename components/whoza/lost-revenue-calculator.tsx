@@ -56,6 +56,48 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
   const monthlyLoss = weeklyLoss * 4
   const yearlyLoss = monthlyLoss * 12
 
+  // Email gate state
+  const [email, setEmail] = useState("")
+  const [emailError, setEmailError] = useState("")
+  const [emailSubmitted, setEmailSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  // Check localStorage on mount
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const saved = window.localStorage.getItem("whoza_calc_email")
+      if (saved) {
+        try {
+          const data = JSON.parse(saved)
+          if (data.email && data.timestamp && Date.now() - data.timestamp < 30 * 24 * 60 * 60 * 1000) {
+            setEmail(data.email)
+            setEmailSubmitted(true)
+          }
+        } catch {
+          // ignore
+        }
+      }
+    }
+  }, [])
+
+  const handleEmailSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    setEmailError("")
+    if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setEmailError("Please enter a valid email")
+      return
+    }
+    setIsSubmitting(true)
+    // Store in localStorage
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem("whoza_calc_email", JSON.stringify({ email, timestamp: Date.now() }))
+    }
+    setTimeout(() => {
+      setEmailSubmitted(true)
+      setIsSubmitting(false)
+    }, 600)
+  }
+
   // Animated number states
   const [animatedWeekly, setAnimatedWeekly] = useState(0)
   const [animatedMonthly, setAnimatedMonthly] = useState(0)
@@ -259,26 +301,78 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
                 <h3 className="text-lg font-semibold text-white mb-8">Your Lost Revenue</h3>
                 
                 <div className="flex-1 space-y-6">
+                  {/* Weekly loss — always visible (the hook) */}
                   <ResultCard 
                     label="Weekly Loss"
                     value={animatedWeekly}
                     color="white/60"
                     country={country}
                   />
-                  <ResultCard 
-                    label="Monthly Loss"
-                    value={animatedMonthly}
-                    color="white/80"
-                    highlight
-                    country={country}
-                  />
-                  <ResultCard 
-                    label="Yearly Loss"
-                    value={animatedYearly}
-                    color="red-400"
-                    isYearly
-                    country={country}
-                  />
+
+                  {/* Monthly + Yearly — gated behind email */}
+                  {!emailSubmitted ? (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      className="bg-white/5 rounded-2xl p-5 border border-white/10"
+                    >
+                      <div className="flex items-center gap-2 mb-3">
+                        <Calculator className="w-4 h-4 text-[var(--katie-blue)]" />
+                        <span className="text-sm font-semibold text-white/90">See your monthly & yearly loss</span>
+                      </div>
+                      <p className="text-xs text-white/50 mb-4">
+                        Enter your email to unlock the full breakdown + get a free recovery report.
+                      </p>
+                      <form onSubmit={handleEmailSubmit} className="space-y-2">
+                        <input
+                          type="email"
+                          value={email}
+                          onChange={(e) => { setEmail(e.target.value); setEmailError("") }}
+                          placeholder="e.g. john@smithplumbing.co.uk"
+                          className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/10 text-white text-sm placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-[var(--katie-blue)]"
+                        />
+                        {emailError && (
+                          <p className="text-xs text-red-400">{emailError}</p>
+                        )}
+                        <button
+                          type="submit"
+                          disabled={isSubmitting}
+                          className="w-full py-3 rounded-lg bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/80 text-white font-semibold text-sm transition-colors disabled:opacity-60"
+                        >
+                          {isSubmitting ? "Unlocking..." : "Get my recovery report"}
+                        </button>
+                      </form>
+                      <p className="text-[10px] text-white/30 mt-2 text-center">
+                        No spam. Unsubscribe anytime. We hate cold emails too.
+                      </p>
+                    </motion.div>
+                  ) : (
+                    <>
+                      <ResultCard 
+                        label="Monthly Loss"
+                        value={animatedMonthly}
+                        color="white/80"
+                        highlight
+                        country={country}
+                      />
+                      <ResultCard 
+                        label="Yearly Loss"
+                        value={animatedYearly}
+                        color="red-400"
+                        isYearly
+                        country={country}
+                      />
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-3 text-center"
+                      >
+                        <p className="text-xs text-emerald-400 font-medium">
+                          ✉ Recovery report sent to {email}
+                        </p>
+                      </motion.div>
+                    </>
+                  )}
                 </div>
 
                 <p className="mt-4 text-sm text-red-400 font-semibold text-center">
