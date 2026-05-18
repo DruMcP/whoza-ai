@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   description: "Discover how whoza.ai's AI voice agent Katie answers calls, qualifies leads, and books jobs for UK tradespeople — 24/7.",
   alternates: {
     canonical: "https://whoza.ai/how-it-works",
+    languages: {
+      "x-default": "https://whoza.ai/how-it-works",
+      "en-GB": "https://whoza.ai/how-it-works",
+    },
   },
   robots: {
     index: true,

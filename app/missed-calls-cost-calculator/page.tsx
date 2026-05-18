@@ -27,6 +27,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://whoza.ai/missed-calls-cost-calculator",
+    languages: {
+      "x-default": "https://whoza.ai/missed-calls-cost-calculator",
+      "en-GB": "https://whoza.ai/missed-calls-cost-calculator",
+    },
   },
 }
 

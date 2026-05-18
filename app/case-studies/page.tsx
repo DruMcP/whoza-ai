@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   description: "See how UK tradespeople are winning more jobs with whoza.ai's AI voice agent. Real results, real businesses.",
   alternates: {
     canonical: "https://whoza.ai/case-studies",
+    languages: {
+      "x-default": "https://whoza.ai/case-studies",
+      "en-GB": "https://whoza.ai/case-studies",
+    },
   },
   robots: {
     index: true,

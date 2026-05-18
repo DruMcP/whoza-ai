@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   description: "Get in touch with the whoza.ai team. WhatsApp, email, or phone — we're here to help UK tradespeople never miss a call again.",
   alternates: {
     canonical: "https://whoza.ai/contact",
+    languages: {
+      "x-default": "https://whoza.ai/contact",
+      "en-GB": "https://whoza.ai/contact",
+    },
   },
   robots: {
     index: true,

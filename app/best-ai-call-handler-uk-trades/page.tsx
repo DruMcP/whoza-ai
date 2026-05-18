@@ -26,6 +26,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://whoza.ai/best-ai-call-handler-uk-trades",
+    languages: {
+      "x-default": "https://whoza.ai/best-ai-call-handler-uk-trades",
+      "en-GB": "https://whoza.ai/best-ai-call-handler-uk-trades",
+    },
   },
 }
 

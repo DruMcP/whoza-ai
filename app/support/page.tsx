@@ -28,6 +28,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://whoza.ai/support",
+    languages: {
+      "x-default": "https://whoza.ai/support",
+      "en-GB": "https://whoza.ai/support",
+    },
   },
   robots: {
     index: true,
