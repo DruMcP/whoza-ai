@@ -60,6 +60,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: citySpecificDescription,
     alternates: {
       canonical: `https://whoza.ai/${location}`,
+      languages: {
+        'x-default': `https://whoza.ai/${location}`,
+        'en-GB': locationData.country === 'uk' ? `https://whoza.ai/${location}` : undefined,
+        'en-US': locationData.country === 'us' ? `https://whoza.ai/${location}` : undefined,
+      },
     },
     openGraph: {
       type: "website",

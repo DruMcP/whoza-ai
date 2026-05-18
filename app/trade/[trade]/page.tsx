@@ -57,6 +57,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: tradeData.metaDescription,
     alternates: {
       canonical: `https://whoza.ai/trade/${tradeData.slug}`,
+      languages: {
+        'x-default': `https://whoza.ai/trade/${tradeData.slug}`,
+        'en-GB': `https://whoza.ai/trade/${tradeData.slug}`,
+      },
     },
     openGraph: {
       type: "website",
