@@ -1,254 +1,227 @@
-"use client"
 
-import { useState, useEffect, useCallback } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { X, ArrowRight, Loader2, CheckCircle2, Mail } from "lucide-react"
+/**
+ * Whoza.ai — AI Voice Agents for UK Tradespeople
+ * Exit Intent Modal Component
+ * 
+ * Triggers on mouseleave (desktop) or 60s+70% scroll (mobile)
+ * Offers lead magnet: "3 ways to never miss a job again"
+ */
 
-const STORAGE_KEY = "whoza_exit_intent"
-const WAITLIST_KEY = "whoza_waitlist_submitted"
-const COOLDOWN_DAYS = 7
+"use client";
 
-function shouldShow(): boolean {
-  if (typeof window === "undefined") return false
+import React, { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { X, Mail, Download, Phone, Clock, Calendar } from "lucide-react";
 
-  // Don't show if already on waitlist
-  const waitlisted = window.localStorage.getItem(WAITLIST_KEY)
-  if (waitlisted === "true") return false
-
-  // Check cooldown
-  const stored = window.localStorage.getItem(STORAGE_KEY)
-  if (stored) {
-    try {
-      const data = JSON.parse(stored)
-      if (data.dismissedAt) {
-        const daysSince = (Date.now() - data.dismissedAt) / (1000 * 60 * 60 * 24)
-        if (daysSince < COOLDOWN_DAYS) return false
-      }
-      if (data.submittedAt) {
-        const daysSince = (Date.now() - data.submittedAt) / (1000 * 60 * 60 * 24)
-        if (daysSince < COOLDOWN_DAYS) return false
-      }
-    } catch {
-      // ignore
-    }
-  }
-
-  return true
+interface ExitIntentModalProps {
+  onClose?: () => void;
 }
 
-function markDismissed() {
-  if (typeof window === "undefined") return
-  window.localStorage.setItem(STORAGE_KEY, JSON.stringify({ dismissedAt: Date.now() }))
-}
+export function ExitIntentModal({ onClose }: ExitIntentModalProps) {
+  const [isVisible, setIsVisible] = useState(false);
+  const [hasTriggered, setHasTriggered] = useState(false);
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+  const [scrollDepth, setScrollDepth] = useState(0);
 
-function markSubmitted() {
-  if (typeof window === "undefined") return
-  window.localStorage.setItem(STORAGE_KEY, JSON.stringify({ submittedAt: Date.now() }))
-}
-
-export function ExitIntentModal() {
-  const [visible, setVisible] = useState(false)
-  const [email, setEmail] = useState("")
-  const [error, setError] = useState("")
-  const [submitted, setSubmitted] = useState(false)
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [scrollDepth, setScrollDepth] = useState(0)
-
-  // Desktop: mouseleave toward top of viewport
+  // Track scroll depth for mobile trigger
   useEffect(() => {
-    if (!shouldShow()) return
+    const handleScroll = () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const depth = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      setScrollDepth(depth);
+    };
 
-    const handleMouseLeave = (e: MouseEvent) => {
-      if (e.clientY < 50 && !visible && shouldShow()) {
-        setVisible(true)
-      }
-    }
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-    document.addEventListener("mouseleave", handleMouseLeave)
-    return () => document.removeEventListener("mouseleave", handleMouseLeave)
-  }, [visible])
-
-  // Mobile: 60s + 70% scroll
+  // Mobile trigger: 60s + 70% scroll
   useEffect(() => {
-    if (!shouldShow()) return
-    const isMobile = window.innerWidth < 768
-    if (!isMobile) return
+    const isMobile = window.innerWidth < 768;
+    if (!isMobile || hasTriggered) return;
 
-    let timer: ReturnType<typeof setTimeout> | null = null
-    let scrollListener: (() => void) | null = null
-
-    const checkTrigger = () => {
-      if (scrollDepth >= 0.7 && !visible && shouldShow()) {
-        setVisible(true)
-        if (timer) clearTimeout(timer)
-        if (scrollListener) window.removeEventListener("scroll", scrollListener)
+    const timer = setTimeout(() => {
+      if (scrollDepth >= 70 && !hasTriggered) {
+        setIsVisible(true);
+        setHasTriggered(true);
       }
-    }
+    }, 60000); // 60 seconds
 
-    timer = setTimeout(() => {
-      scrollListener = () => {
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight
-        if (docHeight > 0) {
-          setScrollDepth(window.scrollY / docHeight)
-        }
+    return () => clearTimeout(timer);
+  }, [scrollDepth, hasTriggered]);
+
+  // Desktop trigger: mouseleave
+  const handleMouseLeave = useCallback(
+    (e: MouseEvent) => {
+      if (hasTriggered) return;
+      // Only trigger when mouse leaves the top of the page
+      if (e.clientY < 10) {
+        setIsVisible(true);
+        setHasTriggered(true);
       }
-      window.addEventListener("scroll", scrollListener)
-      // Check immediately in case already scrolled
-      scrollListener()
-    }, 60000)
+    },
+    [hasTriggered]
+  );
 
-    return () => {
-      if (timer) clearTimeout(timer)
-      if (scrollListener) window.removeEventListener("scroll", scrollListener)
-    }
-  }, [visible, scrollDepth])
+  useEffect(() => {
+    document.addEventListener("mouseleave", handleMouseLeave);
+    return () => document.removeEventListener("mouseleave", handleMouseLeave);
+  }, [handleMouseLeave]);
 
-  const handleClose = useCallback(() => {
-    setVisible(false)
-    markDismissed()
-  }, [])
+  // Don't show if already dismissed
+  useEffect(() => {
+    const dismissed = sessionStorage.getItem("exit-intent-dismissed");
+    if (dismissed) setHasTriggered(true);
+  }, []);
+
+  const handleClose = () => {
+    setIsVisible(false);
+    sessionStorage.setItem("exit-intent-dismissed", "true");
+    onClose?.();
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setError("")
-    if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setError("Please enter a valid email")
-      return
+    e.preventDefault();
+    if (!email || !email.includes("@")) return;
+
+    // Track in GA
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag("event", "exit_intent_lead", {
+        event_category: "engagement",
+        event_label: "lead_magnet_download",
+      });
     }
 
-    setIsSubmitting(true)
-    // Store in localStorage (same key as calculator for unified lead tracking)
-    if (typeof window !== "undefined") {
-      window.localStorage.setItem("whoza_calc_email", JSON.stringify({ email, timestamp: Date.now() }))
-    }
-    await new Promise((r) => setTimeout(r, 800))
-    markSubmitted()
-    setSubmitted(true)
-    setIsSubmitting(false)
-  }
-
-  if (!visible) return null
+    setSubmitted(true);
+    sessionStorage.setItem("exit-intent-dismissed", "true");
+  };
 
   return (
     <AnimatePresence>
-      {visible && (
+      {isVisible && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/70 backdrop-blur"
+          className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
           onClick={handleClose}
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="exit-intent-title"
         >
           <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            transition={{ duration: 0.25, ease: [0.34, 1.56, 0.64, 1] }}
-            className="relative w-full max-w-[420px] bg-[#1E2229] rounded-2xl p-8 shadow-2xl border border-white/[0.06]"
+            initial={{ scale: 0.9, opacity: 0, y: 20 }}
+            animate={{ scale: 1, opacity: 1, y: 0 }}
+            exit={{ scale: 0.9, opacity: 0, y: 20 }}
+            transition={{ type: "spring", damping: 25, stiffness: 300 }}
+            className="relative w-full max-w-lg bg-[#0F172A] border border-[#334155] rounded-2xl shadow-2xl overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}
             <button
               onClick={handleClose}
-              className="absolute top-4 right-4 p-2 rounded-lg transition-colors hover:bg-white/10 text-slate-400 min-h-[48px] min-w-[48px]"
-              aria-label="Close modal"
+              className="absolute top-4 right-4 p-2 text-slate-400 hover:text-white transition-colors z-10"
             >
               <X className="w-5 h-5" />
             </button>
 
-            {submitted ? (
-              <div className="text-center py-6">
-                <CheckCircle2 className="w-12 h-12 text-emerald-400 mx-auto mb-4" />
-                <h2 className="text-2xl font-bold text-white font-sans">You&apos;re all set!</h2>
-                <p className="mt-3 text-slate-400 text-sm leading-relaxed">
-                  Check your inbox in the next few minutes for your free guide.
-                </p>
-                <p className="mt-4 text-slate-500 text-sm">
-                  Want Katie answering your calls?{" "}
-                  <a href="#final-cta" onClick={handleClose} className="text-emerald-400 hover:underline">
-                    Start your free trial →
-                  </a>
-                </p>
-                <button
-                  onClick={handleClose}
-                  className="mt-6 w-full py-3 rounded-xl bg-white/10 text-white font-semibold hover:bg-white/20 transition-colors"
-                >
-                  Close
-                </button>
-              </div>
-            ) : (
-              <>
-                {/* Lead magnet header */}
+            {!submitted ? (
+              <div className="p-6 md:p-8">
+                {/* Header */}
                 <div className="mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-[var(--katie-blue)]/10 flex items-center justify-center mb-4">
-                    <Mail className="w-6 h-6 text-[var(--katie-blue)]" />
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-500/10 text-amber-400 text-sm font-medium rounded-full mb-4">
+                    <Clock className="w-4 h-4" />
+                    <span>Before you go...</span>
                   </div>
-                  <h2
-                    id="exit-intent-title"
-                    className="text-xl font-bold text-white font-sans pr-8"
-                  >
-                    Get 3 ways to never miss a job again
+                  <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                    Missing calls = missing money
                   </h2>
-                  <p className="mt-2 text-sm text-slate-400 font-sans">
-                    A 2-minute read with tactics you can use today — even without Whoza.
+                  <p className="text-slate-400 text-base">
+                    Download the free guide: <strong className="text-white">3 Ways to Never Miss a Job Again</strong>
                   </p>
                 </div>
 
+                {/* Benefits */}
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Phone className="w-4 h-4 text-emerald-400" />
+                    </div>
+                    <div>
+                      <p className="text-white font-medium text-sm">The &quot;Voicemail Alternative&quot; that converts 3x more callers</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Calendar className="w-4 h-4 text-emerald-400" />
+                    </div>
+                    <div>
+                      <p className="text-white font-medium text-sm">How to qualify enquiries without answering the phone</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Download className="w-4 h-4 text-emerald-400" />
+                    </div>
+                    <div>
+                      <p className="text-white font-medium text-sm">The 2-tap system that turns WhatsApp into a job board</p>
+                    </div>
+                  </div>
+                </div>
+
                 {/* Form */}
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <label htmlFor="exit-email" className="block text-sm font-medium mb-1 text-gray-300">
-                      Email address
-                    </label>
+                <form onSubmit={handleSubmit} className="space-y-3">
+                  <div className="relative">
+                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
                     <input
-                      id="exit-email"
                       type="email"
                       value={email}
-                      onChange={(e) => { setEmail(e.target.value); setError("") }}
-                      className="w-full px-4 py-3 rounded-lg outline-none transition-colors focus:ring-2 focus:ring-[var(--katie-blue)] bg-[#111418] text-white text-[15px] font-sans border border-white/[0.06]"
-                      placeholder="e.g. john@smithplumbing.co.uk"
-                      autoFocus
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Enter your email"
+                      className="w-full pl-10 pr-4 py-3 bg-[#1E293B] border border-[#334155] rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#2DD4BF] focus:border-transparent"
+                      required
                     />
-                    {error && <p className="text-xs text-red-500 mt-1">{error}</p>}
                   </div>
-
                   <button
                     type="submit"
-                    disabled={isSubmitting}
-                    className="w-full flex items-center justify-center gap-2 font-semibold text-white transition-all hover:scale-[1.01] active:scale-[0.99] disabled:opacity-70"
-                    style={{
-                      background: "linear-gradient(135deg, #059669, #10B981)",
-                      height: 52,
-                      borderRadius: 12,
-                      fontSize: 15,
-                      fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
-                    }}
+                    className="w-full py-3 px-4 bg-[#2DD4BF] hover:bg-[#14B8A6] text-[#0F172A] font-semibold rounded-xl transition-colors flex items-center justify-center gap-2"
                   >
-                    {isSubmitting ? (
-                      <>
-                        <Loader2 className="w-5 h-5 animate-spin" />
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        Send me the free guide
-                        <ArrowRight className="w-5 h-5" />
-                      </>
-                    )}
+                    <Download className="w-4 h-4" />
+                    Send me the free guide
                   </button>
-
-                  <p className="text-[11px] text-center text-slate-500 mt-2">
-                    No spam. Unsubscribe anytime. We hate cold emails too.
-                  </p>
                 </form>
-              </>
+
+                <p className="text-center text-slate-500 text-xs mt-4">
+                  No spam. Unsubscribe anytime. Used by 200+ UK tradespeople.
+                </p>
+              </div>
+            ) : (
+              <div className="p-6 md:p-8 text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-emerald-500/10 flex items-center justify-center">
+                  <Download className="w-8 h-8 text-emerald-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Check your inbox!</h3>
+                <p className="text-slate-400 mb-4">
+                  We&apos;ve sent <strong className="text-white">3 Ways to Never Miss a Job Again</strong> to {email}
+                </p>
+                <p className="text-sm text-slate-500 mb-6">
+                  Meanwhile, see how Katie captures every missed call:
+                </p>
+                <a
+                  href="#final-cta"
+                  onClick={handleClose}
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#2DD4BF] hover:bg-[#14B8A6] text-[#0F172A] font-semibold rounded-xl transition-colors"
+                >
+                  <Phone className="w-4 h-4" />
+                  See Katie in action
+                </a>
+              </div>
             )}
+
+            {/* Bottom accent */}
+            <div className="h-1 bg-[#2DD4BF]" />
           </motion.div>
         </motion.div>
       )}
     </AnimatePresence>
-  )
+  );
 }
