@@ -52,16 +52,17 @@ export const trades: TradeData[] = [
       { step: 4, title: "Accept, callback or decline", description: "Tap to accept the job, schedule a callback, or decline if you're fully booked — customer gets an instant SMS update" }
     ],
     faqs: [
-      { question: "How much does AI call handling cost for a plumber?", answer: "Whoza starts at £59/month + VAT for the Starter plan. That's less than the cost of one missed emergency call. Every plan includes unlimited AI calls, WhatsApp delivery, and 7-day free trial. Overage minutes are £0.26/minute." },
-      { question: "Can Katie handle emergency plumbing calls at 2am?", answer: "Yes. Katie answers 24/7, including nights, weekends, and bank holidays. She identifies emergency calls (burst pipes, no heating, gas leaks) and marks them as high urgency in your WhatsApp alert so you see them first." },
-      { question: "What information does Katie collect from plumbing customers?", answer: "Katie collects: full name, phone number, postcode, property type (house/flat/commercial), problem description, urgency level (routine/urgent/emergency), preferred appointment time, and how they found you." },
-      { question: "Will customers know they're talking to AI?", answer: "Yes — Katie introduces herself as your AI assistant. Customers appreciate the honesty and the instant response. Most prefer a friendly AI that answers immediately over voicemail or a ringing phone." },
-      { question: "How do I get plumbing reviews after completing a job?", answer: "Claire — our review collection agent — automatically sends a WhatsApp message to every customer whose job you mark as complete. She asks for a Google review, makes it one-tap easy, and follows up politely if needed." }
+      { question: "How much does AI call handling cost for a plumber?", answer: "Whoza starts at £59/month + VAT for the Starter plan. For context:\n• One missed emergency plumbing call averages £180–£340 in lost revenue\n• A plumber missing just 5 calls per week loses approximately £43,200/year\n• The Starter plan pays for itself with one recovered job per month\nEvery plan includes unlimited AI calls, WhatsApp delivery, and a 7-day free trial. Overage minutes are £0.26/minute." },
+      { question: "What percentage of plumbing calls go unanswered?", answer: "Industry data shows 74% of contractor calls go completely unanswered (NextPhone 2026). For plumbers specifically:\n• 62% of calls to small trade businesses are missed during work hours\n• 85% of callers who hit voicemail hang up without leaving a message\n• 78% of customers hire whichever plumber responds first\n• After-hours emergency calls have the highest abandonment rate — yet average £340 per call" },
+      { question: "Can Katie handle emergency plumbing calls at 2am?", answer: "Yes. Katie answers 24/7 including nights, weekends, and bank holidays. For plumbing emergencies she:\n• Identifies emergency keywords instantly (burst pipe, no heating, gas leak, flooding)\n• Marks the alert as 'URGENT' in your WhatsApp so it appears first\n• Captures postcode, property type, and tenant/landlord status\n• Sends the full brief within 30 seconds of the call ending\nEmergency call-outs in the UK average £180–£340 — making after-hours capture one of the highest-ROI features for plumbers." },
+      { question: "What information does Katie collect from plumbing customers?", answer: "Katie collects a complete job brief in under 45 seconds:\n• Full name and phone number\n• Postcode and property type (house/flat/commercial)\n• Problem description (leak, boiler, drain, heating, etc.)\n• Urgency level (routine / urgent / emergency)\n• Preferred appointment time\n• How they found you (Google, recommendation, etc.)\n• Budget signals (if mentioned)\nAll details appear in one WhatsApp message — no more playing voicemail tag or calling back blind." },
+      { question: "Will customers know they're talking to AI?", answer: "Yes — Katie introduces herself as your AI assistant within the first sentence. This transparency actually builds trust:\n• 85% of callers who reach voicemail hang up and call the next plumber (Housecall Pro 2025)\n• Customers consistently prefer instant AI response over voicemail or ringing out\n• Katie uses natural conversation — no robotic menus or 'press 1' prompts\n• She understands trade terms: 'combi boiler,' 'macerator,' 'stopcock,' 'powerflush'\nThe result: customers feel heard, you get qualified leads, and nothing falls through the cracks." },
+      { question: "How do I get plumbing reviews after completing a job?", answer: "Claire — our review collection agent — handles this automatically:\n1. Mark the job complete in your dashboard (or reply 'done' in WhatsApp)\n2. Claire sends a WhatsApp message to the customer within 24 hours\n3. Customer taps one button to leave a Google review — no searching, no links to copy\n4. If no review after 3 days, Claire follows up politely once\nOne plumber using Claire generated 47 Google reviews in 3 months, moving from 3.2 to 4.8 stars. Reviews include before/after photos automatically pulled from your job photos." }
     ],
     stats: [
-      { label: "Average plumbing call-out", value: "£180" },
-      { label: "Average emergency call value", value: "£340" },
-      { label: "Setup time", value: "30 min" }
+      { label: "Plumbing calls go unanswered", value: "74%" },
+      { label: "Average call-out value", value: "£180–£340" },
+      { label: "Yearly loss (5 missed/wk)", value: "£43,200" }
     ],
     relatedLocations: ["london", "manchester", "birmingham", "glasgow", "bristol", "liverpool"]
   },
@@ -92,16 +93,17 @@ export const trades: TradeData[] = [
       { step: 4, title: "Accept and book, or queue for tomorrow", description: "Tap to accept, schedule a callback with time preference, or queue for your next available slot — customer gets confirmation instantly" }
     ],
     faqs: [
-      { question: "Can Katie handle emergency electrical calls?", answer: "Yes. Katie is trained to identify electrical emergencies (no power, burning smell, sparking, shock risk) and marks them as highest priority. You'll get an immediate WhatsApp alert with an emergency tag so you can respond within minutes." },
-      { question: "How does AI call handling work for EICR and landlord certificates?", answer: "Katie recognises landlord and letting agent enquiries by asking the right questions. She captures property portfolio size, certificate type (EICR, PAT, fire alarm), number of properties, and urgency. These are tagged as 'landlord' in your dashboard for fast bulk follow-up." },
-      { question: "Can customers book appointments directly?", answer: "Yes. Katie can check your calendar availability and offer specific time slots. When a customer confirms, the appointment is saved to your dashboard and both parties receive confirmation messages." },
-      { question: "What if I need to call the customer back first?", answer: "Tap 'Call Back' in your WhatsApp alert. Katie sends the customer an SMS with your estimated callback time. When you're ready, the customer's number and full job details are one tap away." },
+      { question: "Can Katie handle emergency electrical calls?", answer: "Yes. Katie is trained to identify electrical emergencies instantly:\n• No power / partial power loss\n• Burning smell or smoke from outlets\n• Sparking sockets or switches\n• Electric shock risk\n• Tripped RCD that won't reset\nEmergency calls are tagged 'URGENT' in your WhatsApp and pushed to the top of your alerts. UK emergency electricians charge £80–£200/hour + VAT for out-of-hours call-outs, making every captured emergency call highly valuable." },
+      { question: "How does AI call handling work for EICR and landlord certificates?", answer: "Katie recognises landlord and letting agent enquiries by asking the right qualification questions:\n• Certificate type: EICR, PAT testing, fire alarm inspection, or EV charger install\n• Property portfolio size (single property vs. multiple)\n• Number of circuits / bedrooms\n• Certificate deadline (landlords need EICRs every 5 years)\n• Tenant access preferences\nThese are tagged 'landlord' in your dashboard for fast bulk follow-up. EICR pricing averages £150–£350 depending on property size, and landlords represent repeat, predictable revenue." },
+      { question: "What do electricians charge per hour in 2026?", answer: "UK electrician rates in 2026 vary by location and job type:\n• Standard domestic rate: £45–£70/hour + VAT\n• Day rate: £350–£450/day + VAT\n• Emergency / out-of-hours: £80–£200/hour + VAT\n• EICR certificate: £150–£350 depending on property size\n• Consumer unit replacement: £350–£900 + VAT\nLondon rates run 20–40% higher than national averages. Katie captures budget signals from callers so you can prioritise high-value jobs and avoid unqualified site visits." },
+      { question: "Can customers book appointments directly?", answer: "Yes. Katie can check your calendar availability and offer specific time slots. When a customer confirms:\n1. The appointment saves to your dashboard\n2. Both parties receive confirmation messages\n3. A reminder is sent 24 hours before\n4. Claire follows up for a review after completion\nFor EICRs and multi-property landlords, Katie can book bulk inspection slots and capture all property addresses in one call." },
+      { question: "What if I need to call the customer back first?", answer: "Tap 'Call Back' in your WhatsApp alert. Katie automatically:\n• Sends the customer an SMS with your estimated callback time\n• Includes your business name so they recognise the number\n• Notes any specific questions they had (e.g., 'wants to discuss EV charger grants')\n• Flags urgency if they mentioned a safety issue\nYour dashboard shows every pending callback with customer details and call context — no more scribbled notes or forgotten follow-ups." },
       { question: "Is there a setup fee for electricians?", answer: "No setup fee. The £59/month Starter plan includes everything: AI answering, WhatsApp alerts, enquiry dashboard, and review collection. You can be live and taking calls within 30 minutes of signup." }
     ],
     stats: [
-      { label: "Electrical calls go unanswered", value: "61%" },
-      { label: "Average EICR lead value", value: "£180" },
-      { label: "Emergency call response time", value: "3 min" }
+      { label: "Electrical calls unanswered", value: "74%" },
+      { label: "Average EICR lead value", value: "£150–£350" },
+      { label: "Emergency call-out rate", value: "£80–£200/hr" }
     ],
     relatedLocations: ["london", "manchester", "birmingham", "leeds", "glasgow", "bristol", "liverpool", "edinburgh"]
   },
@@ -139,9 +141,9 @@ export const trades: TradeData[] = [
       { question: "What's the ROI for builders using AI call handling?", answer: "One missed £40k extension pays for 5+ years of Whoza. Builders using Katie report capturing 40% more enquiries and reducing unqualified site visits by 60%. Average ROI is 12x in the first quarter." }
     ],
     stats: [
-      { label: "Builder enquiries missed monthly", value: "54%" },
-      { label: "Average extension project value", value: "£45k" },
-      { label: "Unqualified site visits saved", value: "60%" }
+      { label: "Builder enquiries missed monthly", value: "68%" },
+      { label: "Average extension value", value: "£40–£60k" },
+      { label: "Unqualified site visit cost", value: "£200+" }
     ],
     relatedLocations: ["london", "manchester", "birmingham", "leeds", "glasgow", "bristol", "liverpool", "edinburgh"]
   },
@@ -180,7 +182,7 @@ export const trades: TradeData[] = [
     ],
     stats: [
       { label: "Roofing calls missed in storms", value: "73%" },
-      { label: "Average emergency repair value", value: "£320" },
+      { label: "Emergency leak repair value", value: "£200–£400" },
       { label: "Full re-roof average value", value: "£14k" }
     ],
     relatedLocations: ["manchester", "birmingham", "leeds", "glasgow", "liverpool", "edinburgh"]
@@ -219,9 +221,9 @@ export const trades: TradeData[] = [
       { question: "How do I convert landscaping enquiries into booked jobs?", answer: "Tap 'Accept' to move to design consultation booking. Katie checks your calendar and offers available slots. For budget-conscious customers, tap 'Call Back' to discuss options. After every completed project, Claire automatically requests a Google review to build your local reputation." }
     ],
     stats: [
-      { label: "Garden enquiries missed in spring", value: "58%" },
-      { label: "Average redesign project value", value: "£18k" },
-      { label: "Commercial contract value", value: "£8k/yr" }
+      { label: "Landscaping calls missed", value: "58%" },
+      { label: "Garden redesign avg value", value: "£15–£25k" },
+      { label: "Commercial contract avg", value: "£8k/yr" }
     ],
     relatedLocations: ["london", "manchester", "birmingham", "leeds", "glasgow", "bristol", "liverpool", "edinburgh"]
   },
@@ -259,9 +261,9 @@ export const trades: TradeData[] = [
       { question: "How does the 7-day free trial work for HVAC companies?", answer: "Sign up, choose a UK number or forward your existing one, and Katie starts answering immediately. Full access to all features: AI answering, WhatsApp alerts, enquiry dashboard, and review collection. Cancel anytime before day 14 — no charge. Most HVAC companies see ROI within the first week." }
     ],
     stats: [
-      { label: "HVAC calls missed in winter", value: "67%" },
-      { label: "Average emergency repair", value: "£280" },
-      { label: "Heat pump enquiry value", value: "£8k" }
+      { label: "HVAC calls missed (winter)", value: "74%" },
+      { label: "Boiler breakdown avg value", value: "£280" },
+      { label: "Heat pump install value", value: "£8–£15k" }
     ],
     relatedLocations: ["london", "manchester", "birmingham", "leeds", "glasgow", "bristol"]
   },
@@ -299,9 +301,9 @@ export const trades: TradeData[] = [
       { question: "How does the 7-day free trial work for heating engineers?", answer: "Sign up, choose a UK number or forward your existing one, and Katie starts answering immediately. Full access to all features: AI answering, WhatsApp alerts, enquiry dashboard, and review collection. Cancel anytime before day 14 — no charge. Most heating engineers see ROI within the first week." }
     ],
     stats: [
-      { label: "Heating calls missed in winter", value: "67%" },
-      { label: "Average emergency repair", value: "£280" },
-      { label: "Boiler install enquiry value", value: "£3.5k" }
+      { label: "Heating calls missed (winter)", value: "74%" },
+      { label: "Boiler breakdown avg value", value: "£280" },
+      { label: "Boiler install avg value", value: "£3.5k" }
     ],
     relatedLocations: ["london", "manchester", "birmingham", "leeds", "glasgow", "bristol"]
   },
@@ -339,8 +341,8 @@ export const trades: TradeData[] = [
       { question: "How do I get reviews from painting customers?", answer: "After you mark a painting job as complete in your dashboard, Claire automatically sends a WhatsApp review request. Include before/after photos in your Google Business Profile to maximise review conversion. One decorator generated 47 reviews in 3 months using Claire." }
     ],
     stats: [
-      { label: "Painting calls missed weekly", value: "52%" },
-      { label: "Average 3-room interior value", value: "£2.4k" },
+      { label: "Painting calls missed", value: "62%" },
+      { label: "3-room interior avg value", value: "£2.4k" },
       { label: "Commercial repaint contract", value: "£15k" }
     ],
     relatedLocations: ["london", "manchester", "birmingham", "leeds", "glasgow", "bristol", "liverpool", "edinburgh"]
