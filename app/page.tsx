@@ -34,6 +34,7 @@ const TrilletVoiceWidget = dynamic(
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { ClaireDashboard } from "@/components/whoza/claire-dashboard"
 import { HomepageSchema } from "@/components/whoza/schema-markup"
+import { BlogSection } from "@/components/whoza/blog-section"
 import { ExitIntentModal } from "@/components/whoza/exit-intent-modal"
 
 export default function Home() {
@@ -109,6 +110,10 @@ export default function Home() {
         <div className="section-divider" />
         <Testimonials />
         <GoogleReviews />
+
+        {/* BLOG - Content + SEO */}
+        <div className="section-divider" />
+        <BlogSection />
 
         {/* WHY US - Comparison */}
         <div className="section-divider" />
