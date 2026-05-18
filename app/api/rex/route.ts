@@ -2,13 +2,18 @@ import { NextRequest, NextResponse } from "next/server"
 import { createClient } from "@supabase/supabase-js"
 import { RexDecisionEngine } from "@/lib/rex/rexDecisionEngine"
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-)
+function getSupabase() {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY
+  if (!url || !key) {
+    throw new Error("Supabase credentials not configured")
+  }
+  return createClient(url, key)
+}
 
 export async function POST(req: NextRequest) {
   try {
+    const supabase = getSupabase()
     const { action, business_id, user_id } = await req.json()
 
     if (!business_id || !user_id) {
@@ -48,6 +53,7 @@ export async function POST(req: NextRequest) {
 
 export async function GET(req: NextRequest) {
   try {
+    const supabase = getSupabase()
     const { searchParams } = new URL(req.url)
     const business_id = searchParams.get("business_id")
 
@@ -55,7 +61,6 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ error: "Missing business_id" }, { status: 400 })
     }
 
-    // Get latest evaluation
     const { data: evaluation } = await supabase
       .from("rex_ece_evaluations")
       .select("*")
@@ -64,7 +69,6 @@ export async function GET(req: NextRequest) {
       .limit(1)
       .maybeSingle()
 
-    // Get active recommendations
     const { data: recommendations } = await supabase
       .from("rex_recommendations")
       .select("*")
