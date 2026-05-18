@@ -21,9 +21,6 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  verification: {
-    google: 'G-VCQND9WPW9',
-  },
   metadataBase: new URL('https://whoza.ai'),
   title: 'Whoza.ai — AI Voice Agents for UK Tradespeople',
   description: 'AI voice agents Katie & Mark answer your trade business calls 24/7. Claire collects reviews, Rex tracks competitors. Plans from £59/month. 7-day free trial.',
@@ -110,9 +107,30 @@ export default function RootLayout({
           __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WBCCZVB4');`,
         }}
       />
+      {/* Google Analytics 4 */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-VCQND9WPW9"
+        strategy="afterInteractive"
+      />
+      <Script
+        id="ga4-script"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-VCQND9WPW9');`,
+        }}
+      />
       {/* End Google Tag Manager */}
     </head>
       <body className="font-sans antialiased">
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-WBCCZVB4"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         {/* Skip link — WCAG 2.4.1 */}
         <a
           href="#main-content"
