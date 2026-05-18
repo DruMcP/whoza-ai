@@ -28,6 +28,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://whoza.ai/vs-trade-receptionist",
+    languages: {
+      'x-default': "https://whoza.ai/vs-trade-receptionist",
+      'en-GB': "https://whoza.ai/vs-trade-receptionist",
+    },
   },
 }
 

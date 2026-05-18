@@ -29,6 +29,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://whoza.ai/pricing",
+    languages: {
+      'x-default': "https://whoza.ai/pricing",
+      'en-GB': "https://whoza.ai/pricing",
+    },
   },
 }
 

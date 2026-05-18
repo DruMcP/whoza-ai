@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   description: "AI voice agent insights, trade business tips, and strategies to help UK tradespeople capture more leads and book more jobs.",
   alternates: {
     canonical: "https://whoza.ai/blog",
+    languages: {
+      'x-default': "https://whoza.ai/blog",
+      'en-GB': "https://whoza.ai/blog",
+    },
   },
   robots: {
     index: true,

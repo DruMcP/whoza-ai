@@ -26,6 +26,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://whoza.ai/ai-vs-virtual-receptionist",
+    languages: {
+      'x-default': "https://whoza.ai/ai-vs-virtual-receptionist",
+      'en-GB': "https://whoza.ai/ai-vs-virtual-receptionist",
+    },
   },
 }
 
