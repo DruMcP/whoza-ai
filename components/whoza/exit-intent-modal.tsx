@@ -133,10 +133,10 @@ export function ExitIntentModal({ onClose }: ExitIntentModalProps) {
                     <span>Before you go...</span>
                   </div>
                   <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                    Missing calls = missing money
+                    Not ready to start?
                   </h2>
                   <p className="text-slate-400 text-base">
-                    Download the free guide: <strong className="text-white">3 Ways to Never Miss a Job Again</strong>
+                    Download the free guide: <strong className="text-white">5 Voicemail Scripts That Win Customers</strong>
                   </p>
                 </div>
 
@@ -147,7 +147,7 @@ export function ExitIntentModal({ onClose }: ExitIntentModalProps) {
                       <Phone className="w-4 h-4 text-emerald-400" />
                     </div>
                     <div>
-                      <p className="text-white font-medium text-sm">The &quot;Voicemail Alternative&quot; that converts 3x more callers</p>
+                      <p className="text-white font-medium text-sm">The professional script that converts 3x more callers into bookings</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -155,7 +155,7 @@ export function ExitIntentModal({ onClose }: ExitIntentModalProps) {
                       <Calendar className="w-4 h-4 text-emerald-400" />
                     </div>
                     <div>
-                      <p className="text-white font-medium text-sm">How to qualify enquiries without answering the phone</p>
+                      <p className="text-white font-medium text-sm">The urgency script for emergency calls that stops customers shopping around</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -163,7 +163,7 @@ export function ExitIntentModal({ onClose }: ExitIntentModalProps) {
                       <Download className="w-4 h-4 text-emerald-400" />
                     </div>
                     <div>
-                      <p className="text-white font-medium text-sm">The 2-tap system that turns WhatsApp into a job board</p>
+                      <p className="text-white font-medium text-sm">The follow-up script that turns missed calls into confirmed jobs within 24 hours</p>
                     </div>
                   </div>
                 </div>
