@@ -13,6 +13,21 @@
 # Also removed trailing slash normalization — handled by Next.js Netlify plugin
 
 [[redirects]]
+  from = "/terms-of-service"
+  to = "/terms"
+  status = 301
+
+[[redirects]]
+  from = "/fair-use-policy"
+  to = "/fair-use"
+  status = 301
+
+[[redirects]]
+  from = "/tools/hourly-rate-checker"
+  to = "/tools/rate-checker"
+  status = 301
+
+[[redirects]]
   from = "/roadmap"
   to = "/"
   status = 301

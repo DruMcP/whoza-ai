@@ -318,10 +318,10 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
                     >
                       <div className="flex items-center gap-2 mb-3">
                         <Calculator className="w-4 h-4 text-[var(--katie-blue)]" />
-                        <span className="text-sm font-semibold text-white/90">See your monthly & yearly loss</span>
+                        <span className="text-sm font-semibold text-white/90">Get your full 12-month breakdown</span>
                       </div>
                       <p className="text-xs text-white/50 mb-4">
-                        Enter your email to unlock the full breakdown + get a free recovery report.
+                        Enter your email to unlock monthly &amp; yearly loss + receive a free recovery report with actionable steps.
                       </p>
                       <form onSubmit={handleEmailSubmit} className="space-y-2">
                         <input
