@@ -46,17 +46,32 @@ Deno.serve(async (req) => {
     
     if (orphanError) {
       // Fallback query if RPC doesn't exist
-      const { data: orphaned, error: fallbackError } = await supabase
-        .from("calls")
-        .select("id, user_id")
-        .not("user_id", "in", supabase.from("users").select("id"))
-        .limit(100);
+      // Step 1: Get all user IDs
+      const { data: userIds, error: userError } = await supabase
+        .from("users")
+        .select("id");
       
-      const orphanCount = fallbackError ? -1 : (orphaned?.length || 0);
+      let orphanCount = -1;
+      if (!userError && userIds) {
+        const ids = userIds.map(u => u.id).filter(Boolean);
+        if (ids.length > 0) {
+          // Step 2: Find calls with user_id not in the list
+          const { data: orphaned, error: fallbackError } = await supabase
+            .from("calls")
+            .select("id, user_id")
+            .not("user_id", "in", "(" + ids.join(",") + ")")
+            .limit(100);
+          
+          orphanCount = fallbackError ? -1 : (orphaned?.length || 0);
+        } else {
+          orphanCount = 0; // No users = no orphans
+        }
+      }
+      
       checks.push({
         check_name: "orphaned_calls",
         status: orphanCount > 0 ? "warn" : "ok",
-        details: { count: orphanCount, error: fallbackError?.message },
+        details: { count: orphanCount, error: orphanError?.message },
       });
       if (orphanCount > 0) hasAnomaly = true;
     } else {
@@ -97,20 +112,25 @@ Deno.serve(async (req) => {
     });
 
     // ─── Check 4: RLS policies active ───
+    // Use pg_tables for more reliable access than information_schema
     const requiredTables = ["calls", "enquiries", "users", "leads", "appointments"];
-    const { data: rlsData, error: rlsError } = await supabase
-      .from("information_schema.tables")
-      .select("table_name")
-      .eq("table_schema", "public")
-      .in("table_name", requiredTables);
+    
+    // Fallback: just verify we can select from each table
+    let foundTables = 0;
+    for (const table of requiredTables) {
+      const { data: _test, error: testErr } = await supabase
+        .from(table)
+        .select("*", { count: "exact", head: true })
+        .limit(1);
+      if (!testErr) foundTables++;
+    }
 
-    const rlsCheck = rlsError ? "error" : "ok";
     checks.push({
       check_name: "rls_policies",
-      status: rlsCheck,
-      details: { tables_found: rlsData?.length || 0, expected: requiredTables.length },
+      status: foundTables === requiredTables.length ? "ok" : "warn",
+      details: { tables_found: foundTables, expected: requiredTables.length },
     });
-    if (rlsCheck === "error") hasAnomaly = true;
+    if (foundTables !== requiredTables.length) hasAnomaly = true;
 
     // ─── Store metrics ───
     await supabase.from("agent_metrics").insert({

@@ -223,7 +223,7 @@ export function MeetTheTeam() {
             href="#final-cta"
             className="inline-flex items-center justify-center rounded-lg bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 text-white font-semibold px-8 h-11 text-base transition-colors"
           >
-            Get Katie answering my calls
+            Try Katie free
             <ArrowRight className="ml-2 w-5 h-5" />
           </a>
         </motion.div>

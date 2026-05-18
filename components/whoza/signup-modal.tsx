@@ -121,7 +121,7 @@ export function SignupModal({ onClose }: SignupModalProps) {
           id="signup-title"
           className="text-2xl font-bold pr-8 text-white font-sans"
         >
-          Get Katie answering your calls
+          Join the pilot
         </h2>
         <p className="mt-2 text-sm text-slate-400 font-sans">
           Try Katie free for 7 days on Starter. No card required.

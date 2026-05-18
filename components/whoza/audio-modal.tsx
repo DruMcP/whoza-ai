@@ -186,7 +186,7 @@ export function AudioModal({ onClose }: AudioModalProps) {
               fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
             }}
           >
-            Get Katie answering my calls
+            Try it free
           </button>
         </div>
       </motion.div>

@@ -32,14 +32,14 @@ export function StickyCTA() {
           <div className="bg-[var(--navy-900)] border-t border-white/10 p-4 shadow-2xl">
             <div className="flex items-center gap-3">
               <div className="flex-1">
-                <div className="text-white font-semibold text-sm">Get Katie answering my calls</div>
+                <div className="text-white font-semibold text-sm">Start free trial</div>
                 <div className="text-white/60 text-xs">Free 7-day trial · No card needed</div>
               </div>
               <a 
                 href="#final-cta"
                 className="inline-flex items-center justify-center bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
               >
-                <span className="truncate">Get Katie answering my calls</span>
+                <span className="truncate">Start free trial</span>
                 <ArrowRight className="ml-2 w-4 h-4" />
               </a>
               <button 
