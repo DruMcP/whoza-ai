@@ -201,16 +201,14 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             </span>
 
             <a
-              href="#"
-              onClick={(e) => e.preventDefault()}
-              className="inline-flex items-center gap-2 text-left text-[15px] text-slate-400/50 font-medium font-sans min-h-[44px] no-underline cursor-default"
-              aria-label="Audio demo coming soon"
-              style={{ pointerEvents: "none" }}
+              href="#demo"
+              className="inline-flex items-center gap-2 transition-colors hover:underline text-left text-[15px] text-slate-400 font-medium font-sans min-h-[44px] no-underline"
+              aria-label="See Katie handle a call — 60 second demo, no signup required"
             >
-              <span className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[10px] text-white/30">
+              <span className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-[10px] text-white">
                 <Play className="w-3 h-3 fill-current" />
               </span>
-              Audio demo — coming soon
+              Hear Katie in Action (60 sec — no signup)
             </a>
 
             {/* Pricing anchor */}
@@ -248,7 +246,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             }}
           >
             <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse" />
-            Limited to 50 {country === "uk" ? "UK" : "US"} trades in our pilot programme
+            Live now in {city} — Start your free trial
           </motion.p>
 
           {/* Trust Pills */}

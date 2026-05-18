@@ -4,16 +4,15 @@ import { useState, useCallback, useEffect, useRef } from "react"
 import { ArrowRight, Loader2, Play, ChevronDown, ChevronUp, MessageSquare, Phone } from "lucide-react"
 import { motion } from "framer-motion"
 import { HeroPhoneMockup } from "./hero-phone-mockup"
-import { WaitlistModal } from "./waitlist-modal"
-import { PilotSpotCounter } from "./pilot-spot-counter"
+import { SignupModal } from "./signup-modal"
 
 /* ── Trust pills ── */
 const trustItems = [
-  "UK Pilot Programme — 50 tradespeople only",
-  "7-day free trial when we go live",
+  "7-day free trial — no card required",
   "30-day money-back guarantee",
-  "Dru personally sets you up",
-  "No credit card needed to join",
+  "Live in 30 minutes",
+  "Works with your existing number",
+  "Cancel anytime",
 ]
 
 /* ── Live counter constants (ONS-derived) ── */
@@ -47,7 +46,7 @@ const fadeInRight = (delay = 0) => ({
 })
 
 export function Hero() {
-  const [showWaitlist, setShowWaitlist] = useState(false)
+  const [showSignup, setShowSignup] = useState(false)
   const [ctaLoading, setCtaLoading] = useState(false)
   const [showTranscript, setShowTranscript] = useState(false)
 
@@ -99,7 +98,7 @@ export function Hero() {
     setCtaLoading(true)
     setTimeout(() => {
       setCtaLoading(false)
-      setShowWaitlist(true)
+      setShowSignup(true)
     }, 800)
   }, [])
 
@@ -189,16 +188,15 @@ export function Hero() {
             No apps. No Contract. Just more work.
           </motion.p>
 
-          {/* Pilot badge + Spot counter */}
+          {/* Launch badge */}
           <motion.div
             {...fadeUpVisible(0.6)}
             className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mb-5"
           >
             <div className="inline-flex items-center gap-2 bg-emerald-500/[0.15] border border-emerald-500/[0.3] text-emerald-500 text-[13px] font-semibold px-4 py-2 rounded-[20px]">
-              <span aria-hidden="true">🌱</span>
-              UK Pilot Programme — Limited to 50 tradespeople
+              <span aria-hidden="true">🚀</span>
+              Live now — Start your free trial today
             </div>
-            <PilotSpotCounter variant="badge" />
           </motion.div>
 
           {/* CTA Group */}
@@ -469,7 +467,7 @@ export function Hero() {
       />
 
       {/* ── Modals ── */}
-      {showWaitlist && <WaitlistModal onClose={() => setShowWaitlist(false)} source="hero" />}
+      {showSignup && <SignupModal onClose={() => setShowSignup(false)} />}
     </section>
   )
 }

@@ -5,7 +5,6 @@ import { motion } from "framer-motion"
 import { Check, ArrowRight, Sparkles, X, CheckCircle2, User, Mic, Database, PhoneCall, Rocket, Loader2 } from "lucide-react"
 import { useLocale } from "@/lib/locale-context"
 import { WaitlistModal } from "./waitlist-modal"
-import { PilotSpotCounter } from "./pilot-spot-counter"
 
 const colorStyles = {
   blue: {
@@ -196,12 +195,7 @@ export function Pricing() {
           </div>
         </motion.div>
 
-        {/* Pilot spots banner */}
-        <div className="max-w-xl mx-auto mb-10">
-          <PilotSpotCounter variant="banner" />
-        </div>
 
-        {/* Pricing transition text */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -294,20 +288,17 @@ export function Pricing() {
                     ))}
                   </ul>
 
-                  {/* CTA — Starter only opens waitlist */}
+                  {/* CTA */}
                   <button
-                    onClick={plan.name === "Starter" ? () => openWaitlist(plan.name) : undefined}
-                    disabled={plan.name !== "Starter"}
+                    onClick={() => openWaitlist(plan.name)}
                     className={`inline-flex items-center justify-center w-full font-bold transition-all py-2 px-4 rounded-md ${
-                      plan.name === "Starter"
-                        ? plan.popular
-                          ? `${colors.bg} ${colors.hover} text-white shadow-lg hover:scale-105 cursor-pointer`
-                          : `bg-[var(--navy-900)] hover:bg-[var(--navy-800)] text-white hover:scale-105 cursor-pointer`
-                        : "bg-[var(--slate-200)] text-[var(--slate-400)] cursor-not-allowed opacity-60"
+                      plan.popular
+                        ? `${colors.bg} ${colors.hover} text-white shadow-lg hover:scale-105 cursor-pointer`
+                        : `bg-[var(--navy-900)] hover:bg-[var(--navy-800)] text-white hover:scale-105 cursor-pointer`
                     }`}
                   >
-                    {plan.name === "Starter" ? plan.cta : "Start with Starter Trial"}
-                    {plan.name === "Starter" && <ArrowRight className="ml-2 w-4 h-4" />}
+                    {plan.cta}
+                    <ArrowRight className="ml-2 w-4 h-4" />
                   </button>
                 </div>
               </motion.div>
@@ -323,10 +314,9 @@ export function Pricing() {
           className="mt-8 text-center"
         >
           <p className="text-sm text-[var(--slate-500)] max-w-xl mx-auto">
-            Pricing shown is for our full launch. Pilot users will lock in
-            introductory rates.{" "}
+            Start with a 7-day free trial on any plan. No commitment required.{" "}
             <span className="font-semibold text-[var(--navy-900)]">
-              Join the pilot to secure your price.
+              Upgrade or downgrade anytime.
             </span>
           </p>
         </motion.div>

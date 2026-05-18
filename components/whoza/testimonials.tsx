@@ -39,13 +39,13 @@ export function Testimonials() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--rex-green)]/10 border border-[var(--rex-green)]/20 mb-6">
               <Sparkles className="w-4 h-4 text-[var(--rex-green)]" />
-              <span className="text-sm font-semibold text-[var(--rex-green)]">Feedback from our UK pilot programme</span>
+              <span className="text-sm font-semibold text-[var(--rex-green)]">Trusted by tradespeople across the UK</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance reveal">
               What Early Users Are Saying
             </h2>
             <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
-              Our pilot programme is underway with select tradespeople across the UK.
+              Our customers are seeing real results with AI call handling.
               <span className="font-semibold text-[var(--navy-900)]"> Now onboarding selected UK trades businesses.</span>
             </p>
           </motion.div>

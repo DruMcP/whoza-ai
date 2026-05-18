@@ -14,7 +14,7 @@ import { ReviewsEngine } from "@/components/whoza/reviews-engine"
 import { GrowthEngine } from "@/components/whoza/growth-engine"
 import { DashboardPreview } from "@/components/whoza/dashboard-preview"
 import { LostRevenueCalculator } from "@/components/whoza/lost-revenue-calculator"
-// import { AudioDemo } from "@/components/whoza/audio-demo" // removed for soft launch
+import { AudioDemo } from "@/components/whoza/audio-demo"
 import { TrialExplanation } from "@/components/whoza/trial-explanation"
 import { Testimonials } from "@/components/whoza/testimonials"
 import { GoogleReviews } from "@/components/whoza/google-reviews"
@@ -57,9 +57,8 @@ export default function Home() {
         <VideoExplainer />
 
         {/* AUDIO DEMO - Hear Katie handle a customer enquiry */}
-        {/* <div className="section-divider" />
-        <AudioDemo /> */}
-        {/* — removed for soft launch (unfinished) */}
+        <div className="section-divider" />
+        <AudioDemo />
 
         <WhatsAppDelivery />
 
