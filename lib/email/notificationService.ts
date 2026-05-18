@@ -1,7 +1,12 @@
 import { supabase } from '../supabase'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+function getSupabaseUrl() {
+  return process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.VITE_SUPABASE_URL
+}
+
+function getSupabaseAnonKey() {
+  return process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY
+}
 
 interface CreateNotificationParams {
   userId: string
@@ -71,10 +76,10 @@ export const notificationService = {
   },
 
   async sendNotification(notificationId: string) {
-    const apiUrl = `${supabaseUrl}/functions/v1/send-notification`
+    const apiUrl = `${getSupabaseUrl()}/functions/v1/send-notification`
 
     const headers: Record<string, string> = {
-      Authorization: `Bearer ${supabaseAnonKey}`,
+      Authorization: `Bearer ${getSupabaseAnonKey()}`,
       'Content-Type': 'application/json',
     }
 
@@ -293,7 +298,7 @@ export const notificationService = {
   },
 
   async processNotificationQueue() {
-    const apiUrl = `${supabaseUrl}/functions/v1/process-notifications`
+    const apiUrl = `${getSupabaseUrl()}/functions/v1/process-notifications`
 
     const headers: Record<string, string> = {
       'Content-Type': 'application/json',
