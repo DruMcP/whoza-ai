@@ -1,7 +1,12 @@
 import { supabase } from '../supabase'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+function getSupabaseUrl() {
+  return process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.VITE_SUPABASE_URL
+}
+
+function getSupabaseAnonKey() {
+  return process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY
+}
 
 const fetchWithTimeout = async (url: string, options: RequestInit, timeout = 10000): Promise<Response> => {
   const controller = new AbortController()
@@ -95,10 +100,10 @@ interface Campaign {
 
 export const emailService = {
   async sendEmail({ templateId, templateName, userId, recipientEmail, variables, campaignId }: SendEmailParams) {
-    const apiUrl = `${supabaseUrl}/functions/v1/send-email`
+    const apiUrl = `${getSupabaseUrl()}/functions/v1/send-email`
 
     const headers: Record<string, string> = {
-      Authorization: `Bearer ${supabaseAnonKey}`,
+      Authorization: `Bearer ${getSupabaseAnonKey()}`,
       'Content-Type': 'application/json',
     }
 
@@ -308,7 +313,7 @@ export const emailService = {
   },
 
   async processCampaignQueue() {
-    const apiUrl = `${supabaseUrl}/functions/v1/process-email-campaigns`
+    const apiUrl = `${getSupabaseUrl()}/functions/v1/process-email-campaigns`
 
     const headers: Record<string, string> = {
       'Content-Type': 'application/json',
