@@ -4,7 +4,7 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { CountrySwitcher } from "./country-switcher"
-import { WaitlistModal } from "./waitlist-modal"
+import { SignupModal } from "./signup-modal"
 
 const navLinks = [
   { href: "/#how-it-works", label: "How It Works", isPageLink: false },
@@ -17,7 +17,7 @@ const navLinks = [
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [showWaitlist, setShowWaitlist] = useState(false)
+  const [showSignup, setShowSignup] = useState(false)
 
   const handleNavClick = (e: React.MouseEvent, href: string, isPageLink: boolean) => {
     if (!isPageLink) {
@@ -132,8 +132,8 @@ export function Header() {
       </motion.header>
 
       <AnimatePresence>
-        {showWaitlist && (
-          <WaitlistModal onClose={() => setShowWaitlist(false)} source="nav-bar" />
+        {showSignup && (
+          <SignupModal onClose={() => setShowSignup(false)} />
         )}
       </AnimatePresence>
     </>

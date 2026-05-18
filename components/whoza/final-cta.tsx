@@ -4,7 +4,7 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { ArrowRight, Phone, BarChart3, Star, Eye, CheckCircle2 } from "lucide-react"
 import { useLocale } from "@/lib/locale-context"
-import { WaitlistModal } from "./waitlist-modal"
+import { SignupModal } from "./signup-modal"
 import { PilotSpotCounter } from "./pilot-spot-counter"
 
 const teamMembers = [
@@ -16,7 +16,7 @@ const teamMembers = [
 
 export function FinalCTA() {
   const { country, config } = useLocale()
-  const [showWaitlist, setShowWaitlist] = useState(false)
+  const [showSignup, setShowSignup] = useState(false)
   
   return (
     <>
@@ -142,7 +142,7 @@ export function FinalCTA() {
           ))}
         </motion.div>
       </div>
-      {showWaitlist && <WaitlistModal onClose={() => setShowWaitlist(false)} source="final-cta" />}
+      {showSignup && <SignupModal onClose={() => setShowSignup(false)} />}
     </section>
     </>
   )

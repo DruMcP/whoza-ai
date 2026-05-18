@@ -85,9 +85,9 @@ export function HeroPhoneMockup() {
                 <div className={styles.waHeaderTitle}>Whoza AI</div>
                 <div className={styles.waHeaderSubtitle}>online</div>
               </div>
-              {/* PILOT badge inside header */}
+              {/* LIVE badge inside header */}
               <div className={styles.waPilotBadge}>
-                <span aria-hidden="true">&#127793;</span> PILOT
+                <span aria-hidden="true">&#127793;</span> LIVE
               </div>
             </div>
 
