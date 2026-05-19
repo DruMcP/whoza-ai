@@ -12,15 +12,6 @@ const nextConfig = {
     'vm-6ndpnuoz41hduvbfu6ks15wb.vusercontent.net',
     '*.vusercontent.net',
   ],
-  async redirects() {
-    return [
-      {
-        source: '/sample-call',
-        destination: '/',
-        permanent: true,
-      },
-    ]
-  },
 }
 
 export default nextConfig

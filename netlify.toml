@@ -16,10 +16,6 @@
   status = 301
 
 # === SEO MIGRATION: Old URLs → New Build (2026-05-14) ===
-# NOTE: Removed redirects for /blog, /how-it-works, /case-studies, /trust, /contact
-# These pages exist in the app and should NOT be redirected
-# Also removed trailing slash normalization — handled by Next.js Netlify plugin
-
 [[redirects]]
   from = "/roadmap"
   to = "/"
