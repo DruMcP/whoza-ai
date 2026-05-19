@@ -119,22 +119,6 @@ export function HowWhozaWorks() {
             </motion.div>
           ))}
         </div>
-
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-16 text-center"
-        >
-          <a
-            href="#final-cta"
-            className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-10 py-4 text-lg gap-3 shadow-lg shadow-[var(--rex-green)]/20 rounded-lg transition-all hover:scale-105"
-          >
-            See it in action
-            <ArrowRight className="w-5 h-5" />
-          </a>
-        </motion.div>
       </div>
     </section>
   )

@@ -76,18 +76,6 @@ export function ComparisonTable() {
           </h2>
         </motion.div>
 
-        {/* Supporting copy */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <p className="text-lg text-[var(--slate-500)] text-pretty max-w-2xl mx-auto">
-            Most services answer calls. Whoza turns them into more work every week.
-          </p>
-        </motion.div>
-
         {/* Table */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

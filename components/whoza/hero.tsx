@@ -1,19 +1,16 @@
 "use client"
 
 import { useState, useCallback, useEffect, useRef } from "react"
-import { ArrowRight, Loader2, Play, ChevronDown, ChevronUp, MessageSquare, Phone } from "lucide-react"
+import { ArrowRight, Loader2 } from "lucide-react"
 import { motion } from "framer-motion"
 import { HeroPhoneMockup } from "./hero-phone-mockup"
 import { WaitlistModal } from "./waitlist-modal"
-import { PilotSpotCounter } from "./pilot-spot-counter"
 
-/* ── Trust pills ── */
+/* ── Trust pills (3 only, post-CTA support) ── */
 const trustItems = [
-  "UK Pilot Programme — 50 tradespeople only",
-  "7-day free trial when we go live",
+  "No credit card required",
   "30-day money-back guarantee",
-  "Dru personally sets you up",
-  "No credit card needed to join",
+  "7-day free trial when we go live",
 ]
 
 /* ── Live counter constants (ONS-derived) ── */
@@ -49,7 +46,6 @@ const fadeInRight = (delay = 0) => ({
 export function Hero() {
   const [showWaitlist, setShowWaitlist] = useState(false)
   const [ctaLoading, setCtaLoading] = useState(false)
-  const [showTranscript, setShowTranscript] = useState(false)
 
   /* ── Live counter refs (no React re-renders) ── */
   const counterRef = useRef<HTMLDivElement>(null)
@@ -101,11 +97,6 @@ export function Hero() {
       setCtaLoading(false)
       setShowWaitlist(true)
     }, 800)
-  }, [])
-
-  const scrollToDemo = useCallback(() => {
-    const el = document.getElementById("demo")
-    if (el) el.scrollIntoView({ behavior: "smooth" })
   }, [])
 
   return (
@@ -176,9 +167,8 @@ export function Hero() {
             {...fadeUpVisible(0.4)}
             className="font-sans text-[17px] leading-relaxed text-slate-400 mb-3 tracking-wide"
           >
-            The <abbr title="Artificial Intelligence">AI</abbr> call handler and Revenue Team built for
-            UK trades. Answers every missed call, qualifies real jobs, and sends them
-            straight to your WhatsApp — so you accept, call back, or decline in two taps.
+            The <abbr title="Artificial Intelligence">AI</abbr> call handler built for
+            UK trades. Answers every call, qualifies real jobs, sends them to your WhatsApp.
           </motion.p>
 
           {/* Outcome punchline */}
@@ -189,21 +179,9 @@ export function Hero() {
             No apps. No Contract. Just more work.
           </motion.p>
 
-          {/* Pilot badge + Spot counter */}
-          <motion.div
-            {...fadeUpVisible(0.6)}
-            className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mb-5"
-          >
-            <div className="inline-flex items-center gap-2 bg-emerald-500/[0.15] border border-emerald-500/[0.3] text-emerald-500 text-[13px] font-semibold px-4 py-2 rounded-[20px]">
-              <span aria-hidden="true">🌱</span>
-              UK Pilot Programme — Limited to 50 tradespeople
-            </div>
-            <PilotSpotCounter variant="badge" />
-          </motion.div>
-
           {/* CTA Group */}
           <motion.div
-            {...fadeUpVisible(0.7)}
+            {...fadeUpVisible(0.6)}
             className="flex flex-col gap-3 mb-5 items-start"
           >
             <button
@@ -228,92 +206,11 @@ export function Hero() {
             <span className="text-[13px] text-slate-400 tracking-wide">
               No credit card required · 30-day money-back guarantee
             </span>
-
-            <button
-              onClick={() => setShowTranscript(!showTranscript)}
-              className="inline-flex items-center gap-2 transition-colors text-left text-[15px] text-slate-400/70 hover:text-slate-300 font-medium font-sans min-h-[44px] cursor-pointer group"
-              aria-label={showTranscript ? "Hide sample call transcript" : "Show sample call transcript"}
-            >
-              <span className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[10px] text-white/50 group-hover:bg-white/10 group-hover:border-white/20 transition-colors">
-                {showTranscript ? <ChevronUp className="w-3 h-3" /> : <Play className="w-3 h-3 fill-current" />}
-              </span>
-              {showTranscript ? "Hide sample call" : "Read a sample call — 30 seconds"}
-            </button>
-
-            {/* Sample Call Transcript */}
-            {showTranscript && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                className="bg-white/[0.04] border border-white/[0.08] rounded-xl p-4 space-y-3"
-              >
-                <div className="flex items-start gap-3">
-                  <Phone className="w-4 h-4 text-slate-400 mt-0.5 shrink-0" />
-                  <div>
-                    <p className="text-sm text-white/80">
-                      <span className="font-semibold text-emerald-400">Katie:</span> Good morning, you&apos;ve reached Smith Plumbing. This is Katie. How can I help you today?
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <MessageSquare className="w-4 h-4 text-slate-400 mt-0.5 shrink-0" />
-                  <div>
-                    <p className="text-sm text-white/80">
-                      <span className="font-semibold text-white/90">Caller:</span> Hi Katie, my boiler&apos;s making a really loud banging noise and I&apos;ve got no hot water. I&apos;m in SW4 — can someone come today?
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Phone className="w-4 h-4 text-slate-400 mt-0.5 shrink-0" />
-                  <div>
-                    <p className="text-sm text-white/80">
-                      <span className="font-semibold text-emerald-400">Katie:</span> I&apos;m sorry to hear that — a banging boiler with no hot water is urgent. I can send someone out today. Is this a gas boiler, and do you smell any gas?
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <MessageSquare className="w-4 h-4 text-slate-400 mt-0.5 shrink-0" />
-                  <div>
-                    <p className="text-sm text-white/80">
-                      <span className="font-semibold text-white/90">Caller:</span> No gas smell, it&apos;s just the noise. It&apos;s a Worcester Bosch combi, about six years old.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Phone className="w-4 h-4 text-slate-400 mt-0.5 shrink-0" />
-                  <div>
-                    <p className="text-sm text-white/80">
-                      <span className="font-semibold text-emerald-400">Katie:</span> Thank you — that&apos;s very helpful. I&apos;ve noted: urgent boiler repair, no hot water, banging noise, Worcester Bosch combi, 6 years old, no gas leak. We can be with you between 2pm and 4pm today. The call-out is £80 plus parts. May I take your name and number to confirm?
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <MessageSquare className="w-4 h-4 text-slate-400 mt-0.5 shrink-0" />
-                  <div>
-                    <p className="text-sm text-white/80">
-                      <span className="font-semibold text-white/90">Caller:</span> Yes, it&apos;s James Patterson, 07700 900123.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Phone className="w-4 h-4 text-slate-400 mt-0.5 shrink-0" />
-                  <div>
-                    <p className="text-sm text-white/80">
-                      <span className="font-semibold text-emerald-400">Katie:</span> Perfect, Mr Patterson. You&apos;ll receive a WhatsApp message in the next 60 seconds with your booking details and our engineer&apos;s ETA. Is there anything else I can help with?
-                    </p>
-                  </div>
-                </div>
-                <p className="text-xs text-slate-500 pt-2 border-t border-white/5">
-                  ☝️ Katie captured the full enquiry, qualified the urgency, checked for gas safety, quoted the call-out fee, and sent it straight to the plumber&apos;s phone — all in under 90 seconds.
-                </p>
-              </motion.div>
-            )}
           </motion.div>
 
-          {/* Trust Pills */}
+          {/* Trust Pills (3 only, supporting evidence) */}
           <motion.ul
-            {...fadeUpVisible(0.8)}
+            {...fadeUpVisible(0.7)}
             aria-label="Key benefits"
             className="flex flex-wrap gap-2.5 mb-6 list-none p-0"
           >
@@ -327,59 +224,6 @@ export function Hero() {
               </li>
             ))}
           </motion.ul>
-
-          {/* Founder Bar */}
-          <motion.div
-            {...fadeUpVisible(0.9)}
-            className="flex items-center gap-3.5 p-4 bg-white/[0.04] border border-white/[0.08] rounded-xl mb-5"
-          >
-            <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-white/10 bg-[#1A1A2E] flex items-center justify-center">
-              <span className="text-xl">👤</span>
-            </div>
-            <div className="min-w-0">
-              <p className="text-sm font-medium text-white mb-1 leading-snug">
-                Built by Dru McPherson, former trade business owner
-              </p>
-              <p className="text-[13px] text-slate-400 m-0">
-                Got questions? I answer every email:{" "}
-                <a
-                  href="mailto:dru@whoza.ai"
-                  className="text-emerald-500 no-underline"
-                >
-                  dru@whoza.ai
-                </a>
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Real Review */}
-          <motion.blockquote
-            {...fadeUpVisible(1.0)}
-            className="m-0 px-5 py-4 bg-white/[0.04] border-l-[3px] border-[#B07D12] rounded-r-xl"
-          >
-            <p
-              className="text-[15px] italic text-slate-400 leading-relaxed mb-2.5"
-            >
-              &ldquo;By far the simplest and the cheapest. I&apos;m already seeing results.&rdquo;
-            </p>
-            <footer
-              className="flex items-center gap-3 flex-wrap"
-            >
-              <cite
-                className="text-[13px] not-italic text-gray-500"
-              >
-                — Ludmila Lamont, Early User
-              </cite>
-              <a
-                href="https://g.page/r/CaV8r9vL8v9vEAI/review"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-animated text-[13px] text-emerald-500 font-medium no-underline"
-              >
-                View on Google →
-              </a>
-            </footer>
-          </motion.blockquote>
         </div>
 
         {/* ══ RIGHT: Phone mockup ══ */}

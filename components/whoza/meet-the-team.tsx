@@ -193,17 +193,6 @@ export function MeetTheTeam() {
                     {agent.entitlement}
                   </p>
                 )}
-
-                {/* CTA — Voice Agents Only */}
-                {agent.isVoiceAgent && (
-                  <a 
-                    href="#final-cta"
-                    className={`mt-4 inline-flex items-center justify-center w-full rounded-lg border-2 ${agent.borderColor} ${agent.textColor} hover:bg-[${agent.color}]/5 font-medium px-4 h-10 text-sm transition-colors`}
-                  >
-                    <Volume2 className="w-4 h-4 mr-2" />
-                    Hear {agent.name} in Action
-                  </a>
-                )}
               </motion.div>
             )
           })}
@@ -216,16 +205,9 @@ export function MeetTheTeam() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <p className="text-[var(--slate-500)] mb-6">
+          <p className="text-[var(--slate-500)]">
             Choose the voice and name that fits your business. Switch anytime.
           </p>
-          <a 
-            href="#final-cta"
-            className="inline-flex items-center justify-center rounded-lg bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 text-white font-semibold px-8 h-11 text-base transition-colors"
-          >
-            Try Katie free
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </a>
         </motion.div>
         {/* Gradient Transition to Dark Section */}
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-[var(--off-white)] to-[var(--navy-900)]" />

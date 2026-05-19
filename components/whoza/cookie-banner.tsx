@@ -116,21 +116,15 @@ export function CookieBanner() {
               <div className="flex flex-wrap items-center gap-2 shrink-0">
                 <button
                   onClick={acceptAll}
-                  className="px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-medium rounded-lg transition-colors min-h-[44px]"
+                  className="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-semibold rounded-lg transition-colors min-h-[44px]"
                 >
-                  Accept All
-                </button>
-                <button
-                  onClick={acceptEssential}
-                  className="cookie-dismiss px-4 py-2 bg-white/10 hover:bg-white/20 text-white text-sm font-medium rounded-lg transition-colors min-h-[44px]"
-                >
-                  Essential Only
+                  Accept
                 </button>
                 <button
                   onClick={() => setShowModal(true)}
-                  className="px-4 py-2 text-white/60 hover:text-white text-sm transition-colors min-h-[44px]"
+                  className="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white text-sm font-medium rounded-lg transition-colors min-h-[44px]"
                 >
-                  Manage Preferences
+                  Customise
                 </button>
               </div>
             </div>
