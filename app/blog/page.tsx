@@ -19,6 +19,14 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "ai-call-answering-uk-tradespeople-definitive-guide-2026",
+    title: "AI Call Answering for UK Tradespeople: The Definitive 2026 Guide",
+    excerpt: "Complete 2026 data on missed call costs, AI voice agent pricing, ROI calculations, and how AI call handling works for UK trades. Statistics, benchmarks, and buyer's guide.",
+    readTime: "12 min read",
+    date: "2026-05-20",
+    category: "Industry Insights",
+  },
+  {
     slug: "how-ai-call-handlers-are-changing-the-game-for-uk-trades-2026",
     title: "How AI Call Handlers Are Changing the Game for UK Trades in 2026",
     excerpt: "The trades industry is undergoing a quiet revolution. AI call handlers like Katie are capturing missed calls, qualifying leads, and booking jobs while tradespeople focus on the work.",
