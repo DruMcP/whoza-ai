@@ -43,43 +43,33 @@ export default function Home() {
       <BreadcrumbSchema items={[{ name: "Home", item: "https://whoza.ai" }]} />
 
       <main id="main-content" role="main" className="pb-24 lg:pb-0">
-        {/* HOOK - Financial urgency */}
+        {/* HOOK - Hero with clean hierarchy */}
         <Hero />
         <SocialProofBar />
         <SocialProofBand />
 
-        {/* DOMINANT MOMENT - Pain → Solution sequence */}
-        <div className="section-divider" />
-        <LostRevenueCalculator />
-
-        {/* VIDEO EXPLAINER - See Whoza in action */}
-        <div className="section-divider" />
-        <VideoExplainer />
-
-        {/* AUDIO DEMO - Hear Katie handle a customer enquiry */}
-        {/* <div className="section-divider" />
-        <AudioDemo /> */}
-        {/* — removed for soft launch (unfinished) */}
-
-        <WhatsAppDelivery />
-
-        {/* PRE-LAUNCH PROOF - Example scenario */}
-        <div className="section-divider" />
-        <PreLaunchProof />
-
-        {/* HOW IT WORKS - Full visual flow */}
+        {/* EDUCATE - How the system works */}
         <div className="section-divider" />
         <HowWhozaWorks />
 
-        {/* EARLY ACCESS - How it works */}
+        {/* HOW IT WORKS - Setup process */}
         <div className="section-divider" />
         <TrialExplanation />
 
-        {/* CALL CAPTURE - Choose your voice */}
+        {/* DIFFERENTIATE - Meet the team */}
         <div className="section-divider" />
         <MeetTheTeam />
 
-        {/* VOICE AGENT DEMO - Experience Katie */}
+        {/* SHOW - Video explainer + demos */}
+        <div className="section-divider" />
+        <VideoExplainer />
+        <WhatsAppDelivery />
+
+        {/* EXAMPLE SCENARIO - Day in the life */}
+        <div className="section-divider" />
+        <PreLaunchProof />
+
+        {/* LIVE DEMO */}
         <div className="section-divider" />
         <section className="py-12 bg-[var(--navy-900)] dark-section">
           <div className="max-w-7xl mx-auto px-4 text-center">
@@ -92,7 +82,7 @@ export default function Home() {
         <div className="section-divider" />
         <ControlSection />
 
-        {/* GROWTH ENGINE - Win more jobs */}
+        {/* FEATURES - Reviews + Growth */}
         <div className="section-divider" />
         <ReviewsEngine />
         <GrowthEngine />
@@ -101,27 +91,29 @@ export default function Home() {
         <div className="section-divider" />
         <DashboardPreview />
         <ClaireDashboard />
-        
-        {/* STATS — Key metrics */}
+
+        {/* URGENCY - Lost revenue + Stats */}
+        <div className="section-divider" />
+        <LostRevenueCalculator />
         <div className="section-divider" />
         <StatsBand />
 
-        {/* PROOF - Social proof */}
-        <div className="section-divider" />
-        <Testimonials />
-        <GoogleReviews />
-
-        {/* WHY US - Comparison */}
+        {/* COMPARE - Why Whoza Wins */}
         <div className="section-divider" />
         <ComparisonTable />
 
-        {/* OFFER - Pricing (no-brainer) */}
+        {/* DECIDE - Pricing */}
         <div className="section-divider" />
         <Pricing />
 
-        {/* OBJECTIONS - FAQ */}
+        {/* OBJECTIONS - FAQ (with Pricing) */}
         <div className="section-divider" />
         <FAQ />
+
+        {/* VALIDATE - Social proof */}
+        <div className="section-divider" />
+        <Testimonials />
+        <GoogleReviews />
 
         {/* CLOSE - Hard close */}
         <div className="section-divider" />

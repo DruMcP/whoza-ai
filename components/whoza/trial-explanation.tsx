@@ -161,7 +161,7 @@ export function TrialExplanation() {
             <ArrowRight className="w-6 h-6" />
           </a>
           <p className="mt-3 text-sm text-[var(--slate-500)]">
-            Be the first to experience AI call handling for trades.
+            No credit card required. Cancel anytime.
           </p>
         </motion.div>
       </div>

@@ -197,16 +197,6 @@ export function PreLaunchProof() {
                 </div>
               </div>
             </div>
-
-            <div className="text-center">
-              <a 
-              href="#final-cta"
-              className="inline-flex items-center justify-center rounded-lg bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-10 py-6 text-lg gap-3 shadow-xl shadow-[var(--rex-green)]/30 transition-all hover:scale-105"
-            >
-              Start your free week
-              <ArrowRight className="w-5 h-5" />
-            </a>
-            </div>
           </motion.div>
         </div>
       </div>
