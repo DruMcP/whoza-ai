@@ -19,14 +19,13 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm install cheerio node-fetch
+        run: npm install cheerio
 
       - name: Validate SEO meta
         id: seo
         run: |
           node -e "
           const cheerio = require('cheerio');
-          const fetch = require('node-fetch');
           
           const urls = [
             'https://whoza-ai-staging-349.netlify.app/',
@@ -72,7 +71,13 @@ jobs:
               }
             }
             
-            console.log('ISSUES=' + JSON.stringify(issues));
+            // Write to GITHUB_ENV for next step
+            const fs = require('fs');
+            fs.appendFileSync(process.env.GITHUB_ENV, 'ISSUES=' + JSON.stringify(issues) + '\\n');
+            console.log('Found ' + issues.length + ' SEO issues');
+            if (issues.length > 0) {
+              console.log(JSON.stringify(issues, null, 2));
+            }
           }
           
           check();
