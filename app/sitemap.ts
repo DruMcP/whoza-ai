@@ -170,5 +170,105 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: loc.country === 'uk' ? 0.7 : 0.6,
   }))
 
-  return [...corePages, ...tradePages, ...locationPages]
+  // Blog posts
+  const blogPosts: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026`,
+      lastModified: '2026-05-20',
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/blog/how-ai-call-handlers-are-changing-the-game-for-uk-trades-2026`,
+      lastModified: '2026-05-15',
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/missed-calls-missed-money-the-real-cost-for-tradespeople`,
+      lastModified: '2026-05-12',
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/ai-receptionist-vs-human-receptionist-which-is-right-for-your-trade-business`,
+      lastModified: '2026-05-10',
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/why-62-percent-of-trade-business-calls-go-unanswered`,
+      lastModified: '2026-05-08',
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/how-katie-answers-captures-and-delivers-enquiries-in-3-seconds`,
+      lastModified: '2026-05-05',
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/the-7-day-free-trial-what-to-expect-when-you-try-katie`,
+      lastModified: '2026-05-03',
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/blog/how-whatsapp-delivery-changes-everything-for-tradespeople`,
+      lastModified: '2026-05-01',
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/blog/roi-calculator-how-much-could-an-ai-call-handler-save-your-trade-business`,
+      lastModified: '2026-04-28',
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/case-study-how-a-london-electrician-recovered-12k-month-with-ai-call-handling`,
+      lastModified: '2026-04-25',
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/moneypenny-vs-whoza-ai-which-receptionist-service-is-right-for-trades`,
+      lastModified: '2026-04-22',
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/why-tradespeople-need-a-revenue-team-not-just-a-virtual-receptionist`,
+      lastModified: '2026-04-20',
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/blog/how-to-never-miss-an-emergency-call-again-plumbers-electricians-roofers`,
+      lastModified: '2026-04-18',
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/blog/the-truth-about-ai-voice-agents-what-google-reviews-say`,
+      lastModified: '2026-04-15',
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/5-signs-your-trade-business-needs-an-ai-call-handler`,
+      lastModified: '2026-04-12',
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/blog/how-whoza-ai-works-with-your-existing-phone-number`,
+      lastModified: '2026-04-10',
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+  ]
+
+  return [...corePages, ...blogPosts, ...tradePages, ...locationPages]
 }
