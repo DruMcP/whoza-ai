@@ -85,8 +85,8 @@ jobs:
       - name: Auto-create PR for patchable vulnerabilities
         if: steps.audit.outputs.critical == 0 && steps.audit.outputs.high == 0
         run: |
-          # Only auto-fix if no critical/high vulnerabilities
-          npm audit fix --package-lock-only
+          # Run fix but don't fail if vulnerabilities remain (e.g. require --force)
+          npm audit fix --package-lock-only || true
           
           if git diff --quiet; then
             echo "No patchable vulnerabilities found"
