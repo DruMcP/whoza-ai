@@ -2,24 +2,6 @@
 
 import { motion } from "framer-motion"
 import { useLocale } from "@/lib/locale-context"
-import { Droplets, Zap, Home, Key, Waves, TreePine, Bug, Sparkles, Flame, Hammer, Wind, Paintbrush, Grid3x3, HardHat } from "lucide-react"
-
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  Plumbers: Droplets,
-  Electricians: Zap,
-  Roofers: Home,
-  Locksmiths: Key,
-  Drainage: Waves,
-  Landscapers: TreePine,
-  "Pest Control": Bug,
-  Cleaners: Sparkles,
-  "Heating Engineers": Flame,
-  Builders: Hammer,
-  HVAC: Wind,
-  "General Contractors": HardHat,
-  Painters: Paintbrush,
-  Flooring: Grid3x3,
-}
 
 const tradesConfig = {
   uk: [
@@ -33,6 +15,11 @@ const tradesConfig = {
     { name: "Cleaners" },
     { name: "Heating Engineers" },
     { name: "Builders" },
+    { name: "Joiners" },
+    { name: "Plasterers" },
+    { name: "Tilers" },
+    { name: "Carpenters" },
+    { name: "Handymen" },
   ],
   us: [
     { name: "Plumbers" },
@@ -45,6 +32,11 @@ const tradesConfig = {
     { name: "General Contractors" },
     { name: "Painters" },
     { name: "Flooring" },
+    { name: "Carpenters" },
+    { name: "Plasterers" },
+    { name: "Tilers" },
+    { name: "Joiners" },
+    { name: "Handymen" },
   ],
 }
 
@@ -67,9 +59,7 @@ export function SocialProofBand() {
             viewport={{ once: true }}
             className="flex gap-3 overflow-x-auto pb-2 sm:flex-wrap sm:justify-center sm:overflow-visible scrollbar-hide"
           >
-            {trades.map((trade, index) => {
-              const Icon = iconMap[trade.name]
-              return (
+            {trades.map((trade, index) => (
                 <motion.div
                   key={trade.name}
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -78,11 +68,9 @@ export function SocialProofBand() {
                   viewport={{ once: true }}
                   className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all cursor-default shrink-0"
                 >
-                  {Icon && <Icon className="w-4 h-4 text-white/60" />}
                   <span className="text-sm font-medium text-white/90 whitespace-nowrap">{trade.name}</span>
                 </motion.div>
-              )
-            })}
+              ))}
           </motion.div>
         </div>
       </div>
