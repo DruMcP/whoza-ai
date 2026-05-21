@@ -110,7 +110,7 @@ export const trades: TradeData[] = [
     singular: "builder",
     plural: "builders",
     display: "Builders",
-    headline: "AI Call Handling for Builders — From Enquiry to Project Brief",
+    headline: "AI Call Handling for Builders — Every Enquiry Captured",
     subheadline: "Extensions, renovations, new builds. Big jobs start with a phone call. Katie captures the full project scope, budget signals, and timeline — so you walk into every quote meeting prepared.",
     metaDescription: "AI call handling for builders and construction companies. Katie qualifies extension, renovation, and new build enquiries 24/7. Captures budget range, timeline, and project scope. Free 7-day trial.",
     problemStatements: [
@@ -190,7 +190,7 @@ export const trades: TradeData[] = [
     singular: "landscaper",
     plural: "landscapers",
     display: "Landscapers",
-    headline: "AI Call Handling for Landscapers — From Garden Dream to Design Brief",
+    headline: "AI Call Handling for Landscapers — Grow Your Business",
     subheadline: "Garden redesigns, patio installations, maintenance contracts. Customers have visions but struggle to describe them. Katie draws out the details — budget, timeline, garden size, style preferences — so you arrive with a plan, not just a tape measure.",
     metaDescription: "AI call handling for landscapers and garden designers. Katie qualifies garden projects 24/7, captures budget, style preferences, and timeline. Never miss a £10k+ garden redesign enquiry. Free trial.",
     problemStatements: [
@@ -270,7 +270,7 @@ export const trades: TradeData[] = [
     singular: "heating engineer",
     plural: "heating engineers",
     display: "Heating Engineers",
-    headline: "AI Call Handling for Heating Engineers — Boiler Breakdowns to Bookings",
+    headline: "AI Call Handling for Heating Engineers — 24/7 Booking",
     subheadline: "Boiler breakdowns, no hot water, gas safety checks. When a customer's heating fails in winter, every minute matters. Katie answers every call with empathy, qualifies the fault, and sends you the full job details before you even pick up.",
     metaDescription: "AI call handling for heating engineers and Gas Safe engineers in the UK. Katie answers boiler breakdowns, servicing, and installation calls 24/7. Captures fault details, boiler make/model, and property info via WhatsApp. 7-day free trial.",
     problemStatements: [
@@ -310,7 +310,7 @@ export const trades: TradeData[] = [
     singular: "painter",
     plural: "painters",
     display: "Painters",
-    headline: "AI Call Handling for Painters & Decorators — Colour Every Call with Revenue",
+    headline: "AI Call Handling for Painters — Every Call, Every Job",
     subheadline: "Interior refresh, exterior repaints, commercial projects. Customers often underestimate the scope ('just a quick lick of paint'). Katie gently draws out the full job details — rooms, surfaces, access, timeline — so you quote with confidence.",
     metaDescription: "AI call handling for painters and decorators. Katie qualifies interior, exterior, and commercial painting jobs 24/7. Captures room count, surface types, access details, and budget. Free 7-day trial.",
     problemStatements: [
