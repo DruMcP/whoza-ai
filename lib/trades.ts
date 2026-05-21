@@ -232,7 +232,7 @@ export const trades: TradeData[] = [
     display: "HVAC",
     headline: "AI Call Handling for HVAC — Hot Leads, Cool Conversions",
     subheadline: "Boiler breakdowns, AC installations, heat pump upgrades. When heating fails in winter or AC fails in summer, customers call in distress. Katie answers with empathy, qualifies the system type, and gets you the details fast.",
-    metaDescription: "AI call handling for HVAC engineers. Katie handles boiler breakdowns, AC installs, and heat pump enquiries 24/7. WhatsApp alerts with system details. Free trial.",
+    metaDescription: "AI call handling for HVAC engineers. Katie handles boiler breakdowns, AC installs, and heat pump enquiries 24/7. WhatsApp alerts with details. Free trial.",
     problemStatements: [
       "Boiler breakdowns in winter = peak call volume when you're already on jobs",
       "Customers can't describe their heating system ('the white box thing') — Katie knows the right questions",
