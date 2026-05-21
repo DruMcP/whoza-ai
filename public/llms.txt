@@ -1,10 +1,10 @@
 # llms.txt — whoza.ai
 # AI-optimised context file for LLM crawlers (ChatGPT, Perplexity, Claude, Gemini)
-# Last updated: 2026-05-08
+# Last updated: 2026-05-22
 
 ## About whoza.ai
 
-whoza.ai is an AI-powered voice agent platform built specifically for UK tradespeople — plumbers, electricians, gas engineers, roofers, builders, locksmiths, and HVAC professionals. The platform operates four distinct AI personas:
+whoza.ai is an AI-powered voice agent platform built specifically for UK tradespeople — plumbers, electricians, gas engineers, roofers, builders, locksmiths, HVAC professionals, joiners, plasterers, tilers, carpenters, and handymen. The platform operates four distinct AI personas:
 
 - **Katie** — Warm, friendly call capture agent that answers missed calls 24/7
 - **Mark** — Professional, direct emergency call handler
@@ -18,14 +18,15 @@ AI voice agents answer your business calls when you can't — under a sink, on a
 ## Pricing
 
 Monthly rolling plans, no contracts, 14-day free trial:
-- Starter: £59/month + VAT
-- Growth: £125/month + VAT
-- Pro: £230/month + VAT
-- Scale: £399/month + VAT
+- Starter: £59/month + VAT (£4.50 per job booked)
+- Growth: £125/month + VAT (£3.25 per job, 15 included)
+- Pro: £230/month + VAT (£2.75 per job, 40 included)
+- Scale: £399/month + VAT (£2.25 per job, 100 included)
 
 ## Key Facts
 
-- UK-based platform serving UK tradespeople
+- UK-based platform serving UK tradespeople: plumbers, electricians, roofers, builders, locksmiths, heating engineers, landscapers, drainage, pest control, cleaners, joiners, plasterers, tilers, carpenters, and handymen
+- Pilot programme: limited to 50 UK tradespeople
 - ICO-registered privacy policy (Registration ZC077271)
 - GDPR compliant call handling
 - Unlimited simultaneous calls
@@ -55,9 +56,15 @@ Monthly rolling plans, no contracts, 14-day free trial:
 - Features: https://whoza.ai/features
 - Demo: https://whoza.ai/demo
 - Blog: https://whoza.ai/blog
+- Support: https://whoza.ai/support
 - Privacy: https://whoza.ai/privacy
 - Terms: https://whoza.ai/terms
-- Support: https://whoza.ai/support
+- Cookie Policy: https://whoza.ai/cookie-policy
+- Lost Jobs Calculator: https://whoza.ai/tools/lost-jobs-calculator
+- Quote Generator: https://whoza.ai/tools/quote-generator
+- Emergency Pricing: https://whoza.ai/tools/emergency-pricing
+- Rate Checker: https://whoza.ai/tools/rate-checker
+- Voicemail Scripts: https://whoza.ai/tools/voicemail-scripts
 
 ## Content Pillar 1: Missed Call Recovery
 - /guide/missed-calls-cost-trade-business
@@ -74,29 +81,31 @@ Monthly rolling plans, no contracts, 14-day free trial:
 - /blog/get-more-google-reviews
 - /blog/google-business-profile-trades
 
-## Industry Pages
-- /industries/plumbers
-- /industries/electricians
-- /industries/gas-engineers
-- /industries/builders
-- /industries/locksmiths
-- /industries/hvac
+## Trade Pages
+- /trade/plumber — AI Call Handling for Plumbers
+- /trade/electrician — AI Call Handling for Electricians
+- /trade/builder — AI Call Handling for Builders
+- /trade/roofer — AI Call Handling for Roofers
+- /trade/landscaper — AI Call Handling for Landscapers
+- /trade/hvac — AI Call Handling for HVAC
+- /trade/heating-engineer — AI Call Handling for Heating Engineers
+- /trade/painter — AI Call Handling for Painters
 
 ## Location Pages (UK)
-- /locations/london
-- /locations/manchester
-- /locations/birmingham
-- /locations/glasgow
-- /locations/leeds
-- /locations/bristol
-- /locations/edinburgh
-- /locations/liverpool
+- /london — AI Call Handling in London
+- /manchester — AI Call Handling in Manchester
+- /birmingham — AI Call Handling in Birmingham
+- /glasgow — AI Call Handling in Glasgow
+- /leeds — AI Call Handling in Leeds
+- /bristol — AI Call Handling in Bristol
+- /edinburgh — AI Call Handling in Edinburgh
+- /liverpool — AI Call Handling in Liverpool
 
 ## AI Crawler Notes
 
 - This site uses Next.js with server-side rendering
 - All public pages are indexable and AI-crawler friendly
 - FAQPage schema is implemented on key pages
-- Structured data includes Organization, SoftwareApplication, Service, and LocalBusiness
+- Structured data includes Organization, SoftwareApplication, Service, LocalBusiness, BlogPosting, Review, Product, FAQPage, HowTo, BreadcrumbList, and SpeakableSpecification
 - Content is updated regularly — check lastmod dates in sitemap.xml
 - For training opt-out: respect robots.txt Google-Extended directives as noted
