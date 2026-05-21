@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion"
 import { Star } from "lucide-react"
+import { ReviewSchema } from "@/components/whoza/review-schema"
+import { ReviewSchema } from "@/components/whoza/review-schema"
 
 const reviews = [
   { name: "Kat Hibbert-Jordan", date: "", text: "I realised recently that my business was not appearing in AI search results at all. Whoza.ai helped me fix that. Now I'm showing up in AI search results and getting more calls. Really pleased with the service.", rating: 5 },
@@ -14,6 +16,14 @@ const reviews = [
 export function GoogleReviews() {
   return (
     <section className="py-16 bg-[var(--off-white)]">
+      <ReviewSchema
+        reviews={reviews.map(({ name, text, rating }) => ({ name, text, rating }))}
+        itemReviewed={{ name: "Whoza.ai — AI Voice Agents for UK Tradespeople", url: "https://whoza.ai" }}
+      />
+      <ReviewSchema
+        reviews={reviews.map(({ name, text, rating }) => ({ name, text, rating }))}
+        itemReviewed={{ name: "Whoza.ai — AI Voice Agents for UK Tradespeople", url: "https://whoza.ai" }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
