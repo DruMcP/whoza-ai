@@ -4,7 +4,7 @@ import { trades } from '@/lib/trades'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://whoza.ai'
-  const lastMod = '2026-05-17'
+  const lastMod = '2026-05-22'
 
   // Core pages
   const corePages: MetadataRoute.Sitemap = [

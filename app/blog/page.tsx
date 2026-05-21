@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
+import { BlogListingSchema } from "@/components/whoza/blog-schema"
 import { FileText, Clock, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
@@ -152,6 +153,7 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-[var(--navy-900)] text-white">
       <Header />
+      <BlogListingSchema posts={blogPosts.map(({ slug, title, excerpt, date, category }) => ({ slug, title, excerpt, date, category }))} />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
         { name: "Blog", item: "https://whoza.ai/blog" },
