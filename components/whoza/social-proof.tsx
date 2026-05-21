@@ -5,38 +5,38 @@ import { useLocale } from "@/lib/locale-context"
 
 const tradesConfig = {
   uk: [
-    { name: "Plumbers" },
-    { name: "Electricians" },
-    { name: "Roofers" },
-    { name: "Locksmiths" },
-    { name: "Drainage" },
-    { name: "Landscapers" },
-    { name: "Pest Control" },
-    { name: "Cleaners" },
-    { name: "Heating Engineers" },
-    { name: "Builders" },
-    { name: "Joiners" },
-    { name: "Plasterers" },
-    { name: "Tilers" },
-    { name: "Carpenters" },
-    { name: "Handymen" },
+    { name: "Plumbers", description: "Emergency leaks, installs & repairs" },
+    { name: "Electricians", description: "Wiring, faults & certificates" },
+    { name: "Roofers", description: "Repairs, replacements & inspections" },
+    { name: "Locksmiths", description: "Emergency entry & security" },
+    { name: "Drainage", description: "Unblocking & CCTV surveys" },
+    { name: "Landscapers", description: "Gardens, patios & maintenance" },
+    { name: "Pest Control", description: "Rats, wasps & prevention" },
+    { name: "Cleaners", description: "Domestic, end-of-tenancy & commercial" },
+    { name: "Heating Engineers", description: "Boilers, servicing & breakdowns" },
+    { name: "Builders", description: "Extensions, renovations & repairs" },
+    { name: "Joiners", description: "Doors, staircases & bespoke woodwork" },
+    { name: "Plasterers", description: "Skimming, boarding & repairs" },
+    { name: "Tilers", description: "Bathrooms, kitchens & floors" },
+    { name: "Carpenters", description: "Framing, fitted furniture & repairs" },
+    { name: "Handymen", description: "Odd jobs, fixes & maintenance" },
   ],
   us: [
-    { name: "Plumbers" },
-    { name: "Electricians" },
-    { name: "Roofers" },
-    { name: "HVAC" },
-    { name: "Landscapers" },
-    { name: "Pest Control" },
-    { name: "Cleaners" },
-    { name: "General Contractors" },
-    { name: "Painters" },
-    { name: "Flooring" },
-    { name: "Carpenters" },
-    { name: "Plasterers" },
-    { name: "Tilers" },
-    { name: "Joiners" },
-    { name: "Handymen" },
+    { name: "Plumbers", description: "Emergency leaks, installs & repairs" },
+    { name: "Electricians", description: "Wiring, faults & certificates" },
+    { name: "Roofers", description: "Repairs, replacements & inspections" },
+    { name: "HVAC", description: "Heating, cooling & servicing" },
+    { name: "Landscapers", description: "Gardens, patios & maintenance" },
+    { name: "Pest Control", description: "Rats, wasps & prevention" },
+    { name: "Cleaners", description: "Domestic, end-of-tenancy & commercial" },
+    { name: "General Contractors", description: "Renovations, builds & management" },
+    { name: "Painters", description: "Interior, exterior & finishes" },
+    { name: "Flooring", description: "Installation, repairs & refinishing" },
+    { name: "Carpenters", description: "Framing, fitted furniture & repairs" },
+    { name: "Plasterers", description: "Skimming, boarding & repairs" },
+    { name: "Tilers", description: "Bathrooms, kitchens & floors" },
+    { name: "Joiners", description: "Doors, staircases & bespoke woodwork" },
+    { name: "Handymen", description: "Odd jobs, fixes & maintenance" },
   ],
 }
 
@@ -107,7 +107,6 @@ export function TrustBadgeBand() {
               viewport={{ once: true }}
               className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--border)]"
             >
-              <span className="text-base">{trade.icon}</span>
               <span className="text-sm font-medium text-[var(--navy-900)]">{trade.name}</span>
             </motion.div>
           ))}

@@ -1,7 +1,3 @@
-"use client"
-
-import Script from "next/script"
-
 interface ReviewSchemaProps {
   reviews: {
     name: string
@@ -56,7 +52,7 @@ export function ReviewSchema({ reviews, itemReviewed }: ReviewSchemaProps) {
   }
 
   return (
-    <Script
+    <script
       id="review-schema"
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
