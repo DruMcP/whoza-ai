@@ -3,7 +3,6 @@
 import { motion } from "framer-motion"
 import { Star } from "lucide-react"
 import { ReviewSchema } from "@/components/whoza/review-schema"
-import { ReviewSchema } from "@/components/whoza/review-schema"
 
 const reviews = [
   { name: "Kat Hibbert-Jordan", date: "", text: "I realised recently that my business was not appearing in AI search results at all. Whoza.ai helped me fix that. Now I'm showing up in AI search results and getting more calls. Really pleased with the service.", rating: 5 },
