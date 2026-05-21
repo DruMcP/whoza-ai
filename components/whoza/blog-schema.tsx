@@ -1,7 +1,3 @@
-"use client"
-
-import Script from "next/script"
-
 interface BlogPostSchemaProps {
   posts: {
     slug: string
@@ -50,7 +46,7 @@ export function BlogListingSchema({ posts }: BlogPostSchemaProps) {
   }
 
   return (
-    <Script
+    <script
       id="blog-listing-schema"
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
