@@ -503,7 +503,10 @@ export function PricingSchema() {
       "@type": "Product",
       "name": "whoza.ai Starter Plan",
       "description": "AI call handling for small trade businesses. 0 included jobs, pay per booking.",
-      "brand": { "@id": "https://whoza.ai/#organization" },
+      "brand": {
+        "@type": "Brand",
+        "name": "whoza.ai"
+      },
       "offers": {
         "@type": "Offer",
         "price": "59",
@@ -511,7 +514,42 @@ export function PricingSchema() {
         "priceValidUntil": "2026-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://whoza.ai/pricing",
-        "description": "£59/month + VAT. 0 included jobs. £4.50 per job booked."
+        "description": "£59/month + VAT. 0 included jobs. £4.50 per job booked.",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "merchantReturnLink": "https://whoza.ai/refund-policy",
+          "returnFees": "https://schema.org/FreeReturn",
+          "returnMethod": "https://schema.org/ReturnByMail"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "GBP"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "GB"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "HUR"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "HUR"
+            }
+          }
+        }
       },
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -526,7 +564,10 @@ export function PricingSchema() {
       "@type": "Product",
       "name": "whoza.ai Growth Plan",
       "description": "AI call handling for growing trade businesses. 15 included jobs per month.",
-      "brand": { "@id": "https://whoza.ai/#organization" },
+      "brand": {
+        "@type": "Brand",
+        "name": "whoza.ai"
+      },
       "offers": {
         "@type": "Offer",
         "price": "125",
@@ -534,7 +575,42 @@ export function PricingSchema() {
         "priceValidUntil": "2026-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://whoza.ai/pricing",
-        "description": "£125/month + VAT. 15 included jobs. £3.25 per additional job."
+        "description": "£125/month + VAT. 15 included jobs. £3.25 per additional job.",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "merchantReturnLink": "https://whoza.ai/refund-policy",
+          "returnFees": "https://schema.org/FreeReturn",
+          "returnMethod": "https://schema.org/ReturnByMail"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "GBP"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "GB"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "HUR"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "HUR"
+            }
+          }
+        }
       },
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -549,7 +625,10 @@ export function PricingSchema() {
       "@type": "Product",
       "name": "whoza.ai Pro Plan",
       "description": "AI call handling for established trade businesses. 40 included jobs per month.",
-      "brand": { "@id": "https://whoza.ai/#organization" },
+      "brand": {
+        "@type": "Brand",
+        "name": "whoza.ai"
+      },
       "offers": {
         "@type": "Offer",
         "price": "230",
@@ -557,7 +636,42 @@ export function PricingSchema() {
         "priceValidUntil": "2026-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://whoza.ai/pricing",
-        "description": "£230/month + VAT. 40 included jobs. £2.75 per additional job."
+        "description": "£230/month + VAT. 40 included jobs. £2.75 per additional job.",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "merchantReturnLink": "https://whoza.ai/refund-policy",
+          "returnFees": "https://schema.org/FreeReturn",
+          "returnMethod": "https://schema.org/ReturnByMail"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "GBP"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "GB"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "HUR"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "HUR"
+            }
+          }
+        }
       },
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -572,7 +686,10 @@ export function PricingSchema() {
       "@type": "Product",
       "name": "whoza.ai Scale Plan",
       "description": "AI call handling for multi-person trade businesses. 100 included jobs per month.",
-      "brand": { "@id": "https://whoza.ai/#organization" },
+      "brand": {
+        "@type": "Brand",
+        "name": "whoza.ai"
+      },
       "offers": {
         "@type": "Offer",
         "price": "399",
@@ -580,7 +697,42 @@ export function PricingSchema() {
         "priceValidUntil": "2026-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://whoza.ai/pricing",
-        "description": "£399/month + VAT. 100 included jobs. £2.25 per additional job."
+        "description": "£399/month + VAT. 100 included jobs. £2.25 per additional job.",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "merchantReturnLink": "https://whoza.ai/refund-policy",
+          "returnFees": "https://schema.org/FreeReturn",
+          "returnMethod": "https://schema.org/ReturnByMail"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "GBP"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "GB"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "HUR"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "HUR"
+            }
+          }
+        }
       },
       "aggregateRating": {
         "@type": "AggregateRating",

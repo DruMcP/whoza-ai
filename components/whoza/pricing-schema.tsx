@@ -40,6 +40,41 @@ export function PricingSchema({ currency, plans }: PricingSchemaProps) {
             name: "Whoza.ai",
             url: "https://whoza.ai",
           },
+          hasMerchantReturnPolicy: {
+            "@type": "MerchantReturnPolicy",
+            returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+            merchantReturnDays: 30,
+            merchantReturnLink: "https://whoza.ai/refund-policy",
+            returnFees: "https://schema.org/FreeReturn",
+            returnMethod: "https://schema.org/ReturnByMail",
+          },
+          shippingDetails: {
+            "@type": "OfferShippingDetails",
+            shippingRate: {
+              "@type": "MonetaryAmount",
+              value: "0",
+              currency: "GBP",
+            },
+            shippingDestination: {
+              "@type": "DefinedRegion",
+              addressCountry: "GB",
+            },
+            deliveryTime: {
+              "@type": "ShippingDeliveryTime",
+              handlingTime: {
+                "@type": "QuantitativeValue",
+                minValue: 0,
+                maxValue: 0,
+                unitCode: "HUR",
+              },
+              transitTime: {
+                "@type": "QuantitativeValue",
+                minValue: 0,
+                maxValue: 0,
+                unitCode: "HUR",
+              },
+            },
+          },
         },
       },
     })),
