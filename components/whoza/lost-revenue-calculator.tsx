@@ -7,6 +7,8 @@ import { Calculator, Phone, PoundSterling, DollarSign, TrendingUp, ArrowRight, A
 import { Slider } from "@/components/ui/slider"
 import { trackCalculatorLead, trackCalculatorUse } from "@/lib/gtag"
 import { useLocale } from "@/lib/locale-context"
+import { WaitlistModal } from "./waitlist-modal"
+import { trackCTA } from "@/lib/gtag"
 
 // Job value examples by trade and location
 const jobExamples: Record<string, Record<string, { hint: string; minValue: number; maxValue: number; defaultValue: number }>> = {
@@ -52,6 +54,8 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
   const [missedCalls, setMissedCalls] = useState([6])
   const [avgJobValue, setAvgJobValue] = useState([jobConfig.defaultValue])
   const [conversionRate, setConversionRate] = useState([35])
+
+  const [showWaitlist, setShowWaitlist] = useState(false)
 
   const weeklyLoss = missedCalls[0] * (avgJobValue[0] * (conversionRate[0] / 100))
   const monthlyLoss = weeklyLoss * 4
@@ -395,19 +399,20 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
                       {config.currencySymbol}{config.pricing.starter}/month <span className="text-xs">+VAT</span>
                     </span>
                   </p>
-                  <a 
-                    href="#final-cta"
-                    className="inline-flex items-center justify-center w-full rounded-lg bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold py-6 text-lg transition-colors"
+                  <button 
+                    onClick={() => { trackCTA("Start free trial", "calculator"); setShowWaitlist(true); }}
+                    className="btn-primary inline-flex items-center justify-center w-full rounded-lg bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold py-6 text-lg transition-colors cursor-pointer border-none"
                   >
                     Start free trial
                     <ArrowRight className="ml-2 w-5 h-5" />
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </motion.div>
       </div>
+      {showWaitlist && <WaitlistModal onClose={() => setShowWaitlist(false)} source="calculator" />}
     </section>
   )
 }

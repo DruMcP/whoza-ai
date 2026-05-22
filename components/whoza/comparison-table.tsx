@@ -110,7 +110,7 @@ export function ComparisonTable() {
                     <tr key={`${group.phase}-header`} className="bg-[var(--navy-900)]">
                       <td
                         colSpan={3}
-                        className="py-2 px-3 sm:py-3 sm:px-6 text-xs font-bold text-white uppercase tracking-wider"
+                        className="py-3 px-6 sm:py-4 sm:px-8 text-xs font-bold text-white uppercase tracking-wider"
                       >
                         <div className="flex items-center gap-2">
                           <span>{group.phase}</span>

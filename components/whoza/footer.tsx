@@ -1,7 +1,10 @@
 "use client"
 
 import { Shield } from "lucide-react"
+import { useState } from "react"
 import { useLocale } from "@/lib/locale-context"
+import { WaitlistModal } from "./waitlist-modal"
+import { trackCTA } from "@/lib/gtag"
 
 const footerLinks = {
   product: [
@@ -54,12 +57,18 @@ const usBadges = [
 export function Footer() {
   const { country, config } = useLocale()
   const badges = country === "uk" ? ukBadges : usBadges
+  const [showWaitlist, setShowWaitlist] = useState(false)
+
+  const openWaitlist = () => {
+    trackCTA("Join Pilot - Footer", "footer")
+    setShowWaitlist(true)
+  }
 
   return (
     <footer className="bg-[var(--navy-900)] border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-8 lg:gap-6">
-          {/* Brand + Newsletter Column */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-6">
+          {/* Brand + CTA Column */}
           <div className="col-span-2">
             <a href="/" className="flex items-center mb-6">
               <img 
@@ -74,20 +83,16 @@ export function Footer() {
               AI revenue system for UK tradespeople. Capture missed calls, book more jobs, grow automatically.
             </p>
             
-            {/* Newsletter */}
+            {/* Pilot CTA */}
             <div className="max-w-sm">
-              <h4 className="text-white font-semibold text-sm mb-2">Get trade tips weekly</h4>
-              <p className="text-sm text-white/50 mb-3">AI insights to win more jobs. No spam.</p>
-              <div className="flex gap-2">
-                <input 
-                  type="email" 
-                  placeholder="you@company.com"
-                  className="flex-1 px-3 py-2 rounded-lg bg-white/10 border border-white/10 text-white text-sm placeholder:text-white/40 focus:outline-none focus:border-emerald-500/50 transition-colors"
-                />
-                <button className="px-4 py-2 rounded-lg bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-700 transition-colors">
-                  Subscribe
-                </button>
-              </div>
+              <h4 className="text-white font-semibold text-sm mb-2">Join the pilot programme</h4>
+              <p className="text-sm text-white/50 mb-3">Limited to 50 UK trades. Lock in introductory pricing.</p>
+              <button
+                onClick={openWaitlist}
+                className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-700 transition-colors"
+              >
+                Start Free Trial
+              </button>
             </div>
           </div>
 
@@ -198,6 +203,14 @@ export function Footer() {
           </div>
         </div>
       </div>
+
+      {/* Waitlist Modal */}
+      {showWaitlist && (
+        <WaitlistModal
+          onClose={() => setShowWaitlist(false)}
+          source="footer"
+        />
+      )}
     </footer>
   )
 }

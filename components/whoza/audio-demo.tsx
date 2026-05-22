@@ -1,121 +1,169 @@
 "use client"
 
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef, useEffect, useCallback } from "react"
 import { motion } from "framer-motion"
-import { Play, Pause, Volume2, VolumeX, RotateCcw, ArrowRight, Headphones, MessageSquare, ClipboardCheck, PhoneIncoming } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Slider } from "@/components/ui/slider"
+import { Play, Pause, Volume2 } from "lucide-react"
 
-const flowSteps = [
-  {
-    icon: PhoneIncoming,
-    title: "Katie answers professionally",
-    description: "Every call is greeted with your business name",
-  },
-  {
-    icon: MessageSquare,
-    title: "The customer explains the issue",
-    description: "Katie listens and asks the right follow-up questions",
-  },
-  {
-    icon: ClipboardCheck,
-    title: "Katie captures the details",
-    description: "Urgency, postcode and contact info are collected",
-  },
-  {
-    icon: Headphones,
-    title: "Enquiry sent to your phone",
-    description: "You decide: Accept, Call Back or Decline",
-  },
-]
+function trackGA4(event: string, params?: Record<string, unknown>) {
+  if (typeof window !== "undefined" && "gtag" in window) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    ;(window as any).gtag("event", event, params)
+  }
+}
 
 export function AudioDemo() {
   const [isPlaying, setIsPlaying] = useState(false)
+  const [progress, setProgress] = useState(0)
   const [currentTime, setCurrentTime] = useState(0)
-  const [duration, setDuration] = useState(0)
-  const [isMuted, setIsMuted] = useState(false)
-  const audioRef = useRef<HTMLAudioElement>(null)
+  const [duration, setDuration] = useState(64)
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [hasStarted, setHasStarted] = useState(false)
+  const [fiftyPctFired, setFiftyPctFired] = useState(false)
+  const audioRef = useRef<HTMLAudioElement | null>(null)
+  const sectionRef = useRef<HTMLElement | null>(null)
+  const [isVisible, setIsVisible] = useState(false)
+  const engagementTimeRef = useRef(0)
+  const lastTickRef = useRef(0)
 
+  // Lazy load audio via Intersection Observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.1 }
+    )
+    if (sectionRef.current) observer.observe(sectionRef.current)
+    return () => observer.disconnect()
+  }, [])
+
+  // Audio event handlers
   useEffect(() => {
     const audio = audioRef.current
     if (!audio) return
 
-    const updateTime = () => setCurrentTime(audio.currentTime)
-    const handleEnded = () => setIsPlaying(false)
-    const handleLoaded = () => setDuration(audio.duration || 0)
+    // If already loaded (readyState >= 2 = HAVE_CURRENT_DATA), set immediately
+    if (audio.readyState >= 2 && !isLoaded) {
+      setDuration(audio.duration || 64)
+      setIsLoaded(true)
+    }
 
-    audio.addEventListener("timeupdate", updateTime)
-    audio.addEventListener("ended", handleEnded)
-    audio.addEventListener("loadedmetadata", handleLoaded)
-    audio.addEventListener("canplaythrough", handleLoaded)
+    const onTimeUpdate = () => {
+      const ct = audio.currentTime
+      const dur = audio.duration || 64
+      setCurrentTime(ct)
+      setProgress((ct / dur) * 100)
+
+      // Track 50% completion
+      if (!fiftyPctFired && ct / dur >= 0.5) {
+        setFiftyPctFired(true)
+        trackGA4("audio_50pct", { audio_name: "katie_demo_leaky_tap" })
+      }
+
+      // Engagement time tracking (sum of seconds played)
+      if (lastTickRef.current > 0) {
+        const delta = ct - lastTickRef.current
+        if (delta > 0 && delta < 1) {
+          engagementTimeRef.current += delta
+        }
+      }
+      lastTickRef.current = ct
+    }
+
+    const onLoadedMetadata = () => {
+      setDuration(audio.duration || 64)
+      setIsLoaded(true)
+    }
+
+    const onEnded = () => {
+      setIsPlaying(false)
+      setProgress(100)
+      trackGA4("audio_complete", {
+        audio_name: "katie_demo_leaky_tap",
+        engagement_time: Math.round(engagementTimeRef.current),
+      })
+    }
+
+    const onError = () => {
+      setIsPlaying(false)
+    }
+
+    audio.addEventListener("timeupdate", onTimeUpdate)
+    audio.addEventListener("loadedmetadata", onLoadedMetadata)
+    audio.addEventListener("ended", onEnded)
+    audio.addEventListener("error", onError)
 
     return () => {
-      audio.removeEventListener("timeupdate", updateTime)
-      audio.removeEventListener("ended", handleEnded)
-      audio.removeEventListener("loadedmetadata", handleLoaded)
-      audio.removeEventListener("canplaythrough", handleLoaded)
+      audio.removeEventListener("timeupdate", onTimeUpdate)
+      audio.removeEventListener("loadedmetadata", onLoadedMetadata)
+      audio.removeEventListener("ended", onEnded)
+      audio.removeEventListener("error", onError)
     }
-  }, [])
+  }, [fiftyPctFired, isVisible, isLoaded])
 
-  const togglePlay = () => {
+  const togglePlay = useCallback(() => {
     const audio = audioRef.current
-    if (!audio) return
+    if (!audio || !isLoaded) return
+
     if (isPlaying) {
       audio.pause()
+      setIsPlaying(false)
     } else {
-      audio.play().catch(() => {})
+      audio.play().then(() => {
+        setIsPlaying(true)
+        if (!hasStarted) {
+          setHasStarted(true)
+          trackGA4("audio_play", {
+            audio_name: "katie_demo_leaky_tap",
+            duration_seconds: Math.round(duration),
+          })
+        }
+      }).catch(() => {
+        setIsPlaying(false)
+      })
     }
-    setIsPlaying(!isPlaying)
-  }
+  }, [isPlaying, isLoaded, hasStarted, duration])
 
-  const reset = () => {
+  const handleSeek = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     const audio = audioRef.current
-    if (!audio) return
-    audio.pause()
-    audio.currentTime = 0
-    setIsPlaying(false)
-    setCurrentTime(0)
-  }
-
-  const handleSeek = ([value]: number[]) => {
-    const audio = audioRef.current
-    if (!audio) return
-    audio.currentTime = value
-    setCurrentTime(value)
-  }
-
-  const toggleMute = () => {
-    const audio = audioRef.current
-    if (!audio) return
-    audio.muted = !isMuted
-    setIsMuted(!isMuted)
-  }
+    if (!audio || !isLoaded) return
+    const rect = e.currentTarget.getBoundingClientRect()
+    const pct = (e.clientX - rect.left) / rect.width
+    const newTime = pct * (audio.duration || duration)
+    audio.currentTime = newTime
+    setCurrentTime(newTime)
+    setProgress(pct * 100)
+  }, [isLoaded, duration])
 
   const formatTime = (seconds: number) => {
-    const mins = Math.floor(seconds / 60)
-    const secs = Math.floor(seconds % 60)
-    return `${mins}:${secs.toString().padStart(2, "0")}`
+    const m = Math.floor(seconds / 60)
+    const s = Math.floor(seconds % 60)
+    return `${m}:${s.toString().padStart(2, "0")}`
   }
 
   return (
-    <section className="py-20 lg:py-28 bg-[var(--navy-900)] dark-section">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      ref={sectionRef}
+      id="katie-demo-audio"
+      className="section-padding-lg bg-white relative"
+      aria-label="Katie demo audio player"
+    >
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-10"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-[var(--katie-blue)]/20 text-[var(--katie-blue)] text-sm font-medium mb-4">
-            Listen Now
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight text-balance reveal">
-            Hear Katie handle a{" "}
-            <span className="text-[var(--katie-blue)]">customer enquiry</span>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[var(--navy-900)] mb-4 reveal">
+            Hear Katie answer a call
           </h2>
-          <p className="mt-6 text-lg text-white/60 max-w-2xl mx-auto">
-            Listen to a short example of how Whoza answers, qualifies and sends an enquiry straight to your phone.
+          <p className="text-base sm:text-lg text-[var(--slate-500)] max-w-2xl mx-auto">
+            Listen to Katie qualify a leaking tap enquiry and send it straight to WhatsApp — in 64 seconds.
           </p>
         </motion.div>
 
@@ -124,140 +172,112 @@ export function AudioDemo() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-[var(--navy-800)] rounded-3xl p-6 lg:p-8 border border-white/10 shadow-xl mb-10"
+          className="bg-[var(--off-white)] rounded-2xl border border-[var(--border)] p-6 sm:p-8 shadow-sm"
+          aria-live="polite"
         >
-          {/* Hidden audio element */}
-          <audio
-            ref={audioRef}
-            src="/audio/whoza_katie_customer_enquiry_demo_final.mp3"
-            preload="metadata"
-            controlsList="nodownload"
-          />
+          {/* Hidden native audio element (lazy loaded) */}
+          {isVisible && (
+            <audio
+              ref={audioRef}
+              src="/audio/katie-demo-leaky-tap.mp3"
+              preload="metadata"
+              crossOrigin="anonymous"
+              className="hidden"
+              aria-hidden="true"
+            />
+          )}
 
-          {/* Animated Waveform */}
-          <div className="flex items-center justify-center gap-1 h-12 mb-4">
-            {Array.from({ length: 40 }).map((_, i) => (
-              <motion.div
-                key={i}
-                className="w-1 rounded-full bg-[var(--katie-blue)]/60"
-                animate={isPlaying ? {
-                  height: [8, 24 + Math.random() * 24, 8],
-                  opacity: [0.5, 1, 0.5],
-                } : {
-                  height: 8,
-                  opacity: 0.3,
-                }}
-                transition={isPlaying ? {
-                  duration: 0.5 + Math.random() * 0.5,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  delay: i * 0.02,
-                } : { duration: 0.3 }}
-              />
-            ))}
-          </div>
+          {/* No-JS fallback */}
+          <noscript>
+            <audio controls className="w-full" preload="none">
+              <source src="/audio/katie-demo-leaky-tap.mp3" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+          </noscript>
 
-          {/* Player Controls */}
-          <div className="flex items-center gap-4 mb-4">
-            <Button
+          {/* Custom Player UI */}
+          <div className="flex items-center gap-4 sm:gap-6">
+            {/* Play/Pause Button */}
+            <button
               onClick={togglePlay}
-              aria-label={isPlaying ? "Pause" : "Play"}
-              className="w-14 h-14 rounded-full bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 p-0 shrink-0 transition-transform active:scale-95"
+              disabled={!isLoaded}
+              aria-label={isPlaying ? "Pause demo call" : "Play demo call"}
+              className={`
+                flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center
+                transition-all duration-200 ease-out
+                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--katie-blue)] focus-visible:ring-offset-2
+                min-w-[44px] min-h-[44px]
+                ${isLoaded 
+                  ? "bg-[var(--katie-blue)] text-white hover:scale-105 active:scale-95 cursor-pointer" 
+                  : "bg-[var(--slate-200)] text-[var(--slate-400)] cursor-not-allowed"
+                }
+              `}
+              style={{ touchAction: "manipulation" }}
             >
               {isPlaying ? (
-                <Pause className="w-6 h-6 text-white" />
+                <Pause className="w-6 h-6" fill="currentColor" />
               ) : (
-                <Play className="w-6 h-6 text-white ml-1" />
+                <Play className="w-6 h-6 ml-0.5" fill="currentColor" />
               )}
-            </Button>
+            </button>
 
+            {/* Progress + Info */}
             <div className="flex-1 min-w-0">
-              <Slider
-                value={[currentTime]}
-                onValueChange={handleSeek}
-                max={duration || 1}
-                step={0.1}
-                className="[&_[role=slider]]:bg-[var(--katie-blue)] [&_[role=slider]]:border-0 [&_.bg-primary]:bg-[var(--katie-blue)]"
-              />
-              <div className="flex justify-between text-xs text-white/40 mt-1">
-                <span>{formatTime(currentTime)}</span>
-                <span>{formatTime(duration)}</span>
+              {/* Progress Bar */}
+              <div
+                className="relative h-2 bg-[var(--slate-200)] rounded-full cursor-pointer group"
+                onClick={handleSeek}
+                role="slider"
+                aria-label="Audio progress"
+                aria-valuemin={0}
+                aria-valuemax={100}
+                aria-valuenow={Math.round(progress)}
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
+                    e.preventDefault()
+                    const audio = audioRef.current
+                    if (!audio) return
+                    const delta = e.key === "ArrowLeft" ? -5 : 5
+                    const newTime = Math.max(0, Math.min(audio.duration || duration, currentTime + delta))
+                    audio.currentTime = newTime
+                  }
+                }}
+              >
+                <div
+                  className="absolute top-0 left-0 h-full bg-[var(--katie-blue)] rounded-full transition-all"
+                  style={{
+                    width: `${progress}%`,
+                    transitionDuration: "100ms",
+                    transitionTimingFunction: "linear",
+                  }}
+                />
+                {/* Hover thumb */}
+                <div 
+                  className="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-white border-2 border-[var(--katie-blue)] rounded-full shadow-sm opacity-0 group-hover:opacity-100 transition-opacity"
+                  style={{ left: `calc(${progress}% - 8px)` }}
+                />
+              </div>
+
+              {/* Time + Duration */}
+              <div className="flex items-center justify-between mt-2">
+                <span className="text-sm text-[var(--slate-400)] font-medium tabular-nums">
+                  {formatTime(currentTime)} / {formatTime(duration)}
+                </span>
+                <div className="flex items-center gap-1.5 text-sm text-[var(--slate-400)]">
+                  <Volume2 className="w-4 h-4" />
+                  <span>1.0 MB</span>
+                </div>
               </div>
             </div>
-
-            <button
-              onClick={toggleMute}
-              aria-label={isMuted ? "Unmute" : "Mute"}
-              className="p-2 text-white/60 hover:text-white transition-colors shrink-0"
-            >
-              {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
-            </button>
-
-            <button
-              onClick={reset}
-              aria-label="Restart audio"
-              className="p-2 text-white/60 hover:text-white transition-colors shrink-0"
-            >
-              <RotateCcw className="w-5 h-5" />
-            </button>
           </div>
 
-          {/* 4-step flow */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-6 reveal-stagger">
-            {flowSteps.map((step, index) => {
-              const StepIcon = step.icon
-              return (
-                <motion.div
-                  key={step.title}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="flex items-start gap-3 p-3 rounded-xl bg-white/5 border border-white/10"
-                >
-                  <div className="w-8 h-8 rounded-lg bg-[var(--katie-blue)]/20 flex items-center justify-center shrink-0 mt-0.5"
-                  >
-                    <StepIcon className="w-4 h-4 text-[var(--katie-blue)]" />
-                  </div>
-                  <div className="min-w-0">
-                    <p className="text-sm font-semibold text-white/90 leading-tight">{step.title}</p>
-                    <p className="text-xs text-white/50 mt-0.5 leading-snug">{step.description}</p>
-                  </div>
-                </motion.div>
-              )
-            })}
-          </div>
-
-          {/* Trust line */}
-          <div className="mt-5 pt-4 border-t border-white/10">
-            <p className="text-xs text-white/40 text-center">
-              Example AI conversation for demonstration purposes.
-              {" "}<span className="text-white/60">
-                Your own assistant name, voice and greeting can be customised during setup.
-              </span>
+          {/* Offline warning */}
+          {typeof navigator !== "undefined" && !navigator.onLine && (
+            <p className="mt-4 text-sm text-amber-600 bg-amber-50 rounded-lg px-3 py-2">
+              Connection required to play audio.
             </p>
-          </div>
-        </motion.div>
-
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <a
-            href="#final-cta"
-            className="inline-flex items-center justify-center rounded-lg bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 text-white font-semibold px-8 h-12 text-base transition-colors"
-          >
-            Get Katie answering my calls
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </a>
-          <p className="mt-4 text-sm text-white/50">
-            <a href="#how-it-works" className="underline hover:text-white/70 transition-colors">
-              See how setup works
-            </a>
-          </p>
+          )}
         </motion.div>
       </div>
     </section>

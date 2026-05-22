@@ -205,7 +205,7 @@ export function WhatsAppDelivery({ trade }: WhatsAppDeliveryProps) {
                         >
                           <button
                             onClick={handleAccept}
-                            className="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#25d366] text-white text-sm font-bold shadow-lg hover:bg-[#128c7e] transition-colors"
+                            className="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#25d366] text-white text-sm font-bold shadow-lg hover:bg-[var(--rex-green-hover)] transition-colors"
                           >
                             <CheckCircle2 className="w-4 h-4" />
                             Accept

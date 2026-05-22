@@ -1,0 +1,1 @@
+cd /root/.openclaw/workspace/whoza-ai-v0 && set -a && source .env.production && set +a && npx netlify deploy --prod --dir=.next --skip-functions-cache --timeout=600000
