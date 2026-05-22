@@ -62,7 +62,7 @@ const videoSchema = {
     "https://whoza.ai/og-image.png",
     "https://whoza.ai/og-image-1200x630.png",
   ],
-  uploadDate: "2026-05-06T00:00:00+00:00",
+  uploadDate: "2026-05-22T00:00:00Z",
   duration: "PT60S",
   contentUrl: "https://whoza.ai/whoza-explainer.mp4",
   embedUrl: "https://whoza.ai/watch",
