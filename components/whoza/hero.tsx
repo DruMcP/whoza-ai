@@ -6,6 +6,8 @@ import { motion } from "framer-motion"
 import { HeroPhoneMockup } from "./hero-phone-mockup"
 import { WaitlistModal } from "./waitlist-modal"
 
+import { trackCTA } from "@/lib/gtag"
+
 /* ── Trust pills (3 only, post-CTA support) ── */
 const trustItems = [
   "No credit card required",
@@ -92,6 +94,7 @@ export function Hero() {
   }, [])
 
   const handlePrimaryCTA = useCallback(() => {
+    trackCTA("Try Katie Free", "hero")
     setCtaLoading(true)
     setTimeout(() => {
       setCtaLoading(false)

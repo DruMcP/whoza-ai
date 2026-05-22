@@ -7,6 +7,8 @@ import { useLocale } from "@/lib/locale-context"
 import { WaitlistModal } from "./waitlist-modal"
 import { PilotSpotCounter } from "./pilot-spot-counter"
 
+import { trackCTA } from "@/lib/gtag"
+
 const teamMembers = [
   { name: "Katie", icon: Phone, bgClass: "bg-[var(--katie-blue)]/20 border-[var(--katie-blue)]/30", iconClass: "text-[var(--katie-blue)]" },
   { name: "Mark", icon: Phone, bgClass: "bg-[var(--mark-grey)]/20 border-[var(--mark-grey)]/30", iconClass: "text-[var(--mark-grey)]" },
@@ -113,7 +115,10 @@ export function FinalCTA() {
           className="mt-10 flex justify-center"
         >
           <button
-            onClick={() => setShowWaitlist(true)}
+            onClick={() => {
+              trackCTA("Start your free week", "final-cta")
+              setShowWaitlist(true)
+            }}
             className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-6 text-lg rounded-lg transition-all hover:scale-[1.02] shadow-2xl shadow-[var(--rex-green)]/40"
           >
             Start your free week

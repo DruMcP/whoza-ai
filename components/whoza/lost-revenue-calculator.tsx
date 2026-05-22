@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import { Calculator, Phone, PoundSterling, DollarSign, TrendingUp, ArrowRight, AlertTriangle, PhoneMissed, Voicemail, Zap } from "lucide-react"
 import { Slider } from "@/components/ui/slider"
+import { trackCalculatorLead, trackCalculatorUse } from "@/lib/gtag"
 import { useLocale } from "@/lib/locale-context"
 
 // Job value examples by trade and location
@@ -88,6 +89,8 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
       return
     }
     setIsSubmitting(true)
+    // Track lead in GA4
+    trackCalculatorLead(email)
     // Store in localStorage
     if (typeof window !== "undefined") {
       window.localStorage.setItem("whoza_calc_email", JSON.stringify({ email, timestamp: Date.now() }))
@@ -113,6 +116,7 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
       (entries) => {
         if (entries[0].isIntersecting && !hasAnimated) {
           setHasAnimated(true)
+          trackCalculatorUse()
           animateNumber(setAnimatedWeekly, 0, weeklyLoss, 800)
           animateNumber(setAnimatedMonthly, 0, monthlyLoss, 1000)
           animateNumber(setAnimatedYearly, 0, yearlyLoss, 1200)
@@ -330,6 +334,7 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
                           onChange={(e) => { setEmail(e.target.value); setEmailError("") }}
                           placeholder="e.g. john@smithplumbing.co.uk"
                           className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/10 text-white text-sm placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-[var(--katie-blue)]"
+                          required
                         />
                         {emailError && (
                           <p className="text-xs text-red-400">{emailError}</p>
