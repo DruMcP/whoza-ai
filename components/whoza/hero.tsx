@@ -117,6 +117,13 @@ export function Hero() {
         />
       </div>
 
+      {/* Animated gradient mesh orbs */}
+      <div className="gradient-mesh" aria-hidden="true">
+        <div className="orb w-[500px] h-[500px] bg-[var(--katie-blue)]/10 top-[-100px] left-[-100px]" style={{ animationDelay: '0s' }} />
+        <div className="orb w-[400px] h-[400px] bg-[var(--rex-green)]/10 top-[40%] right-[-80px]" style={{ animationDelay: '-3s' }} />
+        <div className="orb w-[300px] h-[300px] bg-[var(--claire-amber)]/5 bottom-[-50px] left-[30%]" style={{ animationDelay: '-5s' }} />
+      </div>
+
       {/* Subtle grid */}
       <div
         className="absolute inset-0 pointer-events-none bg-[length:60px_60px]"
