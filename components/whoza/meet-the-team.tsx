@@ -8,7 +8,7 @@ const voiceAgents = [
     name: "Katie",
     role: "Call Capture",
     voice: "Female Voice",
-    description: "Katie answers calls 24/7, qualifies real customer enquiries, and sends them to WhatsApp while you work. Friendly, professional and calm under pressure — she helps customers feel heard before the enquiry reaches you.",
+    description: "Katie answers calls 24/7, qualifies real customer enquiries, and sends them to WhatsApp while you work. Friendly, professional and calm under pressure - she helps customers feel heard before the enquiry reaches you.",
     outcome: "Ready to accept, call back or decline.",
     audioSample: "Hi, you've reached Thompson Plumbing. My name is Katie. How can I help you today?",
     image: "/assets/icons/katie-icon.webp",
@@ -23,7 +23,7 @@ const voiceAgents = [
     name: "Mark",
     role: "Call Capture",
     voice: "Male Voice",
-    description: "Mark answers calls 24/7, qualifies real customer enquiries, and sends them to WhatsApp while you work. Clear, efficient and professional — ideal if you prefer a direct male voice.",
+    description: "Mark answers calls 24/7, qualifies real customer enquiries, and sends them to WhatsApp while you work. Clear, efficient and professional - ideal if you prefer a direct male voice.",
     outcome: "Job type, urgency, location and customer details captured.",
     audioSample: "Hi, you've reached Wilson Electrics. This is Mark speaking. What can I do for you?",
     image: "/assets/icons/mark-icon.webp",
@@ -38,7 +38,7 @@ const voiceAgents = [
     name: "Claire",
     role: "Review Collection",
     headline: "Claire turns completed jobs into reviews",
-    description: "Claire follows up after completed work to request reviews while the customer still remembers the good service. Polite, timely and consistent — she helps turn good jobs into future trust.",
+    description: "Claire follows up after completed work to request reviews while the customer still remembers the good service. Polite, timely and consistent - she helps turn good jobs into future trust.",
     outcome: "More reviews. More trust. More customers choosing you.",
     entitlement: "Included in Growth plan and above.",
     whatsappMessage: "Hi John, thanks for choosing Thompson Plumbing yesterday. If you were happy with the service, would you mind leaving us a quick review? It really helps. [Google review link]",
@@ -144,7 +144,7 @@ export function MeetTheTeam() {
                 {/* Description */}
                 <p className="text-[var(--slate-500)] mb-6 text-sm leading-relaxed">{agent.description}</p>
 
-                {/* Audio Sample Preview — Voice Agents Only */}
+                {/* Audio Sample Preview - Voice Agents Only */}
                 {agent.isVoiceAgent && agent.audioSample && (
                   <div className={`p-4 rounded-xl ${agent.bgLight} mb-6`}>
                     <div className="flex items-center gap-3 mb-2">
@@ -155,32 +155,32 @@ export function MeetTheTeam() {
                   </div>
                 )}
 
-                {/* WhatsApp Message Block — Claire */}
+                {/* WhatsApp Message Block - Claire */}
                 {agent.whatsappMessage && (
-                  <div 
-                    className="p-3 mb-4 rounded-lg border-l-[3px] bg-[#F5F5F5]"
-                    style={{ 
-                      borderLeftColor: agent.color === "var(--claire-amber)" ? "#F59E0B" : agent.color 
+                  <div
+                    className="p-3 mb-4 rounded-lg border-l-[3px] bg-[var(--off-white)]"
+                    style={{
+                      borderLeftColor: agent.color === "var(--claire-amber)" ? "var(--claire-amber)" : agent.color
                     }}
                   >
-                    <p className="text-sm text-[#555555]">
+                    <p className="text-sm text-[var(--slate-500)]">
                       {agent.whatsappMessage}
                     </p>
                   </div>
                 )}
 
-                {/* Insight Card — Rex */}
+                {/* Insight Card - Rex */}
                 {agent.insightCard && (
-                  <div 
-                    className="p-3 mb-4 rounded-lg border-l-[3px] bg-[#F5F5F5] border-l-[#047857]"
+                  <div
+                    className="p-3 mb-4 rounded-lg border-l-[3px] bg-[var(--off-white)] border-l-[var(--rex-green)]"
                   >
-                    <p className="text-sm whitespace-pre-line text-[#555555]">
+                    <p className="text-sm whitespace-pre-line text-[var(--slate-500)]">
                       {agent.insightCard}
                     </p>
                   </div>
                 )}
 
-                {/* Outcome line — desktop only (hidden on mobile < 768px) */}
+                {/* Outcome line - desktop only (hidden on mobile < 768px) */}
                 {agent.outcome && (
                   <p className="hidden md:block text-sm font-medium text-[var(--navy-900)] mt-auto pt-4 mb-2">
                     {agent.outcome}
@@ -209,8 +209,6 @@ export function MeetTheTeam() {
             Choose the voice and name that fits your business. Switch anytime.
           </p>
         </motion.div>
-        {/* Gradient Transition to Dark Section */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-[var(--off-white)] to-[var(--navy-900)]" />
       </div>
     </section>
   )

@@ -33,6 +33,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/whoza-vs-clara`,
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/whoza-vs-moneypenny`,
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/whoza-vs-team-connect`,
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/faq`,
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/best-ai-call-handler-uk-trades`,
       lastModified: lastMod,
       changeFrequency: 'monthly',
@@ -173,8 +197,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts
   const blogPosts: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026`,
-      lastModified: '2026-05-20',
+      url: `${baseUrl}/blog/best-ai-phone-answering-uk-trades-2026`,
+      lastModified: '2026-05-22',
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/blog/how-much-do-missed-calls-cost-uk-trades`,
+      lastModified: '2026-05-22',
       changeFrequency: 'monthly',
       priority: 0.85,
     },

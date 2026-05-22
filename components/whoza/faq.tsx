@@ -206,8 +206,6 @@ export function FAQ() {
           </a>
         </motion.div>
 
-        {/* Gradient Transition to Dark Section */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-[var(--navy-900)]" />
       </div>
     </section>
   )

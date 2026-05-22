@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react"
 import { motion } from "framer-motion"
-import { Play, CheckCircle2, Clock, MapPin, Phone, ArrowRight } from "lucide-react"
+import { Play, CheckCircle2, Clock, MapPin, Phone } from "lucide-react"
 
 export function VideoExplainer() {
   const [isPlaying, setIsPlaying] = useState(false)
@@ -20,7 +20,7 @@ export function VideoExplainer() {
   }
 
   return (
-    <section id="video-explainer" className="py-16 lg:py-20 bg-[var(--off-white)]">
+    <section id="video-explainer" className="section-padding bg-[var(--off-white)]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -54,6 +54,7 @@ export function VideoExplainer() {
               poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1280' height='720' viewBox='0 0 1280 720'%3E%3Crect fill='%230b141a' width='1280' height='720'/%3E%3C/svg%3E"
               preload="metadata"
               playsInline
+              controls
               onPause={handlePause}
               onEnded={handlePause}
             >
@@ -163,16 +164,9 @@ export function VideoExplainer() {
           transition={{ delay: 0.4 }}
           className="mt-8 text-center"
         >
-          <p className="text-sm text-[var(--slate-500)] mb-4">
+          <p className="text-sm text-[var(--slate-500)]">
             See Katie capture a missed enquiry in under 60 seconds.
           </p>
-          <a
-            href="#final-cta"
-            className="inline-flex items-center justify-center rounded-lg bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-6 text-lg gap-2 shadow-xl shadow-[var(--rex-green)]/30 transition-all hover:scale-105"
-          >
-            Watch the demo
-            <ArrowRight className="w-5 h-5" />
-          </a>
         </motion.div>
       </div>
     </section>

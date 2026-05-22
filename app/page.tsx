@@ -4,10 +4,10 @@ import { Header } from "@/components/whoza/header"
 import { Hero } from "@/components/whoza/hero"
 import { SocialProofBar } from "@/components/whoza/social-proof-bar"
 import { SocialProofBand, StatsBand } from "@/components/whoza/social-proof"
+import { AudioDemo } from "@/components/whoza/audio-demo"
 import { VideoExplainer } from "@/components/whoza/video-explainer"
 import { HowWhozaWorks } from "@/components/whoza/how-whoza-works"
 import { MeetTheTeam } from "@/components/whoza/meet-the-team"
-import { WhatsAppDelivery } from "@/components/whoza/whatsapp-delivery"
 import { PreLaunchProof } from "@/components/whoza/pre-launch-proof"
 import { ControlSection } from "@/components/whoza/control-section"
 import { ReviewsEngine } from "@/components/whoza/reviews-engine"
@@ -34,6 +34,7 @@ const TrilletVoiceWidget = dynamic(
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { ClaireDashboard } from "@/components/whoza/claire-dashboard"
 import { HomepageSchema } from "@/components/whoza/schema-markup"
+import { FAQPageSchema } from "@/components/whoza/faq-schema"
 import { ExitIntentModal } from "@/components/whoza/exit-intent-modal"
 
 export default function Home() {
@@ -41,6 +42,20 @@ export default function Home() {
     <>
       <Header />
       <BreadcrumbSchema items={[{ name: "Home", item: "https://whoza.ai" }]} />
+      <FAQPageSchema
+        items={[
+          { question: "How much does Whoza cost in total?", answer: "You pay a monthly plan fee (Starter £59, Growth £125, Pro £230, Scale £399 — all +VAT). Each plan includes a set number of call handling minutes and booked enquiries. Additional enquiries beyond your included amount are charged per booking. Overage minutes are billed at £0.22 per minute. There are no hidden setup fees or long-term contracts." },
+          { question: "Is there a free trial?", answer: "Yes — the 7-day free trial is available on the Starter plan only. Your trial includes 20 minutes of call handling and up to 4 booked enquiries at no charge. No credit card required to start." },
+          { question: "How quickly can I get set up?", answer: "Most tradespeople are fully set up in under 30 minutes. You'll forward your existing business number to your new whoza.ai number, customize your agent's greeting, connect your calendar, and you're live. No technical knowledge required." },
+          { question: "What trades do you support?", answer: "We support all UK trades including plumbers, electricians, builders, roofers, painters, landscapers, heating engineers, carpenters, tilers, plasterers, locksmiths, drainage specialists, and pest control. Our agents are trained on trade-specific terminology and common customer queries for each profession." },
+          { question: "What happens if Katie can't handle a call?", answer: "Katie is trained to recognize when she needs to transfer to a human. For complex queries, emergencies, or if the customer specifically requests you, she'll take a message and notify you immediately via SMS and email. You can call them back within seconds." },
+          { question: "Does it work with my existing phone number?", answer: "Yes. You simply forward your existing business number to your whoza.ai number. Your customers call the same number they always have — they just get answered every time instead of hitting voicemail." },
+          { question: "Is my data safe and compliant?", answer: "Absolutely. We're fully compliant with all relevant data protection regulations. All call recordings and customer data are encrypted, stored in secure local data centers, and you maintain full control." },
+          { question: "What if I want to cancel?", answer: "Cancel anytime — no contracts, no cancellation fees, no hassle. We're confident you'll stay because the system pays for itself many times over, but if it's not right for your business, you can cancel with one click from your dashboard." },
+          { question: "What does the free trial include?", answer: "The 7-day free trial is on the Starter plan only. It includes: 20 minutes of AI call handling, up to 4 booked enquiries, full access to the WhatsApp delivery system, and the complete dashboard." },
+          { question: "What happens to my data if I cancel?", answer: "You can cancel anytime with one click. Your call recordings, customer data, and enquiry history are yours. We can export your data on request, and all stored data is deleted in line with GDPR requirements after cancellation." },
+        ]}
+      />
 
       <main id="main-content" role="main" className="pb-24 lg:pb-0">
         {/* HOOK - Hero with clean hierarchy */}
@@ -60,10 +75,10 @@ export default function Home() {
         <div className="section-divider" />
         <MeetTheTeam />
 
-        {/* SHOW - Video explainer + demos */}
+        {/* SHOW - Video explainer + Audio demo */}
         <div className="section-divider" />
         <VideoExplainer />
-        <WhatsAppDelivery />
+        <AudioDemo />
 
         {/* EXAMPLE SCENARIO - Day in the life */}
         <div className="section-divider" />

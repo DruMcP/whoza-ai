@@ -28,13 +28,13 @@ const fadeUp = (delay = 0) => ({
 })
 
 const fadeUpVisible = (delay = 0) => ({
-  initial: { opacity: 1, y: 0 },
+  initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] },
 })
 
 const fadeInRightVisible = (delay = 0) => ({
-  initial: { opacity: 1, x: 0 },
+  initial: { opacity: 0, x: 50 },
   animate: { opacity: 1, x: 0 },
   transition: { duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] },
 })
@@ -104,7 +104,7 @@ export function Hero() {
 
   return (
     <section
-      className="hero dark-section relative overflow-hidden bg-gradient-to-br from-[#0F1729] via-[#1A1A2E] to-[#0F1729] pt-[var(--section-py-xl)]"
+      className="hero hero-grain dark-section relative overflow-hidden bg-gradient-to-br from-[#0F1729] via-[#1A1A2E] to-[#0F1729] pt-[var(--section-py-xl)]"
       aria-label="Introduction"
     >
       {/* ── Background atmosphere ── */}
@@ -128,7 +128,7 @@ export function Hero() {
 
       {/* ── Main grid ── */}
       <div
-        className="relative max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-[55%_45%] gap-[clamp(40px,4vw,80px)] items-start pb-20"
+        className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-[55%_45%] gap-[clamp(40px,4vw,80px)] items-start pb-20"
       >
         {/* ══ LEFT: Text column ══ */}
         <div className="max-w-[540px]">
@@ -168,7 +168,7 @@ export function Hero() {
           {/* Subhead */}
           <motion.p
             {...fadeUpVisible(0.4)}
-            className="font-sans text-[17px] leading-relaxed text-slate-400 mb-3 tracking-wide"
+            className="font-sans text-lg leading-relaxed text-slate-400 mb-3 tracking-wide"
           >
             The <abbr title="Artificial Intelligence">AI</abbr> call handler built for
             UK trades. Answers every call, qualifies real jobs, sends them to your WhatsApp.
@@ -177,7 +177,7 @@ export function Hero() {
           {/* Outcome punchline */}
           <motion.p
             {...fadeUpVisible(0.5)}
-            className="font-sans text-[17px] font-semibold leading-snug text-white mb-5"
+            className="font-sans text-lg font-semibold leading-snug text-white mb-5"
           >
             No apps. No Contract. Just more work.
           </motion.p>
@@ -190,7 +190,7 @@ export function Hero() {
             <button
               onClick={handlePrimaryCTA}
               disabled={ctaLoading}
-              className="btn-primary inline-flex items-center justify-center bg-white text-[#1A1A2E] font-sans text-[17px] font-bold px-8 py-4 rounded-xl no-underline border-none cursor-pointer min-h-[56px] whitespace-nowrap shadow-[0_4px_14px_rgba(255,255,255,0.15)]"
+              className="btn-primary inline-flex items-center justify-center bg-white text-[#1A1A2E] font-sans text-lg font-bold px-8 py-4 rounded-xl no-underline border-none cursor-pointer min-h-[56px] whitespace-nowrap shadow-[0_4px_14px_rgba(255,255,255,0.15)]"
               aria-label="Try Katie Free for 7 Days"
             >
               {ctaLoading ? (

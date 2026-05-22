@@ -50,7 +50,7 @@ export function Header() {
         role="banner"
         aria-label="Main navigation"
       >
-        <nav className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8" aria-label="Primary">
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Primary">
           <div className="flex items-center justify-between h-[56px]">
             {/* Logo */}
             <a
@@ -105,13 +105,13 @@ export function Header() {
               transition={{ duration: 0.25 }}
               className="md:hidden bg-[#111418]/95 backdrop-blur-md border-t border-white/[0.08] overflow-hidden"
             >
-              <div className="max-w-[1200px] mx-auto px-4 py-4 flex flex-col gap-3">
+              <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-3">
                 {navLinks.map((link) =>
                   <a
                     key={link.href}
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href, link.isPageLink)}
-                    className="text-white/70 hover:text-white text-sm font-medium no-underline transition-colors py-2"
+                    className="text-white/70 hover:text-white text-sm font-medium no-underline transition-colors py-2 min-h-[44px] flex items-center"
                   >
                     {link.label}
                   </a>

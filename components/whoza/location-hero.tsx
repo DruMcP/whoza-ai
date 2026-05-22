@@ -1,10 +1,13 @@
 "use client"
 
+import { useState } from "react"
 import { motion } from "framer-motion"
 import { CheckCircle2, ArrowRight, Play, MapPin, TrendingUp, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { PhoneMockup } from "./phone-mockup"
 import { useLocale } from "@/lib/locale-context"
+import { WaitlistModal } from "./waitlist-modal"
+import { trackCTA } from "@/lib/gtag"
 
 interface LocationHeroProps {
   city: string
@@ -44,6 +47,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
   const { country, config } = useLocale()
   const cityKey = city.toLowerCase()
   const stats = cityStats[cityKey] || { businesses: "5,000+", households: "250K", avgJob: "£300" }
+  const [showWaitlist, setShowWaitlist] = useState(false)
 
   // Natural H1 — no keyword stuffing, punchy and human
   const h1Text = trade
@@ -57,18 +61,16 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
 
   return (
     <section
-      className="hero dark-section relative overflow-hidden bg-gradient-to-br from-[#0F1729] via-[#1A1A2E] to-[#0F1729] pt-[var(--section-py-xl)]"
+      className="hero hero-grain dark-section relative overflow-hidden bg-gradient-to-br from-[#0F1729] via-[#1A1A2E] to-[#0F1729] pt-[var(--section-py-xl)]"
       aria-label={`AI call handling for ${trade || "trades"} in ${city}`}
     >
       {/* ── Background atmosphere ── */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div
-          className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full"
-          className="bg-emerald-500/[0.08] blur-[120px]"
+          className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full bg-emerald-500/[0.08] blur-[120px]"
         />
         <div
-          className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full"
-          className="bg-emerald-500/[0.05] blur-[100px]"
+          className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-emerald-500/[0.05] blur-[100px]"
         />
       </div>
 
@@ -83,7 +85,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
 
       {/* ── Main grid ── */}
       <div
-        className="relative max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8"
+        className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         style={{
           display: "grid",
           gridTemplateColumns: "55% 45%",
@@ -145,7 +147,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.38, ease: [0.16, 1, 0.3, 1] }}
-            className="font-sans text-[17px] leading-relaxed text-slate-400 mb-3 tracking-wide"
+            className="font-sans text-lg leading-relaxed text-slate-400 mb-3 tracking-wide"
           >
             The <abbr title="Artificial Intelligence">AI</abbr> call handler and Revenue Team built for{" "}
             {country === "uk" ? "UK" : "US"} {config.language.tradesPeople}. Answers every missed call,
@@ -158,7 +160,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.48, ease: [0.16, 1, 0.3, 1] }}
-            className="font-sans text-[17px] font-semibold leading-snug text-white mb-5"
+            className="font-sans text-lg font-semibold leading-snug text-white mb-5"
           >
             No apps. No contract. Just more work.
           </motion.p>
@@ -170,31 +172,16 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             transition={{ duration: 0.6, delay: 0.58, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col gap-3 mb-4 items-start"
           >
-            <a
-              href="#pricing"
-              className="btn-primary"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                background: "#fff",
-                color: "#1A1A2E",
-                fontFamily: "var(--font-inter), Inter, system-ui, -apple-system, sans-serif",
-                fontSize: 17,
-                fontWeight: 700,
-                padding: "16px 32px",
-                borderRadius: 12,
-                textDecoration: "none",
-                border: "none",
-                cursor: "pointer",
-                minHeight: 56,
-                whiteSpace: "nowrap",
-                boxShadow: "0 4px 14px rgba(255,255,255,0.15)",
+            <button
+              onClick={() => {
+                trackCTA("Start Capturing Jobs in " + city, "location-hero")
+                setShowWaitlist(true)
               }}
+              className="btn-primary inline-flex items-center justify-center bg-white text-[#1A1A2E] font-sans text-lg font-bold px-8 py-4 rounded-xl no-underline border-none cursor-pointer min-h-[56px] whitespace-nowrap shadow-[0_4px_14px_rgba(255,255,255,0.15)]"
             >
               Start Capturing Jobs in {city}
               <ArrowRight className="w-5 h-5 ml-2" />
-            </a>
+            </button>
 
             <span className="text-[13px] text-slate-400 tracking-wide">
               No credit card required · 30-day money-back guarantee
@@ -405,6 +392,14 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
           <PhoneMockup city={city} trade={trade} />
         </motion.div>
       </div>
+
+      {/* Waitlist Modal */}
+      {showWaitlist && (
+        <WaitlistModal
+          onClose={() => setShowWaitlist(false)}
+          source="location-hero"
+        />
+      )}
     </section>
   )
 }

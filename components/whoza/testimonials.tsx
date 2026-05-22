@@ -1,7 +1,10 @@
 "use client"
 
+import { useState } from "react"
 import { motion } from "framer-motion"
 import { ArrowRight, Sparkles, PhoneCall, Star, TrendingUp } from "lucide-react"
+import { WaitlistModal } from "./waitlist-modal"
+import { trackCTA } from "@/lib/gtag"
 
 const expectationCards = [
   {
@@ -28,8 +31,10 @@ const expectationCards = [
 ]
 
 export function Testimonials() {
+  const [showWaitlist, setShowWaitlist] = useState(false)
+
   return (
-    <section id="testimonials" className="py-20 lg:py-28 bg-[var(--off-white)] overflow-hidden">
+    <section id="testimonials" className="section-padding-lg bg-[var(--off-white)] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.div
@@ -110,15 +115,16 @@ export function Testimonials() {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <a
-            href="#final-cta"
-            className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-10 py-7 text-xl gap-3 shadow-xl shadow-[var(--rex-green)]/30 rounded-lg transition-all hover:scale-105"
+          <button
+            onClick={() => { trackCTA("Start your free trial", "testimonials"); setShowWaitlist(true); }}
+            className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-10 py-7 text-xl gap-3 shadow-xl shadow-[var(--rex-green)]/30 rounded-lg transition-all hover:scale-105 cursor-pointer border-none"
           >
             Start your free trial
             <ArrowRight className="w-6 h-6" />
-          </a>
+          </button>
         </motion.div>
       </div>
+      {showWaitlist && <WaitlistModal onClose={() => setShowWaitlist(false)} source="testimonials" />}
     </section>
   )
 }

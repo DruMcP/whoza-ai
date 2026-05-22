@@ -20,6 +20,22 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "best-ai-phone-answering-uk-trades-2026",
+    title: "Best AI Phone Answering Services for UK Tradespeople 2026",
+    excerpt: "Independent guide comparing whoza.ai, Clara, Moneypenny, Team-Connect, and Smith.ai. Real pricing, honest rankings, no affiliate links.",
+    readTime: "8 min read",
+    date: "2026-05-22",
+    category: "Comparison",
+  },
+  {
+    slug: "how-much-do-missed-calls-cost-uk-trades",
+    title: "How Much Do Missed Calls Cost UK Trades?",
+    excerpt: "Data-driven analysis using FSB and ONS data. Calculate your exact losses by trade. The numbers might shock you.",
+    readTime: "6 min read",
+    date: "2026-05-22",
+    category: "Data",
+  },
+  {
     slug: "ai-call-answering-uk-tradespeople-definitive-guide-2026",
     title: "AI Call Answering for UK Tradespeople: The Definitive 2026 Guide",
     excerpt: "Complete 2026 data on missed call costs, AI voice agent pricing, ROI calculations, and how AI call handling works for UK trades. Statistics, benchmarks, and buyer's guide.",

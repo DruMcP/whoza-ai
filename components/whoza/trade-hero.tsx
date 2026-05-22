@@ -1,9 +1,12 @@
 "use client"
 
+import { useState } from "react"
 import { motion } from "framer-motion"
 import { ArrowRight, Play, CheckCircle2, PhoneCall, TrendingUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { TradeData } from "@/lib/trades"
+import { WaitlistModal } from "./waitlist-modal"
+import { trackCTA } from "@/lib/gtag"
 
 interface TradeHeroProps {
   tradeData: TradeData
@@ -11,6 +14,7 @@ interface TradeHeroProps {
 
 export function TradeHero({ tradeData }: TradeHeroProps) {
   const jobsThisWeek = Math.floor(Math.random() * 60) + 80
+  const [showWaitlist, setShowWaitlist] = useState(false)
 
   return (
     <section className="relative min-h-screen bg-[var(--navy-900)] overflow-hidden pt-20 lg:pt-24">
@@ -73,9 +77,13 @@ export function TradeHero({ tradeData }: TradeHeroProps) {
 
             {/* CTA Buttons */}
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button 
+                <Button 
                 size="lg"
-                className="bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 text-white font-semibold px-8 py-6 text-lg gap-2 group"
+                className="btn-primary bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 text-white font-semibold px-8 py-6 text-lg gap-2 group cursor-pointer"
+                onClick={() => {
+                  trackCTA("Start Free 7-Day Trial", "trade-hero")
+                  setShowWaitlist(true)
+                }}
               >
                 Start Free 7-Day Trial
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -143,6 +151,14 @@ export function TradeHero({ tradeData }: TradeHeroProps) {
 
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[var(--off-white)] to-transparent" />
+
+      {/* Waitlist Modal */}
+      {showWaitlist && (
+        <WaitlistModal
+          onClose={() => setShowWaitlist(false)}
+          source="trade-hero"
+        />
+      )}
     </section>
   )
 }
