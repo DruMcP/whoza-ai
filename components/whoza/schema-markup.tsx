@@ -503,6 +503,7 @@ export function PricingSchema() {
       "@type": "Product",
       "name": "whoza.ai Starter Plan",
       "description": "AI call handling for small trade businesses. 0 included jobs, pay per booking.",
+      "image": "https://whoza.ai/og-image.webp",
       "brand": {
         "@type": "Brand",
         "name": "whoza.ai"
@@ -564,6 +565,7 @@ export function PricingSchema() {
       "@type": "Product",
       "name": "whoza.ai Growth Plan",
       "description": "AI call handling for growing trade businesses. 15 included jobs per month.",
+      "image": "https://whoza.ai/og-image.webp",
       "brand": {
         "@type": "Brand",
         "name": "whoza.ai"
@@ -625,6 +627,7 @@ export function PricingSchema() {
       "@type": "Product",
       "name": "whoza.ai Pro Plan",
       "description": "AI call handling for established trade businesses. 40 included jobs per month.",
+      "image": "https://whoza.ai/og-image.webp",
       "brand": {
         "@type": "Brand",
         "name": "whoza.ai"
@@ -686,6 +689,7 @@ export function PricingSchema() {
       "@type": "Product",
       "name": "whoza.ai Scale Plan",
       "description": "AI call handling for multi-person trade businesses. 100 included jobs per month.",
+      "image": "https://whoza.ai/og-image.webp",
       "brand": {
         "@type": "Brand",
         "name": "whoza.ai"
