@@ -71,7 +71,7 @@ export function Pricing() {
         { text: "Monthly competitor analysis", included: true },
         { text: `${cs}4.50 per booked enquiry — no enquiries included`, included: true },
       ],
-      cta: "Choose Your Plan",
+      cta: "Start free trial",
       stripePlanId: "starter",
     },
     {
@@ -96,7 +96,7 @@ export function Pricing() {
         { text: "Jobs and enquiries dashboard", included: true },
         { text: `${cs}3.25 per additional booked enquiry`, included: true },
       ],
-      cta: "Choose Your Plan",
+      cta: "Activate now",
       stripePlanId: "growth",
     },
     {
@@ -123,7 +123,7 @@ export function Pricing() {
         { text: "connects to your existing tools", included: true },
         { text: `${cs}2.75 per additional booked enquiry`, included: true },
       ],
-      cta: "Choose Your Plan",
+      cta: "Activate now",
       stripePlanId: "pro",
     },
     {
@@ -150,7 +150,7 @@ export function Pricing() {
         { text: "Dedicated account manager", included: true },
         { text: `${cs}2.25 per additional booked enquiry`, included: true },
       ],
-      cta: "Choose Your Plan",
+      cta: "Activate now",
       stripePlanId: "scale",
     },
   ]
