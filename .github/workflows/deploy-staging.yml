@@ -13,8 +13,8 @@ jobs:
       - run: npm ci
       - run: npm run build
       - name: Deploy to Netlify Staging
-        uses: netlify/actions/cli@master
-        with:
-          args: deploy --prod --dir .next --site 97f8a30c-8ba7-4e98-aef4-cfee00eb91dd
+        run: |
+          npm install -g netlify-cli
+          netlify deploy --prod --dir .next --site 97f8a30c-8ba7-4e98-aef4-cfee00eb91dd
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_STAGING_TOKEN }}
