@@ -83,12 +83,26 @@
 - [x] `curl -sI https://whoza.ai/og-image.png` → 200
 - [x] Staging equivalents all → 200
 
-## Git
-- **Branch:** `soft-launch`
-- **Latest commit:** `903dc84` — feat(hero): add animated gradient mesh orbs
-- **Previous commits:** `bebd352` → `07077b4` → `069d0b4`
+## Pricing Trial Clarity Fix (2026-05-23 18:40 UTC)
+- **Commit:** `1e60276` — `fix(pricing): clarify 7-day free trial applies to Starter only`
+- **Files changed:**
+  - `components/whoza/final-cta.tsx` — "Try Whoza free for 7 days on Starter." + "7-day free trial on Starter: 20 minutes + 4 jobs included"
+  - `components/whoza/hero.tsx` — Trust pill: "7-day free trial on Starter" (was "when we go live")
+  - `components/whoza/sticky-cta.tsx` — "7-day trial on Starter · No card needed" (was "Free 7-day trial")
+  - `components/whoza/pricing.tsx` — No changes needed (already correct: only Starter shows trial badge, all 4 plans have working CTAs)
+  - `components/whoza/faq.tsx` — No changes needed (already correct: FAQs state "Starter plan only")
+- **Staging deploy:** `6a11828ae3ada6429c390963`
+- **Production deploy:** `6a1184032f6a956401f7fa92`
+- **Build:** Zero errors, zero TS issues, 72 pages generated
+- **Status:** ✅ Live on both staging and production
 
-## Next Steps (Pending)
-- [ ] Fix mobile horizontal overflow (375px)
-- [ ] Verify SVG icon naturalWidth issue (cosmetic)
-- [ ] Continue with content/design items needing Dru input (video testimonials, launch date)
+## Deploy Summary — 2026-05-23
+
+| Deploy | ID | Status | Key Changes |
+|--------|-----|--------|-------------|
+| Prod (latest) | `6a1184032f6a956401f7fa92` | ✅ Live | Trial clarity fixes |
+| Staging (latest) | `6a11828ae3ada6429c390963` | ✅ Live | Trial clarity fixes |
+| Prod (static fix) | `6a11779612646153f77c08b0` | ✅ Live | Static assets fix |
+| Staging (static fix) | `6a1178ff6cdba54bff5fc443` | ✅ Live | Static assets fix |
+
+**Total commits today:** 8 — GSC image fix, 404 page, gradient orbs, batch 2+3 audit fixes, schema fix, deploy log, trial clarity fix
