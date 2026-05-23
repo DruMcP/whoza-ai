@@ -33,7 +33,7 @@ export function StickyCTA() {
             <div className="flex items-center gap-3">
               <div className="flex-1">
                 <div className="text-white font-semibold text-sm">Start free trial</div>
-                <div className="text-white/60 text-xs">Free 7-day trial · No card needed</div>
+                <div className="text-white/60 text-xs">7-day trial on Starter · No card needed</div>
               </div>
               <a 
                 href="#final-cta"
