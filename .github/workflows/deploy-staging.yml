@@ -1,6 +1,7 @@
 name: deploy_staging
-on: push
-branches: soft-launch
+on:
+  push:
+    branches: [soft-launch]
 jobs:
   deploy:
     runs-on: ubuntu-latest
