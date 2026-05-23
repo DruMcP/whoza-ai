@@ -12,7 +12,7 @@ import { trackCTA } from "@/lib/gtag"
 const trustItems = [
   "No credit card required",
   "30-day money-back guarantee",
-  "7-day free trial when we go live",
+  "7-day free trial on Starter",
 ]
 
 /* ── Live counter constants (ONS-derived) ── */
