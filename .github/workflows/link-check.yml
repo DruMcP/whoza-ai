@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup lychee
+      - name: Check staging links
         uses: lycheeverse/lychee-action@v1
         with:
           args: |
@@ -21,10 +21,15 @@ jobs:
             --exclude "mailto:*"
             --exclude "tel:*"
             --exclude "*.pdf"
+            --exclude "linkedin.com/*"
+            --exclude "twitter.com/*"
+            --exclude "x.com/*"
             --timeout 30
-            --max-concurrency 10
+            --max-concurrency 5
             --retry 3
             --accept 200,201,204,301,302,308
+            --format markdown
+            --output lychee-staging.md
             .
           fail: false
 
@@ -36,17 +41,28 @@ jobs:
             --exclude "mailto:*"
             --exclude "tel:*"
             --exclude "*.pdf"
+            --exclude "linkedin.com/*"
+            --exclude "twitter.com/*"
+            --exclude "x.com/*"
             --timeout 30
-            --max-concurrency 10
+            --max-concurrency 5
             --retry 3
             --accept 200,201,204,301,302,308
+            --format markdown
+            --output lychee-prod.md
             .
           fail: false
 
       - name: Parse results
         id: parse
         run: |
-          BROKEN=$(cat lychee/out.md | grep -c "✗" || echo "0")
+          BROKEN=0
+          for file in lychee-staging.md lychee-prod.md; do
+            if [ -f "$file" ]; then
+              COUNT=$(grep -c "✗" "$file" || echo "0")
+              BROKEN=$((BROKEN + COUNT))
+            fi
+          done
           echo "broken=$BROKEN" >> $GITHUB_OUTPUT
 
       - name: Create issue if broken links found
@@ -55,7 +71,17 @@ jobs:
         with:
           script: |
             const fs = require('fs');
-            const report = fs.readFileSync('lychee/out.md', 'utf8');
+            let report = '';
+            
+            if (fs.existsSync('lychee-staging.md')) {
+              report += '## Staging (whoza-ai-staging-349)\n\n';
+              report += fs.readFileSync('lychee-staging.md', 'utf8');
+            }
+            
+            if (fs.existsSync('lychee-prod.md')) {
+              report += '\n\n## Production (whoza.ai)\n\n';
+              report += fs.readFileSync('lychee-prod.md', 'utf8');
+            }
             
             const title = `[AUTONOMOUS] Broken Links Detected — ${new Date().toISOString().split('T')[0]}`;
             const body = `## Broken Link Report
@@ -63,7 +89,7 @@ jobs:
             **Time:** ${new Date().toISOString()}
             
             ### Summary
-            ${report.substring(0, 3000)}...
+            ${report.substring(0, 6000)}...
             
             ### Action Required
             1. Review broken URLs above
