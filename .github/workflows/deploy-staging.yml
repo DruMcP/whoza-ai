@@ -2,6 +2,7 @@ name: deploy_staging
 on:
   push:
     branches: [soft-launch]
+  workflow_dispatch:
 jobs:
   deploy:
     runs-on: ubuntu-latest
