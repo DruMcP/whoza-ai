@@ -1,9 +1,9 @@
 # ZERO-ERROR INTEGRATION PLAN
 ## Retell + ElevenLabs + Twilio BYOC for UK Operations
 
-**Status:** PLANNING — AWAITING DRU APPROVAL BEFORE ANY CODE CHANGES  
-**Risk Level:** LOW (all new files, zero existing file modifications in Phase 1-4)  
-**Estimated Implementation:** 6-8 hours across 6 phases  
+**Status:** PHASE 0-2 CODE COMPLETE — Deployed, dormant until API keys configured  
+**Risk Level:** LOW (all new files, zero existing file modifications)  
+**Implementation:** 6-8 hours across 6 phases — PHASES 0-2 DONE (2026-05-25)  
 **Target:** New `telephony_backend` column allows per-contractor choice: `trillet` | `retell_twilio`
 
 ---
@@ -30,9 +30,13 @@ We ADD Retell+Twilio BYOC as a **new telephony backend option** alongside the ex
 | Trillet server service | ✅ Complete | `lib/trillet-server.ts` |
 | Trillet config | ✅ Complete | `lib/trillet-config.ts` |
 | Database (calls, enquiries, appointments, leads) | ✅ Migrated | `supabase/migrations/20260508000001_create_trillet_tables.sql` |
-| Build | ✅ Zero errors | 72 pages generated |
-| Staging 349 | ✅ Live | Deploy `6a12bde3` verified |
+| Build | ✅ Zero errors | 77 pages generated |
+| Staging 349 | ✅ Live | Deploy `6a133dfc` verified |
 | Production | ✅ Live | All assets 200 |
+| **Retell/Twilio schema** | **✅ Phase 0 DONE** | `supabase/migrations/20260524000001_create_retell_twilio_schema.sql` |
+| **Retell/Twilio service layer** | **✅ Phase 1-2 DONE** | `lib/retell-service.ts`, `lib/twilio-service.ts`, `lib/elevenlabs-service.ts` |
+| **Retell/Twilio webhooks** | **✅ Phase 2 DONE** | `app/api/webhooks/twilio/*`, `app/api/webhooks/retell/*` |
+| **Retell/Twilio admin API** | **✅ Phase 2 DONE** | `app/api/admin/contractor-telephony/route.ts` |
 
 ---
 

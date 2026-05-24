@@ -23,6 +23,31 @@ Whoza.ai is not Trillet's interface. Whoza is a **revenue system** built *on top
 | **Meta/Facebook Lead** | Social Lead Capture | "Facebook Lead Response" | Pro/Scale only. AI responds to Facebook form submissions within 60 seconds. |
 | **Webhook Events** | Platform Events | Internal | Trillet sends call.completed, lead.received, usage.threshold events to whoza backend. |
 
+## 2a. Voice Layer Architecture (Dual Backend)
+
+Whoza.ai supports **two telephony backends** per contractor:
+
+| Backend | Provider | Use Case | Status |
+|---------|----------|----------|--------|
+| **Trillet** | Trillet AI (managed) | Current default. Full managed service with UK numbers via SIP. | ✅ Active |
+| **Retell + Twilio BYOC** | Retell AI + Twilio + ElevenLabs | Lower cost, UK number ownership, voice cloning. | ✅ Code complete, awaiting API keys |
+
+### Backend Selection
+- Contractors choose via `contractor_telephony.telephony_backend` column
+- Default: `trillet` (existing behavior)
+- Optional: `retell_twilio` (new, feature-flagged)
+- Zero migration required — existing contractors unaffected
+
+### Cost Comparison (per 1000 min)
+| Component | Trillet Managed | Retell/Twilio BYOC |
+|-----------|----------------|-------------------|
+| Voice engine | Included | $70 (Retell) |
+| LLM | Included | $60 (Claude 3.5) |
+| Telephony | Included | $14-18 (Twilio UK) |
+| Number rental | Included | $1-3 |
+| **Total** | ~£180-240 | **$145-151 (~£115)** |
+| **Savings** | — | **~37%** |
+
 ---
 
 ## 3. Plan Tier → Trillet Feature Mapping
@@ -46,7 +71,7 @@ Whoza.ai is not Trillet's interface. Whoza is a **revenue system** built *on top
 
 ## 4. Data Flow Architecture
 
-### 4.1 Incoming Call Flow
+### 4.1 Incoming Call Flow (Trillet Path — Current Default)
 
 ```
 Customer Calls Client's Number
@@ -67,6 +92,36 @@ Customer Calls Client's Number
         ↓
 [Dashboard] → Enquiry appears in client dashboard with Accept/Decline actions
 ```
+
+### 4.1b Incoming Call Flow (Retell/Twilio BYOC Path — New)
+
+```
+Customer Calls Client's Number
+        ↓
+[Call Forwarding] → Twilio Phone Number (UK number)
+        ↓
+[Twilio Webhook] → whoza backend receives: inbound call
+        ↓
+[Telephony Router] → Looks up contractor.telephony_backend
+        ↓
+[Retell Register Call] → POST /v2/register-call (audio_websocket_protocol='twilio')
+        ↓
+[Twilio Returns TwiML] → <Stream> connect to Retell WebSocket
+        ↓
+[Retell Voice AI] → Katie answers using Client Knowledge Profile + cloned voice
+        ↓
+[Retell Webhook] → whoza backend receives: call-ended event
+        ↓
+[Whoza Enrichment] → Extract: postcode, job type, urgency, transcript
+        ↓
+[Supabase] → Enquiry record created (same pipeline as Trillet)
+        ↓
+[WhatsApp API] → Summary sent to tradesperson's phone
+        ↓
+[Dashboard] → Enquiry appears in client dashboard
+```
+
+**Key difference:** Trillet is fully managed; Retell/Twilio gives whoza full control over UK numbers, voice cloning, and 37% lower costs.
 
 ### 4.2 Review Request Flow (Claire — Growth+)
 
@@ -136,6 +191,15 @@ Lead submits form on client's Facebook page
 | `usage.threshold` | `api/trillet-webhook` | Send usage alert | client_id, minutes_used, minutes_remaining, percentage |
 | `recording.available` | `api/trillet-webhook` | Attach recording to enquiry | recording_url, call_id, expiry |
 
+### 5.1b Retell/Twilio → Whoza Webhooks (Inbound — New)
+
+| Event | Whoza Handler | Action | Data Received |
+|-------|---------------|--------|---------------|
+| Twilio inbound call | `api/webhooks/twilio/inbound` | Register with Retell, return TwiML | CallSid, From, To, AccountSid |
+| Twilio status callback | `api/webhooks/twilio/status` | Update call status + timing | CallSid, CallStatus, Duration, RecordingUrl |
+| Retell call-ended | `api/webhooks/retell/call-ended` | Create enquiry from transcript | call_id, transcript, recording_url, duration |
+| Retell function call | `api/webhooks/retell/function` | Handle booking/quote/transfer | function_name, arguments, call_id |
+
 ### 5.2 Whoza → Trillet API Calls (Outbound)
 
 | Whoza Action | Trillet API Endpoint | Purpose | When Called |
@@ -147,6 +211,18 @@ Lead submits form on client's Facebook page
 | Provision number | `POST /phone-numbers` | Allocate UK number | Client setup |
 | Configure webhook | `POST /webhooks` | Set whoza as event receiver | Sub-account creation |
 | Trigger campaign | `POST /campaigns` | Start review request calls | Claire workflow activation |
+
+### 5.2b Whoza → Retell/Twilio API Calls (Outbound — New)
+
+| Whoza Action | API Endpoint | Purpose | When Called |
+|-------------|------------|---------|-------------|
+| Create Twilio subaccount | `POST /Accounts.json` | Isolate contractor billing | Onboarding |
+| Search UK numbers | `GET /AvailablePhoneNumbers/GB/Local` | Find available numbers | Number selection |
+| Purchase number | `POST /IncomingPhoneNumbers` | Buy UK number | Number provisioning |
+| Register Retell call | `POST /v2/register-call` | Connect Twilio → Retell | Every inbound call |
+| Create Retell agent | `POST /create-agent` | Configure voice agent | Agent setup |
+| Clone voice (ElevenLabs) | `POST /v1/voices/add` | Clone contractor voice | Voice setup |
+| Update agent voice | `PATCH /update-agent/{id}` | Set ElevenLabs voice_id | Voice change |
 
 ### 5.3 Internal Whoza APIs
 
@@ -258,13 +334,16 @@ CKP finalized → Synced to Trillet → Agent created
 
 | Table | Purpose | Key Fields |
 |-------|---------|-----------|
-| `clients` | Master client records | id, business_name, trade_type, plan_tier, status, created_at |
-| `client_profiles` | Full CKP JSON | client_id, knowledge_json, version, last_synced_at |
-| `sub_accounts` | Trillet mapping | client_id, trillet_sub_account_id, phone_number, status |
-| `agents` | Voice agent config | client_id, agent_name (Katie/Mark), voice_profile_id, trillet_agent_id |
-| `enquiries` | Call/enquiry records | id, client_id, call_id, transcript, qualification_data, status, whatsapp_sent |
+| `contractors` | Client accounts | id, business_name, email, plan, status, stripe_customer_id, **telephony_backend** |
+| `contractor_telephony` | **NEW** — Backend config per contractor | contractor_id, telephony_backend, twilio_subaccount_sid, retell_agent_id, elevenlabs_voice_id, phone_number, setup_status, uk_compliance_status |
+| `calls` | Trillet call records | contractor_id, trillet_call_id, duration, transcript, status, enquiry_id |
+| `retell_calls` | **NEW** — Retell call records | contractor_id, retell_call_id, twilio_call_sid, duration, transcript, status, outcome, total_cost_usd |
+| `enquiries` | Qualified leads | contractor_id, caller_number, transcript_summary, job_type, urgency, postcode, status |
+| `appointments` | Booked jobs | contractor_id, enquiry_id, scheduled_at, address, notes, status |
+| `leads` | Social/form leads | contractor_id, source, lead_data, status, converted_to_enquiry |
 | `call_recordings` | Recording metadata | enquiry_id, recording_url, duration, retention_expiry |
 | `usage_logs` | Minute tracking | client_id, date, minutes_used, minutes_remaining, plan_allowance |
+| `telephony_webhook_logs` | **NEW** — Unified audit trail | provider, event_type, request_body, response_status, error_message, call_id |
 | `review_requests` | Claire workflow | client_id, customer_phone, job_id, sent_at, status, review_received |
 | `rex_reports` | Competitor analysis | client_id, report_date, recommendations_json, competitor_scores |
 | `competitors` | Tracked competitors | client_id, competitor_name, business_type, last_analyzed |
@@ -324,6 +403,9 @@ paused (client request) → resumed
 | CKP as master data | One source of truth for all agents; syncs to Trillet + powers Claire + Rex | 2026-05-03 |
 | WhatsApp as primary delivery | Tradespeople don't want dashboards; they want messages on their phone | 2026-05-03 |
 | Pro/Scale for advanced features | Crews multi-agent and Meta leads justify premium pricing; Starter/Growth fund acquisition | 2026-05-03 |
+| **Retell+Twilio BYOC as second backend** | 37% cost savings, UK number ownership, voice cloning, zero-risk additive architecture | **2026-05-25** |
+| **VAT removed from all pricing** | WHOZA AI LTD is NOT VAT-registered; cleaner pricing, no confusion | **2026-05-25** |
+| **Audio demo enhanced then simplified** | Waveform + dark theme adds visual interest; transcript removed as unnecessary clutter | **2026-05-25** |
 
 ---
 
@@ -338,6 +420,8 @@ paused (client request) → resumed
 | **Minute Allowance** | Monthly included call minutes per plan tier |
 | **Overage** | Additional minutes charged beyond plan allowance |
 | **White-Label** | Complete brand separation — clients see only whoza.ai branding |
+| **BYOC** | Bring Your Own Carrier — using Twilio as the telephony provider instead of Retell's managed service |
+| **PAC Code** | Porting Authorisation Code — required to transfer a UK phone number between providers |
 
 ---
 
