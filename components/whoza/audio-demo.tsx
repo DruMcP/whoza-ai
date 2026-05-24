@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Play, Pause, Volume2, Sparkles, Phone, MessageCircle, Wrench, ChevronRight } from "lucide-react"
+import { Play, Pause, Volume2, Sparkles, MessageCircle, ChevronRight } from "lucide-react"
 
 function trackGA4(event: string, params?: Record<string, unknown>) {
   if (typeof window !== "undefined" && "gtag" in window) {
@@ -77,57 +77,6 @@ function PulseRings({ isPlaying }: { isPlaying: boolean }) {
   )
 }
 
-/* ─── Chat bubble for transcript ─── */
-function ChatBubble({
-  speaker,
-  text,
-  isActive,
-  delay,
-}: {
-  speaker: "caller" | "katie"
-  text: string
-  isActive: boolean
-  delay: number
-}) {
-  const isKatie = speaker === "katie"
-  return (
-    <motion.div
-      initial={{ opacity: 0, x: isKatie ? 20 : -20, y: 10 }}
-      animate={isActive ? { opacity: 1, x: 0, y: 0 } : { opacity: 0.2, x: 0, y: 0 }}
-      transition={{ duration: 0.4, delay }}
-      className={`flex items-start gap-3 ${isKatie ? "flex-row-reverse" : ""}`}
-    >
-      <div
-        className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${
-          isKatie
-            ? "bg-gradient-to-br from-[var(--katie-blue)] to-cyan-400 text-white"
-            : "bg-[var(--slate-200)] text-[var(--slate-500)]"
-        }`}
-      >
-        {isKatie ? <Sparkles className="w-4 h-4" /> : <Phone className="w-4 h-4" />}
-      </div>
-      <div
-        className={`max-w-[80%] px-4 py-3 rounded-2xl text-sm leading-relaxed ${
-          isKatie
-            ? "bg-gradient-to-br from-[var(--katie-blue)]/10 to-cyan-50 border border-[var(--katie-blue)]/20 text-[var(--navy-900)] rounded-tr-sm"
-            : "bg-white border border-[var(--border)] text-[var(--slate-600)] rounded-tl-sm shadow-sm"
-        }`}
-      >
-        {text}
-      </div>
-    </motion.div>
-  )
-}
-
-const TRANSCRIPT = [
-  { speaker: "caller" as const, text: "Hi, I've got a leaking tap under the kitchen sink. Water's going everywhere." },
-  { speaker: "katie" as const, text: "No problem, I can help with that. Is it the hot or cold tap, and how long has it been leaking?" },
-  { speaker: "caller" as const, text: "Cold tap — started this morning. It's pretty bad." },
-  { speaker: "katie" as const, text: "Got it. I'll get someone out to you today. What's your postcode so I can check availability?" },
-  { speaker: "caller" as const, text: "Perth, PH1 5JN." },
-  { speaker: "katie" as const, text: "Perfect. I can have a plumber with you between 2–4 PM. I'll send the details to your WhatsApp now." },
-]
-
 export function AudioDemo() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [progress, setProgress] = useState(0)
@@ -141,7 +90,6 @@ export function AudioDemo() {
   const [isVisible, setIsVisible] = useState(false)
   const engagementTimeRef = useRef(0)
   const lastTickRef = useRef(0)
-  const [activeBubble, setActiveBubble] = useState(0)
 
   // Lazy load audio via Intersection Observer
   useEffect(() => {
@@ -174,10 +122,6 @@ export function AudioDemo() {
       setCurrentTime(ct)
       setProgress((ct / dur) * 100)
 
-      // Update active transcript bubble based on time
-      const bubbleIndex = Math.min(Math.floor((ct / dur) * TRANSCRIPT.length), TRANSCRIPT.length - 1)
-      setActiveBubble(bubbleIndex)
-
       if (!fiftyPctFired && ct / dur >= 0.5) {
         setFiftyPctFired(true)
         trackGA4("audio_50pct", { audio_name: "katie_demo_leaky_tap" })
@@ -200,7 +144,6 @@ export function AudioDemo() {
     const onEnded = () => {
       setIsPlaying(false)
       setProgress(100)
-      setActiveBubble(TRANSCRIPT.length - 1)
       trackGA4("audio_complete", {
         audio_name: "katie_demo_leaky_tap",
         engagement_time: Math.round(engagementTimeRef.current),
@@ -256,7 +199,6 @@ export function AudioDemo() {
     audio.currentTime = newTime
     setCurrentTime(newTime)
     setProgress(pct * 100)
-    setActiveBubble(Math.min(Math.floor(pct * TRANSCRIPT.length), TRANSCRIPT.length - 1))
   }, [isLoaded, duration])
 
   const formatTime = (seconds: number) => {
@@ -429,34 +371,27 @@ export function AudioDemo() {
             </div>
           </div>
 
-          {/* Bottom: Live Transcript */}
+          {/* Bottom: Info only, no transcript */}
           <div className="p-6 sm:p-8 bg-gradient-to-b from-white/5 to-transparent">
-            <div className="flex items-center gap-2 mb-5">
-              <div className="relative">
-                <div className="w-2 h-2 rounded-full bg-green-400" />
-                {isPlaying && (
-                  <motion.div
-                    className="absolute inset-0 w-2 h-2 rounded-full bg-green-400"
-                    animate={{ scale: [1, 2.5, 1], opacity: [0.8, 0, 0.8] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  />
-                )}
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <div className="relative">
+                  <div className="w-2 h-2 rounded-full bg-green-400" />
+                  {isPlaying && (
+                    <motion.div
+                      className="absolute inset-0 w-2 h-2 rounded-full bg-green-400"
+                      animate={{ scale: [1, 2.5, 1], opacity: [0.8, 0, 0.8] }}
+                      transition={{ duration: 1.5, repeat: Infinity }}
+                    />
+                  )}
+                </div>
+                <span className="text-sm font-medium text-slate-300">
+                  {isPlaying ? "Katie is speaking..." : hasStarted ? "Demo paused" : "Press play to start"}
+                </span>
               </div>
-              <span className="text-sm font-medium text-slate-300">
-                {isPlaying ? "Katie is speaking..." : hasStarted ? "Demo paused" : "Press play to start"}
+              <span className="text-sm text-slate-500">
+                64-second demo call
               </span>
-            </div>
-
-            <div className="space-y-4 max-h-[280px] overflow-y-auto pr-2 scrollbar-thin">
-              {TRANSCRIPT.map((line, i) => (
-                <ChatBubble
-                  key={i}
-                  speaker={line.speaker}
-                  text={line.text}
-                  isActive={i <= activeBubble}
-                  delay={i * 0.1}
-                />
-              ))}
             </div>
           </div>
         </motion.div>
