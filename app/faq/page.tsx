@@ -47,7 +47,7 @@ const faqSchema = {
       "name": "How much does AI phone answering cost in the UK?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "AI phone answering for UK trades typically costs £49–£150 per month. At whoza.ai, plans start at £59/month + VAT for the Starter plan, which includes AI call handling 24/7, WhatsApp delivery, and lead capture. The Growth plan at £125/month adds review collection and competitor analysis. According to a 2025 Federation of Small Businesses (FSB) survey, 78% of UK micro-businesses spend less than £200/month on business software, making AI receptionist services accessible for most tradespeople."
+        "text": "AI phone answering for UK trades typically costs £49–£150 per month. At whoza.ai, plans start at £59/month for the Starter plan, which includes AI call handling 24/7, WhatsApp delivery, and lead capture. The Growth plan at £125/month adds review collection and competitor analysis. According to a 2025 Federation of Small Businesses (FSB) survey, 78% of UK micro-businesses spend less than £200/month on business software, making AI receptionist services accessible for most tradespeople."
       }
     },
     {

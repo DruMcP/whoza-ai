@@ -96,13 +96,26 @@
 - **Build:** Zero errors, zero TS issues, 72 pages generated
 - **Status:** ✅ Live on both staging and production
 
+## Emergency Call Triage + CI Fix (2026-05-23 21:05 UTC)
+- **Commit:** `d3fda7b` — `feat(comparison-table): add Emergency Call Triage to Capture section`
+- **Commit:** `534d6d1` — `fix(ci): reliable Netlify deploy via global CLI install`
+- **Files changed:**
+  - `components/whoza/comparison-table.tsx` — Added "Emergency call triage" row in Capture phase
+  - `.github/workflows/deploy-staging.yml` — Replaced deprecated `netlify/actions/cli@master` with `npm install -g netlify-cli`
+- **Staging deploy:** `6a11a6a9b941bfc30cd307a3`
+- **Production deploy:** `6a11a72d1ab2558c00759dc4`
+- **Build:** Zero errors, 72 pages generated
+- **Status:** ✅ Live on both staging and production
+
 ## Deploy Summary — 2026-05-23
 
 | Deploy | ID | Status | Key Changes |
 |--------|-----|--------|-------------|
-| Prod (latest) | `6a1184032f6a956401f7fa92` | ✅ Live | Trial clarity fixes |
-| Staging (latest) | `6a11828ae3ada6429c390963` | ✅ Live | Trial clarity fixes |
+| Prod (latest) | `6a11a72d1ab2558c00759dc4` | ✅ Live | Emergency triage + CI fix |
+| Staging (latest) | `6a11a6a9b941bfc30cd307a3` | ✅ Live | Emergency triage + CI fix |
+| Prod (trial clarity) | `6a1184032f6a956401f7fa92` | ✅ Live | Trial clarity fixes |
+| Staging (trial clarity) | `6a11828ae3ada6429c390963` | ✅ Live | Trial clarity fixes |
 | Prod (static fix) | `6a11779612646153f77c08b0` | ✅ Live | Static assets fix |
 | Staging (static fix) | `6a1178ff6cdba54bff5fc443` | ✅ Live | Static assets fix |
 
-**Total commits today:** 8 — GSC image fix, 404 page, gradient orbs, batch 2+3 audit fixes, schema fix, deploy log, trial clarity fix
+**Total commits today:** 10

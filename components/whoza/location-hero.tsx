@@ -202,7 +202,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
 
             {/* Pricing anchor */}
             <p className="text-sm text-slate-400 mt-1">
-              From <strong className="text-white">{config.currencySymbol}59/month</strong> + VAT{" "}
+              From <strong className="text-white">{config.currencySymbol}59/month</strong>{" "}
               — one recovered job pays for the entire year
             </p>
 

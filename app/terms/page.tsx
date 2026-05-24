@@ -124,11 +124,11 @@ export default function TermsOfService() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
-                <span><strong>Plans:</strong> Starter (£59), Growth (£125), Pro (£230), Scale (£399) — all prices exclude VAT</span>
+                <span><strong>Plans:</strong> Starter (£59), Growth (£125), Pro (£230), Scale (£399)</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
-                <span><strong>Minute allowances:</strong> Each plan includes a set number of call minutes per month. Additional minutes are charged at £0.22 per minute</span>
+                <span><strong>Minute allowances:</strong> Each plan includes a set number of call minutes per month. Additional minutes are charged at £0.26 per minute</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>

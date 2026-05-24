@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 }
 
 const comparisonData = [
-  { feature: "Monthly Price", whoza: "£59 + VAT", competitor: "£200 – £400 + VAT", winner: "whoza" },
+  { feature: "Monthly Price", whoza: "£59", competitor: "£200 – £400", winner: "whoza" },
   { feature: "Setup Time", whoza: "30 minutes", competitor: "2 – 5 days", winner: "whoza" },
   { feature: "Delivery Method", whoza: "WhatsApp (no app needed)", competitor: "Email + dashboard login", winner: "whoza" },
   { feature: "Simultaneous Calls", whoza: "Unlimited", competitor: "1 – 2 per agent", winner: "whoza" },
@@ -63,7 +63,7 @@ export default function VsTradeReceptionistPage() {
           {
             "@type": "Question",
             "name": "Is whoza.ai cheaper than Trade Receptionist?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. whoza.ai starts at £59/month + VAT. Trade Receptionist typically charges £200-400/month + VAT for comparable call volumes. Over a year, whoza.ai saves £1,700-4,100." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. whoza.ai starts at £59/month. Trade Receptionist typically charges £200-400/month for comparable call volumes. Over a year, whoza.ai saves £1,700-4,100." }
           },
           {
             "@type": "Question",
@@ -195,7 +195,7 @@ export default function VsTradeReceptionistPage() {
                   <PoundSterling className="w-6 h-6 text-emerald-600" />
                   <h3 className="text-2xl font-bold text-emerald-700">Whoza.ai</h3>
                 </div>
-                <div className="text-4xl font-extrabold text-emerald-600 mb-2">£59<span className="text-lg font-medium text-slate-500">/mo + VAT</span></div>
+                <div className="text-4xl font-extrabold text-emerald-600 mb-2">£59<span className="text-lg font-medium text-slate-500">/mo</span></div>
                 <p className="text-slate-600 mb-4">Starter plan. Unlimited calls. No contract.</p>
                 <ul className="space-y-2 text-sm text-slate-700">
                   <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> 7-day free trial</li>
@@ -208,7 +208,7 @@ export default function VsTradeReceptionistPage() {
                   <PoundSterling className="w-6 h-6 text-slate-400" />
                   <h3 className="text-2xl font-bold text-slate-700">Trade Receptionist</h3>
                 </div>
-                <div className="text-4xl font-extrabold text-slate-500 mb-2">£200-400<span className="text-lg font-medium text-slate-500">/mo + VAT</span></div>
+                <div className="text-4xl font-extrabold text-slate-500 mb-2">£200-400<span className="text-lg font-medium text-slate-500">/mo</span></div>
                 <p className="text-slate-600 mb-4">Typical pricing for UK virtual receptionist services.</p>
                 <ul className="space-y-2 text-sm text-slate-700">
                   <li className="flex items-center gap-2"><X className="w-4 h-4 text-red-400" /> 12-month contract typical</li>
