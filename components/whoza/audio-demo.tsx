@@ -1,8 +1,8 @@
 "use client"
 
 import { useState, useRef, useEffect, useCallback } from "react"
-import { motion } from "framer-motion"
-import { Play, Pause, Volume2 } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
+import { Play, Pause, Volume2, Sparkles, Phone, MessageCircle, Wrench, ChevronRight } from "lucide-react"
 
 function trackGA4(event: string, params?: Record<string, unknown>) {
   if (typeof window !== "undefined" && "gtag" in window) {
@@ -10,6 +10,123 @@ function trackGA4(event: string, params?: Record<string, unknown>) {
     ;(window as any).gtag("event", event, params)
   }
 }
+
+/* ─── Animated waveform bars ─── */
+function WaveformBars({ isPlaying }: { isPlaying: boolean }) {
+  const bars = 24
+  return (
+    <div className="flex items-center justify-center gap-[3px] h-16">
+      {Array.from({ length: bars }).map((_, i) => {
+        const delay = i * 0.05
+        const duration = 0.4 + Math.random() * 0.4
+        return (
+          <motion.div
+            key={i}
+            className="w-[3px] rounded-full bg-gradient-to-t from-[var(--katie-blue)] to-cyan-300"
+            animate={
+              isPlaying
+                ? {
+                    height: [8, 24 + Math.random() * 32, 12, 36, 8],
+                    opacity: [0.6, 1, 0.8, 1, 0.6],
+                  }
+                : { height: 8, opacity: 0.3 }
+            }
+            transition={
+              isPlaying
+                ? {
+                    duration,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                    delay,
+                    ease: "easeInOut",
+                  }
+                : { duration: 0.3 }
+            }
+            style={{ minHeight: 4 }}
+          />
+        )
+      })}
+    </div>
+  )
+}
+
+/* ─── Pulsing ring behind play button ─── */
+function PulseRings({ isPlaying }: { isPlaying: boolean }) {
+  if (!isPlaying) return null
+  return (
+    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+      {[0, 1, 2].map((i) => (
+        <motion.div
+          key={i}
+          className="absolute rounded-full border-2 border-[var(--katie-blue)]/30"
+          initial={{ width: 64, height: 64, opacity: 0.6 }}
+          animate={{
+            width: [64, 120, 160],
+            height: [64, 120, 160],
+            opacity: [0.5, 0.2, 0],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            delay: i * 0.6,
+            ease: "easeOut",
+          }}
+        />
+      ))}
+    </div>
+  )
+}
+
+/* ─── Chat bubble for transcript ─── */
+function ChatBubble({
+  speaker,
+  text,
+  isActive,
+  delay,
+}: {
+  speaker: "caller" | "katie"
+  text: string
+  isActive: boolean
+  delay: number
+}) {
+  const isKatie = speaker === "katie"
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: isKatie ? 20 : -20, y: 10 }}
+      animate={isActive ? { opacity: 1, x: 0, y: 0 } : { opacity: 0.2, x: 0, y: 0 }}
+      transition={{ duration: 0.4, delay }}
+      className={`flex items-start gap-3 ${isKatie ? "flex-row-reverse" : ""}`}
+    >
+      <div
+        className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${
+          isKatie
+            ? "bg-gradient-to-br from-[var(--katie-blue)] to-cyan-400 text-white"
+            : "bg-[var(--slate-200)] text-[var(--slate-500)]"
+        }`}
+      >
+        {isKatie ? <Sparkles className="w-4 h-4" /> : <Phone className="w-4 h-4" />}
+      </div>
+      <div
+        className={`max-w-[80%] px-4 py-3 rounded-2xl text-sm leading-relaxed ${
+          isKatie
+            ? "bg-gradient-to-br from-[var(--katie-blue)]/10 to-cyan-50 border border-[var(--katie-blue)]/20 text-[var(--navy-900)] rounded-tr-sm"
+            : "bg-white border border-[var(--border)] text-[var(--slate-600)] rounded-tl-sm shadow-sm"
+        }`}
+      >
+        {text}
+      </div>
+    </motion.div>
+  )
+}
+
+const TRANSCRIPT = [
+  { speaker: "caller" as const, text: "Hi, I've got a leaking tap under the kitchen sink. Water's going everywhere." },
+  { speaker: "katie" as const, text: "No problem, I can help with that. Is it the hot or cold tap, and how long has it been leaking?" },
+  { speaker: "caller" as const, text: "Cold tap — started this morning. It's pretty bad." },
+  { speaker: "katie" as const, text: "Got it. I'll get someone out to you today. What's your postcode so I can check availability?" },
+  { speaker: "caller" as const, text: "Perth, PH1 5JN." },
+  { speaker: "katie" as const, text: "Perfect. I can have a plumber with you between 2–4 PM. I'll send the details to your WhatsApp now." },
+]
 
 export function AudioDemo() {
   const [isPlaying, setIsPlaying] = useState(false)
@@ -24,6 +141,7 @@ export function AudioDemo() {
   const [isVisible, setIsVisible] = useState(false)
   const engagementTimeRef = useRef(0)
   const lastTickRef = useRef(0)
+  const [activeBubble, setActiveBubble] = useState(0)
 
   // Lazy load audio via Intersection Observer
   useEffect(() => {
@@ -45,7 +163,6 @@ export function AudioDemo() {
     const audio = audioRef.current
     if (!audio) return
 
-    // If already loaded (readyState >= 2 = HAVE_CURRENT_DATA), set immediately
     if (audio.readyState >= 2 && !isLoaded) {
       setDuration(audio.duration || 64)
       setIsLoaded(true)
@@ -57,13 +174,15 @@ export function AudioDemo() {
       setCurrentTime(ct)
       setProgress((ct / dur) * 100)
 
-      // Track 50% completion
+      // Update active transcript bubble based on time
+      const bubbleIndex = Math.min(Math.floor((ct / dur) * TRANSCRIPT.length), TRANSCRIPT.length - 1)
+      setActiveBubble(bubbleIndex)
+
       if (!fiftyPctFired && ct / dur >= 0.5) {
         setFiftyPctFired(true)
         trackGA4("audio_50pct", { audio_name: "katie_demo_leaky_tap" })
       }
 
-      // Engagement time tracking (sum of seconds played)
       if (lastTickRef.current > 0) {
         const delta = ct - lastTickRef.current
         if (delta > 0 && delta < 1) {
@@ -81,6 +200,7 @@ export function AudioDemo() {
     const onEnded = () => {
       setIsPlaying(false)
       setProgress(100)
+      setActiveBubble(TRANSCRIPT.length - 1)
       trackGA4("audio_complete", {
         audio_name: "katie_demo_leaky_tap",
         engagement_time: Math.round(engagementTimeRef.current),
@@ -136,6 +256,7 @@ export function AudioDemo() {
     audio.currentTime = newTime
     setCurrentTime(newTime)
     setProgress(pct * 100)
+    setActiveBubble(Math.min(Math.floor(pct * TRANSCRIPT.length), TRANSCRIPT.length - 1))
   }, [isLoaded, duration])
 
   const formatTime = (seconds: number) => {
@@ -148,34 +269,44 @@ export function AudioDemo() {
     <section
       ref={sectionRef}
       id="katie-demo-audio"
-      className="section-padding-lg bg-white relative"
+      className="section-padding-lg relative overflow-hidden"
+      style={{ background: "linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%)" }}
       aria-label="Katie demo audio player"
     >
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Background ambient glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[var(--katie-blue)]/5 rounded-full blur-[120px] pointer-events-none" />
+      
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-10"
+          className="text-center mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[var(--navy-900)] mb-4 reveal">
-            Hear Katie answer a call
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--katie-blue)]/10 border border-[var(--katie-blue)]/20 text-[var(--katie-blue)] text-sm font-medium mb-6">
+            <Sparkles className="w-4 h-4" />
+            AI Voice Demo
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight">
+            Hear Katie answer a{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--katie-blue)] to-cyan-300">
+              real call
+            </span>
           </h2>
-          <p className="text-base sm:text-lg text-[var(--slate-500)] max-w-2xl mx-auto">
+          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
             Listen to Katie qualify a leaking tap enquiry and send it straight to WhatsApp — in 64 seconds.
           </p>
         </motion.div>
 
-        {/* Audio Player Card */}
+        {/* Main Card */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-[var(--off-white)] rounded-2xl border border-[var(--border)] p-6 sm:p-8 shadow-sm"
-          aria-live="polite"
+          className="bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 overflow-hidden shadow-2xl"
         >
-          {/* Hidden native audio element (lazy loaded) */}
+          {/* Hidden native audio element */}
           {isVisible && (
             <audio
               ref={audioRef}
@@ -187,7 +318,6 @@ export function AudioDemo() {
             />
           )}
 
-          {/* No-JS fallback */}
           <noscript>
             <audio controls className="w-full" preload="none">
               <source src="/audio/katie-demo-leaky-tap.mp3" type="audio/mpeg" />
@@ -195,89 +325,160 @@ export function AudioDemo() {
             </audio>
           </noscript>
 
-          {/* Custom Player UI */}
-          <div className="flex items-center gap-4 sm:gap-6">
-            {/* Play/Pause Button */}
-            <button
-              onClick={togglePlay}
-              disabled={!isLoaded}
-              aria-label={isPlaying ? "Pause demo call" : "Play demo call"}
-              className={`
-                flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center
-                transition-all duration-200 ease-out
-                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--katie-blue)] focus-visible:ring-offset-2
-                min-w-[44px] min-h-[44px]
-                ${isLoaded 
-                  ? "bg-[var(--katie-blue)] text-white hover:scale-105 active:scale-95 cursor-pointer" 
-                  : "bg-[var(--slate-200)] text-[var(--slate-400)] cursor-not-allowed"
-                }
-              `}
-              style={{ touchAction: "manipulation" }}
-            >
-              {isPlaying ? (
-                <Pause className="w-6 h-6" fill="currentColor" />
-              ) : (
-                <Play className="w-6 h-6 ml-0.5" fill="currentColor" />
-              )}
-            </button>
-
-            {/* Progress + Info */}
-            <div className="flex-1 min-w-0">
-              {/* Progress Bar */}
-              <div
-                className="relative h-2 bg-[var(--slate-200)] rounded-full cursor-pointer group"
-                onClick={handleSeek}
-                role="slider"
-                aria-label="Audio progress"
-                aria-valuemin={0}
-                aria-valuemax={100}
-                aria-valuenow={Math.round(progress)}
-                tabIndex={0}
-                onKeyDown={(e) => {
-                  if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
-                    e.preventDefault()
-                    const audio = audioRef.current
-                    if (!audio) return
-                    const delta = e.key === "ArrowLeft" ? -5 : 5
-                    const newTime = Math.max(0, Math.min(audio.duration || duration, currentTime + delta))
-                    audio.currentTime = newTime
-                  }
-                }}
-              >
-                <div
-                  className="absolute top-0 left-0 h-full bg-[var(--katie-blue)] rounded-full transition-all"
-                  style={{
-                    width: `${progress}%`,
-                    transitionDuration: "100ms",
-                    transitionTimingFunction: "linear",
-                  }}
-                />
-                {/* Hover thumb */}
-                <div 
-                  className="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-white border-2 border-[var(--katie-blue)] rounded-full shadow-sm opacity-0 group-hover:opacity-100 transition-opacity"
-                  style={{ left: `calc(${progress}% - 8px)` }}
-                />
+          {/* Top: Waveform + Play Controls */}
+          <div className="p-6 sm:p-8 border-b border-white/10">
+            <div className="flex items-center gap-6">
+              {/* Play Button with Pulse Rings */}
+              <div className="relative flex-shrink-0">
+                <PulseRings isPlaying={isPlaying} />
+                <button
+                  onClick={togglePlay}
+                  disabled={!isLoaded}
+                  aria-label={isPlaying ? "Pause demo call" : "Play demo call"}
+                  className={`
+                    relative z-10 w-20 h-20 rounded-full flex items-center justify-center
+                    transition-all duration-300 ease-out
+                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--katie-blue)] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f172a]
+                    ${isLoaded
+                      ? isPlaying
+                        ? "bg-gradient-to-br from-[var(--katie-blue)] to-cyan-400 text-white shadow-lg shadow-[var(--katie-blue)]/30 hover:scale-105 active:scale-95 cursor-pointer"
+                        : "bg-white text-[var(--navy-900)] hover:scale-105 active:scale-95 cursor-pointer shadow-xl"
+                      : "bg-white/10 text-white/30 cursor-not-allowed"
+                    }
+                  `}
+                  style={{ touchAction: "manipulation" }}
+                >
+                  <AnimatePresence mode="wait">
+                    {isPlaying ? (
+                      <motion.div
+                        key="pause"
+                        initial={{ scale: 0.5, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        exit={{ scale: 0.5, opacity: 0 }}
+                        transition={{ duration: 0.15 }}
+                      >
+                        <Pause className="w-8 h-8" fill="currentColor" />
+                      </motion.div>
+                    ) : (
+                      <motion.div
+                        key="play"
+                        initial={{ scale: 0.5, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        exit={{ scale: 0.5, opacity: 0 }}
+                        transition={{ duration: 0.15 }}
+                      >
+                        <Play className="w-8 h-8 ml-1" fill="currentColor" />
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </button>
               </div>
 
-              {/* Time + Duration */}
-              <div className="flex items-center justify-between mt-2">
-                <span className="text-sm text-[var(--slate-400)] font-medium tabular-nums">
-                  {formatTime(currentTime)} / {formatTime(duration)}
-                </span>
-                <div className="flex items-center gap-1.5 text-sm text-[var(--slate-400)]">
-                  <Volume2 className="w-4 h-4" />
-                  <span>1.0 MB</span>
+              {/* Waveform + Progress */}
+              <div className="flex-1 min-w-0">
+                {/* Animated Waveform */}
+                <WaveformBars isPlaying={isPlaying} />
+
+                {/* Progress Bar */}
+                <div
+                  className="relative h-2 bg-white/10 rounded-full cursor-pointer group mt-2"
+                  onClick={handleSeek}
+                  role="slider"
+                  aria-label="Audio progress"
+                  aria-valuemin={0}
+                  aria-valuemax={100}
+                  aria-valuenow={Math.round(progress)}
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
+                      e.preventDefault()
+                      const audio = audioRef.current
+                      if (!audio) return
+                      const delta = e.key === "ArrowLeft" ? -5 : 5
+                      const newTime = Math.max(0, Math.min(audio.duration || duration, currentTime + delta))
+                      audio.currentTime = newTime
+                    }
+                  }}
+                >
+                  <div
+                    className="absolute top-0 left-0 h-full bg-gradient-to-r from-[var(--katie-blue)] to-cyan-300 rounded-full transition-all"
+                    style={{
+                      width: `${progress}%`,
+                      transitionDuration: "100ms",
+                      transitionTimingFunction: "linear",
+                    }}
+                  />
+                  {/* Glow thumb */}
+                  <div
+                    className="absolute top-1/2 -translate-y-1/2 w-5 h-5 bg-white rounded-full shadow-lg shadow-[var(--katie-blue)]/50 opacity-0 group-hover:opacity-100 transition-opacity"
+                    style={{ left: `calc(${progress}% - 10px)` }}
+                  />
+                </div>
+
+                {/* Time + Info */}
+                <div className="flex items-center justify-between mt-3">
+                  <span className="text-sm text-slate-400 font-medium tabular-nums">
+                    {formatTime(currentTime)} / {formatTime(duration)}
+                  </span>
+                  <div className="flex items-center gap-2 text-sm text-slate-500">
+                    <Volume2 className="w-4 h-4" />
+                    <span>Demo call · 1.0 MB</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Offline warning */}
-          {typeof navigator !== "undefined" && !navigator.onLine && (
-            <p className="mt-4 text-sm text-amber-600 bg-amber-50 rounded-lg px-3 py-2">
-              Connection required to play audio.
-            </p>
-          )}
+          {/* Bottom: Live Transcript */}
+          <div className="p-6 sm:p-8 bg-gradient-to-b from-white/5 to-transparent">
+            <div className="flex items-center gap-2 mb-5">
+              <div className="relative">
+                <div className="w-2 h-2 rounded-full bg-green-400" />
+                {isPlaying && (
+                  <motion.div
+                    className="absolute inset-0 w-2 h-2 rounded-full bg-green-400"
+                    animate={{ scale: [1, 2.5, 1], opacity: [0.8, 0, 0.8] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  />
+                )}
+              </div>
+              <span className="text-sm font-medium text-slate-300">
+                {isPlaying ? "Katie is speaking..." : hasStarted ? "Demo paused" : "Press play to start"}
+              </span>
+            </div>
+
+            <div className="space-y-4 max-h-[280px] overflow-y-auto pr-2 scrollbar-thin">
+              {TRANSCRIPT.map((line, i) => (
+                <ChatBubble
+                  key={i}
+                  speaker={line.speaker}
+                  text={line.text}
+                  isActive={i <= activeBubble}
+                  delay={i * 0.1}
+                />
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Bottom CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-10 text-center"
+        >
+          <p className="text-slate-400 text-sm mb-4">
+            That was a 64-second call. Katie captured the issue, location, and availability — then sent it to WhatsApp.
+          </p>
+          <a
+            href="#final-cta"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[var(--katie-blue)] to-cyan-500 text-white font-semibold hover:shadow-lg hover:shadow-[var(--katie-blue)]/20 transition-all hover:scale-105"
+          >
+            <MessageCircle className="w-4 h-4" />
+            Get Katie for your business
+            <ChevronRight className="w-4 h-4" />
+          </a>
         </motion.div>
       </div>
     </section>
