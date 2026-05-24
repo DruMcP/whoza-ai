@@ -4,15 +4,6 @@ on:
     branches: [soft-launch]
   workflow_dispatch:
 
-env:
-  # Non-sensitive env vars (public or staging-specific)
-  NEXT_PUBLIC_SITE_URL: https://whoza-ai-staging-349.netlify.app
-  NEXT_PUBLIC_SUPABASE_URL: https://ligjstpxqtkurvteyyhw.supabase.co
-  TRILLET_BASE_URL: https://api.trillet.ai/v1
-  TRILLET_WORKSPACE_ID: whoza-workspace
-  TRILLET_AGENT_ID: katie-agent
-  WHATSAPP_PROVIDER: trillet
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -22,15 +13,23 @@ jobs:
         with:
           node-version: '22'
       - run: npm ci
+      - name: Create .env.local for build
+        run: |
+          cat > .env.local << 'EOF'
+          NEXT_PUBLIC_SITE_URL=https://whoza-ai-staging-349.netlify.app
+          NEXT_PUBLIC_SUPABASE_URL=${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY=${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+          SUPABASE_SERVICE_ROLE_KEY=${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          STRIPE_SECRET_KEY=${{ secrets.STRIPE_SECRET_KEY }}
+          RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}
+          GOOGLE_PLACES_API_KEY=${{ secrets.GOOGLE_PLACES_API_KEY }}
+          PERPLEXITY_API_KEY=${{ secrets.PERPLEXITY_API_KEY }}
+          TRILLET_BASE_URL=https://api.trillet.ai/v1
+          TRILLET_WORKSPACE_ID=whoza-workspace
+          TRILLET_AGENT_ID=katie-agent
+          WHATSAPP_PROVIDER=trillet
+          EOF
       - run: npm run build
-        env:
-          # Secrets required at build time
-          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
-          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
       - name: Deploy to Netlify Staging
         run: |
           npm install -g netlify-cli
