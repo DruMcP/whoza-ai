@@ -259,7 +259,7 @@ export function Pricing() {
                   <div className="mb-6">
                     <div className="flex items-baseline gap-1">
                       <span className="text-3xl font-bold text-[var(--navy-900)]">{cs}{plan.price}</span>
-                      <span className="text-[var(--slate-500)]">/{plan.period} <span className="text-xs font-normal">+VAT</span></span>
+                      <span className="text-[var(--slate-500)]">/{plan.period}</span>
                     </div>
                     <div className="flex items-center gap-2 mt-2">
                       <span className="text-sm text-[var(--rex-green)] font-semibold">{cs}{plan.perJob}/job</span>
@@ -339,7 +339,7 @@ export function Pricing() {
           className="mt-8 text-center"
         >
           <p className="text-sm text-[var(--slate-500)]">
-            Need more call time? Add 100-minute bundles for {cs}20 +VAT, or pay {cs}0.26/min for additional usage.
+            Need more call time? Add 100-minute bundles for {cs}20, or pay {cs}0.26/min for additional usage.
           </p>
         </motion.div>
 
@@ -373,7 +373,7 @@ export function Pricing() {
                   <p className="text-sm text-[var(--slate-500)] mt-1">Extra call handling minutes at a discounted rate.</p>
                 </div>
                 <div className="text-right">
-                  <div className="text-2xl font-bold text-[var(--navy-900)] whitespace-nowrap">{cs}20 + VAT</div>
+                  <div className="text-2xl font-bold text-[var(--navy-900)] whitespace-nowrap">{cs}20</div>
                 </div>
               </div>
               <div className="flex items-center gap-2 text-sm text-[var(--rex-green)] font-medium bg-[var(--rex-green)]/10 rounded-lg px-3 py-2 mb-4">
@@ -402,7 +402,7 @@ export function Pricing() {
                   <p className="text-sm text-[var(--slate-500)] mt-1">Extra help setting up your AI assistant, call flows and business automations.</p>
                 </div>
                 <div className="text-right">
-                  <div className="text-lg font-bold text-[var(--navy-900)] whitespace-nowrap">{cs}200 per hour + VAT</div>
+                  <div className="text-lg font-bold text-[var(--navy-900)] whitespace-nowrap">{cs}200 per hour</div>
                 </div>
               </div>
               <div className="flex items-center gap-2 text-sm text-[var(--katie-blue)] font-medium bg-[var(--katie-blue)]/10 rounded-lg px-3 py-2 mb-4">

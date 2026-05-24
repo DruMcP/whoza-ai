@@ -330,7 +330,7 @@ export function HomepageSchema() {
           "name": "How much does Whoza cost in total?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You pay a monthly plan fee (Starter £59, Growth £125, Pro £230, Scale £399 — all +VAT). Each plan includes a set number of call handling minutes and booked enquiries. Additional enquiries beyond your included amount are charged per booking. Overage minutes are billed at £0.22 per minute. There are no hidden setup fees or long-term contracts."
+            "text": "You pay a monthly plan fee (Starter £59, Growth £125, Pro £230, Scale £399). Each plan includes a set number of call handling minutes and booked enquiries. Additional enquiries beyond your included amount are charged per booking. Overage minutes are billed at £0.26 per minute. There are no hidden setup fees or long-term contracts."
           }
         },
         {
@@ -515,7 +515,7 @@ export function PricingSchema() {
         "priceValidUntil": "2026-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://whoza.ai/pricing",
-        "description": "£59/month + VAT. 0 included jobs. £4.50 per job booked.",
+        "description": "£59/month. 0 included jobs. £4.50 per job booked.",
         "hasMerchantReturnPolicy": {
           "@type": "MerchantReturnPolicy",
           "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
@@ -577,7 +577,7 @@ export function PricingSchema() {
         "priceValidUntil": "2026-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://whoza.ai/pricing",
-        "description": "£125/month + VAT. 15 included jobs. £3.25 per additional job.",
+        "description": "£125/month. 15 included jobs. £3.25 per additional job.",
         "hasMerchantReturnPolicy": {
           "@type": "MerchantReturnPolicy",
           "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
@@ -639,7 +639,7 @@ export function PricingSchema() {
         "priceValidUntil": "2026-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://whoza.ai/pricing",
-        "description": "£230/month + VAT. 40 included jobs. £2.75 per additional job.",
+        "description": "£230/month. 40 included jobs. £2.75 per additional job.",
         "hasMerchantReturnPolicy": {
           "@type": "MerchantReturnPolicy",
           "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
@@ -701,7 +701,7 @@ export function PricingSchema() {
         "priceValidUntil": "2026-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://whoza.ai/pricing",
-        "description": "£399/month + VAT. 100 included jobs. £2.25 per additional job.",
+        "description": "£399/month. 100 included jobs. £2.25 per additional job.",
         "hasMerchantReturnPolicy": {
           "@type": "MerchantReturnPolicy",
           "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",

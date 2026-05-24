@@ -22,7 +22,6 @@ export function QuoteGenerator() {
   const [customerAddress, setCustomerAddress] = useState("")
   const [quoteRef, setQuoteRef] = useState(`WH-${String(Math.floor(Math.random() * 900) + 100).padStart(3, "0")}`)
   const [validDays, setValidDays] = useState(14)
-  const [vatRegistered, setVatRegistered] = useState(false)
   const [paymentTerms, setPaymentTerms] = useState("On completion")
   const [notes, setNotes] = useState("")
   const [lineItems, setLineItems] = useState<LineItem[]>([
@@ -30,9 +29,7 @@ export function QuoteGenerator() {
   ])
   const [showPreview, setShowPreview] = useState(false)
 
-  const subtotal = lineItems.reduce((sum, item) => sum + item.quantity * item.unitPrice, 0)
-  const vat = vatRegistered ? subtotal * 0.2 : 0
-  const total = subtotal + vat
+  const total = lineItems.reduce((sum, item) => sum + item.quantity * item.unitPrice, 0)
 
   const addLineItem = () => {
     setLineItems([...lineItems, { id: Date.now().toString(), description: "", quantity: 1, unitPrice: 0 }])
@@ -199,26 +196,6 @@ export function QuoteGenerator() {
                 </div>
 
                 <div className="bg-white/5 rounded-xl p-4 space-y-2">
-                  <div className="flex items-center gap-3">
-                    <input
-                      type="checkbox"
-                      id="vat"
-                      checked={vatRegistered}
-                      onChange={(e) => setVatRegistered(e.target.checked)}
-                      className="w-5 h-5 rounded border-white/20 bg-white/10 text-[var(--katie-blue)] accent-[var(--katie-blue)]"
-                    />
-                    <label htmlFor="vat" className="text-sm text-white/80">VAT registered (add 20%)</label>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-white/60">Total ex VAT:</span>
-                    <span className="font-medium">£{subtotal.toFixed(2)}</span>
-                  </div>
-                  {vatRegistered && (
-                    <div className="flex justify-between text-sm">
-                      <span className="text-white/60">VAT (20%):</span>
-                      <span className="font-medium">£{vat.toFixed(2)}</span>
-                    </div>
-                  )}
                   <div className="flex justify-between text-lg font-bold border-t border-white/10 pt-2">
                     <span>TOTAL:</span>
                     <span className="text-[var(--coral)]">£{total.toFixed(2)}</span>
@@ -310,16 +287,6 @@ export function QuoteGenerator() {
 
                 <div className="flex justify-end mb-6">
                   <div className="w-64 space-y-2">
-                    <div className="flex justify-between text-sm">
-                      <span>Subtotal</span>
-                      <span>£{subtotal.toFixed(2)}</span>
-                    </div>
-                    {vatRegistered && (
-                      <div className="flex justify-between text-sm">
-                        <span>VAT (20%)</span>
-                        <span>£{vat.toFixed(2)}</span>
-                      </div>
-                    )}
                     <div className="flex justify-between text-lg font-bold border-t-2 border-[var(--navy-900)]/10 pt-2">
                       <span>TOTAL</span>
                       <span className="text-[var(--coral)]">£{total.toFixed(2)}</span>
@@ -380,7 +347,7 @@ export function QuoteGenerator() {
             applicationCategory: "BusinessApplication",
             offers: { "@type": "Offer", price: "0", priceCurrency: "GBP" },
             operatingSystem: "Web",
-            description: "Create professional, VAT-compliant quotes for UK trade jobs in 60 seconds.",
+            description: "Create professional quotes for UK trade jobs in 60 seconds.",
           }),
         }}
       />

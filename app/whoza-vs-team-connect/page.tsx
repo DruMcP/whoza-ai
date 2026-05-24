@@ -36,9 +36,9 @@ export const metadata: Metadata = {
 }
 
 const comparisonData = [
-  { feature: "Entry Price", whoza: "£59 + VAT", competitor: "£9.99 + VAT", winner: "teamconnect", note: "Team-Connect cheapest entry" },
-  { feature: "Mid-Tier Price", whoza: "£125 + VAT (Growth)", competitor: "£29.99 (Professional)", winner: "teamconnect", note: "Team-Connect cheaper mid" },
-  { feature: "Top-Tier Price", whoza: "£399 + VAT (Scale)", competitor: "£79.99 (Business)", winner: "teamconnect", note: "Team-Connect cheaper top" },
+  { feature: "Entry Price", whoza: "£59", competitor: "£9.99", winner: "teamconnect", note: "Team-Connect cheapest entry" },
+  { feature: "Mid-Tier Price", whoza: "£125 (Growth)", competitor: "£29.99 (Professional)", winner: "teamconnect", note: "Team-Connect cheaper mid" },
+  { feature: "Top-Tier Price", whoza: "£399 (Scale)", competitor: "£79.99 (Business)", winner: "teamconnect", note: "Team-Connect cheaper top" },
   { feature: "WhatsApp Delivery", whoza: "✓ Native", competitor: "✗ SMS/Email", winner: "whoza", note: "whoze better delivery" },
   { feature: "Review Collection", whoza: "✓ Built-in", competitor: "✗ Not included", winner: "whoza", note: "whoze exclusive" },
   { feature: "Competitor Analysis", whoza: "✓ Monthly reports", competitor: "✗ Not available", winner: "whoza", note: "whoze exclusive" },

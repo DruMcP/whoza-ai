@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 }
 
 const comparisonData = [
-  { feature: "Monthly Price", whoza: "£59 + VAT", competitor: "£150–£400 + VAT", winner: "whoza", note: "whoze 62% cheaper entry" },
+  { feature: "Monthly Price", whoza: "£59", competitor: "£150–£400", winner: "whoza", note: "whoze 62% cheaper entry" },
   { feature: "Price per Call", whoza: "£4.50/job booked", competitor: "Included in monthly", winner: "draw", note: "Different pricing models" },
   { feature: "Answerer Type", whoza: "AI voice agent", competitor: "Human receptionists", winner: "draw", note: "Different approaches" },
   { feature: "Availability", whoza: "24/7, unlimited calls", competitor: "24/7, within package", winner: "whoza", note: "AI never sleeps or takes breaks" },

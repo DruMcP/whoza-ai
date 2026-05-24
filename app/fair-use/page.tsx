@@ -174,7 +174,7 @@ export default function FairUsePolicy() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
-                <span><strong>Overage:</strong> Additional minutes charged at £0.22/minute + VAT</span>
+                <span><strong>Overage:</strong> Additional minutes charged at £0.26/minute</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>

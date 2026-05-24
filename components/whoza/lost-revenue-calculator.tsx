@@ -396,7 +396,7 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
                   <p className="text-sm text-white/60 mb-4">
                     Stop the leak. Katie answers every call from just{" "}
                     <span className="text-white font-semibold">
-                      {config.currencySymbol}{config.pricing.starter}/month <span className="text-xs">+VAT</span>
+                      {config.currencySymbol}{config.pricing.starter}/month
                     </span>
                   </p>
                   <button 

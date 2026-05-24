@@ -36,8 +36,8 @@ export const metadata: Metadata = {
 }
 
 const comparisonData = [
-  { feature: "Monthly Price (Entry)", whoza: "£59 + VAT", competitor: "£49.99", winner: "clara", note: "Clara cheaper by £9" },
-  { feature: "Monthly Price (Mid)", whoza: "£125 + VAT (Growth)", competitor: "£99.99 (Pro)", winner: "clara", note: "Clara cheaper by £25" },
+  { feature: "Monthly Price (Entry)", whoza: "£59", competitor: "£49.99", winner: "clara", note: "Clara cheaper by £9" },
+  { feature: "Monthly Price (Mid)", whoza: "£125 (Growth)", competitor: "£99.99 (Pro)", winner: "clara", note: "Clara cheaper by £25" },
   { feature: "WhatsApp Delivery", whoza: "✓ Native integration", competitor: "✗ Email only", winner: "whoza", note: "Major differentiator" },
   { feature: "Review Collection", whoza: "✓ Built-in (Claire)", competitor: "✗ Not available", winner: "whoza", note: "whoze exclusive" },
   { feature: "Competitor Analysis", whoza: "✓ Monthly reports (Rex)", competitor: "✗ Not available", winner: "whoza", note: "whoze exclusive" },

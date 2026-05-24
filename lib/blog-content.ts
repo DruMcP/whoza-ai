@@ -192,7 +192,7 @@ If you're missing calls, you're missing money. The fix is simpler and more affor
         },
         {
           question: "How much does an AI call handler cost?",
-          answer: "whoza.ai plans start at £59/month + VAT for the Starter plan, which includes unlimited calls and WhatsApp delivery. The Growth plan at £125/month adds team features and priority support. All plans include a 7-day free trial.",
+          answer: "whoza.ai plans start at £59/month for the Starter plan, which includes unlimited calls and WhatsApp delivery. The Growth plan at £125/month adds team features and priority support. All plans include a 7-day free trial.",
         },
       ],
     },
@@ -337,7 +337,7 @@ An AI call handler like Katie answers every call you can't take, qualifies the e
 
 Here's the cost breakdown:
 
-**whoza.ai Starter plan: £59/month + VAT**
+**whoza.ai Starter plan: £59/month**
 That's £2.76 per working day. Less than a coffee from Costa.
 
 For that, you get:
@@ -734,7 +734,7 @@ Compare that to the old workflow: miss call → check voicemail hours later → 
           headingTag: "h2",
           body: `Here's where it gets interesting. The fix costs less than the problem.
 
-**whoza.ai Starter plan: £59/month + VAT**
+**whoza.ai Starter plan: £59/month**
 That's £2.76 per working day. Less than a coffee.
 
 **What you get:**

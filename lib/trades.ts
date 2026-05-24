@@ -52,7 +52,7 @@ export const trades: TradeData[] = [
       { step: 4, title: "Accept, callback or decline", description: "Tap to accept the job, schedule a callback, or decline if you're fully booked — customer gets an instant SMS update" }
     ],
     faqs: [
-      { question: "How much does AI call handling cost for a plumber?", answer: "Whoza starts at £59/month + VAT for the Starter plan. That's less than the cost of one missed emergency call. Every plan includes unlimited AI calls, WhatsApp delivery, and 7-day free trial. Overage minutes are £0.26/minute." },
+      { question: "How much does AI call handling cost for a plumber?", answer: "Whoza starts at £59/month for the Starter plan. That's less than the cost of one missed emergency call. Every plan includes unlimited AI calls, WhatsApp delivery, and 7-day free trial. Overage minutes are £0.26/minute." },
       { question: "Can Katie handle emergency plumbing calls at 2am?", answer: "Yes. Katie answers 24/7, including nights, weekends, and bank holidays. She identifies emergency calls (burst pipes, no heating, gas leaks) and marks them as high urgency in your WhatsApp alert so you see them first." },
       { question: "What information does Katie collect from plumbing customers?", answer: "Katie collects: full name, phone number, postcode, property type (house/flat/commercial), problem description, urgency level (routine/urgent/emergency), preferred appointment time, and how they found you." },
       { question: "Will customers know they're talking to AI?", answer: "Yes — Katie introduces herself as your AI assistant. Customers appreciate the honesty and the instant response. Most prefer a friendly AI that answers immediately over voicemail or a ringing phone." },

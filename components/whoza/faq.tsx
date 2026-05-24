@@ -13,7 +13,7 @@ import {
 const faqs = [
   {
     question: "How much does Whoza cost in total?",
-    answer: "You pay a monthly plan fee (Starter £59, Growth £125, Pro £230, Scale £399 — all +VAT). Each plan includes a set number of call handling minutes and booked enquiries. Additional enquiries beyond your included amount are charged per booking. Overage minutes are billed at £0.22 per minute. There are no hidden setup fees or long-term contracts.",
+    answer: "You pay a monthly plan fee (Starter £59, Growth £125, Pro £230, Scale £399). Each plan includes a set number of call handling minutes and booked enquiries. Additional enquiries beyond your included amount are charged per booking. Overage minutes are billed at £0.26 per minute. There are no hidden setup fees or long-term contracts.",
     category: "Pricing",
   },
   {

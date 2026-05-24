@@ -209,7 +209,7 @@ const detailedReviews = [
     ],
     whatYouSee: "WhatsApp and companion app delivery.",
     bestFor: "Tradespeople who want a US-style customer experience and don't mind a non-UK company handling their calls. The WhatsApp integration is a plus.",
-    downside: "US-based company with limited UK trade market understanding. Customer support may be timezone-challenged. Less tailored to UK trade-specific needs (VAT, local regulations, UK trade terminology). Fewer UK-specific features.",
+    downside: "US-based company with limited UK trade market understanding. Customer support may be timezone-challenged. Less tailored to UK trade-specific needs (local regulations, UK trade terminology). Fewer UK-specific features.",
     link: "https://heyrosie.com",
     linkText: "Try Rosie AI",
     isWinner: false,
@@ -222,7 +222,7 @@ const testingCriteria = [
   { icon: Clock, label: "Setup ease", desc: "How long from signup to first answered call?" },
   { icon: Zap, label: "Actionability", desc: "Could we accept, call back, or decline from the notification?" },
   { icon: PoundSterling, label: "Price transparency", desc: "Were there hidden fees or long contracts?" },
-  { icon: Shield, label: "UK-specific features", desc: "Did it understand UK postcodes, VAT, trade terminology?" },
+  { icon: Shield, label: "UK-specific features", desc: "Did it understand UK postcodes, local regulations, trade terminology?" },
 ]
 
 const recommendationTable = [
