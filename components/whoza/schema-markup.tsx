@@ -604,3 +604,89 @@ export function PricingSchema() {
     </>
   )
 }
+
+// ─── VideoSchema ───────────────────────────────────────────────
+
+interface VideoSchemaProps {
+  name: string
+  description: string
+  embedUrl: string
+  thumbnailUrl?: string
+  contentUrl?: string
+  uploadDate?: string
+  duration?: string
+}
+
+/**
+ * VideoSchema — JSON-LD structured data for VideoObject
+ *
+ * Usage: Add to any page that embeds the explainer video.
+ *
+ * Example:
+ *   <VideoSchema
+ *     name="Whoza.ai 60-Second Demo"
+ *     description="See Katie capture a missed enquiry..."
+ *     embedUrl="https://whoza.ai"
+ *   />
+ */
+export function VideoSchema({
+  name,
+  description,
+  embedUrl,
+  thumbnailUrl = "https://whoza.ai/og-image.png",
+  contentUrl = "https://whoza.ai/whoza-explainer.mp4",
+  uploadDate = "2026-05-06T00:00:00+00:00",
+  duration = "PT60S",
+}: VideoSchemaProps) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name,
+    description,
+    thumbnailUrl: [thumbnailUrl, "https://whoza.ai/og-image-1200x630.png"],
+    uploadDate,
+    duration,
+    contentUrl,
+    embedUrl,
+    author: {
+      "@type": "Organization",
+      name: "Whoza.ai",
+      url: "https://whoza.ai",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://whoza.ai/logo.png",
+        width: 512,
+        height: 512,
+      },
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Whoza.ai",
+      url: "https://whoza.ai",
+    },
+    potentialAction: {
+      "@type": "WatchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: embedUrl,
+        actionPlatform: [
+          "http://schema.org/DesktopWebPlatform",
+          "http://schema.org/MobileWebPlatform",
+        ],
+      },
+      expectsAcceptanceOf: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "GBP",
+        availability: "https://schema.org/InStock",
+      },
+    },
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
