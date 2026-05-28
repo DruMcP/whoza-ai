@@ -31,6 +31,7 @@ import { StickyCTA, FloatingChatWidget } from "@/components/whoza/sticky-cta"
 import { LocaleProvider } from "@/lib/locale-context"
 import { locations, getLocationBySlug } from "@/lib/locations"
 import { VideoSchema } from "@/components/whoza/schema-markup"
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 
 interface PageProps {
   params: Promise<{ location: string }>
@@ -103,6 +104,10 @@ export default async function LocationPage({ params }: PageProps) {
         embedUrl={`https://whoza.ai/${location}`}
       />
       <Header />
+      <BreadcrumbSchema items={[
+        { name: "Home", item: "https://whoza.ai" },
+        { name: locationData.city, item: `https://whoza.ai/${location}` },
+      ]} />
       
       <main id="main-content" role="main" className="pb-24 lg:pb-0">
         {/* LOCATION HERO — City-specific value prop */}
