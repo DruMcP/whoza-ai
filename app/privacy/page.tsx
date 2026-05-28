@@ -204,7 +204,7 @@ export default function PrivacyPolicy() {
               </li>
             </ul>
             <p className="text-white/70 leading-relaxed mt-4">
-              To exercise any of these rights, contact us at <a href="mailto:dru@whoza.ai" className="text-emerald-400 hover:underline">dru@whoza.ai</a> or via WhatsApp at <a href="https://wa.me/447831643012" className="text-emerald-400 hover:underline">+44 7831 643012</a>. We will respond within 30 days.
+              To exercise any of these rights, contact us at <a href="mailto:dru@whoza.ai" className="text-emerald-400 hover:underline">dru@whoza.ai</a> or via WhatsApp at <a href="https://wa.me/447463131598" className="text-emerald-400 hover:underline">+44 7463 131598</a>. We will respond within 30 days.
             </p>
           </section>
 
@@ -256,7 +256,7 @@ export default function PrivacyPolicy() {
               <p className="text-white/70">Data Protection Officer</p>
               <p className="text-white font-medium mt-1">WHOZA AI LTD</p>
               <p className="text-white/70 mt-2">Email: <a href="mailto:dru@whoza.ai" className="text-emerald-400 hover:underline">dru@whoza.ai</a></p>
-              <p className="text-white/70">WhatsApp: <a href="https://wa.me/447831643012" className="text-emerald-400 hover:underline">+44 7831 643012</a></p>
+              <p className="text-white/70">WhatsApp: <a href="https://wa.me/447463131598" className="text-emerald-400 hover:underline">+44 7463 131598</a></p>
               <p className="text-white/70 mt-2">Post: WHOZA AI LTD, 6 Atholl Crescent, 6, Perth, PH1 5JN, Scotland</p>
             </div>
           </section>
