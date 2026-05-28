@@ -314,7 +314,7 @@ export function SignupModal({ onClose }: SignupModalProps) {
 
           {/* WhatsApp alternative */}
           <a
-            href="https://wa.me/447831643012"
+            href="https://wa.me/447463131598"
             target="_blank"
             rel="noopener noreferrer"
             className="block text-center transition-colors hover:underline"

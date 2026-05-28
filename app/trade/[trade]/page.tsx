@@ -30,6 +30,7 @@ import { GrowthEngine } from "@/components/whoza/growth-engine"
 import { DashboardPreview } from "@/components/whoza/dashboard-preview"
 import { ClaireDashboard } from "@/components/whoza/claire-dashboard"
 import { trades, getTradeBySlug, getAllTradeSlugs } from "@/lib/trades"
+import { VideoSchema } from "@/components/whoza/schema-markup"
 
 interface PageProps {
   params: Promise<{ trade: string }>
@@ -96,6 +97,11 @@ export default async function TradePage({ params }: PageProps) {
   return (
     <>
       <TradeSchema tradeData={tradeData} />
+      <VideoSchema
+        name={`Whoza.ai Demo — AI Call Handling for ${tradeData.display}`}
+        description={`Watch how Whoza.ai's Katie captures a missed enquiry in under 60 seconds for ${tradeData.display}. The call is answered instantly, the enquiry lands in WhatsApp, and you accept or decline in two taps.`}
+        embedUrl={`https://whoza.ai/trade/${tradeData.slug}`}
+      />
       <Header />
       
       <main id="main-content" role="main" className="pb-24 lg:pb-0">

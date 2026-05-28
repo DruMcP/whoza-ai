@@ -9,7 +9,7 @@ const groups = [
     rows: [
       { outcome: "Every call answered 24/7", whoza: true, typical: false },
       { outcome: "Caller qualified as real job (not spam)", whoza: true, typical: false },
-      { outcome: "Qualified enquiry captured", whoza: true, typical: false },
+      { outcome: "Spam Filtered", whoza: true, typical: false },
     ],
   },
   {

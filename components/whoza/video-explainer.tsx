@@ -51,9 +51,11 @@ export function VideoExplainer() {
             <video
               ref={videoRef}
               className="w-full h-full object-cover"
-              poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1280' height='720' viewBox='0 0 1280 720'%3E%3Crect fill='%230b141a' width='1280' height='720'/%3E%3C/svg%3E"
+              poster="https://whoza.ai/og-image.png"
               preload="metadata"
               playsInline
+              width="1280"
+              height="720"
               onPause={handlePause}
               onEnded={handlePause}
             >
