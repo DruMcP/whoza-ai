@@ -19,10 +19,6 @@ export function GoogleReviews() {
         reviews={reviews.map(({ name, text, rating }) => ({ name, text, rating }))}
         itemReviewed={{ name: "Whoza.ai — AI Voice Agents for UK Tradespeople", url: "https://whoza.ai" }}
       />
-      <ReviewSchema
-        reviews={reviews.map(({ name, text, rating }) => ({ name, text, rating }))}
-        itemReviewed={{ name: "Whoza.ai — AI Voice Agents for UK Tradespeople", url: "https://whoza.ai" }}
-      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
