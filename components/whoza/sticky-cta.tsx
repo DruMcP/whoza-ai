@@ -91,7 +91,7 @@ export function FloatingChatWidget() {
   ]
 
   const waLink = (text: string) =>
-    `https://wa.me/447831643012?text=${encodeURIComponent(text)}`
+    `https://wa.me/447463131598?text=${encodeURIComponent(text)}`
 
   if (!isVisible) return null
 

@@ -30,6 +30,7 @@ import { CityContentSection } from "@/components/whoza/city-content-section"
 import { StickyCTA, FloatingChatWidget } from "@/components/whoza/sticky-cta"
 import { LocaleProvider } from "@/lib/locale-context"
 import { locations, getLocationBySlug } from "@/lib/locations"
+import { VideoSchema } from "@/components/whoza/schema-markup"
 
 interface PageProps {
   params: Promise<{ location: string }>
@@ -96,6 +97,11 @@ export default async function LocationPage({ params }: PageProps) {
 
   return (
     <LocaleProvider forcedCountry={locationData.country}>
+      <VideoSchema
+        name={`Whoza.ai Demo — AI Call Handling in ${locationData.city}`}
+        description={`Watch how Whoza.ai's Katie captures a missed enquiry in under 60 seconds for ${locationData.trades?.slice(0, 2).join(", ") || "tradespeople"} in ${locationData.city}. The call is answered instantly, the enquiry lands in WhatsApp, and you accept or decline in two taps.`}
+        embedUrl={`https://whoza.ai/${location}`}
+      />
       <Header />
       
       <main id="main-content" role="main" className="pb-24 lg:pb-0">

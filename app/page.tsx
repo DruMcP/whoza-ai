@@ -33,13 +33,18 @@ const TrilletVoiceWidget = dynamic(
 
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { ClaireDashboard } from "@/components/whoza/claire-dashboard"
-import { HomepageSchema } from "@/components/whoza/schema-markup"
+import { HomepageSchema, VideoSchema } from "@/components/whoza/schema-markup"
 import { FAQPageSchema } from "@/components/whoza/faq-schema"
 import { ExitIntentModal } from "@/components/whoza/exit-intent-modal"
 
 export default function Home() {
   return (
     <>
+      <VideoSchema
+        name="Whoza.ai 60-Second Demo — Katie Answers Every Call"
+        description="Watch Katie, Whoza's AI call handler, capture a missed enquiry in under 60 seconds. The call is answered instantly, the enquiry lands in WhatsApp, Claire requests a review, and Rex delivers growth insights. Built for UK tradespeople."
+        embedUrl="https://whoza.ai"
+      />
       <Header />
       <BreadcrumbSchema items={[{ name: "Home", item: "https://whoza.ai" }]} />
       <FAQPageSchema

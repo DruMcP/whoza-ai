@@ -15,7 +15,7 @@ const footerLinks = {
   ],
   support: [
     { label: "Help Centre", href: "/support" },
-    { label: "WhatsApp Support", href: "https://wa.me/447831643012" },
+    { label: "WhatsApp Support", href: "https://wa.me/447463131598" },
     { label: "Email Support", href: "mailto:support@whoza.ai" },
     { label: "FAQ", href: "/pricing#faq" },
   ],
@@ -212,7 +212,10 @@ export function Footer() {
               WHOZA AI LTD · Registered in Scotland — Company Number SC874716 · ICO Registration: ZC077271
             </p>
             <p className="text-xs text-white/30 mt-1">
-              6 Atholl Crescent, 6, Perth, PH1 5JN, United Kingdom
+              Registered address: 6 Atholl Crescent, 6, Perth, PH1 5JN, United Kingdom
+            </p>
+            <p className="text-xs text-white/30 mt-1">
+              Office address: 97 Main Street, Tomintoul AB37 9HA
             </p>
           </div>
         </div>
