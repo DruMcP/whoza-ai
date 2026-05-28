@@ -35,6 +35,7 @@ const groups = [
       { outcome: "More reviews → found more easily", whoza: true, typical: false },
       { outcome: "More visibility → more enquiries", whoza: true, typical: false },
       { outcome: "More enquiries → more jobs every week", whoza: true, typical: false },
+      { outcome: "Get Recommended by Chat GPT, Perplexity etc", whoza: true, typical: false },
     ],
   },
 ]
