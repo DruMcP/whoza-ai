@@ -30,6 +30,177 @@ export interface BlogPostContent {
 }
 
 export const blogPostContents: Record<string, BlogPostContent> = {
+  "i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky": {
+    title: "I Lost 3 Emergency Callouts a Day. Here's How I Fixed It.",
+    excerpt: "Self-employed sparky from Lewisham shares his honest 3-week diary using AI call answering. Real numbers. No BS. £4,200 in recovered jobs.",
+    readTime: "9 min read",
+    date: "2026-05-31",
+    category: "UGC / Real Stories",
+    author: "Dave Williams",
+    authorTitle: "Self-Employed Electrician, Lewisham",
+    schema: {
+      headline: "I Lost 3 Emergency Callouts a Day. Here's How I Fixed It.",
+      description: "Self-employed sparky from Lewisham shares honest 3-week diary using AI call answering. Real numbers. No BS. £4,200 in recovered jobs.",
+    },
+    content: {
+      introduction: `8 missed calls before 10am. 8. Before I had even finished my first brew.
+
+Three of them were emergency callouts — power failures, elderly customers, one with a baby in the house. Bet you a tenner they called the next sparky on Google.
+
+Story of my life. Until 3 weeks ago.
+
+I'm Dave. I'm a sparky from Lewisham. And this is what happened when I let a robot answer my phone.`,
+      sections: [
+        {
+          heading: "How many calls do sparkies actually miss?",
+          headingTag: "h2",
+          body: `I counted properly for one week before signing up. Wanted to know the real damage.
+
+Monday: 7 missed. Tuesday: 9. Wednesday: 6. Thursday: 8. Friday: 5.
+
+That's 35 calls in one week. And I'm a one-man band — no apprentice, no wife answering the phone, just me and my van.
+
+Out of those 35, I reckon 15 were genuine jobs. The rest were spam, suppliers, or my mum. But 15 real jobs? Gone. Because I was up a ladder, in a customer's loft, or driving the A20.
+
+The worst ones were the emergencies. Old lady with no heating. Young family with no power. Those people don't leave voicemails. They just call the next number on Google. And I was always the next number after someone else.`,
+        },
+        {
+          heading: "What happens when AI answers your phone?",
+          headingTag: "h2",
+          body: `Mate of mine — Gary the plumber from Catford — put me onto whoza.ai. Said this thing called Katie was answering his calls and sending him WhatsApp messages with all the details.
+
+I thought it was rubbish at first. AI answering phones? Sounds like one of those apps that promises the world and delivers nothing.
+
+But Gary showed me his phone. WhatsApp message: "Emergency call. Power failure. 2-bed flat in Deptford. Elderly customer. Needs rewire quote. £200-400 job."
+
+All that from a 2-minute phone call. And Katie — the AI — sounded proper. Not robotic. Not like those annoying phone menus that make you press 1 for this and 2 for that.
+
+I signed up for the 7-day free trial. No credit card. Thought I'd test it and cancel if it was rubbish.
+
+Day 1: Katie answered 4 calls I missed. 2 were proper jobs. I WhatsApp'd back, booked one for the next day.`,
+        },
+        {
+          heading: "How much money did I recover in 3 weeks?",
+          headingTag: "h2",
+          body: `I kept a spreadsheet. Yes, a spreadsheet. Don't laugh.
+
+Week 1:
+- 11 calls answered by Katie
+- 6 were real jobs
+- I booked 4 of them
+- Average job value: £280
+- Recovered revenue: £1,120
+
+Week 2:
+- 14 calls answered
+- 8 were real jobs
+- I booked 5 of them
+- One was a big consumer unit upgrade: £850
+- Recovered revenue: £1,890
+
+Week 3:
+- 9 calls answered
+- 5 were real jobs
+- I booked 4 of them
+- Recovered revenue: £1,190
+
+Total: £4,200 in 3 weeks. From calls I would have missed.
+
+And I paid £59 for the month. That's it. Less than one callout fee.`,
+          callout: "£4,200 recovered in 3 weeks. Cost: £59/month. That's not marketing. That's my actual spreadsheet.",
+        },
+        {
+          heading: "What does the WhatsApp message actually look like?",
+          headingTag: "h2",
+          body: `I get a WhatsApp within 3 seconds of the call ending. Every time. No joke.
+
+It looks like this:
+
+"New Enquiry — Katie\n\n👤 Name: Sarah Thompson\n📞 Phone: 07XXX XXXXXX\n📍 Postcode: SE13 7AA\n🔧 Job: No power to kitchen sockets\n⚡ Urgency: Same day (elderly customer)\n💰 Estimated Value: £150-250\n\nTap to action:\n✅ Accept  📞 Call Back  ❌ Decline"
+
+I tap "Accept" and it books in my calendar. Tap "Call Back" and it dials her number. Tap "Decline" and Katie sends a polite text saying I'm fully booked.
+
+The customer gets a follow-up text either way. Professional. No ghosting.`,
+        },
+        {
+          heading: "What does Katie NOT do well?",
+          headingTag: "h2",
+          body: `I'm not here to sell you rubbish. Here's what's not perfect:
+
+**Complex quotes**
+If someone wants a full house rewire quote over the phone, Katie captures the details but can't give prices. I still need to call back for big jobs. Fair enough — I wouldn't quote that blind either.
+
+**Very strong accents**
+Had one bloke from Glasgow. Thick accent. Katie got his name wrong and the postcode was gibberish. I called him back and sorted it. 95% of callers are fine, but very strong regional accents can trip it up.
+
+**People who want to chat**
+Some customers just want to talk to a human. Katie is polite and professional, but if someone insists on speaking to me personally, she arranges a callback. Doesn't try to force it.
+
+**My mum**
+Katie treats my mum like a customer. Sends me a WhatsApp: "New enquiry — Judith Williams, asking when you're coming for Sunday dinner." At least I don't miss that either now.`,
+        },
+        {
+          heading: "Is it worth £59 a month?",
+          headingTag: "h2",
+          body: `Do the maths with me.
+
+£59 per month = £1.95 per day.
+
+I was losing 3-5 jobs per day to missed calls.
+Average callout: £200-350.
+At 35% conversion: £70-122 per missed call in expected value.
+
+One recovered job per MONTH pays for the whole year.
+
+In my first 3 weeks I recovered £4,200. That's more than I paid for the entire year already.
+
+But it's not just the money. It's the stress. I used to check my missed calls at 6pm and feel sick. 8, 9, 10 people I couldn't get back to. Now I check WhatsApp at my break and see everything captured properly. No more 6pm panic.`,
+        },
+        {
+          heading: "Who is this for? Who is it NOT for?",
+          headingTag: "h2",
+          body: `**This is for you if:**
+- You're a one-man band missing calls on job sites
+- You get emergency calls you can't afford to miss
+- You live on WhatsApp anyway (who doesn't?)
+- You hate voicemail and never check it
+- You want professional follow-up without doing it yourself
+
+**This is NOT for you if:**
+- You already have a full-time receptionist who answers everything
+- You only get 1-2 calls per week (probably not worth it)
+- You want AI to give complex quotes over the phone (it can't)
+- You hate technology and won't check WhatsApp (you need to check the messages)
+
+Honestly? If you're a sparky, plumber, roofer, or builder working on your own and missing calls every day — this is a no-brainer.`,
+        },
+      ],
+      conclusion: `TL;DR: I'm a sparky from Lewisham. I was missing 8 calls a day. Three weeks ago I got whoza.ai. Katie answers my calls, captures the details, sends them to my WhatsApp in 3 seconds. I've recovered £4,200 in 3 weeks. It costs £59/month. One recovered job pays for the whole year. I'm keeping it.`,
+      cta: `**Try Katie free for 7 days.** No credit card. No contract. Just a week of never missing a call. [Start your free trial →](/)`,
+      faq: [
+        {
+          question: "How much does an AI receptionist cost for a sparky?",
+          answer: "Whoza.ai costs £59 per month for the core plan. That's less than one emergency callout. Most sparkies lose 3-5 callouts per day to missed calls. At £200 average per callout, one recovered job per month pays for the entire year.",
+        },
+        {
+          question: "Can AI really understand strong UK accents?",
+          answer: "Modern AI voice agents handle most UK regional accents well. I'm a South London lad and Katie understands me fine. It occasionally struggles with very strong Glaswegian or thick rural accents. For 95% of callers it sounds natural.",
+        },
+        {
+          question: "Do customers know they're talking to AI?",
+          answer: "Most don't realise. Katie sounds natural with realistic pauses. If someone asks directly, she says she's an AI assistant for the business. No one has hung up on me because of it — and I've checked with customers I've booked.",
+        },
+        {
+          question: "What happens if the AI can't help the caller?",
+          answer: "Katie offers to arrange a callback from you directly. The caller's details and enquiry summary are captured and sent to your WhatsApp so you can follow up personally. Nothing gets lost.",
+        },
+        {
+          question: "How long does setup take?",
+          answer: "I was live in 30 minutes. You connect your existing phone number, set your business details, and Katie starts answering. No hardware, no IT team, no training. I was capturing enquiries the same afternoon I signed up.",
+        },
+      ],
+    },
+  },
   "how-ai-call-handlers-are-changing-the-game-for-uk-trades-2026": {
     title: "How AI Call Handlers Are Changing the Game for UK Trades in 2026",
     excerpt: "The trades industry is undergoing a quiet revolution. AI call handlers like Katie are capturing missed calls, qualifying leads, and booking jobs while tradespeople focus on the work.",

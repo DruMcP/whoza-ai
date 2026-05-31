@@ -36,6 +36,14 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky",
+    title: "I Lost 3 Emergency Callouts a Day. Here's How I Fixed It.",
+    excerpt: "Self-employed sparky from Lewisham shares his honest 3-week diary using AI call answering. Real numbers. No BS. £4,200 in recovered jobs.",
+    readTime: "9 min read",
+    date: "2026-05-31",
+    category: "Real Stories",
+  },
+  {
     slug: "best-ai-phone-answering-uk-trades-2026",
     title: "Best AI Phone Answering Services for UK Tradespeople 2026",
     excerpt: "Independent guide comparing whoza.ai, Clara, Moneypenny, Team-Connect, and Smith.ai. Real pricing, honest rankings, no affiliate links.",

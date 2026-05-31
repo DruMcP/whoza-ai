@@ -197,6 +197,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts
   const blogPosts: MetadataRoute.Sitemap = [
     {
+      url: `${baseUrl}/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky`,
+      lastModified: '2026-05-31',
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/blog/best-ai-phone-answering-uk-trades-2026`,
       lastModified: '2026-05-22',
       changeFrequency: 'monthly',
