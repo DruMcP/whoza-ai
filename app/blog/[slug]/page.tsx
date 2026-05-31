@@ -2,6 +2,8 @@ import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
+import { BlogPostArticleSchema } from "@/components/whoza/blog-post-schema"
+import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 import { FileText, Clock, ArrowLeft, User, Calendar, CheckCircle } from "lucide-react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
@@ -54,6 +56,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <div className="min-h-screen bg-[var(--navy-900)] text-white">
       <Header />
+      <BlogPostArticleSchema
+        slug={slug}
+        title={post.title}
+        description={post.schema.description}
+        datePublished={post.date}
+        dateModified={post.date}
+        author={post.author}
+        authorTitle={post.authorTitle}
+        category={post.category}
+        excerpt={post.excerpt}
+      />
+      <FAQPageSchema faqs={content.faq} />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
         { name: "Blog", item: "https://whoza.ai/blog" },
