@@ -196,7 +196,7 @@ export function FAQ() {
             Our team is here to help you get started with your free trial.
           </p>
           <a 
-            href="https://wa.me/447463131598"
+            href="https://wa.me/447463141750"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 text-white px-6 py-3 rounded-lg font-medium transition-colors"

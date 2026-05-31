@@ -339,7 +339,7 @@ export function Pricing() {
           className="mt-8 text-center"
         >
           <p className="text-sm text-[var(--slate-500)]">
-            Need more call time? Add 100-minute bundles for {cs}20, or pay {cs}0.26/min for additional usage.
+            Need more call time? Add 100-minute bundles for {cs}20, or pay {cs}0.26/min for additional usage. These minutes never expire.
           </p>
         </motion.div>
 

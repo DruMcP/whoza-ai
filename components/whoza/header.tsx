@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { CountrySwitcher } from "./country-switcher"
@@ -18,6 +18,12 @@ const navLinks = [
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [showWaitlist, setShowWaitlist] = useState(false)
+
+  useEffect(() => {
+    const handleOpen = () => setShowWaitlist(true)
+    window.addEventListener('openWaitlist', handleOpen)
+    return () => window.removeEventListener('openWaitlist', handleOpen)
+  }, [])
 
   const handleNavClick = (e: React.MouseEvent, href: string, isPageLink: boolean) => {
     if (!isPageLink) {
