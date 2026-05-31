@@ -25,8 +25,8 @@ export function ReviewsEngine({ trade }: ReviewsEngineProps) {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--rex-green)]/10 text-[var(--rex-green)] text-sm font-bold mb-6">
-              <Star className="w-4 h-4 fill-current" />
+            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--rex-green)]/15 text-[var(--rex-green)] text-base font-bold mb-6 border border-[var(--rex-green)]/25 shadow-sm">
+              <Star className="w-5 h-5 fill-current" />
               Claire — Every Job Becomes Your Next Review
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance reveal">

@@ -140,10 +140,10 @@ export function TrialExplanation() {
           viewport={{ once: true }}
           className="mt-12 text-center"
         >
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-[var(--rex-green)]/10 border border-[var(--rex-green)]/20">
+          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-[var(--rex-green)]/15 border border-[var(--rex-green)]/25 shadow-md">
             <CheckCircle2 className="w-5 h-5 text-[var(--rex-green)]" />
-            <span className="text-[var(--navy-900)] font-semibold">
-              Be the first to experience AI call handling for trades.
+            <span className="text-[var(--navy-900)] font-bold text-base">
+              We only make money, when you make money
             </span>
           </div>
         </motion.div>
