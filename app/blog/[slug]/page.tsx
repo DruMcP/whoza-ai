@@ -2,7 +2,6 @@ import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
-import { BlogPostArticleSchema } from "@/components/whoza/blog-post-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 import { FileText, Clock, ArrowLeft, User, Calendar, CheckCircle } from "lucide-react"
 import Link from "next/link"
@@ -53,19 +52,44 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const { content } = post
 
+  // Generate BlogPosting Article schema JSON-LD
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.schema.description,
+    image: "https://whoza.ai/og-image.webp",
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Person",
+      name: post.author,
+      jobTitle: post.authorTitle || "Contributor",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Whoza.ai",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://whoza.ai/og-image.webp",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://whoza.ai/blog/${slug}`,
+    },
+    articleSection: post.category,
+    wordCount: post.excerpt.length * 8,
+    inLanguage: "en-GB",
+  }
+
   return (
     <div className="min-h-screen bg-[var(--navy-900)] text-white">
       <Header />
-      <BlogPostArticleSchema
-        slug={slug}
-        title={post.title}
-        description={post.schema.description}
-        datePublished={post.date}
-        dateModified={post.date}
-        author={post.author}
-        authorTitle={post.authorTitle}
-        category={post.category}
-        excerpt={post.excerpt}
+      <script
+        id="blog-post-article-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <FAQPageSchema faqs={content.faq} />
       <BreadcrumbSchema items={[
@@ -116,7 +140,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           />
 
           {content.sections.map((section, idx) => (
-            <section key={idx} className="mb-10">
+            <section key={`section-${idx}`} className="mb-10">
               {section.headingTag === "h2" ? (
                 <h2 className="text-2xl font-bold text-white mb-4 mt-8">{section.heading}</h2>
               ) : (
@@ -133,7 +157,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   <table className="w-full text-sm">
                     <tbody>
                       {section.table.map((row, ridx) => (
-                        <tr key={ridx} className="border-b border-white/10 last:border-0">
+                        <tr key={`row-${ridx}`} className="border-b border-white/10 last:border-0">
                           <td className="px-4 py-3 font-medium text-white/70 w-1/3">{row.label}</td>
                           <td className="px-4 py-3 text-white/90">{row.value}</td>
                         </tr>
@@ -146,7 +170,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               {section.list && section.list.length > 0 && (
                 <ul className="space-y-3 mb-6">
                   {section.list.map((item, lidx) => (
-                    <li key={lidx} className="flex items-start gap-3">
+                    <li key={`list-${lidx}`} className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
                       <span className="text-white/80">{item}</span>
                     </li>
@@ -187,7 +211,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <h2 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
             <div className="space-y-4">
               {content.faq.map((faq, fidx) => (
-                <div key={fidx} className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <div key={`faq-${fidx}`} className="bg-white/5 border border-white/10 rounded-xl p-6">
                   <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
                   <p className="text-white/70 leading-relaxed">{faq.answer}</p>
                 </div>
