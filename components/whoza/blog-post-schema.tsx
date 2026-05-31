@@ -1,4 +1,3 @@
-// Blog Post Article Schema — renders BlogPosting structured data for individual posts
 export interface BlogPostArticleSchemaProps {
   slug: string
   title: string
@@ -18,6 +17,7 @@ export function BlogPostArticleSchema({
   datePublished,
   dateModified,
   author,
+  authorTitle,
   category,
   excerpt,
 }: BlogPostArticleSchemaProps) {
@@ -47,7 +47,7 @@ export function BlogPostArticleSchema({
       "@id": `https://whoza.ai/blog/${slug}`,
     },
     articleSection: category,
-    wordCount: excerpt.length * 8, // rough estimate
+    wordCount: excerpt.length * 8,
     inLanguage: "en-GB",
   }
 
