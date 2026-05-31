@@ -26,7 +26,7 @@ jobs:
             --exclude "x.com/*"
             --timeout 30
             --max-concurrency 5
-            --retry 3
+            --max-retries 3
             --accept 200,201,204,301,302,308
             --format markdown
             --output lychee-staging.md
@@ -46,7 +46,7 @@ jobs:
             --exclude "x.com/*"
             --timeout 30
             --max-concurrency 5
-            --retry 3
+            --max-retries 3
             --accept 200,201,204,301,302,308
             --format markdown
             --output lychee-prod.md
