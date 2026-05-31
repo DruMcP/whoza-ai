@@ -69,8 +69,8 @@ export function ComparisonTable() {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto mb-6"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--claire-amber)]/10 text-[var(--claire-amber)] text-sm font-bold mb-4">
-            <MessageCircle className="w-4 h-4" />
+          <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[var(--claire-amber)]/15 text-[var(--claire-amber)] text-base font-bold mb-4 border border-[var(--claire-amber)]/25 shadow-sm">
+            <MessageCircle className="w-5 h-5" />
             Why Whoza Wins
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance reveal">
