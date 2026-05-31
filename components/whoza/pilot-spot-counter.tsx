@@ -83,23 +83,23 @@ export function PilotSpotCounter({ variant = "badge" }: { variant?: "badge" | "b
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-gradient-to-r from-amber-500/10 via-orange-500/10 to-red-500/10 border border-amber-500/20 rounded-xl p-4 flex items-center justify-center gap-3"
+        className="bg-gradient-to-r from-amber-50 via-orange-50 to-red-50 border-2 border-amber-400 rounded-xl p-4 flex items-center justify-center gap-3 shadow-lg shadow-amber-500/10"
       >
         <div className="flex items-center gap-2">
-          <Flame className="w-5 h-5 text-orange-400" />
-          <span className="text-sm font-semibold text-white/90">
+          <Flame className="w-5 h-5 text-orange-500" />
+          <span className="text-sm font-bold text-[var(--navy-900)]">
             {taken} of 50 pilot spots taken
           </span>
         </div>
-        <div className="h-2 w-24 rounded-full bg-white/10 overflow-hidden">
+        <div className="h-3 w-28 rounded-full bg-[var(--navy-900)]/10 overflow-hidden">
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: `${(taken / 50) * 100}%` }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="h-full rounded-full bg-gradient-to-r from-emerald-400 to-emerald-500"
+            className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-emerald-600"
           />
         </div>
-        <span className="text-xs text-white/50">{spots} remaining</span>
+        <span className="text-xs font-semibold text-[var(--navy-900)]/70">{spots} remaining</span>
       </motion.div>
     )
   }

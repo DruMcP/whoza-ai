@@ -4,16 +4,11 @@ import { useState, useCallback, useEffect, useRef } from "react"
 import { ArrowRight, Loader2 } from "lucide-react"
 import { motion } from "framer-motion"
 import { HeroPhoneMockup } from "./hero-phone-mockup"
-import { WaitlistModal } from "./waitlist-modal"
 
 import { trackCTA } from "@/lib/gtag"
 
-/* ── Trust pills (3 only, post-CTA support) ── */
-const trustItems = [
-  "No credit card required",
-  "30-day money-back guarantee",
-  "7-day free trial on Starter",
-]
+/* ── Single trust pill (post-CTA, high visibility) ── */
+const trustPill = "Pay per job booked, not per call answered."
 
 /* ── Live counter constants (ONS-derived) ── */
 const CALL_RATE = 0.31        // calls per second across UK trades
@@ -46,7 +41,6 @@ const fadeInRight = (delay = 0) => ({
 })
 
 export function Hero() {
-  const [showWaitlist, setShowWaitlist] = useState(false)
   const [ctaLoading, setCtaLoading] = useState(false)
 
   /* ── Live counter refs (no React re-renders) ── */
@@ -98,7 +92,7 @@ export function Hero() {
     setCtaLoading(true)
     setTimeout(() => {
       setCtaLoading(false)
-      setShowWaitlist(true)
+      window.dispatchEvent(new CustomEvent('openWaitlist', { detail: { source: 'hero' } }))
     }, 800)
   }, [])
 
@@ -141,7 +135,9 @@ export function Hero() {
         <div className="max-w-[540px]">
           {/* H1 */}
           <motion.h1
-            {...fadeUpVisible(0.1)}
+            initial={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="font-sans text-[clamp(36px,5vw,56px)] font-extrabold leading-[1.05] tracking-tight text-white mb-4"
           >
             <span className="block">Your phone&apos;s ringing.</span>
@@ -218,22 +214,16 @@ export function Hero() {
             </span>
           </motion.div>
 
-          {/* Trust Pills (3 only, supporting evidence) */}
-          <motion.ul
+          {/* Trust Pill — high visibility, single statement */}
+          <motion.div
             {...fadeUpVisible(0.7)}
-            aria-label="Key benefits"
-            className="flex flex-wrap gap-2.5 mb-6 list-none p-0"
+            className="mb-6"
           >
-            {trustItems.map((item) => (
-              <li
-                key={item}
-                className="inline-flex items-center gap-1.5 bg-white/[0.06] text-slate-400 text-[13px] px-3.5 py-2 rounded-[20px] border border-white/[0.08]"
-              >
-                <span className="text-[#D63031] font-bold">✓</span>
-                {item}
-              </li>
-            ))}
-          </motion.ul>
+            <span className="inline-flex items-center gap-2 bg-emerald-500/15 text-emerald-400 text-sm font-bold px-4 py-2.5 rounded-full border border-emerald-500/25 shadow-[0_0_20px_rgba(16,185,129,0.1)]">
+              <span className="text-emerald-300 font-extrabold text-base">✓</span>
+              {trustPill}
+            </span>
+          </motion.div>
         </div>
 
         {/* ══ RIGHT: Phone mockup ══ */}
@@ -321,9 +311,6 @@ export function Hero() {
         }}
         aria-hidden="true"
       />
-
-      {/* ── Modals ── */}
-      {showWaitlist && <WaitlistModal onClose={() => setShowWaitlist(false)} source="hero" />}
     </section>
   )
 }

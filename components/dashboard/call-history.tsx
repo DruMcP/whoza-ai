@@ -52,7 +52,9 @@ export function CallHistory({ clientId }: { clientId?: string }) {
     const channel = supabase
       .channel("calls-updates")
       .on("postgres_changes", { event: "*", schema: "public", table: "calls" }, (payload) => {
-        console.log("[CallHistory] Real-time update:", payload)
+        if (process.env.NODE_ENV === "development") {
+          console.log("[CallHistory] Real-time update:", payload)
+        }
         fetchCalls()
       })
       .subscribe()
@@ -80,7 +82,9 @@ export function CallHistory({ clientId }: { clientId?: string }) {
       if (error) throw error
       setCalls(data || [])
     } catch (err) {
-      console.error("[CallHistory] Fetch error:", err)
+      if (process.env.NODE_ENV === "development") {
+        console.error("[CallHistory] Fetch error:", err)
+      }
       setError("Failed to load calls")
     } finally {
       setLoading(false)
@@ -361,7 +365,9 @@ export function CallHistory({ clientId }: { clientId?: string }) {
       if (!res.ok) throw new Error("Action failed")
       fetchCalls()
     } catch (err) {
-      console.error("[CallHistory] Action failed:", err)
+      if (process.env.NODE_ENV === "development") {
+        console.error("[CallHistory] Action failed:", err)
+      }
     }
   }
 }

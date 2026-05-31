@@ -58,8 +58,8 @@ export function TrialExplanation() {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--rex-green)]/10 text-[var(--rex-green)] text-sm font-medium mb-4">
-            <Shield className="w-4 h-4" />
+          <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[var(--rex-green)]/15 text-[var(--rex-green)] text-base font-bold mb-4 border border-[var(--rex-green)]/25 shadow-sm">
+            <Shield className="w-5 h-5" />
             Zero Risk
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance reveal">

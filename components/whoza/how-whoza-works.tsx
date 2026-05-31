@@ -56,7 +56,7 @@ export function HowWhozaWorks() {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-block px-4 py-2 rounded-full bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] text-sm font-bold mb-4">
+          <span className="inline-block px-6 py-3 rounded-full bg-[#e0f2fe] text-[#0369a1] text-lg font-bold mb-5 border-2 border-[#0369a1]/30 shadow-md tracking-wide">
             The Complete Revenue System
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance reveal">

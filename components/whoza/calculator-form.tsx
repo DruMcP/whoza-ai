@@ -59,7 +59,7 @@ export function CalculatorForm() {
       </div>
 
       <div className="bg-slate-900 rounded-xl p-8 text-white">
-        <h3 className="text-xl font-bold mb-6 text-center">Your Results</h3>
+        <h2 className="text-xl font-bold mb-6 text-center">Your Results</h2>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="text-center">
             <div className="text-3xl font-extrabold text-red-400">{missedPerWeek}</div>

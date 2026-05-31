@@ -1,12 +1,30 @@
 "use client"
 
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Play, CheckCircle2, Clock, MapPin, Phone } from "lucide-react"
 
 export function VideoExplainer() {
   const [isPlaying, setIsPlaying] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
+  const sectionRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const el = sectionRef.current
+    if (!el) return
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          obs.disconnect()
+        }
+      },
+      { rootMargin: "200px" }
+    )
+    obs.observe(el)
+    return () => obs.disconnect()
+  }, [])
 
   const handlePlay = () => {
     if (videoRef.current) {
@@ -20,7 +38,7 @@ export function VideoExplainer() {
   }
 
   return (
-    <section id="video-explainer" className="section-padding bg-[var(--off-white)]">
+    <section id="video-explainer" className="section-padding bg-[var(--off-white)]" ref={sectionRef}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -46,23 +64,25 @@ export function VideoExplainer() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl shadow-black/20 bg-[#0b141a] border border-white/10"
         >
-          {/* Video Player */}
+          {/* Video Player - Only render when visible */}
           <div className="relative aspect-video bg-[#0b141a]">
-            <video
-              ref={videoRef}
-              className="w-full h-full object-cover"
-              poster="https://whoza.ai/og-image.png"
-              preload="metadata"
-              playsInline
-              width="1280"
-              height="720"
-              controls
-              onPause={handlePause}
-              onEnded={handlePause}
-            >
-              <source src="/whoza-explainer.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            {isVisible && (
+              <video
+                ref={videoRef}
+                className="w-full h-full object-cover"
+                preload="none"
+                playsInline
+                width="1280"
+                height="720"
+                controls
+                onPause={handlePause}
+                onEnded={handlePause}
+              >
+                <source src="/whoza-explainer.mp4" type="video/mp4" />
+                <track kind="captions" src="/whoza-explainer-captions.vtt" srclang="en" label="English" default />
+                Your browser does not support the video tag.
+              </video>
+            )}
 
             {/* Custom Thumbnail Overlay (shown when not playing) */}
             {!isPlaying && (

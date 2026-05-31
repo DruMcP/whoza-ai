@@ -108,9 +108,9 @@ export function CookieBanner() {
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div className="flex items-start gap-3 flex-1">
                 <Cookie className="w-5 h-5 text-emerald-400 mt-0.5 shrink-0" />
-                <p className="text-sm text-white/80 leading-relaxed">
-                  We use cookies to make Whoza work properly and to improve your experience.
-                  Essential cookies are always on. Analytics cookies help us improve the site.
+                <p className="text-sm text-white/90 leading-relaxed">
+                  We use cookies to improve your experience.
+                  Essential cookies are always on.
                 </p>
               </div>
               <div className="flex flex-wrap items-center gap-2 shrink-0">
@@ -160,7 +160,7 @@ export function CookieBanner() {
                 </div>
                 <div>
                   <h4 className="font-medium text-white">Essential (required)</h4>
-                  <p className="text-sm text-white/60 mt-1">
+                  <p className="text-sm text-white/90 mt-1">
                     Cannot be disabled. Needed for the site to work: login, security, session management.
                   </p>
                 </div>
@@ -173,13 +173,15 @@ export function CookieBanner() {
                   className={`mt-1 shrink-0 w-10 h-6 rounded-full flex items-center px-1 transition-colors ${
                     analytics ? "bg-emerald-500 justify-end" : "bg-white/20 justify-start"
                   }`}
-                  aria-label={`Toggle analytics cookies ${analytics ? "off" : "on"}`}
+                  role="switch"
+                  aria-checked={analytics}
+                  aria-label="Toggle analytics cookies"
                 >
                   <div className="w-4 h-4 bg-white rounded-full" />
                 </button>
                 <div>
                   <h4 className="font-medium text-white">Analytics</h4>
-                  <p className="text-sm text-white/60 mt-1">
+                  <p className="text-sm text-white/90 mt-1">
                     Helps us improve our website. We use privacy-focused analytics to understand how tradespeople use Whoza. We do not use Google Analytics or any ad-tracking cookies.
                   </p>
                 </div>
@@ -192,13 +194,15 @@ export function CookieBanner() {
                   className={`mt-1 shrink-0 w-10 h-6 rounded-full flex items-center px-1 transition-colors ${
                     functional ? "bg-emerald-500 justify-end" : "bg-white/20 justify-start"
                   }`}
-                  aria-label={`Toggle functional cookies ${functional ? "off" : "on"}`}
+                  role="switch"
+                  aria-checked={functional}
+                  aria-label="Toggle functional cookies"
                 >
                   <div className="w-4 h-4 bg-white rounded-full" />
                 </button>
                 <div>
                   <h4 className="font-medium text-white">Functional</h4>
-                  <p className="text-sm text-white/60 mt-1">
+                  <p className="text-sm text-white/90 mt-1">
                     Remembers your preferences. Saves your choices so you don&apos;t have to set them again.
                   </p>
                 </div>

@@ -15,7 +15,7 @@ const footerLinks = {
   ],
   support: [
     { label: "Help Centre", href: "/support" },
-    { label: "WhatsApp Support", href: "https://wa.me/447463131598" },
+    { label: "WhatsApp Support", href: "https://wa.me/447463141750" },
     { label: "Email Support", href: "mailto:support@whoza.ai" },
     { label: "FAQ", href: "/pricing#faq" },
   ],
@@ -85,7 +85,7 @@ export function Footer() {
             
             {/* Pilot CTA */}
             <div className="max-w-sm">
-              <h4 className="text-white font-semibold text-sm mb-2">Join the pilot programme</h4>
+              <div className="text-white font-semibold text-sm mb-2">Join the pilot programme</div>
               <p className="text-sm text-white/50 mb-3">Limited to 50 UK trades. Lock in introductory pricing.</p>
               <button
                 onClick={openWaitlist}
@@ -98,7 +98,7 @@ export function Footer() {
 
           {/* Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Product</h4>
+            <div className="text-white font-semibold mb-4">Product</div>
             <ul className="space-y-3">
               {footerLinks.product.map((link) => (
                 <li key={link.label}>
@@ -111,7 +111,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4">Tools</h4>
+            <div className="text-white font-semibold mb-4">Tools</div>
             <ul className="space-y-3">
               {footerLinks.tools.map((link) => (
                 <li key={link.label}>
@@ -124,7 +124,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4">Support</h4>
+            <div className="text-white font-semibold mb-4">Support</div>
             <ul className="space-y-3">
               {footerLinks.support.map((link) => (
                 <li key={link.label}>
@@ -137,7 +137,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4">Company</h4>
+            <div className="text-white font-semibold mb-4">Company</div>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
@@ -150,7 +150,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4">Legal</h4>
+            <div className="text-white font-semibold mb-4">Legal</div>
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.label}>
