@@ -306,7 +306,7 @@ When you're the only person in the business, every missed call is a missed job. 
 As you add staff, the phone gets busier. Rather than hiring a dedicated receptionist, an AI handler scales with you — handling 5 calls or 50 calls for the same fixed monthly cost.`,
         },
         {
-          heading: "How to Choose the Right AI Call Handler for Your Trade Business",
+          heading: "How to Choose the Right AI Call Handler for Your Trade Business?",
           headingTag: "h2",
           body: `Not all AI call handlers are built for trades. Here's what to look for when evaluating providers:
 
@@ -448,7 +448,7 @@ Bathroom renovation. Garden landscaping. Roof replacement. These customers are s
 The pattern is clear: in every scenario, answering quickly gives you a massive advantage. Missing the call puts you at a disadvantage that's almost impossible to overcome.`,
         },
         {
-          heading: "The Hidden Costs Beyond Lost Jobs",
+          heading: "What Are the Hidden Costs Beyond Lost Jobs?",
           headingTag: "h2",
           body: `Lost revenue is the biggest cost, but it's not the only one. Missed calls create a cascade of secondary problems:
 
@@ -470,7 +470,7 @@ When you do return calls, you're playing phone tag. The customer isn't available
 Add these up and the true cost of missed calls far exceeds the lost revenue alone.`,
         },
         {
-          heading: "Calculate Your Own Missed Call Cost",
+          heading: "How Can You Calculate Your Own Missed Call Cost?",
           headingTag: "h2",
           body: `Use this formula to calculate exactly how much missed calls are costing your business:
 
@@ -500,7 +500,7 @@ Annual: £5,418 × 12 = **£65,016**
 The numbers are large because the inputs compound. More missed calls × higher job values × time = significant annual loss.`,
         },
         {
-          heading: "The Fix: How to Capture Every Call for Less Than £3 Per Day",
+          heading: "What's the Fix: How to Capture Every Call for Less Than £3 Per Day?",
           headingTag: "h2",
           body: `The solution isn't to check your phone more often — that's impossible when you're working. The solution is to stop missing calls entirely.
 
@@ -580,7 +580,7 @@ The answer depends on your business size, call volume, budget, and priorities. B
 In this guide, we compare AI receptionists and human receptionists on the metrics that actually matter: cost, availability, consistency, scalability, and customer experience. By the end, you'll know which option is right for your business.`,
       sections: [
         {
-          heading: "AI Receptionist vs Human Receptionist: At a Glance",
+          heading: "AI Receptionist vs Human Receptionist: Which Is Better at a Glance?",
           headingTag: "h2",
           body: `Before diving into details, here's the high-level comparison:
 
@@ -607,7 +607,7 @@ In this guide, we compare AI receptionists and human receptionists on the metric
 The cost difference is £15,000-£25,000 per year. That's a new van. Or a year of fuel. Or a significant marketing budget.`,
         },
         {
-          heading: "Cost Comparison: The Numbers Don't Lie",
+          heading: "Cost Comparison: Do the Numbers Lie?",
           headingTag: "h2",
           body: `Let's be precise about costs. A full-time human receptionist in the UK costs more than just their salary.
 
@@ -634,7 +634,7 @@ That's not a small difference. It's the difference between having a receptionist
           callout: "A human receptionist costs £26,000-£35,000 in year one. An AI receptionist costs £708-£4,788. The savings could buy you a new work van.",
         },
         {
-          heading: "Availability: 40 Hours vs 168 Hours Per Week",
+          heading: "Availability: 40 Hours vs 168 Hours Per Week — What's the Difference?",
           headingTag: "h2",
           body: `Here's where the comparison becomes stark. A human receptionist works 40 hours per week — usually 9am to 5pm, Monday to Friday. An AI receptionist works 168 hours per week.
 
@@ -649,7 +649,7 @@ A roofer gets a call on Saturday afternoon about storm damage. The human recepti
 **The availability gap isn't small — it's 4.2x.** And those extra 128 hours per week cover evenings, weekends, bank holidays, and early mornings — exactly when emergency trades get most of their calls.`,
         },
         {
-          heading: "Call Quality: Consistency vs Variability",
+          heading: "Call Quality: Consistency vs Variability — Which Wins?",
           headingTag: "h2",
           body: `Human receptionists have good days and bad days. They get tired, distracted, or rushed. They forget to ask certain questions. They interpret instructions differently. The quality of call handling varies significantly.
 
@@ -787,7 +787,7 @@ Not rejected. Not screened. Just missed — because you're doing the job you're 
 In this article, we'll explain exactly why this happens, why it's costing you more than you think, and how to fix it permanently with a solution that takes 30 minutes to set up and costs less than a daily coffee.`,
       sections: [
         {
-          heading: "Why Tradespeople Miss 62% of Calls",
+          heading: "Why Do Tradespeople Miss 62% of Calls?",
           headingTag: "h2",
           body: `The reason is obvious when you think about it: tradespeople work with their hands, in customers' properties, often at height, in confined spaces, or operating machinery. Answering a phone is physically impossible in most of these situations.
 
@@ -840,7 +840,7 @@ When you miss a call, you're not just missing that conversation — you're remov
           callout: "78% of customers hire the first business that responds. When you miss a call, you're not losing to a competitor — you're not even in the race.",
         },
         {
-          heading: "The 4 'Solutions' That Don't Actually Work",
+          heading: "Which 4 'Solutions' Don't Actually Work?",
           headingTag: "h2",
           body: `Tradespeople have tried many strategies to solve the missed call problem. Most of them fail for predictable reasons.
 
@@ -865,7 +865,7 @@ The theory: be more disciplined about checking the phone.
 The reality: this is physically impossible when you're under a sink or on a roof. And even when you can answer, it's unprofessional to take calls while talking to a paying customer. This "solution" creates stress without solving the problem.`,
         },
         {
-          heading: "The Fix That Actually Works: AI Call Handling",
+          heading: "What's the Fix That Actually Works: AI Call Handling?",
           headingTag: "h2",
           body: `The only solution that permanently solves missed calls is to stop relying on you to answer them. An AI call handler answers every call you can't take, qualifies the enquiry, and delivers it to your WhatsApp.
 
@@ -927,7 +927,7 @@ Most tradespeople see 3-5 extra jobs per month within 60 days. That's £840-£1,
 The question isn't whether you can afford £59/month. It's whether you can afford to keep losing £10,000+/year in missed calls.`,
         },
         {
-          heading: "How to Set It Up in 30 Minutes",
+          heading: "How Do You Set It Up in 30 Minutes?",
           headingTag: "h2",
           body: `The setup process is designed for tradespeople, not IT departments. Here's exactly what happens:
 
