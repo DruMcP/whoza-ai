@@ -16,10 +16,11 @@ const geoStatsConfig = {
 
 interface GeoProofBandProps {
   city?: string
+  country?: string
   jobsThisWeek?: number
 }
 
-export function GeoProofBand({ city, jobsThisWeek: forcedJobs }: GeoProofBandProps) {
+export function GeoProofBand({ city, country, jobsThisWeek: forcedJobs }: GeoProofBandProps) {
   const geoConfig = geoStatsConfig.uk
   
   const [jobsCount, setJobsCount] = useState(forcedJobs || 127)
