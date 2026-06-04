@@ -6,8 +6,8 @@ import { ArrowRight, HelpCircle, PoundSterling, Shield, Clock, MessageCircle, Wr
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "AI Call Answering FAQ for UK Tradespeople | whoza.ai",
-  description: "Honest answers to the most asked questions about AI call handling for UK trades. Pricing, setup, contracts, WhatsApp delivery, and more. Straight answers from someone who's been there.",
+  title: "AI Call Answering FAQ | UK Trades",
+  description: "Honest answers about AI call handling for UK trades. Pricing, setup, contracts, WhatsApp delivery, and more.",
   keywords: [
     "AI call answering FAQ",
     "AI receptionist questions",

@@ -5,6 +5,7 @@ import { Footer } from "@/components/whoza/footer"
 import { Mail, MessageSquare, Phone, Clock, Ticket, HelpCircle, Zap, ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://whoza.ai"),
   title: "Support Centre | Whoza.ai",
   description: "Get help with whoza.ai — email support, WhatsApp, and callback requests. Response within 24 hours.",
   openGraph: {

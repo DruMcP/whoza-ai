@@ -6,8 +6,8 @@ import { ArrowRight, Check, Star, X, Phone, MessageSquare, Clock, PoundSterling,
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "Best AI Call Handler for UK Trades (2026) | whoza.ai",
-  description: "We tested every AI call handler for UK tradespeople. Compare whoza.ai, Clara, Trade Receptionist, Moneypenny and Rosie AI on price, features, and setup time.",
+  title: "Best AI Call Handler UK Trades (2026)",
+  description: "We tested 5 AI call handlers for UK tradespeople. Compare whoza.ai, Clara, Trade Receptionist, Moneypenny and Rosie AI on price and features.",
   openGraph: {
     type: "website",
     locale: "en_GB",
@@ -120,15 +120,15 @@ const detailedReviews = [
     price: "From £59/month",
     trial: "7 days",
     setup: "30 minutes",
-    description: "whoza.ai is the only platform that gives you four AI specialists working together — not just one voice answering the phone.",
+    description: "whoza.ai is the only platform that gives you four AI specialists working together - not just one voice answering the phone.",
     howItWorks: [
       "Katie answers every call 24/7. She qualifies the job, captures the postcode, checks urgency, and sends it all to your WhatsApp.",
       "Mark follows up on high-value quotes and chases outstanding enquiries.",
       "Claire automatically requests Google reviews from happy customers.",
-      "Rex tracks what your competitors are doing — pricing changes, new reviews, who's ranking where.",
+      "Rex tracks what your competitors are doing - pricing changes, new reviews, who's ranking where.",
     ],
-    whatYouSee: "A WhatsApp message with the caller's name, job type, location, estimated value, and urgency — plus Accept Job, Call Back, and Decline buttons. Two taps. No app to download. No login. It just works in the WhatsApp you already use.",
-    bestFor: "Tradespeople who want more than just call answering — they want a system that actively grows their business. The review collection and competitor tracking are genuinely useful features no one else offers.",
+    whatYouSee: "A WhatsApp message with the caller's name, job type, location, estimated value, and urgency - plus Accept Job, Call Back, and Decline buttons. Two taps. No app to download. No login. It just works in the WhatsApp you already use.",
+    bestFor: "Tradespeople who want more than just call answering - they want a system that actively grows their business. The review collection and competitor tracking are genuinely useful features no one else offers.",
     downside: "Pricier than the cheapest option. The pilot programme is limited to 50 tradespeople initially. You need to be comfortable with WhatsApp as your primary business communication tool.",
     link: "/pricing",
     linkText: "Try whoza.ai free for 7 days",
@@ -145,11 +145,11 @@ const detailedReviews = [
     howItWorks: [
       "Clara answers your calls, takes messages, flags urgent calls, filters spam, and delivers summaries to your phone.",
       "You can choose from 20+ natural-sounding voices.",
-      "The app handles everything — call forwarding, transcripts, recordings, and live chat support.",
+      "The app handles everything - call forwarding, transcripts, recordings, and live chat support.",
     ],
     whatYouSee: "Summaries delivered through the app, not native WhatsApp (though summaries come to your phone).",
     bestFor: "Sole traders who want a straightforward, affordable call handler and don't mind managing another app. The 7-day trial with no credit card makes it low-risk to try.",
-    downside: "Single AI persona — she answers calls but doesn't do reviews, competitor tracking, or follow-ups. Requires app download. Delivery is through the app, not native WhatsApp.",
+    downside: "Single AI persona - she answers calls but doesn't do reviews, competitor tracking, or follow-ups. Requires app download. Delivery is through the app, not native WhatsApp.",
     link: "https://heyitsclara.com/gb",
     linkText: "Try Clara",
     isWinner: false,
@@ -163,13 +163,13 @@ const detailedReviews = [
     setup: "1-2 days",
     description: "Trade Receptionist is the budget option. At £29/month, they're the cheapest dedicated call answering service for trades.",
     howItWorks: [
-      "A more traditional setup — calls are answered and details sent via email and a web dashboard.",
+      "A more traditional setup - calls are answered and details sent via email and a web dashboard.",
       "They also offer diary management and WhatsApp integration.",
       "The lower price comes with a longer setup time (1-2 days) and a 12-month minimum contract.",
     ],
     whatYouSee: "Email + dashboard delivery. Slower than WhatsApp.",
     bestFor: "Tradespeople who want the absolute lowest monthly cost and are comfortable with email-based call summaries. The diary management feature is useful if you need booking support.",
-    downside: "12-month contract locks you in. Email + dashboard delivery is slower than WhatsApp. Single-agent capacity means you can only handle 1-2 simultaneous calls. Less sophisticated AI — more of a traditional answering service with AI elements.",
+    downside: "12-month contract locks you in. Email + dashboard delivery is slower than WhatsApp. Single-agent capacity means you can only handle 1-2 simultaneous calls. Less sophisticated AI - more of a traditional answering service with AI elements.",
     link: "https://tradereceptionist.com",
     linkText: "Try Trade Receptionist",
     isWinner: false,
@@ -181,7 +181,7 @@ const detailedReviews = [
     price: "From £150/month",
     trial: "7 days",
     setup: "2-5 days",
-    description: "Moneypenny is the established name — 25 years in business, 10,000+ clients, 1,250 staff. They offer a hybrid human + AI service.",
+    description: "Moneypenny is the established name - 25 years in business, 10,000+ clients, 1,250 staff. They offer a hybrid human + AI service.",
     howItWorks: [
       "A blend of human receptionists and AI technology.",
       "Calls are answered by real people supported by AI tools.",
@@ -236,7 +236,7 @@ const recommendationTable = [
 const faqs = [
   {
     question: "What is an AI call handler?",
-    answer: "An AI call handler is a virtual receptionist powered by artificial intelligence. It answers your business phone 24/7, speaks to callers in a natural voice, captures their details, qualifies the enquiry, and sends you a summary — so you only speak to real jobs.",
+    answer: "An AI call handler is a virtual receptionist powered by artificial intelligence. It answers your business phone 24/7, speaks to callers in a natural voice, captures their details, qualifies the enquiry, and sends you a summary - so you only speak to real jobs.",
   },
   {
     question: "How much does an AI call handler cost?",
@@ -248,11 +248,11 @@ const faqs = [
   },
   {
     question: "What happens to calls outside business hours?",
-    answer: "AI call handlers work 24/7, including evenings, weekends, and bank holidays. Every call is answered, qualified, and logged — you'll see every enquiry in your WhatsApp or app when you check in the morning.",
+    answer: "AI call handlers work 24/7, including evenings, weekends, and bank holidays. Every call is answered, qualified, and logged - you'll see every enquiry in your WhatsApp or app when you check in the morning.",
   },
   {
     question: "Is an AI call handler better than a human receptionist?",
-    answer: "For most UK tradespeople, yes. An AI call handler costs £59/month versus £20,000+/year for a full-time receptionist. It works 24/7, never takes sick leave, and handles unlimited simultaneous calls. The only exception is large firms that need complex customer service — Moneypenny's hybrid model works better there.",
+    answer: "For most UK tradespeople, yes. An AI call handler costs £59/month versus £20,000+/year for a full-time receptionist. It works 24/7, never takes sick leave, and handles unlimited simultaneous calls. The only exception is large firms that need complex customer service - Moneypenny's hybrid model works better there.",
   },
   {
     question: "Do I need to change my phone number?",
@@ -268,7 +268,7 @@ const faqs = [
   },
   {
     question: "Which AI call handler works with WhatsApp?",
-    answer: "whoza.ai delivers all alerts natively in WhatsApp — no app download required. Clara delivers summaries to your phone. Trade Receptionist offers WhatsApp integration. Moneypenny uses email. Rosie AI uses WhatsApp + app.",
+    answer: "whoza.ai delivers all alerts natively in WhatsApp - no app download required. Clara delivers summaries to your phone. Trade Receptionist offers WhatsApp integration. Moneypenny uses email. Rosie AI uses WhatsApp + app.",
   },
   {
     question: "How quickly can I get set up?",
@@ -321,16 +321,16 @@ export default function BestAICallHandlerPage() {
               <span className="text-emerald-400">for UK Tradespeople (2026)</span>
             </h1>
             <p className="text-lg text-white/60 max-w-2xl mb-8">
-              If you're a plumber, electrician, roofer, builder, or heating engineer in the UK, you already know the problem. 
-              Your phone rings while you're on a job, at the merchants, driving between sites, or after hours. 
+              If you're a plumber, electrician, roofer, builder, or heating engineer in the UK, you already know the problem.
+              Your phone rings while you're on a job, at the merchants, driving between sites, or after hours.
               Every missed call is a £250-£450 job going to your competitor.
             </p>
             <p className="text-lg text-white/60 max-w-2xl mb-8">
-              AI call handlers promise to solve this. They answer your phone 24/7, qualify the caller, and send you the details 
+              AI call handlers promise to solve this. They answer your phone 24/7, qualify the caller, and send you the details
               so you only speak to real jobs. But which one actually works for UK tradespeople?
             </p>
             <p className="text-lg text-white/60 max-w-2xl mb-8">
-              We tested five leading options — signing up, making test calls, checking WhatsApp delivery, and comparing pricing. Here's what we found.
+              We tested five leading options - signing up, making test calls, checking WhatsApp delivery, and comparing pricing. Here's what we found.
             </p>
             <a href="/pricing" className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-emerald-700 transition-all">
               Try #1 Pick Free for 7 Days <ArrowRight className="w-4 h-4" />
@@ -374,7 +374,7 @@ export default function BestAICallHandlerPage() {
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Detailed Reviews</h2>
           <div className="space-y-12">
             {detailedReviews.map((review) => (
-              <div key={review.rank} id={review.name.toLowerCase().replace(/\./g, "").replace(/ /g, "-")} 
+              <div key={review.rank} id={review.name.toLowerCase().replace(/\./g, "").replace(/ /g, "-")}
                 className={`rounded-xl p-8 border ${review.isWinner ? "bg-emerald-500/10 border-emerald-500/30" : "bg-white/5 border-white/10"}`}>
                 <div className="flex items-start gap-4 mb-4">
                   <div className={`w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold shrink-0 ${review.isWinner ? "bg-emerald-600 text-white" : "bg-white/10 text-white"}`}>
@@ -487,12 +487,12 @@ export default function BestAICallHandlerPage() {
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Bottom Line</h2>
           <p className="text-lg text-white/60 mb-8 max-w-2xl mx-auto">
-            For UK tradespeople in 2026, AI call handling has gone from a luxury to a necessity. 
-            The ONS reports that 62% of after-hours calls go unanswered — and every unanswered call is a job your competitor gets instead.
+            For UK tradespeople in 2026, AI call handling has gone from a luxury to a necessity.
+            The ONS reports that 62% of after-hours calls go unanswered - and every unanswered call is a job your competitor gets instead.
           </p>
           <p className="text-lg text-white/60 mb-8 max-w-2xl mx-auto">
-            If you want the most capable system — one that answers calls, collects reviews, tracks competitors, 
-            and delivers everything through WhatsApp — <strong className="text-emerald-400">whoza.ai is the clear choice</strong>. 
+            If you want the most capable system - one that answers calls, collects reviews, tracks competitors,
+            and delivers everything through WhatsApp - <strong className="text-emerald-400">whoza.ai is the clear choice</strong>.
             The 7-day free trial makes it risk-free to try.
           </p>
           <a href="/pricing" className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-emerald-700 transition-colors shadow-lg">
@@ -504,7 +504,7 @@ export default function BestAICallHandlerPage() {
         {/* Sources */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
           <p className="text-xs text-white/30">
-            Page compiled: 2026-05-14 · Competitors reviewed: whoza.ai, Clara (heyitsclara.com), Trade Receptionist (tradereceptionist.com), 
+            Page compiled: 2026-05-14 · Competitors reviewed: whoza.ai, Clara (heyitsclara.com), Trade Receptionist (tradereceptionist.com),
             Moneypenny (moneypenny.com), Rosie AI (heyrosie.com) · All pricing and features verified against live sites as of May 2026
           </p>
         </section>

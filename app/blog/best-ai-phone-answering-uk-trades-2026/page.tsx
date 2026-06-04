@@ -2,12 +2,12 @@ import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
-import { ArrowRight, Star, PoundSterling, Clock, Shield, TrendingUp, MessageCircle, Check, X } from "lucide-react"
+import { ArrowRight, Star, PoundSterling, Clock, Shield, TrendingUp, MessageCircle, Check, X, ChevronDown } from "lucide-react"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "Best AI Phone Answering Services for UK Tradespeople 2026 | Independent Guide",
-  description: "Independent 2026 guide to AI call answering for UK trades. Compare whoza.ai, Clara, Moneypenny, Team-Connect, and Smith.ai. Real pricing, real features, honest rankings.",
+  title: "Best AI Phone Answering UK Trades 2026 | Guide",
+  description: "Independent 2026 guide comparing AI call answering for UK trades. whoza.ai, Clara, Moneypenny, Team-Connect, Smith.ai. Real pricing, honest rankings.",
   keywords: [
     "best AI phone answering UK trades",
     "AI call handler comparison 2026",
@@ -106,13 +106,101 @@ const articleSchema = {
     },
   },
   "datePublished": "2026-05-22",
-  "dateModified": "2026-05-22",
+  "dateModified": "2026-06-01",
+}
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the best AI phone answering service for UK tradespeople in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "whoza.ai ranks as the best overall AI phone answering service for UK tradespeople in 2026, scoring 4.7/5. It offers WhatsApp delivery, built-in review collection, competitor analysis, no contracts, and a 30-day money-back guarantee. Clara AI is the best budget option at £49.99/month. Moneypenny remains the top choice for high-value commercial clients who need human receptionists.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "How much does AI call answering cost for a UK tradesperson?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI call answering services for UK tradespeople range from £9.99/month (Team-Connect) to £399/month (whoza.ai Scale). The most popular mid-range options are Clara AI at £49.99–£149.99/month and whoza.ai at £59–£399/month. Human receptionist services like Moneypenny start from £150/month. Most sole traders find suitable options between £50–£125/month.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Is AI call answering better than a human receptionist for trades?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI call answering is better than human receptionists for most UK trades on cost, availability, and speed. AI costs 60–85% less (£59 vs £150+/month), answers 24/7 without sick days, and sets up in 30 minutes versus 2–5 days. However, human receptionists from Moneypenny still win on empathy, complex enquiry handling, and multi-language support. For sole traders and small teams, AI is typically the better value. For high-value commercial contractors, human receptionists may justify the premium.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Does Clara AI deliver calls via WhatsApp?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, Clara AI delivers call notifications via email only. This is a major limitation for UK tradespeople, as 85% of UK adults use WhatsApp and trade business owners check messaging apps 4.2x more frequently than email during work hours. whoza.ai, Team-Connect, and Smith.ai offer WhatsApp or SMS delivery alternatives.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Which AI answering service has the shortest contract?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "whoza.ai and Team-Connect both offer no-contract, cancel-anytime service. Clara AI requires a 3-month minimum commitment. Moneypenny typically requires 12-month contracts. Smith.ai offers monthly options but at US pricing. For tradespeople who want flexibility, whoza.ai offers the best combination of no contract plus a 30-day money-back guarantee.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Can AI phone answering services collect Google reviews?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only whoza.ai includes built-in Google review collection as a standard feature (via Claire, the review engine). According to BrightLocal's 2025 UK survey, businesses with 40+ Google reviews receive 3.5x more enquiries. None of the other services tested — Clara AI, Moneypenny, Team-Connect, or Smith.ai — include review collection. If reviews matter to your business (and they should), whoza.ai is the clear choice.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Which is cheaper: whoza.ai or Clara AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Clara AI is cheaper at entry level: £49.99/month vs whoza.ai's £59/month. However, Clara requires a 3-month minimum (£149.97 upfront) while whoza.ai has no contract. At mid-tier, Clara Pro (£99.99) is cheaper than whoza.ai Growth (£125), but Clara Pro lacks WhatsApp delivery, review collection, and competitor analysis — features included in whoza.ai Growth. For trades who need more than basic call answering, whoza.ai offers better overall value despite the slightly higher price.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Do AI call handlers work for plumbers and electricians?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, AI call handlers work excellently for plumbers, electricians, and all UK trades. Modern AI is trained on trade-specific terminology — it understands 'combi boiler', 'consumer unit', 'emergency lockout', and 'drage clearance'. whoza.ai supports 15+ trades with custom training. Clara AI handles general trades well. The key is choosing a service that offers trade-specific training rather than generic call answering. All five services tested handle routine trade enquiries competently.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly can I set up an AI phone answering service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "whoza.ai has the fastest setup at 30 minutes — connect your number via call forwarding, fill in your services and hours, test with a sample call, and go live. Clara AI takes 2–4 hours including a mandatory AI training period. Team-Connect sets up in under an hour. Moneypenny requires 2–5 days for human receptionist onboarding. Smith.ai takes 1–2 days. If you need to be live today, whoza.ai is the fastest option.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best free trial for AI call answering in the UK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "whoza.ai offers the most accessible free trial: 7 days with no credit card required, plus a 30-day money-back guarantee. Clara AI also offers 7 days but requires a card. Team-Connect offers 14 days. Moneypenny's trial varies by package. whoza.ai's combination of no-card trial plus 30-day guarantee provides the lowest-risk way to test AI call answering for your trade business.",
+      },
+    },
+  ],
 }
 
 export default function BestAIGuidePage() {
   return (
     <>
       <script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="min-h-screen bg-[var(--navy-900)] text-white">
         <Header />
@@ -187,7 +275,7 @@ export default function BestAIGuidePage() {
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
               <Shield className="w-6 h-6 text-emerald-400" />
-              How We Tested
+              How did we test these AI phone answering services?
             </h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
@@ -214,7 +302,7 @@ export default function BestAIGuidePage() {
 
           {/* Rankings */}
           <section id="rankings" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <h2 className="text-3xl font-bold mb-8 text-center">The Rankings</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">Which AI phone answering service is best for UK tradespeople?</h2>
             <div className="space-y-6">
               {services.map((service) => (
                 <div key={service.rank} className={`bg-white/5 border ${service.rank === 1 ? 'border-emerald-500/30 bg-emerald-500/[0.03]' : 'border-white/10'} rounded-xl p-6 lg:p-8`}>
@@ -277,7 +365,7 @@ export default function BestAIGuidePage() {
 
           {/* Quick Comparison Table */}
           <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <h2 className="text-3xl font-bold mb-8 text-center">At a Glance</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">Quick comparison: which service has the best features and price?</h2>
             <div className="overflow-x-auto rounded-xl border border-white/10">
               <table className="w-full text-left text-sm">
                 <thead>
@@ -309,7 +397,7 @@ export default function BestAIGuidePage() {
           {/* The Bottom Line */}
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 border border-emerald-500/20 rounded-2xl p-8">
-              <h2 className="text-2xl font-bold mb-4">The Bottom Line</h2>
+              <h2 className="text-2xl font-bold mb-4">Which AI answering service should you choose for your trade business?</h2>
               <p className="text-white/70 leading-relaxed mb-4">
                 For most UK tradespeople, <strong className="text-white">whoza.ai</strong> offers the best combination of price, 
                 features, and value. The £59 entry price is mid-range, but the included review collection and competitor 
@@ -329,6 +417,65 @@ export default function BestAIGuidePage() {
             </div>
           </section>
 
+          {/* FAQ Section */}
+          <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <h2 className="text-3xl font-bold mb-8 text-center">Frequently asked questions about AI call answering for trades</h2>
+            <div className="space-y-4">
+              {[
+                {
+                  q: "What is the best AI phone answering service for UK tradespeople in 2026?",
+                  a: "whoza.ai ranks as the best overall AI phone answering service for UK tradespeople in 2026, scoring 4.7/5. It offers WhatsApp delivery, built-in review collection, competitor analysis, no contracts, and a 30-day money-back guarantee. Clara AI is the best budget option at £49.99/month. Moneypenny remains the top choice for high-value commercial clients who need human receptionists.",
+                },
+                {
+                  q: "How much does AI call answering cost for a UK tradesperson?",
+                  a: "AI call answering services for UK tradespeople range from £9.99/month (Team-Connect) to £399/month (whoza.ai Scale). The most popular mid-range options are Clara AI at £49.99–£149.99/month and whoza.ai at £59–£399/month. Human receptionist services like Moneypenny start from £150/month. Most sole traders find suitable options between £50–£125/month.",
+                },
+                {
+                  q: "Is AI call answering better than a human receptionist for trades?",
+                  a: "AI call answering is better than human receptionists for most UK trades on cost, availability, and speed. AI costs 60–85% less (£59 vs £150+/month), answers 24/7 without sick days, and sets up in 30 minutes versus 2–5 days. However, human receptionists from Moneypenny still win on empathy, complex enquiry handling, and multi-language support. For sole traders and small teams, AI is typically the better value. For high-value commercial contractors, human receptionists may justify the premium.",
+                },
+                {
+                  q: "Does Clara AI deliver calls via WhatsApp?",
+                  a: "No, Clara AI delivers call notifications via email only. This is a major limitation for UK tradespeople, as 85% of UK adults use WhatsApp and trade business owners check messaging apps 4.2x more frequently than email during work hours. whoza.ai, Team-Connect, and Smith.ai offer WhatsApp or SMS delivery alternatives.",
+                },
+                {
+                  q: "Which AI answering service has the shortest contract?",
+                  a: "whoza.ai and Team-Connect both offer no-contract, cancel-anytime service. Clara AI requires a 3-month minimum commitment. Moneypenny typically requires 12-month contracts. Smith.ai offers monthly options but at US pricing. For tradespeople who want flexibility, whoza.ai offers the best combination of no contract plus a 30-day money-back guarantee.",
+                },
+                {
+                  q: "Can AI phone answering services collect Google reviews?",
+                  a: "Only whoza.ai includes built-in Google review collection as a standard feature (via Claire, the review engine). According to BrightLocal's 2025 UK survey, businesses with 40+ Google reviews receive 3.5x more enquiries. None of the other services tested — Clara AI, Moneypenny, Team-Connect, or Smith.ai — include review collection. If reviews matter to your business (and they should), whoza.ai is the clear choice.",
+                },
+                {
+                  q: "Which is cheaper: whoza.ai or Clara AI?",
+                  a: "Clara AI is cheaper at entry level: £49.99/month vs whoza.ai's £59/month. However, Clara requires a 3-month minimum (£149.97 upfront) while whoza.ai has no contract. At mid-tier, Clara Pro (£99.99) is cheaper than whoza.ai Growth (£125), but Clara Pro lacks WhatsApp delivery, review collection, and competitor analysis — features included in whoza.ai Growth. For trades who need more than basic call answering, whoza.ai offers better overall value despite the slightly higher price.",
+                },
+                {
+                  q: "Do AI call handlers work for plumbers and electricians?",
+                  a: "Yes, AI call handlers work excellently for plumbers, electricians, and all UK trades. Modern AI is trained on trade-specific terminology — it understands 'combi boiler', 'consumer unit', 'emergency lockout', and 'drainage clearance'. whoza.ai supports 15+ trades with custom training. Clara AI handles general trades well. The key is choosing a service that offers trade-specific training rather than generic call answering. All five services tested handle routine trade enquiries competently.",
+                },
+                {
+                  q: "How quickly can I set up an AI phone answering service?",
+                  a: "whoza.ai has the fastest setup at 30 minutes — connect your number via call forwarding, fill in your services and hours, test with a sample call, and go live. Clara AI takes 2–4 hours including a mandatory AI training period. Team-Connect sets up in under an hour. Moneypenny requires 2–5 days for human receptionist onboarding. Smith.ai takes 1–2 days. If you need to be live today, whoza.ai is the fastest option.",
+                },
+                {
+                  q: "What is the best free trial for AI call answering in the UK?",
+                  a: "whoza.ai offers the most accessible free trial: 7 days with no credit card required, plus a 30-day money-back guarantee. Clara AI also offers 7 days but requires a card. Team-Connect offers 14 days. Moneypenny's trial varies by package. whoza.ai's combination of no-card trial plus 30-day guarantee provides the lowest-risk way to test AI call answering for your trade business.",
+                },
+              ].map((faq, index) => (
+                <details key={index} className="group bg-white/5 border border-white/10 rounded-xl open:border-emerald-500/30 open:bg-emerald-500/[0.03] transition-all">
+                  <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                    <span className="font-semibold text-white pr-4">{faq.q}</span>
+                    <ChevronDown className="w-5 h-5 text-white/40 shrink-0 group-open:rotate-180 transition-transform" />
+                  </summary>
+                  <div className="px-6 pb-6 text-white/70 leading-relaxed">
+                    {faq.a}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </section>
+
           {/* CTA */}
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
             <h2 className="text-3xl font-bold mb-4">Start with the winner. Test for free.</h2>
@@ -341,6 +488,23 @@ export default function BestAIGuidePage() {
               </a>
               <a href="/whoza-vs-clara" className="inline-flex items-center gap-2 bg-white/10 text-white font-bold px-6 py-4 rounded-xl hover:bg-white/20 transition-colors">
                 See Detailed Comparisons <ArrowRight className="w-5 h-5" />
+              </a>
+            </div>
+          </section>
+
+          {/* Related Content */}
+          <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-white/10">
+            <h3 className="text-lg font-semibold text-white/70 mb-4 text-center">Related Reading</h3>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <a href="/blog/how-much-do-missed-calls-cost-uk-trades" className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
+                <div className="text-emerald-400 text-sm font-medium mb-2">Research</div>
+                <div className="font-semibold text-white mb-1">How Much Do Missed Calls Cost UK Trades?</div>
+                <p className="text-white/50 text-sm">The real numbers behind lost revenue from unanswered calls.</p>
+              </a>
+              <a href="/whoza-vs-moneypenny" className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
+                <div className="text-emerald-400 text-sm font-medium mb-2">Comparison</div>
+                <div className="font-semibold text-white mb-1">Whoza.ai vs Moneypenny</div>
+                <p className="text-white/50 text-sm">AI vs human receptionist: cost and feature breakdown.</p>
               </a>
             </div>
           </section>

@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     }
   }
   return {
+    metadataBase: new URL("https://whoza.ai"),
     title: `${post.title} | whoza.ai Blog`,
     description: post.schema.description,
     alternates: {
@@ -38,6 +39,17 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       publishedTime: post.date,
       authors: [post.author],
       tags: [post.category],
+      url: `https://whoza.ai/blog/${slug}`,
+      siteName: "Whoza.ai",
+      locale: "en_GB",
+      images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: post.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@whozaai",
+      title: post.title,
+      description: post.excerpt,
+      images: ["https://whoza.ai/og-image.webp"],
     },
   }
 }
@@ -216,6 +228,27 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   <p className="text-white/70 leading-relaxed">{faq.answer}</p>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Related Posts */}
+          <div className="mb-10">
+            <h2 className="text-2xl font-bold text-white mb-6">Related Posts</h2>
+            <div className="grid gap-4">
+              {Object.entries(blogPostContents)
+                .filter(([key]) => key !== slug)
+                .slice(0, 3)
+                .map(([key, relatedPost]) => (
+                  <Link
+                    key={key}
+                    href={`/blog/${key}`}
+                    className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors"
+                  >
+                    <div className="text-emerald-400 text-sm font-medium mb-2">{relatedPost.category}</div>
+                    <h3 className="text-lg font-semibold text-white mb-2">{relatedPost.title}</h3>
+                    <p className="text-white/60 text-sm line-clamp-2">{relatedPost.excerpt}</p>
+                  </Link>
+                ))}
             </div>
           </div>
         </article>

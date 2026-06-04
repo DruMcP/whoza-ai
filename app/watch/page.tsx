@@ -5,9 +5,9 @@ import { Footer } from "@/components/whoza/footer"
 import { WatchPageClient } from "./watch-page-client"
 
 export const metadata: Metadata = {
-  title: "Watch Whoza in Action — 60-Second Demo | whoza.ai",
-  description:
-    "See Katie capture a missed enquiry in under 60 seconds. Watch how Whoza.ai turns every unanswered call into a booked job, review request, and growth insight.",
+  metadataBase: new URL("https://whoza.ai"),
+  title: "Watch Whoza in Action — 60-Second Demo",
+  description: "See Katie capture a missed enquiry in under 60 seconds. Watch how Whoza.ai turns unanswered calls into booked jobs.",
   keywords: [
     "AI call answering demo",
     "missed calls solution",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     ],
     images: [
       {
-        url: "https://whoza.ai/og-image.png",
+        url: "https://whoza.ai/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Whoza.ai — Watch the 60-second demo",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "Watch Whoza in Action — 60-Second Demo",
     description:
       "See Katie capture a missed enquiry in under 60 seconds. Every unanswered call becomes a booked job.",
-    images: ["https://whoza.ai/og-image.png"],
+    images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {
     canonical: "https://whoza.ai/watch",

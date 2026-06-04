@@ -6,8 +6,8 @@ import { ArrowRight, Check, X, MessageCircle, PoundSterling, Clock, Shield, Star
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "Whoza.ai vs Team-Connect: AI Call Handler vs Budget Answering (2026)",
-  description: "Independent comparison of whoza.ai (£59-£399) vs Team-Connect (£9.99-£79.99) for UK trades. Features, reliability, and value analysed honestly.",
+  title: "Whoza.ai vs Team-Connect: AI vs Budget (2026)",
+  description: "Honest comparison of whoza.ai (£59-£399) vs Team-Connect (£9.99-£79.99) for UK trades. Features, reliability, and value analysed.",
   keywords: [
     "whoza.ai vs Team-Connect",
     "Team-Connect receptionist review",
@@ -161,7 +161,7 @@ export default function VsTeamConnectPage() {
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
               <PoundSterling className="w-7 h-7 text-emerald-400" />
-              The £49 Question: What Do You Actually Get?
+              Is Team-Connect actually cheaper than whoza.ai when you factor in features?
             </h2>
             <div className="bg-white/5 border border-white/10 rounded-xl p-8">
               <p className="text-white/70 leading-relaxed mb-4">
@@ -185,7 +185,7 @@ export default function VsTeamConnectPage() {
 
           {/* Comparison Table */}
           <section id="comparison-table" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <h2 className="text-3xl font-bold mb-8 text-center">14-Point Comparison</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">How do whoza.ai and Team-Connect compare on 14 key features?</h2>
             <div className="overflow-x-auto rounded-xl border border-white/10">
               <table className="w-full text-left text-sm">
                 <thead>
@@ -222,7 +222,7 @@ export default function VsTeamConnectPage() {
             <div>
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
                 <Zap className="w-6 h-6 text-emerald-400" />
-                Where Team-Connect Shines
+                When is Team-Connect the better choice over whoza.ai?
               </h2>
               <div className="bg-white/5 border border-white/10 rounded-xl p-6">
                 <p className="text-white/70 leading-relaxed mb-4">
@@ -242,7 +242,7 @@ export default function VsTeamConnectPage() {
             <div>
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
                 <MessageCircle className="w-6 h-6 text-emerald-400" />
-                Where whoza.ai Pulls Ahead
+                Does Team-Connect offer WhatsApp delivery like whoza.ai?
               </h2>
               <div className="bg-white/5 border border-white/10 rounded-xl p-6">
                 <p className="text-white/70 leading-relaxed mb-4">
@@ -295,7 +295,7 @@ export default function VsTeamConnectPage() {
 
           {/* CTA */}
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
-            <h2 className="text-3xl font-bold mb-4">Start low. Upgrade when it works.</h2>
+            <h2 className="text-3xl font-bold mb-4">Which budget AI receptionist should you try first?</h2>
             <p className="text-lg text-white/60 mb-8 max-w-2xl mx-auto">
               Both whoza.ai and Team-Connect have no contracts. Try Team-Connect for a month if budget is tight. 
               When you're ready for the complete revenue system, whoza.ai is here.
@@ -304,7 +304,7 @@ export default function VsTeamConnectPage() {
               <a href="/pricing" className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-emerald-700 transition-colors shadow-lg">
                 Start whoza.ai Free Trial <ArrowRight className="w-5 h-5" />
               </a>
-              <a href="/blog/moneypenny-vs-whoza-ai-which-receptionist-service-is-right-for-trades" className="inline-flex items-center gap-2 bg-white/10 text-white font-bold px-6 py-4 rounded-xl hover:bg-white/20 transition-colors">
+              <a href="/blog/best-ai-phone-answering-uk-trades-2026" className="inline-flex items-center gap-2 bg-white/10 text-white font-bold px-6 py-4 rounded-xl hover:bg-white/20 transition-colors">
                 Read More Comparisons <ArrowRight className="w-5 h-5" />
               </a>
             </div>
@@ -315,6 +315,19 @@ export default function VsTeamConnectPage() {
             <a href="/ai-vs-virtual-receptionist" className="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-medium text-sm transition-colors">
               Read: AI vs Human Receptionist for Contractors <ArrowRight className="ml-2 w-4 h-4" />
             </a>
+          </section>
+
+          {/* Compare with other services */}
+          <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center border-t border-white/10">
+            <p className="text-white/50 text-sm mb-4">Compare whoza.ai with other services:</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <a href="/whoza-vs-clara" className="inline-flex items-center gap-2 bg-white/5 text-white/70 hover:text-white hover:bg-white/10 px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-white/10">
+                vs Clara AI <ArrowRight className="w-3 h-3" />
+              </a>
+              <a href="/whoza-vs-moneypenny" className="inline-flex items-center gap-2 bg-white/5 text-white/70 hover:text-white hover:bg-white/10 px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-white/10">
+                vs Moneypenny <ArrowRight className="w-3 h-3" />
+              </a>
+            </div>
           </section>
 
         </main>

@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/#team", label: "Meet the Team", isPageLink: false },
   { href: "/pricing", label: "Pricing", isPageLink: true },
   { href: "/#testimonials", label: "Testimonials", isPageLink: false },
+  { href: "/blog", label: "Blog", isPageLink: true },
   { href: "/support", label: "Support", isPageLink: true },
   { href: "/#faq", label: "FAQ", isPageLink: false },
 ]
