@@ -6,8 +6,8 @@ import { ArrowRight, PoundSterling, PhoneOff, TrendingUp, AlertTriangle, Clock, 
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "How Much Do Missed Calls Cost UK Trades? | Data-Driven Analysis 2026",
-  description: "Independent analysis of the real cost of missed calls for UK tradespeople. FSB data, ONS wages, and real trade business numbers. Calculate your own losses.",
+  title: "Missed Calls Cost UK Trades? | Analysis 2026",
+  description: "Data-driven analysis of missed call costs for UK trades. FSB and ONS data. Calculate your exact losses by trade.",
   keywords: [
     "missed calls cost UK trades",
     "cost of unanswered calls plumber",
@@ -292,6 +292,23 @@ export default function MissedCallsCostPage() {
               </a>
               <a href="/missed-calls-cost-calculator" className="inline-flex items-center gap-2 bg-white/10 text-white font-bold px-6 py-4 rounded-xl hover:bg-white/20 transition-colors">
                 Try the Calculator <ArrowRight className="w-5 h-5" />
+              </a>
+            </div>
+          </section>
+
+          {/* Related Content */}
+          <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-white/10">
+            <h3 className="text-lg font-semibold text-white/70 mb-4 text-center">Related Reading</h3>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <a href="/blog/best-ai-phone-answering-uk-trades-2026" className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
+                <div className="text-emerald-400 text-sm font-medium mb-2">Comparison</div>
+                <div className="font-semibold text-white mb-1">Best AI Phone Answering for UK Trades 2026</div>
+                <p className="text-white/50 text-sm">Independent guide comparing all major AI call answering services.</p>
+              </a>
+              <a href="/whoza-vs-clara" className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
+                <div className="text-emerald-400 text-sm font-medium mb-2">Comparison</div>
+                <div className="font-semibold text-white mb-1">Whoza.ai vs Clara AI</div>
+                <p className="text-white/50 text-sm">Detailed feature and pricing comparison for UK trades.</p>
               </a>
             </div>
           </section>

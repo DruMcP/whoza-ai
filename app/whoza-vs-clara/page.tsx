@@ -6,8 +6,8 @@ import { ArrowRight, Check, X, MessageCircle, PoundSterling, Clock, Shield, Star
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "Whoza.ai vs Clara AI: Honest Comparison for UK Trades (2026)",
-  description: "Independent comparison of whoza.ai and Clara AI for UK tradespeople. Price, features, WhatsApp delivery, and setup time. Updated May 2026 with real pricing data.",
+  title: "Whoza.ai vs Clara AI: Comparison (2026)",
+  description: "Honest comparison of whoza.ai and Clara AI for UK trades. Price, features, WhatsApp delivery, and setup time compared.",
   keywords: [
     "whoza.ai vs Clara",
     "Clara AI receptionist review",
@@ -125,7 +125,7 @@ export default function VsClaraPage() {
           {/* Quick Verdict */}
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 border border-emerald-500/20 rounded-2xl p-8">
-              <h2 className="text-2xl font-bold mb-4">The Verdict (TL;DR)</h2>
+              <h2 className="text-2xl font-bold mb-4">Which service should you choose: whoza.ai or Clara AI?</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h3 className="font-bold text-emerald-400 mb-2 flex items-center gap-2">
@@ -157,7 +157,7 @@ export default function VsClaraPage() {
 
           {/* Comparison Table */}
           <section id="comparison-table" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <h2 className="text-3xl font-bold mb-8 text-center">Head-to-Head Comparison</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">How do whoza.ai and Clara AI compare head-to-head?</h2>
             <div className="overflow-x-auto rounded-xl border border-white/10">
               <table className="w-full text-left text-sm">
                 <thead>
@@ -195,7 +195,7 @@ export default function VsClaraPage() {
             <div>
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
                 <PoundSterling className="w-6 h-6 text-emerald-400" />
-                Price Breakdown
+                Which is cheaper: whoza.ai or Clara AI?
               </h2>
               <div className="bg-white/5 border border-white/10 rounded-xl p-6">
                 <p className="text-white/70 leading-relaxed mb-4">
@@ -218,7 +218,7 @@ export default function VsClaraPage() {
             <div>
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
                 <MessageCircle className="w-6 h-6 text-emerald-400" />
-                WhatsApp vs Email: Where Trades Actually Live
+                Does Clara AI offer WhatsApp delivery like whoza.ai?
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-emerald-500/5 border border-emerald-500/20 rounded-xl p-6">
@@ -250,7 +250,7 @@ export default function VsClaraPage() {
             <div>
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
                 <Star className="w-6 h-6 text-emerald-400" />
-                The Features That Actually Matter
+                What features does whoza.ai have that Clara AI lacks?
               </h2>
               <div className="bg-white/5 border border-white/10 rounded-xl p-6">
                 <p className="text-white/70 leading-relaxed mb-4">
@@ -286,7 +286,7 @@ export default function VsClaraPage() {
             <div>
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
                 <Clock className="w-6 h-6 text-emerald-400" />
-                Setup Time Reality Check
+                How long does setup take for whoza.ai vs Clara AI?
               </h2>
               <div className="bg-white/5 border border-white/10 rounded-xl p-6">
                 <p className="text-white/70 leading-relaxed mb-4">
@@ -323,7 +323,7 @@ export default function VsClaraPage() {
 
           {/* CTA */}
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
-            <h2 className="text-3xl font-bold mb-4">Try both. Decide for yourself.</h2>
+            <h2 className="text-3xl font-bold mb-4">Which AI receptionist should you try first?</h2>
             <p className="text-lg text-white/60 mb-8 max-w-2xl mx-auto">
               whoza.ai offers a 7-day free trial with no credit card. Clara offers a 7-day trial too. 
               Test them both with real calls and see which fits your workflow.
@@ -332,7 +332,7 @@ export default function VsClaraPage() {
               <a href="/pricing" className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-emerald-700 transition-colors shadow-lg">
                 Start whoza.ai Free Trial <ArrowRight className="w-5 h-5" />
               </a>
-              <a href="/blog/moneypenny-vs-whoza-ai-which-receptionist-service-is-right-for-trades" className="inline-flex items-center gap-2 bg-white/10 text-white font-bold px-6 py-4 rounded-xl hover:bg-white/20 transition-colors">
+              <a href="/blog/best-ai-phone-answering-uk-trades-2026" className="inline-flex items-center gap-2 bg-white/10 text-white font-bold px-6 py-4 rounded-xl hover:bg-white/20 transition-colors">
                 Read More Comparisons <ArrowRight className="w-5 h-5" />
               </a>
             </div>
@@ -343,6 +343,19 @@ export default function VsClaraPage() {
             <a href="/ai-vs-virtual-receptionist" className="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-medium text-sm transition-colors">
               Read: AI vs Human Receptionist for Contractors <ArrowRight className="ml-2 w-4 h-4" />
             </a>
+          </section>
+
+          {/* Compare with other services */}
+          <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center border-t border-white/10">
+            <p className="text-white/50 text-sm mb-4">Compare whoza.ai with other services:</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <a href="/whoza-vs-moneypenny" className="inline-flex items-center gap-2 bg-white/5 text-white/70 hover:text-white hover:bg-white/10 px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-white/10">
+                vs Moneypenny <ArrowRight className="w-3 h-3" />
+              </a>
+              <a href="/whoza-vs-team-connect" className="inline-flex items-center gap-2 bg-white/5 text-white/70 hover:text-white hover:bg-white/10 px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-white/10">
+                vs Team-Connect <ArrowRight className="w-3 h-3" />
+              </a>
+            </div>
           </section>
 
         </main>

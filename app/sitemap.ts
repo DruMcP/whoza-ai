@@ -4,7 +4,7 @@ import { trades } from '@/lib/trades'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://whoza.ai'
-  const lastMod = '2026-05-22'
+  const lastMod = '2026-06-03'
 
   // Core pages
   const corePages: MetadataRoute.Sitemap = [
@@ -49,6 +49,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastMod,
       changeFrequency: 'monthly',
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: lastMod,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/how-it-works`,
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/trust`,
+      lastModified: lastMod,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: lastMod,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/case-studies`,
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/faq`,
@@ -197,6 +227,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts
   const blogPosts: MetadataRoute.Sitemap = [
     {
+      url: `${baseUrl}/blog/i-worked-out-i-was-losing-30000-a-year-to-missed-calls-mark-the-gas-engineer`,
+      lastModified: '2026-06-05',
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026`,
+      lastModified: '2026-05-20',
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/i-missed-5-emergency-calls-a-week-then-i-tried-ai-gary-the-plumber`,
+      lastModified: '2026-06-02',
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky`,
       lastModified: '2026-05-31',
       changeFrequency: 'monthly',
@@ -237,72 +285,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: '2026-05-08',
       changeFrequency: 'monthly',
       priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog/how-katie-answers-captures-and-delivers-enquiries-in-3-seconds`,
-      lastModified: '2026-05-05',
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog/the-7-day-free-trial-what-to-expect-when-you-try-katie`,
-      lastModified: '2026-05-03',
-      changeFrequency: 'monthly',
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/blog/how-whatsapp-delivery-changes-everything-for-tradespeople`,
-      lastModified: '2026-05-01',
-      changeFrequency: 'monthly',
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/blog/roi-calculator-how-much-could-an-ai-call-handler-save-your-trade-business`,
-      lastModified: '2026-04-28',
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog/case-study-how-a-london-electrician-recovered-12k-month-with-ai-call-handling`,
-      lastModified: '2026-04-25',
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog/moneypenny-vs-whoza-ai-which-receptionist-service-is-right-for-trades`,
-      lastModified: '2026-04-22',
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog/why-tradespeople-need-a-revenue-team-not-just-a-virtual-receptionist`,
-      lastModified: '2026-04-20',
-      changeFrequency: 'monthly',
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/blog/how-to-never-miss-an-emergency-call-again-plumbers-electricians-roofers`,
-      lastModified: '2026-04-18',
-      changeFrequency: 'monthly',
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/blog/the-truth-about-ai-voice-agents-what-google-reviews-say`,
-      lastModified: '2026-04-15',
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/5-signs-your-trade-business-needs-an-ai-call-handler`,
-      lastModified: '2026-04-12',
-      changeFrequency: 'monthly',
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/blog/how-whoza-ai-works-with-your-existing-phone-number`,
-      lastModified: '2026-04-10',
-      changeFrequency: 'monthly',
-      priority: 0.75,
     },
   ]
 

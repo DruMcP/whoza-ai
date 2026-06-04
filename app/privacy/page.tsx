@@ -14,6 +14,22 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: "https://whoza.ai/privacy",
+    siteName: "Whoza.ai",
+    title: "Privacy Policy | whoza.ai",
+    description: "whoza.ai privacy policy — ICO-registered, UK GDPR compliant. Learn how we protect your data.",
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Privacy Policy" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@whozaai",
+    title: "Privacy Policy | whoza.ai",
+    description: "whoza.ai privacy policy — ICO-registered, UK GDPR compliant. Learn how we protect your data.",
+    images: ["https://whoza.ai/og-image.webp"],
+  },
 }
 
 export default function PrivacyPolicy() {

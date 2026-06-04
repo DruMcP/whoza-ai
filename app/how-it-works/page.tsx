@@ -11,6 +11,22 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://whoza.ai/how-it-works",
   },
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: "https://whoza.ai/how-it-works",
+    siteName: "Whoza.ai",
+    title: "How It Works | whoza.ai",
+    description: "Discover how whoza.ai's AI voice agent Katie answers calls, qualifies leads, and books jobs for UK tradespeople — 24/7.",
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "How whoza.ai works" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@whozaai",
+    title: "How It Works | whoza.ai",
+    description: "Discover how whoza.ai's AI voice agent Katie answers calls, qualifies leads, and books jobs for UK tradespeople — 24/7.",
+    images: ["https://whoza.ai/og-image.webp"],
+  },
   robots: {
     index: true,
     follow: true,

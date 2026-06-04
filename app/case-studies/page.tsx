@@ -6,14 +6,31 @@ import { Briefcase, TrendingUp, Users, Star, RefreshCw } from "lucide-react"
 import Link from "next/link"
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://whoza.ai"),
   title: "Case Studies | whoza.ai",
   description: "See how UK tradespeople are winning more jobs with whoza.ai's AI voice agent. Real results, real businesses.",
   alternates: {
-    canonical: "https://whoza.ai/case-studies",
+    canonical: "/case-studies",
   },
   robots: {
     index: true,
     follow: true,
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: "/case-studies",
+    siteName: "Whoza.ai",
+    title: "Case Studies | whoza.ai",
+    description: "See how UK tradespeople are winning more jobs with whoza.ai's AI voice agent. Real results, real businesses.",
+    images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "whoza.ai Case Studies" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@whozaai",
+    title: "Case Studies | whoza.ai",
+    description: "See how UK tradespeople are winning more jobs with whoza.ai's AI voice agent.",
+    images: ["/og-image.webp"],
   },
 }
 
@@ -61,17 +78,12 @@ export default function CaseStudiesPage() {
             Real Results
           </div>
           <h1 className="text-4xl font-bold mb-4">Case Studies</h1>
-          <p className="text-white/60 text-lg max-w-2xl">
-            See how UK tradespeople are using whoza.ai to capture more leads, book more jobs, and never miss a call again.
-          </p>
+          <p className="text-white/60 text-lg max-w-2xl">See how UK tradespeople are using whoza.ai to capture more leads, book more jobs, and never miss a call again.</p>
         </div>
 
         <div className="grid gap-8">
-          {caseStudies.map((study, index) => (
-            <div
-              key={index}
-              className="bg-white/5 border border-white/10 rounded-xl p-8"
-            >
+          {caseStudies.map((study, i) => (
+            <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-8">
               <div className="flex items-center gap-3 mb-4">
                 <div className="bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-full text-sm font-medium">
                   {study.trade}
@@ -81,9 +93,9 @@ export default function CaseStudiesPage() {
                   {study.location}
                 </div>
               </div>
-
+              
               <h2 className="text-2xl font-bold mb-4">{study.headline}</h2>
-
+              
               <div className="bg-emerald-500/10 rounded-lg p-4 mb-6 inline-block">
                 <div className="flex items-center gap-2">
                   <TrendingUp className="w-5 h-5 text-emerald-400" />
@@ -91,17 +103,27 @@ export default function CaseStudiesPage() {
                 </div>
                 <p className="text-emerald-300/70 text-sm mt-1">{study.metricLabel}</p>
               </div>
-
+              
               <blockquote className="border-l-2 border-emerald-500/30 pl-4">
                 <p className="text-white/70 italic leading-relaxed">"{study.quote}"</p>
                 <div className="flex items-center gap-1 mt-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-amber-400 fill-amber-400" />
+                  {[...Array(5)].map((_, j) => (
+                    <Star key={j} className="w-4 h-4 text-amber-400 fill-amber-400" />
                   ))}
                 </div>
               </blockquote>
             </div>
           ))}
+        </div>
+
+        <div className="mt-16 text-center">
+          <Link 
+            href="/blog" 
+            className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors"
+          >
+            <RefreshCw className="w-4 h-4" />
+            Read more on the Blog
+          </Link>
         </div>
       </main>
 

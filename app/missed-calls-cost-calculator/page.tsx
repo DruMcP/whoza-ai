@@ -7,8 +7,8 @@ import { ArrowRight, Calculator, PoundSterling, TrendingUp, AlertTriangle } from
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "Missed Call Cost Calculator | How Much Revenue Are You Losing?",
-  description: "Calculate how much missed calls cost your trade business. Enter your average job value, weekly call volume, and conversion rate to see monthly lost revenue.",
+  title: "Missed Call Cost Calculator | Check Losses",
+  description: "Calculate how much missed calls cost your trade business. Enter job value, call volume, and conversion rate.",
   openGraph: {
     type: "website",
     locale: "en_GB",

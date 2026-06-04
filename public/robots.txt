@@ -1,6 +1,6 @@
 # ============================================================
 # whoza.ai — AI Voice Agents for UK Tradespeople
-# Updated: 2026-05-08
+# Updated: 2026-06-05
 # ============================================================
 
 # ------------------- Standard Crawlers -------------------
@@ -17,15 +17,6 @@ Disallow: /_next/
 Disallow: /cdn-cgi/
 Disallow: /*.json$
 Disallow: /*?nocache=
-Disallow: /*?
-Disallow: /roadmap
-Disallow: /account
-Disallow: /free-score
-Disallow: /start
-Disallow: /ai-visibility-*
-Disallow: /uk/ai-visibility/
-Disallow: /us/ai-visibility/
-Disallow: /trades/
 
 # ------------------- AI Search Crawlers -------------------
 # OpenAI (ChatGPT Search, GPTBot)

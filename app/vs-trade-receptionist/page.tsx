@@ -6,8 +6,8 @@ import { ArrowRight, Check, X, Clock, PoundSterling, Shield, AlertTriangle, Buil
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "Whoza.ai vs Trade Receptionist: Which is Better for UK Trades?",
-  description: "Compare whoza.ai and Trade Receptionist for UK tradespeople. Honest comparison of pricing, setup, legal compliance, and platform quality. See why trades choose whoza.ai.",
+  title: "Whoza.ai vs Trade Receptionist | UK Trades",
+  description: "Compare whoza.ai and Trade Receptionist for UK trades. Honest comparison of pricing, setup, compliance, and quality.",
   openGraph: {
     type: "website",
     locale: "en_GB",
@@ -64,17 +64,17 @@ export default function VsTradeReceptionistPage() {
           {
             "@type": "Question",
             "name": "Is whoza.ai cheaper than Trade Receptionist?",
-            "acceptedAnswer": { "@type": "Answer", "text": "whoza.ai starts at £59/month. Trade Receptionist starts at £29/month (+VAT). However, Trade Receptionist charges per call while whoza.ai charges per minute — the same way the underlying infrastructure (Retell.ai + Twilio) is billed. At a realistic 4-minute average call, their £29 Starter plan costs more in infrastructure fees than they charge. Their 'unlimited calls' plan is mathematically unprofitable at realistic call durations." }
+            "acceptedAnswer": { "@type": "Answer", "text": "whoza.ai starts at £59/month. Trade Receptionist starts at £29/month (+VAT). However, Trade Receptionist charges per call while whoza.ai charges per minute - the same way the underlying infrastructure (Retell.ai + Twilio) is billed. At a realistic 4-minute average call, their £29 Starter plan costs more in infrastructure fees than they charge. Their 'unlimited calls' plan is mathematically unprofitable at realistic call durations." }
           },
           {
             "@type": "Question",
             "name": "Does whoza.ai use real people or AI?",
-            "acceptedAnswer": { "@type": "Answer", "text": "whoza.ai uses AI voice agents (Katie and Mark) who answer calls 24/7. Trade Receptionist also uses AI voice agents powered by Retell.ai. Both services use AI — the difference is who built the platform and how it is priced." }
+            "acceptedAnswer": { "@type": "Answer", "text": "whoza.ai uses AI voice agents (Katie and Mark) who answer calls 24/7. Trade Receptionist also uses AI voice agents powered by Retell.ai. Both services use AI - the difference is who built the platform and how it is priced." }
           },
           {
             "@type": "Question",
             "name": "Which is faster to set up?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Trade Receptionist claims setup in under 14 minutes. whoza.ai is typically live in 30 minutes. Both are fast — the real difference is what you get: a custom platform built for UK trades vs a template-based workflow distributed through a course community." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Trade Receptionist claims setup in under 14 minutes. whoza.ai is typically live in 30 minutes. Both are fast - the real difference is what you get: a custom platform built for UK trades vs a template-based workflow distributed through a course community." }
           },
           {
             "@type": "Question",
@@ -84,7 +84,7 @@ export default function VsTradeReceptionistPage() {
           {
             "@type": "Question",
             "name": "Can I cancel whoza.ai anytime?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. whoza.ai has no contracts — cancel anytime. Trade Receptionist also has no contract and offers a 14-day free trial with no card required." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. whoza.ai has no contracts - cancel anytime. Trade Receptionist also has no contract and offers a 14-day free trial with no card required." }
           }
         ]
       })}} />
@@ -222,7 +222,7 @@ export default function VsTradeReceptionistPage() {
               <div className="mt-4 pt-4 border-t border-amber-100">
                 <p className="text-lg text-amber-900 font-semibold">
                   At 4 minutes per call, their £29 Starter plan costs them ~£38 in Retell/Twilio fees.
-                  That is not a sustainable business — it is a loss leader.
+                  That is not a sustainable business - it is a loss leader.
                 </p>
               </div>
             </div>
@@ -230,7 +230,7 @@ export default function VsTradeReceptionistPage() {
             <div className="space-y-4 text-amber-800">
               <p className="leading-relaxed">
                 <strong>Charging per call is a pricing trick.</strong> It hides the real cost from customers.
-                Short calls subsidise long calls. Or worse — calls are artificially cut short to control costs.
+                Short calls subsidise long calls. Or worse - calls are artificially cut short to control costs.
                 Neither is good for your business.
               </p>
               <p className="leading-relaxed">
@@ -256,7 +256,7 @@ export default function VsTradeReceptionistPage() {
               </div>
               <ul className="space-y-3 text-emerald-800">
                 <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> UK Limited Company</li>
-                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> VAT registered — number displayed</li>
+                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> VAT registered - number displayed</li>
                 <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> Full Terms & Conditions</li>
                 <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> Privacy Policy (GDPR compliant)</li>
                 <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> ICO registered (ZC077271)</li>
@@ -285,7 +285,7 @@ export default function VsTradeReceptionistPage() {
           <h2 className="text-3xl font-bold text-slate-900 mb-6">Setup Time: 30 Minutes vs ~14 Minutes</h2>
           <p className="text-lg text-slate-600 mb-6">
             Trade Receptionist claims setup in under 14 minutes. whoza.ai is live in 30 minutes.
-            Both are fast — the real difference is what you get on the other side.
+            Both are fast - the real difference is what you get on the other side.
           </p>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4">
@@ -293,21 +293,21 @@ export default function VsTradeReceptionistPage() {
                 <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold">1</div>
                 <div>
                   <h4 className="font-bold text-slate-900">Connect your number</h4>
-                  <p className="text-sm text-slate-600">2 minutes — forward your existing business number</p>
+                  <p className="text-sm text-slate-600">2 minutes - forward your existing business number</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold">2</div>
                 <div>
                   <h4 className="font-bold text-slate-900">Set your hours</h4>
-                  <p className="text-sm text-slate-600">3 minutes — tell Katie when to answer</p>
+                  <p className="text-sm text-slate-600">3 minutes - tell Katie when to answer</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold">3</div>
                 <div>
                   <h4 className="font-bold text-slate-900">Receive your first lead</h4>
-                  <p className="text-sm text-slate-600">25 minutes — test call, then go live</p>
+                  <p className="text-sm text-slate-600">25 minutes - test call, then go live</p>
                 </div>
               </div>
             </div>
@@ -341,7 +341,7 @@ export default function VsTradeReceptionistPage() {
                   &quot;I ran a trade business for years. I know what it&apos;s like to miss a call while you&apos;re under a sink,
                   on a roof, or in a customer&apos;s home. Every missed call is a job lost to a competitor.
                   I built Katie because I needed her myself. Every feature is designed around the reality
-                  of working in the trades — not a corporate office.&quot;
+                  of working in the trades - not a corporate office.&quot;
                 </p>
                 <div className="flex items-center gap-4 text-sm text-slate-600">
                   <a href="mailto:dru@whoza.ai" className="text-emerald-600 hover:underline font-medium">dru@whoza.ai</a>
@@ -356,7 +356,7 @@ export default function VsTradeReceptionistPage() {
         {/* Trust badges */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-wrap justify-center gap-4">
-            {["7-day free trial — no card needed", "30-day money-back guarantee", "Live in 30 minutes", "No contracts", "ICO Registered ZC077271"].map((item) => (
+            {["7-day free trial - no card needed", "30-day money-back guarantee", "Live in 30 minutes", "No contracts", "ICO Registered ZC077271"].map((item) => (
               <span key={item} className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-800 text-sm font-medium px-4 py-2 rounded-full border border-emerald-100">
                 <Shield className="w-4 h-4" /> {item}
               </span>
@@ -369,7 +369,7 @@ export default function VsTradeReceptionistPage() {
           <h2 className="text-3xl font-bold text-slate-900 mb-4">Ready to stop missing calls?</h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
             Join hundreds of UK tradespeople who&apos;ve switched to whoza.ai.
-            Start your 7-day free trial — no credit card required.
+            Start your 7-day free trial - no credit card required.
           </p>
           <a href="/pricing" className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-emerald-700 transition-colors shadow-lg hover:shadow-xl">
             Try whoza.ai free for 7 days <ArrowRight className="w-5 h-5" />

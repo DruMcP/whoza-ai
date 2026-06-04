@@ -15,13 +15,24 @@ const footerLinks = {
   ],
   support: [
     { label: "Help Centre", href: "/support" },
+    { label: "Contact", href: "/contact" },
+    { label: "FAQ", href: "/faq" },
     { label: "WhatsApp Support", href: "https://wa.me/447463141750" },
     { label: "Email Support", href: "mailto:support@whoza.ai" },
-    { label: "FAQ", href: "/pricing#faq" },
   ],
   company: [
     { label: "Blog", href: "/blog" },
     { label: "Case Studies", href: "/case-studies" },
+    { label: "Watch Demo", href: "/watch" },
+    { label: "Best AI Call Handler", href: "/best-ai-call-handler-uk-trades" },
+    { label: "Missed Calls Cost", href: "/missed-calls-cost-calculator" },
+  ],
+  comparisons: [
+    { label: "vs Trade Receptionist", href: "/vs-trade-receptionist" },
+    { label: "vs Clara AI", href: "/whoza-vs-clara" },
+    { label: "vs Moneypenny", href: "/whoza-vs-moneypenny" },
+    { label: "vs Team-Connect", href: "/whoza-vs-team-connect" },
+    { label: "vs Virtual Receptionist", href: "/ai-vs-virtual-receptionist" },
   ],
   tools: [
     { label: "Lost Jobs Calculator", href: "/tools/lost-jobs-calculator" },
@@ -67,7 +78,7 @@ export function Footer() {
   return (
     <footer className="bg-[var(--navy-900)] border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-8 lg:gap-6">
           {/* Brand + CTA Column */}
           <div className="col-span-2">
             <a href="/" className="flex items-center mb-6">
@@ -141,6 +152,19 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
+                  <a href={link.href} className="text-sm text-white/60 hover:text-white transition-colors">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <div className="text-white font-semibold mb-4">Comparisons</div>
+            <ul className="space-y-3">
+              {footerLinks.comparisons.map((link) => (
+                <li key={link.href}>
                   <a href={link.href} className="text-sm text-white/60 hover:text-white transition-colors">
                     {link.label}
                   </a>
