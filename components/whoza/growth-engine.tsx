@@ -2,10 +2,8 @@
 
 import { motion } from "framer-motion"
 import { Eye, TrendingUp, Target, CheckCircle2, ArrowRight, Zap } from "lucide-react"
-import { useLocale } from "@/lib/locale-context"
 
 export function GrowthEngine() {
-  const { config } = useLocale()
 
   return (
     <section className="py-20 lg:py-32 bg-[var(--navy-900)] dark-section">

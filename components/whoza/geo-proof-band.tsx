@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import { MapPin, TrendingUp, Users } from "lucide-react"
-import { useLocale } from "@/lib/locale-context"
 import { useEffect, useState } from "react"
 
 // Simulated live stats that feel real and active
@@ -13,24 +12,15 @@ const geoStatsConfig = {
     trustedPrefix: "Trusted by trades across",
     localDemand: "Local demand is high",
   },
-  us: {
-    cities: ["Dallas", "Houston", "Phoenix", "Chicago", "Los Angeles", "Miami", "Atlanta", "New York"],
-    jobsPrefix: "enquiries captured this week in",
-    trustedPrefix: "Trusted by contractors across",
-    localDemand: "Local demand is high",
-  },
 }
 
 interface GeoProofBandProps {
   city?: string
-  country?: "uk" | "us"
   jobsThisWeek?: number
 }
 
-export function GeoProofBand({ city, country: forcedCountry, jobsThisWeek: forcedJobs }: GeoProofBandProps) {
-  const { country: ctxCountry } = useLocale()
-  const country = forcedCountry || ctxCountry
-  const geoConfig = geoStatsConfig[country]
+export function GeoProofBand({ city, jobsThisWeek: forcedJobs }: GeoProofBandProps) {
+  const geoConfig = geoStatsConfig.uk
   
   const [jobsCount, setJobsCount] = useState(forcedJobs || 127)
   const [cityIndex, setCityIndex] = useState(0)

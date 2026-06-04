@@ -3,42 +3,25 @@
 // v2.1 - Updated priming stats + UK defaults
 import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
-import { Calculator, Phone, PoundSterling, DollarSign, TrendingUp, ArrowRight, AlertTriangle, PhoneMissed, Voicemail, Zap } from "lucide-react"
+import { Calculator, Phone, PoundSterling, TrendingUp, ArrowRight, AlertTriangle, PhoneMissed, Voicemail, Zap } from "lucide-react"
 import { Slider } from "@/components/ui/slider"
 import { trackCalculatorLead, trackCalculatorUse } from "@/lib/gtag"
-import { useLocale } from "@/lib/locale-context"
 import { WaitlistModal } from "./waitlist-modal"
 import { trackCTA } from "@/lib/gtag"
 
 // Job value examples by trade and location
-const jobExamples: Record<string, Record<string, { hint: string; minValue: number; maxValue: number; defaultValue: number }>> = {
+const jobExamples: Record<string, { hint: string; minValue: number; maxValue: number; defaultValue: number }> = {
   default: {
-    uk: {
-      hint: "Typical plumbing call-out in the UK: £180–£350",
-      minValue: 50,
-      maxValue: 2000,
-      defaultValue: 280,
-    },
-    us: {
-      hint: "Typical HVAC call in Dallas: $150–$400",
-      minValue: 75,
-      maxValue: 3000,
-      defaultValue: 300,
-    },
+    hint: "Typical plumbing call-out in the UK: £180-£350",
+    minValue: 50,
+    maxValue: 2000,
+    defaultValue: 280,
   },
   electrician: {
-    uk: {
-      hint: "Typical electrical call-out in the UK: £150–£300",
-      minValue: 75,
-      maxValue: 2000,
-      defaultValue: 220,
-    },
-    us: {
-      hint: "Typical electrical call in Dallas: $180–$400",
-      minValue: 100,
-      maxValue: 3000,
-      defaultValue: 280,
-    },
+    hint: "Typical electrical call-out in the UK: £150-£300",
+    minValue: 75,
+    maxValue: 2000,
+    defaultValue: 220,
   },
 }
 
@@ -47,10 +30,9 @@ interface LostRevenueCalculatorProps {
 }
 
 export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
-  const { country, config } = useLocale()
   const tradeKey = trade && jobExamples[trade] ? trade : "default"
-  const jobConfig = jobExamples[tradeKey][country]
-  
+  const jobConfig = jobExamples[tradeKey]
+
   const [missedCalls, setMissedCalls] = useState([6])
   const [avgJobValue, setAvgJobValue] = useState([jobConfig.defaultValue])
   const [conversionRate, setConversionRate] = useState([35])
@@ -143,13 +125,13 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
 
   return (
     <section id="calculator" className="py-28 lg:py-44 bg-gradient-to-b from-red-50 via-red-50/50 to-[var(--off-white)] relative">
-      {/* Transition Bridge — responsive sizing */}
+      {/* Transition Bridge - responsive sizing */}
       <div className="absolute top-3 sm:top-4 lg:top-6 left-1/2 -translate-x-1/2 px-4 py-2 sm:px-6 sm:py-2.5 lg:px-8 lg:py-3.5 rounded-full bg-[var(--navy-900)] text-white text-sm sm:text-base lg:text-lg font-bold shadow-xl border-2 sm:border-4 border-white z-10 text-center whitespace-nowrap sm:whitespace-normal max-w-[calc(100vw-2rem)] truncate sm:truncate-none">
         What are missed calls costing you?
       </div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
-        {/* Priming Stats — real UK trade data */}
+        {/* Priming Stats - real UK trade data */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -256,14 +238,10 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
                     <label className="flex items-center gap-2 text-sm font-medium text-[var(--navy-900)]">
-                      {country === "uk" ? (
-                        <PoundSterling className="w-4 h-4 text-[var(--slate-500)]" />
-                      ) : (
-                        <DollarSign className="w-4 h-4 text-[var(--slate-500)]" />
-                      )}
+                      <PoundSterling className="w-4 h-4 text-[var(--slate-500)]" />
                       Average job value
                     </label>
-                    <span className="text-lg font-bold text-[var(--rex-green)]">{config.currencySymbol}{avgJobValue[0]}</span>
+                    <span className="text-lg font-bold text-[var(--rex-green)]">£{avgJobValue[0]}</span>
                   </div>
                   <Slider
                     value={avgJobValue}
@@ -274,8 +252,8 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
                     className="[&_[role=slider]]:bg-[var(--rex-green)] [&_[role=slider]]:border-0 [&_.bg-primary]:bg-[var(--rex-green)]"
                   />
                   <div className="flex justify-between text-xs text-[var(--slate-500)]">
-                    <span>{config.currencySymbol}{jobConfig.minValue}</span>
-                    <span>{config.currencySymbol}{jobConfig.maxValue.toLocaleString()}</span>
+                    <span>£{jobConfig.minValue}</span>
+                    <span>£{jobConfig.maxValue.toLocaleString()}</span>
                   </div>
                   <p className="text-xs text-[var(--katie-blue)] italic">{jobConfig.hint}</p>
                 </div>
@@ -307,17 +285,16 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
               {/* Results */}
               <div ref={resultsRef} className="bg-[var(--navy-900)] p-6 sm:p-8 lg:p-10 flex flex-col">
                 <h3 className="text-lg font-semibold text-white mb-8">Your Lost Revenue</h3>
-                
+
                 <div className="flex-1 space-y-6">
-                  {/* Weekly loss — always visible (the hook) */}
-                  <ResultCard 
+                  {/* Weekly loss - always visible (the hook) */}
+                  <ResultCard
                     label="Weekly Loss"
                     value={animatedWeekly}
                     color="white/60"
-                    country={country}
                   />
 
-                  {/* Monthly + Yearly — gated behind email */}
+                  {/* Monthly + Yearly - gated behind email */}
                   {!emailSubmitted ? (
                     <motion.div
                       initial={{ opacity: 0 }}
@@ -357,19 +334,17 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
                     </motion.div>
                   ) : (
                     <>
-                      <ResultCard 
+                      <ResultCard
                         label="Monthly Loss"
                         value={animatedMonthly}
                         color="white/80"
                         highlight
-                        country={country}
                       />
-                      <ResultCard 
+                      <ResultCard
                         label="Yearly Loss"
                         value={animatedYearly}
                         color="red-400"
                         isYearly
-                        country={country}
                       />
                       <motion.div
                         initial={{ opacity: 0, y: 10 }}
@@ -396,10 +371,10 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
                   <p className="text-sm text-white/60 mb-4">
                     Stop the leak. Katie answers every call from just{" "}
                     <span className="text-white font-semibold">
-                      {config.currencySymbol}{config.pricing.starter}/month
+                      £59/month
                     </span>
                   </p>
-                  <button 
+                  <button
                     onClick={() => { trackCTA("Start free trial", "calculator"); setShowWaitlist(true); }}
                     className="btn-primary inline-flex items-center justify-center w-full rounded-lg bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold py-6 text-lg transition-colors cursor-pointer border-none"
                   >
@@ -417,28 +392,26 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
   )
 }
 
-function ResultCard({ 
-  label, 
-  value, 
-  color, 
-  highlight = false, 
+function ResultCard({
+  label,
+  value,
+  color,
+  highlight = false,
   isYearly = false,
-  country = "uk"
-}: { 
+}: {
   label: string
   value: number
   color: string
   highlight?: boolean
   isYearly?: boolean
-  country?: "uk" | "us"
 }) {
-  const formattedValue = new Intl.NumberFormat(country === "uk" ? "en-GB" : "en-US", {
+  const formattedValue = new Intl.NumberFormat("en-GB", {
     style: "currency",
-    currency: country === "uk" ? "GBP" : "USD",
+    currency: "GBP",
     maximumFractionDigits: 0,
   }).format(value)
 
-  const monthlyPrice = country === "uk" ? 69 : 89
+  const monthlyPrice = 69
 
   return (
     <div className={`p-4 rounded-2xl ${highlight ? "bg-white/10" : "bg-white/5"}`}>

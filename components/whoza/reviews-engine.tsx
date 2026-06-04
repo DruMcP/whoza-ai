@@ -2,14 +2,12 @@
 
 import { motion } from "framer-motion"
 import { Star, MessageSquare, TrendingUp, CheckCircle2, ArrowRight, ThumbsUp } from "lucide-react"
-import { useLocale } from "@/lib/locale-context"
 
 interface ReviewsEngineProps {
   trade?: string
 }
 
 export function ReviewsEngine({ trade }: ReviewsEngineProps) {
-  const { country } = useLocale()
 
   const reviewContext = trade === "electrician" 
     ? "Your electrical work is complete — we'd love your feedback!"

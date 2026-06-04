@@ -1,48 +1,27 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { useLocale } from "@/lib/locale-context"
 
-const tradesConfig = {
-  uk: [
-    { name: "Plumbers", description: "Emergency leaks, installs & repairs" },
-    { name: "Electricians", description: "Wiring, faults & certificates" },
-    { name: "Roofers", description: "Repairs, replacements & inspections" },
-    { name: "Locksmiths", description: "Emergency entry & security" },
-    { name: "Drainage", description: "Unblocking & CCTV surveys" },
-    { name: "Landscapers", description: "Gardens, patios & maintenance" },
-    { name: "Pest Control", description: "Rats, wasps & prevention" },
-    { name: "Cleaners", description: "Domestic, end-of-tenancy & commercial" },
-    { name: "Heating Engineers", description: "Boilers, servicing & breakdowns" },
-    { name: "Builders", description: "Extensions, renovations & repairs" },
-    { name: "Joiners", description: "Doors, staircases & bespoke woodwork" },
-    { name: "Plasterers", description: "Skimming, boarding & repairs" },
-    { name: "Tilers", description: "Bathrooms, kitchens & floors" },
-    { name: "Carpenters", description: "Framing, fitted furniture & repairs" },
-    { name: "Handymen", description: "Odd jobs, fixes & maintenance" },
-  ],
-  us: [
-    { name: "Plumbers", description: "Emergency leaks, installs & repairs" },
-    { name: "Electricians", description: "Wiring, faults & certificates" },
-    { name: "Roofers", description: "Repairs, replacements & inspections" },
-    { name: "HVAC", description: "Heating, cooling & servicing" },
-    { name: "Landscapers", description: "Gardens, patios & maintenance" },
-    { name: "Pest Control", description: "Rats, wasps & prevention" },
-    { name: "Cleaners", description: "Domestic, end-of-tenancy & commercial" },
-    { name: "General Contractors", description: "Renovations, builds & management" },
-    { name: "Painters", description: "Interior, exterior & finishes" },
-    { name: "Flooring", description: "Installation, repairs & refinishing" },
-    { name: "Carpenters", description: "Framing, fitted furniture & repairs" },
-    { name: "Plasterers", description: "Skimming, boarding & repairs" },
-    { name: "Tilers", description: "Bathrooms, kitchens & floors" },
-    { name: "Joiners", description: "Doors, staircases & bespoke woodwork" },
-    { name: "Handymen", description: "Odd jobs, fixes & maintenance" },
-  ],
-}
+const tradesConfig = [
+  { name: "Plumbers", description: "Emergency leaks, installs & repairs" },
+  { name: "Electricians", description: "Wiring, faults & certificates" },
+  { name: "Roofers", description: "Repairs, replacements & inspections" },
+  { name: "Locksmiths", description: "Emergency entry & security" },
+  { name: "Drainage", description: "Unblocking & CCTV surveys" },
+  { name: "Landscapers", description: "Gardens, patios & maintenance" },
+  { name: "Pest Control", description: "Rats, wasps & prevention" },
+  { name: "Cleaners", description: "Domestic, end-of-tenancy & commercial" },
+  { name: "Heating Engineers", description: "Boilers, servicing & breakdowns" },
+  { name: "Builders", description: "Extensions, renovations & repairs" },
+  { name: "Joiners", description: "Doors, staircases & bespoke woodwork" },
+  { name: "Plasterers", description: "Skimming, boarding & repairs" },
+  { name: "Tilers", description: "Bathrooms, kitchens & floors" },
+  { name: "Carpenters", description: "Framing, fitted furniture & repairs" },
+  { name: "Handymen", description: "Odd jobs, fixes & maintenance" },
+]
 
 export function SocialProofBand() {
-  const { country } = useLocale()
-  const trades = tradesConfig[country]
+  const trades = tradesConfig
 
   return (
     <section className="py-6 bg-[var(--navy-900)] border-y border-white/10 dark-section">
@@ -79,8 +58,7 @@ export function SocialProofBand() {
 }
 
 export function TrustBadgeBand() {
-  const { country, config } = useLocale()
-  const trades = tradesConfig[country]
+  const trades = tradesConfig
 
   return (
     <section className="py-12 bg-[var(--off-white)]">
@@ -92,7 +70,7 @@ export function TrustBadgeBand() {
           className="text-center mb-8"
         >
           <p className="text-sm text-[var(--slate-500)] uppercase tracking-wider font-medium">
-            Built for {country === "uk" ? "UK" : "US"} {config.language.tradesPeople}
+            Built for UK tradespeople
           </p>
         </motion.div>
 
@@ -117,13 +95,11 @@ export function TrustBadgeBand() {
 }
 
 export function StatsBand() {
-  const { country, config } = useLocale()
-  
   // Micro proof signals instead of false aggregate claims
   const stats = [
     { value: "3 sec", label: "Answer Time", colorClass: "text-[var(--katie-blue)]" },
     { value: "24/7", label: "Always Working", colorClass: "text-[var(--rex-green)]" },
-    { value: config.currencySymbol + "2–" + config.currencySymbol + "4", label: "Per Booked Job", colorClass: "text-[var(--claire-amber)]" },
+    { value: "£2–£4", label: "Per Booked Job", colorClass: "text-[var(--claire-amber)]" },
     { value: "30 min", label: "Install Time", colorClass: "text-[var(--mark-grey)]" },
   ]
 
