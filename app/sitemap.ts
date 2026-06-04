@@ -247,6 +247,116 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Blog posts
   const blogPosts: MetadataRoute.Sitemap = [
+    // Trade landing pages
+    {
+      url: `${baseUrl}/for-plumbers`,
+      lastModified: lastMod,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/for-electricians`,
+      lastModified: lastMod,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/for-gas-engineers`,
+      lastModified: lastMod,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/for-builders`,
+      lastModified: lastMod,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/for-roofers`,
+      lastModified: lastMod,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/for-locksmiths`,
+      lastModified: lastMod,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/for-hvac`,
+      lastModified: lastMod,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/for-painters-decorators`,
+      lastModified: lastMod,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    // New Phase 1-3 blog posts
+    {
+      url: `${baseUrl}/blog/ai-call-answering-trades-uk-guide`,
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/blog/ai-call-answering-cost-uk`,
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/blog/how-to-grow-trade-business-uk-guide`,
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/why-trade-businesses-miss-calls`,
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/ai-receptionist-vs-human-receptionist-2026`,
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/what-is-ai-phone-answering`,
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/missed-call-calculator-how-much-are-you-losing`,
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/ai-phone-answering-vs-voicemail`,
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/best-ai-phone-answering-uk-2026`,
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/24-7-call-answering-emergency-trades`,
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
     {
       url: `${baseUrl}/blog/i-worked-out-i-was-losing-30000-a-year-to-missed-calls-mark-the-gas-engineer`,
       lastModified: '2026-06-05',

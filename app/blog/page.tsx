@@ -36,6 +36,46 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "ai-phone-technology-complete-guide",
+    title: "AI Phone Technology: The Complete Guide for UK Tradespeople (2026)",
+    excerpt: "How AI voice agents actually work — NLP, speech synthesis, intent recognition, voice quality, and the future of AI phone technology for trade businesses.",
+    readTime: "18 min read",
+    date: "2026-06-05",
+    category: "AI Technology",
+  },
+  {
+    slug: "roofing-lead-generation-guide",
+    title: "Roofing Lead Generation Guide: How to Get More Roofing Jobs in 2026",
+    excerpt: "Practical strategies for UK roofers to generate consistent leads: Google Business Profile, local SEO, emergency call capture, and how AI call handling converts missed calls into booked surveys.",
+    readTime: "8 min read",
+    date: "2026-06-05",
+    category: "Lead Generation",
+  },
+  {
+    slug: "builders-lead-generation-guide",
+    title: "Builders Lead Generation Guide: How to Win More Projects in 2026",
+    excerpt: "Proven lead generation strategies for UK builders: local SEO, project-type targeting, quote conversion, and how AI call handling captures high-value extension and renovation enquiries.",
+    readTime: "8 min read",
+    date: "2026-06-05",
+    category: "Lead Generation",
+  },
+  {
+    slug: "hvac-emergency-call-handling",
+    title: "HVAC Emergency Call Handling: How to Capture Every Boiler Breakdown",
+    excerpt: "Boiler breakdowns don't wait for business hours. Learn how UK heating engineers can capture emergency calls 24/7, prioritise urgent breakdowns, and convert after-hours enquiries into booked callouts.",
+    readTime: "7 min read",
+    date: "2026-06-05",
+    category: "Emergency Services",
+  },
+  {
+    slug: "locksmith-24-7-call-answering",
+    title: "24/7 Call Answering for Locksmiths: Never Miss a Lockout Again",
+    excerpt: "Lockouts are the most urgent trade calls. Learn how UK locksmiths can capture emergency lockout enquiries 24/7, prioritise high-value security upgrades, and convert after-hours calls into booked jobs.",
+    readTime: "7 min read",
+    date: "2026-06-05",
+    category: "Emergency Services",
+  },
+  {
     slug: "ai-call-answering-trades-uk-guide",
     title: "AI Call Answering for UK Trades: The Complete Guide (2026)",
     excerpt: "The definitive UK guide to AI call answering for plumbers, electricians, gas engineers and builders. How it works, what it costs, and how to choose the right service.",
