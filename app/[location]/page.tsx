@@ -79,8 +79,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: citySpecificDescription,
       images: ["https://whoza.ai/og-image.webp"],
     },
-    robots: {
-      index: true,
+  robots: {
+      index: locationData.country === 'uk',
       follow: true,
     },
   }

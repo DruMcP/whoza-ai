@@ -216,13 +216,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }))
 
-  // Dynamic location pages
-  const locationPages: MetadataRoute.Sitemap = locations.map((loc) => ({
-    url: `${baseUrl}/${loc.slug}`,
-    lastModified: lastMod,
-    changeFrequency: 'monthly',
-    priority: loc.country === 'uk' ? 0.7 : 0.6,
-  }))
+  // Dynamic location pages — UK only
+  const locationPages: MetadataRoute.Sitemap = locations
+    .filter((loc) => loc.country === 'uk')
+    .map((loc) => ({
+      url: `${baseUrl}/${loc.slug}`,
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    }))
 
   // Blog posts
   const blogPosts: MetadataRoute.Sitemap = [
