@@ -2,26 +2,16 @@
 
 import { motion } from "framer-motion"
 import { Phone, Calendar, Star, TrendingUp, ArrowUpRight, Eye } from "lucide-react"
-import { useLocale } from "@/lib/locale-context"
 
-const statsConfig = {
-  uk: [
-    { label: "Calls Answered", value: "147", change: "+23%", icon: Phone, color: "var(--katie-blue)" },
-    { label: "Enquiries Captured", value: "89", change: "+18%", icon: Calendar, color: "var(--rex-green)" },
-    { label: "Estimated Value Captured", value: "£12,340", change: "+34%", icon: TrendingUp, color: "var(--claire-amber)" },
-    { label: "Reviews Generated", value: "34", change: "+12", icon: Star, color: "var(--mark-grey)" },
-  ],
-  us: [
-    { label: "Calls Answered", value: "147", change: "+23%", icon: Phone, color: "var(--katie-blue)" },
-    { label: "Enquiries Captured", value: "89", change: "+18%", icon: Calendar, color: "var(--rex-green)" },
-    { label: "Estimated Value Captured", value: "$16,450", change: "+34%", icon: TrendingUp, color: "var(--claire-amber)" },
-    { label: "Reviews Generated", value: "34", change: "+12", icon: Star, color: "var(--mark-grey)" },
-  ],
-}
+const statsConfig = [
+  { label: "Calls Answered", value: "147", change: "+23%", icon: Phone, color: "var(--katie-blue)" },
+  { label: "Enquiries Captured", value: "89", change: "+18%", icon: Calendar, color: "var(--rex-green)" },
+  { label: "Estimated Value Captured", value: "£12,340", change: "+34%", icon: TrendingUp, color: "var(--claire-amber)" },
+  { label: "Reviews Generated", value: "34", change: "+12", icon: Star, color: "var(--mark-grey)" },
+]
 
 export function DashboardPreview() {
-  const { country, config } = useLocale()
-  const stats = statsConfig[country]
+  const stats = statsConfig
 
   return (
     <section className="py-20 lg:py-32 bg-[var(--navy-900)] relative overflow-hidden dark-section">
@@ -111,7 +101,7 @@ export function DashboardPreview() {
                     <div className="text-white/50 text-sm">Last 30 days</div>
                   </div>
                   <div className="text-2xl font-bold text-[var(--rex-green)]">
-                    {country === "uk" ? "£12,340" : "$16,450"}
+                    {stats[2].value}
                   </div>
                 </div>
                 

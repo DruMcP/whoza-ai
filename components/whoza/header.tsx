@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
-import { CountrySwitcher } from "./country-switcher"
 import { WaitlistModal } from "./waitlist-modal"
 
 const navLinks = [
@@ -87,7 +86,6 @@ export function Header() {
               >
                 Start Free Trial
               </button>
-              <CountrySwitcher />
             </div>
 
             {/* Mobile hamburger */}

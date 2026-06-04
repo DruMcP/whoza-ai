@@ -2,7 +2,6 @@
 
 import { Shield, ExternalLink } from "lucide-react"
 import { useState } from "react"
-import { useLocale } from "@/lib/locale-context"
 import { WaitlistModal } from "./waitlist-modal"
 import { trackCTA } from "@/lib/gtag"
 
@@ -53,21 +52,13 @@ const footerLinks = {
   ],
 }
 
-const ukBadges = [
+const badges = [
   "ICO Registered",
   "GDPR Compliant",
   "UK Data Centers",
 ]
 
-const usBadges = [
-  "SOC 2 Compliant",
-  "CCPA Compliant",
-  "US Data Centers",
-]
-
 export function Footer() {
-  const { country, config } = useLocale()
-  const badges = country === "uk" ? ukBadges : usBadges
   const [showWaitlist, setShowWaitlist] = useState(false)
 
   const openWaitlist = () => {

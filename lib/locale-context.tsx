@@ -32,12 +32,12 @@ export function LocaleProvider({ children, forcedCountry }: LocaleProviderProps)
       return
     }
 
-    // Default to UK for all visitors. Only switch to US if user explicitly toggled.
+    // Default to UK for all visitors. Ignore any stored US preference since the site is UK-only.
     const stored = localStorage.getItem(STORAGE_KEY) as Country | null
-    if (stored && (stored === "uk" || stored === "us")) {
-      setCountryState(stored)
+    if (stored === "uk") {
+      setCountryState("uk")
     } else {
-      // First-time visitor: always UK
+      // Always UK, even if US was stored previously
       setCountryState("uk")
       localStorage.setItem(STORAGE_KEY, "uk")
     }
