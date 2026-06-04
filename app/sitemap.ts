@@ -453,12 +453,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-    {
-      url: `${baseUrl}/blog/why-62-percent-of-trade-business-calls-go-unanswered`,
-      lastModified: '2026-05-08',
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
   ]
 
   return [...corePages, ...blogPosts, ...tradePages, ...locationPages]
