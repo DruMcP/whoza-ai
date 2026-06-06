@@ -53,3 +53,4 @@ build-output.txt
 
 # Netlify
 .netlify/
+NETLIFY_ENV_VARS.txt
