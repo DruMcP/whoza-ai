@@ -3,21 +3,21 @@
 import { motion } from "framer-motion"
 
 const tradeLinks: Record<string, string> = {
-  "Plumbers": "/ai-call-answering-plumbers",
-  "Electricians": "/ai-call-answering-electricians",
-  "Builders": "/ai-call-answering-builders",
-  "Roofers": "/ai-call-answering-roofers",
-  "Locksmiths": "/ai-call-answering-locksmiths",
-  "Landscapers": "/ai-call-answering-landscapers",
-  "Heating Engineers": "/ai-call-answering-heating-engineers",
-  "Pest Control": "/ai-call-answering-pest-control",
-  "Cleaners": "/ai-call-answering-cleaners",
-  "Drainage": "/ai-call-answering-drainage",
-  "Joiners": "/ai-call-answering-joiners",
-  "Plasterers": "/ai-call-answering-plasterers",
-  "Tilers": "/ai-call-answering-tilers",
-  "Carpenters": "/ai-call-answering-carpenters",
-  "Handymen": "/ai-call-answering-handymen",
+  "Plumbers": "/for-plumbers",
+  "Electricians": "/for-electricians",
+  "Builders": "/for-builders",
+  "Roofers": "/for-roofers",
+  "Locksmiths": "/for-locksmiths",
+  "Landscapers": "/for-landscapers",
+  "Heating Engineers": "/for-heating-engineers",
+  "Pest Control": "/for-pest-control",
+  "Cleaners": "/for-cleaners",
+  "Drainage": "/for-drainage",
+  "Joiners": "/for-joiners",
+  "Plasterers": "/for-plasterers",
+  "Tilers": "/for-tilers",
+  "Carpenters": "/for-carpenters",
+  "Handymen": "/for-handymen",
 }
 
 export function SocialProofBand() {
