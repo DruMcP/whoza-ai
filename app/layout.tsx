@@ -92,13 +92,14 @@ export default function RootLayout({
       <head>
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/favicon.ico" />
-        <link
-          rel="preload"
-          as="image"
-          href="/_next/image?url=%2Fimages%2Fphone-frame.webp&w=384&q=75"
-          imagesrcset="/_next/image?url=%2Fimages%2Fphone-frame.webp&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fphone-frame.webp&w=384&q=75 384w"
-          imagesizes="(max-width: 768px) 280px, 380px"
-        />
+    {/* Preconnect to critical origins — reduces TTFB by establishing early connections */}
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+    <link rel="preconnect" href="https://whoza.ai" crossOrigin="anonymous" />
         {/* Google Tag Manager */}
       <Script
         id="gtm-script"

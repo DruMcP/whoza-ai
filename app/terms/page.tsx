@@ -4,6 +4,8 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { FileText, Phone, CreditCard, AlertTriangle, Clock, Lock, Globe, Scale } from "lucide-react"
 
+export const revalidate = 3600
+
 export const metadata: Metadata = {
   title: "Terms of Service | whoza.ai",
   description: "whoza.ai terms of service — no contracts, monthly rolling, 7-day free trial. Read our full terms.",

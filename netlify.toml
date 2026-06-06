@@ -9,7 +9,7 @@
   NODE_ENV = "production"
 
 # === SAMPLE-CALL REDIRECT (Batch 2 Fix) ===
-# Audio demos coming soon — redirect to homepage for now
+# Audio demos coming soon - redirect to homepage for now
 [[redirects]]
   from = "/sample-call"
   to = "/"
@@ -160,6 +160,8 @@
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.com *.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: *.google-analytics.com; font-src 'self'; connect-src 'self' *.supabase.co *.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+    # === TTFB OPTIMIZATION: Cache static assets at Netlify edge ===
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
   for = "/sitemap.xml"
@@ -175,3 +177,25 @@
   for = "/llms.txt"
   [headers.values]
     Content-Type = "text/plain; charset=utf-8"
+
+# === TTFB OPTIMIZATION: Aggressive edge caching for static assets ===
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=31536000"
+
+[[headers]]
+  for = "*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=31536000"
+
+[[headers]]
+  for = "/favicon.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, stale-while-revalidate=31536000"
+

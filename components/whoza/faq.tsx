@@ -13,13 +13,43 @@ import {
 const faqs = [
   {
     question: "How much does Whoza cost in total?",
-    answer: "You pay a monthly plan fee (Starter £59, Growth £125, Pro £230, Scale £399). Each plan includes a set number of call handling minutes and booked enquiries. Additional enquiries beyond your included amount are charged per booking. Overage minutes are billed at £0.26 per minute. There are no hidden setup fees or long-term contracts.",
+    answer: "You pay a monthly plan fee (Starter £59, Growth £125, Pro £230, Scale £399). Each plan includes a set number of call handling minutes and booked enquiries. Additional enquiries beyond your included amount are charged per booking. Overage minutes are billed at £0.26 per minute. There are no hidden setup fees or long-term contracts. You can cancel anytime.",
     category: "Pricing",
   },
   {
     question: "Is there a free trial?",
     answer: "Yes — the 7-day free trial is available on the Starter plan only. Your trial includes 20 minutes of call handling and up to 4 booked enquiries at no charge. No credit card required to start. If Whoza works for your business, you can upgrade to any plan. If not, you can cancel anytime during the trial with no charge.",
     category: "General",
+  },
+  {
+    question: "Is there a contract?",
+    answer: "No. whoza.ai has no contracts. You're free to cancel anytime with no penalties. We also offer a 30-day money-back guarantee on all plans.",
+    category: "Pricing",
+  },
+  {
+    question: "Does it work with my existing phone number?",
+    answer: "Yes. You simply forward your existing business number to your whoza.ai number. Your customers call the same number they always have — they just get answered every time instead of hitting voicemail. Setup takes 30 minutes with your phone provider.",
+    category: "Setup",
+  },
+  {
+    question: "Can I search through my past calls?",
+    answer: "Yes. Katie writes detailed text notes for every call, which you can search by keyword, job type, location, or date in your dashboard. Type 'boiler' to find all boiler-related calls, or 'Bristol' to find all calls from that area. Call notes are stored for 30 days on Starter, 90 days on Growth, and 1 year on Pro.",
+    category: "General",
+  },
+  {
+    question: "Can I choose a different voice for my AI?",
+    answer: "Absolutely. We offer 12 different voices with a range of UK accents and tones — from Scottish to Welsh to London. You can preview and change your voice anytime in your dashboard.",
+    category: "General",
+  },
+  {
+    question: "What happens if someone leaves a voicemail?",
+    answer: "Our AI detects voicemails, transcribes them to text, and sends the message to your WhatsApp within 60 seconds. If the voicemail mentions an emergency, it's flagged as urgent so you see it immediately. No audio is stored — only text transcripts.",
+    category: "General",
+  },
+  {
+    question: "What trades do you support?",
+    answer: "We support all UK trades including plumbers, electricians, builders, roofers, painters, landscapers, heating engineers, carpenters, tilers, plasterers, locksmiths, drainage specialists, and pest control. Our agents are trained on trade-specific terminology and common customer queries for each profession.",
+    category: "Trades",
   },
   {
     question: "What happens to my data if I cancel?",
@@ -37,18 +67,13 @@ const faqs = [
     category: "General",
   },
   {
-    question: "Does it work with my existing phone number?",
-    answer: "Yes. You simply forward your existing business number to your whoza.ai number. Your customers call the same number they always have — they just get answered every time instead of hitting voicemail.",
-    category: "Setup",
+    question: "Can I export my call data?",
+    answer: "Yes, on Growth and above. You can export your call logs as CSV or Excel files, filter by date range, job type, and more. We can also automatically email you a monthly export.",
+    category: "General",
   },
   {
-    question: "What trades do you support?",
-    answer: "We support all UK trades including plumbers, electricians, builders, roofers, painters, landscapers, heating engineers, carpenters, tilers, plasterers, locksmiths, drainage specialists, and pest control. Our agents are trained on trade-specific terminology and common customer queries for each profession.\n\nKatie understands emergency scenarios for each trade: roofing emergencies (storm damage, leaks, loose tiles, insurance work), locksmith lockouts at any hour, drainage flooding vs routine cleans, builder site surveys and extensions, and more. She triages urgency immediately — water coming through the ceiling or a lockout at 2am gets flagged as emergency and pushed to your phone instantly. For routine enquiries, she books them directly into your calendar at a time that works for you.",
-    category: "Trades",
-  },
-  {
-    question: "Is my data safe and compliant?",
-    answer: "Absolutely. We're fully compliant with all relevant data protection regulations. All call recordings and customer data are encrypted, stored in secure local data centers, and you maintain full control. You can delete any data at any time from your dashboard.",
+    question: "Does whoza work with my other business tools?",
+    answer: "Yes. On Growth and above, whoza connects with Zapier and Make, letting you sync enquiries with Google Sheets, Google Calendar, Xero, Mailchimp, and 8,000+ other apps.",
     category: "General",
   },
   {

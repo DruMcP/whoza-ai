@@ -67,6 +67,8 @@ const articleSchema = {
   "dateModified": "2026-05-22",
 }
 
+export const revalidate = 3600
+
 export default function MissedCallsCostPage() {
   return (
     <>

@@ -215,6 +215,8 @@ const categories = [
   { icon: MessageCircle, label: "Comparisons", questions: [12] },
 ]
 
+export const revalidate = 3600
+
 export default function FAQPage() {
   const questions = faqSchema.mainEntity
 

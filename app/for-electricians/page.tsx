@@ -70,6 +70,8 @@ const faqs = [
   },
 ]
 
+export const revalidate = 3600
+
 export default function ForElectriciansPage() {
   return (
     <>
@@ -385,7 +387,7 @@ export default function ForElectriciansPage() {
               ))}
             </div>
             <p className="mt-6 text-white/50 text-sm">
-              Read Dave's full story: <Link href="/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky" className="text-amber-400 hover:text-amber-300 underline">I Lost 3 Emergency Callouts a Day. Here's How I Fixed It.</Link>
+              Read Dave's full story: <a href="/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky" className="text-amber-400 hover:text-amber-300 underline">I Lost 3 Emergency Callouts a Day. Here's How I Fixed It.</a>
             </p>
           </div>
         </section>
@@ -448,20 +450,20 @@ export default function ForElectriciansPage() {
               {faqs.map((faq, idx) => (
                 <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
                   <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
-                  <p className="text-white/60 leading-relaxed">{faq.answer}</p>
+                  <p className="text-white/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                 </div>
               ))}
             </div>
             <div className="mt-10 text-center">
               <p className="text-white/50 text-sm">
                 Still have questions? Read our{" "}
-                <Link href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-amber-400 hover:text-amber-300 underline">
+                <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-amber-400 hover:text-amber-300 underline">
                   complete AI call answering guide
-                </Link>{" "}
+                </a>{" "}
                 or{" "}
-                <Link href="/pricing" className="text-amber-400 hover:text-amber-300 underline">
+                <a href="/pricing" className="text-amber-400 hover:text-amber-300 underline">
                   compare all pricing plans
-                </Link>.
+                </a>.
               </p>
             </div>
           </div>

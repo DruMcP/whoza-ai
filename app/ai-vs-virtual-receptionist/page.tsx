@@ -40,6 +40,8 @@ const comparisons = [
   { category: "Contract", ai: "None — cancel anytime", human: "12-month typical", winner: "ai", detail: "No lock-in with AI. Freedom to leave." },
 ]
 
+export const revalidate = 3600
+
 export default function AIVsVirtualReceptionistPage() {
   return (
     <>

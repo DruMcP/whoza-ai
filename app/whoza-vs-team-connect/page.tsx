@@ -72,6 +72,8 @@ const reviewSchema = {
   "reviewBody": "whoza.ai vs Team-Connect comparison for UK trades. Team-Connect wins on absolute price (£9.99 entry vs £59). whoza.ai wins on features (WhatsApp, reviews, competitor analysis, spam filtering, trade specialisation), support quality, and guarantee length. Both have no contracts. Recommendation: Choose Team-Connect if you have extremely limited budget and just need basic call answering. Choose whoza.ai if you want a complete revenue system and can justify the £49/month extra for features that generate return.",
 }
 
+export const revalidate = 3600
+
 export default function VsTeamConnectPage() {
   return (
     <>

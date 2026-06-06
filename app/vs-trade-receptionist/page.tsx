@@ -4,6 +4,8 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { ArrowRight, Check, X, Clock, PoundSterling, Shield, AlertTriangle, Building, Globe, Scale } from "lucide-react"
 
+export const revalidate = 3600
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Whoza.ai vs Trade Receptionist | UK Trades",

@@ -36,8 +36,16 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "247-call-answering-uk-trades-guide-2026",
+    title: "24/7 Call Answering for UK Trades: Complete Guide (2026)",
+    excerpt: "Emergency calls don't wait for business hours. Learn how UK tradespeople can capture every 2am burst pipe, midnight lockout, and Sunday boiler failure with AI-powered 24/7 call answering. Real costs, scenarios, and ROI.",
+    readTime: "18 min read",
+    date: "2026-06-06",
+    category: "Emergency Services",
+  },
+  {
     slug: "ai-phone-technology-complete-guide",
-    title: "AI Phone Technology: The Complete Guide for UK Tradespeople (2026)",
+    title: "AI Phone Technology Guide for UK Trades (2026)",
     excerpt: "How AI voice agents actually work — NLP, speech synthesis, intent recognition, voice quality, and the future of AI phone technology for trade businesses.",
     readTime: "18 min read",
     date: "2026-06-05",
@@ -77,7 +85,7 @@ const blogPosts = [
   },
   {
     slug: "ai-call-answering-trades-uk-guide",
-    title: "AI Call Answering for UK Trades: The Complete Guide (2026)",
+    title: "AI Call Answering for UK Trades (2026)",
     excerpt: "The definitive UK guide to AI call answering for plumbers, electricians, gas engineers and builders. How it works, what it costs, and how to choose the right service.",
     readTime: "15 min read",
     date: "2026-06-05",
@@ -85,7 +93,7 @@ const blogPosts = [
   },
   {
     slug: "missed-call-recovery-trades-guide",
-    title: "Missed Call Recovery for UK Trades: The Complete Guide",
+    title: "Missed Call Recovery for UK Trades | Guide",
     excerpt: "Discover how UK tradespeople can recover revenue from missed calls. Statistics, cost analysis, customer journey mapping, and proven recovery strategies.",
     readTime: "14 min read",
     date: "2026-06-05",
@@ -93,7 +101,7 @@ const blogPosts = [
   },
   {
     slug: "how-does-ai-call-answering-work",
-    title: "How Does AI Call Answering Work? A UK Trades Guide",
+    title: "How AI Call Answering Works | UK Trades Guide",
     excerpt: "Simple explanation of AI call answering technology for UK tradespeople. Learn how voice agents capture calls, qualify leads, and deliver enquiries to WhatsApp in 3 seconds.",
     readTime: "6 min read",
     date: "2026-06-05",
@@ -101,7 +109,7 @@ const blogPosts = [
   },
   {
     slug: "ai-vs-human-receptionist-trades",
-    title: "AI vs Human Receptionist for UK Trades: Which Wins?",
+    title: "AI vs Human Receptionist: UK Trades",
     excerpt: "Head-to-head comparison of AI and human receptionists for UK trade businesses. Cost, availability, call quality, and customer experience compared honestly.",
     readTime: "7 min read",
     date: "2026-06-05",
@@ -109,7 +117,7 @@ const blogPosts = [
   },
   {
     slug: "ai-call-answering-cost-uk",
-    title: "AI Call Answering Cost UK: Pricing Guide for Trades",
+    title: "AI Call Answering Pricing UK | Trades Cost",
     excerpt: "Complete UK pricing guide for AI call answering services. Compare plans, calculate ROI, and understand the true cost for plumbers, electricians, and builders.",
     readTime: "6 min read",
     date: "2026-06-05",
@@ -117,7 +125,7 @@ const blogPosts = [
   },
   {
     slug: "24-7-call-answering-emergency-trades",
-    title: "24/7 Call Answering for Emergency Trades: UK Guide",
+    title: "24/7 Call Answering for Emergency Trades UK",
     excerpt: "Why 24/7 call answering is essential for UK emergency trades. How AI captures burst pipes, power cuts, and lockouts at 2am, weekends, and bank holidays.",
     readTime: "6 min read",
     date: "2026-06-05",
@@ -196,6 +204,8 @@ const blogPosts = [
     category: "Industry Insights",
   },
 ]
+
+export const revalidate = 3600
 
 export default function BlogPage() {
   return (

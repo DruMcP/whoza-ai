@@ -37,6 +37,7 @@ import { HomepageSchema, VideoSchema } from "@/components/whoza/schema-markup"
 import { FAQPageSchema } from "@/components/whoza/faq-schema"
 import { ExitIntentModal } from "@/components/whoza/exit-intent-modal"
 
+
 export default function Home() {
   return (
     <>
@@ -56,6 +57,13 @@ export default function Home() {
           { question: "What happens if Katie can't handle a call?", answer: "Katie is trained to recognize when she needs to transfer to a human. For complex queries, emergencies, or if the customer specifically requests you, she'll take a message and notify you immediately via SMS and email. You can call them back within seconds." },
           { question: "Does it work with my existing phone number?", answer: "Yes. You simply forward your existing business number to your whoza.ai number. Your customers call the same number they always have — they just get answered every time instead of hitting voicemail." },
           { question: "Is my data safe and compliant?", answer: "Absolutely. We're fully compliant with all relevant data protection regulations. All call recordings and customer data are encrypted, stored in secure local data centers, and you maintain full control." },
+          { question: "Does it work with my existing phone number?", answer: "Yes. You simply forward your existing business number to your whoza.ai number. Your customers call the same number they always have — they just get answered every time instead of hitting voicemail. Setup takes 30 minutes with your phone provider." },
+          { question: "Is there a contract?", answer: "No. whoza.ai has no contracts. You're free to cancel anytime with no penalties. We also offer a 30-day money-back guarantee on all plans." },
+          { question: "Can I search through my past calls?", answer: "Yes. Katie writes detailed text notes for every call, which you can search by keyword, job type, location, or date in your dashboard. Type 'boiler' to find all boiler-related calls, or 'Bristol' to find all calls from that area. Call notes are stored for 30 days on Starter, 90 days on Growth, and 1 year on Pro." },
+          { question: "Can I choose a different voice for my AI?", answer: "Absolutely. We offer 12 different voices with a range of UK accents and tones — from Scottish to Welsh to London. You can preview and change your voice anytime in your dashboard." },
+          { question: "What happens if someone leaves a voicemail?", answer: "Our AI detects voicemails, transcribes them to text, and sends the message to your WhatsApp within 60 seconds. If the voicemail mentions an emergency, it's flagged as urgent so you see it immediately. No audio is stored — only text transcripts." },
+          { question: "Can I export my call data?", answer: "Yes, on Growth and above. You can export your call logs as CSV or Excel files, filter by date range, job type, and more. We can also automatically email you a monthly export." },
+          { question: "Does whoza work with my other business tools?", answer: "Yes. On Growth and above, whoza connects with Zapier and Make, letting you sync enquiries with Google Sheets, Google Calendar, Xero, Mailchimp, and 8,000+ other apps." },
           { question: "What if I want to cancel?", answer: "Cancel anytime — no contracts, no cancellation fees, no hassle. We're confident you'll stay because the system pays for itself many times over, but if it's not right for your business, you can cancel with one click from your dashboard." },
           { question: "What does the free trial include?", answer: "The 7-day free trial is on the Starter plan only. It includes: 20 minutes of AI call handling, up to 4 booked enquiries, full access to the WhatsApp delivery system, and the complete dashboard." },
           { question: "What happens to my data if I cancel?", answer: "You can cancel anytime with one click. Your call recordings, customer data, and enquiry history are yours. We can export your data on request, and all stored data is deleted in line with GDPR requirements after cancellation." },

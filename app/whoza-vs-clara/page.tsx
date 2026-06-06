@@ -71,6 +71,8 @@ const reviewSchema = {
   "reviewBody": "Independent comparison of whoza.ai vs Clara AI for UK trades. whoza.ai wins on features (WhatsApp, reviews, competitor analysis) and flexibility (no contract, longer guarantee). Clara wins on entry-level price (£49.99 vs £59). Both offer good UK voices. Recommendation: Choose Clara if budget is extremely tight and you only need basic call answering. Choose whoza.ai if you want the complete revenue system with review collection and growth insights.",
 }
 
+export const revalidate = 3600
+
 export default function VsClaraPage() {
   return (
     <>

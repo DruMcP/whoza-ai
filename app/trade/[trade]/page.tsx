@@ -32,6 +32,8 @@ import { ClaireDashboard } from "@/components/whoza/claire-dashboard"
 import { trades, getTradeBySlug, getAllTradeSlugs } from "@/lib/trades"
 import { VideoSchema } from "@/components/whoza/schema-markup"
 
+export const revalidate = 3600
+
 interface PageProps {
   params: Promise<{ trade: string }>
 }

@@ -4,6 +4,8 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { Shield, Phone, Database, Clock, Lock, UserCheck, FileText, Globe, ExternalLink } from "lucide-react"
 
+export const revalidate = 3600
+
 export const metadata: Metadata = {
   title: "Privacy Policy | whoza.ai",
   description: "whoza.ai privacy policy — ICO-registered, UK GDPR compliant. Learn how we protect your data.",

@@ -61,6 +61,8 @@ const caseStudies = [
   },
 ]
 
+export const revalidate = 3600
+
 export default function CaseStudiesPage() {
   return (
     <div className="min-h-screen bg-[var(--navy-900)] text-white">

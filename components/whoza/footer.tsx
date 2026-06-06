@@ -32,6 +32,8 @@ const footerLinks = {
     { label: "vs Moneypenny", href: "/whoza-vs-moneypenny" },
     { label: "vs Team-Connect", href: "/whoza-vs-team-connect" },
     { label: "vs Virtual Receptionist", href: "/ai-vs-virtual-receptionist" },
+    { label: "vs ARROW", href: "/whoza-vs-arrow" },
+    { label: "vs IONOS", href: "/whoza-vs-ionos" },
   ],
   tools: [
     { label: "Lost Jobs Calculator", href: "/tools/lost-jobs-calculator" },
@@ -56,6 +58,8 @@ const badges = [
   "ICO Registered",
   "GDPR Compliant",
   "UK Data Centers",
+  "No Contract",
+  "Cancel Anytime",
 ]
 
 export function Footer() {
@@ -82,7 +86,7 @@ export function Footer() {
               />
             </a>
             <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-xs">
-              AI revenue system for UK tradespeople. Capture missed calls, book more jobs, grow automatically.
+              AI revenue system for UK tradespeople. Capture missed calls, book more jobs, grow automatically. No contracts. Cancel anytime.
             </p>
             
             {/* Pilot CTA */}

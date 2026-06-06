@@ -76,6 +76,47 @@ const nextConfig = {
       },
     ]
   },
+
+  // === TTFB OPTIMIZATION: Aggressive Edge Caching ===
+  async headers() {
+    return [
+      // Cache static assets aggressively at CDN edge
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      // Cache static images at edge
+      {
+        source: '/images/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=31536000' },
+        ],
+      },
+      // Cache OG image
+      {
+        source: '/og-image.webp',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=31536000' },
+        ],
+      },
+      // Cache favicon
+      {
+        source: '/favicon.ico',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=604800, stale-while-revalidate=31536000' },
+        ],
+      },
+      // HTML pages: stale-while-revalidate for ISR
+      {
+        source: '/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' },
+        ],
+      },
+    ]
+  },
 }
 
 export default nextConfig
