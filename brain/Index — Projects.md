@@ -1,6 +1,6 @@
 ---
 created: 2026-04-29
-updated: 2026-05-10
+updated: 2026-06-07
 tags: [index, projects]
 ---
 
@@ -11,7 +11,7 @@ tags: [index, projects]
 |---------|--------|-------|-------------|
 | [[Project — Voice Agent White Label]] | active | Agent-4 / Agent-5 | 2026-04-28 |
 | [[Project — SEO Remediation]] | active | Agent-7 / Agent-2 | 2026-04-27 |
-| [[Project — Pre-Production Build]] | active | Agent-1 / Agent-2 | 2026-05-10 |
+| [[Project — Pre-Production Build]] | active | Agent-1 / Agent-2 | 2026-06-07 |
 | [[Project — 30-Day Live Test]] | active | Dru / Agent-6 | 2026-04-28 |
 | [[Project — NGT Introduction]] | active | Dru | 2026-04-26 |
 | [[Project — Ovivo Contact Strategy]] | active | Dru | 2026-04-26 |

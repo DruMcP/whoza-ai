@@ -1,9 +1,9 @@
 # Whoza.ai Project Brain
-**Last Updated:** 2026-05-03
+**Last Updated:** 2026-05-11
 **Project:** whoza.ai v2.0 Upgrade
 **Staging Project:** ligjstpxqtkurvteyyhw (Supabase)
 **Production URL:** https://whoza.ai
-**Staging URL:** https://whoza-ai-staging.netlify.app
+**Staging URL:** https://whoza-ai-staging-349.netlify.app
 
 ---
 
@@ -157,6 +157,7 @@ FOR UPDATE;
 9. ROI calculator fix (business: 59) ✅
 10. Red urgency box removal ✅
 11. Logo sizing increase ✅
+12. **Most Popular badge fix (2026-05-11)** ✅ — Removed `overflow-hidden` on popular pricing card that was clipping the "Most Popular" badge on Growth plan
 
 ### High Priority
 1. Import TrialExplanation into page.tsx + position + deploy
@@ -234,6 +235,9 @@ FOR UPDATE;
 - `src/components/FinalDetailsStep.jsx` (new)
 - `src/components/StepIndicator.jsx` (new)
 
+### Files Modified (2026-05-11)
+- `components/whoza/pricing.tsx` — **Fixed**: Most Popular badge on Growth plan was clipped by `overflow-hidden`. Now conditionally applies `overflow-hidden` only to non-popular cards.
+
 ---
 
 ## 🏗️ Technical Stack
@@ -258,5 +262,5 @@ FOR UPDATE;
 
 ---
 
-*Last build: 2026-05-03 — 21 pages prerendered ✅*
-*Last deploy: Deploy ID 69f718cf207f6045b970ab35*
+*Last build: 2026-05-11 — 44 pages prerendered ✅*
+*Last deploy: Deploy ID 6a023e92c840bd48632bd7db — staging 349*
