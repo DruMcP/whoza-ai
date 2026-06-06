@@ -243,8 +243,8 @@ export default function AICallAnsweringGuidePage() {
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div className="bg-white/5 border border-white/10 rounded-xl p-8">
               <p className="text-white/70 leading-relaxed mb-6">
-                If you are a UK tradesperson — plumber, electrician, roofer, locksmith, gas engineer, 
-                builder, landscaper, or any trade that works with your hands — you have a phone problem. 
+                If you are a UK tradesperson — <a href="/ai-call-answering-plumbers" className="text-emerald-400 hover:underline">plumber</a>, <a href="/ai-call-answering-electricians" className="text-emerald-400 hover:underline">electrician</a>, <a href="/ai-call-answering-roofers" className="text-emerald-400 hover:underline">roofer</a>, <a href="/ai-call-answering-locksmiths" className="text-emerald-400 hover:underline">locksmith</a>, gas engineer, 
+                <a href="/ai-call-answering-builders" className="text-emerald-400 hover:underline">builder</a>, <a href="/ai-call-answering-landscapers" className="text-emerald-400 hover:underline">landscaper</a>, or any trade that works with your hands — you have a phone problem. 
                 The Office for National Statistics (ONS) reports that <strong className="text-white">62% of calls 
                 to small UK trade businesses go unanswered</strong>. Of those missed callers, 85% never ring back. 
                 They simply call the next number on Google.

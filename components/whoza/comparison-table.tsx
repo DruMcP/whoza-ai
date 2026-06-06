@@ -167,32 +167,38 @@ export function ComparisonTable() {
           className="mt-8 text-center"
         >
           <p className="text-sm text-[var(--slate-500)] mb-4">
-            See how whoza.ai compares to specific services:
+            See detailed comparison:
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <a 
-              href="/whoza-vs-clara" 
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--border)] hover:bg-[var(--katie-blue)]/5 hover:border-[var(--katie-blue)]/20 transition-all text-sm font-medium text-[var(--navy-900)]"
-            >
-              vs Clara AI
-            </a>
             <a 
               href="/whoza-vs-moneypenny" 
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--border)] hover:bg-[var(--katie-blue)]/5 hover:border-[var(--katie-blue)]/20 transition-all text-sm font-medium text-[var(--navy-900)]"
             >
-              vs Moneypenny
+              Moneypenny vs whoza.ai
             </a>
             <a 
-              href="/whoza-vs-team-connect" 
+              href="/whoza-vs-clara" 
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--border)] hover:bg-[var(--katie-blue)]/5 hover:border-[var(--katie-blue)]/20 transition-all text-sm font-medium text-[var(--navy-900)]"
             >
-              vs Team-Connect
+              Clara AI vs whoza.ai
             </a>
             <a 
-              href="/ai-vs-virtual-receptionist" 
+              href="/whoza-vs-arrow" 
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--border)] hover:bg-[var(--katie-blue)]/5 hover:border-[var(--katie-blue)]/20 transition-all text-sm font-medium text-[var(--navy-900)]"
             >
-              vs Virtual Receptionist
+              Arrow vs whoza.ai
+            </a>
+            <a 
+              href="/whoza-vs-answer" 
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--border)] hover:bg-[var(--katie-blue)]/5 hover:border-[var(--katie-blue)]/20 transition-all text-sm font-medium text-[var(--navy-900)]"
+            >
+              Answer.co.uk vs whoza.ai
+            </a>
+            <a 
+              href="/whoza-vs-yourbusinessnumber" 
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--border)] hover:bg-[var(--katie-blue)]/5 hover:border-[var(--katie-blue)]/20 transition-all text-sm font-medium text-[var(--navy-900)]"
+            >
+              YourBusinessNumber vs whoza.ai
             </a>
           </div>
         </motion.div>

@@ -1,16 +1,16 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Phone, ClipboardCheck, MessageCircle, TrendingUp, ArrowRight } from "lucide-react"
+import { FileText, MessageCircle, Star, TrendingUp, ArrowRight, Shield, Calendar } from "lucide-react"
 import { useLocale } from "@/lib/locale-context"
 
 const stages = [
   {
     number: "01",
     stage: "CAPTURE",
-    title: "Answer Every Call",
-    description: "Katie or Mark picks up in 3 seconds, 24/7. No missed calls. No voicemail. Every call captured and qualified.",
-    icon: Phone,
+    title: "AI Answers — Call Notes, Spam Filter, Urgent Flags",
+    description: "Your chosen voice answers every call 24/7. AI takes detailed text notes, filters spam, and flags urgent jobs instantly. Every conversation captured as searchable text.",
+    icon: FileText,
     color: "var(--katie-blue)",
     bgLight: "bg-[var(--katie-blue)]/10",
     textColor: "text-[var(--katie-blue)]",
@@ -18,36 +18,36 @@ const stages = [
   },
   {
     number: "02",
-    stage: "CONVERT",
-    title: "Book the Job",
-    description: "AI gathers the details, filters spam, and books qualified leads. You only see real jobs with real money attached.",
-    icon: ClipboardCheck,
-    color: "var(--rex-green)",
-    bgLight: "bg-[var(--rex-green)]/10",
-    textColor: "text-[var(--rex-green)]",
-    borderColor: "border-[var(--rex-green)]/30",
-  },
-  {
-    number: "03",
     stage: "DELIVER",
-    title: "Send to Your Phone",
-    description: "Qualified jobs hit your WhatsApp instantly. Customer name, job type, location, time, and estimated value. Tap to accept.",
-    icon: MessageCircle,
+    title: "Deliver — WhatsApp, Calendar Sync, Keep Your Number",
+    description: "Searchable dashboard, auto-synced calendar, and keep your existing number. All job details sent to your phone instantly. Your customers never know anything changed.",
+    icon: Calendar,
     color: "var(--claire-amber)",
     bgLight: "bg-[var(--claire-amber)]/10",
     textColor: "text-[var(--claire-amber)]",
     borderColor: "border-[var(--claire-amber)]/30",
   },
   {
-    number: "04",
-    stage: "GROW",
-    title: "Get More Work",
-    description: "Claire gets you reviews after every job. Rex tells you weekly what to fix so you show up more in ChatGPT and Google AI. More calls. More jobs.",
-    icon: TrendingUp,
+    number: "03",
+    stage: "CONVERT",
+    title: "Convert — Google Reviews on Autopilot",
+    description: "Claire auto-requests Google reviews after every completed job. More reviews = more trust = more customers choosing you. Turn every job into future work.",
+    icon: Star,
     color: "var(--rex-green)",
     bgLight: "bg-[var(--rex-green)]/10",
     textColor: "text-[var(--rex-green)]",
     borderColor: "border-[var(--rex-green)]/30",
+  },
+  {
+    number: "04",
+    stage: "GROW",
+    title: "Grow — Weekly Insights, Advanced Analytics",
+    description: "Weekly summary email every Monday. Advanced analytics (Pro+). Rex insights tell you what to fix so you show up more in ChatGPT and Google AI. More calls. More jobs.",
+    icon: TrendingUp,
+    color: "var(--mark-grey)",
+    bgLight: "bg-[var(--mark-grey)]/10",
+    textColor: "text-[var(--mark-grey)]",
+    borderColor: "border-[var(--mark-grey)]/30",
   },
 ]
 
@@ -86,7 +86,7 @@ export function RevenueSystem() {
         {/* System Flow */}
         <div className="relative">
           {/* Connecting Line (Desktop) */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-[var(--katie-blue)] via-[var(--rex-green)] via-[var(--claire-amber)] to-[var(--rex-green)] rounded-full" className="-translate-y-1/2" />
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-[var(--katie-blue)] via-[var(--claire-amber)] via-[var(--rex-green)] to-[var(--mark-grey)] rounded-full -translate-y-1/2" />
 
           <div className="grid lg:grid-cols-4 gap-6">
             {stages.map((stage, index) => (
@@ -118,7 +118,7 @@ export function RevenueSystem() {
 
                 {/* Arrow (Desktop) */}
                 {index < stages.length - 1 && (
-                  <div className="hidden lg:flex absolute top-1/2 -right-3 z-20 w-6 h-6 rounded-full bg-white border-2 border-[var(--border)] items-center justify-center" className="-translate-y-1/2">
+                  <div className="hidden lg:flex absolute top-1/2 -right-3 z-20 w-6 h-6 rounded-full bg-white border-2 border-[var(--border)] items-center justify-center -translate-y-1/2">
                     <ArrowRight className="w-3 h-3 text-[var(--slate-400)]" />
                   </div>
                 )}

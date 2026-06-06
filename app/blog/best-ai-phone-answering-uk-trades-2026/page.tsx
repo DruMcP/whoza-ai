@@ -257,7 +257,7 @@ export default function BestAIGuidePage() {
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="bg-white/5 border border-white/10 rounded-xl p-8">
               <p className="text-white/70 leading-relaxed mb-4">
-                If you're a plumber, electrician, roofer, or any UK tradesperson, you've probably missed calls 
+                If you're a <a href="/ai-call-answering-plumbers" className="text-emerald-400 hover:underline">plumber</a>, <a href="/ai-call-answering-electricians" className="text-emerald-400 hover:underline">electrician</a>, <a href="/ai-call-answering-roofers" className="text-emerald-400 hover:underline">roofer</a>, or any UK tradesperson, you've probably missed calls 
                 while on a job. According to a 2025 Federation of Small Businesses (FSB) survey, 62% of calls 
                 to small trade businesses go unanswered — and 85% of those callers never ring back. The cost? 
                 An estimated £5,200–£15,600 per year in lost revenue.

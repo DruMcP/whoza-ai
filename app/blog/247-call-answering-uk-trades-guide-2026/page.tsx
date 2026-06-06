@@ -303,8 +303,8 @@ export default function CallAnswering247UKGuidePage() {
               <p className="text-white/70 leading-relaxed mb-6">
                 This guide covers everything UK tradespeople need to know about 24/7 call answering in 2026:
                 which trades need it most, how AI handles emergency calls at 2am, real cost comparisons against
-                human services, ROI calculations, and step-by-step setup. Whether you are a plumber, locksmith,
-                heating engineer, electrician, or emergency roofer, this guide will show you how to capture
+                human services, ROI calculations, and step-by-step setup. Whether you are a <a href="/ai-call-answering-plumbers" className="text-emerald-400 hover:underline">plumber</a>, <a href="/ai-call-answering-locksmiths" className="text-emerald-400 hover:underline">locksmith</a>,
+                <a href="/ai-call-answering-heating-engineers" className="text-emerald-400 hover:underline">heating engineer</a>, <a href="/ai-call-answering-electricians" className="text-emerald-400 hover:underline">electrician</a>, or <a href="/ai-call-answering-roofers" className="text-emerald-400 hover:underline">emergency roofer</a>, this guide will show you how to capture
                 every after-hours opportunity without sacrificing your sleep or personal life.
               </p>
               <p className="text-white/70 leading-relaxed">

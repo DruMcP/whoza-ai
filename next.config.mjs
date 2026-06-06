@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Cache-busting deploy — force fresh CDN upload
   typescript: {
     ignoreBuildErrors: true,
   },

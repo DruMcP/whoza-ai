@@ -369,6 +369,45 @@ export default function BestAICallHandlerPage() {
               </tbody>
             </table>
           </div>
+
+          {/* Competitor comparison links */}
+          <div className="mt-8 text-center">
+            <p className="text-sm text-white/50 mb-4">
+              See detailed comparison:
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <a 
+                href="/whoza-vs-moneypenny" 
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all text-sm font-medium text-white"
+              >
+                Moneypenny vs whoza.ai
+              </a>
+              <a 
+                href="/whoza-vs-clara" 
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all text-sm font-medium text-white"
+              >
+                Clara AI vs whoza.ai
+              </a>
+              <a 
+                href="/whoza-vs-arrow" 
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all text-sm font-medium text-white"
+              >
+                Arrow vs whoza.ai
+              </a>
+              <a 
+                href="/whoza-vs-answer" 
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all text-sm font-medium text-white"
+              >
+                Answer.co.uk vs whoza.ai
+              </a>
+              <a 
+                href="/whoza-vs-yourbusinessnumber" 
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all text-sm font-medium text-white"
+              >
+                YourBusinessNumber vs whoza.ai
+              </a>
+            </div>
+          </div>
         </section>
 
         {/* Detailed Reviews */}

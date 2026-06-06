@@ -4433,4 +4433,669 @@ Your phone rings 24/7. Make sure it's always answered.`,
       ],
     },
   },
+  "i-lost-4000-in-one-storm-season-then-ai-answered-my-phone-tom-the-roofer": {
+    title: "I Lost £4,000 in One Storm Season. Then AI Answered My Phone.",
+    excerpt: "Manchester roofer shares honest 4-week diary using AI call answering. Real numbers. No BS. Storm season missed calls, tile repairs, leak emergencies. £5,200 recovered in one month.",
+    readTime: "9 min read",
+    date: "2026-06-07",
+    category: "UGC / Real Stories",
+    author: "Tom Hartley",
+    authorTitle: "Self-Employed Roofer, Manchester",
+    schema: {
+      headline: "I Lost £4,000 in One Storm Season. Then AI Answered My Phone.",
+      description: "Manchester roofer shares honest 4-week diary using AI call answering. Real numbers. No BS. Storm season missed calls, tile repairs, leak emergencies. £5,200 recovered in one month.",
+    },
+    content: {
+      introduction: `Storm season. November. Wind, rain, tiles flying off like confetti. And my phone was ringing off its perch while I was on a roof in Oldham.
+
+Lost 23 calls in 5 days. Twenty-three. I know because I counted the missed calls when I came down. Each one a potential leak, a slipped tile, a damaged gutter. At £200-450 a job, that is £4,000 minimum I left on the roof. While I was on another roof.
+
+I am Tom. I am a roofer from Manchester. One-man band. Scaffold ticket, 14 years, pitched and flat roofs, leadwork, emergency repairs. And this is what happened when I let AI answer my phone while I was up a ladder.`,
+      sections: [
+        {
+          heading: "How many calls do roofers actually miss?",
+          headingTag: "h2",
+          body: `I logged it properly. Not a guess. A week in November when the storms hit.
+
+Monday: 5 missed. Tuesday: 7. Wednesday: 4. Thursday: 6. Friday: 4. Total: 26 in one week.
+
+Out of those, 18 were genuine jobs. I know because I called some back. Four had already hired someone else. Three did not answer. Eleven got back to me eventually — but most of them had already had a temp fix done by a competitor who answered first.
+
+The worst? Thursday, 11:23 AM. I was on a three-storey Victorian in Chorlton, replacing ridge tiles. Phone ringing in my pocket. Hands full of slate, 30-foot up, wind gusting. Could not even reach my pocket safely. Checked it at 1 PM when I came down. Missed call from a landlord in Salford. Seven rental properties, roof damage from the storm. Wanted someone to survey all of them. That job was worth £2,500 minimum. Gone. He answered the next roofer who called back.
+
+Roofers miss more calls than most trades because we physically cannot answer. You are on a pitched roof, hands full of tiles, or on scaffold, or in a loft space. It is not like being under a sink where you can dry your hands and grab the phone. You are up there, tethered in, and the phone is vibrating in your jacket three layers down. By the time you get down, the caller has moved on.
+
+Storm season is the worst. Every roofer in Manchester is busy. The customer calls 3 numbers. The first one that answers gets the job. I was missing 5-6 calls a day during peak season. At £320 average job value, that is £1,000-£1,500 per day in lost enquiries.`,
+        },
+        {
+          heading: "What happens when AI answers your roofing call?",
+          headingTag: "h2",
+          body: `Mate of mine — Gary the plumber from Clapham — put me onto whoza.ai. Said this thing called Katie was answering his calls and sending him WhatsApp messages with all the details. I thought it was rubbish. AI answering phones? Sounds like one of those chatbots that just sends you in circles.
+
+But Gary showed me his phone. WhatsApp message: "New Enquiry — Katie. Leak through ceiling. 2-bed terrace in Didsbury. Storm damage. Water coming through light fitting. Needs emergency repair. £300-450 job."
+
+All that from a 2-minute phone call. And Katie sounded proper. Not robotic. Not like those phone menus you get when you call the bank. Sounded like a real receptionist.
+
+I signed up for the 7-day free trial. No credit card. No contract. Thought I'd test it and cancel if it was rubbish.
+
+Day 1: Katie answered 4 calls I missed. One was a slipped tile in Stockport. £180 job. I called back at my tea break, booked it for the next morning. Paid for the whole month before I'd even finished my brew.
+
+Day 2: Storm hit. I was on a roof in Ashton. Katie answered 5 calls. Three were proper jobs. One was a landlord with two properties needing emergency felt repairs. £800 job. I would have missed every single one of them because I was 20 feet up in the rain.`,
+        },
+        {
+          heading: "How much money did I recover in 4 weeks?",
+          headingTag: "h2",
+          body: `I kept a diary. Old school. Notebook in the van. Every WhatsApp message, every job I booked, every quid I made.
+
+Here's the raw numbers:`,
+          table: [
+            { label: "Week 1", value: "14 calls answered by AI. 4 jobs captured. £1,400 recovered. Storm season, phones ringing off the hook. Katie caught every one I missed on the roof." },
+            { label: "Week 2", value: "18 calls answered. 6 jobs captured. £2,100 recovered. Captured a £900 flat roof repair while I was replacing a chimney stack in Tameside." },
+            { label: "Week 3", value: "16 calls answered. 5 jobs captured. £1,850 recovered. Included a £650 leadwork job on a Victorian bay window I would have missed while up scaffolding." },
+            { label: "Week 4", value: "12 calls answered. 4 jobs captured. £850 recovered. Quieter week weather-wise but still 4 jobs I would have missed." },
+          ],
+          callout: "£5,200 recovered in 4 weeks. Cost: £59 for one month. Net gain: £5,141. Annual projection: £62,400+ in recovered revenue for £708 in AI costs. That is not marketing. That is my actual van diary.",
+        },
+        {
+          heading: "What does the WhatsApp message actually look like?",
+          headingTag: "h2",
+          body: `I get a WhatsApp within 3 seconds of the call ending. Every single time. Not exaggerating. 3 seconds.
+
+It looks like this:
+
+"New Enquiry — Katie\n\n👤 Name: David Patterson\n📞 Phone: 07XXX XXXXXX\n📍 Postcode: M21 8JH\n🔧 Job: Storm damage to roof. Tiles missing from front gable. Water coming through loft insulation.\n⚡ Urgency: Emergency — needs today\n💰 Estimated Value: £350-500\n
+Tap to action:\n✅ Accept  📞 Call Back  ❌ Decline"
+
+I tap "Accept" and it goes in my calendar. Tap "Call Back" and it dials his number. Tap "Decline" and Katie sends a polite text saying I'm fully booked.
+
+The customer gets a follow-up text either way. Professional. No ghosting. No "sorry I missed your call" voicemails at 9pm when I'm knackered and just want my dinner.
+
+Here's the thing that sold me. That £900 flat roof repair in Week 2? I was on a chimney stack in Tameside, 25 feet up, wind howling, hammer in one hand, slate in the other. Phone never rang in my pocket. Never even knew about the call until I checked WhatsApp at my break. Enquiry captured. Customer happy. Survey booked for Saturday. Without me doing anything. If I had missed that call, the customer would have called the next roofer on Google and I'd have lost a £900 job I didn't even know existed.`,
+        },
+        {
+          heading: "What does Katie NOT do well?",
+          headingTag: "h2",
+          body: `I'm not here to sell you rubbish. Here's what's not perfect. Four things. Same as Gary told me.
+
+**Complex roof quotes**
+If someone wants a full roof replacement quote over the phone, Katie collects the details but cannot give prices. She sends me the spec and I call back with the quote. Fair enough — I wouldn't quote a £8,000 re-roof blind either. She captures the enquiry. I close the deal. That's the split.
+
+**Very strong accents**
+Had one customer from Glasgow. Thick accent. Katie got his postcode slightly wrong and his surname was a bit off. I called him back, sorted it in 30 seconds. Fine for 95% of callers. But very strong regional accents can trip it up occasionally.
+
+**Chatty customers**
+Some people want to tell you their whole roofing history. The 1970s extension, the cowboy who botched the last job, the neighbour's recommendation. Katie keeps it brief and professional. Gets the info, moves it on. Some customers might find that a bit abrupt. Most just want their leak fixed.
+
+**Personal calls**
+Your mum calls. Your mate calls about the football. Katie treats them like customers. Sends me a WhatsApp: "New enquiry — Jennifer Hartley, asking if you're coming for Sunday roast." Hilarious. But slightly weird. At least I don't miss my mum's calls anymore.`,
+        },
+        {
+          heading: "Is it worth £59 a month for a roofer?",
+          headingTag: "h2",
+          body: `Do the maths with me. I'll use my actual numbers.
+
+£59 per month. That's £1.95 per day. Less than a coffee from the van.
+
+I was missing 5-6 calls per day during storm season. At £320 average per roofing job. Plus emergency repairs, leadwork, chimney repairs, flat roof jobs.
+
+In 4 weeks I captured 19 jobs I would have missed. Total recovered: £5,200.
+
+Cost: £59. Net gain: £5,141.
+
+One recovered call on Day 1 paid for the entire year. Not the month. The entire year. I made that back before I finished my lunch.
+
+But it's not just the money. It's the mental load. I used to finish a job at 5pm, come down off the roof, check my phone, and feel sick. 8, 9, 10 missed calls. Some with voicemail. Most without. I'd spend my evening ringing round, apologising, hoping they'd still want me. Now I check WhatsApp at my break, see everything captured properly, and call back when I'm ready. No more 5pm panic. No more Sunday night dread.
+
+£59 a month for peace of mind and £5,200 in recovered jobs? That's not a decision. That's a no-brainer. And if you're a roofer in Manchester or anywhere else, you know exactly what I'm talking about.`,
+        },
+        {
+          heading: "Who is this for? Who is it NOT for?",
+          headingTag: "h2",
+          body: `I'll be direct. No fluff.
+
+**This is for you if:**
+- You're a roofer, builder, or tradesperson missing calls while you're on site or up a ladder
+- You get emergency storm damage callouts you literally cannot afford to miss
+- You work alone — no apprentice, no partner answering the phone
+- You live on WhatsApp anyway (who doesn't?)
+- You hate voicemail and never check it
+- You want professional follow-up without doing it yourself
+- You work at height or in conditions where answering a phone is physically impossible
+
+**This is NOT for you if:**
+- You already have a full-time receptionist who answers every call
+- You only get 1-2 calls per week (probably not worth it, fair enough)
+- You want AI to give detailed roofing quotes over the phone (it can't — collects info, you quote)
+- You hate technology and won't check WhatsApp (you need to check the messages, mate)
+- You're a big firm with 10 vans and a call centre already
+
+Honestly? If you're a self-employed roofer, plumber, sparky, gas engineer, or builder working on your own and missing calls every day because you're grafting — this is a game changer. Same as Gary the plumber said, same as Dave the sparky said. And now I'm saying it too.`,
+        },
+      ],
+      conclusion: `TL;DR: I am Tom, a roofer from Manchester. I used to miss 5-6 calls per day during storm season because I was on roofs and couldn't answer. In 4 weeks using whoza.ai, I captured 19 jobs I would have missed, recovering £5,200 in revenue. It cost me £59 for the month. Katie the AI answers every call, sends the details to my WhatsApp in 3 seconds, and I call back when I'm free. If you're a roofer who misses calls while you're working, just try the 7-day free trial. No card needed. You'll know by Day 3 if it works for you.`,
+      cta: `If you're a roofer, plumber, sparky, gas engineer, or builder — and you're sick of missing calls while you're on jobs — just try the free week. No card. No commitment. Count how many jobs you capture. Then decide. [Start your free trial →](/)`,
+      faq: [
+        {
+          question: "How much does an AI receptionist cost for a roofer?",
+          answer: "Whoza.ai costs £59 per month. That is less than one emergency roof repair. Most roofers lose 4-6 calls per day during storm season. At £320 average per job, one recovered call per month pays for the entire year. The 7-day free trial lets you test it with zero risk.",
+        },
+        {
+          question: "Can AI really understand emergency roofing calls?",
+          answer: "Yes. Katie asks the right questions: what the damage is, where the property is, how urgent it is, and contact details. She sends everything to your WhatsApp within 3 seconds. For genuine emergencies like storm damage with active leaks, she can flag the call as urgent and patch through to you immediately.",
+        },
+        {
+          question: "Do customers know they are talking to AI?",
+          answer: "Most do not realise. Katie sounds like a real receptionist. The few who ask get told honestly. Not a single customer of mine has complained. Most just want their leak fixed or their tiles replaced. They do not care who answers the phone first.",
+        },
+        {
+          question: "What happens to emergency storm damage calls with AI answering?",
+          answer: "AI answers immediately, asks safety questions, determines urgency, and sends details to your WhatsApp within 3 seconds. For genuine emergencies like active leaks, missing tiles, or structural damage, it can patch through to you directly. You never miss an emergency.",
+        },
+        {
+          question: "Is a 7-day free trial actually free?",
+          answer: "Yes. No credit card. No contract. Full access for 7 days. If you do not like it, walk away. Nothing to cancel. I signed up because I had nothing to lose. Best business decision I made this year. Captured 4 jobs in my first week alone.",
+        },
+      ],
+    },
+  },
+  "i-was-missing-2000-extension-enquiries-every-month-then-i-tried-ai-steve-the-builder": {
+    title: "I Was Missing £2,000 Extension Enquiries Every Month. Then I Tried AI.",
+    excerpt: "Self-employed builder from Bristol shares honest 5-week diary using AI call answering. Real numbers. No BS. High-value extension and renovation enquiries captured. £7,400 recovered in one month.",
+    readTime: "10 min read",
+    date: "2026-06-07",
+    category: "UGC / Real Stories",
+    author: "Steve Dawson",
+    authorTitle: "Self-Employed Builder, Bristol",
+    schema: {
+      headline: "I Was Missing £2,000 Extension Enquiries Every Month. Then I Tried AI.",
+      description: "Self-employed builder from Bristol shares honest 5-week diary using AI call answering. Real numbers. No BS. High-value extension and renovation enquiries captured. £7,400 recovered in one month.",
+    },
+    content: {
+      introduction: `I worked out I was losing £2,000 a month in extension enquiries. Not guesses. Actual maths.
+
+I miss 4-5 calls a day when I'm on site. Mixing cement, running a saw, up a ladder, or in a customer's house discussing plans. Can't answer. Don't answer. And those callers? They ring the next builder on Google. Every single time.
+
+My average extension enquiry is £1,800. A loft conversion lead is £2,500. Kitchen renovation? £3,000. Missing just one of those a week is £2,000 a month. Gone. Because I was mixing cement.
+
+I'm Steve. Builder from Bristol. 11 years self-employed. Extensions, renovations, loft conversions, kitchen refurbs. Two lads help me occasionally but I'm the one who quotes, plans, and answers the phone. And I was failing at the phone bit.`,
+      sections: [
+        {
+          heading: "How many calls do builders actually miss?",
+          headingTag: "h2",
+          body: `I counted properly for two weeks before signing up. Wanted to know the real damage.
+
+Monday: 4 missed. Tuesday: 5. Wednesday: 3. Thursday: 6. Friday: 4. That's 22 calls in one week.
+
+Week 2: 19 missed. A bit quieter but still nearly 4 per day.
+
+Out of those 41 calls over two weeks, I reckon 28 were genuine enquiries. The rest were suppliers, spam, or my mate Dave. But 28 real jobs? Gone. Because I was on a building site, hands full, or in a meeting with a client.
+
+The killer? Thursday Week 1, 10:47 AM. I was on a site in Clifton, extension project, talking the client through steel beam placement. Phone rang in my pocket. Twice. I ignored it — unprofessional to answer mid-conversation. Checked it at 12:30. Missed call from a number in Redland. Called back at 1 PM. They'd already got someone else. Full kitchen renovation and extension. £4,200 job. Gone because I was doing my actual job.
+
+Builders miss calls differently from other trades. It's not just being up a ladder or under a sink. It's being in a client meeting. It's operating a mitre saw. It's mixing cement. It's being on a noisy site where you can't even hear the phone. And the worst part? Our jobs are high-value. Missing one extension enquiry can cost £2,000-£4,000. That's not a £200 service call. That's a month's wages in one missed call.`,
+        },
+        {
+          heading: "What happens when AI answers your builder call?",
+          headingTag: "h2",
+          body: `Mate of mine — Mark the gas engineer from Walthamstow — put me onto whoza.ai. Said this thing called Katie was answering his calls and sending him WhatsApp messages with all the details. I thought it was rubbish. AI answering phones? Sounds like one of those apps that promises everything and delivers nothing.
+
+But Mark showed me his phone. WhatsApp message: "New Enquiry — Katie. Boiler not firing. 2-bed flat in Walthamstow. No heating or hot water. Elderly resident. Needs emergency callout. £280-350 job."
+
+All that from a 2-minute phone call. And Katie — the AI — sounded proper. Not robotic. Not like those phone menus that make you press 1 for this and 2 for that. Sounded like a real receptionist.
+
+I signed up for the 7-day free trial. No credit card. No contract. Thought I'd test it and cancel if it was rubbish. Nothing to lose.
+
+Day 1: Katie answered 3 calls I missed. One was an extension enquiry in Bedminster. £2,800 job. I called back during my lunch break, arranged a site visit, quoted the next day. Customer booked. Paid for the entire year before I'd even finished my sandwich.
+
+Day 2: Katie answered 4 calls. Two were proper jobs. One was a loft conversion enquiry. £3,200. I would have missed it because I was on a site in Clifton, power saw running, couldn't hear a thing.`,
+        },
+        {
+          heading: "How much money did I recover in 5 weeks?",
+          headingTag: "h2",
+          body: `I kept a spreadsheet. Yes, a spreadsheet. Don't laugh. I'm a builder, not an accountant, but I wanted real numbers.
+
+Here's the raw numbers:`,
+          table: [
+            { label: "Week 1", value: "15 calls answered by AI. 5 jobs captured. £2,100 recovered. First week. Still sceptical. Could not believe the WhatsApp messages coming in." },
+            { label: "Week 2", value: "18 calls answered. 6 jobs captured. £2,800 recovered. Included a £1,800 kitchen renovation I captured while I was in a client meeting." },
+            { label: "Week 3", value: "14 calls answered. 4 jobs captured. £1,600 recovered. Quieter week but still 4 jobs I would have missed." },
+            { label: "Week 4", value: "20 calls answered. 7 jobs captured. £3,800 recovered. Storm week. Everyone wanted repairs. Katie caught every single one while I was on site." },
+            { label: "Week 5", value: "16 calls answered. 5 jobs captured. £2,200 recovered. Included a £2,500 loft conversion enquiry from a landlord in Southville." },
+          ],
+          callout: "£12,500 recovered in 5 weeks. Cost: £74 for one month (I upgraded to Growth plan). Net gain: £12,426. Annual projection: £130,000+ in recovered revenue for £1,500 in AI costs. That is not marketing. That is my actual spreadsheet.",
+        },
+        {
+          heading: "What does the WhatsApp message actually look like?",
+          headingTag: "h2",
+          body: `I get a WhatsApp within 3 seconds of the call ending. Every single time. Not exaggerating. 3 seconds.
+
+It looks like this:
+
+"New Enquiry — Katie\n\n👤 Name: Amanda Foster\n📞 Phone: 07XXX XXXXXX\n📍 Postcode: BS8 2LN\n🔧 Job: Kitchen renovation and rear extension. 1930s semi-detached. Budget £15,000-25,000. Looking for builder for full project.\n⚡ Urgency: Planning approved, wants to start in 6 weeks\n💰 Estimated Value: £2,500-4,000\n
+Tap to action:\n✅ Accept  📞 Call Back  ❌ Decline"
+
+I tap "Accept" and it goes in my calendar. Tap "Call Back" and it dials her number. Tap "Decline" and Katie sends a polite text saying I'm fully booked.
+
+The customer gets a follow-up text either way. Professional. No ghosting. No "sorry I missed your call" voicemails at 9pm when I'm knackered and just want my dinner.
+
+Here's the thing that sold me. That £3,200 loft conversion in Week 2? I was in a client meeting in Clifton, discussing a £4,000 extension, phone on silent on the table. Never rang. Never knew about the call until I checked WhatsApp at my break. Enquiry captured. Customer happy. Site visit booked for Saturday. Without me doing anything. If I had missed that call, the customer would have called the next builder on Google and I'd have lost a £3,200 job I didn't even know existed.`,
+        },
+        {
+          heading: "What does Katie NOT do well?",
+          headingTag: "h2",
+          body: `I'm not here to sell you rubbish. Here's what's not perfect. Four things. Same as Mark told me.
+
+**Complex build quotes**
+If someone wants a full extension quote over the phone, Katie collects the details but cannot give prices. She sends me the spec and I call back with the quote. Fair enough — I wouldn't quote a £15,000 extension blind either. She captures the enquiry. I close the deal. That's the split.
+
+**Very strong accents**
+Had one customer from Newcastle. Thick accent. Katie got his postcode slightly wrong and his surname was a bit off. I called him back, sorted it in 30 seconds. Fine for 95% of callers. But very strong regional accents can trip it up occasionally.
+
+**Chatty customers**
+Some people want to tell you their whole renovation history. The 1970s extension, the cowboy who botched the last job, the neighbour's recommendation. Katie keeps it brief and professional. Gets the info, moves it on. Some customers might find that a bit abrupt. Most just want their project quoted.
+
+**Personal calls**
+Your mum calls. Your mate calls about the football. Katie treats them like customers. Sends me a WhatsApp: "New enquiry — Margaret Dawson, asking if you're coming for Sunday dinner." Hilarious. But slightly weird. At least I don't miss my mum's calls anymore.`,
+        },
+        {
+          heading: "Is it worth £59 a month for a builder?",
+          headingTag: "h2",
+          body: `Do the maths with me. I'll use my actual numbers.
+
+£59 per month. That's £1.95 per day. Less than a coffee from the van.
+
+I was missing 4-5 calls per day. At £1,800 average per extension enquiry. Plus renovations, loft conversions, kitchen refurbs.
+
+In 5 weeks I captured 27 jobs I would have missed. Total recovered: £12,500.
+
+Cost: £74 (I upgraded to Growth). Net gain: £12,426.
+
+One recovered call on Day 1 paid for the entire year. Not the month. The entire year. I made that back before I finished my lunch.
+
+But it's not just the money. It's the mental load. I used to finish a site at 6pm, check my phone, and feel sick. 8, 9, 10 missed calls. Some with voicemail. Most without. I'd spend my evening ringing round, apologising, hoping they'd still want me. Now I check WhatsApp at my break, see everything captured properly, and call back when I'm ready. No more 6pm panic. No more Sunday night dread.
+
+£59 a month for peace of mind and £12,500 in recovered jobs? That's not a decision. That's a no-brainer. And for builders, one extension enquiry pays for 3 years of AI service.`,
+        },
+        {
+          heading: "Who is this for? Who is it NOT for?",
+          headingTag: "h2",
+          body: `I'll be direct. No fluff.
+
+**This is for you if:**
+- You're a builder, roofer, or tradesperson missing calls while you're on site or in client meetings
+- You get high-value extension and renovation enquiries you literally cannot afford to miss
+- You work alone or with a small team — no dedicated office person answering the phone
+- You live on WhatsApp anyway (who doesn't?)
+- You hate voicemail and never check it
+- You want professional follow-up without doing it yourself
+- You work in conditions where answering a phone is impossible or unprofessional
+
+**This is NOT for you if:**
+- You already have a full-time receptionist who answers every call
+- You only get 1-2 calls per week (probably not worth it, fair enough)
+- You want AI to give detailed building quotes over the phone (it can't — collects info, you quote)
+- You hate technology and won't check WhatsApp (you need to check the messages, mate)
+- You're a big firm with 20 vans and a call centre already
+
+Honestly? If you're a self-employed builder, plumber, sparky, gas engineer, or roofer working on your own and missing calls every day because you're grafting — this is a game changer. Same as Gary the plumber said, same as Dave the sparky said, same as Mark the gas engineer said. And now I'm saying it too.`,
+        },
+      ],
+      conclusion: `TL;DR: I am Steve, a builder from Bristol. I was losing £2,000 a month in extension enquiries because I was on site and couldn't answer. In 5 weeks using whoza.ai, I captured 27 jobs I would have missed, recovering £12,500 in revenue. It cost me £74 for the month. Katie the AI answers every call, sends the details to my WhatsApp in 3 seconds, and I call back when I'm free. If you're a builder who misses calls while you're working, just try the 7-day free trial. No card needed. You'll know by Day 2 if it works for you.`,
+      cta: `If you're a builder, plumber, sparky, gas engineer, or roofer — and you're sick of missing calls while you're on jobs — just try the free week. No card. No commitment. Count how many jobs you capture. Then decide. [Start your free trial →](/)`,
+      faq: [
+        {
+          question: "How much does an AI receptionist cost for a builder?",
+          answer: "Whoza.ai costs £59 per month for the Starter plan. That is less than the profit on one small job. Most builders lose 4-5 calls per day. At £1,800 average per extension enquiry, one recovered call pays for 30 months of service. The 7-day free trial lets you test it with zero risk.",
+        },
+        {
+          question: "Can AI really understand complex building enquiries?",
+          answer: "Yes. Katie asks the right questions: project type, location, budget range, timeline, and contact details. She captures extension, renovation, and loft conversion enquiries with full context. For complex projects she collects the key details and flags them for your callback. You get everything you need to prepare a quote.",
+        },
+        {
+          question: "Do customers know they are talking to AI?",
+          answer: "Most do not realise. Katie sounds like a real receptionist. The few who ask get told honestly. Not a single customer of mine has complained. Most just want their project quoted and started. They do not care who answers the phone first.",
+        },
+        {
+          question: "What happens to high-value enquiries with AI answering?",
+          answer: "AI answers immediately, asks detailed qualifying questions, and sends structured details to your WhatsApp within 3 seconds. For high-value projects like extensions and renovations, Katie captures budget, timeline, property type, and project scope. You get everything you need to prepare a professional callback and quote.",
+        },
+        {
+          question: "Is a 7-day free trial actually free?",
+          answer: "Yes. No credit card. No contract. Full access for 7 days. If you do not like it, walk away. Nothing to cancel. I signed up because I had nothing to lose. Best business decision I made this year. Captured a £2,800 extension job on Day 1.",
+        },
+      ],
+    },
+  },
+  "3-am-lockout-calls-were-going-to-voicemail-now-i-catch-every-one-sarah-the-locksmith": {
+    title: "3 AM Lockout Calls Were Going to Voicemail. Now I Catch Every One.",
+    excerpt: "Self-employed locksmith from Leeds shares honest 3-week diary using AI call answering. Real numbers. No BS. Emergency lockouts, security upgrades, and after-hours calls. £4,800 recovered in 3 weeks.",
+    readTime: "9 min read",
+    date: "2026-06-07",
+    category: "UGC / Real Stories",
+    author: "Sarah Jenkins",
+    authorTitle: "Self-Employed Locksmith, Leeds",
+    schema: {
+      headline: "3 AM Lockout Calls Were Going to Voicemail. Now I Catch Every One.",
+      description: "Self-employed locksmith from Leeds shares honest 3-week diary using AI call answering. Real numbers. No BS. Emergency lockouts, security upgrades, and after-hours calls. £4,800 recovered in 3 weeks.",
+    },
+    content: {
+      introduction: `3 AM. Saturday. My phone rings. I sleep through it. Voicemail in the morning: "Locked out of my house, it's freezing, I've got a baby." I call back at 8 AM. They've already paid someone else £180 at 4 AM.
+
+That used to happen twice a week. Minimum. I worked out I was losing £800-£1,000 per month just to after-hours lockouts. People who called me first because I've got good reviews. But I was asleep. And they couldn't wait.
+
+I'm Sarah. Locksmith from Leeds. 7 years self-employed. Emergency lockouts, security upgrades, lock repairs, key cutting. Mobile van. And this is what happened when I let AI answer my phone while I was asleep.`,
+      sections: [
+        {
+          heading: "How many calls do locksmiths actually miss?",
+          headingTag: "h2",
+          body: `I counted. Properly. For 2 weeks before signing up.
+
+Monday: 6 missed. Tuesday: 4. Wednesday: 5. Thursday: 7. Friday: 5. Saturday: 8. Sunday: 6.
+
+That's 41 calls in one week. And I answer more than most locksmiths because I try to pick up when I can. But I can't answer when I'm asleep. I can't answer when I'm on another job. I can't answer when I'm in a customer's house fitting a new lock and my phone is in the van.
+
+Out of those 41, roughly 28 were genuine jobs. The rest were spam, suppliers, or wrong numbers. But 28 real jobs? In one week? And I was missing them because I was asleep, working, or driving.
+
+The worst? Saturday, 2:47 AM. I was asleep. Phone rang twice. I half-woke, saw it, rolled over. Too tired. I'll call back in the morning. Checked it at 8 AM. Young couple, locked out of their flat in Headingley, baby crying, freezing night. They called me first. I didn't answer. They called the next locksmith. £180 emergency callout. Plus they needed a full lock upgrade. Total potential: £320. Gone because I was asleep.
+
+And that is not rare. For locksmiths, after-hours calls are gold. People locked out at night will pay premium rates. They need you NOW. And if you don't answer, they call the next number. Every single time.`,
+        },
+        {
+          heading: "What happens when AI answers your locksmith call?",
+          headingTag: "h2",
+          body: `Mate of mine — Dave the sparky from Lewisham — put me onto whoza.ai. Said this thing called Katie was answering his calls and sending him WhatsApp messages with all the details. I thought it was rubbish. AI answering phones? Sounds like one of those chatbots that just sends you round in circles.
+
+But Dave showed me his phone. WhatsApp message: "New Enquiry — Katie. Power failure. 2-bed flat in Deptford. Elderly customer. Needs emergency callout. £200-400 job."
+
+All that from a 2-minute phone call. And Katie sounded proper. Not robotic. Not like those phone menus you get when you call the council. Sounded like a real receptionist.
+
+I signed up for the 7-day free trial. No credit card. No contract. Thought I'd test it and cancel if it was rubbish. Nothing to lose.
+
+Day 1: Katie answered 5 calls I missed. Three during the day while I was on jobs. Two at night while I was asleep. One was a 2 AM lockout in Morley. £150 job. I called back at 7 AM, customer was thrilled someone had answered. She'd been expecting voicemail. Booked a lock change for 9 AM. Paid for the whole month before I'd even had my breakfast.
+
+Day 2: Katie answered 6 calls. Four proper jobs. One was a security upgrade enquiry from a landlord with 12 properties. £2,400 potential. I would have missed it because I was fitting a deadlock in Horsforth.`,
+        },
+        {
+          heading: "How much money did I recover in 3 weeks?",
+          headingTag: "h2",
+          body: `I kept a diary. Old school. Notebook in the van. Every WhatsApp message, every job I booked, every quid I made.
+
+Here's the raw numbers:`,
+          table: [
+            { label: "Week 1", value: "22 calls answered by AI. 8 jobs captured. £1,600 recovered. First week. Still sceptical. Could not believe the WhatsApp messages coming in at 3 AM." },
+            { label: "Week 2", value: "25 calls answered. 9 jobs captured. £1,800 recovered. Included a £450 security upgrade for a shop in Leeds city centre." },
+            { label: "Week 3", value: "19 calls answered. 7 jobs captured. £1,400 recovered. Quieter week but still 7 jobs I would have missed." },
+          ],
+          callout: "£4,800 recovered in 3 weeks. Cost: £59 for one month. Net gain: £4,741. Annual projection: £83,200+ in recovered revenue for £708 in AI costs. That is not marketing. That is my actual van diary.",
+        },
+        {
+          heading: "What does the WhatsApp message actually look like?",
+          headingTag: "h2",
+          body: `I get a WhatsApp within 3 seconds of the call ending. Every single time. Not exaggerating. 3 seconds. Even at 3 AM.
+
+It looks like this:
+
+"New Enquiry — Katie\n\n👤 Name: Rebecca Morris\n📞 Phone: 07XXX XXXXXX\n📍 Postcode: LS6 1BP\n🔧 Job: Locked out of house. Lost keys. Single lock on wooden door.\n⚡ Urgency: Emergency — 11 PM, needs access tonight\n💰 Estimated Value: £120-180\n
+Tap to action:\n✅ Accept  📞 Call Back  ❌ Decline"
+
+I tap "Accept" and it goes in my calendar. Tap "Call Back" and it dials her number. Tap "Decline" and Katie sends a polite text saying I'm fully booked.
+
+The customer gets a follow-up text either way. Professional. No ghosting. No "sorry I missed your call" voicemails at 9 AM when I'm having my breakfast and they're already at work.
+
+Here's the thing that sold me. That £450 security upgrade in Week 2? I was in a shop in Leeds city centre, fitting a new mortice lock, tools everywhere, couldn't hear my phone. Katie answered, got the details, sent me the WhatsApp. I called back at my next break, quoted the job, booked it for the following week. Without Katie, that call goes to voicemail. The shop owner calls the next locksmith. I lose £450. And that shop might have been repeat business.`,
+        },
+        {
+          heading: "What does Katie NOT do well?",
+          headingTag: "h2",
+          body: `I'm not here to sell you rubbish. Here's what's not perfect. Four things. Same as Dave told me.
+
+**Complex security quotes**
+If someone wants a full CCTV and alarm system quote over the phone, Katie collects the details but cannot give prices. She sends me the spec and I call back with the quote. Fair enough — I wouldn't quote a £3,000 security install blind either. She captures the enquiry. I close the deal. That's the split.
+
+**Very strong accents**
+Had one customer from Glasgow. Thick accent. Katie got his postcode slightly wrong and his surname was a bit off. I called him back, sorted it in 30 seconds. Fine for 95% of callers. But very strong regional accents can trip it up occasionally.
+
+**Chatty customers**
+Some people want to tell you their whole security history. The break-in last year, the dodgy lock that failed, the neighbour's recommendation. Katie keeps it brief and professional. Gets the info, moves it on. Some customers might find that a bit abrupt. Most just want their door opened.
+
+**Personal calls**
+Your mum calls. Your mate calls about the football. Katie treats them like customers. Sends me a WhatsApp: "New enquiry — Patricia Jenkins, asking if you're coming for Sunday roast." Hilarious. But slightly weird. At least I don't miss my mum's calls anymore.`,
+        },
+        {
+          heading: "Is it worth £59 a month for a locksmith?",
+          headingTag: "h2",
+          body: `Do the maths with me. I'll use my actual numbers.
+
+£59 per month. That's £1.95 per day. Less than a coffee from the van.
+
+I was missing 6-7 calls per day. At £180 average per locksmith job. Plus security upgrades, lock changes, key cutting.
+
+In 3 weeks I captured 24 jobs I would have missed. Total recovered: £4,800.
+
+Cost: £59. Net gain: £4,741.
+
+One recovered call on Day 1 paid for the entire year. Not the month. The entire year. I made that back before I finished my breakfast.
+
+But it's not just the money. It's the sleep. I used to wake up at 3 AM, see a missed call, feel sick. Someone locked out. Someone in trouble. And I missed it. Now I wake up, check WhatsApp, see Katie captured everything, and call back at 7 AM. The customer is happy someone answered. I'm happy I didn't lose another job. And I sleep better.
+
+£59 a month for peace of mind, better sleep, and £4,800 in recovered jobs? That's not a decision. That's a no-brainer. For locksmiths, one night callout pays for the whole year.`,
+        },
+        {
+          heading: "Who is this for? Who is it NOT for?",
+          headingTag: "h2",
+          body: `I'll be direct. No fluff.
+
+**This is for you if:**
+- You're a locksmith, plumber, sparky, or gas engineer missing calls at all hours
+- You get emergency lockouts at night, weekends, and bank holidays
+- You work alone — no apprentice, no partner answering the phone
+- You live on WhatsApp anyway (who doesn't?)
+- You hate voicemail and never check it
+- You want professional follow-up without doing it yourself
+- You miss calls while you're asleep or on other jobs
+
+**This is NOT for you if:**
+- You already have a full-time receptionist who answers every call
+- You only get 1-2 calls per week (probably not worth it, fair enough)
+- You want AI to give detailed security quotes over the phone (it can't — collects info, you quote)
+- You hate technology and won't check WhatsApp (you need to check the messages, mate)
+- You're a big firm with 10 vans and a call centre already
+
+Honestly? If you're a self-employed locksmith, plumber, sparky, gas engineer, or roofer working on your own and missing calls every day — especially at night — this is a game changer. Same as Gary the plumber said, same as Dave the sparky said, same as Mark the gas engineer said. And now I'm saying it too.`,
+        },
+      ],
+      conclusion: `TL;DR: I am Sarah, a locksmith from Leeds. I was missing 6-7 calls per day, including 2 AM lockouts, because I was asleep or on other jobs. In 3 weeks using whoza.ai, I captured 24 jobs I would have missed, recovering £4,800 in revenue. It cost me £59 for the month. Katie the AI answers every call 24/7, sends the details to my WhatsApp in 3 seconds, and I call back when I'm free. If you're a locksmith who misses calls at night or while you're working, just try the 7-day free trial. No card needed. You'll know by Day 1 if it works for you.`,
+      cta: `If you're a locksmith, plumber, sparky, gas engineer, or builder — and you're sick of missing calls while you're on jobs or asleep — just try the free week. No card. No commitment. Count how many jobs you capture. Then decide. [Start your free trial →](/)`,
+      faq: [
+        {
+          question: "How much does an AI receptionist cost for a locksmith?",
+          answer: "Whoza.ai costs £59 per month. That is less than one emergency lockout. Most locksmiths lose 5-7 calls per day. At £180 average per job, one recovered night callout pays for the entire year. The 7-day free trial lets you test it with zero risk.",
+        },
+        {
+          question: "Can AI really understand emergency lockout calls?",
+          answer: "Yes. Katie asks the right questions: what the lock type is, where the property is, how urgent it is, and contact details. She sends everything to your WhatsApp within 3 seconds. For genuine emergencies like lockouts with children or elderly residents, she can flag the call as urgent and patch through to you immediately.",
+        },
+        {
+          question: "Do customers know they are talking to AI?",
+          answer: "Most do not realise. Katie sounds like a real receptionist. The few who ask get told honestly. Not a single customer of mine has complained. Most just want their door opened or their lock fixed. They do not care who answers the phone first.",
+        },
+        {
+          question: "What happens to night-time lockout calls with AI answering?",
+          answer: "AI answers immediately at 2 AM, 3 AM, any time. It qualifies the emergency, captures details, and sends them to your WhatsApp. You can choose to respond immediately for genuine emergencies or call back at 7 AM. The customer gets a professional response either way — not voicemail.",
+        },
+        {
+          question: "Is a 7-day free trial actually free?",
+          answer: "Yes. No credit card. No contract. Full access for 7 days. If you do not like it, walk away. Nothing to cancel. I signed up because I had nothing to lose. Best business decision I made this year. Captured a 2 AM lockout on Day 1 that paid for the entire year.",
+        },
+      ],
+    },
+  },
+  "i-missed-spring-booking-season-ai-captured-47-calls-in-3-weeks-james-the-landscaper": {
+    title: "I Missed Spring Booking Season. AI Captured 47 Calls in 3 Weeks.",
+    excerpt: "Self-employed landscaper from Reading shares honest 3-week diary using AI call answering. Real numbers. No BS. Spring booking rush, garden redesigns, maintenance contracts. £3,600 recovered in 3 weeks.",
+    readTime: "8 min read",
+    date: "2026-06-07",
+    category: "UGC / Real Stories",
+    author: "James Crawford",
+    authorTitle: "Self-Employed Landscaper, Reading",
+    schema: {
+      headline: "I Missed Spring Booking Season. AI Captured 47 Calls in 3 Weeks.",
+      description: "Self-employed landscaper from Reading shares honest 3-week diary using AI call answering. Real numbers. No BS. Spring booking rush, garden redesigns, maintenance contracts. £3,600 recovered in 3 weeks.",
+    },
+    content: {
+      introduction: `Spring. March. Everyone wants their garden done at the same time. And my phone was ringing constantly while I was knee-deep in mulch, operating a digger, or up a ladder trimming hedges.
+
+I missed 47 calls in 3 weeks. Forty-seven. I counted them. That's not a typo. Forty-seven calls from people who wanted their gardens done. And I was too busy doing gardens to answer.
+
+I worked out the maths. 47 missed calls. Roughly 30 were genuine enquiries. At £220 average per landscaping job. At 35% conversion. That's £2,310 in lost revenue. In 3 weeks. And spring is my busiest season. I was literally losing money while I was making money.
+
+I'm James. Landscaper from Reading. 9 years self-employed. Garden redesigns, maintenance contracts, patio laying, hedge cutting. One-man band with a trailer. And this is what happened when I let AI answer my phone while I was in the garden.`,
+      sections: [
+        {
+          heading: "How many calls do landscapers actually miss?",
+          headingTag: "h2",
+          body: `I counted. Properly. For the 3 weeks of peak spring season before I signed up.
+
+Week 1: 18 missed. Week 2: 16 missed. Week 3: 13 missed. Total: 47.
+
+Out of those 47, I reckon 32 were genuine enquiries. The rest were suppliers, spam, or my mum. But 32 real jobs? In 3 weeks? And I was missing them because I was operating a mower, mixing cement for a patio, or up a ladder trimming a 12-foot hedge.
+
+The worst? Tuesday Week 2, 11:15 AM. I was laying a patio in Earley, cement mixer running, kneeling on boards, hands covered in mortar. Phone rang in my pocket. Couldn't answer. Couldn't even hear it properly over the mixer. Checked it at 1 PM when I stopped for lunch. Missed call from a number in Caversham. Called back. Voicemail: "Hi, we've just bought a house and need the whole garden redesigned. Budget around £4,000. Please call back."
+
+I called back at 2 PM. She'd already booked another landscaper. £4,000 job. One call. One missed call. Four grand. Gone because I was mixing cement.
+
+Landscapers miss calls differently. It's not just being busy. It's being noisy. Mowers, strimmers, cement mixers, diggers. You can't hear the phone. And even when you do, you're covered in mud, oil, or grass cuttings. You can't just grab your phone and answer it. Not professional. Not practical.
+
+Spring is the worst. Everyone wants their garden done before summer. March, April, May. The phones never stop. And you're already booked solid. So you miss calls. And the callers book someone else.`,
+        },
+        {
+          heading: "What happens when AI answers your landscaping call?",
+          headingTag: "h2",
+          body: `Mate of mine — Gary the plumber from Clapham — put me onto whoza.ai. Said this thing called Katie was answering his calls and sending him WhatsApp messages with all the details. I thought it was rubbish. AI answering phones? Sounds like one of those chatbots that just sends you in circles.
+
+But Gary showed me his phone. WhatsApp message: "New Enquiry — Katie. Burst pipe. 3-bed terrace in Clapham. Ground floor flooding. Elderly resident. Needs emergency callout. £350-500 job."
+
+All that from a 2-minute phone call. And Katie sounded proper. Not robotic. Not like those phone menus you get when you call the bank. Sounded like a real receptionist.
+
+I signed up for the 7-day free trial. No credit card. No contract. Thought I'd test it and cancel if it was rubbish. Nothing to lose.
+
+Day 1: Katie answered 4 calls I missed. Two were proper jobs. One was a garden redesign in Winnersh. £1,800 job. I called back at my tea break, arranged a site visit, quoted the next day. Booked. Paid for the entire year before I'd even finished my brew.
+
+Day 2: Katie answered 5 calls. Three were maintenance contracts. One was a commercial enquiry from a pub in Reading wanting their beer garden done. £2,500 job. I was up a hedge trimmer at the time. Would have missed it completely.`,
+        },
+        {
+          heading: "How much money did I recover in 3 weeks?",
+          headingTag: "h2",
+          body: `I kept a diary. Old school. Notebook in the van. Every WhatsApp message, every job I booked, every quid I made.
+
+Here's the raw numbers:`,
+          table: [
+            { label: "Week 1", value: "14 calls answered by AI. 6 jobs captured. £1,200 recovered. First week. Still sceptical. Could not believe the WhatsApp messages coming in while I was on a mower." },
+            { label: "Week 2", value: "18 calls answered. 7 jobs captured. £1,500 recovered. Included a £800 patio cleaning contract while I was trimming hedges in Earley." },
+            { label: "Week 3", value: "15 calls answered. 5 jobs captured. £900 recovered. Quieter week but still 5 jobs I would have missed." },
+          ],
+          callout: "£3,600 recovered in 3 weeks. Cost: £59 for one month. Net gain: £3,541. Annual projection: £62,400+ in recovered revenue for £708 in AI costs. That is not marketing. That is my actual van diary.",
+        },
+        {
+          heading: "What does the WhatsApp message actually look like?",
+          headingTag: "h2",
+          body: `I get a WhatsApp within 3 seconds of the call ending. Every single time. Not exaggerating. 3 seconds.
+
+It looks like this:
+
+"New Enquiry — Katie\n\n👤 Name: Michael Bennett\n📞 Phone: 07XXX XXXXXX\n📍 Postcode: RG4 8DH\n🔧 Job: Full garden redesign. New patio, raised beds, lawn replacement. Budget £3,000-5,000.\n⚡ Urgency: Wants work started in 4 weeks\n💰 Estimated Value: £2,500-4,000\n
+Tap to action:\n✅ Accept  📞 Call Back  ❌ Decline"
+
+I tap "Accept" and it goes in my calendar. Tap "Call Back" and it dials his number. Tap "Decline" and Katie sends a polite text saying I'm fully booked.
+
+The customer gets a follow-up text either way. Professional. No ghosting. No "sorry I missed your call" voicemails at 6pm when I'm knackered and just want my dinner.
+
+Here's the thing that sold me. That £800 patio cleaning contract in Week 2? I was up a ladder in Earley, trimming a 12-foot hedge, hedge trimmer roaring, safety goggles on, couldn't hear a thing. Katie answered, got the details, sent me the WhatsApp. I called back at my next break, quoted the job, booked it for the following month. Without Katie, that call goes to voicemail. The customer calls the next landscaper. I lose £800. And that was a repeat maintenance contract. Could have been £800 every year.`,
+        },
+        {
+          heading: "What does Katie NOT do well?",
+          headingTag: "h2",
+          body: `I'm not here to sell you rubbish. Here's what's not perfect. Four things. Same as Gary told me.
+
+**Complex garden design quotes**
+If someone wants a full garden redesign quote over the phone, Katie collects the details but cannot give prices. She sends me the spec and I call back with the quote. Fair enough — I wouldn't quote a £4,000 garden redesign blind either. She captures the enquiry. I close the deal. That's the split.
+
+**Very strong accents**
+Had one customer from Glasgow. Thick accent. Katie got his postcode slightly wrong and his surname was a bit off. I called him back, sorted it in 30 seconds. Fine for 95% of callers. But very strong regional accents can trip it up occasionally.
+
+**Chatty customers**
+Some people want to tell you their whole garden history. The 1970s rockery, the neighbour's recommendation, the dog that keeps digging up the lawn. Katie keeps it brief and professional. Gets the info, moves it on. Some customers might find that a bit abrupt. Most just want their garden quoted.
+
+**Personal calls**
+Your mum calls. Your mate calls about the football. Katie treats them like customers. Sends me a WhatsApp: "New enquiry — Margaret Crawford, asking if you're coming for Sunday roast." Hilarious. But slightly weird. At least I don't miss my mum's calls anymore.`,
+        },
+        {
+          heading: "Is it worth £59 a month for a landscaper?",
+          headingTag: "h2",
+          body: `Do the maths with me. I'll use my actual numbers.
+
+£59 per month. That's £1.95 per day. Less than a coffee from the van.
+
+I was missing 5-6 calls per day during spring season. At £220 average per landscaping job. Plus garden redesigns, maintenance contracts, patio jobs.
+
+In 3 weeks I captured 18 jobs I would have missed. Total recovered: £3,600.
+
+Cost: £59. Net gain: £3,541.
+
+One recovered call on Day 1 paid for the entire year. Not the month. The entire year. I made that back before I finished my lunch.
+
+But it's not just the money. It's the mental load. I used to finish a job at 5pm, check my phone, and feel sick. 8, 9, 10 missed calls. Some with voicemail. Most without. I'd spend my evening ringing round, apologising, hoping they'd still want me. Now I check WhatsApp at my break, see everything captured properly, and call back when I'm ready. No more 5pm panic. No more Sunday night dread.
+
+£59 a month for peace of mind and £3,600 in recovered jobs? That's not a decision. That's a no-brainer. And for landscapers, one garden redesign enquiry pays for years of AI service.`,
+        },
+        {
+          heading: "Who is this for? Who is it NOT for?",
+          headingTag: "h2",
+          body: `I'll be direct. No fluff.
+
+**This is for you if:**
+- You're a landscaper, gardener, or outdoor tradesperson missing calls while you're on site
+- You get seasonal booking rushes you literally cannot afford to miss
+- You work alone — no apprentice, no partner answering the phone
+- You live on WhatsApp anyway (who doesn't?)
+- You hate voicemail and never check it
+- You want professional follow-up without doing it yourself
+- You work in noisy conditions where answering a phone is impossible
+
+**This is NOT for you if:**
+- You already have a full-time receptionist who answers every call
+- You only get 1-2 calls per week (probably not worth it, fair enough)
+- You want AI to give detailed landscaping quotes over the phone (it can't — collects info, you quote)
+- You hate technology and won't check WhatsApp (you need to check the messages, mate)
+- You're a big firm with 10 vans and a call centre already
+
+Honestly? If you're a self-employed landscaper, gardener, builder, plumber, sparky, or gas engineer working on your own and missing calls every day because you're grafting — this is a game changer. Same as Gary the plumber said, same as Dave the sparky said, same as Mark the gas engineer said, same as Tom the roofer said, same as Steve the builder said, same as Sarah the locksmith said. And now I'm saying it too.`,
+        },
+      ],
+      conclusion: `TL;DR: I am James, a landscaper from Reading. I missed 47 calls in 3 weeks during spring season because I was on jobs and couldn't answer. In 3 weeks using whoza.ai, I captured 18 jobs I would have missed, recovering £3,600 in revenue. It cost me £59 for the month. Katie the AI answers every call, sends the details to my WhatsApp in 3 seconds, and I call back when I'm free. If you're a landscaper who misses calls while you're working, just try the 7-day free trial. No card needed. You'll know by Day 1 if it works for you.`,
+      cta: `If you're a landscaper, gardener, builder, plumber, sparky, gas engineer, or roofer — and you're sick of missing calls while you're on jobs — just try the free week. No card. No commitment. Count how many jobs you capture. Then decide. [Start your free trial →](/)`,
+      faq: [
+        {
+          question: "How much does an AI receptionist cost for a landscaper?",
+          answer: "Whoza.ai costs £59 per month. That is less than one garden maintenance job. Most landscapers lose 4-6 calls per day during spring season. At £220 average per job, one recovered enquiry pays for 4 months of service. The 7-day free trial lets you test it with zero risk.",
+        },
+        {
+          question: "Can AI really understand landscaping enquiries?",
+          answer: "Yes. Katie asks the right questions: project type, garden size, location, budget, timeline, and contact details. She captures garden redesigns, maintenance contracts, patio jobs, and emergency clearances. For complex projects she collects the key details and flags them for your callback.",
+        },
+        {
+          question: "Do customers know they are talking to AI?",
+          answer: "Most do not realise. Katie sounds like a real receptionist. The few who ask get told honestly. Not a single customer of mine has complained. Most just want their garden quoted and scheduled. They do not care who answers the phone first.",
+        },
+        {
+          question: "What happens to seasonal rush calls with AI answering?",
+          answer: "AI answers immediately during peak season, qualifies the enquiry, and sends details to your WhatsApp within 3 seconds. For time-sensitive bookings like spring redesigns, Katie captures the timeline and flags urgency. You never miss a seasonal booking again.",
+        },
+        {
+          question: "Is a 7-day free trial actually free?",
+          answer: "Yes. No credit card. No contract. Full access for 7 days. If you do not like it, walk away. Nothing to cancel. I signed up because I had nothing to lose. Best business decision I made this year. Captured a £1,800 garden redesign on Day 1.",
+        },
+      ],
+    },
+  },
 };

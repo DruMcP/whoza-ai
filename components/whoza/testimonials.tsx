@@ -6,6 +6,19 @@ import { ArrowRight, Sparkles, PhoneCall, Star, TrendingUp } from "lucide-react"
 import { WaitlistModal } from "./waitlist-modal"
 import { trackCTA } from "@/lib/gtag"
 
+const tradeLinks: Record<string, string> = {
+  "Plumbers": "/ai-call-answering-plumbers",
+  "Electricians": "/ai-call-answering-electricians",
+  "Builders": "/ai-call-answering-builders",
+  "Roofers": "/ai-call-answering-roofers",
+  "Locksmiths": "/ai-call-answering-locksmiths",
+  "Landscapers": "/ai-call-answering-landscapers",
+  "Heating Engineers": "/ai-call-answering-heating-engineers",
+  "Pest Control": "/ai-call-answering-pest-control",
+  "Cleaners": "/ai-call-answering-cleaners",
+  "Drainage": "/ai-call-answering-drainage",
+}
+
 const expectationCards = [
   {
     title: "More Enquiries",
@@ -87,23 +100,25 @@ export function Testimonials() {
             animate={{ x: [0, -800] }}
             transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
           >
-            {[
-              "Plumbers", "Electricians", "Builders", "Roofers", "Locksmiths",
-              "Landscapers", "Heating Engineers", "Pest Control", "Cleaners", "Drainage"
-            ].map((trade, i) => (
-              <span key={i} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--slate-200)] text-sm text-[var(--slate-500)] shadow-sm">
+            {Object.entries(tradeLinks).map(([trade, href], i) => (
+              <a
+                key={i}
+                href={href}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--slate-200)] text-sm text-[var(--slate-500)] shadow-sm hover:bg-[var(--katie-blue)]/5 hover:border-[var(--katie-blue)]/30 hover:text-[var(--navy-900)] transition-all cursor-pointer"
+              >
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
                 {trade}
-              </span>
+              </a>
             ))}
-            {[
-              "Plumbers", "Electricians", "Builders", "Roofers", "Locksmiths",
-              "Landscapers", "Heating Engineers", "Pest Control", "Cleaners", "Drainage"
-            ].map((trade, i) => (
-              <span key={`dup-${i}`} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--slate-200)] text-sm text-[var(--slate-500)] shadow-sm">
+            {Object.entries(tradeLinks).map(([trade, href], i) => (
+              <a
+                key={`dup-${i}`}
+                href={href}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--slate-200)] text-sm text-[var(--slate-500)] shadow-sm hover:bg-[var(--katie-blue)]/5 hover:border-[var(--katie-blue)]/30 hover:text-[var(--navy-900)] transition-all cursor-pointer"
+              >
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
                 {trade}
-              </span>
+              </a>
             ))}
           </motion.div>
         </div>
