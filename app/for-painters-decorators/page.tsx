@@ -25,7 +25,7 @@ import Link from "next/link"
 import { ArrowRight, CheckCircle, Phone, Shield, Clock, PoundSterling, Paintbrush, PaintBucket, Home, Briefcase, Palette, Star } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "AI Call Handling for Painters & Decorators — Never Miss a Job | whoza.ai",
+  title: "AI Call Handling for Painters & Decorators UK | whoza.ai",
   description: "Stop losing painting enquiries to missed calls. Katie answers 24/7 for interior, exterior, emergency touch-ups & commercial work. WhatsApp alerts in 3 seconds. 7-day free trial.",
   alternates: {
     canonical: "https://whoza.ai/for-painters-decorators",
@@ -35,14 +35,14 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/for-painters-decorators",
     siteName: "Whoza.ai",
-    title: "AI Call Handling for Painters & Decorators — Never Miss a Job",
+    title: "AI Call Handling for Painters & Decorators UK | whoza.ai",
     description: "Stop losing painting enquiries to missed calls. Katie answers 24/7 for interior, exterior, emergency touch-ups & commercial work. WhatsApp alerts in 3 seconds. 7-day free trial.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai for Painters & Decorators" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
-    title: "AI Call Handling for Painters & Decorators — Never Miss a Job",
+    title: "AI Call Handling for Painters & Decorators UK | whoza.ai",
     description: "Stop losing painting enquiries to missed calls. Katie answers 24/7 for interior, exterior, emergency touch-ups & commercial work. WhatsApp alerts in 3 seconds. 7-day free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
@@ -132,6 +132,8 @@ const howItWorks = [
     description: "For emergency touch-ups: accept and arrive with matching paint. For large projects: schedule a site survey with full context. Commercial contracts get priority follow-up for quote preparation."
   }
 ]
+
+export const revalidate = 3600
 
 export default function ForPaintersDecoratorsPage() {
   const localBusinessSchema = {
@@ -406,7 +408,7 @@ export default function ForPaintersDecoratorsPage() {
               {faqs.map((faq, idx) => (
                 <div key={idx} className="bg-[var(--off-white)] rounded-xl border border-[var(--border)] px-6 py-5">
                   <h3 className="text-[var(--navy-900)] font-semibold mb-2">{faq.question}</h3>
-                  <p className="text-[var(--slate-500)] leading-relaxed">{faq.answer}</p>
+                  <p className="text-[var(--slate-500)] leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                 </div>
               ))}
             </div>
@@ -500,19 +502,39 @@ export default function ForPaintersDecoratorsPage() {
             <div className="text-center">
               <p className="text-[var(--slate-500)] mb-4">Also explore:</p>
               <div className="flex flex-wrap justify-center gap-3">
-                <Link href="/for-roofers" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                <a href="/for-roofers" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
                   AI for Roofers
-                </Link>
-                <Link href="/blog/builders-lead-generation-guide" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                </a>
+                <a href="/blog/builders-lead-generation-guide" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
                   Builders Lead Generation Guide
-                </Link>
-                <Link href="/how-it-works" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                </a>
+                <a href="/how-it-works" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
                   How It Works
-                </Link>
+                </a>
               </div>
             </div>
           </div>
         </section>
+
+      <section className="py-12 border-t border-white/10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 className="text-lg font-semibold text-white/70 mb-6 text-center">Also See: AI Call Answering for Related Trades</h3>
+          <div className="grid sm:grid-cols-3 gap-4">
+            <a href="/for-plumbers" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors text-center">
+              <div className="font-medium text-white">AI Call Answering for Plumbers</div>
+              <p className="text-sm text-white/50 mt-1">Never miss a job</p>
+            </a>
+            <a href="/for-electricians" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors text-center">
+              <div className="font-medium text-white">AI Call Answering for Electricians</div>
+              <p className="text-sm text-white/50 mt-1">Never miss a job</p>
+            </a>
+            <a href="/for-handymen" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors text-center">
+              <div className="font-medium text-white">AI Call Answering for Handymen</div>
+              <p className="text-sm text-white/50 mt-1">Never miss a job</p>
+            </a>
+          </div>
+        </div>
+      </section>
 
         <div className="section-divider" />
         <FinalCTA />

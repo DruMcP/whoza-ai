@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 }
 
+export const revalidate = 3600
+
 export default function ComplaintsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-950 to-black text-white">

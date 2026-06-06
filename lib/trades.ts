@@ -306,6 +306,46 @@ export const trades: TradeData[] = [
     relatedLocations: ["london", "manchester", "birmingham", "leeds", "glasgow", "bristol"]
   },
   {
+    slug: "joiner",
+    singular: "joiner",
+    plural: "joiners",
+    display: "Joiners & Carpenters",
+    headline: "AI Call Answering for Joiners & Carpenters UK — Never Miss a Job",
+    subheadline: "Bespoke kitchens, fitted wardrobes, staircases, doors — customers call when they want quality woodwork. Katie answers every call, captures the project details, and sends them to your WhatsApp.",
+    metaDescription: "AI call handling for UK joiners and carpenters. Katie answers 24/7, captures bespoke furniture, fitting, and renovation enquiries. WhatsApp alerts in 3 seconds. 7-day free trial.",
+    problemStatements: [
+      "Joinery enquiries are detailed — customers describe bespoke projects that need careful quoting",
+      "You can't tell if it's a simple door hinge or a £15k kitchen from a missed call",
+      "Commercial clients (builders, developers, architects) expect fast response — voicemail loses contracts",
+      "Evening and weekend calls for urgent repairs (broken doors, stuck windows) go unanswered"
+    ],
+    solutionStatements: [
+      "Katie answers every joinery call in 2 rings, even during workshop hours",
+      "She captures: project type, materials, budget, timeline, commercial/residential, urgency",
+      "Commercial enquiries get priority tagging for fast follow-up",
+      "Bespoke and high-value projects get detailed capture for accurate quoting"
+    ],
+    howItWorks: [
+      { step: 1, title: "Customer calls about joinery/carpentry project", description: "Katie picks up instantly with your branded greeting and identifies the project type — kitchen, wardrobe, staircase, door, or repair" },
+      { step: 2, title: "Katie captures project details", description: "She collects: project type, materials preference, budget range, timeline, property type, and whether it's commercial or residential" },
+      { step: 3, title: "WhatsApp alert with full context", description: "A structured message lands on your phone with all project details. Commercial enquiries tagged as priority" },
+      { step: 4, title: "Quote, accept, or schedule site visit", description: "Tap to accept, call back, or decline. Customer gets an instant SMS either way. You walk into every conversation fully prepared" }
+    ],
+    faqs: [
+      { question: "How much does AI call answering cost for joiners?", answer: "Whoza starts at £59/month for the Starter plan. That's less than one bespoke kitchen consultation. Most joiners recover the cost within a week by capturing just one missed project enquiry." },
+      { question: "Can Katie handle bespoke furniture enquiries?", answer: "Yes. Katie is trained to handle detailed joinery enquiries including bespoke kitchens, fitted wardrobes, staircases, and cabinets. She captures project type, materials, budget, and dimensions — giving you a full brief before you call back." },
+      { question: "What information does Katie collect from joinery customers?", answer: "Katie captures: full name, phone number, postcode, project type, materials preference, budget range, timeline, property type, and whether it's commercial or residential. For bespoke projects, she also asks about style preferences and available drawings." },
+      { question: "Can Katie handle commercial joinery contracts?", answer: "Yes. Katie identifies commercial enquiries from builders, developers, architects, and interior designers. She captures project scale, contract value, timeline, and decision-maker details. Commercial enquiries are tagged as priority in your WhatsApp alert." },
+      { question: "What happens if Katie can't handle a complex enquiry?", answer: "Katie recognises when a call needs human attention. For complex bespoke projects, she takes a detailed message and flags it for your immediate callback. You receive the full context in WhatsApp so you can call back prepared." }
+    ],
+    stats: [
+      { label: "Joinery calls missed weekly", value: "45%" },
+      { label: "Average bespoke kitchen value", value: "£12,000" },
+      { label: "Average fitted wardrobe value", value: "£3,500" }
+    ],
+    relatedLocations: ["london", "manchester", "birmingham", "leeds", "glasgow", "bristol", "liverpool", "edinburgh"]
+  },
+  {
     slug: "painter",
     singular: "painter",
     plural: "painters",

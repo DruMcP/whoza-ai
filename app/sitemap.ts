@@ -285,6 +285,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      url: `${baseUrl}/for-joiners`,
+      lastModified: lastMod,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
       url: `${baseUrl}/for-hvac`,
       lastModified: lastMod,
       changeFrequency: 'weekly',

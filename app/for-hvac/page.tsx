@@ -25,7 +25,7 @@ import Link from "next/link"
 import { ArrowRight, CheckCircle, Phone, Shield, Clock, PoundSterling, Flame, Thermometer, Snowflake, AlertTriangle, Wrench, Star } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "AI Call Handling for Heating Engineers — Never Miss a Boiler Job | whoza.ai",
+  title: "AI Call Handling for Heating Engineers UK | whoza.ai",
   description: "Stop losing boiler breakdown calls to voicemail. Katie answers 24/7 for emergency heating, annual services & breakdowns. WhatsApp alerts in 3 seconds. 7-day free trial.",
   alternates: {
     canonical: "https://whoza.ai/for-hvac",
@@ -35,14 +35,14 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/for-hvac",
     siteName: "Whoza.ai",
-    title: "AI Call Handling for Heating Engineers — Never Miss a Boiler Job",
+    title: "AI Call Handling for Heating Engineers UK | whoza.ai",
     description: "Stop losing boiler breakdown calls to voicemail. Katie answers 24/7 for emergency heating, annual services & breakdowns. WhatsApp alerts in 3 seconds. 7-day free trial.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai for Heating Engineers" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
-    title: "AI Call Handling for Heating Engineers — Never Miss a Boiler Job",
+    title: "AI Call Handling for Heating Engineers UK | whoza.ai",
     description: "Stop losing boiler breakdown calls to voicemail. Katie answers 24/7 for emergency heating, annual services & breakdowns. WhatsApp alerts in 3 seconds. 7-day free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
@@ -132,6 +132,8 @@ const howItWorks = [
     description: "For breakdowns: tap to accept and arrive prepared with the right parts. For services: schedule annual maintenance at customer's preferred time. Landlord enquiries get batch-scheduled efficiently."
   }
 ]
+
+export const revalidate = 3600
 
 export default function ForHvacPage() {
   const localBusinessSchema = {
@@ -250,6 +252,9 @@ export default function ForHvacPage() {
                     See How It Works
                   </Link>
                 </div>
+                <p className="mt-4 text-sm text-white/50">
+                  <a href="/" className="text-orange-400 hover:text-orange-300 underline">Try Katie free for 7 days</a> — no credit card required.
+                </p>
                 <div className="flex items-center gap-6 mt-8 text-white/50 text-sm">
                   <div className="flex items-center gap-2">
                     <CheckCircle className="w-4 h-4 text-orange-400" />
@@ -344,7 +349,7 @@ export default function ForHvacPage() {
                 How Katie Works for Heating Engineers
               </h2>
               <p className="mt-6 text-lg text-[var(--slate-500)] max-w-2xl mx-auto">
-                Four simple steps from missed call to booked callout. Katie handles the conversation. You handle the heating.
+                Four simple steps from missed call to booked callout. Katie handles the conversation. You handle the heating. Read our <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-amber-400 hover:text-amber-300 underline">complete guide to AI call answering</a> for more details.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -406,7 +411,17 @@ export default function ForHvacPage() {
               {faqs.map((faq, idx) => (
                 <div key={idx} className="bg-[var(--off-white)] rounded-xl border border-[var(--border)] px-6 py-5">
                   <h3 className="text-[var(--navy-900)] font-semibold mb-2">{faq.question}</h3>
-                  <p className="text-[var(--slate-500)] leading-relaxed">{faq.answer}</p>
+                  <p className="text-[var(--slate-500)] leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                  {faq.question.includes("How much does") && (
+                    <p className="mt-2 text-sm">
+                      <a href="/pricing" className="text-[var(--katie-blue)] hover:underline">Plans start at £59/month</a>. See full pricing and plan details.
+                    </p>
+                  )}
+                  {faq.question.includes("How does AI call answering work") && (
+                    <p className="mt-2 text-sm">
+                      Read our <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-amber-400 hover:text-amber-300 underline">complete guide to AI call answering</a> for more details.
+                    </p>
+                  )}
                 </div>
               ))}
             </div>
@@ -454,6 +469,12 @@ export default function ForHvacPage() {
                 Start 7-Day Free Trial
                 <ArrowRight className="w-5 h-5" />
               </Link>
+              <Link
+                href="/pricing"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-colors"
+              >
+                See Pricing — Plans from £59/month
+              </Link>
             </div>
             <div className="flex items-center justify-center gap-6 text-white/50 text-sm">
               <div className="flex items-center gap-2">
@@ -500,16 +521,42 @@ export default function ForHvacPage() {
             <div className="text-center">
               <p className="text-[var(--slate-500)] mb-4">Also explore:</p>
               <div className="flex flex-wrap justify-center gap-3">
-                <Link href="/for-locksmiths" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                <a href="/for-locksmiths" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
                   AI for Locksmiths
-                </Link>
-                <Link href="/blog/hvac-emergency-call-handling" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                </a>
+                <a href="/blog/hvac-emergency-call-handling" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
                   HVAC Emergency Call Handling Guide
-                </Link>
-                <Link href="/how-it-works" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                </a>
+                <a href="/how-it-works" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
                   How It Works
-                </Link>
+                </a>
+                <a href="/blog/best-ai-call-answering-service-uk-trades-2026" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                  7 Best AI Call Answering Services Compared
+                </a>
+                <a href="/pricing" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                  Plans from £59/month
+                </a>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 border-t border-white/10">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 className="text-lg font-semibold text-white/70 mb-6 text-center">Also See: AI Call Answering for Related Trades</h3>
+            <div className="grid sm:grid-cols-3 gap-4">
+              <a href="/for-plumbers" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors text-center">
+                <div className="font-medium text-white">AI Call Answering for Plumbers</div>
+                <p className="text-sm text-white/50 mt-1">Never miss a job</p>
+              </a>
+              <a href="/for-electricians" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors text-center">
+                <div className="font-medium text-white">AI Call Answering for Electricians</div>
+                <p className="text-sm text-white/50 mt-1">Never miss a job</p>
+              </a>
+              <a href="/for-gas-engineers" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors text-center">
+                <div className="font-medium text-white">AI Call Answering for Heating Engineers</div>
+                <p className="text-sm text-white/50 mt-1">Never miss a job</p>
+              </a>
             </div>
           </div>
         </section>

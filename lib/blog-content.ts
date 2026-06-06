@@ -9,6 +9,7 @@ export interface BlogPostContent {
   category: string
   author: string
   authorTitle: string
+  metaTitle?: string
   schema: {
     headline: string
     description: string
@@ -1591,7 +1592,8 @@ If you are a plumber, gas engineer, sparky, roofer, or builder and you are sick 
     },
   },
   "ai-call-answering-trades-uk-guide": {
-    title: "AI Call Answering for UK Trades: The Complete Guide (2026)",
+    metaTitle: "AI Call Answering for UK Trades (2026) | whoza.ai Blog",
+    title: "AI Call Answering for UK Trades (2026)",
     excerpt: "The definitive UK guide to AI call answering for plumbers, electricians, gas engineers and builders. How it works, what it costs, and how to choose the right service.",
     readTime: "15 min read",
     date: "2026-06-05",
@@ -1599,7 +1601,7 @@ If you are a plumber, gas engineer, sparky, roofer, or builder and you are sick 
     author: "Dru McPherson",
     authorTitle: "Founder, whoza.ai",
     schema: {
-      headline: "AI Call Answering for UK Trades: The Complete Guide (2026)",
+      headline: "AI Call Answering for UK Trades (2026)",
       description: "The definitive UK guide to AI call answering for plumbers, electricians, gas engineers and builders. How it works, what it costs, and how to choose the right service.",
     },
     content: {
@@ -1726,7 +1728,8 @@ If you are a plumber, gas engineer, sparky, roofer, or builder and you are sick 
     },
   },
   "missed-call-recovery-trades-guide": {
-    title: "Missed Call Recovery for UK Trades: The Complete Guide",
+    title: "Missed Call Recovery for UK Trades | Guide",
+    metaTitle: "Missed Call Recovery for UK Trades | Guide | whoza.ai",
     excerpt: "Discover how UK tradespeople can recover revenue from missed calls. Statistics, cost analysis, customer journey mapping, and proven recovery strategies.",
     readTime: "14 min read",
     date: "2026-06-05",
@@ -1734,7 +1737,7 @@ If you are a plumber, gas engineer, sparky, roofer, or builder and you are sick 
     author: "Dru McPherson",
     authorTitle: "Founder, whoza.ai",
     schema: {
-      headline: "Missed Call Recovery for UK Trades: The Complete Guide",
+      headline: "Missed Call Recovery for UK Trades | Guide",
       description: "Discover how UK tradespeople can recover revenue from missed calls. Statistics, cost analysis, customer journey mapping, and proven recovery strategies.",
     },
     content: {
@@ -1843,7 +1846,8 @@ If you are a plumber, gas engineer, sparky, roofer, or builder and you are sick 
     },
   },
   "how-does-ai-call-answering-work": {
-    title: "How Does AI Call Answering Work? A UK Trades Guide",
+    title: "How AI Call Answering Works | UK Trades",
+    metaTitle: "How AI Call Answering Works | UK Trades Guide | whoza.ai",
     excerpt: "Simple explanation of AI call answering technology for UK tradespeople. Learn how voice agents capture calls, qualify leads, and deliver enquiries to WhatsApp in 3 seconds.",
     readTime: "6 min read",
     date: "2026-06-05",
@@ -1851,7 +1855,7 @@ If you are a plumber, gas engineer, sparky, roofer, or builder and you are sick 
     author: "Dru McPherson",
     authorTitle: "Founder, whoza.ai",
     schema: {
-      headline: "How Does AI Call Answering Work? A UK Trades Guide",
+      headline: "How AI Call Answering Works | UK Trades",
       description: "Simple explanation of AI call answering technology for UK tradespeople. Learn how voice agents capture calls, qualify leads, and deliver enquiries to WhatsApp in 3 seconds.",
     },
     content: {
@@ -1928,7 +1932,8 @@ If you are a plumber, gas engineer, sparky, roofer, or builder and you are sick 
     },
   },
   "ai-vs-human-receptionist-trades": {
-    title: "AI vs Human Receptionist for UK Trades: Which Wins?",
+    title: "AI vs Human Receptionist: UK Trades",
+    metaTitle: "AI vs Human Receptionist: UK Trades | whoza.ai Blog",
     excerpt: "Head-to-head comparison of AI and human receptionists for UK trade businesses. Cost, availability, call quality, and customer experience compared honestly.",
     readTime: "7 min read",
     date: "2026-06-05",
@@ -1936,7 +1941,7 @@ If you are a plumber, gas engineer, sparky, roofer, or builder and you are sick 
     author: "Dru McPherson",
     authorTitle: "Founder, whoza.ai",
     schema: {
-      headline: "AI vs Human Receptionist for UK Trades: Which Wins?",
+      headline: "AI vs Human Receptionist: UK Trades",
       description: "Head-to-head comparison of AI and human receptionists for UK trade businesses. Cost, availability, call quality, and customer experience compared honestly.",
     },
     content: {
@@ -2013,7 +2018,8 @@ If you are a plumber, gas engineer, sparky, roofer, or builder and you are sick 
     },
   },
   "ai-call-answering-cost-uk": {
-    title: "AI Call Answering Cost UK: Pricing Guide for Trades",
+    title: "AI Call Answering Pricing UK | Trades Cost",
+    metaTitle: "AI Call Answering Pricing UK | Trades Cost | whoza.ai",
     excerpt: "Complete UK pricing guide for AI call answering services. Compare plans, calculate ROI, and understand the true cost for plumbers, electricians, and builders.",
     readTime: "6 min read",
     date: "2026-06-05",
@@ -2021,7 +2027,7 @@ If you are a plumber, gas engineer, sparky, roofer, or builder and you are sick 
     author: "Dru McPherson",
     authorTitle: "Founder, whoza.ai",
     schema: {
-      headline: "AI Call Answering Cost UK: Pricing Guide for Trades",
+      headline: "AI Call Answering Pricing UK | Trades Cost",
       description: "Complete UK pricing guide for AI call answering services. Compare plans, calculate ROI, and understand the true cost for plumbers, electricians, and builders.",
     },
     content: {
@@ -2100,7 +2106,8 @@ If you are a plumber, gas engineer, sparky, roofer, or builder and you are sick 
     },
   },
   "24-7-call-answering-emergency-trades": {
-    title: "24/7 Call Answering for Emergency Trades: UK Guide",
+    title: "24/7 Call Answering for Emergency Trades UK",
+    metaTitle: "24/7 Call Answering for Emergency Trades UK | whoza.ai",
     excerpt: "Why 24/7 call answering is essential for UK emergency trades. How AI captures burst pipes, power cuts, and lockouts at 2am, weekends, and bank holidays.",
     readTime: "6 min read",
     date: "2026-06-05",
@@ -2108,7 +2115,7 @@ If you are a plumber, gas engineer, sparky, roofer, or builder and you are sick 
     author: "Dru McPherson",
     authorTitle: "Founder, whoza.ai",
     schema: {
-      headline: "24/7 Call Answering for Emergency Trades: UK Guide",
+      headline: "24/7 Call Answering for Emergency Trades UK",
       description: "Why 24/7 call answering is essential for UK emergency trades. How AI captures burst pipes, power cuts, and lockouts at 2am, weekends, and bank holidays.",
     },
     content: {
@@ -2181,7 +2188,8 @@ If you are a plumber, gas engineer, sparky, roofer, or builder and you are sick 
     },
   },
   "how-to-grow-trade-business-uk-guide": {
-    title: "How to Grow Your Trade Business in 2025: The Complete UK Guide",
+    title: "Grow Your Trade Business: UK Guide (2025)",
+    metaTitle: "Grow Your Trade Business: UK Guide (2025) | whoza.ai",
     excerpt: "12 proven strategies to get more customers, increase revenue, and build a thriving trade business in the UK. From local SEO to Google reviews, partnerships to AI call answering — this is the guide that actually works.",
     readTime: "15 min read",
     date: "2026-06-05",
@@ -2189,7 +2197,7 @@ If you are a plumber, gas engineer, sparky, roofer, or builder and you are sick 
     author: "Dru McPherson",
     authorTitle: "Founder, whoza.ai",
     schema: {
-      headline: "How to Grow Your Trade Business in 2025: The Complete UK Guide",
+      headline: "Grow Your Trade Business: UK Guide (2025)",
       description: "12 proven strategies to get more customers, increase revenue, and build a thriving trade business in the UK. From local SEO to Google reviews, partnerships to AI call answering.",
     },
     content: {
@@ -3536,7 +3544,8 @@ The system in this guide isn't complicated. It's simple, repeatable, and effecti
     },
   },
   "ai-phone-technology-complete-guide": {
-    title: "AI Phone Technology: The Complete Guide for UK Tradespeople (2026)",
+    title: "AI Phone Technology Guide UK Trades (2026)",
+    metaTitle: "AI Phone Technology Guide for UK Trades (2026) | whoza.ai",
     excerpt: "How AI voice agents actually work — NLP, speech synthesis, intent recognition, voice quality, and the future of AI phone technology for trade businesses.",
     readTime: "18 min read",
     date: "2026-06-05",
@@ -3544,7 +3553,7 @@ The system in this guide isn't complicated. It's simple, repeatable, and effecti
     author: "Dru McPherson",
     authorTitle: "Founder, whoza.ai",
     schema: {
-      headline: "AI Phone Technology: The Complete Guide for UK Tradespeople (2026)",
+      headline: "AI Phone Technology Guide UK Trades (2026)",
       description: "How AI voice agents actually work — NLP, speech synthesis, intent recognition, voice quality, and the future of AI phone technology for trade businesses.",
     },
     content: {

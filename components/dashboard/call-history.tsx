@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Phone, PhoneOff, PhoneForwarded, Voicemail, Clock, MapPin, Wrench, AlertCircle, CheckCircle, XCircle, RotateCcw, ChevronDown, ChevronUp, Play, Pause, Volume2 } from "lucide-react"
+import { Phone, PhoneOff, PhoneForwarded, Voicemail, Clock, MapPin, Wrench, AlertCircle, CheckCircle, XCircle, RotateCcw, ChevronDown, ChevronUp, FileText } from "lucide-react"
 import { supabase } from "@/lib/supabase"
 
 interface Call {
@@ -21,6 +21,15 @@ interface Call {
   recording_url: string | null
   outcome: string | null
   created_at: string
+}
+
+const urgencyConfig: Record<string, { label: string; color: string; bg: string; emoji: string }> = {
+  emergency: { label: "EMERGENCY", color: "text-red-600", bg: "bg-red-50", emoji: "🔴" },
+  red: { label: "EMERGENCY", color: "text-red-600", bg: "bg-red-50", emoji: "🔴" },
+  urgent: { label: "URGENT", color: "text-orange-600", bg: "bg-orange-50", emoji: "🟠" },
+  amber: { label: "URGENT", color: "text-orange-600", bg: "bg-orange-50", emoji: "🟠" },
+  standard: { label: "STANDARD", color: "text-green-600", bg: "bg-green-50", emoji: "🟢" },
+  green: { label: "STANDARD", color: "text-green-600", bg: "bg-green-50", emoji: "🟢" },
 }
 
 const statusConfig: Record<string, { label: string; icon: typeof Phone; color: string; bg: string }> = {
@@ -43,7 +52,6 @@ export function CallHistory({ clientId }: { clientId?: string }) {
   const [error, setError] = useState<string | null>(null)
   const [filter, setFilter] = useState<string>("all")
   const [expandedCall, setExpandedCall] = useState<string | null>(null)
-  const [playingAudio, setPlayingAudio] = useState<string | null>(null)
 
   useEffect(() => {
     fetchCalls()
@@ -88,6 +96,23 @@ export function CallHistory({ clientId }: { clientId?: string }) {
       setError("Failed to load calls")
     } finally {
       setLoading(false)
+    }
+  }
+
+  async function handleAction(e: React.MouseEvent, callId: string, action: string) {
+    e.stopPropagation()
+    try {
+      const res = await fetch(`/api/enquiries/${callId}/action`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action }),
+      })
+      if (!res.ok) throw new Error("Action failed")
+      fetchCalls()
+    } catch (err) {
+      if (process.env.NODE_ENV === "development") {
+        console.error("[CallHistory] Action failed:", err)
+      }
     }
   }
 
@@ -259,8 +284,9 @@ export function CallHistory({ clientId }: { clientId?: string }) {
                           )}
                           {call.urgency && (
                             <div className="flex items-center gap-2 text-sm">
-                              <AlertCircle className="w-4 h-4 text-[var(--slate-400)]" />
-                              <span className="text-[var(--slate-500)] capitalize">{call.urgency}</span>
+                              <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${urgencyConfig[call.urgency]?.bg} ${urgencyConfig[call.urgency]?.color}`}>
+                                {urgencyConfig[call.urgency]?.emoji} {urgencyConfig[call.urgency]?.label || call.urgency}
+                              </span>
                             </div>
                           )}
                           {call.outcome && (
@@ -279,35 +305,11 @@ export function CallHistory({ clientId }: { clientId?: string }) {
                           </div>
                         )}
 
-                        {/* Recording */}
-                        {call.recording_url && (
-                          <div className="flex items-center gap-3">
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation()
-                                setPlayingAudio(playingAudio === call.id ? null : call.id)
-                              }}
-                              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/20 transition-colors text-sm font-medium"
-                            >
-                              {playingAudio === call.id ? (
-                                <>
-                                  <Pause className="w-4 h-4" /> Pause
-                                </>
-                              ) : (
-                                <>
-                                  <Play className="w-4 h-4" /> Play Recording
-                                </>
-                              )}
-                            </button>
-                            {playingAudio === call.id && (
-                              <audio
-                                src={call.recording_url}
-                                controls
-                                autoPlay
-                                className="flex-1 h-10"
-                                onEnded={() => setPlayingAudio(null)}
-                              />
-                            )}
+                        {/* Transcript Only Note */}
+                        {call.transcript && (
+                          <div className="flex items-center gap-2 text-xs text-[var(--slate-400)] bg-gray-50 rounded-lg p-2">
+                            <FileText className="w-3.5 h-3.5" />
+                            Text transcript only — no audio recording stored
                           </div>
                         )}
 
@@ -353,21 +355,4 @@ export function CallHistory({ clientId }: { clientId?: string }) {
       )}
     </div>
   )
-
-  async function handleAction(e: React.MouseEvent, callId: string, action: string) {
-    e.stopPropagation()
-    try {
-      const res = await fetch(`/api/enquiries/${callId}/action`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ action }),
-      })
-      if (!res.ok) throw new Error("Action failed")
-      fetchCalls()
-    } catch (err) {
-      if (process.env.NODE_ENV === "development") {
-        console.error("[CallHistory] Action failed:", err)
-      }
-    }
-  }
 }

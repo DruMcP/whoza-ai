@@ -295,7 +295,8 @@ export default function PricingGuidePage() {
                 UK AI call answering provider — Whoza.ai, Clara AI, Moneypenny, ARROW, IONOS, RingCentral AIR, and 
                 Answer.co.uk. We break down per-job, per-minute, and per-month pricing models. We reveal hidden costs 
                 that providers do not advertise. And we calculate exact break-even points for plumbers, electricians, 
-                roofers, and builders.
+                roofers, and builders. For a complete overview of round-the-clock service, see our 
+                <a href="/blog/247-call-answering-uk-trades-guide-2026" className="text-emerald-400 hover:underline">24/7 call answering guide</a>.
               </p>
               <p className="text-white/70 leading-relaxed mb-6">
                 All pricing is verified from provider websites, direct sales enquiries, and our own independent testing. 
@@ -304,7 +305,9 @@ export default function PricingGuidePage() {
               </p>
               <p className="text-white/70 leading-relaxed">
                 By the end of this guide, you will know exactly what you should pay, what hidden costs to watch for, 
-                which pricing model suits your trade, and how many jobs you need to win to break even. Let us get into the numbers.
+                which pricing model suits your trade, and how many jobs you need to win to break even. See 
+                <a href="/pricing" className="text-emerald-400 hover:underline">our pricing</a> for trade-specific plans 
+                starting from £59/month. Let us get into the numbers.
               </p>
             </div>
           </section>
@@ -375,7 +378,8 @@ export default function PricingGuidePage() {
                   trade terminology. A plumber asking about "combi boiler pressure drops" needs an AI trained 
                   on heating terminology. Trade-specific AI (Whoza.ai, some Clara configurations) costs more 
                   but converts significantly more callers into qualified leads. The cheapest option is worthless 
-                  if the AI cannot understand your customers.
+                  if the AI cannot understand your customers. For electrical businesses, see our 
+                  <a href="/for-electricians" className="text-emerald-400 hover:underline">AI call answering for electricians</a> page.
                 </p>
               </div>
 
@@ -1054,7 +1058,10 @@ export default function PricingGuidePage() {
                   AI call answering in the UK costs between £9 and £400+ per month depending on the provider and 
                   pricing model. Entry-level services like IONOS start at £9/month. Mid-tier AI services like Clara 
                   AI cost £49–£149/month. Premium human-assisted services like Moneypenny range from £150–£400+/month. 
-                  Whoza.ai offers trade-specific plans from £59–£399/month with per-job pricing.
+                  Whoza.ai offers trade-specific plans from 
+                  <a href="/pricing" className="text-emerald-400 hover:underline">£59/month</a> with per-job pricing. 
+                  For a full breakdown, see our 
+                  <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-emerald-400 hover:underline">complete guide to AI call answering for UK trades</a>.
                 </p>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-6">
@@ -1126,6 +1133,11 @@ export default function PricingGuidePage() {
                 Calculate Your Losses <ArrowRight className="w-5 h-5" />
               </a>
             </div>
+            <p className="text-white/50 text-sm mt-6 text-center">
+              <a href="/pricing" className="text-emerald-400 hover:underline">Plans from £59/month</a>. 
+              <a href="/pricing" className="text-emerald-400 hover:underline">How much whoza costs</a> 
+              depends on your call volume and trade.
+            </p>
             <div className="flex flex-wrap justify-center gap-6 mt-8 text-sm text-white/40">
               <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-400" /> No credit card required</span>
               <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-400" /> 30-day money-back guarantee</span>
@@ -1138,15 +1150,25 @@ export default function PricingGuidePage() {
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-white/10">
             <h3 className="text-lg font-semibold text-white/70 mb-4 text-center">Related Reading</h3>
             <div className="grid sm:grid-cols-2 gap-4">
-              <a href="/blog/how-much-do-missed-calls-cost-uk-trades" className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
-                <div className="text-emerald-400 text-sm font-medium mb-2">Analysis</div>
-                <div className="font-semibold text-white mb-1">How Much Do Missed Calls Cost UK Trades?</div>
-                <p className="text-white/50 text-sm">Data-driven analysis of missed call costs by trade with FSB and ONS data.</p>
-              </a>
               <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
                 <div className="text-emerald-400 text-sm font-medium mb-2">Guide</div>
-                <div className="font-semibold text-white mb-1">AI Call Answering for UK Trades: Complete 2026 Guide</div>
+                <div className="font-semibold text-white mb-1">Complete Guide to AI Call Answering for UK Trades</div>
                 <p className="text-white/50 text-sm">Everything tradespeople need to know about how AI call answering works.</p>
+              </a>
+              <a href="/blog/best-ai-call-answering-service-uk-trades-2026" className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
+                <div className="text-emerald-400 text-sm font-medium mb-2">Comparison</div>
+                <div className="font-semibold text-white mb-1">7 Best AI Call Answering Services Compared</div>
+                <p className="text-white/50 text-sm">Independent comparison of 7 AI call answering services for UK trades.</p>
+              </a>
+              <a href="/" className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
+                <div className="text-emerald-400 text-sm font-medium mb-2">Calculator</div>
+                <div className="font-semibold text-white mb-1">Lost Jobs Calculator</div>
+                <p className="text-white/50 text-sm">Calculate how much missed calls are costing your trade business.</p>
+              </a>
+              <a href="/" className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
+                <div className="text-emerald-400 text-sm font-medium mb-2">Free Trial</div>
+                <div className="font-semibold text-white mb-1">Try Katie Free for 7 Days</div>
+                <p className="text-white/50 text-sm">No credit card required. Start capturing every call in minutes.</p>
               </a>
             </div>
           </section>

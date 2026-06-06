@@ -58,18 +58,26 @@ export function Pricing() {
       description: "Capture + deliver jobs",
       price: String(config.pricing.starter),
       perJob: "4.50",
+      jobsIncluded: "8",
       includedMinutes: "100",
       period: "month",
       color: "blue" as keyof typeof colorStyles,
       popular: false,
       features: [
         { text: "AI call handling 24/7", included: true },
+        { text: "AI call notes + searchable transcripts", included: true },
+        { text: "Urgent call flags (RED/AMBER/GREEN)", included: true },
+        { text: "12 AI voice options (UK accents)", included: true },
+        { text: "Post-call email summary", included: true },
+        { text: "Voicemail detection + auto-forward", included: true },
         { text: "Spam call filtering", included: true },
         { text: "Lead capture + dashboard", included: true },
         { text: "Booking automation", included: true },
         { text: "WhatsApp job delivery", included: true },
+        { text: "Keep your existing business number", included: true },
+        { text: "No contract — cancel anytime", included: true },
         { text: "Monthly competitor analysis", included: true },
-        { text: `${cs}4.50 per booked enquiry — no enquiries included`, included: true },
+        { text: "8 booked enquiries included", included: true },
       ],
       cta: "Start free trial",
       stripePlanId: "starter",
@@ -79,20 +87,23 @@ export function Pricing() {
       description: "Full revenue system",
       price: String(config.pricing.growth),
       perJob: "3.25",
-      jobsIncluded: "15",
+      jobsIncluded: "16",
       includedMinutes: "300",
       period: "month",
       color: "green" as keyof typeof colorStyles,
       popular: true,
       features: [
         { text: "Everything in Starter", included: true },
-        { text: "15 booked enquiries included", included: true },
+        { text: "16 booked enquiries included", included: true },
+        { text: "Downloadable call logs (CSV/Excel)", included: true },
+        { text: "Weekly summary email (Monday 8am)", included: true },
+        { text: "Zapier / Make integration", included: true },
+        { text: "Customisable WhatsApp message templates", included: true },
+        { text: "Out-of-hours auto-tagging", included: true },
         { text: "Claire review engine", included: true },
         { text: "Monthly competitor analysis", included: true },
         { text: "Weekly actionable AI visibility insights", included: true },
         { text: "Calendar sync (Google, Outlook, Apple)", included: true },
-        { text: "Post-call email summary", included: true },
-        { text: "Voicemail detection + auto-callback", included: true },
         { text: "Jobs and enquiries dashboard", included: true },
         { text: `${cs}3.25 per additional booked enquiry`, included: true },
       ],
@@ -112,6 +123,9 @@ export function Pricing() {
       features: [
         { text: "Everything in Growth", included: true },
         { text: "40 booked enquiries included", included: true },
+        { text: "Advanced analytics dashboard (Pro+)", included: true },
+        { text: "Team member notifications + routing", included: true },
+        { text: "White-label WhatsApp messages", included: true },
         { text: "Monthly competitor analysis", included: true },
         { text: "Weekly actionable AI visibility insights", included: true },
         { text: "Advanced Rex AI visibility reporting", included: true },
@@ -139,6 +153,8 @@ export function Pricing() {
       features: [
         { text: "Everything in Pro", included: true },
         { text: "100 booked enquiries included", included: true },
+        { text: "Location-based call routing", included: true },
+        { text: "Executive summary email (all locations)", included: true },
         { text: "Monthly competitor analysis", included: true },
         { text: "Weekly actionable AI visibility insights", included: true },
         { text: "Advanced Rex reporting", included: true },
@@ -166,26 +182,26 @@ export function Pricing() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="inline-block px-4 py-2 rounded-full bg-[var(--rex-green)] text-white text-sm font-bold mb-4">
-            Zero Risk
+            No Contract. Cancel Anytime.
           </span>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--navy-900)] tracking-tight text-balance reveal">
             Simple Pricing That{" "}
             <span className="text-[var(--rex-green)]">Scales With You</span>
           </h2>
           <p className="mt-6 text-xl text-[var(--slate-500)] text-pretty max-w-2xl mx-auto">
-            Jobs included. {cs}2.25–{cs}4.50 per extra job. Scales as you grow.
+            Jobs included. {cs}2.25-{cs}4.50 per extra job. Scales as you grow.
             <span className="block mt-2 font-semibold text-[var(--navy-900)]">Start small. Only pay more as you get more work.</span>
             <span className="block mt-2 font-semibold text-[var(--navy-900)]">Most customers cover their cost in their first few jobs.</span>
           </p>
           <div className="mt-4 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[var(--rex-green)]/10 text-[var(--rex-green)] font-bold border border-[var(--rex-green)]/20">
             <CheckCircle2 className="w-5 h-5" />
-            30-day money-back guarantee — no questions asked.
+            30-day money-back guarantee — no questions asked. No contract. Cancel anytime.
           </div>
 
           {/* Economics breakdown */}
           <div className="mt-8 flex flex-wrap justify-center gap-6 lg:gap-10 text-center">
             <div className="px-4 py-3 rounded-xl bg-white shadow-sm border border-[var(--border)]">
-              <div className="text-2xl font-bold text-[var(--navy-900)]">{cs}2.25–{cs}4.50</div>
+              <div className="text-2xl font-bold text-[var(--navy-900)]">{cs}2.25-{cs}4.50</div>
               <div className="text-sm text-[var(--slate-500)]">per booked job</div>
             </div>
             <div className="px-4 py-3 rounded-xl bg-[var(--rex-green)]/10 border border-[var(--rex-green)]/20">
@@ -231,8 +247,8 @@ export function Pricing() {
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-white rounded-xl border ${
-                  plan.popular 
-                    ? `pricing-card popular ${colors.border} border-2 shadow-xl md:scale-105 z-10` 
+                  plan.popular
+                    ? `pricing-card popular ${colors.border} border-2 shadow-xl md:scale-105 z-10`
                     : "pricing-card border-[var(--border)] shadow-md hover:shadow-lg transition-shadow overflow-hidden"
                 }`}
               >
@@ -297,7 +313,7 @@ export function Pricing() {
                     ))}
                   </ul>
 
-                  {/* CTA — All plans open waitlist with selected plan */}
+                  {/* CTA - All plans open waitlist with selected plan */}
                   <button
                     onClick={() => openWaitlist(plan.name)}
                     className={`inline-flex items-center justify-center w-full font-bold transition-all py-2 px-4 rounded-md ${
@@ -524,7 +540,7 @@ export function Pricing() {
           viewport={{ once: true }}
           className="mt-8 text-center"
         >
-          <p className="text-lg text-[var(--slate-500)] font-semibold">Each plan includes enquiries, with additional ones charged per job — so you can scale as you grow.</p>
+          <p className="text-lg text-[var(--slate-500)] font-semibold">Each plan includes enquiries, with additional ones charged per job - so you can scale as you grow.</p>
           <p className="text-sm text-[var(--slate-500)] mt-2">Start small. Only pay more as you get more work.</p>
         </motion.div>
         {/* Overage Footnote */}

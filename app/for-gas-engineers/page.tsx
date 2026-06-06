@@ -70,6 +70,8 @@ const faqs = [
   },
 ]
 
+export const revalidate = 3600
+
 export default function ForGasEngineersPage() {
   return (
     <>
@@ -385,7 +387,7 @@ export default function ForGasEngineersPage() {
               ))}
             </div>
             <p className="mt-6 text-white/50 text-sm">
-              Read more about how trades recover revenue: <Link href="/blog/how-much-do-missed-calls-cost-uk-trades" className="text-orange-400 hover:text-orange-300 underline">How Much Do Missed Calls Cost UK Trades?</Link>
+              Read more about how trades recover revenue: <a href="/blog/how-much-do-missed-calls-cost-uk-trades" className="text-orange-400 hover:text-orange-300 underline">How Much Do Missed Calls Cost UK Trades?</a>
             </p>
           </div>
         </section>
@@ -448,20 +450,20 @@ export default function ForGasEngineersPage() {
               {faqs.map((faq, idx) => (
                 <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
                   <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
-                  <p className="text-white/60 leading-relaxed">{faq.answer}</p>
+                  <p className="text-white/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                 </div>
               ))}
             </div>
             <div className="mt-10 text-center">
               <p className="text-white/50 text-sm">
                 Still have questions? Read our{" "}
-                <Link href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-orange-400 hover:text-orange-300 underline">
+                <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-orange-400 hover:text-orange-300 underline">
                   complete AI call answering guide
-                </Link>{" "}
+                </a>{" "}
                 or{" "}
-                <Link href="/pricing" className="text-orange-400 hover:text-orange-300 underline">
+                <a href="/pricing" className="text-orange-400 hover:text-orange-300 underline">
                   compare all pricing plans
-                </Link>.
+                </a>.
               </p>
             </div>
           </div>

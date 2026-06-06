@@ -158,6 +158,44 @@ export function ComparisonTable() {
             </p>
           </div>
         </motion.div>
+
+        {/* Competitor comparison links */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-8 text-center"
+        >
+          <p className="text-sm text-[var(--slate-500)] mb-4">
+            See how whoza.ai compares to specific services:
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <a 
+              href="/whoza-vs-clara" 
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--border)] hover:bg-[var(--katie-blue)]/5 hover:border-[var(--katie-blue)]/20 transition-all text-sm font-medium text-[var(--navy-900)]"
+            >
+              vs Clara AI
+            </a>
+            <a 
+              href="/whoza-vs-moneypenny" 
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--border)] hover:bg-[var(--katie-blue)]/5 hover:border-[var(--katie-blue)]/20 transition-all text-sm font-medium text-[var(--navy-900)]"
+            >
+              vs Moneypenny
+            </a>
+            <a 
+              href="/whoza-vs-team-connect" 
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--border)] hover:bg-[var(--katie-blue)]/5 hover:border-[var(--katie-blue)]/20 transition-all text-sm font-medium text-[var(--navy-900)]"
+            >
+              vs Team-Connect
+            </a>
+            <a 
+              href="/ai-vs-virtual-receptionist" 
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--border)] hover:bg-[var(--katie-blue)]/5 hover:border-[var(--katie-blue)]/20 transition-all text-sm font-medium text-[var(--navy-900)]"
+            >
+              vs Virtual Receptionist
+            </a>
+          </div>
+        </motion.div>
       </div>
     </section>
   )

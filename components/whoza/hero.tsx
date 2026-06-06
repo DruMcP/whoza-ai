@@ -180,10 +180,25 @@ export function Hero() {
           {/* Outcome punchline */}
           <motion.p
             {...fadeUpVisible(0.5)}
-            className="font-sans text-lg font-semibold leading-snug text-white mb-5"
+            className="font-sans text-lg font-semibold leading-snug text-white mb-2"
           >
             No apps. No Contract. Just more work.
           </motion.p>
+
+          {/* Keep your number / No contract badges */}
+          <motion.div
+            {...fadeUpVisible(0.55)}
+            className="flex flex-wrap gap-2 mb-5"
+          >
+            <span className="inline-flex items-center gap-1.5 bg-white/10 text-white/80 text-sm font-medium px-3 py-1.5 rounded-full border border-white/10">
+              <span className="text-emerald-400">✓</span>
+              Keep your existing number
+            </span>
+            <span className="inline-flex items-center gap-1.5 bg-white/10 text-white/80 text-sm font-medium px-3 py-1.5 rounded-full border border-white/10">
+              <span className="text-emerald-400">✓</span>
+              No contract — cancel anytime
+            </span>
+          </motion.div>
 
           {/* CTA Group */}
           <motion.div

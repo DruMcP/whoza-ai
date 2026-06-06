@@ -16,6 +16,8 @@ export const metadata: Metadata = {
   },
 }
 
+export const revalidate = 3600
+
 export default function CookiePolicy() {
   return (
     <div className="min-h-screen bg-[var(--navy-900)] text-white">

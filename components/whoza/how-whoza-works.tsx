@@ -10,8 +10,10 @@ const phases = [
     color: "var(--katie-blue)",
     steps: [
       { icon: Phone, label: "Call Comes In", desc: "Missed or after hours" },
-      { icon: ClipboardCheck, label: "AI Answers", desc: "Katie handles it 24/7" },
-      { icon: MessageCircle, label: "Job Qualified", desc: "Filters out time-wasters" },
+      { icon: ClipboardCheck, label: "AI Answers", desc: "Your chosen voice takes detailed notes 24/7" },
+      { icon: MessageCircle, label: "Job Qualified", desc: "Urgency-flagged. Time-wasters filtered. Emergencies prioritised." },
+      { icon: ClipboardCheck, label: "AI Call Notes", desc: "Every conversation captured as text" },
+      { icon: Check, label: "Spam Filtered", desc: "Sales calls blocked automatically" },
     ],
   },
   {
@@ -19,9 +21,10 @@ const phases = [
     label: "Deliver",
     color: "var(--claire-amber)",
     steps: [
-      { icon: MessageCircle, label: "Sent to Phone", desc: "Via WhatsApp or SMS" },
-      { icon: Check, label: "You Accept", desc: "One tap to confirm" },
-      { icon: Calendar, label: "Enquiry Captured", desc: "In your dashboard" },
+      { icon: MessageCircle, label: "Sent to Phone", desc: "Detailed notes via WhatsApp or SMS" },
+      { icon: Check, label: "You Accept", desc: "One tap to confirm. Auto-synced to your calendar (Growth+)." },
+      { icon: Calendar, label: "Enquiry Captured", desc: "Searchable dashboard + exportable logs." },
+      { icon: Phone, label: "Keep Your Number", desc: "Your customers never know anything changed" },
     ],
   },
   {
@@ -30,7 +33,7 @@ const phases = [
     color: "var(--mark-grey)",
     steps: [
       { icon: Star, label: "Job Completed", desc: "You do the work" },
-      { icon: Star, label: "Review Requested", desc: "Claire auto-follows up" },
+      { icon: Star, label: "Review Requested", desc: "Claire auto-follows up. Google reviews on autopilot." },
     ],
   },
   {
@@ -40,7 +43,8 @@ const phases = [
     steps: [
       { icon: TrendingUp, label: "Rex Analyses", desc: "Monthly competitor check" },
       { icon: TrendingUp, label: "Growth+ Actions", desc: "Weekly recommendations" },
-      { icon: TrendingUp, label: "More Calls", desc: "More jobs, every week" },
+      { icon: TrendingUp, label: "More Calls", desc: "Weekly insights. Advanced analytics (Pro+). More jobs, every week." },
+      { icon: TrendingUp, label: "Weekly Summary", desc: "Your performance every Monday" },
     ],
   },
 ]

@@ -73,6 +73,8 @@ const faqs = [
   },
 ]
 
+export const revalidate = 3600
+
 export default function ForPlumbersPage() {
   return (
     <>
@@ -388,7 +390,7 @@ export default function ForPlumbersPage() {
               ))}
             </div>
             <p className="mt-6 text-white/50 text-sm">
-              Read Gary's full story: <Link href="/blog/i-missed-5-emergency-calls-a-week-then-i-tried-ai-gary-the-plumber" className="text-blue-400 hover:text-blue-300 underline">I Missed 5 Emergency Calls a Week. Then I Tried AI.</Link>
+              Read Gary's full story: <a href="/blog/i-missed-5-emergency-calls-a-week-then-i-tried-ai-gary-the-plumber" className="text-blue-400 hover:text-blue-300 underline">I Missed 5 Emergency Calls a Week. Then I Tried AI.</a>
             </p>
           </div>
         </section>
@@ -451,20 +453,20 @@ export default function ForPlumbersPage() {
               {faqs.map((faq, idx) => (
                 <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
                   <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
-                  <p className="text-white/60 leading-relaxed">{faq.answer}</p>
+                  <p className="text-white/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                 </div>
               ))}
             </div>
             <div className="mt-10 text-center">
               <p className="text-white/50 text-sm">
                 Still have questions? Read our{" "}
-                <Link href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-blue-400 hover:text-blue-300 underline">
+                <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-blue-400 hover:text-blue-300 underline">
                   complete AI call answering guide
-                </Link>{" "}
+                </a>{" "}
                 or{" "}
-                <Link href="/pricing" className="text-blue-400 hover:text-blue-300 underline">
+                <a href="/pricing" className="text-blue-400 hover:text-blue-300 underline">
                   compare all pricing plans
-                </Link>.
+                </a>.
               </p>
             </div>
           </div>

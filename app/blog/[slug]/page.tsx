@@ -12,6 +12,12 @@ interface BlogPostPageProps {
   params: Promise<{ slug: string }>
 }
 
+export const revalidate = 3600
+
+export function generateStaticParams() {
+  return Object.keys(blogPostContents).map((slug) => ({ slug }))
+}
+
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params
   const post = blogPostContents[slug]
@@ -22,7 +28,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   }
   return {
     metadataBase: new URL("https://whoza.ai"),
-    title: `${post.title} | whoza.ai Blog`,
+    title: post.metaTitle || `${post.title} | whoza.ai Blog`,
     description: post.schema.description,
     alternates: {
       canonical: `https://whoza.ai/blog/${slug}`,
@@ -33,10 +39,9 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     },
     authors: [{ name: post.author }],
     openGraph: {
-      title: post.title,
+      title: post.metaTitle || post.title,
       description: post.excerpt,
       type: "article",
-      publishedTime: post.date,
       authors: [post.author],
       tags: [post.category],
       url: `https://whoza.ai/blog/${slug}`,
@@ -47,7 +52,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     twitter: {
       card: "summary_large_image",
       site: "@whozaai",
-      title: post.title,
+      title: post.metaTitle || post.title,
       description: post.excerpt,
       images: ["https://whoza.ai/og-image.webp"],
     },
@@ -68,7 +73,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    headline: post.title,
+    headline: post.schema.headline,
     description: post.schema.description,
     image: "https://whoza.ai/og-image.webp",
     datePublished: post.date,

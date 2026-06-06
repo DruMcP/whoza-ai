@@ -33,6 +33,8 @@ import { locations, getLocationBySlug } from "@/lib/locations"
 import { VideoSchema } from "@/components/whoza/schema-markup"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 
+export const revalidate = 3600
+
 interface PageProps {
   params: Promise<{ location: string }>
 }

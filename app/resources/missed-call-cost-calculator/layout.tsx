@@ -2,21 +2,21 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "Missed Call Cost Calculator | How Much Revenue Are You Losing?",
+  title: "Missed Call Cost Calculator UK | Trades | whoza.ai",
   description: "Free interactive calculator for UK tradespeople. Calculate how much missed calls cost your trade business weekly, monthly, and yearly. Based on ONS data.",
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "https://whoza.ai/resources/missed-call-cost-calculator",
     siteName: "Whoza.ai",
-    title: "Missed Call Cost Calculator | How Much Revenue Are You Losing?",
+    title: "Missed Call Cost Calculator UK | Trades | whoza.ai",
     description: "Free interactive calculator for UK tradespeople. Calculate how much missed calls cost your trade business weekly, monthly, and yearly.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Missed call cost calculator for UK trades" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
-    title: "Missed Call Cost Calculator | How Much Revenue Are You Losing?",
+    title: "Missed Call Cost Calculator UK | Trades | whoza.ai",
     description: "Free interactive calculator for UK tradespeople. Calculate how much missed calls cost your trade business.",
     images: ["https://whoza.ai/og-image.webp"],
   },

@@ -380,7 +380,7 @@ export default function ForRoofersPage() {
               {faqs.map((faq, idx) => (
                 <div key={idx} className="bg-[var(--off-white)] rounded-xl border border-[var(--border)] px-6 py-5">
                   <h3 className="text-[var(--navy-900)] font-semibold mb-2">{faq.question}</h3>
-                  <p className="text-[var(--slate-500)] leading-relaxed">{faq.answer}</p>
+                  <p className="text-[var(--slate-500)] leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                 </div>
               ))}
             </div>
@@ -474,15 +474,15 @@ export default function ForRoofersPage() {
             <div className="text-center">
               <p className="text-[var(--slate-500)] mb-4">Also explore:</p>
               <div className="flex flex-wrap justify-center gap-3">
-                <Link href="/for-builders" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                <a href="/for-builders" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
                   AI for Builders
-                </Link>
-                <Link href="/blog/roofing-lead-generation-guide" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                </a>
+                <a href="/blog/roofing-lead-generation-guide" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
                   Roofing Lead Generation Guide
-                </Link>
-                <Link href="/how-it-works" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                </a>
+                <a href="/how-it-works" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
                   How It Works
-                </Link>
+                </a>
               </div>
             </div>
           </div>
