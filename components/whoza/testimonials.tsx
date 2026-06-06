@@ -7,16 +7,16 @@ import { WaitlistModal } from "./waitlist-modal"
 import { trackCTA } from "@/lib/gtag"
 
 const tradeLinks: Record<string, string> = {
-  "Plumbers": "/ai-call-answering-plumbers",
-  "Electricians": "/ai-call-answering-electricians",
-  "Builders": "/ai-call-answering-builders",
-  "Roofers": "/ai-call-answering-roofers",
-  "Locksmiths": "/ai-call-answering-locksmiths",
-  "Landscapers": "/ai-call-answering-landscapers",
-  "Heating Engineers": "/ai-call-answering-heating-engineers",
-  "Pest Control": "/ai-call-answering-pest-control",
-  "Cleaners": "/ai-call-answering-cleaners",
-  "Drainage": "/ai-call-answering-drainage",
+  "Plumbers": "/for-plumbers",
+  "Electricians": "/for-electricians",
+  "Builders": "/for-builders",
+  "Roofers": "/for-roofers",
+  "Locksmiths": "/for-locksmiths",
+  "Landscapers": "/for-landscapers",
+  "Heating Engineers": "/for-heating-engineers",
+  "Pest Control": "/for-pest-control",
+  "Cleaners": "/for-cleaners",
+  "Drainage": "/for-drainage",
 }
 
 const expectationCards = [
