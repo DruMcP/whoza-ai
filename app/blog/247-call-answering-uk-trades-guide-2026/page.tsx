@@ -303,8 +303,8 @@ export default function CallAnswering247UKGuidePage() {
               <p className="text-white/70 leading-relaxed mb-6">
                 This guide covers everything UK tradespeople need to know about 24/7 call answering in 2026:
                 which trades need it most, how AI handles emergency calls at 2am, real cost comparisons against
-                human services, ROI calculations, and step-by-step setup. Whether you are a <a href="/ai-call-answering-plumbers" className="text-emerald-400 hover:underline">plumber</a>, <a href="/ai-call-answering-locksmiths" className="text-emerald-400 hover:underline">locksmith</a>,
-                <a href="/ai-call-answering-heating-engineers" className="text-emerald-400 hover:underline">heating engineer</a>, <a href="/ai-call-answering-electricians" className="text-emerald-400 hover:underline">electrician</a>, or <a href="/ai-call-answering-roofers" className="text-emerald-400 hover:underline">emergency roofer</a>, this guide will show you how to capture
+                human services, ROI calculations, and step-by-step setup. Whether you are a <a href="/for-plumbers" className="text-emerald-400 hover:underline">plumber</a>, <a href="/for-locksmiths" className="text-emerald-400 hover:underline">locksmith</a>,
+                <a href="/for-heating-engineers" className="text-emerald-400 hover:underline">heating engineer</a>, <a href="/for-electricians" className="text-emerald-400 hover:underline">electrician</a>, or <a href="/for-roofers" className="text-emerald-400 hover:underline">emergency roofer</a>, this guide will show you how to capture
                 every after-hours opportunity without sacrificing your sleep or personal life.
               </p>
               <p className="text-white/70 leading-relaxed">
@@ -465,35 +465,35 @@ export default function CallAnswering247UKGuidePage() {
               {[
                 {
                   trade: "Locksmiths",
-                  tradeHref: "/ai-call-answering-locksmiths",
+                  tradeHref: "/for-locksmiths",
                   urgency: "Critical",
                   why: "Lockouts are the most time-sensitive trade calls. A tenant locked out at midnight will call every locksmith in the area until someone answers. First-answer wins 89% of the time. Emergency callout fees: £150–£250.",
                   peak: "10pm–3am, weekends",
                 },
                 {
                   trade: "Plumbers",
-                  tradeHref: "/ai-call-answering-plumbers",
+                  tradeHref: "/for-plumbers",
                   urgency: "High",
                   why: "Burst pipes, leaking cylinders, and blocked drains cause immediate property damage. Water damage compounds every hour. Emergency callout: £120–£280. Follow-up work: £400–£1,200.",
                   peak: "6pm–11pm, weekends, winter nights",
                 },
                 {
                   trade: "Heating Engineers",
-                  tradeHref: "/ai-call-answering-heating-engineers",
+                  tradeHref: "/for-heating-engineers",
                   urgency: "High",
                   why: "Boiler failures in winter are health hazards, especially for elderly or vulnerable households. No heating in sub-zero temperatures is treated as an emergency. Callout: £150–£300. Boiler replacement: £800–£2,500.",
                   peak: "October–March, weekends, early mornings",
                 },
                 {
                   trade: "Electricians",
-                  tradeHref: "/ai-call-answering-electricians",
+                  tradeHref: "/for-electricians",
                   urgency: "High",
                   why: "Power outages, faulty consumer units, and electrical burning smells are safety emergencies. Customers will not wait until morning. Callout: £100–£200. Rewiring: £500–£3,000.",
                   peak: "Evenings, weekends, storm periods",
                 },
                 {
                   trade: "Emergency Roofers",
-                  tradeHref: "/ai-call-answering-roofers",
+                  tradeHref: "/for-roofers",
                   urgency: "Medium-High",
                   why: "Storm damage, slipped tiles, and leaking roofs worsen with every rainfall. Emergency tarping and repairs prevent interior damage. Callout: £180–£400. Full repair: £600–£2,000.",
                   peak: "Autumn/winter storms, weekends",

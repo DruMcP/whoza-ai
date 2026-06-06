@@ -168,7 +168,7 @@ export default function MissedCallsCostPage() {
                 <li>• <strong className="text-red-400">Annual lost revenue: 260 × 0.35 × £280 = £25,480</strong></li>
               </ul>
               <p className="text-white/70 leading-relaxed">
-                That's <strong className="text-white">£25,480 per year</strong> in lost revenue for a single <a href="/ai-call-answering-plumbers" className="text-emerald-400 hover:underline">plumber</a> 
+                That's <strong className="text-white">£25,480 per year</strong> in lost revenue for a single <a href="/for-plumbers" className="text-emerald-400 hover:underline">plumber</a> 
                 missing just 5 calls per week. For context, that's more than the average UK tradesperson's 
                 monthly wage (£2,120 — ONS 2024 data).
               </p>
@@ -254,9 +254,9 @@ export default function MissedCallsCostPage() {
                 <div>
                   <h3 className="font-bold text-red-400 mb-4">What You Save</h3>
                   <div className="space-y-3 text-white/70 text-sm">
-                    <div className="flex justify-between"><span>Recovered <a href="/ai-call-answering-plumbers" className="text-emerald-400 hover:underline">plumber</a> jobs</span><span>£25,480/yr</span></div>
-                    <div className="flex justify-between"><span>Recovered <a href="/ai-call-answering-electricians" className="text-emerald-400 hover:underline">electrician</a> jobs</span><span>£19,968/yr</span></div>
-                    <div className="flex justify-between"><span>Recovered <a href="/ai-call-answering-roofers" className="text-emerald-400 hover:underline">roofer</a> jobs</span><span>£33,150/yr</span></div>
+                    <div className="flex justify-between"><span>Recovered <a href="/for-plumbers" className="text-emerald-400 hover:underline">plumber</a> jobs</span><span>£25,480/yr</span></div>
+                    <div className="flex justify-between"><span>Recovered <a href="/for-electricians" className="text-emerald-400 hover:underline">electrician</a> jobs</span><span>£19,968/yr</span></div>
+                    <div className="flex justify-between"><span>Recovered <a href="/for-roofers" className="text-emerald-400 hover:underline">roofer</a> jobs</span><span>£33,150/yr</span></div>
                     <div className="flex justify-between"><span>Average across trades</span><span>£24,500/yr</span></div>
                     <div className="border-t border-white/10 pt-3 flex justify-between font-bold text-emerald-400">
                       <span>ROI (whoze Starter)</span><span>3,460%</span>
@@ -276,7 +276,7 @@ export default function MissedCallsCostPage() {
                 leaving on the table every month. The AI service costs me £59. It's not even a decision."
               </blockquote>
               <cite className="text-white/50 text-sm not-italic">
-                — James R., <a href="/ai-call-answering-plumbers" className="text-emerald-400 hover:underline">plumber</a>, Glasgow (interviewed for this article, May 2026)
+                — James R., <a href="/for-plumbers" className="text-emerald-400 hover:underline">plumber</a>, Glasgow (interviewed for this article, May 2026)
               </cite>
             </div>
           </div>
