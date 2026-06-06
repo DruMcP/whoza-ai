@@ -87,11 +87,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  // Cache-busting comment v2 — force fresh chunk hash
   return (
     <html lang="en-GB" className={inter.variable}>
       <head>
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/favicon.ico" />
+    <meta name="deploy-id" content="2026-06-07" />
     {/* Preconnect to critical origins — reduces TTFB by establishing early connections */}
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
@@ -133,6 +135,8 @@ export default function RootLayout({
       {/* End Google Tag Manager */}
     </head>
       <body className="font-sans antialiased">
+        {/* Cache-busting deploy 2026-06-07 */}
+        <div data-deploy="2026-06-07" style={{display:'none'}} />
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

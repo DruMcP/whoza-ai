@@ -354,7 +354,7 @@ export default function BestAICallAnsweringServiceUKPage() {
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div className="bg-white/5 border border-white/10 rounded-xl p-8">
               <p className="text-white/70 leading-relaxed mb-6">
-                If you're a plumber, electrician, gas engineer, roofer, locksmith, or any UK tradesperson, 
+                If you're a <a href="/ai-call-answering-plumbers" className="text-emerald-400 hover:underline">plumber</a>, <a href="/ai-call-answering-electricians" className="text-emerald-400 hover:underline">electrician</a>, gas engineer, <a href="/ai-call-answering-roofers" className="text-emerald-400 hover:underline">roofer</a>, <a href="/ai-call-answering-locksmiths" className="text-emerald-400 hover:underline">locksmith</a>, or any UK tradesperson, 
                 you've missed calls while on a job. According to the Office for National Statistics (ONS), 
                 62% of calls to small UK trade businesses go unanswered — and of those missed callers, 
                 85% never ring back. The cost? An estimated £5,200 to £15,600 per year in lost revenue 
@@ -481,7 +481,7 @@ export default function BestAICallAnsweringServiceUKPage() {
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <h2 className="text-2xl font-bold mb-6">The Problem: Why Missed Calls Cost UK Trades Thousands</h2>
             <p className="text-white/70 leading-relaxed mb-6">
-              Before diving into the solutions, let us understand the scale of the problem. A typical UK plumber 
+              Before diving into the solutions, let us understand the scale of the problem. A typical UK <a href="/ai-call-answering-plumbers" className="text-emerald-400 hover:underline">plumber</a> 
               receives 8–12 calls per day, of which 5–7 go unanswered while they are under a sink, on a roof, or 
               driving between jobs. At an average job value of £180–£400, each missed call represents a potential 
               £90–£200 in lost revenue (accounting for the 50% of enquiries that convert to booked jobs).
@@ -648,7 +648,7 @@ export default function BestAICallAnsweringServiceUKPage() {
                 <p className="text-white/70 leading-relaxed mb-4">
                   The major limitation is email-only delivery. In our testing, this created a real bottleneck. 
                   UK tradespeople check messaging apps 4.2x more frequently than email during work hours, 
-                  according to our survey of 50 plumbers and electricians. When a potential customer calls about 
+                  according to our survey of 50 <a href="/ai-call-answering-plumbers" className="text-emerald-400 hover:underline">plumbers</a> and <a href="/ai-call-answering-electricians" className="text-emerald-400 hover:underline">electricians</a>. When a potential customer calls about 
                   an emergency leak, a 30-minute delay in seeing the enquiry (because you have not checked email) 
                   can mean losing the job to a competitor who answers faster.
                 </p>
@@ -679,7 +679,7 @@ export default function BestAICallAnsweringServiceUKPage() {
                 <p className="text-white/70 leading-relaxed">
                   Moneypenny remains the right choice for luxury trades — high-end builders, bespoke 
                   kitchen fitters, commercial electrical contractors — where the human touch is part of 
-                  the brand promise. For emergency plumbers and locksmiths who need volume and speed, AI services 
+                  the brand promise. For emergency <a href="/ai-call-answering-plumbers" className="text-emerald-400 hover:underline">plumbers</a> and <a href="/ai-call-answering-locksmiths" className="text-emerald-400 hover:underline">locksmiths</a> who need volume and speed, AI services 
                   are the better value.
                 </p>
               </div>
@@ -860,7 +860,7 @@ export default function BestAICallAnsweringServiceUKPage() {
               ROI: How Much Revenue Can AI Call Answering Recover?
             </h2>
             <p className="text-white/70 leading-relaxed mb-6">
-              Let us do the maths. A typical plumber in the UK receives 8–12 calls per day and misses 5–7 of them 
+              Let us do the maths. A typical <a href="/ai-call-answering-plumbers" className="text-emerald-400 hover:underline">plumber</a> in the UK receives 8–12 calls per day and misses 5–7 of them 
               while working. At a 50% conversion rate (industry average for trade enquiries) and an average job 
               value of £250, each missed call costs approximately £125 in potential revenue.
             </p>
@@ -885,7 +885,7 @@ export default function BestAICallAnsweringServiceUKPage() {
               2,100% to 4,500%. This is not a cost — it is an investment with measurable returns.
             </p>
             <p className="text-white/70 leading-relaxed">
-              For emergency trades (plumbers, locksmiths, heating engineers), the numbers are even more dramatic. 
+              For emergency trades (<a href="/ai-call-answering-plumbers" className="text-emerald-400 hover:underline">plumbers</a>, <a href="/ai-call-answering-locksmiths" className="text-emerald-400 hover:underline">locksmiths</a>, <a href="/ai-call-answering-heating-engineers" className="text-emerald-400 hover:underline">heating engineers</a>), the numbers are even more dramatic. 
               Emergency callouts average £150–£400, and callers who cannot reach you will immediately call the next 
               number on Google. Capturing just one additional emergency callout per week pays for the entire 
               monthly service cost.

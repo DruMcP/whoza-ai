@@ -429,6 +429,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    // New UGC posts — June 2026
+    {
+      url: `${baseUrl}/blog/i-lost-4000-in-one-storm-season-then-ai-answered-my-phone-tom-the-roofer`,
+      lastModified: '2026-06-07',
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/blog/i-was-missing-2000-extension-enquiries-every-month-then-i-tried-ai-steve-the-builder`,
+      lastModified: '2026-06-07',
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/blog/3-am-lockout-calls-were-going-to-voicemail-now-i-catch-every-one-sarah-the-locksmith`,
+      lastModified: '2026-06-07',
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/blog/i-missed-spring-booking-season-ai-captured-47-calls-in-3-weeks-james-the-landscaper`,
+      lastModified: '2026-06-07',
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
     {
       url: `${baseUrl}/blog/best-ai-phone-answering-uk-trades-2026`,
       lastModified: '2026-05-22',
