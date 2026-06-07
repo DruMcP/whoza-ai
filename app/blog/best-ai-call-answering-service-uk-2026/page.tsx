@@ -394,8 +394,7 @@ export default function BestAICallAnsweringUKPage() {
             <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 mt-1 shrink-0" /> Trade-specific customisation</li>
           </ul>
           <p className="text-white/70 leading-relaxed">
-            No affiliate relationships. No paid placements. Rankings based on merit alone. 
-            See our <a href="/blog/best-ai-phone-answering-uk-trades-2026" className="text-emerald-400 hover:underline">2025 comparison</a> for historical context.
+            No affiliate relationships. No paid placements. Rankings based on merit alone.
           </p>
         </section>
 

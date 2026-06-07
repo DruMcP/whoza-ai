@@ -9,7 +9,7 @@ const tradeLinks: Record<string, string> = {
   "Roofers": "/for-roofers",
   "Locksmiths": "/for-locksmiths",
   "Landscapers": "/for-landscapers",
-  "Heating Engineers": "/for-heating-engineers",
+  "Heating Engineers": "/for-hvac",
   "Pest Control": "/for-pest-control",
   "Cleaners": "/for-cleaners",
   "Drainage": "/for-drainage",
