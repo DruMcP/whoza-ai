@@ -256,7 +256,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/for-roofers`, lastModified: lastMod, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${baseUrl}/for-locksmiths`, lastModified: lastMod, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${baseUrl}/for-joiners`, lastModified: lastMod, changeFrequency: 'weekly', priority: 0.85 },
-    { url: `${baseUrl}/for-hvac`, lastModified: lastMod, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${baseUrl}/for-heating-engineers`, lastModified: lastMod, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${baseUrl}/for-painters-decorators`, lastModified: lastMod, changeFrequency: 'weekly', priority: 0.85 },
     // Previously missing — now added
     { url: `${baseUrl}/for-carpenters`, lastModified: lastMod, changeFrequency: 'weekly', priority: 0.85 },
@@ -312,7 +312,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'how-to-get-more-google-reviews-trades',
     'how-to-get-more-plumbing-customers',
     'how-to-grow-trade-business-uk-guide',
-    'hvac-emergency-call-handling',
+    'heating-engineer-emergency-call-handling',
     'i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky',
     'i-lost-4000-in-one-storm-season-then-ai-answered-my-phone-tom-the-roofer',
     'i-missed-5-emergency-calls-a-week-then-i-tried-ai-gary-the-plumber',

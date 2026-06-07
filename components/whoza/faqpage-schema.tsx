@@ -1,4 +1,5 @@
 // FAQ Page Schema — renders FAQPage structured data for blog posts with FAQs
+// No id attribute — prevents duplicate ID conflicts across pages
 export interface FAQPageSchemaProps {
   faqs: { question: string; answer: string }[]
 }
@@ -19,7 +20,6 @@ export function FAQPageSchema({ faqs }: FAQPageSchemaProps) {
 
   return (
     <script
-      id="faq-page-schema"
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />

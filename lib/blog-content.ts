@@ -4081,7 +4081,7 @@ At £59/month, AI call handling captures enquiries worth £50,000+. The question
       ],
     },
   },
-  "hvac-emergency-call-handling": {
+  "heating-engineer-emergency-call-handling": {
     title: "HVAC Emergency Call Handling: How to Capture Every Boiler Breakdown",
     excerpt: "Boiler breakdowns don't wait for business hours. Learn how UK heating engineers can capture emergency calls 24/7, prioritise urgent breakdowns, and convert after-hours enquiries into booked callouts.",
     readTime: "7 min read",

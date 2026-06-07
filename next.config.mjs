@@ -21,6 +21,16 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/for-hvac',
+        destination: '/for-heating-engineers',
+        permanent: true,
+      },
+      {
+        source: '/blog/hvac-emergency-call-handling',
+        destination: '/blog/heating-engineer-emergency-call-handling',
+        permanent: true,
+      },
+      {
         source: '/blog/case-study-how-a-london-electrician-recovered-12k-month-with-ai-call-handling',
         destination: '/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky',
         permanent: true,
