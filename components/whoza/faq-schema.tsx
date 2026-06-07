@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 
 interface FAQItem {
   question: string
@@ -8,8 +8,11 @@ interface FAQItem {
 }
 
 export function FAQPageSchema({ items }: { items: FAQItem[] }) {
+  const idRef = useRef(`faq-schema-${Math.random().toString(36).slice(2, 11)}`)
+
   useEffect(() => {
-    const existing = document.getElementById("homepage-faq-schema")
+    const id = idRef.current
+    const existing = document.getElementById(id)
     if (existing) existing.remove()
 
     const schema = {
@@ -26,13 +29,13 @@ export function FAQPageSchema({ items }: { items: FAQItem[] }) {
     }
 
     const script = document.createElement("script")
-    script.id = "homepage-faq-schema"
+    script.id = id
     script.type = "application/ld+json"
     script.textContent = JSON.stringify(schema)
     document.head.appendChild(script)
 
     return () => {
-      const cleanup = document.getElementById("homepage-faq-schema")
+      const cleanup = document.getElementById(id)
       if (cleanup) cleanup.remove()
     }
   }, [items])

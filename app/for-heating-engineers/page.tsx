@@ -28,12 +28,12 @@ export const metadata: Metadata = {
   title: "AI Call Handling for Heating Engineers UK | whoza.ai",
   description: "Stop losing boiler breakdown calls to voicemail. Katie answers 24/7 for emergency heating, annual services & breakdowns. WhatsApp alerts in 3 seconds. 7-day free trial.",
   alternates: {
-    canonical: "https://whoza.ai/for-hvac",
+    canonical: "https://whoza.ai/for-heating-engineers",
   },
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: "https://whoza.ai/for-hvac",
+    url: "https://whoza.ai/for-heating-engineers",
     siteName: "Whoza.ai",
     title: "AI Call Handling for Heating Engineers UK | whoza.ai",
     description: "Stop losing boiler breakdown calls to voicemail. Katie answers 24/7 for emergency heating, annual services & breakdowns. WhatsApp alerts in 3 seconds. 7-day free trial.",
@@ -140,7 +140,7 @@ export default function ForHvacPage() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "whoza.ai — AI Call Handling for Heating Engineers",
-    "url": "https://whoza.ai/for-hvac",
+    "url": "https://whoza.ai/for-heating-engineers",
     "logo": "https://whoza.ai/logo.webp",
     "image": "https://whoza.ai/og-image.webp",
     "description": "AI voice agents for UK heating engineers — answer missed calls 24/7, capture boiler breakdown, service, and installation enquiries, and deliver leads via WhatsApp.",
@@ -212,12 +212,12 @@ export default function ForHvacPage() {
       <VideoSchema
         name="Whoza.ai Demo — AI Call Handling for Heating Engineers"
         description="Watch how Katie captures a missed heating enquiry in under 60 seconds. Boiler breakdowns, emergency heating, annual services — answered 24/7."
-        embedUrl="https://whoza.ai/for-hvac"
+        embedUrl="https://whoza.ai/for-heating-engineers"
       />
       <Header />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
-        { name: "For Heating Engineers", item: "https://whoza.ai/for-hvac" },
+        { name: "For Heating Engineers", item: "https://whoza.ai/for-heating-engineers" },
       ]} />
       <FAQPageSchema faqs={faqs} />
 
@@ -524,7 +524,7 @@ export default function ForHvacPage() {
                 <a href="/for-locksmiths" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
                   AI for Locksmiths
                 </a>
-                <a href="/blog/hvac-emergency-call-handling" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                <a href="/blog/heating-engineer-emergency-call-handling" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
                   HVAC Emergency Call Handling Guide
                 </a>
                 <a href="/how-it-works" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
