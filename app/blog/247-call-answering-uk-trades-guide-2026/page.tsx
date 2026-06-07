@@ -1211,7 +1211,7 @@ export default function CallAnswering247UKGuidePage() {
               but for 95% of trade calls, the AI's accuracy, speed, and reliability deliver better outcomes.
             </p>
             <p className="text-white/70 leading-relaxed">
-              If you are a plumber, locksmith, heating engineer, electrician, or emergency roofer in the UK,
+              If you are a <a href="/for-plumbers" className="text-emerald-400 hover:underline">plumber</a>, <a href="/for-locksmiths" className="text-emerald-400 hover:underline">locksmith</a>, <a href="/for-heating-engineers" className="text-emerald-400 hover:underline">heating engineer</a>, <a href="/for-electricians" className="text-emerald-400 hover:underline">electrician</a>, or <a href="/for-roofers" className="text-emerald-400 hover:underline">emergency roofer</a> in the UK,
               24/7 call answering is the single highest-ROI investment you can make in your business this year.
               Setup takes 30 minutes. The trial is free for 7 days. And the first 2am emergency call you capture
               will make you wonder why you waited.
