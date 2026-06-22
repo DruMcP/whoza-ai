@@ -7,7 +7,7 @@
 # ─── Alert Policies ───
 
 ## P1 - Voice Webhook Failure (Immediate Page)
-# Trigger: trillet-webhook-health monitor DOWN
+# Trigger: Voice webhook monitor DOWN
 # Escalation: Slack → SMS → Phone
 # Response SLA: 3 minutes
 
@@ -15,9 +15,9 @@ p1_policy:
   name: "whoza-ai-voice-outage"
   priority: P1
   conditions:
-    - monitor_name: "trillet-webhook-health"
+    - monitor_name: "voice-webhook-health"
       status: "down"
-    - monitor_name: "trillet-webhook-receiver"
+    - monitor_name: "voice-webhook-receiver"
       status: "down"
   escalation:
     - step: 1

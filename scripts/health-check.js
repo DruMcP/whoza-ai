@@ -16,7 +16,6 @@ const ENDPOINTS = [
   { path: "/terms", name: "Terms of Service", method: "GET" },
   { path: "/dashboard", name: "Dashboard", method: "GET" },
   { path: "/api/rex", name: "Rex API", method: "GET" },
-  { path: "/api/trillet-webhook", name: "Trillet Webhook", method: "GET" },
   { path: "/api/enquiries", name: "Enquiries API", method: "GET" },
 ];
 
