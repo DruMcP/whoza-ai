@@ -51,21 +51,12 @@ page_config:
   monitor_mappings:
     - component: "website"
       monitors: ["prod-homepage", "prod-plumber", "prod-electrician", "prod-heating", "prod-pricing"]
-      
-    - component: "voice-ai"
-      monitors: ["trillet-webhook-health", "trillet-webhook-receiver"]
-      
+
     - component: "dashboard"
       monitors: ["prod-dashboard"]
-      
-    - component: "api"
-      monitors: ["trillet-webhook-receiver"]
-      
+
     - component: "database"
       monitors: ["supabase-auth"]
-      
-    - component: "whatsapp-delivery"
-      monitors: ["trillet-webhook-health"]
 
   # Subscriber options
   subscriptions:
