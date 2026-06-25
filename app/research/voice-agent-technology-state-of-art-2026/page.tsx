@@ -1,3 +1,4 @@
+import { User, Calendar } from "lucide-react"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
