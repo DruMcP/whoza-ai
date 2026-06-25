@@ -3,7 +3,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faq-schema"
-import { ArrowRight, Star, PoundSterling, Clock, Shield, TrendingUp, MessageCircle, Check, X, ChevronDown, Award, Zap, BarChart3 } from "lucide-react"
+import { ArrowRight, Star, PoundSterling, Clock, Shield, TrendingUp, MessageCircle, Check, X, ChevronDown, Award, Zap, BarChart3 , User, Calendar User } from "lucide-react"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
@@ -180,6 +180,21 @@ export default function BestAICallAnsweringUKPage() {
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
             Best AI Call Answering Service UK 2026
           </h1>
+
+              <div className="flex flex-wrap items-center gap-4 text-white/40 text-sm mt-4">
+                <div className="flex items-center gap-2">
+                  <User className="w-4 h-4" />
+                  <span>Trade Tech Review</span>
+                  <span className="text-white/30">— Research Team</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-4 h-4" />
+                  <time dateTime="2026-06-06">2026-06-06</time>
+                </div>
+              </div>
+              <div className="mt-2 text-white/30 text-sm">
+                Last updated: <time dateTime="2026-06-06">2026-06-06</time>
+              </div>
           <p className="text-white/70 text-lg leading-relaxed mb-8 max-w-3xl">
             We tested and compared seven AI call answering services for UK tradespeople. 
             No affiliate links. No paid placements. Just honest rankings based on features, 
@@ -457,7 +472,28 @@ export default function BestAICallAnsweringUKPage() {
         </section>
       </main>
 
-      <Footer />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Best AI Call Answering Service UK 2026",
+            "description": "Independent comparison of the best AI call answering services in the UK.",
+            "image": "https://whoza.ai/og-image.webp",
+            "datePublished": "2026-06-20",
+            "dateModified": "2026-06-20",
+            "author": { "@type": "Organization", "name": "whoza.ai", "url": "https://whoza.ai" },
+            "publisher": { "@type": "Organization", "name": "whoza.ai", "url": "https://whoza.ai" },
+            "speakable": {
+              "@type": "SpeakableSpecification",
+              "cssSelector": [".post-intro", ".key-statistics"]
+            }
+          })
+        }}
+      />
+<Footer />
     </div>
   )
 }

@@ -7,8 +7,8 @@ import { FileText, Clock, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Blog | whoza.ai",
-  description: "AI voice agent insights, trade business tips, and strategies to help UK tradespeople capture more leads and book more jobs.",
+  title: "Blog — AI Call Answering for UK Trades | whoza.ai",
+  description: "AI voice agent insights, trade business tips, and lead capture strategies to help UK tradespeople book more jobs and grow their business.",
   alternates: {
     canonical: "https://whoza.ai/blog",
   },
@@ -35,6 +35,46 @@ export const metadata: Metadata = {
 }
 
 const blogPosts = [
+  {
+    slug: "research/aeo-ai-search-optimisation-2026",
+    title: "Answer Engine Optimisation: Why Small Businesses Must Prepare for AI-Driven Search or Risk Invisibility in 2026 and Beyond",
+    excerpt: "Independent research report on Answer Engine Optimisation (AEO). Data from BrightEdge, Ahrefs, Semrush, Princeton, HubSpot, Google, and 30+ authoritative sources. 48% AI Overview coverage, 60% zero-click rate, 14.2% AI conversion rate.",
+    readTime: "28 min read",
+    date: "2026-06-20",
+    category: "Research",
+    isResearch: true,
+    url: "https://whoza.ai/research/aeo-ai-search-optimisation-2026",
+  },
+  {
+    slug: "research/caller-experience-revolution-ai-voice-agents-2026",
+    title: "The Caller Experience Revolution: How AI Voice Agents Transform Customer Satisfaction, Trust, and Revenue Conversion in Small Business",
+    excerpt: "Independent research report examining how AI voice agents transform caller experience for small businesses. Data from MIT, Harvard Business Review, Zendesk, BrightLocal, and SurveyMonkey.",
+    readTime: "22 min read",
+    date: "2026-06-20",
+    category: "Research",
+    isResearch: true,
+    url: "https://whoza.ai/research/caller-experience-revolution-ai-voice-agents-2026",
+  },
+  {
+    slug: "research/voice-agent-technology-state-of-art-2026",
+    title: "Voice Agent Technology: State of the Art, Architecture & Future 2026",
+    excerpt: "Technical deep-dive into voice AI architecture: end-to-end neural models, sub-200ms latency engineering, speech synthesis quality benchmarks, barge-in handling, and the agentic AI future.",
+    readTime: "18 min read",
+    date: "2026-06-18",
+    category: "Research",
+    isResearch: true,
+    url: "https://whoza.ai/research/voice-agent-technology-state-of-art-2026",
+  },
+  {
+    slug: "research/ai-voice-agents-uk-trades-2026",
+    title: "AI Voice Agents in the UK Trades Sector: Independent Research Report 2026",
+    excerpt: "Comprehensive independent research report analysing AI voice agent adoption, missed call revenue loss, and market trends. Data from Gartner, McKinsey, Juniper Research, BrightLocal, and ONS.",
+    readTime: "25 min read",
+    date: "2026-06-18",
+    category: "Research",
+    isResearch: true,
+    url: "https://whoza.ai/research/ai-voice-agents-uk-trades-2026",
+  },
   {
     slug: "best-ai-call-answering-service-uk-2026",
     title: "Best AI Call Answering Service UK 2026 | Independent Comparison",
@@ -251,7 +291,7 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-[var(--navy-900)] text-white">
       <Header />
-      <BlogListingSchema posts={blogPosts.map(({ slug, title, excerpt, date, category }) => ({ slug, title, excerpt, date, category }))} />
+      <BlogListingSchema posts={blogPosts.map(({ slug, title, excerpt, date, category, url }) => ({ slug, title, excerpt, date, category, url }))} />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
         { name: "Blog", item: "https://whoza.ai/blog" },
@@ -273,13 +313,13 @@ export default function BlogPage() {
           {blogPosts.map((post) => (
             <Link
               key={post.slug}
-              href={`/blog/${post.slug}`}
+              href={post.isResearch ? `/${post.slug}` : `/blog/${post.slug}`}
               className="group block bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-6 transition-colors"
             >
               <div className="flex items-start justify-between gap-4">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
-                    <span className="text-xs font-medium text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded-full">
+                    <span className={`text-xs font-medium px-2 py-1 rounded-full ${post.isResearch ? 'text-amber-400 bg-amber-500/10' : 'text-emerald-400 bg-emerald-500/10'}`}>
                       {post.category}
                     </span>
                     <span className="text-xs text-white/40">{post.date}</span>

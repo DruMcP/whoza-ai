@@ -81,7 +81,7 @@ export function Testimonials() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                className="bg-white rounded-xl p-6 border border-[var(--slate-200)] shadow-md hover:shadow-lg transition-all"
+                className="bg-white rounded-xl p-6 border border-[var(--slate-200)] shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
                 <div className={`w-10 h-10 rounded-lg ${item.bgLight} flex items-center justify-center mb-4`}>
                   <Icon className="w-5 h-5" style={{ color: item.color }} />
@@ -132,7 +132,7 @@ export function Testimonials() {
         >
           <button
             onClick={() => { trackCTA("Start your free trial", "testimonials"); setShowWaitlist(true); }}
-            className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-10 py-7 text-xl gap-3 shadow-xl shadow-[var(--rex-green)]/30 rounded-lg transition-all hover:scale-105 cursor-pointer border-none"
+            className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-10 py-7 text-xl gap-3 shadow-xl shadow-[var(--rex-green)]/30 rounded-lg transition-all hover:scale-105 active:scale-95 cursor-pointer border-none"
           >
             Start your free trial
             <ArrowRight className="w-6 h-6" />

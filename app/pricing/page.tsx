@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@whozaai",
     title: "Whoza.ai Pricing — Plans from £59/month | AI Voice",
     description: "Plans from £59/month. 7-day free trial.",
     images: ["https://whoza.ai/og-image.webp"],

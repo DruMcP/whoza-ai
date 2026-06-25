@@ -18,11 +18,19 @@ const navLinks = [
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [showWaitlist, setShowWaitlist] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     const handleOpen = () => setShowWaitlist(true)
     window.addEventListener('openWaitlist', handleOpen)
     return () => window.removeEventListener('openWaitlist', handleOpen)
+  }, [])
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
+    return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   const handleNavClick = (e: React.MouseEvent, href: string, isPageLink: boolean) => {
@@ -52,7 +60,11 @@ export function Header() {
         initial={{ y: 0, opacity: 1 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-        className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#111418]/80 border-b border-white/[0.08]"
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          scrolled
+            ? 'backdrop-blur-xl bg-[#111418]/60 border-b border-white/10 shadow-lg shadow-black/10'
+            : 'backdrop-blur-md bg-[#111418]/80 border-b border-white/[0.08]'
+        }`}
         role="banner"
         aria-label="Main navigation"
       >
@@ -81,7 +93,7 @@ export function Header() {
               )}
               <button
                 onClick={() => setShowWaitlist(true)}
-                className="btn-primary text-[13px] font-bold px-4 py-2 rounded-lg border border-white/20 bg-white/10 text-white hover:bg-white/20 no-underline cursor-pointer transition-colors whitespace-nowrap min-h-[44px]"
+                className="btn-primary text-[13px] font-bold px-4 py-2 rounded-lg border border-white/20 bg-white/10 text-white hover:bg-white/20 hover:scale-105 active:scale-95 no-underline cursor-pointer transition-all whitespace-nowrap min-h-[44px]"
                 aria-label="Start free trial"
               >
                 Start Free Trial

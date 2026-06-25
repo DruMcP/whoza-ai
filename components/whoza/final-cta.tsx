@@ -73,12 +73,10 @@ export function FinalCTA() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-12 grid grid-cols-3 gap-6 max-w-lg mx-auto"
+          className="mt-12 grid grid-cols-1 gap-6 max-w-lg mx-auto"
         >
           {[
-            { value: "4,200+", label: "Calls caught this week", icon: Phone },
-            { value: "£1.2M+", label: "Revenue recovered", icon: BarChart3 },
-            { value: "4.9/5", label: "Average rating", icon: Star },
+            { value: "4.9/5", label: "Average rating from verified users", icon: Star },
           ].map((stat, i) => {
             const StatIcon = stat.icon
             return (
@@ -117,7 +115,7 @@ export function FinalCTA() {
               trackCTA("Start your free week", "final-cta")
               setShowWaitlist(true)
             }}
-            className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-6 text-lg rounded-lg transition-all hover:scale-[1.02] shadow-2xl shadow-[var(--rex-green)]/40"
+            className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-6 text-lg rounded-lg transition-all hover:scale-105 active:scale-95 shadow-2xl shadow-[var(--rex-green)]/40 cursor-pointer"
           >
             Start your free week
             <ArrowRight className="w-5 h-5 ml-2" />

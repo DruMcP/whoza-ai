@@ -249,6 +249,10 @@ export default function GoogleBusinessProfileChecklistPage() {
       <div className="max-w-4xl mx-auto p-8 bg-white text-slate-900 print:p-0">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold mb-2">Google Business Profile Checklist for UK Trades</h1>
+
+              <div className="mt-4 text-white/30 text-sm">
+                Last updated: <time dateTime="2026-06-06">2026-06-06</time>
+              </div>
           <p className="text-slate-600">A complete optimisation checklist from whoza.ai</p>
         </div>
         {checklistSections.map((section, si) => (
@@ -317,14 +321,14 @@ export default function GoogleBusinessProfileChecklistPage() {
                 <CheckCircle className="w-4 h-4" />
                 Interactive Checklist
               </div>
-              <h1
+              <h2
                 className="text-4xl lg:text-5xl font-extrabold text-white mb-6"
                 style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}
               >
                 Google Business Profile
                 <br />
                 <span className="text-emerald-400">Checklist for UK Trades</span>
-              </h1>
+              </h2>
               <p className="text-lg text-slate-400 max-w-2xl mb-8">
                 A complete, step-by-step checklist to optimise your Google Business Profile and rank higher in local
                 search. Tick items off as you go — your progress saves automatically.

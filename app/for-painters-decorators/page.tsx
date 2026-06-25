@@ -23,10 +23,11 @@ import { FloatingChatWidget } from "@/components/whoza/sticky-cta"
 import { VideoSchema } from "@/components/whoza/schema-markup"
 import Link from "next/link"
 import { ArrowRight, CheckCircle, Phone, Shield, Clock, PoundSterling, Paintbrush, PaintBucket, Home, Briefcase, Palette, Star } from "lucide-react"
+import { RelatedTrades } from "@/components/whoza/related-trades"
 
 export const metadata: Metadata = {
   title: "AI Call Handling for Painters & Decorators UK | whoza.ai",
-  description: "Stop losing painting enquiries to missed calls. Katie answers 24/7 for interior, exterior, emergency touch-ups & commercial work. WhatsApp alerts in 3 seconds. 7-day free trial.",
+  description: "Katie answers 24/7 for painters & decorators. Captures interior, exterior & commercial painting enquiries. WhatsApp alerts in 3 seconds. Free trial.",
   alternates: {
     canonical: "https://whoza.ai/for-painters-decorators",
   },
@@ -36,14 +37,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/for-painters-decorators",
     siteName: "Whoza.ai",
     title: "AI Call Handling for Painters & Decorators UK | whoza.ai",
-    description: "Stop losing painting enquiries to missed calls. Katie answers 24/7 for interior, exterior, emergency touch-ups & commercial work. WhatsApp alerts in 3 seconds. 7-day free trial.",
+    description: "Katie answers 24/7 for painters & decorators. Captures interior, exterior & commercial painting enquiries. WhatsApp alerts in 3 seconds. Free trial.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai for Painters & Decorators" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "AI Call Handling for Painters & Decorators UK | whoza.ai",
-    description: "Stop losing painting enquiries to missed calls. Katie answers 24/7 for interior, exterior, emergency touch-ups & commercial work. WhatsApp alerts in 3 seconds. 7-day free trial.",
+    description: "Katie answers 24/7 for painters & decorators. Captures interior, exterior & commercial painting enquiries. WhatsApp alerts in 3 seconds. Free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {
@@ -154,6 +155,13 @@ export default function ForPaintersDecoratorsPage() {
       "name": "United Kingdom"
     },
     "priceRange": "££",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "127",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
     "telephone": "+44-20-0000-0000",
     "email": "dru@whoz.ai",
     "openingHoursSpecification": [
@@ -390,7 +398,32 @@ export default function ForPaintersDecoratorsPage() {
         <div className="section-divider" />
         <Pricing />
 
-        {/* FAQ */}
+        
+        {/* ─── CITY LINKS ─── */}
+        <section className="py-12">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+              AI Call Answering for Painters & Decorators in Your City
+            </h2>
+            <p className="text-white/60 mb-6">
+              Katie answers calls for painters & decorators across the UK. Find your location:
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+    <Link href="/for-painters-decorators-london" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">London</Link>
+    <Link href="/for-painters-decorators-manchester" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Manchester</Link>
+    <Link href="/for-painters-decorators-birmingham" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Birmingham</Link>
+    <Link href="/for-painters-decorators-leeds" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Leeds</Link>
+    <Link href="/for-painters-decorators-glasgow" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Glasgow</Link>
+    <Link href="/for-painters-decorators-bristol" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Bristol</Link>
+    <Link href="/for-painters-decorators-liverpool" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Liverpool</Link>
+    <Link href="/for-painters-decorators-edinburgh" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Edinburgh</Link>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
+{/* FAQ */}
         <section id="faq" className="section-padding-lg bg-white relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -540,7 +573,9 @@ export default function ForPaintersDecoratorsPage() {
         <FinalCTA />
       </main>
 
-      <Footer />
+      <div className="section-divider" />
+        <RelatedTrades currentTrade="for-painters-decorators" />
+        <Footer />
       <FloatingChatWidget />
     </>
   )

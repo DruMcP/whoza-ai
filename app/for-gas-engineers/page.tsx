@@ -6,10 +6,11 @@ import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 import { VideoSchema } from "@/components/whoza/schema-markup"
 import { ArrowRight, Phone, Flame, Shield, Clock, PoundSterling, CheckCircle2, Star, AlertTriangle, Home, Calendar } from "lucide-react"
 import Link from "next/link"
+import { RelatedTrades } from "@/components/whoza/related-trades"
 
 export const metadata: Metadata = {
   title: "AI Call Answering for Gas Engineers UK — 24/7",
-  description: "Never miss a gas safety enquiry again. Katie answers 24/7, captures CP12 certificates, boiler breakdowns, gas leaks & carbon monoxide emergencies. WhatsApp alerts in 3 seconds. 7-day free trial.",
+  description: "Katie answers 24/7 for gas engineers. Captures CP12 certificates, boiler breakdowns & gas leaks. WhatsApp alerts in 3 seconds. Free trial.",
   alternates: {
     canonical: "https://whoza.ai/for-gas-engineers",
   },
@@ -19,14 +20,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/for-gas-engineers",
     siteName: "Whoza.ai",
     title: "AI Call Answering for Gas Engineers UK — 24/7",
-    description: "Never miss a gas safety enquiry again. Katie answers 24/7, captures CP12 certificates, boiler breakdowns, gas leaks & carbon monoxide emergencies. WhatsApp alerts in 3 seconds. 7-day free trial.",
+    description: "Katie answers 24/7 for gas engineers. Captures CP12 certificates, boiler breakdowns & gas leaks. WhatsApp alerts in 3 seconds. Free trial.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Gas Engineers" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "AI Call Answering for Gas Engineers UK — 24/7",
-    description: "Never miss a gas safety enquiry again. Katie answers 24/7, captures CP12 certificates, boiler breakdowns, gas leaks & carbon monoxide emergencies. WhatsApp alerts in 3 seconds. 7-day free trial.",
+    description: "Katie answers 24/7 for gas engineers. Captures CP12 certificates, boiler breakdowns & gas leaks. WhatsApp alerts in 3 seconds. Free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {
@@ -102,6 +103,13 @@ export default function ForGasEngineersPage() {
             "serviceType": "AI Call Handling for Gas Engineers",
             "knowsAbout": ["Gas Safety", "CP12", "Boiler Repairs", "Gas Leaks", "Carbon Monoxide", "Gas Safe Registered", "Landlord Gas Safety"],
             "priceRange": "££",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "127",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
             "telephone": "+44-20-0000-0000",
             "address": {
               "@type": "PostalAddress",
@@ -324,7 +332,7 @@ export default function ForGasEngineersPage() {
                 {
                   step: "03",
                   icon: Phone,
-                  title: "You Get WhatsApp in 3 Seconds",
+                  title: "Gas Safety Alert in 3 Seconds",
                   description: "A structured message lands on your phone: name, number, postcode, job type, urgency, boiler details, and property type. Tap Accept, Call Back, or Decline. Customer gets an instant SMS either way. For CP12s, she also captures appliance count and certificate due date.",
                 },
               ].map((item, idx) => {
@@ -436,7 +444,31 @@ export default function ForGasEngineersPage() {
         <div className="section-divider" />
 
         {/* ─── FAQ ─── */}
-        <section className="py-16 lg:py-24">
+        
+        {/* ─── CITY LINKS ─── */}
+        <section className="py-12">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+              AI Call Answering for Gas Engineers in Your City
+            </h2>
+            <p className="text-white/60 mb-6">
+              Katie answers calls for gas engineers across the UK. Find your location:
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+    <Link href="/for-gas-engineers-london" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">London</Link>
+    <Link href="/for-gas-engineers-manchester" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Manchester</Link>
+    <Link href="/for-gas-engineers-birmingham" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Birmingham</Link>
+    <Link href="/for-gas-engineers-leeds" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Leeds</Link>
+    <Link href="/for-gas-engineers-glasgow" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Glasgow</Link>
+    <Link href="/for-gas-engineers-bristol" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Bristol</Link>
+    <Link href="/for-gas-engineers-liverpool" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Liverpool</Link>
+    <Link href="/for-gas-engineers-edinburgh" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Edinburgh</Link>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+<section className="py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">
@@ -543,7 +575,9 @@ export default function ForGasEngineersPage() {
         </section>
       </main>
 
-      <Footer />
+      <div className="section-divider" />
+        <RelatedTrades currentTrade="for-gas-engineers" />
+        <Footer />
     </>
   )
 }

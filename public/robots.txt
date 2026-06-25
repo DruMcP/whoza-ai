@@ -1,11 +1,14 @@
 # ============================================================
 # whoza.ai — AI Voice Agents for UK Tradespeople
-# Updated: 2026-06-05
+# Updated: 2026-06-08
+# AEO-optimised: AI crawlers explicitly allowed
 # ============================================================
 
 # ------------------- Standard Crawlers -------------------
 User-agent: *
 Allow: /
+Allow: /_next/static/
+Disallow: /_next/
 Disallow: /api/
 Disallow: /admin/
 Disallow: /portal/
@@ -13,12 +16,11 @@ Disallow: /checkout/
 Disallow: /login/
 Disallow: /sign-in/
 Disallow: /dashboard/
-Disallow: /_next/
 Disallow: /cdn-cgi/
 Disallow: /*.json$
 Disallow: /*?nocache=
 
-# ------------------- AI Search Crawlers -------------------
+# ------------------- AI Search Crawlers (AEO) -------------------
 # OpenAI (ChatGPT Search, GPTBot)
 User-agent: OAI-SearchBot
 Allow: /
@@ -43,7 +45,7 @@ Allow: /
 User-agent: Perplexity-User
 Allow: /
 
-# Google (Gemini, AI Overviews, Bard)
+# Google (Gemini, AI Overviews, Bard, Search)
 User-agent: Google-Extended
 Allow: /
 
@@ -57,8 +59,17 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
+User-agent: msnbot
+Allow: /
+
 # Meta (AI search products)
 User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: FacebookBot
 Allow: /
 
 # Apple
@@ -68,17 +79,65 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
+# ByteDance / TikTok
+User-agent: Bytespider
+Allow: /
+
+User-agent: TikTokSpider
+Allow: /
+
 # Naver (Korean AI search)
 User-agent: Naverbot
+Allow: /
+
+User-agent: Yeti
 Allow: /
 
 # DuckDuckGo
 User-agent: DuckDuckBot
 Allow: /
 
+User-agent: DuckDuckGo-Favicons-Bot
+Allow: /
+
 # Common Crawl (used by many AI models)
 User-agent: CCBot
 Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+User-agent: You.com-Bot
+Allow: /
+
+# Imagesift (AI image search)
+User-agent: ImagesiftBot
+Allow: /
+
+# Petal (Huawei AI search)
+User-agent: PetalBot
+Allow: /
+
+# Seznam (Czech AI search)
+User-agent: SeznamBot
+Allow: /
+
+# Yandex (AI search)
+User-agent: YandexBot
+Allow: /
+
+# Sogou (Chinese AI search)
+User-agent: Sogou web spider
+Allow: /
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+
+# ------------------- LLM Crawler Files -------------------
+# llms.txt and llms-full.txt provide AI-readable context
+# Located at: https://whoza.ai/llms.txt and https://whoza.ai/llms-full.txt
 
 # ------------------- Sitemap -------------------
 Sitemap: https://whoza.ai/sitemap.xml

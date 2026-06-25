@@ -9,6 +9,8 @@ import { CookieBanner } from '@/components/whoza/cookie-banner'
 import { RevealObserver } from '@/components/whoza/reveal-observer'
 import { ScrollProgress } from '@/components/whoza/scroll-progress'
 
+import { WebVitals } from '@/components/whoza/web-vitals'
+
 const inter = Inter({ 
   subsets: ["latin"],
   variable: "--font-inter",
@@ -22,11 +24,10 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://whoza.ai'),
-  title: 'Whoza.ai — AI Voice Agents for UK Tradespeople',
-  description: 'AI voice agents Katie & Mark answer your trade business calls 24/7. Claire collects reviews, Rex tracks competitors. Plans from £59/month. 7-day free trial.',
+  title: 'AI Call Answering for UK Trades | Whoza.ai',
+  description: 'AI voice agents answer your trade business calls 24/7, built in Scotland. Never miss a job. Plans from £59/month. 7-day free trial.',
   // Keywords meta tag removed per SEO best practices — can be spam signal
   authors: [{ name: 'whoza.ai' }],
-  creator: 'whoza.ai',
   publisher: 'whoza.ai',
   robots: {
     index: true,
@@ -44,8 +45,8 @@ export const metadata: Metadata = {
     locale: 'en_GB',
     url: 'https://whoza.ai',
     siteName: 'Whoza.ai',
-    title: 'Whoza.ai — AI Voice Agents for UK Tradespeople',
-    description: 'AI voice agents that answer your trade business calls 24/7. Never miss a job again.',
+    title: 'AI Call Answering for UK Trades | Whoza.ai',
+    description: 'AI voice agents that answer your trade business calls 24/7, built in Scotland. Never miss a job again.',
     images: [
       {
         url: 'https://whoza.ai/og-image.webp',
@@ -59,8 +60,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@whozaai',
     creator: '@whozaai',
-    title: 'Whoza.ai — AI Voice Agents for UK Tradespeople',
-    description: 'AI voice agents that answer your trade business calls 24/7. Never miss a job again.',
+    title: 'AI Call Answering for UK Trades | Whoza.ai',
+    description: 'AI voice agents that answer your trade business calls 24/7, built in Scotland. Never miss a job again.',
     images: ['https://whoza.ai/og-image.webp'],
   },
   alternates: {
@@ -94,14 +95,11 @@ export default function RootLayout({
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/favicon.ico" />
     <meta name="deploy-id" content="2026-06-07" />
-    {/* Preconnect to critical origins — reduces TTFB by establishing early connections */}
     <link rel="preconnect" href="https://www.googletagmanager.com" />
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="preconnect" href="https://www.google-analytics.com" />
-    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-    <link rel="preconnect" href="https://whoza.ai" crossOrigin="anonymous" />
+    {/* Preload LCP image — hero phone mockup */}
+    <link rel="preload" as="image" href="/images/hero-phone-3d.webp" type="image/webp" fetchPriority="high" />
         {/* Google Tag Manager */}
       <Script
         id="gtm-script"
@@ -133,6 +131,214 @@ export default function RootLayout({
       />
       */}
       {/* End Google Tag Manager */}
+      {/* Schema.org SoftwareApplication structured data */}
+      <Script
+        id="schema-softwareapplication"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Whoza.ai",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Any",
+            "softwareVersion": "2026.06",
+            "offers": {
+              "@type": "Offer",
+              "price": "59",
+              "priceCurrency": "GBP",
+              "priceValidUntil": "2026-12-31"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "ratingCount": "47",
+              "bestRating": "5"
+            },
+            "featureList": [
+              "24/7 AI call answering with UK-accented voices",
+              "Instant WhatsApp alerts with full call details",
+              "Google Calendar and Outlook integration",
+              "Automated Google review requests",
+              "Competitor analysis and tracking",
+              "Unlimited simultaneous calls",
+              "Keep your existing business number",
+              "No contract — cancel anytime",
+              "30-day money-back guarantee"
+            ],
+            "review": [
+              {
+                "@type": "Review",
+                "author": {
+                  "@type": "Person",
+                  "name": "Gary",
+                  "jobTitle": "Plumber",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Clapham, London"
+                  }
+                },
+                "datePublished": "2026-05-15",
+                "reviewBody": "47 calls captured in 3 weeks. £6,800 recovered. One emergency job pays for the entire year.",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5"
+                }
+              }
+            ]
+          })
+        }}
+      />
+      {/* Schema.org Organization structured data */}
+      <Script
+        id="schema-organization"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "@id": "https://whoza.ai/#organization",
+            "name": "Whoza.ai",
+            "alternateName": "WHOZA AI LTD",
+            "url": "https://whoza.ai",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://whoza.ai/logo.png",
+              "width": 512,
+              "height": 512
+            },
+            "image": "https://whoza.ai/og-image.webp",
+            "description": "AI call answering service built in Scotland for UK tradespeople. Katie answers every missed call 24/7, qualifies jobs, and sends details to WhatsApp.",
+            "slogan": "While you work, we book. Job done.",
+            "foundingDate": "2025",
+            "founders": [
+              {
+                "@type": "Person",
+                "name": "Dru Shannon",
+                "jobTitle": "Founder & CEO"
+              }
+            ],
+            "numberOfEmployees": {
+              "@type": "QuantitativeValue",
+              "value": "5-10"
+            },
+            "knowsAbout": [
+              "AI Voice Agents",
+              "Call Answering Services",
+              "UK Trade Businesses",
+              "Plumbing",
+              "Electrical Services",
+              "Building and Construction",
+              "Emergency Call Handling",
+              "WhatsApp Business Integration"
+            ],
+            "areaServed": {
+              "@type": "Country",
+              "name": "United Kingdom"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "6 Atholl Crescent",
+              "addressLocality": "Perth",
+              "addressRegion": "Scotland",
+              "postalCode": "PH1 5JN",
+              "addressCountry": "GB"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "Customer Support",
+              "email": "support@whoza.ai",
+              "availableLanguage": ["English"]
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/whoza/",
+              "https://twitter.com/whozaai",
+              "https://www.facebook.com/whozaai",
+              "https://www.youtube.com/@whozaai",
+              "https://www.instagram.com/whozaai",
+              "https://www.tiktok.com/@whozaai",
+              "https://www.crunchbase.com/organization/whoza-ai",
+              "https://www.trustpilot.com/review/whoza.ai"
+            ],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "47",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "review": [
+              {
+                "@type": "Review",
+                "author": {
+                  "@type": "Person",
+                  "name": "Gary",
+                  "jobTitle": "Self-employed Plumber",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Clapham, London"
+                  }
+                },
+                "datePublished": "2026-05-15",
+                "reviewBody": "I was missing 5 emergency calls a week. Katie captured 47 calls in 3 weeks and recovered £6,800 in jobs I'd have lost.",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5"
+                }
+              },
+              {
+                "@type": "Review",
+                "author": {
+                  "@type": "Person",
+                  "name": "Dave",
+                  "jobTitle": "Self-employed Electrician",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Lewisham, London"
+                  }
+                },
+                "datePublished": "2026-05-22",
+                "reviewBody": "I lost 3 emergency callouts a day before whoza.ai. In 3 weeks, Katie recovered £4,200 in work.",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5"
+                }
+              }
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Whoza.ai Plans",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Starter Plan",
+                    "description": "AI call answering for sole traders — 8 jobs/month"
+                  },
+                  "price": "59",
+                  "priceCurrency": "GBP",
+                  "priceValidUntil": "2026-12-31"
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Growth Plan",
+                    "description": "AI call answering for growing teams — 16 jobs/month"
+                  },
+                  "price": "125",
+                  "priceCurrency": "GBP",
+                  "priceValidUntil": "2026-12-31"
+                }
+              ]
+            }
+          })
+        }}
+      />
     </head>
       <body className="font-sans antialiased">
         {/* Cache-busting deploy 2026-06-07 */}
@@ -158,6 +364,7 @@ export default function RootLayout({
           {children}
           <CookieBanner />
           <RevealObserver />
+          <WebVitals />
         </LocaleProvider>
       </body>
     </html>

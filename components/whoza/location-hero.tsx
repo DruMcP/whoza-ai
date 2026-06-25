@@ -139,7 +139,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             transition={{ duration: 0.6, delay: 0.28, ease: [0.16, 1, 0.3, 1] }}
             className="font-sans text-lg font-semibold text-emerald-500 mb-4 leading-snug tracking-tight"
           >
-            While you work, we book.
+            While you work, we book - Job done.
           </motion.p>
 
           {/* Subhead */}

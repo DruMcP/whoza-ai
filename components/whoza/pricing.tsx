@@ -248,15 +248,15 @@ export function Pricing() {
                 viewport={{ once: true }}
                 className={`relative bg-white rounded-xl border ${
                   plan.popular
-                    ? `pricing-card popular ${colors.border} border-2 shadow-xl md:scale-105 z-10`
-                    : "pricing-card border-[var(--border)] shadow-md hover:shadow-lg transition-shadow overflow-hidden"
+                    ? `pricing-card popular ${colors.border} border-2 shadow-xl md:scale-105 z-10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300`
+                    : "pricing-card border-[var(--border)] shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
                 }`}
               >
                 {/* Popular Badge */}
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20"
                   >
-                    <span className={`px-4 py-1.5 rounded-full ${colors.bg} text-white text-xs font-bold shadow-lg`}
+                    <span className={`px-4 py-1.5 rounded-full ${colors.bg} text-white text-xs font-bold shadow-lg animate-pulse`}
                     >
                       <Sparkles className="inline w-3 h-3 mr-1" />
                       Most Popular
@@ -318,8 +318,8 @@ export function Pricing() {
                     onClick={() => openWaitlist(plan.name)}
                     className={`inline-flex items-center justify-center w-full font-bold transition-all py-2 px-4 rounded-md ${
                       plan.popular
-                        ? `${colors.bg} ${colors.hover} text-white shadow-lg hover:scale-105 cursor-pointer`
-                        : `bg-[var(--navy-900)] hover:bg-[var(--navy-800)] text-white hover:scale-105 cursor-pointer`
+                        ? `${colors.bg} ${colors.hover} text-white shadow-lg hover:scale-105 active:scale-95 cursor-pointer`
+                        : `bg-[var(--navy-900)] hover:bg-[var(--navy-800)] text-white hover:scale-105 active:scale-95 cursor-pointer`
                     }`}
                   >
                     {plan.cta}
@@ -381,7 +381,7 @@ export function Pricing() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-6 border border-[var(--border)] shadow-sm"
+              className="bg-white rounded-2xl p-6 border border-[var(--border)] shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
               <div className="flex items-start justify-between mb-4">
                 <div>
@@ -398,7 +398,7 @@ export function Pricing() {
               </div>
               <button
                 onClick={() => openWaitlist("Minutes Bundle")}
-                className="w-full py-2.5 px-4 rounded-lg bg-[var(--navy-900)] hover:bg-[var(--navy-800)] text-white font-semibold transition-colors cursor-pointer inline-flex items-center justify-center gap-2"
+                className="w-full py-2.5 px-4 rounded-lg bg-[var(--navy-900)] hover:bg-[var(--navy-800)] text-white font-semibold transition-all cursor-pointer inline-flex items-center justify-center gap-2 hover:scale-105 active:scale-95"
               >
                 Buy Bundle
                 <ArrowRight className="w-4 h-4" />
@@ -410,7 +410,7 @@ export function Pricing() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-6 border border-[var(--border)] shadow-sm"
+              className="bg-white rounded-2xl p-6 border border-[var(--border)] shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
               <div className="flex items-start justify-between mb-4">
                 <div>
@@ -427,7 +427,7 @@ export function Pricing() {
               </div>
               <button
                 onClick={() => openWaitlist("Consultancy")}
-                className="w-full py-2.5 px-4 rounded-lg bg-[var(--navy-900)] hover:bg-[var(--navy-800)] text-white font-semibold transition-colors cursor-pointer inline-flex items-center justify-center gap-2"
+                className="w-full py-2.5 px-4 rounded-lg bg-[var(--navy-900)] hover:bg-[var(--navy-800)] text-white font-semibold transition-all cursor-pointer inline-flex items-center justify-center gap-2 hover:scale-105 active:scale-95"
               >
                 Book Session
                 <ArrowRight className="w-4 h-4" />
@@ -491,7 +491,7 @@ export function Pricing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="relative bg-white rounded-2xl p-5 border border-[var(--border)] shadow-sm"
+                className="relative bg-white rounded-2xl p-5 border border-[var(--border)] shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="flex items-center gap-2 mb-3">
                   <div

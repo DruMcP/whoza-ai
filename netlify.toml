@@ -118,7 +118,12 @@
 
 [[redirects]]
   from = "/trades/painter-decorator/*"
-  to = "/trade/painter"
+  to = "/for-painters-decorators"
+  status = 301
+
+[[redirects]]
+  from = "/trades/locksmith/*"
+  to = "/trade/locksmith"
   status = 301
 
 [[redirects]]

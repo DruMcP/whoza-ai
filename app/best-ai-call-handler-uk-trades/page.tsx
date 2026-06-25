@@ -395,16 +395,16 @@ export default function BestAICallHandlerPage() {
                 Arrow vs whoza.ai
               </a>
               <a 
-                href="/whoza-vs-answer" 
+                href="/whoza-vs-ionos" 
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all text-sm font-medium text-white"
               >
-                Answer.co.uk vs whoza.ai
+                IONOS vs whoza.ai
               </a>
               <a 
-                href="/whoza-vs-yourbusinessnumber" 
+                href="/vs-trade-receptionist" 
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all text-sm font-medium text-white"
               >
-                YourBusinessNumber vs whoza.ai
+                Trade Receptionist vs whoza.ai
               </a>
             </div>
           </div>

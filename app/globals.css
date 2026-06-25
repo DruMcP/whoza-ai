@@ -6,6 +6,296 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* ── Hero Complete Fix Styles (11 fixes) ── */
+
+/* FIX 2: Phone wrapper + emerald glow + float */
+.phone-wrapper {
+  position: relative;
+  display: inline-block;
+  max-width: 420px;
+  width: 100%;
+  overflow: visible;
+  transform-style: preserve-3d;
+}
+
+/* Inner glow orb */
+.phone-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -60px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(16, 185, 129, 0.18) 0%,
+    rgba(16, 185, 129, 0.06) 40%,
+    transparent 70%
+  );
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Outer ambient glow */
+.phone-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: -80px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(52, 211, 153, 0.06) 0%,
+    transparent 55%
+  );
+  filter: blur(60px);
+  animation: glowPulse 5s ease-in-out infinite 1.5s;
+  pointer-events: none;
+  z-index: -2;
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.70; transform: scale(1.08); }
+}
+
+/* ── Animated gradient shift for hero background ── */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-animated-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    #0B1120 0%,
+    #0f172a 20%,
+    #1e1b4b 40%,
+    #0f172a 60%,
+    #0B1120 80%,
+    #0f172a 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease-in-out infinite;
+  z-index: -1;
+}
+
+.phone-wrapper img,
+.phone-img {
+  width: 100%;
+  height: auto;
+  border-radius: 28px;
+  animation: phoneFloat 6s ease-in-out infinite;
+  filter: drop-shadow(0 25px 50px rgba(0,0,0,0.5))
+          drop-shadow(0 0 30px rgba(16, 185, 129, 0.15));
+}
+
+@keyframes phoneFloat {
+  0%, 100% { transform: translateY(0px); }
+  25% { transform: translateY(-10px); }
+  50% { transform: translateY(-5px); }
+  75% { transform: translateY(-15px); }
+}
+
+/* FIX 6: Subheadline size boost — let Tailwind text-emerald-500 control colour */
+.subheadline {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* POLISH 1: Headline primary breathing room */
+.headline-primary {
+  margin-bottom: 12px;
+}
+
+/* FIX 7: Description brighter */
+.description {
+  color: #94a3b8;
+}
+
+/* FIX 3: Emerald gradient headline */
+.headline-emerald {
+  background: linear-gradient(135deg, #34d399 0%, #10b981 50%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* FIX 5: Emerald gradient CTA button */
+.btn-primary-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border: none;
+  cursor: pointer;
+  box-shadow:
+    0 4px 20px rgba(16, 185, 129, 0.35),
+    0 0 40px rgba(16, 185, 129, 0.12);
+  transition: all 0.3s ease;
+}
+
+.btn-primary-hero:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 30px rgba(16, 185, 129, 0.45),
+    0 0 60px rgba(16, 185, 129, 0.20);
+}
+
+.btn-primary-hero:active {
+  transform: translateY(0);
+}
+
+.btn-primary-hero:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* FIX 6: Social proof micro-line */
+.trust-micro {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #6ee7b7;
+  font-weight: 500;
+}
+
+/* FIX 7: Bold anchor value prop */
+.value-prop {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 20px 0;
+  padding-left: 16px;
+  border-left: 3px solid #10b981;
+  line-height: 1.5;
+}
+
+/* FIX 8: "The / AI /" typography */
+.the-small {
+  font-size: 0.7em;
+  opacity: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  vertical-align: super;
+}
+
+.ai-large {
+  font-size: 1.3em;
+  font-weight: 800;
+  background: linear-gradient(135deg, #34d399, #10b981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* FIX 9: Hero stats section with gradient transition */
+.hero-stats {
+  position: relative;
+  background: linear-gradient(to bottom, #0B1120 0%, #0f172a 50%);
+  text-align: center;
+  padding: 20px 24px 32px !important;
+  margin-top: -50px !important;
+  border-top: none;
+  z-index: 2;
+}
+
+/* Subtle top fade instead of hard line */
+.hero-stats::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, #0B1120);
+  pointer-events: none;
+}
+
+/* FIX 10: Stats headline — let Tailwind text-emerald-500 apply */
+.stats-headline {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  margin-bottom: 16px;
+}
+
+/* FIX 11: Phone column vertical centering */
+.phone-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+@media (max-width: 1023px) {
+  .phone-column {
+    order: -1;
+    min-height: auto;
+    padding: 20px 0;
+  }
+}
+
+/* POLISH 3: Tighten hero bottom padding */
+.hero {
+  padding-bottom: 40px;
+}
+
+/* POLISH 4: Premium checkmark pill styling */
+.check-item {
+  background: rgba(16, 185, 129, 0.06);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  backdrop-filter: blur(8px);
+  padding: 10px 20px;
+  font-weight: 500;
+  border-radius: 9999px;
+}
+
+/* POLISH 5: CTA arrow hover animation */
+.btn-primary-hero:hover svg {
+  transform: translateX(4px);
+  transition: transform 0.3s ease;
+}
+
+/* Mobile phone sizing */
+@media (max-width: 640px) {
+  .phone-wrapper {
+    max-width: 280px;
+  }
+
+  .phone-wrapper::before,
+  .phone-wrapper::after {
+    display: none;
+  }
+
+  .phone-wrapper img,
+  .phone-img {
+    animation: none;
+  }
+
+  .subheadline {
+    font-size: 18px;
+  }
+
+  .value-prop {
+    font-size: 16px;
+  }
+
+  .stats-headline {
+    font-size: 18px;
+  }
+
+  .btn-primary-hero {
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+}
+
 :root {
   /* whoza.ai Brand Colors */
   --katie-blue: oklch(0.55 0.22 260);

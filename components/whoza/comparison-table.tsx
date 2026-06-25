@@ -106,6 +106,18 @@ export function ComparisonTable() {
                 </tr>
               </thead>
               <tbody>
+                {/* Based In row */}
+                <tr className="bg-[var(--navy-900)]/5">
+                  <td className="py-3 px-3 sm:py-4 sm:px-6 text-xs sm:text-sm text-[var(--navy-900)] font-medium">
+                    Based In
+                  </td>
+                  <td className="py-3 px-2 sm:py-4 sm:px-4 text-center">
+                    <span className="text-sm font-semibold text-[var(--katie-blue)]">Built in Scotland</span>
+                  </td>
+                  <td className="py-3 px-2 sm:py-4 sm:px-4 text-center">
+                    <span className="text-xs text-[var(--slate-500)]">USA, Germany, UK (varies)</span>
+                  </td>
+                </tr>
                 {groups.map((group, groupIndex) => (
                   <>
                     {/* Phase header row */}
@@ -189,16 +201,16 @@ export function ComparisonTable() {
               Arrow vs whoza.ai
             </a>
             <a 
-              href="/whoza-vs-answer" 
+              href="/whoza-vs-ionos" 
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--border)] hover:bg-[var(--katie-blue)]/5 hover:border-[var(--katie-blue)]/20 transition-all text-sm font-medium text-[var(--navy-900)]"
             >
-              Answer.co.uk vs whoza.ai
+              IONOS vs whoza.ai
             </a>
             <a 
-              href="/whoza-vs-yourbusinessnumber" 
+              href="/vs-trade-receptionist" 
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--border)] hover:bg-[var(--katie-blue)]/5 hover:border-[var(--katie-blue)]/20 transition-all text-sm font-medium text-[var(--navy-900)]"
             >
-              YourBusinessNumber vs whoza.ai
+              Trade Receptionist vs whoza.ai
             </a>
           </div>
         </motion.div>

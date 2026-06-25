@@ -17,6 +17,65 @@ export const metadata: Metadata = {
   },
 }
 
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://whoza.ai/contact#localbusiness",
+  "name": "whoza.ai",
+  "url": "https://whoza.ai",
+  "logo": "https://whoza.ai/logo.webp",
+  "image": "https://whoza.ai/og-image.webp",
+  "description": "AI call answering for UK trades — never miss a job. whoza.ai provides AI-powered voice agents that answer missed calls 24/7, capture enquiries via WhatsApp, collect Google reviews, and track competitor visibility for UK tradespeople.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "GB",
+    "addressRegion": "Scotland"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "55.9533",
+    "longitude": "-3.1883"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "United Kingdom"
+  },
+  "priceRange": "££",
+  "telephone": "+44-7831-643012",
+  "email": "dru@whoza.ai",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  ],
+  "serviceType": "AI Call Handling Service",
+  "knowsAbout": [
+    "AI Voice Agents",
+    "Call Handling",
+    "Missed Call Recovery",
+    "Lead Qualification",
+    "Google Review Collection",
+    "Competitor Analysis",
+    "Plumbing",
+    "Electrical Services",
+    "HVAC",
+    "Building Services",
+    "Locksmith Services",
+    "Roofing"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+44-7831-643012",
+    "email": "dru@whoza.ai",
+    "contactType": "customer service",
+    "areaServed": "GB",
+    "availableLanguage": ["English"]
+  }
+}
+
 const contactMethods = [
   {
     icon: MessageSquare,
@@ -51,6 +110,11 @@ export default function ContactPage() {
         { name: "Home", item: "https://whoza.ai" },
         { name: "Contact", item: "https://whoza.ai/contact" },
       ]} />
+      <script
+        id="localbusiness-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
 
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Banner */}

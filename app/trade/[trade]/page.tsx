@@ -59,12 +59,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: tradeData.headline,
     description: tradeData.metaDescription,
     alternates: {
-      canonical: `https://whoza.ai/trade/${tradeData.slug}`,
+      // === CRITICAL FIX: Canonical points to /for-[trade] to avoid duplicate content ===
+      canonical: `https://whoza.ai/for-${tradeData.plural}`,
     },
     openGraph: {
       type: "website",
       locale: "en_GB",
-      url: `https://whoza.ai/trade/${tradeData.slug}`,
+      // Also update OG URL to canonical
+      url: `https://whoza.ai/for-${tradeData.plural}`,
       siteName: "Whoza.ai",
       title: tradeData.headline,
       description: tradeData.metaDescription,

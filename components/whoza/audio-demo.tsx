@@ -252,7 +252,7 @@ export function AudioDemo() {
           {isVisible && (
             <audio
               ref={audioRef}
-              src="/audio/katie-demo-leaky-tap.mp3"
+              src="/audio/katie-demo-leaky-tap.mp4"
               preload="metadata"
               crossOrigin="anonymous"
               className="hidden"
@@ -262,7 +262,7 @@ export function AudioDemo() {
 
           <noscript>
             <audio controls className="w-full" preload="none">
-              <source src="/audio/katie-demo-leaky-tap.mp3" type="audio/mpeg" />
+              <source src="/audio/katie-demo-leaky-tap.mp4" type="audio/mp4" />
               Your browser does not support the audio element.
             </audio>
           </noscript>
@@ -364,7 +364,7 @@ export function AudioDemo() {
                   </span>
                   <div className="flex items-center gap-2 text-sm text-slate-500">
                     <Volume2 className="w-4 h-4" />
-                    <span>Demo call · 1.0 MB</span>
+                    <span>Demo call · 2.8 MB</span>
                   </div>
                 </div>
               </div>

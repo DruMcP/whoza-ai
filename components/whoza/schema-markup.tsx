@@ -119,44 +119,6 @@ export function HomepageSchema() {
     },
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "@id": "https://whoza.ai/#software",
-      "name": "whoza.ai",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web",
-      "offers": {
-        "@type": "Offer",
-        "price": "59",
-        "priceCurrency": "GBP",
-        "priceValidUntil": "2026-12-31",
-        "availability": "https://schema.org/InStock",
-        "url": "https://whoza.ai/pricing"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "127",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "featureList": [
-        "24/7 AI call handling",
-        "Instant WhatsApp alerts",
-        "Lead qualification",
-        "Google review collection",
-        "Competitor tracking",
-        "No contracts",
-        "7-day free trial"
-      ],
-      "screenshot": {
-        "@type": "ImageObject",
-        "url": "https://whoza.ai/og-image.webp"
-      },
-      "softwareVersion": "2025.1",
-      "releaseNotes": "https://whoza.ai/changelog"
-    },
-    {
-      "@context": "https://schema.org",
       "@type": "Service",
       "@id": "https://whoza.ai/#service",
       "serviceType": "AI Call Handling for UK Tradespeople",
@@ -242,6 +204,13 @@ export function HomepageSchema() {
       "alternateName": "Katie by whoza.ai",
       "jobTitle": "AI Receptionist",
       "affiliation": { "@id": "https://whoza.ai/#organization" },
+      "sameAs": [
+        "https://whoza.ai/for-plumbers",
+        "https://whoza.ai/for-electricians",
+        "https://whoza.ai/for-builders",
+        "https://whoza.ai/for-roofers",
+        "https://twitter.com/whozaai"
+      ],
       "knowsAbout": ["Plumbing", "Electrical", "HVAC", "Building", "Roofing", "Customer Service", "Call Handling"],
       "description": "Katie is an AI voice agent that answers missed calls for UK tradespeople 24/7, qualifies customer enquiries, and sends them to WhatsApp for instant response."
     },
@@ -253,6 +222,12 @@ export function HomepageSchema() {
       "alternateName": "Mark by whoza.ai",
       "jobTitle": "AI Receptionist",
       "affiliation": { "@id": "https://whoza.ai/#organization" },
+      "sameAs": [
+        "https://whoza.ai/for-plumbers",
+        "https://whoza.ai/for-electricians",
+        "https://whoza.ai/for-builders",
+        "https://whoza.ai/for-roofers"
+      ],
       "knowsAbout": ["Plumbing", "Electrical", "HVAC", "Building", "Roofing", "Customer Service", "Call Handling"],
       "description": "Mark is an AI voice agent with a male voice that answers missed calls for UK tradespeople 24/7, qualifies customer enquiries, and sends them to WhatsApp for instant response."
     },
@@ -264,6 +239,12 @@ export function HomepageSchema() {
       "alternateName": "Claire by whoza.ai",
       "jobTitle": "AI Review Collection Agent",
       "affiliation": { "@id": "https://whoza.ai/#organization" },
+      "sameAs": [
+        "https://whoza.ai/for-plumbers",
+        "https://whoza.ai/for-electricians",
+        "https://whoza.ai/for-builders",
+        "https://whoza.ai/blog/how-to-get-more-google-reviews-trades"
+      ],
       "knowsAbout": ["Google Reviews", "Review Management", "Customer Feedback", "Reputation Management"],
       "description": "Claire is an AI review collection agent that automatically follows up after completed jobs to gather Google reviews and monitors competitor review activity."
     },
@@ -275,6 +256,12 @@ export function HomepageSchema() {
       "alternateName": "Rex by whoza.ai",
       "jobTitle": "AI Visibility Agent",
       "affiliation": { "@id": "https://whoza.ai/#organization" },
+      "sameAs": [
+        "https://whoza.ai/for-plumbers",
+        "https://whoza.ai/for-electricians",
+        "https://whoza.ai/for-builders",
+        "https://whoza.ai/research/aeo-ai-search-optimisation-2026"
+      ],
       "knowsAbout": ["SEO", "Competitor Analysis", "AI Visibility", "ChatGPT Optimization", "Google AI Overviews"],
       "description": "Rex is an AI visibility and competitor tracking agent that analyses competitors monthly and delivers weekly action reports to improve ChatGPT, Google AI, and customer recommendations."
     },
@@ -409,18 +396,6 @@ export function HomepageSchema() {
       "duration": "PT30S",
       "author": { "@id": "https://whoza.ai/#katie" },
       "publisher": { "@id": "https://whoza.ai/#organization" }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://whoza.ai/"
-        }
-      ]
     },
     {
       "@context": "https://schema.org",

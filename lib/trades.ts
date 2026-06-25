@@ -346,45 +346,45 @@ export const trades: TradeData[] = [
     relatedLocations: ["london", "manchester", "birmingham", "leeds", "glasgow", "bristol", "liverpool", "edinburgh"]
   },
   {
-    slug: "painter",
-    singular: "painter",
-    plural: "painters",
-    display: "Painters",
-    headline: "AI Call Handling for Painters — Every Call, Every Job",
-    subheadline: "Interior refresh, exterior repaints, commercial projects. Customers often underestimate the scope ('just a quick lick of paint'). Katie gently draws out the full job details — rooms, surfaces, access, timeline — so you quote with confidence.",
-    metaDescription: "AI call handling for painters and decorators. Katie qualifies interior, exterior, and commercial painting jobs 24/7. Captures room count, surface types, access details, and budget. Free 7-day trial.",
+    slug: "locksmith",
+    singular: "locksmith",
+    plural: "locksmiths",
+    display: "Locksmiths",
+    headline: "AI Call Handling for Locksmiths UK — 24/7 Lockout Help",
+    subheadline: "Emergency lockouts, key replacements, security upgrades. When a customer is locked out at midnight or a tenant has lost their keys, every second counts. Katie answers every call instantly, qualifies the job, and sends you the details before you even pick up.",
+    metaDescription: "Stop losing lockout calls to voicemail. AI call handling for UK locksmiths. Katie answers 24/7, captures emergency lockouts, key replacements & security upgrades. WhatsApp alerts in 3 seconds. 7-day free trial.",
     problemStatements: [
-      "'Just a quick paint job' often turns into 3 rooms + ceilings + woodwork — but you find out too late",
-      "You're up a ladder with paint on your hands — answering calls is dangerous and messy",
-      "Commercial painting contracts need different pricing (sq metre rates, out-of-hours access, scaffolding)",
-      "Colour consultation enquiries need time allocation — but you can't tell from a missed call"
+      "Emergency lockout calls at 2am go straight to voicemail — customer calls the next locksmith on Google",
+      "You can't tell if it's a £60 key copy or a £400 commercial lock change from a missed call",
+      "Landlord enquiries for multi-property lock changes need different handling than residential lockouts",
+      "After-hours security upgrade calls (burglary repairs, CCTV, access control) are your highest-value jobs — but you miss them on site"
     ],
     solutionStatements: [
-      "Katie qualifies painting jobs with structured questions: rooms, surfaces, condition, access, finish type",
-      "She identifies commercial vs. residential, interior vs. exterior, and new paint vs. repaint",
-      "You get a full job spec: '3-bed interior — 4 rooms + hallway — walls + ceilings + woodwork — Dulux — start next week'",
-      "Colour consultation requests flagged so you can allocate design time before the quote"
+      "Katie answers every lockout call in under 3 seconds — even at midnight on a bank holiday",
+      "She identifies emergency vs. routine, residential vs. commercial, and security upgrade vs. lockout",
+      "You get a full job brief: 'Emergency lockout — 2-bed flat — SW11 — no keys — urgent — 2:14am'",
+      "Landlord and commercial enquiries tagged for priority follow-up — these are your repeat revenue"
     ],
     howItWorks: [
-      { step: 1, title: "Customer calls for a painting quote", description: "Katie answers while you're mid-brush or on scaffolding. She asks whether it's interior, exterior, or commercial, and how many rooms/surfaces" },
-      { step: 2, title: "Painting job qualification", description: "Captures: room count and sizes, surface types (walls, ceilings, woodwork, doors), current condition (new plaster, repaint, repair needed), access (ground floor, scaffolding needed), finish type (matte, silk, eggshell), and preferred paint brand" },
-      { step: 3, title: "Job spec to your phone", description: "WhatsApp: 'Interior repaint — 3 rooms + hallway — walls + ceilings + skirting — good condition — Dulux Trade — start in 2 weeks — SE15' — full spec before you quote" },
-      { step: 4, title: "Accept for quote visit or send estimate", description: "Tap 'Accept' to schedule a quote visit with customer. Tap 'Call Back' to discuss via phone first. Commercial jobs tagged for priority handling and different pricing structure" }
+      { step: 1, title: "Customer calls locked out or needs keys", description: "Katie answers instantly with your locksmith company's branded greeting. She identifies if it's an emergency lockout, key replacement, security upgrade, or commercial enquiry" },
+      { step: 2, title: "Locksmith-specific qualification", description: "Captures: property type (house/flat/commercial), lock type (mortice, Yale, UPVC, digital), access situation (lost keys, broken lock, snapped key), insurance status, and whether it's a landlord or homeowner" },
+      { step: 3, title: "WhatsApp alert with full context", description: "Alert shows: 'Emergency lockout — 2-bed flat — Yale lock — lost keys — SW11 — tenant — urgent callback' with customer number and exact location" },
+      { step: 4, title: "Dispatch or schedule service", description: "For emergency lockouts: tap to accept and head straight there with ETA. For key cutting or security surveys: schedule appointment. Commercial enquiries get priority tagging for contract follow-up" }
     ],
     faqs: [
-      { question: "Can Katie handle both residential and commercial painting enquiries?", answer: "Yes. Katie identifies commercial enquiries by asking about business type, site size, access hours, and whether scaffolding is required. Commercial jobs are tagged separately in your dashboard with priority handling." },
-      { question: "How does AI call handling help with painting job quoting?", description: "Katie captures the full scope: room dimensions, surface condition, number of coats needed, paint brand preference, and access constraints. This lets you prepare an accurate estimate before visiting — saving time and improving close rates." },
-      { question: "Can customers request specific paint brands?", answer: "Yes. Katie asks about paint brand preference (Dulux, Farrow & Ball, Benjamin Moore, etc.) and finish type (matte, eggshell, silk, gloss). This information appears in every WhatsApp alert so you can bring colour charts or stock the right products." },
-      { question: "What about colour consultation requests?", answer: "Katie identifies colour consultation enquiries and captures: room purpose, lighting conditions, existing furniture colours, and style preference. These are tagged 'colour-consultation' in your dashboard so you can allocate design time and bring colour charts to the first visit." },
-      { question: "How do I get reviews from painting customers?", answer: "After you mark a painting job as complete in your dashboard, Claire automatically sends a WhatsApp review request. Include before/after photos in your Google Business Profile to maximise review conversion. One decorator generated 47 reviews in 3 months using Claire." }
+      { question: "How much does AI call handling cost for locksmiths?", answer: "Whoza starts at £59/month for the Starter plan. That's less than one emergency lockout callout. Most locksmiths recover the cost within a week by capturing just one missed midnight lockout. Every plan includes unlimited AI calls, WhatsApp alerts, and 7-day free trial." },
+      { question: "Can Katie handle emergency lockout calls at midnight?", answer: "Yes. Katie answers 24/7, including nights, weekends, and bank holidays. She identifies emergency lockouts by keywords (locked out, lost keys, snapped key, can't get in) and marks them as highest priority. You get an immediate WhatsApp with 'EMERGENCY LOCKOUT' in the header." },
+      { question: "How does Katie distinguish between residential and commercial locksmith jobs?", answer: "Yes. Katie is trained to identify the type of locksmith job from the customer's description. 'Locked out of my house' gets residential lockout priority. 'Need to change all locks on my rental property' gets landlord/multi-property tagging. 'Security survey for my shop' gets commercial security priority. Each type gets different follow-up handling in your dashboard." },
+      { question: "Can Katie handle landlord and letting agent calls?", answer: "Yes. Katie identifies landlords and letting agents and asks about: number of properties, lock type, access requirements (master key system, key safe), and preferred service time. These are tagged 'landlord' for your property services team and represent your highest repeat-customer value." },
+      { question: "What if a customer needs a security upgrade after a burglary?", answer: "Katie recognises security upgrade enquiries (burglary, break-in, damaged lock, wants stronger locks, CCTV interest) and captures: property type, number of entry points, insurance claim status, and budget range. These are tagged 'security-upgrade' and flagged as high-value priority — often £400-1,200+ jobs." }
     ],
     stats: [
-      { label: "Painting calls missed weekly", value: "52%" },
-      { label: "Average 3-room interior value", value: "£2.4k" },
-      { label: "Commercial repaint contract", value: "£15k" }
+      { label: "Lockout calls missed after hours", value: "78%" },
+      { label: "Average emergency lockout value", value: "£180" },
+      { label: "Commercial security upgrade value", value: "£650" }
     ],
     relatedLocations: ["london", "manchester", "birmingham", "leeds", "glasgow", "bristol", "liverpool", "edinburgh"]
-  }
+  },
 ]
 
 export function getTradeBySlug(slug: string): TradeData | undefined {
