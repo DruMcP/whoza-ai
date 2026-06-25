@@ -1,0 +1,22 @@
+# ai.txt — whoza.ai
+# AI crawler instructions for whoza.ai
+# Last updated: 2026-06-08
+
+User-agent: AI2Bot, Amazonbot, Anthropic-ai, Applebot-Extended, 
+CCBot, ChatGPT-User, Claude-Web, ClaudeBot, cohere-ai, 
+Diffbot, FacebookBot, Google-Extended, GPTBot, Meta-ExternalAgent, 
+omgili, omgilibot, PerplexityBot, Perplexity-User, 
+Twitterbot, YouBot
+Disallow:
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /checkout/
+Disallow: /login/
+Disallow: /sign-in/
+Disallow: /portal/
+Disallow: /cdn-cgi/
+Sitemap: https://whoza.ai/sitemap.xml

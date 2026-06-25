@@ -3,7 +3,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
-import { FileText, Clock, ArrowLeft, User, Calendar, CheckCircle } from "lucide-react"
+import { FileText, Clock, ArrowLeft, User, Calendar, CheckCircle  User } from "lucide-react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { blogPostContents } from "@/lib/blog-content"
@@ -69,7 +69,102 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const { content } = post
 
+  // Calculate word count from actual content (not excerpt estimate)
+  const introWords = content.introduction.split(/\s+/).length
+  const sectionWords = content.sections.reduce((acc, section) => {
+    const bodyWords = section.body ? section.body.split(/\s+/).length : 0
+    const listWords = section.list ? section.list.join(" ").split(/\s+/).length : 0
+    const calloutWords = section.callout ? section.callout.split(/\s+/).length : 0
+    return acc + bodyWords + listWords + calloutWords
+  }, 0)
+  const conclusionWords = content.conclusion.split(/\s+/).length
+  const ctaWords = content.cta.split(/\s+/).length
+  const faqWords = content.faq.reduce((acc, f) => acc + f.question.split(/\s+/).length + f.answer.split(/\s+/).length, 0)
+  const wordCount = introWords + sectionWords + conclusionWords + ctaWords + faqWords
+
   // Generate BlogPosting Article schema JSON-LD
+  // Enhanced Article schema for Gary's blog post
+  const isGaryPost = slug === "i-missed-5-emergency-calls-a-week-then-i-tried-ai-gary-the-plumber"
+  const enhancedArticleSchema = isGaryPost ? {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "I Missed 5 Emergency Calls a Week. Then I Tried AI.",
+    "description": "Self-employed plumber from Clapham shares honest 4-week diary using AI call answering. Real numbers. No BS. £6,800 in recovered jobs.",
+    "image": "https://whoza.ai/og-image.webp",
+    "datePublished": "2026-05-15",
+    "dateModified": "2026-05-15",
+    "author": {
+      "@type": "Person",
+      "name": "Gary",
+      "jobTitle": "Self-employed Plumber",
+      "worksFor": {
+        "@type": "LocalBusiness",
+        "name": "Gary's Plumbing",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Clapham, London"
+        }
+      },
+      "knowsAbout": ["Plumbing", "Emergency Plumbing", "London Trade Services"]
+    },
+    "publisher": {
+      "@id": "https://whoza.ai/#organization"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://whoza.ai/blog/i-missed-5-emergency-calls-a-week-then-i-tried-ai-gary-the-plumber"
+    },
+    "articleSection": "UGC / Real Stories",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".article-headline", ".article-body"]
+    },
+    "about": {
+      "@type": "Service",
+      "name": "AI Call Answering for Plumbers",
+      "provider": {
+        "@id": "https://whoza.ai/#organization"
+      }
+    },
+    "review": {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Gary",
+        "jobTitle": "Self-employed Plumber"
+      },
+      "itemReviewed": {
+        "@id": "https://whoza.ai/#organization"
+      },
+      "reviewBody": "I was missing 5 emergency calls a week. Katie captured 47 calls in 3 weeks. £6,800 recovered. Best £59 I've ever spent.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "positiveNotes": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Captured 47 missed calls in 3 weeks"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Recovered £6,800 in lost jobs"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Customers didn't realise it was AI"
+          }
+        ]
+      }
+    }
+  } : null
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -96,7 +191,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       "@id": `https://whoza.ai/blog/${slug}`,
     },
     articleSection: post.category,
-    wordCount: post.excerpt.length * 8,
+    wordCount: wordCount,
     inLanguage: "en-GB",
   }
 
@@ -108,6 +203,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+      {enhancedArticleSchema && (
+        <script
+          id="blog-post-enhanced-article-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(enhancedArticleSchema) }}
+        />
+      )}
       <FAQPageSchema faqs={content.faq} />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
@@ -134,15 +236,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <div className="flex items-center gap-2">
               <User className="w-4 h-4" />
               <span>{post.author}</span>
+              {post.authorTitle && <span className="text-white/30">— {post.authorTitle}</span>}
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
-              <span>{post.date}</span>
+              <time dateTime={post.date}>{post.date}</time>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="w-4 h-4" />
               <span>{post.readTime}</span>
             </div>
+          </div>
+          <div className="mt-2 text-white/30 text-sm">
+            Last updated: <time dateTime={post.date}>{post.date}</time>
           </div>
         </div>
 
@@ -266,7 +372,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
 function formatText(text: string): string {
   let formatted = text
+    // Convert markdown links to HTML anchor tags
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-emerald-400 hover:text-emerald-300 underline">$1</a>')
+    // Bold
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    // Italic
     .replace(/\*(.+?)\*/g, "<em>$1</em>")
   return formatted
 }

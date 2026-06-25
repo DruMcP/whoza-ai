@@ -7,7 +7,7 @@ const steps = [
   {
     number: "01",
     title: "We Answer Every Call",
-    description: "Customer calls, Katie or Mark answers within 3 seconds. No voicemail, no missed opportunity.",
+    description: "Forward your number to Whoza. Live and answering calls in 30 minutes. No tech skills, no engineers, no downtime.",
     icon: Phone,
     bgClass: "bg-[var(--katie-blue)]",
     bgLightClass: "bg-[var(--katie-blue)]/10",

@@ -5,7 +5,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { Metadata } from "next"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
-import { ArrowRight, Calculator, PoundSterling, TrendingUp, AlertTriangle, Phone, ChevronRight } from "lucide-react"
+import { ArrowRight, Calculator, PoundSterling, TrendingUp, AlertTriangle, Phone, ChevronRight , Calendar} from "lucide-react"
 import Link from "next/link"
 
 // NOTE: This page uses "use client" so metadata must be exported from a separate file.
@@ -138,6 +138,10 @@ export default function MissedCallCostCalculatorPage() {
                 <br />
                 <span className="text-emerald-400">Calculator for UK Trades</span>
               </h1>
+
+              <div className="mt-4 text-white/30 text-sm">
+                Last updated: <time dateTime="2026-06-06">2026-06-06</time>
+              </div>
               <p className="text-lg text-slate-400 max-w-2xl mb-8">
                 See exactly how much revenue your trade business is losing to missed calls. Adjust the sliders below
                 and watch your losses add up. Based on real UK trade industry data.

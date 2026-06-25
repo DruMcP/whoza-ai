@@ -4,7 +4,7 @@ import { trades } from '@/lib/trades'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://whoza.ai'
-  const lastMod = '2026-06-07'
+  const lastMod = '2026-06-20'
 
   // Core pages
   const corePages: MetadataRoute.Sitemap = [
@@ -178,6 +178,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.85,
     },
+    {
+      url: `${baseUrl}/research`,
+      lastModified: lastMod,
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/research/aeo-ai-search-optimisation-2026`,
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/research/the-true-cost-of-missed-calls-2026`,
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+  {
+      url: `${baseUrl}/research/caller-experience-revolution-ai-voice-agents-2026`,
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/research/ai-voice-agents-uk-trades-2026`,
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/research/voice-agent-technology-state-of-art-2026`,
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
     // Policy pages
     {
       url: `${baseUrl}/privacy`,
@@ -269,13 +305,75 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/for-tilers`, lastModified: lastMod, changeFrequency: 'weekly', priority: 0.85 },
   ]
 
-  // Dynamic trade subdirectory pages (trade/*)
-  const tradeSubPages: MetadataRoute.Sitemap = trades.map((trade) => ({
-    url: `${baseUrl}/trade/${trade.slug}`,
-    lastModified: lastMod,
-    changeFrequency: 'weekly',
-    priority: 0.75,
-  }))
+  // Trade + City combination pages
+  const comboPages: MetadataRoute.Sitemap = [
+    { url: `${baseUrl}/for-plumbers-london`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-electricians-london`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-plumbers-manchester`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-electricians-manchester`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-plumbers-birmingham`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-builders-london`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-locksmiths-london`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-heating-engineers-london`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-roofers-london`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-plumbers-glasgow`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-plumbers-bristol`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-electricians-birmingham`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-gas-engineers-london`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-locksmiths-manchester`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-builders-manchester`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-plumbers-leeds`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-plumbers-liverpool`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-electricians-glasgow`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-heating-engineers-manchester`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-builders-birmingham`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-cleaners-london`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-plumbers-edinburgh`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-landscapers-london`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-handymen-london`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-builders-glasgow`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-builders-edinburgh`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-roofers-glasgow`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-roofers-edinburgh`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-heating-engineers-glasgow`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-heating-engineers-edinburgh`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-locksmiths-glasgow`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-locksmiths-edinburgh`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-carpenters-glasgow`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-carpenters-edinburgh`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-joiners-glasgow`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-joiners-edinburgh`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-plasterers-glasgow`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-plasterers-edinburgh`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-tilers-glasgow`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-tilers-edinburgh`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-gas-engineers-glasgow`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-gas-engineers-edinburgh`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-handymen-glasgow`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-handymen-edinburgh`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-cleaners-glasgow`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-cleaners-edinburgh`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-landscapers-glasgow`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-landscapers-edinburgh`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-painters-decorators-glasgow`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-painters-decorators-edinburgh`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-pest-control-glasgow`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-pest-control-edinburgh`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-drainage-glasgow`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/for-drainage-edinburgh`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.7 },
+  ]
+
+  // === REMOVED: Dynamic trade subdirectory pages (/trade/*) ===
+  // These duplicate the /for-[trade] static pages. 
+  // Keeping them live with canonical tags pointing to /for-[trade] 
+  // but NOT in sitemap to avoid duplicate content issues.
+  // const tradeSubPages: MetadataRoute.Sitemap = trades.map((trade) => ({
+  //   url: `${baseUrl}/trade/${trade.slug}`,
+  //   lastModified: lastMod,
+  //   changeFrequency: 'weekly',
+  //   priority: 0.75,
+  // }))
+  const tradeSubPages: MetadataRoute.Sitemap = []
 
   // Dynamic location pages — UK only
   const locationPages: MetadataRoute.Sitemap = locations
@@ -290,6 +388,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // All blog posts (static + dynamic from blog-content.ts)
   const blogSlugs = [
     // Static blog pages (separate page.tsx files)
+    'ai-receptionist-vs-human-cost-guide-2026',
     '247-call-answering-uk-trades-guide-2026',
     'ai-call-answering-pricing-guide-uk-2026',
     'best-ai-call-answering-service-uk-2026',
@@ -314,8 +413,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'how-to-grow-trade-business-uk-guide',
     'heating-engineer-emergency-call-handling',
     'i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky',
+    'i-lost-a-8000-roof-job-because-i-was-up-a-ladder-mike-the-roofer',
     'i-lost-4000-in-one-storm-season-then-ai-answered-my-phone-tom-the-roofer',
     'i-missed-5-emergency-calls-a-week-then-i-tried-ai-gary-the-plumber',
+    'my-phone-rang-12-times-on-a-building-site-tom-the-builder',
     'i-missed-spring-booking-season-ai-captured-47-calls-in-3-weeks-james-the-landscaper',
     'i-was-missing-2000-extension-enquiries-every-month-then-i-tried-ai-steve-the-builder',
     'i-worked-out-i-was-losing-30000-a-year-to-missed-calls-mark-the-gas-engineer',
@@ -325,6 +426,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'missed-calls-missed-money-the-real-cost-for-tradespeople',
     'roofing-lead-generation-guide',
     'why-62-percent-of-trade-business-calls-go-unanswered',
+    // NEW UGC listicles (June 2026)
+    '5-signs-your-trade-business-is-losing-customers-to-missed-calls',
+    '7-questions-every-uk-tradesperson-should-ask-before-hiring-a-call-answering-service',
+    '8-reasons-uk-tradespeople-switch-to-ai-call-handling-in-2026',
+    // NEW: Ultimate FAQ (June 2026)
+    'ultimate-faq-tradespeople',
   ]
 
   const blogPosts: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
@@ -334,5 +441,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  return [...corePages, ...tradePages, ...tradeSubPages, ...locationPages, ...blogPosts]
+  return [...corePages, ...tradePages, ...comboPages, ...tradeSubPages, ...locationPages, ...blogPosts]
 }

@@ -96,6 +96,11 @@ export default async function LocationPage({ params }: PageProps) {
     notFound()
   }
 
+  // Return 404 for non-UK cities (Issue #5 fix)
+  if (locationData.country !== 'uk') {
+    notFound()
+  }
+
   const jobsThisWeek = Math.floor(Math.random() * 80) + 100
 
   return (
@@ -202,6 +207,38 @@ export default async function LocationPage({ params }: PageProps) {
         {/* OFFER — Pricing (no-brainer) */}
         <div className="section-divider" />
         <Pricing />
+
+        {/* TRADE LINKS — Cross-link to all trade pages */}
+        <div className="section-divider" />
+        <section className="py-12 bg-[var(--navy-900)]">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+              AI Call Handling for Every Trade in {locationData.city}
+            </h2>
+            <p className="text-white/60 mb-6">
+              Whatever your trade, Katie&apos;s got you covered in {locationData.city}.
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <a href="/for-plumbers" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Plumbers</a>
+              <a href="/for-electricians" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Electricians</a>
+              <a href="/for-gas-engineers" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Gas Engineers</a>
+              <a href="/for-builders" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Builders</a>
+              <a href="/for-roofers" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Roofers</a>
+              <a href="/for-locksmiths" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Locksmiths</a>
+              <a href="/for-joiners" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Joiners</a>
+              <a href="/for-heating-engineers" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Heating Engineers</a>
+              <a href="/for-painters-decorators" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Painters & Decorators</a>
+              <a href="/for-carpenters" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Carpenters</a>
+              <a href="/for-cleaners" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Cleaners</a>
+              <a href="/for-drainage" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Drainage</a>
+              <a href="/for-handymen" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Handymen</a>
+              <a href="/for-landscapers" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Landscapers</a>
+              <a href="/for-pest-control" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Pest Control</a>
+              <a href="/for-plasterers" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Plasterers</a>
+              <a href="/for-tilers" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Tilers</a>
+            </div>
+          </div>
+        </section>
 
         {/* OBJECTIONS — FAQ */}
         <div className="section-divider" />

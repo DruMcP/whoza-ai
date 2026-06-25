@@ -2,8 +2,8 @@
 
 import { useState, useCallback, useEffect, useRef } from "react"
 import { ArrowRight, Loader2 } from "lucide-react"
-import { motion } from "framer-motion"
-import { HeroPhoneMockup } from "./hero-phone-mockup"
+import { motion, useScroll, useTransform } from "framer-motion"
+import Image from "next/image"
 
 import { trackCTA } from "@/lib/gtag"
 
@@ -16,12 +16,6 @@ const AVG_JOB_VALUE = 120     // £
 const CONVERSION_RATE = 0.35  // ~35% of missed calls = lost jobs
 
 /* ── Framer-motion helpers ── */
-const fadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] },
-})
-
 const fadeUpVisible = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
@@ -34,14 +28,13 @@ const fadeInRightVisible = (delay = 0) => ({
   transition: { duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] },
 })
 
-const fadeInRight = (delay = 0) => ({
-  initial: { opacity: 0, x: 50 },
-  animate: { opacity: 1, x: 0 },
-  transition: { duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] },
-})
-
 export function Hero() {
   const [ctaLoading, setCtaLoading] = useState(false)
+
+  /* ── 3D phone tilt on scroll ── */
+  const { scrollY } = useScroll()
+  const phoneRotateY = useTransform(scrollY, [0, 600], [0, -8])
+  const phoneRotateX = useTransform(scrollY, [0, 600], [0, 3])
 
   /* ── Live counter refs (no React re-renders) ── */
   const counterRef = useRef<HTMLDivElement>(null)
@@ -97,195 +90,179 @@ export function Hero() {
   }, [])
 
   return (
-    <section
-      className="hero hero-grain dark-section relative overflow-hidden bg-gradient-to-br from-[#0F1729] via-[#1A1A2E] to-[#0F1729] pt-[var(--section-py-xl)]"
-      aria-label="Introduction"
-    >
-      {/* ── Background atmosphere ── */}
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <div
-          className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full bg-emerald-500/[0.08] blur-[120px]"
-        />
-        <div
-          className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-emerald-500/[0.05] blur-[100px]"
-        />
-      </div>
-
-      {/* Animated gradient mesh orbs */}
-      <div className="gradient-mesh" aria-hidden="true">
-        <div className="orb w-[500px] h-[500px] bg-[var(--katie-blue)]/10 top-[-100px] left-[-100px]" style={{ animationDelay: '0s' }} />
-        <div className="orb w-[400px] h-[400px] bg-[var(--rex-green)]/10 top-[40%] right-[-80px]" style={{ animationDelay: '-3s' }} />
-        <div className="orb w-[300px] h-[300px] bg-[var(--claire-amber)]/5 bottom-[-50px] left-[30%]" style={{ animationDelay: '-5s' }} />
-      </div>
-
-      {/* Subtle grid */}
-      <div
-        className="absolute inset-0 pointer-events-none bg-[length:60px_60px]"
-        style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)`,
-        }}
-        aria-hidden="true"
-      />
-
-      {/* ── Main grid ── */}
-      <div
-        className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-[55%_45%] gap-[clamp(40px,4vw,80px)] items-start pb-20"
+    <>
+      <section
+        className="hero hero-grain dark-section relative overflow-hidden bg-[#0B1120]"
+        aria-label="Introduction"
       >
-        {/* ══ LEFT: Text column ══ */}
-        <div className="max-w-[540px]">
-          {/* H1 */}
-          <motion.h1
-            initial={{ opacity: 1, y: 0 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-sans text-[clamp(36px,5vw,56px)] font-extrabold leading-[1.05] tracking-tight text-white mb-4"
-          >
-            <span className="block">Your phone&apos;s ringing.</span>
-            <span className="block text-[#D63031]">Katie&apos;s got it.</span>
-          </motion.h1>
+        {/* Animated gradient background */}
+        <div className="hero-animated-gradient" />
 
-          {/* Entity definitions for AI consumption — visually hidden but machine-readable */}
-          <div className="hidden" aria-hidden="true">
-            <p itemScope itemType="https://schema.org/Thing">
-              <span itemProp="name">Katie</span> is an
-              <span itemProp="additionalType">https://schema.org/SoftwareApplication</span>
-              that answers missed phone calls for UK tradespeople, qualifies the enquiry,
-              and delivers it to WhatsApp.
-            </p>
-            <p itemScope itemType="https://schema.org/Thing">
-              <span itemProp="name">Whoza.ai</span> is an
-              <span itemProp="additionalType">https://schema.org/TechnologyCompany</span>
-              based in the United Kingdom that provides AI call handling services for
-              plumbers, electricians, and other tradespeople.
-            </p>
+        {/* ── Main two-column grid ── */}
+        <div className="hero-grid relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-[55%_45%] gap-[clamp(40px,4vw,80px)] items-center pb-16 pt-[var(--section-py-xl)]">
+          
+          {/* ══ LEFT: Text column ══ */}
+          <div className="max-w-[540px] lg:max-w-none">
+            {/* H1 — FIX 4: Emotional hook */}
+            <motion.h1
+              initial={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+              className="headline-primary font-sans text-[clamp(36px,5vw,56px)] font-extrabold leading-[1.05] tracking-tight text-white mb-2"
+            >
+              <span className="block">Never Miss a Job Again</span>
+              {/* FIX 3: Emerald gradient headline */}
+              <span className="block headline-emerald">Your phone rings. Katie answers.</span>
+            </motion.h1>
+
+            {/* Entity definitions for AI consumption — visually hidden but machine-readable */}
+            <div className="hidden" aria-hidden="true">
+              <p itemScope itemType="https://schema.org/Thing">
+                <span itemProp="name">Katie</span> is an
+                <span itemProp="additionalType">https://schema.org/SoftwareApplication</span>
+                that answers missed phone calls for UK tradespeople, qualifies the enquiry,
+                and delivers it to WhatsApp.
+              </p>
+              <p itemScope itemType="https://schema.org/Thing">
+                <span itemProp="name">Whoza.ai</span> is an
+                <span itemProp="additionalType">https://schema.org/TechnologyCompany</span>
+                based in the United Kingdom that provides AI call handling services for
+                plumbers, electricians, and other tradespeople.
+              </p>
+            </div>
+
+            {/* Secondary headline */}
+            <motion.p
+              {...fadeUpVisible(0.3)}
+              className="subheadline font-sans text-lg font-semibold text-emerald-500 mb-4 leading-snug tracking-tight"
+            >
+              While you work, we book - Job done.
+            </motion.p>
+
+            {/* FIX 8: "The / AI /" typography treatment */}
+            <motion.p
+              {...fadeUpVisible(0.4)}
+              className="font-sans text-lg leading-relaxed text-slate-400 mb-3 tracking-wide"
+            >
+              <span className="the-small">The</span>{" "}
+              <span className="ai-large">AI</span>{" "}
+              call handler built in Scotland for all UK Trades.
+              Answers every call, qualifies real jobs, sends them to your WhatsApp.
+            </motion.p>
+
+            {/* FIX 7: Bold anchor value prop with left green border */}
+            <motion.p
+              {...fadeUpVisible(0.5)}
+              className="value-prop font-sans text-lg font-bold leading-snug text-white mb-2"
+            >
+              No apps. No contract. Live in 30 minutes.
+            </motion.p>
+
+            {/* Keep your number / No contract badges */}
+            <motion.div
+              {...fadeUpVisible(0.55)}
+              className="flex flex-wrap gap-2 mb-5"
+            >
+              <span className="check-item inline-flex items-center gap-1.5 bg-white/10 text-white/80 text-sm font-medium px-3 py-1.5 rounded-full border border-white/10">
+                <span className="text-emerald-400">✓</span>
+                Set up and live in 30 minutes — no tech skills needed
+              </span>
+              <span className="check-item inline-flex items-center gap-1.5 bg-white/10 text-white/80 text-sm font-medium px-3 py-1.5 rounded-full border border-white/10">
+                <span className="text-emerald-400">✓</span>
+                Keep your existing number
+              </span>
+              <span className="check-item inline-flex items-center gap-1.5 bg-white/10 text-white/80 text-sm font-medium px-3 py-1.5 rounded-full border border-white/10">
+                <span className="text-emerald-400">✓</span>
+                24/7 answering — including bank holidays
+              </span>
+              <span className="check-item inline-flex items-center gap-1.5 bg-white/10 text-white/80 text-sm font-medium px-3 py-1.5 rounded-full border border-white/10">
+                <span className="text-emerald-400">✓</span>
+                7-day free trial, no credit card required
+              </span>
+            </motion.div>
+
+            {/* CTA Group — FIX 5: Emerald gradient button */}
+            <motion.div
+              {...fadeUpVisible(0.6)}
+              className="flex flex-col gap-3 mb-3 items-start"
+            >
+              <button
+                onClick={handlePrimaryCTA}
+                disabled={ctaLoading}
+                className="btn-primary-hero inline-flex items-center justify-center font-sans text-lg font-semibold px-8 py-4 rounded-[14px] no-underline border-none cursor-pointer min-h-[56px] whitespace-nowrap hover:scale-105 active:scale-95 transition-transform"
+                aria-label="Try Katie Free for 7 Days"
+              >
+                {ctaLoading ? (
+                  <>
+                    <Loader2 className="w-5 h-5 animate-spin mr-2" />
+                    Setting up Katie…
+                  </>
+                ) : (
+                  <>
+                    Try Katie Free for 7 Days
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </>
+                )}
+              </button>
+
+              <span className="text-[13px] text-slate-400 tracking-wide">
+                No credit card required · 30-day money-back guarantee
+              </span>
+            </motion.div>
+
+            {/* Trust Pill */}
+            <motion.div
+              {...fadeUpVisible(0.7)}
+              className="mb-6"
+            >
+              <span className="inline-flex items-center gap-2 bg-emerald-500/15 text-emerald-400 text-sm font-bold px-4 py-2.5 rounded-full border border-emerald-500/25 shadow-[0_0_20px_rgba(16,185,129,0.1)]">
+                <span className="text-emerald-300 font-extrabold text-base">✓</span>
+                {trustPill}
+              </span>
+            </motion.div>
           </div>
 
-          {/* Secondary headline */}
-          <motion.p
-            {...fadeUpVisible(0.3)}
-            className="font-sans text-lg font-semibold text-emerald-500 mb-4 leading-snug tracking-tight"
-          >
-            While you work, we book.
-          </motion.p>
-
-          {/* Subhead */}
-          <motion.p
-            {...fadeUpVisible(0.4)}
-            className="font-sans text-lg leading-relaxed text-slate-400 mb-3 tracking-wide"
-          >
-            The <abbr title="Artificial Intelligence">AI</abbr> call handler built for
-            UK trades. Answers every call, qualifies real jobs, sends them to your WhatsApp.
-          </motion.p>
-
-          {/* Outcome punchline */}
-          <motion.p
-            {...fadeUpVisible(0.5)}
-            className="font-sans text-lg font-semibold leading-snug text-white mb-2"
-          >
-            No apps. No Contract. Just more work.
-          </motion.p>
-
-          {/* Keep your number / No contract badges */}
+          {/* ══ RIGHT: 3D Phone Image ══ */}
+          {/* FIX 11: Phone column centers vertically */}
           <motion.div
-            {...fadeUpVisible(0.55)}
-            className="flex flex-wrap gap-2 mb-5"
+            {...fadeInRightVisible(0.3)}
+            className="phone-column relative flex justify-center items-center lg:justify-end"
           >
-            <span className="inline-flex items-center gap-1.5 bg-white/10 text-white/80 text-sm font-medium px-3 py-1.5 rounded-full border border-white/10">
-              <span className="text-emerald-400">✓</span>
-              Keep your existing number
-            </span>
-            <span className="inline-flex items-center gap-1.5 bg-white/10 text-white/80 text-sm font-medium px-3 py-1.5 rounded-full border border-white/10">
-              <span className="text-emerald-400">✓</span>
-              No contract — cancel anytime
-            </span>
-          </motion.div>
-
-          {/* CTA Group */}
-          <motion.div
-            {...fadeUpVisible(0.6)}
-            className="flex flex-col gap-3 mb-5 items-start"
-          >
-            <button
-              onClick={handlePrimaryCTA}
-              disabled={ctaLoading}
-              className="btn-primary inline-flex items-center justify-center bg-white text-[#1A1A2E] font-sans text-lg font-bold px-8 py-4 rounded-xl no-underline border-none cursor-pointer min-h-[56px] whitespace-nowrap shadow-[0_4px_14px_rgba(255,255,255,0.15)]"
-              aria-label="Try Katie Free for 7 Days"
+            {/* FIX 2: Phone wrapper with glow, float, and 3D scroll tilt */}
+            <motion.div
+              className="phone-wrapper"
+              style={{
+                rotateY: phoneRotateY,
+                rotateX: phoneRotateX,
+                perspective: 1000,
+              }}
             >
-              {ctaLoading ? (
-                <>
-                  <Loader2 className="w-5 h-5 animate-spin mr-2" />
-                  Setting up Katie…
-                </>
-              ) : (
-                <>
-                  Try Katie Free for 7 Days
-                  <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
-                </>
-              )}
-            </button>
-
-            <span className="text-[13px] text-slate-400 tracking-wide">
-              No credit card required · 30-day money-back guarantee
-            </span>
-          </motion.div>
-
-          {/* Trust Pill — high visibility, single statement */}
-          <motion.div
-            {...fadeUpVisible(0.7)}
-            className="mb-6"
-          >
-            <span className="inline-flex items-center gap-2 bg-emerald-500/15 text-emerald-400 text-sm font-bold px-4 py-2.5 rounded-full border border-emerald-500/25 shadow-[0_0_20px_rgba(16,185,129,0.1)]">
-              <span className="text-emerald-300 font-extrabold text-base">✓</span>
-              {trustPill}
-            </span>
+              <Image
+                src="/images/hero-phone-3d.webp"
+                alt="Katie AI WhatsApp interface showing a new boiler repair lead from Sarah Williams"
+                width={420}
+                height={560}
+                quality={100}
+                priority
+                fetchPriority="high"
+                className="phone-img"
+              />
+            </motion.div>
           </motion.div>
         </div>
+      </section>
 
-        {/* ══ RIGHT: Phone mockup ══ */}
-        <motion.div
-          {...fadeInRightVisible(0.3)}
-          className="relative w-full min-w-[300px] h-[660px] flex justify-center items-start pt-0 overflow-visible"
-          style={{ contain: "layout style paint" }}
-        >
-          {/* Ambient glow — amplified multi-layer aura */}
-          <div
-            className="absolute w-[900px] h-[900px] pointer-events-none z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 blur-[60px]"
-            style={{
-              background:
-                "radial-gradient(ellipse at center, rgba(16,185,129,0.35) 0%, rgba(16,185,129,0.15) 25%, rgba(30,35,70,0.2) 50%, transparent 70%)",
-            }}
-          />
-          <div
-            className="absolute w-[600px] h-[700px] pointer-events-none z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 blur-[30px]"
-            style={{
-              background:
-                "radial-gradient(ellipse at 40% 45%, rgba(255,255,255,0.12) 0%, rgba(16,185,129,0.08) 40%, transparent 65%)",
-            }}
-          />
-          <div
-            className="absolute w-[300px] h-[400px] pointer-events-none z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 blur-[15px]"
-            style={{
-              background:
-                "radial-gradient(ellipse at 50% 40%, rgba(16,185,129,0.25) 0%, transparent 60%)",
-            }}
-          />
-
-          <HeroPhoneMockup />
-        </motion.div>
-      </div>
-
-      {/* ══ LIVE COUNTER ══ */}
-      <div
+      {/* ══ LIVE COUNTER / STATS SECTION ══ */}
+      <section
         ref={counterRef}
-        className="text-center"
-        style={{
-          padding: "40px var(--section-px)",
-          borderTop: "1px solid rgba(255,255,255,0.06)",
-        }}
+        className="hero-stats text-center relative"
       >
-        <p
-          className="text-base text-slate-400 leading-normal m-0"
-        >
+        {/* Stats headline — same solid emerald as subheadline */}
+        <h3 className="stats-headline font-sans text-xl font-bold text-emerald-400 mb-4">
+          That&apos;s why we built Katie&apos;s Revenue Team
+        </h3>
+
+        <p className="text-base text-slate-400 leading-normal m-0">
           <span className="sr-only">
             Live statistics from the Office for National Statistics:
           </span>
@@ -306,26 +283,10 @@ export function Hero() {
           </span>{" "}
           in lost work.
         </p>
-        <p
-          className="text-xs text-gray-500 my-2 mb-1"
-        >
+        <p className="text-xs text-gray-500 my-2 mb-1">
           Source: ONS Business Population Estimates 2025, 62% unanswered rate
         </p>
-        <p
-          className="text-[22px] font-bold text-[#D63031] mt-2 mb-0"
-        >
-          That&apos;s why we built Katie&apos;s Revenue Team
-        </p>
-      </div>
-
-      {/* ── Bottom gradient to off-white ── */}
-      <div
-        className="absolute bottom-0 left-0 right-0 h-16"
-        style={{
-          background: "linear-gradient(to top, var(--off-white), transparent)",
-        }}
-        aria-hidden="true"
-      />
-    </section>
+      </section>
+    </>
   )
 }

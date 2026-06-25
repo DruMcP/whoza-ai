@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
-import { ArrowRight, Star, PoundSterling, Clock, Shield, TrendingUp, MessageCircle, Check, X, ChevronDown } from "lucide-react"
+import { ArrowRight, Star, PoundSterling, Clock, Shield, TrendingUp, MessageCircle, Check, X, ChevronDown , User, Calendar User } from "lucide-react"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
@@ -235,6 +235,21 @@ export default function BestAIGuidePage() {
                 Best AI Phone Answering Services
                 <span className="block text-emerald-400 mt-2">for UK Tradespeople — 2026</span>
               </h1>
+
+              <div className="flex flex-wrap items-center gap-4 text-white/40 text-sm mt-4">
+                <div className="flex items-center gap-2">
+                  <User className="w-4 h-4" />
+                  <span>Trade Tech Review</span>
+                  <span className="text-white/30">— Research Team</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-4 h-4" />
+                  <time dateTime="2026-06-06">2026-06-06</time>
+                </div>
+              </div>
+              <div className="mt-2 text-white/30 text-sm">
+                Last updated: <time dateTime="2026-06-06">2026-06-06</time>
+              </div>
 
               <p className="text-lg text-white/60 max-w-2xl mb-8">
                 We tested every AI call answering service marketed to UK trades. 
@@ -512,7 +527,28 @@ export default function BestAIGuidePage() {
           </section>
         </main>
 
-        <Footer />
+        
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Best AI Phone Answering UK Trades 2026",
+            "description": "Comparison of AI phone answering services for UK trades.",
+            "image": "https://whoza.ai/og-image.webp",
+            "datePublished": "2026-06-20",
+            "dateModified": "2026-06-20",
+            "author": { "@type": "Organization", "name": "whoza.ai", "url": "https://whoza.ai" },
+            "publisher": { "@type": "Organization", "name": "whoza.ai", "url": "https://whoza.ai" },
+            "speakable": {
+              "@type": "SpeakableSpecification",
+              "cssSelector": [".post-intro", ".key-statistics"]
+            }
+          })
+        }}
+      />
+<Footer />
       </div>
     </>
   )

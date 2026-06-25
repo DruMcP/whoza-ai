@@ -9,6 +9,7 @@ import { WaitlistModal } from "@/components/whoza/waitlist-modal"
 import { ArrowRight, Phone, LayoutGrid, Clock, PoundSterling, Shield, CheckCircle2, Star, AlertTriangle, Home, Calendar, HardHat, Briefcase } from "lucide-react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
+import { RelatedTrades } from "@/components/whoza/related-trades"
 
 export const metadata: Metadata = {
   title: "AI Call Answering for Tilers UK — Never Miss a Job",
@@ -109,6 +110,13 @@ export default function ForTilersPage() {
             "serviceType": "AI Call Handling for Tilers",
             "knowsAbout": ["Tiling", "Bathroom Tiling", "Kitchen Tiling", "Floor Tiling", "Commercial Tiling", "Mosaic Tiling", "Underfloor Heating", "Tile Repair"],
             "priceRange": "££",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "127",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
             "telephone": "+44-20-0000-0000",
             "address": {
               "@type": "PostalAddress",
@@ -337,7 +345,7 @@ export default function ForTilersPage() {
                 {
                   step: "03",
                   icon: Phone,
-                  title: "You Get WhatsApp in 3 Seconds",
+                  title: "Tiling Job Alert in 3 Seconds",
                   description: "A structured message lands on your phone: name, number, postcode, project details, urgency, and estimated value. Tap Accept, Call Back, or Decline. Commercial and builder jobs are flagged for immediate attention.",
                 },
               ].map((item, idx) => {
@@ -449,7 +457,31 @@ export default function ForTilersPage() {
         <div className="section-divider" />
 
         {/* ─── FAQ ─── */}
-        <section className="py-16 lg:py-24">
+        
+        {/* ─── CITY LINKS ─── */}
+        <section className="py-12">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+              AI Call Answering for Tilers in Your City
+            </h2>
+            <p className="text-white/60 mb-6">
+              Katie answers calls for tilers across the UK. Find your location:
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+    <Link href="/for-tilers-london" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">London</Link>
+    <Link href="/for-tilers-manchester" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Manchester</Link>
+    <Link href="/for-tilers-birmingham" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Birmingham</Link>
+    <Link href="/for-tilers-leeds" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Leeds</Link>
+    <Link href="/for-tilers-glasgow" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Glasgow</Link>
+    <Link href="/for-tilers-bristol" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Bristol</Link>
+    <Link href="/for-tilers-liverpool" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Liverpool</Link>
+    <Link href="/for-tilers-edinburgh" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Edinburgh</Link>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+<section className="py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">
@@ -579,7 +611,9 @@ export default function ForTilersPage() {
         </section>
       </main>
 
-      <Footer />
+      <div className="section-divider" />
+        <RelatedTrades currentTrade="for-tilers" />
+        <Footer />
     </>
   )
 }

@@ -10,7 +10,7 @@ const steps = [
   {
     number: "01",
     title: "We Set Up Whoza on Your Number",
-    description: "Forward your business number to Whoza. Takes 30 minutes. No tech skills needed.",
+    description: "Forward your number to Whoza. Live and answering calls in 30 minutes. No tech skills, no engineers, no downtime.",
     icon: Clock,
     time: "30 min",
     bgClass: "bg-[var(--katie-blue)]",

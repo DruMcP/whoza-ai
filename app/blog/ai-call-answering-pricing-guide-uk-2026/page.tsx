@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
-import { ArrowRight, Star, PoundSterling, Clock, Shield, Check, AlertTriangle, TrendingUp, Calculator, Phone, HelpCircle, Building, CreditCard, BadgeCheck, ChevronRight, XCircle, FileText, BarChart3, Briefcase } from "lucide-react"
+import { ArrowRight, Star, PoundSterling, Clock, Shield, Check, AlertTriangle, TrendingUp, Calculator, Phone, HelpCircle, Building, CreditCard, BadgeCheck, ChevronRight, XCircle, FileText, BarChart3, Briefcase , User, Calendar User } from "lucide-react"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
@@ -198,6 +198,21 @@ export default function PricingGuidePage() {
                 How Much Does AI Call Answering
                 <span className="block text-emerald-400 mt-2">Cost in the UK? (2026)</span>
               </h1>
+
+              <div className="flex flex-wrap items-center gap-4 text-white/40 text-sm mt-4">
+                <div className="flex items-center gap-2">
+                  <User className="w-4 h-4" />
+                  <span>Trade Tech Review</span>
+                  <span className="text-white/30">— Research Team</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-4 h-4" />
+                  <time dateTime="2026-06-06">2026-06-06</time>
+                </div>
+              </div>
+              <div className="mt-2 text-white/30 text-sm">
+                Last updated: <time dateTime="2026-06-06">2026-06-06</time>
+              </div>
 
               <p className="text-lg text-white/60 max-w-2xl mb-8">
                 A fully transparent pricing guide comparing every major AI call answering service in the UK. 
@@ -1174,7 +1189,28 @@ export default function PricingGuidePage() {
           </section>
         </main>
 
-        <Footer />
+        
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "AI Call Answering Pricing Guide UK 2026",
+            "description": "Pricing guide for AI call answering services in the UK.",
+            "image": "https://whoza.ai/og-image.webp",
+            "datePublished": "2026-06-20",
+            "dateModified": "2026-06-20",
+            "author": { "@type": "Organization", "name": "whoza.ai", "url": "https://whoza.ai" },
+            "publisher": { "@type": "Organization", "name": "whoza.ai", "url": "https://whoza.ai" },
+            "speakable": {
+              "@type": "SpeakableSpecification",
+              "cssSelector": [".post-intro", ".key-statistics"]
+            }
+          })
+        }}
+      />
+<Footer />
       </div>
     </>
   )

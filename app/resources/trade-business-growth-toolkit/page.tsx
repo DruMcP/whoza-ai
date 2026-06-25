@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
-import { ArrowRight, Download, Mail, FileSpreadsheet, FileText, FileCheck, Users, Star, ChevronRight, Briefcase, PoundSterling } from "lucide-react"
+import { ArrowRight, Download, Mail, FileSpreadsheet, FileText, FileCheck, Users, Star, ChevronRight, Briefcase, PoundSterling , Calendar} from "lucide-react"
 import Link from "next/link"
 
 export default function TradeBusinessGrowthToolkitPage() {
@@ -111,6 +111,10 @@ export default function TradeBusinessGrowthToolkitPage() {
                   <br />
                   <span className="text-emerald-400">Growth Toolkit</span>
                 </h1>
+
+              <div className="mt-4 text-white/30 text-sm">
+                Last updated: <time dateTime="2026-06-06">2026-06-06</time>
+              </div>
                 <p className="text-lg text-slate-400 mb-8 max-w-xl">
                   Everything you need to quote faster, follow up better, and convert more enquiries into booked jobs.
                   Built specifically for UK tradespeople.

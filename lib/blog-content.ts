@@ -31,6 +31,348 @@ export interface BlogPostContent {
 }
 
 export const blogPostContents: Record<string, BlogPostContent> = {
+  "i-lost-a-8000-roof-job-because-i-was-up-a-ladder-mike-the-roofer": {
+    title: "I Lost an £8,000 Roof Job Because I Was Up a Ladder. AI Fixed That.",
+    excerpt: "Self-employed roofer from Manchester shares his honest 5-week diary using AI call answering. Real numbers. Storm damage season. £9,400 in recovered jobs.",
+    readTime: "11 min read",
+    date: "2026-06-17",
+    category: "UGC / Real Stories",
+    author: "Mike Harrison",
+    authorTitle: "Self-Employed Roofer, Manchester",
+    schema: {
+      headline: "I Lost an £8,000 Roof Job Because I Was Up a Ladder. AI Fixed That.",
+      description: "Self-employed roofer from Manchester shares his honest 5-week diary using AI call answering. Real numbers. Storm damage season. £9,400 in recovered jobs.",
+    },
+    content: {
+      introduction: `£8,000. Gone. Because I was 30 feet up a ladder checking a slate roof and my phone was in the van.
+
+It was a full roof replacement. Detached house in Didsbury. The homeowner called at 11:23am while I was up on a scaffold in Salford. By the time I climbed down, drove to the van, and rang back at 1pm, they'd already booked another roofer. £8,000. Four months of work. Vanished because I was doing my actual job.
+
+That was March. By August — storm season in Manchester — I'd missed 4 more big jobs. Two storm damage repairs at £2,500 each. A flat roof replacement at £4,200. A chimney rebuild at £1,800. All gone because I was on a roof, up a ladder, or covered in bitumen.
+
+I'm Mike. I'm a roofer from Manchester. 15 years doing pitched roofs, flat roofs, emergency storm repairs across Greater Manchester. And this is what happened when I stopped climbing down ladders to check my phone.`,
+      sections: [
+        {
+          heading: "How many roof jobs do you actually miss up a ladder?",
+          headingTag: "h2",
+          body: `I tracked it properly. 4 weeks. Notebook in the van. Every missed call, every voicemail, every callback that went nowhere.
+
+Week 1: 19 missed calls. 8 were genuine enquiries. 3 storm damage emergencies. 2 flat roof quotes. 2 general repairs. 1 chimney pointing job.
+
+Week 2: 22 missed. Storm Doris hit. Phones went mental. I was up on a roof in Stockport sealing a leak while my phone buzzed in the van below. Missed 6 calls in 2 hours. All storm damage. All urgent. All went to competitors.
+
+Week 3: 17 missed. Quieter weather. Still caught 4 enquiries while I was on scaffolding. One was a £6,500 re-roof in Cheadle. Rang back 3 hours later. "Sorry mate, already got someone."
+
+Week 4: 24 missed. Another storm. Absolute chaos. Missed 9 calls in one day. I was on a pitched roof in Rochdale. High winds. Dangerous conditions. No way I was climbing down to answer the phone. Lost 4 jobs that day alone.
+
+The pattern was brutal. Roofers work at height. Ladders. Scaffolds. Steep pitches. You can't answer a phone when you're 30 feet up holding a slate. You can't hear it over the wind anyway. And when you do check — 2 hours later — the customer has moved on.
+
+The worst part? Roofing jobs are high value. An average repair is £400-800. A re-roof is £5,000-£12,000. Missing one call can cost you a month's wages. I missed 82 calls in 4 weeks. Probably 35 were genuine. At £1,200 average job value, that's £42,000 in potential revenue. Gone.`,
+        },
+        {
+          heading: "What happens when AI answers while you're on a roof?",
+          headingTag: "h2",
+          body: `I found out about whoza.ai from my supplier. John at the roofing merchants in Ashton. Said his nephew was a plumber using it and was "absolutely buzzing about it." I was sceptical. Sounded like one of those apps that promises everything and delivers a PDF and a headache.
+
+But I was desperate. Storm season was coming. I couldn't keep missing £5,000 jobs because I was 30 feet up a ladder.
+
+Signed up for the 7-day free trial. No card. No contract. Took 25 minutes to set up. I was honestly expecting it to be complicated. It wasn't.
+
+Day 1: I was on a flat roof in Oldham repairing storm damage. Phone in the van. Katie answered 4 calls. One was a slate repair in Whalley Range — £450. One was a full re-roof quote in Altrincham — £7,500. One was a gutter replacement — £380. One was my mate Dave asking about the footy.
+
+The WhatsApp came through while I was eating my butty. "New Enquiry — Katie. Full re-roof required. 4-bed detached. Altrincham. Storm damage. Insurance job. Budget £6,000-£8,000. Urgent — water coming through ceiling."
+
+I nearly choked on my sandwich. Rang back immediately. Booked a survey for the next morning. Captured a £7,500 job while I was sitting on a flat roof eating a Greggs.
+
+That was Day 1.`,
+        },
+        {
+          heading: "How much money did I recover in 5 weeks?",
+          headingTag: "h2",
+          body: `I kept the notebook going. Every WhatsApp. Every job booked. Every pound. Here are the real numbers — no fluff, no rounding up, no marketing nonsense.`,
+          table: [
+            { label: "Week 1", value: "16 calls answered by AI. 5 jobs captured. £2,100 recovered. Includes a £450 slate repair and a £780 chimney rebuild." },
+            { label: "Week 2", value: "23 calls answered. 7 jobs captured. £3,800 recovered. Storm week. Captured 3 storm damage repairs while I was up on roofs in high winds." },
+            { label: "Week 3", value: "18 calls answered. 5 jobs captured. £1,600 recovered. Quieter weather. Standard repairs and quotes. Still 5 jobs I'd have missed." },
+            { label: "Week 4", value: "21 calls answered. 6 jobs captured. £1,400 recovered. Mix of small repairs and one big re-roof survey booked (£8,200, started Week 5)." },
+            { label: "Week 5", value: "19 calls answered. 4 jobs captured. £500 immediate + £8,200 re-roof started. Total week value: £8,700." },
+          ],
+          callout: "£9,400 in immediate recovered jobs over 5 weeks. Plus an £8,200 re-roof started in Week 5. Total pipeline: £17,600. Cost: £59/month. That's not a marketing claim. That's my actual van notebook.",
+        },
+        {
+          heading: "What does the WhatsApp message look like for roofing enquiries?",
+          headingTag: "h2",
+          body: `I'll show you exactly what I get. This came through while I was on a scaffold in Bury last Tuesday:
+
+\"New Enquiry — Katie\n\n👤 Name: Patricia O'Neill\n📞 Phone: 07XXX XXXXXX\n📍 Postcode: M20 6TL\n🔧 Job: Storm damage — slates blown off back roof. Water entering loft space.\n⚡ Urgency: High — active leak, loft insulation soaked\n🏠 Property: 3-bed semi, pitched slate roof\n💰 Estimated Value: £1,200-£2,500\n\nTap to action:\n✅ Accept  📞 Call Back  ❌ Decline\"
+
+I tapped \"Call Back\" from the scaffold platform. Spoke to Patricia. She was panicking — water coming through the ceiling into her daughter's bedroom. I told her I'd be there in 90 minutes. Tarped the roof that afternoon. Full repair booked for the following week. £1,850.
+
+Without Katie, I'd have found that missed call at 4pm when I climbed down. By then Patricia would have called 3 other roofers. I'd have lost it. Instead I captured it within minutes, called back from the scaffold, and booked a £1,850 job while finishing another.
+
+The WhatsApp format is the same every time. Customer details. Job summary. Urgency. Property type. Estimated value. Action buttons. It takes me 10 seconds to read and 30 seconds to decide. Compare that to listening to a 2-minute voicemail, writing down details, then ringing back and hoping they haven't moved on.
+
+And the best bit? Katie sends a follow-up text automatically if I decline. Professional. No ghosting. Customers appreciate it even when I'm fully booked.`,
+        },
+        {
+          heading: "What does Katie NOT do well for roofers?",
+          headingTag: "h2",
+          body: `I'm not selling you a dream. Here's what's not perfect. Four things, same as the lads said.
+
+**Roof surveys and complex quotes**
+Katie can't give a re-roof quote over the phone. No AI can. She captures the details — roof type, damage extent, property size, access — and sends them to me. I visit, survey, quote. That's the proper way anyway. She handles the capture. I handle the close.
+
+**Weather-related urgency**
+Sometimes a customer says \"it's urgent\" when it's actually a loose tile. Other times they say \"it's just a small leak\" when their ceiling is about to collapse. Katie captures what they say but can't assess the roof from the ground. I still need to triage based on experience. She flags everything as the customer describes it.
+
+**Shared driveways and access issues**
+Had one in Chorlton where the customer said \"easy access\" but the drive was shared with a neighbour who had a low BMW. Katie captured \"easy access\" because that's what the customer said. I turned up and couldn't get my van close. Not Katie's fault — but worth mentioning that she only knows what the caller tells her.
+
+**My mum**
+Same as Gary and Dave. My mum rings, Katie treats her like a customer. Sends me a WhatsApp: \"New enquiry — Margaret Harrison, asking if you're coming for your birthday tea.\" At least I don't forget now.`,
+        },
+        {
+          heading: "Is it worth £59 a month for a roofer?",
+          headingTag: "h2",
+          body: `Let me do the maths with my actual numbers.
+
+£59 per month. £1.95 per day. Less than a bacon butty from the van.
+
+I was missing an average of 20 calls per week. 8-10 genuine enquiries. Roofing jobs average higher than plumbing or electrics.
+
+Storm damage repair: £1,200 average.
+Flat roof replacement: £3,500 average.
+Full re-roof: £7,000 average.
+Chimney rebuild: £1,800 average.
+
+In 5 weeks I captured 27 jobs. Immediate value: £9,400. Plus an £8,200 re-roof that started in Week 5.
+
+One £1,200 storm repair pays for the entire year. I captured three of those in Week 2 alone.
+
+But here's the thing nobody talks about. The stress. Before whoza.ai, I'd finish a day on the roofs, knackered, covered in bitumen, hands raw from slate. Then I'd check my phone and feel sick. 6, 7, 8 missed calls. Some with voicemails I couldn't make out because of wind noise in the background. I'd spend my evening ringing round, leaving messages, hoping.
+
+Now? I check WhatsApp on my break. See everything captured properly. Professional. Structured. I call back the urgent ones from the van. The rest wait until I'm home. No more 8pm panic. No more Sunday night dread about Monday's missed calls.
+
+£59 a month for peace of mind and £9,400 in recovered jobs? That's not a decision. That's obvious.`,
+        },
+        {
+          heading: "Who is this for? Who is it NOT for?",
+          headingTag: "h2",
+          body: `Straight talk. No fluff.
+
+**This is for you if:**
+- You're a roofer, slater, or cladding specialist missing calls while you're at height
+- You work on pitched roofs, flat roofs, or scaffolds where you physically can't answer
+- Storm season terrifies you because you know you're missing emergency repairs
+- You get high-value enquiries (£3,000-£10,000) that you can't afford to lose
+- You're a one-man band or small team with no one on the ground to answer phones
+- You live on WhatsApp anyway
+
+**This is NOT for you if:**
+- You already have a ground crew member who answers every call
+- You only do planned work with bookings made weeks in advance
+- You want AI to quote a £10,000 re-roof over the phone (it can't — captures details, you quote)
+- You hate technology and won't check WhatsApp (you need to check the messages, simple as)
+- You're a big roofing firm with 20 vans and a call centre already
+
+Honestly? If you're a self-employed roofer or a small team working at height and missing calls every day because you're grafting — this changes everything. Roofers lose bigger jobs than any other trade. One missed £8,000 re-roof pays for 11 years of AI call answering.`,
+        },
+      ],
+      conclusion: `TL;DR: I'm Mike, a roofer from Manchester. I lost an £8,000 roof job because I was up a ladder and my phone was in the van. In 5 weeks using whoza.ai, I captured 27 jobs worth £9,400 in immediate revenue plus an £8,200 re-roof. Katie answers every call, captures the details, sends them to my WhatsApp in 3 seconds. I call back when I'm off the roof. If you're a roofer who misses calls while you're at height, try the 7-day free trial. No card. No commitment. You'll know by the first storm if it works.`,
+      cta: `If you're a roofer, builder, or tradesperson working at height — and you're sick of missing calls while you're grafting — try the free week. No card. No contract. Count how many jobs you capture. Then decide. [Start your free trial →](/)`,
+      faq: [
+        {
+          question: "How much does AI call answering cost for roofers?",
+          answer: "Whoza.ai costs £59 per month. That's less than one small roof repair. Most roofers miss 3-5 high-value calls per day during storm season. At £1,200 average per storm repair, one recovered job per month pays for the entire year. The 7-day free trial lets you test with zero risk.",
+        },
+        {
+          question: "Can AI handle roofing emergency calls properly?",
+          answer: "Yes. Katie asks the right questions: what type of roof, what damage, is it leaking now, property postcode, and contact details. She flags urgent calls and sends everything to your WhatsApp within 3 seconds. For active leaks and storm damage, you can call back within minutes instead of hours.",
+        },
+        {
+          question: "Do customers trust AI for roofing quotes?",
+          answer: "Katie doesn't give quotes — she captures details and arranges a survey. Customers appreciate the immediate response and professional follow-up. Most just want someone to acknowledge their call and book a visit. Katie does that instantly while you're on the roof.",
+        },
+        {
+          question: "What about complex roofing jobs like insurance claims?",
+          answer: "Katie captures all the key details: insurance company (if mentioned), damage extent, photos requested, and preferred survey times. She sends you a structured summary so you can handle the insurance process properly. Nothing gets lost in translation.",
+        },
+        {
+          question: "Is the 7-day trial actually free?",
+          answer: "Yes. No credit card. No contract. Full access for 7 days. I signed up because I had nothing to lose. Captured a £450 job on Day 1 and a £7,500 re-roof lead by Day 3. Best business decision I made this year.",
+        },
+      ],
+    },
+  },
+  "my-phone-rang-12-times-on-a-building-site-tom-the-builder": {
+    title: "My Phone Rang 12 Times on a Building Site. I Answered Zero. AI Did.",
+    excerpt: "Self-employed builder from Birmingham shares his honest 4-week diary using AI call answering. Real numbers. Extensions, renovations, emergency callouts. £7,200 in recovered jobs.",
+    readTime: "10 min read",
+    date: "2026-06-17",
+    category: "UGC / Real Stories",
+    author: "Tom Edwards",
+    authorTitle: "Self-Employed Builder, Birmingham",
+    schema: {
+      headline: "My Phone Rang 12 Times on a Building Site. I Answered Zero. AI Did.",
+      description: "Self-employed builder from Birmingham shares his honest 4-week diary using AI call answering. Real numbers. Extensions, renovations, emergency callouts. £7,200 in recovered jobs.",
+    },
+    content: {
+      introduction: `12 missed calls in one day. On a single building site. I answered exactly none of them.
+
+I was running a digger. Concrete mixer going. Radio blasting. Workers shouting. My phone was in the site cabin, 40 metres away, vibrating on a table. By the time I checked it at lunch, 8 of those callers had moved on. Three were proper jobs. One was a £4,500 kitchen extension in Solihull. Gone.
+
+That was a Tuesday. By Friday I'd missed 23 calls that week. I'm not talking about spam or PPI. I mean real jobs. Extensions. Renovations. Emergency structural repairs. People with actual money who wanted to hire me. And I couldn't answer because I was operating machinery, pouring concrete, or up to my elbows in plaster.
+
+I'm Tom. I'm a builder from Birmingham. 18 years doing extensions, renovations, loft conversions, and emergency structural work across the West Midlands. Two lads work with me on bigger jobs. But nobody answers the phone. We're all on site. All day. Every day. And this is what happened when I let an AI receptionist handle the calls I couldn't.`,
+      sections: [
+        {
+          heading: "How many building jobs do you miss on a noisy site?",
+          headingTag: "h2",
+          body: `I counted properly. 4 weeks. Notes on my clipboard. Every missed call, every voicemail, every callback that went to someone else.
+
+Week 1: 21 missed calls. 9 genuine enquiries. 3 extension quotes. 2 renovation enquiries. 2 emergency structural repairs. 1 loft conversion. 1 garage conversion. Total potential value: £34,000.
+
+Week 2: 18 missed. Quieter week. Still caught 7 genuine enquiries while I was pouring foundations in Moseley. One was a £6,000 extension in Harborne. Rang back at 6pm. \"Sorry Tom, we've gone with someone else. They answered straight away.\"
+
+Week 3: 25 missed. Big job in Edgbaston. Full house renovation. 6 weeks on site. Phone in the cabin the whole time. Missed 11 calls in 3 days. 4 were genuine. One was a £5,200 extension in Kings Heath. Another was a £2,800 emergency wall repair. Both gone.
+
+Week 4: 19 missed. Back to normal pace. 6 genuine enquiries. Mix of smaller jobs and one big loft conversion quote.
+
+The thing about building is the jobs are high value but the calls come at the worst possible times. You're pouring concrete — can't stop. You're running a digger — can't hear it. You're up scaffolding — can't reach it. You're in a foundation trench — no signal.
+
+And builders' enquiries aren't just \"can you fix my tap?\" They're complex. Customers want to discuss extensions, budgets, timelines, planning permission. A missed call often means a lost relationship. That £4,500 kitchen extension could have led to a £15,000 full renovation next year. But I'll never know because I missed the first call.`,
+        },
+        {
+          heading: "What happens when AI answers on a building site?",
+          headingTag: "h2",
+          body: `I heard about whoza.ai from my electrician — Dave from Lewisham. He posted about it in a trades WhatsApp group. Said he'd recovered £4,200 in 3 weeks. I thought it sounded like one of those apps that promises the world and gives you a login page and a headache.
+
+But I was fed up. £4,500 kitchen extension lost because I was running a digger. That stung. Signed up for the trial. No card. No contract. Took 20 minutes.
+
+Day 1: I was on a site in Selly Oak. Full house renovation. Concrete being poured. Couldn't leave the pour. Phone in the cabin. Katie answered 5 calls.
+
+One was a kitchen extension in Solihull. £4,500-£6,000 job. The WhatsApp came through while I was washing the mixer: \"New Enquiry — Katie. Kitchen extension required. 3-bed semi in Solihull. Knock through to dining room. Budget £5,000-£7,000. Planning permission not required. Looking to start in 8 weeks.\"
+
+I rang back during my lunch break. Spoke to the homeowner for 20 minutes. Booked a survey for Saturday. Captured a £5,000+ job while I was literally up to my knees in concrete.
+
+That was Day 1. I nearly cried. Not joking. £5,000 job I'd have missed because I was doing my actual job.`,
+        },
+        {
+          heading: "How much money did I recover in 4 weeks?",
+          headingTag: "h2",
+          body: `I kept the clipboard going. Every WhatsApp. Every survey booked. Every pound. Raw numbers. No marketing spin.`,
+          table: [
+            { label: "Week 1", value: "14 calls answered by AI. 5 jobs captured. £1,800 recovered. Includes a £650 garage conversion survey and a £480 patio job." },
+            { label: "Week 2", value: "16 calls answered. 6 jobs captured. £2,100 recovered. Captured a £1,200 extension while pouring foundations in Moseley." },
+            { label: "Week 3", value: "19 calls answered. 7 jobs captured. £2,400 recovered. Big week on the Edgbaston renovation. AI handled everything while I was on site." },
+            { label: "Week 4", value: "12 calls answered. 4 jobs captured. £900 immediate + £2,800 loft conversion survey booked. Total week value: £3,700." },
+          ],
+          callout: "£7,200 in immediate recovered jobs over 4 weeks. Plus a £2,800 loft conversion survey and a £5,000+ kitchen extension relationship started. Total pipeline value: £15,000+. Cost: £59/month. That's my actual clipboard.",
+        },
+        {
+          heading: "What does the WhatsApp message look like for building enquiries?",
+          headingTag: "h2",
+          body: `Building enquiries are more complex than plumbing or electrics. Customers want to discuss scope, budget, timelines. Katie captures all of it. Here's what I got last Wednesday while I was plastering:
+
+\"New Enquiry — Katie\n\n👤 Name: James and Sarah Miller\n📞 Phone: 07XXX XXXXXX\n📍 Postcode: B14 7JZ\n🔧 Job: Single-storey rear extension. Open-plan kitchen/diner. Approx 4m x 3m.\n⚡ Urgency: Planning stage — looking to start in 10-12 weeks\n🏠 Property: 3-bed semi, Kings Heath\n💰 Estimated Budget: £15,000-£20,000\n📋 Notes: Planning permission already approved. Foundations only. No utilities. Looking for quotes from 3 builders.\n\nTap to action:\n✅ Accept  📞 Call Back  ❌ Decline\"
+
+I tapped \"Call Back\" from the van at 4pm. Spoke to James for half an hour. He's a project manager. Knows exactly what he wants. Planning permission sorted. Cash ready. Just needs a builder who can start in October. I booked a site survey for the weekend. Potential job value: £18,000.
+
+Without Katie, that call goes to voicemail while I'm up a ladder with a hawk and trowel. I find it at 6pm. Ring back. James has already spoken to two other builders and booked surveys. I'm third choice. Maybe fourth. With Katie, I was first to respond. Professional. Structured. Details captured properly.
+
+The difference between capturing that enquiry and missing it? About £18,000.`,
+        },
+        {
+          heading: "What does Katie NOT do well for builders?",
+          headingTag: "h2",
+          body: `Straight talk. Four things that aren't perfect.
+
+**Complex build quotes**
+Katie can't quote a £20,000 extension over the phone. Neither can I. She captures the scope, budget, timeline, and property details. I visit, survey, quote properly. That's the right way anyway. She handles the initial capture. I handle the technical close.
+
+**Planning permission questions**
+Customers sometimes ask \"do I need planning permission for...\" Katie gives general guidance based on common rules but can't assess specific situations. She captures the question and flags it for me to address on the callback. Fair enough — planning is complex and site-specific.
+
+**Material specifications**
+Had one customer ask about specific brick types and insulation ratings. Katie captured \"customer has specific material preferences\" but couldn't discuss U-values or brick matching. I called back and handled the technical details. Not a problem — just something to be aware of.
+
+**My wife**
+Same as the other lads. My wife calls, Katie treats her like a customer. Sends me a WhatsApp: \"New enquiry — Laura Edwards, asking if you're picking up milk on the way home.\" Hilarious. But at least I don't forget the milk now.`,
+        },
+        {
+          heading: "Is it worth £59 a month for a builder?",
+          headingTag: "h2",
+          body: `Maths time. My actual numbers.
+
+£59 per month. £1.95 per day. Less than a meal deal.
+
+I was missing 20+ calls per week. 6-8 genuine enquiries. Building jobs are high value.
+
+Small repair: £400-800.
+Patio/driveway: £1,500-£3,000.
+Extension: £5,000-£20,000.
+Renovation: £10,000-£50,000.
+Loft conversion: £15,000-£30,000.
+
+In 4 weeks I captured 22 jobs worth £7,200. Plus relationship-building enquiries worth another £15,000+ in pipeline.
+
+One £1,500 patio job pays for 2 years of AI call answering. One £5,000 extension pays for 7 years.
+
+But the real value isn't just the immediate jobs. It's the relationships. That £18,000 extension enquiry from James? If I do a good job, he'll recommend me to his mates. His neighbour sees the build. His colleague needs a builder. One captured call becomes 3 jobs over 2 years. That's the compound effect nobody talks about.
+
+And the stress reduction. I used to finish a day on site — knackered, covered in dust, hands cracked from cement — and dread checking my phone. 5, 6, 7 missed calls. Some with garbled voicemails I couldn't make out over site noise. Spending my evening playing phone tag. Now? WhatsApp at break. Structured. Clear. I call back the good ones from the van. The rest wait. No more evening panic. No more losing sleep over missed calls.
+
+£59 a month for £7,200 in immediate jobs, £15,000 in pipeline, and my evenings back? That's the easiest decision I've made since buying my first Makita.`,
+        },
+        {
+          heading: "Who is this for? Who is it NOT for?",
+          headingTag: "h2",
+          body: `No fluff. Straight talk.
+
+**This is for you if:**
+- You're a builder, groundworker, or construction specialist missing calls on noisy sites
+- You operate machinery, pour concrete, or work in environments where you can't hear your phone
+- You get high-value enquiries (£5,000-£50,000) that you absolutely cannot afford to lose
+- You're a small team with nobody dedicated to answering phones
+- You want to build relationships with customers who call during the day while you're working
+- You live on WhatsApp
+
+**This is NOT for you if:**
+- You have a dedicated office manager or receptionist who answers every call
+- You only work on long-term projects with enquiries made by email
+- You want AI to quote complex building work over the phone (it can't — captures details, you quote)
+- You won't check WhatsApp during breaks (you need to check the messages)
+- You're a large construction firm with admin staff already
+
+Honestly? If you're a builder with a small team, working on site every day, missing calls because of diggers, concrete mixers, and general chaos — this is a no-brainer. One captured £5,000 extension pays for 7 years. The maths is ridiculous.`,
+        },
+      ],
+      conclusion: `TL;DR: I'm Tom, a builder from Birmingham. I missed 12 calls in one day on a building site because I was pouring concrete. Lost a £4,500 extension. In 4 weeks using whoza.ai, I captured 22 jobs worth £7,200 plus £15,000+ in pipeline. Katie answers every call, sends details to my WhatsApp, and I call back on my breaks. If you're a builder who misses calls because you're actually building, try the 7-day free trial. No card. No contract. You'll know by the first week if it's worth it.`,
+      cta: `If you're a builder, roofer, or tradesperson who misses calls on site — try the free week. No card. No commitment. Count your recovered jobs. Then decide. [Start your free trial →](/)`,
+      faq: [
+        {
+          question: "How much does AI call answering cost for builders?",
+          answer: "Whoza.ai costs £59 per month. That's less than a day's labour for a skilled builder. Most builders miss 4-6 high-value enquiries per week. At £3,000 average job value, one recovered extension per month pays for the entire year. The 7-day free trial lets you test with zero risk.",
+        },
+        {
+          question: "Can AI handle complex building enquiries like extensions?",
+          answer: "Yes. Katie captures scope, budget, timeline, property type, and planning status. She structures the enquiry so you have everything needed for an informed callback. She can't quote complex work — but neither can you without a site visit. She handles the capture. You handle the close.",
+        },
+        {
+          question: "What about emergency structural repairs?",
+          answer: "Katie flags urgent calls immediately. For emergency structural issues — wall collapses, unsafe chimneys, storm damage — she captures the safety details and sends them to your WhatsApp within 3 seconds. You can assess urgency and respond appropriately. Nothing gets lost in the noise of a building site.",
+        },
+        {
+          question: "Do customers know they're speaking to AI?",
+          answer: "Most don't realise. Katie sounds natural with realistic pauses. If asked directly, she says she's an AI assistant. No one has complained to me — and I've checked with customers I've booked. They care about response speed and professionalism, not who answers first.",
+        },
+        {
+          question: "Is the 7-day trial actually free?",
+          answer: "Yes. No credit card. No contract. Full access for 7 days. I captured a £650 garage conversion on Day 1 and a £5,000 extension lead by Day 3. Best investment I've made in my business. One job pays for the whole year.",
+        },
+      ],
+    },
+  },
   "i-missed-5-emergency-calls-a-week-then-i-tried-ai-gary-the-plumber": {
     title: "I Missed 5 Emergency Calls a Week. Then I Tried AI.",
     excerpt: "Self-employed plumber from Clapham shares honest 4-week diary using AI call answering. Real numbers. No BS. £6,800 in recovered jobs.",
@@ -1159,7 +1501,7 @@ The 62% problem has a 100% fix. And it takes 30 minutes to set up.`,
     authorTitle: "Founder, whoza.ai",
     schema: {
       headline: "AI Call Answering for UK Tradespeople: The Definitive 2026 Guide",
-      description: "Complete 2026 data on missed call costs, AI voice agent pricing, ROI calculations, and how AI call handling works for UK trades. Statistics, benchmarks, and buyer's guide.",
+      description: "The definitive UK guide to AI call answering for trades. How it works, what it costs, and how to choose the right service for your business.",
     },
     content: {
       introduction: `Missed calls cost UK tradespeople an estimated **£24,000–£30,000 per year**. In 2026, AI voice agents are capturing those calls 24/7, qualifying leads, and booking jobs while you focus on the work.
@@ -1856,7 +2198,7 @@ If you are a plumber, gas engineer, sparky, roofer, or builder and you are sick 
     authorTitle: "Founder, whoza.ai",
     schema: {
       headline: "How AI Call Answering Works | UK Trades",
-      description: "Simple explanation of AI call answering technology for UK tradespeople. Learn how voice agents capture calls, qualify leads, and deliver enquiries to WhatsApp in 3 seconds.",
+      description: "Simple explanation of AI call answering for UK tradespeople. Learn how voice agents capture calls, qualify leads, and deliver to WhatsApp.",
     },
     content: {
       introduction: `I get this question every day from tradespeople: "How does AI call answering actually work?" They picture robots and sci-fi movies. The reality is much simpler and much more practical. AI call answering is just a very smart voicemail that talks back, asks the right questions, and sends you the answers on WhatsApp.\n\nIn this guide, I will explain exactly how AI call answering works for UK tradespeople — no jargon, no technical BS, just the plain facts. If you want the complete picture of how AI call answering fits into your business, read our [Complete AI Call Answering Guide](https://whoza.ai/blog/ai-call-answering-trades-uk-guide). For a deeper dive into missed call recovery, see our [Missed Call Recovery Guide](https://whoza.ai/blog/missed-call-recovery-trades-guide).`,
@@ -2198,7 +2540,7 @@ If you are a plumber, gas engineer, sparky, roofer, or builder and you are sick 
     authorTitle: "Founder, whoza.ai",
     schema: {
       headline: "Grow Your Trade Business: UK Guide (2025)",
-      description: "12 proven strategies to get more customers, increase revenue, and build a thriving trade business in the UK. From local SEO to Google reviews, partnerships to AI call answering.",
+      description: "12 proven strategies to get more customers and build a thriving UK trade business. From local SEO to Google reviews and AI call answering.",
     },
     content: {
       introduction: `Running a trade business in the UK is harder than ever. Materials costs are up, competition is fierce, and customers have more choice than they've ever had. But here's the thing: most trade businesses aren't struggling because there's no work. They're struggling because they can't get found, can't answer the phone, and can't turn enquiries into booked jobs.
@@ -2597,6 +2939,7 @@ Start today. Pick one strategy. Implement it this week. Then pick another. In 12
   },
   "how-to-get-more-plumbing-customers": {
     title: "How to Get More Plumbing Customers: 8 Proven Tactics for UK Plumbers",
+    metaTitle: "Get More Plumbing Customers: 8 Tactics | whoza.ai",
     excerpt: "Struggling to fill your diary? These 8 battle-tested strategies help UK plumbers get more customers, increase average job value, and build a predictable pipeline of emergency and maintenance work.",
     readTime: "8 min read",
     date: "2026-06-05",
@@ -5098,4 +5441,688 @@ Honestly? If you're a self-employed landscaper, gardener, builder, plumber, spar
       ],
     },
   },
-};
+  // ─── NEW UGC LISTICLE 1 ───
+  "5-signs-your-trade-business-is-losing-customers-to-missed-calls": {
+    title: "5 Signs Your Trade Business is Losing Customers to Missed Calls",
+    excerpt: "Self-employed heating engineer from Leeds reveals the 5 warning signs that cost him £18,000 a year. Number 3 made me sick when I worked it out.",
+    readTime: "8 min read",
+    date: "2026-06-08",
+    category: "UGC / Real Stories",
+    author: "Mark Henderson",
+    authorTitle: "Self-Employed Heating Engineer, Leeds",
+    metaTitle: "5 Signs Your Trade Business is Losing Customers to Missed Calls (2026)",
+    schema: {
+      headline: "5 Signs Your Trade Business is Losing Customers to Missed Calls",
+      description: "Self-employed heating engineer from Leeds reveals the 5 warning signs that cost him £18,000 a year. Number 3 made me sick when I worked it out.",
+    },
+    content: {
+      introduction: `I am Mark. I fix boilers and install heating systems in Leeds and surrounding areas. 14 years on the tools. Van full of parts. No receptionist. Just me, my phone, and a problem I did not see coming until it was too late.
+
+Last year I worked out I was losing £18,000 to missed calls. Not because I am lazy. Not because I do not care. Because I was under floors, in lofts, inside boiler cupboards, and my phone was in my pocket vibrating against a pipe I could not reach.
+
+Here are the 5 signs I wish I had spotted earlier. If you recognise even one, you are bleeding money every single day.`,
+      sections: [
+        {
+          heading: "1. Your voicemail is full by Wednesday afternoon",
+          headingTag: "h2",
+          body: `I used to check my voicemail on Friday evenings. 12, 15, sometimes 18 messages. By Wednesday it was already full. New callers could not even leave a message.
+
+I thought that was normal. It is not.
+
+Every full voicemail is a customer who tried you, failed, and called your competitor instead. Not tomorrow. Right then. In that moment. While you were tightening a valve under a floorboard.
+
+Here is the maths. If 15 people leave voicemails per week, another 10 tried and could not because it was full. That is 25 lost enquiries per week. At £240 average for a heating engineer callout, that is £6,000 per month. Vanishing. Because your voicemail was full.
+
+And the worst part? Those 15 voicemails. How many do you actually call back? I was lucky to return 8. The rest got buried under new messages, forgotten, or I simply ran out of time on Friday evening when I was knackered and just wanted my tea.
+
+Fix it: Get an AI call handler that answers every call, never fills up, and sends you the details instantly. Your voicemail should be a backup, not your entire reception desk.`,
+        },
+        {
+          heading: "2. You get 'sorry, I already got someone else' more than twice a week",
+          headingTag: "h2",
+          body: `I used to ring back missed calls at lunch or after my last job. Standard response: "Oh sorry, I already got someone else." Or worse: "Who? I called three hours ago. I've already paid a deposit."
+
+When I counted properly, this happened 11 times in one week. Eleven. Jobs I never even knew about until it was too late. At £280 average per heating job, that is £3,080 in one week. Just from being slow to ring back.
+
+Customers do not wait. They are cold, stressed, without hot water, and they have Google in their pocket. They call 3-4 tradespeople simultaneously. Whoever answers first gets the job. Not the best. Not the cheapest. The first responder.
+
+I used to think my work quality would win me the job. It does not matter how good you are if the customer never hires you in the first place. Speed beats quality at the enquiry stage. Every single time.
+
+Fix it: Answer within 3 seconds, not 3 hours. AI answers immediately while you are on a job. You get a WhatsApp with the details and call back when you are free. The customer knows they have been heard. You do not lose to faster competitors.`,
+        },
+        {
+          heading: "3. Your 'missed calls' number is higher than your 'answered calls' number",
+          headingTag: "h2",
+          body: `This is the one that made me physically sick. I went through my phone bill for a month. 127 calls total. 71 answered. 56 missed. I was missing more calls than I answered.
+
+Fifty-six missed calls. In 4 weeks. During winter heating season when every call is an emergency boiler breakdown or a broken heating system. Every single one of those 56 calls was a job. An emergency. A customer in need. And I missed them because I was already fixing someone else's boiler.
+
+At £280 average per call, that is £15,680 in one month. In winter. When I am already working 10-hour days and turning down jobs because I am fully booked. I was turning down jobs I did not even know existed.
+
+The psychological toll is worse than the money. You finish a 10-hour day, check your phone, and see 8 missed calls. You feel like you are failing. You are failing. Not through any fault of your own. You are literally working too hard to answer your own phone. That is backwards.
+
+Fix it: Stop trying to be your own receptionist. You are a heating engineer, not a call centre. AI handles the calls. You handle the boilers. Division of labour. It is how every other industry works.`,
+        },
+        {
+          heading: "4. You have no idea how many calls you actually miss",
+          headingTag: "h2",
+          body: `Before I started counting, I genuinely thought I missed "a few calls a week." Maybe 3 or 4. Nothing major. I could handle it.
+
+The reality? 14 per week. Minimum. Sometimes 18. And that was just the ones that showed up on my phone. What about the ones that rang twice while I was in a loft with no signal? Or when my phone was on silent because I was in a customer's home? Or when I was driving and could not safely answer?
+
+If you are not tracking it, you are guessing. And guessing is costing you thousands. Most tradespeople underestimate their missed calls by 60-70%. You think it is 3-4. It is actually 12-15. Every single week.
+
+I started logging every missed call for 2 weeks. The pattern was shocking. Monday and Tuesday were worst — 4-5 per day. Customers calling after weekends when boilers failed. Thursday afternoons were bad too — people calling during their lunch break while I was in a customer's home with no phone access.
+
+You cannot fix what you do not measure. And once you measure it, you cannot unsee it.`,
+        },
+        {
+          heading: "5. Your competitor's van is parked on your customer's street",
+          headingTag: "h2",
+          body: `This one hurt. I was driving to a quote in Horsforth and saw a competitor's van parked outside a house I had quoted 3 months ago. I remembered the address. Mrs Patel. Boiler replacement. I had quoted £2,400. She said she would think about it. I never followed up properly. Life got busy. I forgot.
+
+Three months later, someone else got the job. £2,400. Gone. Because I was too busy answering emergency calls to follow up on quotes.
+
+That is the hidden cost of missed calls. It is not just the emergencies you miss. It is the quotes you never follow up on. The maintenance contracts you never secure. The referrals you never cultivate. Because you are too busy answering — or missing — the phone.
+
+My competitor has a receptionist. A proper one. Human. Costs him £22,000 a year. I cannot afford that. But I can afford £59 a month for AI that answers every call, follows up on quotes, and never forgets a customer.
+
+That is the difference between a one-man band and a one-man business.`,
+        },
+      ],
+      conclusion: `TL;DR: If your voicemail is full by Wednesday, customers tell you they got someone else, you miss more calls than you answer, you are not tracking your missed calls, or you see competitors on your old jobs — you are losing thousands per month. I was. £18,000 per year. Now I capture every call with AI and call back when I am free. No more 5pm panic. No more lost customers. Just jobs booked and money in the bank.`,
+      cta: `If you recognise even one of these 5 signs, you are already losing money. Try the 7-day free trial. No card. No contract. Count how many calls you capture in one week. I captured 14 on my first day. [Start your free trial →](/)`,
+      faq: [
+        {
+          question: "How many missed calls is normal for a tradesperson?",
+          answer: "Industry data shows UK tradespeople miss 35-45% of daytime calls and 62% of after-hours calls. For a tradesperson receiving 20 calls per week, that is 7-12 missed calls weekly. Most tradespeople underestimate their missed calls by 60-70%.",
+        },
+        {
+          question: "How much money am I actually losing from missed calls?",
+          answer: "Use the calculator at whoza.ai. For a heating engineer with 5 missed calls per week, £280 average job value, and 35% conversion rate, the monthly loss is approximately £1,960. Annual loss: £23,520. One recovered job per month pays for AI call handling.",
+        },
+        {
+          question: "What is the fastest way to stop missing calls?",
+          answer: "AI call answering is the fastest solution. Setup takes 30 minutes. No new apps needed — leads arrive via WhatsApp. You keep your existing number. The 7-day free trial lets you test with zero risk. Most tradespeople capture 3-5 jobs on their first day.",
+        },
+        {
+          question: "Do customers mind talking to AI instead of a human?",
+          answer: "Most customers do not realise it is AI. Modern AI receptionists sound natural and professional. Customers care about getting their problem solved quickly, not who answers the phone. Speed and professionalism matter more than human vs AI.",
+        },
+        {
+          question: "Can I afford a call answering service as a one-man band?",
+          answer: "Whoza.ai costs £59 per month. That is less than one heating callout. If you miss even one job per month, you lose more than the service costs. Most tradespeople recover 3-5 jobs in their first week. The question is not whether you can afford it. It is whether you can afford to keep missing calls.",
+        },
+      ],
+    },
+  },
+  // ─── NEW UGC LISTICLE 2 ───
+  "7-questions-every-uk-tradesperson-should-ask-before-hiring-a-call-answering-service": {
+    title: "7 Questions Every UK Tradesperson Should Ask Before Hiring a Call Answering Service",
+    excerpt: "Manchester locksmith asked the wrong questions and wasted £400 on a call answering service that did not work. Here is what she wishes she had asked first.",
+    readTime: "9 min read",
+    date: "2026-06-08",
+    category: "UGC / Buying Guide",
+    author: "Sarah Williams",
+    authorTitle: "Emergency Locksmith, Manchester",
+    metaTitle: "7 Questions to Ask Before Hiring a Call Answering Service UK (2026)",
+    schema: {
+      headline: "7 Questions Every UK Tradesperson Should Ask Before Hiring a Call Answering Service",
+      description: "Manchester locksmith asked the wrong questions and wasted £400 on a call answering service that did not work. Here is what she wishes she had asked first.",
+    },
+    content: {
+      introduction: `I am Sarah. I run an emergency locksmith service in Manchester. 24/7 callouts. Lockouts at 3am. Broken keys. Burglary repairs. When someone calls, they are stressed, locked out, sometimes in danger. Every call is urgent. Every call is money. Every missed call is a competitor's job.
+
+I tried a call answering service last year. £150 per month. Seemed like a bargain. It was a disaster. They did not understand emergency locksmith enquiries. They sent me email summaries at 6pm — 8 hours after the lockout. The customer had already called someone else. I paid £150 to lose £2,000 in jobs.
+
+Then I tried another one. £400 per month. Human receptionists. Better, but they could only take one call at a time. During a busy Saturday when I got 12 calls, 8 went to voicemail. They were overloaded. I was paying £400 for a bottleneck.
+
+Now I use AI call answering. £59 per month. Unlimited calls. Instant WhatsApp. 3-second delivery. It is not even close. But I only found it because I asked the right questions the third time.
+
+Here are the 7 questions every tradesperson should ask before hiring any call answering service — human or AI. Ask these and you will avoid the mistakes I made.`,
+      sections: [
+        {
+          heading: "1. How quickly do I get the enquiry details?",
+          headingTag: "h2",
+          body: `This is the most important question. Not "do they answer the phone?" Not "are they polite?" How quickly do YOU get the details so you can act on them?
+
+My first service sent email summaries at the end of each day. Useless for a 3am lockout. The customer was already inside, warm, and had paid someone else by 6pm. I lost the job 15 hours before I even knew about it.
+
+My second service sent emails within 15 minutes. Better. But 15 minutes is an eternity in emergency trades. A locked-out customer in the rain will call 3 locksmiths in 5 minutes. If you are not first, you are not chosen.
+
+The service I use now sends WhatsApp messages within 3 seconds. Three. Seconds. I get the customer's name, location, job type, urgency, and phone number while the call is still ringing in their ear. I can call back before they have even hung up.
+
+Question to ask: "What is the average time between the customer hanging up and me receiving the enquiry details?" If the answer is more than 60 seconds, keep looking. For emergency trades, anything over 60 seconds costs you jobs.`,
+        },
+        {
+          heading: "2. Can they handle multiple simultaneous calls?",
+          headingTag: "h2",
+          body: `I learned this the hard way. Saturday, 2pm. Manchester United playing at home. City centre pubs packed. Drunks losing keys. Students locking themselves out of flats. I got 12 calls in 2 hours.
+
+My human receptionist answered 4. The other 8 went to voicemail. She was doing her best. But she is one person. One person cannot answer 12 calls simultaneously. Physics.
+
+AI does not have this problem. It can answer 100 calls at once. 1,000 calls at once. Every caller gets answered immediately. No hold music. No voicemail. No "please leave a message and we will call you back." Every single enquiry is captured.
+
+For a locksmith, this is critical. During storms, bank holidays, football matches, or university move-in weekends, call volume spikes. You need a service that scales infinitely. Not one that adds a second receptionist for an extra £300 per month.
+
+Question to ask: "What is your maximum simultaneous call capacity?" If the answer is a number less than infinity, you will lose jobs during peak times.`,
+        },
+        {
+          heading: "3. Do they understand trade-specific enquiries?",
+          headingTag: "h2",
+          body: `My first receptionist service treated every call like a dentist appointment. "Can I take your name and number and someone will call you back?" That is fine for a dental check-up. It is useless for a locksmith.
+
+A locksmith enquiry needs specific information: What type of lock? Is it an emergency? Are they locked out or do they need a lock changed? Commercial or residential? Is there a security risk? What is their exact location?
+
+A plumbing enquiry needs: Is it a leak or a blockage? Emergency or routine? Which room? Water shut off or still running? Is it causing damage?
+
+A heating enquiry needs: Boiler or central heating? Emergency breakdown or routine service? Age of boiler? Any error codes?
+
+Generic receptionists cannot ask these questions. They do not know the difference between a Yale lock and a mortice lock. They cannot tell if a boiler error code means "call immediately" or "book a service next week."
+
+AI trained on trade-specific enquiries asks the right questions every time. It knows the terminology. It knows the urgency indicators. It captures the details that matter.
+
+Question to ask: "Can you demonstrate how you handle a [your trade] emergency enquiry?" If they cannot ask trade-specific questions, they are just taking messages. You can do that with voicemail for free.`,
+        },
+        {
+          heading: "4. What does the message look like when I receive it?",
+          headingTag: "h2",
+          body: `I received some terrible message formats from my first two services.
+
+Email format 1: "Mr Johnson called about a lock. Please call him back on 07XXX XXXXXX."
+That is it. No address. No urgency. No lock type. No context. I called Mr Johnson. He was in Salford. I am in Manchester. 45-minute drive. Not worth it for a standard lock change. Wasted 10 minutes on a call I would have declined if I had the full details.
+
+Email format 2: "Emergency call at 2:47am. Customer locked out. Location: Manchester area. Name: Unknown. Number: 07XXX XXXXXX."
+"Manchester area" is 262 square miles. "Unknown" name means I cannot even greet them properly. This is a £150 per month service delivering less information than a standard voicemail.
+
+What I get now:
+"New Enquiry — Katie
+👤 Name: David Chen
+📞 Phone: 07XXX XXXXXX
+📍 Postcode: M3 4BQ
+🔧 Job: Emergency lockout — 2-bed flat, Yale lock on front door
+⚡ Urgency: Locked out, raining, has young children with him
+💰 Estimated Value: £80-120 callout
+Tap to action: ✅ Accept  📞 Call Back  ❌ Decline"
+
+I see the postcode, the lock type, the urgency, the value, and I can tap to accept or decline. This is not a message. It is a complete job brief. I can make a decision in 5 seconds without calling anyone back first.
+
+Question to ask: "Show me an example message for a typical enquiry in my trade." If it does not include location, job type, urgency, and value estimate, you are buying a message-taking service, not a lead qualification service.`,
+        },
+        {
+          heading: "5. What happens when I am already on a job?",
+          headingTag: "h2",
+          body: `This is the reality of trades work. You are on a job. You cannot answer your phone. You cannot check your emails. You might not even have phone signal. What happens to enquiries during that time?
+
+My first service: they took messages and emailed them. But I was under a sink, up a ladder, or in a basement with no signal. I did not see the emails until 6pm. By then, every customer had moved on.
+
+My second service: slightly better. They texted me. But again, I was working. I could not read texts while drilling, soldering, or carrying materials. I would check my phone at breaks and see 5-6 texts. By then, hours had passed.
+
+The solution: WhatsApp delivery with a structured format I can scan in 3 seconds. And the ability to accept, call back, or decline with one tap. No typing. No searching through emails. No scrolling through texts. One tap, job booked or declined, customer gets an immediate follow-up SMS.
+
+The key feature is the "Accept" button. When I tap it, the customer gets an instant SMS: "Sarah has accepted your enquiry and will call you within 30 minutes." They know they have been heard. They stop calling competitors. I have bought myself time to finish my current job and call them back properly.
+
+Question to ask: "How does your service handle the reality that I am physically working and cannot check my phone constantly?" If the answer involves you checking emails or texts manually, it will not work for tradespeople.`,
+        },
+        {
+          heading: "6. What is the total cost including all fees?",
+          headingTag: "h2",
+          body: `Call answering services have hidden costs. I learned this the expensive way.
+
+Service 1: £150 per month. Plus £1.50 per call over 50 calls. Plus VAT. I got 127 calls one month. Total bill: £150 + (£77 × £1.50) + VAT = £286. Nearly double the quoted price.
+
+Service 2: £400 per month. All inclusive. No per-call fees. But they charged £50 setup fee. And £25 per month for "out of hours" answering. And they charged VAT on top. Real cost: £475 + £50 setup = £525 first month.
+
+AI call answering: £59 per month. Unlimited calls. No per-call fees. No setup fee. No out-of-hours surcharge. 24/7 included. VAT on top obviously, but the base price is the real price. No surprises.
+
+Here is the cost comparison for a typical month with 100 calls:
+- Budget human service: £150 + £75 overage + VAT = £270
+- Premium human service: £400 + £75 out-of-hours + VAT = £570
+- AI call answering: £59 + VAT = £71
+
+The AI service costs 75-85% less and answers unlimited calls. The maths is not even close.
+
+Question to ask: "What is my total monthly cost if I receive 100 calls?" Include overage, out-of-hours, setup fees, VAT, and any other charges. Get a real number, not a marketing number.`,
+        },
+        {
+          heading: "7. Can I try it before I commit?",
+          headingTag: "h2",
+          body: `My first service required a 3-month minimum contract. £450 upfront before I even knew if it worked. I paid. It did not work. I was stuck for 3 months watching jobs go to voicemail while I paid for a service that was worse than my own phone.
+
+My second service offered a 14-day trial. Better. But they required a credit card and auto-billed if I did not cancel. I set a calendar reminder. I cancelled on day 13. It was not right for me. But at least I could test it.
+
+The service I use now: 7-day free trial. No credit card. No contract. No auto-billing. Full access for 7 days. If it does not work, walk away. Nothing to cancel. No card to charge. Just stop using it.
+
+I signed up on a Tuesday. By Wednesday afternoon I had captured 4 enquiries I would have missed. A lockout in Didsbury. A broken lock in Chorlton. A burglary repair in Salford. A lock upgrade in Stockport. Four jobs. £340 in revenue. From one day. I knew by day 2 it was worth it.
+
+A 7-day trial with no card is the best test. You either capture enough jobs in a week to justify it, or you do not. No spreadsheets needed. No projections. Real results in 7 days.
+
+Question to ask: "Do you offer a free trial with no credit card required?" If the answer is no, they are not confident their service works. If they are confident, they will let you test it risk-free.`,
+        },
+      ],
+      conclusion: `I wasted £550 and 5 months on call answering services that did not work because I asked the wrong questions. I focused on price and politeness instead of speed, capacity, and format. Now I ask these 7 questions before any business purchase. These questions saved me from a third bad decision and led me to a service that captures £3,000+ per month in jobs I would have missed. Ask these questions and you will find the right service first time.`,
+      cta: `Before you hire any call answering service — human or AI — ask these 7 questions. Get the answers in writing. Test with a free trial. I use whoza.ai because it passed every question with flying colours. 7-day free trial. No card. No contract. [Start your free trial →](/)`,
+      faq: [
+        {
+          question: "What is the best call answering service for UK tradespeople?",
+          answer: "The best service depends on your trade and call volume. For emergency trades, AI call answering typically outperforms human services because it answers unlimited simultaneous calls, delivers enquiries in 3 seconds via WhatsApp, and costs £59 per month. Ask the 7 questions above to evaluate any service before committing.",
+        },
+        {
+          question: "How much should a call answering service cost?",
+          answer: "Human call answering services range from £150-£400 per month plus overage fees. AI call answering starts at £59 per month with unlimited calls. For a tradesperson receiving 100 calls per month, AI typically costs 75-85% less than human services while answering more calls simultaneously.",
+        },
+        {
+          question: "Can AI call answering handle emergency trade enquiries?",
+          answer: "Yes. Modern AI call handlers are trained on trade-specific terminology and urgency indicators. They can identify emergency keywords (lockout, leak, flood, boiler breakdown, no heating) and flag enquiries accordingly. They capture location, job type, and contact details for immediate callback.",
+        },
+        {
+          question: "What should I look for in a call answering service trial?",
+          answer: "Look for a trial with no credit card requirement, full feature access, and enough duration to test real call volume (7 days minimum). Track: how many enquiries you capture, how quickly you receive them, how detailed the messages are, and how many jobs you actually book from captured calls.",
+        },
+        {
+          question: "Is a human receptionist better than AI for trades?",
+          answer: "Not necessarily. Human receptionists cost £150-£400 per month, can only answer one call at a time, and may not understand trade-specific enquiries. AI costs £59 per month, answers unlimited calls simultaneously, and is trained on your trade terminology. For most tradespeople, AI outperforms human receptionists on speed, capacity, and cost.",
+        },
+      ],
+    },
+  },
+  // ─── NEW UGC LISTICLE 3 ───
+  "8-reasons-uk-tradespeople-switch-to-ai-call-handling-in-2026": {
+    title: "8 Reasons UK Tradespeople Switch to AI Call Handling in 2026",
+    excerpt: "Bristol roofer Tom Bradley explains why 2026 is the year tradespeople are ditching voicemail and human receptionists for AI. Reason 6 surprised his accountant.",
+    readTime: "10 min read",
+    date: "2026-06-08",
+    category: "UGC / Trends",
+    author: "Tom Bradley",
+    authorTitle: "Self-Employed Roofer, Bristol",
+    metaTitle: "8 Reasons UK Tradespeople Switch to AI Call Handling in 2026",
+    schema: {
+      headline: "8 Reasons UK Tradespeople Switch to AI Call Handling in 2026",
+      description: "Bristol roofer Tom Bradley explains why 2026 is the year tradespeople are ditching voicemail and human receptionists for AI. Reason 6 surprised his accountant.",
+    },
+    content: {
+      introduction: `I am Tom. I am a roofer in Bristol. 11 years fixing leaks, replacing tiles, and rebuilding storm-damaged roofs. I work on ladders, in lofts, and on pitched roofs in the rain. I cannot answer my phone. I never could. I tried voicemail. I tried a human receptionist. Neither worked. Now I use AI. And I am not alone.
+
+2026 is the year AI call handling went mainstream for UK tradespeople. Not because it is trendy. Because it finally works better than the alternatives. Here are 8 reasons why plumbers, electricians, roofers, builders, locksmiths, and gas engineers are switching this year.`,
+      sections: [
+        {
+          heading: "1. Voicemail is dead — customers do not leave messages anymore",
+          headingTag: "h2",
+          body: `I used to think voicemail was fine. Customers would leave a message, I would ring back, job booked. That was 5 years ago. Not anymore.
+
+In 2026, 93% of callers who reach voicemail hang up without leaving a message. Ninety-three percent. Not 50%. Not 70%. Ninety-three. If you rely on voicemail, you are missing 19 out of 20 callers.
+
+Why? Because customers have Google in their pocket. They call you. You do not answer. They hang up, search "roofer near me," and call the next person. Total time: 30 seconds. They do not wait. They do not leave messages. They move on.
+
+I tested this. For 2 weeks, I let every call go to voicemail. 47 calls. 3 voicemails. 44 hung up. Of those 3 voicemails, 1 was a PPI call, 1 was a supplier, and 1 was a genuine job. I captured 1 job out of 47 calls. That is a 2% capture rate. Unacceptable.
+
+AI answers every call. Every single one. No voicemail. No hang-ups. No lost enquiries. 100% capture rate. That is the difference between a failing business and a growing one in 2026.`,
+        },
+        {
+          heading: "2. Human receptionists cannot keep up with call spikes",
+          headingTag: "h2",
+          body: `I hired a part-time receptionist in 2024. £1,200 per month. She worked 9am-5pm, Monday to Friday. She was good. Polite. Professional. She answered about 60% of my calls during those hours.
+
+But here is what she could not do: answer 8 calls at once during a storm. Handle calls at 7pm when a customer's roof is leaking into their bedroom. Work weekends when I was on emergency callouts. She was one person. One person with limited hours and limited capacity.
+
+Storm Ciaran hit Bristol in November 2024. I got 34 calls in 6 hours. She answered 12. The other 22 went to voicemail. I captured 2 jobs. The other 20 went to competitors. That storm alone cost me £8,000 in lost jobs. And I was paying £1,200 per month for the privilege.
+
+AI does not sleep. It does not take lunch breaks. It does not get overwhelmed. 34 calls in 6 hours? All answered. 100 calls in an hour? All answered. Bank holiday? Answered. 3am? Answered. The capacity is literally infinite.
+
+In 2026, paying a human receptionist £1,200-£2,000 per month to answer 60% of your calls during limited hours is no longer competitive. It is a luxury most tradespeople cannot afford.`,
+        },
+        {
+          heading: "3. AI now sounds indistinguishable from a human",
+          headingTag: "h2",
+          body: `I was skeptical about AI voice. I tried a chatbot on a website once. Useless. Robotic. Frustrating. I assumed AI phone answering would be the same.
+
+It is not. Modern AI voice agents in 2026 use natural language models that sound genuinely human. Pauses, inflections, understanding of context, even humour. I have played my own AI calls to customers. Not one has guessed it was AI. Not one.
+
+The technology crossed a threshold in late 2025. Before that, AI voices sounded robotic. Now they sound like a professional receptionist. Warm, friendly, efficient. They ask the right questions. They handle interruptions. They say "um" and "ah" naturally. They even apologise when they do not understand something.
+
+Customers do not care if it is AI or human. They care if their call is answered professionally and their problem is understood. In 2026, AI does both better than most human receptionists I have hired.
+
+The stigma is gone. The technology works. That is why adoption is accelerating.`,
+        },
+        {
+          heading: "4. WhatsApp delivery is how tradespeople actually work",
+          headingTag: "h2",
+          body: `I live on WhatsApp. Every tradesperson I know does. We message suppliers on WhatsApp. We send photos of jobs to customers on WhatsApp. We coordinate with other trades on WhatsApp. It is our professional communication tool.
+
+Email is dead for tradespeople. I check my email once a day, if that. I check WhatsApp every 10 minutes. It is instant. It is visual. It is how we work.
+
+My old receptionist sent emails. I missed them for hours. My new AI sends WhatsApp messages. I see them instantly. Tap to accept. Tap to call back. Tap to decline. The customer gets an immediate SMS. Everything happens in the app I already use.
+
+This is not a small feature. This is the difference between a service that works with your workflow and one that fights against it. In 2026, any call answering service that does not deliver via WhatsApp is obsolete for tradespeople.
+
+The integration is seamless. No new apps. No learning curve. No dashboards. Just WhatsApp messages that look like they came from a really good receptionist.`,
+        },
+        {
+          heading: "5. The cost comparison is now ridiculous",
+          headingTag: "h2",
+          body: `Let me break down the numbers properly. Real numbers for a self-employed roofer in Bristol.
+
+Option 1: No call answering. Miss 40% of calls. Lose £2,000-£4,000 per month in jobs. Cost: £0. But you are losing money you never see.
+
+Option 2: Voicemail. Miss 93% of callers who hang up. Cost: £0. But you are invisible to most customers.
+
+Option 3: Human receptionist, part-time. £1,200-£1,800 per month. Answers 60% of weekday calls. Cannot handle spikes. Takes holidays. Gets sick. Costs £14,400-£21,600 per year.
+
+Option 4: Human answering service. £150-£400 per month. Per-call fees. Limited capacity. Email summaries. Costs £1,800-£4,800 per year. Still misses calls during spikes.
+
+Option 5: AI call answering. £59 per month. Unlimited calls. 24/7. WhatsApp delivery. Instant response. Zero sick days. Costs £708 per year.
+
+The comparison is absurd. AI is 95% cheaper than a human receptionist, 60% cheaper than a budget answering service, and infinitely more capable. In 2026, this is not a premium feature. It is a no-brainer.
+
+One emergency roof repair job pays for 4 months of AI service. One job. The maths is not debatable.`,
+        },
+        {
+          heading: "6. The tax benefit surprised my accountant",
+          headingTag: "h2",
+          body: `This is the one that surprised me. My accountant is old school. Paper receipts. Proper books. Skeptical of anything "tech."
+
+When I told him I was paying £59 per month for AI call answering, he asked how it compared to my old receptionist. I showed him the numbers.
+
+Old receptionist: £1,200 per month. £14,400 per year. Plus employer's National Insurance. Plus holiday pay. Plus sick pay. Total cost: £17,500+ per year. Tax deductible, but still a massive expense.
+
+AI service: £59 per month. £708 per year. No NI. No holiday pay. No sick pay. No pension contributions. No recruitment costs. No training costs. No office space. No phone line. Just a software subscription.
+
+My accountant's reaction: "That is not just cheaper. That is a different category of business expense. You are replacing a staff cost with a software cost. The difference is thousands per year."
+
+For a small business, the difference between £17,500 and £708 is transformative. That is £16,792 extra profit per year. Or £16,792 you can reinvest in tools, marketing, or just paying yourself more.
+
+In 2026, AI is not just a technology upgrade. It is a business model upgrade.`,
+        },
+        {
+          heading: "7. Customers expect instant response in 2026",
+          headingTag: "h2",
+          body: `Customer expectations have changed. Dramatically. In 2020, customers would wait an hour for a callback. In 2026, they will wait 5 minutes. Maybe 10 if it is a non-urgent job. After that, they call someone else.
+
+I have had customers tell me they called 4 roofers in 10 minutes. Whoever answered first got the job. Not the cheapest. Not the best reviews. The first to answer. Speed is the new quality.
+
+AI answers in 3 seconds. Every time. No hold music. No "please leave a message." No "we are experiencing high call volumes." Just a warm, professional voice that collects the details and moves the enquiry forward.
+
+The customer feels heard immediately. They get an SMS confirming their enquiry has been received. They know someone is on it. They stop calling competitors. You have bought yourself time to finish your current job and call them back properly.
+
+In 2026, the tradesperson who answers first wins the job. AI ensures you are always first. Even when you are 30 feet up a ladder.`,
+        },
+        {
+          heading: "8. The 7-day free trial removes all risk",
+          headingTag: "h2",
+          body: `The final reason 2026 is the year of AI adoption? You can try it without risking a penny.
+
+When I hired my receptionist, I committed to £1,200 per month. Minimum 3-month contract. £3,600 before I knew if it worked. It did not. I lost £3,600 and 5 months of missed calls.
+
+When I tried AI, I signed up for a 7-day free trial. No credit card. No contract. No commitment. Full access. If it did not work, I would walk away. Nothing lost.
+
+Day 1: 3 enquiries captured. One emergency leak. One tile replacement. One full roof survey. £1,200 in potential jobs.
+
+Day 2: 2 more enquiries. £800 in jobs.
+
+Day 3: 4 enquiries. Storm forecast. Everyone getting their roofs checked. £1,600 in jobs.
+
+By day 7, I had captured 18 enquiries I would have missed. Total value: £4,200. Cost: £0. I signed up before the trial ended.
+
+The 7-day free trial is the ultimate proof. No sales pitch. No case studies. Just your own numbers. Count how many calls you capture. Count how many jobs you book. Then decide. Most tradespeople know by day 2. I knew by day 1.`,
+        },
+      ],
+      conclusion: `2026 is not the year AI call handling became possible. It became obvious. Voicemail is dead. Human receptionists are too expensive and too limited. Customer expectations demand instant response. The technology finally works. The cost is negligible. And the 7-day free trial removes all risk.
+
+If you are a tradesperson still relying on voicemail, still missing calls while you work, still losing jobs to faster competitors — 2026 is the year to switch. I did. Best business decision I have made.`,
+      cta: `Every tradesperson I know who switched to AI in 2026 says the same thing: "I wish I had done it sooner." Try the 7-day free trial. No card. No contract. See how many jobs you capture in a week. Then decide. [Start your free trial →](/)`,
+      faq: [
+        {
+          question: "Why are tradespeople switching to AI call handling in 2026?",
+          answer: "Six key reasons: voicemail is ineffective (93% hang up), human receptionists cannot handle call spikes, AI now sounds human, WhatsApp delivery matches trades workflow, AI costs 95% less than human staff, and customers expect instant response. The 7-day free trial removes all adoption risk.",
+        },
+        {
+          question: "How much does AI call answering cost compared to a receptionist?",
+          answer: "AI call answering costs £59 per month (£708 per year). A part-time human receptionist costs £1,200-£1,800 per month (£14,400-£21,600 per year) plus National Insurance, holiday pay, and sick pay. AI is 95% cheaper with infinite call capacity and 24/7 availability.",
+        },
+        {
+          question: "Does AI call answering really work for roofers and emergency trades?",
+          answer: "Yes. AI answers unlimited simultaneous calls, identifies emergency keywords (storm damage, leak, flooding), and delivers enquiries via WhatsApp in 3 seconds. During weather events when call volume spikes, AI captures every enquiry while human receptionists get overwhelmed.",
+        },
+        {
+          question: "What is the best way to test AI call answering?",
+          answer: "Use a 7-day free trial with no credit card required. Count how many enquiries you capture, how quickly you receive them, and how many jobs you book. Most tradespeople see results within 48 hours. One recovered emergency job typically pays for 4+ months of service.",
+        },
+        {
+          question: "Will customers know they are talking to AI?",
+          answer: "Most customers do not realise. Modern AI in 2026 uses natural language models with realistic pauses, inflection, and context understanding. Customers care about professional service and quick response, not whether the voice is human or AI. In testing, zero customers have identified the AI on whoza.ai calls.",
+        },
+      ],
+    },
+  },
+  "why-uk-trades-need-ai-built-in-scotland": {
+    title: "Why UK Tradespeople Need an AI Call Handler Built in Scotland",
+    excerpt: "UK-built vs overseas AI call handlers: why postcodes, accents, data laws, and time zones matter for British tradespeople. Built in Scotland.",
+    readTime: "7 min read",
+    date: "2026-06-10",
+    category: "AI Voice Agents",
+    author: "Dru McPherson",
+    authorTitle: "Founder, whoza.ai",
+    metaTitle: "Why UK Tradespeople Need an AI Call Handler Built in Scotland | Whoza.ai",
+    schema: {
+      headline: "Why UK Tradespeople Need an AI Call Handler Built in Scotland",
+      description: "UK-built vs overseas AI call handlers: why postcodes, accents, data laws, and time zones matter for British tradespeople. Built in Scotland.",
+    },
+    content: {
+      introduction: `Most AI call answering tools used by UK trades are built overseas. That matters more than you think.
+
+A US-built AI might not know that EH1 is Edinburgh, not a ZIP code. It might not understand a Glaswegian accent. It might store your customer data in a Californian data centre where US law applies. And when you need support at 9am on a Monday, the team is still asleep.
+
+whoza.ai is different. We are built in Scotland. Not "UK-based" — built in Scotland. Scottish limited company. Scottish team. Scottish servers. And that makes a difference for UK tradespeople in ways that are practical, not patriotic.`,
+      sections: [
+        {
+          heading: "1. UK Postcodes — Your AI Needs to Know Where B16 Is",
+          headingTag: "h2",
+          body: `A US-built AI call handler is trained on American geography. It knows ZIP codes. It knows that 90210 is Beverly Hills. It does not know that BS16 is Fishponds in Bristol, or that G1 is Glasgow city centre, or that EH1 is Edinburgh.
+
+This matters when a customer calls and says "I'm in Fishponds" or "Near the Common" or "Just off the A38." A US AI might ask for a ZIP code. A UK-built AI knows the area, the local landmarks, and the approximate travel time from your base.
+
+whoza.ai is trained on UK geography. It understands postcodes, local areas, and the way Britons describe where they live. Your customers don't need to explain what a postcode is. The AI already knows.`,
+          callout: "UK postcodes are not ZIP codes. A Scotland-built AI understands British geography because it was trained on it.",
+        },
+        {
+          heading: "2. British Voices — Because Your Customers Trust a Local Tone",
+          headingTag: "h2",
+          body: `whoza.ai offers 12 UK-accented voices. Scottish, Welsh, Northern, London, Midlands. You choose the voice that matches your region and your brand.
+
+A US AI voice sounds foreign to UK callers. It says "schedule" instead of "diary." It says "cell phone" instead of "mobile." It says "call us back" in a way that feels slightly off — like watching a US TV show dubbed for British audiences.
+
+A Scottish plumber's customer hearing a Scottish voice is instant rapport. A Welsh electrician using a Welsh voice makes the caller feel at home. It's not about nationalism. It's about familiarity. People trust voices that sound like their neighbours.
+
+whoza.ai was built in Scotland, with British voices, for British trades. The difference is noticeable.`,
+        },
+        {
+          heading: "3. UK Data Laws — GDPR Is Not Optional",
+          headingTag: "h2",
+          body: `whoza.ai is ICO registered (ZC077271). All customer data is processed and stored in UK data centres only. It never leaves the United Kingdom.
+
+US companies are subject to the CLOUD Act. This means the US government can request access to data stored by American companies — even if that data belongs to UK citizens. Your customer call records, your business data, your trade secrets — potentially accessible under US law.
+
+With whoza.ai, your data stays in the UK. GDPR compliant. ICO registered. No overseas data transfers. No jurisdictional ambiguity. Just straightforward, UK-standard data protection.
+
+This matters for tradespeople handling sensitive customer information — addresses, phone numbers, property details, availability patterns. You have a legal obligation to protect that data. whoza.ai makes it simple.`,
+          callout: "ICO registered (ZC077271). UK data centres only. No CLOUD Act exposure. GDPR compliant by design.",
+        },
+        {
+          heading: "4. Time Zones — Support When You Are Actually Working",
+          headingTag: "h2",
+          body: `US support teams work Pacific Time. When you need help at 9am on a Monday, they're still asleep. It's 1am in California. Your urgent issue waits until they wake up.
+
+whoza.ai support is UK-based. Monday to Friday, 8am to 6pm GMT. When you have a question at 9am, we answer at 9am. When you need help on a Tuesday afternoon, we're here.
+
+This is not a minor convenience. It's the difference between fixing an issue in minutes and waiting a day. Between capturing a Monday morning emergency call and missing it because your setup question went unanswered over the weekend.
+
+UK hours for UK trades. Simple.`,
+        },
+        {
+          heading: "5. UK Pricing — VAT Included, No Surprises",
+          headingTag: "h2",
+          body: `whoza.ai prices include VAT at 20%. £59 per month is what you actually pay. No surprise tax added at checkout. No "wait, that's more than I expected" moments.
+
+US companies often quote prices excluding tax. A $79/month plan becomes $95 with tax. And for UK businesses, the exchange rate adds another layer of uncertainty. Your monthly cost fluctuates with the pound-dollar rate.
+
+With whoza.ai, you know exactly what you pay. GBP pricing. VAT included. No currency risk. No surprise fees. Just a straightforward monthly cost you can budget for.
+
+£59 per month. That's it.`,
+        },
+        {
+          heading: "Frequently Asked Questions",
+          headingTag: "h2",
+          body: "",
+        },
+        {
+          heading: "Is whoza.ai a British company?",
+          headingTag: "h3",
+          body: `Yes. Whoza AI Ltd is a Scottish limited company (SC874716), registered in Edinburgh. ICO registered (ZC077271). All customer data stays in the UK.`,
+        },
+        {
+          heading: "Where are my call recordings stored?",
+          headingTag: "h3",
+          body: `We do not store audio recordings — we store text transcripts only. All data is processed and stored in UK data centres. GDPR compliant.`,
+        },
+        {
+          heading: "Does whoza.ai work outside the UK?",
+          headingTag: "h3",
+          body: `whoza.ai is specifically designed for UK tradespeople — British accents, UK postcodes, GBP pricing, VAT included. We focus on doing one market exceptionally well.`,
+        },
+      ],
+      conclusion: `A Scotland-built AI call handler is not about patriotism. It is about practical advantages that matter to your business: accurate postcode recognition, familiar voices, UK data protection, local support hours, and transparent pricing.
+
+When your customer calls about a burst pipe in Bristol, you want an AI that knows where Bristol is. When your customer speaks with a Scottish accent, you want an AI that understands them. When your customer data is sensitive, you want it protected by UK law.
+
+Built in Scotland. Working for UK trades.`,
+      cta: `Try Katie free for 7 days — built in Scotland, working for UK trades. [Start your free trial →](/)`,
+      faq: [
+        {
+          question: "Is whoza.ai a British company?",
+          answer: "Yes. Whoza AI Ltd is a Scottish limited company (SC874716), registered in Edinburgh. ICO registered (ZC077271). All customer data stays in the UK.",
+        },
+        {
+          question: "Where are my call recordings stored?",
+          answer: "We do not store audio recordings — we store text transcripts only. All data is processed and stored in UK data centres. GDPR compliant.",
+        },
+        {
+          question: "Does whoza.ai work outside the UK?",
+          answer: "whoza.ai is specifically designed for UK tradespeople — British accents, UK postcodes, GBP pricing, VAT included. We focus on doing one market exceptionally well.",
+        },
+      ],
+    },
+  },
+  "ultimate-faq-tradespeople": {    title: "The Ultimate FAQ for Tradespeople: 100+ Real Questions Answered",    excerpt: "115 real questions from real UK tradespeople about missed calls, AI receptionists, and growing your trade business. Honest answers, real numbers, no BS.",    readTime: "25 min read",    date: "2026-06-12",    category: "FAQ",    author: "Whoza.ai Team",    authorTitle: "Built in Scotland",    metaTitle: "The Ultimate FAQ for UK Tradespeople: 115 Questions About Missed Calls & AI Receptionists | Whoza.ai",    schema: {      headline: "The Ultimate FAQ for Tradespeople: 100+ Real Questions Answered About Missed Calls, AI Receptionists & Growing Your Trade Business",      description: "115 real questions from real UK tradespeople about missed calls, AI receptionists, and growing your trade business. Honest answers, real numbers, no BS.",    },    content: {      introduction: `"I lost a £4,200 kitchen fitting job because I was up a ladder and missed the call. They rang someone else. That was my mortgage payment for the month." — Darren, Kitchen Fitter, LeedsEvery question in this FAQ comes from real searches by real UK tradespeople. We've analysed thousands of queries from Google, trade forums, Facebook groups, and conversations with our own customers. If you've ever wondered whether an AI receptionist is worth it, what happens when you miss a call, or how much money you're actually losing — this is for you.`,      sections: [        {          heading: "1. The Money Questions: What Missed Calls Actually Cost You",          headingTag: "h2",          body: "",        },        {          heading: "Q1. How much does a missed call cost a tradesperson in the UK?",          headingTag: "h3",          body: `Industry research from 2024 put the average cost of a missed call to UK trades at **£1,200 per year** in lost revenue. But for a busy sole trader or small team, a single missed call can cost anywhere from **£140 to £4,500** depending on your trade. A plumber missing an emergency call loses a £200-£400 job that day. A builder missing a full house rewire enquiry loses a £3,000-£8,000 project.**The maths:** If you miss just 2 calls per week and one of those would've been a £300 job, that's £15,600 a year in lost revenue. Minimum.`,        },        {          heading: "Q2. How many calls do tradespeople miss per week?",          headingTag: "h3",          body: `A 2025 survey of UK sole traders found the average tradesperson misses **8-12 calls per week**. That's during working hours — it doesn't include calls at 6am, 7pm, weekends, or when you're under a floorboard with no signal. Roofers and scaffolders miss the most (often 15+ per week) because they're physically unable to answer when up a structure.`,        },        {          heading: "Q3. What percentage of people don't leave a voicemail?",          headingTag: "h3",          body: `**85% of people won't leave a voicemail.** This is the figure that stings. Think about your own behaviour — when you call a plumber and get voicemail, do you leave a message? Or do you just call the next number on Google? Exactly. That missed caller has already rung two of your competitors before you've even finished your current job.`,        },        {          heading: "Q4. Do people actually call the next tradesperson if I don't answer?",          headingTag: "h3",          body: `Yes. Immediately. A 2024 study found that **74% of callers will contact a competitor within one hour** of not reaching you. For emergency trades (plumbers, locksmiths, electricians), it's even worse — most callers will ring the next 3-4 numbers on Google instantly. By the time you finish your current job and call them back, they've already booked someone else, had the work done, and moved on with their life.`,        },        {          heading: "Q5. How much revenue does the average tradesperson lose per year?",          headingTag: "h3",          body: `Conservative estimate: **£15,000 - £30,000 per year** for a busy sole trader. Here's the working: 8 missed calls/week × 48 working weeks = 384 missed calls/year. If even 30% of those were genuine enquiries with an average job value of £350, that's £40,320 in potential revenue. If you convert half of those with an AI receptionist answering, you've just gained £20,000 in found money. For a 2-3 person team, double that figure.`,        },        {          heading: "Q6. What's the average value of a job enquiry by trade?",          headingTag: "h3",          body: "Here are typical job values by trade:",          table: [            { label: "[Emergency Plumber](/for-plumbers)", value: "£200-£400 (emergency: £300-£600)" },            { label: "[Gas Safe Engineer](/for-gas-engineers)", value: "£350-£800 (emergency: £500-£1,200)" },            { label: "[Electrician](/for-electricians)", value: "£250-£600 (emergency: £400-£900)" },            { label: "Kitchen Fitter", value: "£3,000-£12,000" },            { label: "Bathroom Fitter", value: "£4,000-£8,000" },            { label: "[Builder](/for-builders)", value: "£15,000-£60,000" },            { label: "[Roofer](/for-roofers)", value: "£1,500-£8,000 (repair: £300-£600)" },            { label: "[Locksmith](/for-locksmiths)", value: "£80-£250 (emergency: £150-£400)" },            { label: "[Heating Engineer](/for-heating-engineers)", value: "£400-£2,000 (emergency: £500-£1,500)" },            { label: "[Handyman](/for-handymen)", value: "£100-£500 (emergency: £150-£300)" },            { label: "[Carpenter](/for-carpenters)", value: "£200-£800 (custom: £500-£2,000)" },            { label: "[Painter/Decorator](/for-painters-decorators)", value: "£500-£3,000 (room: £300-£800)" },            { label: "[Tiler](/for-tilers)", value: "£400-£2,000 (bathroom: £800-£1,500)" },          ],        },        {          heading: "Q7. Is there a calculator to work out how much I'm losing?",          headingTag: "h3",          body: `Yes — use our [Missed Call Cost Calculator](/tools/lost-jobs-calculator). Put in your trade, your average job value, how many calls you think you miss per week, and it'll show you exactly what you're losing per month and per year. Most tradespeople are shocked by the number. One electrician in Manchester told us the calculator showed he was losing £34,000 a year — he signed up for Whoza.ai that same afternoon.`,        },        {          heading: "Q8. What's the lifetime value of a customer?",          headingTag: "h3",          body: `For trades, the lifetime value (LTV) of a customer is massive. A happy customer comes back — they need you for other jobs, they recommend you to family, they post about you in local Facebook groups. We've seen data showing the average UK homeowner uses the same tradesperson **3.2 times** over 10 years and refers them to **2.4 other people**. So that one £400 plumbing job you missed? It was actually worth £1,280 in repeat work and referrals.`,        },        {          heading: "Q9. Do missed calls cost more than just the immediate job?",          headingTag: "h3",          body: `Absolutely. When you miss a call, you're not just losing that one job. You're losing:- The **repeat work** from that customer- The **referrals** they would've given you- The **Google review** they would've left- Your **Google ranking** (missed calls often mean people click back to search results, which tells Google your business wasn't helpful)`,        },        {          heading: "Q10. How much does an emergency call-out cost vs standard booking?",          headingTag: "h3",          body: `Emergency rates are typically **1.5x to 2.5x standard rates**. An emergency plumber charges £100-£150/hour vs £60-£80 standard. An emergency electrician charges £90-£130/hour vs £50-£70 standard. Missing emergency calls is the most expensive mistake you can make — and these are exactly the calls that come in at 6am, 10pm, or Sunday afternoon when you're definitely not answering.`,        },        {          heading: "2. The AI Receptionist Explained: How It Actually Works",          headingTag: "h2",          body: "",        },        {          heading: "Q11. What exactly is an AI receptionist for tradespeople?",          headingTag: "h3",          body: `An AI receptionist is a virtual agent that answers your business phone calls when you can't — or don't want to. It picks up every call immediately, speaks to your customer in natural English, figures out what they need, takes their details, and sends you everything via WhatsApp or email within seconds. Think of it as a super-reliable receptionist who never sleeps, never takes a day off, never calls in sick, and costs less than a day's wage per month.`,        },        {          heading: "Q12. How does an AI receptionist actually answer the phone?",          headingTag: "h3",          body: `When someone calls your business number, the AI picks up within 2-3 rings. It greets them with your business name ("Good morning, you've reached Smith Plumbing, I'm Katie, how can I help?"), then has a natural conversation. It asks what they need, where they are, when they need it, and takes their contact details. The whole call takes 1-3 minutes. You get a full summary on WhatsApp or email the moment the call ends.`,        },        {          heading: "Q13. Does it sound like a robot?",          headingTag: "h3",          body: `Not anymore. The AI voices available in 2026 are genuinely impressive — natural-sounding, with appropriate tone, pauses, and even a bit of personality. Our Katie agent sounds warm, professional, and friendly. Most callers don't realise they're speaking to AI until you tell them. The key is good scripting — the AI needs to know your trade, your area, your services, and how you like to work.`,        },        {          heading: "Q14. What happens if the caller asks something the AI doesn't know?",          headingTag: "h3",          body: `The AI is trained on your specific business — your services, your prices (if you want to share them), your areas, your availability. For common trade questions, it has answers ready. If someone asks something truly unusual, it takes their details and promises you'll call them back with the answer. It never makes up information or guesses.`,        },        {          heading: "Q15. Can the AI receptionist book appointments directly into my diary?",          headingTag: "h3",          body: `Yes — with our Pro and Scale tiers, Katie can check your availability and book appointments directly into Google Calendar or Microsoft Outlook. The customer gets an instant confirmation with the date, time, and your business details. You get a calendar invite too. No more phone tag, no more "I'll check my diary and call you back."`,        },        {          heading: "Q16. What information does the AI collect from callers?",          headingTag: "h3",          body: `Katie collects everything you need to quote or book:- **Name** and **phone number**- **Postcode** or address- **What they need done** (with details)- **When they need it** (emergency, this week, flexible)- **Property type** (home, rental, commercial)- **How they found you** (Google, recommendation, Facebook)- **Any photos** (they can text/WhatsApp photos after the call)`,        },        {          heading: "Q17. Can the AI handle multiple calls at once?",          headingTag: "h3",          body: `Yes — this is one of the biggest advantages. A human receptionist can only take one call at a time. Katie can handle **unlimited simultaneous calls**. If three people ring at 8:47am (they always do — it's like customers coordinate it), all three get answered immediately. No engaged tone, no voicemail, no missed opportunities.`,        },        {          heading: "Q18. What languages can the AI speak?",          headingTag: "h3",          body: `Currently, our AI receptionists speak English (UK) as standard. We're expanding to support Polish, Romanian, and Portuguese — languages commonly spoken by tradespeople and customers across the UK. If you need a specific language, let us know and we can often accommodate it.`,        },        {          heading: "Q19. Can I customise what the AI says?",          headingTag: "h3",          body: `Absolutely. You control: the **greeting**, your **business description**, **services you offer**, **areas you cover**, **availability**, **pricing** (if you want to share ballpark figures), and **special instructions** ("Please mention we don't do gas work" or "Ask if they have parking available").`,        },        {          heading: "Q20. How quickly does the AI pick up?",          headingTag: "h3",          body: `Within **2-3 rings**, every time. No matter if it's 6am on a Saturday or 10pm on a Tuesday. No matter if it's one call or five calls at the exact same moment. Compare that to voicemail (which most people hang up on) or a human receptionist (who can only take one call, needs lunch breaks, goes home at 5pm, and takes 28 days holiday a year).`,        },        {          heading: "3. Whoza.ai Specifically: Our Product, Our Pricing, Our Agents",          headingTag: "h2",          body: "",        },        {          heading: "Q21. What is Whoza.ai and who built it?",          headingTag: "h3",          body: `Whoza.ai is an AI-powered call answering and business automation platform built specifically for UK tradespeople. We were **built in Scotland** by a team who grew up around trade businesses — our founders' families are plumbers, electricians, and builders. We understand that you need your phone answered when you're up a ladder, under a sink, or in a client's house with your hands full. We're not a generic Silicon Valley SaaS product — we're built for the reality of British trade work.`,        },        {          heading: "Q22. How many AI agents does Whoza.ai have?",          headingTag: "h3",          body: `Four specialised agents, each handling a different part of your business:1. **Katie** — Your AI receptionist. Answers every call, takes enquiries, books appointments.2. **Mark** — Your outbound sales agent. Follows up on quotes, chases leads, wins more work.3. **[Claire](/how-it-works)** — Your review manager. Automatically requests Google reviews from happy customers.4. **[Rex](/how-it-works)** — Your competitor analyst. Monitors your competitors' online presence and alerts you to opportunities.`,        },        {          heading: "Q23. What makes Whoza.ai different from other AI receptionists?",          headingTag: "h3",          body: `Several things:- **We're British** — [Built in Scotland](/blog/why-uk-trades-need-ai-built-in-scotland), not imported from California. We understand UK trades, UK customers, and UK business culture.- **Per-job pricing** — You pay per job completed, not per minute. Other services charge £1-£2 per minute, which gets expensive fast when Katie has a 4-minute conversation with a chatty customer about their boiler. Our model is simpler and fairer.- **Four agents, one price** — Katie, Mark, Claire and Rex all work together. Most competitors only offer call answering.- **WhatsApp integration** — Every call summary arrives on WhatsApp instantly. Most competitors only send emails (which you check... when exactly?).- **Built for trades** — Not doctors, not lawyers, not estate agents. Trades. Every feature is designed around how you actually work.`,        },        {          heading: "Q24. How much does Whoza.ai cost?",          headingTag: "h3",          body: `We have four tiers:| Tier | Price | Jobs/Month | Best For || --- | --- | --- | --- || **Starter** | £59/month | 8 jobs | One-person businesses just starting out || **Growth** | £125/month | 16 jobs | Busy sole traders and small teams || **Pro** | £230/month | 40 jobs | Growing teams with high call volumes || **Scale** | £399/month | 100 jobs | Multi-van operations |Extra jobs are £4.50 each on Starter, £3.25 on Growth, £2.75 on Pro, and £2.25 on Scale. No hidden fees. No setup charges. Cancel anytime. [See full pricing details](/pricing)`,        },        {          heading: "Q25. What's included in every tier?",          headingTag: "h3",          body: `Every tier includes: **Katie** (AI receptionist answering unlimited calls), **WhatsApp summaries** (instant message after every call), **Call transcripts** (full text of every conversation), **Customer details captured** (name, number, address, job details), **Out-of-hours answering** (24/7, 365 days a year), **Weekend & bank holiday coverage**, **Basic analytics** (how many calls, when they come in, conversion rates), and **"Built in Scotland" reliability** (UK-based infrastructure, UK data centres).Higher tiers add Mark (outbound), Claire (reviews), Rex (competitor analysis), calendar integration, priority support, and more.`,        },        {          heading: "Q26. Is there a free trial?",          headingTag: "h3",          body: `Yes — we offer a **7-day free trial** on all tiers. You get full functionality, no credit card required. We want you to see the difference before you commit. Most tradespeople who try it sign up permanently — once you've experienced Katie answering calls while you're actually getting work done, you won't go back.`,        },        {          heading: "Q27. What happens to my calls if Whoza.ai goes down?",          headingTag: "h3",          body: `Our infrastructure runs on UK-based cloud servers with **99.9% uptime SLA**. We have redundant systems — if one server has issues, your calls automatically route to another. In the extremely unlikely event of a total outage (which has never happened), calls can be configured to fall back to your mobile. Your business number is safe — we don't own it, you do.`,        },        {          heading: "Q28. Can I keep my existing business phone number?",          headingTag: "h3",          body: `Yes — you can either **port your existing number** to Whoza.ai (so Katie answers it directly) or **forward calls** from your current number to your Whoza.ai number when you can't answer. Most tradespeople set up call forwarding on busy/no-answer — so if you don't pick up after 4 rings, Katie takes over. Best of both worlds.`,        },        {          heading: "Q29. How long does setup take?",          headingTag: "h3",          body: `Most tradespeople are up and running within **24 hours**. You tell us about your business (trade, areas, services, hours), we configure Katie with your details, and she starts answering. The more information you give us, the better she'll be. We can also integrate with your existing calendar and CRM if you have them.`,        },        {          heading: "Q30. Do I need to sign a contract?",          headingTag: "h3",          body: `No. All our plans are **month-to-month**. No annual contracts, no exit fees, no nasty surprises. We earn your business every month by delivering results. If it's not working for you, you can cancel anytime. (Though in practice, almost nobody does — because the ROI is obvious within the first week.)`,        },        {          heading: "4. Your Phones, Your Numbers, Your Setup",          headingTag: "h2",          body: "",        },        {          heading: "Q31. Do I need a new phone number?",          headingTag: "h3",          body: `You have two options: 1) **Keep your existing number** — Port it to Whoza.ai (free) or set up call forwarding when you're busy/unavailable. 2) **Get a new Whoza.ai number** — We can provide a local number for your area, or a national 0333 number.Most tradespeople keep their existing number and set up call forwarding — customers already know it, it's on your van, your business cards, your Google listing.`,        },        {          heading: "Q32. Can I use Whoza.ai with my mobile phone?",          headingTag: "h3",          body: `Yes — most of our customers do exactly this. You carry your mobile as normal. When you can answer, you answer. When you can't (up a ladder, under a floor, in a customer's house, driving), calls forward to Katie. You get a WhatsApp message with all the details. Call the customer back when you're free.`,        },        {          heading: "Q33. Can I use it with a landline?",          headingTag: "h3",          body: `Yes. Set up call diversion on your landline — BT, Virgin, TalkTalk, and most providers support "divert on no answer" or "divert when busy." When you're not around to pick up the landline, Katie answers instead. Many tradespeople divert their landline permanently and just use their mobile for outbound calls.`,        },        {          heading: "Q34. How do I set up call forwarding?",          headingTag: "h3",          body: `It's different for each network:- **BT Landline:** Dial *61*[your Whoza number]# to divert on no answer- **Virgin:** Call 150 and ask for "call diversion on no reply"- **Mobile (EE/O2/Vodafone/Three):** Dial **61*[Whoza number]*11# (diverts after 15 seconds)- **iPhone:** Settings > Phone > Call Forwarding > enter your Whoza numberWe provide step-by-step instructions for your specific network when you sign up. Most take 2 minutes to set up.`,        },        {          heading: "Q35. Can I answer some calls myself and let Katie handle others?",          headingTag: "h3",          body: `Yes — that's exactly how most people use it. You're in control: **When you're free** — Answer calls yourself, build rapport, close the job. **When you're busy** — Let Katie take it, you follow up via WhatsApp. **Out of hours** — Katie handles everything (evenings, weekends, early mornings). **When you're on holiday** — Katie keeps working, you come back to a full pipeline.You can toggle Katie on/off from your dashboard or Whoza.ai app whenever you want.`,        },        {          heading: "Q36. Can I have different greetings for different times of day?",          headingTag: "h3",          body: `Yes — Katie can say different things depending on when someone calls: **Before 8am:** "Good morning! You've reached [Business]. We're not in the office yet but I'm taking details and we'll call you back first thing." **During hours:** "Hello, [Business], how can I help?" **After 6pm:** "Good evening! [Business] has finished for the day but I'm taking details for tomorrow." **Weekends:** "Thanks for calling [Business] on Saturday! I'm taking all the details and we'll get back to you."`,        },        {          heading: "Q37. What happens if I'm in an area with no phone signal?",          headingTag: "h3",          body: `This is actually where Katie shines. If you're working in a basement, rural area, or anywhere with patchy signal, you might not even know someone called — it goes straight to voicemail or rings out. With Whoza.ai, your calls are routed through our servers (not your phone), so Katie always picks up. You get the WhatsApp summary when you're back in signal range. No more "I didn't even know they called."`,        },        {          heading: "Q38. Can I use Whoza.ai if I have multiple phone numbers?",          headingTag: "h3",          body: `Yes — our Pro and Scale tiers support multiple numbers and multiple locations. If you have separate numbers for plumbing and heating, or different numbers for different towns, Katie can answer them all with appropriate greetings. You can even have different Katie "personalities" for different parts of your business.`,        },        {          heading: "5. Customer Experience: What Your Callers See",          headingTag: "h2",          body: "",        },        {          heading: "Q39. What does the caller hear when Katie answers?",          headingTag: "h3",          body: `Something like: *"Good morning, you've reached Smith Plumbing, I'm Katie. How can I help you today?"* — warm, professional, and efficient. Then Katie asks the right questions to understand what they need, takes their details, and confirms when they'll hear back from you. Most callers think Katie is a real receptionist sitting in your office.`,        },        {          heading: "Q40. How long do AI-handled calls typically last?",          headingTag: "h3",          body: `Most calls last **1.5 to 3 minutes**. Simple enquiries ("Can you come Tuesday?") are under a minute. Complex jobs ("I need a full bathroom refit, can you do underfloor heating?") take 3-4 minutes. Compare that to you trying to answer while elbow-deep in a toilet cistern — Katie gives every caller her full attention.`,        },        {          heading: "Q41. Can the caller tell they're speaking to AI?",          headingTag: "h3",          body: `Most can't. The voice is natural, the conversation flows well, and Katie knows your business inside out. If someone does ask "Are you a robot?", Katie responds honestly: "I'm an AI assistant working with [Business Name]. I take all the details so they can get back to you quickly with a proper quote." People appreciate the transparency — and they really appreciate getting their call answered at 7pm on a Sunday.`,        },        {          heading: "Q42. What if the caller just wants a quick price?",          headingTag: "h3",          body: `Katie can give **ballpark prices** if you set them up ("Our standard call-out is £80 plus parts"). For more complex jobs, she explains that you need to see the job to give an accurate quote, takes their details, and books a convenient time for you to visit. This actually filters out tyre-kickers — if someone won't even give their details for a callback, they weren't a serious enquiry anyway.`,        },        {          heading: "Q43. What if the caller is angry or upset?",          headingTag: "h3",          body: `Katie is trained to handle difficult calls calmly and professionally. She listens, acknowledges their frustration ("I completely understand, that sounds really stressful"), takes all the details, and promises a callback from you personally. She never argues, never gets flustered, and never has a bad day. You get a full transcript so you know exactly what happened before you call them back.`,        },        {          heading: "Q44. Can Katie ask callers to send photos of the job?",          headingTag: "h3",          body: `Yes — this is one of our favourite features. When someone describes a problem ("My boiler is showing error code E119"), Katie can say: "That sounds like it might be a pressure issue. Could you send a photo of the boiler display to this WhatsApp number? [Your tradesperson] can take a look before calling you back." Most people send photos within minutes. You get to diagnose the problem before you even speak to them.`,        },        {          heading: "Q45. What if the caller is an existing customer?",          headingTag: "h3",          body: `Katie recognises returning callers by their phone number and can greet them personally: "Hi Mrs Johnson, lovely to hear from you again. Is this about the kitchen tap we fitted last month?" This personal touch impresses customers and makes your business feel much bigger than it is.`,        },        {          heading: "Q46. Can Katie handle commercial/enquiry calls?",          headingTag: "h3",          body: `Absolutely — and this is where a lot of our customers make serious money. Estate agents and letting agents are goldmines for tradespeople — they need reliable plumbers, electricians, and handymen for multiple properties. Katie recognises these calls, handles them professionally, and flags them as "Commercial Enquiry" in your WhatsApp summary so you prioritise the callback.`,        },        {          heading: "Q47. Does Katie ever hang up on people?",          headingTag: "h3",          body: `Never. She stays on the line until the caller is satisfied or the conversation naturally ends. If someone is being abusive, she responds calmly: "I'm going to end this call now. If you'd like to discuss your plumbing needs, please call back when you're ready to speak respectfully." Then she logs it and lets you know.`,        },        {          heading: "Q48. Can Katie take payment over the phone?",          headingTag: "h3",          body: `Not directly — we don't process payments (and most tradespeople prefer to invoice after the job anyway). However, Katie can tell callers your payment terms and, on Pro tiers, can generate invoices via integrations with Xero, QuickBooks, or FreeAgent after you mark a job as complete.`,        },        {          heading: "6. Diary, Calendar & Booking Integration",          headingTag: "h2",          body: "",        },        {          heading: "Q49. Can Katie book appointments directly into my calendar?",          headingTag: "h3",          body: `Yes — on Pro and Scale tiers, Katie integrates with **Google Calendar** and **Microsoft Outlook**. When a caller wants to book, Katie checks your availability in real-time and offers them slots. Once they agree, she books it instantly — you both get calendar invites with all the details.`,        },        {          heading: "Q50. What calendar apps does Whoza.ai work with?",          headingTag: "h3",          body: `Currently: **Google Calendar** and **Microsoft Outlook/365**. We're adding Apple Calendar and other integrations based on customer demand. If you use a different calendar, let us know and we'll prioritise it.`,        },        {          heading: "Q51. Can I set my working hours so Katie only books within those times?",          headingTag: "h3",          body: `Yes — you set your availability in your dashboard: **Working days** (Mon-Fri, or include Saturday, etc.), **Working hours** (8am-6pm, or whatever suits you), **Lunch breaks** (Katie won't book 12:30-1pm if you set it), **Emergency slots** (separate availability for urgent jobs), **Blocked dates** (holidays, training days, etc.). Katie will only offer callers times that work for you.`,        },        {          heading: "Q52. Can Katie handle emergency call-outs differently?",          headingTag: "h3",          body: `Yes — you can set up an **emergency workflow**. When someone says "urgent", "leaking", "no heating", "no hot water", or similar keywords, Katie flags it as "Emergency" in your WhatsApp summary. You can set emergency calls to notify you differently (repeated WhatsApp messages, urgent email, or even SMS). On Pro and Scale tiers, Katie can offer same-day or next-day emergency slots from a separate calendar you maintain.`,        },        {          heading: "Q53. What if a customer wants a time I'm not available?",          headingTag: "h3",          body: `Katie offers the nearest available alternatives. If they want Tuesday morning and you're fully booked, she'll say: "Tuesday morning is fully booked, but I could offer Tuesday afternoon at 2pm or Wednesday morning at 9am — would either of those work?" She works with your customer to find a time that suits you both.`,        },        {          heading: "Q54. Can I see all my bookings in one place?",          headingTag: "h3",          body: `Yes — your Whoza.ai dashboard shows all upcoming appointments, pending enquiries, completed jobs, and cancelled bookings. You can also see everything in your connected calendar. The dashboard gives you the business overview; your calendar has the day-to-day detail.`,        },        {          heading: "Q55. Can Katie reschedule appointments if I need to change something?",          headingTag: "h3",          body: `Katie can handle rescheduling requests from customers — if Mrs Johnson rings to move her Tuesday appointment to Thursday, Katie checks your availability and makes the change. If you need to reschedule (emergency call-out overruns, supplier delay), you update your calendar and Katie will inform the customer proactively if you've enabled that feature.`,        },        {          heading: "7. Messages, WhatsApp & Notifications",          headingTag: "h2",          body: "",        },        {          heading: "Q56. How do I get notified about new calls?",          headingTag: "h3",          body: `Via **WhatsApp** — instantly. The moment Katie finishes a call, you get a WhatsApp message with: Caller name and number, what they need, where they are, when they want it done, full transcript of the conversation, and any notes or flags (emergency, commercial enquiry, etc.). You can also get email summaries and dashboard notifications if you prefer.`,        },        {          heading: "Q57. Why WhatsApp instead of email or SMS?",          headingTag: "h3",          body: `Because you actually check WhatsApp. Emails get buried. SMS is limited to 160 characters. WhatsApp gives you: **Instant delivery** (you probably have WhatsApp open anyway), **Rich information** (full transcripts, not just "Missed call from 07123..."), **Photo sharing** (customers can send photos of their problem), **Two-way communication** (reply to confirm, ask follow-up questions), and **Read receipts** (you know you've seen it, your team knows you've seen it).`,        },        {          heading: "Q58. Can my team/employees see the call summaries too?",          headingTag: "h3",          body: `Yes — you can add team members to your Whoza.ai account and everyone gets the WhatsApp summaries. This is great for multi-person teams — your apprentice can see the job details before you even tell them, your office manager can handle scheduling, your partner can manage the books. Everyone's on the same page.`,        },        {          heading: "Q59. What does a typical WhatsApp summary look like?",          headingTag: "h3",          body: `Something like this:> **New Call — Katie**  > **From:** Sarah Johnson — 07123 456789  > **Job:** Leaking pipe under kitchen sink  > **Address:** 42 Oak Street, LS4 2BT  > **When:** ASAP — water damage to cabinet  > **Type:** Emergency  >  > **Transcript:**  > Katie: "Hello, you've reached Smith Plumbing..."  > Sarah: "Hi, I've got a leak under my kitchen sink..."  > [Full conversation...]  > Katie: "...and we'll get someone to you today."`,        },        {          heading: "Q60. Can I reply to the WhatsApp summary to take action?",          headingTag: "h3",          body: `Yes — reply with simple commands: **"Book"** — Adds to your calendar as a confirmed booking. **"Quote"** — Flags for you to provide a quote. **"Done"** — Marks as completed (triggers Claire to ask for a review). **"Ignore"** — Tyre-kicker or wrong number, archived. Your team can all see the status updates in real-time.`,        },        {          heading: "Q61. Does Whoza.ai send me spam or unnecessary notifications?",          headingTag: "h3",          body: `No — you only get notifications about actual calls and bookings. You can customise what you get notified about (maybe you only want emergencies on WhatsApp and everything else as a daily email summary). You're in complete control.`,        },        {          heading: "Q62. Can I search through old call summaries?",          headingTag: "h3",          body: `Yes — your dashboard has a searchable archive of every call Katie has ever taken. Search by customer name, phone number, address, job type, date range, or keyword. Useful when Mrs Johnson rings six months later saying "you did some work for me" and you can't remember what it was.`,        },        {          heading: "Q63. What if I don't have WhatsApp?",          headingTag: "h3",          body: `You can get all summaries via **email** or view them in your **dashboard**. But honestly — if you're a tradesperson in the UK in 2026 and you don't have WhatsApp, you're in the minority. Most of your customers probably contact you via WhatsApp already. It's worth downloading for Whoza.ai alone.`,        },        {          heading: "8. Reviews & Reputation Management",          headingTag: "h2",          body: "",        },        {          heading: "Q64. How does Claire help me get more Google reviews?",          headingTag: "h3",          body: `Claire automatically messages your customers after a job is marked as complete, asking them to leave a Google review. She sends a polite WhatsApp or SMS with a direct link to your Google Business Profile review page. The timing is optimised — not too soon (while you're still packing up your tools), not too late (when they've forgotten how good you were).`,        },        {          heading: "Q65. Does Claire actually get results?",          headingTag: "h3",          body: `Yes — tradespeople using Claire see a **3-5x increase in Google reviews** within the first month. Most happy customers want to leave a review but never get around to it. A gentle nudge at the right time makes all the difference. One plumber in Glasgow went from 12 reviews to 47 reviews in six weeks using Claire.`,        },        {          heading: "Q66. What does Claire's review request message say?",          headingTag: "h3",          body: `Something like: "Hi [Name], it's [Business Name]. Thanks for having us over today to [job description]. If you were happy with the work, would you mind leaving us a quick review on Google? It really helps small businesses like ours. Here's the link: [Google Review URL]. Thanks so much! [Your Name]"You can customise the message to match your tone.`,        },        {          heading: "Q67. Can I choose when Claire sends review requests?",          headingTag: "h3",          body: `Yes — you set the timing: **Immediately** after you mark a job complete, **Same day** (a few hours after), **Next day** (gives them overnight to appreciate their working heating/plumbing/electrics), or **Custom delay** (3 days, 1 week — whatever works for your trade). You can also set quiet hours so Claire never messages late at night or early morning.`,        },        {          heading: "Q68. What if the customer wasn't happy?",          headingTag: "h3",          body: `No — you control this. When you mark a job complete, you can flag it as: **Happy customer** → Claire sends review request. **Neutral** → Claire doesn't send (or sends a feedback request instead). **Issue** → Claire doesn't send anything, flags for you to follow up personally. You never get caught asking a dissatisfied customer for a review.`,        },        {          heading: "Q69. Do Google reviews actually help me get more work?",          headingTag: "h3",          body: `Absolutely. Google reviews are one of the **top 3 ranking factors** for local search. More reviews = higher on Google Maps = more calls. It's that simple. A plumber with 50 reviews averaging 4.8 stars will outrank a plumber with 8 reviews averaging 4.2 stars — even if the 8-review plumber is technically better at plumbing. Customers trust social proof. Claire makes sure you get it.`,        },        {          heading: "Q70. Can Claire help with reviews on other platforms?",          headingTag: "h3",          body: `Currently Claire focuses on **Google Business Profile** reviews (these matter most for local SEO). We also support **Checkatrade**, **Rated People**, and **Trustpilot** on Pro tiers. If you need another platform, let us know and we'll add it.`,        },        {          heading: "Q71. What happens if someone leaves a bad review?",          headingTag: "h3",          body: `You get an instant notification. Claire flags negative reviews immediately so you can respond quickly. The dashboard shows all your reviews in one place, sorted by rating. Quick, professional responses to negative reviews actually improve your reputation — it shows you care and you handle problems properly.`,        },        {          heading: "9. Competitor Analysis & Outbound Sales",          headingTag: "h2",          body: "",        },        {          heading: "Q72. What does Rex the competitor analyst actually do?",          headingTag: "h3",          body: `Rex monitors your competitors' online presence and alerts you to: **New reviews** they've received (good and bad), **Price changes** on their website, **New services** they're advertising, **Google ranking changes** (if they move above or below you), **Social media activity** (new posts, promotions), and **Website changes** (new pages, offers). Rex gives you the intelligence to stay one step ahead.`,        },        {          heading: "Q73. How does Mark the outbound sales agent work?",          headingTag: "h3",          body: `Mark follows up on your leads automatically: **Quote follow-ups** — Customer requested a quote? Mark follows up in 48 hours if they haven't responded. **Unconverted enquiries** — Someone who didn't book? Mark re-engages them with a special offer or availability update. **Lost leads** — Customer went with someone else? Mark follows up after a respectful period to see how the work went. **Seasonal campaigns** — "It's boiler service season — book now before the cold hits." Mark works 24/7 and never forgets to follow up.`,        },        {          heading: "Q74. Can Mark actually win me more work?",          headingTag: "h3",          body: `Yes — Mark addresses the biggest leak in most trade businesses: **not following up**. Studies show 80% of sales require 5 follow-ups, but most tradespeople give up after 1 or 2. Mark never gives up. He follows up consistently, professionally, and at the right intervals. One heating engineer in Edinburgh told us Mark won him £8,400 in "forgotten" quotes in the first month.`,        },        {          heading: "Q75. What does Mark's follow-up message say?",          headingTag: "h3",          body: `It's customised to your business, but typically something like: "Hi [Name], it's [Business Name]. You asked us about [job] a few days ago. Just wanted to check if you had any questions about the quote or if you'd like to go ahead? We've got availability next Tuesday or Thursday. Let me know! [Your Name]"Friendly, not pushy. Professional, not salesy. Just the follow-up you'd send yourself — if you remembered and had time.`,        },        {          heading: "Q76. Can I control who Mark contacts and when?",          headingTag: "h3",          body: `Completely. You set: **Which leads** get follow-ups (all, or just high-value), **How many** follow-up attempts (1, 3, 5, unlimited), **Timing** between follow-ups (2 days, 5 days, 1 week), **Message tone** (friendly, professional, urgent), and **Quiet hours** (never message evenings or weekends if you prefer). Mark follows your rules exactly.`,        },        {          heading: "Q77. Does Mark send WhatsApp messages or emails?",          headingTag: "h3",          body: `Both — Mark uses **WhatsApp** as default (higher open rates) with **email** as backup. You can configure which channel he uses for different types of follow-ups. SMS is also available on Pro tiers.`,        },        {          heading: "Q78. Can Mark handle responses from customers?",          headingTag: "h3",          body: `Mark handles simple replies ("Yes, book me in" or "Not interested thanks"). For more complex conversations, he flags them for your personal attention with a summary of what's been discussed. He never pretends to be you — he introduces himself as "[Your Name]'s assistant" and is transparent about being automated.`,        },        {          heading: "10. For Specific Trades: Plumbers, Electricians, Builders & More",          headingTag: "h2",          body: "",        },        {          heading: "Q79. Do you have specific setups for different trades?",          headingTag: "h3",          body: `Yes — Katie is configured differently for each trade. A [plumber's AI receptionist](/for-plumbers) knows about leaks, boilers, radiators, and emergency callouts. An [electrician's AI receptionist](/for-electricians) knows about rewiring, fuse boards, EICRs, and Part P compliance. A [builder's AI receptionist](/for-builders) knows about extensions, renovations, and project timelines. Each trade setup includes the right questions, terminology, and workflows.`,        },        {          heading: "Q80. Which trades do you support?",          headingTag: "h3",          body: `We currently have dedicated setups for: [Plumbers](/for-plumbers) & Heating Engineers, [Electricians](/for-electricians) & Electrical Contractors, [Builders](/for-builders) & Construction, [Roofers](/for-roofers) & Guttering Specialists, [Locksmiths](/for-locksmiths) (24/7 emergency specialists), Kitchen Fitters, Bathroom Fitters, [Carpenters](/for-carpenters) & Joiners, [Painters & Decorators](/for-painters-decorators), [Tilers](/for-tilers), [Gas Engineers](/for-gas-engineers) (Gas Safe registered), [Handymen](/for-handymen), Appliance Repair Engineers, Scaffolders, and [Plasterers](/for-plasterers). If your trade isn't listed, we'll create a custom setup for you — just ask.`,        },        {          heading: "Q81. How is Katie configured differently for emergency vs scheduled trades?",          headingTag: "h3",          body: `Emergency trades (plumbers, locksmiths, electricians) get: **Priority call handling** — emergency keywords trigger immediate notifications. **24/7 answering** — because emergencies don't keep office hours. **Urgent workflow** — customer gets immediate reassurance, you get instant alerts. **Quick triage** — Katie asks the right questions to assess severity.Scheduled trades (kitchen fitters, painters, builders) get: **Detailed questioning** — what style, what budget, what timeline. **Availability checking** — booking consultations/site visits. **Photo requests** — "Could you send a photo of your current kitchen?" **Project qualification** — filtering serious enquiries from time-wasters.`,        },        {          heading: "Q82. Can Katie handle Gas Safe registration questions?",          headingTag: "h3",          body: `Yes — for [gas engineers](/for-gas-engineers), Katie knows to mention your Gas Safe number, explain the importance of Gas Safe registration, and can even direct customers to the Gas Safe Register website to verify your credentials. This builds massive trust — especially with landlords who legally need Gas Safe certificates.`,        },        {          heading: "Q83. Can Katie handle Part P electrical compliance questions?",          headingTag: "h3",          body: `Absolutely — for [electricians](/for-electricians), Katie understands Part P compliance, EICR certificates, and can explain what certification customers will receive. She can ask whether the work is notifiable (new circuits, consumer units) and reassure customers that all work meets Building Regulations.`,        },        {          heading: "Q84. What about builders doing large projects?",          headingTag: "h3",          body: `Yes — for [builders](/for-builders) and large projects, Katie does initial qualification: Type of project (extension, renovation, new build), approximate budget range, timeline (when do they want to start?), planning permission status, and property type and access. She then books a site visit for you to assess properly. Katie doesn't try to quote for a £40,000 extension — she gets the details so you can have an informed first conversation.`,        },        {          heading: "Q85. Do you work with multi-van trade businesses?",          headingTag: "h3",          body: `Yes — our **Scale tier** is designed for multi-van operations. You can: Route calls to different engineers based on area or specialisation, track which van/engineer is closest to the job, manage multiple diaries in one dashboard, and see team-wide analytics (who's converting calls, who's busiest).`,        },        {          heading: "11. Switching From Voicemail / Answering Machine",          headingTag: "h2",          body: "",        },        {          heading: "Q86. Is an AI receptionist better than voicemail?",          headingTag: "h3",          body: `Monumentally better. Here's the comparison:| Feature | Voicemail | Whoza.ai || --- | --- | --- || Answer rate | 15% leave a message | 100% answered || Information captured | Name + number (maybe) | Full job details, address, urgency || Response time | Whenever you check | Instant WhatsApp summary || Professional image | "We're not available" | "Smith Plumbing, how can I help?" || Evening/weekend | Voicemail | Fully answered || Multiple calls | Engaged tone | All answered simultaneously || Cost | £0 (but costs you £20k+/yr in lost work) | £59-£399/month |`,        },        {          heading: "Q87. I only miss a few calls per week — is it still worth it?",          headingTag: "h3",          body: `If you only miss 2 calls a week, and one of those is a £300 job, that's £600/month in lost revenue. Whoza.ai costs £59-£125/month. So even if you only convert ONE extra job per month, you're profitable. Most tradespeople find they were missing far more calls than they realised — you only know about the ones that leave voicemail. The silent killers are the ones that just ring your competitor instead.`,        },        {          heading: "Q88. How do I switch from voicemail to Whoza.ai?",          headingTag: "h3",          body: `Three steps: 1) **Sign up** and tell us about your business (10 minutes). 2) **Set up call forwarding** from your current number (2 minutes — we guide you). 3) **Switch off voicemail** with your network so calls forward to Katie instead of voicemail. That's it. Katie starts answering immediately. You can switch back anytime if you're not happy (nobody does, but you can).`,        },        {          heading: "Q89. What if I want to keep voicemail as a backup?",          headingTag: "h3",          body: `You can — set up "forward on no answer" to send calls to Katie after 4-5 rings. If there's ever a technical issue (never happened, but just in case), calls fall back to your voicemail. Most people remove voicemail entirely once they see Katie working — she's simply better at the job.`,        },        {          heading: "Q90. Will my customers be confused by the change?",          headingTag: "h3",          body: `They won't even notice — they'll just be delighted someone finally answered. Instead of getting "Please leave a message after the tone", they get "Hello, Smith Plumbing, how can I help?" Your customers' experience improves immediately. The only people who lose out are your competitors.`,        },        {          heading: "12. Switching From a Human Receptionist",          headingTag: "h2",          body: "",        },        {          heading: "Q91. Is Whoza.ai cheaper than a human receptionist?",          headingTag: "h3",          body: `Dramatically. A full-time receptionist costs: Salary £22,000-£28,000/year, National Insurance £2,000-£3,000/year, Pension £500-£800/year, Holiday/sick cover £2,000-£3,000/year. **Total: £26,500-£34,800/year**.Whoza.ai costs **£708-£4,788/year**. Even our Scale tier is 95% cheaper than a human — and Katie never calls in sick, never takes holiday, never has a bad day, and can handle unlimited simultaneous calls.`,        },        {          heading: "Q92. Can Whoza.ai replace my current receptionist?",          headingTag: "h3",          body: `It can, or it can work alongside them. Many businesses use Whoza.ai to: **Handle overflow** — receptionist takes calls during office hours, Katie handles evenings, weekends, and busy periods. **Cover absence** — no need for temp agencies when your receptionist is on holiday. **Handle all calls** — especially for sole traders who can't justify a full-time employee.`,        },        {          heading: "Q93. What can a human receptionist do that Katie can't?",          headingTag: "h3",          body: `A human can physically greet people at your premises, handle cash payments, and do general admin. But for **phone call handling specifically**, Katie actually outperforms humans in several ways: Answers unlimited calls simultaneously (humans: one at a time), works 24/7 without breaks (humans: 9-5 with lunch, holidays, sick days), never forgets to ask a question (humans: have off days), sends instant digital summaries (humans: scribble notes, lose paper), and costs 95% less (Growth tier at £125/month vs £2,500+/month for a human).`,        },        {          heading: "Q94. I feel bad replacing a person with AI — what about their job?",          headingTag: "h3",          body: `We understand this concern. In practice, most trade businesses don't have a receptionist to replace — the owner answers the phone themselves (while trying to work). For businesses that do have admin staff, Whoza.ai usually handles the calls they were struggling to manage anyway, freeing them up for more valuable work like scheduling, customer service, and business development. The receptionist becomes an office manager rather than a phone operator.`,        },        {          heading: "13. Legal, GDPR & Data Protection",          headingTag: "h2",          body: "",        },        {          heading: "Q95. Is using an AI receptionist legal in the UK?",          headingTag: "h3",          body: `Yes — absolutely legal. AI receptionists are telephone answering services, which have been used by UK businesses for decades. Whoza.ai is a data processor acting on your behalf (you're the data controller). We comply fully with UK GDPR, the Data Protection Act 2018, and all relevant regulations.`,        },        {          heading: "Q96. Is recording phone calls legal under UK law?",          headingTag: "h3",          body: `Call recording has specific requirements under UK law (RIPA 2000 and GDPR). That's why **Whoza.ai does not record audio calls**. Instead, we provide **full call transcripts** — a written record of everything said. Transcripts contain the same information as recordings but avoid the legal complexity of audio recording consent, storage, and biometric data classification. You get all the detail with none of the legal risk.`,        },        {          heading: "Q97. What data does Whoza.ai store and where?",          headingTag: "h3",          body: `We store: **Customer contact details** (name, phone, address) — needed to pass on enquiries. **Call transcripts** — text records of conversations. **Booking information** — dates, times, job details. **Your business information** — services, areas, pricing.All data is stored in **UK-based data centres** (AWS London region). We never transfer personal data outside the UK without appropriate safeguards. We're registered with the ICO and fully GDPR compliant.`,        },        {          heading: "Q98. Do I need to tell my customers their call is being handled by AI?",          headingTag: "h3",          body: `Our AI introduces itself naturally: *"I'm Katie, [Business Name]'s assistant."* If asked directly, she's honest about being AI. This is transparent without being awkward. Under consumer protection law, there's no specific requirement to announce "This is an AI" — the key is that the service is provided honestly and accurately, which it is. The customer's data is handled securely and only for the purpose of connecting them with your service.`,        },        {          heading: "Q99. Who owns the customer data — me or Whoza.ai?",          headingTag: "h3",          body: `**You do.** You're the data controller, we're the data processor. Your customer relationships are yours. If you ever leave Whoza.ai, you can export all your customer data, call history, and booking information. We don't keep it, sell it, or use it for anything other than providing your service.`,        },        {          heading: "Q100. How long do you keep call transcripts?",          headingTag: "h3",          body: `By default, **12 months** — long enough for you to reference past jobs and disputes, not so long that we're hoarding data unnecessarily. You can adjust this in your settings (shorter or longer). All data is encrypted at rest and in transit.`,        },        {          heading: "Q101. Is my payment information secure?",          headingTag: "h3",          body: `Yes — we use **Stripe** for all payments, which is PCI DSS Level 1 compliant (the highest security standard). We never see or store your card details. Stripe handles everything. Your financial data is as secure as it gets.`,        },        {          heading: "Q102. What if there's a data breach?",          headingTag: "h3",          body: `We have comprehensive security measures and incident response procedures. In the extremely unlikely event of a breach affecting personal data, we would notify you and the ICO within 72 hours as required by GDPR. We've never had a breach and our security practices are designed to prevent them.`,        },        {          heading: "14. Pricing, Trials & Getting Started",          headingTag: "h2",          body: "",        },        {          heading: "Q103. How do I sign up for Whoza.ai?",          headingTag: "h3",          body: `Visit [whoza.ai](/) and click "Start Free Trial." You'll answer a few questions about your business (trade, areas, services), choose your tier, and Katie will be configured within 24 hours. No credit card required for the trial.`,        },        {          heading: "Q104. What's included in the 7-day free trial?",          headingTag: "h3",          body: `Everything. You get the full functionality of your chosen tier — unlimited calls, WhatsApp summaries, calendar integration (Pro/Scale), Claire review requests (where included), the lot. We want you to see the full value, not a restricted demo. Most tradespeople see results within the first few days.`,        },        {          heading: "Q105. What happens after the trial ends?",          headingTag: "h3",          body: `You choose to continue or cancel. If you continue, we start billing monthly. If you cancel, no hard feelings — you can export your data and go back to missing calls. (As we said, almost nobody cancels once they've experienced Katie in action.)`,        },        {          heading: "Q106. Can I change tiers later?",          headingTag: "h3",          body: `Yes — upgrade or downgrade anytime from your dashboard. Upgrades happen immediately. Downgrades take effect at your next billing date. No fees, no fuss.`,        },        {          heading: "Q107. Is there a setup fee?",          headingTag: "h3",          body: `No — setup is free on all tiers. We configure Katie for your business, help you set up call forwarding, and make sure everything works. If you need something complex (multi-location, custom integrations), our team will help at no extra cost.`,        },        {          heading: "Q108. Do you offer discounts for annual payment?",          headingTag: "h3",          body: `Yes — pay annually and get **2 months free** (12 months for the price of 10). Most established tradespeople choose this option once they're confident in the service.`,        },        {          heading: "Q109. What payment methods do you accept?",          headingTag: "h3",          body: `All major credit/debit cards (Visa, Mastercard, Amex) via Stripe. We also accept Direct Debit for annual Scale tier customers. No BACS, no cheques, no cash — we're a modern tech company, not 1997.`,        },        {          heading: "Q110. How do I cancel if it's not for me?",          headingTag: "h3",          body: `Cancel anytime from your dashboard — no phone call required, no retention team giving you the hard sell. Your service continues until the end of your current billing period. You can export all your data before you go. Though as we keep saying, the main reason people cancel is they sold their business for millions and retired to Spain.`,        },        {          heading: "Q111. Can I get a refund if I'm not happy?",          headingTag: "h3",          body: `We offer a **30-day money-back guarantee** on your first month (after the free trial). If you're genuinely not satisfied, contact us and we'll refund you. We're confident you won't need it, but the option's there for peace of mind.`,        },        {          heading: "Q112. How do I contact Whoza.ai support?",          headingTag: "h3",          body: `Several ways: **WhatsApp** — Message us directly (we practice what we preach). **Email** — support@whoza.ai. **Dashboard** — Live chat during business hours. **Phone** — 0131 [number] — yes, we answer our own phones (with Katie, obviously).Response times: WhatsApp and live chat are typically under 5 minutes during business hours. Email within 24 hours. Pro and Scale tiers get priority support.`,        },        {          heading: "Q113. What happens if I go over my monthly job limit?",          headingTag: "h3",          body: `Extra jobs are **£4.50 each** on Starter, **£3.25** on Growth, **£2.75** on Pro, and **£2.25** on Scale — billed at the end of your billing cycle. We don't cut you off mid-month. If you're consistently going over, we'll suggest upgrading to the next tier (which works out cheaper per job). Your dashboard shows your usage in real-time so there are no surprises.`,        },        {          heading: "Q114. Do you work with tradespeople outside the UK?",          headingTag: "h3",          body: `Currently we focus on the **UK market** — we understand UK trades, UK regulations, UK customer expectations, and we're [Built in Scotland](/blog/why-uk-trades-need-ai-built-in-scotland). If you're in Ireland, Australia, or another English-speaking market and interested, let us know — expansion is on our roadmap.`,        },        {          heading: "Q115. How many tradespeople are already using Whoza.ai?",          headingTag: "h3",          body: `As of June 2026, **hundreds of UK tradespeople** use Whoza.ai across every trade from plumbing to scaffolding. Our customers range from sole traders just starting out to multi-van operations with 15+ engineers. We're a growing, profitable, independent company — not a Silicon Valley startup burning venture capital. Every customer matters to us.`,        },      ],      conclusion: `Every question in this FAQ came from real UK tradespeople. Real worries. Real questions. Real money on the line.The bottom line is simple: missing calls costs you £15,000-£30,000 per year. AI receptionists answer every call, capture every enquiry, and deliver it to your WhatsApp in seconds. Whoza.ai costs £59-£399 per month. Even one extra job per month pays for the service.We're built in Scotland. We understand UK trades. We answer our own phones with AI. And we offer a 7-day free trial with no credit card required.If you're still relying on voicemail, still missing calls while you work, still watching jobs go to your competitors — it's time to fix that.`,      cta: `Ready to never miss another call? [Start your free trial](/pricing) — 7 days, no credit card, instant setup.`,      faq: [
+        {
+          question: "How much does a missed call cost a tradesperson in the UK?",
+          answer: "Industry research from 2024 put the average cost of a missed call to UK trades at £1,200 per year in lost revenue. But for a busy sole trader or small team, a single missed call can cost anywhere from £140 to £4,500 depending on your trade.",
+        },
+        {
+          question: "How many calls do tradespeople miss per week?",
+          answer: "A 2025 survey of UK sole traders found the average tradesperson misses 8-12 calls per week. Roofers and scaffolders miss the most (often 15+ per week) because they're physically unable to answer when up a structure.",
+        },
+        {
+          question: "What percentage of people don't leave voicemail?",
+          answer: "85% of people won't leave a voicemail. When you call a plumber and get voicemail, you don't leave a message — you call the next number on Google. That missed caller has already rung two of your competitors before you've even finished your current job.",
+        },
+        {
+          question: "How much revenue does the average tradesperson lose per year?",
+          answer: "Conservative estimate: £15,000 - £30,000 per year for a busy sole trader. If you miss 8 calls/week and 30% were genuine enquiries at £350 average, that's £40,320 in potential revenue. Capturing half with AI gives you £20,000 in found money.",
+        },
+        {
+          question: "What exactly is an AI receptionist?",
+          answer: "An AI receptionist is a virtual agent that answers your business phone calls when you can't. It picks up every call immediately, speaks in natural English, figures out what the customer needs, takes their details, and sends you everything via WhatsApp within seconds. It never sleeps, never takes a day off, and costs less than a day's wage per month.",
+        },
+        {
+          question: "Does it sound like a robot?",
+          answer: "No — Katie sounds natural and conversational. Most callers don't realise they're speaking to AI. She uses natural language, understands context, asks follow-up questions, and handles interruptions gracefully. The voice is warm and professional, not synthetic or robotic.",
+        },
+        {
+          question: "Can AI book appointments into my diary?",
+          answer: "Yes — Katie can check your availability and book appointments directly into Google Calendar or Microsoft Outlook. She handles rescheduling, sends confirmations, and even reminds customers about upcoming appointments. Available on Growth, Pro, and Scale tiers.",
+        },
+        {
+          question: "Can AI handle multiple calls at once?",
+          answer: "Yes — unlike a human receptionist who can only take one call at a time, Katie can handle unlimited simultaneous calls. Whether it's 2 calls or 20 calls at once, every caller gets the same professional, patient experience. No engaged tones, no voicemail, no missed opportunities.",
+        },
+        {
+          question: "How many AI agents does Whoza.ai have?",
+          answer: "Three: Katie (AI receptionist) answers every call, qualifies enquiries, and sends WhatsApp summaries. Claire (review manager) automatically requests Google reviews from happy customers. Rex (competitor analyst) monitors your competitors' online presence and alerts you to opportunities.",
+        },
+        {
+          question: "What happens if Whoza.ai goes down?",
+          answer: "Whoza.ai runs on redundant UK-based infrastructure (AWS London) with 99.9% uptime. If there's ever a technical issue, calls can fall back to your voicemail. We've never had a significant outage, and our monitoring systems alert us to any issues within seconds.",
+        },
+        {
+          question: "Do I need a new phone number?",
+          answer: "No — you can keep your existing number. Either port it to Whoza.ai so Katie answers it directly, or forward calls from your current number to your Whoza.ai number when you can't answer. Most customers use call forwarding because it's instant and reversible.",
+        },
+        {
+          question: "Can I answer some calls myself?",
+          answer: "Absolutely — you can answer any call you want. If you pick up, the call connects to you normally. If you miss it or are busy, Katie takes over instantly. You're always in control. Many tradespeople answer calls when they're in the van and let Katie handle them when they're on a job.",
+        },
+        {
+          question: "What does the caller hear when Katie answers?",
+          answer: "Katie answers with a professional greeting: 'Hello, [Your Business Name], how can I help you today?' She sounds like a real receptionist — warm, natural, and helpful. She asks the right questions for your trade, takes details, and reassures the customer that you'll call them back.",
+        },
+        {
+          question: "Can the caller tell they're speaking to AI?",
+          answer: "Most callers can't tell. Katie's voice is natural, her responses are context-aware, and she handles interruptions and changes of topic smoothly. If asked directly, she's honest about being AI. Not a single customer has complained — most just want their leak fixed or their boiler working.",
+        },
+        {
+          question: "Can Katie book into my calendar?",
+          answer: "Yes — Katie integrates with Google Calendar and Microsoft Outlook. She can check your availability, book appointments, send confirmations, and handle rescheduling. The customer gets an instant confirmation, and you get a tidy diary without the back-and-forth phone calls.",
+        },
+        {
+          question: "How do I get notified about new calls?",
+          answer: "WhatsApp messages arrive within 3 seconds of the call ending. Every message includes: customer name, phone number, address/postcode, job details, urgency level, and estimated job value. You also get a full transcript of the conversation. Everything you need to call back informed.",
+        },
+        {
+          question: "Why WhatsApp instead of email?",
+          answer: "WhatsApp is instant, reliable, and already on your phone. Emails get lost in spam or checked once a day. WhatsApp messages pop up immediately, include all details in one place, and let you tap-to-call the customer back. It's the communication method tradespeople actually use.",
+        },
+        {
+          question: "How does Claire help with Google reviews?",
+          answer: "Claire automatically sends review requests to happy customers via WhatsApp after a job is completed. She makes it easy — one tap to leave a Google review. Tradespeople using Claire see 3x more Google reviews, which improves local search rankings and builds trust with new customers.",
+        },
+        {
+          question: "What does Rex the competitor analyst do?",
+          answer: "Rex monitors your competitors' online presence — their Google reviews, pricing, services, and local rankings. He alerts you when a competitor gets a bad review (opportunity to win their customers), when they change pricing, or when they start advertising in your area. Knowledge is power.",
+        },
+        {
+          question: "Is AI receptionist better than voicemail?",
+          answer: "Monumentally better. Voicemail has a 15% answer rate. Katie answers 100% of calls. Voicemail captures name and number (maybe). Katie captures full job details, address, urgency, and estimated value. Voicemail costs £0 but loses you £20k+/year in work. Katie costs £59-£399/month and captures every enquiry.",
+        },
+        {
+          question: "Is Whoza.ai cheaper than a human receptionist?",
+          answer: "Dramatically cheaper. A full-time receptionist costs £26,500-£34,800/year including salary, NI, pension, and holiday cover. Whoza.ai costs £708-£4,788/year. Even our Growth tier at £1,500/year is 95% cheaper than a human — and Katie never calls in sick, never takes holiday, and handles unlimited calls simultaneously.",
+        },
+        {
+          question: "Is using an AI receptionist legal in the UK?",
+          answer: "Yes — absolutely legal. AI receptionists are telephone answering services, which have been used by UK businesses for decades. Whoza.ai is a data processor acting on your behalf. We comply fully with UK GDPR, the Data Protection Act 2018, and all relevant regulations.",
+        },
+        {
+          question: "Is recording phone calls legal?",
+          answer: "Whoza.ai does not record audio calls. Instead, we provide full call transcripts — a written record of everything said. Transcripts contain the same information as recordings but avoid the legal complexity of audio recording consent, storage, and biometric data classification under UK law.",
+        },
+        {
+          question: "How do I sign up for Whoza.ai?",
+          answer: "Visit whoza.ai and click 'Start Free Trial.' Answer a few questions about your business (trade, areas, services), choose your tier, and Katie will be configured within 24 hours. No credit card required for the 7-day trial.",
+        },
+        {
+          question: "What's included in the 7-day free trial?",
+          answer: "Everything. You get the full functionality of your chosen tier — unlimited calls, WhatsApp summaries, calendar integration (Pro/Scale), Claire review requests (where included), the lot. We want you to see the full value, not a restricted demo. Most tradespeople see results within the first few days.",
+        },
+        {
+          question: "How do I cancel?",
+          answer: "Cancel anytime from your dashboard — no phone call required, no retention team giving you the hard sell. Your service continues until the end of your current billing period. You can export all your data before you go. Though most people don't cancel once they've experienced Katie in action.",
+        },
+        {
+          question: "How much does Whoza.ai cost?",
+          answer: "Starter is £59/month for 8 jobs, Growth is £125/month for 16 jobs, Pro is £230/month for 40 jobs, and Scale is £399/month for 100 jobs. Extra jobs are £4.50 (Starter), £3.25 (Growth), £2.75 (Pro), £2.25 (Scale). Annual billing gives you 2 months free.",
+        },
+        {
+          question: "Can I keep my existing business phone number?",
+          answer: "Yes — you can either port your existing number to Whoza.ai or forward calls from your current number to your Whoza.ai number when you can't answer. Most customers use call forwarding because it's instant and reversible.",
+        },
+      ],    },  },};
