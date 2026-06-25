@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
-import { ArrowRight, Star, PoundSterling, Clock, Shield, TrendingUp, MessageCircle, Check, X, ChevronDown , User, Calendar User } from "lucide-react"
+import { ArrowRight, Star, PoundSterling, Clock, Shield, TrendingUp, MessageCircle, Check, X, ChevronDown , Calendar, User } from "lucide-react"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
