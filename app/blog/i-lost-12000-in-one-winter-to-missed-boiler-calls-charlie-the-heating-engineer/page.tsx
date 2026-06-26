@@ -7,16 +7,16 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "I Lost £12,000 in One Winter to Missed Boiler Calls | whoza.ai",
-  description: "Self-employed heating engineer from Manchester shares 4-week winter diary using AI call answering. 47 missed boiler calls, £12,000 lost revenue, and how AI call answering changed everything. Real numbers. No BS.",
+  title: "I Lost £12,000 to Missed Boiler Calls | whoza.ai",
+  description: "Heating engineer shares 4-week winter diary. 47 missed boiler calls, £12,000 lost revenue, and how AI call answering recovered £8,400. Real numbers from Manchester.",
   alternates: {
     canonical: "https://whoza.ai/blog/i-lost-12000-in-one-winter-to-missed-boiler-calls-charlie-the-heating-engineer",
   },
   robots: { index: true, follow: true },
   authors: [{ name: "Charlie Hardcastle" }],
   openGraph: {
-    title: "I Lost £12,000 in One Winter to Missed Boiler Calls | whoza.ai",
-    description: "Self-employed heating engineer from Manchester shares 4-week winter diary. 47 missed boiler calls, £12,000 lost revenue, and how AI call answering changed everything.",
+    title: "I Lost £12,000 to Missed Boiler Calls | whoza.ai",
+    description: "Heating engineer shares 4-week winter diary. 47 missed boiler calls, £12,000 lost revenue, and how AI call answering recovered £8,400. Real numbers from Manchester.",
     type: "article",
     authors: ["Charlie Hardcastle"],
     tags: ["UGC / Real Stories"],
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
-    title: "I Lost £12,000 in One Winter to Missed Boiler Calls | whoza.ai",
-    description: "Self-employed heating engineer from Manchester shares 4-week winter diary. 47 missed boiler calls, £12,000 lost revenue, and how AI call answering changed everything.",
+    title: "I Lost £12,000 to Missed Boiler Calls | whoza.ai",
+    description: "Heating engineer shares 4-week winter diary. 47 missed boiler calls, £12,000 lost revenue, and how AI call answering recovered £8,400. Real numbers from Manchester.",
     images: ["https://whoza.ai/og-image.webp"],
   },
 }

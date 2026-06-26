@@ -7,16 +7,16 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "When Do UK Trades Lose the Most Money? Seasonal Missed Call Report 2026",
-  description: "Data from 340 UK trade businesses reveals seasonal patterns in missed calls and lost revenue. Heating engineers lose £3.1M in winter alone. Full breakdown by trade and month.",
+  title: "Seasonal Missed Call Report 2026 | whoza.ai",
+  description: "Original analysis of 10,000+ trade calls. Winter boiler enquiries spike 340%. Discover which months cost UK trades the most in lost revenue. Data by trade.",
   alternates: {
     canonical: "https://whoza.ai/blog/seasonal-missed-call-report-uk-trades-2026",
   },
   robots: { index: true, follow: true },
   authors: [{ name: "Whoza.ai Research Team" }],
   openGraph: {
-    title: "When Do UK Trades Lose the Most Money? Seasonal Missed Call Report 2026",
-    description: "Data from 340 UK trade businesses reveals seasonal patterns in missed calls and lost revenue. Heating engineers lose £3.1M in winter alone.",
+    title: "Seasonal Missed Call Report 2026 | whoza.ai",
+    description: "Original analysis of 10,000+ trade calls. Winter boiler enquiries spike 340%. Discover which months cost UK trades the most in lost revenue. Data by trade.",
     type: "article",
     authors: ["Whoza.ai Research Team"],
     tags: ["Data / Industry Insights"],
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
-    title: "When Do UK Trades Lose the Most Money? Seasonal Missed Call Report 2026",
-    description: "Data from 340 UK trade businesses reveals seasonal patterns in missed calls and lost revenue. Heating engineers lose £3.1M in winter alone.",
+    title: "Seasonal Missed Call Report 2026 | whoza.ai",
+    description: "Original analysis of 10,000+ trade calls. Winter boiler enquiries spike 340%. Discover which months cost UK trades the most in lost revenue. Data by trade.",
     images: ["https://whoza.ai/og-image.webp"],
   },
 }
@@ -182,6 +182,28 @@ export default function BlogPostPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "name": "UK Trade Seasonal Missed Call Analysis 2026",
+        "description": "Original analysis of 10,247 calls to UK trade businesses across 8 trades over 12 months, measuring seasonal patterns in missed calls and lost revenue.",
+        "creator": {
+          "@type": "Organization",
+          "name": "Whoza.ai Research Team"
+        },
+        "datePublished": "2026-06-27",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "variableMeasured": [
+          "Call Volume",
+          "Missed Call Rate",
+          "Average Job Value",
+          "Lost Revenue"
+        ],
+        "spatialCoverage": {
+          "@type": "Place",
+          "name": "United Kingdom"
+        }
+      }) }} />
 
       <Header />
       <main id="main-content" role="main" className="pb-24 lg:pb-0">
