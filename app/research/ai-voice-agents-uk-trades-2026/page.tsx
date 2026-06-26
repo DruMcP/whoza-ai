@@ -8,7 +8,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "AI Voice Agents in the UK Trades Sector: Independent Research Report 2026 | whoza.ai",
-  description: "Comprehensive independent research report analysing AI voice agent adoption, missed call revenue loss, and market trends in the UK trades sector. Data from Gartner, McKinsey, Juniper Research, BrightLocal, and ONS.",
+  description: "Independent research on AI voice agent adoption, missed call revenue loss and market trends in UK trades. Data from Gartner, McKinsey and BrightLocal.",
   alternates: {
     canonical: "https://whoza.ai/research/ai-voice-agents-uk-trades-2026",
   },
@@ -334,7 +334,7 @@ export default function ResearchPage() {
                 Executive Summary
               </h2>
               <p className="text-white/80 leading-relaxed mb-4">
-                The convergence of large language models (LLMs), real-time speech synthesis, and telephony integration has given rise to a new category of business tools: AI voice agents purpose-built for the small business sector. This report examines the market vertical of AI-powered call handling and revenue optimisation systems, with specific focus on the UK trades sector — encompassing plumbers, electricians, roofers, builders, heating engineers, and allied home service professionals.
+                The convergence of large language models, real-time speech synthesis, and telephony integration has created AI voice agents purpose-built for small businesses. This report examines AI-powered call handling and revenue optimisation systems, with specific focus on the UK trades sector — encompassing plumbers, electricians, roofers, builders, heating engineers, and allied home service professionals.
               </p>
               <p className="text-white/80 leading-relaxed mb-4">Key findings from our analysis include:</p>
               <ul className="space-y-2 mb-4">
@@ -369,7 +369,7 @@ export default function ResearchPage() {
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-white mb-4">Introduction: The AI Voice Agent Landscape</h2>
             <p className="text-white/80 leading-relaxed mb-4">
-              The evolution of conversational AI has accelerated dramatically since 2023, transitioning from rule-based chatbots to sophisticated voice agents capable of natural, context-aware dialogue. Unlike their predecessors, modern AI voice agents leverage end-to-end speech models — most notably OpenAI's Realtime API — that process audio natively rather than chaining together separate speech-to-text, language model, and text-to-speech components. This architectural shift has reduced response latency from 1–2 seconds to as low as 250 milliseconds, achieving near-human conversational fluidity (OpenAI, 2025).
+              The evolution of conversational AI has accelerated dramatically since 2023, transitioning from rule-based chatbots to sophisticated voice agents capable of natural, context-aware dialogue. Modern AI voice agents leverage end-to-end speech models — notably OpenAI's Realtime API — that process audio natively rather than chaining separate speech-to-text, language model, and text-to-speech components. This has reduced response latency from 1–2 seconds to as low as 250 milliseconds (OpenAI, 2025).
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
               Gartner predicts that by the end of 2026, <strong>80% of customer service organisations will use generative AI</strong> in some form, and by 2027, <strong>25% of all customer service interactions will begin with a GenAI-capable agent</strong> — up from less than 5% in 2024 (Gartner Predictions, 2024). These projections underscore the speed at which voice AI is transitioning from experimental technology to standard business infrastructure.

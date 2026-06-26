@@ -430,6 +430,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '5-signs-your-trade-business-is-losing-customers-to-missed-calls',
     '7-questions-every-uk-tradesperson-should-ask-before-hiring-a-call-answering-service',
     '8-reasons-uk-tradespeople-switch-to-ai-call-handling-in-2026',
+    // NEW: Heating engineer UGC (June 2026)
+    'i-lost-12000-in-one-winter-to-missed-boiler-calls-charlie-the-heating-engineer',
+    // NEW: Seasonal data research (June 2026)
+    'seasonal-missed-call-report-uk-trades-2026',
     // NEW: Ultimate FAQ (June 2026)
     'ultimate-faq-tradespeople',
   ]

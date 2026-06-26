@@ -1,13 +1,14 @@
 import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { ArrowRight, FileText, BookOpen } from "lucide-react"
 import Link from "next/link"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "AI Research for UK Trades | whoza.ai Library",
-  description: "Independent research reports on AI call answering, missed call impact, voice agent technology, and trade business optimisation.",
+  description: "Independent AI research for UK tradespeople. Missed call impact studies, voice agent reports, and trade business optimisation data. Download free reports.",
   alternates: { canonical: "https://whoza.ai/research" },
   robots: { index: true, follow: true },
 }
@@ -56,6 +57,10 @@ export default function ResearchLanding() {
   return (
     <div className="min-h-screen bg-[var(--navy-900)] text-white">
       <Header />
+      <BreadcrumbSchema items={[
+        { name: "Home", item: "https://whoza.ai" },
+        { name: "Research", item: "https://whoza.ai/research" },
+      ]} />
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <section className="mb-16">
           <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">

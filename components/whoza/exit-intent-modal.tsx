@@ -177,6 +177,7 @@ export function ExitIntentModal({ onClose }: ExitIntentModalProps) {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Enter your email"
+                      aria-label="Email address"
                       className="w-full pl-10 pr-4 py-3 bg-[#1E293B] border border-[#334155] rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#2DD4BF] focus:border-transparent"
                       required
                     />

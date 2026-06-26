@@ -59,6 +59,7 @@ export function WaitlistForm() {
                 type="email"
                 required
                 placeholder="Your email"
+                aria-label="Email address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full pl-10 pr-4 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-[var(--rex-green)] focus:border-transparent transition-all"

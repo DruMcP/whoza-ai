@@ -13,7 +13,7 @@ import { RelatedTrades } from "@/components/whoza/related-trades"
 
 export const metadata: Metadata = {
   title: "AI Call Answering for Pest Control UK — Never Miss an Infestation Call",
-  description: "AI call handling for UK pest control companies. Katie answers 24/7, captures infestation details, and sends WhatsApp alerts. Never miss a £200+ emergency call. 7-day free trial.",
+  description: "AI call handling for UK pest control. Katie answers 24/7, captures infestation details and sends WhatsApp alerts. Never miss a £200+ emergency call. Free trial.",
   alternates: {
     canonical: "https://whoza.ai/for-pest-control",
   },
@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/for-pest-control",
     siteName: "Whoza.ai",
     title: "AI Call Answering for Pest Control UK — Never Miss an Infestation Call",
-    description: "AI call handling for UK pest control companies. Katie answers 24/7, captures infestation details, and sends WhatsApp alerts. Never miss a £200+ emergency call. 7-day free trial.",
+    description: "AI call handling for UK pest control. Katie answers 24/7, captures infestation details and sends WhatsApp alerts. Never miss a £200+ emergency call. Free trial.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Pest Control" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "AI Call Answering for Pest Control UK — Never Miss an Infestation Call",
-    description: "AI call handling for UK pest control companies. Katie answers 24/7, captures infestation details, and sends WhatsApp alerts. Never miss a £200+ emergency call. 7-day free trial.",
+    description: "AI call handling for UK pest control. Katie answers 24/7, captures infestation details and sends WhatsApp alerts. Never miss a £200+ emergency call. Free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {

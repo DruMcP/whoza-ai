@@ -421,14 +421,6 @@ export function PricingSchema() {
   const schemas = [
     {
       "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://whoza.ai/" },
-        { "@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://whoza.ai/pricing" }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
         {

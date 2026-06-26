@@ -8,7 +8,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "AI Voice Agents & Customer Satisfaction | whoza.ai",
-  description: "Independent research on how AI voice agents transform caller experience for small businesses. Data from MIT, Harvard, Zendesk, and BrightLocal.",
+  description: "Independent research on AI voice agents and caller experience for UK small businesses. Data from MIT, Harvard, Zendesk and BrightLocal. Download free.",
   alternates: {
     canonical: "https://whoza.ai/research/caller-experience-revolution-ai-voice-agents-2026",
   },
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/research/caller-experience-revolution-ai-voice-agents-2026",
     siteName: "Whoza.ai",
     title: "The Caller Experience Revolution: AI Voice Agents & Small Business",
-    description: "Independent research report examining how AI voice agents transform caller experience for small businesses.",
+    description: "Independent research on AI voice agents and caller experience for UK small businesses. Data from MIT, Harvard, Zendesk and BrightLocal. Download free.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "The Caller Experience Revolution Research 2026" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "The Caller Experience Revolution: AI Voice Agents & Small Business",
-    description: "Independent research report examining how AI voice agents transform caller experience for small businesses.",
+    description: "Independent research on AI voice agents and caller experience for UK small businesses. Data from MIT, Harvard, Zendesk and BrightLocal. Download free.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   other: {
@@ -303,7 +303,7 @@ export default function ResearchPage() {
                 Executive Summary
               </h2>
               <p className="text-white/80 leading-relaxed mb-4">
-                The customer experience begins not at the point of purchase but at the first point of contact. For small businesses that rely on inbound telephone enquiries, that first contact is often the single greatest determinant of whether a prospective customer becomes a paying client or a lost opportunity. This report examines how AI voice agents are fundamentally transforming the caller experience, moving it from a system characterised by friction, delay, and abandonment to one defined by immediacy, natural conversation, and measurable business outcomes.
+                The customer experience begins at the first point of contact. For small businesses relying on inbound calls, this moment determines whether a prospect becomes a client or a lost opportunity. This report examines how AI voice agents transform caller experience from friction and abandonment to immediacy and measurable outcomes.
               </p>
               <p className="text-white/80 leading-relaxed mb-4">Key findings include:</p>
               <ul className="space-y-2 mb-4">
@@ -341,14 +341,14 @@ export default function ResearchPage() {
             </p>
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">The Psychology of the Caller</h3>
             <p className="text-white/80 leading-relaxed mb-4">
-              Telephone calls to small businesses do not occur at random. They are triggered by specific events: a burst pipe, a flickering electrical system, a leaking roof, a failed boiler. In each case, the caller is experiencing a problem that demands resolution, and their emotional state is one of elevated stress combined with time pressure. Research published in the Journal of Marketing Research confirms that response speed is the number one factor customers use to judge service quality before making a purchase decision.
+              Telephone calls to small businesses are triggered by specific events: burst pipes, electrical faults, leaking roofs, failed boilers. Callers experience elevated stress and time pressure. Research confirms response speed is the top factor customers use to judge service quality before purchasing.
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
-              This psychological context has profound implications. When a caller encounters a busy signal, a voicemail prompt, or an extended hold period, their reaction is not one of mild inconvenience but of escalating frustration. According to Accenture research, <strong>87% of customers who have had even a single negative service experience will avoid that company in the future</strong>. For small businesses where word-of-mouth referrals represent the primary growth channel, a single missed or mishandled call carries amplified consequences.
+              This psychological context has profound implications. When callers encounter busy signals, voicemail, or extended holds, their reaction is escalating frustration, not mild inconvenience. Accenture research shows <strong>87% of customers with even one negative service experience will avoid that company in the future</strong>. For small businesses where word-of-mouth drives growth, a single missed call carries amplified consequences.
             </p>
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">The Call Flow Map</h3>
             <p className="text-white/80 leading-relaxed mb-4">
-              The typical inbound call follows a predictable pattern. The caller identifies a need, searches for a provider (Google, Checkatrade, Yelp), selects 2-3 businesses from the results, and begins calling sequentially. If the first business answers, qualifies the enquiry, and demonstrates competence, the caller typically stops calling alternatives. If the first business does not answer, the caller moves to the second. By the time they reach the third, their patience is diminished and their criteria have expanded — any responsive provider will suffice.
+              The typical inbound call follows a predictable pattern. The caller identifies a need, searches for providers, selects 2-3 businesses, and calls sequentially. If the first answers and demonstrates competence, the caller stops. If not, they move to the second. By the third, patience is diminished and any responsive provider will suffice.
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
               This sequential calling behaviour explains why the first responder wins. A business that answers immediately, at any hour, with a professional demeanour and the ability to capture the caller&apos;s requirements, secures the job before competitors are even aware an opportunity existed.
@@ -362,17 +362,17 @@ export default function ResearchPage() {
             </p>
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">The Voicemail Abyss</h3>
             <p className="text-white/80 leading-relaxed mb-4">
-              Research compiled across multiple studies reveals a stark pattern of caller abandonment. Forbes and Ruby Research found that <strong>80% of callers who reach voicemail hang up without leaving a message</strong>. PATLive&apos;s analysis confirms that 85% of callers who do not get through to a live person will never call back. For the caller, voicemail represents not a temporary inconvenience but a signal that the business does not prioritise their enquiry.
+              Research reveals a stark pattern of caller abandonment. Forbes and Ruby Research found that <strong>80% of callers who reach voicemail hang up without leaving a message</strong>. PATLive confirms 85% of unanswered callers never call back. For callers, voicemail signals the business does not prioritise their enquiry.
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
-              The voicemail problem is compounded by callback delays. A 2025 study of 142 UK SMEs found that when callbacks do occur, the average response time exceeds six hours — by which point the caller has typically hired a competitor. The Drift Lead Response Report found that waiting just five minutes to respond increases the risk of losing a lead by 10 times; waiting 10 minutes increases that risk by 100 times.
+              The voicemail problem is compounded by callback delays. A 2025 study of 142 UK SMEs found average callback response time exceeds six hours — by which point callers have typically hired a competitor. The Drift Lead Response Report found waiting just five minutes increases lead loss risk by 10 times; waiting 10 minutes increases it by 100 times.
             </p>
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">The Ringout Problem</h3>
             <p className="text-white/80 leading-relaxed mb-4">
               For businesses that do not use voicemail, the alternative is often worse: a continuous ring that eventually disconnects. Research from 411 Locals found that small businesses miss an average of 62% of incoming calls during working hours, rising to over 80% during peak periods such as Monday mornings and Friday afternoons when demand is highest and staff availability lowest.
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
-              The reasons are structural, not negligent. In a plumbing business with two employees, both individuals may be on job sites when a third call arrives. In an electrical contracting firm, the owner may be in a loft space where answering a phone is physically impossible. In a roofing company, workers on ladders or scaffold cannot safely take calls. The result is that calls go unanswered not because the business does not care, but because the business lacks the capacity to care at the moment the call arrives.
+              The reasons are structural, not negligent. In a two-person plumbing business, both may be on job sites when a third call arrives. Electricians may be in loft spaces where answering is physically impossible. Roofers on ladders cannot safely take calls. Calls go unanswered not because the business does not care, but because they lack capacity at the moment the call arrives.
             </p>
 
             <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden mb-6">
@@ -427,7 +427,7 @@ export default function ResearchPage() {
             </p>
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">The MIT Lead Response Management Study</h3>
             <p className="text-white/80 leading-relaxed mb-4">
-              The foundational research in this field was conducted by Dr. James Oldroyd at MIT, in partnership with InsideSales.com. Analysing over 15,000 leads across multiple industries, the study established what has become known as the five-minute rule: <strong>companies that respond to leads within five minutes are 100 times more likely to make contact than those that wait 30 minutes</strong>, and 21 times more likely to qualify the lead. The research was subsequently published in the Harvard Business Review under the title &quot;The Short Life of Online Sales Leads.&quot;
+              Dr. James Oldroyd at MIT conducted the foundational research, analysing 15,000+ leads across industries. The study established the five-minute rule: <strong>companies responding within five minutes are 100 times more likely to make contact than those waiting 30 minutes</strong>, and 21 times more likely to qualify the lead. Published in Harvard Business Review as &quot;The Short Life of Online Sales Leads.&quot;
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
               Velocify found that calling a lead within one minute of inquiry boosts conversion rates by 391% compared to waiting just two minutes. InsideSales.com confirmed that <strong>50% of sales go to the vendor that responds first</strong> — not the best vendor, but the fastest. Lead Connect&apos;s 2023 study found that 78% of customers hire the first business that responds to their enquiry.
@@ -497,10 +497,10 @@ export default function ResearchPage() {
 
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">The Average Business Response Gap</h3>
             <p className="text-white/80 leading-relaxed mb-4">
-              Despite the clarity of this research, the average business response time remains abysmal. Optifai&apos;s 2026 Pipeline Study of 939 B2B companies found the average lead response time is <strong>47 hours</strong> — nearly two full days. Only 23% of companies respond within five minutes, while 42% take longer than 24 hours. The same study found that 23% of companies never respond to leads at all.
+              Despite this research, average business response time remains abysmal. Optifai&apos;s 2026 Pipeline Study of 939 B2B companies found the average lead response time is <strong>47 hours</strong> — nearly two full days. Only 23% respond within five minutes, while 42% take longer than 24 hours. 23% never respond to leads at all.
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
-              For small businesses in the trades sector, the gap is likely wider. Unlike B2B SaaS companies with dedicated sales development representatives, trade businesses typically have no one whose sole responsibility is responding to enquiries. The electrician who receives a call while installing a distribution board cannot pause mid-job to answer the phone. The result is that even businesses with excellent technical skills and strong customer relationships lose jobs simply because they could not respond in time.
+              For small trade businesses, the gap is likely wider. Unlike B2B SaaS companies with dedicated sales teams, trade businesses typically have no one solely responsible for responding to enquiries. The electrician installing a distribution board cannot pause mid-job to answer the phone. Even businesses with excellent technical skills lose jobs simply because they could not respond in time.
             </p>
           </section>
 
@@ -511,7 +511,7 @@ export default function ResearchPage() {
             </p>
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">The Zero-Second Answer</h3>
             <p className="text-white/80 leading-relaxed mb-4">
-              The most transformative feature of AI voice agents is the guarantee of answer. Unlike human receptionists who can handle only one call at a time, AI agents accept unlimited simultaneous calls with no busy signals, no ringouts, and no hold queues. For the caller, this means that dialling a business equipped with an AI voice agent produces an immediate connection — a human-sounding voice that greets them by name, confirms the business name, and asks how it can help.
+              The most transformative feature of AI voice agents is the guarantee of answer. Unlike human receptionists limited to one call at a time, AI agents accept unlimited simultaneous calls with no busy signals or hold queues. Callers get immediate connection — a human-sounding voice that greets them by name and asks how it can help.
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
               Research from Freshworks found that first response time for tickets dropped from over six hours to less than four minutes with AI-powered support, and customer satisfaction climbed from 89% to 99%. The underlying principle is identical: the faster a customer&apos;s need is acknowledged, the more positively they evaluate the interaction.
@@ -522,15 +522,15 @@ export default function ResearchPage() {
               The expectation of round-the-clock availability has shifted from a luxury to a baseline requirement. According to Zendesk&apos;s CX Trends 2026 report, <strong>74% of consumers now expect 24/7 customer service</strong>. Among Gen Z and Millennial consumers, 34-35% identify 24/7 availability as one of the most important attributes of a positive customer support experience.
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
-              For trade businesses, this expectation creates both a challenge and an opportunity. The challenge is that providing human-staffed 24/7 telephone coverage is economically impractical for most small businesses. The opportunity is that AI voice agents provide this coverage at a fraction of the cost — typically <strong>£59-£125 per month compared to £22,000-£28,000 annually</strong> for a full-time human receptionist. A business that answers calls at 10pm on a Sunday, when competitors are sending callers to voicemail, captures enquiries that would otherwise go to the first available alternative.
+              For trade businesses, this expectation creates both a challenge and an opportunity. Human-staffed 24/7 coverage is economically impractical for most small businesses. AI voice agents provide this coverage at a fraction of the cost — typically <strong>£59-£125 per month versus £22,000-£28,000 annually</strong> for a full-time receptionist. A business answering calls at 10pm on Sunday captures enquiries that would otherwise go to competitors.
             </p>
 
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">Natural Conversation and Barge-In Handling</h3>
             <p className="text-white/80 leading-relaxed mb-4">
-              Modern AI voice agents operate with conversational fluency that callers routinely mistake for human interaction. Sub-200ms response latency, natural turn-taking, and the ability to handle interruptions (barge-in) with sub-200ms stop latency create an interaction that feels indistinguishable from speaking with a live receptionist. In blind testing, <strong>94% of callers believed they were speaking to a human</strong> rather than an AI system.
+              Modern AI voice agents operate with conversational fluency callers routinely mistake for human interaction. Sub-200ms response latency, natural turn-taking, and barge-in handling create interactions indistinguishable from live receptionists. In blind testing, <strong>94% of callers believed they were speaking to a human</strong> rather than an AI system.
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
-              This naturalness is critical to caller satisfaction. Metrigy&apos;s 2025 study of 503 consumers found that while 79% of Americans prefer interacting with a human over an AI agent, this preference is driven primarily by negative experiences with poor-quality AI systems. When AI systems demonstrate competence, transparency, and conversational fluency, acceptance rates increase dramatically. Gen Z consumers are the most likely to try self-service solutions before contacting support (94%), and are also the most forgiving after a negative chatbot experience — only 20% are unwilling to give AI another chance, compared to 61% of Baby Boomers.
+              This naturalness is critical to caller satisfaction. Metrigy&apos;s 2025 study of 503 consumers found that while 79% prefer human agents, this preference is driven by negative experiences with poor-quality AI. When AI demonstrates competence and fluency, acceptance rates increase dramatically. Gen Z consumers are most likely to try self-service first (94%) and most forgiving after negative experiences — only 20% unwilling to retry versus 61% of Baby Boomers.
             </p>
           </section>
 
@@ -541,7 +541,7 @@ export default function ResearchPage() {
             </p>
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">Consumer Trust in AI: The Current Landscape</h3>
             <p className="text-white/80 leading-relaxed mb-4">
-              McKinsey&apos;s 2025 Consumer Pulse Survey reveals significant generational variation in AI trust. While 79% of consumers overall prefer human agents, this figure masks important demographic differences. Younger consumers demonstrate substantially higher comfort with AI-mediated service, and critically, their satisfaction is driven by outcomes rather than interaction type. When AI resolves issues quickly and accurately, satisfaction scores match or exceed those for human-only service.
+              McKinsey&apos;s 2025 Consumer Pulse Survey reveals significant generational variation in AI trust. While 79% of consumers overall prefer human agents, younger consumers show substantially higher comfort with AI-mediated service. Their satisfaction is driven by outcomes rather than interaction type. When AI resolves issues quickly and accurately, satisfaction scores match or exceed human-only service.
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
               The key determinant of trust is not whether the agent is human or AI, but whether the interaction is competent, transparent, and effective. Salesforce research confirms that <strong>consumers who understand when they are interacting with AI and how their data will be used report higher satisfaction</strong> than those who encounter undisclosed automation. Transparency is not a compliance checkbox — it is a trust-building mechanism.
@@ -549,7 +549,7 @@ export default function ResearchPage() {
 
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">Best Practice: Disclosure and Consent</h3>
             <p className="text-white/80 leading-relaxed mb-4">
-              The most effective AI voice agent implementations follow a clear disclosure protocol. The caller is informed within the first 10 seconds that they are speaking with an AI assistant. This disclosure is not framed as an apology but as a value proposition: &quot;You&apos;re speaking with Katie, our AI receptionist. I can take your details, answer questions, and book your appointment immediately. If you need to speak with a human, I can connect you right away.&quot;
+              The most effective AI voice agent implementations follow a clear disclosure protocol. Callers are informed within the first 10 seconds that they are speaking with an AI assistant. This is framed as a value proposition: &quot;You&apos;re speaking with Katie, our AI receptionist. I can take your details, answer questions, and book your appointment immediately. If you need a human, I can connect you right away.&quot;
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
               This approach accomplishes three objectives simultaneously: it satisfies transparency requirements, it frames the AI as a capability rather than a limitation, and it provides an immediate human escalation path that preserves caller autonomy. Research from PwC&apos;s Future of Customer Experience Report confirms that <strong>consumers who are given clear escalation options report higher trust</strong> than those who are not, regardless of whether they exercise those options.
@@ -560,7 +560,7 @@ export default function ResearchPage() {
               The single most important factor in maintaining caller trust is the seamlessness of human handoff. Twilio research found that <strong>89% of consumers expect a smooth transition</strong> when transferred from an automated system to a human agent, and frustration increases dramatically when this transition is clumsy or requires the caller to repeat information.
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
-              Modern AI voice agents address this by maintaining conversation context through the handoff. When a caller requests human escalation, the AI captures the transcript, the caller&apos;s details, and the nature of the enquiry, then passes this information to the human agent before the connection is made. The human agent answers the call with full context: &quot;Hi, I have your details here. You&apos;re calling about a boiler breakdown in Manchester. Let me help you with that.&quot; This continuity transforms a potentially frustrating experience into one that feels personalised and efficient.
+              Modern AI voice agents maintain conversation context through handoffs. When callers request human escalation, the AI captures the transcript, details, and enquiry nature, then passes this to the human agent before connection. The human answers with full context: &quot;Hi, I have your details here. You&apos;re calling about a boiler breakdown in Manchester. Let me help you with that.&quot; This continuity transforms potentially frustrating experiences into personalised, efficient ones.
             </p>
           </section>
 
@@ -574,7 +574,7 @@ export default function ResearchPage() {
               Gladly&apos;s 2025 analysis found that companies using AI-trained support systems achieved <strong>CSAT scores averaging 90%</strong> — the highest recorded in recent industry studies. This represents a significant improvement over traditional systems, where satisfaction scores typically plateau at 75-80% for human-only support and 65-70% for basic chatbot implementations.
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
-              The drivers of this improvement are straightforward. AI agents provide consistent, accurate information without the variability introduced by human factors: fatigue, distraction, incomplete training, or interpersonal inconsistency. Every caller receives the same quality of interaction, the same depth of information, and the same professional demeanour. For small businesses where the owner may answer calls differently depending on whether they have just finished a difficult job or are rushing to their next appointment, this consistency is a meaningful advantage.
+              The drivers of this improvement are straightforward. AI agents provide consistent, accurate information without human variability: fatigue, distraction, incomplete training, or interpersonal inconsistency. Every caller receives the same quality of interaction and professional demeanour. For small businesses where the owner may answer calls differently depending on their current situation, this consistency is a meaningful advantage.
             </p>
 
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">Resolution Speed and First-Contact Resolution</h3>
@@ -582,7 +582,7 @@ export default function ResearchPage() {
               Freshworks&apos; 2025 analysis found that AI-powered customer service achieves <strong>up to 60% faster query resolution</strong> than human-only systems. The American Customer Satisfaction Index (ACSI) confirms that first-contact resolution is the strongest predictor of customer satisfaction across all service channels — stronger than agent friendliness, hold time, or follow-up quality.
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
-              For trade businesses, first-contact resolution means capturing the enquiry completely in the initial call: customer details, job description, urgency, location, and preferred callback time. An AI agent that captures all of this information in a 90-second call and delivers it to the tradesperson via WhatsApp has achieved first-contact resolution. The tradesperson has everything they need to call back with full context and book the job. Compare this to a voicemail that provides only a phone number and a garbled message about &quot;something leaking,&quot; requiring multiple callback attempts to clarify.
+              For trade businesses, first-contact resolution means capturing the enquiry completely in the initial call: customer details, job description, urgency, location, and preferred callback time. An AI agent capturing all this in 90 seconds and delivering it via WhatsApp achieves first-contact resolution. The tradesperson has everything needed to callback with full context. Compare this to a voicemail providing only a phone number and garbled message about &quot;something leaking,&quot; requiring multiple callbacks.
             </p>
 
             <div className="bg-emerald-500/10 border-l-4 border-emerald-500 rounded-r-xl p-6 my-6">
@@ -607,7 +607,7 @@ export default function ResearchPage() {
 
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">Automated Review Collection</h3>
             <p className="text-white/80 leading-relaxed mb-4">
-              AI voice agents address this gap through automated, contextual review solicitation. When a job is marked complete, the AI system places a brief follow-up call or sends a WhatsApp message: &quot;Hi, this is Katie from [Business Name]. We hope your [job type] was completed to your satisfaction. If you have two minutes, we&apos;d be grateful for a quick review on Google. It helps other customers find us. Here&apos;s the link.&quot;
+              AI voice agents address this gap through automated, contextual review solicitation. When a job is marked complete, the AI places a brief follow-up call or WhatsApp message: &quot;Hi, this is Katie from [Business Name]. We hope your [job type] was completed to your satisfaction. If you have two minutes, we&apos;d be grateful for a quick Google review. Here&apos;s the link.&quot;
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
               This automation transforms review solicitation from a manual, inconsistent process into a systematic, reliable one. The Journal of Small Business Strategy&apos;s 2026 research on reputation management confirms that <strong>automated review requests achieve 3-4 times higher response rates</strong> than manual requests, primarily because they are sent immediately after service completion when customer satisfaction is highest.
@@ -707,11 +707,11 @@ export default function ResearchPage() {
             </p>
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">Generational Acceptance Trends</h3>
             <p className="text-white/80 leading-relaxed mb-4">
-              While older consumers show more scepticism toward AI-mediated service, Gen Z and Millennials — the next generation of homeowners and service buyers — demonstrate significantly higher acceptance. McKinsey&apos;s research confirms that younger consumers prioritise speed and resolution over interaction type. As these demographics represent an increasing share of the service-buying market, businesses that adopt AI voice agents now will be positioned to serve this growing segment.
+              While older consumers show more scepticism toward AI-mediated service, Gen Z and Millennials demonstrate significantly higher acceptance. McKinsey&apos;s research confirms younger consumers prioritise speed and resolution over interaction type. As these demographics represent an increasing share of the service-buying market, businesses adopting AI voice agents now will be positioned to serve this growing segment.
             </p>
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">Multimodal AI and Visual Context</h3>
             <p className="text-white/80 leading-relaxed mb-4">
-              The next evolution of caller experience will integrate visual channels. A caller describing a leaking roof will be able to share a photo via WhatsApp while speaking with the AI, which can assess severity, estimate repair scope, and prioritise urgency. Gartner predicts that by 2029, <strong>agentic AI will autonomously resolve 80% of common customer service issues</strong>, with multimodal capabilities enabling visual verification and remote diagnostics.
+              The next evolution of caller experience will integrate visual channels. A caller describing a leaking roof will share a photo via WhatsApp while speaking with the AI, which can assess severity and prioritise urgency. Gartner predicts by 2029, <strong>agentic AI will autonomously resolve 80% of common customer service issues</strong>, with multimodal capabilities enabling visual verification and remote diagnostics.
             </p>
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">Predictive and Proactive Service</h3>
             <p className="text-white/80 leading-relaxed mb-4">

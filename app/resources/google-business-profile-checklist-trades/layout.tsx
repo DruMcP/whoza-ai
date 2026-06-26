@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Google Business Profile Checklist for UK Trades | whoza.ai",
-  description: "Complete interactive checklist to optimise your Google Business Profile. Category recommendations, photo guidelines, review templates, post strategy, and Q&A for UK tradespeople.",
+  description: "Complete interactive checklist to optimise your Google Business Profile. Category recommendations, photo guidelines, review templates and post strategy.",
   openGraph: {
     type: "website",
     locale: "en_GB",

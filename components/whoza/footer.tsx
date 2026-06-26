@@ -42,6 +42,14 @@ const footerLinks = {
     { label: "Hourly Rate Checker", href: "/tools/rate-checker" },
     { label: "Voicemail Scripts", href: "/tools/voicemail-scripts" },
   ],
+  resources: [
+    { label: "Research Library", href: "/research" },
+    { label: "Missed Call Cost Calculator", href: "/resources/missed-call-cost-calculator" },
+    { label: "Trade Business Growth Toolkit", href: "/resources/trade-business-growth-toolkit" },
+    { label: "Google Business Profile Checklist", href: "/resources/google-business-profile-checklist-trades" },
+    { label: "Local SEO Checklist", href: "/resources/local-seo-checklist-trades" },
+    { label: "Emergency Call Handling Guide", href: "/blog/emergency-call-handling-guide" },
+  ],
   legal: [
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms of Service", href: "/terms" },
@@ -71,7 +79,7 @@ export function Footer() {
   }
 
   return (
-    <footer className="bg-[var(--navy-900)] border-t border-white/10">
+    <footer className="bg-[var(--navy-900)] border-t border-white/10" role="contentinfo" aria-label="Footer">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-8 lg:gap-6">
           {/* Brand + CTA Column */}
@@ -120,6 +128,19 @@ export function Footer() {
             <div className="text-white font-semibold mb-4">Tools</div>
             <ul className="space-y-3">
               {footerLinks.tools.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="text-sm text-white/60 hover:text-white transition-colors">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <div className="text-white font-semibold mb-4">Resources</div>
+            <ul className="space-y-3">
+              {footerLinks.resources.map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className="text-sm text-white/60 hover:text-white transition-colors">
                     {link.label}

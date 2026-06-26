@@ -314,6 +314,7 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
                           value={email}
                           onChange={(e) => { setEmail(e.target.value); setEmailError("") }}
                           placeholder="e.g. john@smithplumbing.co.uk"
+                          aria-label="Email address for recovery report"
                           className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/10 text-white text-sm placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-[var(--katie-blue)]"
                           required
                         />

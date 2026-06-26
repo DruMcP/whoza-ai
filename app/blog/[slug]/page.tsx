@@ -165,6 +165,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     }
   } : null
 
+  const pillarSlugs = [
+    "how-does-ai-call-answering-work",
+    "ai-call-answering-cost-uk",
+    "how-to-grow-trade-business-uk-guide",
+    "how-to-get-more-plumbing-customers",
+  ]
+  const isPillarPost = pillarSlugs.includes(slug)
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -193,6 +201,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     articleSection: post.category,
     wordCount: wordCount,
     inLanguage: "en-GB",
+    ...(isPillarPost && {
+      speakable: {
+        "@type": "SpeakableSpecification",
+        cssSelector: ["article h1", "article h2", "article p"],
+      },
+    }),
   }
 
   return (

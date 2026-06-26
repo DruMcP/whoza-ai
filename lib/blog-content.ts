@@ -2198,7 +2198,7 @@ If you are a plumber, gas engineer, sparky, roofer, or builder and you are sick 
     authorTitle: "Founder, whoza.ai",
     schema: {
       headline: "How AI Call Answering Works | UK Trades",
-      description: "Simple explanation of AI call answering for UK tradespeople. Learn how voice agents capture calls, qualify leads, and deliver to WhatsApp.",
+      description: "Simple explanation of AI call answering for UK tradespeople. Learn how voice agents capture calls, qualify leads, and deliver details to WhatsApp instantly.",
     },
     content: {
       introduction: `I get this question every day from tradespeople: "How does AI call answering actually work?" They picture robots and sci-fi movies. The reality is much simpler and much more practical. AI call answering is just a very smart voicemail that talks back, asks the right questions, and sends you the answers on WhatsApp.\n\nIn this guide, I will explain exactly how AI call answering works for UK tradespeople — no jargon, no technical BS, just the plain facts. If you want the complete picture of how AI call answering fits into your business, read our [Complete AI Call Answering Guide](https://whoza.ai/blog/ai-call-answering-trades-uk-guide). For a deeper dive into missed call recovery, see our [Missed Call Recovery Guide](https://whoza.ai/blog/missed-call-recovery-trades-guide).`,
@@ -2370,7 +2370,7 @@ If you are a plumber, gas engineer, sparky, roofer, or builder and you are sick 
     authorTitle: "Founder, whoza.ai",
     schema: {
       headline: "AI Call Answering Pricing UK | Trades Cost",
-      description: "Complete UK pricing guide for AI call answering services. Compare plans, calculate ROI, and understand the true cost for plumbers, electricians, and builders.",
+      description: "Complete UK pricing guide for AI call answering services. Compare plans, calculate ROI, and understand true costs for plumbers, electricians, builders.",
     },
     content: {
       introduction: `How much does AI call answering cost in the UK? This is the first question every tradesperson asks me. And the answer surprises them: less than a coffee per day. For £59 per month, you get a 24/7 receptionist that answers every call you miss, qualifies every enquiry, and delivers the details to your WhatsApp in 3 seconds.\n\nIn this guide, I break down the complete cost structure of AI call answering for UK trade businesses. I compare plans, calculate ROI, and show you exactly how much money you will make back. For the full picture of how AI call answering works, see our [Complete Guide](https://whoza.ai/blog/ai-call-answering-trades-uk-guide). For a comparison with human receptionists, read our [AI vs Human Receptionist](https://whoza.ai/blog/ai-vs-human-receptionist-trades) article.`,
@@ -2540,7 +2540,7 @@ If you are a plumber, gas engineer, sparky, roofer, or builder and you are sick 
     authorTitle: "Founder, whoza.ai",
     schema: {
       headline: "Grow Your Trade Business: UK Guide (2025)",
-      description: "12 proven strategies to get more customers and build a thriving UK trade business. From local SEO to Google reviews and AI call answering.",
+      description: "The 12 proven strategies to get more customers and build a thriving UK trade business. From local SEO to Google reviews and AI call answering. Read now.",
     },
     content: {
       introduction: `Running a trade business in the UK is harder than ever. Materials costs are up, competition is fierce, and customers have more choice than they've ever had. But here's the thing: most trade businesses aren't struggling because there's no work. They're struggling because they can't get found, can't answer the phone, and can't turn enquiries into booked jobs.

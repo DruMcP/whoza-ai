@@ -7,7 +7,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Voice Agent Technology: State of the Art, Architecture & Future 2026 | whoza.ai",
   description:
-    "Technical deep-dive into voice AI architecture: end-to-end neural models, latency engineering below 200ms, speech synthesis quality benchmarks, barge-in handling, and the agentic AI future. Independent research.",
+    "Technical deep-dive into voice AI architecture. End-to-end neural models, latency below 200ms, speech synthesis and barge-in handling. Download free.",
   keywords: [
     "voice agent technology",
     "AI voice agents",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Voice Agent Technology: State of the Art, Architecture & Future 2026",
     description:
-      "Technical deep-dive into voice AI architecture: end-to-end neural models, latency engineering below 200ms, speech synthesis quality benchmarks, and the agentic AI future.",
+      "Technical deep-dive into voice AI architecture. End-to-end neural models, latency below 200ms, speech synthesis and barge-in handling. Download free.",
     url: "https://whoza.ai/research/voice-agent-technology-state-of-art-2026",
     siteName: "Whoza.ai",
     images: [
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     site: "@whozaai",
     title: "Voice Agent Technology: State of the Art, Architecture & Future 2026",
     description:
-      "Technical deep-dive into voice AI architecture: end-to-end neural models, latency engineering below 200ms, speech synthesis quality benchmarks, and the agentic AI future.",
+      "Technical deep-dive into voice AI architecture. End-to-end neural models, latency below 200ms, speech synthesis and barge-in handling. Download free.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {

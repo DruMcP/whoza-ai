@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "AI Call Handling for Roofers UK — Never Miss a Lead",
-  description: "Katie answers 24/7 for roofers. Captures storm damage, leaks, guttering & emergency repair enquiries. WhatsApp alerts in 3 seconds. Free trial.",
+  description: "Katie answers 24/7 for roofers. Captures storm damage, leaks, guttering and emergency repair enquiries. WhatsApp alerts in 3 seconds. Start free trial today.",
   alternates: {
     canonical: "https://whoza.ai/for-roofers",
   },
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/for-roofers",
     siteName: "Whoza.ai",
     title: "AI Call Handling for Roofers UK — Never Miss a Lead",
-    description: "Katie answers 24/7 for roofers. Captures storm damage, leaks, guttering & emergency repair enquiries. WhatsApp alerts in 3 seconds. Free trial.",
+    description: "Katie answers 24/7 for roofers. Captures storm damage, leaks, guttering and emergency repair enquiries. WhatsApp alerts in 3 seconds. Start free trial today.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai for Roofers" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "AI Call Handling for Roofers UK — Never Miss a Lead",
-    description: "Katie answers 24/7 for roofers. Captures storm damage, leaks, guttering & emergency repair enquiries. WhatsApp alerts in 3 seconds. Free trial.",
+    description: "Katie answers 24/7 for roofers. Captures storm damage, leaks, guttering and emergency repair enquiries. WhatsApp alerts in 3 seconds. Start free trial today.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {

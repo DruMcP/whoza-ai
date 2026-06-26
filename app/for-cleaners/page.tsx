@@ -13,7 +13,7 @@ import { RelatedTrades } from "@/components/whoza/related-trades"
 
 export const metadata: Metadata = {
   title: "AI Call Answering for Cleaners UK — Never Miss a Booking",
-  description: "AI call handling for UK cleaning companies. Katie answers 24/7, captures domestic, commercial, and end-of-tenancy enquiries. WhatsApp alerts in 3 seconds. 7-day free trial.",
+  description: "AI call handling for UK cleaners. Katie answers 24/7, captures domestic, commercial and end-of-tenancy enquiries. WhatsApp alerts in 3 seconds. Free trial.",
   alternates: {
     canonical: "https://whoza.ai/for-cleaners",
   },
@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/for-cleaners",
     siteName: "Whoza.ai",
     title: "AI Call Answering for Cleaners UK — Never Miss a Booking",
-    description: "AI call handling for UK cleaning companies. Katie answers 24/7, captures domestic, commercial, and end-of-tenancy enquiries. WhatsApp alerts in 3 seconds. 7-day free trial.",
+    description: "AI call handling for UK cleaners. Katie answers 24/7, captures domestic, commercial and end-of-tenancy enquiries. WhatsApp alerts in 3 seconds. Free trial.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Cleaners" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "AI Call Answering for Cleaners UK — Never Miss a Booking",
-    description: "AI call handling for UK cleaning companies. Katie answers 24/7, captures domestic, commercial, and end-of-tenancy enquiries. WhatsApp alerts in 3 seconds. 7-day free trial.",
+    description: "AI call handling for UK cleaners. Katie answers 24/7, captures domestic, commercial and end-of-tenancy enquiries. WhatsApp alerts in 3 seconds. Free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {
