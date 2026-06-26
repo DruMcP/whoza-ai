@@ -27,7 +27,7 @@ import { RelatedTrades } from "@/components/whoza/related-trades"
 
 export const metadata: Metadata = {
   title: "AI Call Handling for Heating Engineers UK | whoza.ai",
-  description: "Katie answers 24/7 for heating engineers. Captures boiler breakdowns, annual services & emergencies. WhatsApp alerts in 3 seconds. Free trial.",
+  description: "Katie answers 24/7 for heating engineers. Captures boiler breakdowns, annual services and emergencies. WhatsApp alerts in 3 seconds. Start your free trial.",
   alternates: {
     canonical: "https://whoza.ai/for-heating-engineers",
   },
@@ -37,14 +37,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/for-heating-engineers",
     siteName: "Whoza.ai",
     title: "AI Call Handling for Heating Engineers UK | whoza.ai",
-    description: "Katie answers 24/7 for heating engineers. Captures boiler breakdowns, annual services & emergencies. WhatsApp alerts in 3 seconds. Free trial.",
+    description: "Katie answers 24/7 for heating engineers. Captures boiler breakdowns, annual services and emergencies. WhatsApp alerts in 3 seconds. Start your free trial.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai for Heating Engineers" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "AI Call Handling for Heating Engineers UK | whoza.ai",
-    description: "Katie answers 24/7 for heating engineers. Captures boiler breakdowns, annual services & emergencies. WhatsApp alerts in 3 seconds. Free trial.",
+    description: "Katie answers 24/7 for heating engineers. Captures boiler breakdowns, annual services and emergencies. WhatsApp alerts in 3 seconds. Start your free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {

@@ -11,7 +11,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Whoza.ai Pricing — Plans from £59/month | AI Voice",
-  description: "Choose from 4 plans: Starter £59, Growth £125, Pro £230, Scale £399/month. 7-day free trial on Starter. AI voice agents for UK tradespeople.",
+  description: "Choose from 4 plans: Starter £59, Growth £125, Pro £230, Scale £399/month. All plans include 7-day free trial. AI voice agents for UK tradespeople.",
   openGraph: {
     type: "website",
     locale: "en_GB",

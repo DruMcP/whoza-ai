@@ -5,7 +5,7 @@ export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
   // P0.1: Return 410 Gone for US location pages
-  if (pathname.startsWith('/locations/us/')) {
+  if (pathname === '/locations/us' || pathname.startsWith('/locations/us/')) {
     return new NextResponse('Gone', { status: 410 })
   }
 
@@ -13,5 +13,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/locations/us/:path*'],
+  matcher: ['/locations/us', '/locations/us/:path*'],
 }

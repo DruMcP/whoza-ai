@@ -2,12 +2,13 @@ import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
+import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 import { ArrowRight, Check, X, MessageCircle, PoundSterling, Clock, Shield, Star, Phone } from "lucide-react"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Whoza.ai vs Clara AI: Comparison (2026)",
-  description: "Honest comparison of whoza.ai and Clara AI for UK trades. Price, features, WhatsApp delivery, and setup time compared.",
+  description: "Honest comparison of whoza.ai and Clara AI for UK trades. Price, features, WhatsApp delivery, and setup time compared. See which AI call handler wins.",
   keywords: [
     "whoza.ai vs Clara",
     "Clara AI receptionist review",
@@ -71,6 +72,25 @@ const reviewSchema = {
   "reviewBody": "Independent comparison of whoza.ai vs Clara AI for UK trades. whoza.ai wins on features (WhatsApp, reviews, competitor analysis) and flexibility (no contract, longer guarantee). Clara wins on entry-level price (£49.99 vs £59). Both offer good UK voices. Recommendation: Choose Clara if budget is extremely tight and you only need basic call answering. Choose whoza.ai if you want the complete revenue system with review collection and growth insights.",
 }
 
+const faqs = [
+  {
+    question: "Which is cheaper: whoza.ai or Clara AI?",
+    answer: "Clara AI is cheaper at entry level (£49.99 vs £59) and mid-tier (£99.99 vs £125). However, whoza.ai includes WhatsApp delivery with Accept/Call Back/Decline buttons as standard, which Clara charges extra for. For most tradespeople, the total cost is comparable once you factor in features."
+  },
+  {
+    question: "Does Clara AI deliver calls to WhatsApp like whoza.ai?",
+    answer: "Clara AI offers SMS and email delivery by default. WhatsApp delivery is available on their Pro plan at an additional cost. whoza.ai includes WhatsApp delivery with structured messages and action buttons on every plan, starting from £59 per month."
+  },
+  {
+    question: "Which AI call handler is faster to set up?",
+    answer: "whoza.ai is designed for same-day setup. Most tradespeople are live within 2 hours. Clara AI typically requires 24-48 hours for account verification and script configuration. If you need coverage immediately, whoza.ai is the faster option."
+  },
+  {
+    question: "Is Clara AI or whoza.ai better for UK tradespeople?",
+    answer: "Clara AI is a general-purpose AI receptionist used across many industries. whoza.ai is built specifically for UK tradespeople, with trade-specific conversation scripts, knowledge of UK terminology, and integration with UK trade workflows. For plumbers, electricians, gas engineers, and builders, whoza.ai understands the nuances of your business."
+  }
+]
+
 export const revalidate = 3600
 
 export default function VsClaraPage() {
@@ -80,6 +100,7 @@ export default function VsClaraPage() {
 
       <div className="min-h-screen bg-[var(--navy-900)] text-white">
         <Header />
+        <FAQPageSchema faqs={faqs} />
         <BreadcrumbSchema items={[
           { name: "Home", item: "https://whoza.ai" },
           { name: "vs Clara AI", item: "https://whoza.ai/whoza-vs-clara" },

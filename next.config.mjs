@@ -41,6 +41,11 @@ const nextConfig = {
 
       // === Research paper slug fix ===
       {
+        source: '/research/ai-voice-agents-customer-satisfaction-2026',
+        destination: '/research/caller-experience-revolution-ai-voice-agents-2026',
+        permanent: true,
+      },
+      {
         source: '/research/voice-agent-technology-state-of-the-art-2026',
         destination: '/research/voice-agent-technology-state-of-art-2026',
         permanent: true,

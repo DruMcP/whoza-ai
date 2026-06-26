@@ -8,7 +8,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Blog — AI Call Answering for UK Trades | whoza.ai",
-  description: "AI voice agent insights, trade business tips, and lead capture strategies to help UK tradespeople book more jobs and grow their business.",
+  description: "AI voice agent insights, trade business growth tips, and lead capture strategies for UK plumbers, electricians, gas engineers and builders. Book more jobs.",
   alternates: {
     canonical: "https://whoza.ai/blog",
   },

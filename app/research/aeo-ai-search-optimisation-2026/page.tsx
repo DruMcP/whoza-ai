@@ -8,7 +8,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Answer Engine Optimisation: Why Small Businesses Must Prepare for AI-Driven Search | whoza.ai",
-  description: "Independent research report on Answer Engine Optimisation (AEO). Data from BrightEdge, Ahrefs, Semrush, Princeton, HubSpot, Google, and 30+ authoritative sources.",
+  description: "Independent research on Answer Engine Optimisation (AEO). Data from BrightEdge, Ahrefs, Semrush, Princeton, HubSpot, Google and 30+ authoritative sources.",
   alternates: {
     canonical: "https://whoza.ai/research/aeo-ai-search-optimisation-2026",
   },

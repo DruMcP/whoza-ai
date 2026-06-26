@@ -25,7 +25,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://whoza.ai'),
   title: 'AI Call Answering for UK Trades | Whoza.ai',
-  description: 'AI voice agents answer your trade business calls 24/7, built in Scotland. Never miss a job. Plans from £59/month. 7-day free trial.',
+  description: 'AI voice agents answer your trade business calls 24/7, built in Scotland for UK plumbers, electricians and builders. Plans from £59/month. 7-day free trial.',
   // Keywords meta tag removed per SEO best practices — can be spam signal
   authors: [{ name: 'whoza.ai' }],
   publisher: 'whoza.ai',

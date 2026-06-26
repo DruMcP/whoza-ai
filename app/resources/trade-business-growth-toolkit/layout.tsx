@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Free Trade Business Growth Toolkit | whoza.ai",
-  description: "Download the free Trade Business Growth Toolkit. Quoting calculator, enquiry form templates, follow-up emails, and missed call recovery checklist. Built for UK tradespeople.",
+  description: "Download the free Trade Business Growth Toolkit. Quoting calculator, enquiry templates, follow-up emails, missed call recovery checklist. Start growing.",
   openGraph: {
     type: "website",
     locale: "en_GB",

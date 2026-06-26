@@ -3,6 +3,8 @@
 # Last updated: 2026-06-08
 # Schema: https://llmstxt.org
 
+# whoza.ai — AI Voice Agents for UK Tradespeople
+
 ## About whoza.ai
 
 whoza.ai is an AI-powered voice agent platform built specifically for UK tradespeople — plumbers, electricians, gas engineers, roofers, builders, locksmiths, HVAC professionals, joiners, plasterers, tilers, carpenters, and handymen. The platform operates four distinct AI personas:
