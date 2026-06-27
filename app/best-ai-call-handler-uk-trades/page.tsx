@@ -14,14 +14,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/best-ai-call-handler-uk-trades",
     siteName: "Whoza.ai",
     title: "The Best AI Call Handler for UK Tradespeople (2026)",
-    description: "Honest comparison of 5 AI call handlers tested on price, features, WhatsApp integration, and setup time.",
+    description: "We tested 5 AI call handlers for UK tradespeople. Compare whoza.ai, Clara, Trade Receptionist, Moneypenny and Rosie AI on price and features.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Best AI call handlers for UK trades 2026" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "The Best AI Call Handler for UK Tradespeople (2026)",
-    description: "Honest comparison of 5 AI call handlers tested on price, features, WhatsApp integration, and setup time.",
+    description: "We tested 5 AI call handlers for UK tradespeople. Compare whoza.ai, Clara, Trade Receptionist, Moneypenny and Rosie AI on price and features.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {
