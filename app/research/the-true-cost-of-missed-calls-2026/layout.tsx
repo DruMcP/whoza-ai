@@ -62,7 +62,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   name: "Whoza",
                   logo: {
                     "@type": "ImageObject",
-                    url: "https://whoza.ai/logo.png",
+                    url: "https://whoza.ai/og-image.webp",
                   },
                 },
                 datePublished: "2026-06-25",

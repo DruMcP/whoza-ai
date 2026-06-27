@@ -64,7 +64,7 @@ const scholarlyArticleSchema = {
     "@type": "Organization",
     "name": "whoza.ai",
     "url": "https://whoza.ai",
-    "logo": { "@type": "ImageObject", "url": "https://whoza.ai/logo.png" }
+    "logo": { "@type": "ImageObject", "url": "https://whoza.ai/og-image.webp" }
   },
   "publisher": { "@id": "https://whoza.ai/#organization" },
   "mainEntityOfPage": {
@@ -163,7 +163,6 @@ export default function ResearchPage() {
 
       <script id="schema-scholarly-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(scholarlyArticleSchema) }} />
       <script id="schema-dataset" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetSchema) }} />
-      <script id="schema-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
         { name: "Research", item: "https://whoza.ai/research/aeo-ai-search-optimisation-2026" },

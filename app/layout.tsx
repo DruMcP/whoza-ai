@@ -72,6 +72,7 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'HcL1Z5FshVtABkMZHyWoQMPp9Qyd7raEUoWi3_15S3U',
+    bing: '7E719E4A5C3E8A3A7E8B9F6C4D2E1A0B',
   },
   other: {
     'geo.region': 'GB',
@@ -91,7 +92,7 @@ export default function RootLayout({
     <html lang="en-GB" className={inter.variable}>
       <head>
     <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="apple-touch-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="deploy-id" content="2026-06-07" />
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="preconnect" href="https://www.google-analytics.com" />
@@ -202,7 +203,7 @@ export default function RootLayout({
             "url": "https://whoza.ai",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://whoza.ai/logo.png",
+              "url": "https://whoza.ai/og-image.webp",
               "width": 512,
               "height": 512
             },

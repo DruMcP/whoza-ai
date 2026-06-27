@@ -87,7 +87,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const isGaryPost = slug === "i-missed-5-emergency-calls-a-week-then-i-tried-ai-gary-the-plumber"
   const enhancedArticleSchema = isGaryPost ? {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     "headline": "I Missed 5 Emergency Calls a Week. Then I Tried AI.",
     "description": "Self-employed plumber from Clapham shares honest 4-week diary using AI call answering. Real numbers. No BS. £6,800 in recovered jobs.",
     "image": "https://whoza.ai/og-image.webp",
@@ -201,12 +201,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     articleSection: post.category,
     wordCount: wordCount,
     inLanguage: "en-GB",
-    ...(isPillarPost && {
-      speakable: {
-        "@type": "SpeakableSpecification",
-        cssSelector: ["article h1", "article h2", "article p"],
-      },
-    }),
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["article h1", "article h2", "article p"],
+    },
   }
 
   return (

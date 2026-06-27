@@ -27,7 +27,7 @@ export const locations: LocationData[] = [
     region: "England", 
     trades: ["plumbers", "electricians", "builders"],
     population: "8.9M",
-    description: "London's competitive trade market means missed calls cost more. With 32,000+ trade businesses competing for 1.2M households, answering every enquiry is critical.",
+    description: "London has 35,000+ trade businesses serving 3.5M households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",
     challenges: [
       "High competition — 15+ plumbers per postcode in central London",
       "Emergency calls peak during commute hours when you're on the road",
@@ -49,7 +49,7 @@ export const locations: LocationData[] = [
     region: "England", 
     trades: ["plumbers", "electricians", "roofers"],
     population: "2.8M",
-    description: "Manchester's booming property market and rainy climate mean roofers and plumbers are always in demand. But with 8,500+ trade businesses, standing out requires capturing every call.",
+    description: "Manchester has 10,000+ trade businesses serving 550K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",
     challenges: [
       "Rapid property development creates surge demand for trades",
       "Weather emergencies (storms, flooding) cause call spikes",
@@ -71,7 +71,7 @@ export const locations: LocationData[] = [
     region: "England", 
     trades: ["plumbers", "builders", "painters"],
     population: "2.6M",
-    description: "As the UK's second-largest city, Birmingham has a massive trade market. 11,000+ trade businesses serve 680K households, but missed calls cost the local economy millions annually.",
+    description: "Birmingham has 11,000+ trade businesses serving 680K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",
     challenges: [
       "Large suburban areas mean longer travel times between jobs",
       "Diverse housing from 1930s semis to modern apartments",
@@ -93,7 +93,7 @@ export const locations: LocationData[] = [
     region: "England", 
     trades: ["electricians", "roofers", "landscapers"],
     population: "2.3M",
-    description: "Leeds' mix of Victorian terraces, modern developments, and rural outskirts creates unique trade demands. Electricians and roofers are particularly busy with the city's ongoing regeneration.",
+    description: "Leeds has 8,500+ trade businesses serving 350K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month. Try free.",
     challenges: [
       "Victorian wiring in older terraces needs specialist electricians",
       "Yorkshire weather puts constant demand on roofers",
@@ -115,7 +115,7 @@ export const locations: LocationData[] = [
     region: "Scotland", 
     trades: ["plumbers", "builders", "electricians"],
     population: "1.7M",
-    description: "Glasgow's tenement buildings and harsh winters create constant demand for plumbers and heating engineers. With 5,500+ trade businesses, competition is fierce and every missed call is a lost job.",
+    description: "Glasgow has 9,000+ trade businesses serving 300K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",
     challenges: [
       "Tenement buildings have shared systems — emergencies affect multiple flats",
       "Harsh winters cause boiler and heating emergencies to spike",
@@ -137,7 +137,7 @@ export const locations: LocationData[] = [
     region: "England", 
     trades: ["plumbers", "electricians", "builders"],
     population: "700K",
-    description: "Bristol's booming property market and eco-conscious homeowners drive demand for modern, efficient trade services. The city's 4,800+ trade businesses compete for high-value jobs.",
+    description: "Bristol has 8,000+ trade businesses serving 460K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",
     challenges: [
       "Hills and narrow streets make travel between jobs time-consuming",
       "Eco-conscious customers ask about energy-efficient solutions",
@@ -159,7 +159,7 @@ export const locations: LocationData[] = [
     region: "England", 
     trades: ["roofers", "plumbers", "electricians"],
     population: "900K",
-    description: "Liverpool's mix of historic docks, Victorian housing, and new developments creates varied trade needs. Roofers are especially busy with the city's rainy climate and aging housing stock.",
+    description: "Liverpool has 7,500+ trade businesses serving 280K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",
     challenges: [
       "Aging Victorian housing needs constant roof and gutter maintenance",
       "Student areas (Aigburth, Wavertree) have high-turnover repairs",
@@ -181,7 +181,7 @@ export const locations: LocationData[] = [
     region: "Scotland", 
     trades: ["builders", "plumbers", "electricians"],
     population: "540K",
-    description: "Edinburgh's UNESCO World Heritage status and seasonal tourism create unique trade demands. Builders and plumbers handle everything from Georgian renovations to modern flat emergencies.",
+    description: "Edinburgh has 7,000+ trade businesses serving 250K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",
     challenges: [
       "Georgian and Victorian buildings need specialist conservation trades",
       "Festival season brings emergency maintenance demands for venues",

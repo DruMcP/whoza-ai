@@ -142,7 +142,7 @@ export default function ForPaintersDecoratorsPage() {
     "@type": "LocalBusiness",
     "name": "whoza.ai — AI Call Handling for Painters & Decorators",
     "url": "https://whoza.ai/for-painters-decorators",
-    "logo": "https://whoza.ai/logo.webp",
+    "logo": "https://whoza.ai/og-image.webp",
     "image": "https://whoza.ai/og-image.webp",
     "description": "AI voice agents for UK painters and decorators — answer missed calls 24/7, capture interior, exterior, commercial, and emergency touch-up enquiries, and deliver leads via WhatsApp.",
     "address": {

@@ -7,8 +7,8 @@ import { ArrowRight, Star, Clock, Shield, TrendingUp , Calendar, User } from "lu
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "AI Receptionist vs Human Receptionist: 2026 Cost Guide | Whoza",
-  description: "Detailed cost comparison of human and AI receptionists for UK trade businesses. Human: £27,800-£38,700/year. AI: £708-£1,500/year. See ROI analysis and features.",
+  title: "AI Receptionist vs Human: 2026 Cost Guide | Whoza",
+  description: "Detailed cost comparison of human and AI receptionists for UK trade businesses. Human: £27,800-£38,700/year. AI: £708-£1,500/year. ROI analysis. 2026.",
   keywords: [
     "AI receptionist cost UK",
     "human receptionist cost UK trades",
@@ -375,7 +375,7 @@ export default function BlogPost() {
                   name: "Whoza",
                   logo: {
                     "@type": "ImageObject",
-                    url: "https://whoza.ai/logo.png",
+                    url: "https://whoza.ai/og-image.webp",
                   },
                 },
                 datePublished: "2026-06-25",

@@ -7,7 +7,7 @@ import { ArrowRight, PoundSterling, PhoneOff, TrendingUp, AlertTriangle, Clock, 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Missed Calls Cost UK Trades? | Analysis 2026",
-  description: "Data-driven analysis of missed call costs for UK trades. FSB and ONS data. Calculate your exact losses by trade.",
+  description: "Data-driven analysis of missed call costs for UK trades. FSB and ONS data. Calculate your exact revenue loss. Real numbers. Complete 2026 analysis. Plans from £59.",
   keywords: [
     "missed calls cost UK trades",
     "cost of unanswered calls plumber",
@@ -48,7 +48,7 @@ const tradeData = [
 
 const articleSchema = {
   "@context": "https://schema.org",
-  "@type": "Article",
+  "@type": "BlogPosting",
   "headline": "How Much Do Missed Calls Cost UK Trades?",
   "description": "Data-driven analysis of missed call costs for UK tradespeople using FSB and ONS data.",
   "author": {

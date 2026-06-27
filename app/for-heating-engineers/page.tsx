@@ -142,7 +142,7 @@ export default function ForHvacPage() {
     "@type": "LocalBusiness",
     "name": "whoza.ai — AI Call Handling for Heating Engineers",
     "url": "https://whoza.ai/for-heating-engineers",
-    "logo": "https://whoza.ai/logo.webp",
+    "logo": "https://whoza.ai/og-image.webp",
     "image": "https://whoza.ai/og-image.webp",
     "description": "AI voice agents for UK heating engineers — answer missed calls 24/7, capture boiler breakdown, service, and installation enquiries, and deliver leads via WhatsApp.",
     "address": {

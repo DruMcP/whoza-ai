@@ -60,7 +60,7 @@ const videoSchema = {
     "Watch Katie, Whoza's AI call handler, capture a missed enquiry in under 60 seconds. The call is answered instantly, the enquiry lands in WhatsApp, Claire requests a review, and Rex delivers growth insights. Built for UK tradespeople.",
   thumbnailUrl: [
     "https://whoza.ai/og-image.png",
-    "https://whoza.ai/og-image-1200x630.png",
+    "https://whoza.ai/og-image.webp",
   ],
   uploadDate: "2026-05-22T00:00:00Z",
   duration: "PT60S",
@@ -77,7 +77,7 @@ const videoSchema = {
     url: "https://whoza.ai",
     logo: {
       "@type": "ImageObject",
-      url: "https://whoza.ai/logo.png",
+      url: "https://whoza.ai/og-image.webp",
       width: 512,
       height: 512,
     },

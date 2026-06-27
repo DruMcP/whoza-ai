@@ -142,7 +142,7 @@ export default function ForLocksmithsPage() {
     "@type": "LocalBusiness",
     "name": "whoza.ai — AI Call Handling for Locksmiths",
     "url": "https://whoza.ai/for-locksmiths",
-    "logo": "https://whoza.ai/logo.webp",
+    "logo": "https://whoza.ai/og-image.webp",
     "image": "https://whoza.ai/og-image.webp",
     "description": "AI voice agents for UK locksmiths — answer missed calls 24/7, capture emergency lockout, key replacement, and security upgrade enquiries, and deliver leads via WhatsApp.",
     "address": {

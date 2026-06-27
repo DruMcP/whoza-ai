@@ -41,7 +41,7 @@ const organizationSchema = {
   "url": "https://whoza.ai",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://whoza.ai/logo.webp",
+    "url": "https://whoza.ai/og-image.webp",
     "width": 512,
     "height": 512
   },

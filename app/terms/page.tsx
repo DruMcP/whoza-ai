@@ -286,7 +286,7 @@ export default function TermsOfService() {
               <p className="text-white/70">For questions about these Terms:</p>
               <p className="text-white font-medium mt-1">WHOZA AI LTD</p>
               <p className="text-white/70 mt-2">Email: <a href="mailto:dru@whoza.ai" className="text-emerald-400 hover:underline">dru@whoza.ai</a></p>
-              <p className="text-white/70">WhatsApp: <a href="https://wa.me/447463141750" className="text-emerald-400 hover:underline">+44 7463 141750</a></p>
+              <p className="text-white/70">WhatsApp: <a href="tel:+447463141750" className="text-emerald-400 hover:underline">+44 7463 141750</a></p>
               <p className="text-white/70 mt-2">Post: WHOZA AI LTD, 97 Main Street, Tomintoul AB37 9HA, Scotland</p>
             </div>
           </section>

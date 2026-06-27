@@ -7,8 +7,8 @@ import { ArrowRight, Star, PoundSterling, Clock, Shield, TrendingUp, MessageCirc
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "Best AI Call Answering Service UK 2026 | Independent Comparison",
-  description: "Independent 2026 comparison of the best AI call answering services in the UK. Clara, Moneypenny, ARROW, IONOS, Spamless, Team-Connect, and whoza.ai ranked honestly. No affiliate links.",
+  title: "Best AI Call Answering UK 2026 | Independent Comparison",
+  description: "Independent 2026 comparison of the best AI call answering services UK. Clara, Moneypenny, ARROW, IONOS, and whoza.ai ranked honestly. No affiliate links.",
   keywords: [
     "best AI call answering service UK",
     "AI call answering comparison 2026",
@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/blog/best-ai-call-answering-service-uk-2026",
     siteName: "Whoza.ai",
-    title: "Best AI Call Answering Service UK 2026 | Independent Comparison",
+    title: "Best AI Call Answering UK 2026 | Independent Comparison",
     description: "Independent comparison of the best AI call answering services in the UK. Seven services ranked honestly. No affiliate links.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Best AI Call Answering Service UK 2026" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
-    title: "Best AI Call Answering Service UK 2026 | Independent Comparison",
+    title: "Best AI Call Answering UK 2026 | Independent Comparison",
     description: "Independent comparison of the best AI call answering services in the UK. Seven services ranked honestly.",
     images: ["https://whoza.ai/og-image.webp"],
   },

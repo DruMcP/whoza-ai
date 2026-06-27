@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "24/7 Call Answering UK Trades (2026) | Emergency Guide",
   description:
-    "Complete guide to 24/7 call answering for UK trades. How AI handles emergency calls at 2am, weekends, and holidays. Compare costs, features, and setup.",
+    "24/7 call answering guide for UK trades. How AI handles emergency calls day and night. Never miss an urgent job again. Complete 2026 guide. Plans from £59.",
   keywords: [
     "24/7 call answering UK",
     "after hours call answering",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "24/7 Call Answering UK Trades (2026) | Emergency Guide",
     description:
-      "Complete guide to 24/7 call answering for UK trades. How AI handles emergency calls at 2am, weekends, and holidays. Compare costs, features, and setup.",
+      "24/7 call answering guide for UK trades. How AI handles emergency calls day and night. Never miss an urgent job again. Complete 2026 guide. Plans from £59.",
     images: [
       {
         url: "https://whoza.ai/og-image.webp",
@@ -57,10 +57,10 @@ export const metadata: Metadata = {
 
 const articleSchema = {
   "@context": "https://schema.org",
-  "@type": "Article",
+  "@type": "BlogPosting",
   headline: "24/7 Call Answering for UK Trades: Complete Guide (2026)",
   description:
-    "Complete guide to 24/7 call answering for UK trades. How AI handles emergency calls at 2am, weekends, and holidays. Compare costs, features, and setup.",
+    "24/7 call answering guide for UK trades. How AI handles emergency calls day and night. Never miss an urgent job again. Complete 2026 guide. Plans from £59.",
   author: {
     "@type": "Organization",
     name: "Trade Tech Review",
