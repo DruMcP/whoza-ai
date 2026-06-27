@@ -16,7 +16,7 @@ const footerLinks = {
     { label: "Help Centre", href: "/support" },
     { label: "Contact", href: "/contact" },
     { label: "FAQ", href: "/faq" },
-    { label: "WhatsApp Support", href: "https://wa.me/447463141750" },
+    { label: "WhatsApp Support", href: "tel:+447463141750" },
     { label: "Email Support", href: "mailto:support@whoza.ai" },
   ],
   company: [
@@ -47,8 +47,7 @@ const footerLinks = {
     { label: "Missed Call Cost Calculator", href: "/resources/missed-call-cost-calculator" },
     { label: "Trade Business Growth Toolkit", href: "/resources/trade-business-growth-toolkit" },
     { label: "Google Business Profile Checklist", href: "/resources/google-business-profile-checklist-trades" },
-    { label: "Local SEO Checklist", href: "/resources/local-seo-checklist-trades" },
-    { label: "Emergency Call Handling Guide", href: "/blog/emergency-call-handling-guide" },
+    { label: "24/7 Call Answering Guide", href: "/blog/247-call-answering-uk-trades-guide-2026" },
   ],
   legal: [
     { label: "Privacy Policy", href: "/privacy" },
