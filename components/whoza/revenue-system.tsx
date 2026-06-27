@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { FileText, MessageCircle, Star, TrendingUp, ArrowRight, Shield, Calendar } from "lucide-react"
+import { FileText, Star, TrendingUp, ArrowRight, Calendar } from "lucide-react"
 import { useLocale } from "@/lib/locale-context"
 
 const stages = [

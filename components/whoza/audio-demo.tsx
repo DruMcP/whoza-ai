@@ -6,7 +6,7 @@ import { Play, Pause, Volume2, Sparkles, MessageCircle, ChevronRight } from "luc
 
 function trackGA4(event: string, params?: Record<string, unknown>) {
   if (typeof window !== "undefined" && "gtag" in window) {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+     
     ;(window as any).gtag("event", event, params)
   }
 }

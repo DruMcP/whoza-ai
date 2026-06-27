@@ -5,7 +5,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { Metadata } from "next"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
-import { ArrowRight, Calculator, PoundSterling, TrendingUp, AlertTriangle, Phone, ChevronRight , Calendar} from "lucide-react"
+import { ArrowRight, Calculator, PoundSterling, TrendingUp, AlertTriangle, Phone, ChevronRight } from "lucide-react"
 import Link from "next/link"
 
 // NOTE: This page uses "use client" so metadata must be exported from a separate file.

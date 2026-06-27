@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { FileText, Plus, Trash2, Download, ArrowRight, Check } from "lucide-react"
+import { FileText, Plus, Trash2, Download, ArrowRight } from "lucide-react"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import Script from "next/script"

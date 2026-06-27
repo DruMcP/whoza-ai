@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react"
 import { motion } from "framer-motion"
-import { Play, Pause, ArrowRight, Share2, CheckCircle2, Clock, MapPin, Phone, Zap, Star, MessageSquare, TrendingUp } from "lucide-react"
+import { Play, Pause, ArrowRight, Share2, CheckCircle2, Clock, MapPin, Phone, Zap, Star, MessageSquare } from "lucide-react"
 
 export function WatchPageClient() {
   const [isPlaying, setIsPlaying] = useState(false)

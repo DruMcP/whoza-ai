@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Phone, ArrowRight, CheckCircle2, Copy, Mic, MessageSquare, Volume2 } from "lucide-react"
+import { Phone, CheckCircle2, Copy, Mic, MessageSquare, Volume2 } from "lucide-react"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import Script from "next/script"

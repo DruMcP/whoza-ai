@@ -3,7 +3,7 @@
 // v2.1 - Updated priming stats + UK defaults
 import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
-import { Calculator, Phone, PoundSterling, TrendingUp, ArrowRight, AlertTriangle, PhoneMissed, Voicemail, Zap } from "lucide-react"
+import { Calculator, Phone, PoundSterling, TrendingUp, ArrowRight, PhoneMissed, Voicemail, Zap } from "lucide-react"
 import { Slider } from "@/components/ui/slider"
 import { trackCalculatorLead, trackCalculatorUse } from "@/lib/gtag"
 import { WaitlistModal } from "./waitlist-modal"

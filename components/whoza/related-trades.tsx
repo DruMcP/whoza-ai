@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, Wrench, Droplets, Zap, Home, Flame, Bug, TreePine, Paintbrush, Lock, Hammer, Calendar, Shield, Truck, PenTool } from "lucide-react"
+import { ArrowRight, Wrench, Droplets, Zap, Home, Flame, Bug, TreePine, Paintbrush, Lock, Hammer, Calendar, Shield, Truck } from "lucide-react"
 
 // Related trades mapping for each trade page
 const relatedTradesMap: Record<string, Array<{ slug: string; name: string; icon: React.ComponentType<{ className?: string }> }>> = {

@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { ArrowRight, Phone, BarChart3, Star, Eye, CheckCircle2 } from "lucide-react"
+import { ArrowRight, Phone, Star, Eye, CheckCircle2 } from "lucide-react"
 import { WaitlistModal } from "./waitlist-modal"
 import { PilotSpotCounter } from "./pilot-spot-counter"
 

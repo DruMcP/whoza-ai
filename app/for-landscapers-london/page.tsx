@@ -3,7 +3,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
-import { ArrowRight, Phone, TreeDeciduous, Shield, Clock, PoundSterling, CheckCircle2, Star, AlertTriangle, MapPin, TrendingUp, Users, Home } from "lucide-react"
+import { ArrowRight, Phone, TreeDeciduous, Shield, Clock, PoundSterling, CheckCircle2, Star, AlertTriangle, TrendingUp, Users, Home } from "lucide-react"
 import Link from "next/link"
 
 export const metadata: Metadata = {

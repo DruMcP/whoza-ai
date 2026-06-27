@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
-import { FileText, Download, BookOpen, ArrowLeft, Calendar, User, BarChart3, Clock, ExternalLink, CheckCircle } from "lucide-react"
+import { FileText, Download, BookOpen, ArrowLeft, Calendar, User, BarChart3, Clock, CheckCircle } from "lucide-react"
 import Link from "next/link"
 
 export const metadata: Metadata = {

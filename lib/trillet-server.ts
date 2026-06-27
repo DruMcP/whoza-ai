@@ -205,7 +205,7 @@ class TrilletServerService {
     }
 
     // HMAC-SHA256 verification
-    const crypto = require("crypto");
+    import crypto from "crypto";
     const expected = crypto
       .createHmac("sha256", this.webhookSecret)
       .update(payload)

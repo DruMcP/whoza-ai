@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Phone, ClipboardCheck, MessageCircle, Check, Calendar, Star, TrendingUp, ArrowRight, ArrowDown } from "lucide-react"
+import { Phone, ClipboardCheck, MessageCircle, Check, Calendar, Star, TrendingUp, ArrowDown } from "lucide-react"
 
 const phases = [
   {

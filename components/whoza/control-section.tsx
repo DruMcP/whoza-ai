@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Shield, Check, X, Phone, Clock, FileText, Bell, MessageCircle, Mail, Smartphone, CheckCircle2 } from "lucide-react"
+import { Shield, Check, Phone, Clock, FileText, Bell, MessageCircle, Mail, Smartphone } from "lucide-react"
 
 const controlFeatures = [
   { icon: Check, text: "Accept or decline every enquiry instantly", color: "text-[var(--rex-green)]" },
