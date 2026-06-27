@@ -283,15 +283,6 @@ export default function BestAICallHandlerPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://whoza.ai/" },
-          { "@type": "ListItem", "position": 2, "name": "Best AI Call Handler UK Trades", "item": "https://whoza.ai/best-ai-call-handler-uk-trades" }
-        ]
-      })}} />
-
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": faqs.map(f => ({
           "@type": "Question",

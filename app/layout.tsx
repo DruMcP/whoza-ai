@@ -46,7 +46,6 @@ export const metadata: Metadata = {
     url: 'https://whoza.ai',
     siteName: 'Whoza.ai',
     title: 'AI Call Answering for UK Trades | Whoza.ai',
-    description: 'AI voice agents that answer your trade business calls 24/7, built in Scotland. Never miss a job again.',
     images: [
       {
         url: 'https://whoza.ai/og-image.webp',
@@ -61,7 +60,6 @@ export const metadata: Metadata = {
     site: '@whozaai',
     creator: '@whozaai',
     title: 'AI Call Answering for UK Trades | Whoza.ai',
-    description: 'AI voice agents that answer your trade business calls 24/7, built in Scotland. Never miss a job again.',
     images: ['https://whoza.ai/og-image.webp'],
   },
   alternates: {
