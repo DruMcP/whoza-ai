@@ -13,7 +13,7 @@ import { RelatedTrades } from "@/components/whoza/related-trades"
 
 export const metadata: Metadata = {
   title: "AI Call Answering for Joiners UK — 24/7 Bespoke Joinery Call Capture",
-  description: "AI call answering for UK joiners and bespoke joinery services. Katie captures 24/7 enquiries for kitchens, staircases and fitted furniture. WhatsApp alerts instantly. Free trial.",
+  description: "AI call answering for UK joiners. Katie captures 24/7 enquiries for kitchens, staircases and fitted furniture. WhatsApp alerts instantly. Plans from £59.",
   alternates: {
     canonical: "https://whoza.ai/for-joiners",
   },
@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/for-joiners",
     siteName: "Whoza.ai",
     title: "AI Call Answering for Joiners UK — 24/7 Bespoke Joinery Call Capture",
-    description: "AI call answering for UK joiners and bespoke joinery services. Katie captures 24/7 enquiries for kitchens, staircases and fitted furniture. WhatsApp alerts instantly. Free trial.",
+    description: "AI call answering for UK joiners. Katie captures 24/7 enquiries for kitchens, staircases and fitted furniture. WhatsApp alerts instantly. Plans from £59.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Joiners & Carpenters" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "AI Call Answering for Joiners UK — 24/7 Bespoke Joinery Call Capture",
-    description: "AI call answering for UK joiners and bespoke joinery services. Katie captures 24/7 enquiries for kitchens, staircases and fitted furniture. WhatsApp alerts instantly. Free trial.",
+    description: "AI call answering for UK joiners. Katie captures 24/7 enquiries for kitchens, staircases and fitted furniture. WhatsApp alerts instantly. Plans from £59.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {

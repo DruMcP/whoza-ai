@@ -7,7 +7,7 @@ import { ArrowRight, Phone, HardHat, Shield, Clock, PoundSterling, CheckCircle2,
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "AI Call Answering for Heating Engineers in Manchester | whoza.ai",
+  title: "AI Call Answering Heating Engineers Manchester | whoza.ai",
   description: "Stop losing heating engineer jobs to missed calls in Manchester. Katie answers 24/7, captures boiler and heating enquiries via WhatsApp. Plans from £59/month.",
   alternates: {
     canonical: "https://whoza.ai/for-heating-engineers-manchester",
@@ -16,15 +16,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     url: "https://whoza.ai/for-heating-engineers-manchester",
-    siteName: "Whoza.ai",
-    title: "AI Call Answering for Heating Engineers in Manchester | whoza.ai",
+    title: "AI Call Answering Heating Engineers Manchester | whoza.ai",
     description: "Stop losing heating engineer jobs to missed calls in Manchester. Katie answers 24/7, captures boiler and heating enquiries via WhatsApp. Plans from £59/month.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Heating Engineers in Manchester" }],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
-    title: "AI Call Answering for Heating Engineers in Manchester | whoza.ai",
+    title: "AI Call Answering Heating Engineers Manchester | whoza.ai",
     description: "Stop losing heating engineer jobs to missed calls in Manchester. Katie answers 24/7, captures boiler and heating enquiries via WhatsApp. Plans from £59/month.",
     images: ["https://whoza.ai/og-image.webp"],
   },

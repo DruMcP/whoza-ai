@@ -7,7 +7,7 @@ import { ArrowRight, Phone, Paintbrush, Shield, Clock, PoundSterling, CheckCircl
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "AI Call Answering for Painters & Decorators in Edinburgh | whoza.ai",
+  title: "AI Call Answering Painters Edinburgh | whoza.ai",
   description: "Stop losing painter-decorator jobs to missed calls in Edinburgh. Katie answers 24/7, captures painting and renovation enquiries via WhatsApp. Plans from £59.",
   alternates: {
     canonical: "https://whoza.ai/for-painters-decorators-edinburgh",
@@ -16,15 +16,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     url: "https://whoza.ai/for-painters-decorators-edinburgh",
-    siteName: "Whoza.ai",
-    title: "AI Call Answering for Painters & Decorators in Edinburgh | whoza.ai",
+    title: "AI Call Answering Painters Edinburgh | whoza.ai",
     description: "Stop losing painter-decorator jobs to missed calls in Edinburgh. Katie answers 24/7, captures painting and renovation enquiries via WhatsApp. Plans from £59.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Painters & Decorators in Edinburgh" }],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
-    title: "AI Call Answering for Painters & Decorators in Edinburgh | whoza.ai",
+    title: "AI Call Answering Painters Edinburgh | whoza.ai",
     description: "Stop losing painter-decorator jobs to missed calls in Edinburgh. Katie answers 24/7, captures painting and renovation enquiries via WhatsApp. Plans from £59.",
     images: ["https://whoza.ai/og-image.webp"],
   },

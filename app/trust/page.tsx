@@ -7,9 +7,25 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Trust & Security | whoza.ai",
-  description: "whoza.ai is ICO-registered, UK GDPR compliant, and SOC 2 Type II certified. Your data and your customers' data are protected.",
+  description: "whoza.ai is ICO-registered, UK GDPR compliant, and SOC 2 Type II certified. Your data and your customers' data are protected. Plans from £59. Read now.",
   alternates: {
     canonical: "https://whoza.ai/trust",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: "https://whoza.ai/trust",
+    siteName: "Whoza.ai",
+    title: "Trust & Security | whoza.ai",
+    description: "whoza.ai is ICO-registered, UK GDPR compliant, and SOC 2 Type II certified. Your data and your customers' data are protected. Plans from £59. Read now.",
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Trust & Security | whoza.ai" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@whozaai",
+    title: "Trust & Security | whoza.ai",
+    description: "whoza.ai is ICO-registered, UK GDPR compliant, and SOC 2 Type II certified. Your data and your customers' data are protected. Plans from £59. Read now.",
+    images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {
     index: true,
@@ -62,18 +78,6 @@ export default function TrustPage() {
       ]} />
 
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        {/* Banner */}
-        <div className="mb-10 bg-amber-500/10 border border-amber-500/20 rounded-xl p-6 flex items-start gap-4">
-          <RefreshCw className="w-6 h-6 text-amber-400 flex-shrink-0 mt-0.5" />
-          <div>
-            <p className="text-amber-300 font-semibold text-lg">Content Update in Progress</p>
-            <p className="text-amber-200/70 mt-1">
-              We're refreshing this page for our new AI voice agent platform. Check back soon or{" "}
-              <Link href="/" className="underline hover:text-amber-300">explore our homepage</Link>.
-            </p>
-          </div>
-        </div>
-
         <div className="mb-12">
           <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Shield className="w-4 h-4" />

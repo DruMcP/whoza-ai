@@ -13,7 +13,7 @@ import { RelatedTrades } from "@/components/whoza/related-trades"
 
 export const metadata: Metadata = {
   title: "AI Call Answering for Plasterers UK — Never Miss a Job",
-  description: "AI call answering for UK plasterers. Katie captures 24/7 skimming, rendering and dry lining enquiries. WhatsApp alerts in 3 seconds. Never miss a plastering job. Free trial.",
+  description: "AI call answering for UK plasterers. Katie captures 24/7 skimming, rendering and dry lining enquiries. WhatsApp alerts instantly. Plans from £59. Free trial.",
   alternates: {
     canonical: "https://whoza.ai/for-plasterers",
   },
@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/for-plasterers",
     siteName: "Whoza.ai",
     title: "AI Call Answering for Plasterers UK — Never Miss a Job",
-    description: "AI call answering for UK plasterers. Katie captures 24/7 skimming, rendering and dry lining enquiries. WhatsApp alerts in 3 seconds. Never miss a plastering job. Free trial.",
+    description: "AI call answering for UK plasterers. Katie captures 24/7 skimming, rendering and dry lining enquiries. WhatsApp alerts instantly. Plans from £59. Free trial.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Plasterers" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "AI Call Answering for Plasterers UK — Never Miss a Job",
-    description: "AI call answering for UK plasterers. Katie captures 24/7 skimming, rendering and dry lining enquiries. WhatsApp alerts in 3 seconds. Never miss a plastering job. Free trial.",
+    description: "AI call answering for UK plasterers. Katie captures 24/7 skimming, rendering and dry lining enquiries. WhatsApp alerts instantly. Plans from £59. Free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {

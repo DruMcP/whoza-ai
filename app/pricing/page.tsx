@@ -11,21 +11,21 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Whoza.ai Pricing — Plans from £59/month | AI Voice",
-  description: "Choose from 4 plans: Starter £59, Growth £125, Pro £230, Scale £399/month. All include unlimited calls, WhatsApp delivery and 24/7 answering. 7-day free trial.",
+  description: "Choose from 4 plans: Starter £59, Growth £125, Pro £230, Scale £399. All include unlimited calls, WhatsApp delivery and 24/7 answering. 7-day free trial.",
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "https://whoza.ai/pricing",
     siteName: "Whoza.ai",
     title: "Whoza.ai Pricing — Plans from £59/month | AI Voice",
-    description: "Choose from 4 plans: Starter £59, Growth £125, Pro £230, Scale £399/month. All include unlimited calls, WhatsApp delivery and 24/7 answering. 7-day free trial.",
+    description: "Choose from 4 plans: Starter £59, Growth £125, Pro £230, Scale £399. All include unlimited calls, WhatsApp delivery and 24/7 answering. 7-day free trial.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Whoza.ai Pricing" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "Whoza.ai Pricing — Plans from £59/month | AI Voice",
-    description: "Choose from 4 plans: Starter £59, Growth £125, Pro £230, Scale £399/month. All include unlimited calls, WhatsApp delivery and 24/7 answering. 7-day free trial.",
+    description: "Choose from 4 plans: Starter £59, Growth £125, Pro £230, Scale £399. All include unlimited calls, WhatsApp delivery and 24/7 answering. 7-day free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {

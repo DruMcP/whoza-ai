@@ -93,7 +93,7 @@ export const locations: LocationData[] = [
     region: "England", 
     trades: ["electricians", "roofers", "landscapers"],
     population: "2.3M",
-    description: "Leeds has 8,500+ trade businesses serving 350K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month. Try free.",
+    description: "Leeds has 8,500+ trade businesses serving 350K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59. Try free.",
     challenges: [
       "Victorian wiring in older terraces needs specialist electricians",
       "Yorkshire weather puts constant demand on roofers",
