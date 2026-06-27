@@ -15,7 +15,11 @@ next.user-config.*
 
 # Common ignores
 node_modules
-.next/
+# Netlify deploy — cache excluded via netlify.toml
+.next/cache/
+.env.local
+.env.staging
+.env.productioncache/
 .DS_Store
 .vercel
 

@@ -1,0 +1,749 @@
+{
+  "version": 1,
+  "config": {
+    "env": {},
+    "webpack": null,
+    "eslint": {
+      "ignoreDuringBuilds": false
+    },
+    "typescript": {
+      "ignoreBuildErrors": true,
+      "tsconfigPath": "tsconfig.json"
+    },
+    "typedRoutes": false,
+    "distDir": ".next",
+    "cleanDistDir": true,
+    "assetPrefix": "",
+    "cacheMaxMemorySize": 52428800,
+    "configOrigin": "next.config.mjs",
+    "useFileSystemPublicRoutes": true,
+    "generateEtags": true,
+    "pageExtensions": [
+      "tsx",
+      "ts",
+      "jsx",
+      "js"
+    ],
+    "poweredByHeader": true,
+    "compress": true,
+    "images": {
+      "deviceSizes": [
+        640,
+        750,
+        828,
+        1080,
+        1200,
+        1920,
+        2048,
+        3840
+      ],
+      "imageSizes": [
+        16,
+        32,
+        48,
+        64,
+        96,
+        128,
+        256,
+        384
+      ],
+      "path": "/_next/image",
+      "loader": "default",
+      "loaderFile": "",
+      "domains": [],
+      "disableStaticImages": false,
+      "minimumCacheTTL": 60,
+      "formats": [
+        "image/webp",
+        "image/avif"
+      ],
+      "maximumResponseBody": 50000000,
+      "dangerouslyAllowSVG": false,
+      "contentSecurityPolicy": "script-src 'none'; frame-src 'none'; sandbox;",
+      "contentDispositionType": "attachment",
+      "remotePatterns": [],
+      "unoptimized": false
+    },
+    "devIndicators": {
+      "position": "bottom-left"
+    },
+    "onDemandEntries": {
+      "maxInactiveAge": 60000,
+      "pagesBufferLength": 5
+    },
+    "amp": {
+      "canonicalBase": ""
+    },
+    "basePath": "",
+    "sassOptions": {},
+    "trailingSlash": false,
+    "i18n": null,
+    "productionBrowserSourceMaps": false,
+    "excludeDefaultMomentLocales": true,
+    "serverRuntimeConfig": {},
+    "publicRuntimeConfig": {},
+    "reactProductionProfiling": false,
+    "reactStrictMode": null,
+    "reactMaxHeadersLength": 6000,
+    "httpAgentOptions": {
+      "keepAlive": true
+    },
+    "logging": {},
+    "compiler": {},
+    "expireTime": 31536000,
+    "staticPageGenerationTimeout": 60,
+    "modularizeImports": {
+      "@mui/icons-material": {
+        "transform": "@mui/icons-material/{{member}}"
+      },
+      "lodash": {
+        "transform": "lodash/{{member}}"
+      }
+    },
+    "outputFileTracingRoot": "/root/.openclaw/workspace",
+    "allowedDevOrigins": [
+      "vm-6ndpnuoz41hduvbfu6ks15wb.vusercontent.net",
+      "*.vusercontent.net"
+    ],
+    "experimental": {
+      "useSkewCookie": false,
+      "cacheLife": {
+        "default": {
+          "stale": 300,
+          "revalidate": 900,
+          "expire": 4294967294
+        },
+        "seconds": {
+          "stale": 30,
+          "revalidate": 1,
+          "expire": 60
+        },
+        "minutes": {
+          "stale": 300,
+          "revalidate": 60,
+          "expire": 3600
+        },
+        "hours": {
+          "stale": 300,
+          "revalidate": 3600,
+          "expire": 86400
+        },
+        "days": {
+          "stale": 300,
+          "revalidate": 86400,
+          "expire": 604800
+        },
+        "weeks": {
+          "stale": 300,
+          "revalidate": 604800,
+          "expire": 2592000
+        },
+        "max": {
+          "stale": 300,
+          "revalidate": 2592000,
+          "expire": 4294967294
+        }
+      },
+      "cacheHandlers": {},
+      "cssChunking": true,
+      "multiZoneDraftMode": false,
+      "appNavFailHandling": false,
+      "prerenderEarlyExit": true,
+      "serverMinification": true,
+      "serverSourceMaps": false,
+      "linkNoTouchStart": false,
+      "caseSensitiveRoutes": false,
+      "clientSegmentCache": false,
+      "clientParamParsing": false,
+      "dynamicOnHover": false,
+      "preloadEntriesOnStart": true,
+      "clientRouterFilter": true,
+      "clientRouterFilterRedirects": false,
+      "fetchCacheKeyPrefix": "",
+      "middlewarePrefetch": "flexible",
+      "optimisticClientCache": true,
+      "manualClientBasePath": false,
+      "cpus": 1,
+      "memoryBasedWorkersCount": false,
+      "imgOptConcurrency": null,
+      "imgOptTimeoutInSeconds": 7,
+      "imgOptMaxInputPixels": 268402689,
+      "imgOptSequentialRead": null,
+      "imgOptSkipMetadata": null,
+      "isrFlushToDisk": true,
+      "workerThreads": false,
+      "optimizeCss": false,
+      "nextScriptWorkers": false,
+      "scrollRestoration": false,
+      "externalDir": false,
+      "disableOptimizedLoading": false,
+      "gzipSize": true,
+      "craCompat": false,
+      "esmExternals": true,
+      "fullySpecified": false,
+      "swcTraceProfiling": false,
+      "forceSwcTransforms": false,
+      "largePageDataBytes": 128000,
+      "typedEnv": false,
+      "parallelServerCompiles": false,
+      "parallelServerBuildTraces": false,
+      "ppr": false,
+      "authInterrupts": false,
+      "webpackMemoryOptimizations": false,
+      "optimizeServerReact": true,
+      "viewTransition": false,
+      "routerBFCache": false,
+      "removeUncaughtErrorAndRejectionListeners": false,
+      "validateRSCRequestHeaders": false,
+      "staleTimes": {
+        "dynamic": 0,
+        "static": 300
+      },
+      "serverComponentsHmrCache": true,
+      "staticGenerationMaxConcurrency": 8,
+      "staticGenerationMinPagesPerWorker": 25,
+      "cacheComponents": false,
+      "inlineCss": false,
+      "useCache": false,
+      "globalNotFound": false,
+      "devtoolSegmentExplorer": true,
+      "browserDebugInfoInTerminal": false,
+      "optimizeRouterScrolling": false,
+      "middlewareClientMaxBodySize": 10485760,
+      "optimizePackageImports": [
+        "lucide-react",
+        "date-fns",
+        "lodash-es",
+        "ramda",
+        "antd",
+        "react-bootstrap",
+        "ahooks",
+        "@ant-design/icons",
+        "@headlessui/react",
+        "@headlessui-float/react",
+        "@heroicons/react/20/solid",
+        "@heroicons/react/24/solid",
+        "@heroicons/react/24/outline",
+        "@visx/visx",
+        "@tremor/react",
+        "rxjs",
+        "@mui/material",
+        "@mui/icons-material",
+        "recharts",
+        "react-use",
+        "effect",
+        "@effect/schema",
+        "@effect/platform",
+        "@effect/platform-node",
+        "@effect/platform-browser",
+        "@effect/platform-bun",
+        "@effect/sql",
+        "@effect/sql-mssql",
+        "@effect/sql-mysql2",
+        "@effect/sql-pg",
+        "@effect/sql-sqlite-node",
+        "@effect/sql-sqlite-bun",
+        "@effect/sql-sqlite-wasm",
+        "@effect/sql-sqlite-react-native",
+        "@effect/rpc",
+        "@effect/rpc-http",
+        "@effect/typeclass",
+        "@effect/experimental",
+        "@effect/opentelemetry",
+        "@material-ui/core",
+        "@material-ui/icons",
+        "@tabler/icons-react",
+        "mui-core",
+        "react-icons/ai",
+        "react-icons/bi",
+        "react-icons/bs",
+        "react-icons/cg",
+        "react-icons/ci",
+        "react-icons/di",
+        "react-icons/fa",
+        "react-icons/fa6",
+        "react-icons/fc",
+        "react-icons/fi",
+        "react-icons/gi",
+        "react-icons/go",
+        "react-icons/gr",
+        "react-icons/hi",
+        "react-icons/hi2",
+        "react-icons/im",
+        "react-icons/io",
+        "react-icons/io5",
+        "react-icons/lia",
+        "react-icons/lib",
+        "react-icons/lu",
+        "react-icons/md",
+        "react-icons/pi",
+        "react-icons/ri",
+        "react-icons/rx",
+        "react-icons/si",
+        "react-icons/sl",
+        "react-icons/tb",
+        "react-icons/tfi",
+        "react-icons/ti",
+        "react-icons/vsc",
+        "react-icons/wi"
+      ],
+      "trustHostHeader": false,
+      "isExperimentalCompile": false
+    },
+    "htmlLimitedBots": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
+    "bundlePagesRouterDependencies": false,
+    "configFileName": "next.config.mjs",
+    "turbopack": {
+      "root": "/root/.openclaw/workspace"
+    },
+    "_originalRewrites": {
+      "beforeFiles": [],
+      "afterFiles": [
+        {
+          "source": "/ai.txt",
+          "destination": "/ai.txt"
+        },
+        {
+          "source": "/llms.txt",
+          "destination": "/llms.txt"
+        },
+        {
+          "source": "/llms-full.txt",
+          "destination": "/llms-full.txt"
+        },
+        {
+          "source": "/robots.txt",
+          "destination": "/robots.txt"
+        }
+      ],
+      "fallback": []
+    },
+    "_originalRedirects": [
+      {
+        "source": "/research/ai-voice-agents-customer-satisfaction-2026",
+        "destination": "/research/caller-experience-revolution-ai-voice-agents-2026",
+        "permanent": true
+      },
+      {
+        "source": "/research/voice-agent-technology-state-of-the-art-2026",
+        "destination": "/research/voice-agent-technology-state-of-art-2026",
+        "permanent": true
+      },
+      {
+        "source": "/blog/5-signs-your-trade-business-needs-an-ai-call-handler",
+        "destination": "/blog/ai-receptionist-vs-human-receptionist-which-is-right-for-your-trade-business",
+        "permanent": true
+      },
+      {
+        "source": "/whoza-vs-answer",
+        "destination": "/",
+        "permanent": true
+      },
+      {
+        "source": "/whoza-vs-yourbusinessnumber",
+        "destination": "/",
+        "permanent": true
+      },
+      {
+        "source": "/for-hvac",
+        "destination": "/for-heating-engineers",
+        "permanent": true
+      },
+      {
+        "source": "/plumber",
+        "destination": "/for-plumbers",
+        "permanent": true
+      },
+      {
+        "source": "/electrician",
+        "destination": "/for-electricians",
+        "permanent": true
+      },
+      {
+        "source": "/roofer",
+        "destination": "/for-roofers",
+        "permanent": true
+      },
+      {
+        "source": "/locksmith",
+        "destination": "/for-locksmiths",
+        "permanent": true
+      },
+      {
+        "source": "/drainage",
+        "destination": "/for-drainage",
+        "permanent": true
+      },
+      {
+        "source": "/landscaper",
+        "destination": "/for-landscapers",
+        "permanent": true
+      },
+      {
+        "source": "/pest-control",
+        "destination": "/for-pest-control",
+        "permanent": true
+      },
+      {
+        "source": "/cleaner",
+        "destination": "/for-cleaners",
+        "permanent": true
+      },
+      {
+        "source": "/heating-engineer",
+        "destination": "/for-heating-engineers",
+        "permanent": true
+      },
+      {
+        "source": "/builder",
+        "destination": "/for-builders",
+        "permanent": true
+      },
+      {
+        "source": "/sheffield",
+        "destination": "/",
+        "permanent": true
+      },
+      {
+        "source": "/newcastle",
+        "destination": "/",
+        "permanent": true
+      },
+      {
+        "source": "/cardiff",
+        "destination": "/",
+        "permanent": true
+      },
+      {
+        "source": "/nottingham",
+        "destination": "/",
+        "permanent": true
+      },
+      {
+        "source": "/coventry",
+        "destination": "/",
+        "permanent": true
+      },
+      {
+        "source": "/bradford",
+        "destination": "/",
+        "permanent": true
+      },
+      {
+        "source": "/belfast",
+        "destination": "/",
+        "permanent": true
+      },
+      {
+        "source": "/derby",
+        "destination": "/",
+        "permanent": true
+      },
+      {
+        "source": "/plumber-london",
+        "destination": "/london",
+        "permanent": true
+      },
+      {
+        "source": "/electrician-london",
+        "destination": "/london",
+        "permanent": true
+      },
+      {
+        "source": "/roofer-london",
+        "destination": "/london",
+        "permanent": true
+      },
+      {
+        "source": "/:path+/",
+        "destination": "/:path+",
+        "permanent": true
+      },
+      {
+        "source": "/blog/hvac-emergency-call-handling",
+        "destination": "/blog/heating-engineer-emergency-call-handling",
+        "permanent": true
+      },
+      {
+        "source": "/blog/case-study-how-a-london-electrician-recovered-12k-month-with-ai-call-handling",
+        "destination": "/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky",
+        "permanent": true
+      },
+      {
+        "source": "/blog/how-katie-answers-captures-and-delivers-enquiries-in-3-seconds",
+        "destination": "/blog/how-ai-call-handlers-are-changing-the-game-for-uk-trades-2026",
+        "permanent": true
+      },
+      {
+        "source": "/blog/how-to-never-miss-an-emergency-call-again-plumbers-electricians-roofers",
+        "destination": "/blog/i-missed-5-emergency-calls-a-week-then-i-tried-ai-gary-the-plumber",
+        "permanent": true
+      },
+      {
+        "source": "/blog/how-whatsapp-delivery-changes-everything-for-tradespeople",
+        "destination": "/blog/how-ai-call-handlers-are-changing-the-game-for-uk-trades-2026",
+        "permanent": true
+      },
+      {
+        "source": "/blog/how-whoza-ai-works-with-your-existing-phone-number",
+        "destination": "/blog/how-ai-call-handlers-are-changing-the-game-for-uk-trades-2026",
+        "permanent": true
+      },
+      {
+        "source": "/blog/how-ai-call-handling-works-with-your-existing-phone-number",
+        "destination": "/blog/how-ai-call-handlers-are-changing-the-game-for-uk-trades-2026",
+        "permanent": true
+      },
+      {
+        "source": "/blog/moneypenny-vs-whoza-ai-which-receptionist-service-is-right-for-trades",
+        "destination": "/blog/ai-receptionist-vs-human-receptionist-which-is-right-for-your-trade-business",
+        "permanent": true
+      },
+      {
+        "source": "/blog/roi-calculator-how-much-could-an-ai-call-handler-save-your-trade-business",
+        "destination": "/blog/how-much-do-missed-calls-cost-uk-trades",
+        "permanent": true
+      },
+      {
+        "source": "/blog/missed-calls-missed-money",
+        "destination": "/blog/missed-calls-cost-uk-trades",
+        "permanent": true
+      },
+      {
+        "source": "/blog/the-7-day-free-trial-what-to-expect-when-you-try-katie",
+        "destination": "/blog/missed-calls-missed-money-the-real-cost-for-tradespeople",
+        "permanent": true
+      },
+      {
+        "source": "/blog/the-truth-about-ai-voice-agents-what-google-reviews-say",
+        "destination": "/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026",
+        "permanent": true
+      },
+      {
+        "source": "/blog/why-tradespeople-need-a-revenue-team-not-just-a-virtual-receptionist",
+        "destination": "/blog/ai-receptionist-vs-human-receptionist-which-is-right-for-your-trade-business",
+        "permanent": true
+      },
+      {
+        "source": "/blog/what-is-ai-visibility-and-why-does-it-matter-for-your-trade-business",
+        "destination": "/blog/local-seo-trades-complete-guide",
+        "permanent": true
+      },
+      {
+        "source": "/blog/what-is-ai-visibility-uk-tradespeople-2026",
+        "destination": "/blog/local-seo-trades-complete-guide",
+        "permanent": true
+      },
+      {
+        "source": "/blog/how-uk-tradespeople-get-found-ai-search-2026",
+        "destination": "/blog/local-seo-trades-complete-guide",
+        "permanent": true
+      },
+      {
+        "source": "/blog/why-bing-matters-for-ai-search-2026",
+        "destination": "/blog/local-seo-trades-complete-guide",
+        "permanent": true
+      },
+      {
+        "source": "/blog/why-bing-matters-for-ai-search-the-perplexity-connection",
+        "destination": "/blog/local-seo-trades-complete-guide",
+        "permanent": true
+      },
+      {
+        "source": "/blog/best-practices-tradespeople-london-local-ai-visibility-guide",
+        "destination": "/blog/local-seo-trades-complete-guide",
+        "permanent": true
+      },
+      {
+        "source": "/blog/ai-search-optimization-beginners-guide-get-found-chatgpt-perplexity-2026",
+        "destination": "/blog/local-seo-trades-complete-guide",
+        "permanent": true
+      },
+      {
+        "source": "/blog/the-ultimate-guide-to-ai-search-optimization-for-tradespeople",
+        "destination": "/blog/local-seo-trades-complete-guide",
+        "permanent": true
+      },
+      {
+        "source": "/blog/top-10-ai-visibility-strategies-uk-tradespeople-2026",
+        "destination": "/blog/local-seo-trades-complete-guide",
+        "permanent": true
+      },
+      {
+        "source": "/blog/manchester-vs-birmingham-local-seo-strategies-2026",
+        "destination": "/blog/local-seo-trades-complete-guide",
+        "permanent": true
+      },
+      {
+        "source": "/blog/how-ai-search-engines-choose-which-local-businesses-to-recommend",
+        "destination": "/blog/local-seo-trades-complete-guide",
+        "permanent": true
+      },
+      {
+        "source": "/blog/how-ai-search-engines-rank-local-tradespeople-aeo-geo-guide-2026",
+        "destination": "/blog/local-seo-trades-complete-guide",
+        "permanent": true
+      },
+      {
+        "source": "/blog/the-uk-trades-business-playbook-for-ai-search-visibility-in-2026",
+        "destination": "/blog/how-to-grow-trade-business-uk-guide",
+        "permanent": true
+      },
+      {
+        "source": "/blog/uk-trades-business-playbook-ai-search-visibility-2026",
+        "destination": "/blog/how-to-grow-trade-business-uk-guide",
+        "permanent": true
+      },
+      {
+        "source": "/blog/how-reviews-influence-ai-search-recommendations-tradespeople-2026",
+        "destination": "/blog/how-to-get-more-google-reviews-trades",
+        "permanent": true
+      },
+      {
+        "source": "/blog/how-to-create-faq-page-ai-can-find-2026",
+        "destination": "/blog/ultimate-faq-tradespeople",
+        "permanent": true
+      },
+      {
+        "source": "/blog/how-to-create-an-faq-page-that-ai-can-find-and-reference",
+        "destination": "/blog/ultimate-faq-tradespeople",
+        "permanent": true
+      },
+      {
+        "source": "/blog/how-ai-search-engines-choose-plumber-recommendation-manchester",
+        "destination": "/blog/how-to-get-more-plumbing-customers",
+        "permanent": true
+      },
+      {
+        "source": "/blog/electricians-guide-to-google-ai-overviews-how-to-get-featured",
+        "destination": "/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky",
+        "permanent": true
+      },
+      {
+        "source": "/blog/how-uk-tradespeople-can-get-recommended-by-chatgpt-in-2026",
+        "destination": "/blog/local-seo-trades-complete-guide",
+        "permanent": true
+      },
+      {
+        "source": "/blog/roofers-checklist-10-steps-to-ai-visibility-2026",
+        "destination": "/blog/roofing-lead-generation-guide",
+        "permanent": true
+      },
+      {
+        "source": "/blog/electricians-guide-to-google-ai-overviews-2026",
+        "destination": "/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky",
+        "permanent": true
+      },
+      {
+        "source": "/blog/how-plumbers-can-get-found-in-chatgpt-a-step-by-step-guide",
+        "destination": "/blog/how-to-get-more-plumbing-customers",
+        "permanent": true
+      },
+      {
+        "source": "/blog/how-plumbers-can-get-found-in-chatgpt-2026",
+        "destination": "/blog/how-to-get-more-plumbing-customers",
+        "permanent": true
+      },
+      {
+        "source": "/ai-call-answering-plumbers",
+        "destination": "/for-plumbers",
+        "permanent": true
+      },
+      {
+        "source": "/ai-call-answering-electricians",
+        "destination": "/for-electricians",
+        "permanent": true
+      },
+      {
+        "source": "/ai-call-answering-builders",
+        "destination": "/for-builders",
+        "permanent": true
+      },
+      {
+        "source": "/ai-call-answering-roofers",
+        "destination": "/for-roofers",
+        "permanent": true
+      },
+      {
+        "source": "/ai-call-answering-locksmiths",
+        "destination": "/for-locksmiths",
+        "permanent": true
+      },
+      {
+        "source": "/ai-call-answering-heating-engineers",
+        "destination": "/for-heating-engineers",
+        "permanent": true
+      },
+      {
+        "source": "/ai-call-answering-landscapers",
+        "destination": "/for-landscapers",
+        "permanent": true
+      },
+      {
+        "source": "/ai-call-answering-pest-control",
+        "destination": "/for-pest-control",
+        "permanent": true
+      },
+      {
+        "source": "/ai-call-answering-cleaners",
+        "destination": "/for-cleaners",
+        "permanent": true
+      },
+      {
+        "source": "/sign-in",
+        "destination": "/",
+        "permanent": true
+      },
+      {
+        "source": "/blog/roofers-checklist",
+        "destination": "/blog/roofing-lead-generation-guide",
+        "permanent": true
+      },
+      {
+        "source": "/blog/electricians-guide",
+        "destination": "/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky",
+        "permanent": true
+      },
+      {
+        "source": "/trade/landscapers",
+        "destination": "/for-landscapers",
+        "permanent": true
+      },
+      {
+        "source": "/trade/pest-control",
+        "destination": "/for-pest-control",
+        "permanent": true
+      },
+      {
+        "source": "/trade/cleaners",
+        "destination": "/for-cleaners",
+        "permanent": true
+      }
+    ]
+  },
+  "appDir": "/root/.openclaw/workspace/whoza-ai-v0",
+  "relativeAppDir": "whoza-ai-v0",
+  "files": [
+    ".next/routes-manifest.json",
+    ".next/server/pages-manifest.json",
+    ".next/build-manifest.json",
+    ".next/prerender-manifest.json",
+    ".next/server/functions-config-manifest.json",
+    ".next/server/middleware-manifest.json",
+    ".next/server/middleware-build-manifest.js",
+    ".next/server/middleware-react-loadable-manifest.js",
+    ".next/react-loadable-manifest.json",
+    ".next/server/app-paths-manifest.json",
+    ".next/app-path-routes-manifest.json",
+    ".next/app-build-manifest.json",
+    ".next/server/server-reference-manifest.js",
+    ".next/server/server-reference-manifest.json",
+    ".next/BUILD_ID",
+    ".next/server/next-font-manifest.js",
+    ".next/server/next-font-manifest.json",
+    ".next/required-server-files.json"
+  ],
+  "ignore": [
+    "node_modules/next/dist/compiled/@ampproject/toolbox-optimizer/**/*"
+  ]
+}
