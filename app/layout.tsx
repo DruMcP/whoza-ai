@@ -77,8 +77,8 @@ export const metadata: Metadata = {
   other: {
     'geo.region': 'GB',
     'geo.placename': 'United Kingdom',
-    'geo.position': '51.5074;-0.1278',
-    'ICBM': '51.5074, -0.1278',
+    'geo.position': '56.3950;-3.4306',
+    'ICBM': '56.3950, -3.4306',
   },
 }
 

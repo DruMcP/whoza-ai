@@ -210,12 +210,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <div className="min-h-screen bg-[var(--navy-900)] text-white">
       <Header />
-      <script
-        id="blog-post-article-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      {enhancedArticleSchema && (
+      {/* Only render enhanced schema for Gary post; regular articleSchema is embedded in enhanced */}
+      {!isGaryPost && (
+        <script
+          id="blog-post-article-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        />
+      )}
+      {isGaryPost && enhancedArticleSchema && (
         <script
           id="blog-post-enhanced-article-schema"
           type="application/ld+json"

@@ -7,7 +7,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "How Katie Works — AI Call Answering | whoza.ai",
-  description: "Discover how whoza.ai's AI voice agent Katie answers calls, qualifies leads, and books jobs for UK tradespeople — 24/7. Setup in 30 minutes.",
+  description: "Discover how whoza.ai's AI voice agent Katie answers calls, qualifies leads, and books jobs for UK tradespeople — 24/7. Setup in 30 minutes. Plans from £59.",
   alternates: {
     canonical: "https://whoza.ai/how-it-works",
   },
@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/how-it-works",
     siteName: "Whoza.ai",
     title: "How It Works | whoza.ai",
-    description: "Discover how whoza.ai's AI voice agent Katie answers calls, qualifies leads, and books jobs for UK tradespeople — 24/7.",
+    description: "Discover how whoza.ai's AI voice agent Katie answers calls, qualifies leads, and books jobs for UK tradespeople — 24/7. Setup in 30 minutes. Plans from £59.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "How whoza.ai works" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "How It Works | whoza.ai",
-    description: "Discover how whoza.ai's AI voice agent Katie answers calls, qualifies leads, and books jobs for UK tradespeople — 24/7.",
+    description: "Discover how whoza.ai's AI voice agent Katie answers calls, qualifies leads, and books jobs for UK tradespeople — 24/7. Setup in 30 minutes. Plans from £59.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {
@@ -136,18 +136,6 @@ export default function HowItWorksPage() {
       />
 
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        {/* Banner */}
-        <div className="mb-10 bg-amber-500/10 border border-amber-500/20 rounded-xl p-6 flex items-start gap-4">
-          <RefreshCw className="w-6 h-6 text-amber-400 flex-shrink-0 mt-0.5" />
-          <div>
-            <p className="text-amber-300 font-semibold text-lg">Content Update in Progress</p>
-            <p className="text-amber-200/70 mt-1">
-              We're refreshing this page for our new AI voice agent platform. Check back soon or{" "}
-              <Link href="/" className="underline hover:text-amber-300">explore our homepage</Link>.
-            </p>
-          </div>
-        </div>
-
         <div className="mb-12">
           <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Phone className="w-4 h-4" />

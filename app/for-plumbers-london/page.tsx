@@ -8,7 +8,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "AI Call Answering for Plumbers in London | whoza.ai",
-  description: "Stop losing plumber jobs to missed calls in London. Katie answers 24/7, captures burst pipe and boiler enquiries via WhatsApp. Plans from £59/month.",
+  description: "Stop losing plumber jobs to missed calls in London. Katie answers 24/7, captures burst pipe and boiler enquiries via WhatsApp. Plans from £59/month. Read now.",
   alternates: {
     canonical: "https://whoza.ai/for-plumbers-london",
   },
@@ -16,16 +16,12 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     url: "https://whoza.ai/for-plumbers-london",
-    siteName: "Whoza.ai",
-    title: "AI Call Answering for Plumbers in London | whoza.ai",
-    description: "Stop losing plumber jobs to missed calls in London. Katie answers 24/7, captures burst pipe and boiler enquiries via WhatsApp. Plans from £59/month.",
+    description: "Stop losing plumber jobs to missed calls in London. Katie answers 24/7, captures burst pipe and boiler enquiries via WhatsApp. Plans from £59/month. Read now.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Plumbers in London" }],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
-    title: "AI Call Answering for Plumbers in London | whoza.ai",
-    description: "Stop losing plumber jobs to missed calls in London. Katie answers 24/7, captures burst pipe and boiler enquiries via WhatsApp. Plans from £59/month.",
+    description: "Stop losing plumber jobs to missed calls in London. Katie answers 24/7, captures burst pipe and boiler enquiries via WhatsApp. Plans from £59/month. Read now.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {

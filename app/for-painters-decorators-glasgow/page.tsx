@@ -7,7 +7,7 @@ import { ArrowRight, Phone, Paintbrush, Shield, Clock, PoundSterling, CheckCircl
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "AI Call Answering for Painters & Decorators in Glasgow | whoza.ai",
+  title: "AI Call Answering Painters Glasgow | whoza.ai",
   description: "Stop losing painter-decorator jobs to missed calls in Glasgow. Katie answers 24/7, captures painting and renovation enquiries via WhatsApp. Plans from £59.",
   alternates: {
     canonical: "https://whoza.ai/for-painters-decorators-glasgow",
@@ -16,15 +16,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     url: "https://whoza.ai/for-painters-decorators-glasgow",
-    siteName: "Whoza.ai",
-    title: "AI Call Answering for Painters & Decorators in Glasgow | whoza.ai",
+    title: "AI Call Answering Painters Glasgow | whoza.ai",
     description: "Stop losing painter-decorator jobs to missed calls in Glasgow. Katie answers 24/7, captures painting and renovation enquiries via WhatsApp. Plans from £59.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Painters & Decorators in Glasgow" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai - AI Call Answering for Painters & Decorators in Glasgow" }],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
-    title: "AI Call Answering for Painters & Decorators in Glasgow | whoza.ai",
+    title: "AI Call Answering Painters Glasgow | whoza.ai",
     description: "Stop losing painter-decorator jobs to missed calls in Glasgow. Katie answers 24/7, captures painting and renovation enquiries via WhatsApp. Plans from £59.",
     images: ["https://whoza.ai/og-image.webp"],
   },
@@ -49,7 +47,7 @@ const faqs = [
   },
   {
     "question": "Does it work with my existing Glasgow business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing Glasgow business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "answer": "Yes. You simply set up call forwarding from your existing Glasgow business number to your whoza.ai number. Your customers dial the same number they've always used - Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
     "question": "How quickly can I get set up as a painter & decorator in Glasgow?",
@@ -57,7 +55,7 @@ const faqs = [
   },
   {
     "question": "What makes whoza.ai different for painters decorators in Glasgow?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for painters & decorators. She understands interior painting, exterior painting, wallpapering & decorative finishes — and with 5,500+ trade businesses competing in Glasgow, capturing every call gives you a real competitive edge."
+    "answer": "Unlike generic call answering services, Katie is trained specifically for painters & decorators. She understands interior painting, exterior painting, wallpapering & decorative finishes - and with 5,500+ trade businesses competing in Glasgow, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -115,7 +113,7 @@ export default function ForPainterDecoratorGlasgowPage() {
               },
               {
                 "@type": "VideoObject",
-                "name": "Whoza.ai 60-Second Demo — Katie Answers Every Call",
+                "name": "Whoza.ai 60-Second Demo - Katie Answers Every Call",
                 "description": "Watch Katie, Whoza's AI call handler, capture a missed enquiry in under 60 seconds. The call is answered instantly, the enquiry lands in WhatsApp, Claire requests a review, and Rex delivers growth insights. Built for UK tradespeople.",
                 "thumbnailUrl": "https://whoza.ai/og-image.webp",
                 "uploadDate": "2026-06-01",
@@ -138,7 +136,7 @@ export default function ForPainterDecoratorGlasgowPage() {
                   "https://www.linkedin.com/company/whoza-ai"
                 ]
               },
-              
+
             ]
           })
         }}
@@ -163,9 +161,9 @@ export default function ForPainterDecoratorGlasgowPage() {
                   Job in Glasgow Again
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
-                  Glasgow has 5,500+ trade businesses competing for 310K households. 
-                  With 2,600 missed calls every week across the city, 
-                  Katie ensures you capture every painters decorators enquiry — interior painting, exterior painting, wallpapering & decorative finishes.
+                  Glasgow has 5,500+ trade businesses competing for 310K households.
+                  With 2,600 missed calls every week across the city,
+                  Katie ensures you capture every painters decorators enquiry - interior painting, exterior painting, wallpapering & decorative finishes.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -205,7 +203,7 @@ export default function ForPainterDecoratorGlasgowPage() {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-white">Incoming Call</p>
-                      <p className="text-xs text-white/50">Glasgow — Painter & Decorator Enquiry</p>
+                      <p className="text-xs text-white/50">Glasgow - Painter & Decorator Enquiry</p>
                     </div>
                     <span className="ml-auto text-xs bg-red-500/20 text-red-400 px-2 py-1 rounded-full">URGENT</span>
                   </div>
@@ -217,7 +215,7 @@ export default function ForPainterDecoratorGlasgowPage() {
                       <p className="text-sm text-white/90">"I need a painter & decorator urgently in Glasgow!"</p>
                     </div>
                     <div className="bg-white/5 rounded-lg p-3">
-                      <p className="text-sm text-white/70">"I understand — let me get your details so I can get help to you quickly. Can you confirm your Glasgow postcode?"</p>
+                      <p className="text-sm text-white/70">"I understand - let me get your details so I can get help to you quickly. Can you confirm your Glasgow postcode?"</p>
                     </div>
                   </div>
                   <div className="mt-4 pt-4 border-t border-white/10">
@@ -274,7 +272,7 @@ export default function ForPainterDecoratorGlasgowPage() {
                 The Real Cost of Missed Calls for Painters & Decorators in Glasgow
               </h2>
               <p className="text-white/60 text-lg max-w-2xl mx-auto">
-                Tenement buildings have shared systems — emergencies affect multiple flats. Harsh winters cause boiler and heating emergencies to spike. Older housing stock needs frequent updates.
+                Tenement buildings have shared systems - emergencies affect multiple flats. Harsh winters cause boiler and heating emergencies to spike. Older housing stock needs frequent updates.
               </p>
             </div>
             <div className="space-y-8">
@@ -286,7 +284,7 @@ export default function ForPainterDecoratorGlasgowPage() {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">While You're on the Job</h3>
                     <p className="text-white/60 leading-relaxed">
-                      You're mid-job and your phone rings. Can't answer — hands full, focused on the task. Check missed call at break. Customer already booked someone else.
+                      You're mid-job and your phone rings. Can't answer - hands full, focused on the task. Check missed call at break. Customer already booked someone else.
                     </p>
                   </div>
                 </div>
@@ -307,7 +305,7 @@ export default function ForPainterDecoratorGlasgowPage() {
             </div>
             <div className="mt-8 bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-6 text-center">
               <p className="text-emerald-200 font-medium text-lg">
-                The average Glasgow painter & decorator misses multiple calls per day = 
+                The average Glasgow painter & decorator misses multiple calls per day =
                 <strong> £45,000+</strong> in lost revenue per year
               </p>
               <p className="text-emerald-200/70 text-sm mt-1">
@@ -335,7 +333,7 @@ export default function ForPainterDecoratorGlasgowPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your Glasgow number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your Glasgow number. Katie picks up in under 2 rings with your branded greeting - 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",

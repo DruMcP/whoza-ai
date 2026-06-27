@@ -7,7 +7,7 @@ import { ArrowRight, Phone, Droplets, Shield, Clock, PoundSterling, CheckCircle2
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "AI Call Answering for Drainage Engineers in Glasgow | whoza.ai",
+  title: "AI Call Answering Drainage Engineers Glasgow | whoza.ai",
   description: "Stop losing drainage jobs to missed calls in Glasgow. Katie answers 24/7, captures blocked drain and flood enquiries via WhatsApp. Plans from £59/month.",
   alternates: {
     canonical: "https://whoza.ai/for-drainage-glasgow",
@@ -16,15 +16,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     url: "https://whoza.ai/for-drainage-glasgow",
-    siteName: "Whoza.ai",
-    title: "AI Call Answering for Drainage Engineers in Glasgow | whoza.ai",
+    title: "AI Call Answering Drainage Engineers Glasgow | whoza.ai",
     description: "Stop losing drainage jobs to missed calls in Glasgow. Katie answers 24/7, captures blocked drain and flood enquiries via WhatsApp. Plans from £59/month.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Drainage Engineers in Glasgow" }],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
-    title: "AI Call Answering for Drainage Engineers in Glasgow | whoza.ai",
+    title: "AI Call Answering Drainage Engineers Glasgow | whoza.ai",
     description: "Stop losing drainage jobs to missed calls in Glasgow. Katie answers 24/7, captures blocked drain and flood enquiries via WhatsApp. Plans from £59/month.",
     images: ["https://whoza.ai/og-image.webp"],
   },

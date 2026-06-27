@@ -723,7 +723,7 @@ Honestly? If you're a sparky, plumber, roofer, or builder working on your own an
     authorTitle: "Founder, whoza.ai",
     schema: {
       headline: "How AI Call Handlers Are Changing the Game for UK Trades in 2026",
-      description: "AI call handlers transform how UK tradespeople capture leads. From missed calls to £50,000+ recovered revenue. Complete 2026 guide. Plans from £59.",
+      description: "AI call handlers transform how UK tradespeople capture leads. From missed calls to booked jobs — how AI is changing the trade industry in 2026. Read now.",
     },
     content: {
       introduction: `The UK trades industry loses an estimated £2.3 billion annually to missed calls. In 2026, that number is finally starting to drop — thanks to AI call handlers.
@@ -891,7 +891,7 @@ If you're missing calls, you're missing money. The fix is simpler and more affor
     authorTitle: "Founder, whoza.ai",
     schema: {
       headline: "Missed Calls = Missed Money: The Real Cost for UK Tradespeople",
-      description: "62% of trade business calls go unanswered. Calculate revenue lost to missed calls. Data-driven analysis with real numbers. FSB and ONS data 2026.",
+      description: "62% of trade business calls go unanswered. Calculate revenue lost to missed calls and see how AI call answering recovers every enquiry for your trade.",
     },
     content: {
       introduction: `Here's a number that should terrify every UK tradesperson: **62% of calls to small trade businesses go unanswered.**
@@ -1288,7 +1288,7 @@ If you've been putting off hiring a receptionist because £25,000/year is imposs
     authorTitle: "Founder, whoza.ai",
     schema: {
       headline: "Why 62% of Trade Business Calls Go Unanswered (and How to Fix It)",
-      description: "62% of trade business calls go unanswered because tradespeople are working when customers call. See why and how AI fixes it permanently. 2026 data.",
+      description: "62% of trade business calls go unanswered because tradespeople are working when the phone rings. Learn the real cost and how AI solves this problem. Read now.",
     },
     content: {
       introduction: `You're up a ladder replacing guttering. Your phone rings in your pocket. You can't answer it — you're 8 feet off the ground holding a drill.
@@ -1509,7 +1509,7 @@ The 62% problem has a 100% fix. And it takes 30 minutes to set up.`,
     authorTitle: "Founder, whoza.ai",
     schema: {
       headline: "AI Call Answering for UK Tradespeople: The Definitive 2026 Guide",
-      description: "The definitive UK guide to AI call answering for trades. How it works, what it costs, which providers to avoid. How to choose the right service. 2026.",
+      description: "Everything UK tradespeople need to know about AI call answering. How it works, pricing, benefits and provider comparison for 2026. Plans from £59. Read now.",
     },
     content: {
       introduction: `Missed calls cost UK tradespeople an estimated **£24,000–£30,000 per year**. In 2026, AI voice agents are capturing those calls 24/7, qualifying leads, and booking jobs while you focus on the work.
@@ -1953,7 +1953,7 @@ If you are a plumber, gas engineer, sparky, roofer, or builder and you are sick 
     authorTitle: "Founder, whoza.ai",
     schema: {
       headline: "AI Call Answering for UK Trades (2026)",
-      description: "Definitive UK guide to AI call answering for plumbers, electricians, gas engineers, builders, roofers. How it works, pricing, and setup. 2026.",
+      description: "Definitive UK guide to AI call answering for plumbers, electricians, gas engineers and builders. How it works, costs and benefits for your trade in 2026.",
     },
     content: {
       introduction: `If you are a UK tradesperson missing calls while you are on jobs, you are losing roughly £50,000 per year in recoverable revenue. I have spoken to hundreds of plumbers, electricians, gas engineers, roofers, and builders across the UK. Every single one of them tells me the same story: the phone rings, they are under a sink or up a ladder, they cannot answer, and the caller hires someone else.\n\nThis is not a character flaw. It is a structural problem. You are paid to work with your hands, not to answer a phone. The physical reality of trade work makes call answering impossible.\n\nAI call answering solves this permanently. For less than £3 per day, an AI voice agent answers every call you miss, qualifies the enquiry, and delivers the details to your WhatsApp in 3 seconds. This guide explains exactly what AI call answering is, how it works, what it costs, and how to choose the right service for your trade business.\n\nIf you want to see how missed calls are costing you specifically, read our detailed breakdown at [whoza.ai/blog/missed-calls-missed-money-the-real-cost-for-tradespeople](https://whoza.ai/blog/missed-calls-missed-money-the-real-cost-for-tradespeople).`,
@@ -2379,7 +2379,7 @@ If you are a plumber, gas engineer, sparky, roofer, or builder and you are sick 
     authorTitle: "Founder, whoza.ai",
     schema: {
       headline: "AI Call Answering Pricing UK | Trades Cost",
-      description: "Complete UK pricing guide for AI call answering services. Compare plans, calculate ROI, and understand true costs for plumbers, electricians, builders.",
+      description: "Transparent AI call answering pricing guide for UK businesses. Compare whoza.ai plans, features and costs. Find the right plan for your trade in 2026.",
     },
     content: {
       introduction: `How much does AI call answering cost in the UK? This is the first question every tradesperson asks me. And the answer surprises them: less than a coffee per day. For £59 per month, you get a 24/7 receptionist that answers every call you miss, qualifies every enquiry, and delivers the details to your WhatsApp in 3 seconds.\n\nIn this guide, I break down the complete cost structure of AI call answering for UK trade businesses. I compare plans, calculate ROI, and show you exactly how much money you will make back. For the full picture of how AI call answering works, see our [Complete Guide](https://whoza.ai/blog/ai-call-answering-trades-uk-guide). For a comparison with human receptionists, read our [AI vs Human Receptionist](https://whoza.ai/blog/ai-vs-human-receptionist-trades) article.`,
@@ -3398,6 +3398,7 @@ Start today. Pick one step from this guide and implement it this week. Then pick
   },
   "google-business-profile-trades": {
     title: "Google Business Profile for Trades: The Complete Optimisation Guide",
+    metaTitle: "Google Business Profile for Trades: Guide | whoza.ai",
     excerpt: "Your GBP is your most powerful marketing tool. Learn how to optimise it properly to rank higher, get more calls, and win more customers.",
     readTime: "8 min read",
     date: "2026-06-05",
@@ -3405,7 +3406,7 @@ Start today. Pick one step from this guide and implement it this week. Then pick
     author: "Dru McPherson",
     authorTitle: "Founder, whoza.ai",
     schema: {
-      headline: "Google Business Profile for Trades: The Complete Optimisation Guide",
+      headline: "Google Business Profile for Trades: Guide | whoza.ai",
       description: "Your Google Business Profile is your most powerful marketing tool. Learn how to optimise it properly to rank higher, get more calls, and win more customers.",
     },
     content: {
@@ -4289,7 +4290,7 @@ Your phone is your best lead generation tool. Make sure it's always answered.`,
     authorTitle: "Founder, whoza.ai",
     schema: {
       headline: "Builders Lead Generation Guide: How to Win More Projects in 2026",
-      description: "Proven lead generation strategies for UK builders. Local SEO, project-type targeting, social proof, and partnerships. Step-by-step guide with real examples. 2026.",
+      description: "Proven lead generation strategies for UK builders. Local SEO, project-type targeting, Google Business Profile and AI call answering for more enquiries.",
     },
     content: {
       introduction: `Building projects are the highest-value jobs in UK trades. A single-storey rear extension averages £45,000-£65,000. A loft conversion runs £35,000-£55,000. Full house renovations can exceed £100,000.
@@ -5137,7 +5138,7 @@ Honestly? If you're a self-employed builder, plumber, sparky, gas engineer, or r
     authorTitle: "Self-Employed Locksmith, Leeds",
     schema: {
       headline: "3 AM Lockout Calls Were Going to Voicemail. Now I Catch Every One.",
-      description: "Leeds locksmith shares honest 3-week diary using AI call answering. Lockout calls. £2,100 in recovered jobs. Real numbers. No marketing fluff. 2026.",
+      description: "Leeds locksmith shares 3-week diary using AI call answering. Lockout calls captured, revenue recovered. Real results from a real tradesperson. Read now.",
     },
     content: {
       introduction: `3 AM. Saturday. My phone rings. I sleep through it. Voicemail in the morning: "Locked out of my house, it's freezing, I've got a baby." I call back at 8 AM. They've already paid someone else £180 at 4 AM.
@@ -5587,7 +5588,7 @@ That is the difference between a one-man band and a one-man business.`,
     metaTitle: "7 Questions Before Hiring a Call Answering Service UK",
     schema: {
       headline: "7 Questions Every UK Tradesperson Should Ask Before Hiring a Call Answering Service",
-      description: "Manchester locksmith asked the wrong questions and wasted £400. Learn the 7 questions every tradesperson should ask before signing up. 2026 guide. Plans from £59.",
+      description: "7 essential questions UK tradespeople should ask before hiring a call answering service. Avoid costly mistakes and choose the right provider for your trade.",
     },
     content: {
       introduction: `I am Sarah. I run an emergency locksmith service in Manchester. 24/7 callouts. Lockouts at 3am. Broken keys. Burglary repairs. When someone calls, they are stressed, locked out, sometimes in danger. Every call is urgent. Every call is money. Every missed call is a competitor's job.
