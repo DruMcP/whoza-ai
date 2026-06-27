@@ -6,11 +6,11 @@ import { Mail, MessageSquare, Phone, Clock, Ticket, HelpCircle, Zap, ArrowRight 
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "Support Centre | Whoza.ai",
-  description: "Get help with whoza.ai — email support, WhatsApp, and callback requests. Response within 24 hours.",
+  title: "Support Centre — AI Call Answering Help | whoza.ai",
+  description: "Get help with whoza.ai AI call answering. Email support, WhatsApp, and callback requests. Setup guides, billing, technical issues. Response within 24 hours.",
   openGraph: {
-    title: "Support Centre | Whoza.ai",
-    description: "Get help with whoza.ai — email support, WhatsApp, and callback requests. Response within 24 hours.",
+    title: "Support Centre — AI Call Answering Help | whoza.ai",
+    description: "Get help with whoza.ai AI call answering. Email support, WhatsApp, and callback requests. Setup guides, billing, technical issues. Response within 24 hours.",
     url: "https://whoza.ai/support",
     images: [
       {
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Support Centre | Whoza.ai",
-    description: "Get help with whoza.ai — email support, WhatsApp, and callback requests. Response within 24 hours.",
+    title: "Support Centre — AI Call Answering Help | whoza.ai",
+    description: "Get help with whoza.ai AI call answering. Email support, WhatsApp, and callback requests. Setup guides, billing, technical issues. Response within 24 hours.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {

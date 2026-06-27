@@ -11,7 +11,7 @@ import { RelatedTrades } from "@/components/whoza/related-trades"
 
 export const metadata: Metadata = {
   title: "AI Call Answering for Carpenters UK — Never Miss a Job",
-  description: "AI call handling for UK carpenters. Katie answers 24/7, captures bespoke furniture, kitchen fitting, and renovation enquiries. WhatsApp alerts in 3 seconds. 7-day free trial.",
+  description: "AI call answering for UK carpenters. Katie captures 24/7 bespoke furniture, kitchen fitting and renovation enquiries. WhatsApp alerts in 3 seconds. Start your free trial.",
   alternates: {
     canonical: "https://whoza.ai/for-carpenters",
   },
@@ -21,14 +21,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/for-carpenters",
     siteName: "Whoza.ai",
     title: "AI Call Answering for Carpenters UK — Never Miss a Job",
-    description: "AI call handling for UK carpenters. Katie answers 24/7, captures bespoke furniture, kitchen fitting, and renovation enquiries. WhatsApp alerts in 3 seconds. 7-day free trial.",
+    description: "AI call answering for UK carpenters. Katie captures 24/7 bespoke furniture, kitchen fitting and renovation enquiries. WhatsApp alerts in 3 seconds. Start your free trial.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Carpenters" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "AI Call Answering for Carpenters UK — Never Miss a Job",
-    description: "AI call handling for UK carpenters. Katie answers 24/7, captures bespoke furniture, kitchen fitting, and renovation enquiries. WhatsApp alerts in 3 seconds. 7-day free trial.",
+    description: "AI call answering for UK carpenters. Katie captures 24/7 bespoke furniture, kitchen fitting and renovation enquiries. WhatsApp alerts in 3 seconds. Start your free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {

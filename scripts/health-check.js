@@ -7,8 +7,8 @@
  * Default baseUrl: https://whoza-ai-staging.netlify.app
  */
 
-const BASE_URL = process.argv[2] || "https://whoza-ai-staging.netlify.app";
-const TIMEOUT_MS = 5000;
+const BASE_URL = process.argv[2] || "https://whoza.ai";
+const TIMEOUT_MS = 15000;
 
 const ENDPOINTS = [
   { path: "/", name: "Homepage", method: "GET" },

@@ -1,3 +1,4 @@
+import crypto from "crypto";
 import { TrilletCallEvent, TrilletCreateAgentRequest, TrilletInitiateCallRequest } from "./trillet-types";
 import { trilletConfig } from "./trillet-config";
 
@@ -205,7 +206,6 @@ class TrilletServerService {
     }
 
     // HMAC-SHA256 verification
-    import crypto from "crypto";
     const expected = crypto
       .createHmac("sha256", this.webhookSecret)
       .update(payload)

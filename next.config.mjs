@@ -285,6 +285,11 @@ const nextConfig = {
         permanent: true,
       },
 
+      {
+        source: '/blog/emergency-call-handling-guide',
+        destination: '/blog/24-7-call-answering-emergency-trades',
+        permanent: true,
+      },
       // === GSC 404 FIX: Redirect dead AI-visibility blog posts (2026-06-14) ===
       // Local SEO / getting found cluster
       {

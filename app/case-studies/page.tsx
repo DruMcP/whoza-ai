@@ -7,10 +7,10 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "Case Studies | whoza.ai",
-  description: "See how UK tradespeople are winning more jobs with whoza.ai's AI voice agent. Real results, real businesses.",
+  title: "Case Studies — AI Call Answering for UK Trades | whoza.ai",
+  description: "See how UK tradespeople win more jobs with whoza.ai's AI call answering. Real results: 98% answer rates, doubled bookings, thousands in revenue saved.",
   alternates: {
-    canonical: "/case-studies",
+    canonical: "https://whoza.ai/case-studies",
   },
   robots: {
     index: true,
@@ -19,18 +19,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: "/case-studies",
+    url: "https://whoza.ai/case-studies",
     siteName: "Whoza.ai",
-    title: "Case Studies | whoza.ai",
-    description: "See how UK tradespeople are winning more jobs with whoza.ai's AI voice agent. Real results, real businesses.",
-    images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "whoza.ai Case Studies" }],
+    title: "Case Studies — AI Call Answering for UK Trades | whoza.ai",
+    description: "See how UK tradespeople win more jobs with whoza.ai's AI call answering. Real results: 98% answer rates, doubled bookings, thousands in revenue saved.",
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai Case Studies" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
-    title: "Case Studies | whoza.ai",
-    description: "See how UK tradespeople are winning more jobs with whoza.ai's AI voice agent.",
-    images: ["/og-image.webp"],
+    title: "Case Studies — AI Call Answering for UK Trades | whoza.ai",
+    description: "See how UK tradespeople win more jobs with whoza.ai's AI call answering. Real results: 98% answer rates, doubled bookings, thousands in revenue saved.",
+    images: ["https://whoza.ai/og-image.webp"],
   },
 }
 

@@ -12,8 +12,8 @@ import { notFound } from "next/navigation"
 import { RelatedTrades } from "@/components/whoza/related-trades"
 
 export const metadata: Metadata = {
-  title: "AI Call Answering for Drainage Companies UK — Never Miss an Emergency",
-  description: "AI call handling for UK drainage companies. Katie answers 24/7, captures blocked drain, flood, and sewage enquiries. WhatsApp alerts in 3 seconds. 7-day free trial.",
+  title: "AI Call Answering for Drainage Engineers UK — 24/7 Missed Call Recovery",
+  description: "AI call answering for UK drainage engineers. Katie handles 24/7 emergency calls, captures flood enquiries, and sends WhatsApp alerts. Never miss a drainage job. Start free.",
   alternates: {
     canonical: "https://whoza.ai/for-drainage",
   },
@@ -22,15 +22,15 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/for-drainage",
     siteName: "Whoza.ai",
-    title: "AI Call Answering for Drainage Companies UK — Never Miss an Emergency",
-    description: "AI call handling for UK drainage companies. Katie answers 24/7, captures blocked drain, flood, and sewage enquiries. WhatsApp alerts in 3 seconds. 7-day free trial.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Drainage Companies" }],
+    title: "AI Call Answering for Drainage Engineers UK — 24/7 Missed Call Recovery",
+    description: "AI call answering for UK drainage engineers. Katie handles 24/7 emergency calls, captures flood enquiries, and sends WhatsApp alerts. Never miss a drainage job. Start free.",
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Drainage Engineers" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
-    title: "AI Call Answering for Drainage Companies UK — Never Miss an Emergency",
-    description: "AI call handling for UK drainage companies. Katie answers 24/7, captures blocked drain, flood, and sewage enquiries. WhatsApp alerts in 3 seconds. 7-day free trial.",
+    title: "AI Call Answering for Drainage Engineers UK — 24/7 Missed Call Recovery",
+    description: "AI call answering for UK drainage engineers. Katie handles 24/7 emergency calls, captures flood enquiries, and sends WhatsApp alerts. Never miss a drainage job. Start free.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {

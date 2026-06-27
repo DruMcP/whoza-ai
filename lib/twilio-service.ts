@@ -6,6 +6,7 @@
 // - Number porting (PAC code)
 // - Credential encryption at rest
 
+import crypto from "crypto";
 import { telephonyConfig, telephonyFeatures } from "./telephony-config";
 
 interface TwilioSubaccount {
@@ -302,7 +303,6 @@ export class TwilioService {
       const paramString = sortedKeys.map((key) => `${key}${params[key]}`).join("");
       const fullUrl = url + paramString;
 
-      import crypto from "crypto";
       const expected = crypto
         .createHmac("sha1", this.masterToken)
         .update(Buffer.from(fullUrl, "utf8"))
