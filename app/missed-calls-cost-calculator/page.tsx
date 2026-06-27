@@ -3,7 +3,7 @@ import { Metadata } from "next"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
-import { ArrowRight, Calculator, PoundSterling, TrendingUp, AlertTriangle } from "lucide-react"
+import { ArrowRight, PoundSterling, TrendingUp, AlertTriangle } from "lucide-react"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),

@@ -70,6 +70,7 @@ export function CallHistory({ clientId }: { clientId?: string }) {
     return () => {
       supabase.removeChannel(channel)
     }
+// eslint-disable-next-line react-hooks/exhaustive-deps
   }, [clientId])
 
   async function fetchCalls() {

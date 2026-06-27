@@ -40,8 +40,8 @@ export function TrilletVoiceWidget({
 
     const initAgent = async () => {
       try {
-        const module = await import("@trillet-ai/web-sdk")
-        TrilletAgent = module.TrilletAgent
+        const trilletModule = await import("@trillet-ai/web-sdk")
+        TrilletAgent = trilletModule.TrilletAgent
 
         agentRef.current = new TrilletAgent({
           workspaceId,

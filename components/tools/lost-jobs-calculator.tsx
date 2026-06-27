@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Calculator, ArrowRight, Share2, MessageCircle, Check, TrendingDown, AlertTriangle } from "lucide-react"
+import { Calculator, Share2, Check, TrendingDown, AlertTriangle } from "lucide-react"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import Script from "next/script"

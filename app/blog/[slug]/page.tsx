@@ -383,7 +383,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 }
 
 function formatText(text: string): string {
-  let formatted = text
+  const formatted = text
     // Convert markdown links to HTML anchor tags
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-emerald-400 hover:text-emerald-300 underline">$1</a>')
     // Bold

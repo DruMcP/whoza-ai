@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { ArrowRight, CheckCircle2, Loader2, Mail, Building2, User } from "lucide-react"
+import { ArrowRight, CheckCircle2, Loader2, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { joinWaitlist } from "@/lib/supabase"
 

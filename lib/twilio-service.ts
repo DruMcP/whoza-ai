@@ -302,7 +302,7 @@ export class TwilioService {
       const paramString = sortedKeys.map((key) => `${key}${params[key]}`).join("");
       const fullUrl = url + paramString;
 
-      const crypto = require("crypto");
+      import crypto from "crypto";
       const expected = crypto
         .createHmac("sha1", this.masterToken)
         .update(Buffer.from(fullUrl, "utf8"))

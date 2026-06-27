@@ -22,7 +22,7 @@ import { FinalCTA } from "@/components/whoza/final-cta"
 import { FloatingChatWidget } from "@/components/whoza/sticky-cta"
 import { VideoSchema } from "@/components/whoza/schema-markup"
 import Link from "next/link"
-import { ArrowRight, CheckCircle, Phone, Shield, Clock, PoundSterling, Flame, Thermometer, Snowflake, AlertTriangle, Wrench, Star } from "lucide-react"
+import { ArrowRight, CheckCircle, Phone, Shield, Clock, PoundSterling, Flame, Thermometer, Snowflake, Wrench, Star } from "lucide-react"
 import { RelatedTrades } from "@/components/whoza/related-trades"
 
 export const metadata: Metadata = {

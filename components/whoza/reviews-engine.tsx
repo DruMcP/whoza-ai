@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Star, MessageSquare, TrendingUp, CheckCircle2, ArrowRight, ThumbsUp } from "lucide-react"
+import { Star, MessageSquare, TrendingUp, CheckCircle2, ThumbsUp } from "lucide-react"
 
 interface ReviewsEngineProps {
   trade?: string

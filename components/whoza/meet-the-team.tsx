@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Phone, ArrowRight, Volume2, Eye, Star } from "lucide-react"
+import { Phone, Volume2, Eye, Star } from "lucide-react"
 
 const voiceAgents = [
   {

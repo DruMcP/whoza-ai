@@ -4,7 +4,7 @@ import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 import { VideoSchema } from "@/components/whoza/schema-markup"
-import { ArrowRight, Phone, Zap, Shield, Clock, PoundSterling, CheckCircle2, Star, AlertTriangle, FileCheck, Home, Calendar } from "lucide-react"
+import { ArrowRight, Phone, Zap, Shield, Clock, PoundSterling, CheckCircle2, Star, AlertTriangle, FileCheck } from "lucide-react"
 import Link from "next/link"
 import { RelatedTrades } from "@/components/whoza/related-trades"
 

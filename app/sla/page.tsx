@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
-import { Shield, Clock } from "lucide-react"
+import { Shield } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Service Level Agreement | whoza.ai",

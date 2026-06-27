@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Flame, ArrowRight, Clock, AlertTriangle, Check, Copy, CheckCircle2 } from "lucide-react"
+import { Flame, Clock, AlertTriangle, Copy, CheckCircle2 } from "lucide-react"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import Script from "next/script"

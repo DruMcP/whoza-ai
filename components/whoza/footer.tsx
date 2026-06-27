@@ -1,6 +1,6 @@
 "use client"
 
-import { Shield, ExternalLink } from "lucide-react"
+import { Shield } from "lucide-react"
 import { useState } from "react"
 import { WaitlistModal } from "./waitlist-modal"
 import { trackCTA } from "@/lib/gtag"

@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Phone, CheckCircle2, ArrowRight, Zap, MessageSquare, Star, BarChart3, Target } from "lucide-react"
+import { Phone, CheckCircle2, ArrowRight, Zap, Star, BarChart3, Target } from "lucide-react"
 import { useLocale } from "@/lib/locale-context"
 
 export function PreLaunchProof() {
