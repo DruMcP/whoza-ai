@@ -204,11 +204,11 @@ export default function RootLayout({
             "url": "https://whoza.ai",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://whoza.ai/og-image.webp",
+              "url": "https://whoza.ai/logo.webp",
               "width": 512,
               "height": 512
             },
-            "image": "https://whoza.ai/og-image.webp",
+            "image": "https://whoza.ai/logo.webp",
             "description": "AI call answering service built in Scotland for UK tradespeople. Katie answers every missed call 24/7, qualifies jobs, and sends details to WhatsApp.",
             "slogan": "While you work, we book. Job done.",
             "foundingDate": "2025",

@@ -13,7 +13,7 @@ import { RelatedTrades } from "@/components/whoza/related-trades"
 
 export const metadata: Metadata = {
   title: "AI Call Answering for Tilers UK — Never Miss a Job",
-  description: "AI call handling for UK tilers. Katie answers 24/7, captures bathroom, kitchen, floor, and commercial tiling enquiries. WhatsApp alerts in 3 seconds. 7-day free trial.",
+  description: "AI call answering for UK tilers. Katie captures 24/7 bathroom, kitchen, floor and commercial tiling enquiries. WhatsApp alerts in 3 seconds. Never miss a tiling job. Free trial.",
   alternates: {
     canonical: "https://whoza.ai/for-tilers",
   },
@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/for-tilers",
     siteName: "Whoza.ai",
     title: "AI Call Answering for Tilers UK — Never Miss a Job",
-    description: "AI call handling for UK tilers. Katie answers 24/7, captures bathroom, kitchen, floor, and commercial tiling enquiries. WhatsApp alerts in 3 seconds. 7-day free trial.",
+    description: "AI call answering for UK tilers. Katie captures 24/7 bathroom, kitchen, floor and commercial tiling enquiries. WhatsApp alerts in 3 seconds. Never miss a tiling job. Free trial.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Tilers" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "AI Call Answering for Tilers UK — Never Miss a Job",
-    description: "AI call handling for UK tilers. Katie answers 24/7, captures bathroom, kitchen, floor, and commercial tiling enquiries. WhatsApp alerts in 3 seconds. 7-day free trial.",
+    description: "AI call answering for UK tilers. Katie captures 24/7 bathroom, kitchen, floor and commercial tiling enquiries. WhatsApp alerts in 3 seconds. Never miss a tiling job. Free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {

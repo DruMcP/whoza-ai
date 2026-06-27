@@ -6,14 +6,30 @@ import { MessageSquare, Mail, Phone, MapPin, Clock, ExternalLink, RefreshCw } fr
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Contact | whoza.ai",
-  description: "Get in touch with the whoza.ai team. WhatsApp, email, or phone — we're here to help UK tradespeople never miss a call again.",
+  title: "Contact whoza.ai — AI Call Answering for UK Trades",
+  description: "Contact whoza.ai via WhatsApp, email or phone. Get help with AI call answering for your trade business. Response within 2 hours. Scotland based, UK wide.",
   alternates: {
     canonical: "https://whoza.ai/contact",
   },
   robots: {
     index: true,
     follow: true,
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: "https://whoza.ai/contact",
+    siteName: "Whoza.ai",
+    title: "Contact whoza.ai — AI Call Answering for UK Trades",
+    description: "Contact whoza.ai via WhatsApp, email or phone. Get help with AI call answering for your trade business. Response within 2 hours. Scotland based, UK wide.",
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Contact whoza.ai" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@whozaai",
+    title: "Contact whoza.ai — AI Call Answering for UK Trades",
+    description: "Contact whoza.ai via WhatsApp, email or phone. Get help with AI call answering for your trade business. Response within 2 hours. Scotland based, UK wide.",
+    images: ["https://whoza.ai/og-image.webp"],
   },
 }
 
@@ -23,26 +39,29 @@ const localBusinessSchema = {
   "@id": "https://whoza.ai/contact#localbusiness",
   "name": "whoza.ai",
   "url": "https://whoza.ai",
-  "logo": "https://whoza.ai/og-image.webp",
-  "image": "https://whoza.ai/og-image.webp",
+  "logo": "https://whoza.ai/logo.webp",
+  "image": "https://whoza.ai/logo.webp",
   "description": "AI call answering for UK trades — never miss a job. whoza.ai provides AI-powered voice agents that answer missed calls 24/7, capture enquiries via WhatsApp, collect Google reviews, and track competitor visibility for UK tradespeople.",
   "address": {
     "@type": "PostalAddress",
-    "addressCountry": "GB",
-    "addressRegion": "Scotland"
+    "streetAddress": "6 Atholl Crescent",
+    "addressLocality": "Perth",
+    "addressRegion": "Scotland",
+    "postalCode": "PH1 5JN",
+    "addressCountry": "GB"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "55.9533",
-    "longitude": "-3.1883"
+    "latitude": "56.3950",
+    "longitude": "-3.4306"
   },
   "areaServed": {
     "@type": "Country",
     "name": "United Kingdom"
   },
   "priceRange": "££",
-  "telephone": "+44-7831-643012",
-  "email": "dru@whoza.ai",
+  "telephone": "+447831643012",
+  "email": "support@whoza.ai",
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
@@ -68,8 +87,8 @@ const localBusinessSchema = {
   ],
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+44-7831-643012",
-    "email": "dru@whoza.ai",
+    "telephone": "+447831643012",
+    "email": "support@whoza.ai",
     "contactType": "customer service",
     "areaServed": "GB",
     "availableLanguage": ["English"]
@@ -117,19 +136,6 @@ export default function ContactPage() {
       />
 
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        {/* Banner */}
-        <div className="mb-10 bg-amber-500/10 border border-amber-500/20 rounded-xl p-6 flex items-start gap-4">
-          <RefreshCw className="w-6 h-6 text-amber-400 flex-shrink-0 mt-0.5" />
-          <div>
-            <p className="text-amber-300 font-semibold text-lg">Content Update in Progress</p>
-            <p className="text-amber-200/70 mt-1">
-              We're refreshing this page for our new AI voice agent platform. Check back soon or{" "}
-              <Link href="/" className="underline hover:text-amber-300">explore our homepage</Link>.
-            </p>
-          </div>
-        </div>
-
-        <div className="mb-12">
           <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <MessageSquare className="w-4 h-4" />
             Let's Talk
@@ -138,7 +144,6 @@ export default function ContactPage() {
           <p className="text-white/60 text-lg max-w-2xl">
             Questions about Katie? Want to see a demo? Just want to say hello? We're here — pick your channel.
           </p>
-        </div>
 
         <div className="grid gap-6 mb-12">
           {contactMethods.map((method, index) => (
