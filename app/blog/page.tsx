@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/blog",
     siteName: "Whoza.ai",
     title: "Blog | whoza.ai",
-    description: "AI voice agent insights, trade business tips, and strategies to help UK tradespeople capture more leads and book more jobs.",
+    description: "AI voice agent insights, trade business growth tips, and lead capture strategies for UK plumbers, electricians, gas engineers and builders. Book more jobs.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai Blog" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "Blog | whoza.ai",
-    description: "AI voice agent insights, trade business tips, and strategies to help UK tradespeople capture more leads and book more jobs.",
+    description: "AI voice agent insights, trade business growth tips, and lead capture strategies for UK plumbers, electricians, gas engineers and builders. Book more jobs.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {
