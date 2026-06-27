@@ -7,7 +7,7 @@ import { ArrowRight, Star, PoundSterling, Clock, Shield, TrendingUp, MessageCirc
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Best AI Phone Answering UK Trades 2026 | Guide",
-  description: "Independent 2026 guide comparing AI call answering for UK trades. whoza.ai, Clara, Moneypenny, Team-Connect, Smith.ai. Real pricing, honest rankings.",
+  description: "Independent 2026 guide comparing AI call answering for UK trades. whoza.ai, Clara, Moneypenny, and more. Features, pricing, and reliability compared. 2026.",
   keywords: [
     "best AI phone answering UK trades",
     "AI call handler comparison 2026",
@@ -90,7 +90,7 @@ const services = [
 
 const articleSchema = {
   "@context": "https://schema.org",
-  "@type": "Article",
+  "@type": "BlogPosting",
   "headline": "Best AI Phone Answering Services for UK Tradespeople 2026",
   "description": "Independent comparison of AI call answering services for UK tradespeople.",
   "author": {

@@ -67,7 +67,7 @@ const scholarlyArticleSchema = {
     "url": "https://whoza.ai",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://whoza.ai/logo.png"
+      "url": "https://whoza.ai/og-image.webp"
     }
   },
   "publisher": {
@@ -243,7 +243,6 @@ export default function ResearchPage() {
       <script
         id="schema-breadcrumb"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },

@@ -8,7 +8,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "AI Call Answering for Roofers in Glasgow | whoza.ai",
-  description: "Stop losing roofers jobs to missed calls in Glasgow. Katie answers 24/7, captures storm damage, active leaks & emergency repairs, and sends WhatsApp alerts in 3 seconds. 7-day free trial.",
+  description: "Stop losing roofer jobs to missed calls in Glasgow. Katie answers 24/7, captures storm damage and repair enquiries via WhatsApp. Plans from £59/month.",
   alternates: {
     canonical: "https://whoza.ai/for-roofers-glasgow",
   },
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/for-roofers-glasgow",
     siteName: "Whoza.ai",
     title: "AI Call Answering for Roofers in Glasgow | whoza.ai",
-    description: "Stop losing roofers jobs to missed calls in Glasgow. Katie answers 24/7, captures storm damage, active leaks & emergency repairs, and sends WhatsApp alerts in 3 seconds. 7-day free trial.",
+    description: "Stop losing roofer jobs to missed calls in Glasgow. Katie answers 24/7, captures storm damage and repair enquiries via WhatsApp. Plans from £59/month.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Roofers in Glasgow" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "AI Call Answering for Roofers in Glasgow | whoza.ai",
-    description: "Stop losing roofers jobs to missed calls in Glasgow. Katie answers 24/7, captures storm damage, active leaks & emergency repairs, and sends WhatsApp alerts in 3 seconds. 7-day free trial.",
+    description: "Stop losing roofer jobs to missed calls in Glasgow. Katie answers 24/7, captures storm damage and repair enquiries via WhatsApp. Plans from £59/month.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {
@@ -124,7 +124,7 @@ export default function ForRooferGlasgowPage() {
                 "publisher": {
                   "@type": "Organization",
                   "name": "whoza.ai",
-                  "logo": { "@type": "ImageObject", "url": "https://whoza.ai/logo.png" }
+                  "logo": { "@type": "ImageObject", "url": "https://whoza.ai/og-image.webp" }
                 }
               },
               {
@@ -132,20 +132,13 @@ export default function ForRooferGlasgowPage() {
                 "@id": "https://whoza.ai/#organization",
                 "name": "whoza.ai",
                 "url": "https://whoza.ai",
-                "logo": { "@type": "ImageObject", "url": "https://whoza.ai/logo.png" },
+                "logo": { "@type": "ImageObject", "url": "https://whoza.ai/og-image.webp" },
                 "sameAs": [
                   "https://twitter.com/whozaai",
                   "https://www.linkedin.com/company/whoza-ai"
                 ]
               },
-              {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://whoza.ai" },
-                  { "@type": "ListItem", "position": 2, "name": "For Roofers", "item": "https://whoza.ai/for-roofers" },
-                  { "@type": "ListItem", "position": 3, "name": "Glasgow", "item": "https://whoza.ai/for-roofers-glasgow" }
-                ]
-              }
+              
             ]
           })
         }}

@@ -8,7 +8,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "AI Call Answering for Builders in Manchester | whoza.ai",
-  description: "Stop losing builders jobs to missed calls in Manchester. Katie answers 24/7, captures extension enquiries, renovation quotes, new build leads & commercial contracts, and sends WhatsApp alerts in 3 seconds. 7-day free trial.",
+  description: "Stop losing builder jobs to missed calls in Manchester. Katie answers 24/7, captures extension and renovation enquiries via WhatsApp. Plans from £59/month.",
   alternates: {
     canonical: "https://whoza.ai/for-builders-manchester",
   },
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/for-builders-manchester",
     siteName: "Whoza.ai",
     title: "AI Call Answering for Builders in Manchester | whoza.ai",
-    description: "Stop losing builders jobs to missed calls in Manchester. Katie answers 24/7, captures extension enquiries, renovation quotes, new build leads & commercial contracts, and sends WhatsApp alerts in 3 seconds. 7-day free trial.",
+    description: "Stop losing builder jobs to missed calls in Manchester. Katie answers 24/7, captures extension and renovation enquiries via WhatsApp. Plans from £59/month.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Builders in Manchester" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "AI Call Answering for Builders in Manchester | whoza.ai",
-    description: "Stop losing builders jobs to missed calls in Manchester. Katie answers 24/7, captures extension enquiries, renovation quotes, new build leads & commercial contracts, and sends WhatsApp alerts in 3 seconds. 7-day free trial.",
+    description: "Stop losing builder jobs to missed calls in Manchester. Katie answers 24/7, captures extension and renovation enquiries via WhatsApp. Plans from £59/month.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {
@@ -114,14 +114,7 @@ export default function ForBuilderManchesterPage() {
                   "name": "Manchester"
                 }
               },
-              {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://whoza.ai" },
-                  { "@type": "ListItem", "position": 2, "name": "For Builders", "item": "https://whoza.ai/for-builders" },
-                  { "@type": "ListItem", "position": 3, "name": "Manchester", "item": "https://whoza.ai/for-builders-manchester" }
-                ]
-              }
+              
             ]
           })
         }}

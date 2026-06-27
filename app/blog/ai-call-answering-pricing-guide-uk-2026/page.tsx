@@ -7,7 +7,7 @@ import { ArrowRight, Star, PoundSterling, Clock, Shield, Check, AlertTriangle, T
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "AI Call Answering Cost UK (2026) | Pricing Guide",
-  description: "Transparent AI call answering pricing guide for UK businesses. Compare Whoza.ai, Clara, Moneypenny, ARROW, IONOS. Per-job vs per-minute models. Hidden costs revealed.",
+  description: "Transparent AI call answering pricing guide for UK businesses. Compare whoza.ai plans. Starter, Growth, Pro, and Scale. No hidden fees. 2026 guide.",
   keywords: [
     "AI receptionist cost UK",
     "AI answering service pricing UK",
@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/blog/ai-call-answering-pricing-guide-uk-2026",
     siteName: "Whoza.ai",
     title: "AI Call Answering Cost UK (2026) | Pricing Guide",
-    description: "Transparent AI call answering pricing guide for UK businesses. Compare Whoza.ai, Clara, Moneypenny, ARROW, IONOS. Per-job vs per-minute models. Hidden costs revealed.",
+    description: "Transparent AI call answering pricing guide for UK businesses. Compare whoza.ai plans. Starter, Growth, Pro, and Scale. No hidden fees. 2026 guide.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "AI Call Answering Cost UK 2026 Pricing Guide" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "AI Call Answering Cost UK (2026) | Pricing Guide",
-    description: "Transparent AI call answering pricing guide for UK businesses. Compare Whoza.ai, Clara, Moneypenny, ARROW, IONOS. Per-job vs per-minute models. Hidden costs revealed.",
+    description: "Transparent AI call answering pricing guide for UK businesses. Compare whoza.ai plans. Starter, Growth, Pro, and Scale. No hidden fees. 2026 guide.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 
 const articleSchema = {
   "@context": "https://schema.org",
-  "@type": "Article",
+  "@type": "BlogPosting",
   "headline": "How Much Does AI Call Answering Cost in the UK? (2026 Pricing Guide)",
   "description": "Transparent AI call answering pricing guide for UK businesses. Compare per-job, per-minute and per-month models. Hidden costs revealed.",
   "author": {

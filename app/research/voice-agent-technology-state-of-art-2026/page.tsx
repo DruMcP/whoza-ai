@@ -94,7 +94,7 @@ export default function VoiceAgentTechnologyPage() {
               url: "https://whoza.ai",
               logo: {
                 "@type": "ImageObject",
-                url: "https://whoza.ai/logo.png",
+                url: "https://whoza.ai/og-image.webp",
               },
             },
             publisher: {

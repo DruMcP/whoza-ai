@@ -180,7 +180,6 @@ export default function BlogPostPage() {
       {/* Schema Blocks */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
@@ -206,6 +205,11 @@ export default function BlogPostPage() {
       }) }} />
 
       <Header />
+      <BreadcrumbSchema items={[
+        { name: "Home", item: "https://whoza.ai" },
+        { name: "Blog", item: "https://whoza.ai/blog" },
+        { name: "Seasonal Missed Call Report 2026", item: "https://whoza.ai/blog/seasonal-missed-call-report-uk-trades-2026" },
+      ]} />
       <main id="main-content" role="main" className="pb-24 lg:pb-0">
         {/* Hero Section */}
         <section className="relative bg-[var(--navy-900)] py-16 sm:py-20 lg:py-24">

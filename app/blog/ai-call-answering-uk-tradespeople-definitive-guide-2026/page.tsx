@@ -7,7 +7,7 @@ import { ArrowRight, Star, PoundSterling, Clock, Shield, Check, X, ChevronDown, 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "AI Call Answering for UK Trades: Complete 2026 Guide",
-  description: "Everything UK tradespeople need to know about AI call answering. How it works, pricing, setup, and which trades benefit most.",
+  description: "Everything UK tradespeople need to know about AI call answering. How it works, pricing, setup, and choosing the right service. Complete 2026 guide. Plans from £59.",
   keywords: [
     "AI call answering for UK tradespeople",
     "AI phone answering for trades UK",
@@ -24,14 +24,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026",
     siteName: "Whoza.ai",
     title: "AI Call Answering for UK Trades: Complete 2026 Guide",
-    description: "Everything UK tradespeople need to know about AI call answering. How it works, pricing, setup, and which trades benefit most.",
+    description: "Everything UK tradespeople need to know about AI call answering. How it works, pricing, setup, and choosing the right service. Complete 2026 guide. Plans from £59.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "AI Call Answering for UK Trades Complete 2026 Guide" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "AI Call Answering for UK Trades: Complete 2026 Guide",
-    description: "Everything UK tradespeople need to know about AI call answering. How it works, pricing, setup, and which trades benefit most.",
+    description: "Everything UK tradespeople need to know about AI call answering. How it works, pricing, setup, and choosing the right service. Complete 2026 guide. Plans from £59.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 
 const articleSchema = {
   "@context": "https://schema.org",
-  "@type": "Article",
+  "@type": "BlogPosting",
   "headline": "AI Call Answering for UK Trades: The Complete 2026 Guide",
   "description": "Everything UK tradespeople need to know about AI call answering. How it works, pricing, setup, and which trades benefit most.",
   "author": {

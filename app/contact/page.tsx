@@ -23,7 +23,7 @@ const localBusinessSchema = {
   "@id": "https://whoza.ai/contact#localbusiness",
   "name": "whoza.ai",
   "url": "https://whoza.ai",
-  "logo": "https://whoza.ai/logo.webp",
+  "logo": "https://whoza.ai/og-image.webp",
   "image": "https://whoza.ai/og-image.webp",
   "description": "AI call answering for UK trades — never miss a job. whoza.ai provides AI-powered voice agents that answer missed calls 24/7, capture enquiries via WhatsApp, collect Google reviews, and track competitor visibility for UK tradespeople.",
   "address": {

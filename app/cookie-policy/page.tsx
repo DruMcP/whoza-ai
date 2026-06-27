@@ -212,7 +212,7 @@ export default function CookiePolicy() {
             </p>
             <div className="bg-white/5 rounded-lg p-6">
               <p className="text-white/70">Email: <a href="mailto:dru@whoza.ai" className="text-emerald-400 hover:underline">dru@whoza.ai</a></p>
-              <p className="text-white/70 mt-2">WhatsApp: <a href="https://wa.me/447463141750" className="text-emerald-400 hover:underline">+44 7463 141750</a></p>
+              <p className="text-white/70 mt-2">WhatsApp: <a href="tel:+447463141750" className="text-emerald-400 hover:underline">+44 7463 141750</a> (WhatsApp)</p>
               <p className="text-white/70 mt-2">Post: WHOZA AI LTD, 6 Atholl Crescent, 6, Perth, PH1 5JN, Scotland</p>
             </div>
           </section>

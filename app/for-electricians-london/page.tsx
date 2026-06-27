@@ -8,7 +8,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "AI Call Answering for Electricians in London | whoza.ai",
-  description: "Stop losing electricians jobs to missed calls in London. Katie answers 24/7, captures EICR enquiries, emergency faults, consumer unit upgrades & power outages, and sends WhatsApp alerts in 3 seconds. 7-day free trial.",
+  description: "Stop losing electrician jobs to missed calls in London. Katie answers 24/7, captures emergency and EICR enquiries via WhatsApp. Plans from £59/month.",
   alternates: {
     canonical: "https://whoza.ai/for-electricians-london",
   },
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/for-electricians-london",
     siteName: "Whoza.ai",
     title: "AI Call Answering for Electricians in London | whoza.ai",
-    description: "Stop losing electricians jobs to missed calls in London. Katie answers 24/7, captures EICR enquiries, emergency faults, consumer unit upgrades & power outages, and sends WhatsApp alerts in 3 seconds. 7-day free trial.",
+    description: "Stop losing electrician jobs to missed calls in London. Katie answers 24/7, captures emergency and EICR enquiries via WhatsApp. Plans from £59/month.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Electricians in London" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "AI Call Answering for Electricians in London | whoza.ai",
-    description: "Stop losing electricians jobs to missed calls in London. Katie answers 24/7, captures EICR enquiries, emergency faults, consumer unit upgrades & power outages, and sends WhatsApp alerts in 3 seconds. 7-day free trial.",
+    description: "Stop losing electrician jobs to missed calls in London. Katie answers 24/7, captures emergency and EICR enquiries via WhatsApp. Plans from £59/month.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {
@@ -114,14 +114,7 @@ export default function ForElectricianLondonPage() {
                   "name": "London"
                 }
               },
-              {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://whoza.ai" },
-                  { "@type": "ListItem", "position": 2, "name": "For Electricians", "item": "https://whoza.ai/for-electricians" },
-                  { "@type": "ListItem", "position": 3, "name": "London", "item": "https://whoza.ai/for-electricians-london" }
-                ]
-              }
+              
             ]
           })
         }}

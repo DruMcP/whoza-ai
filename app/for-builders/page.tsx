@@ -114,7 +114,7 @@ export default function ForBuildersPage() {
     "@type": "LocalBusiness",
     "name": "whoza.ai — AI Call Handling for Builders",
     "url": "https://whoza.ai/for-builders",
-    "logo": "https://whoza.ai/logo.webp",
+    "logo": "https://whoza.ai/og-image.webp",
     "image": "https://whoza.ai/og-image.webp",
     "description": "AI voice agents for UK builders — answer missed calls 24/7, capture extension, renovation, and emergency structural enquiries, and deliver leads via WhatsApp.",
     "address": {

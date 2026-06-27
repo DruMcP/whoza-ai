@@ -7,7 +7,7 @@ import { ArrowRight, Star, PoundSterling, Clock, Shield, Check, X, ChevronDown, 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "7 Best AI Call Answering Services UK (2026) | For Trades",
-  description: "We tested 7 AI call answering services for UK trades. Compare pricing, features, and WhatsApp delivery. Find the best fit for your plumbing, electrical, or building business.",
+  description: "We tested 7 AI call answering services for UK trades. Compare pricing, features, and reliability. Independent comparison. No affiliate links. 2026 guide.",
   keywords: [
     "best AI call answering service UK",
     "AI call answering UK trades",
@@ -163,7 +163,7 @@ const services = [
 
 const articleSchema = {
   "@context": "https://schema.org",
-  "@type": "Article",
+  "@type": "BlogPosting",
   "headline": "The 7 Best AI Call Answering Services for UK Tradespeople (2026)",
   "description": "Independent comparison of 7 AI call answering services for UK tradespeople. Real pricing, honest rankings, no affiliate links.",
   "author": {

@@ -8,7 +8,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "AI Call Answering for Plumbers in Liverpool | whoza.ai",
-  description: "Stop losing plumbers jobs to missed calls in Liverpool. Katie answers 24/7, captures burst pipe emergencies, boiler breakdowns, blocked drains & leak enquiries, and sends WhatsApp alerts in 3 seconds. 7-day free trial.",
+  description: "Stop losing plumber jobs to missed calls in Liverpool. Katie answers 24/7, captures burst pipe and boiler enquiries via WhatsApp. Plans from £59/month.",
   alternates: {
     canonical: "https://whoza.ai/for-plumbers-liverpool",
   },
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/for-plumbers-liverpool",
     siteName: "Whoza.ai",
     title: "AI Call Answering for Plumbers in Liverpool | whoza.ai",
-    description: "Stop losing plumbers jobs to missed calls in Liverpool. Katie answers 24/7, captures burst pipe emergencies, boiler breakdowns, blocked drains & leak enquiries, and sends WhatsApp alerts in 3 seconds. 7-day free trial.",
+    description: "Stop losing plumber jobs to missed calls in Liverpool. Katie answers 24/7, captures burst pipe and boiler enquiries via WhatsApp. Plans from £59/month.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Plumbers in Liverpool" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "AI Call Answering for Plumbers in Liverpool | whoza.ai",
-    description: "Stop losing plumbers jobs to missed calls in Liverpool. Katie answers 24/7, captures burst pipe emergencies, boiler breakdowns, blocked drains & leak enquiries, and sends WhatsApp alerts in 3 seconds. 7-day free trial.",
+    description: "Stop losing plumber jobs to missed calls in Liverpool. Katie answers 24/7, captures burst pipe and boiler enquiries via WhatsApp. Plans from £59/month.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {
@@ -114,14 +114,7 @@ export default function ForPlumberLiverpoolPage() {
                   "name": "Liverpool"
                 }
               },
-              {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://whoza.ai" },
-                  { "@type": "ListItem", "position": 2, "name": "For Plumbers", "item": "https://whoza.ai/for-plumbers" },
-                  { "@type": "ListItem", "position": 3, "name": "Liverpool", "item": "https://whoza.ai/for-plumbers-liverpool" }
-                ]
-              }
+              
             ]
           })
         }}

@@ -8,7 +8,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "AI Call Answering for Cleaners in London | whoza.ai",
-  description: "Stop losing cleaners jobs to missed calls in London. Katie answers 24/7, captures domestic cleans, end-of-tenancy bookings, commercial contracts & carpet cleaning, and sends WhatsApp alerts in 3 seconds. 7-day free trial.",
+  description: "Stop losing cleaner jobs to missed calls in London. Katie answers 24/7, captures domestic and commercial enquiries via WhatsApp. Plans from £59/month.",
   alternates: {
     canonical: "https://whoza.ai/for-cleaners-london",
   },
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/for-cleaners-london",
     siteName: "Whoza.ai",
     title: "AI Call Answering for Cleaners in London | whoza.ai",
-    description: "Stop losing cleaners jobs to missed calls in London. Katie answers 24/7, captures domestic cleans, end-of-tenancy bookings, commercial contracts & carpet cleaning, and sends WhatsApp alerts in 3 seconds. 7-day free trial.",
+    description: "Stop losing cleaner jobs to missed calls in London. Katie answers 24/7, captures domestic and commercial enquiries via WhatsApp. Plans from £59/month.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Cleaners in London" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "AI Call Answering for Cleaners in London | whoza.ai",
-    description: "Stop losing cleaners jobs to missed calls in London. Katie answers 24/7, captures domestic cleans, end-of-tenancy bookings, commercial contracts & carpet cleaning, and sends WhatsApp alerts in 3 seconds. 7-day free trial.",
+    description: "Stop losing cleaner jobs to missed calls in London. Katie answers 24/7, captures domestic and commercial enquiries via WhatsApp. Plans from £59/month.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {
@@ -114,14 +114,7 @@ export default function ForCleanerLondonPage() {
                   "name": "London"
                 }
               },
-              {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://whoza.ai" },
-                  { "@type": "ListItem", "position": 2, "name": "For Cleaners", "item": "https://whoza.ai/for-cleaners" },
-                  { "@type": "ListItem", "position": 3, "name": "London", "item": "https://whoza.ai/for-cleaners-london" }
-                ]
-              }
+              
             ]
           })
         }}

@@ -8,7 +8,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "I Lost £12,000 to Missed Boiler Calls | whoza.ai",
-  description: "Heating engineer shares 4-week winter diary. 47 missed boiler calls, £12,000 lost revenue, and how AI call answering recovered £8,400. Real numbers from Manchester.",
+  description: "Heating engineer shares 4-week winter diary. 47 missed boiler calls, £12,000 lost revenue. How AI call answering recovered £8,400. Real numbers. 2026.",
   alternates: {
     canonical: "https://whoza.ai/blog/i-lost-12000-in-one-winter-to-missed-boiler-calls-charlie-the-heating-engineer",
   },
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Charlie Hardcastle" }],
   openGraph: {
     title: "I Lost £12,000 to Missed Boiler Calls | whoza.ai",
-    description: "Heating engineer shares 4-week winter diary. 47 missed boiler calls, £12,000 lost revenue, and how AI call answering recovered £8,400. Real numbers from Manchester.",
+    description: "Heating engineer shares 4-week winter diary. 47 missed boiler calls, £12,000 lost revenue. How AI call answering recovered £8,400. Real numbers. 2026.",
     type: "article",
     authors: ["Charlie Hardcastle"],
     tags: ["UGC / Real Stories"],
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@whozaai",
     title: "I Lost £12,000 to Missed Boiler Calls | whoza.ai",
-    description: "Heating engineer shares 4-week winter diary. 47 missed boiler calls, £12,000 lost revenue, and how AI call answering recovered £8,400. Real numbers from Manchester.",
+    description: "Heating engineer shares 4-week winter diary. 47 missed boiler calls, £12,000 lost revenue. How AI call answering recovered £8,400. Real numbers. 2026.",
     images: ["https://whoza.ai/og-image.webp"],
   },
 }
@@ -167,10 +167,14 @@ export default function BlogPostPage() {
       {/* Schema Blocks */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
 
       <Header />
+      <BreadcrumbSchema items={[
+        { name: "Home", item: "https://whoza.ai" },
+        { name: "Blog", item: "https://whoza.ai/blog" },
+        { name: "I Lost £12,000 to Missed Boiler Calls", item: "https://whoza.ai/blog/i-lost-12000-in-one-winter-to-missed-boiler-calls-charlie-the-heating-engineer" },
+      ]} />
       <main id="main-content" role="main" className="pb-24 lg:pb-0">
         {/* Hero Section */}
         <section className="relative bg-[var(--navy-900)] py-16 sm:py-20 lg:py-24">

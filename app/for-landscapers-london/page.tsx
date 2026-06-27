@@ -8,7 +8,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "AI Call Answering for Landscapers in London | whoza.ai",
-  description: "Stop losing landscapers jobs to missed calls in London. Katie answers 24/7, captures garden redesigns, patio installations, maintenance contracts & tree work, and sends WhatsApp alerts in 3 seconds. 7-day free trial.",
+  description: "Stop losing landscaper jobs to missed calls in London. Katie answers 24/7, captures garden and maintenance enquiries via WhatsApp. Plans from £59/month.",
   alternates: {
     canonical: "https://whoza.ai/for-landscapers-london",
   },
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/for-landscapers-london",
     siteName: "Whoza.ai",
     title: "AI Call Answering for Landscapers in London | whoza.ai",
-    description: "Stop losing landscapers jobs to missed calls in London. Katie answers 24/7, captures garden redesigns, patio installations, maintenance contracts & tree work, and sends WhatsApp alerts in 3 seconds. 7-day free trial.",
+    description: "Stop losing landscaper jobs to missed calls in London. Katie answers 24/7, captures garden and maintenance enquiries via WhatsApp. Plans from £59/month.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Landscapers in London" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "AI Call Answering for Landscapers in London | whoza.ai",
-    description: "Stop losing landscapers jobs to missed calls in London. Katie answers 24/7, captures garden redesigns, patio installations, maintenance contracts & tree work, and sends WhatsApp alerts in 3 seconds. 7-day free trial.",
+    description: "Stop losing landscaper jobs to missed calls in London. Katie answers 24/7, captures garden and maintenance enquiries via WhatsApp. Plans from £59/month.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {
@@ -114,14 +114,7 @@ export default function ForLandscaperLondonPage() {
                   "name": "London"
                 }
               },
-              {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://whoza.ai" },
-                  { "@type": "ListItem", "position": 2, "name": "For Landscapers", "item": "https://whoza.ai/for-landscapers" },
-                  { "@type": "ListItem", "position": 3, "name": "London", "item": "https://whoza.ai/for-landscapers-london" }
-                ]
-              }
+              
             ]
           })
         }}

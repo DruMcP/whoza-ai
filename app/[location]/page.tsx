@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   
   return {
     metadataBase: new URL("https://whoza.ai"),
-    title: `AI Call Handling for ${tradesText} in ${locationData.city} | whoza.ai`,
+    title: `AI Call Answering ${locationData.city} | whoza.ai`,
     description: citySpecificDescription,
     alternates: {
       canonical: `https://whoza.ai/${location}`,
@@ -70,14 +70,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       locale: locationData.country === "uk" ? "en_GB" : "en_US",
       url: `https://whoza.ai/${location}`,
       siteName: "Whoza.ai",
-      title: `AI Call Handling for ${tradesText} in ${locationData.city} | whoza.ai`,
+      title: `AI Call Answering ${locationData.city} | whoza.ai`,
       description: citySpecificDescription,
       images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: `whoza.ai — AI Call Handling in ${locationData.city}` }],
     },
     twitter: {
       card: "summary_large_image",
       site: "@whozaai",
-      title: `AI Call Handling for ${tradesText} in ${locationData.city} | whoza.ai`,
+      title: `AI Call Answering ${locationData.city} | whoza.ai`,
       description: citySpecificDescription,
       images: ["https://whoza.ai/og-image.webp"],
     },
