@@ -72,7 +72,7 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'HcL1Z5FshVtABkMZHyWoQMPp9Qyd7raEUoWi3_15S3U',
-    bing: '7E719E4A5C3E8A3A7E8B9F6C4D2E1A0B',
+    // bing: handled via raw <meta> tag in <head> — Next.js metadata.verification.bing doesn't render msvalidate.01
   },
   other: {
     'geo.region': 'GB',
@@ -91,10 +91,9 @@ export default function RootLayout({
   return (
     <html lang="en-GB" className={inter.variable}>
       <head>
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="msvalidate.01" content="7E719E4A5C3E8A3A7E8B9F6C4D2E1A0B" />
-    <meta name="msvalidate.01" content="7E719E4A5C3E8A3A7E8B9F6C4D2E1A0B" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <meta name="msvalidate.01" content="7E719E4A5C3E8A3A7E8B9F6C4D2E1A0B" />
     <meta name="deploy-id" content="2026-06-07" />
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="preconnect" href="https://www.google-analytics.com" />
