@@ -30,3 +30,5 @@ node_modules
 # Build cache
 tsconfig.tsbuildinfo
 .next/
+deploy-root/
+deploy-staging/
