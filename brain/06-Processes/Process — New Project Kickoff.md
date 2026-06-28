@@ -17,7 +17,7 @@ New initiative approved by Dru or agent team.
    - 3–5 key results (specific, measurable)
 
 2. **Create project note**
-   - Use [[Templates/project]] in `01-Projects/`
+   - Use [[project]] in `01-Projects/`
    - Fill frontmatter: status, owner, priority
    - Link to triggering decisions or research
 
@@ -50,6 +50,6 @@ New initiative approved by Dru or agent team.
 - If project scope unclear → Refine in inbox before kickoff
 
 ## Related
-- [[Templates/project]] — Project template
+- [[project]] — Project template
 - [[Index — Projects]] — Active work
 - [[Index — Processes]]

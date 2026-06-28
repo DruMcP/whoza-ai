@@ -34,7 +34,7 @@ Retell AI is the backup voice platform for whoza.ai. Offers per-client white-lab
 - whoza.ai wants to avoid Trillet Agency Plan commitment initially
 
 ## Resources
-- Full investigation: [[RETELL_WHITE_LABEL_INVESTIGATION.md]] (flat file, 10KB)
+- Full investigation: `RETELL_WHITE_LABEL_INVESTIGATION.md` (flat file) (flat file, 10KB)
 - Supplier comparison: [[Research — UK Voice Agent Suppliers]]
 
 ## Related

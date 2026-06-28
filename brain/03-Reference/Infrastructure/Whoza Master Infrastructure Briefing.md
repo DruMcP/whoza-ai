@@ -1,3 +1,9 @@
+---
+created: 2026-06-25
+updated: 2026-06-25
+tags: [reference, infrastructure, briefing]
+---
+
 # WHOZA.AI MASTER INFRASTRUCTURE BRIEFING
 Business Model, Trillet Capability Leverage, Client Knowledge Architecture, Onboarding and Agentic Infrastructure
 Prepared for Whoza.ai development agents - 03 May 2026

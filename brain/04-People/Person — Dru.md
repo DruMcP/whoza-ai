@@ -38,7 +38,7 @@ Dru is the human founder of whoza.ai, working in E-commerce (EC) and now buildin
 - When frustrated: expresses plainly without excessive emotion
 
 ## Resources
-- See [[USER.md]] in workspace root for full profile
+- See `USER.md` (flat file in workspace root) in workspace root for full profile
 
 ## Related
 - [[Project — NGT Introduction]] — BD initiative

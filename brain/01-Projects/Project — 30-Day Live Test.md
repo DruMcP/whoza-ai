@@ -102,10 +102,10 @@ This is the go-live validation sprint. No more building — this is about gettin
 - CAC > £300 per customer → pricing or channel problem
 
 ## Resources
-- Full plan: [[30_DAY_GATED_EXECUTION_PLAN.md]] (flat file, 21KB)
-- Business model: [[BUSINESS_MODEL_ANALYSIS.md]] (flat file)
-- PnL model: [[TRILLET_PnL_MODEL.md]] (flat file)
-- Voice design: [[TRILLET_DESIGN_AND_COSTING.md]] (flat file)
+- Full plan: `30_DAY_GATED_EXECUTION_PLAN.md` (flat file) (flat file, 21KB)
+- Business model: `BUSINESS_MODEL_ANALYSIS.md` (flat file) (flat file)
+- PnL model: `TRILLET_PnL_MODEL.md` (flat file in workspace root) (flat file)
+- Voice design: `TRILLET_DESIGN_AND_COSTING.md` (flat file) (flat file)
 
 ## Related
 - [[Project — Voice Agent White Label]] — The product being tested

@@ -59,9 +59,9 @@ Trade Receptionist is the most mature UK trades-specific AI voice product. Their
 | Alex | British (Scottish) | Efficient, calm | Electricians, HVAC |
 
 ## Resources
-- Full spec: [[TRADE_RECEPTIONIST_FEATURE_REPLICATION.md]] (flat file, 13KB)
-- Voice design: [[TRILLET_DESIGN_AND_COSTING.md]] (flat file)
-- Supplier deep dive: [[UK_VOICE_AGENT_SUPPLIER_DEEP_DIVE.md]] (flat file)
+- Full spec: `TRADE_RECEPTIONIST_FEATURE_REPLICATION.md` (flat file) (flat file, 13KB)
+- Voice design: `TRILLET_DESIGN_AND_COSTING.md` (flat file) (flat file)
+- Supplier deep dive: `UK_VOICE_AGENT_SUPPLIER_DEEP_DIVE.md` (flat file) (flat file)
 
 ## Related
 - [[Project — Voice Agent White Label]] — Parent project

@@ -60,9 +60,9 @@ Every month on whoza.ai, both services get stronger. Compounding investment in p
 **Simplified tiers:** Solo £69 → Business £129 → Professional £219 → Enterprise £499
 
 ## Resources
-- Full overview: [[CLIENT_OFFER_OVERVIEW.md]] (flat file, 8KB)
-- Business model: [[BUSINESS_MODEL_ANALYSIS.md]] (flat file)
-- Bundle strategy: [[BUNDLE_STRATEGY_ANALYSIS.md]] (flat file)
+- Full overview: `CLIENT_OFFER_OVERVIEW.md` (flat file) (flat file, 8KB)
+- Business model: `BUSINESS_MODEL_ANALYSIS.md` (flat file) (flat file)
+- Bundle strategy: `BUNDLE_STRATEGY_ANALYSIS.md` (flat file) (flat file)
 
 ## Related
 - [[Project — Voice Agent White Label]] — The product

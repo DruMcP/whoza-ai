@@ -1,3 +1,9 @@
+---
+created: 2026-06-25
+updated: 2026-06-25
+tags: [reference, launch, vision]
+---
+
 Whoza.ai Launch Vision Overview
 
 A precise build-to vision for launch: AI Revenue Team for UK Trades

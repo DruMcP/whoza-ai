@@ -1,3 +1,9 @@
+---
+created: 2026-06-25
+updated: 2026-06-25
+tags: [research, audit, multi-agent]
+---
+
 Whoza.ai Enterprise Audit Report
 
 Multi-Agent Expert Validation — 9.5+ Standard Assessment

@@ -30,7 +30,7 @@ Heartbeat poll, scheduled cron, or manual run.
    - Schema markup: 10 types active
 
 4. **Log results**
-   Update [[HEARTBEAT.md]] with timestamp and result.
+   Update `HEARTBEAT.md` (flat file in workspace root) with timestamp and result.
 
 5. **Alert if issues**
    - Any endpoint failing → Immediate Agent-3 investigation
@@ -46,6 +46,6 @@ Site status: Fully operational
 ```
 
 ## Related
-- [[HEARTBEAT.md]] — Operational monitoring log
+- `HEARTBEAT.md` (flat file in workspace root) — Operational monitoring log
 - [[Project — SEO Remediation]] — SEO health
 - [[Index — Processes]]

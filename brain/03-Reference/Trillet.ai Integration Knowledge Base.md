@@ -397,7 +397,7 @@ Whoza dashboard, Rex, Claire, analytics, billing  ←  CUSTOMER FACING OS
 ## Related Brain Notes
 - [[Research — Trillet Deep Dive]] — Initial evaluation
 - [[Decision — Trillet as Voice Provider]] — Why we chose Trillet
-- [[TRILLET_DESIGN_AND_COSTING.md]] — Commercial model
-- [[TRILLET_PnL_MODEL.md]] — Unit economics
+- `TRILLET_DESIGN_AND_COSTING.md` (flat file) — Commercial model
+- `TRILLET_PnL_MODEL.md` (flat file in workspace root) — Unit economics
 - [[Whoza Master Infrastructure Briefing]] — Full infrastructure context
-- [[AGENT_TEAM_ARCHITECTURE.md]] — Katie, Mark, Claire, Rex roles
+- `AGENT_TEAM_ARCHITECTURE.md` (flat file) — Katie, Mark, Claire, Rex roles

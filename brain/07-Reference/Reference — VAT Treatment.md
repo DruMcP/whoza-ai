@@ -20,8 +20,8 @@ tags: [reference, tax, compliance]
 - Invoice generation includes VAT breakdown
 
 ## Resources
-- Clarification: [[VAT_TREATMENT_CLARIFICATION.md]] (flat file, 11KB)
-- Confirmation: [[VAT_TREATMENT_CONFIRMED.md]] (flat file, 6KB)
+- Clarification: `VAT_TREATMENT_CLARIFICATION.md` (flat file) (flat file, 11KB)
+- Confirmation: `VAT_TREATMENT_CONFIRMED.md` (flat file) (flat file, 6KB)
 
 ## Related
 - [[Reference — PnL Model]] — VAT impacts unit economics

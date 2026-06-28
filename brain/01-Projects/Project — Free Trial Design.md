@@ -85,11 +85,11 @@ Free trials are the primary conversion mechanism for the voice + visibility bund
 - Flag suspicious patterns (same IP, same device, multiple trials)
 
 ## Resources
-- Full spec: [[FREE_TRIAL_DESIGN.md]] (flat file, 15KB)
-- PnL model: [[TRILLET_PnL_MODEL.md]] (flat file)
-- Competitor intel: [[COMPETITIVE_INTELLIGENCE_REPORT.md]] (flat file)
+- Full spec: `FREE_TRIAL_DESIGN.md` (flat file) (flat file, 15KB)
+- PnL model: `TRILLET_PnL_MODEL.md` (flat file in workspace root) (flat file)
+- Competitor intel: `COMPETITIVE_INTELLIGENCE_REPORT.md` (flat file) (flat file)
 
 ## Related
 - [[Project — Voice Agent White Label]] — Trial is the entry point
-- [[Project — Client Onboarding]] — Trial flows into onboarding
+- [[Reference — Client Onboarding Process]] — Trial flows into onboarding
 - [[Index — Projects]]

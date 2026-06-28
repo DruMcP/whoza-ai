@@ -39,10 +39,10 @@ This project was spawned by [[Decision — White-Label vs Build Voice]] and info
 3. Can we do true white-label (our branding, their infra) per client? → [[Research — Retell White Label]]
 
 ## Resources
-- Full design spec: [[TRILLET_DESIGN_AND_COSTING.md]] (flat file)
-- PnL model: [[TRILLET_PnL_MODEL.md]] (flat file)
-- Supplier deep dive: [[UK_VOICE_AGENT_SUPPLIER_DEEP_DIVE.md]] (flat file)
-- Retell investigation: [[RETELL_WHITE_LABEL_INVESTIGATION.md]] (flat file)
+- Full design spec: `TRILLET_DESIGN_AND_COSTING.md` (flat file) (flat file)
+- PnL model: `TRILLET_PnL_MODEL.md` (flat file in workspace root) (flat file)
+- Supplier deep dive: `UK_VOICE_AGENT_SUPPLIER_DEEP_DIVE.md` (flat file) (flat file)
+- Retell investigation: `RETELL_WHITE_LABEL_INVESTIGATION.md` (flat file) (flat file)
 
 ## Related
 - [[Project — Trade Receptionist Feature Replication]] — Feature-level spec

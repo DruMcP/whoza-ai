@@ -25,5 +25,5 @@ How they connect to whoza.ai.
 What are we pursuing with this person?
 
 ## Related
-- [[Project — Example Project]]
+- [[Project — Voice Agent White Label]]
 - [[Index — People]]

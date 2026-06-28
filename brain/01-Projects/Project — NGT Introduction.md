@@ -33,5 +33,5 @@ NGT has patented ECA core technology. whoza.ai's visibility platform could help 
 
 ## Related
 - [[Project — Ovivo Contact Strategy]] — Parallel water treatment BD track
-- [[Reference — POSH Platform]] — Technical context from uploaded docs
+- POSH Platform (no dedicated note — see Project — NGT Introduction) — Technical context from uploaded docs
 - [[Index — Projects]]

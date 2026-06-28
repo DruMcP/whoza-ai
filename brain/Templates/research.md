@@ -24,6 +24,6 @@ What does this mean for whoza.ai?
 What still needs investigating?
 
 ## Related
-- [[Decision — Example]]
-- [[Project — Example]]
+- [[Decision — Pricing Architecture]]
+- [[Project — Voice Agent White Label]]
 - [[Index — Research]]

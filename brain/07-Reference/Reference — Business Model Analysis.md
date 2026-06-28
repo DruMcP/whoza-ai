@@ -1,10 +1,13 @@
 ---
 created: 2026-04-29
-updated: 2026-04-29
+updated: 2026-06-25
 tags: [reference, business-model, market]
+status: superseded
 ---
 
 # Reference — Business Model Analysis
+
+> ⚠️ **DEPRECATED — June 2026.** Market data and opportunity scores below remain directionally useful, but the business model has pivoted. See [[Reference — Whoza.ai Knowledge Base]] for current positioning (AI call answering for UK trades, pay-per-job via WhatsApp). Revenue model, pricing tiers, and bundle strategy have all changed since April 2026.
 
 ## Opportunity Score: 8.48 / 10 (A-grade)
 
@@ -54,9 +57,9 @@ tags: [reference, business-model, market]
 | Home services AI adoption | 3.0% (lowest of 17 industries — first-mover window) |
 
 ## Resources
-- Full analysis: [[BUSINESS_MODEL_ANALYSIS.md]] (flat file, 22KB)
-- PnL model: [[TRILLET_PnL_MODEL.md]] (flat file)
-- Competitor intel: [[COMPETITIVE_INTELLIGENCE_REPORT.md]] (flat file)
+- Full analysis: `BUSINESS_MODEL_ANALYSIS.md` (flat file) (flat file, 22KB)
+- PnL model: `TRILLET_PnL_MODEL.md` (flat file in workspace root) (flat file)
+- Competitor intel: `COMPETITIVE_INTELLIGENCE_REPORT.md` (flat file) (flat file)
 
 ## Related
 - [[Reference — Validated Business Model]] — Core model summary

@@ -73,9 +73,9 @@ Multiple voice agent platforms and UK number suppliers enable the white-label re
 **Incompatible:** Some MVNOs disable call forwarding (rare)
 
 ## Resources
-- Full deep dive: [[UK_VOICE_AGENT_SUPPLIER_DEEP_DIVE.md]] (flat file, 17KB)
-- Retell investigation: [[RETELL_WHITE_LABEL_INVESTIGATION.md]] (flat file)
-- Trillet design: [[TRILLET_DESIGN_AND_COSTING.md]] (flat file)
+- Full deep dive: `UK_VOICE_AGENT_SUPPLIER_DEEP_DIVE.md` (flat file) (flat file, 17KB)
+- Retell investigation: `RETELL_WHITE_LABEL_INVESTIGATION.md` (flat file) (flat file)
+- Trillet design: `TRILLET_DESIGN_AND_COSTING.md` (flat file) (flat file)
 
 ## Related
 - [[Decision — Trillet as Voice Provider]] — Why Trillet won

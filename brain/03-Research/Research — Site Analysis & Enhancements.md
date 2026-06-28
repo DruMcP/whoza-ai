@@ -71,9 +71,9 @@ Only email capture is via the high-friction competitor analysis tool.
 - Add exit-intent popup for email capture
 
 ## Resources
-- Full analysis: [[SITE_ANALYSIS_AND_ENHANCEMENTS.md]] (flat file, 13KB)
-- SEO tracking: [[SEO_FIX_PLAN.md]] (flat file)
-- Competitor intel: [[COMPETITIVE_INTELLIGENCE_REPORT.md]] (flat file)
+- Full analysis: `SITE_ANALYSIS_AND_ENHANCEMENTS.md` (flat file) (flat file, 13KB)
+- SEO tracking: `SEO_FIX_PLAN.md` (flat file) (flat file)
+- Competitor intel: `COMPETITIVE_INTELLIGENCE_REPORT.md` (flat file) (flat file)
 
 ## Related
 - [[Project — SEO Remediation]] — Active fixes

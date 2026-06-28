@@ -1,3 +1,9 @@
+---
+created: 2026-06-25
+updated: 2026-06-25
+tags: [reference, security, netlify, credentials]
+---
+
 # Netlify Authentication Token
 # Updated: 2026-05-07
 # Scope: CORRECT Staging deployment (349)

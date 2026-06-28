@@ -1,10 +1,13 @@
 ---
 created: 2026-04-29
-updated: 2026-04-29
+updated: 2026-06-25
 tags: [reference, pnl, financial]
+status: superseded
 ---
 
 # Reference — PnL Model
+
+> ⚠️ **DEPRECATED — June 2026.** This note reflects the April 2026 pricing model (Solo/Business/Pro/Enterprise with AI Visibility bundles). The current deployed pricing is documented in [[Reference — Whoza.ai Knowledge Base]]. See Section 2.3 (Pricing) for accurate tiers, features, and unit economics.
 
 ## Unit Economics (Trillet-Based)
 
@@ -54,9 +57,9 @@ tags: [reference, pnl, financial]
 - **Target:** 10+ customers by month 3 for comfortable runway
 
 ## Resources
-- Full model: [[TRILLET_PnL_MODEL.md]] (flat file, 10KB)
-- Business model: [[BUSINESS_MODEL_ANALYSIS.md]] (flat file)
-- Bundle strategy: [[BUNDLE_STRATEGY_ANALYSIS.md]] (flat file)
+- Full model: `TRILLET_PnL_MODEL.md` (flat file in workspace root) (flat file, 10KB)
+- Business model: `BUSINESS_MODEL_ANALYSIS.md` (flat file) (flat file)
+- Bundle strategy: `BUNDLE_STRATEGY_ANALYSIS.md` (flat file) (flat file)
 
 ## Related
 - [[Decision — Pricing Architecture]] — Pricing tiers

@@ -49,8 +49,8 @@ tags: [reference, team, agents]
 - **Communication:** Brain notes + chat + automated reports
 
 ## Resources
-- Full architecture: [[AGENT_TEAM_ARCHITECTURE.md]] (flat file, 36KB)
+- Full architecture: `AGENT_TEAM_ARCHITECTURE.md` (flat file) (flat file, 36KB)
 
 ## Related
-- [[AGENT_BRAIN_PROTOCOL.md]] — How agents use the brain
+- [[AGENT_BRAIN_PROTOCOL]] — How agents use the brain
 - [[Index — Reference]]

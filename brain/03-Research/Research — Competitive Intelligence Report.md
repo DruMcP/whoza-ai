@@ -68,9 +68,9 @@ credibility: high
 - Price against human receptionists, not cheap AI tools
 
 ## Resources
-- Full report: [[COMPETITIVE_INTELLIGENCE_REPORT.md]] (flat file, 16KB)
-- Pricing deep dive: [[COMPETITIVE_PRICING_ANALYSIS.md]] (flat file)
-- Feature replication: [[TRADE_RECEPTIONIST_FEATURE_REPLICATION.md]] (flat file)
+- Full report: `COMPETITIVE_INTELLIGENCE_REPORT.md` (flat file) (flat file, 16KB)
+- Pricing deep dive: `COMPETITIVE_PRICING_ANALYSIS.md` (flat file) (flat file)
+- Feature replication: `TRADE_RECEPTIONIST_FEATURE_REPLICATION.md` (flat file) (flat file)
 
 ## Related
 - [[Decision — Bundle Strategy]] — Why bundling wins

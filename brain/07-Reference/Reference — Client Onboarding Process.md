@@ -69,9 +69,9 @@ Body: {
 **Total time from signup to live: 10–15 minutes**
 
 ## Resources
-- Full process: [[CLIENT_ONBOARDING_PROCESS.md]] (flat file, 14KB)
-- Voice design: [[TRILLET_DESIGN_AND_COSTING.md]] (flat file)
-- Free trial design: [[FREE_TRIAL_DESIGN.md]] (flat file)
+- Full process: `CLIENT_ONBOARDING_PROCESS.md` (flat file) (flat file, 14KB)
+- Voice design: `TRILLET_DESIGN_AND_COSTING.md` (flat file) (flat file)
+- Free trial design: `FREE_TRIAL_DESIGN.md` (flat file) (flat file)
 
 ## Related
 - [[Project — Voice Agent White Label]] — The product being onboarded

@@ -58,9 +58,9 @@ whoza.ai's proposed pricing (£49–£499/mo) sits in the "premium AI" bracket �
 | **Enterprise** | £499/mo | White-label + custom scripts. Comparable to Team Connect Enterprise (£99.99 is cheaper but less feature-rich). |
 
 ## Resources
-- Full analysis: [[COMPETITIVE_PRICING_ANALYSIS.md]] (flat file, 14KB)
-- Competitor intel: [[COMPETITIVE_INTELLIGENCE_REPORT.md]] (flat file)
-- PnL model: [[TRILLET_PnL_MODEL.md]] (flat file)
+- Full analysis: `COMPETITIVE_PRICING_ANALYSIS.md` (flat file) (flat file, 14KB)
+- Competitor intel: `COMPETITIVE_INTELLIGENCE_REPORT.md` (flat file) (flat file)
+- PnL model: `TRILLET_PnL_MODEL.md` (flat file in workspace root) (flat file)
 
 ## Related
 - [[Decision — Pricing Architecture]] — Our pricing tiers

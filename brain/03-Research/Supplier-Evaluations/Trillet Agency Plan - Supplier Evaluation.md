@@ -1,3 +1,9 @@
+---
+created: 2026-06-25
+updated: 2026-06-25
+tags: [research, supplier, evaluation, trillet]
+---
+
 Trillet.ai Agency Plan: Comprehensive White-Label Supplier Evaluation
 
 1. Executive Summary for White-Label Partnership Decision

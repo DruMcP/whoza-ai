@@ -1,6 +1,6 @@
 ---
 created: 2026-04-29
-updated: 2026-05-02
+updated: 2026-06-25
 tags: [inbox, meta]
 ---
 
@@ -55,10 +55,10 @@ Fleeting notes, quick ideas, raw research snippets, half-formed thoughts. Anythi
 ---
 
 ## How to Process
-- Idea for a project? → Create [[Templates/project]] in [[01-Projects]]
-- Competitor intel? → Create [[Templates/research]] in [[03-Research]]
-- New contact met? → Create [[Templates/person]] in [[04-People]]
-- Decision reached in chat? → Create [[Templates/decision]] in [[02-Decisions]]
+- Idea for a project? → Create from [[project]] in `01-Projects/`
+- Competitor intel? → Create from [[research]] in `03-Research/`
+- New contact met? → Create from [[person]] in `04-People/`
+- Decision reached in chat? → Create from [[decision]] in `02-Decisions/`
 
 ## Related
 - [[Index]] — Brain homepage

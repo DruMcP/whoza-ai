@@ -24,7 +24,11 @@ tags: [index, projects]
 | [[Project — Trade Receptionist Feature Replication]] | planning | Agent-4 |
 
 ## Archive
-Move completed projects to [[99-Archive — Projects]].
+| Project | Status | Owner | Last Update |
+|---------|--------|-------|-------------|
+| [[Project — Trillet Integration]] | completed | Agent-1 | 2026-05-08 |
+
+Move other completed projects to `99-Archive/` folder.
 
 ## Related
 - [[Index — Decisions]] — Why certain projects exist

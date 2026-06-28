@@ -48,7 +48,7 @@ SUPABASE_SERVICE_ROLE_KEY=[REDACTED — see .env.staging in v0 workspace]
 | `call_logs` | Call history, outcomes, recordings |
 | `trials` | Trial tracking, expiry dates |
 | `scheduled_tasks` | Cron jobs, reminders, review requests |
-| `subscription_plans` | Plan definitions (Solo/Business/Pro/Enterprise) |
+| `subscription_plans` | Plan definitions (Starter/Growth/Pro/Scale) |
 
 ## Key Pages & Routes
 | Route | Component | Purpose | Status |
@@ -93,9 +93,9 @@ GitHub push → Netlify build (npm run build) → Prerender (prerender.mjs) → 
 ## Recent Changes
 - **2026-05-10** — Legal compliance sprint: 9 legal pages added, CookieBanner component, ICO badge, sitemap updated. Katie audio player overlay installed (35s boiler enquiry demo). Header CTA resized and tagline updated.
 - **2026-05-08** — SEO remediation: CTA buttons converted to anchor tags, 11 schema types, hreflang, sitemap, support page.
-- Deploy checklist: [[STAGING_DEPLOY_CHECKLIST.md]] (flat file)
-- SEO fix plan: [[SEO_FIX_PLAN.md]] (flat file)
-- Site analysis: [[SITE_ANALYSIS_AND_ENHANCEMENTS.md]] (flat file)
+- Deploy checklist: `STAGING_DEPLOY_CHECKLIST.md` (flat file) (flat file)
+- SEO fix plan: `SEO_FIX_PLAN.md` (flat file) (flat file)
+- Site analysis: `SITE_ANALYSIS_AND_ENHANCEMENTS.md` (flat file) (flat file)
 
 ## Related
 - [[Decision — Netlify + Supabase Stack]] — Why this stack

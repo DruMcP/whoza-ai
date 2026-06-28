@@ -1,6 +1,6 @@
 ---
 created: 2026-04-29
-updated: 2026-05-02
+updated: 2026-06-25
 tags: [index, research]
 ---
 
@@ -12,22 +12,20 @@ tags: [index, research]
 | [[Research — Trillet Deep Dive]] | primary | high | 2026-04-28 |
 | [[Research — Retell White Label]] | primary | high | 2026-04-28 |
 | [[Research — UK Voice Agent Suppliers]] | primary | high | 2026-04-28 |
-| [[Research — UK Number Suppliers]] | secondary | medium | 2026-04-28 |
 
 ## Competitive Intelligence
 | Topic | Source | Credibility | Date |
 |-------|--------|-------------|------|
-| [[Research — Competitor Analysis]] | mixed | medium | 2026-04-26 |
-| [[Research — Competitive Pricing Analysis]] | primary | high | 2026-04-28 |
 | [[Research — Competitive Intelligence Report]] | primary | high | 2026-04-28 |
+| [[Research — Competitive Pricing Analysis]] | primary | high | 2026-04-28 |
 | [[Research — Brand Strength Analysis]] | internal | high | 2026-04-28 |
 
 ## Market & Business
 | Topic | Source | Credibility | Date |
 |-------|--------|-------------|------|
-| [[Research — Validated Business Model]] | internal | high | 2026-04-28 |
-| [[Research — Business Model Analysis]] | internal | high | 2026-04-28 |
 | [[Research — Client Offer Overview]] | internal | high | 2026-04-28 |
+| [[Reference — Business Model Analysis]] — *(see Reference index)* | internal | high | 2026-04-28 |
+| [[Reference — Validated Business Model]] — *(see Reference index)* | internal | high | 2026-04-28 |
 
 ## Reviews & Conversion
 | Topic | Source | Credibility | Date |
@@ -37,27 +35,19 @@ tags: [index, research]
 ## SEO & Web
 | Topic | Source | Credibility | Date |
 |-------|--------|-------------|------|
-| [[Research — SEO Remediation Plan]] | internal | high | 2026-04-27 |
 | [[Research — Site Analysis & Enhancements]] | internal | high | 2026-04-26 |
-| [[Research — Multi-Agent Audit Report]] | internal | high | 2026-05-03 |
-| [[Research — Enterprise Audit Report]] | internal | high | 2026-05-03 |
-
-## UX & Conversion Audits
-| Topic | Source | Credibility | Date |
-|-------|--------|-------------|------|
+| [[Project — SEO Remediation]] — *(see Projects index)* | internal | high | 2026-04-27 |
 | [[Whoza_AI_Master_UX_Audit_Report]] | 5 specialist agents | high | 2026-07 |
 | [[Whoza_AI_Alignment_Review]] | follow-up audit | high | 2026-07 |
 
 ## Supplier Evaluations
 | Topic | Source | Credibility | Date |
 |-------|--------|-------------|------|
-| [[Research — Trillet Deep Dive]] | primary | high | 2026-04-28 |
-| [[Research — Trillet Agency Plan Evaluation]] | primary | high | 2026-05-03 |
-| [[Research — Multi-Agent Audit Report]] | internal | high | 2026-05-03 |
-| [[Research — Enterprise Audit Report]] | internal | high | 2026-05-03 |
+| [[Trillet Agency Plan - Supplier Evaluation]] | primary | high | 2026-05-03 |
+| [[Whoza Multi-Agent Audit Report]] | internal | high | 2026-05-03 |
+| [[Whoza AI Enterprise Audit Report]] | internal | high | 2026-05-03 |
 
-## Supplier Evaluations
-| Topic | Source | Credibility | Date |
-|-------|--------|-------------|------|
-| [[Research — Trillet Deep Dive]] | primary | high | 2026-04-28 |
-| [[Research — Trillet Agency Plan Evaluation]] | primary | high | 2026-05-03 |
+## Related
+- [[Index — Reference]] — For business model and PnL research (now in Reference)
+- [[Index — Projects]] — SEO remediation is a project
+- [[research]] — Create new research notes

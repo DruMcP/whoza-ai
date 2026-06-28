@@ -1,3 +1,9 @@
+---
+created: 2026-06-25
+updated: 2026-06-25
+tags: [research, audit, alignment]
+---
+
 # Whoza.ai — Alignment Review & Further Enhancement Roadmap
 
 > **Review Date:** July 2025  

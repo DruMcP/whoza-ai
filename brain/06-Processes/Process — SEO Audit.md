@@ -42,7 +42,7 @@ Monday morning, or after major deploy.
    - Thin content pages
 
 6. **Log and fix**
-   - Update [[SEO_FIX_PLAN.md]] if new issues found
+   - Update `SEO_FIX_PLAN.md` (flat file) if new issues found
    - Assign fixes to Agent-2
    - Verify fixes before next audit
 

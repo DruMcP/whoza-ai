@@ -14,8 +14,8 @@ One-line goal of this project.
 
 ## Context
 Why this exists. Link to related decisions or research:
-- [[Decision — Example Decision]]
-- [[Research — Example Topic]]
+- [[Decision — Pricing Architecture]]
+- [[Research — Trillet Deep Dive]]
 
 ## Status
 - [ ] Kickoff
@@ -28,7 +28,7 @@ What does success look like? Specific, measurable.
 
 ## Resources
 - Links, docs, tools
-- [[Person — Key Stakeholder]]
+- [[Person — Dru]]
 
 ## Log
 | Date | Event | Owner |

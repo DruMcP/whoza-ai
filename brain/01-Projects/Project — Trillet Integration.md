@@ -1,3 +1,9 @@
+---
+created: 2026-06-25
+updated: 2026-06-25
+tags: [project, trillet, integration, completed]
+---
+
 # Trillet Integration — Pre-Trial Build Task List
 **Target:** 1st June Launch
 **Pre-trial build:** 8 May → 22 May (15 days)

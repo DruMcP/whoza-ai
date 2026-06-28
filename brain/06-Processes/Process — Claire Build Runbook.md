@@ -109,5 +109,5 @@ Step-by-step SOP for building the Claire Post-Job Conversion Engine MVP. ~9 days
 ## Related
 - [[Project — Pre-Production Build]] — Parent project
 - [[Decision — Claire is Post-Job Conversion Engine]] — Product positioning
-- [[docs/CLAIRE_MVP_SPEC.md]] — Full technical specification
+- `docs/CLAIRE_MVP_SPEC.md` (flat file) — Full technical specification
 - [[Index — Processes]]

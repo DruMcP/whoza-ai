@@ -98,9 +98,9 @@ Tradespeople respond to practical proof, not marketing fluff. Every automation m
 | Analytics | GA4 + custom dashboard | £0 |
 
 ## Resources
-- Full blueprint: [[MARKETING_AUTOMATION_BLUEPRINT.md]] (flat file, 18KB)
-- Business model: [[BUSINESS_MODEL_ANALYSIS.md]] (flat file)
-- Competitor intel: [[COMPETITIVE_INTELLIGENCE_REPORT.md]] (flat file)
+- Full blueprint: `MARKETING_AUTOMATION_BLUEPRINT.md` (flat file) (flat file, 18KB)
+- Business model: `BUSINESS_MODEL_ANALYSIS.md` (flat file) (flat file)
+- Competitor intel: `COMPETITIVE_INTELLIGENCE_REPORT.md` (flat file) (flat file)
 
 ## Related
 - [[Project — 30-Day Live Test]] — Marketing automation feeds the go-live sprint

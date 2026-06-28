@@ -1,3 +1,9 @@
+---
+created: 2026-06-25
+updated: 2026-06-25
+tags: [research, audit, ux]
+---
+
 # Whoza.ai — Master UX Audit Report
 
 > **Source:** 5 Specialist Agents (Copy, Visual Design, Colour/Branding, Customer Journey, Competitive Intelligence)  

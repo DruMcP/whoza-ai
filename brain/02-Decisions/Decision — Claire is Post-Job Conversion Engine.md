@@ -62,7 +62,7 @@ Claire was originally conceived as a "review collection" feature — one of thre
 
 ## Related
 - [[Project — Pre-Production Build]] — Where Claire is being built
-- [[docs/CLAIRE_MVP_SPEC.md]] — Full technical specification
+- `docs/CLAIRE_MVP_SPEC.md` (flat file) — Full technical specification
 - [[Research — Pluspoint Review Platform]] — Potential partner/comparison
-- [[9_PLUS_WORLD_CLASS_PLAN.md]] — Section 5: Claire roadmap
+- `9_PLUS_WORLD_CLASS_PLAN.md` (flat file) — Section 5: Claire roadmap
 - [[Index — Decisions]]

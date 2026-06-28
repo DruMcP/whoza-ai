@@ -16,16 +16,16 @@ New note in `00-Inbox/`, or daily heartbeat.
    - Read all uncategorized notes from last 24h
 
 2. **Categorize each note**
-   - Idea for a project? → Create [[Templates/project]] in `01-Projects/`
-   - Competitor intel? → Create [[Templates/research]] in `03-Research/`
-   - New contact met? → Create [[Templates/person]] in `04-People/`
-   - Decision reached? → Create [[Templates/decision]] in `02-Decisions/`
+   - Idea for a project? → Create [[project]] in `01-Projects/`
+   - Competitor intel? → Create [[research]] in `03-Research/`
+   - New contact met? → Create [[person]] in `04-People/`
+   - Decision reached? → Create [[decision]] in `02-Decisions/`
    - Quick task? → Add to relevant project note or create task
    - Junk? → Delete
 
 3. **Link new notes**
-   - Add wiki links `[[Note Name]]` to related existing notes
-   - Update relevant [[Index — *]] pages
+   - Add wiki links ``Note Name` (create actual link when note exists)` to related existing notes
+   - Update relevant index pages ([[Index — Projects]], [[Index — Research]], [[Index — People]], [[Index — Decisions]])
 
 4. **Clean inbox**
    - Move processed notes to proper folders
@@ -37,5 +37,5 @@ New note in `00-Inbox/`, or daily heartbeat.
 
 ## Related
 - [[00-Inbox — Raw Captures]] — The inbox
-- [[AGENT_BRAIN_PROTOCOL.md]] — Full agent rules
+- [[AGENT_BRAIN_PROTOCOL]] — Full agent rules
 - [[Index — Processes]]

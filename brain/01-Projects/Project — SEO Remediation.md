@@ -16,8 +16,8 @@ Fix all critical Google SEO issues and confirm full visibility to search crawler
 Site audit revealed multiple SEO problems affecting whoza.ai's discoverability. This is blocking organic acquisition and undermining credibility. Dru escalated x3 — this is a P0 fire.
 
 ## Key Results
-- [ ] All critical issues from [[whoza.ai-SEO-Remediation-2026-04-27.xlsx]] resolved
-- [ ] All critical issues from [[whoza.ai-FAQ-Remediation-2026-04-27.xlsx]] resolved
+- [ ] All critical issues from `whoza.ai-SEO-Remediation-2026-04-27.xlsx` (Excel file) resolved
+- [ ] All critical issues from `whoza.ai-FAQ-Remediation-2026-04-27.xlsx` (Excel file) resolved
 - [ ] Sitemap clean and submitted to Google Search Console
 - [ ] robots.txt allows all legitimate crawlers (including AI bots)
 - [ ] OG images, schema markup, hreflang validated

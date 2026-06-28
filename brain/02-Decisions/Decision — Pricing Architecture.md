@@ -1,13 +1,15 @@
 ---
 created: 2026-04-29
-updated: 2026-04-29
+updated: 2026-06-25
 tags: [decision, pricing, business]
-status: accepted
+status: superseded
 owner: "Agent-1: CTO Architect / Dru"
 impact: high
 ---
 
 # Decision — Pricing Architecture
+
+> ⚠️ **SUPERSEDED — June 2026.** The pricing model below (Solo/Business/Pro/Enterprise with Voice + Visibility bundles) was the April 2026 architecture. The current deployed pricing is documented in [[Reference — Whoza.ai Knowledge Base]]: Starter £59 (8 jobs), Growth £99 (16 jobs), Pro £179 (40 jobs), Scale £399 (100 jobs). This decision is preserved for historical context only.
 
 ## Context
 whoza.ai needs clear, defensible pricing for the AI Voice + AI Visibility bundle that positions us against both cheap AI tools and expensive human receptionists.
@@ -51,7 +53,7 @@ whoza.ai needs clear, defensible pricing for the AI Voice + AI Visibility bundle
 **Fully reversible.** Pricing can be adjusted in Stripe dashboard within minutes. A/B test different price points on landing pages.
 
 ## Related
-- [[Reference — Competitive Pricing Analysis]] — Market benchmarks
+- [[Research — Competitive Pricing Analysis]] — Market benchmarks
 - [[Reference — PnL Model]] — Unit economics
 - [[Project — Free Trial Design]] — Trial feeds into pricing
 - [[Index — Decisions]]

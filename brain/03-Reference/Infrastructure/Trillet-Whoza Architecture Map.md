@@ -1,3 +1,9 @@
+---
+created: 2026-06-25
+updated: 2026-06-25
+tags: [reference, infrastructure, trillet, architecture]
+---
+
 # Trillet → Whoza Architecture Map
 
 _The bridge between supplier infrastructure and customer experience._

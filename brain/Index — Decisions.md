@@ -1,6 +1,6 @@
 ---
 created: 2026-04-29
-updated: 2026-05-02
+updated: 2026-06-25
 tags: [index, decisions]
 ---
 
@@ -18,12 +18,14 @@ tags: [index, decisions]
 ## Business & Pricing
 | Decision | Status | Date | Impact |
 |----------|--------|------|--------|
-| [[Decision — VAT Treatment]] | accepted | 2026-04-28 | medium |
 | [[Decision — Bundle Strategy]] | accepted | 2026-04-28 | medium |
 | [[Decision — Claire is Post-Job Conversion Engine]] | accepted | 2026-05-02 | high |
 
+## Reference
+- [[Reference — VAT Treatment]] — VAT handling for UK trades (medium impact)
+
 ## Process
-- To propose a decision: create from [[Templates/decision]]
+- To propose a decision: create from [[decision]]
 - To deprecate: update status, add "Superseded by" link
 
 ## Related

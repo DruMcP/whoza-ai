@@ -1,3 +1,9 @@
+---
+created: 2026-06-25
+updated: 2026-06-25
+tags: [reference, agent-os, infrastructure]
+---
+
 # Whoza Command OS
 
 _Agentic Platform Management System_

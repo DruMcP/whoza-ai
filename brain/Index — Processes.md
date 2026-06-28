@@ -1,6 +1,6 @@
 ---
 created: 2026-04-29
-updated: 2026-05-02
+updated: 2026-06-25
 tags: [index, processes]
 ---
 
@@ -16,7 +16,6 @@ tags: [index, processes]
 | Process | Owner | Trigger |
 |---------|-------|---------|
 | [[Process — SEO Audit]] | Agent-7 | Monday |
-| [[Process — Competitive Intel Review]] | Agent-11 | Friday |
 
 ## As Needed
 | Process | Owner | Trigger |
@@ -32,4 +31,4 @@ tags: [index, processes]
 | [[Process — Claire Build Runbook]] | Agent-1 / Agent-2 | Dru go-ahead on Claire MVP |
 
 ## Related
-- [[Templates/process]] — Create new SOPs
+- [[process]] — Create new SOPs

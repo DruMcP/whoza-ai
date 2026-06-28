@@ -31,6 +31,6 @@ Trillet is the fastest path to market. Their existing feature set maps closely t
 ## Related
 - [[Project — Voice Agent White Label]] — Active project
 - [[Decision — Trillet as Voice Provider]] — Why Trillet won
-- [[TRILLET_DESIGN_AND_COSTING.md]] — Full flat-file spec
-- [[TRILLET_PnL_MODEL.md]] — Unit economics
+- `TRILLET_DESIGN_AND_COSTING.md` (flat file) — Full flat-file spec
+- `TRILLET_PnL_MODEL.md` (flat file in workspace root) — Unit economics
 - [[Index — Research]]

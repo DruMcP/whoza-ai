@@ -54,6 +54,6 @@ Pluspoint identified as a potential review platform partner during competitive r
 ## Related
 - [[Project — Pre-Production Build]] — Claire build in progress
 - [[Decision — Claire is Post-Job Conversion Engine]] — Why custom build over off-the-shelf
-- [[docs/CLAIRE_MVP_SPEC.md]] — Claire technical specification
-- [[9_PLUS_WORLD_CLASS_PLAN.md]] — Section 5.9: Future expansion roadmap
+- `docs/CLAIRE_MVP_SPEC.md` (flat file) — Claire technical specification
+- `9_PLUS_WORLD_CLASS_PLAN.md` (flat file) — Section 5.9: Future expansion roadmap
 - [[Index — Research]]

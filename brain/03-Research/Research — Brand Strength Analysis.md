@@ -69,9 +69,9 @@ whoza.ai is a **C+/B- brand** for the trades market. Tech-forward and modern, bu
 5. **"Built for trades" messaging:** Not "AI platform" but "your 24/7 receptionist"
 
 ## Resources
-- Full analysis: [[BRAND_STRENGTH_ANALYSIS.md]] (flat file, 14KB)
-- Competitor intel: [[COMPETITIVE_INTELLIGENCE_REPORT.md]] (flat file)
-- Site analysis: [[SITE_ANALYSIS_AND_ENHANCEMENTS.md]] (flat file)
+- Full analysis: `BRAND_STRENGTH_ANALYSIS.md` (flat file) (flat file, 14KB)
+- Competitor intel: `COMPETITIVE_INTELLIGENCE_REPORT.md` (flat file) (flat file)
+- Site analysis: `SITE_ANALYSIS_AND_ENHANCEMENTS.md` (flat file) (flat file)
 
 ## Related
 - [[Project — Marketing Automation]] — Content and messaging

@@ -59,7 +59,7 @@ Bundled clients typically churn 30–50% less than single-product clients. Doubl
 **Fully reversible.** Can unbundle at any time by creating separate Stripe products.
 
 ## Related
-- [[Reference — Bundle Strategy Analysis]] — Full analysis
+- [[Reference — Validated Business Model]] (bundle strategy now part of Knowledge Base) — Full analysis
 - [[Decision — Pricing Architecture]] — Pricing tiers
 - [[Project — Voice Agent White Label]] — Execution
 - [[Index — Decisions]]

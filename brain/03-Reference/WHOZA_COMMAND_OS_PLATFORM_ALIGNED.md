@@ -1,3 +1,9 @@
+---
+created: 2026-06-25
+updated: 2026-06-25
+tags: [reference, agent-os, infrastructure, active]
+---
+
 # Whoza Command OS — Platform-Aligned v2.1
 
 _Agentic control system for whoza.ai — adapted to whoza's actual architecture_

@@ -22,7 +22,7 @@ Raw notes, decisions made, tensions surfaced.
 | | | |
 
 ## Decisions Made
-- [[Decision — Example]] (link if a formal decision was reached)
+- [[Decision — Pricing Architecture]] (link if a formal decision was reached)
 
 ## Related
-- [[Project — Example Project]]
+- [[Project — Voice Agent White Label]]

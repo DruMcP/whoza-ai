@@ -30,6 +30,6 @@ Chosen option and rationale.
 Can we undo this? How hard?
 
 ## Related
-- Supersedes: [[Decision — Older Decision]]
+- Supersedes: [[Decision — Pricing Architecture]]
 - Superseded by: (leave blank until deprecated)
 - [[Index — Decisions]]
