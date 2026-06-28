@@ -35,10 +35,10 @@ jobs:
         with:
           urls: |
             https://whoza-ai-staging-349.netlify.app/
-            https://whoza-ai-staging-349.netlify.app/trade/plumber
+            https://whoza-ai-staging-349.netlify.app/for-plumbers
             https://whoza-ai-staging-349.netlify.app/pricing
             https://www.whoza.ai/
-            https://www.whoza.ai/trade/plumber
+            https://www.whoza.ai/for-plumbers
             https://www.whoza.ai/pricing
           uploadArtifacts: true
           temporaryPublicStorage: true
