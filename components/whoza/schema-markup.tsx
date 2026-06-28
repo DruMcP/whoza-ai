@@ -19,7 +19,7 @@ export function HomepageSchema() {
       ],
       "contactPoint": {
         "@type": "ContactPoint",
-        "email": "dru@whoz.ai",
+        "email": "support@whoza.ai",
         "contactType": "customer service",
         "areaServed": "GB",
         "availableLanguage": ["English"]
@@ -79,20 +79,22 @@ export function HomepageSchema() {
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "GB",
-        "addressRegion": "England"
+        "addressRegion": "Scotland",
+        "addressLocality": "Perth",
+        "postalCode": "PH2 8HN"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "51.5074",
-        "longitude": "-0.1278"
+        "latitude": "56.3950",
+        "longitude": "-3.4306"
       },
       "areaServed": {
         "@type": "Country",
         "name": "United Kingdom"
       },
       "priceRange": "££",
-      "telephone": "+44-20-0000-0000",
-      "email": "dru@whoz.ai",
+      "telephone": "+447463141750",
+      "email": "support@whoza.ai",
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -194,7 +196,7 @@ export function HomepageSchema() {
       "description": "Dru McPherson is the founder of whoza.ai, a former trade business owner who built Katie the AI call handler for UK tradespeople.",
       "sameAs": ["https://www.linkedin.com/in/drumcpherson"],
       "url": "https://whoza.ai",
-      "email": "dru@whoza.ai"
+      "email": "support@whoza.ai"
     },
     {
       "@context": "https://schema.org",

@@ -7,7 +7,7 @@ const steps = [
   {
     number: "01",
     title: "We Answer Every Call",
-    description: "Forward your number to Whoza. Live and answering calls in 30 minutes. No tech skills, no engineers, no downtime.",
+    description: "Forward your existing business number to whoza.ai through simple call forwarding — setup takes under 10 minutes with your phone provider. Katie goes live and starts answering your missed calls within 30 minutes. No technical knowledge required, no software to install, and zero downtime for your business.",
     icon: Phone,
     bgClass: "bg-[var(--katie-blue)]",
     bgLightClass: "bg-[var(--katie-blue)]/10",
@@ -21,7 +21,7 @@ const steps = [
   {
     number: "02",
     title: "We Book Real Enquiries",
-    description: "Katie gathers all the details: what they need, when they need it, where they are.",
+    description: "Katie asks every caller the right questions to qualify the enquiry: what service they need, when they need it, where their property is located, and how urgent the job is. She understands trade-specific terminology and filters out time-wasters, spam, and wrong numbers automatically.",
     icon: ClipboardCheck,
     bgClass: "bg-[var(--rex-green)]",
     bgLightClass: "bg-[var(--rex-green)]/10",
@@ -35,7 +35,7 @@ const steps = [
   {
     number: "03",
     title: "We Send Them to Your Phone",
-    description: "Qualified enquiry lands on your phone instantly. Customer name, job type, location, time, and value.",
+    description: "Every qualified enquiry lands on your mobile phone as a structured WhatsApp message within 3 seconds. You get the customer's full name, the exact job type, their postcode and location, preferred appointment time, and an estimated job value. No apps to check, no dashboards to monitor.",
     icon: MessageCircle,
     bgClass: "bg-[var(--claire-amber)]",
     bgLightClass: "bg-[var(--claire-amber)]/10",

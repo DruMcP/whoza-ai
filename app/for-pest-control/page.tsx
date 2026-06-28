@@ -12,7 +12,7 @@ import { notFound } from "next/navigation"
 import { RelatedTrades } from "@/components/whoza/related-trades"
 
 export const metadata: Metadata = {
-  title: "AI Call Answering for Pest Control UK — 24/7 Emergency Call Capture",
+  title: "AI Call Answering for Pest Control UK — Never Miss a Job",
   description: "AI call answering for UK pest control companies. Katie handles 24/7 emergency calls, captures rodent, insect and wildlife enquiries. Instant WhatsApp alerts.",
   alternates: {
     canonical: "https://whoza.ai/for-pest-control",
@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/for-pest-control",
     siteName: "Whoza.ai",
-    title: "AI Call Answering for Pest Control UK — 24/7 Emergency Call Capture",
+    title: "AI Call Answering for Pest Control UK — Never Miss a Job",
     description: "AI call answering for UK pest control companies. Katie handles 24/7 emergency calls, captures rodent, insect and wildlife enquiries. Instant WhatsApp alerts.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Pest Control" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
-    title: "AI Call Answering for Pest Control UK — 24/7 Emergency Call Capture",
+    title: "AI Call Answering for Pest Control UK — Never Miss a Job",
     description: "AI call answering for UK pest control companies. Katie handles 24/7 emergency calls, captures rodent, insect and wildlife enquiries. Instant WhatsApp alerts.",
     images: ["https://whoza.ai/og-image.webp"],
   },

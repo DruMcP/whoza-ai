@@ -12,7 +12,7 @@ import { notFound } from "next/navigation"
 import { RelatedTrades } from "@/components/whoza/related-trades"
 
 export const metadata: Metadata = {
-  title: "AI Call Answering for Drainage Engineers UK — 24/7 Missed Call Recovery",
+  title: "AI Call Answering for Drainage UK — Never Miss a Job",
   description: "AI call answering for UK drainage engineers. Katie handles 24/7 emergency calls, captures flood enquiries. WhatsApp alerts instantly. Plans from £59/month.",
   alternates: {
     canonical: "https://whoza.ai/for-drainage",
@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/for-drainage",
     siteName: "Whoza.ai",
-    title: "AI Call Answering for Drainage Engineers UK — 24/7 Missed Call Recovery",
+    title: "AI Call Answering for Drainage UK — Never Miss a Job",
     description: "AI call answering for UK drainage engineers. Katie handles 24/7 emergency calls, captures flood enquiries. WhatsApp alerts instantly. Plans from £59/month.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Drainage Engineers" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
-    title: "AI Call Answering for Drainage Engineers UK — 24/7 Missed Call Recovery",
+    title: "AI Call Answering for Drainage UK — Never Miss a Job",
     description: "AI call answering for UK drainage engineers. Katie handles 24/7 emergency calls, captures flood enquiries. WhatsApp alerts instantly. Plans from £59/month.",
     images: ["https://whoza.ai/og-image.webp"],
   },

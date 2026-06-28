@@ -8,13 +8,6 @@
 [context.production.environment]
   NODE_ENV = "production"
 
-# === SAMPLE-CALL REDIRECT (Batch 2 Fix) ===
-# Audio demos coming soon - redirect to homepage for now
-[[redirects]]
-  from = "/sample-call"
-  to = "/"
-  status = 301
-
 # === SEO MIGRATION: Old URLs → New Build (2026-05-14) ===
 [[redirects]]
   from = "/roadmap"

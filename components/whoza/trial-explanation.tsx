@@ -66,7 +66,7 @@ export function TrialExplanation() {
             How Whoza Works
           </h2>
           <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
-            From missed call to captured enquiry — automatically.
+            Whoza.ai uses an AI voice agent named Katie to answer your business calls 24 hours a day, 7 days a week. She qualifies leads, books appointments, and sends instant WhatsApp notifications with caller details. Setup takes just 30 minutes with your existing phone number, and there is no equipment to install or software to learn.
           </p>
         </motion.div>
 
