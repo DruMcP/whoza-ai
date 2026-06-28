@@ -7,7 +7,7 @@ import { ArrowRight, PoundSterling, PhoneOff, TrendingUp, AlertTriangle, User, C
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Missed Calls Cost UK Trades? | Analysis 2026",
-  description: "Data-driven analysis of missed call costs for UK trades. FSB and ONS data. Calculate your exact revenue loss. Real numbers. Complete 2026 analysis. Plans from £59.",
+  description: "Data-driven analysis of missed call costs for UK trades. FSB and ONS data. Find exact revenue loss. Real numbers. Complete 2026 analysis. Plans from £59.",
   keywords: [
     "missed calls cost UK trades",
     "cost of unanswered calls plumber",

@@ -63,8 +63,7 @@ export function Testimonials() {
               What Early Users Are Saying
             </h2>
             <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
-              Our pilot programme is underway with select tradespeople across the UK.
-              <span className="font-semibold text-[var(--navy-900)]"> Now onboarding selected UK trades businesses.</span>
+              Our UK pilot programme is now live with plumbers, electricians, builders, roofers and other tradespeople across the country. Every user below is a real business owner who started using whoza.ai to capture their missed calls. Read their genuine feedback about how AI call answering has changed their business.
             </p>
           </motion.div>
         </div>

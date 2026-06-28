@@ -3,29 +3,29 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
-import { ArrowRight, Phone, Droplets, Shield, Clock, PoundSterling, CheckCircle2, Star, AlertTriangle, TrendingUp, Users, Home } from "lucide-react"
+import { ArrowRight, Phone, Hammer, Shield, Clock, PoundSterling, CheckCircle2, Star, AlertTriangle, TrendingUp, Users, Home } from "lucide-react"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Drainage Call Answering Edinburgh | whoza.ai",
-  description: "Stop losing drainage jobs to missed calls in Edinburgh. Katie answers 24/7, captures blocked drain and flood enquiries via WhatsApp. Plans from £59.",
+  title: "AI Call Answering for Carpenters in Bristol | whoza.ai",
+  description: "Stop losing carpenter jobs to missed calls in Bristol. Katie answers 24/7, captures furniture and renovation enquiries via WhatsApp. Plans from £59.",
   alternates: {
-    canonical: "https://whoza.ai/for-drainage-edinburgh",
+    canonical: "https://whoza.ai/for-carpenters-bristol",
   },
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: "https://whoza.ai/for-drainage-edinburgh",
+    url: "https://whoza.ai/for-carpenters-bristol",
     siteName: "Whoza.ai",
-    title: "Drainage Call Answering Edinburgh | whoza.ai",
-    description: "Stop losing drainage jobs to missed calls in Edinburgh. Katie answers 24/7, captures blocked drain and flood enquiries via WhatsApp. Plans from £59.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Drainage Engineers in Edinburgh" }],
+    title: "AI Call Answering for Carpenters in Bristol | whoza.ai",
+    description: "Stop losing carpenter jobs to missed calls in Bristol. Katie answers 24/7, captures furniture and renovation enquiries via WhatsApp. Plans from £59.",
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Carpenters in Bristol" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
-    title: "Drainage Call Answering Edinburgh | whoza.ai",
-    description: "Stop losing drainage jobs to missed calls in Edinburgh. Katie answers 24/7, captures blocked drain and flood enquiries via WhatsApp. Plans from £59.",
+    title: "AI Call Answering for Carpenters in Bristol | whoza.ai",
+    description: "Stop losing carpenter jobs to missed calls in Bristol. Katie answers 24/7, captures furniture and renovation enquiries via WhatsApp. Plans from £59.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {
@@ -36,46 +36,46 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    "question": "How much does AI call answering cost for drainage in Edinburgh?",
-    "answer": "whoza.ai starts at £59/month for the Starter plan. That's less than one drainage engineer job in Edinburgh. Every plan includes unlimited AI calls, WhatsApp delivery, and a 7-day free trial. Most drainage engineers recover the cost within 48 hours by capturing just one missed job."
+    "question": "How much does AI call answering cost for carpenters in Bristol?",
+    "answer": "whoza.ai starts at £59/month for the Starter plan. That's less than one carpenter job in Bristol. Every plan includes unlimited AI calls, WhatsApp delivery, and a 7-day free trial. Most carpenters recover the cost within 48 hours by capturing just one missed job."
   },
   {
-    "question": "Can Katie handle emergency calls for drainage in Edinburgh?",
-    "answer": "Absolutely. Katie answers 24/7, including nights, weekends, and bank holidays. She identifies emergency calls and marks them as highest priority in your WhatsApp alert. Whether you're in Edinburgh or anywhere in the UK, you'll see the emergency tag immediately and can respond within minutes."
+    "question": "Can Katie handle emergency calls for carpenters in Bristol?",
+    "answer": "Absolutely. Katie answers 24/7, including nights, weekends, and bank holidays. She identifies emergency calls and marks them as highest priority in your WhatsApp alert. Whether you're in Bristol or anywhere in the UK, you'll see the emergency tag immediately and can respond within minutes."
   },
   {
-    "question": "What information does Katie collect from drainage customers in Edinburgh?",
-    "answer": "Katie captures: full name, phone number, Edinburgh postcode, property type, job description, urgency level, preferred appointment time, and how they found you. For emergencies, she also asks about immediate safety concerns and property damage extent."
+    "question": "What information does Katie collect from carpenters customers in Bristol?",
+    "answer": "Katie captures: full name, phone number, Bristol postcode, property type, job description, urgency level, preferred appointment time, and how they found you. For emergencies, she also asks about immediate safety concerns and property damage extent."
   },
   {
-    "question": "Does it work with my existing Edinburgh business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing Edinburgh business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "question": "Does it work with my existing Bristol business phone number?",
+    "answer": "Yes. You simply set up call forwarding from your existing Bristol business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
-    "question": "How quickly can I get set up as a drainage engineer in Edinburgh?",
-    "answer": "Most drainage engineers in Edinburgh are live and capturing calls within 30 minutes. Sign up, connect your number via call forwarding, set your greeting and business details, and Katie starts answering immediately. No hardware, no IT team, no technical knowledge required."
+    "question": "How quickly can I get set up as a carpenter in Bristol?",
+    "answer": "Most carpenters in Bristol are live and capturing calls within 30 minutes. Sign up, connect your number via call forwarding, set your greeting and business details, and Katie starts answering immediately. No hardware, no IT team, no technical knowledge required."
   },
   {
-    "question": "What makes whoza.ai different for drainage in Edinburgh?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for drainage engineers. She understands blocked drains, drain repairs, CCTV surveys & emergency unblocking — and with 4,500+ trade businesses competing in Edinburgh, capturing every call gives you a real competitive edge."
+    "question": "What makes whoza.ai different for carpenters in Bristol?",
+    "answer": "Unlike generic call answering services, Katie is trained specifically for carpenters. She understands bespoke joinery, kitchen fitting, door installation & woodwork repairs — and with 4,000+ trade businesses competing in Bristol, capturing every call gives you a real competitive edge."
   }
 ]
 
 export const revalidate = 3600
 
-export default function ForDrainageEngineerEdinburghPage() {
+export default function ForCarpenterBristolPage() {
   return (
     <>
       <Header />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
-        { name: "For Drainage Engineers", item: "https://whoza.ai/for-drainage" },
-        { name: "Edinburgh", item: "https://whoza.ai/for-drainage-edinburgh" },
+        { name: "Carpenters", item: "https://whoza.ai/for-carpenters" },
+        { name: "Bristol", item: "https://whoza.ai/for-carpenters-bristol" },
       ]} />
       <FAQPageSchema faqs={faqs} />
 
       <script
-        id="drainage-edinburgh-schema"
+        id="carpenters-bristol-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -87,16 +87,16 @@ export default function ForDrainageEngineerEdinburghPage() {
               },
               {
                 "@type": "LocalBusiness",
-                "name": "whoza.ai - AI Call Answering for Drainage Engineers in Edinburgh",
+                "name": "whoza.ai - AI Call Answering for Carpenters in Bristol",
                 "address": {
                   "@type": "PostalAddress",
-                  "addressLocality": "Edinburgh",
+                  "addressLocality": "Bristol",
                   "addressCountry": "GB"
                 },
                 "geo": {
                   "@type": "GeoCoordinates",
-                  "latitude": "55.9533",
-                  "longitude": "-3.1883"
+                  "latitude": "51.4545",
+                  "longitude": "-2.5879"
                 },
                 "priceRange": "££",
                 "aggregateRating": {
@@ -107,24 +107,10 @@ export default function ForDrainageEngineerEdinburghPage() {
               },
               {
                 "@type": "Service",
-                "serviceType": "AI Call Answering for Drainage Engineers",
+                "serviceType": "AI Call Answering for Carpenters",
                 "areaServed": {
                   "@type": "City",
-                  "name": "Edinburgh"
-                }
-              },
-              {
-                "@type": "VideoObject",
-                "name": "Whoza.ai 60-Second Demo — Katie Answers Every Call",
-                "description": "Watch Katie, Whoza's AI call handler, capture a missed enquiry in under 60 seconds. The call is answered instantly, the enquiry lands in WhatsApp, Claire requests a review, and Rex delivers growth insights. Built for UK tradespeople.",
-                "thumbnailUrl": "https://whoza.ai/og-image.webp",
-                "uploadDate": "2026-06-01",
-                "duration": "PT60S",
-                "embedUrl": "https://whoza.ai",
-                "publisher": {
-                  "@type": "Organization",
-                  "name": "whoza.ai",
-                  "logo": { "@type": "ImageObject", "url": "https://whoza.ai/og-image.webp" }
+                  "name": "Bristol"
                 }
               },
               {
@@ -138,7 +124,6 @@ export default function ForDrainageEngineerEdinburghPage() {
                   "https://www.linkedin.com/company/whoza-ai"
                 ]
               },
-              
             ]
           })
         }}
@@ -147,25 +132,25 @@ export default function ForDrainageEngineerEdinburghPage() {
       <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
         <section className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
           <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px]" />
+            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[120px]" />
             <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[100px]" />
           </div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-flex items-center gap-2 bg-blue-500/10 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-                  <Droplets className="w-4 h-4" />
-                  Drainage Engineers in Edinburgh
+                <div className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                  <Hammer className="w-4 h-4" />
+                  Carpenters in Bristol
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6">
                   Never Miss a{" "}
-                  <span className="text-blue-400">Drainage Engineer</span>{" "}
-                  Job in Edinburgh Again
+                  <span className="text-amber-400">Carpenter</span>{" "}
+                  Job in Bristol Again
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
-                  Edinburgh has 4,500+ trade businesses competing for 245K households. 
-                  With 2,200 missed calls every week across the city, 
-                  Katie ensures you capture every drainage enquiry — blocked drains, drain repairs, CCTV surveys & emergency unblocking.
+                  Bristol has 4,000+ trade businesses competing for 220K households. 
+                  With 1,800 missed calls every week across the city, 
+                  Katie ensures you capture every carpenters enquiry — bespoke joinery, kitchen fitting, door installation & woodwork repairs.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -200,12 +185,12 @@ export default function ForDrainageEngineerEdinburghPage() {
               <div className="relative">
                 <div className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center">
-                      <Phone className="w-5 h-5 text-blue-400" />
+                    <div className="w-10 h-10 rounded-full bg-amber-500/10 flex items-center justify-center">
+                      <Phone className="w-5 h-5 text-amber-400" />
                     </div>
                     <div>
                       <p className="text-sm font-medium text-white">Incoming Call</p>
-                      <p className="text-xs text-white/50">Edinburgh — Drainage Engineer Enquiry</p>
+                      <p className="text-xs text-white/50">Bristol — Carpenter Enquiry</p>
                     </div>
                     <span className="ml-auto text-xs bg-red-500/20 text-red-400 px-2 py-1 rounded-full">URGENT</span>
                   </div>
@@ -213,11 +198,11 @@ export default function ForDrainageEngineerEdinburghPage() {
                     <div className="bg-white/5 rounded-lg p-3">
                       <p className="text-sm text-white/70">"Hello, you've reached the business. I'm Katie, your digital assistant. How can I help today?"</p>
                     </div>
-                    <div className="bg-blue-500/10 rounded-lg p-3 border-blue-500/20 border">
-                      <p className="text-sm text-white/90">"I need a drainage engineer urgently in Edinburgh!"</p>
+                    <div className="bg-amber-500/10 rounded-lg p-3 border-amber-500/20 border">
+                      <p className="text-sm text-white/90">"I need a carpenter urgently in Bristol!"</p>
                     </div>
                     <div className="bg-white/5 rounded-lg p-3">
-                      <p className="text-sm text-white/70">"I understand — let me get your details so I can get help to you quickly. Can you confirm your Edinburgh postcode?"</p>
+                      <p className="text-sm text-white/70">"I understand — let me get your details so I can get help to you quickly. Can you confirm your Bristol postcode?"</p>
                     </div>
                   </div>
                   <div className="mt-4 pt-4 border-t border-white/10">
@@ -238,19 +223,19 @@ export default function ForDrainageEngineerEdinburghPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                Edinburgh Drainage Engineers Market
+                Bristol Carpenters Market
               </h2>
               <p className="text-white/60 text-lg max-w-2xl mx-auto">
-                The numbers that matter for drainage engineers in Edinburgh.
+                The numbers that matter for carpenters in Bristol.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
               {[
-                { icon: Users, label: "Trade Businesses", value: "4,500+", color: "text-blue-400" },
-                { icon: Home, label: "Households", value: "245K", color: "text-blue-400" },
-                { icon: PoundSterling, label: "Avg Job Value", value: "£315", color: "text-emerald-400" },
-                { icon: Phone, label: "Missed Calls/Week", value: "2,200", color: "text-red-400" },
-                { icon: TrendingUp, label: "Market Size", value: "£200M", color: "text-amber-400" },
+                { icon: Users, label: "Trade Businesses", value: "4,000+", color: "text-amber-400" },
+                { icon: Home, label: "Households", value: "220K", color: "text-amber-400" },
+                { icon: PoundSterling, label: "Avg Job Value", value: "£300", color: "text-emerald-400" },
+                { icon: Phone, label: "Missed Calls/Week", value: "1,800", color: "text-red-400" },
+                { icon: TrendingUp, label: "Market Size", value: "£180M", color: "text-amber-400" },
               ].map((item, idx) => {
                 const Icon = item.icon
                 return (
@@ -271,17 +256,17 @@ export default function ForDrainageEngineerEdinburghPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                The Real Cost of Missed Calls for Drainage Engineers in Edinburgh
+                The Real Cost of Missed Calls for Carpenters in Bristol
               </h2>
               <p className="text-white/60 text-lg max-w-2xl mx-auto">
-                Georgian and Victorian buildings need specialist conservation trades. Festival season brings emergency maintenance demands for venues. Tourist rentals need rapid turnaround between bookings.
+                Victorian terraces and modern developments alike need skilled carpenters. Bristol's booming property market means constant demand for quality woodwork.
               </p>
             </div>
             <div className="space-y-8">
               <div className="bg-white/5 border border-white/10 rounded-xl p-6">
                 <div className="flex items-start gap-4">
-                  <div className={`w-12 h-12 rounded-xl bg-blue-500/10 border-blue-500/20 border flex items-center justify-center flex-shrink-0`}>
-                    <AlertTriangle className={`w-6 h-6 text-blue-400`} />
+                  <div className={`w-12 h-12 rounded-xl bg-amber-500/10 border-amber-500/20 border flex items-center justify-center flex-shrink-0`}>
+                    <AlertTriangle className={`w-6 h-6 text-amber-400`} />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">While You're on the Job</h3>
@@ -299,7 +284,7 @@ export default function ForDrainageEngineerEdinburghPage() {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">After Hours & Emergencies</h3>
                     <p className="text-white/60 leading-relaxed">
-                      A customer calls about an urgent issue at 8pm while you're having dinner. They leave a voicemail, then call the next drainage engineer on Google. You lose a £315+ job.
+                      A customer calls about an urgent issue at 8pm while you're having dinner. They leave a voicemail, then call the next carpenter on Google. You lose a £300+ job.
                     </p>
                   </div>
                 </div>
@@ -307,11 +292,11 @@ export default function ForDrainageEngineerEdinburghPage() {
             </div>
             <div className="mt-8 bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-6 text-center">
               <p className="text-emerald-200 font-medium text-lg">
-                The average Edinburgh drainage engineer misses multiple calls per day = 
-                <strong> £45,000+</strong> in lost revenue per year
+                The average Bristol carpenter misses multiple calls per day = 
+                <strong> £42,000+</strong> in lost revenue per year
               </p>
               <p className="text-emerald-200/70 text-sm mt-1">
-                Based on £315 avg job value with 35% conversion rate
+                Based on £300 avg job value with 35% conversion rate
               </p>
             </div>
           </div>
@@ -323,7 +308,7 @@ export default function ForDrainageEngineerEdinburghPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                How Katie Works for Drainage Engineers in Edinburgh
+                How Katie Works for Carpenters in Bristol
               </h2>
               <p className="text-white/60 text-lg max-w-2xl mx-auto">
                 Three simple steps from missed call to booked job. No apps to check. No dashboards to monitor.
@@ -335,13 +320,13 @@ export default function ForDrainageEngineerEdinburghPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your Edinburgh number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your Bristol number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",
-                  icon: Droplets,
+                  icon: Hammer,
                   title: "She Qualifies the Job",
-                  description: `Katie asks the right questions: Edinburgh postcode, problem type, urgency level, property type, and when they need you. She identifies emergencies and marks them as urgent.`,
+                  description: `Katie asks the right questions: Bristol postcode, problem type, urgency level, property type, and when they need you. She identifies emergencies and marks them as urgent.`,
                 },
                 {
                   step: "03",
@@ -355,8 +340,8 @@ export default function ForDrainageEngineerEdinburghPage() {
                   <div key={idx} className="relative">
                     <div className="bg-white/5 border border-white/10 rounded-xl p-8 h-full">
                       <div className="text-5xl font-bold text-white/10 mb-4">{item.step}</div>
-                      <div className={`w-12 h-12 rounded-xl bg-blue-500/10 border-blue-500/20 border flex items-center justify-center mb-4`}>
-                        <Icon className={`w-6 h-6 text-blue-400`} />
+                      <div className={`w-12 h-12 rounded-xl bg-amber-500/10 border-amber-500/20 border flex items-center justify-center mb-4`}>
+                        <Icon className={`w-6 h-6 text-amber-400`} />
                       </div>
                       <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
                       <p className="text-white/60 leading-relaxed">{item.description}</p>
@@ -375,28 +360,27 @@ export default function ForDrainageEngineerEdinburghPage() {
 
         <div className="section-divider" />
 
-        {/* ─── CITY LINKS ─── */}
         <section className="py-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-              AI Call Answering for Drainage Engineers Across the UK
+              AI Call Answering for Carpenters Across the UK
             </h2>
             <p className="text-white/60 mb-6">
-              Katie answers calls for drainage engineers in cities nationwide. Find your location:
+              Katie answers calls for carpenters in cities nationwide. Find your location:
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/for-drainage-london" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">London</Link>
-              <Link href="/for-drainage-manchester" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Manchester</Link>
-              <Link href="/for-drainage-birmingham" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Birmingham</Link>
-              <Link href="/for-drainage-leeds" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Leeds</Link>
-              <Link href="/for-drainage-glasgow" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Glasgow</Link>
-              <Link href="/for-drainage-bristol" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Bristol</Link>
-              <Link href="/for-drainage-liverpool" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Liverpool</Link>
-              <Link href="/for-drainage-edinburgh" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Edinburgh</Link>
+              <Link href="/for-carpenters-london" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">London</Link>
+              <Link href="/for-carpenters-manchester" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Manchester</Link>
+              <Link href="/for-carpenters-birmingham" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Birmingham</Link>
+              <Link href="/for-carpenters-leeds" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Leeds</Link>
+              <Link href="/for-carpenters-glasgow" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Glasgow</Link>
+              <Link href="/for-carpenters-bristol" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Bristol</Link>
+              <Link href="/for-carpenters-liverpool" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Liverpool</Link>
+              <Link href="/for-carpenters-edinburgh" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Edinburgh</Link>
             </div>
             <div className="mt-6">
-              <Link href="/for-drainage" className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-all">
-                View all Drainage Engineers →
+              <Link href="/for-carpenters" className="inline-flex items-center text-amber-400 hover:text-amber-300 text-sm font-medium transition-all">
+                View all Carpenters →
               </Link>
             </div>
           </div>
@@ -408,10 +392,10 @@ export default function ForDrainageEngineerEdinburghPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                Questions Drainage Engineers in Edinburgh Ask
+                Questions Carpenters in Bristol Ask
               </h2>
               <p className="text-white/60">
-                Everything you need to know about AI call answering for drainage engineers in Edinburgh.
+                Everything you need to know about AI call answering for carpenters in Bristol.
               </p>
             </div>
             <div className="space-y-4">
@@ -433,7 +417,7 @@ export default function ForDrainageEngineerEdinburghPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                Trusted by Drainage Engineers Across the UK
+                Trusted by Carpenters Across the UK
               </h2>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -446,7 +430,7 @@ export default function ForDrainageEngineerEdinburghPage() {
                 const Icon = item.icon
                 return (
                   <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
-                    <Icon className={`w-8 h-8 text-blue-400 mx-auto mb-3`} />
+                    <Icon className={`w-8 h-8 text-amber-400 mx-auto mb-3`} />
                     <p className="font-semibold text-white">{item.label}</p>
                     <p className="text-sm text-white/50">{item.sub}</p>
                   </div>
@@ -460,12 +444,12 @@ export default function ForDrainageEngineerEdinburghPage() {
 
         <section className="py-16 lg:py-24 relative overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px]" />
+            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[120px]" />
             <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[100px]" />
           </div>
           <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-              Stop Losing Drainage Engineer Jobs in Edinburgh Today
+              Stop Losing Carpenter Jobs in Bristol Today
             </h2>
             <p className="text-xl text-white/70 max-w-2xl mx-auto mb-8">
               Every missed call is a competitor gaining a customer. Katie answers 24/7, captures every enquiry, and delivers it to your WhatsApp in 3 seconds.

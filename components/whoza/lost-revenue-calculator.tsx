@@ -185,8 +185,7 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
             <span className="text-[var(--rex-green)]">Costing You?</span>
           </h2>
           <p className="mt-6 text-xl text-[var(--slate-500)] text-pretty">
-            One missed enquiry can be a lost quote, a call-out, or a full day's work.
-            <span className="font-semibold text-[var(--navy-900)]"> Use the calculator to see your number.</span>
+            Every missed call to your trade business is a potential job walking straight to your competitor. When a customer calls and you do not answer, 85% of them will never call back, and 78% will simply hire whoever responds first. Use the calculator below to see exactly how much revenue you are losing every week, month, and year.
           </p>
         </motion.div>
 
