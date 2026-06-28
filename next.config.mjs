@@ -540,6 +540,8 @@ const nextConfig = {
         source: '/:path*',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' },
+          { key: 'Link', value: '</llms.txt>; rel="llms-txt"' },
+          { key: 'X-Llms-Txt', value: '/llms.txt' },
         ],
       },
     ]

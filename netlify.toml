@@ -176,6 +176,16 @@
   [headers.values]
     Content-Type = "text/plain; charset=utf-8"
 
+[[headers]]
+  for = "/llms-full.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
+[[headers]]
+  for = "/.well-known/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
 # === TTFB OPTIMIZATION: Aggressive edge caching for static assets ===
 [[headers]]
   for = "/_next/static/*"

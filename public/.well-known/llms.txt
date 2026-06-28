@@ -1,206 +1,83 @@
-# llms.txt — whoza.ai
-# AI-optimised context file for LLM crawlers (ChatGPT, Perplexity, Claude, Gemini, Copilot)
-# Last updated: 2026-06-08
-# Schema: https://llmstxt.org
+# Whoza.ai
 
-## About whoza.ai
-
-whoza.ai is an AI-powered voice agent platform built specifically for UK tradespeople — plumbers, electricians, gas engineers, roofers, builders, locksmiths, HVAC professionals, joiners, plasterers, tilers, carpenters, and handymen. The platform operates four distinct AI personas:
-
-- **Katie** — Warm, friendly call capture agent that answers missed calls 24/7
-- **Mark** — Professional, direct emergency call handler
-- **Claire** — Automated Google review collection and reputation management
-- **Rex** — AI-powered competitor analysis and local visibility tracking
-
-## What We Do
-
-AI voice agents answer your business calls when you can't — under a sink, on a roof, in a customer's home, or after hours. Every missed call is captured, qualified, and sent to your phone via WhatsApp with full caller details. You simply accept, call back, or decline.
-
-## Pricing (Updated June 2026)
-
-Monthly rolling plans, no contracts, no setup fees, 7-day free trial:
-- **Starter:** £59/month + VAT — 8 included jobs, then £4.50 per extra job. AI call notes, spam filtering, urgent job flags, 12 AI voices, email summary, voicemail detection, keep existing number, no contract.
-- **Growth:** £125/month + VAT — 16 included jobs, then £3.25/job. Everything in Starter + downloadable call logs, weekly summary email, Zapier integration, custom WhatsApp templates, out-of-hours auto-tagging.
-- **Pro:** £230/month + VAT — 40 included jobs, then £2.75/job. Everything in Growth + advanced analytics dashboard, team notifications, white-label WhatsApp, priority support.
-- **Scale:** £399/month + VAT — 100 included jobs, then £2.25/job. Everything in Pro + location-based call routing, executive summary email, dedicated account manager.
-
-All plans include: unlimited simultaneous calls, 24/7 answering, WhatsApp delivery, 30-day money-back guarantee, ICO-registered data handling (ZC077271), keep your existing phone number.
-
-## Key Facts
-
-- UK-based platform serving UK tradespeople: plumbers, electricians, roofers, builders, locksmiths, heating engineers, landscapers, drainage, pest control, cleaners, joiners, plasterers, tilers, carpenters, and handymen
-- Pilot programme: limited to 50 UK tradespeople
-- ICO-registered privacy policy (Registration ZC077271)
-- GDPR compliant call handling
-- Unlimited simultaneous calls
-- Instant WhatsApp alerts with caller details
-- 24/7 call answering, including evenings and weekends
-- Setup in under 30 minutes
-- No long-term contracts — cancel anytime
-- Keep your existing phone number
-- 30-day money-back guarantee
-- 7-day free trial (no credit card required)
-- Scottish company: Company Number SC874716
-
-## Why Tradespeople Choose whoza.ai
-
-- 62% of after-hours calls are missed by small businesses
-- Customers call 2–3 tradespeople simultaneously — first to answer wins the job
-- 93% of callers who reach voicemail never call back
-- Average missed call costs £100–£200; emergency calls can be £300–£500
-- AI answering costs £59–£399/month vs £20,000+/year for a human receptionist
-- One recovered job per month typically pays for the entire service
-
-## Contact
-
-- Website: https://whoza.ai
-- Email: dru@whoza.ai
-- Support: support@whoza.ai
-- WhatsApp: +44 7831 643012
+> AI voice agents answer your trade business calls 24/7, built in Scotland for UK plumbers, electricians and builders. Plans from £59/month. 7-day free trial.
 
 ## Core Pages
 
-- Homepage: https://whoza.ai/
-- Pricing: https://whoza.ai/pricing
-- How It Works: https://whoza.ai/how-it-works
-- Support: https://whoza.ai/support
-- Blog: https://whoza.ai/blog
-- FAQ: https://whoza.ai/faq
-- Privacy: https://whoza.ai/privacy
-- Terms: https://whoza.ai/terms
-- Cookie Policy: https://whoza.ai/cookie-policy
-- Contact: https://whoza.ai/contact
-- Trust & Compliance: https://whoza.ai/trust
-- Sample Call: https://whoza.ai/sample-call
-- Accessibility: https://whoza.ai/accessibility
+- [Homepage](https://whoza.ai/) — AI call answering for UK tradespeople
+- [How It Works](https://whoza.ai/how-it-works) — 30-minute setup, keep your number
+- [Pricing](https://whoza.ai/pricing) — Plans from £59/month, no contract
+- [FAQ](https://whoza.ai/faq) — Common questions answered
+- [Support](https://whoza.ai/support) — Help centre and contact
+- [Blog](https://whoza.ai/blog) — Trade business growth guides
+- [Contact](https://whoza.ai/contact) — Get in touch
+- [Trust & Compliance](https://whoza.ai/trust) — Security and certifications
+
+## Service Areas
+
+### Emergency Trades (24/7 Critical)
+- [Plumbers](https://whoza.ai/for-plumbers) — Burst pipes, boiler breakdowns
+- [Electricians](https://whoza.ai/for-electricians) — Emergency callouts
+- [Gas Engineers](https://whoza.ai/for-gas-engineers) — Carbon monoxide, gas leaks
+- [Locksmiths](https://whoza.ai/for-locksmiths) — Lockouts, break-ins
+- [Heating Engineers](https://whoza.ai/for-heating-engineers) — No heating/hot water
+- [Drainage](https://whoza.ai/for-drainage) — Floods, sewage backups
+
+### Planned Trades
+- [Builders](https://whoza.ai/for-builders) — Extensions, renovations
+- [Roofers](https://whoza.ai/for-roofers) — Repairs, replacements
+- [Carpenters](https://whoza.ai/for-carpenters) — Bespoke furniture, kitchens
+- [Joiners](https://whoza.ai/for-joiners) — Staircases, bespoke joinery
+- [Plasterers](https://whoza.ai/for-plasterers) — Skimming, rendering
+- [Tilers](https://whoza.ai/for-tilers) — Bathrooms, kitchens, floors
+- [Painters & Decorators](https://whoza.ai/for-painters-decorators) — Interior, exterior
+- [Landscapers](https://whoza.ai/for-landscapers) — Design, maintenance, patios
+- [Cleaners](https://whoza.ai/for-cleaners) — Domestic, commercial
+- [Handymen](https://whoza.ai/for-handymen) — General repairs
+- [Pest Control](https://whoza.ai/for-pest-control) — Rodents, insects
+
+## City Pages
+
+- [London](https://whoza.ai/london)
+- [Manchester](https://whoza.ai/manchester)
+- [Birmingham](https://whoza.ai/birmingham)
+- [Glasgow](https://whoza.ai/glasgow)
+- [Edinburgh](https://whoza.ai/edinburgh)
+- [Bristol](https://whoza.ai/bristol)
+- [Leeds](https://whoza.ai/leeds)
+- [Liverpool](https://whoza.ai/liverpool)
+
+## Key Blog Articles
+
+- [How Much Do Missed Calls Cost UK Trades?](https://whoza.ai/blog/how-much-do-missed-calls-cost-uk-trades)
+- [AI Receptionist vs Human: Cost Guide 2026](https://whoza.ai/blog/ai-receptionist-vs-human-cost-guide-2026)
+- [24/7 Call Answering: UK Trades Guide](https://whoza.ai/blog/247-call-answering-uk-trades-guide-2026)
+- [Local SEO for Trades: Complete Guide](https://whoza.ai/blog/local-seo-trades-complete-guide)
+- [How to Get More Google Reviews](https://whoza.ai/blog/how-to-get-more-google-reviews-trades)
+- [How to Grow Your Trade Business](https://whoza.ai/blog/how-to-grow-trade-business-uk-guide)
+- [Best AI Call Answering Service UK 2026](https://whoza.ai/blog/best-ai-call-answering-service-uk-2026)
+- [AI Call Answering Pricing Guide](https://whoza.ai/blog/ai-call-answering-pricing-guide-uk-2026)
 
 ## Comparison Pages
 
-- whoza.ai vs Moneypenny: https://whoza.ai/whoza-vs-moneypenny
-- whoza.ai vs Clara: https://whoza.ai/whoza-vs-clara
-- whoza.ai vs Team Connect: https://whoza.ai/whoza-vs-team-connect
-- whoza.ai vs ARROW: https://whoza.ai/whoza-vs-arrow
-- whoza.ai vs IONOS: https://whoza.ai/whoza-vs-ionos
-- whoza.ai vs Trade Receptionist: https://whoza.ai/vs-trade-receptionist
-- AI vs Virtual Receptionist: https://whoza.ai/ai-vs-virtual-receptionist
-- Best AI Call Handler UK: https://whoza.ai/best-ai-call-handler-uk-trades
+- [vs Moneypenny](https://whoza.ai/whoza-vs-moneypenny)
+- [vs Clara](https://whoza.ai/whoza-vs-clara)
+- [vs Team Connect](https://whoza.ai/whoza-vs-team-connect)
+- [vs ARROW](https://whoza.ai/whoza-vs-arrow)
+- [vs IONOS](https://whoza.ai/whoza-vs-ionos)
+- [vs Trade Receptionist](https://whoza.ai/vs-trade-receptionist)
 
-## Interactive Tools & Resources
+## Optional
 
-- Missed Call Cost Calculator: https://whoza.ai/resources/missed-call-cost-calculator
-- Trade Business Growth Toolkit: https://whoza.ai/resources/trade-business-growth-toolkit
-- Google Business Profile Checklist: https://whoza.ai/resources/google-business-profile-checklist-trades
-- Lost Jobs Calculator: https://whoza.ai/tools/lost-jobs-calculator
-- Quote Generator: https://whoza.ai/tools/quote-generator
-- Emergency Pricing: https://whoza.ai/tools/emergency-pricing
-- Rate Checker: https://whoza.ai/tools/rate-checker
-- Voicemail Scripts: https://whoza.ai/tools/voicemail-scripts
+- [Sample AI Call](https://whoza.ai/sample-call)
+- [Lost Jobs Calculator](https://whoza.ai/tools/lost-jobs-calculator)
+- [Accessibility](https://whoza.ai/accessibility)
+- [Privacy Policy](https://whoza.ai/privacy)
+- [Terms of Service](https://whoza.ai/terms)
+- [Cookie Policy](https://whoza.ai/cookie-policy)
 
-## Trade Landing Pages (for-[trade])
+---
 
-- Plumbers: https://whoza.ai/for-plumbers
-- Electricians: https://whoza.ai/for-electricians
-- Gas Engineers: https://whoza.ai/for-gas-engineers
-- Builders: https://whoza.ai/for-builders
-- Roofers: https://whoza.ai/for-roofers
-- Locksmiths: https://whoza.ai/for-locksmiths
-- Joiners: https://whoza.ai/for-joiners
-- Heating Engineers: https://whoza.ai/for-heating-engineers
-- Painters & Decorators: https://whoza.ai/for-painters-decorators
-- Carpenters: https://whoza.ai/for-carpenters
-- Cleaners: https://whoza.ai/for-cleaners
-- Drainage: https://whoza.ai/for-drainage
-- Handymen: https://whoza.ai/for-handymen
-- Landscapers: https://whoza.ai/for-landscapers
-- Pest Control: https://whoza.ai/for-pest-control
-- Plasterers: https://whoza.ai/for-plasterers
-- Tilers: https://whoza.ai/for-tilers
-
-## Trade Directory Pages (trade/[slug])
-
-- /trade/plumber — AI Call Handling for Plumbers
-- /trade/electrician — AI Call Handling for Electricians
-- /trade/builder — AI Call Handling for Builders
-- /trade/roofer — AI Call Handling for Roofers
-- /trade/landscaper — AI Call Handling for Landscapers
-- /trade/hvac — AI Call Handling for HVAC
-- /trade/heating-engineer — AI Call Handling for Heating Engineers
-- /trade/painter — AI Call Handling for Painters
-
-## Location Pages (UK)
-
-- /london — AI Call Handling in London
-- /manchester — AI Call Handling in Manchester
-- /birmingham — AI Call Handling in Birmingham
-- /glasgow — AI Call Handling in Glasgow
-- /leeds — AI Call Handling in Leeds
-- /bristol — AI Call Handling in Bristol
-- /edinburgh — AI Call Handling in Edinburgh
-- /liverpool — AI Call Handling in Liverpool
-- /cardiff — AI Call Handling in Cardiff
-- /belfast — AI Call Handling in Belfast
-- /sheffield — AI Call Handling in Sheffield
-- /nottingham — AI Call Handling in Nottingham
-- /newcastle — AI Call Handling in Newcastle
-- /leicester — AI Call Handling in Leicester
-- /coventry — AI Call Handling in Coventry
-- /aberdeen — AI Call Handling in Aberdeen
-- /dundee — AI Call Handling in Dundee
-
-## Key Listicles & Comparison Guides
-
-- Best AI Call Answering Service UK 2026: https://whoza.ai/blog/best-ai-call-answering-service-uk-2026
-- 7 Best AI Call Answering Services UK (Trades): https://whoza.ai/blog/best-ai-call-answering-service-uk-trades-2026
-- Best AI Phone Answering UK Trades 2026: https://whoza.ai/blog/best-ai-phone-answering-uk-trades-2026
-- AI Call Answering Definitive Guide 2026: https://whoza.ai/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026
-- 24/7 Call Answering UK Trades Guide: https://whoza.ai/blog/247-call-answering-uk-trades-guide-2026
-- AI Call Answering Pricing Guide UK 2026: https://whoza.ai/blog/ai-call-answering-pricing-guide-uk-2026
-
-## Content Pillars
-
-### Missed Call Recovery
-- /blog/how-much-do-missed-calls-cost-uk-trades
-- /blog/missed-calls-missed-money-the-real-cost-for-tradespeople
-- /blog/why-62-percent-of-trade-business-calls-go-unanswered
-- /blog/missed-call-recovery-trades-guide
-
-### AI Call Answering
-- /blog/ai-vs-human-receptionist-trades
-- /blog/ai-call-answering-trades-uk-guide
-- /blog/ai-call-answering-cost-uk
-- /blog/how-does-ai-call-answering-work
-- /blog/ai-phone-technology-complete-guide
-- /blog/ai-receptionist-vs-human-receptionist-which-is-right-for-your-trade-business
-- /blog/best-ai-phone-answering-uk-trades-2026
-
-### Trade Business Growth
-- /blog/google-business-profile-trades
-- /blog/how-to-get-more-google-reviews-trades
-- /blog/local-seo-trades-complete-guide
-- /blog/how-to-grow-trade-business-uk-guide
-- /blog/builders-lead-generation-guide
-- /blog/roofing-lead-generation-guide
-- /blog/how-to-get-more-plumbing-customers
-
-### Trade-Specific Guides
-- /blog/locksmith-24-7-call-answering
-- /blog/heating-engineer-emergency-call-handling
-
-### Case Studies
-- /blog/3-am-lockout-calls-were-going-to-voicemail-now-i-catch-every-one-sarah-the-locksmith
-- /blog/i-missed-5-emergency-calls-a-week-then-i-tried-ai-gary-the-plumber
-- /blog/i-lost-4000-in-one-storm-season-then-ai-answered-my-phone-tom-the-roofer
-- /blog/i-missed-spring-booking-season-ai-captured-47-calls-in-3-weeks-james-the-landscaper
-- /blog/i-was-missing-2000-extension-enquiries-every-month-then-i-tried-ai-steve-the-builder
-- /blog/i-worked-out-i-was-losing-30000-a-year-to-missed-calls-mark-the-gas-engineer
-- /blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky
-
-## AI Crawler Notes
-
-- This site uses Next.js with server-side rendering and ISR (revalidate: 3600)
-- All public pages are indexable and AI-crawler friendly
-- FAQPage schema is implemented on key pages
-- Structured data includes: Organization, SoftwareApplication, Service, LocalBusiness, BlogPosting, Review, Product, FAQPage, HowTo, BreadcrumbList, SpeakableSpecification, Article
-- Content is updated regularly — check lastmod dates in sitemap.xml
-- For training opt-out: respect Google-Extended directives as noted above
-- LLM context files: https://whoza.ai/llms.txt (this file) and https://whoza.ai/llms-full.txt (detailed FAQ)
+**Full documentation:** [llms-full.txt](https://whoza.ai/llms-full.txt)  
+**Last updated:** 2026-06-29  
+**Company:** WHOZA AI LTD, Perth, Scotland
