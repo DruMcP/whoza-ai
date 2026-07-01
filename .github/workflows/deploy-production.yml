@@ -44,8 +44,6 @@ jobs:
           TRILLET_AGENT_ID=katie-agent
           # === WHATSAPP ===
           WHATSAPP_PROVIDER=trillet
-          # === GITHUB ===
-          GITHUB_TOKEN=*** secrets.GITHUB_TOKEN }}
           EOF
 
       - name: Build site
@@ -58,4 +56,4 @@ jobs:
           npm install -g netlify-cli
           netlify deploy --prod --site 9313ac92-d80f-4935-b4f7-61a0c5b07e2d --dir .next
         env:
-          NETLIFY_AUTH_TOKEN: *** secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
