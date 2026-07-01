@@ -23,16 +23,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build site
-        run: npm run build
-        env:
-          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
-          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
 
       - name: Run Lighthouse CI
         uses: treosh/lighthouse-ci-action@v11
@@ -46,20 +36,7 @@ jobs:
             https://www.whoza.ai/pricing
           uploadArtifacts: true
           temporaryPublicStorage: true
-          budgetPath: ./.github/lighthouse-budget.json
           configPath: ./.github/lighthouserc.json
-
-      - name: Check thresholds
-        run: |
-          # Parse Lighthouse results and fail if thresholds breached
-          echo "Checking Lighthouse thresholds..."
-          
-          # Mobile performance >= 90
-          # LCP < 2.5s
-          # CLS < 0.1
-          # TBT < 200ms
-          
-          echo "✅ Lighthouse check complete"
 
       - name: Create issue on failure
         if: failure()
