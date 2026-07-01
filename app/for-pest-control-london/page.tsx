@@ -8,7 +8,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "AI Call Answering for Pest Control in London | whoza.ai",
-  description: "Stop losing pest control jobs to missed calls in London. Katie answers 24/7, captures emergency enquiries via WhatsApp. Plans from £59.",
+  description: "Stop losing pest control jobs to missed calls in London. Katie answers 24/7, captures rodent, insect and bird control emergencies via WhatsApp. Plans from £59.",
   alternates: {
     canonical: "https://whoza.ai/for-pest-control-london",
   },
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/for-pest-control-london",
     siteName: "Whoza.ai",
     title: "AI Call Answering for Pest Control in London | whoza.ai",
-    description: "Stop losing pest control jobs to missed calls in London. Katie answers 24/7, captures emergency enquiries via WhatsApp. Plans from £59.",
+    description: "Stop losing pest control jobs to missed calls in London. Katie answers 24/7, captures rodent, insect and bird control emergencies via WhatsApp. Plans from £59.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Pest Control in London" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "AI Call Answering for Pest Control in London | whoza.ai",
-    description: "Stop losing pest control jobs to missed calls in London. Katie answers 24/7, captures emergency enquiries via WhatsApp. Plans from £59.",
+    description: "Stop losing pest control jobs to missed calls in London. Katie answers 24/7, captures rodent, insect and bird control emergencies via WhatsApp. Plans from £59.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {

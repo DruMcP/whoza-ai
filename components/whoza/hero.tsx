@@ -115,22 +115,6 @@ export function Hero() {
               <span className="block headline-emerald">Your phone rings. Katie answers.</span>
             </motion.h1>
 
-            {/* Entity definitions for AI consumption — visually hidden but machine-readable */}
-            <div className="hidden" aria-hidden="true">
-              <p itemScope itemType="https://schema.org/Thing">
-                <span itemProp="name">Katie</span> is an
-                <span itemProp="additionalType">https://schema.org/SoftwareApplication</span>
-                that answers missed phone calls for UK tradespeople, qualifies the enquiry,
-                and delivers it to WhatsApp.
-              </p>
-              <p itemScope itemType="https://schema.org/Thing">
-                <span itemProp="name">Whoza.ai</span> is an
-                <span itemProp="additionalType">https://schema.org/TechnologyCompany</span>
-                based in the United Kingdom that provides AI call handling services for
-                plumbers, electricians, and other tradespeople.
-              </p>
-            </div>
-
             {/* Secondary headline */}
             <motion.p
               {...fadeUpVisible(0.3)}

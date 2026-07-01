@@ -2,6 +2,54 @@ export function HomepageSchema() {
   const schemas = [
     {
       "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Whoza.ai",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web, iOS, Android",
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "59",
+        "highPrice": "399",
+        "priceCurrency": "GBP",
+        "offerCount": "4"
+      },
+      "description": "AI voice agents answer your trade business calls 24/7, built in Scotland for UK plumbers, electricians and builders. Plans from £59/month.",
+      "url": "https://whoza.ai",
+      "provider": {
+        "@type": "Organization",
+        "name": "whoza.ai",
+        "url": "https://whoza.ai",
+        "logo": "https://whoza.ai/logo.png",
+        "foundingLocation": "Perth, Scotland, United Kingdom",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "6 Atholl Crescent",
+          "addressLocality": "Perth",
+          "addressRegion": "Scotland",
+          "postalCode": "PH1 5JN",
+          "addressCountry": "GB"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "support@whoza.ai",
+          "telephone": "+447463141750",
+          "availableLanguage": "English",
+          "areaServed": "GB"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/whoza-ai"
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@context": "https://schema.org",
       "@type": "Organization",
       "@id": "https://whoza.ai/#organization",
       "name": "whoza.ai",
