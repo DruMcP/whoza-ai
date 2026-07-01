@@ -8,7 +8,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "AI Call Answering for Carpenters in Bristol | whoza.ai",
-  description: "Stop losing carpenter jobs to missed calls in Bristol. Katie answers 24/7, captures furniture, kitchen fitting and renovation enquiries via WhatsApp. Plans from £59.",
+  description: "Stop losing carpenter jobs to missed calls in Bristol. Katie answers 24/7, captures furniture, kitchens and renovation enquiries via WhatsApp. Plans from £59.",
   alternates: {
     canonical: "https://whoza.ai/for-carpenters-bristol",
   },
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/for-carpenters-bristol",
     siteName: "Whoza.ai",
     title: "AI Call Answering for Carpenters in Bristol | whoza.ai",
-    description: "Stop losing carpenter jobs to missed calls in Bristol. Katie answers 24/7, captures furniture, kitchen fitting and renovation enquiries via WhatsApp. Plans from £59.",
+    description: "Stop losing carpenter jobs to missed calls in Bristol. Katie answers 24/7, captures furniture, kitchens and renovation enquiries via WhatsApp. Plans from £59.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Carpenters in Bristol" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "AI Call Answering for Carpenters in Bristol | whoza.ai",
-    description: "Stop losing carpenter jobs to missed calls in Bristol. Katie answers 24/7, captures furniture, kitchen fitting and renovation enquiries via WhatsApp. Plans from £59.",
+    description: "Stop losing carpenter jobs to missed calls in Bristol. Katie answers 24/7, captures furniture, kitchens and renovation enquiries via WhatsApp. Plans from £59.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {
