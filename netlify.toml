@@ -6,9 +6,6 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-[context.production.environment]
-  NODE_ENV = "production"
-
 # === SEO MIGRATION: Old URLs → New Build (2026-05-14) ===
 [[redirects]]
   from = "/roadmap"
