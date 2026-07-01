@@ -173,16 +173,22 @@
   for = "/llms.txt"
   [headers.values]
     Content-Type = "text/plain; charset=utf-8"
+    Link = "</llms.txt>; rel=\"llms-txt\""
+    X-Llms-Txt = "/llms.txt"
 
 [[headers]]
   for = "/llms-full.txt"
   [headers.values]
     Content-Type = "text/plain; charset=utf-8"
+    Link = "</llms.txt>; rel=\"llms-txt\""
+    X-Llms-Txt = "/llms.txt"
 
 [[headers]]
   for = "/.well-known/llms.txt"
   [headers.values]
     Content-Type = "text/plain; charset=utf-8"
+    Link = "</llms.txt>; rel=\"llms-txt\""
+    X-Llms-Txt = "/llms.txt"
 
 # === TTFB OPTIMIZATION: Aggressive edge caching for static assets ===
 [[headers]]

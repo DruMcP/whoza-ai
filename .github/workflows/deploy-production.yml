@@ -51,9 +51,29 @@ jobs:
           export NODE_OPTIONS="--max-old-space-size=4096"
           npm run build
 
+      - name: Verify build output
+        run: |
+          echo "Build output directory contents:"
+          ls -la .next/ | head -20
+          echo "Build output size:"
+          du -sh .next/
+
+      - name: Check Netlify token
+        run: |
+          echo "Checking NETLIFY_AUTH_TOKEN availability..."
+          if [ -n "$NETLIFY_AUTH_TOKEN" ]; then
+            echo "NETLIFY_AUTH_TOKEN is set (length: ${#NETLIFY_AUTH_TOKEN})"
+          else
+            echo "NETLIFY_AUTH_TOKEN is NOT set"
+            exit 1
+          fi
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+
       - name: Deploy to Netlify
         run: |
           npm install -g netlify-cli
-          netlify deploy --prod --site 9313ac92-d80f-4935-b4f7-61a0c5b07e2d --dir .next
+          echo "Deploying to Netlify..."
+          netlify deploy --prod --site 9313ac92-d80f-4935-b4f7-61a0c5b07e2d --dir .next --debug
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
