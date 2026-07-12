@@ -730,7 +730,7 @@ const item = {
    <div className="mt-12 p-6 rounded-xl bg-slate-50 border border-slate-200 text-center">
      <p className="text-lg font-semibold text-slate-900 mb-2">Still have questions?</p>
      <p className="text-slate-600 mb-4">Chat with us on WhatsApp — we reply in minutes.</p>
-     <a href="https://wa.me/447831643012" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-emerald-600 text-white font-medium hover:bg-emerald-700 transition-colors">
+     <a href="https://wa.me/447463141750" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-emerald-600 text-white font-medium hover:bg-emerald-700 transition-colors">
        <MessageCircle className="w-5 h-5" />
        Message us on WhatsApp
      </a>

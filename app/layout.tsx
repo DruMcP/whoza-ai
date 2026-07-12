@@ -24,8 +24,8 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://whoza.ai'),
-  title: 'AI Call Answering for UK Trades | Whoza.ai',
-  description: 'AI voice agents answer your trade business calls 24/7, built in Scotland for UK plumbers, electricians and builders. Plans from £59/month. 7-day free trial.',
+  title: 'AI Receptionist for UK Trades | 24/7 | From £59 — Whoza.ai',
+  description: "Stop losing £12,000/year to missed calls. Whoza.ai's AI receptionist answers 24/7, collects reviews, and grows your visibility. Start your 7-day free trial.",
   // Keywords meta tag removed per SEO best practices — can be spam signal
   authors: [{ name: 'whoza.ai' }],
   publisher: 'whoza.ai',
@@ -45,7 +45,8 @@ export const metadata: Metadata = {
     locale: 'en_GB',
     url: 'https://whoza.ai',
     siteName: 'Whoza.ai',
-    title: 'AI Call Answering for UK Trades | Whoza.ai',
+    title: 'AI Receptionist for UK Trades | 24/7 | From £59 — Whoza.ai',
+    description: "Stop losing £12,000/year to missed calls. Whoza.ai's AI receptionist answers 24/7, collects reviews, and grows your visibility. Start your 7-day free trial.",
     images: [
       {
         url: 'https://whoza.ai/og-image.webp',
@@ -59,7 +60,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@whozaai',
     creator: '@whozaai',
-    title: 'AI Call Answering for UK Trades | Whoza.ai',
+    title: 'AI Receptionist for UK Trades | 24/7 | From £59 — Whoza.ai',
+    description: "Stop losing £12,000/year to missed calls. Whoza.ai's AI receptionist answers 24/7, collects reviews, and grows your visibility. Start your 7-day free trial.",
     images: ['https://whoza.ai/og-image.webp'],
   },
   alternates: {
@@ -149,12 +151,6 @@ export default function RootLayout({
               "priceCurrency": "GBP",
               "priceValidUntil": "2026-12-31"
             },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "ratingCount": "47",
-              "bestRating": "5"
-            },
             "featureList": [
               "24/7 AI call answering with UK-accented voices",
               "Instant WhatsApp alerts with full call details",
@@ -212,6 +208,20 @@ export default function RootLayout({
             "description": "AI call answering service built in Scotland for UK tradespeople. Katie answers every missed call 24/7, qualifies jobs, and sends details to WhatsApp.",
             "slogan": "While you work, we book. Job done.",
             "foundingDate": "2025",
+            "telephone": "+447463141750",
+            "email": "support@whoza.ai",
+            "identifier": [
+              {
+                "@type": "PropertyValue",
+                "name": "Company number",
+                "value": "SC874716"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "ICO registration",
+                "value": "ZC077271"
+              }
+            ],
             "founders": [
               {
                 "@type": "Person",
@@ -260,53 +270,6 @@ export default function RootLayout({
               "https://www.tiktok.com/@whozaai",
               "https://www.crunchbase.com/organization/whoza-ai",
               "https://www.trustpilot.com/review/whoza.ai"
-            ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "reviewCount": "47",
-              "bestRating": "5",
-              "worstRating": "1"
-            },
-            "review": [
-              {
-                "@type": "Review",
-                "author": {
-                  "@type": "Person",
-                  "name": "Gary",
-                  "jobTitle": "Self-employed Plumber",
-                  "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Clapham, London"
-                  }
-                },
-                "datePublished": "2026-05-15",
-                "reviewBody": "I was missing 5 emergency calls a week. Katie captured 47 calls in 3 weeks and recovered £6,800 in jobs I'd have lost.",
-                "reviewRating": {
-                  "@type": "Rating",
-                  "ratingValue": "5",
-                  "bestRating": "5"
-                }
-              },
-              {
-                "@type": "Review",
-                "author": {
-                  "@type": "Person",
-                  "name": "Dave",
-                  "jobTitle": "Self-employed Electrician",
-                  "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Lewisham, London"
-                  }
-                },
-                "datePublished": "2026-05-22",
-                "reviewBody": "I lost 3 emergency callouts a day before whoza.ai. In 3 weeks, Katie recovered £4,200 in work.",
-                "reviewRating": {
-                  "@type": "Rating",
-                  "ratingValue": "5",
-                  "bestRating": "5"
-                }
-              }
             ],
             "hasOfferCatalog": {
               "@type": "OfferCatalog",

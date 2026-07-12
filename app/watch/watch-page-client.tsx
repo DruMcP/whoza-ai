@@ -168,23 +168,23 @@ export function WatchPageClient() {
                           <div className="flex items-start gap-2">
                             <Phone className="w-4 h-4 text-[#25d366] mt-0.5 shrink-0" />
                             <div>
-                              <div className="text-sm font-semibold">Mrs. Sarah Thompson</div>
-                              <div className="text-xs text-white/70">Boiler repair — no heating</div>
+                              <div className="text-sm font-semibold">Sarah Williams</div>
+                              <div className="text-xs text-white/70">Boiler Repair</div>
                             </div>
                           </div>
 
                           <div className="flex items-center gap-2">
                             <MapPin className="w-4 h-4 text-[#25d366] shrink-0" />
-                            <span className="text-xs">Manchester, M20</span>
+                            <span className="text-xs">Bristol, BS16</span>
                           </div>
 
                           <div className="flex items-center gap-2">
                             <Clock className="w-4 h-4 text-[#25d366] shrink-0" />
-                            <span className="text-xs text-[#25d366] font-medium">Urgency: Today</span>
+                            <span className="text-xs text-[#25d366] font-medium">High Priority</span>
                           </div>
 
                           <div className="pt-2 border-t border-white/20 flex items-center justify-between">
-                            <span className="text-lg font-bold">£140</span>
+                            <span className="text-lg font-bold">£250 – £450</span>
                             <span className="text-xs text-white/60">estimated</span>
                           </div>
                         </div>

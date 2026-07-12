@@ -8,7 +8,7 @@ import { ArrowRight, Star, Clock, Shield, TrendingUp , Calendar, User } from "lu
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "AI Receptionist vs Human: 2026 Cost Guide | Whoza",
-  description: "Detailed cost comparison of human and AI receptionists for UK trade businesses. Human: £27,800-£38,700/year. AI: £708-£1,500/year. ROI analysis. 2026.",
+  description: "AI receptionist vs human: cost comparison for UK trades. £59/month vs £25K/year. Speed, accuracy, and availability compared. Read the analysis.",
   keywords: [
     "AI receptionist cost UK",
     "human receptionist cost UK trades",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/blog/ai-receptionist-vs-human-cost-guide-2026",
     siteName: "Whoza.ai",
     title: "AI Receptionist vs Human Receptionist: 2026 Cost Guide",
-    description: "Human receptionist: £27,800-£38,700/year. AI receptionist: £708-£1,500/year. See the complete comparison for UK trades.",
+    description: "AI receptionist vs human: cost comparison for UK trades. £59/month vs £25K/year. Speed, accuracy, and availability compared. Read the analysis.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "AI Receptionist vs Human Receptionist Cost Comparison 2026" }],
     publishedTime: "2026-06-25T00:00:00+00:00",
     modifiedTime: "2026-06-25T00:00:00+00:00",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@whozaai",
     title: "AI Receptionist vs Human Receptionist: 2026 Cost Guide",
-    description: "Human: £27,800-£38,700/year. AI: £708-£1,500/year. Full comparison for UK trades.",
+    description: "AI receptionist vs human: cost comparison for UK trades. £59/month vs £25K/year. Speed, accuracy, and availability compared. Read the analysis.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {

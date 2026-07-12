@@ -97,11 +97,7 @@ export default function ForPainterDecoratorEdinburghPage() {
                   "longitude": "-3.1883"
                 },
                 "priceRange": "££",
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": "4.8",
-                  "reviewCount": "127"
-                }
+                
               },
               {
                 "@type": "Service",

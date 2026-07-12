@@ -7,7 +7,7 @@ import { WatchPageClient } from "./watch-page-client"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Watch Whoza in Action — 60-Second Demo",
-  description: "See Katie capture a missed enquiry in under 60 seconds. Watch how Whoza.ai turns unanswered calls into booked jobs.",
+  description: "Watch Katie capture a missed trade enquiry in 60 seconds. AI receptionist answers, qualifies, and delivers job details to WhatsApp. See whoza.ai in action. Free trial.",
   keywords: [
     "AI call answering demo",
     "missed calls solution",

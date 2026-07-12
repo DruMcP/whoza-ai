@@ -47,13 +47,33 @@ const faqs = [
     category: "General",
   },
   {
+    question: "How many calls can whoza.ai handle at once?",
+    answer: "It depends on your plan. Starter handles 1 concurrent call, Growth 2, Pro 3, and Scale 5. If all lines are busy, callers hear a polite message and you get an instant alert. See full details at /how-many-calls-at-once.",
+    category: "General",
+  },
+  {
+    question: "What integrations does whoza.ai support?",
+    answer: "whoza.ai integrates with Google Calendar, Outlook, Apple Calendar, WhatsApp Business, Zapier, Make, Stripe, Twilio, and Supabase. Custom integrations are available on request. See the full list at /integrations.",
+    category: "General",
+  },
+  {
+    question: "Can whoza.ai book appointments into my calendar?",
+    answer: "Yes — on every plan. The AI checks your calendar (Google, Outlook, or Apple) before offering slots, then adds confirmed bookings directly. No double-bookings. Learn more at /booking.",
+    category: "General",
+  },
+  {
+    question: "What accents and voices are available?",
+    answer: "12+ UK and Irish accents: Scottish, Northern English, Southern English, Midlands English, Welsh, and Irish. Male and female options. Switch anytime from your dashboard. See all voices at /accents.",
+    category: "General",
+  },
+  {
     question: "What trades do you support?",
     answer: "We support all UK trades including plumbers, electricians, builders, roofers, painters, landscapers, heating engineers, carpenters, tilers, plasterers, locksmiths, drainage specialists, and pest control. Our agents are trained on trade-specific terminology and common customer queries for each profession.",
     category: "Trades",
   },
   {
     question: "What happens to my data if I cancel?",
-    answer: "You can cancel anytime with one click. Your call recordings, customer data, and enquiry history are yours. We can export your data on request, and all stored data is deleted in line with GDPR requirements after cancellation.",
+    answer: "You can cancel anytime with one click. Your call transcripts, customer data, and enquiry history are yours. We can export your data on request, and all stored data is deleted in line with GDPR requirements after cancellation.",
     category: "General",
   },
   {
@@ -63,7 +83,17 @@ const faqs = [
   },
   {
     question: "What happens if Katie can't handle a call?",
-    answer: "Katie is trained to recognize when she needs to transfer to a human. For complex queries, emergencies, or if the customer specifically requests you, she'll take a message and notify you immediately via SMS and email. You can call them back within seconds.",
+    answer: "Katie is trained to recognize when she needs to transfer to a human. For complex queries, emergencies, or if the customer specifically requests you, she'll put them through to you on that call — a live transfer, not a promise to call back later. If you're unavailable, she takes a detailed message and notifies you immediately via WhatsApp. Learn more: /will-my-customers-mind.",
+    category: "General",
+  },
+  {
+    question: "Will my customers mind an AI answering my phone?",
+    answer: "Almost nobody hangs up — because the alternative is your voicemail. Katie answers in a natural voice, captures the job details, and books it in. If a caller asks to speak to you, she puts them through. If you're unavailable, she takes the details and you get a WhatsApp summary instantly. Read the full answer: /will-my-customers-mind.",
+    category: "General",
+  },
+  {
+    question: "Is it a phone tree?",
+    answer: "No. There is no menu, no 'press 1 for sales,' no hold music. The phone rings, Katie says hello, asks what's wrong, and has a real conversation — the way a good receptionist would. If the caller wants to talk to you, she puts them through. Read more: /is-it-a-phone-tree.",
     category: "General",
   },
   {
@@ -127,6 +157,20 @@ export function FAQ() {
             Everything you need to know about whoza.ai
           </p>
         </motion.div>
+
+        {/* Server-rendered FAQ content for AI crawlers — hidden from visual view, present in HTML for AEO */}
+        <div className="hidden" aria-hidden="true" data-testid="faq-crawlable-content">
+          <div itemScope itemType="https://schema.org/FAQPage">
+            {faqs.map((faq, i) => (
+              <div key={`crawlable-${i}`} itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+                <h3 itemProp="name">{faq.question}</h3>
+                <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                  <div itemProp="text">{faq.answer}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
 
         {/* FAQ Accordion */}
         <motion.div

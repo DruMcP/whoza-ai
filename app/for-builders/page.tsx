@@ -1,6 +1,7 @@
 "use client"
 
 import { Header } from "@/components/whoza/header"
+import { TradeCityLinks } from "@/components/TradeCityLinks";
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
@@ -127,13 +128,7 @@ export default function ForBuildersPage() {
       "name": "United Kingdom"
     },
     "priceRange": "££",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "reviewCount": "127",
-              "bestRating": "5",
-              "worstRating": "1"
-            },
+            
     "telephone": "+44-20-0000-0000",
     "email": "dru@whoz.ai",
     "openingHoursSpecification": [
@@ -352,7 +347,7 @@ export default function ForBuildersPage() {
         <div className="section-divider" />
         <TrialExplanation />
         <div className="section-divider" />
-        <MeetTheTeam />
+        <MeetTheTeam businessName="Harrison & Sons Builders" />
         <div className="section-divider" />
         <ControlSection />
         <div className="section-divider" />
@@ -372,53 +367,7 @@ export default function ForBuildersPage() {
 
         
         {/* ─── CITY LINKS ─── */}
-        <section className="py-12">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-              AI Call Answering for Builders in Your City
-            </h2>
-            <p className="text-white/60 mb-6">
-              Katie answers calls for builders across the UK. Find your location:
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-    <Link href="/for-builders-london" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">London</Link>
-    <Link href="/for-builders-manchester" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Manchester</Link>
-    <Link href="/for-builders-birmingham" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Birmingham</Link>
-    <Link href="/for-builders-leeds" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Leeds</Link>
-    <Link href="/for-builders-glasgow" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Glasgow</Link>
-    <Link href="/for-builders-bristol" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Bristol</Link>
-    <Link href="/for-builders-liverpool" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Liverpool</Link>
-    <Link href="/for-builders-edinburgh" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Edinburgh</Link>
-            </div>
-          </div>
-        </section>
-
-        <div className="section-divider" />
-
-{/* FAQ */}
-        <section id="faq" className="section-padding-lg bg-white relative">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] text-sm font-medium mb-4">
-                Got Questions?
-              </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
-                Builder FAQ
-              </h2>
-              <p className="mt-6 text-lg text-[var(--slate-500)]">
-                Everything you need to know about AI call handling for building businesses
-              </p>
-            </div>
-            <div className="space-y-4">
-              {faqs.map((faq, idx) => (
-                <div key={idx} className="bg-[var(--off-white)] rounded-xl border border-[var(--border)] px-6 py-5">
-                  <h3 className="text-[var(--navy-900)] font-semibold mb-2">{faq.question}</h3>
-                  <p className="text-[var(--slate-500)] leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <TradeCityLinks tradeSlug="builders" />
 
         <div className="section-divider" />
 

@@ -15,43 +15,14 @@
   transform-style: preserve-3d;
 }
 
-/* Inner glow orb */
+/* Inner glow orb — REMOVED: new render has its own lighting */
 .phone-wrapper::before {
-  content: '';
-  position: absolute;
-  inset: -60px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(16, 185, 129, 0.18) 0%,
-    rgba(16, 185, 129, 0.06) 40%,
-    transparent 70%
-  );
-  filter: blur(50px);
-  pointer-events: none;
-  z-index: -1;
+  display: none;
 }
 
-/* Outer ambient glow */
+/* Outer ambient glow — REMOVED: new render has its own lighting */
 .phone-wrapper::after {
-  content: '';
-  position: absolute;
-  inset: -80px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(52, 211, 153, 0.06) 0%,
-    transparent 55%
-  );
-  filter: blur(60px);
-  animation: glowPulse 5s ease-in-out infinite 1.5s;
-  pointer-events: none;
-  z-index: -2;
-}
-
-@keyframes glowPulse {
-  0%, 100% { opacity: 0.35; transform: scale(1); }
-  50% { opacity: 0.70; transform: scale(1.08); }
+  display: none;
 }
 
 /* ── Animated gradient shift for hero background ── */
@@ -66,12 +37,12 @@
   inset: 0;
   background: linear-gradient(
     135deg,
-    #0B1120 0%,
-    #0f172a 20%,
-    #1e1b4b 40%,
-    #0f172a 60%,
-    #0B1120 80%,
-    #0f172a 100%
+    #0F172A 0%,
+    #0F172A 20%,
+    #0F172A 40%,
+    #0F172A 60%,
+    #0F172A 80%,
+    #0F172A 100%
   );
   background-size: 400% 400%;
   animation: gradientShift 15s ease-in-out infinite;
@@ -82,10 +53,9 @@
 .phone-img {
   width: 100%;
   height: auto;
-  border-radius: 28px;
+  border-radius: 0;
   animation: phoneFloat 6s ease-in-out infinite;
-  filter: drop-shadow(0 25px 50px rgba(0,0,0,0.5))
-          drop-shadow(0 0 30px rgba(16, 185, 129, 0.15));
+  /* No drop-shadow — render has its own depth */
 }
 
 @keyframes phoneFloat {
@@ -195,7 +165,7 @@
 /* FIX 9: Hero stats section with gradient transition */
 .hero-stats {
   position: relative;
-  background: linear-gradient(to bottom, #0B1120 0%, #0f172a 50%);
+  background: linear-gradient(to bottom, #0F172A 0%, #0F172A 50%);
   text-align: center;
   padding: 20px 24px 32px !important;
   margin-top: -50px !important;
@@ -211,7 +181,7 @@
   left: 0;
   right: 0;
   height: 60px;
-  background: linear-gradient(to bottom, transparent, #0B1120);
+  background: linear-gradient(to bottom, transparent, #0F172A);
   pointer-events: none;
 }
 
@@ -241,6 +211,7 @@
 /* POLISH 3: Tighten hero bottom padding */
 .hero {
   padding-bottom: 40px;
+  background: #0F172A;
 }
 
 /* POLISH 4: Premium checkmark pill styling */
@@ -259,15 +230,12 @@
   transition: transform 0.3s ease;
 }
 
-/* Mobile phone sizing */
+/* Mobile phone sizing — keep legible, min ~340px */
 @media (max-width: 640px) {
   .phone-wrapper {
-    max-width: 280px;
-  }
-
-  .phone-wrapper::before,
-  .phone-wrapper::after {
-    display: none;
+    max-width: none;
+    width: min(100%, 380px);
+    min-width: 340px;
   }
 
   .phone-wrapper img,

@@ -7,7 +7,11 @@ import { ArrowRight, Sparkles } from "lucide-react"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Whoza.ai vs IONOS — AI Call Answering Comparison",
-  description: "Full comparison coming soon. Try whoza.ai free for 7 days. AI call answering for UK tradespeople.",
+  description: "Compare whoza.ai vs IONOS for UK trades. AI call answering from £59/month with 24/7 answering, WhatsApp delivery, and instant setup. See the full comparison.",
+  robots: {
+    index: false,
+    follow: false,
+  },
   alternates: {
     canonical: "https://whoza.ai/whoza-vs-ionos",
   },

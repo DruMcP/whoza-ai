@@ -97,11 +97,7 @@ export default function ForPainterDecoratorGlasgowPage() {
                   "longitude": "-4.2518"
                 },
                 "priceRange": "££",
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": "4.8",
-                  "reviewCount": "127"
-                }
+                
               },
               {
                 "@type": "Service",

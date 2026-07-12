@@ -11,10 +11,10 @@ export function PhoneMockup({ city, trade }: { city?: string; trade?: string }) 
     label: "WhatsApp Enquiry Received",
     heading: "New Customer Enquiry",
     jobType: "Boiler Repair",
-    name: "Sarah Thompson",
+    name: "Sarah Williams",
     area: displayArea,
-    urgency: "Today",
-    value: "£180–£260",
+    urgency: "High Priority",
+    value: "£250 – £450",
     time: "ASAP",
   }
 

@@ -25,7 +25,7 @@ const voiceAgents = [
     voice: "Male Voice",
     description: "Mark answers calls 24/7, qualifies real customer enquiries, and sends them to WhatsApp while you work. Clear, efficient and professional - ideal if you prefer a direct male voice.",
     outcome: "Job type, urgency, location and customer details captured.",
-    audioSample: "Hi, you've reached Wilson Electrics. This is Mark speaking. What can I do for you?",
+    audioSample: "Hi, you've reached us. This is Mark speaking. What can I do for you?",
     image: "/assets/icons/mark-icon.webp",
     color: "var(--mark-grey)",
     bgLight: "bg-[var(--mark-grey)]/10",
@@ -68,7 +68,16 @@ const voiceAgents = [
   },
 ]
 
-export function MeetTheTeam() {
+export function MeetTheTeam({ businessName = "Thompson Plumbing" }: { businessName?: string }) {
+  const voiceAgentsWithBusiness = voiceAgents.map(agent => {
+    if (agent.audioSample && agent.audioSample.includes("Thompson Plumbing")) {
+      return { ...agent, audioSample: agent.audioSample.replace("Thompson Plumbing", businessName) }
+    }
+    if (agent.whatsappMessage && agent.whatsappMessage.includes("Thompson Plumbing")) {
+      return { ...agent, whatsappMessage: agent.whatsappMessage.replace("Thompson Plumbing", businessName) }
+    }
+    return agent
+  })
   return (
     <section id="team" className="section-padding-lg bg-[var(--off-white)] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -93,7 +102,7 @@ export function MeetTheTeam() {
 
         {/* Agent Cards */}
         <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12 reveal-stagger">
-          {voiceAgents.map((agent, index) => {
+          {voiceAgentsWithBusiness.map((agent, index) => {
             const RoleIcon = agent.roleIcon
             return (
               <motion.div

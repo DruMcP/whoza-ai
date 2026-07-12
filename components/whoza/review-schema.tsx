@@ -13,14 +13,6 @@ interface ReviewSchemaProps {
 }
 
 export function ReviewSchema({ reviews, itemReviewed }: ReviewSchemaProps) {
-  const aggregateRating = {
-    "@type": "AggregateRating",
-    ratingValue: (reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length).toFixed(1),
-    bestRating: 5,
-    worstRating: 1,
-    reviewCount: reviews.length,
-  }
-
   const reviewSchema = reviews.map((review) => ({
     "@type": "Review",
     author: {
@@ -36,8 +28,7 @@ export function ReviewSchema({ reviews, itemReviewed }: ReviewSchemaProps) {
     },
     datePublished: review.date || "2026-05-01",
     publisher: {
-      "@type": "Organization",
-      name: "Whoza.ai",
+      "@id": "https://whoza.ai/#organization",
     },
   }))
 
@@ -47,7 +38,6 @@ export function ReviewSchema({ reviews, itemReviewed }: ReviewSchemaProps) {
     name: itemReviewed.name,
     url: itemReviewed.url,
     image: itemReviewed.image || "https://whoza.ai/og-image.webp",
-    aggregateRating,
     review: reviewSchema,
   }
 

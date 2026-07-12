@@ -49,8 +49,8 @@ const supportChannels = [
     icon: MessageSquare,
     title: "WhatsApp",
     description: "Quick questions and urgent issues",
-    link: "tel:+447831643012",
-    linkText: "+44 7831 643012",
+    link: "https://wa.me/447463141750",
+    linkText: "+44 7463 141750",
     responseTime: "Within 4 hours",
   },
   {

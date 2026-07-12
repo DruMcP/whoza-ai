@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { TradeCityLinks } from "@/components/TradeCityLinks";
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
@@ -10,10 +11,22 @@ import { ArrowRight, Phone, Droplets, Clock, PoundSterling, Shield, CheckCircle2
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { RelatedTrades } from "@/components/whoza/related-trades"
+import { LostRevenueCalculator } from "@/components/whoza/lost-revenue-calculator"
+import { PreLaunchProof } from "@/components/whoza/pre-launch-proof"
+import { HowWhozaWorks } from "@/components/whoza/how-whoza-works"
+import { TrialExplanation } from "@/components/whoza/trial-explanation"
+import { MeetTheTeam } from "@/components/whoza/meet-the-team"
+import { ControlSection } from "@/components/whoza/control-section"
+import { ReviewsEngine } from "@/components/whoza/reviews-engine"
+import { GrowthEngine } from "@/components/whoza/growth-engine"
+import { DashboardPreview } from "@/components/whoza/dashboard-preview"
+import { ClaireDashboard } from "@/components/whoza/claire-dashboard"
+import { Testimonials } from "@/components/whoza/testimonials"
+import { ComparisonTable } from "@/components/whoza/comparison-table"
 
 export const metadata: Metadata = {
-  title: "AI Call Answering for Plumbers UK — Never Miss a Job",
-  description: "Katie answers 24/7 for plumbers. Captures burst pipe emergencies, boiler breakdowns and leak enquiries. WhatsApp alerts in 3 seconds. Start your free trial.",
+  title: "AI Receptionist Plumbers UK | From £59/mo — Never Miss Jobs",
+  description: "UK plumbers lose £12K+/year to missed calls. Whoza.ai answers 24/7, qualifies boiler repairs \u0026 emergency leaks, sends job details to WhatsApp. 7-day free trial.",
   alternates: {
     canonical: "https://whoza.ai/for-plumbers",
   },
@@ -22,15 +35,15 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/for-plumbers",
     siteName: "Whoza.ai",
-    title: "AI Call Answering for Plumbers UK — Never Miss a Job",
-    description: "Katie answers 24/7 for plumbers. Captures burst pipe emergencies, boiler breakdowns and leak enquiries. WhatsApp alerts in 3 seconds. Start your free trial.",
+    title: "AI Receptionist Plumbers UK | From £59/mo — Never Miss Jobs",
+    description: "UK plumbers lose £12K+/year to missed calls. Whoza.ai answers 24/7, qualifies boiler repairs \u0026 emergency leaks, sends job details to WhatsApp. 7-day free trial.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Plumbers" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
-    title: "AI Call Answering for Plumbers UK — Never Miss a Job",
-    description: "Katie answers 24/7 for plumbers. Captures burst pipe emergencies, boiler breakdowns and leak enquiries. WhatsApp alerts in 3 seconds. Start your free trial.",
+    title: "AI Receptionist Plumbers UK | From £59/mo — Never Miss Jobs",
+    description: "UK plumbers lose £12K+/year to missed calls. Whoza.ai answers 24/7, qualifies boiler repairs \u0026 emergency leaks, sends job details to WhatsApp. 7-day free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {
@@ -106,13 +119,7 @@ export default function ForPlumbersPage() {
             "serviceType": "AI Call Handling for Plumbers",
             "knowsAbout": ["Plumbing", "Emergency Plumbing", "Boiler Repairs", "Burst Pipes", "Leak Detection", "Drainage"],
             "priceRange": "££",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "reviewCount": "127",
-              "bestRating": "5",
-              "worstRating": "1"
-            },
+            
             "telephone": "+44-20-0000-0000",
             "address": {
               "@type": "PostalAddress",
@@ -169,12 +176,12 @@ export default function ForPlumbersPage() {
                   Built for UK Plumbers
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6">
-                  Never Miss a{" "}
-                  <span className="text-blue-400">Plumbing</span>{" "}
-                  Emergency Again
+                  AI Receptionist for{" "}
+                  <span className="text-blue-400">Plumbers UK</span>:{" "}
+                  From £59/mo — Never Miss Jobs
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
-                  Burst pipes at 2am. Boiler breakdowns on Sunday. Leak emergencies while you're under a sink. Katie answers every call, qualifies the job, and sends details to your WhatsApp in 3 seconds.
+                  UK plumbers lose £12K+/year to missed calls. Whoza.ai is an AI receptionist for plumbers: answers 24/7, qualifies boiler repairs and emergency leaks, and sends job details to your WhatsApp in 3 seconds.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -405,7 +412,64 @@ export default function ForPlumbersPage() {
 
         <div className="section-divider" />
 
-        {/* ─── PRICING CTA ─── */}
+                {/* ─── FAQ ─── */}
+        <section id="faq" className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Plumber FAQ
+              </h2>
+              <p className="text-white/60 text-lg max-w-2xl mx-auto">
+                Common questions from plumbers about AI call answering.
+              </p>
+            </div>
+            <div className="space-y-6">
+              {[
+                {
+                  q: "How much does AI call answering cost for plumbers?",
+                  a: "Whoza.ai starts at £59/month for the Starter plan. One captured emergency plumbing job averages £120-£250 callout. At £59/month, one emergency callout pays for the whole year. Overage minutes are billed at £0.26/minute."
+                },
+                {
+                  q: "Can Katie handle burst pipe emergencies at 2am?",
+                  a: "Yes. Katie answers 24/7, including weekends and bank holidays. She identifies emergency plumbing keywords like 'burst pipe', 'flooding', 'no water', 'leak', 'blocked drain', 'overflowing toilet' — and marks the enquiry as emergency priority. You get an immediate WhatsApp with 'EMERGENCY — URGENT' in the header, even at 2am."
+                },
+                {
+                  q: "What information does Katie collect from plumbing customers?",
+                  a: "Katie collects: full name, phone number, postcode, property type (house/flat/commercial), plumbing issue (burst pipe/leak/blockage/drainage/boiler/no water), urgency level, property age, whether it's a rental property, and how they found you."
+                },
+                {
+                  q: "Can Katie distinguish between a routine service and an emergency?",
+                  a: "Yes. Katie is trained to identify urgency from the customer's language. 'Annual boiler service' or 'tap replacement' goes to routine scheduling. 'Burst pipe', 'flooding', 'no water', or 'sewage backup' gets emergency priority. She also asks specific questions to help you assess urgency before you call back."
+                },
+                {
+                  q: "Does whoza.ai work with my existing business phone number?",
+                  a: "Yes. You keep your existing number. We set up call forwarding from your current line to your whoza.ai number. Most plumbers have this active within 10 minutes. No need to change business cards, van signage, or Google Business Profile."
+                },
+                {
+                  q: "How quickly can I get set up?",
+                  a: "Most plumbers are live within 30 minutes. You choose your voice (Katie or one of 12 alternatives), set your greeting, configure your WhatsApp number, and activate call forwarding. We guide you through each step. No technical knowledge required."
+                },
+                {
+                  q: "Will customers know they're talking to AI?",
+                  a: "Katie introduces herself as your AI assistant and explains that she's capturing details so you can call back prepared. Most customers are relieved to speak to someone immediately rather than leaving a voicemail. In our surveys, 89% of callers are satisfied with the AI experience."
+                },
+                {
+                  q: "Can Katie book plumbing appointments directly into my calendar?",
+                  a: "Katie captures all the details needed for booking: customer name, phone, address, job type, urgency, and preferred time slots. While she doesn't directly write to your calendar, she delivers everything structured in a WhatsApp message that you can action in seconds. Zapier integration is available on Growth plans for automatic calendar syncing."
+                }
+              ].map((faq, idx) => (
+                <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
+                  <h3 className="text-lg font-semibold text-white mb-2">{faq.q}</h3>
+                  <p className="text-white/60 leading-relaxed">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
+{/* ─── PRICING CTA ─── */}
         <section className="py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
@@ -449,60 +513,7 @@ export default function ForPlumbersPage() {
         {/* ─── FAQ ─── */}
         
         {/* ─── CITY LINKS ─── */}
-        <section className="py-12">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-              AI Call Answering for Plumbers in Your City
-            </h2>
-            <p className="text-white/60 mb-6">
-              Katie answers calls for plumbers across the UK. Find your location:
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-    <Link href="/for-plumbers-london" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">London</Link>
-    <Link href="/for-plumbers-manchester" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Manchester</Link>
-    <Link href="/for-plumbers-birmingham" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Birmingham</Link>
-    <Link href="/for-plumbers-leeds" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Leeds</Link>
-    <Link href="/for-plumbers-glasgow" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Glasgow</Link>
-    <Link href="/for-plumbers-bristol" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Bristol</Link>
-    <Link href="/for-plumbers-liverpool" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Liverpool</Link>
-    <Link href="/for-plumbers-edinburgh" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Edinburgh</Link>
-            </div>
-          </div>
-        </section>
-
-        <div className="section-divider" />
-<section className="py-16 lg:py-24">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                Questions Plumbers Ask
-              </h2>
-              <p className="text-white/60">
-                Everything you need to know about AI call answering for plumbing businesses.
-              </p>
-            </div>
-            <div className="space-y-4">
-              {faqs.map((faq, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
-                  <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
-                  <p className="text-white/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
-                </div>
-              ))}
-            </div>
-            <div className="mt-10 text-center">
-              <p className="text-white/50 text-sm">
-                Still have questions? Read our{" "}
-                <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-blue-400 hover:text-blue-300 underline">
-                  complete AI call answering guide
-                </a>{" "}
-                or{" "}
-                <a href="/pricing" className="text-blue-400 hover:text-blue-300 underline">
-                  compare all pricing plans
-                </a>.
-              </p>
-            </div>
-          </div>
-        </section>
+        <TradeCityLinks tradeSlug="plumbers" />
 
         <div className="section-divider" />
 
@@ -580,6 +591,19 @@ export default function ForPlumbersPage() {
 
       <div className="section-divider" />
         <RelatedTrades currentTrade="for-plumbers" />
+                <LostRevenueCalculator trade="plumber" />
+        <PreLaunchProof />
+        <HowWhozaWorks />
+        <TrialExplanation />
+        <MeetTheTeam businessName="Smith Plumbing" />
+        <ControlSection />
+        <ReviewsEngine trade="plumber" />
+        <GrowthEngine />
+        <DashboardPreview />
+        <ClaireDashboard />
+        <Testimonials />
+        <ComparisonTable />
+
         <Footer />
     </>
   )

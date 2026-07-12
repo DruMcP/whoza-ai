@@ -77,11 +77,6 @@ export default function DataProcessingAgreement() {
                     <td className="px-4 py-3">Caller verbal</td>
                   </tr>
                   <tr className="border-t border-white/10">
-                    <td className="px-4 py-3">Call recording</td>
-                    <td className="px-4 py-3">Audio recording of conversation</td>
-                    <td className="px-4 py-3">AI system</td>
-                  </tr>
-                  <tr className="border-t border-white/10">
                     <td className="px-4 py-3">Call transcript</td>
                     <td className="px-4 py-3">Text transcription of conversation</td>
                     <td className="px-4 py-3">AI system</td>

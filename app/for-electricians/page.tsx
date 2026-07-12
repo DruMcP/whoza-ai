@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { TradeCityLinks } from "@/components/TradeCityLinks";
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
@@ -7,10 +8,22 @@ import { VideoSchema } from "@/components/whoza/schema-markup"
 import { ArrowRight, Phone, Zap, Shield, Clock, PoundSterling, CheckCircle2, Star, AlertTriangle, FileCheck } from "lucide-react"
 import Link from "next/link"
 import { RelatedTrades } from "@/components/whoza/related-trades"
+import { LostRevenueCalculator } from "@/components/whoza/lost-revenue-calculator"
+import { PreLaunchProof } from "@/components/whoza/pre-launch-proof"
+import { HowWhozaWorks } from "@/components/whoza/how-whoza-works"
+import { TrialExplanation } from "@/components/whoza/trial-explanation"
+import { MeetTheTeam } from "@/components/whoza/meet-the-team"
+import { ControlSection } from "@/components/whoza/control-section"
+import { ReviewsEngine } from "@/components/whoza/reviews-engine"
+import { GrowthEngine } from "@/components/whoza/growth-engine"
+import { DashboardPreview } from "@/components/whoza/dashboard-preview"
+import { ClaireDashboard } from "@/components/whoza/claire-dashboard"
+import { Testimonials } from "@/components/whoza/testimonials"
+import { ComparisonTable } from "@/components/whoza/comparison-table"
 
 export const metadata: Metadata = {
-  title: "AI Call Answering for Electricians UK — 24/7 Leads",
-  description: "Katie answers 24/7 for electricians. Captures EICR enquiries, emergency faults & consumer unit upgrades. WhatsApp alerts in 3 seconds. Free trial.",
+  title: "AI for Electricians UK | Catch Every Rewire & Emergency Call",
+  description: "UK electricians: stop missing rewire enquiries and emergency callouts. Whoza.ai answers 24/7, qualifies jobs, and sends details to WhatsApp. 7-day free trial.",
   alternates: {
     canonical: "https://whoza.ai/for-electricians",
   },
@@ -19,15 +32,15 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/for-electricians",
     siteName: "Whoza.ai",
-    title: "AI Call Answering for Electricians UK — 24/7 Leads",
-    description: "Katie answers 24/7 for electricians. Captures EICR enquiries, emergency faults & consumer unit upgrades. WhatsApp alerts in 3 seconds. Free trial.",
+    title: "AI for Electricians UK | Catch Every Rewire & Emergency Call",
+    description: "UK electricians: stop missing rewire enquiries and emergency callouts. Whoza.ai answers 24/7, qualifies jobs, and sends details to WhatsApp. 7-day free trial.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Electricians" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
-    title: "AI Call Answering for Electricians UK — 24/7 Leads",
-    description: "Katie answers 24/7 for electricians. Captures EICR enquiries, emergency faults & consumer unit upgrades. WhatsApp alerts in 3 seconds. Free trial.",
+    title: "AI for Electricians UK | Catch Every Rewire & Emergency Call",
+    description: "UK electricians: stop missing rewire enquiries and emergency callouts. Whoza.ai answers 24/7, qualifies jobs, and sends details to WhatsApp. 7-day free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {
@@ -103,13 +116,7 @@ export default function ForElectriciansPage() {
             "serviceType": "AI Call Handling for Electricians",
             "knowsAbout": ["Electrical", "EICR", "Emergency Electrical", "Consumer Unit Upgrades", "Rewiring", "PAT Testing", "EV Charger Installation"],
             "priceRange": "££",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "reviewCount": "127",
-              "bestRating": "5",
-              "worstRating": "1"
-            },
+            
             "telephone": "+44-20-0000-0000",
             "address": {
               "@type": "PostalAddress",
@@ -166,12 +173,12 @@ export default function ForElectriciansPage() {
                   Built for UK Electricians
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6">
-                  Never Miss an{" "}
-                  <span className="text-amber-400">Electrical</span>{" "}
-                  Lead Again
+                  AI for Electricians UK:{" "}
+                  <span className="text-amber-400">Catch Every Rewire</span>{" "}
+                  & Emergency Call
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
-                  EICR certificates, emergency faults, consumer unit upgrades, power outages. When customers call, they're worried or in a hurry. Katie answers in seconds, calms the situation, and captures every detail.
+                  UK electricians lose £15,000+/year to missed calls. Whoza.ai is an AI call answering service built for sparkies: answers 24/7, qualifies EICRs, rewires, and emergency faults, and sends full details to your WhatsApp in 3 seconds.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -402,7 +409,64 @@ export default function ForElectriciansPage() {
 
         <div className="section-divider" />
 
-        {/* ─── PRICING CTA ─── */}
+                {/* ─── FAQ ─── */}
+        <section id="faq" className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Electrician FAQ
+              </h2>
+              <p className="text-white/60 text-lg max-w-2xl mx-auto">
+                Common questions from electricians about AI call answering.
+              </p>
+            </div>
+            <div className="space-y-6">
+              {[
+                {
+                  q: "How much does AI call answering cost for electricians?",
+                  a: "Whoza.ai starts at £59/month for the Starter plan. One captured emergency electrical job averages £150-£300 callout. An EICR certificate averages £150-£220. At £59/month, one EICR pays for the whole year. Overage minutes are billed at £0.26/minute."
+                },
+                {
+                  q: "Can Katie handle electrical emergencies at 2am?",
+                  a: "Yes. Katie answers 24/7, including weekends and bank holidays. She identifies emergency electrical keywords like 'power cut', 'tripping', 'burning smell', 'sparking', 'fuse box', 'no lights' — and marks the enquiry as emergency priority. You get an immediate WhatsApp with 'ELECTRICAL EMERGENCY — URGENT' in the header, even at 2am."
+                },
+                {
+                  q: "What information does Katie collect from electrical customers?",
+                  a: "Katie collects: full name, phone number, postcode, property type (house/flat/commercial), electrical issue (power cut/tripping/faulty socket/lighting/rewiring/EICR), urgency level, property age, whether it's a rental property, and how they found you."
+                },
+                {
+                  q: "Can Katie handle EICR certificate enquiries?",
+                  a: "Yes. Katie identifies landlord-specific calls by keywords like 'EICR', 'electrical certificate', 'landlord', 'tenant', or 'rental property'. She captures the number of properties, number of circuits, preferred inspection dates, and tenant contact details. EICR enquiries get flagged as 'landlord/certificate' in your dashboard for efficient batch scheduling."
+                },
+                {
+                  q: "Does whoza.ai work with my existing business phone number?",
+                  a: "Yes. You keep your existing number. We set up call forwarding from your current line to your whoza.ai number. Most electricians have this active within 10 minutes. No need to change business cards, van signage, or Google Business Profile."
+                },
+                {
+                  q: "How quickly can I get set up?",
+                  a: "Most electricians are live within 30 minutes. You choose your voice (Katie or one of 12 alternatives), set your greeting, configure your WhatsApp number, and activate call forwarding. We guide you through each step. No technical knowledge required."
+                },
+                {
+                  q: "Will customers know they're talking to AI?",
+                  a: "Katie introduces herself as your AI assistant and explains that she's capturing details so you can call back prepared. Most customers are relieved to speak to someone immediately rather than leaving a voicemail. In our surveys, 89% of callers are satisfied with the AI experience."
+                },
+                {
+                  q: "Can Katie handle rewire and installation quote enquiries?",
+                  a: "Yes. Katie captures installation enquiries with: property type and size, number of rooms, current wiring condition, whether it's a partial or full rewire, and timeline. These high-value enquiries (£2,000-£8,000+) get flagged as 'installation quote' for priority follow-up."
+                }
+              ].map((faq, idx) => (
+                <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
+                  <h3 className="text-lg font-semibold text-white mb-2">{faq.q}</h3>
+                  <p className="text-white/60 leading-relaxed">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
+{/* ─── PRICING CTA ─── */}
         <section className="py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
@@ -446,60 +510,7 @@ export default function ForElectriciansPage() {
         {/* ─── FAQ ─── */}
         
         {/* ─── CITY LINKS ─── */}
-        <section className="py-12">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-              AI Call Answering for Electricians in Your City
-            </h2>
-            <p className="text-white/60 mb-6">
-              Katie answers calls for electricians across the UK. Find your location:
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-    <Link href="/for-electricians-london" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">London</Link>
-    <Link href="/for-electricians-manchester" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Manchester</Link>
-    <Link href="/for-electricians-birmingham" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Birmingham</Link>
-    <Link href="/for-electricians-leeds" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Leeds</Link>
-    <Link href="/for-electricians-glasgow" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Glasgow</Link>
-    <Link href="/for-electricians-bristol" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Bristol</Link>
-    <Link href="/for-electricians-liverpool" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Liverpool</Link>
-    <Link href="/for-electricians-edinburgh" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Edinburgh</Link>
-            </div>
-          </div>
-        </section>
-
-        <div className="section-divider" />
-<section className="py-16 lg:py-24">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                Questions Electricians Ask
-              </h2>
-              <p className="text-white/60">
-                Everything you need to know about AI call answering for electrical businesses.
-              </p>
-            </div>
-            <div className="space-y-4">
-              {faqs.map((faq, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
-                  <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
-                  <p className="text-white/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
-                </div>
-              ))}
-            </div>
-            <div className="mt-10 text-center">
-              <p className="text-white/50 text-sm">
-                Still have questions? Read our{" "}
-                <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-amber-400 hover:text-amber-300 underline">
-                  complete AI call answering guide
-                </a>{" "}
-                or{" "}
-                <a href="/pricing" className="text-amber-400 hover:text-amber-300 underline">
-                  compare all pricing plans
-                </a>.
-              </p>
-            </div>
-          </div>
-        </section>
+        <TradeCityLinks tradeSlug="electricians" />
 
         <div className="section-divider" />
 
@@ -577,6 +588,19 @@ export default function ForElectriciansPage() {
 
       <div className="section-divider" />
         <RelatedTrades currentTrade="for-electricians" />
+                <LostRevenueCalculator trade="electrician" />
+        <PreLaunchProof />
+        <HowWhozaWorks />
+        <TrialExplanation />
+        <MeetTheTeam businessName="Evans Electrical" />
+        <ControlSection />
+        <ReviewsEngine trade="electrician" />
+        <GrowthEngine />
+        <DashboardPreview />
+        <ClaireDashboard />
+        <Testimonials />
+        <ComparisonTable />
+
         <Footer />
     </>
   )

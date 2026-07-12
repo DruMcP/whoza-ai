@@ -39,23 +39,23 @@ const caseStudies = [
     trade: "Electrical Contractor",
     location: "London",
     headline: "From 40% Missed Calls to 98% Answer Rate",
-    metric: "£12,400",
-    metricLabel: "additional monthly revenue",
+    metric: "98%",
+    metricLabel: "answer rate achieved",
     quote: "Before whoza.ai, we were losing jobs because we couldn't answer the phone on site. Now Katie handles every call and we only speak to qualified leads.",
   },
   {
     trade: "Plumbing & Heating",
     location: "Manchester",
     headline: "Doubled Emergency Call Bookings in 30 Days",
-    metric: "2.1x",
+    metric: "2x",
     metricLabel: "increase in emergency bookings",
     quote: "Emergency calls come in at all hours. Katie qualifies them instantly and sends the urgent ones straight to my phone. I haven't missed a single emergency since.",
   },
   {
     trade: "Roofing Specialist",
     location: "Birmingham",
-    headline: "£8,000 Saved on Receptionist Costs",
-    metric: "£8,000",
+    headline: "Saved on Receptionist Costs",
+    metric: "£8k+",
     metricLabel: "annual savings vs. full-time hire",
     quote: "We considered hiring a receptionist but whoza.ai costs a fraction and works 24/7. Katie books surveys, qualifies leads, and handles the routine enquiries we used to miss.",
   },
@@ -77,10 +77,14 @@ export default function CaseStudiesPage() {
         <div className="mb-12">
           <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Briefcase className="w-4 h-4" />
-            Real Results
+            Illustrative Examples
           </div>
           <h1 className="text-4xl font-bold mb-4">Case Studies</h1>
           <p className="text-white/60 text-lg max-w-2xl">See how UK tradespeople are using whoza.ai to capture more leads, book more jobs, and never miss a call again.</p>
+          <p className="text-white/40 text-sm mt-4 max-w-2xl">
+            Figures shown are illustrative estimates based on typical industry benchmarks and customer-reported outcomes. 
+            Results vary by business. No guarantee of specific revenue or savings is implied.
+          </p>
         </div>
 
         <div className="grid gap-8">

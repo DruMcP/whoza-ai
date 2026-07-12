@@ -92,7 +92,7 @@ export function Hero() {
   return (
     <>
       <section
-        className="hero hero-grain dark-section relative overflow-hidden bg-[#0B1120]"
+        className="hero hero-grain dark-section relative overflow-hidden bg-[#0F172A]"
         aria-label="Introduction"
       >
         {/* Animated gradient background */}
@@ -130,7 +130,7 @@ export function Hero() {
             >
               <span className="the-small">The</span>{" "}
               <span className="ai-large">AI</span>{" "}
-              call handler built in Scotland for all UK Trades.
+              receptionist built in Scotland for UK trades.
               Answers every call, qualifies real jobs, sends them to your WhatsApp.
             </motion.p>
 
@@ -162,6 +162,10 @@ export function Hero() {
               <span className="check-item inline-flex items-center gap-1.5 bg-white/10 text-white/80 text-sm font-medium px-3 py-1.5 rounded-full border border-white/10">
                 <span className="text-emerald-400">✓</span>
                 7-day free trial, no credit card required
+              </span>
+              <span className="check-item inline-flex items-center gap-1.5 bg-white/10 text-white/80 text-sm font-medium px-3 py-1.5 rounded-full border border-white/10">
+                <span className="text-emerald-400">✓</span>
+                No call recording — transcripts only
               </span>
             </motion.div>
 
@@ -223,13 +227,15 @@ export function Hero() {
             >
               <Image
                 src="/images/hero-phone-3d.webp"
-                alt="Katie AI WhatsApp interface showing a new boiler repair lead from Sarah Williams"
+                alt="Katie AI WhatsApp interface showing a new boiler repair lead from Sarah Williams in Bristol"
                 width={420}
-                height={560}
-                quality={100}
+                height={630}
+                quality={90}
                 priority
                 fetchPriority="high"
+                sizes="(max-width: 768px) 90vw, 40vw"
                 className="phone-img"
+                style={{ objectFit: 'contain' }}
               />
             </motion.div>
           </motion.div>

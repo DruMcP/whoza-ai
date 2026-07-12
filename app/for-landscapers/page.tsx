@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { TradeCityLinks } from "@/components/TradeCityLinks";
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
@@ -106,13 +107,7 @@ export default function ForLandscapersPage() {
             "serviceType": "AI Call Handling for Landscapers",
             "knowsAbout": ["Landscaping", "Garden Design", "Garden Maintenance", "Patio Laying", "Fencing", "Turfing", "Tree Surgery", "Hardscaping"],
             "priceRange": "££",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "reviewCount": "127",
-              "bestRating": "5",
-              "worstRating": "1"
-            },
+            
             "telephone": "+44-20-0000-0000",
             "address": {
               "@type": "PostalAddress",
@@ -449,60 +444,7 @@ export default function ForLandscapersPage() {
         {/* ─── FAQ ─── */}
         
         {/* ─── CITY LINKS ─── */}
-        <section className="py-12">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-              AI Call Answering for Landscapers in Your City
-            </h2>
-            <p className="text-white/60 mb-6">
-              Katie answers calls for landscapers across the UK. Find your location:
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-    <Link href="/for-landscapers-london" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">London</Link>
-    <Link href="/for-landscapers-manchester" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Manchester</Link>
-    <Link href="/for-landscapers-birmingham" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Birmingham</Link>
-    <Link href="/for-landscapers-leeds" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Leeds</Link>
-    <Link href="/for-landscapers-glasgow" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Glasgow</Link>
-    <Link href="/for-landscapers-bristol" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Bristol</Link>
-    <Link href="/for-landscapers-liverpool" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Liverpool</Link>
-    <Link href="/for-landscapers-edinburgh" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Edinburgh</Link>
-            </div>
-          </div>
-        </section>
-
-        <div className="section-divider" />
-<section className="py-16 lg:py-24">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                Questions Landscapers Ask
-              </h2>
-              <p className="text-white/60">
-                Everything you need to know about AI call answering for landscaping businesses.
-              </p>
-            </div>
-            <div className="space-y-4">
-              {faqs.map((faq, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
-                  <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
-                  <p className="text-white/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
-                </div>
-              ))}
-            </div>
-            <div className="mt-10 text-center">
-              <p className="text-white/50 text-sm">
-                Still have questions? Read our{" "}
-                <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-green-400 hover:text-green-300 underline">
-                  complete AI call answering guide
-                </a>{" "}
-                or{" "}
-                <a href="/pricing" className="text-green-400 hover:text-green-300 underline">
-                  compare all pricing plans
-                </a>.
-              </p>
-            </div>
-          </div>
-        </section>
+        <TradeCityLinks tradeSlug="landscapers" />
 
         <div className="section-divider" />
 

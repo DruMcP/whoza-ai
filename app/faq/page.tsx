@@ -95,7 +95,7 @@ const faqSchema = {
       "name": "Is there a contract or can I cancel anytime?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "whoza.ai has no contracts — you can cancel anytime with 30 days' notice. This is a deliberate choice based on feedback from tradespeople who've been burned by 12-month lock-ins with traditional answering services. The 7-day free trial also requires no credit card. We believe if the service isn't working for you, you shouldn't be trapped. This no-contract approach is increasingly common in SaaS but still rare in the call answering industry, where 12-month minimums are standard practice."
+        "text": "whoza.ai has no contracts — you can cancel anytime with no notice. This is a deliberate choice based on feedback from tradespeople who've been burned by 12-month lock-ins with traditional answering services. The 7-day free trial also requires no credit card. We believe if the service isn't working for you, you shouldn't be trapped. This no-contract approach is increasingly common in SaaS but still rare in the call answering industry, where 12-month minimums are standard practice."
       }
     },
     {
@@ -143,7 +143,7 @@ const faqSchema = {
       "name": "How does whoza.ai compare to Moneypenny?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Moneypenny is a well-established UK answering service using human receptionists, starting from approximately £150/month. whoza.ai uses AI and starts at £59/month. The key differences: (1) Price — whoza.ai is roughly 60% cheaper, (2) Availability — AI handles unlimited simultaneous calls; human services typically handle 1–2 at a time, (3) Setup — whoza.ai is live in 30 minutes vs 2–5 days, (4) Delivery — whoza.ai uses WhatsApp; Moneypenny uses email + portal. Moneypenny's advantage is human relationship building for high-value commercial clients. For most sole traders and small trade businesses, the cost savings and instant setup of AI make more sense. See our detailed comparison at /vs-trade-receptionist."
+        "text": "Moneypenny is a well-established UK answering service using human receptionists, starting from approximately £150/month. whoza.ai uses AI and starts at £59/month. The key differences: (1) Price — whoza.ai is roughly 60% cheaper, (2) Availability — AI answers 24/7; human services have shift limits, (3) Setup — whoza.ai is live in 30 minutes vs 2–5 days, (4) Delivery — whoza.ai uses WhatsApp; Moneypenny uses email + portal. Moneypenny's advantage is human relationship building for high-value commercial clients. For most sole traders and small trade businesses, the cost savings and instant setup of AI make more sense. See our detailed comparison at /vs-trade-receptionist."
       }
     },
     {
@@ -167,7 +167,7 @@ const faqSchema = {
       "name": "Is my data safe with whoza.ai?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. whoza.ai is ICO registered (registration number ZC077271), GDPR compliant, and stores all UK customer data in UK-based data centres. Call recordings are encrypted at rest and in transit. We don't sell data to third parties, and you can request deletion of all your data at any time. The platform uses enterprise-grade security: AES-256 encryption, SOC 2 Type II certified infrastructure, and regular penetration testing. For tradespeople handling sensitive customer information (addresses, property details, financial information), this level of security exceeds what's typically available with consumer-grade answering services."
+        "text": "Yes. whoza.ai is ICO registered (registration number ZC077271), GDPR compliant, and stores all UK customer data in UK-based data centres. Call transcripts are encrypted at rest and in transit. No audio recordings are stored. We don't sell data to third parties, and you can request deletion of all your data at any time. The platform uses enterprise-grade security: AES-256 encryption, SOC 2 Type II certified infrastructure, and regular penetration testing. For tradespeople handling sensitive customer information (addresses, property details, financial information), this level of security exceeds what's typically available with consumer-grade answering services."
       }
     },
     {

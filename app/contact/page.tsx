@@ -60,7 +60,7 @@ const localBusinessSchema = {
     "name": "United Kingdom"
   },
   "priceRange": "££",
-  "telephone": "+447831643012",
+  "telephone": "+447463141750",
   "email": "support@whoza.ai",
   "openingHoursSpecification": [
     {
@@ -87,7 +87,7 @@ const localBusinessSchema = {
   ],
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+447831643012",
+    "telephone": "+447463141750",
     "email": "support@whoza.ai",
     "contactType": "customer service",
     "areaServed": "GB",
@@ -99,7 +99,7 @@ const contactMethods = [
   {
     icon: MessageSquare,
     label: "WhatsApp",
-    value: "+44 7831 643012",
+    value: "+44 7463 141750",
     href: "https://wa.me/447463141750",
     description: "Fastest response. Message us any time.",
   },
@@ -113,7 +113,7 @@ const contactMethods = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+44 7831 643012",
+    value: "+44 7463 141750",
     href: "tel:+447463141750",
     description: "Call us during business hours.",
   },

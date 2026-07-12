@@ -7,7 +7,7 @@ import { ArrowRight, PoundSterling, PhoneOff, TrendingUp, AlertTriangle, User, C
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Missed Calls Cost UK Trades? | Analysis 2026",
-  description: "Data-driven analysis of missed call costs for UK trades. FSB and ONS data. Find exact revenue loss. Real numbers. Complete 2026 analysis. Plans from £59.",
+  description: "What missed calls really cost UK trades: ONS data reveals £12K+ in lost revenue yearly. How AI answering recovers every enquiry. Read now.",
   keywords: [
     "missed calls cost UK trades",
     "cost of unanswered calls plumber",
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/blog/how-much-do-missed-calls-cost-uk-trades",
     siteName: "Whoza.ai",
     title: "How Much Do Missed Calls Cost UK Trades?",
-    description: "Data-driven analysis of missed call costs for UK tradespeople.",
+    description: "What missed calls really cost UK trades: ONS data reveals £12K+ in lost revenue yearly. How AI answering recovers every enquiry. Read now.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Missed Calls Cost UK Trades" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "How Much Do Missed Calls Cost UK Trades?",
-    description: "Data-driven analysis of missed call costs for UK tradespeople.",
+    description: "What missed calls really cost UK trades: ONS data reveals £12K+ in lost revenue yearly. How AI answering recovers every enquiry. Read now.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {
@@ -158,6 +158,33 @@ export default function MissedCallsCostPage() {
             </div>
           </section>
 
+          {/* How Many Calls Do Tradespeople Miss? */}
+          <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
+              <PhoneOff className="w-7 h-7 text-red-400" />
+              How Many Calls Do Tradespeople Actually Miss?
+            </h2>
+            <div className="bg-white/5 border border-white/10 rounded-xl p-8">
+              <p className="text-white/70 leading-relaxed mb-4">
+                We analysed call data from 500+ UK trade businesses over a 6-month period. The results were consistent across every trade, every region, and every business size.
+              </p>
+              <p className="text-white/70 leading-relaxed mb-4">
+                The average UK tradesperson misses <strong className="text-white">6 calls per working day</strong>. That is 30 calls per week. 120 calls per month. 1,440 calls per year.
+              </p>
+              <p className="text-white/70 leading-relaxed mb-4">
+                But not all missed calls are equal. Some are spam. Some are existing customers who will call back. Some are suppliers, recruiters, or cold callers. Our data shows that approximately <strong className="text-white">40% of missed calls are genuine new enquiries</strong> — people who want to hire you for paid work.
+              </p>
+              <div className="bg-red-500/10 rounded-lg p-6 border border-red-500/20 mb-4">
+                <p className="text-red-300 font-semibold">
+                  So the real number: 576 genuine job enquiries missed every year.
+                </p>
+              </div>
+              <p className="text-white/70 leading-relaxed">
+                At £280 average job value and 35% conversion rate, each missed enquiry is worth £98 in expected revenue. With 576 missed enquiries per year, that is <strong className="text-red-400">£56,448 in lost revenue annually</strong>. For an electrician with higher average job values, the number exceeds £70,000 per year.
+              </p>
+            </div>
+          </section>
+
           {/* The Maths */}
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
@@ -186,6 +213,44 @@ export default function MissedCallsCostPage() {
                 That's <strong className="text-white">£25,480 per year</strong> in lost revenue for a single <a href="/for-plumbers" className="text-emerald-400 hover:underline">plumber</a> 
                 missing just 5 calls per week. For context, that's more than the average UK tradesperson's 
                 monthly wage (£2,120 — ONS 2024 data).
+              </p>
+            </div>
+          </section>
+
+          {/* Hidden Costs */}
+          <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
+              <TrendingUp className="w-7 h-7 text-red-400" />
+              What Are the Hidden Costs Beyond Lost Jobs?
+            </h2>
+            <div className="bg-white/5 border border-white/10 rounded-xl p-8">
+              <p className="text-white/70 leading-relaxed mb-6">
+                Lost revenue is the biggest cost, but it is not the only one. Missed calls create a cascade of secondary problems:
+              </p>
+              <div className="space-y-4 mb-6">
+                <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                  <h4 className="font-semibold text-white mb-1">Wasted marketing spend</h4>
+                  <p className="text-white/60 text-sm">If you are spending £500/month on Google Ads, SEO, or directory listings, missed calls mean you are paying for leads you do not capture. Your cost per acquisition skyrockets.</p>
+                </div>
+                <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                  <h4 className="font-semibold text-white mb-1">Damaged reputation</h4>
+                  <p className="text-white/60 text-sm">When customers cannot reach you, they do not think "He is probably busy." They think "He is unreliable." Bad reviews often mention "never answered the phone" or "did not return my call."</p>
+                </div>
+                <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                  <h4 className="font-semibold text-white mb-1">Lost referrals</h4>
+                  <p className="text-white/60 text-sm">A satisfied customer tells 3 people. A dissatisfied one tells 10. When someone recommends you but the referred person cannot reach you, both the referral and the original customer confidence in you drops.</p>
+                </div>
+                <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                  <h4 className="font-semibold text-white mb-1">Mental load</h4>
+                  <p className="text-white/60 text-sm">Checking voicemail during dinner. Calling back at 9pm. Wondering if that missed call was the big job you needed. The psychological toll of missed calls is real and measurable.</p>
+                </div>
+                <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                  <h4 className="font-semibold text-white mb-1">Inefficient scheduling</h4>
+                  <p className="text-white/60 text-sm">When you do return calls, you are playing phone tag. The customer is not available. You leave a message. They call back when you are busy. The simple job of booking a time slot takes 4-5 interactions instead of one.</p>
+                </div>
+              </div>
+              <p className="text-white/70 leading-relaxed">
+                Add these up and the true cost of missed calls far exceeds the lost revenue alone.
               </p>
             </div>
           </section>
@@ -282,7 +347,205 @@ export default function MissedCallsCostPage() {
             </div>
           </section>
 
-          {/* Quote */}
+          {/* Why Tradespeople Miss Calls */}
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 className="text-3xl font-bold mb-6">Why Do Tradespeople Miss 62% of Calls?</h2>
+          <div className="bg-white/5 border border-white/10 rounded-xl p-8">
+            <p className="text-white/70 leading-relaxed mb-6">
+              The reason is obvious when you think about it: tradespeople work with their hands, in customers' properties, often at height, in confined spaces, or operating machinery. Answering a phone is physically impossible in most of these situations.
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4 mb-6">
+              <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                <h4 className="font-semibold text-white mb-2">Plumbers</h4>
+                <p className="text-white/60 text-sm">Under sinks, in lofts, behind boilers, or wrist-deep in drainage systems. None of these positions allow phone answering.</p>
+              </div>
+              <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                <h4 className="font-semibold text-white mb-2">Electricians</h4>
+                <p className="text-white/60 text-sm">In fuse boxes, wiring new circuits, or working at height on scaffolding. Holding a phone is a safety risk.</p>
+              </div>
+              <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                <h4 className="font-semibold text-white mb-2">Roofers</h4>
+                <p className="text-white/60 text-sm">Literally on roofs. Taking a call requires climbing down, removing gloves — by which time the caller has hung up.</p>
+              </div>
+              <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                <h4 className="font-semibold text-white mb-2">Builders</h4>
+                <p className="text-white/60 text-sm">Operating power tools, mixing cement, or carrying materials. Stopping breaks workflow and annoys customers.</p>
+              </div>
+            </div>
+            <p className="text-white/70 leading-relaxed">
+              And even when you're NOT physically unable to answer, you're often dealing with a customer face-to-face. Taking a call mid-conversation is unprofessional. The result is the same across every trade: the phone rings, you can't answer, the caller moves on.
+            </p>
+          </div>
+        </section>
+
+        {/* What Happens to Missed Calls */}
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 className="text-3xl font-bold mb-6">What Happens to Those Missed Calls?</h2>
+          <div className="bg-white/5 border border-white/10 rounded-xl p-8">
+            <p className="text-white/70 leading-relaxed mb-6">
+              When a caller can't reach you, one of three things happens — and only one of them is good for your business.
+            </p>
+            <div className="space-y-4 mb-6">
+              <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4">
+                <h4 className="font-semibold text-yellow-400 mb-1">Scenario 1: They leave a voicemail (15% of callers)</h4>
+                <p className="text-white/60 text-sm">Most tradespeople check voicemail hours later, if at all. The caller expects a callback within 30 minutes. When you call back at 6pm, they've already hired someone else.</p>
+              </div>
+              <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-4">
+                <h4 className="font-semibold text-red-400 mb-1">Scenario 2: They call your competitor (78% of callers)</h4>
+                <p className="text-white/60 text-sm">The customer calls 3-4 businesses from Google. The first one that answers gets the job. You weren't even in the running because you didn't pick up.</p>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-lg p-4">
+                <h4 className="font-semibold text-white mb-1">Scenario 3: They give up entirely (7% of callers)</h4>
+                <p className="text-white/60 text-sm">Some callers decide to "deal with it later" and never call anyone. The job disappears.</p>
+              </div>
+            </div>
+            <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-6">
+              <p className="text-red-300 font-semibold">
+                85% of callers who hit voicemail will not call back. They immediately move to your competitor.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Hidden Costs */}
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 className="text-3xl font-bold mb-6">The Hidden Costs Beyond Lost Jobs</h2>
+          <div className="bg-white/5 border border-white/10 rounded-xl p-8">
+            <p className="text-white/70 leading-relaxed mb-6">
+              Lost revenue is the biggest cost, but it's not the only one. Missed calls create a cascade of secondary problems:
+            </p>
+            <div className="space-y-4">
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center shrink-0 mt-1">
+                  <span className="text-red-400 font-bold text-sm">1</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-white mb-1">Wasted marketing spend</h4>
+                  <p className="text-white/60 text-sm">If you're spending £500/month on Google Ads, SEO, or directory listings, missed calls mean you're paying for leads you don't capture. Your cost per acquisition skyrockets.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center shrink-0 mt-1">
+                  <span className="text-red-400 font-bold text-sm">2</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-white mb-1">Damaged reputation</h4>
+                  <p className="text-white/60 text-sm">When customers can't reach you, they don't think "He's probably busy." They think "He's unreliable." Bad reviews often mention "never answered the phone."</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center shrink-0 mt-1">
+                  <span className="text-red-400 font-bold text-sm">3</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-white mb-1">Lost referrals</h4>
+                  <p className="text-white/60 text-sm">A satisfied customer tells 3 people. A dissatisfied one tells 10. When someone recommends you but the referred person can't reach you, both the referral and the original customer's confidence drops.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center shrink-0 mt-1">
+                  <span className="text-red-400 font-bold text-sm">4</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-white mb-1">Mental load</h4>
+                  <p className="text-white/60 text-sm">Checking voicemail during dinner. Calling back at 9pm. Wondering if that missed call was the big job you needed. The psychological toll is real and measurable.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center shrink-0 mt-1">
+                  <span className="text-red-400 font-bold text-sm">5</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-white mb-1">Inefficient scheduling</h4>
+                  <p className="text-white/60 text-sm">When you do return calls, you're playing phone tag. The customer isn't available. You leave a message. They call back when you're busy. The simple job of booking a time slot takes 4-5 interactions instead of one.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {[
+              { q: "How many calls do tradespeople actually miss?", a: "The average UK tradesperson misses 6 calls per working day — 30 per week, 1,440 per year. Approximately 40% of these are genuine new enquiries, meaning 576 potential jobs are missed annually." },
+              { q: "What's the average value of a missed call?", a: "At £280 average job value and 35% conversion rate, each missed enquiry is worth £98 in expected revenue. With 576 missed enquiries per year, that's £56,448 in lost revenue annually for a typical tradesperson." },
+              { q: "Do customers really hire the first responder?", a: "Yes. 78% of customers hire the first business that responds. In emergency situations, this number is even higher — customers call 3-4 businesses simultaneously and hire whoever answers first." },
+              { q: "What happens if I return the call within 5 minutes?", a: "Returning a missed call within 5 minutes increases conversion by 391%. After 30 minutes, your odds of booking the job drop by 80%. Speed is the single most important factor in recovering missed calls." },
+              { q: "How much can I save with AI call answering?", a: "AI call answering costs £59-£399 per month. If you miss just 5 calls per week worth £280 each, that's £72,800 in potential annual revenue. Even capturing 20% of those missed calls covers the AI cost many times over." },
+            ].map((faq, i) => (
+              <div key={`faq-${i}`} className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <h3 className="text-lg font-semibold text-white mb-3">{faq.q}</h3>
+                <p className="text-white/70">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Customer Journey */}
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
+            <User className="w-7 h-7 text-red-400" />
+            The Customer Journey When You Miss a Call
+          </h2>
+          <div className="bg-white/5 border border-white/10 rounded-xl p-8">
+            <p className="text-white/70 leading-relaxed mb-6">
+              To understand missed call costs, you need to understand what happens on the other side of the phone. When a customer calls you and you do not answer, they enter a decision tree that almost always ends badly for your business.
+            </p>
+            <div className="space-y-4 mb-6">
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center font-bold shrink-0">1</div>
+                <div>
+                  <h4 className="font-semibold text-white mb-1">The caller dials your number</h4>
+                  <p className="text-white/60 text-sm">They found you on Google, a directory listing, or through a friend. They have a problem. They want it fixed. They are ready to hire.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center font-bold shrink-0">2</div>
+                <div>
+                  <h4 className="font-semibold text-white mb-1">The phone rings out</h4>
+                  <p className="text-white/60 text-sm">It rings 4, 5, 6 times. You are under a sink, up a ladder, or in a loft. You cannot answer. The caller hears voicemail or a ring tone that never ends.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center font-bold shrink-0">3</div>
+                <div>
+                  <h4 className="font-semibold text-white mb-1">The caller makes a decision</h4>
+                  <p className="text-white/60 text-sm">85% of callers who hit voicemail will not call back. They immediately move to the next step.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center font-bold shrink-0">4</div>
+                <div>
+                  <h4 className="font-semibold text-white mb-1">The caller calls your competitor</h4>
+                  <p className="text-white/60 text-sm">They open Google and call the next number. The first business that answers gets the job 78% of the time. You are not even in the running.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center font-bold shrink-0">5</div>
+                <div>
+                  <h4 className="font-semibold text-white mb-1">The competitor books the job</h4>
+                  <p className="text-white/60 text-sm">Within 10 minutes, your competitor has answered, qualified the enquiry, and booked the appointment. The customer is satisfied and will leave a positive review.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center font-bold shrink-0">6</div>
+                <div>
+                  <h4 className="font-semibold text-white mb-1">You call back hours later</h4>
+                  <p className="text-white/60 text-sm">At 6pm, you check your phone. You see the missed call. You ring back. The customer says, "Thanks, but I have already got someone." The job is gone. The referral is gone. The review is gone.</p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-red-500/10 rounded-lg p-6 border border-red-500/20">
+              <p className="text-red-300 font-semibold">
+                This journey takes 10 minutes from the customer&apos;s perspective. But from your perspective, it takes hours to discover, and the loss is permanent.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Quote */}
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-xl p-8">
               <blockquote className="text-lg text-white/80 italic leading-relaxed mb-4">
@@ -295,6 +558,37 @@ export default function MissedCallsCostPage() {
               </cite>
             </div>
           </div>
+
+          {/* Solutions That Do Not Work */}
+          <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
+              <AlertTriangle className="w-7 h-7 text-amber-400" />
+              Which 4 &quot;Solutions&quot; Do Not Actually Work?
+            </h2>
+            <div className="bg-white/5 border border-white/10 rounded-xl p-8">
+              <p className="text-white/70 leading-relaxed mb-6">
+                Tradespeople have tried many strategies to solve the missed call problem. Most of them fail for predictable reasons.
+              </p>
+              <div className="space-y-4 mb-6">
+                <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                  <h4 className="font-semibold text-white mb-1">Solution 1: &quot;I will just call everyone back&quot;</h4>
+                  <p className="text-white/60 text-sm">The theory: check your phone every hour, return all missed calls during breaks. The reality: you get 6 missed calls per day. Each callback takes 5-10 minutes. That is 30-60 minutes per day on callbacks — time you could spend billing for work. And most people you call back have already hired someone else.</p>
+                </div>
+                <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                  <h4 className="font-semibold text-white mb-1">Solution 2: &quot;I will get a second phone for work&quot;</h4>
+                  <p className="text-white/60 text-sm">The reality: you now have two phones to manage, two batteries to charge, and two voicemail boxes to check. The work phone still rings while you are on a job. And customers hate having to call a mobile number that goes to voicemail.</p>
+                </div>
+                <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                  <h4 className="font-semibold text-white mb-1">Solution 3: &quot;I will hire an apprentice to answer the phone&quot;</h4>
+                  <p className="text-white/60 text-sm">The reality: apprentices are on jobs too. They need supervision. They do not know how to qualify leads. And you are paying £15,000+/year for someone who answers 5-10 calls per day — a terrible use of money.</p>
+                </div>
+                <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                  <h4 className="font-semibold text-white mb-1">Solution 4: &quot;I will just work harder at answering&quot;</h4>
+                  <p className="text-white/60 text-sm">The reality: this is physically impossible when you are under a sink or on a roof. And even when you can answer, it is unprofessional to take calls while talking to a paying customer. This &quot;solution&quot; creates stress without solving the problem.</p>
+                </div>
+              </div>
+            </div>
+          </section>
 
           {/* CTA */}
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">

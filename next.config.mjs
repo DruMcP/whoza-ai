@@ -56,6 +56,32 @@ const nextConfig = {
         permanent: true,
       },
 
+      {
+        source: '/for-bathroom-fitters',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/for-scaffolders',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/trade/painter',
+        destination: '/for-painters-decorators',
+        permanent: true,
+      },
+      {
+        source: '/case-studies/2',
+        destination: '/case-studies',
+        permanent: true,
+      },
+      {
+        source: '/resources/local-seo-checklist-trades',
+        destination: '/resources',
+        permanent: true,
+      },
+
       // === CRITICAL: Redirect missing comparison pages to homepage ===
       {
         source: '/whoza-vs-answer',
@@ -288,6 +314,144 @@ const nextConfig = {
       {
         source: '/blog/emergency-call-handling-guide',
         destination: '/blog/24-7-call-answering-emergency-trades',
+        permanent: true,
+      },
+      // === SEO/AEO Duplication Fixes (2026-07-12) ===
+      // Consolidate three competing "best AI" pages into one canonical hub
+      {
+        source: '/blog/best-ai-call-answering-service-uk-2026',
+        destination: '/best-ai-call-handler-uk-trades',
+        permanent: true,
+      },
+      {
+        source: '/blog/best-ai-call-answering-service-uk-trades-2026',
+        destination: '/best-ai-call-handler-uk-trades',
+        permanent: true,
+      },
+      {
+        source: '/blog/best-ai-phone-answering-uk-trades-2026',
+        destination: '/best-ai-call-handler-uk-trades',
+        permanent: true,
+      },
+      // Consolidate two missed-call calculators
+      {
+        source: '/missed-calls-cost-calculator',
+        destination: '/resources/missed-call-cost-calculator',
+        permanent: true,
+      },
+      // Consolidate AI vs human receptionist cluster
+      {
+        source: '/blog/ai-vs-human-receptionist-trades',
+        destination: '/ai-vs-virtual-receptionist',
+        permanent: true,
+      },
+      {
+        source: '/blog/ai-receptionist-vs-human-receptionist-which-is-right-for-your-trade-business',
+        destination: '/ai-vs-virtual-receptionist',
+        permanent: true,
+      },
+      // Consolidate missed-call cost blog cluster
+      {
+        source: '/blog/missed-calls-missed-money-the-real-cost-for-tradespeople',
+        destination: '/blog/how-much-do-missed-calls-cost-uk-trades',
+        permanent: true,
+      },
+      {
+        source: '/blog/why-62-percent-of-trade-business-calls-go-unanswered',
+        destination: '/blog/how-much-do-missed-calls-cost-uk-trades',
+        permanent: true,
+      },
+      {
+        source: '/blog/missed-call-recovery-trades-guide',
+        destination: '/blog/how-much-do-missed-calls-cost-uk-trades',
+        permanent: true,
+      },
+      // Consolidate AI call answering guide cluster
+      {
+        source: '/blog/ai-call-answering-trades-uk-guide',
+        destination: '/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026',
+        permanent: true,
+      },
+      {
+        source: '/blog/247-call-answering-uk-trades-guide-2026',
+        destination: '/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026',
+        permanent: true,
+      },
+      {
+        source: '/blog/how-ai-call-handlers-are-changing-the-game-for-uk-trades-2026',
+        destination: '/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026',
+        permanent: true,
+      },
+      // === SEO/AEO Duplication Fixes (2026-07-12) ===
+      // Consolidate three competing "best AI" pages into one canonical hub
+      {
+        source: '/blog/best-ai-call-answering-service-uk-2026',
+        destination: '/best-ai-call-handler-uk-trades',
+        permanent: true,
+      },
+      {
+        source: '/blog/best-ai-call-answering-service-uk-trades-2026',
+        destination: '/best-ai-call-handler-uk-trades',
+        permanent: true,
+      },
+      {
+        source: '/blog/best-ai-phone-answering-uk-trades-2026',
+        destination: '/best-ai-call-handler-uk-trades',
+        permanent: true,
+      },
+      // Consolidate two missed-call calculators
+      {
+        source: '/missed-calls-cost-calculator',
+        destination: '/resources/missed-call-cost-calculator',
+        permanent: true,
+      },
+      // Consolidate AI vs human receptionist cluster
+      {
+        source: '/blog/ai-vs-human-receptionist-trades',
+        destination: '/ai-vs-virtual-receptionist',
+        permanent: true,
+      },
+      {
+        source: '/blog/ai-receptionist-vs-human-receptionist-which-is-right-for-your-trade-business',
+        destination: '/ai-vs-virtual-receptionist',
+        permanent: true,
+      },
+      // Consolidate missed-call cost blog cluster
+      {
+        source: '/blog/missed-calls-missed-money-the-real-cost-for-tradespeople',
+        destination: '/blog/how-much-do-missed-calls-cost-uk-trades',
+        permanent: true,
+      },
+      {
+        source: '/blog/why-62-percent-of-trade-business-calls-go-unanswered',
+        destination: '/blog/how-much-do-missed-calls-cost-uk-trades',
+        permanent: true,
+      },
+      {
+        source: '/blog/missed-call-recovery-trades-guide',
+        destination: '/blog/how-much-do-missed-calls-cost-uk-trades',
+        permanent: true,
+      },
+      // Consolidate AI call answering guide cluster
+      {
+        source: '/blog/ai-call-answering-trades-uk-guide',
+        destination: '/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026',
+        permanent: true,
+      },
+      {
+        source: '/blog/247-call-answering-uk-trades-guide-2026',
+        destination: '/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026',
+        permanent: true,
+      },
+      {
+        source: '/blog/how-ai-call-handlers-are-changing-the-game-for-uk-trades-2026',
+        destination: '/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026',
+        permanent: true,
+      },
+      // De-cannibalise: redirect /for-carpenters to /for-joiners (broader UK term)
+      {
+        source: '/for-carpenters',
+        destination: '/for-joiners',
         permanent: true,
       },
       // === GSC 404 FIX: Redirect dead AI-visibility blog posts (2026-06-14) ===

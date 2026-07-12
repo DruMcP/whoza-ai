@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import CityTradeSchema from "@/components/CityTradeSchema";
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
@@ -100,11 +101,7 @@ export default function ForHeatingEngineerLondonPage() {
                   "longitude": "-0.1278"
                 },
                 "priceRange": "££",
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": "4.8",
-                  "reviewCount": "127"
-                }
+                
               },
               {
                 "@type": "Service",
@@ -121,6 +118,7 @@ export default function ForHeatingEngineerLondonPage() {
       />
 
       <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
+      <CityTradeSchema trade="Heating Engineer" tradePlural="Heating Engineers" city="London" region="Greater London" pageUrl="https://whoza.ai/for-heating-engineers-london" />
         {/* ─── HERO ─── */}
         <section className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
           <div className="absolute inset-0">

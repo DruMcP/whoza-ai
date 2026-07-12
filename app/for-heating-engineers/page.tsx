@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { TradeCityLinks } from "@/components/TradeCityLinks";
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
@@ -155,13 +156,7 @@ export default function ForHvacPage() {
       "name": "United Kingdom"
     },
     "priceRange": "££",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "reviewCount": "127",
-              "bestRating": "5",
-              "worstRating": "1"
-            },
+            
     "telephone": "+44-20-0000-0000",
     "email": "dru@whoz.ai",
     "openingHoursSpecification": [
@@ -383,7 +378,7 @@ export default function ForHvacPage() {
         <div className="section-divider" />
         <TrialExplanation />
         <div className="section-divider" />
-        <MeetTheTeam />
+        <MeetTheTeam businessName="Carter Heating Solutions" />
         <div className="section-divider" />
         <ControlSection />
         <div className="section-divider" />
@@ -403,26 +398,7 @@ export default function ForHvacPage() {
 
         
         {/* ─── CITY LINKS ─── */}
-        <section className="py-12">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-              AI Call Answering for Heating Engineers in Your City
-            </h2>
-            <p className="text-white/60 mb-6">
-              Katie answers calls for heating engineers across the UK. Find your location:
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-    <Link href="/for-heating-engineers-london" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">London</Link>
-    <Link href="/for-heating-engineers-manchester" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Manchester</Link>
-    <Link href="/for-heating-engineers-birmingham" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Birmingham</Link>
-    <Link href="/for-heating-engineers-leeds" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Leeds</Link>
-    <Link href="/for-heating-engineers-glasgow" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Glasgow</Link>
-    <Link href="/for-heating-engineers-bristol" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Bristol</Link>
-    <Link href="/for-heating-engineers-liverpool" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Liverpool</Link>
-    <Link href="/for-heating-engineers-edinburgh" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Edinburgh</Link>
-            </div>
-          </div>
-        </section>
+        <TradeCityLinks tradeSlug="heating-engineers" />
 
         <div className="section-divider" />
 

@@ -96,7 +96,7 @@ export default function FairUsePolicy() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
-                <span>Disabling or interfering with AI call recording disclosures</span>
+                <span>Disabling or interfering with AI disclosure notices</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
@@ -120,26 +120,26 @@ export default function FairUsePolicy() {
                 <tbody>
                   <tr className="border-t border-white/10">
                     <td className="px-4 py-3 font-medium">Starter (£59/mo)</td>
-                    <td className="px-4 py-3">Up to 500 minutes</td>
-                    <td className="px-4 py-3">Up to 50 enquiries</td>
+                    <td className="px-4 py-3">Up to 100 minutes</td>
+                    <td className="px-4 py-3">Up to 8 booked enquiries</td>
                     <td className="px-4 py-3">1</td>
                   </tr>
                   <tr className="border-t border-white/10">
                     <td className="px-4 py-3 font-medium">Growth (£125/mo)</td>
-                    <td className="px-4 py-3">Up to 1,500 minutes</td>
-                    <td className="px-4 py-3">Up to 150 enquiries</td>
+                    <td className="px-4 py-3">Up to 300 minutes</td>
+                    <td className="px-4 py-3">Up to 16 booked enquiries</td>
                     <td className="px-4 py-3">2</td>
                   </tr>
                   <tr className="border-t border-white/10">
                     <td className="px-4 py-3 font-medium">Pro (£230/mo)</td>
-                    <td className="px-4 py-3">Up to 3,000 minutes</td>
-                    <td className="px-4 py-3">Up to 300 enquiries</td>
+                    <td className="px-4 py-3">Up to 700 minutes</td>
+                    <td className="px-4 py-3">Up to 40 booked enquiries</td>
                     <td className="px-4 py-3">3</td>
                   </tr>
                   <tr className="border-t border-white/10">
                     <td className="px-4 py-3 font-medium">Scale (£399/mo)</td>
-                    <td className="px-4 py-3">Up to 6,000 minutes</td>
-                    <td className="px-4 py-3">Up to 600 enquiries</td>
+                    <td className="px-4 py-3">Up to 1,500 minutes</td>
+                    <td className="px-4 py-3">Up to 100 booked enquiries</td>
                     <td className="px-4 py-3">5</td>
                   </tr>
                 </tbody>

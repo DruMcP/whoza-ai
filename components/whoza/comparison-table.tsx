@@ -201,12 +201,6 @@ export function ComparisonTable() {
               Arrow vs whoza.ai
             </a>
             <a 
-              href="/whoza-vs-ionos" 
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--border)] hover:bg-[var(--katie-blue)]/5 hover:border-[var(--katie-blue)]/20 transition-all text-sm font-medium text-[var(--navy-900)]"
-            >
-              IONOS vs whoza.ai
-            </a>
-            <a 
               href="/vs-trade-receptionist" 
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--border)] hover:bg-[var(--katie-blue)]/5 hover:border-[var(--katie-blue)]/20 transition-all text-sm font-medium text-[var(--navy-900)]"
             >

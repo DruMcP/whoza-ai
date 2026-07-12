@@ -3900,7 +3900,7 @@ The system in this guide isn't complicated. It's simple, repeatable, and effecti
   },
   "ai-phone-technology-complete-guide": {
     title: "AI Phone Technology Guide UK Trades (2026)",
-    metaTitle: "Local SEO for UK Trades Complete Guide 2026",
+    metaTitle: "AI Phone Technology Guide UK Trades (2026)",
     excerpt: "How AI voice agents actually work — NLP, speech synthesis, intent recognition, voice quality, and the future of AI phone technology for trade businesses.",
     readTime: "18 min read",
     date: "2026-06-05",

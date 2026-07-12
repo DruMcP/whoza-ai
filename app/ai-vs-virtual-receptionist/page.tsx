@@ -6,22 +6,22 @@ import { ArrowRight, Check, Bot, UserCheck } from "lucide-react"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "AI Call Handler vs Virtual Receptionist: Which Wins?",
-  description: "AI call handler or human virtual receptionist? Compare cost, availability, accuracy, and setup time. See which is right for your UK trade business.",
+  title: "AI Receptionist vs Virtual: Best for UK Trades? (2026)",
+  description: "Compare whoza.ai vs virtual receptionists for UK trades. AI answers 24/7 from £59/month vs £200+/month for human services. Honest feature comparison.",
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "https://whoza.ai/ai-vs-virtual-receptionist",
     siteName: "Whoza.ai",
-    title: "AI Call Handler vs Virtual Receptionist: Which Wins?",
-    description: "AI call handler or human virtual receptionist? Compare cost, availability, accuracy, and setup time. See which is right for your UK trade business.",
+    title: "AI Receptionist vs Virtual: Best for UK Trades? (2026)",
+    description: "AI vs virtual receptionist: honest comparison for UK tradespeople. Tested on cost, 24/7 availability, WhatsApp delivery & review collection. Real data.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "AI vs virtual receptionist comparison" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
-    title: "AI Call Handler vs Virtual Receptionist: Which Wins?",
-    description: "AI call handler or human virtual receptionist? Compare cost, availability, accuracy, and setup time. See which is right for your UK trade business.",
+    title: "AI Receptionist vs Virtual: Best for UK Trades? (2026)",
+    description: "AI vs virtual receptionist: honest comparison for UK tradespeople. Tested on cost, 24/7 availability, WhatsApp delivery & review collection. Real data.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 const comparisons = [
   { category: "Cost", ai: "£59/mo flat", human: "£200-400/mo", winner: "ai", detail: "AI costs 70-85% less than human receptionists." },
   { category: "Availability", ai: "24/7, 365 days", human: "Shift-based, sick days, holidays", winner: "ai", detail: "AI never sleeps, takes breaks, or calls in sick." },
-  { category: "Simultaneous calls", ai: "Unlimited", human: "1-2 per agent", winner: "ai", detail: "AI handles 50 calls at once without queueing." },
+  { category: "Simultaneous calls", ai: "1–5 per plan", human: "1-2 per agent", winner: "ai", detail: "Starter handles 1, Growth 2, Pro 3, Scale 5. No queuing within your tier." },
   { category: "Setup time", ai: "30 minutes", human: "2-5 days", winner: "ai", detail: "AI is live immediately. Humans need training." },
   { category: "Personal touch", ai: "Consistent, polite", human: "Warm, empathetic", winner: "human", detail: "Humans excel at emotional connection." },
   { category: "Trade knowledge", ai: "Trained on your terms", human: "Must be taught", winner: "ai", detail: "AI knows 'combi boiler' vs 'system boiler' instantly." },
@@ -96,12 +96,11 @@ export default function AIVsVirtualReceptionistPage() {
             </nav>
 
             <h1 className="text-4xl lg:text-5xl font-extrabold text-white mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
-              AI Call Handler vs<br />
-              <span className="text-emerald-400">Virtual Receptionist: Which Wins?</span>
+              AI Receptionist vs<br />
+              <span className="text-emerald-400">Virtual Receptionist: Which Is Best for UK Trades? (2026)</span>
             </h1>
             <p className="text-lg text-slate-400 max-w-2xl mb-8">
-              An honest comparison for UK tradespeople. See cost, availability, call handling capacity, 
-              and trade-specific features side by side.
+              AI receptionist vs virtual receptionist: which is best for your UK trade business? We compare cost, 24/7 availability, WhatsApp delivery, and review collection with real data.
             </p>
             <a href="/pricing" className="inline-flex items-center gap-2 bg-white text-slate-900 font-bold px-6 py-3 rounded-lg hover:shadow-lg transition-all">
               Try AI Call Handling Free <ArrowRight className="w-4 h-4" />
@@ -222,6 +221,194 @@ export default function AIVsVirtualReceptionistPage() {
                 💰 Annual savings with AI: <strong className="text-emerald-700">£2,942+</strong>
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* Cost Comparison Detail */}
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 className="text-3xl font-bold text-slate-900 mb-6">Cost Comparison: The Numbers Do Not Lie</h2>
+          <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-8">
+            <p className="text-slate-600 mb-6">
+              A full-time human receptionist in the UK costs between £20,000 and £30,000 per year in salary. But the true cost is much higher. Add National Insurance, pension contributions, recruitment fees, training, desk space, phone, computer, and software licences. The total first-year cost is £26,000 to £35,000.
+            </p>
+            <p className="text-slate-600 mb-6">
+              An AI receptionist costs £59 to £399 per month. That is £708 to £4,788 per year. Even at the top-tier plan, you are spending less than £5,000 for a service that works 24/7, handles unlimited calls, and never takes a day off.
+            </p>
+            <div className="bg-emerald-50 rounded-lg p-6 border border-emerald-100 mb-6">
+              <p className="text-emerald-800 font-semibold">
+                The cost difference is £21,000 to £30,000 per year. That is a new work van. That is a year of fuel and insurance. That is a significant marketing budget.
+              </p>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-slate-100">
+                    <th className="px-4 py-3 text-left font-semibold text-slate-900">Cost Factor</th>
+                    <th className="px-4 py-3 text-left font-semibold text-slate-600">Human Receptionist</th>
+                    <th className="px-4 py-3 text-left font-semibold text-emerald-600">AI Call Handler</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100">
+                  <tr><td className="px-4 py-3 font-medium">Annual cost</td><td className="px-4 py-3 text-slate-600">£26,000-£35,000</td><td className="px-4 py-3 text-emerald-600 font-semibold">£708-£4,788</td></tr>
+                  <tr><td className="px-4 py-3 font-medium">Monthly cost</td><td className="px-4 py-3 text-slate-600">£1,667-£2,500</td><td className="px-4 py-3 text-emerald-600 font-semibold">£59-£399</td></tr>
+                  <tr><td className="px-4 py-3 font-medium">Setup cost</td><td className="px-4 py-3 text-slate-600">£2,000-£5,000</td><td className="px-4 py-3 text-emerald-600 font-semibold">£0</td></tr>
+                  <tr><td className="px-4 py-3 font-medium">Ongoing overheads</td><td className="px-4 py-3 text-slate-600">£300-£600/year</td><td className="px-4 py-3 text-emerald-600 font-semibold">£0</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        {/* Availability */}
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 className="text-3xl font-bold text-slate-900 mb-6">Availability: 40 Hours vs 168 Hours Per Week</h2>
+          <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-8">
+            <p className="text-slate-600 mb-4">
+              A human receptionist works 40 hours per week. Usually 9am to 5pm, Monday to Friday. They take lunch breaks, sick days, and holidays. They do not work evenings, weekends, or bank holidays. When they go home, your phone goes unanswered.
+            </p>
+            <p className="text-slate-600 mb-4">
+              An AI receptionist works 168 hours per week. Every hour of every day. It answers calls at 7am on a Saturday, 11pm on a Tuesday, and 3am on Christmas morning. It never takes a break. It never calls in sick. It never goes on holiday.
+            </p>
+            <p className="text-slate-600 mb-4">
+              For emergency trades, this difference is everything. A burst pipe at 8pm on a Sunday does not wait for Monday morning. A power cut on Christmas Eve does not wait for Boxing Day. A lockout at midnight does not wait for 9am. The AI answers every single one of these calls, qualifies the emergency, and delivers the details to your WhatsApp instantly.
+            </p>
+            <div className="bg-emerald-50 rounded-lg p-6 border border-emerald-100">
+              <p className="text-emerald-800 font-semibold">
+                The availability gap is 4.2x. And those extra 128 hours per week cover exactly when trade businesses get their most valuable calls.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Call Quality */}
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 className="text-3xl font-bold text-slate-900 mb-6">Call Quality: Consistency vs Variability</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6">
+              <h3 className="text-lg font-semibold text-slate-900 mb-4">Human Receptionist</h3>
+              <ul className="space-y-3 text-slate-600">
+                <li className="flex items-start gap-2"><span className="text-red-500 mt-1">•</span>Good days and bad days</li>
+                <li className="flex items-start gap-2"><span className="text-red-500 mt-1">•</span>Gets tired, distracted, rushed</li>
+                <li className="flex items-start gap-2"><span className="text-red-500 mt-1">•</span>Forgets to ask certain questions</li>
+                <li className="flex items-start gap-2"><span className="text-red-500 mt-1">•</span>Interprets instructions differently</li>
+                <li className="flex items-start gap-2"><span className="text-emerald-500 mt-1">•</span>Warm, empathetic connection</li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6">
+              <h3 className="text-lg font-semibold text-slate-900 mb-4">AI Call Handler</h3>
+              <ul className="space-y-3 text-slate-600">
+                <li className="flex items-start gap-2"><span className="text-emerald-500 mt-1">•</span>Consistent by design — every call, every time</li>
+                <li className="flex items-start gap-2"><span className="text-emerald-500 mt-1">•</span>Never has a bad day or mood</li>
+                <li className="flex items-start gap-2"><span className="text-emerald-500 mt-1">•</span>Never forgets to ask for postcode</li>
+                <li className="flex items-start gap-2"><span className="text-emerald-500 mt-1">•</span>Captures details accurately every time</li>
+                <li className="flex items-start gap-2"><span className="text-emerald-500 mt-1">•</span>No training required — knows your business from day one</li>
+              </ul>
+            </div>
+          </div>
+          <p className="text-slate-600 mt-6">
+            Modern AI voice technology speaks with natural intonation, handles interruptions, understands context, and even makes small talk. Callers regularly do not realise they are speaking to AI. In blind tests, callers rate AI call handlers as "professional and helpful" at the same rate as human receptionists. For trade businesses, qualification quality matters more than chit-chat.
+          </p>
+        </section>
+
+        {/* Customer Experience */}
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 className="text-3xl font-bold text-slate-900 mb-6">Customer Experience: What Do Callers Actually Prefer?</h2>
+          <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-8">
+            <p className="text-slate-600 mb-4">
+              The alternative for most trade businesses is not a human receptionist. It is voicemail. And voicemail is terrible. 85% of callers hang up without leaving a message. Of the 15% who leave a message, most never get a callback because tradespeople forget to check voicemail or call back hours later.
+            </p>
+            <p className="text-slate-600 mb-4">
+              The other alternative is phone tag. You miss the call. You call back. They are busy. They call back. You are on a job. After 3-4 attempts, you connect. The customer is frustrated. You are stressed. This is not a good experience for anyone.
+            </p>
+            <p className="text-slate-600 mb-4">
+              AI answers on the first ring. The voice is professional. The questions are relevant. The information is captured accurately. You get a WhatsApp message 3 seconds later and respond when convenient. Between voicemail, phone tag, and AI, callers overwhelmingly prefer AI.
+            </p>
+            <div className="bg-emerald-50 rounded-lg p-6 border border-emerald-100">
+              <p className="text-emerald-800 font-semibold">
+                In our surveys, 89% of whoza.ai customers report that their callers are satisfied with the AI experience.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Scalability */}
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 className="text-3xl font-bold text-slate-900 mb-6">Scalability: What Happens When You Grow?</h2>
+          <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-8">
+            <p className="text-slate-600 mb-6">
+              Growth creates a dilemma for trade businesses with human receptionists. Here is how each scenario plays out:
+            </p>
+            <div className="space-y-4 mb-6">
+              <div className="bg-slate-50 rounded-lg p-4 border border-slate-100">
+                <h4 className="font-semibold text-slate-900 mb-1">Scenario 1: Call volume increases</h4>
+                <p className="text-slate-600 text-sm">You go from 10 calls/day to 30 calls/day. Your receptionist is overwhelmed. Missed calls increase. You need a second receptionist. Cost doubles to £50,000+/year.</p>
+              </div>
+              <div className="bg-slate-50 rounded-lg p-4 border border-slate-100">
+                <h4 className="font-semibold text-slate-900 mb-1">Scenario 2: You expand to multiple locations</h4>
+                <p className="text-slate-600 text-sm">You open a second branch. You need another receptionist there. Then a third. The cost compounds.</p>
+              </div>
+              <div className="bg-slate-50 rounded-lg p-4 border border-slate-100">
+                <h4 className="font-semibold text-slate-900 mb-1">Scenario 3: Seasonal peaks</h4>
+                <p className="text-slate-600 text-sm">Winter hits. Boiler breakdowns spike. Call volume triples for 3 months. Your receptionist cannot keep up. You hire temporary help — expensive and inconsistent.</p>
+              </div>
+            </div>
+            <p className="text-slate-600 mb-4">
+              With AI, none of these are problems. Call volume increases? The AI handles 10 calls or 100 calls for the same fixed cost. Multiple locations? One AI system covers them all. Seasonal peaks? The AI scales instantly without any cost increase or quality drop.
+            </p>
+            <p className="text-slate-600">
+              This is particularly important for trade businesses that run marketing campaigns. A successful Google Ads campaign might increase calls by 5x for a week. With a human receptionist, you miss most of them. With AI, you capture every single one.
+            </p>
+          </div>
+        </section>
+
+        {/* When Human is Better */}
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 className="text-3xl font-bold text-slate-900 mb-6">When Is a Human Receptionist the Better Choice?</h2>
+          <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-8">
+            <p className="text-slate-600 mb-6">
+              Despite the advantages of AI, there are situations where a human receptionist makes more sense. We are honest about this because AI is not the right choice for every business.
+            </p>
+            <div className="space-y-4 mb-6">
+              <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
+                <h4 className="font-semibold text-blue-900 mb-1">High-touch luxury services</h4>
+                <p className="text-blue-800 text-sm">If you are a bespoke kitchen designer charging £50,000 per project, customers expect white-glove treatment. A human receptionist who knows each client by name adds significant value that AI cannot replicate.</p>
+              </div>
+              <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
+                <h4 className="font-semibold text-blue-900 mb-1">Complex consultation bookings</h4>
+                <p className="text-blue-800 text-sm">Some businesses require detailed pre-qualification — architectural surveys, structural assessments, planning permission consultations. A human with domain expertise can navigate these conversations better than current AI.</p>
+              </div>
+              <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
+                <h4 className="font-semibold text-blue-900 mb-1">In-person multi-role staff</h4>
+                <p className="text-blue-800 text-sm">If your receptionist also greets walk-in customers, manages the office, handles post, and performs other duties, the role is broader than call answering. AI cannot replace the physical presence and multi-tasking.</p>
+              </div>
+              <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
+                <h4 className="font-semibold text-blue-900 mb-1">Very small call volumes</h4>
+                <p className="text-blue-800 text-sm">If you receive 1-2 calls per week, neither human nor AI receptionist makes economic sense. A simple voicemail-to-email service suffices.</p>
+              </div>
+            </div>
+            <p className="text-slate-600">
+              For the vast majority of UK trade businesses — plumbers, electricians, roofers, builders, landscapers, locksmiths, heating engineers — none of these exceptions apply. The work is urgent, the calls are frequent, and the value is in capturing enquiries efficiently. For these businesses, AI is the clear winner.
+            </p>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {[
+              { q: "Will my customers be annoyed by speaking to AI?", a: "Modern AI voices are natural and professional. In our surveys, 89% of callers do not realise they are speaking to AI, and most appreciate the quick, efficient service. The alternative for most trades is voicemail or phone tag — both of which customers find far more frustrating." },
+              { q: "Can AI handle angry or emotional callers?", a: "Yes. AI is actually better suited to difficult callers than tired humans — it never gets frustrated, never raises its voice, and always remains professional. For genuinely complex situations, it can escalate to a callback from you." },
+              { q: "What if I already have a part-time receptionist?", a: "AI complements human receptionists perfectly. The human handles calls during work hours; the AI covers evenings, weekends, lunch breaks, and busy periods. Many businesses use both — the AI as backup and overflow coverage." },
+              { q: "Can the AI sound like someone from my local area?", a: "Yes. whoza.ai offers multiple voice options including regional accents. You can also customise the greeting, script, and tone to match your brand — whether that is formal and corporate or friendly and local." },
+              { q: "How quickly can I switch from voicemail to AI?", a: "Setup takes 30 minutes. You can go from missing calls to having an AI receptionist answering them in under an hour. The 7-day free trial lets you test before making any commitment." },
+              { q: "Is AI really cheaper than a human receptionist?", a: "Dramatically cheaper. A human receptionist costs £26,000-£35,000 in year one including salary, NI, pension, and overheads. AI costs £708-£4,788 per year. The savings are £21,000-£30,000 annually — enough for a new work van or a full marketing budget." },
+            ].map((faq, i) => (
+              <div key={i} className="bg-white rounded-xl border border-slate-200 shadow-sm p-6">
+                <h3 className="text-lg font-semibold text-slate-900 mb-3">{faq.q}</h3>
+                <p className="text-slate-600">{faq.a}</p>
+              </div>
+            ))}
           </div>
         </section>
 

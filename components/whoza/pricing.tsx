@@ -75,6 +75,8 @@ export function Pricing() {
         { text: "Booking automation", included: true },
         { text: "WhatsApp job delivery", included: true },
         { text: "Keep your existing business number", included: true },
+        { text: "Calendar sync (Google, Outlook, Apple)", included: true },
+        { text: "Live transfer to you — if you're available, Katie puts them through", included: true },
         { text: "No contract — cancel anytime", included: true },
         { text: "Monthly competitor analysis", included: true },
         { text: "8 booked enquiries included", included: true },
@@ -130,7 +132,6 @@ export function Pricing() {
         { text: "Weekly actionable AI visibility insights", included: true },
         { text: "Advanced Rex AI visibility reporting", included: true },
         { text: "Full system (Katie/Mark + Claire + Rex)", included: true },
-        { text: "Smart scheduling (checks calendar before booking)", included: true },
         { text: "SMS + WhatsApp follow-up sequences", included: true },
         { text: "Outbound callback campaigns", included: true },
         { text: "CRM integration (Jobber, ServiceTitan)", included: true },
@@ -231,6 +232,10 @@ export function Pricing() {
           <div className="mt-3 inline-flex flex-col sm:flex-row items-center gap-3 px-5 py-3 rounded-xl bg-[var(--rex-green)]/10 border border-[var(--rex-green)]/20 text-sm">
             <CheckCircle2 className="w-4 h-4 text-[var(--rex-green)] shrink-0" />
             <span className="text-[var(--navy-900)] font-medium">30-day money-back guarantee on all plans.</span>
+          </div>
+          <div className="mt-2 inline-flex flex-col sm:flex-row items-center gap-3 px-5 py-3 rounded-xl bg-[var(--katie-blue)]/10 border border-[var(--katie-blue)]/20 text-sm">
+            <CheckCircle2 className="w-4 h-4 text-[var(--katie-blue)] shrink-0" />
+            <span className="text-[var(--navy-900)] font-medium">No VAT charged.</span>
           </div>
           <p className="mt-2 text-sm text-[var(--slate-500)]">Upgrade anytime as your business grows.</p>
         </motion.div>

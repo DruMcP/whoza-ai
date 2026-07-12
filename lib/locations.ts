@@ -9,6 +9,8 @@ export interface LocationData {
   population?: string
   description?: string
   challenges?: string[]
+  lat?: string
+  lng?: string
   localStats?: {
     businesses: string
     households: string
@@ -25,6 +27,8 @@ export const locations: LocationData[] = [
     city: "London", 
     country: "uk", 
     region: "England", 
+    lat: "51.5074",
+    lng: "-0.1278",
     trades: ["plumbers", "electricians", "builders"],
     population: "8.9M",
     description: "London has 35,000+ trade businesses serving 3.5M households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",
@@ -47,6 +51,8 @@ export const locations: LocationData[] = [
     city: "Manchester", 
     country: "uk", 
     region: "England", 
+    lat: "53.4808",
+    lng: "-2.2426",
     trades: ["plumbers", "electricians", "roofers"],
     population: "2.8M",
     description: "Manchester has 10,000+ trade businesses serving 550K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",
@@ -69,6 +75,8 @@ export const locations: LocationData[] = [
     city: "Birmingham", 
     country: "uk", 
     region: "England", 
+    lat: "52.4862",
+    lng: "-1.8904",
     trades: ["plumbers", "builders", "painters"],
     population: "2.6M",
     description: "Birmingham has 11,000+ trade businesses serving 680K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",
@@ -91,6 +99,8 @@ export const locations: LocationData[] = [
     city: "Leeds", 
     country: "uk", 
     region: "England", 
+    lat: "53.8008",
+    lng: "-1.5491",
     trades: ["electricians", "roofers", "landscapers"],
     population: "2.3M",
     description: "Leeds has 8,500+ trade businesses serving 350K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59. Try free.",
@@ -113,6 +123,8 @@ export const locations: LocationData[] = [
     city: "Glasgow", 
     country: "uk", 
     region: "Scotland", 
+    lat: "55.8642",
+    lng: "-4.2518",
     trades: ["plumbers", "builders", "electricians"],
     population: "1.7M",
     description: "Glasgow has 9,000+ trade businesses serving 300K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",
@@ -135,6 +147,8 @@ export const locations: LocationData[] = [
     city: "Bristol", 
     country: "uk", 
     region: "England", 
+    lat: "51.4545",
+    lng: "-2.5879",
     trades: ["plumbers", "electricians", "builders"],
     population: "700K",
     description: "Bristol has 8,000+ trade businesses serving 460K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",
@@ -157,6 +171,8 @@ export const locations: LocationData[] = [
     city: "Liverpool", 
     country: "uk", 
     region: "England", 
+    lat: "53.4084",
+    lng: "-2.9916",
     trades: ["roofers", "plumbers", "electricians"],
     population: "900K",
     description: "Liverpool has 7,500+ trade businesses serving 280K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",
@@ -179,6 +195,8 @@ export const locations: LocationData[] = [
     city: "Edinburgh", 
     country: "uk", 
     region: "Scotland", 
+    lat: "55.9533",
+    lng: "-3.1883",
     trades: ["builders", "plumbers", "electricians"],
     population: "540K",
     description: "Edinburgh has 7,000+ trade businesses serving 250K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",

@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import CityTradeSchema from "@/components/CityTradeSchema";
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
@@ -99,11 +100,7 @@ export default function ForCarpenterBristolPage() {
                   "longitude": "-2.5879"
                 },
                 "priceRange": "££",
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": "4.8",
-                  "reviewCount": "127"
-                }
+                
               },
               {
                 "@type": "Service",
@@ -130,6 +127,7 @@ export default function ForCarpenterBristolPage() {
       />
 
       <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
+      <CityTradeSchema trade="Carpenter" tradePlural="Carpenters" city="Bristol" region="City of Bristol" pageUrl="https://whoza.ai/for-carpenters-bristol" />
         <section className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
           <div className="absolute inset-0">
             <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[120px]" />

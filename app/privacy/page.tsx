@@ -84,7 +84,7 @@ export default function PrivacyPolicy() {
             <ul className="space-y-3 text-white/70">
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
-                <span><strong>Call recordings and transcripts:</strong> Voice calls answered by our AI agents (Katie/Mark) are recorded and transcribed for quality, training, and service delivery purposes. Callers are notified at the start of each call that the interaction is being recorded and processed by AI.</span>
+                <span><strong>Call transcripts:</strong> Voice calls answered by our AI agents (Katie/Mark) are transcribed for quality and service delivery purposes. Calls are <strong>not recorded</strong>; a written transcript is generated and processed by AI. Transcripts are available on request. No audio is stored.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
@@ -148,7 +148,7 @@ export default function PrivacyPolicy() {
               4. AI Processing Disclosure
             </h2>
             <p className="text-white/70 leading-relaxed">
-              Whoza.ai uses artificial intelligence to process voice calls, transcribe conversations, and generate responses. Our AI agents (Katie and Mark) are powered by third-party voice AI infrastructure. All AI processing occurs within UK/EU data centres or jurisdictions with adequate data protection safeguards. Callers are informed at the start of each call that they are speaking with an AI assistant and that the call is recorded.
+              Whoza.ai uses artificial intelligence to process voice calls, transcribe conversations, and generate responses. Our AI agents (Katie and Mark) are powered by third-party voice AI infrastructure. All AI processing occurs within UK/EU data centres or jurisdictions with adequate data protection safeguards. Callers are informed at the start of each call that they are speaking with an AI assistant.
             </p>
           </section>
 
@@ -170,7 +170,7 @@ export default function PrivacyPolicy() {
             <ul className="space-y-3 text-white/70">
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
-                <span><strong>Call recordings:</strong> Retained for 90 days from the date of the call, after which they are automatically deleted. You can request earlier deletion at any time.</span>
+                <span><strong>Call transcripts and metadata:</strong> Retained for 2 years for billing, dispute resolution, and service improvement purposes.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>

@@ -47,6 +47,7 @@ export function PricingSchema({ currency, plans }: PricingSchemaProps) {
             merchantReturnLink: "https://whoza.ai/refund-policy",
             returnFees: "https://schema.org/FreeReturn",
             returnMethod: "https://schema.org/ReturnByMail",
+            applicableCountry: "GB",
           },
           shippingDetails: {
             "@type": "OfferShippingDetails",

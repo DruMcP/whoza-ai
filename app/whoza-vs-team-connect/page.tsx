@@ -7,7 +7,7 @@ import { ArrowRight, Check, MessageCircle, PoundSterling, Shield, Star, Zap } fr
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Whoza.ai vs Team-Connect: AI vs Budget (2026)",
-  description: "Honest comparison of whoza.ai (£59-£399) vs Team-Connect (£9.99-£79.99) for UK trades. Features, reliability, and value analysed.",
+  description: "Honest comparison of whoza.ai (£59-£399) vs Team-Connect (£9.99-£79.99) for UK trades. Features, reliability, and value analysed head-to-head. See which wins.",
   keywords: [
     "whoza.ai vs Team-Connect",
     "Team-Connect receptionist review",

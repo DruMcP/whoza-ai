@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Sample AI Call — Hear Katie Answer | whoza.ai",
-  description: "Hear Katie, whoza.ai's AI voice agent, answer a real trade enquiry in 64 seconds. Captures details and sends to WhatsApp instantly.",
+  description: "Hear Katie answer a real trade call in 60 seconds. AI receptionist captures enquiries, sends details to WhatsApp. See the whoza.ai demo. Free 7-day trial.",
   alternates: {
     canonical: "https://whoza.ai/sample-call",
   },
@@ -16,14 +16,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/sample-call",
     siteName: "Whoza.ai",
     title: "Sample AI Call — Hear Katie Answer | whoza.ai",
-    description: "Hear Katie, whoza.ai's AI voice agent, answer a real trade enquiry in 64 seconds. Captures details and sends to WhatsApp instantly.",
+    description: "Hear Katie answer a real trade call in 60 seconds. AI receptionist captures enquiries, sends details to WhatsApp. See the whoza.ai demo. Free 7-day trial.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Hear Katie answer a sample call" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "Sample AI Call — Hear Katie Answer | whoza.ai",
-    description: "Hear Katie, whoza.ai's AI voice agent, answer a real trade enquiry in 64 seconds. Captures details and sends to WhatsApp instantly.",
+    description: "Hear Katie answer a real trade call in 60 seconds. AI receptionist captures enquiries, sends details to WhatsApp. See the whoza.ai demo. Free 7-day trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {

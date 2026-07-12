@@ -24,7 +24,8 @@ const footerLinks = {
     { label: "Case Studies", href: "/case-studies" },
     { label: "Watch Demo", href: "/watch" },
     { label: "Best AI Call Handler", href: "/best-ai-call-handler-uk-trades" },
-    { label: "Missed Calls Cost", href: "/missed-calls-cost-calculator" },
+    { label: "Missed Calls Cost", href: "/resources/missed-call-cost-calculator" },
+    { label: "Part of 5R-AI — the UK AI agency", href: "https://www.5r-ai.com", external: true },
   ],
   comparisons: [
     { label: "vs Trade Receptionist", href: "/vs-trade-receptionist" },
@@ -33,7 +34,6 @@ const footerLinks = {
     { label: "vs Team-Connect", href: "/whoza-vs-team-connect" },
     { label: "vs Virtual Receptionist", href: "/ai-vs-virtual-receptionist" },
     { label: "vs ARROW", href: "/whoza-vs-arrow" },
-    { label: "vs IONOS", href: "/whoza-vs-ionos" },
   ],
   tools: [
     { label: "Lost Jobs Calculator", href: "/tools/lost-jobs-calculator" },
@@ -44,6 +44,7 @@ const footerLinks = {
   ],
   resources: [
     { label: "Research Library", href: "/research" },
+    { label: "Press Centre", href: "/press" },
     { label: "Missed Call Cost Calculator", href: "/resources/missed-call-cost-calculator" },
     { label: "Trade Business Growth Toolkit", href: "/resources/trade-business-growth-toolkit" },
     { label: "Google Business Profile Checklist", href: "/resources/google-business-profile-checklist-trades" },
@@ -167,7 +168,11 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-sm text-white/60 hover:text-white transition-colors">
+                  <a 
+                    href={link.href} 
+                    className="text-sm text-white/60 hover:text-white transition-colors"
+                    {...(link.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                  >
                     {link.label}
                   </a>
                 </li>

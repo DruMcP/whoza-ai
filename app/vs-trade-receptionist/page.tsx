@@ -9,7 +9,7 @@ export const revalidate = 3600
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Whoza.ai vs Trade Receptionist | UK Trades",
-  description: "Compare whoza.ai and Trade Receptionist for UK trades. Honest comparison of pricing, setup, compliance, and quality.",
+  description: "Compare whoza.ai vs Trade Receptionist for UK trades. AI answers every call 24/7 from £59/month vs £150+ for human services. Features, compliance, and quality compared.",
   openGraph: {
     type: "website",
     locale: "en_GB",
@@ -36,7 +36,6 @@ const comparisonData = [
   { feature: "Setup Time", whoza: "30 minutes", competitor: "~14 minutes (their claim)", winner: "competitor" },
   { feature: "Delivery Method", whoza: "WhatsApp", competitor: "WhatsApp job summaries", winner: "draw" },
   { feature: "Legal Entity", whoza: "UK Limited Company", competitor: "Australian Sole Trader", winner: "whoza" },
-  { feature: "VAT Compliance", whoza: "VAT registered, displayed", competitor: "No VAT number shown", winner: "whoza" },
   { feature: "T&Cs / Privacy Policy", whoza: "Present", competitor: "Missing / non-functional", winner: "whoza" },
   { feature: "Pricing Model", whoza: "Per minute (matches infra cost)", competitor: "Per call (hides real cost)", winner: "whoza" },
   { feature: "Money-Back Guarantee", whoza: "30 days", competitor: "None stated", winner: "whoza" },
@@ -248,7 +247,6 @@ export default function VsTradeReceptionistPage() {
               </div>
               <ul className="space-y-3 text-emerald-800">
                 <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> UK Limited Company</li>
-                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> VAT registered - number displayed</li>
                 <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> Full Terms & Conditions</li>
                 <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> Privacy Policy (GDPR compliant)</li>
                 <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> ICO registered (ZC077271)</li>
@@ -263,7 +261,6 @@ export default function VsTradeReceptionistPage() {
               <ul className="space-y-3 text-slate-600">
                 <li className="flex items-start gap-2"><Scale className="w-5 h-5 text-slate-400 shrink-0 mt-0.5" /> Australian sole trader (ABN 12 386 387 099)</li>
                 <li className="flex items-start gap-2"><X className="w-5 h-5 text-red-400 shrink-0 mt-0.5" /> No UK company at Companies House</li>
-                <li className="flex items-start gap-2"><X className="w-5 h-5 text-red-400 shrink-0 mt-0.5" /> No VAT number displayed despite "+VAT" pricing</li>
                 <li className="flex items-start gap-2"><X className="w-5 h-5 text-red-400 shrink-0 mt-0.5" /> No functional Terms & Conditions</li>
                 <li className="flex items-start gap-2"><X className="w-5 h-5 text-red-400 shrink-0 mt-0.5" /> Privacy Policy link missing / non-functional</li>
                 <li className="flex items-start gap-2"><Globe className="w-5 h-5 text-slate-400 shrink-0 mt-0.5" /> Based in Melbourne, VIC 3004</li>
@@ -314,7 +311,7 @@ export default function VsTradeReceptionistPage() {
           <div className="mt-8 bg-slate-50 rounded-xl p-6 border border-slate-200">
             <p className="text-slate-700 leading-relaxed">
               <strong>But here is what those 30 minutes build:</strong> a custom platform designed specifically for UK trades,
-              with proper legal compliance, VAT registration, GDPR-compliant privacy policy,
+              with proper legal compliance, GDPR-compliant privacy policy,
               and a UK-based team you can actually reach. Trade Receptionist is a Retell.ai + n8n + Twilio template
               distributed through a Skool community (&quot;Brendan&apos;s AI Community&quot;). It is not a purpose-built platform.
             </p>

@@ -81,9 +81,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: citySpecificDescription,
       images: ["https://whoza.ai/og-image.webp"],
     },
-  robots: {
-      index: locationData.country === 'uk',
+    robots: {
+      index: false,
       follow: true,
+    },
+    other: {
+      'geo.region': `GB-${locationData.region}`,
+      'geo.placename': locationData.city,
+      'geo.position': `${locationData.lat};${locationData.lng}`,
+      'ICBM': `${locationData.lat}, ${locationData.lng}`,
     },
   }
 }
@@ -105,6 +111,63 @@ export default async function LocationPage({ params }: PageProps) {
 
   return (
     <LocaleProvider forcedCountry={locationData.country}>
+      {/* City-specific LocalBusiness JSON-LD — overrides global Perth coordinates */}
+      <script
+        id={`localbusiness-${location}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "@id": `https://whoza.ai/${location}#localbusiness`,
+            "name": `whoza.ai — AI Call Answering in ${locationData.city}`,
+            "url": `https://whoza.ai/${location}`,
+            "logo": "https://whoza.ai/logo.webp",
+            "image": "https://whoza.ai/og-image.webp",
+            "description": `AI voice agents that answer missed calls for tradespeople in ${locationData.city} 24/7. Capture enquiries, book jobs, collect reviews. Plans from £59/month.`,
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "GB",
+              "addressRegion": locationData.region,
+              "addressLocality": locationData.city,
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": locationData.lat,
+              "longitude": locationData.lng,
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": locationData.city,
+            },
+            "priceRange": "££",
+            "telephone": "+447463141750",
+            "email": "support@whoza.ai",
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "00:00",
+                "closes": "23:59",
+              },
+            ],
+            "serviceType": "AI Call Handling Service",
+            "knowsAbout": [
+              "AI Voice Agents",
+              "Call Handling",
+              "Missed Call Recovery",
+              "Lead Qualification",
+              "Google Review Collection",
+              "Plumbing",
+              "Electrical Services",
+              "HVAC",
+              "Building Services",
+              "Locksmith Services",
+              "Roofing",
+            ],
+          }),
+        }}
+      />
       <VideoSchema
         name={`Whoza.ai Demo — AI Call Handling in ${locationData.city}`}
         description={`Watch how Whoza.ai's Katie captures a missed enquiry in under 60 seconds for ${locationData.trades?.slice(0, 2).join(", ") || "tradespeople"} in ${locationData.city}. The call is answered instantly, the enquiry lands in WhatsApp, and you accept or decline in two taps.`}

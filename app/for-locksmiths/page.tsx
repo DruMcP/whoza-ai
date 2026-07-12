@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { TradeCityLinks } from "@/components/TradeCityLinks";
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
@@ -155,13 +156,7 @@ export default function ForLocksmithsPage() {
       "name": "United Kingdom"
     },
     "priceRange": "££",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "reviewCount": "127",
-              "bestRating": "5",
-              "worstRating": "1"
-            },
+            
     "telephone": "+44-20-0000-0000",
     "email": "dru@whoz.ai",
     "openingHoursSpecification": [
@@ -383,7 +378,7 @@ export default function ForLocksmithsPage() {
         <div className="section-divider" />
         <TrialExplanation />
         <div className="section-divider" />
-        <MeetTheTeam />
+        <MeetTheTeam businessName="Keyguard Locksmiths" />
         <div className="section-divider" />
         <ControlSection />
         <div className="section-divider" />
@@ -403,58 +398,7 @@ export default function ForLocksmithsPage() {
 
         
         {/* ─── CITY LINKS ─── */}
-        <section className="py-12">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-              AI Call Answering for Locksmiths in Your City
-            </h2>
-            <p className="text-white/60 mb-6">
-              Katie answers calls for locksmiths across the UK. Find your location:
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-    <Link href="/for-locksmiths-london" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">London</Link>
-    <Link href="/for-locksmiths-manchester" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Manchester</Link>
-    <Link href="/for-locksmiths-birmingham" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Birmingham</Link>
-    <Link href="/for-locksmiths-leeds" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Leeds</Link>
-    <Link href="/for-locksmiths-glasgow" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Glasgow</Link>
-    <Link href="/for-locksmiths-bristol" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Bristol</Link>
-    <Link href="/for-locksmiths-liverpool" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Liverpool</Link>
-    <Link href="/for-locksmiths-edinburgh" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Edinburgh</Link>
-            </div>
-          </div>
-        </section>
-
-        <div className="section-divider" />
-
-{/* FAQ */}
-        <section id="faq" className="section-padding-lg bg-white relative">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] text-sm font-medium mb-4">
-                Got Questions?
-              </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
-                Locksmith FAQ
-              </h2>
-              <p className="mt-6 text-lg text-[var(--slate-500)]">
-                Everything you need to know about AI call handling for locksmith businesses
-              </p>
-            </div>
-            <div className="space-y-4">
-              {faqs.map((faq, idx) => (
-                <div key={idx} className="bg-[var(--off-white)] rounded-xl border border-[var(--border)] px-6 py-5">
-                  <h3 className="text-[var(--navy-900)] font-semibold mb-2">{faq.question}</h3>
-                  <div className="text-[var(--slate-500)] leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
-                  {faq.question.includes("How much does") && (
-                    <p className="mt-2 text-sm">
-                      <Link href="/pricing" className="text-[var(--katie-blue)] hover:underline">Plans start at £59/month</Link>. See full pricing and plan details.
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <TradeCityLinks tradeSlug="locksmiths" />
 
         <div className="section-divider" />
 

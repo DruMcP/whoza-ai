@@ -2,121 +2,6 @@ export function HomepageSchema() {
   const schemas = [
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Whoza.ai",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web, iOS, Android",
-      "offers": {
-        "@type": "AggregateOffer",
-        "lowPrice": "59",
-        "highPrice": "399",
-        "priceCurrency": "GBP",
-        "offerCount": "4"
-      },
-      "description": "AI voice agents answer your trade business calls 24/7, built in Scotland for UK plumbers, electricians and builders. Plans from £59/month.",
-      "url": "https://whoza.ai",
-      "provider": {
-        "@type": "Organization",
-        "name": "whoza.ai",
-        "url": "https://whoza.ai",
-        "logo": "https://whoza.ai/logo.png",
-        "foundingLocation": "Perth, Scotland, United Kingdom",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "6 Atholl Crescent",
-          "addressLocality": "Perth",
-          "addressRegion": "Scotland",
-          "postalCode": "PH1 5JN",
-          "addressCountry": "GB"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "customer support",
-          "email": "support@whoza.ai",
-          "telephone": "+447463141750",
-          "availableLanguage": "English",
-          "areaServed": "GB"
-        },
-        "sameAs": [
-          "https://www.linkedin.com/company/whoza-ai"
-        ]
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "5",
-        "bestRating": "5"
-      }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "@id": "https://whoza.ai/#organization",
-      "name": "whoza.ai",
-      "url": "https://whoza.ai",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://whoza.ai/logo.webp",
-        "width": 512,
-        "height": 512
-      },
-      "sameAs": [
-        "https://twitter.com/whozaai",
-        "https://www.linkedin.com/company/whoza-ai",
-        "https://www.facebook.com/whozaai"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "support@whoza.ai",
-        "contactType": "customer service",
-        "areaServed": "GB",
-        "availableLanguage": ["English"]
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "AI Voice Agent Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "AI Call Capture"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "AI Review Capture"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "AI Visibility Tracking"
-            }
-          }
-        ]
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "AI Voice Agents for UK Tradespeople",
-        "description": "whoza.ai provides AI-powered voice agents that answer missed calls, capture enquiries via WhatsApp, collect Google reviews, and track competitor visibility for UK tradespeople."
-      },
-      "mentions": [
-        { "@type": "Thing", "name": "WhatsApp Business" },
-        { "@type": "Thing", "name": "Google Reviews" },
-        { "@type": "Thing", "name": "ChatGPT" },
-        { "@type": "Thing", "name": "Perplexity" },
-        { "@type": "Thing", "name": "Google AI Overviews" }
-      ],
-      "foundingDate": "2024",
-      "founder": {"@id": "https://whoza.ai/#dru-mcpherson"},
-      "description": "AI-powered voice agent platform for UK tradespeople"
-    },
-    {
-      "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "@id": "https://whoza.ai/#localbusiness",
       "name": "whoza.ai",
@@ -223,14 +108,6 @@ export function HomepageSchema() {
       "name": "whoza.ai",
       "publisher": {
         "@id": "https://whoza.ai/#organization"
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://whoza.ai/blog/?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
       }
     },
     {
@@ -383,7 +260,7 @@ export function HomepageSchema() {
           "name": "What happens to my data if I cancel?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You can cancel anytime with one click. Your call recordings, customer data, and enquiry history are yours. We can export your data on request, and all stored data is deleted in line with GDPR requirements after cancellation."
+            "text": "You can cancel anytime with one click. Your call transcripts, customer data, and enquiry history are yours. We can export your data on request, and all stored data is deleted in line with GDPR requirements after cancellation."
           }
         },
         {
@@ -423,7 +300,7 @@ export function HomepageSchema() {
           "name": "Is my data safe and compliant?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Absolutely. We're fully compliant with all relevant data protection regulations. All call recordings and customer data are encrypted, stored in secure local data centers, and you maintain full control. You can delete any data at any time from your dashboard."
+            "text": "Absolutely. We're fully compliant with all relevant data protection regulations. All call transcripts and customer data are encrypted, stored in secure local data centers, and you maintain full control. You can delete any data at any time from your dashboard."
           }
         },
         {
@@ -446,6 +323,62 @@ export function HomepageSchema() {
       "duration": "PT30S",
       "author": { "@id": "https://whoza.ai/#katie" },
       "publisher": { "@id": "https://whoza.ai/#organization" }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://whoza.ai/#organization",
+      "name": "whoza.ai",
+      "url": "https://whoza.ai",
+      "logo": "https://whoza.ai/logo.png",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Perth, Scotland, United Kingdom"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "6 Atholl Crescent",
+        "addressLocality": "Perth",
+        "addressRegion": "Scotland",
+        "postalCode": "PH2 8HN",
+        "addressCountry": "GB"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "support@whoza.ai",
+        "telephone": "+447463141750",
+        "availableLanguage": "English",
+        "areaServed": "GB"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/whoza-ai"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Whoza.ai",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web, iOS, Android",
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "59",
+        "highPrice": "399",
+        "priceCurrency": "GBP",
+        "offerCount": "4"
+      },
+      "description": "AI voice agents answer your trade business calls 24/7, built in Scotland for UK plumbers, electricians and builders. Plans from £59/month.",
+      "url": "https://whoza.ai",
+      "provider": {
+        "@id": "https://whoza.ai/#organization"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "5",
+        "bestRating": "5"
+      }
     },
     {
       "@context": "https://schema.org",
@@ -518,13 +451,11 @@ export function PricingSchema() {
     {
       "@context": "https://schema.org",
       "@type": "Product",
+      "@id": "https://whoza.ai/#product-starter",
       "name": "whoza.ai Starter Plan",
       "description": "AI call handling for small trade businesses. 0 included jobs, pay per booking.",
       "image": "https://whoza.ai/og-image.webp",
-      "brand": {
-        "@type": "Brand",
-        "name": "whoza.ai"
-      },
+      "brand": { "@id": "https://whoza.ai/#organization" },
       "offers": {
         "@type": "Offer",
         "price": "59",
@@ -539,7 +470,8 @@ export function PricingSchema() {
           "merchantReturnDays": 30,
           "merchantReturnLink": "https://whoza.ai/refund-policy",
           "returnFees": "https://schema.org/FreeReturn",
-          "returnMethod": "https://schema.org/ReturnByMail"
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "applicableCountry": "GB"
         },
         "shippingDetails": {
           "@type": "OfferShippingDetails",
@@ -568,25 +500,16 @@ export function PricingSchema() {
             }
           }
         }
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "127",
-        "bestRating": "5",
-        "worstRating": "1"
       }
     },
     {
       "@context": "https://schema.org",
       "@type": "Product",
+      "@id": "https://whoza.ai/#product-growth",
       "name": "whoza.ai Growth Plan",
       "description": "AI call handling for growing trade businesses. 15 included jobs per month.",
       "image": "https://whoza.ai/og-image.webp",
-      "brand": {
-        "@type": "Brand",
-        "name": "whoza.ai"
-      },
+      "brand": { "@id": "https://whoza.ai/#organization" },
       "offers": {
         "@type": "Offer",
         "price": "125",
@@ -601,7 +524,8 @@ export function PricingSchema() {
           "merchantReturnDays": 30,
           "merchantReturnLink": "https://whoza.ai/refund-policy",
           "returnFees": "https://schema.org/FreeReturn",
-          "returnMethod": "https://schema.org/ReturnByMail"
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "applicableCountry": "GB"
         },
         "shippingDetails": {
           "@type": "OfferShippingDetails",
@@ -630,25 +554,16 @@ export function PricingSchema() {
             }
           }
         }
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "127",
-        "bestRating": "5",
-        "worstRating": "1"
       }
     },
     {
       "@context": "https://schema.org",
       "@type": "Product",
+      "@id": "https://whoza.ai/#product-pro",
       "name": "whoza.ai Pro Plan",
       "description": "AI call handling for established trade businesses. 40 included jobs per month.",
       "image": "https://whoza.ai/og-image.webp",
-      "brand": {
-        "@type": "Brand",
-        "name": "whoza.ai"
-      },
+      "brand": { "@id": "https://whoza.ai/#organization" },
       "offers": {
         "@type": "Offer",
         "price": "230",
@@ -663,7 +578,8 @@ export function PricingSchema() {
           "merchantReturnDays": 30,
           "merchantReturnLink": "https://whoza.ai/refund-policy",
           "returnFees": "https://schema.org/FreeReturn",
-          "returnMethod": "https://schema.org/ReturnByMail"
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "applicableCountry": "GB"
         },
         "shippingDetails": {
           "@type": "OfferShippingDetails",
@@ -692,25 +608,16 @@ export function PricingSchema() {
             }
           }
         }
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "127",
-        "bestRating": "5",
-        "worstRating": "1"
       }
     },
     {
       "@context": "https://schema.org",
       "@type": "Product",
+      "@id": "https://whoza.ai/#product-scale",
       "name": "whoza.ai Scale Plan",
       "description": "AI call handling for multi-person trade businesses. 100 included jobs per month.",
       "image": "https://whoza.ai/og-image.webp",
-      "brand": {
-        "@type": "Brand",
-        "name": "whoza.ai"
-      },
+      "brand": { "@id": "https://whoza.ai/#organization" },
       "offers": {
         "@type": "Offer",
         "price": "399",
@@ -725,7 +632,8 @@ export function PricingSchema() {
           "merchantReturnDays": 30,
           "merchantReturnLink": "https://whoza.ai/refund-policy",
           "returnFees": "https://schema.org/FreeReturn",
-          "returnMethod": "https://schema.org/ReturnByMail"
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "applicableCountry": "GB"
         },
         "shippingDetails": {
           "@type": "OfferShippingDetails",
@@ -754,13 +662,6 @@ export function PricingSchema() {
             }
           }
         }
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "127",
-        "bestRating": "5",
-        "worstRating": "1"
       }
     }
   ]

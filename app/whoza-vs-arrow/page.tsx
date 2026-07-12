@@ -7,7 +7,7 @@ import { ArrowRight, Check, X, MessageCircle, PoundSterling, Clock, Shield, Star
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Whoza.ai vs ARROW: Comparison (2026)",
-  description: "Honest comparison of whoza.ai and ARROW for UK trades. Price, features, WhatsApp delivery, AI capabilities, and setup time compared head-to-head.",
+  description: "Honest comparison of whoza.ai and ARROW for UK trades. Price, features, WhatsApp delivery, AI capabilities, and setup time compared head-to-head. See details.",
   keywords: [
     "whoza.ai vs ARROW",
     "ARROW AI receptionist review",

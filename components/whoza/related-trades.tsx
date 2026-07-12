@@ -76,7 +76,7 @@ const relatedTradesMap: Record<string, Array<{ slug: string; name: string; icon:
     { slug: "/for-painters-decorators", name: "Painters & Decorators", icon: Paintbrush },
   ],
   "for-joiners": [
-    { slug: "/for-carpenters", name: "Carpenters", icon: Hammer },
+    { slug: "/for-plumbers", name: "Plumbers", icon: Droplets },
     { slug: "/for-builders", name: "Builders", icon: Home },
     { slug: "/for-roofers", name: "Roofers", icon: Home },
     { slug: "/for-handymen", name: "Handymen", icon: Wrench },

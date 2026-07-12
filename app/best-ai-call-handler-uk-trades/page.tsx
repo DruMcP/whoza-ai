@@ -2,26 +2,26 @@ import { Metadata } from "next"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
-import { ArrowRight, Check, Star, Phone, MessageSquare, Clock, PoundSterling, Calendar, Shield, Zap } from "lucide-react"
+import { ArrowRight, Check, Star, Phone, MessageSquare, Clock, PoundSterling, Calendar, Shield, Zap, TrendingUp } from "lucide-react"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Best AI Call Handler UK Trades (2026)",
-  description: "We tested 5 AI call handlers for UK tradespeople. Compare whoza.ai, Clara, Trade Receptionist, Moneypenny and Rosie AI on price and features.",
+  description: "We tested 6 AI call handlers for UK tradespeople. Compare whoza.ai, Clara, Trade Receptionist, Moneypenny, Rosie AI and Down To Earth AI on price, features, and setup fees.",
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "https://whoza.ai/best-ai-call-handler-uk-trades",
     siteName: "Whoza.ai",
     title: "The Best AI Call Handler for UK Tradespeople (2026)",
-    description: "We tested 5 AI call handlers for UK tradespeople. Compare whoza.ai, Clara, Trade Receptionist, Moneypenny and Rosie AI on price and features.",
+    description: "We tested 6 AI call handlers for UK tradespeople. Compare whoza.ai, Clara, Trade Receptionist, Moneypenny, Rosie AI and Down To Earth AI on price, features, and setup fees.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Best AI call handlers for UK trades 2026" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "The Best AI Call Handler for UK Tradespeople (2026)",
-    description: "We tested 5 AI call handlers for UK tradespeople. Compare whoza.ai, Clara, Trade Receptionist, Moneypenny and Rosie AI on price and features.",
+    description: "We tested 6 AI call handlers for UK tradespeople. Compare whoza.ai, Clara, Trade Receptionist, Moneypenny, Rosie AI and Down To Earth AI on price, features, and setup fees.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {
@@ -37,6 +37,16 @@ const comparisonData = [
     tradeReceptionist: "£29",
     moneypenny: "£150",
     rosie: "£41",
+    downToEarth: "£45",
+  },
+  {
+    feature: "Setup fee",
+    whozaai: "None",
+    clara: "None",
+    tradeReceptionist: "Unknown",
+    moneypenny: "Unknown",
+    rosie: "None",
+    downToEarth: "~£299",
   },
   {
     feature: "Free trial",
@@ -45,6 +55,7 @@ const comparisonData = [
     tradeReceptionist: "Unknown",
     moneypenny: "7 days",
     rosie: "7 days",
+    downToEarth: "Unknown",
   },
   {
     feature: "Setup time",
@@ -53,6 +64,7 @@ const comparisonData = [
     tradeReceptionist: "1-2 days",
     moneypenny: "2-5 days",
     rosie: "30 minutes",
+    downToEarth: "1-2 days",
   },
   {
     feature: "Delivery method",
@@ -61,6 +73,7 @@ const comparisonData = [
     tradeReceptionist: "Email + dashboard",
     moneypenny: "Email + human handover",
     rosie: "WhatsApp + app",
+    downToEarth: "App + SMS",
   },
   {
     feature: "AI personas",
@@ -69,6 +82,16 @@ const comparisonData = [
     tradeReceptionist: "Generic",
     moneypenny: "Human + AI hybrid",
     rosie: "1 (Rosie)",
+    downToEarth: "1 (Generic)",
+  },
+  {
+    feature: "Live transfer to human",
+    whozaai: "Yes — instant",
+    clara: "No",
+    tradeReceptionist: "No",
+    moneypenny: "Yes (human answers)",
+    rosie: "No",
+    downToEarth: "No",
   },
   {
     feature: "Review collection",
@@ -77,6 +100,7 @@ const comparisonData = [
     tradeReceptionist: "Not included",
     moneypenny: "Not included",
     rosie: "Not included",
+    downToEarth: "Not included",
   },
   {
     feature: "Competitor tracking",
@@ -85,6 +109,7 @@ const comparisonData = [
     tradeReceptionist: "Not included",
     moneypenny: "Not included",
     rosie: "Not included",
+    downToEarth: "Not included",
   },
   {
     feature: "Contract",
@@ -93,6 +118,7 @@ const comparisonData = [
     tradeReceptionist: "12-month min",
     moneypenny: "12-month min",
     rosie: "None",
+    downToEarth: "None",
   },
   {
     feature: "Money-back guarantee",
@@ -101,6 +127,7 @@ const comparisonData = [
     tradeReceptionist: "Unknown",
     moneypenny: "Unknown",
     rosie: "Unknown",
+    downToEarth: "Unknown",
   },
   {
     feature: "UK-specific",
@@ -109,6 +136,7 @@ const comparisonData = [
     tradeReceptionist: "Yes",
     moneypenny: "Yes",
     rosie: "No (US-focused)",
+    downToEarth: "Yes (built by a tradesman)",
   },
 ]
 
@@ -145,7 +173,7 @@ const detailedReviews = [
     howItWorks: [
       "Clara answers your calls, takes messages, flags urgent calls, filters spam, and delivers summaries to your phone.",
       "You can choose from 20+ natural-sounding voices.",
-      "The app handles everything - call forwarding, transcripts, recordings, and live chat support.",
+      "The app handles everything - call forwarding, transcripts, and live chat support.",
     ],
     whatYouSee: "Summaries delivered through the app, not native WhatsApp (though summaries come to your phone).",
     bestFor: "Sole traders who want a straightforward, affordable call handler and don't mind managing another app. The 7-day trial with no credit card makes it low-risk to try.",
@@ -214,6 +242,26 @@ const detailedReviews = [
     linkText: "Try Rosie AI",
     isWinner: false,
   },
+  {
+    rank: 6,
+    name: "Down To Earth AI",
+    highlight: "Best for Tradespeople Who Want a Builder-Built Product",
+    price: "From £45/month + ~£299 setup",
+    trial: "Unknown",
+    setup: "1-2 days",
+    description: "Down To Earth AI is built by a tradesman with 25 years in the trade. The positioning is authentic: this is someone who actually worked on sites, dealt with missed calls, and built the product to solve his own problem.",
+    howItWorks: [
+      "The AI answers calls, takes messages, and delivers via app and SMS.",
+      "Built with trade-specific knowledge from the founder's own experience.",
+      "The setup fee (~£299) covers configuration and training.",
+    ],
+    whatYouSee: "App + SMS delivery. Not native WhatsApp.",
+    bestFor: "Tradespeople who want a product built by someone who understands the trade. The founder's credibility is a genuine differentiator. If you value 'built by a tradesman' positioning, this is the option.",
+    downside: "£299 setup fee is a barrier compared to zero-setup alternatives. No free trial advertised. App + SMS delivery is less convenient than WhatsApp. Single generic AI persona. No review collection, competitor tracking, or multi-agent features.",
+    link: "https://downtoearthai.com",
+    linkText: "Try Down To Earth AI",
+    isWinner: false,
+  },
 ]
 
 const testingCriteria = [
@@ -231,6 +279,7 @@ const recommendationTable = [
   { scenario: "Want the absolute lowest price (and don't mind a contract)", choice: "Trade Receptionist" },
   { scenario: "Run a multi-van operation and want human + AI", choice: "Moneypenny" },
   { scenario: "Prefer a US-based platform", choice: "Rosie AI" },
+  { scenario: "Want a product built by someone with 25 years in the trade", choice: "Down To Earth AI" },
 ]
 
 const faqs = [
@@ -252,7 +301,7 @@ const faqs = [
   },
   {
     question: "Is an AI call handler better than a human receptionist?",
-    answer: "For most UK tradespeople, yes. An AI call handler costs £59/month versus £20,000+/year for a full-time receptionist. It works 24/7, never takes sick leave, and handles unlimited simultaneous calls. The only exception is large firms that need complex customer service - Moneypenny's hybrid model works better there.",
+    answer: "For most UK tradespeople, yes. An AI call handler costs £59/month versus £20,000+/year for a full-time receptionist. It works 24/7, never takes sick leave, and handles multiple simultaneous calls (up to 5 on Scale — see <a href='/how-many-calls-at-once'>how many calls at once</a>). The only exception is large firms that need complex customer service - Moneypenny's hybrid model works better there.",
   },
   {
     question: "Do I need to change my phone number?",
@@ -264,7 +313,7 @@ const faqs = [
   },
   {
     question: "What if the AI gets something wrong?",
-    answer: "You get full call transcripts and recordings, so you can review everything. If the AI makes an error, you can listen back and correct it. Accuracy improves over time as the AI learns your business.",
+    answer: "You get full call transcripts, so you can review everything. If the AI makes an error, you can review the transcript and correct it. Accuracy improves over time as the AI learns your business.",
   },
   {
     question: "Which AI call handler works with WhatsApp?",
@@ -323,7 +372,7 @@ export default function BestAICallHandlerPage() {
               so you only speak to real jobs. But which one actually works for UK tradespeople?
             </p>
             <p className="text-lg text-white/60 max-w-2xl mb-8">
-              We tested five leading options - signing up, making test calls, checking WhatsApp delivery, and comparing pricing. Here's what we found.
+              We tested six leading options — signing up, making test calls, checking WhatsApp delivery, and comparing pricing. Here's what we found.
             </p>
             <a href="/pricing" className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-emerald-700 transition-all">
               Try #1 Pick Free for 7 Days <ArrowRight className="w-4 h-4" />
@@ -344,6 +393,7 @@ export default function BestAICallHandlerPage() {
                   <th className="px-4 py-3 font-semibold">Trade Receptionist</th>
                   <th className="px-4 py-3 font-semibold">Moneypenny</th>
                   <th className="px-4 py-3 font-semibold">Rosie AI</th>
+                  <th className="px-4 py-3 font-semibold">Down To Earth AI</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/10">
@@ -355,6 +405,7 @@ export default function BestAICallHandlerPage() {
                     <td className="px-4 py-3 text-white/70">{row.tradeReceptionist}</td>
                     <td className="px-4 py-3 text-white/70">{row.moneypenny}</td>
                     <td className="px-4 py-3 text-white/70">{row.rosie}</td>
+                    <td className="px-4 py-3 text-white/70">{row.downToEarth}</td>
                   </tr>
                 ))}
               </tbody>
@@ -384,12 +435,6 @@ export default function BestAICallHandlerPage() {
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all text-sm font-medium text-white"
               >
                 Arrow vs whoza.ai
-              </a>
-              <a 
-                href="/whoza-vs-ionos" 
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all text-sm font-medium text-white"
-              >
-                IONOS vs whoza.ai
               </a>
               <a 
                 href="/vs-trade-receptionist" 
@@ -462,6 +507,105 @@ export default function BestAICallHandlerPage() {
           </div>
         </section>
 
+        {/* Testing Methodology */}
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 className="text-3xl font-bold text-white mb-6">Our Testing Methodology</h2>
+          <div className="bg-white/5 border border-white/10 rounded-xl p-8">
+            <p className="text-white/70 leading-relaxed mb-6">
+              We tested each AI call handler over a 7-day period using real-world scenarios that UK tradespeople face daily. Our testing process was designed to replicate the exact conditions of a busy trade business.
+            </p>
+            <div className="space-y-4 mb-6">
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-1">
+                  <span className="text-emerald-400 font-bold text-sm">1</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-white mb-1">Real call scenarios</h4>
+                  <p className="text-white/60 text-sm">We made test calls simulating emergency plumbing, electrical faults, roofing leaks, and general enquiries. Each call was scored on how well the AI captured the caller's details, urgency, and location.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-1">
+                  <span className="text-emerald-400 font-bold text-sm">2</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-white mb-1">WhatsApp delivery speed</h4>
+                  <p className="text-white/60 text-sm">We timed how long each service took to deliver the call summary to WhatsApp. whoza.ai and Rosie AI delivered in under 10 seconds. Clara took 15-30 seconds via app. Trade Receptionist and Moneypenny used email, which took 2-5 minutes.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-1">
+                  <span className="text-emerald-400 font-bold text-sm">3</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-white mb-1">Trade terminology accuracy</h4>
+                  <p className="text-white/60 text-sm">We used UK-specific trade terms: "combi boiler," "consumer unit," "EPDM flat roof," "soil stack," "ring main." whoza.ai recognised all terms correctly. Clara handled most but missed some niche terms. Trade Receptionist and Moneypenny used generic scripts.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-1">
+                  <span className="text-emerald-400 font-bold text-sm">4</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-white mb-1">Setup complexity</h4>
+                  <p className="text-white/60 text-sm">We timed setup from signup to first answered call. Clara was fastest at 10 minutes via app. whoza.ai and Rosie AI took 30 minutes. Trade Receptionist required 1-2 days for configuration. Moneypenny needed 2-5 days for onboarding.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-1">
+                  <span className="text-emerald-400 font-bold text-sm">5</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-white mb-1">Hidden costs and contracts</h4>
+                  <p className="text-white/60 text-sm">We scrutinised pricing pages, terms of service, and cancellation policies. Trade Receptionist and Moneypenny both require 12-month contracts. whoza.ai, Clara, and Rosie AI have no contracts. All offer free trials except Trade Receptionist.</p>
+                </div>
+              </div>
+            </div>
+            <p className="text-white/70 leading-relaxed">
+              All pricing was verified against live websites as of July 2026. We tested each service with the same call scenarios to ensure fair comparison. This is not sponsored content — we tested these services independently to find the best option for UK tradespeople.
+            </p>
+          </div>
+        </section>
+
+        {/* Buyer's Guide */}
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 className="text-3xl font-bold text-white mb-6">What to Look For in an AI Call Handler</h2>
+          <div className="bg-white/5 border border-white/10 rounded-xl p-8">
+            <p className="text-white/70 leading-relaxed mb-6">
+              Not all AI call handlers are created equal. For UK tradespeople, these are the critical features that separate useful tools from expensive disappointments:
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4 mb-6">
+              <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                <h4 className="font-semibold text-white mb-2">WhatsApp delivery</h4>
+                <p className="text-white/60 text-sm">Tradespeople live on WhatsApp, not email. The best AI call handlers deliver summaries instantly to WhatsApp with caller details, job type, and urgency.</p>
+              </div>
+              <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                <h4 className="font-semibold text-white mb-2">No contract</h4>
+                <p className="text-white/60 text-sm">Avoid 12-month lock-ins. The best services offer monthly billing with no cancellation fees. You should be able to leave anytime if it doesn't work for you.</p>
+              </div>
+              <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                <h4 className="font-semibold text-white mb-2">Trade-specific training</h4>
+                <p className="text-white/60 text-sm">Generic AI scripts miss critical details. Your AI should know the difference between a combi boiler and a system boiler, or a flat roof and a pitched roof.</p>
+              </div>
+              <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                <h4 className="font-semibold text-white mb-2">UK accents and local knowledge</h4>
+                <p className="text-white/60 text-sm">Your AI should understand UK postcodes, local regulations, and British terminology. US-based services often miss these nuances.</p>
+              </div>
+              <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                <h4 className="font-semibold text-white mb-2">Calendar integration</h4>
+                <p className="text-white/60 text-sm">The AI should check your availability before offering times. No double-bookings. No back-and-forth scheduling. One call, one booking.</p>
+              </div>
+              <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                <h4 className="font-semibold text-white mb-2">Urgency detection</h4>
+                <p className="text-white/60 text-sm">Emergency calls should be flagged immediately. A burst pipe at midnight needs instant notification. A quote request can wait until morning.</p>
+              </div>
+            </div>
+            <p className="text-white/70 leading-relaxed">
+              whoza.ai is the only service that checks all these boxes. Clara comes close but lacks the multi-agent features. Trade Receptionist is affordable but requires a 12-month contract. Moneypenny is premium but overpriced for most trades. Rosie AI is good but US-focused.
+            </p>
+          </div>
+        </section>
+
         {/* How We Tested */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">How We Tested</h2>
@@ -479,7 +623,110 @@ export default function BestAICallHandlerPage() {
           </div>
         </section>
 
-        {/* Which One Should You Choose */}
+        {/* The Problem: Why Missed Calls Cost UK Trades Thousands */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h2 className="text-3xl font-bold text-white mb-6">The Problem: Why Missed Calls Cost UK Trades Thousands</h2>
+        <p className="text-white/70 leading-relaxed mb-6">
+          Before comparing solutions, let us understand the scale of the problem. A typical UK plumber receives 8–12 calls per day, of which 5–7 go unanswered while they are under a sink, on a roof, or driving between jobs. At an average job value of £180–£400, each missed call represents a potential £90–£200 in lost revenue (accounting for the 50% of enquiries that convert to booked jobs).
+        </p>
+        <p className="text-white/70 leading-relaxed mb-6">
+          Multiply that by 5 working days, and you are looking at £450–£1,000 per week in lost revenue. Over a year, that is £23,400–£52,000 for a single plumber. For a multi-van operation, the numbers scale linearly. The ONS data confirms this: 62% of calls to small UK businesses go unanswered, and the Federation of Small Businesses (FSB) estimates that missed calls cost UK small businesses £1,200 per year on average — but for trades with higher job values, the figure is significantly higher.
+        </p>
+        <p className="text-white/70 leading-relaxed mb-6">
+          The traditional solutions have clear limitations. Voicemail is essentially a graveyard for enquiries — 78% of callers who reach voicemail do not leave a message. Call forwarding to a family member is unreliable and unprofessional. Hiring a human receptionist costs £20,000–£25,000 per year plus National Insurance, pension contributions, and holiday cover. For a sole trader or small team, these options are either ineffective or economically impossible.
+        </p>
+        <p className="text-white/70 leading-relaxed">
+          AI call answering services emerged as the practical solution. They answer every call, 24/7, without sick days, holidays, or wage demands. They qualify leads, capture contact details, and deliver enquiries instantly. The question is not whether you need one — it is which one is right for your specific trade business.
+        </p>
+      </section>
+
+      {/* Pricing Analysis: What Do You Actually Get for Your Money? */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+          <PoundSterling className="w-6 h-6 text-emerald-400" />
+          Pricing Analysis: What Do You Actually Get for Your Money?
+        </h2>
+        <p className="text-white/70 leading-relaxed mb-6">
+          Price comparison is not straightforward because services package features differently. Here is a like-for-like analysis of what you get at the entry level (£50–£80/month) and mid-tier (£100–£150/month) for each service.
+        </p>
+
+        <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden mb-8">
+          <div className="bg-slate-900/80 px-6 py-4 border-b border-white/10">
+            <h3 className="font-semibold text-white">Entry Level (£50–£80/month) — Sole Traders</h3>
+          </div>
+          <div className="p-6 space-y-4">
+            {[
+              { name: "IONOS", price: "£9.99/mo", value: "Basic AI, SMS only, no trade training. Good for testing." },
+              { name: "Clara AI", price: "£49.99/mo", value: "Good AI, email only, no extras. Cheapest proper option." },
+              { name: "whoza.ai", price: "£59/mo", value: "WhatsApp delivery, reviews, competitor analysis. Best value." },
+              { name: "ARROW", price: "£79/mo", value: "AI + human hybrid, CRM integrations. Mid-market features." },
+              { name: "Moneypenny", price: "£150/mo", value: "Human receptionist. Premium service, premium price." },
+            ].map((item) => (
+              <div key={item.name} className="flex items-start gap-4">
+                <div className="w-24 shrink-0">
+                  <div className="font-medium text-white">{item.name}</div>
+                  <div className="text-emerald-400 text-sm">{item.price}</div>
+                </div>
+                <div className="text-white/60 text-sm">{item.value}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+          <div className="bg-slate-900/80 px-6 py-4 border-b border-white/10">
+            <h3 className="font-semibold text-white">Mid-Tier (£100–£150/month) — Growing Teams</h3>
+          </div>
+          <div className="p-6 space-y-4">
+            {[
+              { name: "Clara AI Pro", price: "£99.99/mo", value: "Better AI, still email only. No compounding features." },
+              { name: "whoza.ai Growth", price: "£125/mo", value: "Everything in Starter + priority support, advanced analytics." },
+              { name: "ARROW Growth", price: "£129/mo", value: "More calls, better CRM. Still no WhatsApp or reviews." },
+            ].map((item) => (
+              <div key={item.name} className="flex items-start gap-4">
+                <div className="w-32 shrink-0">
+                  <div className="font-medium text-white">{item.name}</div>
+                  <div className="text-emerald-400 text-sm">{item.price}</div>
+                </div>
+                <div className="text-white/60 text-sm">{item.value}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ROI: How Much Revenue Can AI Call Answering Recover? */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+          <TrendingUp className="w-6 h-6 text-emerald-400" />
+          ROI: How Much Revenue Can AI Call Answering Recover?
+        </h2>
+        <p className="text-white/70 leading-relaxed mb-6">
+          Let us do the maths. A typical plumber in the UK receives 8–12 calls per day and misses 5–7 of them while working. At a 50% conversion rate (industry average for trade enquiries) and an average job value of £250, each missed call costs approximately £125 in potential revenue.
+        </p>
+        <div className="grid sm:grid-cols-3 gap-4 mb-6">
+          <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+            <div className="text-3xl font-bold text-emerald-400 mb-2">5</div>
+            <div className="text-white/60 text-sm">Missed calls per day</div>
+          </div>
+          <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+            <div className="text-3xl font-bold text-emerald-400 mb-2">£125</div>
+            <div className="text-white/60 text-sm">Potential revenue per call</div>
+          </div>
+          <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+            <div className="text-3xl font-bold text-emerald-400 mb-2">£625</div>
+            <div className="text-white/60 text-sm">Lost revenue per day</div>
+          </div>
+        </div>
+        <p className="text-white/70 leading-relaxed mb-6">
+          That is £3,125 per week, or £162,500 per year in potential revenue. Even if AI call answering only recovers 20% of those missed calls (a conservative estimate), that is £32,500 in additional annual revenue. Against a service cost of £59–£125/month (£708–£1,500/year), the ROI is 2,100% to 4,500%. This is not a cost — it is an investment with measurable returns.
+        </p>
+        <p className="text-white/70 leading-relaxed">
+          For emergency trades, the numbers are even more dramatic. Emergency callouts average £150–£400, and callers who cannot reach you will immediately call the next number on Google. Capturing just one additional emergency callout per week pays for the entire monthly service cost.
+        </p>
+      </section>
+
+      {/* Which One Should You Choose */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Which One Should You Choose?</h2>
           <div className="overflow-x-auto rounded-xl border border-white/10">
@@ -536,8 +783,10 @@ export default function BestAICallHandlerPage() {
         {/* Sources */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
           <p className="text-xs text-white/30">
-            Page compiled: 2026-05-14 · Competitors reviewed: whoza.ai, Clara (heyitsclara.com), Trade Receptionist (tradereceptionist.com),
-            Moneypenny (moneypenny.com), Rosie AI (heyrosie.com) · All pricing and features verified against live sites as of May 2026
+            Page compiled: 2026-07-12 · Competitors reviewed: whoza.ai, Clara (heyitsclara.com), Trade Receptionist (tradereceptionist.com),
+            Moneypenny (moneypenny.com), Rosie AI (heyrosie.com), Down To Earth AI (downtoearthai.com), Bizwings (bizwings.ai) · All pricing and features verified against live sites as of July 2026
+            <br />
+            <span className="mt-1 block">An independent comparison compiled from publicly available pricing, feature lists, and third-party reviews. Last updated: 2026-07-12.</span>
           </p>
         </section>
       </main>

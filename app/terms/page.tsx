@@ -86,7 +86,7 @@ export default function TermsOfService() {
           <section className="mb-10">
             <h2 className="text-xl font-semibold mb-4 flex items-center gap-3">
               <Phone className="w-5 h-5 text-emerald-400" />
-              3. Call Recording and AI Disclosure
+              3. AI Disclosure and Transcripts
             </h2>
             <p className="text-white/70 leading-relaxed mb-4">
               By using whoza.ai, you acknowledge and agree that:
@@ -94,19 +94,19 @@ export default function TermsOfService() {
             <ul className="space-y-3 text-white/70">
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
-                <span>All calls answered by our AI agents are recorded for quality, training, and service delivery purposes</span>
+                <span>Calls answered by our AI agents are <strong>not recorded</strong>. A written transcript is generated for quality and service delivery purposes.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
-                <span>Callers are notified at the beginning of each call that they are speaking with an AI assistant and that the call is being recorded</span>
+                <span>Callers are notified at the beginning of each call that they are speaking with an AI assistant</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
-                <span>You are responsible for ensuring compliance with all applicable laws regarding call recording in your jurisdiction</span>
+                <span>You are responsible for ensuring compliance with all applicable laws regarding AI disclosure in your jurisdiction</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
-                <span>You will inform your existing customers that their calls may be handled by AI and recorded where required by law</span>
+                <span>You will inform your existing customers that their calls may be handled by AI where required by law</span>
               </li>
             </ul>
           </section>
@@ -193,7 +193,7 @@ export default function TermsOfService() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
-                <span>Use your call recordings for purposes other than service delivery and anonymised model improvement</span>
+                <span>Use your call transcripts for purposes other than service delivery and anonymised model improvement</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
@@ -208,7 +208,7 @@ export default function TermsOfService() {
           <section className="mb-10">
             <h2 className="text-xl font-semibold mb-4">7. Service Level and Limitations</h2>
             <p className="text-white/70 leading-relaxed mb-4">
-              While we strive for 99.9% uptime, whoza.ai is a technology service and occasional disruptions may occur. We do not guarantee:
+              While we strive for 99.5% uptime, whoza.ai is a technology service and occasional disruptions may occur. We do not guarantee:
             </p>
             <ul className="space-y-3 text-white/70">
               <li className="flex items-start gap-3">

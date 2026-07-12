@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { TradeCityLinks } from "@/components/TradeCityLinks";
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "AI Call Answering for Joiners UK — Never Miss a Job",
     description: "AI call answering for UK joiners. Katie captures 24/7 enquiries for kitchens, staircases and fitted furniture. WhatsApp alerts instantly. Plans from £59.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Joiners & Carpenters" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Joiners" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -84,14 +85,14 @@ export default function ForJoinersPage() {
   return (
     <>
       <VideoSchema
-        name="Whoza.ai for Joiners & Carpenters — AI Call Answering Demo"
+        name="Whoza.ai for Joiners — AI Call Answering Demo"
         description="Watch Katie capture a missed joinery enquiry in under 60 seconds. Bespoke kitchen project details collected, sent to WhatsApp, and ready for quoting while the carpenter is still on site."
         embedUrl="https://whoza.ai/for-joiners"
       />
       <Header />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
-        { name: "For Joiners & Carpenters", item: "https://whoza.ai/for-joiners" },
+        { name: "For Joiners", item: "https://whoza.ai/for-joiners" },
       ]} />
       <FAQPageSchema faqs={faqs} />
 
@@ -103,20 +104,14 @@ export default function ForJoinersPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "whoza.ai — AI Call Answering for Joiners & Carpenters",
+            "name": "whoza.ai — AI Call Answering for Joiners",
             "url": "https://whoza.ai/for-joiners",
-            "description": "AI call answering service for UK joiners and carpenters. Katie answers missed calls 24/7, captures bespoke project enquiries, and delivers job details via WhatsApp in 3 seconds.",
+            "description": "AI call answering service for UK joiners. Katie answers missed calls 24/7, captures bespoke project enquiries, and delivers job details via WhatsApp in 3 seconds.",
             "areaServed": { "@type": "Country", "name": "United Kingdom" },
-            "serviceType": "AI Call Handling for Joiners & Carpenters",
+            "serviceType": "AI Call Handling for Joiners",
             "knowsAbout": ["Joinery", "Carpentry", "Bespoke Kitchens", "Fitted Wardrobes", "Staircases", "Doors", "Windows", "Woodworking", "Custom Furniture"],
             "priceRange": "££",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "reviewCount": "127",
-              "bestRating": "5",
-              "worstRating": "1"
-            },
+            
             "telephone": "+44-20-0000-0000",
             "address": {
               "@type": "PostalAddress",
@@ -141,11 +136,11 @@ export default function ForJoinersPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "name": "AI Call Answering for UK Joiners & Carpenters",
+            "name": "AI Call Answering for UK Joiners",
             "provider": { "@type": "Organization", "name": "whoza.ai", "url": "https://whoza.ai" },
             "areaServed": { "@type": "Country", "name": "United Kingdom" },
             "serviceType": "AI Call Handling",
-            "description": "24/7 AI call answering for UK joiners and carpenters. Captures bespoke kitchen, fitted wardrobe, staircase, and renovation enquiries and delivers details via WhatsApp in 3 seconds.",
+            "description": "24/7 AI call answering for UK joiners. Captures bespoke kitchen, fitted wardrobe, staircase, and renovation enquiries and delivers details via WhatsApp in 3 seconds.",
             "offers": {
               "@type": "Offer",
               "price": "59",
@@ -170,11 +165,11 @@ export default function ForJoinersPage() {
               <div>
                 <div className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
                   <Hammer className="w-4 h-4" />
-                  Built for UK Joiners & Carpenters
+                  Built for UK Joiners
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6">
                   AI Call Answering for{" "}
-                  <span className="text-amber-400">Joiners & Carpenters</span>{" "}
+                  <span className="text-amber-400">Joiners</span>{" "}
                   UK — Never Miss a Job
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
@@ -255,7 +250,7 @@ export default function ForJoinersPage() {
                 The Real Cost of Missed Joinery Calls
               </h2>
               <p className="text-white/60 text-lg max-w-2xl mx-auto">
-                Every missed call is a bespoke project going to your competitor. Here's what joiners and carpenters lose every single week.
+                Every missed call is a bespoke project going to your competitor. Here's what joiners lose every single week.
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
@@ -322,7 +317,7 @@ export default function ForJoinersPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                How Katie Works for Joiners & Carpenters
+                How Katie Works for Joiners
               </h2>
               <p className="text-white/60 text-lg max-w-2xl mx-auto">
                 Four simple steps from missed call to qualified project. No apps to check. No dashboards to monitor.
@@ -465,60 +460,7 @@ export default function ForJoinersPage() {
         {/* ─── FAQ ─── */}
         
         {/* ─── CITY LINKS ─── */}
-        <section className="py-12">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-              AI Call Answering for Joiners in Your City
-            </h2>
-            <p className="text-white/60 mb-6">
-              Katie answers calls for joiners across the UK. Find your location:
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-    <Link href="/for-joiners-london" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">London</Link>
-    <Link href="/for-joiners-manchester" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Manchester</Link>
-    <Link href="/for-joiners-birmingham" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Birmingham</Link>
-    <Link href="/for-joiners-leeds" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Leeds</Link>
-    <Link href="/for-joiners-glasgow" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Glasgow</Link>
-    <Link href="/for-joiners-bristol" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Bristol</Link>
-    <Link href="/for-joiners-liverpool" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Liverpool</Link>
-    <Link href="/for-joiners-edinburgh" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Edinburgh</Link>
-            </div>
-          </div>
-        </section>
-
-        <div className="section-divider" />
-<section className="py-16 lg:py-24">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                Questions Joiners & Carpenters Ask
-              </h2>
-              <p className="text-white/60">
-                Everything you need to know about AI call answering for joinery and carpentry businesses.
-              </p>
-            </div>
-            <div className="space-y-4">
-              {faqs.map((faq, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
-                  <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
-                  <p className="text-white/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
-                </div>
-              ))}
-            </div>
-            <div className="mt-10 text-center">
-              <p className="text-white/50 text-sm">
-                Still have questions? Read our{" "}
-                <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-amber-400 hover:text-amber-300 underline">
-                  complete AI call answering guide
-                </a>{" "}
-                or{" "}
-                <a href="/pricing" className="text-amber-400 hover:text-amber-300 underline">
-                  compare all pricing plans
-                </a>. See the <Link href="/blog/best-ai-call-answering-service-uk-trades-2026" className="text-amber-400 hover:text-amber-300 underline">7 best AI call answering services compared</Link> for UK trades.
-              </p>
-            </div>
-          </div>
-        </section>
+        <TradeCityLinks tradeSlug="joiners" />
 
         <div className="section-divider" />
 
@@ -527,7 +469,7 @@ export default function ForJoinersPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                Trusted by Joiners & Carpenters Across the UK
+                Trusted by Joiners Across the UK
               </h2>
               <p className="text-white/60 max-w-2xl mx-auto">
                 From solo craftsmen in London to workshop teams in Manchester, joiners rely on Katie to capture every call.
@@ -571,8 +513,8 @@ export default function ForJoinersPage() {
         <div className="font-medium text-white">AI Call Answering for Builders</div>
         <p className="text-sm text-white/50 mt-1">Never miss a job</p>
       </a>
-      <a href="/for-carpenters" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors text-center">
-        <div className="font-medium text-white">AI Call Answering for Carpenters</div>
+      <a href="/for-handymen" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors text-center">
+        <div className="font-medium text-white">AI Call Answering for Handymen</div>
         <p className="text-sm text-white/50 mt-1">Never miss a job</p>
       </a>
       <a href="/for-roofers" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors text-center">
