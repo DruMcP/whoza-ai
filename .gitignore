@@ -32,3 +32,8 @@ tsconfig.tsbuildinfo
 .next/
 deploy-root/
 deploy-staging/
+
+# Sensitive handoff docs — never commit (contain credentials)
+CTO_HANDOFF.md
+CTO_HANDOFF.docx
+CTO_HANDOFF*
