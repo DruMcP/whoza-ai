@@ -1,3 +1,25 @@
+## Changes made today (2026-07-13):
+
+### Deploy: SEO/Geo/Schema Batch + New Pages
+- **Deploy ID:** `6a54009e1b9df192f64cbf81`
+- **Build:** 215 pages, zero errors
+- **Status:** Production live at https://whoza.ai
+
+**Key changes deployed:**
+- UK city geo coordinates corrected (Perth no longer applied globally)
+  - London: 51.5074, -0.1278 ✅
+  - Glasgow: 55.8642, -4.2518 ✅
+  - Edinburgh: 55.9533, -3.1883 ✅
+  - Manchester: 53.4808, -2.2426 ✅
+- Pricing schema fixes: `applicableCountry: "GB"`, ISO 4217 `unitCode: "HUR"`
+- Meta title/description optimizations across trade/city pages
+- New pages: press, booking, integrations, multi-location, how-many-calls-at-once, is-it-a-phone-tree, will-my-customers-mind, accents, research/cost-of-missed-calls-uk-trades-2026
+- 5R-AI backlink integration in footer
+- LLMS.TXT headers in netlify.toml
+- 138 files committed, 3,972 insertions, 2,044 deletions
+
+---
+
 ## Changes made today (2026-05-05):
 
 ### Round 1 — Critical UX Fixes
