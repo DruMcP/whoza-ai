@@ -317,7 +317,6 @@ export function LostJobsCalculator() {
                 name: "Lost Jobs Calculator for UK Tradespeople",
                 applicationCategory: "FinanceApplication",
                 offers: { "@type": "Offer", price: "0", priceCurrency: "GBP" },
-                aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", ratingCount: "127" },
                 operatingSystem: "Web",
                 description: "Free calculator showing UK tradespeople how much revenue they lose to missed calls.",
               },

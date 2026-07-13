@@ -372,12 +372,6 @@ export function HomepageSchema() {
       "url": "https://whoza.ai",
       "provider": {
         "@id": "https://whoza.ai/#organization"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "5",
-        "bestRating": "5"
       }
     },
     {

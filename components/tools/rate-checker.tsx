@@ -362,7 +362,6 @@ export function RateChecker() {
                 name: "Hourly Rate Checker for UK Tradespeople",
                 applicationCategory: "FinanceApplication",
                 offers: { "@type": "Offer", price: "0", priceCurrency: "GBP" },
-                aggregateRating: { "@type": "AggregateRating", ratingValue: "4.7", ratingCount: "112" },
                 operatingSystem: "Web",
                 description: "Free rate checker for UK tradespeople. Compare your hourly rate against regional averages and top earners in your trade.",
               },

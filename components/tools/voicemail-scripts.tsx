@@ -367,7 +367,6 @@ export function VoicemailScriptGenerator() {
                 name: "Voicemail Script Generator for UK Tradespeople",
                 applicationCategory: "BusinessApplication",
                 offers: { "@type": "Offer", price: "0", priceCurrency: "GBP" },
-                aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", ratingCount: "156" },
                 operatingSystem: "Web",
                 description: "Free voicemail script generator for UK tradespeople. Create professional, friendly, or urgent voicemail greetings tailored to your trade.",
               },

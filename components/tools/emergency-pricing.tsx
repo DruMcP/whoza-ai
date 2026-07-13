@@ -377,7 +377,6 @@ export function EmergencyPricingCalculator() {
                 name: "Emergency Callout Pricing Calculator for UK Trades",
                 applicationCategory: "FinanceApplication",
                 offers: { "@type": "Offer", price: "0", priceCurrency: "GBP" },
-                aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", ratingCount: "94" },
                 operatingSystem: "Web",
                 description: "Free calculator for UK tradespeople to price emergency callouts by trade, region, time of day, and job complexity.",
               },
