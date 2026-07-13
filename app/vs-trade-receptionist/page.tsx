@@ -9,7 +9,7 @@ export const revalidate = 3600
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Whoza.ai vs Trade Receptionist | UK Trades",
-  description: "Compare whoza.ai vs Trade Receptionist for UK trades. AI answers every call 24/7 from £59/month vs £150+ for human services. Features, compliance, and quality compared.",
+  description: "Compare whoza.ai vs Trade Receptionist for UK trades. AI answers calls 24/7 from £59/month vs £150+ for human services. Features and compliance compared.",
   openGraph: {
     type: "website",
     locale: "en_GB",

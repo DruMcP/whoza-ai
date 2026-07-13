@@ -26,7 +26,7 @@ import { ComparisonTable } from "@/components/whoza/comparison-table"
 
 export const metadata: Metadata = {
   title: "AI Receptionist Plumbers UK | From £59/mo — Never Miss Jobs",
-  description: "UK plumbers lose £12K+/year to missed calls. Whoza.ai answers 24/7, qualifies boiler repairs \u0026 emergency leaks, sends job details to WhatsApp. 7-day free trial.",
+  description: "UK plumbers lose £12K+/year to missed calls. Whoza.ai answers 24/7, qualifies boiler repairs & leaks, sends job details to WhatsApp. 7-day free trial.",
   alternates: {
     canonical: "https://whoza.ai/for-plumbers",
   },
@@ -36,14 +36,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/for-plumbers",
     siteName: "Whoza.ai",
     title: "AI Receptionist Plumbers UK | From £59/mo — Never Miss Jobs",
-    description: "UK plumbers lose £12K+/year to missed calls. Whoza.ai answers 24/7, qualifies boiler repairs \u0026 emergency leaks, sends job details to WhatsApp. 7-day free trial.",
+    description: "UK plumbers lose £12K+/year to missed calls. Whoza.ai answers 24/7, qualifies boiler repairs & leaks, sends job details to WhatsApp. 7-day free trial.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Plumbers" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "AI Receptionist Plumbers UK | From £59/mo — Never Miss Jobs",
-    description: "UK plumbers lose £12K+/year to missed calls. Whoza.ai answers 24/7, qualifies boiler repairs \u0026 emergency leaks, sends job details to WhatsApp. 7-day free trial.",
+    description: "UK plumbers lose £12K+/year to missed calls. Whoza.ai answers 24/7, qualifies boiler repairs & leaks, sends job details to WhatsApp. 7-day free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {

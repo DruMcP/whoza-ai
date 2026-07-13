@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://whoza.ai/whoza-vs-ionos",
   },
+  openGraph: {
+    url: "https://whoza.ai/whoza-vs-ionos",
+  },
 }
 
 export default function WhozaVsIonosPage() {

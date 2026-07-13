@@ -4,7 +4,7 @@ import { LostJobsCalculator } from "@/components/tools/lost-jobs-calculator"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Lost Jobs Calculator UK | See Your Costs",
-  description: "Free missed jobs calculator for UK tradespeople. Calculate revenue lost to unanswered calls using ONS data. See your weekly and yearly cost instantly. Try now.",
+  description: "Free missed jobs calculator for UK tradespeople. Calculate revenue lost to unanswered calls using ONS data. See your cost weekly and yearly. Try it now.",
   openGraph: {
     title: "Lost Jobs Calculator UK | See What Missed Calls Cost You | whoza.ai",
     description: "Free calculator for UK tradespeople. Enter your missed calls per week and see exactly how much revenue you're losing. ONS data backed.",

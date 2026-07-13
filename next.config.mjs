@@ -84,6 +84,11 @@ const nextConfig = {
 
       // === CRITICAL: Redirect missing comparison pages to homepage ===
       {
+        source: '/whoza-vs-virtual-receptionist',
+        destination: '/ai-vs-virtual-receptionist',
+        permanent: true,
+      },
+      {
         source: '/whoza-vs-answer',
         destination: '/',
         permanent: true,
@@ -314,6 +319,22 @@ const nextConfig = {
       {
         source: '/blog/emergency-call-handling-guide',
         destination: '/blog/24-7-call-answering-emergency-trades',
+        permanent: true,
+      },
+      // === v16: Redirect abbreviated blog slugs to canonical full slugs ===
+      {
+        source: '/blog/ai-call-answering-uk-trades',
+        destination: '/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026',
+        permanent: true,
+      },
+      {
+        source: '/blog/missed-calls-cost-uk-trades',
+        destination: '/blog/how-much-do-missed-calls-cost-uk-trades',
+        permanent: true,
+      },
+      {
+        source: '/blog/ai-receptionist-vs-human',
+        destination: '/blog/ai-receptionist-vs-human-cost-guide-2026',
         permanent: true,
       },
       // === SEO/AEO Duplication Fixes (2026-07-12) ===

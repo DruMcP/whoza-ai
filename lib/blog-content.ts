@@ -882,7 +882,7 @@ If you're missing calls, you're missing money. The fix is simpler and more affor
   },
   "missed-calls-missed-money-the-real-cost-for-tradespeople": {
     title: "Missed Calls = Missed Money: The Real Cost for UK Tradespeople",
-    metaTitle: "Missed Calls = Missed Money: Real Cost for Trades | whoza.ai",
+    metaTitle: "Missed Calls = Missed Money: Real Cost | whoza.ai",
     excerpt: "62% of calls to small trade businesses go unanswered. We break down the maths — how much revenue you're losing every week, and what you can do about it.",
     readTime: "6 min read",
     date: "2026-05-12",

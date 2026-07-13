@@ -7,7 +7,7 @@ import { ArrowRight, Check, X, PoundSterling, Shield, Star, TrendingUp, PhoneOff
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Whoza.ai vs Moneypenny: £59 vs £150+ (2026)",
-  description: "AI vs human receptionist: honest cost and feature comparison for UK tradespeople. whoza.ai at £59/month vs Moneypenny from £150/month. See which suits your trade.",
+  description: "AI vs human receptionist: honest cost comparison for UK tradespeople. whoza.ai at £59/month vs Moneypenny from £150/month. See which suits your trade.",
   keywords: [
     "whoza.ai vs Moneypenny",
     "Moneypenny alternative UK trades",
