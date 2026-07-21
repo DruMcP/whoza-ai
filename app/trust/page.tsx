@@ -7,7 +7,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Trust & Security | whoza.ai",
-  description: "whoza.ai is ICO-registered, UK GDPR compliant, and SOC 2 Type II certified. Your data and your customers' data are protected. Plans from £59. Read now.",
+  description: "whoza.ai is ICO-registered (ZC077271), UK GDPR compliant, and running a SOC 2 Type II programme. Your data and your customers' data are protected. Plans from £59. Read now.",
   alternates: {
     canonical: "https://whoza.ai/trust",
   },
@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/trust",
     siteName: "Whoza.ai",
     title: "Trust & Security | whoza.ai",
-    description: "whoza.ai is ICO-registered, UK GDPR compliant, and SOC 2 Type II certified. Your data and your customers' data are protected. Plans from £59. Read now.",
+    description: "whoza.ai is ICO-registered (ZC077271), UK GDPR compliant, and running a SOC 2 Type II programme. Your data and your customers' data are protected. Plans from £59. Read now.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Trust & Security | whoza.ai" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "Trust & Security | whoza.ai",
-    description: "whoza.ai is ICO-registered, UK GDPR compliant, and SOC 2 Type II certified. Your data and your customers' data are protected. Plans from £59. Read now.",
+    description: "whoza.ai is ICO-registered (ZC077271), UK GDPR compliant, and running a SOC 2 Type II programme. Your data and your customers' data are protected. Plans from £59. Read now.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {
@@ -37,17 +37,17 @@ const trustItems = [
   {
     icon: Shield,
     title: "ICO Registered",
-    description: "WHOZA AI LTD is registered with the UK Information Commissioner's Office (ICO Registration: ZC077271) as a data controller and processor.",
+    description: "WHOZA AI LTD (Company No. SC874716) is registered with the UK Information Commissioner's Office (ICO Registration: ZC077271) as a data controller and processor.",
   },
   {
     icon: Lock,
     title: "UK GDPR Compliant",
-    description: "All data processing follows UK General Data Protection Regulation and the Data Protection Act 2018. Callers are notified at the start of every call that AI is handling the conversation.",
+    description: "All data processing follows UK General Data Protection Regulation and the Data Protection Act 2018. Our AI assistant identifies itself as AI only when a caller asks, and always answers honestly — it never claims to be human.",
   },
   {
     icon: Server,
-    title: "SOC 2 Type II Certified",
-    description: "Our infrastructure meets SOC 2 Type II standards for security, availability, and confidentiality. Encryption in transit (TLS 1.3) and at rest.",
+    title: "SOC 2 Type II Programme",
+    description: "SOC 2 Type II programme underway. Our security controls are SOC 2-aligned, with encryption in transit (TLS 1.3) and at rest.",
   },
   {
     icon: FileCheck,
@@ -57,7 +57,7 @@ const trustItems = [
   {
     icon: Clock,
     title: "Controlled Data Retention",
-    description: "Call recordings retained for 90 days then auto-deleted. Transcripts and metadata held for 2 years for billing and dispute resolution. Earlier deletion available on request.",
+    description: "Calls are not recorded — only live text transcripts are produced, and audio is never stored. Transcripts and call notes are visible in your dashboard for 30 days, then removed. Backend archive of transcripts and metadata for billing and dispute resolution is retained for 90 days. Caller contact records are retained while your account is active plus the dispute window. Earlier deletion of transcripts, metadata and caller contact records is available on request.",
   },
   {
     icon: Globe,

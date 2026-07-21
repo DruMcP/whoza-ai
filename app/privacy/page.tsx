@@ -50,7 +50,7 @@ export default function PrivacyPolicy() {
             Your data is protected
           </div>
           <h1 className="text-4xl font-bold mb-4">Privacy Policy</h1>
-          <p className="text-white/60">Last updated: May 2026</p>
+          <p className="text-white/60">Last updated: July 2026</p>
         </div>
 
         <div className="prose prose-invert max-w-none">
@@ -60,10 +60,10 @@ export default function PrivacyPolicy() {
               1. Data Controller
             </h2>
             <p className="text-white/70 leading-relaxed">
-              WHOZA AI LTD is the data controller for personal information processed through our AI revenue system for UK tradespeople. We are registered with the Information Commissioner's Office (ICO) and process data in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.
+              WHOZA AI LTD (Company No. SC874716) is the data controller for personal information processed through our AI revenue system for UK tradespeople. We are registered with the Information Commissioner's Office (ICO) and process data in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.
             </p>
             <div className="bg-white/5 rounded-lg p-6 mt-4">
-              <p className="text-white/70"><strong>WHOZA AI LTD</strong> is registered with the Information Commissioner's Office (ICO) as a data controller and processor.</p>
+              <p className="text-white/70"><strong>WHOZA AI LTD</strong> (Company No. SC874716) is registered with the Information Commissioner's Office (ICO) as a data controller and processor.</p>
               <p className="text-white/70 mt-2">ICO Registration Number: <strong className="text-white">ZC077271</strong></p>
               <p className="text-white/70 mt-2">
                 <a href="https://ico.org.uk/ESDWebPages/Entry/ZC077271" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:underline inline-flex items-center gap-1">
@@ -84,7 +84,7 @@ export default function PrivacyPolicy() {
             <ul className="space-y-3 text-white/70">
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
-                <span><strong>Call transcripts:</strong> Voice calls answered by our AI agents (Katie/Mark) are transcribed for quality and service delivery purposes. Calls are <strong>not recorded</strong>; a written transcript is generated and processed by AI. Transcripts are available on request. No audio is stored.</span>
+                <span><strong>Call transcripts:</strong> Voice calls answered by our AI agents (Katie/Mark) are transcribed for quality and service delivery purposes. Calls are <strong>not recorded</strong>; a written transcript is generated and processed by AI. No audio is stored. The AI assistant identifies itself as AI only when a caller asks, and always answers honestly — it never claims to be human.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
@@ -125,7 +125,7 @@ export default function PrivacyPolicy() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
-                <span>To generate review requests after completed jobs (Claire)</span>
+                <span>To send post-call service messages (e.g. satisfaction SMS) tied to the caller's own call, processed under legitimate interests / PECR service-message basis. Marketing messages require separate consent and are not sent on the Starter plan.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
@@ -148,7 +148,7 @@ export default function PrivacyPolicy() {
               4. AI Processing Disclosure
             </h2>
             <p className="text-white/70 leading-relaxed">
-              Whoza.ai uses artificial intelligence to process voice calls, transcribe conversations, and generate responses. Our AI agents (Katie and Mark) are powered by third-party voice AI infrastructure. All AI processing occurs within UK/EU data centres or jurisdictions with adequate data protection safeguards. Callers are informed at the start of each call that they are speaking with an AI assistant.
+              Whoza.ai uses artificial intelligence to process voice calls, transcribe conversations, and generate responses. Our AI agents (Katie and Mark) are powered by third-party voice AI infrastructure. All AI processing occurs within UK/EU data centres or jurisdictions with adequate data protection safeguards. The AI assistant identifies itself as AI only when a caller asks, and always answers honestly — it never claims to be human.
             </p>
           </section>
 
@@ -158,7 +158,7 @@ export default function PrivacyPolicy() {
               5. Data Security
             </h2>
             <p className="text-white/70 leading-relaxed">
-              We implement appropriate technical and organisational measures to protect your data, including encryption in transit (TLS 1.3) and at rest, access controls, regular security audits, and staff training. Our infrastructure is SOC 2 Type II certified and we maintain strict data separation between client accounts.
+              We implement appropriate technical and organisational measures to protect your data, including encryption in transit (TLS 1.3) and at rest, access controls, regular security audits, and staff training. Our SOC 2 Type II programme is in progress; our security controls are SOC 2-aligned. We maintain strict data separation between client accounts.
             </p>
           </section>
 
@@ -170,11 +170,19 @@ export default function PrivacyPolicy() {
             <ul className="space-y-3 text-white/70">
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
-                <span><strong>Call transcripts and metadata:</strong> Retained for 2 years for billing, dispute resolution, and service improvement purposes.</span>
+                <span><strong>Audio:</strong> Calls are not recorded. Audio is never stored anywhere in the stack.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
-                <span><strong>Call transcripts and metadata:</strong> Retained for 2 years for billing, dispute resolution, and service improvement purposes.</span>
+                <span><strong>Transcripts and call notes (dashboard):</strong> Visible to the business owner in their dashboard for <strong>30 days</strong>, then removed from the dashboard.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span><strong>Transcripts and metadata (backend archive):</strong> Retained for billing and dispute resolution for <strong>90 days</strong>.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span><strong>Caller contact record:</strong> Phone number, name and known details used to recognise returning callers. This is a separate data class with its own lawful basis, retained while the account is active plus the dispute window.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
@@ -183,6 +191,10 @@ export default function PrivacyPolicy() {
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
                 <span><strong>Payment records:</strong> Retained for 7 years in accordance with UK tax regulations.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span><strong>Early deletion:</strong> You may request early deletion of transcripts, metadata and caller contact records at any time by contacting us.</span>
               </li>
             </ul>
           </section>
@@ -206,7 +218,7 @@ export default function PrivacyPolicy() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
-                <span><strong>Right to erasure:</strong> Request deletion of your data ("right to be forgotten")</span>
+                <span><strong>Right to erasure:</strong> Request deletion of your data ("right to be forgotten"). Early deletion of transcripts, metadata and caller contact records is available on request at any time.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
@@ -241,7 +253,15 @@ export default function PrivacyPolicy() {
             <ul className="space-y-3 text-white/70">
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
-                <span><strong>Voice AI infrastructure:</strong> Trillet.ai (voice processing, call handling)</span>
+                <span><strong>Telephony and SMS:</strong> Twilio (call routing and SMS delivery)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span><strong>Voice-agent orchestration:</strong> Retell (conversation flow and agent management)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span><strong>Voice synthesis:</strong> ElevenLabs (AI voice generation)</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
@@ -258,6 +278,10 @@ export default function PrivacyPolicy() {
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
                 <span><strong>WhatsApp Business API:</strong> Meta (message delivery)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span><strong>Calendar integration:</strong> Google, Microsoft, Apple (calendar sync and booking)</span>
               </li>
             </ul>
             <p className="text-white/70 leading-relaxed mt-4">
