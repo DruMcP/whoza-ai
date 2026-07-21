@@ -148,6 +148,30 @@ const faqSchema = {
     },
     {
       "@type": "Question",
+      "name": "When am I charged for a job?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You are charged only when you accept a job from the WhatsApp or SMS job card. Tapping 'Accept' counts as a booked job. Declining a job — or not responding within 24 hours — means the job is not charged. This is our 'pay per job booked, not per call answered' guarantee."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What counts as a booked job?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A booked job is an enquiry that you have accepted via the WhatsApp or SMS job card. When you tap Accept, it is billed as a job. Declined enquiries are not billed. If you do not respond to a job card within 24 hours, the system automatically declines it — and an auto-declined enquiry is not billed. Spam calls, wrong numbers, supplier calls and duplicate enquiries never count towards your limit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I don't respond to a job card?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each job card starts a 24-hour timer from delivery. If you do not respond within 24 hours, the system automatically declines the enquiry and it is not billed. You will receive a reminder before the deadline. For urgent (RED-flagged) leads, we escalate via the standard escalation ladder so genuine emergencies are never silently auto-declined."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "What happens if Katie can't handle a call?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -206,7 +230,7 @@ const faqSchema = {
 }
 
 const categories = [
-  { icon: PoundSterling, label: "Pricing & Cost", questions: [0, 4, 17] },
+  { icon: PoundSterling, label: "Pricing & Cost", questions: [0, 4, 17, 21, 22, 23] },
   { icon: Phone, label: "How It Works", questions: [2, 5, 6, 7, 9, 10, 14] },
   { icon: Wrench, label: "Trades & Services", questions: [8, 18] },
   { icon: Star, label: "Reviews & Growth", questions: [15, 20] },

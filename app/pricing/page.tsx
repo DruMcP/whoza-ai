@@ -37,7 +37,8 @@ export const metadata: Metadata = {
 export const revalidate = 3600
 
 const pricingFaqs = [
-  { question: "How much does an AI receptionist cost vs in-house staff?", answer: "A full-time human receptionist costs £25,000-£38,700/year including salary, NI, pension, and holiday cover. Whoza.ai's AI receptionist starts at £59/month (£708/year) — a 97% saving." },
+  { question: "How much does an AI receptionist cost vs in-house staff?", answer: "A full-time human receptionist costs £25,000-£38,700/year including salary, NI, pension, and holiday cover. Whoza.ai's AI receptionist starts at £59/month (£708/year) — a 97% saving. You pay only when you accept a job via WhatsApp or SMS." },
+  { question: "What counts as a booked job?", answer: "A booked job is an enquiry you accept via the WhatsApp or SMS job card. When you tap Accept, it counts as one booked job. Declined enquiries and auto-declined enquiries (no response within 24 hours) are never charged. Spam, wrong numbers, and duplicate enquiries also never count." },
   { question: "What is included in the £59/month Starter plan?", answer: "The Starter plan includes unlimited AI call answering, 8 booked jobs per month, WhatsApp delivery, voicemail detection, and 7-day free trial. No credit card required." },
   { question: "Is there a contract or cancellation fee?", answer: "No. whoza.ai has no contracts and no cancellation fees. You can cancel anytime with one click. We also offer a 30-day money-back guarantee." },
   { question: "How quickly can I get set up?", answer: "Most tradespeople are fully set up in under 30 minutes. Forward your existing number, customize your greeting, and Katie starts answering immediately." },
@@ -80,6 +81,7 @@ export default function PricingPage() {
                 <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full">
                   <span className="text-[var(--katie-blue)]">✓</span>
                   <span className="text-white/80">Pay for jobs booked, not calls answered</span>
+                  <span className="text-white/40 text-xs ml-1" title="A booked job is an enquiry you accept via WhatsApp or SMS. Declined or auto-declined (no response in 24h) jobs are never charged.">ⓘ</span>
                 </div>
                 <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full">
                   <span className="text-[var(--katie-blue)]">✓</span>
