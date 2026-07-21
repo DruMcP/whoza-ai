@@ -6,15 +6,15 @@ import { Mic, Check, ArrowRight, MapPin } from "lucide-react"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "UK AI Voice Accents | Scottish, English, Welsh, Irish | whoza.ai",
-  description: "Choose from 12+ UK AI voice accents: Scottish, English (Northern, Southern, Midlands), Welsh, and Irish. Your AI receptionist sounds local to your customers.",
+  title: "UK AI Voice Accents | Scottish, English, Welsh | whoza.ai",
+  description: "Choose from 12 AI voice options (UK accents): Scottish, English (Northern, Southern, Midlands), and Welsh. Your AI receptionist sounds local to your customers.",
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "https://whoza.ai/accents",
     siteName: "Whoza.ai",
-    title: "UK AI Voice Accents | Scottish, English, Welsh, Irish | whoza.ai",
-    description: "Choose from 12+ UK AI voice accents: Scottish, English (Northern, Southern, Midlands), Welsh, and Irish. Your AI receptionist sounds local to your customers.",
+    title: "UK AI Voice Accents | Scottish, English, Welsh | whoza.ai",
+    description: "Choose from 12 AI voice options (UK accents): Scottish, English (Northern, Southern, Midlands), and Welsh. Your AI receptionist sounds local to your customers.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Whoza.ai Voice Accents" }],
   },
   alternates: {
@@ -30,11 +30,10 @@ const accents = [
   { name: "Southern English", region: "London / South East", desc: "Clear, professional. Standard for London and southern businesses." },
   { name: "Midlands English", region: "Birmingham / Midlands", desc: "Approachable, local. Ideal for Midlands-based trades." },
   { name: "Welsh", region: "Wales", desc: "Distinctive, warm. Builds instant rapport in Wales." },
-  { name: "Irish", region: "Northern Ireland / Ireland", desc: "Friendly, engaging. Popular across the UK." },
 ]
 
 const features = [
-  "12+ distinct UK and Irish accents",
+  "12 AI voice options (UK accents)",
   "Male and female voice options",
   "Customisable greeting scripts",
   "Accents matched to your region",
@@ -60,7 +59,7 @@ export default function AccentsPage() {
             Your AI Receptionist Sounds Local
           </h1>
           <p className="text-white/60 max-w-2xl text-lg">
-            Choose from 12+ UK and Irish accents. Scottish, English, Welsh, Irish — male and female voices. Your customers hear someone who sounds like they are from the same area.
+            Choose from 12 AI voice options (UK accents). Scottish, English, Welsh — male and female voices. Your customers hear someone who sounds like they are from the same area.
           </p>
         </div>
 

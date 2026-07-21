@@ -50,7 +50,7 @@ const comparisonData = [
   { feature: "Contract", whoza: "None — cancel anytime", competitor: "1-month minimum", winner: "whoza", note: "whoze more flexible" },
   { feature: "Money-Back Guarantee", whoza: "30 days", competitor: "30 days", winner: "draw", note: "Both equal" },
   { feature: "Spam Filtering", whoza: "✓ Advanced AI filtering", competitor: "✓ Basic filtering", winner: "whoza", note: "whoze more sophisticated" },
-  { feature: "Custom AI Voices", whoza: "✓ 12+ voices", competitor: "✓ 3 voices", winner: "whoza", note: "whoze more choice" },
+  { feature: "Custom AI Voices", whoza: "✓ 12 AI voice options (UK accents)", competitor: "✓ 3 voices", winner: "whoza", note: "whoze more choice" },
   { feature: "Calendar Integration", whoza: "✓ Auto-sync (Growth+)", competitor: "✗ Manual only", winner: "whoza", note: "whoze more automated" },
 ]
 
@@ -302,7 +302,7 @@ export default function WhozaVsArrowPage() {
                 <p className="text-white/70 leading-relaxed mb-4">
                   Both whoza.ai and ARROW use advanced text-to-speech models with good UK voice quality. 
                   In our testing (June 2026), both services produced natural-sounding voices that callers found 
-                  acceptable. However, whoza.ai offers 12+ different voice options including regional accents 
+                  acceptable. However, whoza.ai offers 12 AI voice options (UK accents) including regional accents 
                   (Northern, Scottish, Welsh, Midlands), while ARROW provides 3 standard voices.
                 </p>
                 <p className="text-white/70 leading-relaxed mb-4">

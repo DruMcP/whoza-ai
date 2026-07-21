@@ -38,7 +38,7 @@ const faqs = [
   },
   {
     question: "Can I choose a different voice for my AI?",
-    answer: "Absolutely. We offer 12 different voices with a range of UK accents and tones — from Scottish to Welsh to London. You can preview and change your voice anytime in your dashboard.",
+    answer: "Absolutely. We offer 12 AI voice options (UK accents) with a range of tones — from Scottish to Welsh to London. You can preview and change your voice anytime in your dashboard.",
     category: "General",
   },
   {
@@ -63,7 +63,7 @@ const faqs = [
   },
   {
     question: "What accents and voices are available?",
-    answer: "12+ UK and Irish accents: Scottish, Northern English, Southern English, Midlands English, Welsh, and Irish. Male and female options. Switch anytime from your dashboard. See all voices at /accents.",
+    answer: "12 AI voice options (UK accents): Scottish, Northern English, Southern English, Midlands English, and Welsh. Male and female options. Switch anytime from your dashboard. See all voices at /accents.",
     category: "General",
   },
   {

@@ -1,3 +1,44 @@
+## Changes made today (2026-07-22):
+
+### PR: Voice Wording Consistency (Ready for Review)
+- **Branch:** `fix/voice-wording-consistency`
+- **Build:** 206 pages, zero errors
+- **Status:** Branch pushed, PR ready — DO NOT MERGE until business confirms accuracy
+
+**Canonical wording established:** "12 AI voice options (UK accents)"
+- Count: exactly 12 (never "12+")
+- Accents: UK only (never "Irish")
+
+**Files changed (6):**
+| File | Change |
+|------|--------|
+| `app/accents/page.tsx` | Title/desc: removed "Irish"; hero text: "12+ UK and Irish" → "12 AI voice options (UK accents)"; features list updated; removed Irish accent card |
+| `components/whoza/faq.tsx` | 2 answers: voice choice + accents available — both normalised to canonical |
+| `app/page.tsx` | Homepage FAQ voice answer normalised |
+| `app/whoza-vs-arrow/page.tsx` | Comparison table: "12+ voices" → "12 AI voice options (UK accents)"; body copy updated |
+| `app/for-plumbers/page.tsx` | Setup FAQ: "12 alternatives" → "12 AI voice options with UK accents" |
+| `app/for-electricians/page.tsx` | Setup FAQ: same normalisation |
+
+**⚠️ BUSINESS CONFIRMATION REQUIRED BEFORE MERGE:**
+Product must genuinely offer exactly 12 voices, all UK accents, with no Irish accents. If product has Irish accents or >12 voices, business must decide which claim is accurate before merging.
+
+---
+
+### Deploy: Booked-Job Billing Definition (Production)
+- **Deploy ID:** `6a5f9e27cd99b52fb4aa583c`
+- **Build:** 206 pages, zero errors
+- **Status:** Production live at https://whoza.ai
+
+**Key changes deployed:**
+- FAQ page: 3 new canonical billing Qs (When charged? What counts? What if no response?)
+- Pricing page: ⓘ tooltip on "Pay for jobs booked" + new FAQ entry
+- Terms page: Section 4 rewritten with formal billing wording (booked job definition, exclusions, allowances)
+- API: `lib/billing.ts` — new billing service with idempotency, audit trail, exclusion checks
+- API: `app/api/enquiries/[id]/action/route.ts` — accept-only billing integration
+- lib/usage.ts — extended with `acceptedJobs`, `planJobs`, `isNearJobLimit`, `isOverJobLimit`
+
+---
+
 ## Changes made today (2026-07-13):
 
 ### Deploy: SEO/Geo/Schema Batch + New Pages

@@ -444,7 +444,7 @@ export default function ForElectriciansPage() {
                 },
                 {
                   q: "How quickly can I get set up?",
-                  a: "Most electricians are live within 30 minutes. You choose your voice (Katie or one of 12 alternatives), set your greeting, configure your WhatsApp number, and activate call forwarding. We guide you through each step. No technical knowledge required."
+                  a: "Most electricians are live within 30 minutes. You choose your voice (Katie or one of 12 AI voice options with UK accents), set your greeting, configure your WhatsApp number, and activate call forwarding. We guide you through each step. No technical knowledge required."
                 },
                 {
                   q: "Will customers know they're talking to AI?",
