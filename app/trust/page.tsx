@@ -57,7 +57,7 @@ const trustItems = [
   {
     icon: Clock,
     title: "Controlled Data Retention",
-    description: "Calls are not recorded — only live text transcripts are produced, and audio is never stored. Transcripts and call notes are visible in your dashboard for 30 days, then removed. Backend archive of transcripts and metadata for billing and dispute resolution is retained for [[CONFIRM WITH LEGAL: archive transcript retention period]]. Caller contact records are retained while your account is active plus the dispute window. Earlier deletion of transcripts, metadata and caller contact records is available on request.",
+    description: "Calls are not recorded — only live text transcripts are produced, and audio is never stored. Transcripts and call notes are visible in your dashboard for 30 days, then removed. Backend archive of transcripts and metadata for billing and dispute resolution is retained for 90 days. Caller contact records are retained while your account is active plus the dispute window. Earlier deletion of transcripts, metadata and caller contact records is available on request.",
   },
   {
     icon: Globe,

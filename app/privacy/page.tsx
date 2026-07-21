@@ -178,7 +178,7 @@ export default function PrivacyPolicy() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
-                <span><strong>Transcripts and metadata (backend archive):</strong> Retained for billing and dispute resolution for <strong>[[CONFIRM WITH LEGAL: archive transcript retention period]]</strong>.</span>
+                <span><strong>Transcripts and metadata (backend archive):</strong> Retained for billing and dispute resolution for <strong>90 days</strong>.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
