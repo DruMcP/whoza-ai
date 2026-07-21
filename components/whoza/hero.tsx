@@ -130,7 +130,7 @@ export function Hero() {
             >
               <span className="the-small">The</span>{" "}
               <span className="ai-large">AI</span>{" "}
-              receptionist built in Scotland for UK trades.
+              receptionist and Revenue Team built in Scotland for UK trades.
               Answers every call, qualifies real jobs, sends them to your WhatsApp.
             </motion.p>
 
@@ -193,9 +193,6 @@ export function Hero() {
                 )}
               </button>
 
-              <span className="text-[13px] text-slate-400 tracking-wide">
-                No credit card required · 30-day money-back guarantee
-              </span>
             </motion.div>
 
             {/* Trust Pill */}
