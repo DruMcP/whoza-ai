@@ -130,6 +130,18 @@ export default function TermsOfService() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
+                <span><strong>Booked job definition:</strong> A booked job is an enquiry that you have accepted via the WhatsApp or SMS job card. Only accepted enquiries count towards your plan's included jobs and are billed. Declined enquiries are not billed. If you do not respond to a job card within 24 hours, the system automatically declines it — and an auto-declined enquiry is not billed.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span><strong>Never billable:</strong> Spam calls, robocalls, wrong numbers, supplier or sales calls, your own test calls, and duplicate enquiries (same caller + materially the same job within 7 days) never count towards your limit and are never billed, even if somehow accepted.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span><strong>Job allowances:</strong> Each plan includes a set number of booked jobs per month: Starter 8, Growth 16, Pro 40, Scale 100. Additional accepted jobs beyond your included allowance are charged at your plan's per-extra-job rate: Starter £4.50, Growth £3.25, Pro £2.75, Scale £2.25.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
                 <span><strong>Minute allowances:</strong> Each plan includes a set number of call minutes per month. Additional minutes are charged at £0.26 per minute</span>
               </li>
               <li className="flex items-start gap-3">

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { processAcceptBilling, processDeclineBilling, isExcludedFromBilling } from "@/lib/billing";
 
 /**
  * Enquiry Action API
@@ -7,10 +8,13 @@ import { createClient } from "@supabase/supabase-js";
  * POST /api/enquiries/[id]/action
  *
  * Actions:
- * - "accept"     → Mark enquiry as accepted, notify customer
- * - "call_back"  → Schedule callback, notify customer
- * - "decline"    → Decline enquiry, log reason
+ * - "accept"     → Mark enquiry as accepted, bill if eligible
+ * - "call_back"  → Schedule callback, NOT billable
+ * - "decline"    → Decline enquiry, log not-billed event
  * - "complete"   → Mark job as completed (for Claire review flow)
+ *
+ * Billing rule: ONLY "accept" bills. Callback, decline, complete do not.
+ * Idempotent: accepting twice bills once.
  *
  * Body: { action: string, reason?: string, callbackTime?: string }
  */
@@ -86,6 +90,35 @@ export async function POST(
       throw new Error(`Failed to update enquiry: ${updateError.message}`);
     }
 
+    // ── BILLING LOGIC ──
+    // Only "accept" bills. Decline, callback, complete do not.
+    let billingResult: { billed: boolean; eventId?: string; reason: string } | null = null;
+
+    if (action === "accept") {
+      // Safety: exclude spam/duplicates/test calls
+      const excluded = await isExcludedFromBilling(id);
+      if (excluded) {
+        billingResult = await processDeclineBilling(
+          id,
+          enquiry.client_id,
+          "decline",
+          "whatsapp",
+          "excluded_spam_or_duplicate"
+        );
+      } else {
+        billingResult = await processAcceptBilling(id, enquiry.client_id, "whatsapp");
+      }
+    } else if (action === "decline") {
+      billingResult = await processDeclineBilling(
+        id,
+        enquiry.client_id,
+        "decline",
+        "whatsapp",
+        reason || "owner_declined"
+      );
+    }
+    // callback and complete are never billed — no event needed
+
     // Send WhatsApp notification based on action
     let notificationType: string;
     switch (action) {
@@ -148,6 +181,7 @@ export async function POST(
       action,
       newStatus,
       updated,
+      billing: billingResult || { billed: false, reason: "not_applicable" },
     });
 
   } catch (error) {

@@ -21,13 +21,18 @@ export interface UsageSummary {
   period: string; // "2026-05"
   totalMinutes: number;
   totalCalls: number;
+  acceptedJobs: number; // billed enquiries (owner accepted)
   planMinutes: number;
+  planJobs: number; // included jobs in plan
   planName: string;
   percentUsed: number;
+  jobPercentUsed: number;
   overageMinutes: number;
   overageCost: number;
   isNearLimit: boolean;
   isOverLimit: boolean;
+  isNearJobLimit: boolean;
+  isOverJobLimit: boolean;
 }
 
 export async function getUsageSummary(clientId: string): Promise<UsageSummary | null> {
@@ -47,6 +52,7 @@ export async function getUsageSummary(clientId: string): Promise<UsageSummary | 
 
   const plan = client.plan;
   const planMinutes = plan?.included_minutes || 0;
+  const planJobs = plan?.included_jobs || plan?.jobs_included || 0;
   const overageRate = plan?.overage_rate_per_minute || 0;
 
   // Get current month's usage
@@ -71,7 +77,23 @@ export async function getUsageSummary(clientId: string): Promise<UsageSummary | 
   const totalMinutes = Math.ceil(totalSeconds / 60);
   const totalCalls = calls?.length || 0;
 
+  // Count ACCEPTED enquiries (booked jobs) for this period
+  const { data: acceptedEnquiries, error: enquiriesError } = await supabase
+    .from("enquiries")
+    .select("id")
+    .eq("client_id", clientId)
+    .eq("status", "accepted")
+    .gte("action_at", periodStart)
+    .lte("action_at", periodEnd);
+
+  if (enquiriesError) {
+    console.error("[Usage] Failed to fetch accepted enquiries:", enquiriesError);
+  }
+
+  const acceptedJobs = acceptedEnquiries?.length || 0;
+
   const percentUsed = planMinutes > 0 ? Math.round((totalMinutes / planMinutes) * 100) : 0;
+  const jobPercentUsed = planJobs > 0 ? Math.round((acceptedJobs / planJobs) * 100) : 0;
   const overageMinutes = Math.max(0, totalMinutes - planMinutes);
   const overageCost = overageMinutes * overageRate;
 
@@ -80,13 +102,18 @@ export async function getUsageSummary(clientId: string): Promise<UsageSummary | 
     period: `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`,
     totalMinutes,
     totalCalls,
+    acceptedJobs,
     planMinutes,
+    planJobs,
     planName: plan?.name || "Unknown",
     percentUsed,
+    jobPercentUsed,
     overageMinutes,
     overageCost,
     isNearLimit: percentUsed >= 80 && percentUsed < 100,
     isOverLimit: percentUsed >= 100,
+    isNearJobLimit: jobPercentUsed >= 80 && jobPercentUsed < 100,
+    isOverJobLimit: jobPercentUsed >= 100,
   };
 }
 
@@ -98,6 +125,13 @@ export async function checkUsageLimit(clientId: string): Promise<{ allowed: bool
     return {
       allowed: false,
       reason: `Plan limit exceeded: ${summary.totalMinutes}/${summary.planMinutes} minutes used`,
+    };
+  }
+
+  if (summary.isOverJobLimit) {
+    return {
+      allowed: false,
+      reason: `Job limit exceeded: ${summary.acceptedJobs}/${summary.planJobs} booked jobs used`,
     };
   }
 
