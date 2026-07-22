@@ -212,7 +212,7 @@ export function AudioDemo() {
       ref={sectionRef}
       id="katie-demo-audio"
       className="section-padding-lg relative overflow-hidden"
-      style={{ background: "linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%)" }}
+      aria-label="Katie audio demo"
       aria-label="Katie demo audio player"
     >
       {/* Background ambient glow */}
@@ -323,22 +323,29 @@ export function AudioDemo() {
 
                 {/* Progress Bar */}
                 <div
-                  className="relative h-2 bg-white/10 rounded-full cursor-pointer group mt-2"
+                  className="relative h-2 bg-white/10 rounded-full cursor-pointer group mt-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--katie-blue)] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f172a]"
                   onClick={handleSeek}
                   role="slider"
                   aria-label="Audio progress"
                   aria-valuemin={0}
                   aria-valuemax={100}
                   aria-valuenow={Math.round(progress)}
+                  aria-valuetext={`${formatTime(currentTime)} of ${formatTime(duration)}`}
                   tabIndex={0}
                   onKeyDown={(e) => {
-                    if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
+                    if (e.key === "ArrowLeft" || e.key === "ArrowRight" || e.key === "Home" || e.key === "End") {
                       e.preventDefault()
                       const audio = audioRef.current
                       if (!audio) return
-                      const delta = e.key === "ArrowLeft" ? -5 : 5
-                      const newTime = Math.max(0, Math.min(audio.duration || duration, currentTime + delta))
-                      audio.currentTime = newTime
+                      if (e.key === "Home") {
+                        audio.currentTime = 0
+                      } else if (e.key === "End") {
+                        audio.currentTime = audio.duration || duration
+                      } else {
+                        const delta = e.key === "ArrowLeft" ? -5 : 5
+                        const newTime = Math.max(0, Math.min(audio.duration || duration, currentTime + delta))
+                        audio.currentTime = newTime
+                      }
                     }
                   }}
                 >

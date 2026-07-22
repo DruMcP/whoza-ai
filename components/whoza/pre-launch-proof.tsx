@@ -8,7 +8,7 @@ export function PreLaunchProof() {
   const { config } = useLocale()
 
   return (
-    <section className="section-padding-lg bg-[var(--off-white)]">
+    <section className="section-padding-lg bg-[var(--off-white)]" aria-label="Day in the life example">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div

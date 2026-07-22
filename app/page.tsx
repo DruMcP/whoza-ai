@@ -98,7 +98,7 @@ export default function Home() {
 
         {/* LIVE DEMO */}
         <div className="section-divider" />
-        <section className="py-12 bg-[var(--navy-900)] dark-section">
+        <section className="py-12 bg-[var(--navy-900)] dark-section" aria-label="Live demo">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <p className="text-white/60 text-sm mb-4">Experience the demo — no signup needed</p>
             <TrilletVoiceWidget buttonLabel="Talk to Katie" />

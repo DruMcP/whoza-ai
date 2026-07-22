@@ -62,6 +62,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
   return (
     <section
       className="hero hero-grain dark-section relative overflow-hidden bg-gradient-to-br from-[#0F1729] via-[#1A1A2E] to-[#0F1729] pt-[var(--section-py-xl)]"
+      aria-label={`${city} AI receptionist`}
       aria-label={`AI call handling for ${trade || "trades"} in ${city}`}
     >
       {/* ── Background atmosphere ── */}
@@ -127,7 +128,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             className="font-sans text-[clamp(36px,5vw,56px)] font-extrabold leading-[1.05] tracking-tight text-white mb-4 whitespace-pre-line"
           >
             <span className="block">Your phone&apos;s ringing.</span>
-            <span className="block text-[#D63031]">
+            <span className="block text-red-400">
               Katie&apos;s got it — in {city}.
             </span>
           </motion.h1>
@@ -251,7 +252,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
                 key={item}
                 className="inline-flex items-center gap-1.5 bg-white/[0.06] text-slate-400 text-[13px] px-3.5 py-2 rounded-[20px] border border-white/[0.08]"
               >
-                <span className="text-[#D63031] font-bold">✓</span>
+                <span className="text-red-400 font-bold">✓</span>
                 {item}
               </li>
             ))}

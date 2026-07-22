@@ -27,7 +27,7 @@ export function TradeLocations({ tradeData }: TradeLocationsProps) {
     relatedLocs.length > 0 ? relatedLocs : ukLocations
 
   return (
-    <section className="py-16 bg-[var(--off-white)]">
+    <section className="py-16 bg-[var(--off-white)]" aria-label="Service locations">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <motion.h2

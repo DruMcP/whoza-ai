@@ -46,7 +46,7 @@ export function WhatsAppDelivery({ trade }: WhatsAppDeliveryProps) {
   }
 
   return (
-    <section className="py-28 lg:py-44 bg-[var(--navy-900)] relative overflow-hidden dark-section">
+    <section className="py-28 lg:py-44 bg-[var(--navy-900)] relative overflow-hidden dark-section" aria-label="WhatsApp delivery">
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-[var(--rex-green)]/10 rounded-full blur-[120px]" />
@@ -112,10 +112,10 @@ export function WhatsAppDelivery({ trade }: WhatsAppDeliveryProps) {
                       <div className="bg-[#005c4b] rounded-xl p-4 max-w-[280px] ml-auto">
                         {/* Top Label */}
                         <div className="flex items-center justify-between mb-3">
-                          <div className="px-2 py-0.5 rounded bg-[#25d366] text-white text-[10px] font-bold uppercase tracking-wider">
+                          <div className="px-2 py-0.5 rounded bg-[#25d366] text-[#0b141a] text-[10px] font-bold uppercase tracking-wider">
                             {job.label}
                           </div>
-                          <div className="text-[#25d366] text-[10px]">Just now</div>
+                          <div className="text-white text-[10px]">Just now</div>
                         </div>
                         
                         {/* Main Heading */}
@@ -163,7 +163,7 @@ export function WhatsAppDelivery({ trade }: WhatsAppDeliveryProps) {
                             <CheckCircle2 className="w-3.5 h-3.5 text-[#25d366] mt-0.5 shrink-0" />
                             <div>
                               <span className="text-[10px] text-white/50 uppercase tracking-wider">Preferred Time</span>
-                              <div className="text-sm font-medium text-[#25d366]">{job.time}</div>
+                              <div className="text-sm font-medium text-white">{job.time}</div>
                             </div>
                           </div>
                         </div>
@@ -173,7 +173,7 @@ export function WhatsAppDelivery({ trade }: WhatsAppDeliveryProps) {
                           <div className="flex items-center justify-between">
                             <div>
                               <span className="text-[10px] text-white/50 uppercase tracking-wider">Estimated Value</span>
-                              <div className="text-lg font-bold text-[#25d366]">{job.value}</div>
+                              <div className="text-lg font-bold text-white">{job.value}</div>
                             </div>
                           </div>
                         </div>
@@ -189,7 +189,7 @@ export function WhatsAppDelivery({ trade }: WhatsAppDeliveryProps) {
                         >
                           <button
                             onClick={handleAccept}
-                            className="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#25d366] text-white text-sm font-bold shadow-lg hover:bg-[var(--rex-green-hover)] transition-colors"
+                            className="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#25d366] text-[#0b141a] text-sm font-bold shadow-lg hover:bg-[var(--rex-green-hover)] transition-colors"
                           >
                             <CheckCircle2 className="w-4 h-4" />
                             Accept
@@ -222,7 +222,7 @@ export function WhatsAppDelivery({ trade }: WhatsAppDeliveryProps) {
                                 <CheckCircle2 className="w-6 h-6 text-white" />
                               </div>
                               <div>
-                                <div className="text-[#25d366] font-bold text-sm">ENQUIRY ACCEPTED</div>
+                                <div className="text-white font-bold text-sm">ENQUIRY ACCEPTED</div>
                                 <div className="text-white text-xs">{job.jobType} • {job.area}</div>
                               </div>
                             </div>
@@ -233,7 +233,7 @@ export function WhatsAppDelivery({ trade }: WhatsAppDeliveryProps) {
                             transition={{ delay: 0.3 }}
                             className="bg-white/10 rounded-lg p-3 text-center"
                           >
-                            <div className="text-[#25d366] text-xs font-medium">Customer notified via WhatsApp</div>
+                            <div className="text-white text-xs font-medium">Customer notified via WhatsApp</div>
                           </motion.div>
                         </motion.div>
                       )}
@@ -256,7 +256,7 @@ export function WhatsAppDelivery({ trade }: WhatsAppDeliveryProps) {
                         transition={{ delay: 0.5 }}
                         className="text-center"
                       >
-                        <button className="text-[#25d366] text-xs flex items-center gap-1 mx-auto">
+                        <button className="text-white text-xs flex items-center gap-1 mx-auto">
                           <Phone className="w-3 h-3" />
                           Request callback
                         </button>

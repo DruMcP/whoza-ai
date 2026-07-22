@@ -124,7 +124,7 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
   }, [missedCalls, avgJobValue, conversionRate, hasAnimated, weeklyLoss, monthlyLoss, yearlyLoss])
 
   return (
-    <section id="calculator" className="py-28 lg:py-44 bg-gradient-to-b from-red-50 via-red-50/50 to-[var(--off-white)] relative">
+    <section id="calculator" className="py-28 lg:py-44 bg-gradient-to-b from-red-50 via-red-50/50 to-[var(--off-white)] relative" aria-label="Lost revenue calculator">
       {/* Transition Bridge - responsive sizing */}
       <div className="absolute top-3 sm:top-4 lg:top-6 left-1/2 -translate-x-1/2 px-4 py-2 sm:px-6 sm:py-2.5 lg:px-8 lg:py-3.5 rounded-full bg-[var(--navy-900)] text-white text-sm sm:text-base lg:text-lg font-bold shadow-xl border-2 sm:border-4 border-white z-10 text-center whitespace-nowrap sm:whitespace-normal max-w-[calc(100vw-2rem)] truncate sm:truncate-none">
         What are missed calls costing you?
@@ -213,11 +213,11 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
                 {/* Missed Calls Per Week */}
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
-                    <label className="flex items-center gap-2 text-sm font-medium text-[var(--navy-900)]">
+                    <label id="missed-calls-label" className="flex items-center gap-2 text-sm font-medium text-[var(--navy-900)]">
                       <Phone className="w-4 h-4 text-[var(--slate-500)]" />
                       Missed calls per week
                     </label>
-                    <span className="text-lg font-bold text-[var(--katie-blue)]">{missedCalls[0]}</span>
+                    <span className="text-lg font-bold text-[var(--katie-blue)]" aria-live="polite" aria-atomic="true">{missedCalls[0]} calls</span>
                   </div>
                   <Slider
                     value={missedCalls}
@@ -225,6 +225,9 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
                     max={50}
                     min={1}
                     step={1}
+                    aria-label="Missed calls per week"
+                    aria-labelledby="missed-calls-label"
+                    ariaValuetext={`${missedCalls[0]} calls per week`}
                     className="[&_[role=slider]]:bg-[var(--katie-blue)] [&_[role=slider]]:border-0 [&_.bg-primary]:bg-[var(--katie-blue)]"
                   />
                   <div className="flex justify-between text-xs text-[var(--slate-500)]">
@@ -236,11 +239,11 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
                 {/* Average Job Value */}
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
-                    <label className="flex items-center gap-2 text-sm font-medium text-[var(--navy-900)]">
+                    <label id="job-value-label" className="flex items-center gap-2 text-sm font-medium text-[var(--navy-900)]">
                       <PoundSterling className="w-4 h-4 text-[var(--slate-500)]" />
                       Average job value
                     </label>
-                    <span className="text-lg font-bold text-[var(--rex-green)]">£{avgJobValue[0]}</span>
+                    <span className="text-lg font-bold text-[var(--rex-green)]" aria-live="polite" aria-atomic="true">£{avgJobValue[0]}</span>
                   </div>
                   <Slider
                     value={avgJobValue}
@@ -248,6 +251,9 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
                     max={jobConfig.maxValue}
                     min={jobConfig.minValue}
                     step={25}
+                    aria-label="Average job value"
+                    aria-labelledby="job-value-label"
+                    ariaValuetext={`£${avgJobValue[0]}`}
                     className="[&_[role=slider]]:bg-[var(--rex-green)] [&_[role=slider]]:border-0 [&_.bg-primary]:bg-[var(--rex-green)]"
                   />
                   <div className="flex justify-between text-xs text-[var(--slate-500)]">
@@ -260,11 +266,11 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
                 {/* Conversion Rate */}
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
-                    <label className="flex items-center gap-2 text-sm font-medium text-[var(--navy-900)]">
+                    <label id="conversion-rate-label" className="flex items-center gap-2 text-sm font-medium text-[var(--navy-900)]">
                       <TrendingUp className="w-4 h-4 text-[var(--slate-500)]" />
                       Call-to-job conversion rate
                     </label>
-                    <span className="text-lg font-bold text-[var(--claire-amber)]">{conversionRate[0]}%</span>
+                    <span className="text-lg font-bold text-[var(--claire-amber)]" aria-live="polite" aria-atomic="true">{conversionRate[0]}%</span>
                   </div>
                   <Slider
                     value={conversionRate}
@@ -272,6 +278,9 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
                     max={100}
                     min={10}
                     step={5}
+                    aria-label="Call-to-job conversion rate"
+                    aria-labelledby="conversion-rate-label"
+                    ariaValuetext={`${conversionRate[0]}%`}
                     className="[&_[role=slider]]:bg-[var(--claire-amber)] [&_[role=slider]]:border-0 [&_.bg-primary]:bg-[var(--claire-amber)]"
                   />
                   <div className="flex justify-between text-xs text-[var(--slate-500)]">

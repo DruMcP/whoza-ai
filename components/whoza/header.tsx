@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { WaitlistModal } from "./waitlist-modal"
@@ -19,6 +19,10 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [showWaitlist, setShowWaitlist] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const menuButtonRef = useRef<HTMLButtonElement>(null)
+  const mobileMenuRef = useRef<HTMLDivElement>(null)
+  const firstLinkRef = useRef<HTMLAnchorElement>(null)
+  const lastLinkRef = useRef<HTMLAnchorElement>(null)
 
   useEffect(() => {
     const handleOpen = () => setShowWaitlist(true)
@@ -32,6 +36,55 @@ export function Header() {
     onScroll()
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  // Focus management: open → first link, close → button
+  useEffect(() => {
+    if (menuOpen) {
+      // Small delay to ensure DOM is rendered
+      const timer = setTimeout(() => {
+        firstLinkRef.current?.focus()
+      }, 50)
+      return () => clearTimeout(timer)
+    } else {
+      menuButtonRef.current?.focus()
+    }
+  }, [menuOpen])
+
+  // Esc to close + focus trap
+  useEffect(() => {
+    if (!menuOpen) return
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        e.preventDefault()
+        setMenuOpen(false)
+        return
+      }
+      if (e.key === "Tab") {
+        const focusable = mobileMenuRef.current?.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled])'
+        )
+        if (!focusable || focusable.length === 0) return
+        const first = focusable[0]
+        const last = focusable[focusable.length - 1]
+
+        if (e.shiftKey) {
+          if (document.activeElement === first) {
+            e.preventDefault()
+            last.focus()
+          }
+        } else {
+          if (document.activeElement === last) {
+            e.preventDefault()
+            first.focus()
+          }
+        }
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyDown)
+    return () => document.removeEventListener("keydown", handleKeyDown)
+  }, [menuOpen])
 
   const handleNavClick = (e: React.MouseEvent, href: string, isPageLink: boolean) => {
     if (!isPageLink) {
@@ -102,10 +155,12 @@ export function Header() {
 
             {/* Mobile hamburger */}
             <button
+              ref={menuButtonRef}
               className="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
               onClick={() => setMenuOpen((p) => !p)}
               aria-expanded={menuOpen}
-              aria-label="Toggle menu"
+              aria-controls="mobile-menu"
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
             >
               {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -116,6 +171,8 @@ export function Header() {
         <AnimatePresence>
           {menuOpen && (
             <motion.div
+              id="mobile-menu"
+              ref={mobileMenuRef}
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
@@ -123,10 +180,11 @@ export function Header() {
               className="md:hidden bg-[#111418]/95 backdrop-blur-md border-t border-white/[0.08] overflow-hidden"
             >
               <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-3">
-                {navLinks.map((link) =>
+                {navLinks.map((link, index) =>
                   <a
                     key={link.href}
                     href={link.href}
+                    ref={index === 0 ? firstLinkRef : index === navLinks.length - 1 ? lastLinkRef : undefined}
                     onClick={(e) => handleNavClick(e, link.href, link.isPageLink)}
                     className="text-white/70 hover:text-white text-sm font-medium no-underline transition-colors py-2 min-h-[44px] flex items-center"
                   >

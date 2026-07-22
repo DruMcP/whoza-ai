@@ -24,7 +24,7 @@ const scoreLabels = [
   { min: 0, max: 30, label: "Low risk — keep it up", color: "#10B981", emoji: "🟢" },
   { min: 30, max: 60, label: "Moderate — some calls slipping", color: "#F59E0B", emoji: "🟡" },
   { min: 60, max: 85, label: "High — losing serious money", color: "#F97316", emoji: "🟠" },
-  { min: 85, max: 100, label: "Critical — every missed call hurts", color: "#D63031", emoji: "🔴" },
+  { min: 85, max: 100, label: "Critical — every missed call hurts", color: "#B91C1C", emoji: "🔴" },,
 ]
 
 export function LostJobsCalculator() {
@@ -91,7 +91,7 @@ export function LostJobsCalculator() {
                 <select
                   value={trade}
                   onChange={(e) => handleTradeChange(e.target.value)}
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:border-[var(--katie-blue)] appearance-none cursor-pointer"
+                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/40 text-white focus:outline-none focus:border-[var(--katie-blue)] appearance-none cursor-pointer"
                 >
                   {Object.entries(tradeDefaults).map(([key, info]) => (
                     <option key={key} value={key} className="bg-[var(--navy-900)]">
@@ -113,7 +113,7 @@ export function LostJobsCalculator() {
                     max={50}
                     value={missedCalls}
                     onChange={(e) => setMissedCalls(Number(e.target.value))}
-                    className="flex-1 h-2 bg-white/20 rounded-lg appearance-none cursor-pointer accent-[var(--coral)]"
+                    className="flex-1 h-2 bg-white/40 rounded-lg appearance-none cursor-pointer accent-[var(--coral)]"
                   />
                   <span className="text-2xl font-bold text-[var(--coral)] w-12 text-center">
                     {missedCalls}
@@ -137,7 +137,7 @@ export function LostJobsCalculator() {
                     step={10}
                     value={jobValue}
                     onChange={(e) => setJobValue(Number(e.target.value))}
-                    className="flex-1 h-2 bg-white/20 rounded-lg appearance-none cursor-pointer accent-[var(--coral)]"
+                    className="flex-1 h-2 bg-white/40 rounded-lg appearance-none cursor-pointer accent-[var(--coral)]"
                   />
                   <span className="text-2xl font-bold text-[var(--coral)] w-24 text-center">
                     £{jobValue}
@@ -160,7 +160,7 @@ export function LostJobsCalculator() {
                     max={7}
                     value={daysPerWeek}
                     onChange={(e) => setDaysPerWeek(Number(e.target.value))}
-                    className="flex-1 h-2 bg-white/20 rounded-lg appearance-none cursor-pointer accent-[var(--coral)]"
+                    className="flex-1 h-2 bg-white/40 rounded-lg appearance-none cursor-pointer accent-[var(--coral)]"
                   />
                   <span className="text-2xl font-bold text-[var(--coral)] w-12 text-center">
                     {daysPerWeek}
@@ -178,7 +178,7 @@ export function LostJobsCalculator() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@company.com"
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-[var(--katie-blue)]"
+                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/40 text-white placeholder:text-white/40 focus:outline-none focus:border-[var(--katie-blue)]"
                 />
                 <p className="text-sm text-white/50 mt-1">We'll send you the full breakdown</p>
               </div>
@@ -271,7 +271,7 @@ export function LostJobsCalculator() {
                   href={`https://wa.me/?text=${encodeURIComponent(shareText)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 py-3 rounded-lg bg-[#25D366] hover:bg-[#25D366]/90 text-white font-bold transition-colors flex items-center justify-center gap-2"
+                  className="flex-1 py-3 rounded-lg bg-[#25D366] hover:bg-[#25D366]/90 text-[#0A0F1A] font-bold transition-colors flex items-center justify-center gap-2"
                 >
                   <Share2 className="w-5 h-5" />
                   SHARE ON WHATSAPP

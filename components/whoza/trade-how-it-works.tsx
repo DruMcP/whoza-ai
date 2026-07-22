@@ -12,7 +12,7 @@ const stepIcons = [Phone, MessageSquare, Bell, CheckCircle]
 
 export function TradeHowItWorks({ tradeData }: TradeHowItWorksProps) {
   return (
-    <section id="how-it-works" className="py-20 bg-[var(--off-white)]">
+    <section id="how-it-works" className="py-20 bg-[var(--off-white)]" aria-label="How it works">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2

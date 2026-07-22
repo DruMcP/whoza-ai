@@ -58,10 +58,10 @@ export function PhoneMockup({ city, trade }: { city?: string; trade?: string }) 
             >
               {/* Top Label */}
               <div className="flex items-center justify-between mb-3">
-                <div className="px-2 py-0.5 rounded bg-[#25d366] text-white text-[10px] font-bold uppercase tracking-wider">
+                <div className="px-2 py-0.5 rounded bg-[#25d366] text-[#0b141a] text-[10px] font-bold uppercase tracking-wider">
                   {enquiry.label}
                 </div>
-                <div className="text-[#25d366] text-[10px]">Just now</div>
+                <div className="text-white text-[10px]">Just now</div>
               </div>
               
               {/* Main Heading */}
@@ -109,7 +109,7 @@ export function PhoneMockup({ city, trade }: { city?: string; trade?: string }) 
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#25d366] mt-0.5 shrink-0" />
                   <div>
                     <span className="text-[10px] text-white/50 uppercase tracking-wider">Preferred Time</span>
-                    <div className="text-sm font-medium text-[#25d366]">{enquiry.time}</div>
+                    <div className="text-sm font-medium text-white">{enquiry.time}</div>
                   </div>
                 </div>
               </div>
@@ -119,7 +119,7 @@ export function PhoneMockup({ city, trade }: { city?: string; trade?: string }) 
                 <div className="flex items-center justify-between">
                   <div>
                     <span className="text-[10px] text-white/50 uppercase tracking-wider">Estimated Value</span>
-                    <div className="text-lg font-bold text-[#25d366]">{enquiry.value}</div>
+                    <div className="text-lg font-bold text-white">{enquiry.value}</div>
                   </div>
                 </div>
               </div>
@@ -132,7 +132,7 @@ export function PhoneMockup({ city, trade }: { city?: string; trade?: string }) 
               transition={{ delay: 1 }}
               className="flex gap-1.5 justify-end mt-3"
             >
-              <button className="flex-1 flex items-center justify-center gap-1 px-2 py-2 rounded-full bg-[#25d366] text-white text-[10px] sm:text-xs font-bold shadow-lg hover:bg-[#128c7e] transition-colors">
+              <button className="flex-1 flex items-center justify-center gap-1 px-2 py-2 rounded-full bg-[#25d366] text-[#0b141a] text-[10px] sm:text-xs font-bold shadow-lg hover:bg-[#128c7e] transition-colors">
                 <CheckCircle2 className="w-3.5 h-3.5" />
                 Accept
               </button>
@@ -155,7 +155,7 @@ export function PhoneMockup({ city, trade }: { city?: string; trade?: string }) 
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-[#25d366]" />
                 <div>
-                  <div className="text-[#25d366] text-sm font-bold">ENQUIRY ACCEPTED</div>
+                  <div className="text-white text-sm font-bold">ENQUIRY ACCEPTED</div>
                   <div className="text-white text-xs">{enquiry.jobType} • {enquiry.area}</div>
                 </div>
               </div>

@@ -121,13 +121,13 @@ export default function FairUsePolicy() {
                   <tr className="border-t border-white/10">
                     <td className="px-4 py-3 font-medium">Starter (£59/mo)</td>
                     <td className="px-4 py-3">Up to 100 minutes</td>
-                    <td className="px-4 py-3">Up to 8 booked enquiries</td>
+                    <td className="px-4 py-3">Up to 10 booked enquiries</td>
                     <td className="px-4 py-3">1</td>
                   </tr>
                   <tr className="border-t border-white/10">
                     <td className="px-4 py-3 font-medium">Growth (£125/mo)</td>
                     <td className="px-4 py-3">Up to 300 minutes</td>
-                    <td className="px-4 py-3">Up to 16 booked enquiries</td>
+                    <td className="px-4 py-3">Up to 20 booked enquiries</td>
                     <td className="px-4 py-3">2</td>
                   </tr>
                   <tr className="border-t border-white/10">

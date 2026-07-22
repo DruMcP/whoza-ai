@@ -7,9 +7,6 @@ import Image from "next/image"
 
 import { trackCTA } from "@/lib/gtag"
 
-/* ── Single trust pill (post-CTA, high visibility) ── */
-const trustPill = "Pay per job booked, not per call answered."
-
 /* ── Live counter constants (ONS-derived) ── */
 const CALL_RATE = 0.31        // calls per second across UK trades
 const AVG_JOB_VALUE = 120     // £
@@ -49,6 +46,26 @@ export function Hero() {
       (entries) => {
         if (entries[0].isIntersecting) {
           if (timerRef.current) return
+
+          // Reduced motion: show final values immediately
+          const prefersReducedMotion = typeof window !== 'undefined' &&
+            window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+          if (prefersReducedMotion) {
+            const now = Date.now();
+            const todayStart = new Date(new Date().toDateString()).getTime();
+            const secondsElapsed = Math.floor((now - todayStart) / 1000);
+            const missedCalls = Math.floor(secondsElapsed * CALL_RATE);
+            const lostValue = Math.floor(missedCalls * AVG_JOB_VALUE * CONVERSION_RATE);
+            if (missedCallsRef.current) {
+              missedCallsRef.current.textContent = missedCalls.toLocaleString("en-GB");
+            }
+            if (lostValueRef.current) {
+              lostValueRef.current.textContent = `£${lostValue.toLocaleString("en-GB")}`;
+            }
+            return;
+          }
+
           let elapsed = 0
           timerRef.current = setInterval(() => {
             elapsed += 1
@@ -103,76 +120,55 @@ export function Hero() {
           
           {/* ══ LEFT: Text column ══ */}
           <div className="max-w-[540px] lg:max-w-none">
-            {/* H1 — FIX 4: Emotional hook */}
+            {/* Eyebrow */}
+            <motion.div
+              {...fadeUpVisible(0.05)}
+              className="mb-3"
+            >
+              <span className="inline-flex items-center gap-2 text-sm text-slate-400">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" aria-hidden="true" />
+                Every missed call is a job going to your competitor.
+              </span>
+            </motion.div>
+
+            {/* H1 */}
             <motion.h1
               initial={{ opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="headline-primary font-sans text-[clamp(36px,5vw,56px)] font-extrabold leading-[1.05] tracking-tight text-white mb-2"
+              className="headline-primary font-sans text-[clamp(36px,5vw,56px)] font-extrabold leading-[1.05] tracking-tight text-white mb-3"
             >
-              <span className="block">Never Miss a Job Again</span>
-              {/* FIX 3: Emerald gradient headline */}
-              <span className="block headline-emerald">Your phone rings. Katie answers.</span>
+              <span className="block">Never miss a job again.</span>
             </motion.h1>
 
-            {/* Secondary headline */}
+            {/* Tagline 1 */}
+            <motion.p
+              {...fadeUpVisible(0.2)}
+              className="font-sans text-[clamp(20px,2.5vw,28px)] font-bold text-white mb-1"
+            >
+              Your phone rings. Katie answers 24/7.
+            </motion.p>
+
+            {/* Tagline 2 */}
+            <motion.p
+              {...fadeUpVisible(0.25)}
+              className="font-sans text-[clamp(20px,2.5vw,28px)] font-bold text-white mb-4"
+            >
+              While you work, we book — Job done.
+            </motion.p>
+
+            {/* Sub-paragraph */}
             <motion.p
               {...fadeUpVisible(0.3)}
-              className="subheadline font-sans text-lg font-semibold text-emerald-500 mb-4 leading-snug tracking-tight"
+              className="font-sans text-lg leading-relaxed text-slate-400 mb-6 tracking-wide"
             >
-              While you work, we book - Job done.
+              The AI Receptionist built for UK trades. Answers every call, qualifies real jobs, and sends them to your WhatsApp. No apps. No contract. Live in 30 minutes.
             </motion.p>
 
-            {/* FIX 8: "The / AI /" typography treatment */}
-            <motion.p
+            {/* CTA Group */}
+            <motion.div
               {...fadeUpVisible(0.4)}
-              className="font-sans text-lg leading-relaxed text-slate-400 mb-3 tracking-wide"
-            >
-              <span className="the-small">The</span>{" "}
-              <span className="ai-large">AI</span>{" "}
-              receptionist and Revenue Team built in Scotland for UK trades.
-              Answers every call, qualifies real jobs, sends them to your WhatsApp.
-            </motion.p>
-
-            {/* FIX 7: Bold anchor value prop with left green border */}
-            <motion.p
-              {...fadeUpVisible(0.5)}
-              className="value-prop font-sans text-lg font-bold leading-snug text-white mb-2"
-            >
-              No apps. No contract. Live in 30 minutes.
-            </motion.p>
-
-            {/* Keep your number / No contract badges */}
-            <motion.div
-              {...fadeUpVisible(0.55)}
-              className="flex flex-wrap gap-2 mb-5"
-            >
-              <span className="check-item inline-flex items-center gap-1.5 bg-white/10 text-white/80 text-sm font-medium px-3 py-1.5 rounded-full border border-white/10">
-                <span className="text-emerald-400">✓</span>
-                Set up and live in 30 minutes — no tech skills needed
-              </span>
-              <span className="check-item inline-flex items-center gap-1.5 bg-white/10 text-white/80 text-sm font-medium px-3 py-1.5 rounded-full border border-white/10">
-                <span className="text-emerald-400">✓</span>
-                Keep your existing number
-              </span>
-              <span className="check-item inline-flex items-center gap-1.5 bg-white/10 text-white/80 text-sm font-medium px-3 py-1.5 rounded-full border border-white/10">
-                <span className="text-emerald-400">✓</span>
-                24/7 answering — including bank holidays
-              </span>
-              <span className="check-item inline-flex items-center gap-1.5 bg-white/10 text-white/80 text-sm font-medium px-3 py-1.5 rounded-full border border-white/10">
-                <span className="text-emerald-400">✓</span>
-                7-day free trial, no credit card required
-              </span>
-              <span className="check-item inline-flex items-center gap-1.5 bg-white/10 text-white/80 text-sm font-medium px-3 py-1.5 rounded-full border border-white/10">
-                <span className="text-emerald-400">✓</span>
-                No call recording — transcripts only
-              </span>
-            </motion.div>
-
-            {/* CTA Group — FIX 5: Emerald gradient button */}
-            <motion.div
-              {...fadeUpVisible(0.6)}
-              className="flex flex-col gap-3 mb-3 items-start"
+              className="flex flex-col gap-3 mb-5 items-start"
             >
               <button
                 onClick={handlePrimaryCTA}
@@ -192,17 +188,28 @@ export function Hero() {
                   </>
                 )}
               </button>
-
             </motion.div>
 
-            {/* Trust Pill */}
+            {/* Trust Pills — 4 items */}
             <motion.div
-              {...fadeUpVisible(0.7)}
-              className="mb-6"
+              {...fadeUpVisible(0.5)}
+              className="flex flex-wrap gap-2"
             >
-              <span className="inline-flex items-center gap-2 bg-emerald-500/15 text-emerald-400 text-sm font-bold px-4 py-2.5 rounded-full border border-emerald-500/25 shadow-[0_0_20px_rgba(16,185,129,0.1)]">
-                <span className="text-emerald-300 font-extrabold text-base">✓</span>
-                {trustPill}
+              <span className="check-item inline-flex items-center gap-1.5 bg-white/10 text-white/80 text-sm font-medium px-3 py-1.5 rounded-full border border-white/10">
+                <span className="text-emerald-400">✓</span>
+                Pay only for jobs you accept
+              </span>
+              <span className="check-item inline-flex items-center gap-1.5 bg-white/10 text-white/80 text-sm font-medium px-3 py-1.5 rounded-full border border-white/10">
+                <span className="text-emerald-400">✓</span>
+                Keep your existing number
+              </span>
+              <span className="check-item inline-flex items-center gap-1.5 bg-white/10 text-white/80 text-sm font-medium px-3 py-1.5 rounded-full border border-white/10">
+                <span className="text-emerald-400">✓</span>
+                No call recording
+              </span>
+              <span className="check-item inline-flex items-center gap-1.5 bg-white/10 text-white/80 text-sm font-medium px-3 py-1.5 rounded-full border border-white/10">
+                <span className="text-emerald-400">✓</span>
+                No tech skills needed
               </span>
             </motion.div>
           </div>
@@ -243,11 +250,12 @@ export function Hero() {
       <section
         ref={counterRef}
         className="hero-stats text-center relative"
+        aria-label="Live statistics"
       >
         {/* Stats headline — same solid emerald as subheadline */}
-        <h3 className="stats-headline font-sans text-xl font-bold text-emerald-400 mb-4">
+        <h2 className="stats-headline font-sans text-xl font-bold text-emerald-400 mb-4">
           That&apos;s why we built Katie&apos;s Revenue Team
-        </h3>
+        </h2>
 
         <p className="text-base text-slate-400 leading-normal m-0">
           <span className="sr-only">
@@ -256,7 +264,7 @@ export function Hero() {
           Since you opened this page, UK trades have missed{" "}
           <span
             ref={missedCallsRef}
-            className="font-bold text-[#D63031] [font-variant-numeric:tabular-nums]"
+            className="font-bold text-red-400 [font-variant-numeric:tabular-nums]"
             aria-live="polite"
           >
             0
@@ -264,7 +272,7 @@ export function Hero() {
           calls. That&apos;s approximately{" "}
           <span
             ref={lostValueRef}
-            className="font-bold text-[#D63031] [font-variant-numeric:tabular-nums]"
+            className="font-bold text-red-400 [font-variant-numeric:tabular-nums]"
           >
             £0
           </span>{" "}

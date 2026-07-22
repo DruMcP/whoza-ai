@@ -138,7 +138,7 @@ export function FAQ() {
   }, [openItem])
 
   return (
-    <section id="faq" className="section-padding-lg bg-white relative">
+    <section id="faq" className="section-padding-lg bg-white relative" aria-label="Frequently asked questions">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div

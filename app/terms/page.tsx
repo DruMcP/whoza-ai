@@ -138,7 +138,7 @@ export default function TermsOfService() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
-                <span><strong>Job allowances:</strong> Each plan includes a set number of booked jobs per month: Starter 8, Growth 16, Pro 40, Scale 100. Additional accepted jobs beyond your included allowance are charged at your plan's per-extra-job rate: Starter £4.50, Growth £3.25, Pro £2.75, Scale £2.25.</span>
+                <span><strong>Job allowances:</strong> Each plan includes a set number of booked jobs per month: Starter 10, Growth 20, Pro 40, Scale 100. Additional accepted jobs beyond your included allowance are charged at your plan's per-extra-job rate: Starter £4.50, Growth £3.25, Pro £2.75, Scale £2.25.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>

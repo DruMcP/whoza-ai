@@ -22,7 +22,7 @@ const tradeLinks: Record<string, string> = {
 
 export function SocialProofBand() {
   return (
-    <section className="py-6 bg-[var(--navy-900)] border-y border-white/10 dark-section">
+    <section className="py-6 bg-[var(--navy-900)] border-y border-white/10 dark-section" aria-label="Trust badges">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Horizontal scroll container */}
         <div className="relative">
@@ -58,7 +58,7 @@ export function SocialProofBand() {
 
 export function TrustBadgeBand() {
   return (
-    <section className="py-12 bg-[var(--off-white)]">
+    <section className="py-12 bg-[var(--off-white)]" aria-label="Social proof">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0 }}
@@ -102,7 +102,7 @@ export function StatsBand() {
   ]
 
   return (
-    <section className="py-16 bg-[var(--navy-900)] dark-section">
+    <section className="py-16 bg-[var(--navy-900)] dark-section" aria-label="Customer testimonials">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (

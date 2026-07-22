@@ -51,7 +51,7 @@ const phases = [
 
 export function HowWhozaWorks() {
   return (
-    <section id="how-it-works" className="py-20 lg:py-28 bg-[var(--off-white)]">
+    <section id="how-it-works" className="py-20 lg:py-28 bg-[var(--off-white)]" aria-label="How it works">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div

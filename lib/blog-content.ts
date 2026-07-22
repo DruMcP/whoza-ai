@@ -6139,7 +6139,7 @@ Built in Scotland. Working for UK trades.`,
         },
         {
           question: "How much does Whoza.ai cost?",
-          answer: "Starter is £59/month for 8 jobs, Growth is £125/month for 16 jobs, Pro is £230/month for 40 jobs, and Scale is £399/month for 100 jobs. Extra jobs are £4.50 (Starter), £3.25 (Growth), £2.75 (Pro), £2.25 (Scale). Annual billing gives you 2 months free.",
+          answer: "Starter is £59/month for 10 jobs, Growth is £125/month for 20 jobs, Pro is £230/month for 40 jobs, and Scale is £399/month for 100 jobs. Extra jobs are £4.50 (Starter), £3.25 (Growth), £2.75 (Pro), £2.25 (Scale). Annual billing gives you 2 months free.",
         },
         {
           question: "Can I keep my existing business phone number?",

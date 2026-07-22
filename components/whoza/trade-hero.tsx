@@ -17,7 +17,7 @@ export function TradeHero({ tradeData }: TradeHeroProps) {
   const [showWaitlist, setShowWaitlist] = useState(false)
 
   return (
-    <section className="relative min-h-screen bg-[var(--navy-900)] overflow-hidden pt-20 lg:pt-24">
+    <section className="relative min-h-screen bg-[var(--navy-900)] overflow-hidden pt-20 lg:pt-24" aria-label="Introduction">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-[var(--katie-blue)]/20 rounded-full blur-[120px] opacity-50" />
@@ -123,9 +123,9 @@ export function TradeHero({ tradeData }: TradeHeroProps) {
             className="relative"
           >
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-              <h3 className="text-xl font-semibold text-white mb-6">
+              <h2 className="text-xl font-semibold text-white mb-6">
                 Why {tradeData.display} Choose Whoza
-              </h3>
+              </h2>
               <div className="space-y-4">
                 {tradeData.solutionStatements.slice(0, 4).map((solution, i) => (
                   <div key={i} className="flex items-start gap-3">

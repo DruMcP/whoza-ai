@@ -38,7 +38,7 @@ export function VideoExplainer() {
   }
 
   return (
-    <section id="video-explainer" className="section-padding bg-[var(--off-white)]" ref={sectionRef}>
+    <section id="video-explainer" className="section-padding bg-[var(--off-white)]" ref={sectionRef} aria-label="Video explainer">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -107,10 +107,10 @@ export function VideoExplainer() {
                     {/* Enquiry Card */}
                     <div className="bg-[#005c4b] rounded-b-xl p-4 sm:p-5">
                       <div className="flex items-center gap-2 mb-3">
-                        <div className="px-2 py-0.5 rounded bg-[#25d366] text-white text-xs font-bold uppercase tracking-wide">
+                        <div className="px-2 py-0.5 rounded bg-[#25d366] text-[#0b141a] text-xs font-bold uppercase tracking-wide">
                           New Enquiry
                         </div>
-                        <div className="text-[#25d366] text-xs font-medium">Just now</div>
+                        <div className="text-white text-xs font-medium">Just now</div>
                       </div>
 
                       <div className="space-y-2.5 text-white">
@@ -129,7 +129,7 @@ export function VideoExplainer() {
 
                         <div className="flex items-center gap-2">
                           <Clock className="w-4 h-4 text-[#25d366] shrink-0" />
-                          <span className="text-xs text-[#25d366] font-medium">High Priority</span>
+                          <span className="text-xs text-white font-medium">High Priority</span>
                         </div>
 
                         <div className="pt-2 border-t border-white/20 flex items-center justify-between">
@@ -140,7 +140,7 @@ export function VideoExplainer() {
 
                       {/* Action Buttons */}
                       <div className="flex gap-2 mt-4">
-                        <div className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-full bg-[#25d366] text-white text-sm font-medium">
+                        <div className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-full bg-[#25d366] text-[#0b141a] text-sm font-medium">
                           <CheckCircle2 className="w-4 h-4" />
                           Accept
                         </div>

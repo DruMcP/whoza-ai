@@ -116,7 +116,7 @@ export default function BlogPostPage() {
         "name": "How much does AI call answering cost for heating engineers?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "AI call answering for heating engineers starts at £59/month for the Starter plan. The Growth plan at £125/month includes 16 jobs and Zapier integration. Most heating engineers recover the cost within the first captured call."
+          "text": "AI call answering for heating engineers starts at £59/month for the Starter plan. The Growth plan at £125/month includes 20 jobs and Zapier integration. Most heating engineers recover the cost within the first captured call."
         }
       },
       {

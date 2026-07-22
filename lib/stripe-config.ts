@@ -8,15 +8,15 @@ export const STRIPE_PRODUCTS = {
     monthlyPrice: 5900, // £59.00 in pence
     perJobPrice: 450,    // £4.50 in pence
     includedMinutes: 100,
-    jobsIncluded: 8,
+    jobsIncluded: 10,
   },
   growth: {
     name: "Growth",
-    description: "Full revenue system — 16 jobs included",
+    description: "Full revenue system — 20 jobs included",
     monthlyPrice: 12500, // £125.00 in pence
     perJobPrice: 325,    // £3.25 in pence
     includedMinutes: 300,
-    jobsIncluded: 16,
+    jobsIncluded: 20,
   },
   pro: {
     name: "Pro",

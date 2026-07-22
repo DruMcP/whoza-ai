@@ -14,7 +14,7 @@ export function DashboardPreview() {
   const stats = statsConfig
 
   return (
-    <section className="py-20 lg:py-32 bg-[var(--navy-900)] relative overflow-hidden dark-section">
+    <section className="py-20 lg:py-32 bg-[var(--navy-900)] relative overflow-hidden dark-section" aria-label="Dashboard preview">
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[var(--katie-blue)]/10 rounded-full blur-[120px]" />

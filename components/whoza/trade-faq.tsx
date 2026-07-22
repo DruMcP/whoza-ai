@@ -13,7 +13,7 @@ export function TradeFAQ({ tradeData }: TradeFAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section id="faq" className="py-20 bg-white">
+    <section id="faq" className="py-20 bg-white" aria-label="Frequently asked questions">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <motion.h2

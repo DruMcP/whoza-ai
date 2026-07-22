@@ -14,7 +14,7 @@ export function CityContentSection({ locationData }: CityContentSectionProps) {
   const CurrencyIcon = locationData.country === "uk" ? PoundSterling : DollarSign
 
   return (
-    <section className="section-padding bg-[var(--navy-900)] dark-section">
+    <section className="section-padding bg-[var(--navy-900)] dark-section" aria-label="City content">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* City Overview */}
         <div className="text-center mb-12">

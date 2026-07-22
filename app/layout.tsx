@@ -280,7 +280,7 @@ export default function RootLayout({
                   "itemOffered": {
                     "@type": "Service",
                     "name": "Starter Plan",
-                    "description": "AI call answering for sole traders — 8 jobs/month"
+                    "description": "AI call answering for sole traders — 10 jobs/month"
                   },
                   "price": "59",
                   "priceCurrency": "GBP",
@@ -291,7 +291,7 @@ export default function RootLayout({
                   "itemOffered": {
                     "@type": "Service",
                     "name": "Growth Plan",
-                    "description": "AI call answering for growing teams — 16 jobs/month"
+                    "description": "AI call answering for growing teams — 20 jobs/month"
                   },
                   "price": "125",
                   "priceCurrency": "GBP",

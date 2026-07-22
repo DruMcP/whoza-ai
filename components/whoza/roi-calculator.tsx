@@ -36,7 +36,7 @@ export function ROICalculator() {
   const roiDisplay = roiRaw > 2000 ? "2,000%+" : `${roiRaw.toLocaleString()}%`
 
   return (
-    <section className="py-20 lg:py-32 bg-[var(--navy-900)]">
+    <section className="py-20 lg:py-32 bg-[var(--navy-900)]" aria-label="ROI calculator">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div

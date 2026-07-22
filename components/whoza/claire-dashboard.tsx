@@ -65,7 +65,7 @@ export function ClaireDashboard({ clientId = "demo" }: ClaireDashboardProps) {
   if (!metrics) return null
 
   return (
-    <section className="py-16 bg-[var(--navy-900)] dark-section">
+    <section className="py-16 bg-[var(--navy-900)] dark-section" aria-label="Review dashboard">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
@@ -87,6 +87,7 @@ export function ClaireDashboard({ clientId = "demo" }: ClaireDashboardProps) {
             <button
               key={p}
               onClick={() => setPeriod(p)}
+              aria-pressed={period === p}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 period === p
                   ? "bg-[var(--rex-green)] text-white"

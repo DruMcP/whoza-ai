@@ -64,7 +64,7 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="section-padding-lg bg-white">
+    <section id="how-it-works" className="section-padding-lg bg-white" aria-label="How it works">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div

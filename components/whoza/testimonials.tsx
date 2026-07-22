@@ -47,7 +47,7 @@ export function Testimonials() {
   const [showWaitlist, setShowWaitlist] = useState(false)
 
   return (
-    <section id="testimonials" className="section-padding-lg bg-[var(--off-white)] overflow-hidden">
+    <section id="testimonials" className="section-padding-lg bg-[var(--off-white)] overflow-hidden" aria-label="Customer testimonials">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.div

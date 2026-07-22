@@ -107,7 +107,7 @@ export function HeroPhoneMockup() {
                 <div>&#128295; Boiler Repair</div>
                 <div>&#128205; Bristol, BS16</div>
                 <div>&#128176; &#163;250 &#8211; &#163;450</div>
-                <div className="text-[#D63031]">&#9889; High Priority</div>
+                <div className="text-red-400">&#9889; High Priority</div>
               </div>
               {/* Time + read receipts */}
               <div className={styles.waMessageTime}>

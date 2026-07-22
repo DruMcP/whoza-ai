@@ -50,7 +50,7 @@ export function GeoProofBand({ city, country, jobsThisWeek: forcedJobs }: GeoPro
   const nearbyCity2 = geoConfig.cities[(cityIndex + 2) % geoConfig.cities.length]
 
   return (
-    <section className="py-6 bg-[var(--navy-900)] border-y border-white/10">
+    <section className="py-6 bg-[var(--navy-900)] border-y border-white/10" aria-label="Location proof">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-12">
           {/* Enquiries Captured Stat */}

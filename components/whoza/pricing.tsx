@@ -58,7 +58,7 @@ export function Pricing() {
       description: "Capture + deliver jobs",
       price: String(config.pricing.starter),
       perJob: "4.50",
-      jobsIncluded: "8",
+      jobsIncluded: "10",
       includedMinutes: "100",
       period: "month",
       color: "blue" as keyof typeof colorStyles,
@@ -79,7 +79,7 @@ export function Pricing() {
         { text: "Live transfer to you — if you're available, Katie puts them through", included: true },
         { text: "No contract — cancel anytime", included: true },
         { text: "Monthly competitor analysis", included: true },
-        { text: "8 booked enquiries included", included: true },
+        { text: "10 booked enquiries included", included: true },
       ],
       cta: "Start free trial",
       stripePlanId: "starter",
@@ -89,14 +89,14 @@ export function Pricing() {
       description: "Full revenue system",
       price: String(config.pricing.growth),
       perJob: "3.25",
-      jobsIncluded: "16",
+      jobsIncluded: "20",
       includedMinutes: "300",
       period: "month",
       color: "green" as keyof typeof colorStyles,
       popular: true,
       features: [
         { text: "Everything in Starter", included: true },
-        { text: "16 booked enquiries included", included: true },
+        { text: "20 booked enquiries included", included: true },
         { text: "Downloadable call logs (CSV/Excel)", included: true },
         { text: "Weekly summary email (Monday 8am)", included: true },
         { text: "Zapier / Make integration", included: true },
@@ -173,7 +173,7 @@ export function Pricing() {
   ]
 
   return (
-    <section id="pricing" className="py-24 lg:py-40 bg-[var(--off-white)]">
+    <section id="pricing" className="py-24 lg:py-40 bg-[var(--off-white)]" aria-label="Pricing">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div

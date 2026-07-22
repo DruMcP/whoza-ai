@@ -45,14 +45,16 @@ function Cell({ value }: { value: boolean }) {
   if (value) {
     return (
       <div className="flex items-center justify-center gap-2">
-        <Check className="w-5 h-5 text-[var(--rex-green)]" />
+        <Check className="w-5 h-5 text-[var(--rex-green)]" aria-hidden="true" />
+        <span className="sr-only">Yes</span>
         <span className="hidden sm:inline text-sm text-[var(--rex-green)] font-medium">Yes</span>
       </div>
     )
   }
   return (
     <div className="flex items-center justify-center gap-2">
-      <X className="w-5 h-5 text-red-400" />
+      <X className="w-5 h-5 text-red-400" aria-hidden="true" />
+      <span className="sr-only">No</span>
       <span className="hidden sm:inline text-sm text-red-400 font-medium">No</span>
     </div>
   )
@@ -60,7 +62,7 @@ function Cell({ value }: { value: boolean }) {
 
 export function ComparisonTable() {
   return (
-    <section className="section-padding-lg bg-[var(--off-white)]">
+    <section className="section-padding-lg bg-[var(--off-white)]" aria-label="Feature comparison">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -88,16 +90,16 @@ export function ComparisonTable() {
           <table className="w-full min-w-[340px]">
               <thead>
                 <tr className="border-b-2 border-[var(--navy-900)]">
-                  <th className="text-left py-3 px-3 sm:py-5 sm:px-6 text-xs sm:text-sm font-medium text-[var(--slate-500)] uppercase tracking-wider">
+                  <th scope="col" className="text-left py-3 px-3 sm:py-5 sm:px-6 text-xs sm:text-sm font-medium text-[var(--slate-500)] uppercase tracking-wider">
                     Outcome
                   </th>
-                  <th className="py-3 px-2 sm:py-5 sm:px-4 text-center min-w-[80px] sm:min-w-[140px]">
+                  <th scope="col" className="py-3 px-2 sm:py-5 sm:px-4 text-center min-w-[80px] sm:min-w-[140px]">
                     <div className="inline-flex flex-col items-center">
                       <span className="font-bold text-[var(--katie-blue)] text-sm sm:text-lg">whoza.ai</span>
                       <span className="text-xs text-[var(--slate-500)] mt-1">Complete system</span>
                     </div>
                   </th>
-                  <th className="py-3 px-2 sm:py-5 sm:px-4 text-center min-w-[80px] sm:min-w-[140px]">
+                  <th scope="col" className="py-3 px-2 sm:py-5 sm:px-4 text-center min-w-[80px] sm:min-w-[140px]">
                     <div className="inline-flex flex-col items-center">
                       <span className="font-medium text-[var(--navy-900)] text-sm sm:text-lg">Typical AI</span>
                       <span className="text-xs text-[var(--slate-500)] mt-1">Answers calls only</span>
@@ -108,9 +110,9 @@ export function ComparisonTable() {
               <tbody>
                 {/* Based In row */}
                 <tr className="bg-[var(--navy-900)]/5">
-                  <td className="py-3 px-3 sm:py-4 sm:px-6 text-xs sm:text-sm text-[var(--navy-900)] font-medium">
+                  <th scope="row" className="py-3 px-3 sm:py-4 sm:px-6 text-xs sm:text-sm text-[var(--navy-900)] font-medium text-left">
                     Based In
-                  </td>
+                  </th>
                   <td className="py-3 px-2 sm:py-4 sm:px-4 text-center">
                     <span className="text-sm font-semibold text-[var(--katie-blue)]">Built in Scotland</span>
                   </td>
@@ -139,9 +141,9 @@ export function ComparisonTable() {
                           (groupIndex + rowIndex) % 2 === 0 ? "bg-[var(--off-white)]/30" : ""
                         }
                       >
-                        <td className="py-3 px-3 sm:py-4 sm:px-6 text-xs sm:text-sm text-[var(--navy-900)] font-medium">
+                        <th scope="row" className="py-3 px-3 sm:py-4 sm:px-6 text-xs sm:text-sm text-[var(--navy-900)] font-medium text-left">
                           {row.outcome}
-                        </td>
+                        </th>
                         <td className="py-3 px-2 sm:py-4 sm:px-4">
                           <Cell value={row.whoza} />
                         </td>

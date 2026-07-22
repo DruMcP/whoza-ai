@@ -34,6 +34,19 @@ export function MissedCallCounter() {
   useEffect(() => {
     if (!isVisible) return
 
+    // Reduced motion: skip the ticking animation, show initial values only
+    const prefersReducedMotion = typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion) {
+      // Show a representative static value without continuous updates
+      const staticCalls = Math.floor(MISSED_CALLS_PER_SECOND * 60 * 5); // 5 min worth
+      const staticRevenue = Math.floor(staticCalls * AVG_JOB_VALUE);
+      setMissedCalls(staticCalls);
+      setLostRevenue(staticRevenue);
+      return;
+    }
+
     const interval = setInterval(() => {
       setMissedCalls((prev) => prev + Math.floor(MISSED_CALLS_PER_SECOND * 3.2))
       setLostRevenue((prev) => prev + Math.floor(MISSED_CALLS_PER_SECOND * 3.2 * AVG_JOB_VALUE))

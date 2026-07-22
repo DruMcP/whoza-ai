@@ -55,7 +55,7 @@ export function RevenueSystem() {
   const { config } = useLocale()
 
   return (
-    <section className="section-padding-lg bg-white relative overflow-hidden">
+    <section className="section-padding-lg bg-white relative overflow-hidden" aria-label="Revenue system">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.02]" style={{
         backgroundImage: `radial-gradient(circle at 1px 1px, var(--navy-900) 1px, transparent 0)`,

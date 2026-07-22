@@ -79,7 +79,7 @@ export function MeetTheTeam({ businessName = "Thompson Plumbing" }: { businessNa
     return agent
   })
   return (
-    <section id="team" className="section-padding-lg bg-[var(--off-white)] relative">
+    <section id="team" className="section-padding-lg bg-[var(--off-white)] relative" aria-label="Meet the team">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div

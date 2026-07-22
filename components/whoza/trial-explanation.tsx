@@ -49,7 +49,7 @@ export function TrialExplanation() {
   const [showWaitlist, setShowWaitlist] = useState(false)
 
   return (
-    <section id="trial" className="section-padding-lg bg-[var(--off-white)]">
+    <section id="trial" className="section-padding-lg bg-[var(--off-white)]" aria-label="Setup process">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div

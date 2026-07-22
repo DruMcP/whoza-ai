@@ -150,7 +150,7 @@ export default function RexDashboard() {
   )
 
   return (
-    <section className="min-h-screen bg-[var(--navy-900)] py-20">
+    <section className="min-h-screen bg-[var(--navy-900)] py-20" aria-label="Dashboard">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-8">

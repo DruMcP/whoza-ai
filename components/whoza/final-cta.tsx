@@ -20,7 +20,7 @@ export function FinalCTA() {
   
   return (
     <>
-    <section id="final-cta" className="section-padding-xl bg-[var(--navy-900)] relative overflow-hidden dark-section">
+    <section id="final-cta" className="section-padding-xl bg-[var(--navy-900)] relative overflow-hidden dark-section" aria-label="Call to action">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[var(--katie-blue)]/10 rounded-full blur-[120px]" />

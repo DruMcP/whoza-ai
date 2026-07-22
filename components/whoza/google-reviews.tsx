@@ -14,7 +14,7 @@ const reviews = [
 
 export function GoogleReviews() {
   return (
-    <section className="section-padding bg-[var(--off-white)]">
+    <section className="section-padding bg-[var(--off-white)]" aria-label="Google reviews">
       <ReviewSchema
         reviews={reviews.map(({ name, text, rating }) => ({ name, text, rating }))}
         itemReviewed={{ name: "Whoza.ai — AI Voice Agents for UK Tradespeople", url: "https://whoza.ai" }}

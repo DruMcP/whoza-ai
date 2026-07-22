@@ -392,8 +392,8 @@
    ========================================= */
 
 .persona-card[data-persona="katie"]{
-  background:linear-gradient(135deg, #fff 0%, rgba(214,48,49,.04) 100%);
-  border-top:3px solid #D63031;
+  background:linear-gradient(135deg, #fff 0%, rgba(185,28,28,.04) 100%);
+  border-top:3px solid #B91C1C;
 }
 .persona-card[data-persona="mark"]{
   background:linear-gradient(135deg, #fff 0%, rgba(15,76,117,.04) 100%);
