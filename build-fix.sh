@@ -1,1 +1,0 @@
-cd /root/.openclaw/workspace/whoza-ai-v0 && npx next build 2>&1 | tail -40

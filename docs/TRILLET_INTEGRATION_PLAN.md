@@ -1,347 +1,216 @@
-# Trillet Integration Plan for whoza.ai
+# Trillet.ai Integration — Pre-Trial Preparation
 
-**Research Date:** May 2, 2026
-**Platform:** Trillet AI (https://trillet.ai)
-**Status:** Ready for evaluation
-
----
-
-## What Trillet Is
-
-Trillet AI is a **white-label voice AI platform** purpose-built for agencies. It provides:
-- AI-powered voice agents that answer calls 24/7
-- Messaging agents (SMS, WhatsApp)
-- REST API + Web SDK for integration
-- Built-in compliance (HIPAA, GDPR, TCPA)
-- Website scraping for instant agent knowledge
-- Calendar integration (Google, Outlook, Calendly)
-- CRM integrations (GoHighLevel, HubSpot, Salesforce)
-
-**Architecture:** Native platform (not a wrapper like VoiceAIWrapper/Vapify)
+**Trial Window:** May 23–29, 2026  
+**Goal:** Flip from MOCK → LIVE in under 30 minutes when credentials arrive  
+**Last Updated:** 2026-05-14
 
 ---
 
-## Integration Requirements
+## ✅ Pre-Trial Checklist
 
-### 1. API Access
+### Infrastructure
+- [x] Staging Supabase project isolated (`ligjstpxqtkurvteyyhw.supabase.co`)
+- [x] All Trillet tables created (`calls`, `enquiries`, `appointments`, `leads`)
+- [x] RLS policies active on all tables
+- [x] Indexes on `call_id`, `status`, `created_at`
+- [x] Webhook delivery log table (`webhook_deliveries`) for debugging
+- [x] `enquiries` table enhanced with `whatsapp_provider`, `whatsapp_message_id`, `client_whatsapp_number`
 
-**Base URL:** `https://api.trillet.ai/v1` (assumed — docs reference REST API)
+### Codebase
+- [x] `@trillet-ai/web-sdk` v1.7.1 installed
+- [x] `lib/trillet-config.ts` — mock mode detection, graceful fallbacks
+- [x] `lib/trillet-server.ts` — server-side SDK wrapper with retry logic
+- [x] `lib/trillet-types.ts` — complete TypeScript interfaces
+- [x] `lib/trillet-webhook.ts` — 6 event handlers:
+  - `call.started` → create `calls` record
+  - `call.completed` (outcome: `qualified`) → upsert `calls` + create `enquiries`
+  - `call.transferred` → log + mark call
+  - `appointment.booked` → create `appointments`
+  - `lead.captured` → create `leads`
+  - `voicemail.left` → create `enquiries` (type: `voicemail`)
+- [x] `app/api/trillet-webhook/route.ts` — HMAC signature verification (bypassed when secret empty)
+- [x] `app/api/enquiries/route.ts` — CRUD API with Supabase integration
+- [x] `app/api/health/trillet/route.ts` — diagnostic endpoint (`GET /api/health/trillet`)
+- [x] `components/whoza/trillet-voice-widget.tsx` — React component with WebRTC call UI
+- [x] `supabase/functions/whatsapp-deliver/index.ts` — **Provider-agnostic WhatsApp delivery**
+  - Supports: `stub`, `twilio`, `meta`, `trillet`
+  - Configurable via `WHATSAPP_PROVIDER` env var
+  - Auto-looks up enquiry by `call_id` when `callId` is passed
+  - Formats messages with urgency emojis and structured layout
+  - Updates `enquiries` table with delivery metadata
+- [x] `.env.example` — all required variables with inline docs
+- [x] `scripts/test-trillet-mock.js` — mock mode test suite
 
-**Authentication:** API Key (Bearer token)
-- Sign up at: `app.trillet.ai`
-- Generate API key from dashboard
-- Pass as header: `Authorization: Bearer {api_key}`
+### Test Infrastructure
+- [x] `scripts/test-trillet-mock.js` simulates full lifecycle:
+  1. `call.started` → inserts `calls`
+  2. `call.completed` (outcome: `qualified`) → upserts `calls` + creates `enquiries`
+  3. `appointment.booked` → inserts `appointments`
+  4. Verifies all records in Supabase
+- [x] Test script handles network sandbox gracefully
 
-**Required Headers:**
-```
-Content-Type: application/json
-Authorization: Bearer <your-api-key>
-```
+---
 
-### 2. Core API Endpoints
+## 🔧 Flip-to-Live Steps (30-Minute Checklist)
 
-Based on Trillet docs, these are the key APIs:
+When Trillet trial API key arrives, do in this order:
 
-| API | Purpose | Use for whoza.ai |
-|-----|---------|------------------|
-| **Call Agents API** | Create/manage voice agents | Build "Katie" agent |
-| **Omni Flow Agents API** | Create messaging agents | Build WhatsApp/SMS agents |
-| **Call Flows API** | Design conversation flows | Configure call handling |
-| **Voice Calls API** | Initiate/manage calls | Outbound callbacks |
-| **Conversations API** | Manage interactions | Unified conversation view |
-
-### 3. Web SDK for Frontend
-
-**Package:** `@trillet-ai/web-sdk` (npm)
-
-**Use case:** Embed "Talk to Katie" voice widget on whoza.ai website
-
-**Installation:**
+### Step 1: Credentials (5 min)
 ```bash
-npm install @trillet-ai/web-sdk
+# Paste into .env.staging
+TRILLET_API_KEY=tk_live_xxxxxxxxxxxx
+TRILLET_WEBHOOK_SECRET=whsec_xxxxxxxxxxxx
+
+# Choose WhatsApp provider
+WHATSAPP_PROVIDER=twilio  # or meta | trillet
+TWILIO_ACCOUNT_SID=ACxxxx
+TWILIO_AUTH_TOKEN=xxxx
+TWILIO_WHATSAPP_FROM=+44xxxx
 ```
 
-**Basic Implementation:**
-```typescript
-import { TrilletAgent } from '@trillet-ai/web-sdk';
-
-const agent = new TrilletAgent({
-  workspaceId: 'your-workspace-id',
-  agentId: 'your-agent-id',
-  mode: 'voice',
-});
-
-// Start call (no API key needed for public calls)
-await agent.startPublicCall();
-```
-
-**SDK Requirements:**
-- Modern browser with WebRTC support
-- HTTPS or localhost (secure context)
-- Microphone permission
-- React/Next.js compatible
-
-### 4. Webhook Integration
-
-**Incoming Webhooks:** Trillet can POST to your endpoint when:
-- Call starts/ends
-- Appointment booked
-- Lead captured
-- Voicemail left
-
-**Outgoing Webhooks:** Your app can trigger Trillet via:
-- REST API calls
-- Make.com integration
-- n8n integration
-
-**Webhook Payload Format:**
-```json
-{
-  "variables": {
-    "customer_name": "John Doe",
-    "order_status": "shipped"
-  }
-}
-```
-
----
-
-## Pricing Structure
-
-### For Agencies (White-Label)
-
-| Plan | Monthly | Sub-accounts | Per-minute |
-|------|---------|--------------|------------|
-| **Studio** | $99/mo | Up to 3 | $0.09/min |
-| **Agency** | $299/mo | Unlimited | $0.09/min |
-
-### For Small Business (Direct)
-
-| Plan | Monthly | Included | Per-minute |
-|------|---------|----------|------------|
-| **Receptionist** | $49/mo | 150 min | $0.09/min after |
-
-### Cost Calculation Example
-
-**Scenario:** Agency with 10 clients, 1,000 min/client/month
-- Platform fee: $299/month
-- Usage: 10,000 min × $0.09 = $900/month
-- **Total cost: ~$1,200/month**
-
-**Revenue potential:** Charge clients £297-997/month
-- At £500/client × 10 = £5,000/month revenue
-- **Gross margin: ~75-80%**
-
----
-
-## Onboarding Process
-
-### Phase 1: Discovery (30-45 min)
-Gather from client:
-- Primary use case (receptionist, lead qual, booking)
-- Business hours
-- Common caller questions
-- Calendar/CRM systems
-- Call volume estimates
-- Compliance needs
-
-### Phase 2: Configuration (15-30 min)
-1. **Website scraping:** Paste client URL → auto-generates knowledge
-2. **FAQ customization:** Add specific Q&A
-3. **Calendar integration:** Connect Google/Outlook/Calendly
-4. **Call routing:** Set transfer numbers, voicemail, escalation
-5. **Branding:** Apply white-label (domain, logo, colors)
-
-### Phase 3: Testing (1-2 hours)
-- Basic inquiry test
-- Appointment booking test
-- Edge case test
-- Call transfer test
-- After-hours test
-- Multi-channel test (SMS/WhatsApp)
-
-### Phase 4: Training + Handoff (30 min)
-- Record training videos (Loom)
-- Provide documentation
-- Schedule follow-up check-ins
-
-**Total setup time:** 3-5 hours of agency time across 48-72 hours
-
----
-
-## How whoza.ai Can Integrate
-
-### Option A: White-Label Reseller (Recommended)
-
-whoza.ai becomes a Trillet agency partner:
-
-1. **Sign up for Trillet Agency plan** ($299/mo)
-2. **Create sub-accounts** for each client
-3. **Configure agents** using Trillet dashboard
-4. **White-label** with whoza.ai branding
-5. **Bill clients** at your markup (£297-997/mo)
-
-**Integration points:**
-- whoza.ai landing page → Trillet sub-account creation
-- whoza.ai dashboard → Trillet API for call data
-- whoza.ai CRM → Trillet webhook for lead sync
-
-### Option B: API Integration (Custom)
-
-Build custom integration using Trillet REST API:
-
-**Required endpoints:**
-```
-POST /v1/call-agents          # Create Katie agent
-POST /v1/call-flows            # Define conversation flow
-POST /v1/voice-calls           # Initiate outbound calls
-GET  /v1/conversations         # Fetch call history
-POST /v1/webhooks              # Configure webhooks
-```
-
-**Authentication:**
-```typescript
-const headers = {
-  'Authorization': `Bearer ${TRILLET_API_KEY}`,
-  'Content-Type': 'application/json'
-};
-```
-
-**Webhook handler in whoza.ai:**
-```typescript
-// app/api/trillet-webhook/route.ts
-export async function POST(req: Request) {
-  const payload = await req.json();
-  
-  // Handle events:
-  // - call.completed → Update dashboard
-  // - appointment.booked → Send to client WhatsApp
-  // - lead.captured → Add to Supabase
-  
-  return Response.json({ received: true });
-}
-```
-
----
-
-## Technical Implementation Plan
-
-### Step 1: Sign up + API keys
-- Register at `app.trillet.ai`
-- Choose Agency plan ($299/mo)
-- Generate API key
-- Configure webhook URL: `https://whoza.ai/api/trillet-webhook`
-
-### Step 2: Create "Katie" agent
+### Step 2: Verify Health (2 min)
 ```bash
-curl -X POST https://api.trillet.ai/v1/call-agents \
-  -H "Authorization: Bearer $TRILLET_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "Katie - whoza.ai Receptionist",
-    "voice": "en-GB-female-1",
-    "language": "en-GB",
-    "knowledge_base": "https://whoza.ai",
-    "greeting": "Hello, youve reached whoza.ai. How can I help?",
-    "capabilities": ["appointment_booking", "lead_capture", "faq"]
-  }'
+curl https://whoza-ai-staging-349.netlify.app/api/health/trillet
 ```
+Expected: `status: "ready"` with all checks green.
 
-### Step 3: Install Web SDK on whoza.ai
+### Step 3: Enable Webhook Verification (3 min)
 ```bash
-npm install @trillet-ai/web-sdk
+# In app/api/trillet-webhook/route.ts
+# Remove the early-return bypass for empty TRILLET_WEBHOOK_SECRET
+# (Already documented in code comments)
 ```
 
-Add to hero component:
-```tsx
-import { TrilletAgent } from '@trillet-ai/web-sdk';
+### Step 4: Run Mock Test on Staging (5 min)
+```bash
+# From project root on staging environment
+node scripts/test-trillet-mock.js
+```
+Expected: All 3 test phases pass, records verified in Supabase.
 
-// "Talk to Katie" button
-const agent = new TrilletAgent({
-  workspaceId: 'whoza-workspace',
-  agentId: 'katie-agent-id',
-  mode: 'voice'
-});
+### Step 5: Place Live Test Call (10 min)
+1. Log into Trillet dashboard
+2. Provision test phone number
+3. Configure agent (Katie) with whoza workspace
+4. Place test call
+5. Verify webhook fires to `/api/trillet-webhook`
+6. Check Supabase: `calls`, `enquiries` tables populated
+7. Check WhatsApp delivery (if provider configured)
 
-await agent.startPublicCall();
+### Step 6: Production Deploy (5 min)
+```bash
+git checkout master
+git merge v0-staging
+# Copy .env.staging → .env.production (update URLs)
+git push origin master
+# Netlify auto-deploys
 ```
 
-### Step 4: Webhook handler
-Create `app/api/trillet-webhook/route.ts`:
-- Receive call events
-- Update Supabase database
-- Send WhatsApp notifications to clients
-- Update dashboard metrics
+---
 
-### Step 5: Dashboard integration
-- Fetch call data from Trillet API
-- Display in whoza.ai client dashboard
-- Show metrics: calls answered, jobs booked, revenue
+## 📊 WhatsApp Provider Comparison
+
+| Provider | Setup Time | Cost/Msg | UK Number | Notes |
+|----------|-----------|----------|-----------|-------|
+| **Twilio** | 15 min | ~£0.005 | ✅ | Fastest. Sandbox mode for testing. |
+| **Meta Business API** | 2–4 hrs | ~£0.002 | ✅ | Cheapest long-term. Needs Business Verification. |
+| **Trillet Native** | 0 min | Unknown | ? | Check with Trillet team if included. |
+| **stub** | 0 min | £0 | N/A | Logs only. Safe for dev. |
+
+**Recommendation:** Start with Twilio for trial (fastest). Switch to Meta for production (cheapest).
 
 ---
 
-## Compliance & Security
+## 🧪 Test Scenarios
 
-**Trillet includes:**
-- ✅ HIPAA compliance (healthcare)
-- ✅ GDPR compliance (EU clients)
-- ✅ TCPA compliance (US outbound)
-- ✅ SOC 2 certification
-- ✅ Call recording with consent
-- ✅ Encryption in transit + at rest
+### Scenario A: Qualified Call → WhatsApp Lead
+1. Call Trillet test number
+2. Katie answers, qualifies job
+3. Webhook fires `call.completed` with `outcome: "qualified"`
+4. Enquiry created in Supabase
+5. WhatsApp message sent to tradesman
+6. Tradesman taps "Accept Job"
+7. Enquiry status → `accepted`
 
-**whoza.ai requirements:**
-- Privacy policy update (call recording disclosure)
-- Terms of service (AI agent usage)
-- Data processing agreement (if needed)
-- Client consent flow for call recording
+### Scenario B: Voicemail
+1. Call outside hours
+2. Voicemail recorded
+3. Webhook fires `voicemail.left`
+4. Enquiry created (type: `voicemail`)
+5. WhatsApp notification with recording link
 
----
-
-## Comparison: Trillet vs whoza.ai Current Setup
-
-| Feature | whoza.ai (current) | Trillet |
-|---------|-------------------|---------|
-| Voice AI | Partner fulfillment | Native (built-in) |
-| Control | Limited | Full API control |
-| Branding | Partial | Full white-label |
-| Setup time | Unknown | 30 min per client |
-| Cost structure | Unknown | $0.09/min + $299/mo |
-| Compliance | Unknown | HIPAA/GDPR/TCPA |
-| SDK | None | React/Next.js SDK |
-| Webhooks | None | Built-in |
+### Scenario C: Spam/Unqualified
+1. Call comes in
+2. Katie determines it's spam
+3. Webhook fires `call.completed` with `outcome: "unqualified"`
+4. Call logged, no enquiry created
+5. Optionally: WhatsApp summary sent anyway
 
 ---
 
-## Recommended Next Steps
+## 🔒 Security Checklist (Before Production)
 
-1. **Sign up for Trillet free trial** (Studio plan, $99/mo)
-2. **Create test agent** for whoza.ai
-3. **Install Web SDK** on staging site
-4. **Test voice widget** on landing page
-5. **Configure webhook** endpoint
-6. **Build client onboarding flow**
-7. **Migrate from partner** to Trillet (if beneficial)
-
----
-
-## Resources
-
-- **Trillet Docs:** https://docs.trillet.ai
-- **API Reference:** https://docs.trillet.ai/api-reference
-- **Web SDK:** https://www.npmjs.com/package/@trillet-ai/web-sdk
-- **GitHub SDK:** https://github.com/comms-channel/trillet-sdk
-- **Pricing:** https://trillet.ai/pricing
-- **Agency Resources:** Skool community (included with plan)
+- [ ] TRILLET_WEBHOOK_SECRET set (signature verification active)
+- [ ] HMAC bypass removed from `trillet-webhook/route.ts`
+- [ ] Webhook endpoint uses HTTPS
+- [ ] Supabase RLS policies reviewed for production
+- [ ] `SUPABASE_SERVICE_ROLE_KEY` rotated after staging testing
+- [ ] `TRILLET_API_KEY` scoped to minimum permissions
+- [ ] Error logs don't leak PII (phone numbers, names)
+- [ ] GDPR: Call recordings have retention policy (auto-delete after 90 days?)
 
 ---
 
-## Contact
+## 📞 Open Questions for Trillet Team
 
-- **Trillet Support:** Via dashboard or docs.trillet.ai
-- **Agency Partnerships:** Via Skool community
-- **Sales:** https://trillet.ai
+1. **WhatsApp native?** Does Trillet handle WhatsApp delivery natively, or do we integrate separately?
+2. **Trial scope:** What call volume is included in trial? Any rate limits?
+3. **UK numbers:** Can we provision a UK number for testing?
+4. **Webhook retries:** What's Trillet's retry policy? (We return 500 for failures)
+5. **Recording storage:** How long are recordings retained? Can we auto-download?
+6. **Custom variables:** Can we pass `client_id`, `postcode`, `trade_type` via dialplan?
+7. **Pricing post-trial:** Per-minute vs per-call pricing for UK numbers?
+8. **Agent config:** Can we configure Katie's voice/persona via API?
 
 ---
 
-**Summary:** Trillet provides a complete white-label voice AI platform with REST API, Web SDK, and built-in compliance. whoza.ai can integrate as an agency partner ($299/mo) with full API control, or build a custom integration. The platform is purpose-built for reselling — no engineering team required.
+## 🚨 Emergency Rollback
+
+If production breaks:
+
+```bash
+# 1. Revert to mock mode instantly
+git revert HEAD --no-edit  # or manually empty TRILLET_API_KEY
+
+# 2. Deploy
+netlify deploy --site 97f8a30c-8ba7-4e98-aef4-cfee00eb91dd --prod --dir=.next
+
+# 3. Verify
+# - Homepage loads without Trillet dependency
+# - Webhook endpoint returns 401 (safe)
+# - No calls accidentally placed
+```
+
+---
+
+## 📁 Key Files
+
+| File | Purpose |
+|------|---------|
+| `lib/trillet-config.ts` | SDK config, mock mode, env vars |
+| `lib/trillet-server.ts` | Server-side Trillet client |
+| `lib/trillet-webhook.ts` | Webhook event processors |
+| `lib/trillet-types.ts` | TypeScript interfaces |
+| `app/api/trillet-webhook/route.ts` | HTTP webhook handler |
+| `app/api/health/trillet/route.ts` | Health check endpoint |
+| `app/api/enquiries/route.ts` | Enquiries REST API |
+| `components/whoza/trillet-voice-widget.tsx` | WebRTC voice widget |
+| `supabase/functions/whatsapp-deliver/index.ts` | WhatsApp delivery (provider-agnostic) |
+| `scripts/test-trillet-mock.js` | Mock test suite |
+| `.env.example` | Env var template |
+| `supabase/migrations/20260508000001_create_trillet_tables.sql` | Trillet tables |
+| `supabase/migrations/20260514000001_enhance_whatsapp_delivery.sql` | WhatsApp delivery enhancements |
+
+---
+
+*Ready for trial. Will execute flip-to-live on May 23 when credentials arrive.*
