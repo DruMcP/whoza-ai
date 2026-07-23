@@ -36,6 +36,14 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "ai-search-for-uk-trades",
+    title: "Your Next Customer Won't Google You. They'll Ask AI.",
+    excerpt: "UK customers have quietly switched to AI search — over half of UK adults now use ChatGPT (Ofcom, 2025). Here's what it means for trades, and how to be the name the AI recommends. Founder analysis, every stat sourced.",
+    readTime: "9 min read",
+    date: "2026-07-23",
+    category: "AI Search",
+  },
+  {
     slug: "research/aeo-ai-search-optimisation-2026",
     title: "Answer Engine Optimisation: Why Small Businesses Must Prepare for AI-Driven Search or Risk Invisibility in 2026 and Beyond",
     excerpt: "Independent research report on Answer Engine Optimisation (AEO). Data from BrightEdge, Ahrefs, Semrush, Princeton, HubSpot, Google, and 30+ authoritative sources. 48% AI Overview coverage, 60% zero-click rate, 14.2% AI conversion rate.",

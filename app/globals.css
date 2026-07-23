@@ -83,7 +83,7 @@
 
 /* FIX 3: Emerald gradient headline */
 .headline-emerald {
-  background: linear-gradient(135deg, #34d399 0%, #10b981 50%, #059669 100%);
+  background: linear-gradient(135deg, #34d399 0%, #10b981 50%, #047857 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -99,7 +99,7 @@
   font-size: 16px;
   font-weight: 600;
   color: #ffffff;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, #10b981 0%, #047857 100%);
   border: none;
   cursor: pointer;
   box-shadow:
@@ -265,14 +265,14 @@
   /* whoza.ai Brand Colors */
   --katie-blue: oklch(0.55 0.22 260);
   --mark-grey: oklch(0.55 0.02 250);
-  --rex-green: #059669;
+  --rex-green: #047857;
   --rex-green-hover: #065F46;
   --claire-amber: oklch(0.65 0.18 65);
 
   /* New Hero Design System Tokens */
   --charcoal: #1A1D23;
   --green-primary: #10B981;
-  --green-secondary: #059669;
+  --green-secondary: #047857;
   --text-primary: #FFFFFF;
   --text-secondary: #9CA3AF;
   --text-muted: #6B7280;
@@ -331,7 +331,7 @@
   --color-coral: #B91C1C;
   --color-coral-hover: #B82020;
   --color-teal: #10B981;
-  --color-teal-dark: #059669;
+  --color-teal-dark: #047857;
   --color-emerald: #008B6B;
   --color-gold: #B07D12;
   --color-teal-secondary: #0F4C75;
@@ -447,7 +447,7 @@
 }
 
 :focus-visible {
-  outline: 3px solid #059669;
+  outline: 3px solid #047857;
   outline-offset: 2px;
   box-shadow: none;
   border-radius: 2px;

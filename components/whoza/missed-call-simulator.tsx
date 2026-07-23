@@ -82,7 +82,7 @@ export function MissedCallSimulator({ className = "" }: MissedCallSimulatorProps
               onClick={handleSeeKatieAnswer}
               className="px-5 py-2.5 rounded-lg font-medium transition-all hover:scale-[1.02] active:scale-[0.98] text-white text-sm min-h-[48px]"
               style={{
-                background: "linear-gradient(135deg, #059669, #10B981)",
+                background: "linear-gradient(135deg, #047857, #10B981)",
               }}
             >
               See Katie answer
@@ -182,7 +182,7 @@ export function MissedCallSimulator({ className = "" }: MissedCallSimulatorProps
               onClick={handleReplay}
               className="px-5 py-2.5 rounded-lg font-medium transition-all hover:scale-[1.02] active:scale-[0.98] text-white text-sm min-h-[48px]"
               style={{
-                background: "linear-gradient(135deg, #059669, #10B981)",
+                background: "linear-gradient(135deg, #047857, #10B981)",
               }}
             >
               See it in action

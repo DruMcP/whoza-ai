@@ -431,7 +431,7 @@ export function KatieAudioPlayer({ isOpen, onClose }: KatieAudioPlayerProps) {
                     onClick={togglePlay}
                     className="p-3 rounded-full transition-colors"
                     style={{
-                      background: "linear-gradient(135deg, #059669, #10B981)",
+                      background: "linear-gradient(135deg, #047857, #10B981)",
                       color: "#FFFFFF",
                       minHeight: 48,
                       minWidth: 48,

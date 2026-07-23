@@ -313,7 +313,7 @@
   position:absolute;
   inset:-2px;
   border-radius:18px;
-  background:linear-gradient(135deg, #10B981, #059669);
+  background:linear-gradient(135deg, #10B981, #047857);
   z-index:-1;
   animation:glowPulse 3s ease-in-out infinite;
   opacity:.8;
@@ -488,7 +488,7 @@
   top:0;
   left:0;
   height:3px;
-  background:linear-gradient(90deg, #10B981, #059669);
+  background:linear-gradient(90deg, #10B981, #047857);
   z-index:9999;
   transform-origin:left;
   transform:scaleX(var(--progress, 0));

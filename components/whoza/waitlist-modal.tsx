@@ -245,7 +245,7 @@ export function WaitlistModal({ onClose, source = "homepage", plan }: WaitlistMo
                 disabled={isSubmitting}
                 className="w-full flex items-center justify-center gap-2 font-semibold text-white transition-all hover:scale-[1.01] active:scale-[0.99] disabled:opacity-70 mt-2"
                 style={{
-                  background: "linear-gradient(135deg, #059669, #10B981)",
+                  background: "linear-gradient(135deg, #047857, #10B981)",
                   height: 56,
                   borderRadius: 12,
                   fontSize: 16,
