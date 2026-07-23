@@ -188,7 +188,19 @@ export function Hero() {
                   </>
                 )}
               </button>
+              {/* CTA microcopy */}
+              <p className="text-sm text-slate-400 font-medium">
+                No card needed · Cancel anytime · Live in 30 minutes
+              </p>
             </motion.div>
+
+            {/* Positioning line */}
+            <motion.p
+              {...fadeUpVisible(0.45)}
+              className="font-sans text-[clamp(20px,2.2vw,24px)] font-extrabold text-white mb-4 pt-4 border-t border-white/10"
+            >
+              Not just a receptionist. <span className="text-emerald-400">A revenue team.</span>
+            </motion.p>
 
             {/* Trust Pills — 4 items */}
             <motion.div
