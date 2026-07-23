@@ -211,7 +211,7 @@ export function AudioDemo() {
     <section
       ref={sectionRef}
       id="katie-demo-audio"
-      className="section-padding-lg relative overflow-hidden"
+      className="section-padding-lg relative overflow-hidden bg-[#0f172a] text-white"
       aria-label="Katie audio demo"
       aria-label="Katie demo audio player"
     >
