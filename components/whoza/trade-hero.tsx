@@ -12,8 +12,10 @@ interface TradeHeroProps {
   tradeData: TradeData
 }
 
+import { stableNum } from "@/lib/stable-num"
+
 export function TradeHero({ tradeData }: TradeHeroProps) {
-  const jobsThisWeek = Math.floor(Math.random() * 60) + 80
+  const jobsThisWeek = stableNum(tradeData.slug, 80, 140)
   const [showWaitlist, setShowWaitlist] = useState(false)
 
   return (
