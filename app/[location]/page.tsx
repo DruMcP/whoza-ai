@@ -1,3 +1,4 @@
+import { stableNum } from "@/lib/stable-num"
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { Header } from "@/components/whoza/header"
@@ -107,7 +108,7 @@ export default async function LocationPage({ params }: PageProps) {
     notFound()
   }
 
-  const jobsThisWeek = Math.floor(Math.random() * 80) + 100
+  const jobsThisWeek = stableNum(location, 100, 180)
 
   return (
     <LocaleProvider forcedCountry={locationData.country}>
