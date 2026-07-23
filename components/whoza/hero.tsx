@@ -188,10 +188,6 @@ export function Hero() {
                   </>
                 )}
               </button>
-              {/* CTA microcopy */}
-              <p className="text-sm text-slate-400 font-medium">
-                No card needed · Cancel anytime · Live in 30 minutes
-              </p>
             </motion.div>
 
             {/* Positioning line */}
