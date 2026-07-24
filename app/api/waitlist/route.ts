@@ -12,7 +12,11 @@ function getResend() {
 
 // Use anon key for waitlist persistence — email_subscribers has public INSERT RLS
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ""
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY || ""
+const supabaseKey =
+  process.env.SUPABASE_ANON_KEY ||
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||
+  process.env.SUPABASE_SERVICE_ROLE_KEY ||
+  ""
 const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null
 
 // Admin emails that must receive notification on every signup
