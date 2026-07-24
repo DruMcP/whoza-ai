@@ -1,5 +1,6 @@
 import { Resend } from "resend"
 import { NextRequest, NextResponse } from "next/server"
+import { createClient } from "@supabase/supabase-js"
 
 export const dynamic = "force-dynamic"
 
@@ -9,10 +10,17 @@ function getResend() {
   return new Resend(key)
 }
 
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ""
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || ""
+const supabase = createClient(supabaseUrl, supabaseServiceKey)
+
+// Admin emails that must receive notification on every signup
+const ADMIN_EMAILS = ["dru@whoza.ai", "support@whoza.ai"]
+
 export async function POST(req: NextRequest) {
+  let body: any
   try {
-    const resend = getResend()
-    const body = await req.json()
+    body = await req.json()
     const { email, trade, phone, postcode, source, plan } = body
 
     if (!email || !trade) {
@@ -24,12 +32,38 @@ export async function POST(req: NextRequest) {
 
     const timestamp = new Date().toISOString()
 
-    // Send notification to Dru
-    await resend.emails.send({
-      from: "Whoza.ai <pilot@whoza.ai>",
-      to: "dru@whoza.ai",
-      subject: `New Pilot Signup — ${trade} — ${email}`,
-      text: `
+    // ── 1. Persist signup to database (backup / audit trail) ──
+    try {
+      await supabase.from("email_subscribers").upsert(
+        {
+          email: email.toLowerCase().trim(),
+          source: source ? `waitlist-${source}` : "waitlist-homepage",
+          page_path: plan ? `/waitlist?plan=${plan}` : "/waitlist",
+          metadata: {
+            trade,
+            phone: phone || null,
+            postcode: postcode || null,
+            plan: plan || null,
+            source: source || "homepage",
+            signed_up_at: timestamp,
+          },
+        },
+        { onConflict: "email" }
+      )
+    } catch (dbErr) {
+      // Non-blocking: log but continue so user experience isn't affected
+      console.error("Waitlist DB persistence error:", dbErr)
+    }
+
+    const resend = getResend()
+
+    // ── 2. Send admin notifications (both emails, independent) ──
+    const adminNotificationPromises = ADMIN_EMAILS.map((adminEmail) =>
+      resend.emails.send({
+        from: "Whoza.ai <pilot@whoza.ai>",
+        to: adminEmail,
+        subject: `New Pilot Signup — ${trade} — ${email}`,
+        text: `
 New pilot signup:
 
 Email: ${email}
@@ -39,11 +73,12 @@ Postcode: ${postcode || "Not provided"}
 Source: ${source || "homepage"}
 Plan: ${plan || "N/A"}
 Timestamp: ${timestamp}
-      `.trim(),
-    })
+        `.trim(),
+      })
+    )
 
-    // Send confirmation to user
-    await resend.emails.send({
+    // ── 3. Send user confirmation ──
+    const userConfirmationPromise = resend.emails.send({
       from: "Dru @ Whoza.ai <pilot@whoza.ai>",
       to: email,
       subject: "You're on the whoza.ai pilot list",
@@ -66,9 +101,53 @@ Got questions? Reply to this email or contact Dru at dru@whoza.ai.
       `.trim(),
     })
 
-    return NextResponse.json({ success: true })
+    // Run all sends concurrently; failures are isolated
+    const [adminResults, userResult] = await Promise.all([
+      Promise.allSettled(adminNotificationPromises),
+      userConfirmationPromise,
+    ])
+
+    // Log any admin notification failures
+    const adminFailures = adminResults.filter((r) => r.status === "rejected")
+    if (adminFailures.length > 0) {
+      console.error(
+        "Admin notification failures:",
+        adminFailures.map((f) => (f as PromiseRejectedResult).reason)
+      )
+    }
+
+    // If user confirmation failed, we still return success (they're in the DB)
+    // but log the error for follow-up
+    if (!userResult || userResult.error) {
+      console.error("User confirmation email failed:", userResult?.error)
+    }
+
+    return NextResponse.json({
+      success: true,
+      notified: ADMIN_EMAILS.length - adminFailures.length,
+      total: ADMIN_EMAILS.length,
+    })
   } catch (error) {
     console.error("Waitlist submission error:", error)
+    // Even on total failure, if we have the email, try to store it
+    if (body?.email) {
+      try {
+        await supabase.from("email_subscribers").upsert(
+          {
+            email: body.email.toLowerCase().trim(),
+            source: "waitlist-error-recovery",
+            metadata: {
+              trade: body.trade || "unknown",
+              error: String(error).slice(0, 500),
+              recovered_at: new Date().toISOString(),
+            },
+          },
+          { onConflict: "email" }
+        )
+      } catch {
+        /* best effort */
+      }
+    }
     return NextResponse.json(
       { error: "Failed to process submission" },
       { status: 500 }
