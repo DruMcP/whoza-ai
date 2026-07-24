@@ -10,9 +10,10 @@ function getResend() {
   return new Resend(key)
 }
 
+// Use anon key for waitlist persistence — email_subscribers has public INSERT RLS
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ""
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || ""
-const supabase = createClient(supabaseUrl, supabaseServiceKey)
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY || ""
+const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null
 
 // Admin emails that must receive notification on every signup
 const ADMIN_EMAILS = ["dru@whoza.ai", "support@whoza.ai"]
@@ -33,26 +34,31 @@ export async function POST(req: NextRequest) {
     const timestamp = new Date().toISOString()
 
     // ── 1. Persist signup to database (backup / audit trail) ──
-    try {
-      await supabase.from("email_subscribers").upsert(
-        {
-          email: email.toLowerCase().trim(),
-          source: source ? `waitlist-${source}` : "waitlist-homepage",
-          page_path: plan ? `/waitlist?plan=${plan}` : "/waitlist",
-          metadata: {
-            trade,
-            phone: phone || null,
-            postcode: postcode || null,
-            plan: plan || null,
-            source: source || "homepage",
-            signed_up_at: timestamp,
+    if (supabase) {
+      try {
+        const { error: dbError } = await supabase.from("email_subscribers").upsert(
+          {
+            email: email.toLowerCase().trim(),
+            source: source ? `waitlist-${source}` : "waitlist-homepage",
+            page_path: plan ? `/waitlist?plan=${plan}` : "/waitlist",
+            metadata: {
+              trade,
+              phone: phone || null,
+              postcode: postcode || null,
+              plan: plan || null,
+              source: source || "homepage",
+              signed_up_at: timestamp,
+            },
           },
-        },
-        { onConflict: "email" }
-      )
-    } catch (dbErr) {
-      // Non-blocking: log but continue so user experience isn't affected
-      console.error("Waitlist DB persistence error:", dbErr)
+          { onConflict: "email" }
+        )
+        if (dbError) {
+          console.error("Waitlist DB persistence error:", dbError)
+        }
+      } catch (dbErr) {
+        // Non-blocking: log but continue so user experience isn't affected
+        console.error("Waitlist DB persistence exception:", dbErr)
+      }
     }
 
     const resend = getResend()
@@ -129,8 +135,8 @@ Got questions? Reply to this email or contact Dru at dru@whoza.ai.
     })
   } catch (error) {
     console.error("Waitlist submission error:", error)
-    // Even on total failure, if we have the email, try to store it
-    if (body?.email) {
+    // Even on total failure, if we have the email and supabase, try to store it
+    if (body?.email && supabase) {
       try {
         await supabase.from("email_subscribers").upsert(
           {
