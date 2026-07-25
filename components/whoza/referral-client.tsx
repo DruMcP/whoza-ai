@@ -5,6 +5,16 @@ import { motion } from "framer-motion"
 import { Copy, Check, Gift, Users, TrendingUp, ArrowRight, Share2, MessageCircle, Mail } from "lucide-react"
 import { trackCTA, trackEvent } from "@/lib/gtag"
 
+// Generate a consistent demo referral code for this browser
+function getOrCreateReferralCode(): string {
+  const stored = localStorage.getItem("whoza_referral_code")
+  if (stored) return stored
+  const code = Math.random().toString(36).substring(2, 6).toUpperCase() +
+               Math.random().toString(36).substring(2, 6).toUpperCase()
+  localStorage.setItem("whoza_referral_code", code)
+  return code
+}
+
 interface ReferralStats {
   total: number
   pending: number
@@ -18,70 +28,55 @@ export function ReferralClient() {
   const [referralCode, setReferralCode] = useState<string>("")
   const [referralLink, setReferralLink] = useState<string>("")
   const [copied, setCopied] = useState(false)
-  const [email, setEmail] = useState("")
   const [friendEmail, setFriendEmail] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
   const [stats, setStats] = useState<ReferralStats | null>(null)
   const [isLoading, setIsLoading] = useState(true)
-
-  // Mock auth check — in production this would come from Supabase auth
-  // For now, we show a generic referral page that works for both logged-in and logged-out users
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [hasGenerated, setHasGenerated] = useState(false)
 
   useEffect(() => {
-    // Check if user is logged in (mock — would use Supabase auth in production)
-    const checkAuth = async () => {
-      try {
-        // In production: const { data: { session } } = await supabase.auth.getSession()
-        // For now, show the public referral page
-        setIsLoggedIn(false)
-        setIsLoading(false)
-      } catch {
-        setIsLoading(false)
-      }
+    const code = getOrCreateReferralCode()
+    setReferralCode(code)
+    setReferralLink(`https://whoza.ai/?ref=${code}`)
+    setIsLoading(false)
+
+    // Try to fetch stats if we have a contractor_id in localStorage
+    const contractorId = localStorage.getItem("whoza_contractor_id")
+    if (contractorId) {
+      fetch(`/api/referral/stats?contractor_id=${contractorId}`)
+        .then(r => r.json())
+        .then(data => {
+          if (data.success) setStats(data.stats)
+        })
+        .catch(() => {/* ignore */})
     }
-    checkAuth()
   }, [])
 
   const handleCopyLink = async () => {
-    const link = referralLink || `https://whoza.ai/?ref=${referralCode || "YOURCODE"}`
+    if (!referralLink) return
     try {
-      await navigator.clipboard.writeText(link)
+      await navigator.clipboard.writeText(referralLink)
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
-      trackEvent("referral_link_copied", { code: referralCode })
+      trackEvent("referral_link_copied", { code: referralCode, location: "refer-page" })
     } catch {
-      // Fallback
-      const textArea = document.createElement("textarea")
-      textArea.value = link
-      document.body.appendChild(textArea)
-      textArea.select()
-      document.execCommand("copy")
-      document.body.removeChild(textArea)
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     }
   }
 
   const handleShareWhatsApp = () => {
-    const link = referralLink || `https://whoza.ai/?ref=${referralCode || "YOURCODE"}`
-    const text = `Check out Whoza.ai — an AI receptionist that answers missed calls 24/7 and books jobs via WhatsApp. Use my link for a free month: ${link}`
+    if (!referralLink) return
+    const text = `Check out Whoza.ai — an AI receptionist that answers missed calls 24/7 and books jobs via WhatsApp. Use my link: ${referralLink}`
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank")
     trackCTA("Share Referral WhatsApp", "refer-page")
   }
 
   const handleShareEmail = () => {
-    const link = referralLink || `https://whoza.ai/?ref=${referralCode || "YOURCODE"}`
+    if (!referralLink) return
     const subject = "Try Whoza.ai — AI receptionist for trades"
-    const body = `Hi,
-
-I thought you'd be interested in Whoza.ai — an AI receptionist that answers missed calls 24/7 and sends job details straight to WhatsApp.
-
-Use my referral link and we both get a free month:
-${link}
-
-Cheers!`
+    const body = `Hi,\n\nI thought you'd be interested in Whoza.ai — an AI receptionist that answers missed calls 24/7 and sends job details straight to WhatsApp.\n\nUse my link:\n${referralLink}\n\nCheers!`
     window.open(`mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, "_blank")
     trackCTA("Share Referral Email", "refer-page")
   }
@@ -106,7 +101,7 @@ Cheers!`
 
       const data = await response.json()
 
-      if (data.success) {
+      if (data.success || data.message?.includes("already been referred")) {
         setSubmitStatus("success")
         setFriendEmail("")
         trackEvent("referral_email_sent", { code: referralCode })
@@ -219,116 +214,41 @@ Cheers!`
               Your Referral Link
             </h2>
             <p className="text-[var(--slate-500)] text-center mb-6">
-              {isLoggedIn
-                ? "Share this link with other tradespeople"
-                : "Enter your email to get your unique referral link"}
+              Share this link with other tradespeople
             </p>
 
-            {!isLoggedIn ? (
-              <div className="space-y-4">
-                <div className="flex gap-2">
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your email address"
-                    className="flex-1 px-4 py-3 rounded-lg border border-[var(--border)] bg-[var(--off-white)] text-[var(--navy-900)] placeholder:text-[var(--slate-400)] focus:outline-none focus:ring-2 focus:ring-[var(--katie-blue)]"
-                  />
-                  <button
-                    onClick={() => {
-                      if (email) {
-                        setReferralCode("DEMO1234")
-                        setReferralLink(`https://whoza.ai/?ref=DEMO1234`)
-                        trackCTA("Get Referral Link", "refer-page")
-                      }
-                    }}
-                    className="px-6 py-3 bg-[var(--rex-green)] text-white font-medium rounded-lg hover:bg-[var(--rex-green-hover)] transition-colors whitespace-nowrap"
-                  >
-                    Get Link
-                  </button>
+            <div className="space-y-4">
+              <div className="flex gap-2">
+                <div className="flex-1 px-4 py-3 rounded-lg border border-[var(--border)] bg-[var(--off-white)] text-[var(--navy-900)] font-mono text-sm break-all">
+                  {referralLink || "Loading..."}
                 </div>
-                <p className="text-sm text-[var(--slate-400)] text-center">
-                  You'll need to sign up for Whoza.ai to track your referrals and claim rewards.
-                </p>
+                <button
+                  onClick={handleCopyLink}
+                  className="px-4 py-3 bg-[var(--navy-900)] text-white font-medium rounded-lg hover:bg-[var(--navy-800)] transition-colors"
+                  aria-label="Copy referral link"
+                >
+                  {copied ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
+                </button>
               </div>
-            ) : (
-              <div className="space-y-4">
-                <div className="flex gap-2">
-                  <div className="flex-1 px-4 py-3 rounded-lg border border-[var(--border)] bg-[var(--off-white)] text-[var(--navy-900)] font-mono text-sm break-all">
-                    {referralLink || "Loading..."}
-                  </div>
-                  <button
-                    onClick={handleCopyLink}
-                    className="px-4 py-3 bg-[var(--navy-900)] text-white font-medium rounded-lg hover:bg-[var(--navy-800)] transition-colors"
-                    aria-label="Copy referral link"
-                  >
-                    {copied ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
-                  </button>
-                </div>
 
-                {/* Share Buttons */}
-                <div className="flex gap-3 justify-center">
-                  <button
-                    onClick={handleShareWhatsApp}
-                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366]/20 transition-colors font-medium"
-                  >
-                    <MessageCircle className="w-4 h-4" />
-                    WhatsApp
-                  </button>
-                  <button
-                    onClick={handleShareEmail}
-                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/20 transition-colors font-medium"
-                  >
-                    <Mail className="w-4 h-4" />
-                    Email
-                  </button>
-                </div>
+              {/* Share Buttons */}
+              <div className="flex gap-3 justify-center">
+                <button
+                  onClick={handleShareWhatsApp}
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366]/20 transition-colors font-medium"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  WhatsApp
+                </button>
+                <button
+                  onClick={handleShareEmail}
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/20 transition-colors font-medium"
+                >
+                  <Mail className="w-4 h-4" />
+                  Email
+                </button>
               </div>
-            )}
-
-            {/* Referral Link Display (when generated) */}
-            {referralLink && !isLoggedIn && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                className="mt-6 pt-6 border-t border-[var(--border)]"
-              >
-                <div className="flex gap-2 mb-4">
-                  <div className="flex-1 px-4 py-3 rounded-lg border border-[var(--border)] bg-[var(--off-white)] text-[var(--navy-900)] font-mono text-sm break-all">
-                    {referralLink}
-                  </div>
-                  <button
-                    onClick={handleCopyLink}
-                    className="px-4 py-3 bg-[var(--navy-900)] text-white font-medium rounded-lg hover:bg-[var(--navy-800)] transition-colors"
-                  >
-                    {copied ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
-                  </button>
-                </div>
-
-                <div className="flex gap-3 justify-center">
-                  <button
-                    onClick={handleShareWhatsApp}
-                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366]/20 transition-colors font-medium"
-                  >
-                    <MessageCircle className="w-4 h-4" />
-                    WhatsApp
-                  </button>
-                  <button
-                    onClick={handleShareEmail}
-                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/20 transition-colors font-medium"
-                  >
-                    <Mail className="w-4 h-4" />
-                    Email
-                  </button>
-                </div>
-
-                <div className="mt-4 p-4 bg-amber-50 border border-amber-200 rounded-lg">
-                  <p className="text-sm text-amber-800">
-                    <strong>Note:</strong> This is a demo link. Sign up for Whoza.ai to get your real referral code and track your rewards.
-                  </p>
-                </div>
-              </motion.div>
-            )}
+            </div>
           </motion.div>
         </div>
       </div>
@@ -389,8 +309,8 @@ Cheers!`
         </div>
       </div>
 
-      {/* Stats Section (for logged in users) */}
-      {isLoggedIn && stats && (
+      {/* Stats Section */}
+      {stats && (
         <div className="py-16 bg-[var(--off-white)]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div

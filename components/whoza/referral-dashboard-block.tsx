@@ -14,31 +14,54 @@ interface ReferralStats {
   reward_months_earned: number
 }
 
+function getOrCreateReferralCode(): string {
+  const stored = localStorage.getItem("whoza_referral_code")
+  if (stored) return stored
+  const code = Math.random().toString(36).substring(2, 6).toUpperCase() +
+               Math.random().toString(36).substring(2, 6).toUpperCase()
+  localStorage.setItem("whoza_referral_code", code)
+  return code
+}
+
 export function ReferralDashboardBlock() {
   const [referralCode, setReferralCode] = useState<string>("")
   const [referralLink, setReferralLink] = useState<string>("")
   const [copied, setCopied] = useState(false)
   const [stats, setStats] = useState<ReferralStats | null>(null)
   const [isLoading, setIsLoading] = useState(true)
+  const [hasContractorId, setHasContractorId] = useState(false)
 
   useEffect(() => {
-    // In production, fetch from API:
-    // fetch(`/api/referral/stats?contractor_id=${contractorId}`)
-    // For now, show placeholder
-    setReferralCode("DEMO1234")
-    setReferralLink("https://whoza.ai/?ref=DEMO1234")
-    setStats({
-      total: 3,
-      pending: 1,
-      signed_up: 1,
-      paid: 1,
-      rewarded: 1,
-      reward_months_earned: 1,
-    })
-    setIsLoading(false)
+    const code = getOrCreateReferralCode()
+    setReferralCode(code)
+    setReferralLink(`https://whoza.ai/?ref=${code}`)
+
+    const contractorId = localStorage.getItem("whoza_contractor_id")
+    setHasContractorId(!!contractorId)
+
+    if (contractorId) {
+      fetch(`/api/referral/stats?contractor_id=${contractorId}`)
+        .then(r => r.json())
+        .then(data => {
+          if (data.success) {
+            setStats(data.stats)
+            // Update local code with real one if available
+            if (data.contractor?.referral_code) {
+              setReferralCode(data.contractor.referral_code)
+              setReferralLink(`https://whoza.ai/?ref=${data.contractor.referral_code}`)
+              localStorage.setItem("whoza_referral_code", data.contractor.referral_code)
+            }
+          }
+        })
+        .catch(() => {/* ignore */})
+        .finally(() => setIsLoading(false))
+    } else {
+      setIsLoading(false)
+    }
   }, [])
 
   const handleCopyLink = async () => {
+    if (!referralLink) return
     try {
       await navigator.clipboard.writeText(referralLink)
       setCopied(true)
@@ -51,6 +74,7 @@ export function ReferralDashboardBlock() {
   }
 
   const handleShareWhatsApp = () => {
+    if (!referralLink) return
     const text = `Check out Whoza.ai — an AI receptionist that answers missed calls 24/7 and books jobs via WhatsApp. Use my link for a free month: ${referralLink}`
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank")
     trackCTA("Share Referral WhatsApp", "dashboard")
@@ -125,7 +149,7 @@ export function ReferralDashboardBlock() {
         </div>
 
         {/* Stats */}
-        {stats && (
+        {stats ? (
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {[
               { label: "Total", value: stats.total, icon: Users, key: "total" },
@@ -145,6 +169,12 @@ export function ReferralDashboardBlock() {
                 <div className="text-xs text-[var(--slate-500)]">{stat.label}</div>
               </motion.div>
             ))}
+          </div>
+        ) : (
+          <div className="bg-[var(--off-white)] rounded-xl p-4 text-center">
+            <p className="text-sm text-[var(--slate-500)]">
+              Complete your setup to start tracking referrals and earning free months.
+            </p>
           </div>
         )}
 
