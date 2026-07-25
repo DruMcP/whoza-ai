@@ -11,6 +11,7 @@ const footerLinks = {
     { label: "Pricing", href: "/pricing" },
     { label: "How It Works", href: "/#how-it-works" },
     { label: "Testimonials", href: "/#testimonials" },
+    { label: "Refer a Trade", href: "/refer" },
   ],
   support: [
     { label: "Help Centre", href: "/support" },

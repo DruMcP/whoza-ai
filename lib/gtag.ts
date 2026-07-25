@@ -56,3 +56,13 @@ export const trackCalculatorUse = () =>
 
 export const trackCalculatorLead = (email: string) =>
   trackEvent("generate_lead", { event_category: "calculator", event_label: "email_capture", value: 1 })
+
+// Referral programme tracking
+export const trackReferralShare = (method: string, location: string) =>
+  trackEvent("referral_share", { event_category: "referral", event_label: `${method} | ${location}` })
+
+export const trackReferralSignup = (code: string) =>
+  trackEvent("referral_signup", { event_category: "referral", event_label: code })
+
+export const trackReferralReward = (referrerId: string, months: number) =>
+  trackEvent("referral_reward_issued", { event_category: "referral", event_label: referrerId, value: months })

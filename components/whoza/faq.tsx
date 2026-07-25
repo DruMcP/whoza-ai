@@ -12,6 +12,11 @@ import {
 
 const faqs = [
   {
+    question: "How does the Refer a Trade programme work?",
+    answer: "Refer a fellow tradesperson to Whoza.ai using your unique referral link. When they sign up and become a paying customer, you both get a free month added to your subscriptions. There's no limit to how many people you can refer — stack your rewards and potentially get your service free for years.",
+    category: "Pricing",
+  },
+  {
     question: "How much does Whoza cost in total?",
     answer: "You pay a monthly plan fee (Starter £59, Growth £125, Pro £230, Scale £399). Each plan includes a set number of call handling minutes and booked enquiries. Additional enquiries beyond your included amount are charged per booking. Overage minutes are billed at £0.26 per minute. There are no hidden setup fees or long-term contracts. You can cancel anytime.",
     category: "Pricing",

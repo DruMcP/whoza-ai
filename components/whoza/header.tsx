@@ -9,6 +9,7 @@ const navLinks = [
   { href: "/#how-it-works", label: "How It Works", isPageLink: false },
   { href: "/#team", label: "Meet the Team", isPageLink: false },
   { href: "/pricing", label: "Pricing", isPageLink: true },
+  { href: "/refer", label: "Refer a Trade", isPageLink: true },
   { href: "/#testimonials", label: "Testimonials", isPageLink: false },
   { href: "/blog", label: "Blog", isPageLink: true },
   { href: "/support", label: "Support", isPageLink: true },

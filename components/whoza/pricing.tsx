@@ -8,6 +8,8 @@ import { useLocale } from "@/lib/locale-context"
 import { WaitlistModal } from "./waitlist-modal"
 import { PilotSpotCounter } from "./pilot-spot-counter"
 
+import { ReferralStrip } from "./referral-strip"
+
 const colorStyles = {
   blue: {
     border: "border-[var(--katie-blue)]",
@@ -174,6 +176,7 @@ export function Pricing() {
 
   return (
     <section id="pricing" className="py-24 lg:py-40 bg-[var(--off-white)]" aria-label="Pricing">
+      <ReferralStrip />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div

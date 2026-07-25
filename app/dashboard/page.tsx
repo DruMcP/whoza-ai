@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { PhoneSetup } from "@/components/dashboard/phone-setup"
+import { ReferralDashboardBlock } from "@/components/whoza/referral-dashboard-block"
 import { useCallStats } from "@/hooks/use-calls"
 import {
   Phone,
@@ -69,6 +70,9 @@ export default function DashboardPage() {
 
         {/* Phone Setup */}
         <PhoneSetup />
+
+        {/* Referral Block */}
+        <ReferralDashboardBlock />
       </main>
 
       <Footer />
