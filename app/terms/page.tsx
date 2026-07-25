@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
-import { FileText, Phone, CreditCard, AlertTriangle, Clock, Lock, Globe, Scale } from "lucide-react"
+import { FileText, Phone, CreditCard, AlertTriangle, Clock, Lock, Globe, Scale, Gift } from "lucide-react"
 
 export const revalidate = 3600
 
@@ -151,6 +151,58 @@ export default function TermsOfService() {
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
                 <span><strong>Trial:</strong> 7-day free trial available on Starter and Growth plans. Trial includes reduced minute allowances</span>
+              </li>
+            </ul>
+          </section>
+
+          <section className="mb-10">
+            <h2 className="text-xl font-semibold mb-4 flex items-center gap-3">
+              <Gift className="w-5 h-5 text-emerald-400" />
+              4a. Refer a Trade Programme
+            </h2>
+            <p className="text-white/70 leading-relaxed mb-4">
+              The Refer a Trade programme rewards existing customers who refer new tradespeople to whoza.ai. Participation is automatic for all active customers.
+            </p>
+            <h3 className="text-lg font-semibold text-white mb-3">How It Works</h3>
+            <ul className="space-y-3 text-white/70 mb-6">
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span><strong>Referrer reward:</strong> One free month of your own current plan for every referred tradesperson who (a) completes their 7-day trial AND (b) pays for their second consecutive month. No credit is awarded if the referred customer cancels or lapses before their second payment.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span><strong>Referred friend reward:</strong> Their first paid month free after their 7-day trial, on whichever plan they choose. The free month is valued on their chosen plan, not the referrer's plan.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span><strong>Cap:</strong> Maximum 12 free months earned per customer per rolling 12-month period. After the cap is reached, referrals still track but no further credits accrue until the rolling window frees up.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span><strong>Credit value:</strong> One month of the referrer's own current plan at the time the credit is applied. If you are on Starter, you get one Starter month free. If you upgrade before the credit applies, the credit is valued at your new plan.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span><strong>Credit application:</strong> Credits are non-transferable, have no cash alternative, and apply automatically to your next invoice(s). Pilot users keep their locked introductory rates — credits stack on top.</span>
+              </li>
+            </ul>
+            <h3 className="text-lg font-semibold text-white mb-3">Restrictions</h3>
+            <ul className="space-y-3 text-white/70">
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span>Referrals must be genuine third parties. Self-referrals, duplicate accounts, and referrals from the same household or business entity are void.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span>We reserve the right to withhold credits and suspend programme participation where we suspect abuse, gaming, or fraudulent activity.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span>Only one referrer can be credited per referred customer. If multiple referral codes are submitted, the most recently used valid code is attributed.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span>Programme terms may change with 14 days' notice. Credits earned before a change remain valid under the terms in force at the time of earning.</span>
               </li>
             </ul>
           </section>

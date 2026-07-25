@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useCallback } from "react"
+import { useState, useCallback, useEffect } from "react"
 import { motion } from "framer-motion"
 import { X, ArrowRight, Loader2, CheckCircle2 } from "lucide-react"
 
@@ -29,10 +29,24 @@ export function WaitlistModal({ onClose, source = "homepage", plan }: WaitlistMo
     trade: "",
     phone: "",
     postcode: "",
+    referral_code: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [errors, setErrors] = useState<Record<string, string>>({})
+
+  // Capture ?ref=CODE from URL on mount
+  useEffect(() => {
+    try {
+      const params = new URLSearchParams(window.location.search)
+      const ref = params.get("ref")
+      if (ref && /^[A-HJ-NP-Z2-9]{8}$/i.test(ref)) {
+        setFormData((prev) => ({ ...prev, referral_code: ref.toUpperCase() }))
+      }
+    } catch {
+      // ignore
+    }
+  }, [])
 
   const handleChange = useCallback(
     (field: string, value: string) => {
@@ -81,6 +95,7 @@ export function WaitlistModal({ onClose, source = "homepage", plan }: WaitlistMo
             trade: formData.trade,
             phone: formData.phone,
             postcode: formData.postcode,
+            referral_code: formData.referral_code,
             source,
             plan: plan || null,
           }),
@@ -233,6 +248,25 @@ export function WaitlistModal({ onClose, source = "homepage", plan }: WaitlistMo
                   className="w-full px-4 py-3 rounded-lg outline-none transition-colors focus:ring-2 bg-[#111418] text-white text-[15px] font-sans border border-white/[0.06]"
                   placeholder="e.g. SW1A 1AA"
                 />
+              </div>
+
+              {/* Referral Code */}
+              <div>
+                <label htmlFor="waitlist-referral" className="block text-sm font-medium mb-1 text-gray-300">
+                  Referral code <span className="text-gray-500">(optional)</span>
+                </label>
+                <input
+                  id="waitlist-referral"
+                  type="text"
+                  value={formData.referral_code}
+                  onChange={(e) => handleChange("referral_code", e.target.value)}
+                  className="w-full px-4 py-3 rounded-lg outline-none transition-colors focus:ring-2 bg-[#111418] text-white text-[15px] font-sans border border-white/[0.06] uppercase"
+                  placeholder="e.g. ABC12345"
+                  maxLength={10}
+                />
+                <p className="text-xs text-slate-500 mt-1">
+                  Know someone already on Whoza? Enter their code for a free month.
+                </p>
               </div>
 
               {errors.submit && (

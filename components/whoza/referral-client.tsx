@@ -68,7 +68,7 @@ export function ReferralClient() {
 
   const handleShareWhatsApp = () => {
     if (!referralLink) return
-    const text = `Check out Whoza.ai — an AI receptionist that answers missed calls 24/7 and books jobs via WhatsApp. Use my link: ${referralLink}`
+    const text = `Check out Whoza.ai — an AI receptionist that answers missed calls 24/7 and books jobs via WhatsApp. Use my link and your first paid month is free after the trial: ${referralLink}`
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank")
     trackCTA("Share Referral WhatsApp", "refer-page")
   }
@@ -76,7 +76,7 @@ export function ReferralClient() {
   const handleShareEmail = () => {
     if (!referralLink) return
     const subject = "Try Whoza.ai — AI receptionist for trades"
-    const body = `Hi,\n\nI thought you'd be interested in Whoza.ai — an AI receptionist that answers missed calls 24/7 and sends job details straight to WhatsApp.\n\nUse my link:\n${referralLink}\n\nCheers!`
+    const body = `Hi,\n\nI thought you'd be interested in Whoza.ai — an AI receptionist that answers missed calls 24/7 and sends job details straight to WhatsApp.\n\nUse my referral link and your first paid month is free after the 7-day trial:\n${referralLink}\n\nCheers!`
     window.open(`mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, "_blank")
     trackCTA("Share Referral Email", "refer-page")
   }
@@ -145,8 +145,8 @@ export function ReferralClient() {
               <span className="text-[var(--rex-green)]">Get a Free Month.</span>
             </h1>
             <p className="text-xl text-white/70 max-w-2xl mx-auto">
-              Refer a fellow tradesperson to Whoza.ai. When they sign up, you both get a free month.
-              No limits. Stack your rewards.
+              Refer a fellow tradesperson to Whoza.ai. When they join and stay,
+              you both get rewarded. Earn up to a full year free.
             </p>
           </motion.div>
         </div>
@@ -174,7 +174,7 @@ export function ReferralClient() {
               {
                 icon: Gift,
                 title: "You Both Win",
-                description: "When they become a paying customer, you both get a free month added to your accounts.",
+                description: "Your friend gets their first paid month free after their 7-day trial. You get a free month credited after they complete their second consecutive paid month.",
                 color: "var(--claire-amber)",
                 key: "reward",
               },
@@ -367,27 +367,27 @@ export function ReferralClient() {
                 },
                 {
                   question: "What does my friend get?",
-                  answer: "Your friend gets a free month of Whoza.ai when they sign up using your referral link. They'll get the same plan you're on.",
+                  answer: "Their first paid month free after their 7-day trial, on whichever plan they choose. The free month is valued on their chosen plan, not yours.",
                   key: "friend",
                 },
                 {
                   question: "What do I get?",
-                  answer: "For every friend who becomes a paying customer, you get one free month added to your subscription. There's no limit — refer 12 friends, get a year free.",
+                  answer: "One free month of your own current plan for every referred tradesperson who (a) completes their 7-day trial AND (b) pays for their second consecutive month. No credit if they cancel or lapse before their second payment. Maximum 12 free months per rolling 12-month period.",
                   key: "me",
                 },
                 {
                   question: "When do I get my free month?",
-                  answer: "Your free month is added when your friend completes their first paid month. We'll notify you via email and update your dashboard.",
+                  answer: "After your friend completes their second consecutive paid month. We'll notify you via email and update your dashboard. The credit applies automatically to your next invoice.",
                   key: "when",
                 },
                 {
                   question: "Can I refer multiple people?",
-                  answer: "Absolutely. There's no limit to how many people you can refer or how many free months you can earn.",
+                  answer: "Yes — refer as many tradespeople as you like. You can earn up to 12 free months in any 12-month period — a full year free. After the cap, referrals still track but no further credits accrue until the rolling window frees up.",
                   key: "multiple",
                 },
                 {
                   question: "What if my friend cancels?",
-                  answer: "If your friend cancels before completing their first paid month, no free month is awarded. But if they rejoin later, the referral still counts.",
+                  answer: "If your friend cancels or lapses before completing their second paid month, no credit is awarded. Credits only apply for referrals who genuinely continue as paying customers. No cash alternative; credits are non-transferable.",
                   key: "cancel",
                 },
               ].map((faq, index) => (
@@ -416,7 +416,7 @@ export function ReferralClient() {
               Start Sharing, Start Saving
             </h2>
             <p className="text-white/70 mb-8">
-              Every tradesperson you refer is one more month you don't pay for.
+              Earn up to a full year free by referring tradespeople who love Whoza.ai.
             </p>
             <a
               href="/?ref=referral-cta"

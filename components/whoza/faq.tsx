@@ -13,7 +13,7 @@ import {
 const faqs = [
   {
     question: "How does the Refer a Trade programme work?",
-    answer: "Refer a fellow tradesperson to Whoza.ai using your unique referral link. When they sign up and become a paying customer, you both get a free month added to your subscriptions. There's no limit to how many people you can refer — stack your rewards and potentially get your service free for years.",
+    answer: "Refer a fellow tradesperson to Whoza.ai using your unique referral link. Your friend gets their first paid month free after their 7-day trial, on whichever plan they choose. You get one free month of your own current plan credited after they complete their second consecutive paid month. You can earn up to 12 free months per rolling 12-month period. No credit if they cancel before their second payment.",
     category: "Pricing",
   },
   {

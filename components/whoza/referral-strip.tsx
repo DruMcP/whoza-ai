@@ -19,7 +19,7 @@ export function ReferralStrip() {
         >
           <Gift className="w-5 h-5 text-[var(--rex-green)] shrink-0" />
           <span className="font-medium">
-            <strong>Refer a Trade:</strong> Give a free month, get a free month. No limits.
+            <strong>Refer a Trade:</strong> Give a free month, get a free month. Earn up to a year free.
           </span>
           <span className="inline-flex items-center gap-1 text-[var(--rex-green)] font-semibold group-hover:gap-2 transition-all">
             Learn more

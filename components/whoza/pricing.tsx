@@ -175,9 +175,10 @@ export function Pricing() {
   ]
 
   return (
-    <section id="pricing" className="py-24 lg:py-40 bg-[var(--off-white)]" aria-label="Pricing">
+    <>
       <ReferralStrip />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="pricing" className="py-24 lg:py-40 bg-[var(--off-white)]" aria-label="Pricing">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -572,5 +573,6 @@ export function Pricing() {
         />
       )}
     </section>
+    </>
   )
 }

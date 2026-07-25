@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
   let body: any
   try {
     body = await req.json()
-    const { email, trade, phone, postcode, source, plan } = body
+    const { email, trade, phone, postcode, referral_code, source, plan } = body
 
     if (!email || !trade) {
       return NextResponse.json(
@@ -49,6 +49,7 @@ export async function POST(req: NextRequest) {
               trade,
               phone: phone || null,
               postcode: postcode || null,
+              referral_code: referral_code || null,
               plan: plan || null,
               source: source || "homepage",
               signed_up_at: timestamp,
@@ -80,6 +81,7 @@ Email: ${email}
 Trade: ${trade}
 Phone: ${phone || "Not provided"}
 Postcode: ${postcode || "Not provided"}
+Referral Code: ${referral_code || "None"}
 Source: ${source || "homepage"}
 Plan: ${plan || "N/A"}
 Timestamp: ${timestamp}
@@ -103,7 +105,9 @@ Here's what happens next:
 1. Dru will personally email you within 48 hours
 2. You'll get a call to discuss your setup
 3. Katie goes live on your number in 30 minutes
-4. 7 days free — no credit card needed
+4. 7 days free — no credit card needed${referral_code ? `
+
+Referral bonus: You used a referral code. Your first paid month will be free after your trial.` : ""}
 
 Got questions? Reply to this email or contact Dru at dru@whoza.ai.
 

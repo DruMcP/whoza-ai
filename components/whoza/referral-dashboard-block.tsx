@@ -75,7 +75,7 @@ export function ReferralDashboardBlock() {
 
   const handleShareWhatsApp = () => {
     if (!referralLink) return
-    const text = `Check out Whoza.ai — an AI receptionist that answers missed calls 24/7 and books jobs via WhatsApp. Use my link for a free month: ${referralLink}`
+    const text = `Check out Whoza.ai — an AI receptionist that answers missed calls 24/7 and books jobs via WhatsApp. Use my link for a free first month after your trial: ${referralLink}`
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank")
     trackCTA("Share Referral WhatsApp", "dashboard")
   }
@@ -139,7 +139,7 @@ export function ReferralDashboardBlock() {
             WhatsApp
           </button>
           <a
-            href={`mailto:?subject=Try Whoza.ai - AI Receptionist for Trades&body=Hi,%0D%0A%0D%0AI thought you'd be interested in Whoza.ai - an AI receptionist that answers missed calls 24/7 and sends job details straight to WhatsApp.%0D%0A%0D%0AUse my referral link and we both get a free month:%0D%0A${referralLink}%0D%0A%0D%0ACheers!`}
+            href={`mailto:?subject=Try Whoza.ai - AI Receptionist for Trades&body=Hi,%0D%0A%0D%0AI thought you'd be interested in Whoza.ai - an AI receptionist that answers missed calls 24/7 and sends job details straight to WhatsApp.%0D%0A%0D%0AUse my referral link and your first paid month is free after the trial:%0D%0A${referralLink}%0D%0A%0D%0ACheers!`}
             onClick={() => trackCTA("Share Referral Email", "dashboard")}
             className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/20 transition-colors font-medium text-sm"
           >
