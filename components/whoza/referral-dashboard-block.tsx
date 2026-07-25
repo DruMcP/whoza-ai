@@ -128,13 +128,13 @@ export function ReferralDashboardBlock() {
         {stats && (
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {[
-              { label: "Total", value: stats.total, icon: Users },
-              { label: "Signed Up", value: stats.signed_up, icon: TrendingUp },
-              { label: "Paid", value: stats.paid, icon: Check },
-              { label: "Free Months", value: stats.reward_months_earned, icon: Gift },
+              { label: "Total", value: stats.total, icon: Users, key: "total" },
+              { label: "Signed Up", value: stats.signed_up, icon: TrendingUp, key: "signed_up" },
+              { label: "Paid", value: stats.paid, icon: Check, key: "paid" },
+              { label: "Free Months", value: stats.reward_months_earned, icon: Gift, key: "rewarded" },
             ].map((stat, index) => (
               <motion.div
-                key={index}
+                key={stat.key}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}

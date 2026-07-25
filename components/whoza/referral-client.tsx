@@ -167,22 +167,25 @@ Cheers!`
                 title: "Share Your Link",
                 description: "Copy your unique referral link or share it directly via WhatsApp or email.",
                 color: "var(--katie-blue)",
+                key: "share",
               },
               {
                 icon: Users,
                 title: "They Sign Up",
                 description: "Your friend joins Whoza.ai using your referral link and starts their free trial.",
                 color: "var(--rex-green)",
+                key: "signup",
               },
               {
                 icon: Gift,
                 title: "You Both Win",
                 description: "When they become a paying customer, you both get a free month added to your accounts.",
                 color: "var(--claire-amber)",
+                key: "reward",
               },
             ].map((step, index) => (
               <motion.div
-                key={index}
+                key={step.key}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -400,13 +403,13 @@ Cheers!`
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {[
-                  { label: "Total Referrals", value: stats.total, icon: Users },
-                  { label: "Signed Up", value: stats.signed_up, icon: TrendingUp },
-                  { label: "Paid", value: stats.paid, icon: Check },
-                  { label: "Free Months Earned", value: stats.reward_months_earned, icon: Gift },
+                  { label: "Total Referrals", value: stats.total, icon: Users, key: "total" },
+                  { label: "Signed Up", value: stats.signed_up, icon: TrendingUp, key: "signed_up" },
+                  { label: "Paid", value: stats.paid, icon: Check, key: "paid" },
+                  { label: "Free Months Earned", value: stats.reward_months_earned, icon: Gift, key: "rewarded" },
                 ].map((stat, index) => (
                   <motion.div
-                    key={index}
+                    key={stat.key}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -440,30 +443,36 @@ Cheers!`
                 {
                   question: "How do I get my referral code?",
                   answer: "Once you sign up for Whoza.ai, your unique referral code is automatically generated. You can find it in your dashboard under the 'Refer a Trade' section.",
+                  key: "how",
                 },
                 {
                   question: "What does my friend get?",
                   answer: "Your friend gets a free month of Whoza.ai when they sign up using your referral link. They'll get the same plan you're on.",
+                  key: "friend",
                 },
                 {
                   question: "What do I get?",
                   answer: "For every friend who becomes a paying customer, you get one free month added to your subscription. There's no limit — refer 12 friends, get a year free.",
+                  key: "me",
                 },
                 {
                   question: "When do I get my free month?",
                   answer: "Your free month is added when your friend completes their first paid month. We'll notify you via email and update your dashboard.",
+                  key: "when",
                 },
                 {
                   question: "Can I refer multiple people?",
                   answer: "Absolutely. There's no limit to how many people you can refer or how many free months you can earn.",
+                  key: "multiple",
                 },
                 {
                   question: "What if my friend cancels?",
                   answer: "If your friend cancels before completing their first paid month, no free month is awarded. But if they rejoin later, the referral still counts.",
+                  key: "cancel",
                 },
               ].map((faq, index) => (
                 <div
-                  key={index}
+                  key={faq.key}
                   className="border border-[var(--border)] rounded-xl p-6 hover:bg-[var(--off-white)] transition-colors"
                 >
                   <h3 className="font-semibold text-[var(--navy-900)] mb-2">{faq.question}</h3>
