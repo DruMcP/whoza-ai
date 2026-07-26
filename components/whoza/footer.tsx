@@ -75,7 +75,7 @@ export function Footer() {
   const [showWaitlist, setShowWaitlist] = useState(false)
 
   const openWaitlist = () => {
-    trackCTA("Join Pilot - Footer", "footer")
+    trackCTA("Start Free Trial - Footer", "footer")
     setShowWaitlist(true)
   }
 
@@ -98,10 +98,10 @@ export function Footer() {
               AI revenue system for UK tradespeople. Capture missed calls, book more jobs, grow automatically. No contracts. Cancel anytime.
             </p>
             
-            {/* Pilot CTA */}
+            {/* Free Trial CTA */}
             <div className="max-w-sm">
-              <div className="text-white font-semibold text-sm mb-2">Join the pilot programme</div>
-              <p className="text-sm text-white/50 mb-3">Limited to 50 UK trades. Lock in introductory pricing.</p>
+              <div className="text-white font-semibold text-sm mb-2">Start your free trial</div>
+              <p className="text-sm text-white/50 mb-3">Limited to 50 UK trades. Start your free trial today.</p>
               <button
                 onClick={openWaitlist}
                 className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-700 transition-colors"

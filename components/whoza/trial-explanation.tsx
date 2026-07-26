@@ -3,7 +3,6 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Clock, Phone, MessageCircle, CheckCircle2, ArrowRight, Shield } from "lucide-react"
-import { WaitlistModal } from "./waitlist-modal"
 import { trackCTA } from "@/lib/gtag"
 
 const steps = [
@@ -46,8 +45,6 @@ const steps = [
 ]
 
 export function TrialExplanation() {
-  const [showWaitlist, setShowWaitlist] = useState(false)
-
   return (
     <section id="trial" className="section-padding-lg bg-[var(--off-white)]" aria-label="Setup process">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -159,10 +156,10 @@ export function TrialExplanation() {
             See how AI call handling works for your trade.
           </p>
           <button 
-            onClick={() => { trackCTA("Lock in pilot pricing", "trial-explanation"); setShowWaitlist(true); }}
+            onClick={() => { trackCTA("Try Katie Free for 7 Days", "trial-explanation"); window.dispatchEvent(new CustomEvent('openWaitlist', { detail: { source: 'trial-explanation' } })); }}
             className="inline-flex items-center justify-center rounded-lg bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-10 py-7 text-xl gap-3 shadow-2xl shadow-[var(--rex-green)]/40 transition-all hover:scale-105 cursor-pointer border-none"
           >
-            Lock in pilot pricing
+            Try Katie Free for 7 Days
             <ArrowRight className="w-6 h-6" />
           </button>
           <p className="mt-3 text-sm text-[var(--slate-500)]">
@@ -170,7 +167,6 @@ export function TrialExplanation() {
           </p>
         </motion.div>
       </div>
-      {showWaitlist && <WaitlistModal onClose={() => setShowWaitlist(false)} source="trial-explanation" />}
     </section>
   )
 }

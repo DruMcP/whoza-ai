@@ -95,7 +95,7 @@ const stats = [
   { value: "24/7", label: "Call Answering" },
   { value: "< 3s", label: "Answer Speed" },
   { value: "30 min", label: "Setup Time" },
-  { value: "50", label: "Pilot Users" },
+  { value: "50", label: "Active Users" },
 ]
 
 export const revalidate = 3600
@@ -177,7 +177,7 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold mb-6">Meet the Team</h2>
           <p className="text-lg text-white/60 max-w-3xl mb-8 leading-relaxed">
             whoza.ai is a small, focused team. We don't have a 200-person sales department. 
-            We have engineers who build, a founder who answers support emails, and a pilot group of 50 UK tradespeople 
+            We have engineers who build, a founder who answers support emails, and a growing community of UK tradespeople 
             who tell us exactly what works and what doesn't.
           </p>
           <div className="grid md:grid-cols-2 gap-6">

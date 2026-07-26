@@ -9,7 +9,7 @@ export function ReferralStrip() {
     <motion.div
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
-      className="bg-gradient-to-r from-[var(--rex-green)]/10 via-[var(--claire-amber)]/10 to-[var(--katie-blue)]/10 border-y border-[var(--rex-green)]/20"
+      className="bg-white border-y border-[var(--rex-green)]/20"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <a

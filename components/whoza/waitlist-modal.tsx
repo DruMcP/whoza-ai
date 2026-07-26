@@ -148,7 +148,7 @@ export function WaitlistModal({ onClose, source = "homepage", plan }: WaitlistMo
               You're on the list!
             </h2>
             <p className="mt-3 text-slate-400 text-sm leading-relaxed">
-              Dru will personally be in touch within 48 hours to set up your pilot.
+              Dru will personally be in touch within 48 hours to get you started.
             </p>
             <p className="mt-4 text-slate-500 text-sm">
               Got questions? Email{" "}
@@ -170,7 +170,7 @@ export function WaitlistModal({ onClose, source = "homepage", plan }: WaitlistMo
               id="waitlist-title"
               className="text-2xl font-bold pr-8 text-white font-sans"
             >
-              {plan ? `Join the Pilot — ${plan} Plan` : "Join the UK Pilot Programme"}
+              {plan ? `Start Free Trial — ${plan} Plan` : "Start Your Free Trial"}
             </h2>
             <p className="mt-2 text-sm text-slate-400 font-sans">
               Limited to 50 tradespeople. You're getting early access.
@@ -294,7 +294,7 @@ export function WaitlistModal({ onClose, source = "homepage", plan }: WaitlistMo
                   </>
                 ) : (
                   <>
-                    Join the Pilot — Free
+                    Start Your Free Trial
                     <ArrowRight className="w-5 h-5" />
                   </>
                 )}

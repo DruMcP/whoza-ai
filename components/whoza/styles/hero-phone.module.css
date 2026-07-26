@@ -139,8 +139,8 @@
   line-height:1.2;
 }
 
-/* PILOT badge inside header */
-.waPilotBadge{
+/* LIVE badge inside header */
+.waLiveBadge{
   background:linear-gradient(135deg,#10B981,#047857);
   color:#fff;
   font-size:10px;
@@ -500,7 +500,7 @@
     height:70px;
     filter:blur(24px);
   }
-  .waPilotBadge{
+  .waLiveBadge{
     font-size:9px;
     padding:3px 8px;
   }
@@ -556,8 +556,7 @@
 .phoneBtnVolumeUp,
 .phoneBtnVolumeDown,
 .phoneBtnPower,
-.screenGloss,
-.phonePilotBadge{
+.screenGloss{
   display:none;
 }
 

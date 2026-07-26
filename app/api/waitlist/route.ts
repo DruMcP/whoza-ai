@@ -71,11 +71,11 @@ export async function POST(req: NextRequest) {
     // ── 2. Send admin notifications (both emails, independent) ──
     const adminNotificationPromises = ADMIN_EMAILS.map((adminEmail) =>
       resend.emails.send({
-        from: "Whoza.ai <pilot@whoza.ai>",
+        from: "Whoza.ai <support@whoza.ai>",
         to: adminEmail,
-        subject: `New Pilot Signup — ${trade} — ${email}`,
+        subject: `New Signup — ${trade} — ${email}`,
         text: `
-New pilot signup:
+New signup:
 
 Email: ${email}
 Trade: ${trade}
@@ -91,13 +91,13 @@ Timestamp: ${timestamp}
 
     // ── 3. Send user confirmation ──
     const userConfirmationPromise = resend.emails.send({
-      from: "Dru @ Whoza.ai <pilot@whoza.ai>",
+      from: "Dru @ Whoza.ai <dru@whoza.ai>",
       to: email,
-      subject: "You're on the whoza.ai pilot list",
+      subject: "Welcome to whoza.ai — You're on the list",
       text: `
 Hi there,
 
-Thanks for joining the whoza.ai UK Pilot Programme!
+Thanks for signing up to whoza.ai!
 
 You're on the list.
 

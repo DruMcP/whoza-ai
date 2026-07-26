@@ -157,7 +157,7 @@ const detailedReviews = [
     ],
     whatYouSee: "A WhatsApp message with the caller's name, job type, location, estimated value, and urgency - plus Accept Job, Call Back, and Decline buttons. Two taps. No app to download. No login. It just works in the WhatsApp you already use.",
     bestFor: "Tradespeople who want more than just call answering - they want a system that actively grows their business. The review collection and competitor tracking are genuinely useful features no one else offers.",
-    downside: "Pricier than the cheapest option. The pilot programme is limited to 50 tradespeople initially. You need to be comfortable with WhatsApp as your primary business communication tool.",
+    downside: "Pricier than the cheapest option. Early access is limited to 50 tradespeople initially. You need to be comfortable with WhatsApp as your primary business communication tool.",
     link: "/pricing",
     linkText: "Try whoza.ai free for 7 days",
     isWinner: true,

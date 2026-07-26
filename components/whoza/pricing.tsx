@@ -6,7 +6,6 @@ import { Check, ArrowRight, Sparkles, X, CheckCircle2, User, Mic, Database, Phon
 import { trackCTA, trackPricingView } from "@/lib/gtag"
 import { useLocale } from "@/lib/locale-context"
 import { WaitlistModal } from "./waitlist-modal"
-import { PilotSpotCounter } from "./pilot-spot-counter"
 
 import { ReferralStrip } from "./referral-strip"
 
@@ -220,11 +219,6 @@ export function Pricing() {
           </div>
         </motion.div>
 
-        {/* Pilot spots banner */}
-        <div className="max-w-xl mx-auto mb-10">
-          <PilotSpotCounter variant="banner" />
-        </div>
-
         {/* Pricing transition text */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -348,11 +342,7 @@ export function Pricing() {
           className="mt-8 text-center"
         >
           <p className="text-sm text-[var(--slate-500)] max-w-xl mx-auto">
-            Pricing shown is for our full launch. Pilot users will lock in
-            introductory rates.{" "}
-            <span className="font-semibold text-[var(--navy-900)]">
-              Join the pilot to secure your price.
-            </span>
+            7-day free trial on Starter. No contract. Cancel anytime.
           </p>
         </motion.div>
 

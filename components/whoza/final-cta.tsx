@@ -4,7 +4,6 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { ArrowRight, Phone, Star, Eye, CheckCircle2 } from "lucide-react"
 import { WaitlistModal } from "./waitlist-modal"
-import { PilotSpotCounter } from "./pilot-spot-counter"
 
 import { trackCTA } from "@/lib/gtag"
 
@@ -99,7 +98,7 @@ export function FinalCTA() {
         </motion.div>
 
         <div className="mt-4 flex justify-center">
-          <PilotSpotCounter variant="badge" />
+          {/* Pilot spot counter removed */}
         </div>
 
         {/* CTAs */}

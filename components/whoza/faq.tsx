@@ -233,19 +233,6 @@ export function FAQ() {
               >
                 <AccordionTrigger className="faq-toggle text-left text-[var(--navy-900)] font-semibold hover:no-underline py-5">
                   {faq.question}
-                  {/* Chevron icon for prompt compatibility */}
-                  <svg 
-                    className="faq-chevron w-5 h-5 text-[var(--slate-400)] shrink-0 ml-2" 
-                    viewBox="0 0 24 24" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    strokeWidth="2" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <polyline points="6 9 12 15 18 9" />
-                  </svg>
                 </AccordionTrigger>
                 <AccordionContent className="faq-answer text-[var(--slate-500)] pb-5 leading-relaxed">
                   {faq.answer}

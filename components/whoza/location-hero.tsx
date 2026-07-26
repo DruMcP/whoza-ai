@@ -236,7 +236,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             }}
           >
             <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse" />
-            Limited to 50 {country === "uk" ? "UK" : "US"} trades in our pilot programme
+            Limited to 50 {country === "uk" ? "UK" : "US"} trades in our early access programme
           </motion.p>
 
           {/* Trust Pills */}
