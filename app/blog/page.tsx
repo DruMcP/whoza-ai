@@ -36,6 +36,14 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "what-tradespeople-actually-want-from-ai",
+    title: "What Tradespeople Actually Want from AI — and It Isn't What the Tech Lot Are Selling",
+    excerpt: "A working tradesperson's honest take on what we actually want from AI: calls answered, evenings back, invoices out when the job's done. No apps, no jargon.",
+    readTime: "12 min read",
+    date: "2026-07-26",
+    category: "Industry Insights",
+  },
+  {
     slug: "ai-search-for-uk-trades",
     title: "Your Next Customer Won't Google You. They'll Ask AI.",
     excerpt: "UK customers have quietly switched to AI search — over half of UK adults now use ChatGPT (Ofcom, 2025). Here's what it means for trades, and how to be the name the AI recommends. Founder analysis, every stat sourced.",

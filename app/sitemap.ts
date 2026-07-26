@@ -109,6 +109,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Blog posts
   const blogSlugs = [
+    'what-tradespeople-actually-want-from-ai',
     'ai-search-for-uk-trades',
     'ai-receptionist-vs-human-cost-guide-2026',
     '247-call-answering-uk-trades-guide-2026',
