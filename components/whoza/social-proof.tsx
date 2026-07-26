@@ -1,6 +1,9 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Link from "next/link"
+
+const MotionLink = motion(Link)
 
 const tradeLinks: Record<string, string> = {
   "Plumbers": "/for-plumbers",
@@ -36,19 +39,32 @@ export function SocialProofBand() {
             viewport={{ once: true }}
             className="flex gap-3 overflow-x-auto pb-2 sm:flex-wrap sm:justify-center sm:overflow-visible scrollbar-hide"
           >
-            {Object.entries(tradeLinks).map(([trade, href], index) => (
-              <motion.a
-                key={trade}
-                href={href}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all cursor-pointer shrink-0"
-              >
-                <span className="text-sm font-medium text-white/90 whitespace-nowrap">{trade}</span>
-              </motion.a>
-            ))}
+            {Object.entries(tradeLinks).map(([trade, href], index) =>
+              trade === "Carpenters" ? (
+                <motion.span
+                  key={trade}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: index * 0.05 }}
+                  viewport={{ once: true }}
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/5 border border-white/10 transition-all shrink-0"
+                >
+                  <span className="text-sm font-medium text-white/90 whitespace-nowrap">{trade}</span>
+                </motion.span>
+              ) : (
+                <MotionLink
+                  key={trade}
+                  href={href}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: index * 0.05 }}
+                  viewport={{ once: true }}
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all cursor-pointer shrink-0"
+                >
+                  <span className="text-sm font-medium text-white/90 whitespace-nowrap">{trade}</span>
+                </MotionLink>
+              )
+            )}
           </motion.div>
         </div>
       </div>
@@ -73,19 +89,32 @@ export function TrustBadgeBand() {
 
         {/* Trade Types Grid - Clickable links */}
         <div className="flex flex-wrap justify-center gap-3">
-          {Object.entries(tradeLinks).map(([trade, href], index) => (
-            <motion.a
-              key={trade}
-              href={href}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.05 }}
-              viewport={{ once: true }}
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--border)] hover:bg-[var(--katie-blue)]/5 hover:border-[var(--katie-blue)]/20 transition-all cursor-pointer"
-            >
-              <span className="text-sm font-medium text-[var(--navy-900)]">{trade}</span>
-            </motion.a>
-          ))}
+          {Object.entries(tradeLinks).map(([trade, href], index) =>
+            trade === "Carpenters" ? (
+              <motion.span
+                key={trade}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.05 }}
+                viewport={{ once: true }}
+                className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--border)] transition-all"
+              >
+                <span className="text-sm font-medium text-[var(--navy-900)]">{trade}</span>
+              </motion.span>
+            ) : (
+              <MotionLink
+                key={trade}
+                href={href}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.05 }}
+                viewport={{ once: true }}
+                className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--border)] hover:bg-[var(--katie-blue)]/5 hover:border-[var(--katie-blue)]/20 transition-all cursor-pointer"
+              >
+                <span className="text-sm font-medium text-[var(--navy-900)]">{trade}</span>
+              </MotionLink>
+            )
+          )}
         </div>
       </div>
     </section>
