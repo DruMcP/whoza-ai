@@ -248,15 +248,6 @@ export default function BlogPostPage() {
         </div>
 
         <article className="prose prose-invert prose-lg max-w-none">
-          {/* Hero image placeholder */}
-          <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden mb-10">
-            <div className="aspect-[16/9] bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
-              <p className="text-white/40 text-sm text-center px-8">
-                [IMAGE PLACEHOLDER]<br />
-                Heating engineer accepting a boiler repair job via WhatsApp using Whoza AI receptionist
-              </p>
-            </div>
-          </div>
 
           {/* Introduction */}
           <div className="text-white/80 leading-relaxed mb-10">
@@ -373,16 +364,6 @@ export default function BlogPostPage() {
               <Link href="/pricing" className="text-emerald-400 hover:text-emerald-300 underline">pricing page</Link>{" "}
               and you&apos;ll see the shape of it.
             </p>
-
-            {/* Mid-article image placeholder */}
-            <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden my-8">
-              <div className="aspect-[16/9] bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
-                <p className="text-white/40 text-sm text-center px-8">
-                  [IMAGE PLACEHOLDER]<br />
-                  Job Done button in WhatsApp that triggers Whoza&apos;s AI invoicing agent
-                </p>
-              </div>
-            </div>
           </section>
 
           {/* Section 6 */}
