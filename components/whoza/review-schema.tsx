@@ -32,12 +32,32 @@ export function ReviewSchema({ reviews, itemReviewed }: ReviewSchemaProps) {
     },
   }))
 
+  const ratingValue =
+    reviews.length > 0
+      ? Math.round(
+          (reviews.reduce((sum, review) => sum + review.rating, 0) /
+            reviews.length) *
+            10,
+        ) / 10
+      : 0
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "Product",
     name: itemReviewed.name,
     url: itemReviewed.url,
     image: itemReviewed.image || "https://whoza.ai/og-image.webp",
+    brand: {
+      "@type": "Brand",
+      name: "Whoza.ai",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue,
+      reviewCount: reviews.length,
+      bestRating: 5,
+      worstRating: 1,
+    },
     review: reviewSchema,
   }
 
