@@ -69,7 +69,7 @@ export function Pricing() {
         { text: "AI call notes + searchable transcripts", included: true },
         { text: "Urgent call flags (RED/AMBER/GREEN)", included: true },
         { text: "12 AI voice options (UK accents)", included: true },
-        { text: "Post-call email summary", included: true },
+        { text: "Call transcripts available", included: true },
         { text: "Voicemail detection + auto-forward", included: true },
         { text: "Spam call filtering", included: true },
         { text: "Lead capture + dashboard", included: true },
