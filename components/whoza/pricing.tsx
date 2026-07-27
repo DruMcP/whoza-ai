@@ -99,8 +99,6 @@ export function Pricing() {
         { text: "Everything in Starter", included: true },
         { text: "20 booked enquiries included", included: true },
         { text: "Downloadable call logs (CSV/Excel)", included: true },
-        { text: "Weekly summary email (Monday 8am)", included: true },
-        { text: "Zapier / Make integration", included: true },
         { text: "Customisable WhatsApp message templates", included: true },
         { text: "Out-of-hours auto-tagging", included: true },
         { text: "Claire review engine", included: true },
