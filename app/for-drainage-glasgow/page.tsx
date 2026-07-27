@@ -130,7 +130,8 @@ export default function ForDrainageEngineerGlasgowPage() {
                 "logo": { "@type": "ImageObject", "url": "https://whoza.ai/og-image.webp" },
                 "sameAs": [
                   "https://twitter.com/whozaai",
-                  "https://www.linkedin.com/company/whoza-ai"
+                  "https://www.linkedin.com/company/whoza-ai",
+                  "https://www.facebook.com/profile.php?id=61586217731657"
                 ]
               },
               

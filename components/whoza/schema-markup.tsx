@@ -352,7 +352,8 @@ export function HomepageSchema() {
         "areaServed": "GB"
       },
       "sameAs": [
-        "https://www.linkedin.com/company/whoza-ai"
+        "https://www.linkedin.com/company/whoza-ai",
+        "https://www.facebook.com/profile.php?id=61586217731657"
       ]
     },
     {
