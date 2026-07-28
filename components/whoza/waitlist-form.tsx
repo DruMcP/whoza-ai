@@ -35,6 +35,9 @@ export function WaitlistForm({ source = "homepage", plan, onSubmitted, variant =
   const [submitted, setSubmitted] = useState(false)
   const [errors, setErrors] = useState<Record<string, string>>({})
 
+  // When used inside a modal with onSubmitted, let parent handle success UI
+  const isControlled = !!onSubmitted
+
   // Capture ?ref=CODE from URL on mount
   useEffect(() => {
     try {
@@ -103,15 +106,18 @@ export function WaitlistForm({ source = "homepage", plan, onSubmitted, variant =
 
         if (!response.ok) throw new Error("Submission failed")
 
-        setSubmitted(true)
-        onSubmitted?.()
+        if (isControlled) {
+          onSubmitted()
+        } else {
+          setSubmitted(true)
+        }
       } catch {
         setErrors({ submit: "Something went wrong. Please try again." })
       } finally {
         setIsSubmitting(false)
       }
     },
-    [validate, formData, source, plan, onSubmitted]
+    [validate, formData, source, plan, onSubmitted, isControlled]
   )
 
   const isPage = variant === "page"
