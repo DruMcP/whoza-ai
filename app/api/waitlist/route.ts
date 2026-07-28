@@ -131,12 +131,13 @@ export async function POST(req: NextRequest) {
     const resend = getResend()
 
     // ── 2. Send admin notifications (both emails, independent) ──
-    const adminNotificationPromises = ADMIN_EMAILS.map((adminEmail) =>
-      resend.emails.send({
-        from: "Whoza.ai <support@whoza.ai>",
-        to: adminEmail,
-        subject: `New Signup — ${trade} — ${email}`,
-        text: `
+    const adminResults = await Promise.all(
+      ADMIN_EMAILS.map((adminEmail) =>
+        resend.emails.send({
+          from: "Whoza.ai <support@whoza.ai>",
+          to: adminEmail,
+          subject: `New Signup — ${trade} — ${email}`,
+          text: `
 New signup:
 
 Email: ${email}
@@ -147,12 +148,13 @@ Referral Code: ${referral_code || "None"}
 Source: ${source || "homepage"}
 Plan: ${plan || "N/A"}
 Timestamp: ${timestamp}
-        `.trim(),
-      })
+          `.trim(),
+        })
+      )
     )
 
     // ── 3. Send user confirmation ──
-    const userConfirmationPromise = resend.emails.send({
+    const userResult = await resend.emails.send({
       from: "Dru @ Whoza.ai <dru@whoza.ai>",
       replyTo: "dru@whoza.ai",
       to: email,
@@ -161,31 +163,42 @@ Timestamp: ${timestamp}
       text: buildWelcomeText(referral_code || null),
     })
 
-    // Run all sends concurrently; failures are isolated
-    const [adminResults, userResult] = await Promise.all([
-      Promise.allSettled(adminNotificationPromises),
-      userConfirmationPromise,
-    ])
+    // ── 4. Check for errors (Resend returns { error } without throwing) ──
+    const adminErrors = adminResults
+      .filter((r): r is { error: { name: string; message: string } } => !!r.error)
+      .map((r) => `${r.error.name}: ${r.error.message}`)
 
-    // Log any admin notification failures
-    const adminFailures = adminResults.filter((r) => r.status === "rejected")
-    if (adminFailures.length > 0) {
-      console.error(
-        "Admin notification failures:",
-        adminFailures.map((f) => (f as PromiseRejectedResult).reason)
-      )
+    const userError = userResult?.error
+      ? `${userResult.error.name}: ${userResult.error.message}`
+      : null
+
+    if (adminErrors.length > 0) {
+      console.error("Admin notification errors:", adminErrors)
+    }
+    if (userError) {
+      console.error("User confirmation email error:", userError)
     }
 
-    // If user confirmation failed, we still return success (they're in the DB)
-    // but log the error for follow-up
-    if (!userResult || userResult.error) {
-      console.error("User confirmation email failed:", userResult?.error)
+    // If all emails failed, surface it
+    if (adminErrors.length === ADMIN_EMAILS.length && userError) {
+      return NextResponse.json(
+        {
+          error: "Email delivery failed",
+          details: { admin: adminErrors, user: userError },
+        },
+        { status: 502 }
+      )
     }
 
     return NextResponse.json({
       success: true,
-      notified: ADMIN_EMAILS.length - adminFailures.length,
+      notified: ADMIN_EMAILS.length - adminErrors.length,
       total: ADMIN_EMAILS.length,
+      userEmailId: userResult?.data?.id || null,
+      errors:
+        adminErrors.length > 0 || userError
+          ? { admin: adminErrors, user: userError }
+          : undefined,
     })
   } catch (error) {
     console.error("Waitlist submission error:", error)
