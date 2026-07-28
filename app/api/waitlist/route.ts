@@ -22,6 +22,68 @@ const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabase
 // Admin emails that must receive notification on every signup
 const ADMIN_EMAILS = ["dru@whoza.ai", "support@whoza.ai"]
 
+function buildWelcomeHtml(_referralCode: string | null): string {
+  return `<!DOCTYPE html>
+<html lang="en-GB">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background:#f1f5f9;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f1f5f9;padding:24px 12px;">
+    <tr><td align="center">
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:600px;max-width:100%;background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 8px 30px rgba(15,23,42,.08);">
+        <tr><td style="background:#0f172a;padding:26px 32px;">
+          <span style="color:#ffffff;font-size:22px;font-weight:800;letter-spacing:-.4px;">whoza<span style="color:#34d399;">.ai</span></span>
+        </td></tr>
+        <tr><td style="padding:34px 32px 6px;">
+          <h1 style="margin:0 0 18px;font-size:24px;line-height:1.25;color:#0f172a;font-weight:800;">You're in. Welcome to Whoza.</h1>
+          <p style="margin:0 0 16px;font-size:16px;line-height:1.6;color:#334155;">Hi there,</p>
+          <p style="margin:0 0 16px;font-size:16px;line-height:1.6;color:#334155;">Thanks for signing up — you've claimed one of our early-access spots. That means <strong>Katie</strong>, your new AI receptionist, is about to start answering every call for you, 24/7 — and booking the real jobs straight to your WhatsApp.</p>
+          <p style="margin:0 0 12px;font-size:16px;line-height:1.6;color:#0f172a;font-weight:700;">Here's what happens next</p>
+          <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin:0 0 20px;">
+            <tr><td valign="top" style="padding:6px 12px 6px 0;"><span style="display:inline-block;width:26px;height:26px;background:#ecfdf5;color:#047857;border-radius:50%;text-align:center;line-height:26px;font-weight:800;font-size:14px;">1</span></td><td style="padding:6px 0;font-size:15px;line-height:1.55;color:#334155;">I'll personally email you within one working day to get you set up.</td></tr>
+            <tr><td valign="top" style="padding:6px 12px 6px 0;"><span style="display:inline-block;width:26px;height:26px;background:#ecfdf5;color:#047857;border-radius:50%;text-align:center;line-height:26px;font-weight:800;font-size:14px;">2</span></td><td style="padding:6px 0;font-size:15px;line-height:1.55;color:#334155;">We'll do a quick call to point your existing number at Katie — nothing to install, you keep your number.</td></tr>
+            <tr><td valign="top" style="padding:6px 12px 6px 0;"><span style="display:inline-block;width:26px;height:26px;background:#ecfdf5;color:#047857;border-radius:50%;text-align:center;line-height:26px;font-weight:800;font-size:14px;">3</span></td><td style="padding:6px 0;font-size:15px;line-height:1.55;color:#334155;">Katie goes live, usually within about 30 minutes of that call.</td></tr>
+            <tr><td valign="top" style="padding:6px 12px 6px 0;"><span style="display:inline-block;width:26px;height:26px;background:#ecfdf5;color:#047857;border-radius:50%;text-align:center;line-height:26px;font-weight:800;font-size:14px;">4</span></td><td style="padding:6px 0;font-size:15px;line-height:1.55;color:#334155;">Your 7 days free start then — no card needed. After that you only pay per job you accept.</td></tr>
+          </table>
+          <p style="margin:0 0 22px;font-size:16px;line-height:1.6;color:#334155;">Any questions before then, just hit reply — this reaches me directly.</p>
+          <table role="presentation" cellpadding="0" cellspacing="0"><tr><td style="border-radius:12px;background:#0f172a;"><a href="https://www.whoza.ai" style="display:inline-block;padding:14px 28px;font-size:16px;font-weight:800;color:#ffffff;text-decoration:none;border-radius:12px;">Explore Whoza</a></td></tr></table>
+        </td></tr>
+        <tr><td style="padding:26px 32px 30px;">
+          <p style="margin:22px 0 4px;font-size:16px;line-height:1.6;color:#334155;">Cheers,</p>
+          <p style="margin:0;font-size:16px;line-height:1.6;color:#0f172a;font-weight:700;">Dru</p>
+          <p style="margin:0;font-size:14px;line-height:1.6;color:#64748b;">Founder, Whoza · <a href="mailto:dru@whoza.ai" style="color:#047857;text-decoration:none;">dru@whoza.ai</a> · <a href="https://www.whoza.ai" style="color:#047857;text-decoration:none;">whoza.ai</a></p>
+        </td></tr>
+        <tr><td style="background:#f8fafc;border-top:1px solid #e2e8f0;padding:16px 32px;">
+          <p style="margin:0;font-size:12px;line-height:1.5;color:#94a3b8;">You're receiving this because you signed up at whoza.ai. Whoza — the AI phone receptionist for UK trades.</p>
+        </td></tr>
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>`
+}
+
+function buildWelcomeText(_referralCode: string | null): string {
+  return `Hi there,
+
+Thanks for signing up to Whoza — you're in.
+
+You've claimed one of our early-access spots, which means Katie, your new AI receptionist, is about to start answering every call for you, 24/7 — and booking the real jobs straight to your WhatsApp.
+
+Here's what happens next:
+1. I'll personally email you within one working day to get you set up.
+2. We'll do a quick call to point your existing number at Katie — nothing to install, you keep your number.
+3. Katie goes live, usually within about 30 minutes of that call.
+4. Your 7 days free start then — no card needed. After that you only pay per job you accept.
+
+Any questions before then, just hit reply — this reaches me directly.
+
+Cheers,
+Dru
+Founder, Whoza
+dru@whoza.ai · whoza.ai
+`
+}
+
 export async function POST(req: NextRequest) {
   let body: any
   try {
@@ -92,27 +154,11 @@ Timestamp: ${timestamp}
     // ── 3. Send user confirmation ──
     const userConfirmationPromise = resend.emails.send({
       from: "Dru @ Whoza.ai <dru@whoza.ai>",
+      replyTo: "dru@whoza.ai",
       to: email,
-      subject: "Welcome to whoza.ai — You're on the list",
-      text: `
-Hi there,
-
-Thanks for signing up to whoza.ai!
-
-You're on the list.
-
-Here's what happens next:
-1. Dru will personally email you within 48 hours
-2. You'll get a call to discuss your setup
-3. Katie goes live on your number in 30 minutes
-4. 7 days free — no credit card needed${referral_code ? `
-
-Referral bonus: You used a referral code. Your first paid month will be free after your trial.` : ""}
-
-Got questions? Reply to this email or contact Dru at dru@whoza.ai.
-
-— Dru & the whoza.ai team
-      `.trim(),
+      subject: "You're in — welcome to Whoza",
+      html: buildWelcomeHtml(referral_code || null),
+      text: buildWelcomeText(referral_code || null),
     })
 
     // Run all sends concurrently; failures are isolated

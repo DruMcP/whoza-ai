@@ -38,6 +38,13 @@ const nextConfig = {
     async redirects() {
     return [
 
+      // === Signup convenience redirects ===
+      { source: '/waitlist', destination: '/signup', permanent: true },
+      { source: '/sign-up', destination: '/signup', permanent: true },
+      { source: '/get-started', destination: '/signup', permanent: true },
+      { source: '/start', destination: '/signup', permanent: true },
+      { source: '/join', destination: '/signup', permanent: true },
+
       // === Research paper slug fix ===
       {
         source: '/research/ai-voice-agents-customer-satisfaction-2026',
