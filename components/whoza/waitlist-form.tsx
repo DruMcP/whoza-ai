@@ -234,28 +234,6 @@ export function WaitlistForm({ source = "homepage", plan, onSubmitted, variant =
         />
       </div>
 
-      {/* Referral Code */}
-      <div>
-        <label
-          htmlFor={`waitlist-referral-${variant}`}
-          className="block text-sm font-medium mb-1 text-gray-300"
-        >
-          Referral code <span className="text-gray-500">(optional)</span>
-        </label>
-        <input
-          id={`waitlist-referral-${variant}`}
-          type="text"
-          value={formData.referral_code}
-          onChange={(e) => handleChange("referral_code", e.target.value)}
-          className="w-full px-4 py-3 rounded-lg outline-none transition-colors focus:ring-2 focus:ring-emerald-400/50 bg-[#111418] text-white text-[15px] font-sans border border-white/[0.06] uppercase"
-          placeholder="e.g. ABC12345"
-          maxLength={10}
-        />
-        <p className="text-xs text-slate-500 mt-1">
-          Know someone already on Whoza? Enter their code for a free month.
-        </p>
-      </div>
-
       {errors.submit && <p className="text-sm text-red-500">{errors.submit}</p>}
 
       {/* Submit */}

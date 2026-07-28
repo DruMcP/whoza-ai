@@ -39,7 +39,7 @@ function buildWelcomeHtml(_referralCode: string | null): string {
           <p style="margin:0 0 16px;font-size:16px;line-height:1.6;color:#334155;">Thanks for signing up — you've claimed one of our early-access spots. That means <strong>Katie</strong>, your new AI receptionist, is about to start answering every call for you, 24/7 — and booking the real jobs straight to your WhatsApp.</p>
           <p style="margin:0 0 12px;font-size:16px;line-height:1.6;color:#0f172a;font-weight:700;">Here's what happens next</p>
           <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin:0 0 20px;">
-            <tr><td valign="top" style="padding:6px 12px 6px 0;"><span style="display:inline-block;width:26px;height:26px;background:#ecfdf5;color:#047857;border-radius:50%;text-align:center;line-height:26px;font-weight:800;font-size:14px;">1</span></td><td style="padding:6px 0;font-size:15px;line-height:1.55;color:#334155;">I'll personally email you within one working day to get you set up.</td></tr>
+            <tr><td valign="top" style="padding:6px 12px 6px 0;"><span style="display:inline-block;width:26px;height:26px;background:#ecfdf5;color:#047857;border-radius:50%;text-align:center;line-height:26px;font-weight:800;font-size:14px;">1</span></td><td style="padding:6px 0;font-size:15px;line-height:1.55;color:#334155;">I'll personally email you within 48 hours to get you set up.</td></tr>
             <tr><td valign="top" style="padding:6px 12px 6px 0;"><span style="display:inline-block;width:26px;height:26px;background:#ecfdf5;color:#047857;border-radius:50%;text-align:center;line-height:26px;font-weight:800;font-size:14px;">2</span></td><td style="padding:6px 0;font-size:15px;line-height:1.55;color:#334155;">We'll do a quick call to point your existing number at Katie — nothing to install, you keep your number.</td></tr>
             <tr><td valign="top" style="padding:6px 12px 6px 0;"><span style="display:inline-block;width:26px;height:26px;background:#ecfdf5;color:#047857;border-radius:50%;text-align:center;line-height:26px;font-weight:800;font-size:14px;">3</span></td><td style="padding:6px 0;font-size:15px;line-height:1.55;color:#334155;">Katie goes live, usually within about 30 minutes of that call.</td></tr>
             <tr><td valign="top" style="padding:6px 12px 6px 0;"><span style="display:inline-block;width:26px;height:26px;background:#ecfdf5;color:#047857;border-radius:50%;text-align:center;line-height:26px;font-weight:800;font-size:14px;">4</span></td><td style="padding:6px 0;font-size:15px;line-height:1.55;color:#334155;">Your 7 days free start then — no card needed. After that you only pay per job you accept.</td></tr>
@@ -70,7 +70,7 @@ Thanks for signing up to Whoza — you're in.
 You've claimed one of our early-access spots, which means Katie, your new AI receptionist, is about to start answering every call for you, 24/7 — and booking the real jobs straight to your WhatsApp.
 
 Here's what happens next:
-1. I'll personally email you within one working day to get you set up.
+1. I'll personally email you within 48 hours to get you set up.
 2. We'll do a quick call to point your existing number at Katie — nothing to install, you keep your number.
 3. Katie goes live, usually within about 30 minutes of that call.
 4. Your 7 days free start then — no card needed. After that you only pay per job you accept.
@@ -179,15 +179,9 @@ Timestamp: ${timestamp}
       console.error("User confirmation email error:", userError)
     }
 
-    // If all emails failed, surface it
+    // If all emails failed, log it but don't block the signup
     if (adminErrors.length === ADMIN_EMAILS.length && userError) {
-      return NextResponse.json(
-        {
-          error: "Email delivery failed",
-          details: { admin: adminErrors, user: userError },
-        },
-        { status: 502 }
-      )
+      console.error("All email deliveries failed:", { admin: adminErrors, user: userError })
     }
 
     return NextResponse.json({

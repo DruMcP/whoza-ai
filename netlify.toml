@@ -143,8 +143,13 @@
   status = 301
 
 [[redirects]]
+  from = "/start"
+  to = "/signup"
+  status = 301
+
+[[redirects]]
   from = "/start/*"
-  to = "/"
+  to = "/signup"
   status = 301
 
 [[headers]]
