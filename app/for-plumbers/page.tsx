@@ -427,7 +427,7 @@ export default function ForPlumbersPage() {
               {[
                 {
                   q: "How much does AI call answering cost for plumbers?",
-                  a: "Whoza.ai starts at £59/month for the Starter plan. One captured emergency plumbing job averages £120-£250 callout. At £59/month, one emergency callout pays for the whole year. Overage minutes are billed at £0.26/minute."
+                  a: "Whoza.ai starts at £59/month for the Starter plan. One captured emergency plumbing job averages £120-£250 callout. At £59/month, one emergency callout pays for the whole year. Overage minutes are billed at £0.40/minute."
                 },
                 {
                   q: "Can Katie handle burst pipe emergencies at 2am?",

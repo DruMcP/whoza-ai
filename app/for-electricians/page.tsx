@@ -424,7 +424,7 @@ export default function ForElectriciansPage() {
               {[
                 {
                   q: "How much does AI call answering cost for electricians?",
-                  a: "Whoza.ai starts at £59/month for the Starter plan. One captured emergency electrical job averages £150-£300 callout. An EICR certificate averages £150-£220. At £59/month, one EICR pays for the whole year. Overage minutes are billed at £0.26/minute."
+                  a: "Whoza.ai starts at £59/month for the Starter plan. One captured emergency electrical job averages £150-£300 callout. An EICR certificate averages £150-£220. At £59/month, one EICR pays for the whole year. Overage minutes are billed at £0.40/minute."
                 },
                 {
                   q: "Can Katie handle electrical emergencies at 2am?",

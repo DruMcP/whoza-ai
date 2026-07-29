@@ -57,7 +57,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "How much does AI call handling cost for locksmiths?",
-    answer: "Whoza.ai starts at £59/month for the Starter plan. One captured emergency lockout averages £80-£150 callout fee. A full security upgrade can be £500-£2,000. At £59/month, one emergency lockout callout pays for the entire year. Overage minutes are billed at £0.26/minute. No hidden fees or contracts."
+    answer: "Whoza.ai starts at £59/month for the Starter plan. One captured emergency lockout averages £80-£150 callout fee. A full security upgrade can be £500-£2,000. At £59/month, one emergency lockout callout pays for the entire year. Overage minutes are billed at £0.40/minute. No hidden fees or contracts."
   },
   {
     question: "Can Katie handle emergency lockout calls at 3am?",

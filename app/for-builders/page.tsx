@@ -31,7 +31,7 @@ import { RelatedTrades } from "@/components/whoza/related-trades"
 const faqs = [
   {
     question: "How much does AI call handling cost for builders?",
-    answer: "Whoza.ai starts at £59/month for the Starter plan. One captured extension or renovation enquiry can be worth £15,000-£80,000. That's one free trial to pay for over a decade. Overage minutes are billed at £0.26/minute. No hidden setup fees or long-term contracts."
+    answer: "Whoza.ai starts at £59/month for the Starter plan. One captured extension or renovation enquiry can be worth £15,000-£80,000. That's one free trial to pay for over a decade. Overage minutes are billed at £0.40/minute. No hidden setup fees or long-term contracts."
   },
   {
     question: "Can Katie handle large project enquiries like full house renovations?",

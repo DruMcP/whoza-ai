@@ -50,7 +50,7 @@ export const STRIPE_ADDONS = {
 }
 
 // Overage pricing (not a product, just a rate)
-export const OVERAGE_RATE_PER_MINUTE = 26 // £0.26 in pence
+export const OVERAGE_RATE_PER_MINUTE = 40 // £0.40 in pence
 
 // Currency
 export const CURRENCY = "gbp"

@@ -4090,7 +4090,7 @@ Can you change the greeting? Adjust the voice? Modify the questions asked? Set y
 A 7-day free trial lets you see real results with actual customers. Watch how many calls get captured, what the quality of information is, and whether customers mention the AI experience positively. Real data beats marketing claims every time.
 
 **Check pricing transparency**
-Avoid per-call pricing — costs spiral unpredictably. Look for fixed monthly pricing with clear overage rates. whoza.ai's Starter plan at £59/month with £0.26/minute overage is predictable and scales reasonably.`,
+Avoid per-call pricing — costs spiral unpredictably. Look for fixed monthly pricing with clear overage rates. whoza.ai's Starter plan at £59/month with £0.40/minute overage is predictable and scales reasonably.`,
         },
       ],
       conclusion: `AI phone technology has crossed the threshold from experimental to essential. In 2026, the best AI voice agents sound natural, understand context, handle interruptions, and capture information with 95%+ accuracy. They work 24/7, scale infinitely, and cost less than a daily coffee.

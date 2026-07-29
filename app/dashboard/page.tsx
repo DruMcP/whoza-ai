@@ -22,7 +22,7 @@ export default function DashboardPage() {
   const statCards = [
     { label: "Total", value: stats.total, icon: <Phone className="w-5 h-5" />, color: "bg-blue-500/10 text-blue-400" },
     { label: "New", value: stats.new, icon: <AlertCircle className="w-5 h-5" />, color: "bg-amber-500/10 text-amber-400" },
-    { label: "Accepted", value: stats.accepted, icon: <CheckCircle className="w-5 h-5" />, color: "bg-green-500/10 text-green-400" },
+    { label: "Accepted", value: stats.accepted, icon: <CheckCircle className="w-5 h-5" />, color: "bg-green-500/10 text-green-400", tooltip: "A booked job is a job enquiry accepted via WhatsApp (e.g. replying ACCEPT). Unaccepted cards do not count." },
     { label: "Completed", value: stats.completed, icon: <CheckCircle className="w-5 h-5" />, color: "bg-emerald-500/10 text-emerald-400" },
     { label: "Declined", value: stats.declined, icon: <XCircle className="w-5 h-5" />, color: "bg-red-500/10 text-red-400" },
     { label: "Missed", value: stats.missed, icon: <PhoneOff className="w-5 h-5" />, color: "bg-gray-500/10 text-gray-400" },
@@ -48,6 +48,7 @@ export default function DashboardPage() {
             <div
               key={stat.label}
               className={`${stat.color} rounded-xl p-3 border border-white/5`}
+              title={(stat as any).tooltip || undefined}
             >
               <div className="flex items-center gap-1.5 text-xs font-medium opacity-70 mb-1">
                 {stat.icon}

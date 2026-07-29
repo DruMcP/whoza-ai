@@ -31,7 +31,7 @@ import { RelatedTrades } from "@/components/whoza/related-trades"
 const faqs = [
   {
     question: "How much does AI call handling cost for roofers?",
-    answer: "Whoza.ai starts at £59/month for the Starter plan. That's less than the cost of one missed emergency repair. Every plan includes unlimited AI calls, WhatsApp delivery, and a 7-day free trial. Overage minutes are billed at £0.26/minute. One captured £14,000 re-roof pays for 20+ years of service."
+    answer: "Whoza.ai starts at £59/month for the Starter plan. That's less than the cost of one missed emergency repair. Every plan includes unlimited AI calls, WhatsApp delivery, and a 7-day free trial. Overage minutes are billed at £0.40/minute. One captured £14,000 re-roof pays for 20+ years of service."
   },
   {
     question: "Can Katie handle storm damage emergencies at 2am?",

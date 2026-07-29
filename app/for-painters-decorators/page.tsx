@@ -57,7 +57,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "How much does AI call handling cost for painters and decorators?",
-    answer: "Whoza.ai starts at £59/month for the Starter plan. One captured interior painting job for a 3-bedroom house averages £1,200-£2,500. A full exterior repaint can be £3,000-£8,000. At £59/month, one missed room repaint pays for the entire year. Overage minutes are billed at £0.26/minute. No hidden fees or contracts."
+    answer: "Whoza.ai starts at £59/month for the Starter plan. One captured interior painting job for a 3-bedroom house averages £1,200-£2,500. A full exterior repaint can be £3,000-£8,000. At £59/month, one missed room repaint pays for the entire year. Overage minutes are billed at £0.40/minute. No hidden fees or contracts."
   },
   {
     question: "Can Katie handle emergency painting and touch-up calls?",

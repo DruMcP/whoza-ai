@@ -352,7 +352,7 @@ export function Pricing() {
           className="mt-8 text-center"
         >
           <p className="text-sm text-[var(--slate-500)]">
-            Need more call time? Add 100-minute bundles for {cs}20, or pay {cs}0.26/min for additional usage. These minutes never expire.
+            Need more call time? Add 100-minute bundles for {cs}20, or pay {cs}0.40/min for additional usage. These minutes never expire.
           </p>
         </motion.div>
 
@@ -391,7 +391,7 @@ export function Pricing() {
               </div>
               <div className="flex items-center gap-2 text-sm text-[var(--rex-green)] font-medium bg-[var(--rex-green)]/10 rounded-lg px-3 py-2 mb-4">
                 <CheckCircle2 className="w-4 h-4" />
-                Lower cost than standard overage rate ({cs}0.26/min)
+                Lower cost than standard overage rate ({cs}0.40/min)
               </div>
               <button
                 onClick={() => openWaitlist("Minutes Bundle")}
@@ -548,7 +548,19 @@ export function Pricing() {
           className="mt-8 text-center"
         >
           <p className="text-sm text-[var(--slate-400)]">
-            Additional call handling minutes are charged at {cs}0.26 per minute across all plans. You can monitor and control usage at any time.
+            Additional call handling minutes are charged at {cs}0.40 per minute across all plans. You can monitor and control usage at any time.
+          </p>
+        </motion.div>
+
+        {/* Booked Job Definition Footnote */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mt-4 text-center"
+        >
+          <p className="text-sm text-[var(--slate-400)] max-w-2xl mx-auto">
+            A booked job is a job enquiry that the tradesperson has accepted via the Whoza WhatsApp channel (e.g. replying ACCEPT to the WhatsApp job card). Job cards sent but not accepted do not count toward plan job allowances and are not billed as extra jobs.
           </p>
         </motion.div>
       </div>

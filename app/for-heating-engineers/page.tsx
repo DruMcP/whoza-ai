@@ -57,7 +57,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "How much does AI call handling cost for heating engineers?",
-    answer: "Whoza.ai starts at £59/month for the Starter plan. One captured boiler breakdown averages £120-£200 callout. A full boiler replacement can be £2,500-£4,500. At £59/month, one emergency callout pays for the whole year. Overage minutes are billed at £0.26/minute."
+    answer: "Whoza.ai starts at £59/month for the Starter plan. One captured boiler breakdown averages £120-£200 callout. A full boiler replacement can be £2,500-£4,500. At £59/month, one emergency callout pays for the whole year. Overage minutes are billed at £0.40/minute."
   },
   {
     question: "Can Katie handle emergency boiler breakdown calls at 6am on a Sunday?",

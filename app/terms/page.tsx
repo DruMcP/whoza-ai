@@ -130,7 +130,7 @@ export default function TermsOfService() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
-                <span><strong>Booked job definition:</strong> A booked job is an enquiry that you have accepted via the WhatsApp or SMS job card. Only accepted enquiries count towards your plan's included jobs and are billed. Declined enquiries are not billed. If you do not respond to a job card within 24 hours, the system automatically declines it — and an auto-declined enquiry is not billed.</span>
+                <span><strong>Booked job definition:</strong> A booked job is a job enquiry that the tradesperson has accepted via the Whoza WhatsApp channel (e.g. replying ACCEPT to the WhatsApp job card). Job cards sent but not accepted do not count toward plan job allowances and are not billed as extra jobs.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
@@ -142,7 +142,7 @@ export default function TermsOfService() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
-                <span><strong>Minute allowances:</strong> Each plan includes a set number of call minutes per month. Additional minutes are charged at £0.26 per minute</span>
+                <span><strong>Minute allowances:</strong> Each plan includes a set number of call minutes per month. Additional minutes are charged at £0.40 per minute</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>

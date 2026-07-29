@@ -150,6 +150,9 @@ export default function FairUsePolicy() {
           <section className="mb-10">
             <h2 className="text-xl font-semibold mb-4">5. Trial Fair Use</h2>
             <p className="text-white/70 leading-relaxed mb-4">
+              A booked job is a job enquiry that the tradesperson has accepted via the Whoza WhatsApp channel (e.g. replying ACCEPT to the WhatsApp job card). Job cards sent but not accepted do not count toward plan job allowances and are not billed as extra jobs.
+            </p>
+            <p className="text-white/70 leading-relaxed mb-4">
               The 7-day Katie trial on Starter includes:
             </p>
             <ul className="space-y-3 text-white/70">
@@ -176,7 +179,7 @@ export default function FairUsePolicy() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
-                <span><strong>Overage:</strong> Additional minutes charged at £0.26/minute</span>
+                <span><strong>Overage:</strong> Additional minutes charged at £0.40/minute</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
