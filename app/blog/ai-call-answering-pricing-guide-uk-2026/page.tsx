@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://whoza.ai/blog/ai-call-answering-pricing-guide-uk-2026",
   },
-  authors: [{ name: "Trade Tech Review" }],
+  authors: [{ name: "whoza.ai" }],
   publisher: "Whoza.ai",
 }
 
@@ -47,7 +47,7 @@ const articleSchema = {
   "description": "Transparent AI call answering pricing guide for UK businesses. Compare per-job, per-minute and per-month models. Hidden costs revealed.",
   "author": {
     "@type": "Organization",
-    "name": "Trade Tech Review",
+    "name": "whoza.ai",
   },
   "publisher": {
     "@type": "Organization",
@@ -202,7 +202,7 @@ export default function PricingGuidePage() {
               <div className="flex flex-wrap items-center gap-4 text-white/40 text-sm mt-4">
                 <div className="flex items-center gap-2">
                   <User className="w-4 h-4" />
-                  <span>Trade Tech Review</span>
+                  <span>whoza.ai</span>
                   <span className="text-white/30">— Research Team</span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -260,7 +260,7 @@ export default function PricingGuidePage() {
                   <Check className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-white">ICO Registered</strong>
-                    <p className="text-white/50">whoza.ai: ICO ZB123456 — UK GDPR compliant</p>
+                    <p className="text-white/50">whoza.ai: ICO ZC077271 — UK GDPR compliant</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">

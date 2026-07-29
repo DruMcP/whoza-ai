@@ -3,6 +3,7 @@ import { MetadataRoute } from 'next'
 // Verified live /for-{trade}-{city} pages (July 2026)
 const LIVE_CITY_PAGES: Record<string, string[]> = {
   "plumbers": ["london","manchester","birmingham","leeds","glasgow","bristol","liverpool","edinburgh"],
+  "painters-decorators": ["london","glasgow","edinburgh"],
   "electricians": ["london","manchester","birmingham","glasgow","edinburgh"],
   "builders": ["london","manchester","birmingham","glasgow","edinburgh"],
   "roofers": ["london","glasgow","edinburgh"],
@@ -35,6 +36,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/faq`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/support`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${baseUrl}/contact`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${baseUrl}/about`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${baseUrl}/refer`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${baseUrl}/case-studies`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/sample-call`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${baseUrl}/trust`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
@@ -75,6 +78,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
+  // Location pages
+  const locationPages: MetadataRoute.Sitemap = [
+    { url: `${baseUrl}/london`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/manchester`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/birmingham`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/glasgow`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/edinburgh`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/bristol`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/leeds`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/liverpool`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+  ]
+
   // Resources
   const resourcePages: MetadataRoute.Sitemap = [
     { url: `${baseUrl}/resources/missed-call-cost-calculator`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
@@ -114,22 +129,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'what-tradespeople-actually-want-from-ai',
     'ai-search-for-uk-trades',
     'ai-receptionist-vs-human-cost-guide-2026',
-    '247-call-answering-uk-trades-guide-2026',
     'ai-call-answering-pricing-guide-uk-2026',
-    'best-ai-call-answering-service-uk-2026',
-    'best-ai-call-answering-service-uk-trades-2026',
     '24-7-call-answering-emergency-trades',
     '3-am-lockout-calls-were-going-to-voicemail-now-i-catch-every-one-sarah-the-locksmith',
     'ai-call-answering-cost-uk',
-    'ai-call-answering-trades-uk-guide',
     'ai-call-answering-uk-tradespeople-definitive-guide-2026',
     'ai-phone-technology-complete-guide',
-    'ai-receptionist-vs-human-receptionist-which-is-right-for-your-trade-business',
-    'ai-vs-human-receptionist-trades',
-    'best-ai-phone-answering-uk-trades-2026',
     'builders-lead-generation-guide',
     'google-business-profile-trades',
-    'how-ai-call-handlers-are-changing-the-game-for-uk-trades-2026',
     'how-does-ai-call-answering-work',
     'how-much-do-missed-calls-cost-uk-trades',
     'how-to-get-more-google-reviews-trades',
@@ -146,10 +153,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'i-worked-out-i-was-losing-30000-a-year-to-missed-calls-mark-the-gas-engineer',
     'local-seo-trades-complete-guide',
     'locksmith-24-7-call-answering',
-    'missed-call-recovery-trades-guide',
-    'missed-calls-missed-money-the-real-cost-for-tradespeople',
     'roofing-lead-generation-guide',
-    'why-62-percent-of-trade-business-calls-go-unanswered',
     '5-signs-your-trade-business-is-losing-customers-to-missed-calls',
     '7-questions-every-uk-tradesperson-should-ask-before-hiring-a-call-answering-service',
     '8-reasons-uk-tradespeople-switch-to-ai-call-handling-in-2026',
@@ -185,6 +189,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...comparisonPages,
     ...tradePages,
     ...comboPages,
+    ...locationPages,
     ...resourcePages,
     ...toolPages,
     ...researchPages,

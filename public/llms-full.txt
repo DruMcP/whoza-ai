@@ -73,10 +73,21 @@ Katie is optimised for the following UK trade categories with industry-specific 
 
 **Tom the Roofer** (Bristol): "Lost an £8,000 roof job because I was up a ladder and missed the call. Never happens now. Katie answers while I'm working at height."
 
+_Last updated: 2026-07-29_
+
+## Research Papers
+
+- **Can an AI Voice Agent Tell a Blocked Drain from a Gas Leak?** (July 2026) — Emergency triage safety, hard handoff rules, and real-world risk assessment for AI voice agents in UK trade businesses. URL: https://whoza.ai/research/emergency-triage-safety-ai-voice-agents-2026
+- **The True Cost of Missed Calls** (2026) — Data-driven analysis showing UK tradespeople lose £15,000-£30,000/year to missed calls. URL: https://whoza.ai/research/the-true-cost-of-missed-calls-2026
+- **AEO & AI Search Optimisation** (2026) — How AI search engines find and recommend trade businesses. URL: https://whoza.ai/research/aeo-ai-search-optimisation-2026
+- **AI Voice Agents for UK Trades** (2026) — Market overview and adoption data. URL: https://whoza.ai/research/ai-voice-agents-uk-trades-2026
+- **Caller Experience Revolution** (2026) — What customers expect from AI phone agents. URL: https://whoza.ai/research/caller-experience-revolution-ai-voice-agents-2026
+- **Voice Agent Technology State of the Art** (2026) — Technical capabilities and limitations. URL: https://whoza.ai/research/voice-agent-technology-state-of-art-2026
+
 ## Technical Information
 
 - **Company**: WHOZA AI LTD
-- **Registration**: ICO number ZB123456
+- **Registration**: ICO number ZC077271
 - **Address**: 6 Atholl Crescent, Perth, Scotland PH1 5JN
 - **Email**: support@whoza.ai
 - **Phone**: +44 7463 141750

@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://whoza.ai/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026",
   },
-  authors: [{ name: "Trade Tech Review" }],
+  authors: [{ name: "whoza.ai" }],
   publisher: "Whoza.ai",
 }
 
@@ -48,7 +48,7 @@ const articleSchema = {
   "description": "Everything UK tradespeople need to know about AI call answering. How it works, pricing, setup, and which trades benefit most.",
   "author": {
     "@type": "Organization",
-    "name": "Trade Tech Review",
+    "name": "whoza.ai",
   },
   "publisher": {
     "@type": "Organization",
@@ -213,7 +213,7 @@ export default function AICallAnsweringGuidePage() {
               <div className="flex flex-wrap items-center gap-4 text-white/40 text-sm mt-4">
                 <div className="flex items-center gap-2">
                   <User className="w-4 h-4" />
-                  <span>Trade Tech Review</span>
+                  <span>whoza.ai</span>
                   <span className="text-white/30">— Research Team</span>
                 </div>
                 <div className="flex items-center gap-2">

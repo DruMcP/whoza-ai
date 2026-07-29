@@ -1,6 +1,6 @@
 # llms-full.txt — whoza.ai
 # AI-optimised context file with complete FAQ answers for LLM crawlers
-# Last updated: 2026-06-08
+# Last updated: 2026-07-29
 # Schema: https://llmstxt.org
 
 ## About whoza.ai

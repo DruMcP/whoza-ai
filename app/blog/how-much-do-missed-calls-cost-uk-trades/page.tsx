@@ -53,7 +53,7 @@ const articleSchema = {
   "description": "Data-driven analysis of missed call costs for UK tradespeople using FSB and ONS data.",
   "author": {
     "@type": "Organization",
-    "name": "Trade Tech Review",
+    "name": "whoza.ai",
   },
   "publisher": {
     "@type": "Organization",
@@ -109,7 +109,7 @@ export default function MissedCallsCostPage() {
               <div className="flex flex-wrap items-center gap-4 text-white/40 text-sm mt-4">
                 <div className="flex items-center gap-2">
                   <User className="w-4 h-4" />
-                  <span>Trade Tech Review</span>
+                  <span>whoza.ai</span>
                   <span className="text-white/30">— Research Team</span>
                 </div>
                 <div className="flex items-center gap-2">

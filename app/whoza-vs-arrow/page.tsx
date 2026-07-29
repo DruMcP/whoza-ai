@@ -70,7 +70,7 @@ const reviewSchema = {
   },
   "author": {
     "@type": "Organization",
-    "name": "Trade Tech Review",
+    "name": "whoza.ai",
   },
   "reviewBody": "Independent comparison of whoza.ai vs ARROW for UK trades. whoza.ai wins on price (cheaper at every tier), features (WhatsApp, reviews, competitor analysis, calendar sync), and flexibility (no contract). ARROW offers a longer free trial (14 days) but requires a credit card. Both provide good AI voice quality and 30-day money-back guarantees. Recommendation: Choose whoza.ai if you want the complete revenue system with WhatsApp delivery and review collection. Choose ARROW if you want a longer trial period and don't mind email delivery.",
 }
