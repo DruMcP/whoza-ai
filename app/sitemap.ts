@@ -63,6 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     pageUrl('/about', 'app/about/page.tsx', { changeFrequency: 'monthly', priority: 0.5 }),
     pageUrl('/refer', 'app/refer/page.tsx', { changeFrequency: 'monthly', priority: 0.5 }),
     pageUrl('/case-studies', 'app/case-studies/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
+    pageUrl('/locations', 'app/locations/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
     pageUrl('/sample-call', 'app/sample-call/page.tsx', { changeFrequency: 'weekly', priority: 0.7 }),
     pageUrl('/trust', 'app/trust/page.tsx', { changeFrequency: 'yearly', priority: 0.3 }),
     pageUrl('/best-ai-call-handler-uk-trades', 'app/best-ai-call-handler-uk-trades/page.tsx', { changeFrequency: 'monthly', priority: 0.8 }),

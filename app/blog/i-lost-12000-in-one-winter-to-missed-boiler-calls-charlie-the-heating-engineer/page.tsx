@@ -54,10 +54,9 @@ export default function BlogPostPage() {
     "headline": "I Lost £12,000 in One Winter to Missed Boiler Calls",
     "description": "Self-employed heating engineer from Manchester shares 4-week winter diary using AI call answering. 47 missed boiler calls, £12,000 lost revenue, and how AI call answering changed everything.",
     "author": {
-      "@type": "Person",
-      "name": "Charlie Hardcastle",
-      "jobTitle": "Self-Employed Heating Engineer",
-      "worksFor": { "@type": "Organization", "name": "Whoza.ai" }
+      "@type": "Organization",
+      "name": "whoza.ai",
+      "url": "https://whoza.ai"
     },
     "publisher": {
       "@type": "Organization",

@@ -122,9 +122,9 @@ const articleSchema = {
   "datePublished": postDate,
   "dateModified": postDate,
   "author": {
-    "@type": "Person",
-    "name": "A working heating engineer",
-    "jobTitle": "Self-employed Heating Engineer",
+    "@type": "Organization",
+    "name": "whoza.ai",
+    "url": "https://whoza.ai"
   },
   "publisher": {
     "@type": "Organization",
