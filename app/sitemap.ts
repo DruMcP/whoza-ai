@@ -1,4 +1,6 @@
 import { MetadataRoute } from 'next'
+import { execSync } from 'child_process'
+import { blogPostContents } from '@/lib/blog-content'
 
 // Verified live /for-{trade}-{city} pages (July 2026)
 const LIVE_CITY_PAGES: Record<string, string[]> = {
@@ -23,105 +25,121 @@ const LIVE_CITY_PAGES: Record<string, string[]> = {
 
 const baseUrl = 'https://whoza.ai'
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date().toISOString().split('T')[0]
+function gitLastMod(filePath: string): string {
+  try {
+    const date = execSync(`git log -1 --format=%cs -- "${filePath}"`, {
+      encoding: 'utf8',
+      cwd: process.cwd(),
+    }).trim()
+    return date || fallbackDate()
+  } catch {
+    return fallbackDate()
+  }
+}
 
+function fallbackDate(): string {
+  return gitLastMod('app/sitemap.ts')
+}
+
+function pageUrl(path: string, filePath: string, opts: Omit<MetadataRoute.Sitemap[0], 'url' | 'lastModified'>): MetadataRoute.Sitemap[0] {
+  return {
+    url: `${baseUrl}${path}`,
+    lastModified: gitLastMod(filePath),
+    ...opts,
+  }
+}
+
+export default function sitemap(): MetadataRoute.Sitemap {
   // Core pages
   const corePages: MetadataRoute.Sitemap = [
-    { url: baseUrl, lastModified: now, changeFrequency: 'daily', priority: 1.0 },
-    { url: `${baseUrl}/signup`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${baseUrl}/pricing`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/how-it-works`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${baseUrl}/locations`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/faq`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/support`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${baseUrl}/contact`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${baseUrl}/about`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${baseUrl}/refer`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${baseUrl}/case-studies`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${baseUrl}/sample-call`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${baseUrl}/trust`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${baseUrl}/best-ai-call-handler-uk-trades`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/ai-vs-virtual-receptionist`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    pageUrl('/', 'app/page.tsx', { changeFrequency: 'daily', priority: 1.0 }),
+    pageUrl('/signup', 'app/signup/page.tsx', { changeFrequency: 'monthly', priority: 0.9 }),
+    pageUrl('/pricing', 'app/pricing/page.tsx', { changeFrequency: 'weekly', priority: 0.9 }),
+    pageUrl('/how-it-works', 'app/how-it-works/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
+    pageUrl('/blog', 'app/blog/page.tsx', { changeFrequency: 'weekly', priority: 0.8 }),
+    pageUrl('/faq', 'app/faq/page.tsx', { changeFrequency: 'monthly', priority: 0.8 }),
+    pageUrl('/support', 'app/support/page.tsx', { changeFrequency: 'monthly', priority: 0.5 }),
+    pageUrl('/contact', 'app/contact/page.tsx', { changeFrequency: 'monthly', priority: 0.5 }),
+    pageUrl('/about', 'app/about/page.tsx', { changeFrequency: 'monthly', priority: 0.5 }),
+    pageUrl('/refer', 'app/refer/page.tsx', { changeFrequency: 'monthly', priority: 0.5 }),
+    pageUrl('/case-studies', 'app/case-studies/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
+    pageUrl('/sample-call', 'app/sample-call/page.tsx', { changeFrequency: 'weekly', priority: 0.7 }),
+    pageUrl('/trust', 'app/trust/page.tsx', { changeFrequency: 'yearly', priority: 0.3 }),
+    pageUrl('/best-ai-call-handler-uk-trades', 'app/best-ai-call-handler-uk-trades/page.tsx', { changeFrequency: 'monthly', priority: 0.8 }),
+    pageUrl('/ai-vs-virtual-receptionist', 'app/ai-vs-virtual-receptionist/page.tsx', { changeFrequency: 'monthly', priority: 0.8 }),
   ]
 
   // Comparison pages
   const comparisonPages: MetadataRoute.Sitemap = [
-    { url: `${baseUrl}/vs-trade-receptionist`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/whoza-vs-clara`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/whoza-vs-moneypenny`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/whoza-vs-team-connect`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/whoza-vs-arrow`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/whoza-vs-ionos`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    pageUrl('/vs-trade-receptionist', 'app/vs-trade-receptionist/page.tsx', { changeFrequency: 'monthly', priority: 0.8 }),
+    pageUrl('/whoza-vs-clara', 'app/whoza-vs-clara/page.tsx', { changeFrequency: 'monthly', priority: 0.8 }),
+    pageUrl('/whoza-vs-moneypenny', 'app/whoza-vs-moneypenny/page.tsx', { changeFrequency: 'monthly', priority: 0.8 }),
+    pageUrl('/whoza-vs-team-connect', 'app/whoza-vs-team-connect/page.tsx', { changeFrequency: 'monthly', priority: 0.8 }),
+    pageUrl('/whoza-vs-arrow', 'app/whoza-vs-arrow/page.tsx', { changeFrequency: 'monthly', priority: 0.8 }),
+    pageUrl('/whoza-vs-ionos', 'app/whoza-vs-ionos/page.tsx', { changeFrequency: 'monthly', priority: 0.8 }),
   ]
 
   // Trade pages (17)
   const tradeSlugs = Object.keys(LIVE_CITY_PAGES)
-  const tradePages: MetadataRoute.Sitemap = tradeSlugs.map(slug => ({
-    url: `${baseUrl}/for-${slug}`,
-    lastModified: now,
-    changeFrequency: 'weekly',
-    priority: 0.9,
-  }))
+  const tradePages: MetadataRoute.Sitemap = tradeSlugs.map(slug =>
+    pageUrl(`/for-${slug}`, `app/for-${slug}/page.tsx`, { changeFrequency: 'weekly', priority: 0.9 })
+  )
 
   // City combo pages (55 live combinations only)
   const comboPages: MetadataRoute.Sitemap = []
   for (const [tradeSlug, cities] of Object.entries(LIVE_CITY_PAGES)) {
     for (const city of cities) {
-      comboPages.push({
-        url: `${baseUrl}/for-${tradeSlug}-${city}`,
-        lastModified: now,
-        changeFrequency: 'monthly',
-        priority: 0.8,
-      })
+      comboPages.push(
+        pageUrl(`/for-${tradeSlug}-${city}`, `app/for-${tradeSlug}-${city}/page.tsx`, { changeFrequency: 'monthly', priority: 0.8 })
+      )
     }
   }
 
-  // Location pages
+  // Location pages (all served by app/[location]/page.tsx)
+  const locationRouteFile = 'app/[location]/page.tsx'
   const locationPages: MetadataRoute.Sitemap = [
-    { url: `${baseUrl}/london`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/manchester`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/birmingham`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/glasgow`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/edinburgh`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/bristol`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/leeds`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/liverpool`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    pageUrl('/london', locationRouteFile, { changeFrequency: 'monthly', priority: 0.8 }),
+    pageUrl('/manchester', locationRouteFile, { changeFrequency: 'monthly', priority: 0.8 }),
+    pageUrl('/birmingham', locationRouteFile, { changeFrequency: 'monthly', priority: 0.8 }),
+    pageUrl('/glasgow', locationRouteFile, { changeFrequency: 'monthly', priority: 0.8 }),
+    pageUrl('/edinburgh', locationRouteFile, { changeFrequency: 'monthly', priority: 0.8 }),
+    pageUrl('/bristol', locationRouteFile, { changeFrequency: 'monthly', priority: 0.8 }),
+    pageUrl('/leeds', locationRouteFile, { changeFrequency: 'monthly', priority: 0.8 }),
+    pageUrl('/liverpool', locationRouteFile, { changeFrequency: 'monthly', priority: 0.8 }),
   ]
 
   // Resources
   const resourcePages: MetadataRoute.Sitemap = [
-    { url: `${baseUrl}/resources/missed-call-cost-calculator`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/resources/trade-business-growth-toolkit`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/resources/google-business-profile-checklist-trades`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+    pageUrl('/resources/missed-call-cost-calculator', 'app/resources/missed-call-cost-calculator/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
+    pageUrl('/resources/trade-business-growth-toolkit', 'app/resources/trade-business-growth-toolkit/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
+    pageUrl('/resources/google-business-profile-checklist-trades', 'app/resources/google-business-profile-checklist-trades/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
   ]
 
   // Tools
   const toolPages: MetadataRoute.Sitemap = [
-    { url: `${baseUrl}/tools/lost-jobs-calculator`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/tools/quote-generator`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/tools/emergency-pricing`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/tools/rate-checker`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/tools/voicemail-scripts`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/watch`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+    pageUrl('/tools/lost-jobs-calculator', 'app/tools/lost-jobs-calculator/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
+    pageUrl('/tools/quote-generator', 'app/tools/quote-generator/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
+    pageUrl('/tools/emergency-pricing', 'app/tools/emergency-pricing/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
+    pageUrl('/tools/rate-checker', 'app/tools/rate-checker/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
+    pageUrl('/tools/voicemail-scripts', 'app/tools/voicemail-scripts/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
+    pageUrl('/watch', 'app/watch/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
   ]
 
   // Research pages
   const researchPages: MetadataRoute.Sitemap = [
-    { url: `${baseUrl}/research`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${baseUrl}/research/emergency-triage-safety-ai-voice-agents-2026`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${baseUrl}/research/aeo-ai-search-optimisation-2026`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${baseUrl}/research/the-true-cost-of-missed-calls-2026`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${baseUrl}/research/caller-experience-revolution-ai-voice-agents-2026`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${baseUrl}/research/ai-voice-agents-uk-trades-2026`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${baseUrl}/research/voice-agent-technology-state-of-art-2026`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${baseUrl}/research/cost-of-missed-calls-uk-trades-2026`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    pageUrl('/research', 'app/research/page.tsx', { changeFrequency: 'weekly', priority: 0.7 }),
+    pageUrl('/research/emergency-triage-safety-ai-voice-agents-2026', 'app/research/emergency-triage-safety-ai-voice-agents-2026/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
+    pageUrl('/research/aeo-ai-search-optimisation-2026', 'app/research/aeo-ai-search-optimisation-2026/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
+    pageUrl('/research/the-true-cost-of-missed-calls-2026', 'app/research/the-true-cost-of-missed-calls-2026/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
+    pageUrl('/research/caller-experience-revolution-ai-voice-agents-2026', 'app/research/caller-experience-revolution-ai-voice-agents-2026/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
+    pageUrl('/research/ai-voice-agents-uk-trades-2026', 'app/research/ai-voice-agents-uk-trades-2026/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
+    pageUrl('/research/voice-agent-technology-state-of-art-2026', 'app/research/voice-agent-technology-state-of-art-2026/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
+    pageUrl('/research/cost-of-missed-calls-uk-trades-2026', 'app/research/cost-of-missed-calls-uk-trades-2026/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
   ]
 
   // Press
   const pressPages: MetadataRoute.Sitemap = [
-    { url: `${baseUrl}/press`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    pageUrl('/press', 'app/press/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
   ]
 
   // Blog posts
@@ -162,26 +180,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'ultimate-faq-tradespeople',
   ]
 
-  const blogPosts: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
-    url: `${baseUrl}/blog/${slug}`,
-    lastModified: now,
-    changeFrequency: 'monthly',
-    priority: 0.7,
-  }))
+  const blogPosts: MetadataRoute.Sitemap = blogSlugs.map((slug) => {
+    const post = blogPostContents[slug]
+    const lastModified = post?.date || gitLastMod(`app/blog/${slug}/page.tsx`)
+    return {
+      url: `${baseUrl}/blog/${slug}`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    }
+  })
 
   // Legal pages
   const legalPages: MetadataRoute.Sitemap = [
-    { url: `${baseUrl}/privacy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${baseUrl}/terms`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${baseUrl}/cookie-policy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${baseUrl}/dpa`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${baseUrl}/fair-use`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${baseUrl}/sla`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${baseUrl}/refund-policy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${baseUrl}/modern-slavery`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${baseUrl}/accessibility`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${baseUrl}/vat-info`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${baseUrl}/complaints`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
+    pageUrl('/privacy', 'app/privacy/page.tsx', { changeFrequency: 'yearly', priority: 0.3 }),
+    pageUrl('/terms', 'app/terms/page.tsx', { changeFrequency: 'yearly', priority: 0.3 }),
+    pageUrl('/cookie-policy', 'app/cookie-policy/page.tsx', { changeFrequency: 'yearly', priority: 0.3 }),
+    pageUrl('/dpa', 'app/dpa/page.tsx', { changeFrequency: 'yearly', priority: 0.3 }),
+    pageUrl('/fair-use', 'app/fair-use/page.tsx', { changeFrequency: 'yearly', priority: 0.3 }),
+    pageUrl('/sla', 'app/sla/page.tsx', { changeFrequency: 'yearly', priority: 0.3 }),
+    pageUrl('/refund-policy', 'app/refund-policy/page.tsx', { changeFrequency: 'yearly', priority: 0.3 }),
+    pageUrl('/modern-slavery', 'app/modern-slavery/page.tsx', { changeFrequency: 'yearly', priority: 0.3 }),
+    pageUrl('/accessibility', 'app/accessibility/page.tsx', { changeFrequency: 'yearly', priority: 0.3 }),
+    pageUrl('/vat-info', 'app/vat-info/page.tsx', { changeFrequency: 'yearly', priority: 0.3 }),
+    pageUrl('/complaints', 'app/complaints/page.tsx', { changeFrequency: 'yearly', priority: 0.3 }),
   ]
 
   return [

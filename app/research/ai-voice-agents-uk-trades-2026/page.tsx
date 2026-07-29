@@ -177,10 +177,7 @@ const datasetSchema = {
   "name": "UK Trades Missed Call Statistics 2026",
   "description": "Key statistics on missed calls and revenue loss for UK trade businesses",
   "creator": {
-    "@type": "Person",
-    "name": "Dru McPherson",
-    "jobTitle": "Founder, whoza.ai",
-    "url": "https://whoza.ai"
+    "@id": "https://whoza.ai/#dru-mcpherson"
   },
   "datePublished": "2026-06-18",
   "license": "https://creativecommons.org/licenses/by/4.0/",

@@ -152,10 +152,7 @@ const datasetSchema = {
   "name": "Caller Experience & AI Voice Agent Statistics 2026",
   "description": "Key statistics on caller abandonment, response times, AI impact on satisfaction, and review generation for small businesses",
   "creator": {
-    "@type": "Person",
-    "name": "Dru McPherson",
-    "jobTitle": "Founder, whoza.ai",
-    "url": "https://whoza.ai"
+    "@id": "https://whoza.ai/#dru-mcpherson"
   },
   "datePublished": "2026-06-20",
   "license": "https://creativecommons.org/licenses/by/4.0/",

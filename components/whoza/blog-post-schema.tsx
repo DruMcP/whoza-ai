@@ -21,6 +21,14 @@ export function BlogPostArticleSchema({
   category,
   excerpt,
 }: BlogPostArticleSchemaProps) {
+  const isDru = author === "Dru McPherson" || author === "Dru"
+  const isOrg = author === "Whoza.ai Research Team" || author === "whoza.ai" || author === "Whoza.ai"
+  const authorObj = isDru
+    ? { "@id": "https://whoza.ai/#dru-mcpherson" }
+    : isOrg
+    ? { "@id": "https://whoza.ai/#organization" }
+    : { "@type": "Person" as const, name: author, jobTitle: authorTitle }
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -29,11 +37,7 @@ export function BlogPostArticleSchema({
     image: "https://whoza.ai/og-image.webp",
     datePublished: datePublished,
     dateModified: dateModified || datePublished,
-    author: {
-      "@type": "Person",
-      name: author,
-      jobTitle: authorTitle,
-    },
+    author: authorObj,
     publisher: {
       "@type": "Organization",
       name: "Whoza.ai",

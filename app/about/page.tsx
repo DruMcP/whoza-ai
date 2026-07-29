@@ -59,10 +59,7 @@ const organizationSchema = {
   },
   "foundingDate": "2024",
   "founder": {
-    "@type": "Person",
-    "name": "Dru McPherson",
-    "jobTitle": "Founder",
-    "url": "https://whoza.ai"
+    "@id": "https://whoza.ai/#dru-mcpherson"
   },
   "description": "AI call answering for UK trades — never miss a job. whoza.ai provides AI-powered voice agents that answer missed calls 24/7, capture enquiries via WhatsApp, collect Google reviews, and track competitor visibility for UK tradespeople.",
   "slogan": "AI call answering for UK trades — never miss a job"

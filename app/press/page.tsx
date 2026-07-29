@@ -374,19 +374,13 @@ export default function PressPage() {
                 }
               ],
               "founder": {
-                "@type": "Person",
-                "@id": "https://whoza.ai/#founder",
-                "name": "Dru McPherson",
-                "jobTitle": "Founder & CEO",
-                "worksFor": {
-                  "@id": "https://whoza.ai/#organization"
-                }
+                "@id": "https://whoza.ai/#dru-mcpherson"
               }
             },
             {
               "@context": "https://schema.org",
               "@type": "Person",
-              "@id": "https://whoza.ai/#founder",
+              "@id": "https://whoza.ai/#dru-mcpherson",
               "name": "Dru McPherson",
               "givenName": "Dru",
               "familyName": "McPherson",

@@ -87,7 +87,7 @@ export default function AISearchForTradesPost() {
         description="How UK customers now use AI to find and vet tradespeople — and how to make sure your trade business is the one it recommends."
         datePublished={PUBLISHED}
         dateModified={PUBLISHED}
-        author="Dru"
+        author="Dru McPherson"
         authorTitle="Founder, Whoza"
         category="AI Search"
         excerpt="UK customers have quietly switched to AI search. Here's what it means for trades — and how to be the name the AI recommends."

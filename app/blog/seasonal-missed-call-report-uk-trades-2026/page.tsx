@@ -13,12 +13,12 @@ export const metadata: Metadata = {
     canonical: "https://whoza.ai/blog/seasonal-missed-call-report-uk-trades-2026",
   },
   robots: { index: true, follow: true },
-  authors: [{ name: "Whoza.ai Research Team" }],
+  authors: [{ name: "whoza.ai", url: "https://whoza.ai" }],
   openGraph: {
     title: "Seasonal Missed Call Report 2026 | whoza.ai",
     description: "Original analysis of 10,000+ trade calls. Winter boiler enquiries spike 340%. Discover which months cost UK trades the most in lost revenue. Data by trade.",
     type: "article",
-    authors: ["Whoza.ai Research Team"],
+    authors: ["whoza.ai"],
     tags: ["Data / Industry Insights"],
     url: "https://whoza.ai/blog/seasonal-missed-call-report-uk-trades-2026",
     siteName: "Whoza.ai",
@@ -54,9 +54,7 @@ export default function BlogPostPage() {
     "headline": "When Do UK Trades Lose the Most Money? Seasonal Missed Call Report 2026",
     "description": "Data from 340 UK trade businesses reveals seasonal patterns in missed calls and lost revenue. Heating engineers lose £3.1M in winter alone. Full breakdown by trade and month.",
     "author": {
-      "@type": "Organization",
-      "name": "Whoza.ai Research Team",
-      "url": "https://whoza.ai"
+      "@id": "https://whoza.ai/#organization"
     },
     "publisher": {
       "@type": "Organization",
@@ -187,8 +185,7 @@ export default function BlogPostPage() {
         "name": "UK Trade Seasonal Missed Call Analysis 2026",
         "description": "Original analysis of 10,247 calls to UK trade businesses across 8 trades over 12 months, measuring seasonal patterns in missed calls and lost revenue.",
         "creator": {
-          "@type": "Organization",
-          "name": "Whoza.ai Research Team"
+          "@id": "https://whoza.ai/#organization"
         },
         "datePublished": "2026-06-27",
         "license": "https://creativecommons.org/licenses/by/4.0/",

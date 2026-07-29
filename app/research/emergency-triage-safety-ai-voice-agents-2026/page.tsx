@@ -24,7 +24,7 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-  authors: [{ name: "Dru", url: "https://whoza.ai" }],
+  authors: [{ name: "Dru McPherson", url: "https://whoza.ai" }],
   openGraph: {
     type: "article",
     locale: "en_GB",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Emergency Triage Safety Research 2026" }],
     publishedTime: "2026-07-29",
     modifiedTime: "2026-07-29",
-    authors: ["Dru"],
+    authors: ["Dru McPherson"],
     tags: ["Research", "Safety", "AI Voice Agents", "Emergency Response", "Liability"],
   },
   twitter: {
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   other: {
     "article:published_time": "2026-07-29",
     "article:modified_time": "2026-07-29",
-    "article:author": "Dru",
+    "article:author": "Dru McPherson",
     "article:section": "Research",
     "article:tag": "AI Voice Agents, Emergency Triage, UK Trades, Gas Safety, AI Liability, Answer Engine Optimisation",
   },
@@ -64,10 +64,7 @@ const articleSchema = {
   "datePublished": "2026-07-29",
   "dateModified": "2026-07-29",
   "author": {
-    "@type": "Person",
-    "name": "Dru",
-    "jobTitle": "Founder, whoza.ai",
-    "url": "https://whoza.ai"
+    "@id": "https://whoza.ai/#dru-mcpherson"
   },
   "publisher": {
     "@id": "https://whoza.ai/#organization"

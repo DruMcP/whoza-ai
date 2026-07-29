@@ -125,10 +125,7 @@ const datasetSchema = {
   "name": "AI Search & AEO Impact Statistics 2026",
   "description": "Key statistics on AI Overview impact, zero-click rates, CTR collapse, structured data correlation, and conversion metrics for AI-driven search",
   "creator": {
-    "@type": "Person",
-    "name": "Dru McPherson",
-    "jobTitle": "Founder, whoza.ai",
-    "url": "https://whoza.ai"
+    "@id": "https://whoza.ai/#dru-mcpherson"
   },
   "datePublished": "2026-06-20",
   "license": "https://creativecommons.org/licenses/by/4.0/",

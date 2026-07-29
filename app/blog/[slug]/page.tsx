@@ -94,18 +94,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     "datePublished": "2026-05-15",
     "dateModified": "2026-05-15",
     "author": {
-      "@type": "Person",
-      "name": "Gary",
-      "jobTitle": "Self-employed Plumber",
-      "worksFor": {
-        "@type": "LocalBusiness",
-        "name": "Gary's Plumbing",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Clapham, London"
-        }
-      },
-      "knowsAbout": ["Plumbing", "Emergency Plumbing", "London Trade Services"]
+      "@type": "Organization",
+      "name": "whoza.ai",
+      "url": "https://whoza.ai"
     },
     "publisher": {
       "@id": "https://whoza.ai/#organization"
@@ -129,9 +120,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     "review": {
       "@type": "Review",
       "author": {
-        "@type": "Person",
-        "name": "Gary",
-        "jobTitle": "Self-employed Plumber"
+        "@type": "Organization",
+        "name": "whoza.ai",
+        "url": "https://whoza.ai"
       },
       "itemReviewed": {
         "@id": "https://whoza.ai/#organization"
@@ -173,6 +164,20 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   ]
   const isPillarPost = pillarSlugs.includes(slug)
 
+  const customerStoryAuthors = [
+    "Mike Harrison", "Tom Edwards", "Gary Mitchell", "Dave Williams", "Mark Harrison",
+    "Tom Hartley", "Steve Dawson", "Sarah Jenkins", "James Crawford", "Mark Henderson",
+    "Sarah Williams", "Tom Bradley"
+  ]
+  const isDruAuthor = post.author === "Dru McPherson"
+  const isOrgAuthor = customerStoryAuthors.includes(post.author) || post.author === "Whoza.ai Team"
+
+  const authorSchema = isDruAuthor
+    ? { "@id": "https://whoza.ai/#dru-mcpherson" }
+    : isOrgAuthor
+      ? { "@type": "Organization" as const, "name": "whoza.ai", "url": "https://whoza.ai" }
+      : { "@type": "Person" as const, name: post.author, jobTitle: post.authorTitle || "Contributor" }
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -181,11 +186,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     image: "https://whoza.ai/og-image.webp",
     datePublished: post.date,
     dateModified: post.date,
-    author: {
-      "@type": "Person",
-      name: post.author,
-      jobTitle: post.authorTitle || "Contributor",
-    },
+    author: authorSchema,
     publisher: {
       "@type": "Organization",
       name: "Whoza.ai",
