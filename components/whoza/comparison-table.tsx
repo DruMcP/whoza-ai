@@ -1,53 +1,108 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Check, X, ArrowRight, MessageCircle } from "lucide-react"
+import { Check, X, ArrowRight, MessageCircle, Minus } from "lucide-react"
 
-const groups = [
+type CellValue = "yes" | "no" | "sometimes" | "varies"
+
+interface Row {
+  outcome: string
+  whoza: CellValue
+  typical: CellValue
+  outcomeLink?: string
+}
+
+interface Group {
+  phase: string
+  rows: Row[]
+}
+
+const groups: Group[] = [
+  {
+    phase: "VALUE",
+    rows: [
+      {
+        outcome: "Pay only for jobs you accept — unaccepted enquiries are never billed",
+        whoza: "yes",
+        typical: "no",
+        outcomeLink: "#booked-job-definition",
+      },
+      {
+        outcome: "No contract — cancel anytime, 30-day money-back guarantee",
+        whoza: "yes",
+        typical: "varies",
+      },
+    ],
+  },
   {
     phase: "Capture",
     rows: [
-      { outcome: "Every call answered 24/7", whoza: true, typical: false },
-      { outcome: "Caller qualified as real job (not spam)", whoza: true, typical: false },
-      { outcome: "Emergency call triage", whoza: true, typical: false },
-      { outcome: "Spam Filtered", whoza: true, typical: false },
+      { outcome: "Every call answered 24/7", whoza: "yes", typical: "no" },
+      { outcome: "Caller qualified as a real job (not spam)", whoza: "yes", typical: "no" },
+      { outcome: "Urgency triage — every call flagged RED/AMBER/GREEN", whoza: "yes", typical: "no" },
+      { outcome: "Spam & sales calls filtered automatically", whoza: "yes", typical: "no" },
+      { outcome: "Voicemail detection + auto-forward", whoza: "yes", typical: "no" },
+      { outcome: "Live transfer to you mid-call when you're available", whoza: "yes", typical: "no" },
+      { outcome: "Keep your existing business number — customers notice nothing", whoza: "yes", typical: "sometimes" },
     ],
   },
   {
     phase: "Deliver",
     rows: [
-      { outcome: "Job sent to your phone instantly", whoza: true, typical: false },
-      { outcome: "You accept or decline via WhatsApp", whoza: true, typical: false },
-      { outcome: "Customer follow-up sent", whoza: true, typical: false },
+      { outcome: "Job sent to your phone instantly via WhatsApp", whoza: "yes", typical: "no" },
+      { outcome: "Accept, call back or decline with one tap", whoza: "yes", typical: "no" },
+      { outcome: "AI call notes + searchable transcripts", whoza: "yes", typical: "no" },
+      { outcome: "Choice of 12 UK voices — name your own assistant", whoza: "yes", typical: "no" },
+      { outcome: "Booking automation + calendar sync (Google, Outlook, Apple)", whoza: "yes", typical: "no" },
+      { outcome: "Customer confirmation & follow-up sent automatically", whoza: "yes", typical: "no" },
     ],
   },
   {
     phase: "Convert",
     rows: [
-      { outcome: "Completed job → review requested", whoza: true, typical: false },
-      { outcome: "Monthly competitor analysis", whoza: true, typical: false },
-      { outcome: "Weekly AI visibility actions", whoza: true, typical: false },
-      { outcome: "Clear action to get more calls", whoza: true, typical: false },
+      { outcome: "Completed job → review requested automatically (Claire)", whoza: "yes", typical: "no" },
+      { outcome: "CRM integration — Jobber, ServiceTitan (Pro plan)", whoza: "yes", typical: "no" },
+      { outcome: "Monthly competitor analysis (Rex)", whoza: "yes", typical: "no" },
+      { outcome: "Weekly AI visibility actions", whoza: "yes", typical: "no" },
+      { outcome: "One clear action to get more calls, every week", whoza: "yes", typical: "no" },
     ],
   },
   {
     phase: "Grow",
     rows: [
-      { outcome: "More reviews → found more easily", whoza: true, typical: false },
-      { outcome: "More visibility → more enquiries", whoza: true, typical: false },
-      { outcome: "More enquiries → more jobs every week", whoza: true, typical: false },
-      { outcome: "Get Recommended by Chat GPT, Perplexity etc", whoza: true, typical: false },
+      { outcome: "More reviews → found more easily", whoza: "yes", typical: "no" },
+      { outcome: "More visibility → more enquiries", whoza: "yes", typical: "no" },
+      { outcome: "More enquiries → more jobs every week", whoza: "yes", typical: "no" },
+      { outcome: "Optimised to get recommended by ChatGPT, Perplexity etc", whoza: "yes", typical: "no" },
     ],
   },
 ]
 
-function Cell({ value }: { value: boolean }) {
-  if (value) {
+function Cell({ value }: { value: CellValue }) {
+  if (value === "yes") {
     return (
       <div className="flex items-center justify-center gap-2">
         <Check className="w-5 h-5 text-[var(--rex-green)]" aria-hidden="true" />
         <span className="sr-only">Yes</span>
         <span className="hidden sm:inline text-sm text-[var(--rex-green)] font-medium">Yes</span>
+      </div>
+    )
+  }
+  if (value === "sometimes") {
+    return (
+      <div className="flex items-center justify-center gap-2">
+        <Minus className="w-5 h-5 text-amber-400" aria-hidden="true" />
+        <span className="sr-only">Sometimes</span>
+        <span className="hidden sm:inline text-sm text-amber-400 font-medium">Sometimes</span>
+      </div>
+    )
+  }
+  if (value === "varies") {
+    return (
+      <div className="flex items-center justify-center gap-2">
+        <Minus className="w-5 h-5 text-amber-400" aria-hidden="true" />
+        <span className="sr-only">Varies</span>
+        <span className="hidden sm:inline text-sm text-amber-400 font-medium">Varies</span>
       </div>
     )
   }
@@ -88,74 +143,80 @@ export function ComparisonTable() {
           className="bg-white rounded-xl shadow-xl border border-[var(--border)] overflow-x-auto"
         >
           <table className="w-full min-w-[340px]">
-              <thead>
-                <tr className="border-b-2 border-[var(--navy-900)]">
-                  <th scope="col" className="text-left py-3 px-3 sm:py-5 sm:px-6 text-xs sm:text-sm font-medium text-[var(--slate-500)] uppercase tracking-wider">
-                    Outcome
-                  </th>
-                  <th scope="col" className="py-3 px-2 sm:py-5 sm:px-4 text-center min-w-[80px] sm:min-w-[140px]">
-                    <div className="inline-flex flex-col items-center">
-                      <span className="font-bold text-[var(--katie-blue)] text-sm sm:text-lg">whoza.ai</span>
-                      <span className="text-xs text-[var(--slate-500)] mt-1">Complete system</span>
-                    </div>
-                  </th>
-                  <th scope="col" className="py-3 px-2 sm:py-5 sm:px-4 text-center min-w-[80px] sm:min-w-[140px]">
-                    <div className="inline-flex flex-col items-center">
-                      <span className="font-medium text-[var(--navy-900)] text-sm sm:text-lg">Typical AI</span>
-                      <span className="text-xs text-[var(--slate-500)] mt-1">Answers calls only</span>
-                    </div>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {/* Based In row */}
-                <tr className="bg-[var(--navy-900)]/5">
-                  <th scope="row" className="py-3 px-3 sm:py-4 sm:px-6 text-xs sm:text-sm text-[var(--navy-900)] font-medium text-left">
-                    Based In
-                  </th>
-                  <td className="py-3 px-2 sm:py-4 sm:px-4 text-center">
-                    <span className="text-sm font-semibold text-[var(--katie-blue)]">Built in Scotland</span>
-                  </td>
-                  <td className="py-3 px-2 sm:py-4 sm:px-4 text-center">
-                    <span className="text-xs text-[var(--slate-500)]">USA, Germany, UK (varies)</span>
-                  </td>
-                </tr>
-                {groups.map((group, groupIndex) => (
-                  <>
-                    {/* Phase header row */}
-                    <tr key={`${group.phase}-header`} className="bg-[var(--navy-900)]">
-                      <td
-                        colSpan={3}
-                        className="py-3 px-6 sm:py-4 sm:px-8 text-xs font-bold text-white uppercase tracking-wider"
-                      >
-                        <div className="flex items-center gap-2">
-                          <span>{group.phase}</span>
-                          <ArrowRight className="w-3 h-3" />
-                        </div>
+            <thead>
+              <tr className="border-b-2 border-[var(--navy-900)]">
+                <th scope="col" className="text-left py-3 px-3 sm:py-5 sm:px-6 text-xs sm:text-sm font-medium text-[var(--slate-500)] uppercase tracking-wider">
+                  Outcome
+                </th>
+                <th scope="col" className="py-3 px-2 sm:py-5 sm:px-4 text-center min-w-[80px] sm:min-w-[140px]">
+                  <div className="inline-flex flex-col items-center">
+                    <span className="font-bold text-[var(--katie-blue)] text-sm sm:text-lg">whoza.ai</span>
+                    <span className="text-xs text-[var(--slate-500)] mt-1">Complete system</span>
+                  </div>
+                </th>
+                <th scope="col" className="py-3 px-2 sm:py-5 sm:px-4 text-center min-w-[80px] sm:min-w-[140px]">
+                  <div className="inline-flex flex-col items-center">
+                    <span className="font-medium text-[var(--navy-900)] text-sm sm:text-lg">Typical AI</span>
+                    <span className="text-xs text-[var(--slate-500)] mt-1">Answers calls only</span>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* Based In row */}
+              <tr className="bg-[var(--navy-900)]/5">
+                <th scope="row" className="py-3 px-3 sm:py-4 sm:px-6 text-xs sm:text-sm text-[var(--navy-900)] font-medium text-left">
+                  Based In
+                </th>
+                <td className="py-3 px-2 sm:py-4 sm:px-4 text-center">
+                  <span className="text-sm font-semibold text-[var(--katie-blue)]">Built in Scotland</span>
+                </td>
+                <td className="py-3 px-2 sm:py-4 sm:px-4 text-center">
+                  <span className="text-xs text-[var(--slate-500)]">USA, Germany, UK (varies)</span>
+                </td>
+              </tr>
+              {groups.map((group, groupIndex) => (
+                <>
+                  {/* Phase header row */}
+                  <tr key={`${group.phase}-header`} className="bg-[var(--navy-900)]">
+                    <td
+                      colSpan={3}
+                      className="py-3 px-6 sm:py-4 sm:px-8 text-xs font-bold text-white uppercase tracking-wider"
+                    >
+                      <div className="flex items-center gap-2">
+                        <span>{group.phase}</span>
+                        <ArrowRight className="w-3 h-3" />
+                      </div>
+                    </td>
+                  </tr>
+                  {group.rows.map((row, rowIndex) => (
+                    <tr
+                      key={row.outcome}
+                      className={
+                        (groupIndex + rowIndex) % 2 === 0 ? "bg-[var(--off-white)]/30" : ""
+                      }
+                    >
+                      <th scope="row" className="py-3 px-3 sm:py-4 sm:px-6 text-xs sm:text-sm text-[var(--navy-900)] font-medium text-left">
+                        {row.outcomeLink ? (
+                          <a href={row.outcomeLink} className="underline underline-offset-2 decoration-[var(--katie-blue)] hover:text-[var(--katie-blue)] transition-colors">
+                            {row.outcome}
+                          </a>
+                        ) : (
+                          row.outcome
+                        )}
+                      </th>
+                      <td className="py-3 px-2 sm:py-4 sm:px-4">
+                        <Cell value={row.whoza} />
+                      </td>
+                      <td className="py-4 px-4">
+                        <Cell value={row.typical} />
                       </td>
                     </tr>
-                    {group.rows.map((row, rowIndex) => (
-                      <tr
-                        key={row.outcome}
-                        className={
-                          (groupIndex + rowIndex) % 2 === 0 ? "bg-[var(--off-white)]/30" : ""
-                        }
-                      >
-                        <th scope="row" className="py-3 px-3 sm:py-4 sm:px-6 text-xs sm:text-sm text-[var(--navy-900)] font-medium text-left">
-                          {row.outcome}
-                        </th>
-                        <td className="py-3 px-2 sm:py-4 sm:px-4">
-                          <Cell value={row.whoza} />
-                        </td>
-                        <td className="py-4 px-4">
-                          <Cell value={row.typical} />
-                        </td>
-                      </tr>
-                    ))}
-                  </>
-                ))}
-              </tbody>
-            </table>
+                  ))}
+                </>
+              ))}
+            </tbody>
+          </table>
         </motion.div>
 
         {/* Closing line */}

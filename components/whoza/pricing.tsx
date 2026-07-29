@@ -554,6 +554,7 @@ export function Pricing() {
 
         {/* Booked Job Definition Footnote */}
         <motion.div
+          id="booked-job-definition"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
