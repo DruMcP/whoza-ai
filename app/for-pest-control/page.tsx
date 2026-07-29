@@ -368,7 +368,7 @@ export default function ForPestControlPage() {
               })}
             </div>
             <div className="mt-8 text-center">
-              <a href="/blog/247-call-answering-uk-trades-guide-2026" className="inline-flex items-center text-amber-400 hover:text-amber-300 font-medium transition-colors">
+              <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="inline-flex items-center text-amber-400 hover:text-amber-300 font-medium transition-colors">
                 Read our 24/7 call answering guide
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
@@ -559,7 +559,7 @@ export default function ForPestControlPage() {
                 or{" "}
                 <a href="/pricing" className="text-amber-400 hover:text-amber-300 underline">
                   compare all pricing plans
-                </a>. See the <Link href="/blog/best-ai-call-answering-service-uk-trades-2026" className="text-amber-400 hover:text-amber-300 underline">7 best AI call answering services compared</Link> for UK trades.
+                </a>. See the <Link href="/best-ai-call-handler-uk-trades" className="text-amber-400 hover:text-amber-300 underline">7 best AI call answering services compared</Link> for UK trades.
               </p>
             </div>
           </div>

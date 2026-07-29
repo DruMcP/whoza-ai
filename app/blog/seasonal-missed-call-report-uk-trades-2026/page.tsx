@@ -770,7 +770,7 @@ export default function BlogPostPage() {
                   <p className="text-[var(--katie-blue)] text-sm font-medium mb-1">Guide</p>
                   <p className="text-white font-semibold">How Much Do Missed Calls Cost UK Trades?</p>
                 </a>
-                <a href="/blog/why-62-percent-of-trade-business-calls-go-unanswered" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors">
+                <a href="/blog/how-much-do-missed-calls-cost-uk-trades" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors">
                   <p className="text-[var(--katie-blue)] text-sm font-medium mb-1">Research</p>
                   <p className="text-white font-semibold">Why 62% of Trade Business Calls Go Unanswered</p>
                 </a>

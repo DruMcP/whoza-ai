@@ -611,7 +611,7 @@ export default function MissedCallsCostPage() {
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-white/10">
             <h3 className="text-lg font-semibold text-white/70 mb-4 text-center">Related Reading</h3>
             <div className="grid sm:grid-cols-2 gap-4">
-              <a href="/blog/best-ai-phone-answering-uk-trades-2026" className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
+              <a href="/best-ai-call-handler-uk-trades" className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
                 <div className="text-emerald-400 text-sm font-medium mb-2">Comparison</div>
                 <div className="font-semibold text-white mb-1">Best AI Phone Answering for UK Trades 2026</div>
                 <p className="text-white/50 text-sm">Independent guide comparing all major AI call answering services.</p>

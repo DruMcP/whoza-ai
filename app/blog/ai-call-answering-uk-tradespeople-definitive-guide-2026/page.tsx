@@ -281,7 +281,7 @@ export default function AICallAnsweringGuidePage() {
                 This guide covers everything: what AI call answering is, how the technology works, 
                 real pricing, which trades benefit most, how it compares to human receptionists and 
                 voicemail, and exactly how to set it up in 30 minutes. For a detailed look at round-the-clock service, 
-                see our <a href="/blog/247-call-answering-uk-trades-guide-2026" className="text-emerald-400 hover:underline">24/7 call answering guide</a>. 
+                see our <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-emerald-400 hover:underline">24/7 call answering guide</a>. 
                 For pricing specifics, check our <a href="/blog/ai-call-answering-pricing-guide-uk-2026" className="text-emerald-400 hover:underline">AI call answering pricing guide</a>. 
                 All data is verified from ONS, Federation of Small Businesses (FSB), and our own independent testing.
               </p>
@@ -1137,7 +1137,7 @@ export default function AICallAnsweringGuidePage() {
                 },
                 {
                   q: "Does AI call answering work with my existing phone number?",
-                  a: "Yes, AI call answering works with your existing business phone number. You simply configure call forwarding on your mobile or landline to divert unanswered or busy calls to the AI service. Your customers never know the difference — they dial your usual number and the AI answers professionally in your business name. You can also get a dedicated number if preferred. For after-hours coverage, see our \u003ca href='/blog/247-call-answering-uk-trades-guide-2026' className='text-emerald-400 hover:underline'\u003e24/7 call answering guide\u003c/a\u003e.",
+                  a: "Yes, AI call answering works with your existing business phone number. You simply configure call forwarding on your mobile or landline to divert unanswered or busy calls to the AI service. Your customers never know the difference — they dial your usual number and the AI answers professionally in your business name. You can also get a dedicated number if preferred. For after-hours coverage, see our \u003ca href='/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026' className='text-emerald-400 hover:underline'\u003e24/7 call answering guide\u003c/a\u003e.",
                 },
                 {
                   q: "Is AI call answering GDPR compliant for UK trades?",
@@ -1178,7 +1178,7 @@ export default function AICallAnsweringGuidePage() {
                 <a href="/pricing" className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-emerald-700 transition-colors shadow-lg">
                   Start Free Trial <ArrowRight className="w-5 h-5" />
                 </a>
-                <a href="/blog/best-ai-call-answering-service-uk-trades-2026" className="inline-flex items-center gap-2 bg-white/10 text-white font-bold px-6 py-4 rounded-xl hover:bg-white/20 transition-colors">
+                <a href="/best-ai-call-handler-uk-trades" className="inline-flex items-center gap-2 bg-white/10 text-white font-bold px-6 py-4 rounded-xl hover:bg-white/20 transition-colors">
                   See Service Comparison <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
@@ -1210,7 +1210,7 @@ export default function AICallAnsweringGuidePage() {
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-white/10">
             <h3 className="text-lg font-semibold text-white/70 mb-4 text-center">Related Reading</h3>
             <div className="grid sm:grid-cols-2 gap-4">
-              <a href="/blog/best-ai-call-answering-service-uk-trades-2026" className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
+              <a href="/best-ai-call-handler-uk-trades" className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
                 <div className="text-emerald-400 text-sm font-medium mb-2">Comparison</div>
                 <div className="font-semibold text-white mb-1">7 Best AI Call Answering Services Compared</div>
                 <p className="text-white/50 text-sm">Independent comparison of 7 AI call answering services for UK trades.</p>

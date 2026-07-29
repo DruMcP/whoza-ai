@@ -820,7 +820,7 @@ export default function VoiceAgentTechnologyPage() {
                 </div>
               </a>
               <a
-                href="/blog/best-ai-call-answering-service-uk-2026"
+                href="/best-ai-call-handler-uk-trades"
                 className="block p-4 bg-white/[0.03] border border-white/[0.06] rounded-lg hover:border-[#6366F1]/30 hover:bg-white/[0.05] transition-all group"
               >
                 <div className="flex items-start gap-3">

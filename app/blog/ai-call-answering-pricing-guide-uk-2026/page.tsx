@@ -311,7 +311,7 @@ export default function PricingGuidePage() {
                 Answer.co.uk. We break down per-job, per-minute, and per-month pricing models. We reveal hidden costs 
                 that providers do not advertise. And we calculate exact break-even points for plumbers, electricians, 
                 roofers, and builders. For a complete overview of round-the-clock service, see our 
-                <a href="/blog/247-call-answering-uk-trades-guide-2026" className="text-emerald-400 hover:underline">24/7 call answering guide</a>.
+                <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-emerald-400 hover:underline">24/7 call answering guide</a>.
               </p>
               <p className="text-white/70 leading-relaxed mb-6">
                 All pricing is verified from provider websites, direct sales enquiries, and our own independent testing. 
@@ -1170,7 +1170,7 @@ export default function PricingGuidePage() {
                 <div className="font-semibold text-white mb-1">Complete Guide to AI Call Answering for UK Trades</div>
                 <p className="text-white/50 text-sm">Everything tradespeople need to know about how AI call answering works.</p>
               </a>
-              <a href="/blog/best-ai-call-answering-service-uk-trades-2026" className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
+              <a href="/best-ai-call-handler-uk-trades" className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
                 <div className="text-emerald-400 text-sm font-medium mb-2">Comparison</div>
                 <div className="font-semibold text-white mb-1">7 Best AI Call Answering Services Compared</div>
                 <p className="text-white/50 text-sm">Independent comparison of 7 AI call answering services for UK trades.</p>

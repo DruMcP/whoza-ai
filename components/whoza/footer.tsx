@@ -49,7 +49,7 @@ const footerLinks = {
     { label: "Missed Call Cost Calculator", href: "/resources/missed-call-cost-calculator" },
     { label: "Trade Business Growth Toolkit", href: "/resources/trade-business-growth-toolkit" },
     { label: "Google Business Profile Checklist", href: "/resources/google-business-profile-checklist-trades" },
-    { label: "24/7 Call Answering Guide", href: "/blog/247-call-answering-uk-trades-guide-2026" },
+    { label: "24/7 Call Answering Guide", href: "/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" },
   ],
   legal: [
     { label: "Privacy Policy", href: "/privacy" },

@@ -306,7 +306,7 @@ export default function VsTeamConnectPage() {
               <a href="/pricing" className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-emerald-700 transition-colors shadow-lg">
                 Start whoza.ai Free Trial <ArrowRight className="w-5 h-5" />
               </a>
-              <a href="/blog/best-ai-phone-answering-uk-trades-2026" className="inline-flex items-center gap-2 bg-white/10 text-white font-bold px-6 py-4 rounded-xl hover:bg-white/20 transition-colors">
+              <a href="/best-ai-call-handler-uk-trades" className="inline-flex items-center gap-2 bg-white/10 text-white font-bold px-6 py-4 rounded-xl hover:bg-white/20 transition-colors">
                 Read More Comparisons <ArrowRight className="w-5 h-5" />
               </a>
             </div>

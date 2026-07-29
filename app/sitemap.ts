@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next'
 // Verified live /for-{trade}-{city} pages (July 2026)
 const LIVE_CITY_PAGES: Record<string, string[]> = {
   "plumbers": ["london","manchester","birmingham","leeds","glasgow","bristol","liverpool","edinburgh"],
-  "painters-decorators": ["london","glasgow","edinburgh"],
+  "painters-decorators": ["glasgow","edinburgh"],
   "electricians": ["london","manchester","birmingham","glasgow","edinburgh"],
   "builders": ["london","manchester","birmingham","glasgow","edinburgh"],
   "roofers": ["london","glasgow","edinburgh"],

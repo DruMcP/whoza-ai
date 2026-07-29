@@ -1009,7 +1009,7 @@ export default function ResearchPage() {
                 <p className="text-white/60 text-sm">Complete 2026 data on missed call costs, AI voice agent pricing, ROI calculations, and how AI call handling works.</p>
               </Link>
               <Link
-                href="/blog/best-ai-call-answering-service-uk-2026"
+                href="/best-ai-call-handler-uk-trades"
                 className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors"
               >
                 <div className="text-emerald-400 text-sm font-medium mb-2">Comparison</div>

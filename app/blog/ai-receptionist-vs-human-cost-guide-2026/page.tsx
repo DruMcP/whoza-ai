@@ -305,7 +305,7 @@ export default function BlogPost() {
               <h3 className="font-semibold mb-2 group-hover:text-emerald-400 transition-colors text-white">Pricing Guide 2026</h3>
               <p className="text-sm text-white/60">Detailed breakdown of AI call answering costs and ROI calculations.</p>
             </a>
-            <a href="/blog/247-call-answering-uk-trades-guide-2026" className="group block bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-5 transition-colors">
+            <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="group block bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-5 transition-colors">
               <h3 className="font-semibold mb-2 group-hover:text-emerald-400 transition-colors text-white">24/7 Emergency Call Handling</h3>
               <p className="text-sm text-white/60">How to capture emergency calls at 2am, weekends, and bank holidays.</p>
             </a>
