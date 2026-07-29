@@ -540,7 +540,7 @@ export default function AICallAnsweringGuidePage() {
                 <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> Works with your existing phone number</li>
                 <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> 24/7 operation with no downtime</li>
                 <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> Spam and robocall filtering included</li>
-                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> Call recordings stored for 12+ months</li>
+                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> Full call transcripts available in your dashboard</li>
                 <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> GDPR-compliant data handling (ICO registered)</li>
               </ul>
             </div>

@@ -175,7 +175,7 @@ const faqSchema = {
       "name": "What happens if Katie can't handle a call?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "If Katie encounters a situation she can't handle — such as a complex commercial tender, a complaint requiring empathy, or a highly technical question — she politely takes a detailed message and immediately transfers the call to your voicemail or designated backup number. You receive the full call recording and transcript in your dashboard, so you can follow up personally. The system also learns from these scenarios: unusual call types are flagged for review, and Katie's knowledge base is updated regularly. In practice, Katie successfully handles approximately 92% of calls without human intervention."
+        "text": "If Katie encounters a situation she can't handle — such as a complex commercial tender, a complaint requiring empathy, or a highly technical question — she politely takes a detailed message and immediately transfers the call to your voicemail or designated backup number. You receive the full call transcript in your dashboard, so you can follow up personally. The system also learns from these scenarios: unusual call types are flagged for review, and Katie's knowledge base is updated regularly. In practice, Katie successfully handles approximately 92% of calls without human intervention."
       }
     },
     {
