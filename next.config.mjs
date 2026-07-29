@@ -476,12 +476,6 @@ const nextConfig = {
         destination: '/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026',
         permanent: true,
       },
-      // De-cannibalise: redirect /for-carpenters to /for-joiners (broader UK term)
-      {
-        source: '/for-carpenters',
-        destination: '/for-joiners',
-        permanent: true,
-      },
       // === GSC 404 FIX: Redirect dead AI-visibility blog posts (2026-06-14) ===
       // Local SEO / getting found cluster
       {

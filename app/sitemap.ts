@@ -42,7 +42,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/sample-call`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${baseUrl}/trust`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${baseUrl}/best-ai-call-handler-uk-trades`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/missed-calls-cost-calculator`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/ai-vs-virtual-receptionist`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
   ]
 
