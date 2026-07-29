@@ -30,6 +30,7 @@ import { Footer } from "@/components/whoza/footer"
 import { CityContentSection } from "@/components/whoza/city-content-section"
 import { StickyCTA, FloatingChatWidget } from "@/components/whoza/sticky-cta"
 import { LocaleProvider } from "@/lib/locale-context"
+import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 import { locations, getLocationBySlug } from "@/lib/locations"
 import { VideoSchema } from "@/components/whoza/schema-markup"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
@@ -110,6 +111,34 @@ export default async function LocationPage({ params }: PageProps) {
 
   const jobsThisWeek = stableNum(location, 100, 180)
 
+  // City-specific FAQ content — unique per city
+  const cityFaqs = [
+    {
+      question: `Do you cover all areas of ${locationData.city} including suburbs?`,
+      answer: `Yes — Katie answers calls for tradespeople across ${locationData.city} and surrounding areas${locationData.neighbourhoods ? `, including ${locationData.neighbourhoods.slice(0, 6).join(", ")} and beyond` : ""}. Whether you're working in the city centre or the outer suburbs, every missed call gets captured and delivered to your WhatsApp instantly.`,
+    },
+    {
+      question: `What's the average response time for tradespeople in ${locationData.city}?`,
+      answer: `${locationData.responseTime || "Most tradespeople in " + locationData.city + " respond within 20-30 minutes"}. Katie ensures you never miss the initial enquiry — she answers instantly, 24/7, and sends you the full job details via WhatsApp so you can call back prepared with all the context.`,
+    },
+    {
+      question: `Are missed calls a big problem for ${locationData.city} tradespeople?`,
+      answer: `Yes — ${locationData.localStats?.missedCallsWeekly || "thousands of"} calls go unanswered every week in ${locationData.city}. ${locationData.callVolume || ""} Many tradespeople miss calls while on site, driving between jobs, or during evenings and weekends. At an average job value of ${locationData.localStats?.avgJob || "£280"}, that's significant lost revenue every month. Katie captures every call so you don't lose a single job.`,
+    },
+    {
+      question: `Does whoza.ai work with local trade associations in ${locationData.city}?`,
+      answer: `Absolutely. We work with tradespeople who hold certifications from ${locationData.associations ? locationData.associations.slice(0, 3).join(", ") : "NICEIC, Gas Safe, FMB and other"} bodies. Katie is trained to handle enquiries professionally and can reference your accreditations when speaking with customers, building trust from the first call.`,
+    },
+    {
+      question: `Can Katie handle emergency calls in ${locationData.city} at night and weekends?`,
+      answer: `Yes — Katie answers 24/7, including nights, weekends, and bank holidays. She identifies emergency keywords and marks urgent enquiries with priority flags in your WhatsApp. Whether it's a burst pipe at 2am or a boiler breakdown on Christmas Day, Katie captures the details and alerts you immediately.`,
+    },
+    {
+      question: `How quickly can I get set up in ${locationData.city}?`,
+      answer: `Most tradespeople in ${locationData.city} are live within 30 minutes. You forward your existing business number to whoza.ai, set your greeting and trade details, and Katie starts answering immediately. No hardware, no IT team, no technical knowledge required.`,
+    },
+  ]
+
   return (
     <LocaleProvider forcedCountry={locationData.country}>
       {/* City-specific LocalBusiness JSON-LD — overrides global Perth coordinates */}
@@ -169,6 +198,7 @@ export default async function LocationPage({ params }: PageProps) {
           }),
         }}
       />
+      <FAQPageSchema faqs={cityFaqs} />
       <VideoSchema
         name={`Whoza.ai Demo — AI Call Handling in ${locationData.city}`}
         description={`Watch how Whoza.ai's Katie captures a missed enquiry in under 60 seconds for ${locationData.trades?.slice(0, 2).join(", ") || "tradespeople"} in ${locationData.city}. The call is answered instantly, the enquiry lands in WhatsApp, and you accept or decline in two taps.`}

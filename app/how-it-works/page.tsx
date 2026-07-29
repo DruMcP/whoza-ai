@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
+import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 import { Settings, Phone, MessageSquare, BarChart3, Shield, RefreshCw } from "lucide-react"
 import Link from "next/link"
 
@@ -32,6 +33,41 @@ export const metadata: Metadata = {
     follow: true,
   },
 }
+
+const howItWorksFaqs = [
+  {
+    question: "How does Katie actually answer my phone calls?",
+    answer: "When a customer calls your business number, Katie picks up instantly — usually within 2 rings. She greets them with your branded message, asks qualifying questions about their job, and captures all the details. The entire conversation happens in natural, conversational English. No menus, no hold music, no 'press 1 for sales'.",
+  },
+  {
+    question: "Do I need to change my business phone number?",
+    answer: "No. You keep your existing number. You simply set up call forwarding from your current provider (BT, Virgin, Vodafone, etc.) to your whoza.ai number. Your customers dial the same number they've always used — they just get answered every time instead of hitting voicemail. Setup takes under 10 minutes.",
+  },
+  {
+    question: "How quickly can I get set up?",
+    answer: "Most tradespeople are live and capturing calls within 30 minutes. Sign up, choose your plan, connect your number via call forwarding, set your greeting and trade details, and Katie starts answering immediately. No hardware, no IT team, no technical knowledge required.",
+  },
+  {
+    question: "What information does Katie collect from callers?",
+    answer: "Katie captures: full name, phone number, postcode, property type, problem description, urgency level, preferred appointment time, and how they found you. For emergencies, she also flags priority and asks key safety questions. Everything is structured and delivered to your WhatsApp in a clean, readable format.",
+  },
+  {
+    question: "Will customers know they're talking to AI?",
+    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. In user surveys, 89% of callers are satisfied with the AI experience — they just want their problem fixed fast.",
+  },
+  {
+    question: "How does the WhatsApp delivery work?",
+    answer: "Within 3 seconds of the call ending, you receive a structured WhatsApp message with all the caller's details: name, number, address, job type, urgency level, and notes from the conversation. You can tap 'Accept', 'Call Back', or 'Decline' directly in the chat. The customer gets an instant SMS confirmation either way.",
+  },
+  {
+    question: "Can Katie book appointments into my calendar?",
+    answer: "Yes. Katie checks your connected calendar (Google, Outlook, or Apple) for available slots and offers them to the customer. When they confirm, the booking is saved and both parties receive confirmation. No double-bookings, no back-and-forth scheduling calls.",
+  },
+  {
+    question: "What happens if Katie can't handle a complex enquiry?",
+    answer: "Katie recognises when a call needs human attention. For complex quotes or unusual situations, she takes a detailed message, flags it for your immediate callback, and delivers full context in WhatsApp so you can call back prepared. If a caller specifically asks for you, she can attempt a live transfer.",
+  },
+]
 
 const steps = [
   {
@@ -71,6 +107,7 @@ export default function HowItWorksPage() {
         { name: "Home", item: "https://whoza.ai" },
         { name: "How It Works", item: "https://whoza.ai/how-it-works" },
       ]} />
+      <FAQPageSchema faqs={howItWorksFaqs} />
       <script
         id="howto-schema"
         type="application/ld+json"
