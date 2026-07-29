@@ -17,6 +17,13 @@ export const revalidate = 3600
 
 const researchReports = [
   {
+    date: "July 2026",
+    title: "Can an AI Voice Agent Tell a Blocked Drain from a Gas Leak?",
+    description: "Independent research on emergency triage, liability and where AI voice agents genuinely belong in safety-critical trades. Healthcare triage benchmarks, UK law, and minimum safeguards.",
+    href: "/research/emergency-triage-safety-ai-voice-agents-2026",
+    status: "live" as const,
+  },
+  {
     date: "June 2026",
     title: "The True Cost of Missed Calls",
     description: "UK Trades Industry Financial Impact Report 2026. Quantifying revenue loss from missed calls across plumbing, electrical, roofing, building, and heating trades.",

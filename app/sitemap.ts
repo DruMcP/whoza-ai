@@ -95,6 +95,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Research pages
   const researchPages: MetadataRoute.Sitemap = [
     { url: `${baseUrl}/research`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${baseUrl}/research/emergency-triage-safety-ai-voice-agents-2026`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/research/aeo-ai-search-optimisation-2026`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/research/the-true-cost-of-missed-calls-2026`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/research/caller-experience-revolution-ai-voice-agents-2026`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
