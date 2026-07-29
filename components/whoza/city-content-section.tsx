@@ -136,7 +136,93 @@ export function CityContentSection({ locationData }: CityContentSectionProps) {
           )}
         </div>
 
-        {/* City-specific testimonial */}
+        {/* City Context — Unique per city */}
+      {locationData.cityContext && (
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+            <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+              <Home className="w-5 h-5 text-[var(--katie-blue)]" />
+              Housing Stock in {locationData.city}
+            </h3>
+            <p className="text-white/70 text-sm leading-relaxed">{locationData.cityContext.housingStock}</p>
+          </div>
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+            <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+              <TrendingUp className="w-5 h-5 text-[var(--coral)]" />
+              Weather Impact
+            </h3>
+            <p className="text-white/70 text-sm leading-relaxed">{locationData.cityContext.weatherImpact}</p>
+          </div>
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+            <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+              <Award className="w-5 h-5 text-emerald-400" />
+              Permitting & Regulations
+            </h3>
+            <p className="text-white/70 text-sm leading-relaxed">{locationData.cityContext.permittingNotes}</p>
+          </div>
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+            <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+              <PoundSterling className="w-5 h-5 text-emerald-400" />
+              Market Dynamics
+            </h3>
+            <p className="text-white/70 text-sm leading-relaxed">{locationData.cityContext.marketDynamics}</p>
+          </div>
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 md:col-span-2">
+            <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+              <PhoneCall className="w-5 h-5 text-amber-400" />
+              Trade Shortage in {locationData.city}
+            </h3>
+            <p className="text-white/70 text-sm leading-relaxed">{locationData.cityContext.tradeShortage}</p>
+          </div>
+        </div>
+      )}
+
+      {/* Case Studies — Unique per city */}
+      {locationData.caseStudies && locationData.caseStudies.length > 0 && (
+        <div className="mb-12">
+          <h3 className="text-2xl font-bold text-white mb-6 text-center">
+            Real Results in {locationData.city}
+          </h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            {locationData.caseStudies.map((cs, idx) => (
+              <div key={idx} className="bg-white/5 border border-white/10 rounded-2xl p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold text-sm">
+                    {cs.name.split(" ").map(n => n[0]).join("")}
+                  </div>
+                  <div>
+                    <p className="text-white font-medium text-sm">{cs.name}</p>
+                    <p className="text-white/50 text-sm">{cs.trade}, {cs.area}</p>
+                  </div>
+                </div>
+                <p className="text-white/70 text-sm leading-relaxed mb-4">{cs.story}</p>
+                <p className="text-white/70 text-sm leading-relaxed mb-4">{cs.result}</p>
+                <div className="text-emerald-400 font-bold text-sm">{cs.revenue}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Local Insights — Unique per city */}
+      {locationData.localInsights && locationData.localInsights.length > 0 && (
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-8 mb-12">
+          <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
+            <MapPin className="w-5 h-5 text-[var(--coral)]" />
+            Local Insights: {locationData.city}
+          </h3>
+          <ul className="space-y-3">
+            {locationData.localInsights.map((insight, idx) => (
+              <li key={idx} className="flex items-start gap-3 text-white/70 text-sm">
+                <div className="w-1.5 h-1.5 rounded-full bg-[var(--coral)] flex-shrink-0 mt-1.5" />
+                {insight}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* City-specific testimonial */}
         {testimonial && (
           <div className="bg-white/5 border border-white/10 rounded-2xl p-8 mb-12">
             <div className="flex items-start gap-4">
