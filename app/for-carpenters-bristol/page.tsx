@@ -75,59 +75,7 @@ export default function ForCarpenterBristolPage() {
       ]} />
       <FAQPageSchema faqs={faqs} />
 
-      <script
-        id="carpenters-bristol-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "FAQPage",
-                "mainEntity": faqs.map(f => ({"@type":"Question","name":f.question,"acceptedAnswer":{"@type":"Answer","text":f.answer}}))
-              },
-              {
-                "@type": "LocalBusiness",
-                "name": "whoza.ai - AI Call Answering for Carpenters in Bristol",
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressLocality": "Bristol",
-                  "addressCountry": "GB"
-                },
-                "geo": {
-                  "@type": "GeoCoordinates",
-                  "latitude": "51.4545",
-                  "longitude": "-2.5879"
-                },
-                "priceRange": "££",
-                
-              },
-              {
-                "@type": "Service",
-                "serviceType": "AI Call Answering for Carpenters",
-                "areaServed": {
-                  "@type": "City",
-                  "name": "Bristol"
-                }
-              },
-              {
-                "@type": "Organization",
-                "@id": "https://whoza.ai/#organization",
-                "name": "whoza.ai",
-                "url": "https://whoza.ai",
-                "logo": { "@type": "ImageObject", "url": "https://whoza.ai/og-image.webp" },
-                "sameAs": [
-                  "https://twitter.com/whozaai",
-                  "https://www.linkedin.com/company/whoza-ai",
-                  "https://www.facebook.com/profile.php?id=61586217731657"
-                ]
-              },
-            ]
-          })
-        }}
-      />
-
-      <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
+            <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
       <CityTradeSchema trade="Carpenter" tradePlural="Carpenters" city="Bristol" region="City of Bristol" pageUrl="https://whoza.ai/for-carpenters-bristol" />
         <section className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
           <div className="absolute inset-0">

@@ -90,39 +90,7 @@ export default function ForGasEngineersPage() {
       <FAQPageSchema faqs={faqs} />
 
       {/* Schema JSON-LD */}
-      <script
-        id="gas-engineer-localbusiness-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "whoza.ai — AI Call Answering for Gas Engineers",
-            "url": "https://whoza.ai/for-gas-engineers",
-            "description": "AI call answering service for UK Gas Safe registered engineers. Katie answers missed calls 24/7, captures CP12 enquiries, boiler breakdowns, gas leaks, and delivers job details via WhatsApp in 3 seconds.",
-            "areaServed": { "@type": "Country", "name": "United Kingdom" },
-            "serviceType": "AI Call Handling for Gas Engineers",
-            "knowsAbout": ["Gas Safety", "CP12", "Boiler Repairs", "Gas Leaks", "Carbon Monoxide", "Gas Safe Registered", "Landlord Gas Safety"],
-            "priceRange": "££",
-            
-            "telephone": "+44-20-0000-0000",
-            "address": {
-              "@type": "PostalAddress",
-              "addressCountry": "GB",
-              "addressRegion": "England"
-            },
-            "openingHoursSpecification": [
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-                "opens": "00:00",
-                "closes": "23:59"
-              }
-            ]
-          })
-        }}
-      />
-      <script
+            <script
         id="gas-engineer-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -144,9 +112,7 @@ export default function ForGasEngineersPage() {
             }
           })
         }}
-      />
-
-      <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
+      />      <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
         {/* ─── HERO ─── */}
         <section className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
           <div className="absolute inset-0">

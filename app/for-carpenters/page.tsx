@@ -95,39 +95,7 @@ export default function ForCarpentersPage() {
       <FAQPageSchema faqs={faqs} />
 
       {/* Schema JSON-LD */}
-      <script
-        id="carpenter-localbusiness-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "whoza.ai — AI Call Answering for Carpenters",
-            "url": "https://whoza.ai/for-carpenters",
-            "description": "AI call answering service for UK carpenters. Katie answers missed calls 24/7, captures bespoke furniture enquiries, and delivers job details via WhatsApp in 3 seconds.",
-            "areaServed": { "@type": "Country", "name": "United Kingdom" },
-            "serviceType": "AI Call Handling for Carpenters",
-            "knowsAbout": ["Carpentry", "Bespoke Furniture", "Fitted Kitchens", "Wardrobes", "Staircases", "Joinery", "Woodworking"],
-            "priceRange": "££",
-            
-            "telephone": "+44-20-0000-0000",
-            "address": {
-              "@type": "PostalAddress",
-              "addressCountry": "GB",
-              "addressRegion": "England"
-            },
-            "openingHoursSpecification": [
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-                "opens": "00:00",
-                "closes": "23:59"
-              }
-            ]
-          })
-        }}
-      />
-      <script
+            <script
         id="carpenter-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -149,9 +117,7 @@ export default function ForCarpentersPage() {
             }
           })
         }}
-      />
-
-      <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
+      />      <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
         {/* ─── HERO ─── */}
         <section className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
           <div className="absolute inset-0">

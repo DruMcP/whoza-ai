@@ -138,37 +138,7 @@ const howItWorks = [
 export const revalidate = 3600
 
 export default function ForHvacPage() {
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "whoza.ai — AI Call Handling for Heating Engineers",
-    "url": "https://whoza.ai/for-heating-engineers",
-    "logo": "https://whoza.ai/og-image.webp",
-    "image": "https://whoza.ai/og-image.webp",
-    "description": "AI voice agents for UK heating engineers — answer missed calls 24/7, capture boiler breakdown, service, and installation enquiries, and deliver leads via WhatsApp.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "GB",
-      "addressRegion": "England"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "United Kingdom"
-    },
-    "priceRange": "££",
-            
-    "telephone": "+44-20-0000-0000",
-    "email": "dru@whoz.ai",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "00:00",
-        "closes": "23:59"
-      }
-    ],
-    "serviceType": "AI Call Handling for Heating Engineers"
-  }
+  
 
   const serviceSchema = {
     "@context": "https://schema.org",
@@ -210,9 +180,7 @@ export default function ForHvacPage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <VideoSchema
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />      <VideoSchema
         name="Whoza.ai Demo — AI Call Handling for Heating Engineers"
         description="Watch how Katie captures a missed heating enquiry in under 60 seconds. Boiler breakdowns, emergency heating, annual services — answered 24/7."
         embedUrl="https://whoza.ai/for-heating-engineers"

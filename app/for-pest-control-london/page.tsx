@@ -75,59 +75,7 @@ export default function ForPestControlLondonPage() {
       ]} />
       <FAQPageSchema faqs={faqs} />
 
-      <script
-        id="pest-control-london-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "FAQPage",
-                "mainEntity": faqs.map(f => ({"@type":"Question","name":f.question,"acceptedAnswer":{"@type":"Answer","text":f.answer}}))
-              },
-              {
-                "@type": "LocalBusiness",
-                "name": "whoza.ai - AI Call Answering for Pest Control in London",
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressLocality": "London",
-                  "addressCountry": "GB"
-                },
-                "geo": {
-                  "@type": "GeoCoordinates",
-                  "latitude": "51.5074",
-                  "longitude": "-0.1278"
-                },
-                "priceRange": "££",
-                
-              },
-              {
-                "@type": "Service",
-                "serviceType": "AI Call Answering for Pest Control",
-                "areaServed": {
-                  "@type": "City",
-                  "name": "London"
-                }
-              },
-              {
-                "@type": "Organization",
-                "@id": "https://whoza.ai/#organization",
-                "name": "whoza.ai",
-                "url": "https://whoza.ai",
-                "logo": { "@type": "ImageObject", "url": "https://whoza.ai/og-image.webp" },
-                "sameAs": [
-                  "https://twitter.com/whozaai",
-                  "https://www.linkedin.com/company/whoza-ai",
-                  "https://www.facebook.com/profile.php?id=61586217731657"
-                ]
-              },
-            ]
-          })
-        }}
-      />
-
-      <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
+            <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
       <CityTradeSchema trade="Pest Control Technician" tradePlural="Pest Control Services" city="London" region="Greater London" pageUrl="https://whoza.ai/for-pest-control-london" />
         <section className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
           <div className="absolute inset-0">

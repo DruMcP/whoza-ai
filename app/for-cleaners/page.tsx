@@ -97,39 +97,7 @@ export default function ForCleanersPage() {
       <FAQPageSchema faqs={faqs} />
 
       {/* Schema JSON-LD */}
-      <script
-        id="cleaner-localbusiness-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "whoza.ai — AI Call Answering for Cleaners",
-            "url": "https://whoza.ai/for-cleaners",
-            "description": "AI call answering service for UK cleaning companies. Katie answers missed calls 24/7, captures domestic, commercial, and end-of-tenancy enquiries, and delivers job details via WhatsApp in 3 seconds.",
-            "areaServed": { "@type": "Country", "name": "United Kingdom" },
-            "serviceType": "AI Call Handling for Cleaners",
-            "knowsAbout": ["Domestic Cleaning", "Commercial Cleaning", "End of Tenancy Cleaning", "Carpet Cleaning", "Deep Cleaning", "Office Cleaning", "Window Cleaning"],
-            "priceRange": "££",
-            
-            "telephone": "+44-20-0000-0000",
-            "address": {
-              "@type": "PostalAddress",
-              "addressCountry": "GB",
-              "addressRegion": "England"
-            },
-            "openingHoursSpecification": [
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-                "opens": "00:00",
-                "closes": "23:59"
-              }
-            ]
-          })
-        }}
-      />
-      <script
+            <script
         id="cleaner-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -151,9 +119,7 @@ export default function ForCleanersPage() {
             }
           })
         }}
-      />
-
-      <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
+      />      <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
         {/* ─── HERO ─── */}
         <section className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
           <div className="absolute inset-0">

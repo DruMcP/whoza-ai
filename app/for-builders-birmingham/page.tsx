@@ -76,48 +76,7 @@ export default function ForBuilderBirminghamPage() {
       <FAQPageSchema faqs={faqs} />
 
       {/* Schema JSON-LD */}
-      <script
-        id="builder-birmingham-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "FAQPage",
-                "mainEntity": [{"@type":"Question","name":"How much does AI call answering cost for builders in Birmingham?","acceptedAnswer":{"@type":"Answer","text":"whoza.ai starts at £59/month for the Starter plan. That's less than one builder job in Birmingham. Every plan includes unlimited AI calls, WhatsApp delivery, and a 7-day free trial. Most builders recover the cost within 48 hours by capturing just one missed job."}},{"@type":"Question","name":"Can Katie handle emergency calls for builders in Birmingham?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. Katie answers 24/7, including nights, weekends, and bank holidays. She identifies emergency calls and marks them as highest priority in your WhatsApp alert. Whether you're in Birmingham or anywhere in the UK, you'll see the emergency tag immediately and can respond within minutes."}},{"@type":"Question","name":"What information does Katie collect from builders customers in Birmingham?","acceptedAnswer":{"@type":"Answer","text":"Katie captures: full name, phone number, Birmingham postcode, property type, job description, urgency level, preferred appointment time, and how they found you. For emergencies, she also asks about immediate safety concerns and property damage extent."}},{"@type":"Question","name":"Does it work with my existing Birmingham business phone number?","acceptedAnswer":{"@type":"Answer","text":"Yes. You simply set up call forwarding from your existing Birmingham business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."}},{"@type":"Question","name":"How quickly can I get set up as a builder in Birmingham?","acceptedAnswer":{"@type":"Answer","text":"Most builders in Birmingham are live and capturing calls within 30 minutes. Sign up, connect your number via call forwarding, set your greeting and business details, and Katie starts answering immediately. No hardware, no IT team, no technical knowledge required."}},{"@type":"Question","name":"What makes whoza.ai different for builders in Birmingham?","acceptedAnswer":{"@type":"Answer","text":"Unlike generic call answering services, Katie is trained specifically for builders. She understands extension enquiries, renovation quotes, new build leads & commercial contracts — and with 11,000+ trade businesses competing in Birmingham, capturing every call gives you a real competitive edge."}}]
-              },
-              {
-                "@type": "LocalBusiness",
-                "name": "whoza.ai - AI Call Answering for Builders in Birmingham",
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressLocality": "Birmingham",
-                  "addressCountry": "GB"
-                },
-                "geo": {
-                  "@type": "GeoCoordinates",
-                  "latitude": "52.4862",
-                  "longitude": "-1.8904"
-                },
-                "priceRange": "££",
-                
-              },
-              {
-                "@type": "Service",
-                "serviceType": "AI Call Answering for Builders",
-                "areaServed": {
-                  "@type": "City",
-                  "name": "Birmingham"
-                }
-              },
-              
-            ]
-          })
-        }}
-      />
-
-      <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
+            <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
       <CityTradeSchema trade="Builder" tradePlural="Builders" city="Birmingham" region="West Midlands" pageUrl="https://whoza.ai/for-builders-birmingham" />
         {/* ─── HERO ─── */}
         <section className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">

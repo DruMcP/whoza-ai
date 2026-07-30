@@ -75,74 +75,7 @@ export default function ForJoinerEdinburghPage() {
       ]} />
       <FAQPageSchema faqs={faqs} />
 
-      <script
-        id="joiners-edinburgh-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "FAQPage",
-                "mainEntity": faqs.map(f => ({"@type":"Question","name":f.question,"acceptedAnswer":{"@type":"Answer","text":f.answer}}))
-              },
-              {
-                "@type": "LocalBusiness",
-                "name": "whoza.ai - AI Call Answering for Joiners in Edinburgh",
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressLocality": "Edinburgh",
-                  "addressCountry": "GB"
-                },
-                "geo": {
-                  "@type": "GeoCoordinates",
-                  "latitude": "55.9533",
-                  "longitude": "-3.1883"
-                },
-                "priceRange": "££",
-                
-              },
-              {
-                "@type": "Service",
-                "serviceType": "AI Call Answering for Joiners",
-                "areaServed": {
-                  "@type": "City",
-                  "name": "Edinburgh"
-                }
-              },
-              {
-                "@type": "VideoObject",
-                "name": "Whoza.ai 60-Second Demo — Katie Answers Every Call",
-                "description": "Watch Katie, Whoza's AI call handler, capture a missed enquiry in under 60 seconds. The call is answered instantly, the enquiry lands in WhatsApp, Claire requests a review, and Rex delivers growth insights. Built for UK tradespeople.",
-                "thumbnailUrl": "https://whoza.ai/og-image.webp",
-                "uploadDate": "2026-06-01",
-                "duration": "PT60S",
-                "embedUrl": "https://whoza.ai",
-                "publisher": {
-                  "@type": "Organization",
-                  "name": "whoza.ai",
-                  "logo": { "@type": "ImageObject", "url": "https://whoza.ai/og-image.webp" }
-                }
-              },
-              {
-                "@type": "Organization",
-                "@id": "https://whoza.ai/#organization",
-                "name": "whoza.ai",
-                "url": "https://whoza.ai",
-                "logo": { "@type": "ImageObject", "url": "https://whoza.ai/og-image.webp" },
-                "sameAs": [
-                  "https://twitter.com/whozaai",
-                  "https://www.linkedin.com/company/whoza-ai",
-                  "https://www.facebook.com/profile.php?id=61586217731657"
-                ]
-              },
-              
-            ]
-          })
-        }}
-      />
-
-      <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
+            <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
       <CityTradeSchema trade="Joiner" tradePlural="Joiners" city="Edinburgh" region="City of Edinburgh" pageUrl="https://whoza.ai/for-joiners-edinburgh" />
         <section className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
           <div className="absolute inset-0">

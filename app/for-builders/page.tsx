@@ -110,37 +110,7 @@ const howItWorks = [
 ]
 
 export default function ForBuildersPage() {
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "whoza.ai — AI Call Handling for Builders",
-    "url": "https://whoza.ai/for-builders",
-    "logo": "https://whoza.ai/og-image.webp",
-    "image": "https://whoza.ai/og-image.webp",
-    "description": "AI voice agents for UK builders — answer missed calls 24/7, capture extension, renovation, and emergency structural enquiries, and deliver leads via WhatsApp.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "GB",
-      "addressRegion": "England"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "United Kingdom"
-    },
-    "priceRange": "££",
-            
-    "telephone": "+44-20-0000-0000",
-    "email": "dru@whoz.ai",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "00:00",
-        "closes": "23:59"
-      }
-    ],
-    "serviceType": "AI Call Handling for Builders"
-  }
+  
 
   const serviceSchema = {
     "@context": "https://schema.org",
@@ -182,9 +152,7 @@ export default function ForBuildersPage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <VideoSchema
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />      <VideoSchema
         name="Whoza.ai Demo — AI Call Handling for Builders"
         description="Watch how Katie captures a missed building enquiry in under 60 seconds. Extensions, renovations, emergency structural work — answered 24/7."
         embedUrl="https://whoza.ai/for-builders"

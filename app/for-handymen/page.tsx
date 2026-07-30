@@ -93,39 +93,7 @@ export default function ForHandymenPage() {
       <FAQPageSchema faqs={faqs} />
 
       {/* Schema JSON-LD */}
-      <script
-        id="handyman-localbusiness-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "whoza.ai — AI Call Answering for Handymen",
-            "url": "https://whoza.ai/for-handymen",
-            "description": "AI call answering service for UK handymen. Katie answers missed calls 24/7, captures odd jobs, repairs, and maintenance enquiries, and delivers job details via WhatsApp in 3 seconds.",
-            "areaServed": { "@type": "Country", "name": "United Kingdom" },
-            "serviceType": "AI Call Handling for Handymen",
-            "knowsAbout": ["Handyman Services", "Odd Jobs", "Property Maintenance", "Flat-Pack Assembly", "Painting and Decorating", "Tiling", "Carpentry", "Electrical Repairs", "Plumbing Repairs", "Garden Maintenance", "Landlord Services"],
-            "priceRange": "££",
-            
-            "telephone": "+44-20-0000-0000",
-            "address": {
-              "@type": "PostalAddress",
-              "addressCountry": "GB",
-              "addressRegion": "England"
-            },
-            "openingHoursSpecification": [
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-                "opens": "00:00",
-                "closes": "23:59"
-              }
-            ]
-          })
-        }}
-      />
-      <script
+            <script
         id="handyman-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -147,9 +115,7 @@ export default function ForHandymenPage() {
             }
           })
         }}
-      />
-
-      <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
+      />      <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
         {/* ─── HERO ─── */}
         <section className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
           <div className="absolute inset-0">
