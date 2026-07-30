@@ -247,13 +247,7 @@ export default function RootLayout({
                   "Keep your existing business number",
                   "No contract — cancel anytime",
                   "30-day money-back guarantee"
-                ],
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": "4.9",
-                  "bestRating": "5",
-                  "reviewCount": "47"
-                }
+                ]
               }
             ]
           })
