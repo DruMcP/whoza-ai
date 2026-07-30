@@ -48,13 +48,6 @@ export function HomepageSchema() {
         "termsOfService": "https://whoza.ai/terms"
       },
       {
-        "@type": "WebSite",
-        "@id": "https://whoza.ai/#website",
-        "url": "https://whoza.ai",
-        "name": "whoza.ai",
-        "publisher": { "@id": "https://whoza.ai/#organization" }
-      },
-      {
         "@type": "Person",
         "@id": "https://whoza.ai/#dru-mcpherson",
         "name": "Dru McPherson",

@@ -128,9 +128,9 @@ const faqs = [
   },
 ]
 
-export function FAQ() {
+export function FAQ({ initialCategory = "All" }: { initialCategory?: string }) {
   const [openItem, setOpenItem] = useState<string | undefined>(undefined)
-  const [activeCategory, setActiveCategory] = useState("All")
+  const [activeCategory, setActiveCategory] = useState(initialCategory)
   
   const categories = ["All", "General", "Pricing", "Setup", "Trades"]
   

@@ -1,5 +1,3 @@
-"use client"
-
 import { Header } from "@/components/whoza/header"
 import { Hero } from "@/components/whoza/hero"
 import { SocialProofBar } from "@/components/whoza/social-proof-bar"
@@ -24,13 +22,7 @@ import { FAQ } from "@/components/whoza/faq"
 import { FinalCTA } from "@/components/whoza/final-cta"
 import { Footer } from "@/components/whoza/footer"
 import { StickyCTA, FloatingChatWidget } from "@/components/whoza/sticky-cta"
-import dynamic from "next/dynamic"
-
-const TrilletVoiceWidget = dynamic(
-  () => import("@/components/whoza/trillet-voice-widget").then((mod) => mod.TrilletVoiceWidget),
-  { ssr: false, loading: () => <p className="text-white/60 text-sm">Loading demo...</p> }
-)
-
+import { TrilletVoiceWidgetClient } from "@/components/whoza/trillet-voice-widget-client"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { ClaireDashboard } from "@/components/whoza/claire-dashboard"
 import { HomepageSchema, VideoSchema } from "@/components/whoza/schema-markup"
@@ -108,7 +100,7 @@ export default function Home() {
         <section className="py-12 bg-[var(--navy-900)] dark-section" aria-label="Live demo">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <p className="text-white/60 text-sm mb-4">Experience the demo — no signup needed</p>
-            <TrilletVoiceWidget buttonLabel="Talk to Katie" />
+            <TrilletVoiceWidgetClient />
           </div>
         </section>
 

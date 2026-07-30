@@ -36,13 +36,11 @@ export const metadata: Metadata = {
 export const revalidate = 3600
 
 const pricingFaqs = [
-  { question: "How much does an AI receptionist cost vs in-house staff?", answer: "A full-time human receptionist costs £25,000-£38,700/year including salary, NI, pension, and holiday cover. Whoza.ai's AI receptionist starts at £59/month (£708/year) — a 97% saving. You pay only when you accept a job via WhatsApp or SMS." },
   { question: "What counts as a booked job?", answer: "A booked job is a job enquiry that the tradesperson has accepted via the Whoza WhatsApp channel (e.g. replying ACCEPT to the WhatsApp job card). Job cards sent but not accepted do not count toward plan job allowances and are not billed as extra jobs." },
-  { question: "What is included in the £59/month Starter plan?", answer: "The Starter plan includes unlimited AI call answering, 10 booked jobs per month, WhatsApp delivery, voicemail detection, and 7-day free trial. No credit card required." },
-  { question: "Is there a contract or cancellation fee?", answer: "No. whoza.ai has no contracts and no cancellation fees. You can cancel anytime with one click. We also offer a 30-day money-back guarantee." },
-  { question: "How quickly can I get set up?", answer: "Most tradespeople are fully set up in under 30 minutes. Forward your existing number, customize your greeting, and Katie starts answering immediately." },
-  { question: "Does it work with my existing phone number?", answer: "Yes. You simply forward your existing business number to your whoza.ai number. Your customers call the same number — Katie answers when you can't." },
-  { question: "Can callers be transferred to me if they want to speak to a human?", answer: "Yes. If a caller says they'd rather speak to you, Katie transfers them through on that call. Not a callback later — a live transfer to your phone, right then. If you're unavailable, she takes the details and books them in, then sends you the summary via WhatsApp." },
+  { question: "How does the Refer a Trade programme work?", answer: "Refer a fellow tradesperson to Whoza.ai using your unique referral link. Your friend gets their first paid month free after their 7-day trial, on whichever plan they choose. You get one free month of your own current plan credited after they complete their second consecutive paid month. You can earn up to 12 free months per rolling 12-month period. No credit if they cancel before their second payment." },
+  { question: "How much does Whoza cost in total?", answer: "You pay a monthly plan fee (Starter £59, Growth £125, Pro £230, Scale £399). Each plan includes a set number of call handling minutes and booked enquiries. Additional enquiries beyond your included amount are charged per booking. Overage minutes are billed at £0.40 per minute. There are no hidden setup fees or long-term contracts. You can cancel anytime." },
+  { question: "Is there a contract?", answer: "No. whoza.ai has no contracts. You're free to cancel anytime with no penalties. We also offer a 30-day money-back guarantee on all plans." },
+  { question: "What if I want to cancel?", answer: "Cancel anytime — no contracts, no cancellation fees, no hassle. We're confident you'll stay because the system pays for itself many times over, but if it's not right for your business, you can cancel with one click from your dashboard." },
 ]
 
 export default function PricingPage() {
@@ -100,8 +98,8 @@ export default function PricingPage() {
         {/* Comparison Table */}
         <ComparisonTable />
 
-        {/* FAQ */}
-        <FAQ />
+        {/* FAQ — scoped to Pricing category only */}
+        <FAQ initialCategory="Pricing" />
 
         {/* Final CTA */}
         <FinalCTA />

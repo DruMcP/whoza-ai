@@ -133,7 +133,7 @@ export default function RootLayout({
       */}
       {/* End Google Tag Manager */}
       {/* Schema.org consolidated @graph — Organization + WebSite + SoftwareApplication */}
-      <Script
+      <script
         id="schema-graph"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
