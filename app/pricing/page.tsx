@@ -4,7 +4,6 @@ import { Pricing } from "@/components/whoza/pricing"
 import { FAQ } from "@/components/whoza/faq"
 import { FinalCTA } from "@/components/whoza/final-cta"
 import { ComparisonTable } from "@/components/whoza/comparison-table"
-import { PricingSchema } from "@/components/whoza/pricing-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import type { Metadata } from "next"
@@ -109,7 +108,108 @@ export default function PricingPage() {
       </main>
 
       <Footer />
-      <PricingSchema />
+      <script
+        id="pricing-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Service",
+                "@id": "https://whoza.ai/pricing#starter-plan",
+                "name": "whoza.ai Starter Plan",
+                "description": "AI call handling for UK trades. 10 jobs included, 100 minutes included, 1 concurrent call. £4.50 per extra job.",
+                "provider": { "@id": "https://whoza.ai/#organization" },
+                "areaServed": { "@type": "Country", "name": "United Kingdom" },
+                "hasOfferCatalog": {
+                  "@type": "OfferCatalog",
+                  "name": "whoza.ai Pricing Plans",
+                  "itemListElement": [
+                    {
+                      "@type": "Offer",
+                      "name": "Starter Plan",
+                      "price": "59",
+                      "priceCurrency": "GBP",
+                      "priceValidUntil": "2026-12-31",
+                      "availability": "https://schema.org/InStock",
+                      "url": "https://whoza.ai/pricing",
+                      "itemOffered": { "@id": "https://whoza.ai/pricing#starter-plan" },
+                      "eligibleRegion": { "@type": "Country", "name": "United Kingdom", "applicableCountry": "GB" }
+                    },
+                    {
+                      "@type": "Offer",
+                      "name": "Growth Plan",
+                      "price": "125",
+                      "priceCurrency": "GBP",
+                      "priceValidUntil": "2026-12-31",
+                      "availability": "https://schema.org/InStock",
+                      "url": "https://whoza.ai/pricing",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "@id": "https://whoza.ai/pricing#growth-plan",
+                        "name": "whoza.ai Growth Plan",
+                        "description": "AI call handling for UK trades. 20 jobs included, 300 minutes included, 2 concurrent calls. £3.25 per extra job.",
+                        "provider": { "@id": "https://whoza.ai/#organization" },
+                        "areaServed": { "@type": "Country", "name": "United Kingdom" }
+                      },
+                      "eligibleRegion": { "@type": "Country", "name": "United Kingdom", "applicableCountry": "GB" }
+                    },
+                    {
+                      "@type": "Offer",
+                      "name": "Pro Plan",
+                      "price": "230",
+                      "priceCurrency": "GBP",
+                      "priceValidUntil": "2026-12-31",
+                      "availability": "https://schema.org/InStock",
+                      "url": "https://whoza.ai/pricing",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "@id": "https://whoza.ai/pricing#pro-plan",
+                        "name": "whoza.ai Pro Plan",
+                        "description": "AI call handling for UK trades. 40 jobs included, 700 minutes included, 3 concurrent calls. £2.75 per extra job.",
+                        "provider": { "@id": "https://whoza.ai/#organization" },
+                        "areaServed": { "@type": "Country", "name": "United Kingdom" }
+                      },
+                      "eligibleRegion": { "@type": "Country", "name": "United Kingdom", "applicableCountry": "GB" }
+                    },
+                    {
+                      "@type": "Offer",
+                      "name": "Scale Plan",
+                      "price": "399",
+                      "priceCurrency": "GBP",
+                      "priceValidUntil": "2026-12-31",
+                      "availability": "https://schema.org/InStock",
+                      "url": "https://whoza.ai/pricing",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "@id": "https://whoza.ai/pricing#scale-plan",
+                        "name": "whoza.ai Scale Plan",
+                        "description": "AI call handling for UK trades. 100 jobs included, 1500 minutes included, 5 concurrent calls. £2.25 per extra job.",
+                        "provider": { "@id": "https://whoza.ai/#organization" },
+                        "areaServed": { "@type": "Country", "name": "United Kingdom" }
+                      },
+                      "eligibleRegion": { "@type": "Country", "name": "United Kingdom", "applicableCountry": "GB" }
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "AggregateOffer",
+                "name": "whoza.ai Plans",
+                "description": "AI call handling plans for UK tradespeople. Starting from £59/month.",
+                "lowPrice": "59",
+                "highPrice": "399",
+                "priceCurrency": "GBP",
+                "availability": "https://schema.org/InStock",
+                "url": "https://whoza.ai/pricing",
+                "eligibleRegion": { "@type": "Country", "name": "United Kingdom", "applicableCountry": "GB" },
+                "offerCount": "4"
+              }
+            ]
+          })
+        }}
+      />
       <FAQPageSchema faqs={pricingFaqs} />
     </div>
   )
