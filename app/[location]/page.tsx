@@ -141,47 +141,30 @@ export default async function LocationPage({ params }: PageProps) {
 
   return (
     <LocaleProvider forcedCountry={locationData.country}>
-      {/* City-specific LocalBusiness JSON-LD — overrides global Perth coordinates */}
+      {/* City-specific Service JSON-LD — Service + areaServed (no fabricated address) */}
       <script
-        id={`localbusiness-${location}`}
+        id={`service-${location}`}
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "@id": `https://whoza.ai/${location}#localbusiness`,
+            "@type": "Service",
+            "@id": `https://whoza.ai/${location}#service`,
             "name": `whoza.ai — AI Call Answering in ${locationData.city}`,
             "url": `https://whoza.ai/${location}`,
-            "logo": "https://whoza.ai/logo.webp",
-            "image": "https://whoza.ai/og-image.webp",
-            "description": `AI voice agents that answer missed calls for tradespeople in ${locationData.city} 24/7. Capture enquiries, book jobs, collect reviews. Plans from £59/month.`,
-            "address": {
-              "@type": "PostalAddress",
-              "addressCountry": "GB",
-              "addressRegion": locationData.region,
-              "addressLocality": locationData.city,
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": locationData.lat,
-              "longitude": locationData.lng,
-            },
+            "provider": { "@id": "https://whoza.ai/#organization" },
             "areaServed": {
               "@type": "City",
               "name": locationData.city,
             },
-            "priceRange": "££",
-            "telephone": "+447463141750",
-            "email": "support@whoza.ai",
-            "openingHoursSpecification": [
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-                "opens": "00:00",
-                "closes": "23:59",
-              },
-            ],
             "serviceType": "AI Call Handling Service",
+            "description": `AI voice agents that answer missed calls for tradespeople in ${locationData.city} 24/7. Capture enquiries, book jobs, collect reviews. Plans from £59/month.`,
+            "offers": {
+              "@type": "Offer",
+              "price": "59",
+              "priceCurrency": "GBP",
+              "url": "https://whoza.ai/pricing",
+            },
             "knowsAbout": [
               "AI Voice Agents",
               "Call Handling",
