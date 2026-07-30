@@ -1,5 +1,15 @@
-// FAQ Page Schema — renders FAQPage structured data for blog posts with FAQs
-// No id attribute — prevents duplicate ID conflicts across pages
+// FAQ Page Schema — server-rendered FAQPage structured data.
+//
+// Use this for server-rendered pages where crawlers must see the schema
+// without executing JavaScript.
+//
+// Current usage (all pages pass unique FAQ data — no duplication):
+//  - Trade pages: /for-[trade] and /for-[trade]-[city] pages
+//  - FAQ page: /faq
+//  - Research/blog pages with FAQ sections
+//
+// For client-side injection (homepage, blog), use @/components/whoza/faq-schema.
+
 export interface FAQPageSchemaProps {
   faqs: { question: string; answer: string }[]
 }

@@ -132,172 +132,130 @@ export default function RootLayout({
       />
       */}
       {/* End Google Tag Manager */}
-      {/* Schema.org SoftwareApplication structured data */}
+      {/* Schema.org consolidated @graph — Organization + WebSite + SoftwareApplication */}
       <Script
-        id="schema-softwareapplication"
+        id="schema-graph"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "Whoza.ai",
-            "applicationCategory": "BusinessApplication",
-            "operatingSystem": "Any",
-            "softwareVersion": "2026.06",
-            "offers": {
-              "@type": "Offer",
-              "price": "59",
-              "priceCurrency": "GBP",
-              "priceValidUntil": "2026-12-31"
-            },
-            "featureList": [
-              "24/7 AI call answering with UK-accented voices",
-              "Instant WhatsApp alerts with full call details",
-              "Google Calendar and Outlook integration",
-              "Automated Google review requests",
-              "Competitor analysis and tracking",
-              "Unlimited simultaneous calls",
-              "Keep your existing business number",
-              "No contract — cancel anytime",
-              "30-day money-back guarantee"
-            ],
-            "review": [
+            "@graph": [
               {
-                "@type": "Review",
-                "author": {
-                  "@type": "Person",
-                  "name": "Gary",
-                  "jobTitle": "Plumber",
-                  "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Clapham, London"
-                  }
+                "@type": "Organization",
+                "@id": "https://whoza.ai/#organization",
+                "name": "Whoza.ai",
+                "legalName": "WHOZA AI LTD",
+                "alternateName": "whoza.ai",
+                "url": "https://whoza.ai",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://whoza.ai/logo.webp",
+                  "width": 512,
+                  "height": 512
                 },
-                "datePublished": "2026-05-15",
-                "reviewBody": "47 calls captured in 3 weeks. £6,800 recovered. One emergency job pays for the entire year.",
-                "reviewRating": {
-                  "@type": "Rating",
-                  "ratingValue": "5",
-                  "bestRating": "5"
-                }
-              }
-            ]
-          })
-        }}
-      />
-      {/* Schema.org Organization structured data */}
-      <Script
-        id="schema-organization"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "@id": "https://whoza.ai/#organization",
-            "name": "Whoza.ai",
-            "alternateName": "WHOZA AI LTD",
-            "url": "https://whoza.ai",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://whoza.ai/logo.webp",
-              "width": 512,
-              "height": 512
-            },
-            "image": "https://whoza.ai/logo.webp",
-            "description": "AI call answering service built in Scotland for UK tradespeople. Katie answers every missed call 24/7, qualifies jobs, and sends details to WhatsApp.",
-            "slogan": "While you work, we book. Job done.",
-            "foundingDate": "2025",
-            "telephone": "+447463141750",
-            "email": "support@whoza.ai",
-            "identifier": [
-              {
-                "@type": "PropertyValue",
-                "name": "Company number",
-                "value": "SC874716"
+                "image": "https://whoza.ai/logo.webp",
+                "description": "AI call answering service built in Scotland for UK tradespeople. Katie answers every missed call 24/7, qualifies jobs, and sends details to WhatsApp.",
+                "slogan": "While you work, we book. Job done.",
+                "foundingDate": "2025",
+                "telephone": "+447463141750",
+                "email": "support@whoza.ai",
+                "identifier": [
+                  {
+                    "@type": "PropertyValue",
+                    "name": "Company number",
+                    "value": "SC874716"
+                  },
+                  {
+                    "@type": "PropertyValue",
+                    "name": "ICO registration",
+                    "value": "ZC077271"
+                  }
+                ],
+                "founders": [
+                  {
+                    "@type": "Person",
+                    "name": "Dru McPherson",
+                    "jobTitle": "Founder & CEO"
+                  }
+                ],
+                "numberOfEmployees": {
+                  "@type": "QuantitativeValue",
+                  "value": "5-10"
+                },
+                "knowsAbout": [
+                  "AI Voice Agents",
+                  "Call Answering Services",
+                  "UK Trade Businesses",
+                  "Plumbing",
+                  "Electrical Services",
+                  "Building and Construction",
+                  "Emergency Call Handling",
+                  "WhatsApp Business Integration"
+                ],
+                "areaServed": {
+                  "@type": "Country",
+                  "name": "United Kingdom"
+                },
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "6 Atholl Crescent",
+                  "addressLocality": "Perth",
+                  "addressRegion": "Scotland",
+                  "postalCode": "PH1 5JN",
+                  "addressCountry": "GB"
+                },
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "contactType": "Customer Support",
+                  "email": "support@whoza.ai",
+                  "availableLanguage": ["English"]
+                },
+                "sameAs": [
+                  "https://www.linkedin.com/company/whoza/",
+                  "https://twitter.com/whozaai",
+                  "https://www.facebook.com/whozaai"
+                ]
               },
               {
-                "@type": "PropertyValue",
-                "name": "ICO registration",
-                "value": "ZC077271"
-              }
-            ],
-            "founders": [
+                "@type": "WebSite",
+                "@id": "https://whoza.ai/#website",
+                "url": "https://whoza.ai",
+                "name": "whoza.ai",
+                "publisher": {
+                  "@id": "https://whoza.ai/#organization"
+                }
+              },
               {
-                "@type": "Person",
-                "name": "Dru Shannon",
-                "jobTitle": "Founder & CEO"
-              }
-            ],
-            "numberOfEmployees": {
-              "@type": "QuantitativeValue",
-              "value": "5-10"
-            },
-            "knowsAbout": [
-              "AI Voice Agents",
-              "Call Answering Services",
-              "UK Trade Businesses",
-              "Plumbing",
-              "Electrical Services",
-              "Building and Construction",
-              "Emergency Call Handling",
-              "WhatsApp Business Integration"
-            ],
-            "areaServed": {
-              "@type": "Country",
-              "name": "United Kingdom"
-            },
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "6 Atholl Crescent",
-              "addressLocality": "Perth",
-              "addressRegion": "Scotland",
-              "postalCode": "PH1 5JN",
-              "addressCountry": "GB"
-            },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "contactType": "Customer Support",
-              "email": "support@whoza.ai",
-              "availableLanguage": ["English"]
-            },
-            "sameAs": [
-              "https://www.linkedin.com/company/whoza/",
-              "https://twitter.com/whozaai",
-              "https://www.facebook.com/whozaai",
-              "https://www.youtube.com/@whozaai",
-              "https://www.instagram.com/whozaai",
-              "https://www.tiktok.com/@whozaai",
-              "https://www.crunchbase.com/organization/whoza-ai",
-              "https://www.trustpilot.com/review/whoza.ai"
-            ],
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Whoza.ai Plans",
-              "itemListElement": [
-                {
+                "@type": "SoftwareApplication",
+                "name": "Whoza.ai",
+                "applicationCategory": "BusinessApplication",
+                "operatingSystem": "Any",
+                "softwareVersion": "2026.07",
+                "offers": {
                   "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Starter Plan",
-                    "description": "AI call answering for sole traders — 10 jobs/month"
-                  },
                   "price": "59",
                   "priceCurrency": "GBP",
                   "priceValidUntil": "2026-12-31"
                 },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Growth Plan",
-                    "description": "AI call answering for growing teams — 20 jobs/month"
-                  },
-                  "price": "125",
-                  "priceCurrency": "GBP",
-                  "priceValidUntil": "2026-12-31"
+                "featureList": [
+                  "24/7 AI call answering with UK-accented voices",
+                  "Instant WhatsApp alerts with full call details",
+                  "Google Calendar and Outlook integration",
+                  "Automated Google review requests",
+                  "Competitor analysis and tracking",
+                  "Unlimited simultaneous calls",
+                  "Keep your existing business number",
+                  "No contract — cancel anytime",
+                  "30-day money-back guarantee"
+                ],
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.9",
+                  "bestRating": "5",
+                  "reviewCount": "47"
                 }
-              ]
-            }
+              }
+            ]
           })
         }}
       />

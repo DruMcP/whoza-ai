@@ -2,83 +2,122 @@
 
 import Script from "next/script"
 
-interface PricingSchemaProps {
-  currency: string
-  plans: {
-    name: string
-    price: number
-    description: string
-    url?: string
-  }[]
-}
+/**
+ * Pricing Schema — Service type structured data for whoza.ai pricing plans.
+ *
+ * Uses verified pricing (do not change without confirming with product):
+ * - Starter: £59/month, 10 jobs, 100 min, £4.50/extra job, 1 concurrent call
+ * - Growth: £125/month, 20 jobs, 300 min, £3.25/extra job, 2 concurrent calls
+ * - Pro: £230/month, 40 jobs, 700 min, £2.75/extra job, 3 concurrent calls
+ * - Scale: £399/month, 100 jobs, 1500 min, £2.25/extra job, 5 concurrent calls
+ * - Overage: £0.40/minute for extra minutes
+ * - Currency: GBP, Country: GB
+ */
 
-export function PricingSchema({ currency, plans }: PricingSchemaProps) {
+const PLANS = [
+  {
+    name: "Starter",
+    price: "59",
+    description:
+      "AI call handling for UK trades. 10 jobs included, 100 minutes included, 1 concurrent call. £4.50 per extra job.",
+  },
+  {
+    name: "Growth",
+    price: "125",
+    description:
+      "AI call handling for UK trades. 20 jobs included, 300 minutes included, 2 concurrent calls. £3.25 per extra job.",
+  },
+  {
+    name: "Pro",
+    price: "230",
+    description:
+      "AI call handling for UK trades. 40 jobs included, 700 minutes included, 3 concurrent calls. £2.75 per extra job.",
+  },
+  {
+    name: "Scale",
+    price: "399",
+    description:
+      "AI call handling for UK trades. 100 jobs included, 1500 minutes included, 5 concurrent calls. £2.25 per extra job.",
+  },
+]
+
+const ORGANIZATION_ID = "https://whoza.ai/#organization"
+
+export function PricingSchema() {
+  const offers = PLANS.map((plan) => ({
+    "@type": "Offer" as const,
+    name: `${plan.name} Plan`,
+    price: plan.price,
+    priceCurrency: "GBP",
+    priceValidUntil: "2026-12-31",
+    availability: "https://schema.org/InStock",
+    url: "https://whoza.ai/pricing",
+    itemOffered: {
+      "@type": "Service" as const,
+      "@id": `https://whoza.ai/pricing#${plan.name.toLowerCase()}-plan`,
+      name: `whoza.ai ${plan.name} Plan`,
+      description: plan.description,
+      provider: { "@id": ORGANIZATION_ID },
+      areaServed: {
+        "@type": "Country" as const,
+        name: "United Kingdom",
+      },
+    },
+    eligibleRegion: {
+      "@type": "Country" as const,
+      name: "United Kingdom",
+      applicableCountry: "GB",
+    },
+  }))
+
+  const services = PLANS.map((plan) => ({
+    "@type": "Service" as const,
+    "@id": `https://whoza.ai/pricing#${plan.name.toLowerCase()}-plan`,
+    name: `whoza.ai ${plan.name} Plan`,
+    description: plan.description,
+    provider: { "@id": ORGANIZATION_ID },
+    areaServed: {
+      "@type": "Country" as const,
+      name: "United Kingdom",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog" as const,
+      name: "whoza.ai Pricing Plans",
+      itemListElement: offers,
+    },
+  }))
+
+  const aggregateOffer = {
+    "@type": "AggregateOffer" as const,
+    name: "whoza.ai Plans",
+    description:
+      "AI call handling plans for UK tradespeople. Starting from £59/month.",
+    lowPrice: "59",
+    highPrice: "399",
+    priceCurrency: "GBP",
+    availability: "https://schema.org/InStock",
+    url: "https://whoza.ai/pricing",
+    eligibleRegion: {
+      "@type": "Country" as const,
+      name: "United Kingdom",
+      applicableCountry: "GB",
+    },
+    offerCount: PLANS.length.toString(),
+    offers,
+  }
+
   const schema = {
     "@context": "https://schema.org",
-    "@type": "ItemList",
-    itemListElement: plans.map((plan, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      item: {
-        "@type": "Product",
-        name: `Whoza.ai ${plan.name} Plan`,
-        description: plan.description,
-        url: plan.url || "https://whoza.ai/pricing",
-        brand: {
-          "@type": "Brand",
-          name: "Whoza.ai",
-        },
-        offers: {
-          "@type": "Offer",
-          price: plan.price.toString(),
-          priceCurrency: currency,
-          priceValidUntil: "2026-12-31",
-          availability: "https://schema.org/InStock",
-          url: plan.url || "https://whoza.ai/pricing",
-          seller: {
-            "@type": "Organization",
-            name: "Whoza.ai",
-            url: "https://whoza.ai",
-          },
-          hasMerchantReturnPolicy: {
-            "@type": "MerchantReturnPolicy",
-            returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
-            merchantReturnDays: 30,
-            merchantReturnLink: "https://whoza.ai/refund-policy",
-            returnFees: "https://schema.org/FreeReturn",
-            returnMethod: "https://schema.org/ReturnByMail",
-            applicableCountry: "GB",
-          },
-          shippingDetails: {
-            "@type": "OfferShippingDetails",
-            shippingRate: {
-              "@type": "MonetaryAmount",
-              value: "0",
-              currency: "GBP",
-            },
-            shippingDestination: {
-              "@type": "DefinedRegion",
-              addressCountry: "GB",
-            },
-            deliveryTime: {
-              "@type": "ShippingDeliveryTime",
-              handlingTime: {
-                "@type": "QuantitativeValue",
-                minValue: 0,
-                maxValue: 0,
-                unitCode: "HUR",
-              },
-              transitTime: {
-                "@type": "QuantitativeValue",
-                minValue: 0,
-                maxValue: 0,
-                unitCode: "HUR",
-              },
-            },
-          },
-        },
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": ORGANIZATION_ID,
+        name: "whoza.ai",
+        url: "https://whoza.ai",
       },
-    })),
+      ...services,
+      aggregateOffer,
+    ],
   }
 
   return (

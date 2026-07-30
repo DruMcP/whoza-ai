@@ -1,8 +1,6 @@
 import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
-import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
-import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 import { FileText, Clock, ArrowLeft, User, Calendar, CheckCircle } from "lucide-react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
@@ -86,7 +84,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   // Enhanced Article schema for Gary's blog post
   const isGaryPost = slug === "i-missed-5-emergency-calls-a-week-then-i-tried-ai-gary-the-plumber"
   const enhancedArticleSchema = isGaryPost ? {
-    "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "I Missed 5 Emergency Calls a Week. Then I Tried AI.",
     "description": "Self-employed plumber from Clapham shares honest 4-week diary using AI call answering. Real numbers. No BS. £6,800 in recovered jobs.",
@@ -94,9 +91,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     "datePublished": "2026-05-15",
     "dateModified": "2026-05-15",
     "author": {
-      "@type": "Organization",
-      "name": "whoza.ai",
-      "url": "https://whoza.ai"
+      "@id": "https://whoza.ai/#organization"
     },
     "publisher": {
       "@id": "https://whoza.ai/#organization"
@@ -120,9 +115,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     "review": {
       "@type": "Review",
       "author": {
-        "@type": "Organization",
-        "name": "whoza.ai",
-        "url": "https://whoza.ai"
+        "@id": "https://whoza.ai/#organization"
       },
       "itemReviewed": {
         "@id": "https://whoza.ai/#organization"
@@ -153,6 +146,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           }
         ]
       }
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://whoza.ai/blog",
+      "name": "whoza.ai Blog"
     }
   } : null
 
@@ -175,11 +173,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const authorSchema = isDruAuthor
     ? { "@id": "https://whoza.ai/#dru-mcpherson" }
     : isOrgAuthor
-      ? { "@type": "Organization" as const, "name": "whoza.ai", "url": "https://whoza.ai" }
+      ? { "@id": "https://whoza.ai/#organization" }
       : { "@type": "Person" as const, name: post.author, jobTitle: post.authorTitle || "Contributor" }
 
   const articleSchema = {
-    "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.schema.headline,
     description: post.schema.description,
@@ -188,12 +185,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     dateModified: post.date,
     author: authorSchema,
     publisher: {
-      "@type": "Organization",
-      name: "Whoza.ai",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://whoza.ai/og-image.webp",
-      },
+      "@id": "https://whoza.ai/#organization",
     },
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -206,32 +198,48 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       "@type": "SpeakableSpecification",
       cssSelector: ["article h1", "article h2", "article p"],
     },
+    isPartOf: {
+      "@type": "Blog",
+      "@id": "https://whoza.ai/blog",
+      name: "whoza.ai Blog",
+    },
+  }
+
+  const faqEntities = content.faq.map((faq) => ({
+    "@type": "Question" as const,
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer" as const,
+      text: faq.answer,
+    },
+  }))
+
+  const breadcrumbList = {
+    "@type": "BreadcrumbList" as const,
+    itemListElement: [
+      { "@type": "ListItem" as const, position: 1, name: "Home", item: "https://whoza.ai" },
+      { "@type": "ListItem" as const, position: 2, name: "Blog", item: "https://whoza.ai/blog" },
+      { "@type": "ListItem" as const, position: 3, name: post.title, item: `https://whoza.ai/blog/${slug}` },
+    ],
+  }
+
+  const graphSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      isGaryPost && enhancedArticleSchema ? enhancedArticleSchema : articleSchema,
+      { "@type": "FAQPage" as const, mainEntity: faqEntities },
+      breadcrumbList,
+    ],
   }
 
   return (
     <div className="min-h-screen bg-[var(--navy-900)] text-white">
       <Header />
-      {/* Only render enhanced schema for Gary post; regular articleSchema is embedded in enhanced */}
-      {!isGaryPost && (
-        <script
-          id="blog-post-article-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-        />
-      )}
-      {isGaryPost && enhancedArticleSchema && (
-        <script
-          id="blog-post-enhanced-article-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(enhancedArticleSchema) }}
-        />
-      )}
-      <FAQPageSchema faqs={content.faq} />
-      <BreadcrumbSchema items={[
-        { name: "Home", item: "https://whoza.ai" },
-        { name: "Blog", item: "https://whoza.ai/blog" },
-        { name: post.title, item: `https://whoza.ai/blog/${slug}` },
-      ]} />
+      <script
+        id="blog-post-graph-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(graphSchema) }}
+      />
 
       <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <Link

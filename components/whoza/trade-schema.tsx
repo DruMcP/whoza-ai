@@ -4,136 +4,157 @@ interface TradeSchemaProps {
   tradeData: TradeData
 }
 
+/**
+ * Trade Schema — consolidated structured data for trade pages.
+ *
+ * Outputs ONE <script> tag with @graph array containing:
+ * - FAQPage
+ * - HowTo
+ * - Service (with all 4 pricing plans)
+ * - BreadcrumbList
+ * - WebPage (with SpeakableSpecification)
+ *
+ * Pricing must match verified data exactly:
+ * - Starter: £59, Growth: £125, Pro: £230, Scale: £399
+ * - Currency: GBP, Country: GB
+ */
+
+const ORGANIZATION_ID = "https://whoza.ai/#organization"
+
+const PRICING_PLANS = [
+  { name: "Starter", price: "59" },
+  { name: "Growth", price: "125" },
+  { name: "Pro", price: "230" },
+  { name: "Scale", price: "399" },
+]
+
 export function TradeSchema({ tradeData }: TradeSchemaProps) {
-  // FAQPage schema for AEO
+  const serviceId = `https://whoza.ai/trade/${tradeData.slug}#service`
+
   const faqSchema = {
-    "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": tradeData.faqs.map((faq) => ({
+    mainEntity: tradeData.faqs.map((faq) => ({
       "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
+      name: faq.question,
+      acceptedAnswer: {
         "@type": "Answer",
-        "text": faq.answer,
+        text: faq.answer,
       },
     })),
   }
 
-  // HowTo schema for the process
   const howToSchema = {
-    "@context": "https://schema.org",
     "@type": "HowTo",
-    "name": `How to Set Up AI Call Handling for ${tradeData.display}`,
-    "description": `Four-step process to get Katie answering calls for your ${tradeData.singular} business`,
-    "totalTime": "PT30M",
-    "supply": [
+    name: `How to Set Up AI Call Handling for ${tradeData.display}`,
+    description: `Four-step process to get Katie answering calls for your ${tradeData.singular} business`,
+    totalTime: "PT30M",
+    supply: [
       {
         "@type": "HowToSupply",
-        "name": "UK phone number or existing business line",
+        name: "UK phone number or existing business line",
       },
     ],
-    "tool": [
+    tool: [
       {
         "@type": "HowToTool",
-        "name": "Smartphone with WhatsApp",
+        name: "Smartphone with WhatsApp",
       },
     ],
-    "step": tradeData.howItWorks.map((step) => ({
+    step: tradeData.howItWorks.map((step) => ({
       "@type": "HowToStep",
-      "position": step.step,
-      "name": step.title,
-      "text": step.description,
+      position: step.step,
+      name: step.title,
+      text: step.description,
     })),
   }
 
-  // Service schema for the trade-specific service
   const serviceSchema = {
-    "@context": "https://schema.org",
     "@type": "Service",
-    "name": `AI Call Handling for ${tradeData.display}`,
-    "description": tradeData.metaDescription,
-    "provider": {
+    "@id": serviceId,
+    name: `AI Call Handling for ${tradeData.display}`,
+    description: tradeData.metaDescription,
+    provider: {
       "@type": "Organization",
-      "name": "Whoza.ai",
-      "url": "https://whoza.ai",
+      "@id": ORGANIZATION_ID,
+      name: "whoza.ai",
+      url: "https://whoza.ai",
     },
-    "areaServed": {
+    areaServed: {
       "@type": "Country",
-      "name": "United Kingdom",
+      name: "United Kingdom",
     },
-    "hasOfferCatalog": {
+    hasOfferCatalog: {
       "@type": "OfferCatalog",
-      "name": "Whoza Pricing Plans",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Starter Plan",
-          },
-          "price": "59",
-          "priceCurrency": "GBP",
-          "priceValidUntil": "2026-12-31",
-          "availability": "https://schema.org/InStock",
+      name: "whoza.ai Pricing Plans",
+      itemListElement: PRICING_PLANS.map((plan) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          "@id": `https://whoza.ai/pricing#${plan.name.toLowerCase()}-plan`,
+          name: `${plan.name} Plan`,
         },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Growth Plan",
-          },
-          "price": "125",
-          "priceCurrency": "GBP",
-          "priceValidUntil": "2026-12-31",
-          "availability": "https://schema.org/InStock",
+        price: plan.price,
+        priceCurrency: "GBP",
+        priceValidUntil: "2026-12-31",
+        availability: "https://schema.org/InStock",
+        url: "https://whoza.ai/pricing",
+        eligibleRegion: {
+          "@type": "Country",
+          name: "United Kingdom",
+          applicableCountry: "GB",
         },
-      ],
+      })),
     },
   }
 
-  // BreadcrumbList schema
   const breadcrumbSchema = {
-    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
+    itemListElement: [
       {
         "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://whoza.ai",
+        position: 1,
+        name: "Home",
+        item: "https://whoza.ai",
       },
       {
         "@type": "ListItem",
-        "position": 2,
-        "name": tradeData.display,
-        "item": `https://whoza.ai/trade/${tradeData.slug}`,
+        position: 2,
+        name: tradeData.display,
+        item: `https://whoza.ai/trade/${tradeData.slug}`,
       },
     ],
   }
 
-  // SpeakableSpecification for voice search optimization
   const speakableSchema = {
-    "@context": "https://schema.org",
     "@type": "WebPage",
-    "speakable": {
+    speakable: {
       "@type": "SpeakableSpecification",
-      "cssSelector": [".trade-headline", ".trade-subheadline", ".trade-faq-question"],
+      cssSelector: [
+        ".trade-headline",
+        ".trade-subheadline",
+        ".trade-faq-question",
+      ],
     },
-    "headline": tradeData.headline,
-    "description": tradeData.subheadline,
+    headline: tradeData.headline,
+    description: tradeData.subheadline,
   }
 
-  const schemas = [faqSchema, howToSchema, serviceSchema, breadcrumbSchema, speakableSchema]
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      faqSchema,
+      howToSchema,
+      serviceSchema,
+      breadcrumbSchema,
+      speakableSchema,
+    ],
+  }
 
   return (
-    <>
-      {schemas.map((schema, i) => (
-        <script
-          key={i}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
-      ))}
-    </>
+    <script
+      id="trade-schema"
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
   )
 }
