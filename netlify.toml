@@ -78,9 +78,245 @@
   status = 301
 
 [[redirects]]
-  from = "/us/ai-visibility/*"
+  from = "/uk/ai-visibility/*"
   to = "/"
   status = 301
+
+[[redirects]]
+  from = "/us/ai-visibility/*"
+  to = "/gone"
+  status = 410
+
+# === US city slug 410 Gone — UK-only site ===
+[[redirects]]
+  from = "/houston"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/miami"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/los-angeles"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/chicago"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/dallas"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/atlanta"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/phoenix"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/san-jose"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/charlotte"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/new-york"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/philadelphia"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/san-antonio"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/san-diego"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/austin"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/jacksonville"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/fort-worth"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/columbus"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/indianapolis"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/seattle"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/denver"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/washington"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/boston"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/el-paso"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/detroit"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/nashville"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/portland"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/oklahoma-city"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/las-vegas"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/louisville"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/baltimore"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/milwaukee"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/albuquerque"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/tucson"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/fresno"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/sacramento"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/mesa"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/kansas-city"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/long-beach"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/colorado-springs"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/raleigh"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/omaha"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/oakland"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/minneapolis"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/tulsa"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/wichita"
+  to = "/gone"
+  status = 410
+
+[[redirects]]
+  from = "/new-orleans"
+  to = "/gone"
+  status = 410
 
 [[redirects]]
   from = "/trades/plumber/*"

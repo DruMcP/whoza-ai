@@ -84,7 +84,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       images: ["https://whoza.ai/og-image.webp"],
     },
     robots: {
-      index: false,
+      index: true,
       follow: true,
     },
     other: {
