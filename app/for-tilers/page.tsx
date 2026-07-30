@@ -11,6 +11,7 @@ import { ArrowRight, Phone, LayoutGrid, Clock, PoundSterling, Shield, CheckCircl
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { RelatedTrades } from "@/components/whoza/related-trades"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "AI Call Answering for Tilers UK — Never Miss a Job",
@@ -171,36 +172,15 @@ export default function ForTilersPage() {
                   </span>
                 </div>
               </div>
-              <div className="relative">
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center">
-                      <Phone className="w-5 h-5 text-blue-400" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-white">Incoming Call</p>
-                      <p className="text-xs text-white/50">Bathroom Tiling Enquiry</p>
-                    </div>
-                    <span className="ml-auto text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded-full">NEW</span>
-                  </div>
-                  <div className="space-y-3">
-                    <div className="bg-white/5 rounded-lg p-3">
-                      <p className="text-sm text-white/70">"Hello, you've reached Johnson Tiling. I'm Katie, the digital assistant. How can I help?"</p>
-                    </div>
-                    <div className="bg-blue-500/10 rounded-lg p-3 border border-blue-500/20">
-                      <p className="text-sm text-white/90">"I need my bathroom retiled — about 12 square metres. Can you quote?"</p>
-                    </div>
-                    <div className="bg-white/5 rounded-lg p-3">
-                      <p className="text-sm text-white/70">"I'd be happy to help. Can you confirm your postcode and what type of tiles you're considering — ceramic, porcelain, or natural stone?"</p>
-                    </div>
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-white/10">
-                    <div className="flex items-center gap-2 text-emerald-400 text-sm">
-                      <CheckCircle2 className="w-4 h-4" />
-                      WhatsApp sent to tiler in 2.8 seconds
-                    </div>
-                  </div>
-                </div>
+              <div className="relative flex justify-center">
+                <Image
+                  src="/images/hero-phone-3d.webp"
+                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  width={735}
+                  height={1103}
+                  className="w-full max-w-[380px] h-auto drop-shadow-2xl"
+                  priority
+                />
               </div>
             </div>
           </div>
