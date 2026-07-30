@@ -192,10 +192,7 @@ export default function RootLayout({
                   "Emergency Call Handling",
                   "WhatsApp Business Integration"
                 ],
-                "areaServed": {
-                  "@type": "Country",
-                  "name": "United Kingdom"
-                },
+                "areaServed": ["GB", "US"],
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "6 Atholl Crescent",
@@ -208,12 +205,13 @@ export default function RootLayout({
                   "@type": "ContactPoint",
                   "contactType": "Customer Support",
                   "email": "support@whoza.ai",
+                  "telephone": "+447463141750",
+                  "areaServed": ["GB", "US"],
                   "availableLanguage": ["English"]
                 },
                 "sameAs": [
-                  "https://www.linkedin.com/company/whoza/",
-                  "https://twitter.com/whozaai",
-                  "https://www.facebook.com/whozaai"
+                  "https://www.linkedin.com/company/whoza",
+                  "https://www.facebook.com/profile.php?id=61586217731657"
                 ]
               },
               {

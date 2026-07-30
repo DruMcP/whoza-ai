@@ -38,7 +38,7 @@ export const revalidate = 3600
 const pricingFaqs = [
   { question: "What counts as a booked job?", answer: "A booked job is a job enquiry that the tradesperson has accepted via the Whoza WhatsApp channel (e.g. replying ACCEPT to the WhatsApp job card). Job cards sent but not accepted do not count toward plan job allowances and are not billed as extra jobs." },
   { question: "How does the Refer a Trade programme work?", answer: "Refer a fellow tradesperson to Whoza.ai using your unique referral link. Your friend gets their first paid month free after their 7-day trial, on whichever plan they choose. You get one free month of your own current plan credited after they complete their second consecutive paid month. You can earn up to 12 free months per rolling 12-month period. No credit if they cancel before their second payment." },
-  { question: "How much does Whoza cost in total?", answer: "You pay a monthly plan fee (Starter £59, Growth £125, Pro £230, Scale £399). Each plan includes a set number of call handling minutes and booked enquiries. Additional enquiries beyond your included amount are charged per booking. Overage minutes are billed at £0.40 per minute. There are no hidden setup fees or long-term contracts. You can cancel anytime." },
+  { question: "How much does Whoza cost in total?", answer: "You pay a monthly plan fee (Starter £59, Growth £125, Pro £230, Scale £399). Each plan includes a set number of call handling minutes and booked enquiries. Additional enquiries beyond your included amount are charged per booking. Overage minutes are billed at £0.26 per minute. There are no hidden setup fees or long-term contracts. You can cancel anytime." },
   { question: "Is there a contract?", answer: "No. whoza.ai has no contracts. You're free to cancel anytime with no penalties. We also offer a 30-day money-back guarantee on all plans." },
   { question: "What if I want to cancel?", answer: "Cancel anytime — no contracts, no cancellation fees, no hassle. We're confident you'll stay because the system pays for itself many times over, but if it's not right for your business, you can cancel with one click from your dashboard." },
 ]
@@ -115,94 +115,77 @@ export default function PricingPage() {
             "@graph": [
               {
                 "@type": "Service",
-                "@id": "https://whoza.ai/pricing#starter-plan",
-                "name": "whoza.ai Starter Plan",
-                "description": "AI call handling for UK trades. 10 jobs included, 100 minutes included, 1 concurrent call. £4.50 per extra job.",
+                "@id": "https://whoza.ai/pricing#service",
+                "name": "Whoza.ai AI Receptionist",
                 "provider": { "@id": "https://whoza.ai/#organization" },
-                "areaServed": { "@type": "Country", "name": "United Kingdom" },
+                "areaServed": ["GB", "US"],
+                "audience": { "@type": "Audience", "audienceType": "UK and US tradespeople" },
                 "hasOfferCatalog": {
                   "@type": "OfferCatalog",
-                  "name": "whoza.ai Pricing Plans",
+                  "name": "Whoza.ai Plans",
                   "itemListElement": [
                     {
                       "@type": "Offer",
-                      "name": "Starter Plan",
+                      "name": "Starter",
+                      "description": "10 booked enquiries included, 100 call minutes included, 1 concurrent call, £4.50 per extra job",
                       "price": "59",
                       "priceCurrency": "GBP",
-                      "priceValidUntil": "2026-12-31",
-                      "availability": "https://schema.org/InStock",
+                      "priceSpecification": {
+                        "@type": "UnitPriceSpecification",
+                        "price": "59",
+                        "priceCurrency": "GBP",
+                        "billingIncrement": "P1M"
+                      },
                       "url": "https://whoza.ai/pricing",
-                      "itemOffered": { "@id": "https://whoza.ai/pricing#starter-plan" },
-                      "eligibleRegion": { "@type": "Country", "name": "United Kingdom", "applicableCountry": "GB" }
+                      "availability": "https://schema.org/InStock"
                     },
                     {
                       "@type": "Offer",
-                      "name": "Growth Plan",
+                      "name": "Growth",
+                      "description": "20 booked enquiries included, 300 call minutes included, 2 concurrent calls, £3.25 per extra job",
                       "price": "125",
                       "priceCurrency": "GBP",
-                      "priceValidUntil": "2026-12-31",
-                      "availability": "https://schema.org/InStock",
-                      "url": "https://whoza.ai/pricing",
-                      "itemOffered": {
-                        "@type": "Service",
-                        "@id": "https://whoza.ai/pricing#growth-plan",
-                        "name": "whoza.ai Growth Plan",
-                        "description": "AI call handling for UK trades. 20 jobs included, 300 minutes included, 2 concurrent calls. £3.25 per extra job.",
-                        "provider": { "@id": "https://whoza.ai/#organization" },
-                        "areaServed": { "@type": "Country", "name": "United Kingdom" }
+                      "priceSpecification": {
+                        "@type": "UnitPriceSpecification",
+                        "price": "125",
+                        "priceCurrency": "GBP",
+                        "billingIncrement": "P1M"
                       },
-                      "eligibleRegion": { "@type": "Country", "name": "United Kingdom", "applicableCountry": "GB" }
+                      "url": "https://whoza.ai/pricing",
+                      "availability": "https://schema.org/InStock"
                     },
                     {
                       "@type": "Offer",
-                      "name": "Pro Plan",
+                      "name": "Pro",
+                      "description": "40 booked enquiries included, 700 call minutes included, 3 concurrent calls, £2.75 per extra job",
                       "price": "230",
                       "priceCurrency": "GBP",
-                      "priceValidUntil": "2026-12-31",
-                      "availability": "https://schema.org/InStock",
-                      "url": "https://whoza.ai/pricing",
-                      "itemOffered": {
-                        "@type": "Service",
-                        "@id": "https://whoza.ai/pricing#pro-plan",
-                        "name": "whoza.ai Pro Plan",
-                        "description": "AI call handling for UK trades. 40 jobs included, 700 minutes included, 3 concurrent calls. £2.75 per extra job.",
-                        "provider": { "@id": "https://whoza.ai/#organization" },
-                        "areaServed": { "@type": "Country", "name": "United Kingdom" }
+                      "priceSpecification": {
+                        "@type": "UnitPriceSpecification",
+                        "price": "230",
+                        "priceCurrency": "GBP",
+                        "billingIncrement": "P1M"
                       },
-                      "eligibleRegion": { "@type": "Country", "name": "United Kingdom", "applicableCountry": "GB" }
+                      "url": "https://whoza.ai/pricing",
+                      "availability": "https://schema.org/InStock"
                     },
                     {
                       "@type": "Offer",
-                      "name": "Scale Plan",
+                      "name": "Scale",
+                      "description": "100 booked enquiries included, 1500 call minutes included, 5 concurrent calls, £2.25 per extra job",
                       "price": "399",
                       "priceCurrency": "GBP",
-                      "priceValidUntil": "2026-12-31",
-                      "availability": "https://schema.org/InStock",
-                      "url": "https://whoza.ai/pricing",
-                      "itemOffered": {
-                        "@type": "Service",
-                        "@id": "https://whoza.ai/pricing#scale-plan",
-                        "name": "whoza.ai Scale Plan",
-                        "description": "AI call handling for UK trades. 100 jobs included, 1500 minutes included, 5 concurrent calls. £2.25 per extra job.",
-                        "provider": { "@id": "https://whoza.ai/#organization" },
-                        "areaServed": { "@type": "Country", "name": "United Kingdom" }
+                      "priceSpecification": {
+                        "@type": "UnitPriceSpecification",
+                        "price": "399",
+                        "priceCurrency": "GBP",
+                        "billingIncrement": "P1M"
                       },
-                      "eligibleRegion": { "@type": "Country", "name": "United Kingdom", "applicableCountry": "GB" }
+                      "url": "https://whoza.ai/pricing",
+                      "availability": "https://schema.org/InStock"
                     }
                   ]
                 }
-              },
-              {
-                "@type": "AggregateOffer",
-                "name": "whoza.ai Plans",
-                "description": "AI call handling plans for UK tradespeople. Starting from £59/month.",
-                "lowPrice": "59",
-                "highPrice": "399",
-                "priceCurrency": "GBP",
-                "availability": "https://schema.org/InStock",
-                "url": "https://whoza.ai/pricing",
-                "eligibleRegion": { "@type": "Country", "name": "United Kingdom", "applicableCountry": "GB" },
-                "offerCount": "4"
               }
             ]
           })
