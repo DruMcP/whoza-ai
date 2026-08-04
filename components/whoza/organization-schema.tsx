@@ -33,7 +33,7 @@ export const organizationSchemaObject = {
     {
       "@type": "PropertyValue",
       "name": "Company number",
-      "value": "SC874716",
+      "value": "SC787047",
     },
     {
       "@type": "PropertyValue",
