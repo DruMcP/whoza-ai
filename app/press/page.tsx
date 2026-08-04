@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
+import { organizationSchemaObject } from "@/components/whoza/organization-schema"
 import { Star, Quote, Newspaper, TrendingUp, PhoneOff, Building2, Calendar, Mail, ExternalLink } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -75,7 +76,7 @@ export default function PressPage() {
                 <div>
                   <p className="font-semibold text-white text-lg">Dru McPherson</p>
                   <p className="text-white/50">Founder & CEO, whoza.ai</p>
-                  <p className="text-white/40 text-sm">Whoza AI Ltd, Tomintoul, Scotland</p>
+                  <p className="text-white/40 text-sm">Based in Tomintoul, Scotland</p>
                 </div>
               </div>
             </div>
@@ -186,7 +187,7 @@ export default function PressPage() {
                 </p>
                 <p>
                   <strong className="text-white">Whoza AI Ltd</strong> was formally incorporated in Scotland in 2025 
-                  (Companies House SC874716), with headquarters established in Tomintoul, Banffshire — a village in the 
+                  (Companies House SC874716), with its operational base established in Tomintoul, Banffshire — a village in the 
                   Cairngorms National Park. The company launched its flagship AI agent, <strong className="text-white">Katie</strong>, 
                   in early 2026, targeting UK trades with a simple value proposition: never miss a job again.
                 </p>
@@ -221,8 +222,12 @@ export default function PressPage() {
                 <dd className="text-white font-medium">2025</dd>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-5">
-                <dt className="text-white/40 text-sm mb-1">Headquarters</dt>
+                <dt className="text-white/40 text-sm mb-1">Operational base</dt>
                 <dd className="text-white font-medium">97 Main Street, Tomintoul, Banffshire, AB37 9HA, Scotland</dd>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-5">
+                <dt className="text-white/40 text-sm mb-1">Registered office</dt>
+                <dd className="text-white font-medium">6 Atholl Crescent, Perth, PH1 5JN, Scotland</dd>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-5">
                 <dt className="text-white/40 text-sm mb-1">Companies House</dt>
@@ -339,44 +344,7 @@ export default function PressPage() {
                 "@id": "https://whoza.ai/#organization"
               }
             },
-            {
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "@id": "https://whoza.ai/#organization",
-              "name": "whoza.ai",
-              "legalName": "Whoza AI Ltd",
-              "url": "https://whoza.ai",
-              "logo": "https://whoza.ai/logo.webp",
-              "foundingDate": "2025",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "97 Main Street",
-                "addressLocality": "Tomintoul",
-                "addressRegion": "Banffshire",
-                "postalCode": "AB37 9HA",
-                "addressCountry": "GB"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "contactType": "Press Enquiries",
-                "email": "press@whoza.ai"
-              },
-              "identifier": [
-                {
-                  "@type": "PropertyValue",
-                  "name": "Companies House Number",
-                  "value": "SC874716"
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "ICO Registration Number",
-                  "value": "ZC077271"
-                }
-              ],
-              "founder": {
-                "@id": "https://whoza.ai/#dru-mcpherson"
-              }
-            },
+            organizationSchemaObject,
             {
               "@context": "https://schema.org",
               "@type": "Person",

@@ -320,27 +320,27 @@
 
 [[redirects]]
   from = "/trades/plumber/*"
-  to = "/trade/plumber"
+  to = "/for-plumbers"
   status = 301
 
 [[redirects]]
   from = "/trades/electrician/*"
-  to = "/trade/electrician"
+  to = "/for-electricians"
   status = 301
 
 [[redirects]]
   from = "/trades/builder/*"
-  to = "/trade/builder"
+  to = "/for-builders"
   status = 301
 
 [[redirects]]
   from = "/trades/roofer/*"
-  to = "/trade/roofer"
+  to = "/for-roofers"
   status = 301
 
 [[redirects]]
   from = "/trades/heating-engineer/*"
-  to = "/trade/hvac"
+  to = "/for-heating-engineers"
   status = 301
 
 [[redirects]]
@@ -350,17 +350,17 @@
 
 [[redirects]]
   from = "/trades/locksmith/*"
-  to = "/trade/locksmith"
+  to = "/for-locksmiths"
   status = 301
 
 [[redirects]]
   from = "/trades/gardener/*"
-  to = "/trade/landscaper"
+  to = "/for-landscapers"
   status = 301
 
 [[redirects]]
   from = "/trades/gas-engineer/*"
-  to = "/trade/hvac"
+  to = "/for-gas-engineers"
   status = 301
 
 [[redirects]]

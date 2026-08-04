@@ -8,6 +8,7 @@ import { LocaleProvider } from '@/lib/locale-context'
 import { CookieBanner } from '@/components/whoza/cookie-banner'
 import { ScrollProgress } from '@/components/whoza/scroll-progress'
 
+import { organizationSchemaObject } from "@/components/whoza/organization-schema"
 import { WebVitals } from '@/components/whoza/web-vitals'
 
 const inter = Inter({ 
@@ -140,80 +141,7 @@ export default function RootLayout({
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@graph": [
-              {
-                "@type": "Organization",
-                "@id": "https://whoza.ai/#organization",
-                "name": "Whoza.ai",
-                "legalName": "WHOZA AI LTD",
-                "alternateName": "whoza.ai",
-                "url": "https://whoza.ai",
-                "logo": {
-                  "@type": "ImageObject",
-                  "url": "https://whoza.ai/logo.webp",
-                  "width": 512,
-                  "height": 512
-                },
-                "image": "https://whoza.ai/logo.webp",
-                "description": "AI call answering service built in Scotland for UK tradespeople. Katie answers every missed call 24/7, qualifies jobs, and sends details to WhatsApp.",
-                "slogan": "While you work, we book. Job done.",
-                "foundingDate": "2025",
-                "telephone": "+447463141750",
-                "email": "support@whoza.ai",
-                "identifier": [
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Company number",
-                    "value": "SC874716"
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "ICO registration",
-                    "value": "ZC077271"
-                  }
-                ],
-                "founders": [
-                  {
-                    "@type": "Person",
-                    "name": "Dru McPherson",
-                    "jobTitle": "Founder & CEO"
-                  }
-                ],
-                "numberOfEmployees": {
-                  "@type": "QuantitativeValue",
-                  "value": "5-10"
-                },
-                "knowsAbout": [
-                  "AI Voice Agents",
-                  "Call Answering Services",
-                  "UK Trade Businesses",
-                  "Plumbing",
-                  "Electrical Services",
-                  "Building and Construction",
-                  "Emergency Call Handling",
-                  "WhatsApp Business Integration"
-                ],
-                "areaServed": ["GB", "US"],
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "6 Atholl Crescent",
-                  "addressLocality": "Perth",
-                  "addressRegion": "Scotland",
-                  "postalCode": "PH1 5JN",
-                  "addressCountry": "GB"
-                },
-                "contactPoint": {
-                  "@type": "ContactPoint",
-                  "contactType": "Customer Support",
-                  "email": "support@whoza.ai",
-                  "telephone": "+447463141750",
-                  "areaServed": ["GB", "US"],
-                  "availableLanguage": ["English"]
-                },
-                "sameAs": [
-                  "https://www.linkedin.com/company/whoza",
-                  "https://www.facebook.com/profile.php?id=61586217731657"
-                ]
-              },
+              organizationSchemaObject,
               {
                 "@type": "WebSite",
                 "@id": "https://whoza.ai/#website",
