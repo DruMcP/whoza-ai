@@ -17,6 +17,13 @@ export const revalidate = 3600
 
 const researchReports = [
   {
+    date: "August 2026",
+    title: "The Missed Call Index — Q3 2026: what unanswered calls cost UK trades",
+    description: "A third of UK small-business calls go unanswered. The Missed Call Index Q3 2026 models £2.3bn of trades revenue at risk — the data, the cost, and the fix.",
+    href: "/research/missed-call-index-q3-2026",
+    status: "live" as const,
+  },
+  {
     date: "July 2026",
     title: "Can an AI Voice Agent Tell a Blocked Drain from a Gas Leak?",
     description: "Independent research on emergency triage, liability and where AI voice agents genuinely belong in safety-critical trades. Healthcare triage benchmarks, UK law, and minimum safeguards.",
