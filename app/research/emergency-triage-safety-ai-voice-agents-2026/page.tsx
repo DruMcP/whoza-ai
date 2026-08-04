@@ -101,7 +101,7 @@ const faqItems = [
   },
   {
     question: "Should a trade business still use an AI answering service if it cannot guarantee perfect emergency triage?",
-    answer: "Most likely yes, provided it is built with hard safeguards for the small number of genuinely dangerous calls. Missed calls carry their own risk — the Health and Safety Executive's data, echoed in whoza's earlier research, suggests around 62 per cent of trade business calls go unanswered during working hours, and an unreachable business is not automatically the safer option. The goal is not to avoid AI, it is to make sure the safety-critical calls are never left to AI judgement alone."
+    answer: "Most likely yes, provided it is built with hard safeguards for the small number of genuinely dangerous calls. Missed calls carry their own risk — the Health and Safety Executive's data, echoed in whoza's earlier research, suggests around 33 per cent of small UK trade businesses fail to answer incoming calls, and an unreachable business is not automatically the safer option. The goal is not to avoid AI, it is to make sure the safety-critical calls are never left to AI judgement alone."
   }
 ]
 
@@ -168,8 +168,8 @@ export default function ResearchPage() {
               <span className="text-white/70">word error rate gap on speech recognition for Black American speakers versus white American speakers</span>
             </li>
             <li className="flex items-start">
-              <span className="text-emerald-400 font-bold mr-3 min-w-[80px]">62%</span>
-              <span className="text-white/70">of trade business calls go unanswered during working hours — being unreachable carries its own risk</span>
+              <span className="text-emerald-400 font-bold mr-3 min-w-[80px]">33%</span>
+              <span className="text-white/70">of small UK trade businesses fail to answer incoming calls — being unreachable carries its own risk</span>
             </li>
             <li className="flex items-start">
               <span className="text-emerald-400 font-bold mr-3 min-w-[80px]">July 2026</span>
@@ -382,7 +382,7 @@ export default function ResearchPage() {
             <li>Large-scale ASR accent audit, 2,700 speakers, ACL Anthology, 2022, cited via Kerson AI Solutions</li>
             <li>Cambridge-affiliated study of Whisper transcription accuracy across US and UK English speakers, Journal of the Acoustical Society of America, 2024, cited via Kerson AI Solutions</li>
             <li>whoza.ai Research, 'The True Cost of Missed Calls', 2026, whoza.ai/research/the-true-cost-of-missed-calls-2026</li>
-            <li>whoza.ai, 'Why 62% of Trade Business Calls Go Unanswered', whoza.ai/blog/how-much-do-missed-calls-cost-uk-trades</li>
+            <li>whoza.ai, 'How Much Do Missed Calls Cost UK Trades?', whoza.ai/blog/how-much-do-missed-calls-cost-uk-trades</li>
           </ol>
           <p className="text-sm text-white/40 mt-6 italic">
             This piece reflects my own view as founder of whoza.ai, informed by the research cited above. Where figures are drawn from other fields, particularly healthcare triage, I have tried to flag the limits of that comparison rather than overstate it.

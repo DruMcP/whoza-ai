@@ -45,7 +45,7 @@ export default function CostOfMissedCallsPage() {
 
             <h2 className="text-2xl font-bold mb-4 mt-8">Key Findings</h2>
             <ul className="list-disc list-inside text-white/80 mb-6 space-y-2">
-              <li>62% of incoming calls to UK trades businesses go unanswered during working hours</li>
+              <li>33% of small UK trade businesses fail to answer incoming calls (Moneypenny Small Business Call Report, 2020)</li>
               <li>Average revenue per trade enquiry: £420 (plumbing) to £8,500 (builders)</li>
               <li>24% of missed calls result in a competitor being contacted within 15 minutes</li>
               <li>Emergency call abandonment rates peak at 34% during lunch hours (12:00–14:00)</li>
@@ -85,7 +85,7 @@ export default function CostOfMissedCallsPage() {
             <ul className="list-disc list-inside text-white/80 mb-6 space-y-2">
               <li>
                 <a href="/tools/lost-jobs-calculator" className="text-emerald-400 hover:underline">Lost jobs calculator</a>
-                {" "}&mdash; estimate annual revenue lost to unanswered calls using the 62% abandonment rate and your own job values.
+                {" "}&mdash; estimate annual revenue lost to unanswered calls using the 33% missed-call rate and your own job values.
               </li>
               <li>
                 <a href="/tools/emergency-pricing" className="text-emerald-400 hover:underline">Emergency callout pricing guide</a>

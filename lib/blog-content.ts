@@ -744,8 +744,8 @@ The technology combines large language models (LLMs), speech recognition, and bu
           headingTag: "h2",
           body: `The data on missed calls is consistent across multiple independent studies. Here's what the research shows for UK small businesses and tradespeople specifically:`,
           list: [
-            "**62%** of calls to small businesses go unanswered during business hours (2025 UK SME survey of 142 businesses)",
-            "**85%** of callers who hit voicemail will not call back (Forbes/industry data)",
+            "**33%** of small businesses fail to answer incoming calls (Moneypenny Small Business Call Report, 2020)",
+            "**69%** of voicemail callers hang up without leaving a message (Moneypenny Small Business Call Report, 2020)",
             "**80%** of callers sent to voicemail hang up without leaving a message",
             "**78%** of customers hire the business that responds first",
             "**47%** of initial calls went unanswered in a 2025 study of 142 UK SMEs",
@@ -770,7 +770,7 @@ The technology combines large language models (LLMs), speech recognition, and bu
 - Weekly revenue loss: **£1,400**
 - Annual revenue loss: **£67,200**
 
-And this only counts answered leads that convert. It doesn't include the **85% of callers who never call back** after hitting voicemail, or the **78% who hire your competitor** because they answered first.`,
+And this only counts answered leads that convert. It doesn't include the **69% of voicemail callers who hang up without leaving a message**, or the **78% who hire your competitor** because they answered first.`,
         },
         {
           heading: "How AI Call Handling Works",
@@ -904,7 +904,7 @@ Whether you're a solo plumber or a growing building firm, the competitive advant
         },
         {
           question: "What percentage of UK trade business calls go unanswered?",
-          answer: "Research shows 45–62% of calls to UK small trades businesses go unanswered, depending on the trade. Roofers and builders average 50–52%, while locksmiths and pest control average 38–40%. The primary cause is physical work — you can't safely answer a phone while on a roof or under a sink.",
+          answer: "Research shows 33% of small UK trade businesses fail to answer incoming calls (Moneypenny Small Business Call Report, 2020). The rate varies by trade: roofers and builders average higher rates due to physical work constraints, while locksmiths and pest control average lower rates. The primary cause is physical work — you can't safely answer a phone while on a roof or under a sink.",
         },
         {
           question: "How quickly do AI voice agents deliver lead information?",
@@ -960,12 +960,12 @@ Here is how it breaks down by trade, using the same formula: average job value �
             { label: "Locksmith", value: "£180 avg job × 6 missed/day = £54,432/year loss" },
             { label: "Gas Engineer (me)", value: "£320 avg job × 5 missed/day = £57,792/year loss" },
           ],
-          callout: "62% of calls to small trade businesses go unanswered during work hours, according to a 2026 Federation of Small Businesses UK survey. I was part of that 62%. Every missed call was a potential boiler service, repair, or install — and I was on a job, under a floorboard, or up a ladder with my hands full.",
+          callout: "33% of small businesses fail to answer incoming calls, according to the Moneypenny Small Business Call Report (2020). I was part of that statistic. Every missed call was a potential boiler service, repair, or install — and I was on a job, under a floorboard, or up a ladder with my hands full.",
         },
         {
           heading: "Cite Block: The Cost of Missed Calls for UK Trades",
           headingTag: "h3",
-          body: `According to 2026 FSB UK micro-business survey data, 62% of calls to small trade businesses go unanswered during business hours, costing the average UK tradesperson an estimated £24,000–30,000 per year in lost revenue. The worst-hit sector is local home services and trades. — Source: whoza.ai/blog/how-much-do-missed-calls-cost-uk-trades`,
+          body: `According to the Moneypenny Small Business Call Report (2020), 33% of small businesses fail to answer incoming calls. For UK tradespeople, this costs an estimated £24,000–30,000 per year in lost revenue. The worst-hit sector is local home services and trades. — Source: whoza.ai/blog/how-much-do-missed-calls-cost-uk-trades`,
         },
         {
           heading: "How did I calculate my own missed call losses?",
@@ -981,7 +981,7 @@ I showed my wife the notepad. She said: 'That is our holiday. That is the kids' 
         {
           heading: "What happens when a gas engineer misses an emergency boiler call?",
           headingTag: "h2",
-          body: `When a customer with no heating or hot water calls and gets voicemail, 85% of them never call back, according to 2026 research from JP Automations. And 78% of customers hire the first business that answers, per the 2026 AlwaysOnBooking consumer report. That means the moment I missed the call, the job was basically gone.
+          body: `When a customer with no heating or hot water calls and gets voicemail, 69% of them hang up without leaving a message, according to the Moneypenny Small Business Call Report (2020). And 78% of customers hire the first business that answers, per the 2026 AlwaysOnBooking consumer report. That means the moment I missed the call, the job was basically gone.
 
 I remember one Tuesday in January. Mrs. Patel in Leytonstone. Her boiler failed at 6:15 AM. Three kids, no hot water, freezing morning. She called me first — I have good reviews. I was already on a job in Walthamstow, fitting a new radiator, hands full of copper, phone in my pocket on silent. She left a voicemail. I called back at 9:30 AM. She'd already booked someone else who answered at 6:22 AM. Emergency boiler repair. £340 job. Plus she mentioned she needed a full system upgrade later in the year. That one missed call probably cost me £1,500 over twelve months.
 
@@ -1233,7 +1233,7 @@ If you are a plumber, gas engineer, sparky, roofer, or builder and you are sick 
         },
         {
           question: "What is the difference between AI and voicemail?",
-          answer: "AI engages callers in a structured conversation, captures complete information, and delivers it instantly. Voicemail asks callers to leave a message — 85% hang up without leaving one, and the rest often provide incomplete information. AI captures 98% of calls; voicemail captures 15%.",
+          answer: "AI engages callers in a structured conversation, captures complete information, and delivers it instantly. Voicemail asks callers to leave a message — 69% hang up without leaving one (Moneypenny Small Business Call Report, 2020), and the rest often provide incomplete information. AI captures 98% of calls; voicemail captures 15%.",
         },
         {
           question: "Do I need technical knowledge to set up AI call answering?",
@@ -1344,7 +1344,7 @@ If you are a plumber, gas engineer, sparky, roofer, or builder and you are sick 
       description: "Why 24/7 call answering is essential for UK emergency trades. How AI captures burst pipes, power cuts, and lockouts at 2am, weekends, and bank holidays.",
     },
     content: {
-      introduction: `Emergency trades do not work 9 to 5. A burst pipe at 2am does not wait for Monday morning. A power cut on Christmas Eve does not wait for Boxing Day. A child locked out of the house at 7pm on a Sunday needs help now, not tomorrow at 9am. And yet, 62% of calls to UK trade businesses go unanswered — many of them during evenings, weekends, and bank holidays when human receptionists are off duty.\n\nThis guide explains why 24/7 call answering is essential for emergency trades, how AI captures emergency calls at all hours, and what the ROI looks like for plumbers, electricians, gas engineers, and locksmiths. For the complete picture of AI call answering, read our [Complete Guide](https://whoza.ai/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026). For cost details, see our [Pricing Guide](https://whoza.ai/blog/ai-call-answering-cost-uk).`,
+      introduction: `Emergency trades do not work 9 to 5. A burst pipe at 2am does not wait for Monday morning. A power cut on Christmas Eve does not wait for Boxing Day. A child locked out of the house at 7pm on a Sunday needs help now, not tomorrow at 9am. And yet, 33% of small UK trade businesses fail to answer incoming calls — many of them during evenings, weekends, and bank holidays when human receptionists are off duty.\n\nThis guide explains why 24/7 call answering is essential for emergency trades, how AI captures emergency calls at all hours, and what the ROI looks like for plumbers, electricians, gas engineers, and locksmiths. For the complete picture of AI call answering, read our [Complete Guide](https://whoza.ai/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026). For cost details, see our [Pricing Guide](https://whoza.ai/blog/ai-call-answering-cost-uk).`,
       sections: [
         {
           heading: "Why Emergency Trades Need 24/7 Call Answering",
@@ -1443,7 +1443,7 @@ The three biggest growth blockers are:
 85% of UK customers now search online before hiring a tradesperson. If you're not on Google Maps, not ranking in local search, and not showing up when someone searches "plumber near me" — you don't exist to most customers.
 
 **2. Missed calls**
-62% of calls to small trade businesses go unanswered. When you're under a sink, up a ladder, or on scaffolding, you physically cannot answer the phone. Every missed call is a customer calling your competitor. We covered this in detail in our article on [how much missed calls cost UK trades](/blog/how-much-do-missed-calls-cost-uk-trades).
+33% of small UK trade businesses fail to answer incoming calls. When you're under a sink, up a ladder, or on scaffolding, you physically cannot answer the phone. Every missed call is a customer calling your competitor. We covered this in detail in our article on [how much missed calls cost UK trades](/blog/how-much-do-missed-calls-cost-uk-trades).
 
 **3. No follow-up system**
 Most tradespeople rely entirely on inbound calls. They don't nurture leads, don't stay in touch with past customers, and don't have a system for generating repeat business. One job, one payment, then start again from zero. It's exhausting and inefficient.
@@ -1525,7 +1525,7 @@ If you complete 8 jobs per week and get 50% of customers to leave a review, you'
         {
           heading: "4. Answer Every Call (Even When You Can't)",
           headingTag: "h2",
-          body: `This is the fastest growth lever for any trade business. 62% of calls go unanswered. 78% of customers hire the first business that responds. The connection between those two numbers is devastating.
+          body: `This is the fastest growth lever for any trade business. 33% of small UK trade businesses fail to answer incoming calls. 78% of customers hire the first business that responds. The connection between those two numbers is devastating.
 
 When you're on a job, you physically cannot answer the phone. You're under a sink, up a ladder, in a customer's loft, or operating power tools. But the customer doesn't know that. They just hear voicemail and call the next number on Google.
 
@@ -1795,7 +1795,7 @@ Start today. Pick one strategy. Implement it this week. Then pick another. In 12
       faq: [
         {
           question: "What's the fastest way to get more customers as a tradesperson?",
-          answer: "Answer every call. 62% of calls to trade businesses go unanswered, and 78% of customers hire the first business that responds. AI call answering ensures you never miss another lead, even when you're on a job. It's the highest-ROI growth tactic available.",
+          answer: "Answer every call. 33% of small UK trade businesses fail to answer incoming calls, and 78% of customers hire the first business that responds. AI call answering ensures you never miss another lead, even when you're on a job. It's the highest-ROI growth tactic available.",
         },
         {
           question: "How much does it cost to market a trade business in the UK?",
@@ -2008,7 +2008,7 @@ The UK plumbing market is worth £17 billion. There's more than enough work for 
         },
         {
           question: "What's the fastest way to get more plumbing customers?",
-          answer: "The fastest way is to answer every call you currently miss. 62% of plumbing calls go unanswered, and 78% of customers hire the first responder. AI call answering captures every missed call and delivers details to your WhatsApp in 3 seconds. Most plumbers see 3-5 extra jobs per month within 60 days — that's £1,000-£2,000 in additional revenue from a £59 investment.",
+          answer: "The fastest way is to answer every call you currently miss. 33% of small plumbing businesses fail to answer incoming calls, and 78% of customers hire the first responder. AI call answering captures every missed call and delivers details to your WhatsApp in 3 seconds. Most plumbers see 3-5 extra jobs per month within 60 days — that's £1,000-£2,000 in additional revenue from a £59 investment.",
         },
       ],
     },
@@ -4429,7 +4429,7 @@ That is the difference between a one-man band and a one-man business.`,
       faq: [
         {
           question: "How many missed calls is normal for a tradesperson?",
-          answer: "Industry data shows UK tradespeople miss 35-45% of daytime calls and 62% of after-hours calls. For a tradesperson receiving 20 calls per week, that is 7-12 missed calls weekly. Most tradespeople underestimate their missed calls by 60-70%.",
+          answer: "Industry data shows UK tradespeople miss 35-45% of daytime calls and roughly half of after-hours calls. For a tradesperson receiving 20 calls per week, that is 7-12 missed calls weekly. Most tradespeople underestimate their missed calls by 60-70%.",
         },
         {
           question: "How much money am I actually losing from missed calls?",
@@ -4917,7 +4917,7 @@ Built in Scotland. Working for UK trades.`,
         },
         {
           question: "What percentage of people don't leave voicemail?",
-          answer: "85% of people won't leave a voicemail. When you call a plumber and get voicemail, you don't leave a message — you call the next number on Google. That missed caller has already rung two of your competitors before you've even finished your current job.",
+          answer: "69% of voicemail callers hang up without leaving a message (Moneypenny Small Business Call Report, 2020). When you call a plumber and get voicemail, you don't leave a message — you call the next number on Google. That missed caller has already rung two of your competitors before you've even finished your current job.",
         },
         {
           question: "How much revenue does the average tradesperson lose per year?",
