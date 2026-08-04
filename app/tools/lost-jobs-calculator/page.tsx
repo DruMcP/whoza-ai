@@ -42,8 +42,8 @@ export default function LostJobsCalculatorPage() {
         <p className="mb-4 text-sm leading-relaxed opacity-80">
           This calculator estimates the revenue a UK trade business loses each week and each
           year to unanswered phone calls. It multiplies your missed calls by the share of
-          callers who never ring back and by your average job value. Roughly 62% of calls to
-          small trade firms go unanswered, and for a typical one-van business that works out
+          callers who never ring back and by your average job value. Roughly 33% of small
+          trade firms fail to answer incoming calls, and for a typical one-van business that works out
           at around &pound;12,000 of lost work a year. Plumbers, electricians, roofers,
           heating engineers and locksmiths lose the most, because the phone rings while they
           are on a job and cannot answer it.

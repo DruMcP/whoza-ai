@@ -135,7 +135,7 @@ export default function IsItAPhoneTreePage() {
               They want someone to hear them, understand the problem, and tell them when help is coming. That's what Katie does. She doesn't make them navigate a system. She has a conversation, the same way a good receptionist would.
             </p>
             <p className="text-white/70 leading-relaxed">
-              The ONS reports that 62% of calls to UK trade businesses go unanswered. Not because tradespeople don't care — because they're on a job, at the merchants, or it's 7pm. Katie answers every call as if it's the only one that matters. Because to that caller, it is.
+              The Moneypenny Small Business Call Report (2020) reports that 33% of small businesses fail to answer incoming calls. Not because tradespeople don't care — because they're on a job, at the merchants, or it's 7pm. Katie answers every call as if it's the only one that matters. Because to that caller, it is.
             </p>
           </section>
         </div>

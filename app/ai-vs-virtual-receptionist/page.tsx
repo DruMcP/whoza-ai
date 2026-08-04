@@ -315,7 +315,7 @@ export default function AIVsVirtualReceptionistPage() {
           <h2 className="text-3xl font-bold text-slate-900 mb-6">Customer Experience: What Do Callers Actually Prefer?</h2>
           <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-8">
             <p className="text-slate-600 mb-4">
-              The alternative for most trade businesses is not a human receptionist. It is voicemail. And voicemail is terrible. 85% of callers hang up without leaving a message. Of the 15% who leave a message, most never get a callback because tradespeople forget to check voicemail or call back hours later.
+              The alternative for most trade businesses is not a human receptionist. It is voicemail. And voicemail is terrible. 69% of callers hang up without leaving a message. Of the 31% who leave a message, most never get a callback because tradespeople forget to check voicemail or call back hours later.
             </p>
             <p className="text-slate-600 mb-4">
               The other alternative is phone tag. You miss the call. You call back. They are busy. They call back. You are on a job. After 3-4 attempts, you connect. The customer is frustrated. You are stressed. This is not a good experience for anyone.

@@ -630,7 +630,7 @@ export default function BestAICallHandlerPage() {
           Before comparing solutions, let us understand the scale of the problem. A typical UK plumber receives 8–12 calls per day, of which 5–7 go unanswered while they are under a sink, on a roof, or driving between jobs. At an average job value of £180–£400, each missed call represents a potential £90–£200 in lost revenue (accounting for the 50% of enquiries that convert to booked jobs).
         </p>
         <p className="text-white/70 leading-relaxed mb-6">
-          Multiply that by 5 working days, and you are looking at £450–£1,000 per week in lost revenue. Over a year, that is £23,400–£52,000 for a single plumber. For a multi-van operation, the numbers scale linearly. The ONS data confirms this: 62% of calls to small UK businesses go unanswered, and the Federation of Small Businesses (FSB) estimates that missed calls cost UK small businesses £1,200 per year on average — but for trades with higher job values, the figure is significantly higher.
+          Multiply that by 5 working days, and you are looking at £450–£1,000 per week in lost revenue. Over a year, that is £23,400–£52,000 for a single plumber. For a multi-van operation, the numbers scale linearly. The Moneypenny Small Business Call Report (2020) confirms this: 33% of small UK businesses fail to answer incoming calls, and the Federation of Small Businesses (FSB) estimates that missed calls cost UK small businesses £1,200 per year on average — but for trades with higher job values, the figure is significantly higher.
         </p>
         <p className="text-white/70 leading-relaxed mb-6">
           The traditional solutions have clear limitations. Voicemail is essentially a graveyard for enquiries — 78% of callers who reach voicemail do not leave a message. Call forwarding to a family member is unreliable and unprofessional. Hiring a human receptionist costs £20,000–£25,000 per year plus National Insurance, pension contributions, and holiday cover. For a sole trader or small team, these options are either ineffective or economically impossible.
@@ -767,7 +767,7 @@ export default function BestAICallHandlerPage() {
           <h2 className="text-3xl font-bold text-white mb-4">Bottom Line</h2>
           <p className="text-lg text-white/60 mb-8 max-w-2xl mx-auto">
             For UK tradespeople in 2026, AI call handling has gone from a luxury to a necessity.
-            The ONS reports that 62% of after-hours calls go unanswered - and every unanswered call is a job your competitor gets instead.
+            The Moneypenny Small Business Call Report (2020) reports that 33% of small businesses fail to answer incoming calls - and every unanswered call is a job your competitor gets instead.
           </p>
           <p className="text-lg text-white/60 mb-8 max-w-2xl mx-auto">
             If you want the most capable system - one that answers calls, collects reviews, tracks competitors,

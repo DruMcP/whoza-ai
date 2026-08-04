@@ -129,6 +129,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Research pages
   const researchPages: MetadataRoute.Sitemap = [
     pageUrl('/research', 'app/research/page.tsx', { changeFrequency: 'weekly', priority: 0.7 }),
+    pageUrl('/research/missed-call-index-q3-2026', 'app/research/missed-call-index-q3-2026/page.tsx', { changeFrequency: 'weekly', priority: 0.8 }),
     pageUrl('/research/emergency-triage-safety-ai-voice-agents-2026', 'app/research/emergency-triage-safety-ai-voice-agents-2026/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
     pageUrl('/research/aeo-ai-search-optimisation-2026', 'app/research/aeo-ai-search-optimisation-2026/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
     pageUrl('/research/the-true-cost-of-missed-calls-2026', 'app/research/the-true-cost-of-missed-calls-2026/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),

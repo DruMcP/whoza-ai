@@ -113,7 +113,7 @@ export default function BlogPostPage() {
         "name": "What percentage of trade calls go unanswered?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "On average, 62% of trade business calls go unanswered during working hours. This rises to 89% after 6 PM and 94% overnight. Weekends see 67% of calls unanswered. Emergency trades (heating, roofing, locksmiths) have the highest rates of missed calls."
+          "text": "On average, 33% of small UK businesses fail to answer incoming calls. This rises to 89% after 6 PM and 94% overnight. Weekends see 67% of calls unanswered. Emergency trades (heating, roofing, locksmiths) have the highest rates of missed calls."
         }
       },
       {
@@ -284,7 +284,7 @@ export default function BlogPostPage() {
                 </div>
                 <div className="flex items-start gap-2">
                   <TrendingUp className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
-                  <p className="text-white/70">62% of all trade calls go unanswered during working hours</p>
+                  <p className="text-white/70">33% of small UK businesses fail to answer incoming calls</p>
                 </div>
                 <div className="flex items-start gap-2">
                   <TrendingUp className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
@@ -769,7 +769,7 @@ export default function BlogPostPage() {
                 </a>
                 <a href="/blog/how-much-do-missed-calls-cost-uk-trades" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors">
                   <p className="text-[var(--katie-blue)] text-sm font-medium mb-1">Research</p>
-                  <p className="text-white font-semibold">Why 62% of Trade Business Calls Go Unanswered</p>
+                  <p className="text-white font-semibold">Why 33% of Small UK Businesses Miss Calls</p>
                 </a>
               </div>
             </div>

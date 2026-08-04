@@ -416,7 +416,7 @@ export function WatchPageClient() {
             <div className="prose prose-invert max-w-none">
               <p className="text-white/70 leading-relaxed mb-4">
                 <strong className="text-white">[00:00-00:03]</strong> A missed call comes in to a UK tradesperson's
-                mobile. The phone rings out. The caller hits voicemail — and 85% of them never call back.
+                mobile. The phone rings out. The caller hits voicemail — and 69% of them hang up without leaving a message.
               </p>
               <p className="text-white/70 leading-relaxed mb-4">
                 <strong className="text-white">[00:03-00:12]</strong> Katie, Whoza's AI call handler, picks up the call

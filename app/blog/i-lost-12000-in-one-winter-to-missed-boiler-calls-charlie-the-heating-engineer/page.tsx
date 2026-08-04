@@ -384,7 +384,7 @@ export default function BlogPostPage() {
             <h2 className="text-2xl sm:text-3xl font-bold text-white mt-12 mb-6">Would I go back to voicemail? Never.</h2>
 
             <p className="text-white/70 leading-relaxed mb-6">
-              I used to think voicemail was fine. "They'll leave a message and I'll call back." They don't. <a href="/blog/how-much-do-missed-calls-cost-uk-trades" className="text-[var(--katie-blue)] hover:underline">85% of people who hit voicemail hang up and call the next number</a>. That's not my stat — that's from a proper business report. And it matches exactly what I saw.
+              I used to think voicemail was fine. "They'll leave a message and I'll call back." They don't. <a href="/blog/how-much-do-missed-calls-cost-uk-trades" className="text-[var(--katie-blue)] hover:underline">69% of people who hit voicemail hang up without leaving a message</a>. That's not my stat — that's from the Moneypenny Small Business Call Report, 2020. And it matches exactly what I saw.
             </p>
 
             <p className="text-white/70 leading-relaxed mb-6">

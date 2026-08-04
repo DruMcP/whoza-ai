@@ -161,8 +161,8 @@ export default function MissedCallCostCalculatorPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
               <div>
-                <div className="text-3xl font-extrabold text-emerald-600">62%</div>
-                <p className="text-sm text-slate-600 mt-1">of trade calls go unanswered</p>
+                <div className="text-3xl font-extrabold text-emerald-600">33%</div>
+                <p className="text-sm text-slate-600 mt-1">of small businesses fail to answer calls</p>
               </div>
               <div>
                 <div className="text-3xl font-extrabold text-emerald-600">£280</div>
@@ -173,12 +173,12 @@ export default function MissedCallCostCalculatorPage() {
                 <p className="text-sm text-slate-600 mt-1">call-to-job conversion</p>
               </div>
               <div>
-                <div className="text-3xl font-extrabold text-emerald-600">85%</div>
-                <p className="text-sm text-slate-600 mt-1">won't call back</p>
+                <div className="text-3xl font-extrabold text-emerald-600">69%</div>
+                <p className="text-sm text-slate-600 mt-1">hang up on voicemail</p>
               </div>
             </div>
             <p className="text-center text-xs text-slate-500 mt-4">
-              Source: ONS Business Population Estimates 2025, UK Trade Federation survey 2024
+              Source: Moneypenny Small Business Call Report, 2020
             </p>
           </div>
         </section>
@@ -258,7 +258,7 @@ export default function MissedCallCostCalculatorPage() {
                 </h3>
                 <p className="text-slate-700">
                   When a customer calls and gets voicemail,{" "}
-                  <strong>85% won't call back</strong>. They'll call your competitor instead. With the average UK trade
+                  <strong>69% hang up on voicemail</strong>. They'll call your competitor instead. With the average UK trade
                   job worth £280 and a 35% conversion rate, each missed call represents £98 in expected revenue.
                 </p>
               </div>

@@ -42,12 +42,12 @@ export default function MissedCallsCalculatorPage() {
           {
             "@type": "Question",
             "name": "How much do missed calls cost UK tradespeople?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Missed calls cost UK tradespeople £3,000-£12,000 per year on average. Based on ONS data, 62% of calls to small trade businesses go unanswered. With an average job value of £280 and 35% conversion rate, 10 missed calls per week = £5,096 in lost annual revenue." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Missed calls cost UK tradespeople £3,000-£12,000 per year on average. Based on the Moneypenny Small Business Call Report (2020), 33% of small businesses fail to answer incoming calls. With an average job value of £280 and 35% conversion rate, 10 missed calls per week = £5,096 in lost annual revenue." }
           },
           {
             "@type": "Question",
             "name": "What percentage of calls do trade businesses miss?",
-            "acceptedAnswer": { "@type": "Answer", "text": "62% of calls to small UK trade businesses go unanswered, according to ONS Business Population Estimates 2025. Plumbers miss the most calls (68%) because they're often working in areas with poor phone signal." }
+            "acceptedAnswer": { "@type": "Answer", "text": "33% of small UK businesses fail to answer incoming calls, according to the Moneypenny Small Business Call Report (2020). Plumbers miss the most calls (68%) because they're often working in areas with poor phone signal." }
           },
           {
             "@type": "Question",
@@ -104,8 +104,8 @@ export default function MissedCallsCalculatorPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
               <div>
-                <div className="text-3xl font-extrabold text-emerald-600">62%</div>
-                <p className="text-sm text-slate-600 mt-1">of calls go unanswered</p>
+                <div className="text-3xl font-extrabold text-emerald-600">33%</div>
+                <p className="text-sm text-slate-600 mt-1">of small businesses fail to answer calls</p>
               </div>
               <div>
                 <div className="text-3xl font-extrabold text-emerald-600">£280</div>
@@ -116,11 +116,11 @@ export default function MissedCallsCalculatorPage() {
                 <p className="text-sm text-slate-600 mt-1">conversion rate</p>
               </div>
               <div>
-                <div className="text-3xl font-extrabold text-emerald-600">85%</div>
-                <p className="text-sm text-slate-600 mt-1">won't call back</p>
+                <div className="text-3xl font-extrabold text-emerald-600">69%</div>
+                <p className="text-sm text-slate-600 mt-1">hang up on voicemail</p>
               </div>
             </div>
-            <p className="text-center text-xs text-slate-500 mt-4">Source: ONS Business Population Estimates 2025, UK Trade Federation survey 2024</p>
+            <p className="text-center text-xs text-slate-500 mt-4">Source: Moneypenny Small Business Call Report, 2020</p>
           </div>
         </section>
 
@@ -143,7 +143,7 @@ export default function MissedCallsCalculatorPage() {
               <div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">Every missed call is a potential job lost</h3>
                 <p className="text-slate-700">
-                  When a customer calls and gets voicemail, 85% won't call back. They'll call your competitor instead.
+                  When a customer calls and gets voicemail, 69% hang up without leaving a message. They'll call your competitor instead.
                   With an average job value of £280, each missed call represents £98 in expected revenue (35% conversion × £280).
                 </p>
               </div>
