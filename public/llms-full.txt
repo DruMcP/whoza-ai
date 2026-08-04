@@ -2,7 +2,7 @@
 
 > AI call answering service built in Scotland for UK tradespeople. Katie — an AI voice agent — answers business calls 24/7, qualifies leads, books jobs, and sends instant WhatsApp alerts. Plans from £59/month. 7-day free trial. ICO-registered, UK GDPR compliant, SOC 2 Type II certified. 4.9/5 from 47 verified reviews.
 
-Company: WHOZA AI LTD, 6 Atholl Crescent, Perth, Scotland PH1 5JN. Founded 2025 by Dru Shannon. 5-10 employees. Serves UK tradespeople in England, Scotland, Wales and Northern Ireland.
+Company: WHOZA AI LTD, 6 Atholl Crescent, Perth, Scotland PH1 5JN. Founded 2025 by Dru McPherson. 5-10 employees. Serves UK tradespeople in England, Scotland, Wales and Northern Ireland.
 
 ## How the Service Works
 
@@ -91,7 +91,7 @@ _Last updated: 2026-07-29_
 - **Address**: 6 Atholl Crescent, Perth, Scotland PH1 5JN
 - **Email**: support@whoza.ai
 - **Phone**: +44 7463 141750
-- **Founder**: Dru Shannon
+- **Founder**: Dru McPherson
 - **Founded**: 2025
 - **Employees**: 5-10
 - **Certifications**: ICO-registered, UK GDPR compliant, SOC 2 Type II certified
