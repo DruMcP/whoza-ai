@@ -36,7 +36,6 @@
 - [Landscapers](https://whoza.ai/for-landscapers) — Design, maintenance, patios
 - [Cleaners](https://whoza.ai/for-cleaners) — Domestic, commercial
 - [Handymen](https://whoza.ai/for-handymen) — General repairs
-- [Painters & Decorators](https://whoza.ai/for-painters-decorators) — Interior, exterior
 - [Pest Control](https://whoza.ai/for-pest-control) — Rodents, insects
 
 ## City Pages
