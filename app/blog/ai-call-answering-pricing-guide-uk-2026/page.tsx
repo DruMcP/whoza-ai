@@ -956,7 +956,7 @@ export default function PricingGuidePage() {
               <p className="text-white/60 text-sm leading-relaxed mb-4">
                 Monthly ROI = (Average job value × Estimated extra jobs captured/month) – Monthly AI cost.
                 We assume AI captures 8 extra qualified leads per month (conservative — based on 20 calls/week, 
-                62% missed rate, 90% AI capture vs 22% voicemail capture, 35% conversion).
+                33% missed rate, 90% AI capture vs 22% voicemail capture, 35% conversion).
               </p>
               <div className="bg-slate-900/50 rounded-lg p-4 font-mono text-sm">
                 <p className="text-emerald-400">Plumber Example:</p>
