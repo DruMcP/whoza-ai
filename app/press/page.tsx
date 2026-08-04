@@ -7,7 +7,7 @@ import { Star, Quote, Newspaper, TrendingUp, PhoneOff, Building2, Calendar, Mail
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Press Centre | whoza.ai",
-  description: "Media resources, press releases, and company information for whoza.ai — the AI call answering platform for UK tradespeople. Founded 2025. Company: SC874716.",
+  description: "Media resources, press releases, and company information for whoza.ai — the AI call answering platform for UK tradespeople. Founded 2025. Company: SC787047.",
   alternates: { canonical: "https://whoza.ai/press" },
   robots: { index: true, follow: true },
   openGraph: {
@@ -49,7 +49,7 @@ export default function PressPage() {
             </h2>
             <div className="bg-white/5 border border-white/10 rounded-xl p-6 md:p-8">
               <p className="text-white/80 leading-relaxed text-lg">
-                <strong className="text-white">whoza.ai</strong> is an AI-powered call answering platform for UK tradespeople. Founded in 2025 in Tomintoul, Scotland, the company provides 24/7 AI voice agents that answer missed calls, qualify leads, and deliver enquiries via WhatsApp. Its flagship agent, Katie, speaks with a natural Scottish accent. whoza.ai serves plumbers, electricians, builders, roofers, and other trade businesses across the United Kingdom. Plans start from only £59 per month. Registered as Whoza AI Ltd (Companies House: SC874716, ICO: ZC077271).
+                <strong className="text-white">whoza.ai</strong> is an AI-powered call answering platform for UK tradespeople. Founded in 2025 in Tomintoul, Scotland, the company provides 24/7 AI voice agents that answer missed calls, qualify leads, and deliver enquiries via WhatsApp. Its flagship agent, Katie, speaks with a natural Scottish accent. whoza.ai serves plumbers, electricians, builders, roofers, and other trade businesses across the United Kingdom. Plans start from only £59 per month. Registered as Whoza AI Ltd (Companies House: SC787047, ICO: ZC077271).
               </p>
               <div className="mt-4 flex items-center gap-2 text-white/40 text-sm">
                 <span className="bg-white/5 px-2 py-1 rounded">75 words</span>
@@ -187,7 +187,7 @@ export default function PressPage() {
                 </p>
                 <p>
                   <strong className="text-white">Whoza AI Ltd</strong> was formally incorporated in Scotland in 2025 
-                  (Companies House SC874716), with its operational base established in Tomintoul, Banffshire — a village in the 
+                  (Companies House SC787047), with its operational base established in Tomintoul, Banffshire — a village in the 
                   Cairngorms National Park. The company launched its flagship AI agent, <strong className="text-white">Katie</strong>, 
                   in early 2026, targeting UK trades with a simple value proposition: never miss a job again.
                 </p>
@@ -231,7 +231,7 @@ export default function PressPage() {
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-5">
                 <dt className="text-white/40 text-sm mb-1">Companies House</dt>
-                <dd className="text-white font-medium">SC874716</dd>
+                <dd className="text-white font-medium">SC787047</dd>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-5">
                 <dt className="text-white/40 text-sm mb-1">ICO Registration</dt>
