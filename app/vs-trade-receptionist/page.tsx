@@ -44,9 +44,56 @@ const comparisonData = [
   { feature: "Contract", whoza: "None", competitor: "None", winner: "draw" },
 ]
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Whoza.ai vs Trade Receptionist: Which Is Better for UK Trades?",
+  "description": "An honest comparison of two very different approaches to AI call handling. See pricing, setup time, legal compliance, and why the platform behind your calls matters.",
+  "author": {
+    "@type": "Person",
+    "name": "Dru McPherson",
+    "jobTitle": "Founder & CEO"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "whoza.ai",
+    "logo": { "@type": "ImageObject", "url": "https://whoza.ai/logo.png" }
+  },
+  "datePublished": "2026-06-05",
+  "dateModified": "2026-07-13",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://whoza.ai/vs-trade-receptionist"
+  }
+}
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Whoza.ai vs Trade Receptionist feature comparison",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Monthly Price", "description": "Whoza.ai: £59 (Starter). Trade Receptionist: £29 / £59 / £119 (+VAT). Result: Draw." },
+    { "@type": "ListItem", "position": 2, "name": "Setup Time", "description": "Whoza.ai: 30 minutes. Trade Receptionist: ~14 minutes (their claim). Result: Trade Receptionist." },
+    { "@type": "ListItem", "position": 3, "name": "Delivery Method", "description": "Whoza.ai: WhatsApp. Trade Receptionist: WhatsApp job summaries. Result: Draw." },
+    { "@type": "ListItem", "position": 4, "name": "Legal Entity", "description": "Whoza.ai: UK Limited Company. Trade Receptionist: Australian Sole Trader. Result: Whoza." },
+    { "@type": "ListItem", "position": 5, "name": "T&Cs / Privacy Policy", "description": "Whoza.ai: Present. Trade Receptionist: Missing / non-functional. Result: Whoza." },
+    { "@type": "ListItem", "position": 6, "name": "Pricing Model", "description": "Whoza.ai: Per minute (matches infrastructure cost). Trade Receptionist: Per call (hides real cost). Result: Whoza." },
+    { "@type": "ListItem", "position": 7, "name": "Money-Back Guarantee", "description": "Whoza.ai: 30 days. Trade Receptionist: None stated. Result: Whoza." },
+    { "@type": "ListItem", "position": 8, "name": "Build Quality", "description": "Whoza.ai: Custom platform. Trade Receptionist: n8n template from course. Result: Whoza." },
+    { "@type": "ListItem", "position": 9, "name": "Free Trial", "description": "Whoza.ai: 7 days, no card. Trade Receptionist: 14 days, no card. Result: Trade Receptionist." },
+    { "@type": "ListItem", "position": 10, "name": "Contract", "description": "Whoza.ai: None. Trade Receptionist: None. Result: Draw." }
+  ]
+}
+
 export default function VsTradeReceptionistPage() {
   return (
     <>
+      {/* Article Schema */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+
+      {/* ItemList Schema */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+
       {/* FAQ Schema */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
