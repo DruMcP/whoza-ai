@@ -912,7 +912,7 @@ Whether you're a solo plumber or a growing building firm, the competitive advant
         },
         {
           question: "Is an AI receptionist better than voicemail?",
-          answer: "Dramatically better. 80% of callers hang up on voicemail without leaving a message, and 85% never call back. An AI receptionist answers every call, captures every lead, and delivers structured information instantly. One captured job per month typically pays for the entire service.",
+          answer: "Dramatically better. 69% of voicemail callers hang up without leaving a message (Moneypenny Small Business Call Report, 2020). An AI receptionist answers every call, captures every lead, and delivers structured information instantly. One captured job per month typically pays for the entire service.",
         },
         {
           question: "Can I keep my existing business phone number?",
