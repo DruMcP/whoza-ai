@@ -1,7 +1,6 @@
 import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
-import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -90,7 +89,7 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://whoza.ai/" },
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://whoza.ai" },
     { "@type": "ListItem", "position": 2, "name": "Research", "item": "https://whoza.ai/research" },
     { "@type": "ListItem", "position": 3, "name": "The Missed Call Index — Q3 2026" },
   ],
@@ -144,37 +143,35 @@ const faqSchema = {
   ],
 }
 
-const speakableSchema = {
+const webPageSchema = {
   "@context": "https://schema.org",
-  "@type": "SpeakableSpecification",
-  "cssSelector": [
-    "h1",
-    ".intro-paragraph",
-    "#finding-1 strong",
-    "#finding-2 strong",
-    "#finding-3 strong",
-    "#finding-4 strong",
-    "#finding-5 strong",
-  ],
+  "@type": "WebPage",
+  "@id": "https://whoza.ai/research/missed-call-index-q3-2026",
+  "url": "https://whoza.ai/research/missed-call-index-q3-2026",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".intro-paragraph",
+      "#finding-1 strong",
+      "#finding-2 strong",
+      "#finding-3 strong",
+      "#finding-4 strong",
+      "#finding-5 strong",
+    ],
+  },
 }
 
 export default function MissedCallIndexPage() {
   return (
     <div className="min-h-screen bg-[var(--navy-900)] text-white">
       <Header />
-      <BreadcrumbSchema
-        items={[
-          { name: "Home", item: "https://whoza.ai" },
-          { name: "Research", item: "https://whoza.ai/research" },
-          { name: "The Missed Call Index — Q3 2026" },
-        ]}
-      />
 
       {/* ─── JSON-LD blocks ─── */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reportSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
 
       <main id="main-content" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* ─── Header / Byline ─── */}
