@@ -76,6 +76,39 @@ export default function CostOfMissedCallsPage() {
               </li>
             </ol>
 
+            <h2 className="text-2xl font-bold mb-4 mt-8">Interactive Tools Built On This Data</h2>
+            <p className="text-white/80 mb-4">
+              The figures above power a set of free calculators and reference tools for UK trades.
+              Each one applies the methodology in this paper to a single trade business, so you can
+              see what unanswered calls are costing your own operation rather than the sector average.
+            </p>
+            <ul className="list-disc list-inside text-white/80 mb-6 space-y-2">
+              <li>
+                <a href="/tools/lost-jobs-calculator" className="text-emerald-400 hover:underline">Lost jobs calculator</a>
+                {" "}&mdash; estimate annual revenue lost to unanswered calls using the 62% abandonment rate and your own job values.
+              </li>
+              <li>
+                <a href="/tools/emergency-pricing" className="text-emerald-400 hover:underline">Emergency callout pricing guide</a>
+                {" "}&mdash; benchmark out-of-hours rates against the 34% lunchtime abandonment peak identified above.
+              </li>
+              <li>
+                <a href="/tools/rate-checker" className="text-emerald-400 hover:underline">Trade rate checker</a>
+                {" "}&mdash; compare your hourly and callout rates against the £420&ndash;£8,500 per-enquiry revenue range.
+              </li>
+              <li>
+                <a href="/tools/quote-generator" className="text-emerald-400 hover:underline">Quote generator</a>
+                {" "}&mdash; turn a captured enquiry into a written quote before the 15-minute competitor window closes.
+              </li>
+              <li>
+                <a href="/tools/voicemail-scripts" className="text-emerald-400 hover:underline">Voicemail scripts for trades</a>
+                {" "}&mdash; reduce abandonment on the calls you genuinely cannot answer.
+              </li>
+            </ul>
+            <p className="text-white/80 mb-6">
+              A simplified version of the model is also available as the{" "}
+              <a href="/resources/missed-call-cost-calculator" className="text-emerald-400 hover:underline">missed call cost calculator</a>.
+            </p>
+
             <h2 className="text-2xl font-bold mb-4 mt-8">Download Citation Formats</h2>
             <div className="flex gap-4 mb-12">
               <button className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-sm transition">
@@ -107,7 +140,7 @@ export default function CostOfMissedCallsPage() {
               "@id": "https://whoza.ai/#organization"
             },
             "datePublished": "2026-07-04",
-            "dateModified": "2026-07-04",
+            "dateModified": "2026-08-04",
             "mainEntityOfPage": {
               "@id": "https://whoza.ai/research/cost-of-missed-calls-uk-trades-2026"
             },
