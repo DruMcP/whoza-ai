@@ -94,21 +94,21 @@ export default function PressPage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {/* Stat 1 */}
               <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <div className="text-4xl font-extrabold text-red-400 mb-2">62%</div>
-                <p className="text-sm text-white/70 mb-3">of calls to UK small trade businesses go unanswered during working hours</p>
-                <a href="https://www.ons.gov.uk/businessindustryandtrade/business/activitysizeandlocation" target="_blank" rel="noopener noreferrer" className="flex items-start gap-2 text-xs text-white/40 hover:text-emerald-400 transition-colors">
+                <div className="text-4xl font-extrabold text-red-400 mb-2">33%</div>
+                <p className="text-sm text-white/70 mb-3">of UK small businesses fail to answer incoming calls</p>
+                <div className="flex items-start gap-2 text-xs text-white/40">
                   <ExternalLink className="w-3 h-3 mt-0.5 shrink-0" />
-                  <span>Source: ONS UK business population estimates (2025); whoza.ai analysis</span>
-                </a>
+                  <span>Source: Moneypenny Small Business Call Report, 2020</span>
+                </div>
               </div>
 
               {/* Stat 2 */}
               <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <div className="text-4xl font-extrabold text-red-400 mb-2">85%</div>
-                <p className="text-sm text-white/70 mb-3">of callers who reach voicemail hang up without leaving a message</p>
+                <div className="text-4xl font-extrabold text-red-400 mb-2">69%</div>
+                <p className="text-sm text-white/70 mb-3">of voicemail callers hang up without leaving a message</p>
                 <div className="flex items-start gap-2 text-xs text-white/40">
                   <ExternalLink className="w-3 h-3 mt-0.5 shrink-0" />
-                  <span>Source: whoza.ai customer survey and industry estimates, 2026</span>
+                  <span>Source: Moneypenny Small Business Call Report, 2020</span>
                 </div>
               </div>
 
@@ -177,7 +177,7 @@ export default function PressPage() {
                 <p>
                   The problem was structural, not personal. UK trades operate as mobile, single-person or small-team businesses. 
                   They do not have receptionists. They cannot pause mid-job to answer a call. And voicemail — the default fallback — 
-                  loses 85% of callers permanently, per industry research.
+                  loses 69% of callers permanently, per Moneypenny Small Business Call Report, 2020.
                 </p>
                 <p>
                   In late 2024, McPherson began building what would become whoza.ai: an AI voice agent that could answer calls 

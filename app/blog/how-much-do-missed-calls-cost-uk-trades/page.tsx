@@ -141,14 +141,14 @@ export default function MissedCallsCostPage() {
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="grid sm:grid-cols-3 gap-4">
               <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-6 text-center">
-                <div className="text-4xl font-extrabold text-red-400 mb-2">62%</div>
-                <p className="text-sm text-white/60">of calls to small trade businesses go unanswered</p>
-                <p className="text-xs text-white/40 mt-2">FSB UK Micro-Business Survey 2025</p>
+                <div className="text-4xl font-extrabold text-red-400 mb-2">33%</div>
+                <p className="text-sm text-white/60">of small businesses fail to answer incoming calls</p>
+                <p className="text-xs text-white/40 mt-2">Moneypenny Small Business Call Report, 2020</p>
               </div>
               <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-6 text-center">
-                <div className="text-4xl font-extrabold text-red-400 mb-2">85%</div>
-                <p className="text-sm text-white/60">of callers who hit voicemail won't call back</p>
-                <p className="text-xs text-white/40 mt-2">AlwaysOnBooking UK Trade Report 2026</p>
+                <div className="text-4xl font-extrabold text-red-400 mb-2">69%</div>
+                <p className="text-sm text-white/60">of voicemail callers hang up without leaving a message</p>
+                <p className="text-xs text-white/40 mt-2">Moneypenny Small Business Call Report, 2020</p>
               </div>
               <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-6 text-center">
                 <div className="text-4xl font-extrabold text-red-400 mb-2">78%</div>
@@ -349,7 +349,7 @@ export default function MissedCallsCostPage() {
 
           {/* Why Tradespeople Miss Calls */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h2 className="text-3xl font-bold mb-6">Why Do Tradespeople Miss 62% of Calls?</h2>
+          <h2 className="text-3xl font-bold mb-6">Why Do Tradespeople Miss So Many Calls?</h2>
           <div className="bg-white/5 border border-white/10 rounded-xl p-8">
             <p className="text-white/70 leading-relaxed mb-6">
               The reason is obvious when you think about it: tradespeople work with their hands, in customers' properties, often at height, in confined spaces, or operating machinery. Answering a phone is physically impossible in most of these situations.
@@ -401,7 +401,7 @@ export default function MissedCallsCostPage() {
             </div>
             <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-6">
               <p className="text-red-300 font-semibold">
-                85% of callers who hit voicemail will not call back. They immediately move to your competitor.
+                69% of callers who hit voicemail will not call back. They immediately move to your competitor.
               </p>
             </div>
           </div>
@@ -512,7 +512,7 @@ export default function MissedCallsCostPage() {
                 <div className="w-8 h-8 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center font-bold shrink-0">3</div>
                 <div>
                   <h4 className="font-semibold text-white mb-1">The caller makes a decision</h4>
-                  <p className="text-white/60 text-sm">85% of callers who hit voicemail will not call back. They immediately move to the next step.</p>
+                  <p className="text-white/60 text-sm">69% of callers who hit voicemail will not call back. They immediately move to the next step.</p>
                 </div>
               </div>
               <div className="flex gap-4">

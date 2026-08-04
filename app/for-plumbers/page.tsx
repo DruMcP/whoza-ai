@@ -227,7 +227,7 @@ export default function ForPlumbersPage() {
                   icon: Droplets,
                   title: "Leak Emergencies While Working",
                   description: "You're under a sink fixing a waste pipe. Phone vibrates in your pocket. Can't answer — hands full of muck, water everywhere. Check missed call at 4pm. Customer already booked someone else. Lost £350 job.",
-                  stat: "62% of calls unanswered",
+                  stat: "33% of calls unanswered",
                   color: "blue",
                 },
               ].map((item, idx) => {

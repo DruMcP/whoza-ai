@@ -71,7 +71,7 @@ export function LostJobsCalculator() {
               How Much Are Missed Calls Costing Your Trade Business?
             </h1>
             <p className="text-white/60 text-lg max-w-2xl mx-auto">
-              Most UK tradespeople don't track missed calls. But the ONS reports that 62% of after-hours calls go unanswered — and 85% of those callers never ring back. They just call the next name on Google.
+              Most UK tradespeople don't track missed calls. But the Moneypenny Small Business Call Report (2020) found that 33% of small businesses fail to answer incoming calls — and 69% of voicemail callers hang up without leaving a message. They just call the next name on Google.
             </p>
           </motion.div>
 
@@ -295,7 +295,7 @@ export function LostJobsCalculator() {
             <h3>How many calls do tradespeople miss per week?</h3>
             <p>UK tradespeople miss an average of 3-5 calls per week, rising to 8-12 during busy periods or when on emergency callouts.</p>
             <h3>Do missed callers leave a voicemail?</h3>
-            <p>85% of missed callers to trade businesses never leave a voicemail. They simply call the next tradesperson on Google.</p>
+            <p>69% of missed callers to trade businesses hang up without leaving a voicemail. They simply call the next tradesperson on Google.</p>
             <h3>Is the Lost Jobs Calculator free?</h3>
             <p>Yes. The Lost Jobs Calculator is completely free to use. No signup required. We also offer a 7-day free trial of Katie, our AI call handler.</p>
           </div>
@@ -344,7 +344,7 @@ export function LostJobsCalculator() {
                     name: "Do missed callers leave a voicemail?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "85% of missed callers to trade businesses never leave a voicemail. They simply call the next tradesperson on Google.",
+                      text: "69% of missed callers to trade businesses hang up without leaving a voicemail. They simply call the next tradesperson on Google.",
                     },
                   },
                   {

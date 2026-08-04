@@ -134,7 +134,7 @@ export function VoicemailScriptGenerator() {
               Voicemail Script Generator for UK Tradespeople
             </h1>
             <p className="text-white/60 text-lg max-w-2xl mx-auto">
-              85% of callers to trade businesses never leave a voicemail — because most greetings are generic, vague, or unprofessional. Generate three tailored scripts in seconds and win back lost enquiries.
+              69% of callers to trade businesses hang up without leaving a voicemail — because most greetings are generic, vague, or unprofessional. Generate three tailored scripts in seconds and win back lost enquiries.
             </p>
           </motion.div>
 
@@ -325,7 +325,7 @@ export function VoicemailScriptGenerator() {
               {/* CTA */}
               <div className="bg-[var(--coral)]/10 border border-[var(--coral)]/20 rounded-xl p-6 text-center">
                 <p className="text-lg text-white font-medium mb-3">
-                  Even the best voicemail still loses 85% of callers.
+                  Even the best voicemail still loses 69% of callers.
                 </p>
                 <a
                   href="/pricing"
@@ -342,7 +342,7 @@ export function VoicemailScriptGenerator() {
           <div className="hidden">
             <h2>FAQ</h2>
             <h3>Why do most callers not leave a voicemail for tradespeople?</h3>
-            <p>85% of callers to trade businesses never leave a voicemail because the greeting is too long, too generic, or fails to promise a callback. A clear, warm, and specific greeting increases callback rates by up to 40%.</p>
+            <p>69% of callers to trade businesses hang up without leaving a voicemail because the greeting is too long, too generic, or fails to promise a callback. A clear, warm, and specific greeting increases callback rates by up to 40%.</p>
             <h3>How long should a trade business voicemail be?</h3>
             <p>Aim for 20–25 seconds. Research shows most callers abandon voicemail after 30 seconds. Include your name, business, a brief apology, and a clear callback promise.</p>
             <h3>Should I include my mobile number on my voicemail?</h3>
@@ -378,7 +378,7 @@ export function VoicemailScriptGenerator() {
                     name: "Why do most callers not leave a voicemail for tradespeople?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "85% of callers to trade businesses never leave a voicemail because the greeting is too long, too generic, or fails to promise a callback. A clear, warm, and specific greeting increases callback rates by up to 40%.",
+                      text: "69% of callers to trade businesses hang up without leaving a voicemail because the greeting is too long, too generic, or fails to promise a callback. A clear, warm, and specific greeting increases callback rates by up to 40%.",
                     },
                   },
                   {

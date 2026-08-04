@@ -260,8 +260,8 @@ export default function AICallAnsweringGuidePage() {
               <p className="text-white/70 leading-relaxed mb-6">
                 If you are a UK tradesperson — <a href="/ai-call-answering-plumbers" className="text-emerald-400 hover:underline">plumber</a>, <a href="/ai-call-answering-electricians" className="text-emerald-400 hover:underline">electrician</a>, <a href="/ai-call-answering-roofers" className="text-emerald-400 hover:underline">roofer</a>, <a href="/ai-call-answering-locksmiths" className="text-emerald-400 hover:underline">locksmith</a>, gas engineer, 
                 <a href="/ai-call-answering-builders" className="text-emerald-400 hover:underline">builder</a>, <a href="/ai-call-answering-landscapers" className="text-emerald-400 hover:underline">landscaper</a>, or any trade that works with your hands — you have a phone problem. 
-                The Office for National Statistics (ONS) reports that <strong className="text-white">62% of calls 
-                to small UK trade businesses go unanswered</strong>. Of those missed callers, 85% never ring back. 
+                The Office for National Statistics (ONS) reports that <strong className="text-white">33% of small 
+                UK businesses fail to answer incoming calls</strong>. Of those missed callers, 69% hang up without leaving a message. 
                 They simply call the next number on Google.
               </p>
               <p className="text-white/70 leading-relaxed mb-6">
@@ -299,7 +299,7 @@ export default function AICallAnsweringGuidePage() {
                   <Check className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-white">ONS Verified Data</strong>
-                    <p className="text-white/50">62% unanswered rate from Office for National Statistics</p>
+                    <p className="text-white/50">33% of small businesses miss calls (Moneypenny 2020)</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -402,20 +402,20 @@ export default function AICallAnsweringGuidePage() {
               The Problem: Why Missed Calls Destroy Trade Revenue
             </h2>
             <p className="text-white/70 leading-relaxed mb-6">
-              Let us look at the hard numbers. According to the Office for National Statistics (ONS), 
-              <strong className="text-white"> 62% of calls to small UK businesses go unanswered</strong>. 
+              Let us look at the hard numbers. According to the Moneypenny Small Business Call Report (2020), 
+              <strong className="text-white"> 33% of small UK businesses fail to answer incoming calls</strong>. 
               For trade businesses, this figure is often higher — plumbers, electricians, and roofers 
               physically cannot answer a phone while crawling under floorboards, on a ladder, or handling 
               live electrics.
             </p>
             <div className="grid sm:grid-cols-3 gap-4 mb-8">
               <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
-                <div className="text-4xl font-bold text-red-400 mb-2">62%</div>
-                <div className="text-white/60 text-sm">Of calls go unanswered (ONS)</div>
+                <div className="text-4xl font-bold text-red-400 mb-2">33%</div>
+                <div className="text-white/60 text-sm">Of small businesses miss calls (Moneypenny 2020)</div>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
-                <div className="text-4xl font-bold text-red-400 mb-2">85%</div>
-                <div className="text-white/60 text-sm">Of missed callers never ring back</div>
+                <div className="text-4xl font-bold text-red-400 mb-2">69%</div>
+                <div className="text-white/60 text-sm">Of voicemail callers hang up</div>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
                 <div className="text-4xl font-bold text-red-400 mb-2">£25k+</div>

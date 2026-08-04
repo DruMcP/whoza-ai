@@ -140,8 +140,8 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
         >
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 reveal-stagger">
             {[
-              { pct: "62%", text: "of calls to small trade businesses go unanswered", icon: PhoneMissed },
-              { pct: "85%", text: "of callers who hit voicemail won't call back", icon: Voicemail },
+              { pct: "33%", text: "of small businesses fail to answer calls", icon: PhoneMissed },
+              { pct: "69%", text: "of voicemail callers hang up without leaving a message", icon: Voicemail },
               { pct: "78%", text: "of customers hire whoever responds first", icon: Zap },
             ].map((stat, i) => {
               const StatIcon = stat.icon
@@ -185,7 +185,7 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
             <span className="text-[var(--rex-green)]">Costing You?</span>
           </h2>
           <p className="mt-6 text-xl text-[var(--slate-500)] text-pretty">
-            Every missed call to your trade business is a potential job walking straight to your competitor. When a customer calls and you do not answer, 85% of them will never call back, and 78% will simply hire whoever responds first. Use the calculator below to see exactly how much revenue you are losing every week, month, and year.
+            Every missed call to your trade business is a potential job walking straight to your competitor. When a customer calls and you do not answer, 69% of voicemail callers hang up without leaving a message, and 78% will simply hire whoever responds first. Use the calculator below to see exactly how much revenue you are losing every week, month, and year.
           </p>
         </motion.div>
 

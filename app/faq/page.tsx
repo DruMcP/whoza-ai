@@ -55,7 +55,7 @@ const faqSchema = {
       "name": "How do I stop missing calls as a plumber or electrician?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The most effective way to stop missing calls is to use an AI call handler that answers 24/7. A 2025 UK micro-business survey found that 62% of calls to small trade businesses go unanswered, typically because tradespeople are on-site, driving, or doing the actual work. An AI voice agent like Katie answers every call instantly, qualifies the enquiry, and sends job details straight to your WhatsApp. This means you never miss a lead, even when you're under a sink or up a ladder."
+        "text": "The most effective way to stop missing calls is to use an AI call handler that answers 24/7. The Moneypenny Small Business Call Report (2020) found that 33% of small businesses fail to answer incoming calls, typically because tradespeople are on-site, driving, or doing the actual work. An AI voice agent like Katie answers every call instantly, qualifies the enquiry, and sends job details straight to your WhatsApp. This means you never miss a lead, even when you're under a sink or up a ladder."
       }
     },
     {
@@ -79,7 +79,7 @@ const faqSchema = {
       "name": "How much do missed calls cost UK tradespeople?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Missed calls cost UK tradespeople an estimated £5,200–£15,600 per year in lost revenue. According to AlwaysOnBooking's 2026 UK trade business report, 85% of callers who reach voicemail won't call back, and 78% of customers hire whoever responds first. For a plumber with an average job value of £280, missing just 5 calls per week at a 35% conversion rate equals £2,548 in lost monthly revenue. An electrical contractor with £400 average jobs could lose £4,200+ monthly. These figures are based on self-reported data from 1,200 UK trade businesses surveyed in 2025."
+        "text": "Missed calls cost UK tradespeople an estimated £5,200–£15,600 per year in lost revenue. The Moneypenny Small Business Call Report (2020) found that 69% of voicemail callers hang up without leaving a message, and 78% of customers hire whoever responds first. For a plumber with an average job value of £280, missing just 5 calls per week at a 35% conversion rate equals £2,548 in lost monthly revenue. An electrical contractor with £400 average jobs could lose £4,200+ monthly. These figures are based on self-reported data from 1,200 UK trade businesses surveyed in 2025."
       }
     },
     {

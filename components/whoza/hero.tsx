@@ -287,7 +287,7 @@ export function Hero() {
           in lost work.
         </p>
         <p className="text-xs text-gray-500 my-2 mb-1">
-          Source: ONS Business Population Estimates 2025, 62% unanswered rate
+          Source: Moneypenny Small Business Call Report, 2020, 33% of small businesses fail to answer
         </p>
       </section>
     </>

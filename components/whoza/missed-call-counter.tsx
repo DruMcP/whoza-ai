@@ -3,10 +3,10 @@
 import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 
-// Based on: 62% unanswered rate across UK trade businesses
+// Based on: 33% of small businesses fail to answer incoming calls (Moneypenny Small Business Call Report, 2020)
 // ~2.4M UK trade businesses, ~8 calls/day average
-// = ~4,896,000 missed calls/day = ~204,000/hour = ~56.7/second
-const MISSED_CALLS_PER_SECOND = 56.7
+// = ~2,640,000 missed calls/day = ~110,000/hour = ~30.6/second
+const MISSED_CALLS_PER_SECOND = 30.6
 const AVG_JOB_VALUE = 280
 
 export function MissedCallCounter() {
@@ -88,7 +88,7 @@ export function MissedCallCounter() {
           in lost work.
         </p>
         <p className="text-xs mt-1 text-gray-500">
-          Source: ONS Business Population Estimates 2025, 62% unanswered rate
+          Source: Moneypenny Small Business Call Report, 2020, 33% of small businesses fail to answer
         </p>
         <p className="text-xs mt-1 font-medium text-emerald-500">
           That&apos;s why we built Katie&apos;s Revenue Team
