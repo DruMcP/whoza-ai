@@ -121,6 +121,68 @@ export default function Home() {
         {/* URGENCY - Lost revenue + Stats */}
         <div className="section-divider" />
         <LostRevenueCalculator />
+
+        {/* FREE TOOLS — contextual in-body internal links (not footer boilerplate) */}
+        <div className="section-divider" />
+        <section className="py-14" aria-labelledby="free-tools-heading">
+          <div className="max-w-5xl mx-auto px-4">
+            <h2 id="free-tools-heading" className="text-2xl md:text-3xl font-bold mb-3">
+              Free tools for UK tradespeople
+            </h2>
+            <p className="mb-6 opacity-80">
+              Built from our research into missed calls across UK trades. Free to use, no signup —
+              every figure is based on real UK trade pricing and ONS call data.
+            </p>
+            <ul className="space-y-4">
+              <li>
+                <a href="/tools/lost-jobs-calculator" className="font-semibold underline">
+                  Lost Jobs Calculator
+                </a>{" "}
+                — work out how many jobs a year you lose to unanswered calls, and what those missed
+                jobs are worth at your average job value.
+              </li>
+              <li>
+                <a href="/tools/rate-checker" className="font-semibold underline">
+                  Hourly Rate Checker for UK trades
+                </a>{" "}
+                — compare your hourly rate against typical rates for your trade and region before
+                you quote your next job.
+              </li>
+              <li>
+                <a href="/tools/emergency-pricing" className="font-semibold underline">
+                  Emergency Callout Pricing Calculator
+                </a>{" "}
+                — set a defensible out-of-hours callout charge, including evening, weekend and bank
+                holiday uplifts.
+              </li>
+              <li>
+                <a href="/tools/quote-generator" className="font-semibold underline">
+                  Free Quote Generator
+                </a>{" "}
+                — produce a clean, itemised quote you can send from your phone while you are still
+                on site.
+              </li>
+              <li>
+                <a href="/tools/voicemail-scripts" className="font-semibold underline">
+                  Voicemail Script Generator
+                </a>{" "}
+                — write a voicemail greeting that actually gets callers to leave their name, job
+                and number instead of hanging up.
+              </li>
+              <li>
+                <a href="/resources/missed-call-cost-calculator" className="font-semibold underline">
+                  Missed Call Cost Calculator
+                </a>{" "}
+                — the original tool behind our{" "}
+                <a href="/research/cost-of-missed-calls-uk-trades-2026" className="underline">
+                  Cost of Missed Calls to UK Trades 2026
+                </a>{" "}
+                research.
+              </li>
+            </ul>
+          </div>
+        </section>
+
         <div className="section-divider" />
         <StatsBand />
 
