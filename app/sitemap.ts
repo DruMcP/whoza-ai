@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import { execSync } from 'child_process'
 import { blogPostContents } from '@/lib/blog-content'
+import { existsSync, readdirSync } from 'fs'
 
 // Verified live /for-{trade}-{city} pages (July 2026)
 const LIVE_CITY_PAGES: Record<string, string[]> = {
@@ -47,6 +48,38 @@ function pageUrl(path: string, filePath: string, opts: Omit<MetadataRoute.Sitema
     lastModified: gitLastMod(filePath),
     ...opts,
   }
+}
+
+/**
+ * Discover live blog slugs from two sources:
+ * 1. Static page.tsx files in app/blog/<slug>/ ( pillar / special posts )
+ * 2. Keys in blogPostContents (dynamic [slug] posts)
+ * This ensures the sitemap can never drift from the actual live pages.
+ */
+function discoverBlogSlugs(): string[] {
+  const slugs = new Set<string>()
+
+  // 1. Static blog post directories (each has its own page.tsx)
+  try {
+    const entries = readdirSync('app/blog', { withFileTypes: true })
+    for (const entry of entries) {
+      if (entry.isDirectory() && entry.name !== '[slug]') {
+        const pagePath = `app/blog/${entry.name}/page.tsx`
+        if (existsSync(pagePath)) {
+          slugs.add(entry.name)
+        }
+      }
+    }
+  } catch {
+    // ignore
+  }
+
+  // 2. Dynamic blog posts from blogPostContents
+  for (const slug of Object.keys(blogPostContents)) {
+    slugs.add(slug)
+  }
+
+  return Array.from(slugs).sort()
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -144,47 +177,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     pageUrl('/press', 'app/press/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
   ]
 
-  // Blog posts
-  const blogSlugs = [
-    'what-tradespeople-actually-want-from-ai',
-    'ai-search-for-uk-trades',
-    'ai-receptionist-vs-human-cost-guide-2026',
-    'ai-call-answering-pricing-guide-uk-2026',
-    '24-7-call-answering-emergency-trades',
-    '3-am-lockout-calls-were-going-to-voicemail-now-i-catch-every-one-sarah-the-locksmith',
-    'ai-call-answering-cost-uk',
-    'ai-call-answering-uk-tradespeople-definitive-guide-2026',
-    'ai-phone-technology-complete-guide',
-    'builders-lead-generation-guide',
-    'google-business-profile-trades',
-    'how-does-ai-call-answering-work',
-    'how-much-do-missed-calls-cost-uk-trades',
-    'how-to-get-more-google-reviews-trades',
-    'how-to-get-more-plumbing-customers',
-    'how-to-grow-trade-business-uk-guide',
-    'heating-engineer-emergency-call-handling',
-    'i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky',
-    'i-lost-a-8000-roof-job-because-i-was-up-a-ladder-mike-the-roofer',
-    'i-lost-4000-in-one-storm-season-then-ai-answered-my-phone-tom-the-roofer',
-    'i-missed-5-emergency-calls-a-week-then-i-tried-ai-gary-the-plumber',
-    'my-phone-rang-12-times-on-a-building-site-tom-the-builder',
-    'i-missed-spring-booking-season-ai-captured-47-calls-in-3-weeks-james-the-landscaper',
-    'i-was-missing-2000-extension-enquiries-every-month-then-i-tried-ai-steve-the-builder',
-    'i-worked-out-i-was-losing-30000-a-year-to-missed-calls-mark-the-gas-engineer',
-    'local-seo-trades-complete-guide',
-    'locksmith-24-7-call-answering',
-    'roofing-lead-generation-guide',
-    '5-signs-your-trade-business-is-losing-customers-to-missed-calls',
-    '7-questions-every-uk-tradesperson-should-ask-before-hiring-a-call-answering-service',
-    '8-reasons-uk-tradespeople-switch-to-ai-call-handling-in-2026',
-    'i-lost-12000-in-one-winter-to-missed-boiler-calls-charlie-the-heating-engineer',
-    'seasonal-missed-call-report-uk-trades-2026',
-    'ultimate-faq-tradespeople',
-  ]
+  // Blog posts — dynamically discovered from content + static files
+  const blogSlugs = discoverBlogSlugs()
 
   const blogPosts: MetadataRoute.Sitemap = blogSlugs.map((slug) => {
     const post = blogPostContents[slug]
-    const lastModified = post?.date || gitLastMod(`app/blog/${slug}/page.tsx`)
+    const staticPagePath = `app/blog/${slug}/page.tsx`
+    const lastModified = post?.date || (existsSync(staticPagePath) ? gitLastMod(staticPagePath) : fallbackDate())
     return {
       url: `${baseUrl}/blog/${slug}`,
       lastModified,
