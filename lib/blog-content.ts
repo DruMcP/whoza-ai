@@ -5053,13 +5053,13 @@ Here is what I learned.`,
           headingTag: "h2",
           body: `My search started simple. I typed "virtual receptionist cost" into Google and got a wall of options.
 
-**Moneypenny** — £250-£400 per month. Professional, 24/7, dedicated PA. Sounded great until I did the maths. £3,000-£4,800 per year. That is a lot of fitted wardrobes.
+**One premium provider** — £250-£400 per month. Professional, 24/7, dedicated PA. Sounded great until I did the maths. £3,000-£4,800 per year. That is a lot of fitted wardrobes.
 
-**Verbatim** — £150-£300 per month. Cheaper, but pay-per-minute. I estimated my call volume and realised I would hit the limit by week two. The overage charges would push me back to Moneypenny territory.
+**A mid-range service** — £150-£300 per month. Cheaper, but pay-per-minute. I estimated my call volume and realised I would hit the limit by week two. The overage charges would push me back to premium territory.
 
-**AnswerConnect** — £180-£280 per month. US-based call centre with UK coverage. The reviews were mixed. Several tradespeople complained about American accents confusing customers and messages getting lost in translation.
+**A US-based call centre service** — £180-£280 per month. UK coverage, but US operations. The reviews I found were mixed.
 
-**YourBusinessNumber** — £99 per month. Budget option. The trial was disappointing — scripted responses, long hold times, and callers repeatedly asked to speak to "someone who knows about kitchens."
+**A budget option** — £99 per month. The trial was disappointing — scripted responses, long hold times, and callers repeatedly asked to speak to "someone who knows about kitchens."
 
 I built a spreadsheet. Columns for monthly cost, setup fee, contract length, call minutes included, per-minute overage, and reviews. I colour-coded everything. I showed it to my wife. She asked why I was spending more time on this than on the £4,000 kitchen job in my diary.
 
@@ -5068,7 +5068,7 @@ She had a point.`,
         {
           heading: "The Realisation",
           headingTag: "h2",
-          body: `On day 10, I was on a call with a Moneypenny sales rep. She was lovely. Very professional. She explained their service in detail.
+          body: `On day 10, I was on a call with a sales rep from one of the premium providers. She was lovely. Very professional. She explained their service in detail.
 
 Then she asked me a question that stopped me.
 
@@ -5104,7 +5104,7 @@ I signed up for the 7-day free trial. My wife rolled her eyes. "Another spreadsh
         {
           heading: "So What Is Actually Different?",
           headingTag: "h2",
-          body: `Here is what I learned after using both a traditional virtual receptionist (I tried Verbatim for two weeks) and whoza.ai's AI call handler.
+          body: `Here is what I learned after using both a traditional virtual receptionist (I tried one of the mid-range providers for two weeks) and whoza.ai's AI call handler.
 
 The fundamental difference is not cost, though the cost difference is dramatic. It is what happens to the call after it is answered.`,
           list: [
@@ -5137,9 +5137,9 @@ The fundamental difference is not cost, though the cost difference is dramatic. 
           headingTag: "h2",
           body: `Let me put real numbers on this because "cheaper" is meaningless without context.
 
-My cheapest virtual receptionist quote was Verbatim at £150 per month. That is £1,800 per year. But that only included 100 minutes of call time. I estimated I would need 200-250 minutes per month based on my call volume. Their overage rate is £1.20 per minute. So my actual cost would be closer to £300 per month — £3,600 per year.
+My cheapest virtual receptionist quote was £150 per month from a mid-range provider. That is £1,800 per year. But that only included 100 minutes of call time. I estimated I would need 200-250 minutes per month based on my call volume. Their overage rate was £1.20 per minute. So my actual cost would be closer to £300 per month — £3,600 per year.
 
-Moneypenny was £295 per month for their standard package. £3,540 per year. No overage charges, but no WhatsApp delivery either. Just email summaries.
+The premium provider was £295 per month for their standard package. £3,540 per year. No overage charges, but no WhatsApp delivery either. Just email summaries.
 
 whoza.ai Starter is £59 per month. 10 jobs included. £4.50 per extra job. Unlimited call minutes. WhatsApp delivery. 24/7 answering. No contract.
 
@@ -5186,10 +5186,12 @@ The question is not "how much does a virtual receptionist cost?" The question is
 
 It is an AI that works harder, costs less, and never takes a day off.
 
-Try it. The 7-day free trial is genuinely free — no credit card, no contract, no hard sell. I am not affiliated with whoza.ai. I am just a joiner from Glasgow who got tired of missing calls. And I wish I had done this six months sooner.`,
+Try it. The 7-day free trial is genuinely free — no credit card, no contract, no hard sell. I am just a joiner from Glasgow who got tired of missing calls. And I wish I had done this six months sooner.
+
+*This is a real customer scenario written in Whoza's house style for readability — not a verified third-party review.*`,
         },
       ],
-      conclusion: `I spent two weeks researching virtual receptionist costs. I compared Moneypenny, Verbatim, AnswerConnect, and YourBusinessNumber. I built spreadsheets. I sat through sales calls. I did free trials.
+      conclusion: `I spent two weeks researching virtual receptionist costs. I compared four different virtual receptionist services. I built spreadsheets. I sat through sales calls. I did free trials.
 
 The cheapest traditional virtual receptionist I found was £150 per month. The most expensive was £400. All required contracts. None offered WhatsApp delivery. None included 24/7 answering without extra charges.
 
@@ -5202,7 +5204,7 @@ The right question is: what captures the most enquiries for the least money? In 
       faq: [
         {
           question: "How much does a virtual receptionist cost in the UK?",
-          answer: "UK virtual receptionist services typically cost £150-£400 per month (£1,800-£4,800 per year). Premium services like Moneypenny charge £250-£400/month. Budget options like YourBusinessNumber start at £99/month but offer limited service. All typically require 12-month contracts. AI call handling alternatives like whoza.ai cost £59-£399/month with no contract.",
+          answer: "UK virtual receptionist services typically cost £150-£400 per month (£1,800-£4,800 per year). Premium providers charge £250-£400/month. Budget options start at £99/month but offer limited service. All typically require 12-month contracts. AI call handling alternatives like whoza.ai cost £59-£399/month with no contract.",
         },
         {
           question: "Is an AI call handler cheaper than a virtual receptionist?",
@@ -5210,11 +5212,11 @@ The right question is: what captures the most enquiries for the least money? In 
         },
         {
           question: "Do customers mind speaking to AI instead of a human receptionist?",
-          answer: "Most callers do not realise they are speaking to AI. Modern AI voices are natural and conversational. The key metric is whether their problem gets solved quickly and professionally. whoza.ai reports 89% customer satisfaction. The alternative for most trades is voicemail — which 69% of callers hang up on without leaving a message.",
+          answer: "Most callers do not realise they are speaking to AI. Modern AI voices are natural and conversational. The key metric is whether their problem gets solved quickly and professionally. Callers appreciate an immediate response over voicemail or a ringing phone. The alternative for most trades is voicemail — which 69% of callers hang up on without leaving a message.",
         },
         {
           question: "What is the best virtual receptionist for UK tradespeople?",
-          answer: "For most UK tradespeople, an AI call handler outperforms traditional virtual receptionists on cost, availability, and features. whoza.ai is specifically designed for trades — pre-trained on trade terminology, delivers via WhatsApp, works 24/7, and costs £59/month with no contract. Traditional virtual receptionists like Moneypenny or Verbatim are better suited to corporate businesses with complex needs.",
+          answer: "For most UK tradespeople, an AI call handler outperforms traditional virtual receptionists on cost, availability, and features. whoza.ai is specifically designed for trades — pre-trained on trade terminology, delivers via WhatsApp, works 24/7, and costs £59/month with no contract. Traditional virtual receptionists are better suited to corporate businesses with complex needs.",
         },
         {
           question: "Can I try whoza.ai for free?",
