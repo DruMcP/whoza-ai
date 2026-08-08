@@ -36,6 +36,14 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "i-spent-two-weeks-comparing-virtual-receptionist-prices-ross-the-joiner",
+    title: "I Spent Two Weeks Googling 'Virtual Receptionist Cost' Before I Realised I Was Buying the Wrong Thing",
+    excerpt: "Self-employed joiner from Glasgow spent 14 days comparing virtual receptionist prices. He discovered the cheapest option was not the best value — and the best value was not what he expected.",
+    readTime: "14 min read",
+    date: "2026-08-08",
+    category: "UGC / Real Stories",
+  },
+  {
     slug: "what-tradespeople-actually-want-from-ai",
     title: "What Tradespeople Actually Want from AI — and It Isn't What the Tech Lot Are Selling",
     excerpt: "A working tradesperson's honest take on what we actually want from AI: calls answered, evenings back, invoices out when the job's done. No apps, no jargon.",
