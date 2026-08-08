@@ -98,6 +98,15 @@ export default function PricingPage() {
         {/* Comparison Table */}
         <ComparisonTable />
 
+        {/* Real story link */}
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+            <p className="text-white/70">
+              <strong className="text-white">Real story from a Glasgow joiner:</strong> Ross spent two weeks comparing virtual receptionist prices from Moneypenny, Verbatim, AnswerConnect and others. He documented exactly what each costs, what is included, and what happened when he switched to AI. <a href="/blog/i-spent-two-weeks-comparing-virtual-receptionist-prices-ross-the-joiner" className="text-[var(--katie-blue)] hover:underline font-semibold">Read his honest comparison →</a>
+            </p>
+          </div>
+        </section>
+
         {/* FAQ — scoped to Pricing category only */}
         <FAQ initialCategory="Pricing" />
 
