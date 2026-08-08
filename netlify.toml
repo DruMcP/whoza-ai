@@ -368,10 +368,6 @@
   to = "/"
   status = 301
 
-[[redirects]]
-  from = "/video/*"
-  to = "/"
-  status = 301
 
 [[redirects]]
   from = "/competitor-analysis/*"

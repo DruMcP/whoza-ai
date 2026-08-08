@@ -37,7 +37,6 @@ const nextConfig = {
 
     async redirects() {
     return [
-
       // === Signup convenience redirects ===
       { source: '/waitlist', destination: '/signup', permanent: true },
       { source: '/sign-up', destination: '/signup', permanent: true },
@@ -54,12 +53,6 @@ const nextConfig = {
       {
         source: '/research/voice-agent-technology-state-of-the-art-2026',
         destination: '/research/voice-agent-technology-state-of-art-2026',
-        permanent: true,
-      },
-
-      {
-        source: '/blog/5-signs-your-trade-business-needs-an-ai-call-handler',
-        destination: '/blog/ai-receptionist-vs-human-receptionist-which-is-right-for-your-trade-business',
         permanent: true,
       },
 
@@ -89,20 +82,10 @@ const nextConfig = {
         permanent: true,
       },
 
-      // === CRITICAL: Redirect missing comparison pages to homepage ===
+      // === CRITICAL: Redirect missing comparison pages ===
       {
         source: '/whoza-vs-virtual-receptionist',
         destination: '/ai-vs-virtual-receptionist',
-        permanent: true,
-      },
-      {
-        source: '/whoza-vs-answer',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/whoza-vs-yourbusinessnumber',
-        destination: '/',
         permanent: true,
       },
 
@@ -118,55 +101,46 @@ const nextConfig = {
         destination: '/for-plumbers',
         permanent: true,
       },
-
       {
         source: '/electrician',
         destination: '/for-electricians',
         permanent: true,
       },
-
       {
         source: '/roofer',
         destination: '/for-roofers',
         permanent: true,
       },
-
       {
         source: '/locksmith',
         destination: '/for-locksmiths',
         permanent: true,
       },
-
       {
         source: '/drainage',
         destination: '/for-drainage',
         permanent: true,
       },
-
       {
         source: '/landscaper',
         destination: '/for-landscapers',
         permanent: true,
       },
-
       {
         source: '/pest-control',
         destination: '/for-pest-control',
         permanent: true,
       },
-
       {
         source: '/cleaner',
         destination: '/for-cleaners',
         permanent: true,
       },
-
       {
         source: '/heating-engineer',
         destination: '/for-heating-engineers',
         permanent: true,
       },
-
       {
         source: '/builder',
         destination: '/for-builders',
@@ -179,43 +153,36 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
-
       {
         source: '/newcastle',
         destination: '/',
         permanent: true,
       },
-
       {
         source: '/cardiff',
         destination: '/',
         permanent: true,
       },
-
       {
         source: '/nottingham',
         destination: '/',
         permanent: true,
       },
-
       {
         source: '/coventry',
         destination: '/',
         permanent: true,
       },
-
       {
         source: '/bradford',
         destination: '/',
         permanent: true,
       },
-
       {
         source: '/belfast',
         destination: '/',
         permanent: true,
       },
-
       {
         source: '/derby',
         destination: '/',
@@ -246,297 +213,6 @@ const nextConfig = {
         permanent: true,
       },
 
-      {
-        source: '/blog/hvac-emergency-call-handling',
-        destination: '/blog/heating-engineer-emergency-call-handling',
-        permanent: true,
-      },
-
-      {
-        source: '/blog/case-study-how-a-london-electrician-recovered-12k-month-with-ai-call-handling',
-        destination: '/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky',
-        permanent: true,
-      },
-
-      {
-        source: '/blog/how-katie-answers-captures-and-delivers-enquiries-in-3-seconds',
-        destination: '/blog/how-ai-call-handlers-are-changing-the-game-for-uk-trades-2026',
-        permanent: true,
-      },
-
-      {
-        source: '/blog/how-to-never-miss-an-emergency-call-again-plumbers-electricians-roofers',
-        destination: '/blog/i-missed-5-emergency-calls-a-week-then-i-tried-ai-gary-the-plumber',
-        permanent: true,
-      },
-
-      {
-        source: '/blog/how-whatsapp-delivery-changes-everything-for-tradespeople',
-        destination: '/blog/how-ai-call-handlers-are-changing-the-game-for-uk-trades-2026',
-        permanent: true,
-      },
-
-      {
-        source: '/blog/how-whoza-ai-works-with-your-existing-phone-number',
-        destination: '/blog/how-ai-call-handlers-are-changing-the-game-for-uk-trades-2026',
-        permanent: true,
-      },
-
-      {
-        source: '/blog/how-ai-call-handling-works-with-your-existing-phone-number',
-        destination: '/blog/how-ai-call-handlers-are-changing-the-game-for-uk-trades-2026',
-        permanent: true,
-      },
-
-      {
-        source: '/blog/moneypenny-vs-whoza-ai-which-receptionist-service-is-right-for-trades',
-        destination: '/blog/ai-receptionist-vs-human-receptionist-which-is-right-for-your-trade-business',
-        permanent: true,
-      },
-
-      {
-        source: '/blog/roi-calculator-how-much-could-an-ai-call-handler-save-your-trade-business',
-        destination: '/blog/how-much-do-missed-calls-cost-uk-trades',
-        permanent: true,
-      },
-
-      {
-        source: '/blog/missed-calls-missed-money',
-        destination: '/blog/missed-calls-cost-uk-trades',
-        permanent: true,
-      },
-      {
-        source: '/blog/the-7-day-free-trial-what-to-expect-when-you-try-katie',
-        destination: '/blog/missed-calls-missed-money-the-real-cost-for-tradespeople',
-        permanent: true,
-      },
-
-      {
-        source: '/blog/the-truth-about-ai-voice-agents-what-google-reviews-say',
-        destination: '/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026',
-        permanent: true,
-      },
-
-      {
-        source: '/blog/why-tradespeople-need-a-revenue-team-not-just-a-virtual-receptionist',
-        destination: '/blog/ai-receptionist-vs-human-receptionist-which-is-right-for-your-trade-business',
-        permanent: true,
-      },
-
-      {
-        source: '/blog/emergency-call-handling-guide',
-        destination: '/blog/24-7-call-answering-emergency-trades',
-        permanent: true,
-      },
-      // === v16: Redirect abbreviated blog slugs to canonical full slugs ===
-      {
-        source: '/blog/ai-call-answering-uk-trades',
-        destination: '/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026',
-        permanent: true,
-      },
-      {
-        source: '/blog/missed-calls-cost-uk-trades',
-        destination: '/blog/how-much-do-missed-calls-cost-uk-trades',
-        permanent: true,
-      },
-      {
-        source: '/blog/ai-receptionist-vs-human',
-        destination: '/blog/ai-receptionist-vs-human-cost-guide-2026',
-        permanent: true,
-      },
-      // === SEO/AEO Duplication Fixes (2026-07-12) ===
-      // Consolidate three competing "best AI" pages into one canonical hub
-      {
-        source: '/blog/best-ai-call-answering-service-uk-2026',
-        destination: '/best-ai-call-handler-uk-trades',
-        permanent: true,
-      },
-      {
-        source: '/blog/best-ai-call-answering-service-uk-trades-2026',
-        destination: '/best-ai-call-handler-uk-trades',
-        permanent: true,
-      },
-      {
-        source: '/blog/best-ai-phone-answering-uk-trades-2026',
-        destination: '/best-ai-call-handler-uk-trades',
-        permanent: true,
-      },
-      // Consolidate two missed-call calculators
-      {
-        source: '/missed-calls-cost-calculator',
-        destination: '/resources/missed-call-cost-calculator',
-        permanent: true,
-      },
-      // Consolidate AI vs human receptionist cluster
-      {
-        source: '/blog/ai-vs-human-receptionist-trades',
-        destination: '/ai-vs-virtual-receptionist',
-        permanent: true,
-      },
-      {
-        source: '/blog/ai-receptionist-vs-human-receptionist-which-is-right-for-your-trade-business',
-        destination: '/ai-vs-virtual-receptionist',
-        permanent: true,
-      },
-      // Consolidate missed-call cost blog cluster
-      {
-        source: '/blog/missed-calls-missed-money-the-real-cost-for-tradespeople',
-        destination: '/blog/how-much-do-missed-calls-cost-uk-trades',
-        permanent: true,
-      },
-      {
-        source: '/blog/why-62-percent-of-trade-business-calls-go-unanswered',
-        destination: '/blog/how-much-do-missed-calls-cost-uk-trades',
-        permanent: true,
-      },
-      {
-        source: '/blog/missed-call-recovery-trades-guide',
-        destination: '/blog/how-much-do-missed-calls-cost-uk-trades',
-        permanent: true,
-      },
-      // Consolidate AI call answering guide cluster
-      {
-        source: '/blog/ai-call-answering-trades-uk-guide',
-        destination: '/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026',
-        permanent: true,
-      },
-      {
-        source: '/blog/247-call-answering-uk-trades-guide-2026',
-        destination: '/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026',
-        permanent: true,
-      },
-      {
-        source: '/blog/how-ai-call-handlers-are-changing-the-game-for-uk-trades-2026',
-        destination: '/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026',
-        permanent: true,
-      },
-      // === GSC 404 FIX: Redirect dead AI-visibility blog posts (2026-06-14) ===
-      // Local SEO / getting found cluster
-      {
-        source: '/blog/what-is-ai-visibility-and-why-does-it-matter-for-your-trade-business',
-        destination: '/blog/local-seo-trades-complete-guide',
-        permanent: true,
-      },
-      {
-        source: '/blog/what-is-ai-visibility-uk-tradespeople-2026',
-        destination: '/blog/local-seo-trades-complete-guide',
-        permanent: true,
-      },
-      {
-        source: '/blog/how-uk-tradespeople-get-found-ai-search-2026',
-        destination: '/blog/local-seo-trades-complete-guide',
-        permanent: true,
-      },
-      {
-        source: '/blog/why-bing-matters-for-ai-search-2026',
-        destination: '/blog/local-seo-trades-complete-guide',
-        permanent: true,
-      },
-      {
-        source: '/blog/why-bing-matters-for-ai-search-the-perplexity-connection',
-        destination: '/blog/local-seo-trades-complete-guide',
-        permanent: true,
-      },
-      {
-        source: '/blog/best-practices-tradespeople-london-local-ai-visibility-guide',
-        destination: '/blog/local-seo-trades-complete-guide',
-        permanent: true,
-      },
-      {
-        source: '/blog/ai-search-optimization-beginners-guide-get-found-chatgpt-perplexity-2026',
-        destination: '/blog/local-seo-trades-complete-guide',
-        permanent: true,
-      },
-      {
-        source: '/blog/the-ultimate-guide-to-ai-search-optimization-for-tradespeople',
-        destination: '/blog/local-seo-trades-complete-guide',
-        permanent: true,
-      },
-      {
-        source: '/blog/top-10-ai-visibility-strategies-uk-tradespeople-2026',
-        destination: '/blog/local-seo-trades-complete-guide',
-        permanent: true,
-      },
-      {
-        source: '/blog/manchester-vs-birmingham-local-seo-strategies-2026',
-        destination: '/blog/local-seo-trades-complete-guide',
-        permanent: true,
-      },
-      {
-        source: '/blog/how-ai-search-engines-choose-which-local-businesses-to-recommend',
-        destination: '/blog/local-seo-trades-complete-guide',
-        permanent: true,
-      },
-      {
-        source: '/blog/how-ai-search-engines-rank-local-tradespeople-aeo-geo-guide-2026',
-        destination: '/blog/local-seo-trades-complete-guide',
-        permanent: true,
-      },
-      // Business growth / playbook cluster
-      {
-        source: '/blog/the-uk-trades-business-playbook-for-ai-search-visibility-in-2026',
-        destination: '/blog/how-to-grow-trade-business-uk-guide',
-        permanent: true,
-      },
-      {
-        source: '/blog/uk-trades-business-playbook-ai-search-visibility-2026',
-        destination: '/blog/how-to-grow-trade-business-uk-guide',
-        permanent: true,
-      },
-      // Reviews cluster
-      {
-        source: '/blog/how-reviews-influence-ai-search-recommendations-tradespeople-2026',
-        destination: '/blog/how-to-get-more-google-reviews-trades',
-        permanent: true,
-      },
-      // FAQ cluster
-      {
-        source: '/blog/how-to-create-faq-page-ai-can-find-2026',
-        destination: '/blog/ultimate-faq-tradespeople',
-        permanent: true,
-      },
-      {
-        source: '/blog/how-to-create-an-faq-page-that-ai-can-find-and-reference',
-        destination: '/blog/ultimate-faq-tradespeople',
-        permanent: true,
-      },
-      // GSC 404 FIX: Missing blog redirects (2026-06-16)
-      {
-        source: '/blog/how-ai-search-engines-choose-plumber-recommendation-manchester',
-        destination: '/blog/how-to-get-more-plumbing-customers',
-        permanent: true,
-      },
-      {
-        source: '/blog/electricians-guide-to-google-ai-overviews-how-to-get-featured',
-        destination: '/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky',
-        permanent: true,
-      },
-      {
-        source: '/blog/how-uk-tradespeople-can-get-recommended-by-chatgpt-in-2026',
-        destination: '/blog/local-seo-trades-complete-guide',
-        permanent: true,
-      },
-      // Trade-specific clusters
-      {
-        source: '/blog/roofers-checklist-10-steps-to-ai-visibility-2026',
-        destination: '/blog/roofing-lead-generation-guide',
-        permanent: true,
-      },
-      {
-        source: '/blog/electricians-guide-to-google-ai-overviews-2026',
-        destination: '/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky',
-        permanent: true,
-      },
-      {
-        source: '/blog/how-plumbers-can-get-found-in-chatgpt-a-step-by-step-guide',
-        destination: '/blog/how-to-get-more-plumbing-customers',
-        permanent: true,
-      },
-      {
-        source: '/blog/how-plumbers-can-get-found-in-chatgpt-2026',
-        destination: '/blog/how-to-get-more-plumbing-customers',
-        permanent: true,
-      },
       // === GSC 404 FIX: Dead internal link pages ===
       {
         source: '/ai-call-answering-plumbers',
@@ -586,17 +262,6 @@ const nextConfig = {
       {
         source: '/sign-in',
         destination: '/',
-        permanent: true,
-      },
-      // === Missing short URL redirects ===
-      {
-        source: '/blog/roofers-checklist',
-        destination: '/blog/roofing-lead-generation-guide',
-        permanent: true,
-      },
-      {
-        source: '/blog/electricians-guide',
-        destination: '/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky',
         permanent: true,
       },
       // Trade page aliases — redirect /trade/* to /for-* for missing entries

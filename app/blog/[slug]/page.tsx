@@ -6,8 +6,9 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { blogPostContents } from "@/lib/blog-content"
 
-// Defensive blocklist: retired blog slugs that must never render content
-// (Redirects in next.config.mjs handle these at the edge; this is a safety net)
+// Defensive blocklist: retired blog slugs that must return 404
+// These slugs no longer have live content. The page component below
+// calls notFound() for any slug in this set.
 const RETIRED_BLOG_SLUGS = new Set([
   // AI-visibility cluster (consolidated to local-seo-trades-complete-guide)
   "what-is-ai-visibility-and-why-does-it-matter-for-your-trade-business",
@@ -25,6 +26,8 @@ const RETIRED_BLOG_SLUGS = new Set([
   "how-ai-search-engines-choose-plumber-recommendation-manchester",
   "how-uk-tradespeople-can-get-recommended-by-chatgpt-in-2026",
   "electricians-guide-to-google-ai-overviews-how-to-get-featured",
+  "electricians-guide",
+  "electricians-guide-to-google-ai-overviews-2026",
   // Playbook cluster (consolidated to how-to-grow-trade-business-uk-guide)
   "the-uk-trades-business-playbook-for-ai-search-visibility-in-2026",
   "uk-trades-business-playbook-ai-search-visibility-2026",
@@ -35,6 +38,7 @@ const RETIRED_BLOG_SLUGS = new Set([
   "how-to-create-an-faq-page-that-ai-can-find-and-reference",
   // Trade-specific redirects
   "roofers-checklist-10-steps-to-ai-visibility-2026",
+  "roofers-checklist",
   // Abbreviated / old slugs
   "ai-call-answering-trades-uk-guide",
   "247-call-answering-uk-trades-guide-2026",
@@ -50,6 +54,10 @@ const RETIRED_BLOG_SLUGS = new Set([
   "missed-calls-missed-money-the-real-cost-for-tradespeople",
   "why-62-percent-of-trade-business-calls-go-unanswered",
   "missed-call-recovery-trades-guide",
+  "hvac-emergency-call-handling",
+  "emergency-call-handling-guide",
+  "how-plumbers-can-get-found-in-chatgpt-2026",
+  "how-plumbers-can-get-found-in-chatgpt-a-step-by-step-guide",
   "5-signs-your-trade-business-needs-an-ai-call-handler",
   "case-study-how-a-london-electrician-recovered-12k-month-with-ai-call-handling",
   "how-katie-answers-captures-and-delivers-enquiries-in-3-seconds",
