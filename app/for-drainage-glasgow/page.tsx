@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 }

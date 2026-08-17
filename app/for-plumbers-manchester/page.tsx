@@ -100,7 +100,7 @@ export default function ForPlumberManchesterPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Manchester has 8,500+ trade businesses competing for 540K households. 
                   With 3,400 missed calls every week across the city, 
-                  Katie ensures you capture every plumbers enquiry — burst pipe emergencies, boiler breakdowns, blocked drains & leak enquiries.
+                  Katie ensures you capture every plumbing enquiry — burst pipe emergencies, boiler breakdowns, blocked drains & leak enquiries.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link

@@ -100,7 +100,7 @@ export default function ForPlumberBristolPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Bristol has 4,800+ trade businesses competing for 235K households. 
                   With 2,100 missed calls every week across the city, 
-                  Katie ensures you capture every plumbers enquiry — burst pipe emergencies, boiler breakdowns, blocked drains & leak enquiries.
+                  Katie ensures you capture every plumbing enquiry — burst pipe emergencies, boiler breakdowns, blocked drains & leak enquiries.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link

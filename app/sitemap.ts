@@ -3,24 +3,15 @@ import { execSync } from 'child_process'
 import { blogPostContents } from '@/lib/blog-content'
 import { existsSync, readdirSync } from 'fs'
 
-// Verified live /for-{trade}-{city} pages (July 2026)
+// Verified live /for-{trade}-{city} pages (August 2026)
+// Removed low-value combos flagged as duplicate by GSC.
+// Keeping: plumbers, electricians, builders, roofers, heating-engineers, gas-engineers
 const LIVE_CITY_PAGES: Record<string, string[]> = {
   "plumbers": ["london","manchester","birmingham","leeds","glasgow","bristol","liverpool","edinburgh"],
-  "painters-decorators": ["glasgow","edinburgh"],
   "electricians": ["london","manchester","birmingham","glasgow","edinburgh"],
   "builders": ["london","manchester","birmingham","glasgow","edinburgh"],
   "roofers": ["london","glasgow","edinburgh"],
-  "locksmiths": ["london","manchester","glasgow","edinburgh"],
-  "landscapers": ["london","glasgow","edinburgh"],
   "heating-engineers": ["london","manchester","glasgow","edinburgh"],
-  "pest-control": ["london","glasgow","edinburgh"],
-  "cleaners": ["london","glasgow","edinburgh"],
-  "drainage": ["glasgow","edinburgh"],
-  "joiners": ["glasgow","edinburgh"],
-  "plasterers": ["glasgow","edinburgh"],
-  "tilers": ["glasgow","edinburgh"],
-  "carpenters": ["glasgow","bristol","edinburgh"],
-  "handymen": ["london","glasgow","edinburgh"],
   "gas-engineers": ["london","glasgow","edinburgh"],
 };
 

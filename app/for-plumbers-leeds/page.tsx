@@ -100,7 +100,7 @@ export default function ForPlumberLeedsPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Leeds has 6,000+ trade businesses competing for 350K households. 
                   With 2,800 missed calls every week across the city, 
-                  Katie ensures you capture every plumbers enquiry — burst pipe emergencies, boiler breakdowns, blocked drains & leak enquiries.
+                  Katie ensures you capture every plumbing enquiry — burst pipe emergencies, boiler breakdowns, blocked drains & leak enquiries.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
