@@ -308,6 +308,31 @@ export default function ForPlumberLondonPage() {
         <div className="section-divider" />
 
         {/* ─── CITY LINKS ─── */}
+        {/* ─── LOCAL CONTEXT ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Plumbers in London Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                From Chelsea and Kensington to Hackney and Stratford, London&apos;s plumbing market is fiercely competitive. Victorian terraces in Islington and period conversions in Camden still run on original lead piping that fails without warning. With 15+ trade businesses per postcode in central London, a missed call rarely gets a second chance — the customer simply dials the next number.
+              </p>
+              <p>
+                Hard water across north and west London causes limescale buildup that destroys boilers and narrows pipes. Thames Water pressure zones vary dramatically by borough, meaning a fix that works in Westminster may fail in Haringey. Winter freeze-thaw cycles burst exposed pipes in council estates across Tower Hamlets and Southwark, while summer heatwaves trigger air conditioning and ventilation enquiries that plumbers increasingly field.
+              </p>
+              <p>
+                Emergency calls peak during commute hours when you&apos;re between jobs — stuck in ULEZ, congestion charge, or resident parking restrictions. When a tenant in a Pimlico period conversion reports a burst pipe at 7pm, Katie captures the postcode, flags the urgency, and gives you the full context before you commit to a site visit. That qualification alone saves hours of unbillable travel across London&apos;s sprawling zones.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
+
         <section className="py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">

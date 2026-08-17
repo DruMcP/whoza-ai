@@ -307,6 +307,31 @@ export default function ForPlumberEdinburghPage() {
         <div className="section-divider" />
 
         {/* ─── CITY LINKS ─── */}
+        {/* ─── LOCAL CONTEXT ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Plumbers in Edinburgh Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                From Georgian townhouses in the New Town to Victorian tenements in Leith and Marchmont, Edinburgh&apos;s plumbing trade operates in a city where history and modernity collide. Category A listed buildings in Stockbridge and Comely Bank retain original lead piping that requires specialist knowledge and careful handling. With 47% of the city centre designated as a UNESCO World Heritage Site, almost every external repair needs planning permission — customers who call expect trades who understand these constraints.
+              </p>
+              <p>
+                Hard water in west Edinburgh — particularly Corstorphine and Balerno — causes severe limescale buildup that destroys boilers and narrows pipes. East-coast winds from the Firth of Forth drive rain horizontally into roof spaces and down external walls, creating hidden damp that manifests as plumbing emergencies. Winter temperatures regularly drop below freezing, and with sunset around 3:30pm in December, emergency callouts often happen in darkness.
+              </p>
+              <p>
+                Edinburgh&apos;s affluent market — the highest average household income outside London — means customers expect professionalism and pay for quality. But with 60,000+ students and a booming short-term let economy in the Old and New Towns, property managers need rapid turnaround on maintenance calls. When an Airbnb host in Bruntsfield reports a leak between changeovers, Katie captures the urgency, the time pressure, and delivers everything to your WhatsApp before the next guest checks in.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
+
         <section className="py-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">

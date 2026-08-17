@@ -307,6 +307,31 @@ export default function ForElectricianEdinburghPage() {
         <div className="section-divider" />
 
         {/* ─── CITY LINKS ─── */}
+        {/* ─── LOCAL CONTEXT ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Electricians in Edinburgh Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                From Georgian townhouses in the New Town to Victorian tenements in Marchmont and Newington, Edinburgh&apos;s electrical trade operates in a city where almost every job requires specialist knowledge. Category A listed buildings in Stockbridge retain original wiring that needs sympathetic upgrading without damaging historic fabric. With 47% of the city centre a UNESCO World Heritage Site, external electrical work almost always needs planning permission — customers expect trades who understand these constraints.
+              </p>
+              <p>
+                The 60,000+ student population across four universities creates relentless EICR demand in HMOs across Marchmont, Newington, and Leith. Edinburgh&apos;s short-term let economy — Airbnb properties in the Old and New Towns — needs rapid-turnaround electrical repairs between changeovers. East-coast winds from the Firth of Forth drive rain horizontally into properties, causing damp that corrodes junction boxes and triggers persistent RCD faults in older installations.
+              </p>
+              <p>
+                Edinburgh&apos;s affluent market — highest average household income outside London — means customers pay for quality but expect professionalism from first contact. When a property manager in Bruntsfield needs an EICR turned around in 48 hours for a new tenancy, or a Georgian townhouse owner in Comely Bank wants a sympathetic rewire that preserves original features, Katie captures the full brief, flags the specialist requirements, and delivers a structured enquiry that lets you quote accurately without a callback.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
+
         <section className="py-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">

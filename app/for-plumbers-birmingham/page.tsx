@@ -312,6 +312,31 @@ export default function ForPlumberBirminghamPage() {
         <div className="section-divider" />
 
         {/* ─── CITY LINKS ─── */}
+        {/* ─── LOCAL CONTEXT ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Plumbers in Birmingham Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                From Edgbaston and Moseley to Digbeth and Sutton Coldfield, Birmingham&apos;s plumbing trade faces a city in transition. Victorian villas in Handsworth and period homes in Kings Heath still rely on original plumbing that fails without warning, while the Big City Plan drives new-build developments across Digbeth and Smithfield. As the youngest city in Europe, Birmingham&apos;s 40% under-25 population creates constant demand for rental property maintenance.
+              </p>
+              <p>
+                Birmingham&apos;s inland position means colder winters than coastal cities — temperatures regularly drop below freezing in January and February, bursting pipes in poorly insulated 1930s semis across Kingstanding and Erdington. Summer thunderstorms cause flash flooding and drainage issues, particularly in the 35 miles of canal-side properties where basement flooding is a recurring problem. Post-war estates in Castle Vale and Bromford need responsive maintenance for aging pipework.
+              </p>
+              <p>
+                With £10bn of regeneration investment, specialist trades are in constant demand — but customers won&apos;t wait. When a first-time buyer in Harborne discovers a leak during their survey, or a landlord in Selly Oak needs an emergency callout for a student property, Katie captures every detail, qualifies the job, and delivers it to your WhatsApp while you&apos;re still on your current fix.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
+
         <section className="py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">

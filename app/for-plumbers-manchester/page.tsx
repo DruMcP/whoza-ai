@@ -312,6 +312,31 @@ export default function ForPlumberManchesterPage() {
         <div className="section-divider" />
 
         {/* ─── CITY LINKS ─── */}
+        {/* ─── LOCAL CONTEXT ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Plumbers in Manchester Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                From Didsbury and Chorlton to Salford and Ancoats, Manchester&apos;s plumbing trade serves a housing stock as varied as its neighbourhoods. Red brick terraces in Levenshulme still run on original cast iron pipes and shared drains that back up without warning. With rapid regeneration across Salford Quays and MediaCity, new-build apartments sit alongside century-old infrastructure — and both need reliable plumbers who answer their phone.
+              </p>
+              <p>
+                Manchester&apos;s rainfall averages 867mm per year — well above the UK average — causing persistent damp, gutter overflow, and blocked drains across the city. Victorian cast iron pipes in south Manchester terraces corrode from the inside out, while combi boilers in converted flats struggle with hard water scale from Trafford and Stockport. Prolonged cold snaps freeze poorly insulated pipes in Wythenshawe and Miles Platting council estates.
+              </p>
+              <p>
+                The city&apos;s 100,000+ students create a constant stream of HMO maintenance calls, often from landlords who manage remotely from London. On match days, traffic gridlock around Old Trafford and the Etihad makes emergency callouts a nightmare. When a student landlord in Withington gets a leak report at 8pm, Katie captures the tenant details, flags the urgency, and delivers everything to your WhatsApp before you&apos;ve finished your current job.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
+
         <section className="py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">

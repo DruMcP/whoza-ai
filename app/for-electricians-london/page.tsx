@@ -312,6 +312,31 @@ export default function ForElectricianLondonPage() {
         <div className="section-divider" />
 
         {/* ─── CITY LINKS ─── */}
+        {/* ─── LOCAL CONTEXT ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Electricians in London Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                From Canary Wharf and the City of London to Islington and Camden, London&apos;s electrical trade spans everything from commercial three-phase work to Victorian terrace rewiring. New-build apartments in Nine Elms and Stratford need EV charger installations and smart home integration, while period conversions in Maida Vale and Pimlico still run on aging wiring that poses genuine safety risks. With 45% of London households rented, EICR demand from landlords is relentless.
+              </p>
+              <p>
+                The 6-yearly EICR requirement for landlords means a constant stream of inspection bookings across every borough. Commercial work in the City and Docklands demands three-phase expertise and out-of-hours availability. Summer heatwaves push air conditioning and ventilation installations to peak demand, while winter boiler breakdowns create secondary electrical faults in integrated heating systems. Hard water in north and west London indirectly affects electrical systems through limescale-damaged components.
+              </p>
+              <p>
+                Competition is brutal — 15+ trade businesses per postcode in central London. Emergency calls peak during commute hours when you&apos;re between jobs, navigating ULEZ and congestion charge zones. When a letting agent in Kensington books an EICR for a portfolio of properties, Katie captures the full schedule, flags the certificate deadline, and delivers a structured enquiry that lets you quote accurately without a callback.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
+
         <section className="py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">

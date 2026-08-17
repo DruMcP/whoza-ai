@@ -307,6 +307,31 @@ export default function ForElectricianGlasgowPage() {
         <div className="section-divider" />
 
         {/* ─── CITY LINKS ─── */}
+        {/* ─── LOCAL CONTEXT ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Electricians in Glasgow Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                From the Financial District and Pacific Quay to Hyndland and Partick, Glasgow&apos;s electrical trade spans commercial high-rises and sandstone tenements in equal measure. Tenement flats across Dennistoun and Hillhead still run on original wiring that fails modern safety standards, while new-build apartments at Glasgow Harbour demand smart home integration and EV charging points. With 5,500+ trade businesses competing, customers who call and get voicemail simply move on.
+              </p>
+              <p>
+                Glasgow&apos;s 1,124mm annual rainfall — the highest of any major UK city — causes persistent damp that corrodes junction boxes, triggers RCD faults, and degrades cable insulation in older properties. Factoring companies like FirstPort maintain approved contractor lists for tenement maintenance, and getting on them requires demonstrated reliability. The 50,000+ student population creates constant demand for EICRs in HMOs across the West End and City Centre.
+              </p>
+              <p>
+                Commercial work in the Financial District and Pacific Quay demands out-of-hours availability and three-phase expertise. When a factoring company reports a communal electrical fault in a West End tenement, or a student landlord in Shawlands needs EICRs ahead of the new term, Katie captures the property details, flags the urgency, and delivers everything to your WhatsApp — letting you assess and respond without breaking stride on your current job.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
+
         <section className="py-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">

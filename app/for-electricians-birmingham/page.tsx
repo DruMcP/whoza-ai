@@ -312,6 +312,31 @@ export default function ForElectricianBirminghamPage() {
         <div className="section-divider" />
 
         {/* ─── CITY LINKS ─── */}
+        {/* ─── LOCAL CONTEXT ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Electricians in Birmingham Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                From the Jewellery Quarter and Digbeth to Edgbaston and Solihull, Birmingham&apos;s electrical trade operates in the UK&apos;s youngest major city. Victorian villas in Moseley and Handsworth need complete rewiring and sympathetic upgrades that preserve original features. New-build developments across Smithfield and Perry Barr demand EV charging infrastructure and smart home integration. With 40% of the population under 25, the rental market is relentless — and every landlord needs an EICR.
+              </p>
+              <p>
+                Student areas like Selly Oak and Harborne generate constant EICR bookings and emergency callouts for overloaded circuits in converted terraced houses. Commercial work in the Jewellery Quarter and Digbeth spans manufacturing, retail, and creative industries — each with different electrical requirements. Birmingham&apos;s inland position means colder winters than coastal cities, with temperatures regularly dropping below freezing and causing electrical faults in poorly insulated outbuildings and garages.
+              </p>
+              <p>
+                The Big City Plan&apos;s £10bn regeneration investment means specialist trades are in constant demand, but customers expect immediate response. When a first-time buyer in Kings Heath discovers outdated wiring during a survey, or a letting agent in Edgbaston needs urgent EICRs for a portfolio ahead of tenancy renewals, Katie captures every detail, flags the deadline, and delivers a structured enquiry that lets you quote without playing phone tag.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
+
         <section className="py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">

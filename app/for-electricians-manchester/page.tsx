@@ -312,6 +312,31 @@ export default function ForElectricianManchesterPage() {
         <div className="section-divider" />
 
         {/* ─── CITY LINKS ─── */}
+        {/* ─── LOCAL CONTEXT ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Electricians in Manchester Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                From MediaCity and the Northern Quarter to Didsbury and Salford, Manchester&apos;s electrical trade serves a city where industrial heritage meets modern regeneration. Ex-mill buildings in Ancoats converted to flats need complete rewiring and complex heating system integration. Red brick terraces across Chorlton and Levenshulme still run on original wiring that fails inspection after inspection. With 100,000+ students and a booming buy-to-let market, EICR demand never stops.
+              </p>
+              <p>
+                Student HMOs across Fallowfield and Rusholme need annual EICRs and frequent emergency callouts for overloaded circuits. Commercial work in the city centre and MediaCity demands reliable trades who can work around office hours. New-build apartments in Salford Quays need EV charging infrastructure and smart home systems. Manchester&apos;s 867mm annual rainfall causes persistent damp that corrodes junction boxes and triggers RCD faults in older properties.
+              </p>
+              <p>
+                Match days create traffic chaos that makes emergency callouts a logistical nightmare. When a student landlord in Withington books an EICR for a three-bed HMO, or a commercial client in Spinningfields needs out-of-hours fault finding, Katie captures the property details, flags the deadline, and delivers a structured enquiry to your WhatsApp — no callback needed, no detail missed.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
+
         <section className="py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">

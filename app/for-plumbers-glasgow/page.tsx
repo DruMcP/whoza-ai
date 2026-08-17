@@ -307,6 +307,31 @@ export default function ForPlumberGlasgowPage() {
         <div className="section-divider" />
 
         {/* ─── CITY LINKS ─── */}
+        {/* ─── LOCAL CONTEXT ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Plumbers in Glasgow Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                From Hyndland and Partick in the West End to Pollokshields and Shawlands in the Southside, Glasgow&apos;s plumbing trade serves one of the most distinctive housing stocks in the UK. Sandstone tenements across Dennistoun and Hillhead share communal drains and pipework that make leak tracing a specialist skill. With 5,500+ trade businesses competing for work, a missed call means the customer moves on to the next number.
+              </p>
+              <p>
+                Glasgow has the highest rainfall of any major UK city at 1,124mm per year — persistent damp and driving rain cause gutter overflow, roof leaks, and external stone deterioration that infiltrates internal pipework. Shared drains in tenement blocks mean one blocked pipe affects multiple flats, and factoring companies like FirstPort maintain strict approved contractor lists. Harsh winters with frequent freeze-thaw cycles burst exposed pipes, particularly in post-war estates across Castlemilk and Easterhouse.
+              </p>
+              <p>
+                The Glasgow Housing Association manages 43,000 homes and is a major client for responsive trades. Meanwhile, 50,000+ students across three universities create constant HMO maintenance demand. When a factoring company reports a communal drain issue in a West End tenement at 6pm, Katie captures the full context, flags the shared-service complexity, and delivers it to your WhatsApp before you&apos;ve packed up your tools.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
+
         <section className="py-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">
