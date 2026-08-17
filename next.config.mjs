@@ -82,6 +82,58 @@ const nextConfig = {
         permanent: true,
       },
 
+      // === CRITICAL: 301 retired blog posts to live equivalents ===
+      {
+        source: '/blog/best-ai-call-answering-service-uk-2026',
+        destination: '/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026',
+        permanent: true,
+      },
+      {
+        source: '/blog/247-call-answering-uk-trades-guide-2026',
+        destination: '/blog/24-7-call-answering-emergency-trades',
+        permanent: true,
+      },
+      {
+        source: '/blog/ai-call-answering-trades-uk-guide',
+        destination: '/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026',
+        permanent: true,
+      },
+      {
+        source: '/blog/missed-call-recovery-trades-guide',
+        destination: '/blog/how-much-do-missed-calls-cost-uk-trades',
+        permanent: true,
+      },
+      {
+        source: '/blog/ai-vs-human-receptionist-trades',
+        destination: '/blog/ai-receptionist-vs-human-cost-guide-2026',
+        permanent: true,
+      },
+      {
+        source: '/blog/best-ai-phone-answering-uk-trades-2026',
+        destination: '/blog/ai-phone-technology-complete-guide',
+        permanent: true,
+      },
+      {
+        source: '/blog/how-ai-call-handlers-are-changing-the-game-for-uk-trades-2026',
+        destination: '/blog/how-does-ai-call-answering-work',
+        permanent: true,
+      },
+      {
+        source: '/blog/missed-calls-missed-money-the-real-cost-for-tradespeople',
+        destination: '/blog/how-much-do-missed-calls-cost-uk-trades',
+        permanent: true,
+      },
+      {
+        source: '/blog/ai-receptionist-vs-human-receptionist-which-is-right-for-your-trade-business',
+        destination: '/blog/ai-receptionist-vs-human-cost-guide-2026',
+        permanent: true,
+      },
+      {
+        source: '/blog/why-62-percent-of-trade-business-calls-go-unanswered',
+        destination: '/blog/5-signs-your-trade-business-is-losing-customers-to-missed-calls',
+        permanent: true,
+      },
+
       // === CRITICAL: Redirect missing comparison pages ===
       {
         source: '/whoza-vs-virtual-receptionist',

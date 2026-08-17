@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   description:
     "Sign up for Whoza — the AI phone receptionist for UK trades. Katie answers every call 24/7 and books real jobs to your WhatsApp. 7-day free trial, no card, live in 30 minutes.",
   alternates: {
-    canonical: "https://www.whoza.ai/signup",
+    canonical: "https://whoza.ai/signup",
   },
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: "https://www.whoza.ai/signup",
+    url: "https://whoza.ai/signup",
     siteName: "Whoza.ai",
     title: "Start Your Free Trial | Whoza",
     description:

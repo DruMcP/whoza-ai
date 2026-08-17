@@ -7,6 +7,16 @@
   package = "@netlify/plugin-nextjs"
 
 # === SEO MIGRATION: Old URLs → New Build (2026-05-14) ===
+# === WWW → APEX: Canonical hostname redirect ===
+[[redirects]]
+  from = "/*"
+  to = "https://whoza.ai/:splat"
+  status = 301
+  force = true
+
+  [redirects.conditions]
+    Host = ["www.whoza.ai"]
+
 [[redirects]]
   from = "/roadmap"
   to = "/"

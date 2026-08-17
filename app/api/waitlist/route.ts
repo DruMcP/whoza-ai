@@ -45,12 +45,12 @@ function buildWelcomeHtml(_referralCode: string | null): string {
             <tr><td valign="top" style="padding:6px 12px 6px 0;"><span style="display:inline-block;width:26px;height:26px;background:#ecfdf5;color:#047857;border-radius:50%;text-align:center;line-height:26px;font-weight:800;font-size:14px;">4</span></td><td style="padding:6px 0;font-size:15px;line-height:1.55;color:#334155;">Your 7 days free start then — no card needed. After that you only pay per job you accept.</td></tr>
           </table>
           <p style="margin:0 0 22px;font-size:16px;line-height:1.6;color:#334155;">Any questions before then, just hit reply — this reaches me directly.</p>
-          <table role="presentation" cellpadding="0" cellspacing="0"><tr><td style="border-radius:12px;background:#0f172a;"><a href="https://www.whoza.ai" style="display:inline-block;padding:14px 28px;font-size:16px;font-weight:800;color:#ffffff;text-decoration:none;border-radius:12px;">Explore Whoza</a></td></tr></table>
+          <table role="presentation" cellpadding="0" cellspacing="0"><tr><td style="border-radius:12px;background:#0f172a;"><a href="https://whoza.ai" style="display:inline-block;padding:14px 28px;font-size:16px;font-weight:800;color:#ffffff;text-decoration:none;border-radius:12px;">Explore Whoza</a></td></tr></table>
         </td></tr>
         <tr><td style="padding:26px 32px 30px;">
           <p style="margin:22px 0 4px;font-size:16px;line-height:1.6;color:#334155;">Cheers,</p>
           <p style="margin:0;font-size:16px;line-height:1.6;color:#0f172a;font-weight:700;">Dru</p>
-          <p style="margin:0;font-size:14px;line-height:1.6;color:#64748b;">Founder, Whoza · <a href="mailto:dru@whoza.ai" style="color:#047857;text-decoration:none;">dru@whoza.ai</a> · <a href="https://www.whoza.ai" style="color:#047857;text-decoration:none;">whoza.ai</a></p>
+          <p style="margin:0;font-size:14px;line-height:1.6;color:#64748b;">Founder, Whoza · <a href="mailto:dru@whoza.ai" style="color:#047857;text-decoration:none;">dru@whoza.ai</a> · <a href="https://whoza.ai" style="color:#047857;text-decoration:none;">whoza.ai</a></p>
         </td></tr>
         <tr><td style="background:#f8fafc;border-top:1px solid #e2e8f0;padding:16px 32px;">
           <p style="margin:0;font-size:12px;line-height:1.5;color:#94a3b8;">You're receiving this because you signed up at whoza.ai. Whoza — the AI phone receptionist for UK trades.</p>
