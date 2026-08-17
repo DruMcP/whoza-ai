@@ -287,6 +287,27 @@ export default function ForHeatingEngineerGlasgowPage() {
 
         <div className="section-divider" />
 
+        {/* ─── LOCAL CONTEXT ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Heating Engineers in Glasgow Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                From Hyndland and Partick in the West End to Bearsden and Milngavie in the suburbs, Glasgow heating engineers work across some of the most demanding housing stock in the UK. Tenement flats with sandstone walls and shared services require specialist knowledge, while suburban homes in the north-west face aging boilers that struggle through harsh winters. With 5,500+ trade businesses serving 310K households, Glasgow's market is competitive — and every missed call costs you a £290 job.
+              </p>
+              <p>
+                Glasgow has the highest rainfall of any major UK city and harsh winters with frequent freeze-thaw cycles that stress pipes and heating systems. Short daylight hours in winter — sunset around 4pm — mean emergency callouts often happen in darkness. Glasgow Housing Association manages 43,000 homes and maintains strict contractor frameworks where responsive call handling is essential for contract retention. Katie answers 24/7, identifies emergencies, and delivers qualified leads to your WhatsApp in seconds — so you're always first to respond.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
         {/* ─── CITY LINKS ─── */}
         <section className="py-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

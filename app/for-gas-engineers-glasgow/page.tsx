@@ -287,6 +287,27 @@ export default function ForGasEngineerGlasgowPage() {
 
         <div className="section-divider" />
 
+        {/* ─── LOCAL CONTEXT ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Gas Engineers in Glasgow Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                From Pollokshields and Shawlands in the Southside to Dennistoun and the City Centre, Glasgow gas engineers serve a market defined by tenement flats, student rentals, and social housing contracts. Tenement buildings have shared gas services where one fault can affect multiple flats, and 50,000+ students across three universities create constant demand for annual gas safety checks in HMO properties. Glasgow Housing Association manages 43,000 homes and maintains approved contractor lists where reliable call handling is essential for contract retention.
+              </p>
+              <p>
+                With 5,500+ trade businesses competing for 310K households, missing a call means losing a £290 job. Harsh winters drive emergency boiler and gas appliance failures, and factoring companies like FirstPort expect rapid response times from their approved contractors. Whether you're issuing a CP12 in a Shawlands tenement or responding to an emergency gas leak in the City Centre, Katie answers 24/7, qualifies the enquiry, and sends it to your WhatsApp instantly — so you're always first to respond.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
         {/* ─── CITY LINKS ─── */}
         <section className="py-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

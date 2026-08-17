@@ -287,6 +287,27 @@ export default function ForHeatingEngineerEdinburghPage() {
 
         <div className="section-divider" />
 
+        {/* ─── LOCAL CONTEXT ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Heating Engineers in Edinburgh Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                From Georgian townhouses in New Town to family homes in Morningside and Bruntsfield, Edinburgh's heating engineers work across properties that demand specialist expertise. The New Town's Category A listed buildings still run traditional wet central heating systems with original pipework, while Victorian tenements in Stockbridge require careful boiler upgrades that respect stone construction and shared services. With 4,500+ trade businesses competing for 245K households, availability is everything.
+              </p>
+              <p>
+                Edinburgh is colder and drier than Glasgow but still faces high wind exposure from the Firth of Forth. East-coast winds drive rain horizontally, and winter temperatures regularly drop below freezing — stressing older heating systems when families need them most. Sunset falls as early as 3:30pm in December, meaning emergency callouts often happen in darkness. Whether you're servicing a townhouse in the New Town or replacing a boiler in Bruntsfield, Katie answers every call 24/7 and delivers the details to your WhatsApp so you never miss a £315 enquiry.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
         {/* ─── CITY LINKS ─── */}
         <section className="py-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

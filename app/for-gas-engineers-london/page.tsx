@@ -292,6 +292,27 @@ export default function ForGasEngineerLondonPage() {
 
         <div className="section-divider" />
 
+        {/* ─── LOCAL CONTEXT ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Gas Engineers in London Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                From Chelsea and Kensington to Croydon and Bromley, London gas engineers operate in a market where landlord enquiries dominate. With around 45% of London households rented — well above the UK average — annual gas safety certificates are legally required and non-compliance carries £6,000+ fines. Period conversions in Pimlico and Maida Vale need Gas Safe-registered engineers who understand multi-unit buildings, while new-build apartments in Canary Wharf require warranty-period snagging and smart home gas appliance integration.
+              </p>
+              <p>
+                With 32,000+ trade businesses competing for work and 15+ businesses per postcode in central London, customers move fast. Emergency gas calls peak during commute hours when you're on the road, and landlords often need same-day CP12 certificates before new tenancies begin. Katie answers every call instantly, 24/7, captures the property details and urgency, and delivers them to your WhatsApp in seconds — so you never lose a £340 callout to a competitor who simply picked up first.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
         {/* ─── CITY LINKS ─── */}
         <section className="py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

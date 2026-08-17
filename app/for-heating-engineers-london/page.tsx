@@ -292,6 +292,27 @@ export default function ForHeatingEngineerLondonPage() {
 
         <div className="section-divider" />
 
+        {/* ─── LOCAL CONTEXT ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Heating Engineers in London Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                From Islington and Camden to Hackney and Stratford, London's heating engineers work across a housing stock that ranges from Victorian terraces with original pipework to modern apartments in Canary Wharf. In zones 2–3, period properties still run aging boilers that fail without warning, while 1930s semis in Croydon and Bromley need routine maintenance and Boiler Plus-compliant replacements. With 32,000+ trade businesses competing for 1.2M households, standing out means being available when customers call.
+              </p>
+              <p>
+                London's hard water — particularly in north and west postcodes — causes limescale buildup that leads to premature heat exchanger failure. Boiler breakdowns spike from January through March, and emergency calls peak during commute hours when you're travelling between jobs. Katie answers every call instantly, 24/7, capturing the enquiry and delivering it to your WhatsApp so you can respond before the customer moves on to a competitor.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
         {/* ─── CITY LINKS ─── */}
         <section className="py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

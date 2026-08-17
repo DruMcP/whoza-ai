@@ -290,6 +290,27 @@ export default function ForHeatingEngineerManchesterPage() {
 
         <div className="section-divider" />
 
+        {/* ─── LOCAL CONTEXT ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Heating Engineers in Manchester Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                In Didsbury, Chorlton, Salford and Ancoats, Manchester's heating engineers face a market shaped by red brick terraces, industrial conversions, and rapid new-build regeneration. The red brick terraces of south Manchester — many converted to combi boiler systems — still suffer from aging pipework and cold, damp conditions that stress heating systems year-round. With 8,500+ trade businesses competing across Greater Manchester, missing a call means losing a £310 job to the next engineer on the list.
+              </p>
+              <p>
+                Manchester's high rainfall and cold, damp climate put constant pressure on older boilers. Hard water in Trafford and Stockport causes scale buildup that reduces efficiency and triggers breakdowns. When a family in Prestwich or Whitefield loses heating during a cold snap, they call the first engineer who answers. Katie captures every call 24/7, qualifies the urgency, and sends the details straight to your WhatsApp — so you never miss a breakdown, installation, or service enquiry, even when you're on the job.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
         {/* ─── CITY LINKS ─── */}
         <section className="py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

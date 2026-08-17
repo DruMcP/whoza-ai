@@ -287,6 +287,27 @@ export default function ForGasEngineerEdinburghPage() {
 
         <div className="section-divider" />
 
+        {/* ─── LOCAL CONTEXT ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Gas Engineers in Edinburgh Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                From Leith and Portobello to Marchmont and Corstorphine, Edinburgh gas engineers serve a market shaped by student rentals, short-term lets, and period properties. With 60,000+ students across four universities, landlords in Marchmont and Newington need annual gas safety checks for high-turnover HMOs. The rise of Airbnb in the Old Town and New Town means property managers need reliable gas engineers who can respond quickly between bookings — especially during August's Fringe Festival when trades are in short supply and emergency callouts command premium rates.
+              </p>
+              <p>
+                Edinburgh's 4,500+ trade businesses compete for 245K households, and with the highest average household income outside London, customers expect professionalism. Georgian townhouses and Victorian tenements have complex gas systems that require specialist knowledge, and all gas work must meet strict safety standards. Whether you're certifying a student flat in Leith or responding to a boiler fault in Portobello, Katie captures every call 24/7 and delivers qualified enquiries to your WhatsApp — so you never miss a £315 job.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
         {/* ─── CITY LINKS ─── */}
         <section className="py-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
