@@ -7,7 +7,7 @@ import { existsSync, readdirSync } from 'fs'
 // Removed low-value combos flagged as duplicate by GSC.
 // Keeping: plumbers, electricians, builders, roofers, heating-engineers, gas-engineers
 const LIVE_CITY_PAGES: Record<string, string[]> = {
-  "plumbers": ["london","manchester","birmingham","leeds","glasgow","bristol","liverpool","edinburgh"],
+  "plumbers": ["london","manchester","birmingham","glasgow","edinburgh"],
   "electricians": ["london","manchester","birmingham","glasgow","edinburgh"],
   "builders": ["london","manchester","birmingham","glasgow","edinburgh"],
   "roofers": ["london","glasgow","edinburgh"],
