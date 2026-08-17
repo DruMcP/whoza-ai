@@ -159,6 +159,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     pageUrl('/watch', 'app/watch/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
   ]
 
+  // Orphaned pages — discovered pages with content but missing from sitemap
+  const orphanedPages: MetadataRoute.Sitemap = [
+    pageUrl('/accents', 'app/accents/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
+    pageUrl('/booking', 'app/booking/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
+    pageUrl('/how-many-calls-at-once', 'app/how-many-calls-at-once/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
+    pageUrl('/integrations', 'app/integrations/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
+    pageUrl('/is-it-a-phone-tree', 'app/is-it-a-phone-tree/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
+    pageUrl('/missed-calls-cost-calculator', 'app/missed-calls-cost-calculator/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
+    pageUrl('/multi-location', 'app/multi-location/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
+    pageUrl('/will-my-customers-mind', 'app/will-my-customers-mind/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
+  ]
+
   // Research pages
   const researchPages: MetadataRoute.Sitemap = [
     pageUrl('/research', 'app/research/page.tsx', { changeFrequency: 'weekly', priority: 0.7 }),
@@ -215,6 +227,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...locationPages,
     ...resourcePages,
     ...toolPages,
+    ...orphanedPages,
     ...researchPages,
     ...pressPages,
     ...blogPosts,

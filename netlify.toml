@@ -78,11 +78,6 @@
   status = 301
 
 [[redirects]]
-  from = "/uk/ai-visibility/*"
-  to = "/"
-  status = 301
-
-[[redirects]]
   from = "/us/ai-visibility/*"
   to = "/gone"
   status = 410

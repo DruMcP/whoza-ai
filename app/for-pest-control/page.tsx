@@ -421,7 +421,7 @@ export default function ForPestControlPage() {
               ))}
             </div>
             <p className="mt-6 text-white/50 text-sm">
-              Read Sarah's full story: <Link href="/blog/i-missed-4-emergency-calls-a-day-then-i-tried-ai-sarah-pest-control" className="text-amber-400 hover:text-amber-300 underline">I Missed 4 Emergency Calls a Day. Then I Tried AI.</Link>
+              Read our guide: <Link href="/blog/24-7-call-answering-emergency-trades" className="text-amber-400 hover:text-amber-300 underline">24/7 Call Answering for Emergency Trades</Link>
             </p>
           </div>
         </section>

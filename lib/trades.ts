@@ -392,11 +392,9 @@ export function getTradeBySlug(slug: string): TradeData | undefined {
 }
 
 export function getAllTradeSlugs(): string[] {
-  const ukOnly = ["heating-engineer"]
-  const usOnly = ["hvac"]
-  const all = trades.map((t) => t.slug)
-  // Return all for static generation — routing handles UK/US filtering
-  return all
+  // UK-only site: exclude US-only trades to prevent
+  // /trade/hvac being built (canonicals to /for-hvac which redirects)
+  return trades.filter((t) => t.slug !== "hvac").map((t) => t.slug)
 }
 
 export function getAvailableTradesForCountry(country: "uk" | "us"): TradeData[] {

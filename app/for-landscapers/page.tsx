@@ -339,7 +339,7 @@ export default function ForLandscapersPage() {
               ))}
             </div>
             <p className="mt-6 text-white/50 text-sm">
-              Read James's full story: <a href="/blog/i-missed-5-enquiries-a-week-then-i-tried-ai-james-the-landscaper" className="text-green-400 hover:text-green-300 underline">I Missed 5 Enquiries a Week. Then I Tried AI.</a>
+              Read James's full story: <a href="/blog/i-missed-spring-booking-season-ai-captured-47-calls-in-3-weeks-james-the-landscaper" className="text-green-400 hover:text-green-300 underline">I Missed Spring Booking Season. AI Captured 47 Calls in 3 Weeks.</a>
             </p>
           </div>
         </section>

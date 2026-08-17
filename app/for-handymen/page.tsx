@@ -345,7 +345,7 @@ export default function ForHandymenPage() {
               ))}
             </div>
             <p className="mt-6 text-white/50 text-sm">
-              Read Raj's full story: <a href="/blog/i-missed-half-my-calls-then-i-tried-ai-raj-the-handyman" className="text-blue-400 hover:text-blue-300 underline">I Missed Half My Calls. Then I Tried AI.</a>
+              Read our guide: <a href="/blog/how-does-ai-call-answering-work" className="text-blue-400 hover:text-blue-300 underline">How Does AI Call Answering Work?</a>
             </p>
           </div>
         </section>
