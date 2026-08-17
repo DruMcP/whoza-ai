@@ -290,6 +290,25 @@ export default function ForElectricianLondonPage() {
           </div>
         </section>
 
+        {/* ─── WHY ELECTRICIANS IN LONDON NEED AI CALL ANSWERING ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Electricians in London Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                London&apos;s electrical market is driven by regulatory pressure and rapid technological change. In Islington and Camden, landlords face strict EICR requirements — electrical installations must be inspected every 5 years for tenancies, and letting agents demand certificates before marketing properties. Canary Wharf&apos;s commercial sector generates calls for three-phase upgrades and EV charger installations in multi-storey car parks, while Croydon&apos;s suburban mix of 1930s semis and new developments creates steady demand for consumer unit replacements and rewiring. With 32,000+ trade businesses competing across 1.2M households and 8,200 missed calls weekly, London&apos;s electricians operate in the UK&apos;s most competitive trade market.
+              </p>
+              <p>
+                The EICR deadline pressure is particularly acute. Since 2020, private landlords in London must have valid EICR certificates, and the city&apos;s high tenant turnover means these inspections come around frequently. Letting agents in Islington and Camden often call multiple electricians simultaneously to find the fastest availability — the first to answer gets the job and potentially a recurring contract across a portfolio of properties. Meanwhile, Canary Wharf&apos;s commercial clients need specialists who understand three-phase systems and EV infrastructure. Katie captures whether a call is a domestic EICR, a commercial three-phase job, or an emergency fault, delivering the details to your WhatsApp in 3 seconds so you never lose a £340 average job.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <div className="section-divider" />
 
         {/* ─── CITY LINKS ─── */}

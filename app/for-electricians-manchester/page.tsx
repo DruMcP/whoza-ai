@@ -290,6 +290,25 @@ export default function ForElectricianManchesterPage() {
           </div>
         </section>
 
+        {/* ─── WHY ELECTRICIANS IN MANCHESTER NEED AI CALL ANSWERING ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Electricians in Manchester Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                Manchester&apos;s electrical market is fuelled by a booming student population, commercial regeneration, and ageing housing stock. In Prestwich and Whitefield, family homes with 1960s wiring need regular EICR updates and consumer unit replacements. MediaCity&apos;s commercial hub generates calls for office fit-outs, data cabling, and three-phase installations, while the Northern Quarter&apos;s bars and restaurants need rapid-response electricians for emergency repairs that can&apos;t wait until morning. With 8,500+ trade businesses serving 540K households and 3,400 missed calls every week, Manchester&apos;s electricians face competition from every direction.
+              </p>
+              <p>
+                The student HMO market is a defining feature. Areas around Fallowfield and Withington are packed with student houses that require annual electrical checks under HMO licensing rules. Landlords with multiple student properties book electricians months in advance for these inspections, but emergency calls still spike during term time when overloaded circuits trip or old wiring fails. A missed call from a landlord with five student properties isn&apos;t just one £310 job — it&apos;s a lost annual contract worth thousands. Katie captures the property type and whether the call relates to HMO compliance, ensuring you never miss the kind of recurring work that builds a stable Manchester trade business.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <div className="section-divider" />
 
         {/* ─── CITY LINKS ─── */}

@@ -290,6 +290,25 @@ export default function ForElectricianBirminghamPage() {
           </div>
         </section>
 
+        {/* ─── WHY ELECTRICIANS IN BIRMINGHAM NEED AI CALL ANSWERING ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Electricians in Birmingham Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                Birmingham&apos;s electrical market is being reshaped by the Big City Plan and a wave of commercial regeneration. In the Jewellery Quarter, converted industrial units need specialist electricians who understand both heritage building constraints and modern power requirements for manufacturing equipment. Digbeth&apos;s creative and tech sector demands data cabling, EV charging points, and smart building installations, while Selly Oak&apos;s student population drives constant HMO electrical inspection work. Harborne&apos;s established suburban homes, meanwhile, generate steady domestic demand for EICRs, rewiring, and consumer unit upgrades. With 11,000+ trade businesses competing across 680K households and 4,100 missed calls weekly, Birmingham is one of the UK&apos;s most active electrical markets.
+              </p>
+              <p>
+                The Big City Plan is the key driver here. Birmingham&apos;s 20-year regeneration strategy is transforming neighbourhoods across the city centre and surrounding districts, creating sustained demand for commercial electrical work in refurbished buildings and new developments. Electricians who establish relationships with developers and contractors during this phase secure long-term work as projects expand. Meanwhile, the city&apos;s large student population — concentrated in Selly Oak and the city centre — means HMO landlords need reliable electricians for annual compliance checks. Katie captures whether a call is a domestic EICR in Harborne, a commercial fit-out in Digbeth, or an emergency repair in the Jewellery Quarter, ensuring you never miss a £295 average job in a £380M market.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <div className="section-divider" />
 
         {/* ─── CITY LINKS ─── */}

@@ -285,6 +285,25 @@ export default function ForPlumberEdinburghPage() {
           </div>
         </section>
 
+        {/* ─── WHY PLUMBERS IN EDINBURGH NEED AI CALL ANSWERING ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Plumbers in Edinburgh Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                Edinburgh&apos;s plumbing scene is shaped by its UNESCO-listed Georgian and Victorian architecture, hard water from local reservoirs, and a dense concentration of rental properties. In New Town and Stockbridge, Georgian townhouses with original lead pipework require careful handling — any work on listed properties needs planning consent, and only plumbers with the right experience get these jobs. Leith&apos;s vibrant mix of old port housing and new developments creates constant demand for both emergency repairs and modern installations, while Morningside&apos;s established Victorian homes face the same hard water scaling issues that plague the entire city. With 3,800+ trade businesses competing for 245K households and 1,900 missed calls every week, Edinburgh&apos;s market rewards responsiveness.
+              </p>
+              <p>
+                The listed building factor is critical here. In New Town especially — a UNESCO World Heritage Site — even internal plumbing alterations can require consent, and estate agents managing short-term lets in the area maintain lists of approved tradespeople who understand these restrictions. A missed call from an estate agent or a homeowner in a listed property isn&apos;t just a lost £275 job — it&apos;s a lost relationship with a client who needs ongoing maintenance. Katie captures the property type and urgency, ensuring that when a call comes in from a Georgian townhouse or a Leith tenement, you have the details to respond with the right expertise.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <div className="section-divider" />
 
         {/* ─── CITY LINKS ─── */}

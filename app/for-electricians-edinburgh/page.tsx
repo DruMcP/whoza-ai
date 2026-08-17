@@ -285,6 +285,25 @@ export default function ForElectricianEdinburghPage() {
           </div>
         </section>
 
+        {/* ─── WHY ELECTRICIANS IN EDINBURGH NEED AI CALL ANSWERING ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Electricians in Edinburgh Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                Edinburgh&apos;s electrical market combines heritage constraints, student rental demand, and strict conservation rules. In Marchmont and Newington, Victorian and Georgian properties with original wiring need careful upgrading — particularly in student HMOs where annual electrical inspections are mandatory under licensing rules. Bruntsfield&apos;s established family homes generate demand for modern consumer units and EV charger installations, while Corstorphine&apos;s suburban semis need regular EICR updates as properties change hands. With 4,500+ trade businesses competing for 245K households and 2,200 missed calls every week, Edinburgh rewards electricians who understand the city&apos;s unique requirements.
+              </p>
+              <p>
+                The UNESCO World Heritage Site status adds a layer of complexity found nowhere else in the UK. In the New Town and Old Town, even internal electrical alterations in listed buildings may require planning consent, and work must be carried out by electricians who understand both modern Part P requirements and conservation guidelines. Estate agents managing short-term lets in these areas maintain lists of approved contractors who can navigate this dual compliance landscape. A missed call from an agent with a portfolio of heritage properties isn&apos;t just a lost £315 job — it&apos;s a lost entry point to some of Edinburgh&apos;s most lucrative recurring work. Katie captures the property type, location, and urgency, ensuring you have the full picture before you even return the call.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <div className="section-divider" />
 
         {/* ─── CITY LINKS ─── */}

@@ -285,6 +285,25 @@ export default function ForPlumberGlasgowPage() {
           </div>
         </section>
 
+        {/* ─── WHY PLUMBERS IN GLASGOW NEED AI CALL ANSWERING ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Plumbers in Glasgow Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                Glasgow&apos;s plumbing market is defined by tenement living and the city&apos;s position as the UK&apos;s rainiest major city. In Hyndland and Partick, traditional sandstone tenements share drainage and supply systems — when a pipe bursts in one flat, it can affect multiple neighbours, creating urgent multi-property calls that demand immediate response. Pollokshields&apos; mix of Victorian villas and tenement flats adds further variety, while Bearsden&apos;s suburban detached homes bring their own set of challenges with private drainage and larger-scale bathroom renovations. With 4,800+ trade businesses serving 310K households and 2,400 missed calls weekly, Glasgow&apos;s plumbers are in constant demand.
+              </p>
+              <p>
+                A uniquely Glasgow factor is the role of factoring companies in tenement buildings. In areas like Hyndland and Partick, repairs to shared systems often require approval from factoring companies or the building&apos;s factor, and plumbers who are on approved contractor lists get priority access to these jobs. Missing a call from a factor or a resident dealing with a shared drain blockage means losing not just one job but potentially an ongoing contract for the entire building. Katie captures whether a call is a private job or a shared system issue, ensuring you never miss the kind of tenement work that builds long-term revenue in Glasgow&apos;s £200M market.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <div className="section-divider" />
 
         {/* ─── CITY LINKS ─── */}

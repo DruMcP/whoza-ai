@@ -290,6 +290,25 @@ export default function ForPlumberBirminghamPage() {
           </div>
         </section>
 
+        {/* ─── WHY PLUMBERS IN BIRMINGHAM NEED AI CALL ANSWERING ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Plumbers in Birmingham Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                Birmingham&apos;s sprawling suburban layout and diverse housing stock create unique plumbing challenges across the city. In Edgbaston and Moseley, large Victorian and Edwardian homes with original plumbing systems require specialist knowledge for repairs and upgrades. Digbeth&apos;s industrial heritage means converted warehouse apartments with modern systems sit alongside older terraces in need of frequent maintenance. Meanwhile, Sutton Coldfield&apos;s suburban semis face seasonal pressure — cold snaps freeze outdoor pipes and push call volumes well beyond what a solo plumber can handle. With 9,500+ trade businesses competing across 680K households and 3,600 missed calls every week, the demand is relentless.
+              </p>
+              <p>
+                One factor that sets Birmingham apart is its extensive canal network, which runs through neighbourhoods like Digbeth and impacts basement properties directly. Plumbers here regularly deal with flooding and damp-related pipe issues that wouldn&apos;t occur in other cities. Combined with the city&apos;s cold winters — pipe freezes are a genuine annual crisis — Birmingham plumbers face a double threat of weather emergencies and infrastructure-age problems. Katie captures the urgency and location specifics, whether it&apos;s a burst pipe in a Moseley Victorian or basement flooding near the canal, making sure you don&apos;t lose a £280 average job to a competitor who simply picked up the phone.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <div className="section-divider" />
 
         {/* ─── CITY LINKS ─── */}

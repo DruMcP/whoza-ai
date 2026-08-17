@@ -285,6 +285,25 @@ export default function ForElectricianGlasgowPage() {
           </div>
         </section>
 
+        {/* ─── WHY ELECTRICIANS IN GLASGOW NEED AI CALL ANSWERING ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Electricians in Glasgow Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                Glasgow&apos;s electrical market is dominated by tenement rewiring, EICR demand, and social housing contracts. In Hillhead and Shawlands, traditional sandstone tenements still contain original wiring that predates modern safety standards, creating constant demand for full rewires and consumer unit upgrades. The city centre&apos;s mix of commercial and residential properties generates calls for everything from shop fit-outs to emergency fault-finding in flats above retail units. Milngavie&apos;s suburban detached homes, meanwhile, bring demand for EV charger installations and modern smart home wiring. With 5,500+ trade businesses serving 310K households and 2,600 missed calls every week, Glasgow&apos;s electricians are never short of work.
+              </p>
+              <p>
+                A uniquely Glasgow opportunity lies in social housing contracts. Glasgow Housing Association and other social landlords maintain approved contractor lists for electrical work across their portfolios, and electricians on these lists get steady, predictable work — from EICRs to full rewires in tenement flats. These contracts are typically awarded to responsive, reliable tradespeople who can handle high volumes of scheduled work. A missed call from a housing association coordinator or a letting agent managing multiple tenement properties isn&apos;t just a single £290 job — it&apos;s a potential contract worth tens of thousands annually. Katie captures the property type, whether it&apos;s a private tenement in Hillhead or a social housing job in Shawlands, ensuring you never miss the calls that build long-term revenue.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <div className="section-divider" />
 
         {/* ─── CITY LINKS ─── */}

@@ -286,6 +286,25 @@ export default function ForPlumberLondonPage() {
           </div>
         </section>
 
+        {/* ─── WHY PLUMBERS IN LONDON NEED AI CALL ANSWERING ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Plumbers in London Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                London&apos;s plumbing market is unlike anywhere else in the UK. In areas like Chelsea and Kensington, ageing Victorian water mains and hard water from the Thames create constant demand for pipe replacement and descaling work. Meanwhile, in Hackney and Stratford, the mix of new-build apartments and converted industrial spaces means plumbers field calls about everything from boiler installations in high-rise blocks to emergency leaks in period properties. With 28,000+ trade businesses competing for 1.2M households and 7,800 missed calls every week, the plumbers who answer first win the job.
+              </p>
+              <p>
+                What makes London particularly challenging is the sheer diversity of housing stock and the pressure on water infrastructure. Thames Water operates different pressure zones across the city, meaning a plumber in Kensington may deal with entirely different supply issues than one in Stratford. Tenant turnover in rental hotspots like Hackney drives constant maintenance enquiries, while landlords in Chelsea expect rapid response times for emergency repairs. When you&apos;re on a job in one postcode and a call comes in from another, Katie captures every detail — from the specific property type to the urgency level — so you never lose a £320 average job to a missed call.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <div className="section-divider" />
 
         {/* ─── CITY LINKS ─── */}

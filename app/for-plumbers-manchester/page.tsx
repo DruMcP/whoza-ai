@@ -290,6 +290,25 @@ export default function ForPlumberManchesterPage() {
           </div>
         </section>
 
+        {/* ─── WHY PLUMBERS IN MANCHESTER NEED AI CALL ANSWERING ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Plumbers in Manchester Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                Manchester&apos;s plumbing landscape is shaped by its Victorian heritage and notoriously wet climate. In Didsbury and Chorlton, leafy suburbs with Edwardian semis and terraced conversions, plumbers regularly encounter ageing cast iron drains and original lead pipework that struggles with the region&apos;s heavy rainfall. Salford&apos;s rapid regeneration has introduced modern apartment blocks alongside traditional housing, creating a split market where one call might be about a combi boiler installation in a converted terrace and the next about a burst pipe in a new-build flat. With 7,200+ trade businesses serving 540K households and 3,000 missed calls weekly, every unanswered phone is a competitor&apos;s gain.
+              </p>
+              <p>
+                The city&apos;s plumbing challenges are distinctly local. Manchester&apos;s terrace conversions — common in Ancoats and Chorlton — often involve relocating combi boilers from kitchens to utility cupboards, a job that requires specific expertise and can&apos;t be handled by a generic call-taker. Meanwhile, Salford&apos;s ongoing development means new housing stock with modern systems sits alongside Victorian infrastructure, creating unpredictable demand. Katie understands these distinctions, capturing whether a caller needs emergency drain clearance after a Manchester downpour or a planned combi relocation in a terrace conversion, ensuring you never miss a £295 average job.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <div className="section-divider" />
 
         {/* ─── CITY LINKS ─── */}
