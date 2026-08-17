@@ -119,7 +119,7 @@ export default function AboutPage() {
             Our Story
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            AI Call Answering for UK Trades — Never Miss a Job
+            About whoza.ai — Built by Tradespeople, for Tradespeople
           </h1>
           <p className="text-xl text-white/60 max-w-3xl mb-8 leading-relaxed">
             whoza.ai was built by someone who has been exactly where you are — on a roof, under a floorboard, 

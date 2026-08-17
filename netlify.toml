@@ -15,6 +15,18 @@
   force = true
 
 [[redirects]]
+  from = "/trade/hvac"
+  to = "/for-heating-engineers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-hvac"
+  to = "/for-heating-engineers"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/roadmap"
   to = "/"
   status = 301

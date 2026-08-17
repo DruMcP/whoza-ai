@@ -101,7 +101,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     pageUrl('/whoza-vs-moneypenny', 'app/whoza-vs-moneypenny/page.tsx', { changeFrequency: 'monthly', priority: 0.8 }),
     pageUrl('/whoza-vs-team-connect', 'app/whoza-vs-team-connect/page.tsx', { changeFrequency: 'monthly', priority: 0.8 }),
     pageUrl('/whoza-vs-arrow', 'app/whoza-vs-arrow/page.tsx', { changeFrequency: 'monthly', priority: 0.8 }),
-    pageUrl('/whoza-vs-ionos', 'app/whoza-vs-ionos/page.tsx', { changeFrequency: 'monthly', priority: 0.8 }),
   ]
 
   // Trade pages (17)
