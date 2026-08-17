@@ -134,15 +134,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Resources
   const resourcePages: MetadataRoute.Sitemap = [
-    pageUrl('/resources/missed-call-cost-calculator', 'app/resources/missed-call-cost-calculator/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
+    pageUrl('/missed-calls-cost-calculator', 'app/missed-calls-cost-calculator/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
     pageUrl('/resources/trade-business-growth-toolkit', 'app/resources/trade-business-growth-toolkit/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
     pageUrl('/resources/google-business-profile-checklist-trades', 'app/resources/google-business-profile-checklist-trades/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
   ]
 
   // Tools
   const toolPages: MetadataRoute.Sitemap = [
-    pageUrl('/tools/lost-jobs-calculator', 'app/tools/lost-jobs-calculator/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
     pageUrl('/tools/quote-generator', 'app/tools/quote-generator/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
+    pageUrl('/tools/emergency-pricing', 'app/tools/emergency-pricing/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
     pageUrl('/tools/emergency-pricing', 'app/tools/emergency-pricing/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
     pageUrl('/tools/rate-checker', 'app/tools/rate-checker/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
     pageUrl('/tools/voicemail-scripts', 'app/tools/voicemail-scripts/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
@@ -171,7 +171,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     pageUrl('/research/caller-experience-revolution-ai-voice-agents-2026', 'app/research/caller-experience-revolution-ai-voice-agents-2026/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
     pageUrl('/research/ai-voice-agents-uk-trades-2026', 'app/research/ai-voice-agents-uk-trades-2026/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
     pageUrl('/research/voice-agent-technology-state-of-art-2026', 'app/research/voice-agent-technology-state-of-art-2026/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
-    pageUrl('/research/cost-of-missed-calls-uk-trades-2026', 'app/research/cost-of-missed-calls-uk-trades-2026/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
   ]
 
   // Press

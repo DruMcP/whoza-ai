@@ -96,6 +96,26 @@
   to = "/locations"
   status = 301
 
+# === Consolidate duplicate calculators ===
+[[redirects]]
+  from = "/resources/missed-call-cost-calculator"
+  to = "/missed-calls-cost-calculator"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/tools/lost-jobs-calculator"
+  to = "/missed-calls-cost-calculator"
+  status = 301
+  force = true
+
+# === Consolidate duplicate research reports ===
+[[redirects]]
+  from = "/research/cost-of-missed-calls-uk-trades-2026"
+  to = "/research/the-true-cost-of-missed-calls-2026"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/us/ai-visibility/*"
   to = "/gone"
