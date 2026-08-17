@@ -98,7 +98,7 @@ export default function ForBuilderGlasgowPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Glasgow has 5,500+ trade businesses competing for 310K households. 
                   With 2,600 missed calls every week across the city, 
-                  Katie ensures you capture every builders enquiry — extensions, renovations & new builds.
+                  Katie ensures you capture every building enquiry — extensions, renovations & new builds.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link

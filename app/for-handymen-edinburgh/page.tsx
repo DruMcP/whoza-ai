@@ -94,7 +94,7 @@ export default function ForHandymanEdinburghPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Edinburgh has 4,500+ trade businesses competing for 245K households. 
                   With 2,200 missed calls every week across the city, 
-                  Katie ensures you capture every handymen enquiry — general repairs, maintenance, flat packs, odd jobs & property upkeep.
+                  Katie ensures you capture every handyman enquiry — general repairs, maintenance, flat packs, odd jobs & property upkeep.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link

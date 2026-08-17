@@ -100,7 +100,7 @@ export default function ForCleanerLondonPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   London has 32,000+ trade businesses competing for 1.2M households. 
                   With 8,200 missed calls every week across the city, 
-                  Katie ensures you capture every cleaners enquiry — domestic cleans, end-of-tenancy bookings, commercial contracts & carpet cleaning.
+                  Katie ensures you capture every cleaning enquiry — domestic cleans, end-of-tenancy bookings, commercial contracts & carpet cleaning.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link

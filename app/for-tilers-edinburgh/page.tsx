@@ -98,7 +98,7 @@ export default function ForTilerEdinburghPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Edinburgh has 4,500+ trade businesses competing for 245K households. 
                   With 2,200 missed calls every week across the city, 
-                  Katie ensures you capture every tilers enquiry — bathroom tiling, kitchen tiling, floor tiling & mosaic work.
+                  Katie ensures you capture every tiling enquiry — bathroom tiling, kitchen tiling, floor tiling & mosaic work.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link

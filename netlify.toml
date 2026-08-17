@@ -26,6 +26,67 @@
   status = 301
   force = true
 
+# === Retired blog posts → live equivalents (moved from next.config.mjs for cache immunity) ===
+[[redirects]]
+  from = "/blog/best-ai-call-answering-service-uk-2026"
+  to = "/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/247-call-answering-uk-trades-guide-2026"
+  to = "/blog/24-7-call-answering-emergency-trades"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/ai-call-answering-trades-uk-guide"
+  to = "/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/missed-call-recovery-trades-guide"
+  to = "/blog/how-much-do-missed-calls-cost-uk-trades"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/ai-vs-human-receptionist-trades"
+  to = "/blog/ai-receptionist-vs-human-cost-guide-2026"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/best-ai-phone-answering-uk-trades-2026"
+  to = "/blog/ai-phone-technology-complete-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-ai-call-handlers-are-changing-the-game-for-uk-trades-2026"
+  to = "/blog/how-does-ai-call-answering-work"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/missed-calls-missed-money-the-real-cost-for-tradespeople"
+  to = "/blog/how-much-do-missed-calls-cost-uk-trades"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/ai-receptionist-vs-human-receptionist-which-is-right-for-your-trade-business"
+  to = "/blog/ai-receptionist-vs-human-cost-guide-2026"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/why-62-percent-of-trade-business-calls-go-unanswered"
+  to = "/blog/5-signs-your-trade-business-is-losing-customers-to-missed-calls"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/roadmap"
   to = "/"
@@ -427,8 +488,10 @@
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.com *.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: *.google-analytics.com; font-src 'self'; connect-src 'self' *.supabase.co *.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
-    # === TTFB OPTIMIZATION: Allow CDN to serve stale while revalidating ===
-    Cache-Control = "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400"
+    # === Cache fix: Do NOT cache error responses at CDN ===
+    # Next.js sets appropriate cache headers per route. This catch-all must not
+    # override them with a long s-maxage that also caches 404s.
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
   for = "/sitemap.xml"

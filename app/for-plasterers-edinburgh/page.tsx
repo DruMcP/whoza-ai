@@ -98,7 +98,7 @@ export default function ForPlastererEdinburghPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Edinburgh has 4,500+ trade businesses competing for 245K households. 
                   With 2,200 missed calls every week across the city, 
-                  Katie ensures you capture every plasterers enquiry — plastering, skimming, rendering, dry lining & repairs.
+                  Katie ensures you capture every plastering enquiry — plastering, skimming, rendering, dry lining & repairs.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link

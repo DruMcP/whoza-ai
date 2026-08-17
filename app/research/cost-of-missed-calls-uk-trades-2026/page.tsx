@@ -84,7 +84,7 @@ export default function CostOfMissedCallsPage() {
             </p>
             <ul className="list-disc list-inside text-white/80 mb-6 space-y-2">
               <li>
-                <a href="/tools/lost-jobs-calculator" className="text-emerald-400 hover:underline">Lost jobs calculator</a>
+                <a href="/missed-calls-cost-calculator" className="text-emerald-400 hover:underline">Lost jobs calculator</a>
                 {" "}&mdash; estimate annual revenue lost to unanswered calls using the 33% missed-call rate and your own job values.
               </li>
               <li>
@@ -106,7 +106,7 @@ export default function CostOfMissedCallsPage() {
             </ul>
             <p className="text-white/80 mb-6">
               A simplified version of the model is also available as the{" "}
-              <a href="/resources/missed-call-cost-calculator" className="text-emerald-400 hover:underline">missed call cost calculator</a>.
+              <a href="/missed-calls-cost-calculator" className="text-emerald-400 hover:underline">missed call cost calculator</a>.
             </p>
 
             <h2 className="text-2xl font-bold mb-4 mt-8">Download Citation Formats</h2>

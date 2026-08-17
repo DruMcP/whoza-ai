@@ -98,7 +98,7 @@ export default function ForJoinerEdinburghPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Edinburgh has 4,500+ trade businesses competing for 245K households. 
                   With 2,200 missed calls every week across the city, 
-                  Katie ensures you capture every joiners enquiry — bespoke joinery, staircases, doors, windows & woodwork.
+                  Katie ensures you capture every joinery enquiry — bespoke joinery, staircases, doors, windows & woodwork.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link

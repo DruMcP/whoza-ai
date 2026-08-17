@@ -98,7 +98,7 @@ export default function ForHeatingEngineerManchesterPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Manchester has 8,500+ trade businesses competing for 540K households. 
                   With 3,400 missed calls every week across the city, 
-                  Katie ensures you capture every heating-engineers enquiry — boiler breakdowns, no hot water emergencies, gas safety checks & heating installations.
+                  Katie ensures you capture every heating enquiry — boiler breakdowns, no hot water emergencies, gas safety checks & heating installations.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link

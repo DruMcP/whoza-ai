@@ -100,7 +100,7 @@ export default function ForLocksmithManchesterPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Manchester has 8,500+ trade businesses competing for 540K households. 
                   With 3,400 missed calls every week across the city, 
-                  Katie ensures you capture every locksmiths enquiry — emergency lockouts, key replacements, security upgrades & commercial lock changes.
+                  Katie ensures you capture every locksmith enquiry — emergency lockouts, key replacements, security upgrades & commercial lock changes.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link

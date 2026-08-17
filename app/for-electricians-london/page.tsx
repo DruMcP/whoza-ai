@@ -100,7 +100,7 @@ export default function ForElectricianLondonPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   London has 32,000+ trade businesses competing for 1.2M households. 
                   With 8,200 missed calls every week across the city, 
-                  Katie ensures you capture every electricians enquiry — EICR enquiries, emergency faults, consumer unit upgrades & power outages.
+                  Katie ensures you capture every electrical enquiry — EICR enquiries, emergency faults, consumer unit upgrades & power outages.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link

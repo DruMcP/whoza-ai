@@ -26,7 +26,7 @@ const footerLinks = {
     { label: "Case Studies", href: "/case-studies" },
     { label: "Watch Demo", href: "/watch" },
     { label: "Best AI Call Handler", href: "/best-ai-call-handler-uk-trades" },
-    { label: "Missed Calls Cost", href: "/resources/missed-call-cost-calculator" },
+    { label: "Missed Calls Cost", href: "/missed-calls-cost-calculator" },
     { label: "Part of 5R-AI — the UK AI agency", href: "https://www.5r-ai.com", external: true },
   ],
   comparisons: [
@@ -38,7 +38,7 @@ const footerLinks = {
     { label: "vs ARROW", href: "/whoza-vs-arrow" },
   ],
   tools: [
-    { label: "Lost Jobs Calculator", href: "/tools/lost-jobs-calculator" },
+    { label: "Lost Jobs Calculator", href: "/missed-calls-cost-calculator" },
     { label: "Quote Generator", href: "/tools/quote-generator" },
     { label: "Emergency Pricing", href: "/tools/emergency-pricing" },
     { label: "Hourly Rate Checker", href: "/tools/rate-checker" },
@@ -47,7 +47,7 @@ const footerLinks = {
   resources: [
     { label: "Research Library", href: "/research" },
     { label: "Press Centre", href: "/press" },
-    { label: "Missed Call Cost Calculator", href: "/resources/missed-call-cost-calculator" },
+    { label: "Missed Call Cost Calculator", href: "/missed-calls-cost-calculator" },
     { label: "Trade Business Growth Toolkit", href: "/resources/trade-business-growth-toolkit" },
     { label: "Google Business Profile Checklist", href: "/resources/google-business-profile-checklist-trades" },
     { label: "24/7 Call Answering Guide", href: "/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" },

@@ -100,7 +100,7 @@ export default function ForBuilderLondonPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   London has 32,000+ trade businesses competing for 1.2M households. 
                   With 8,200 missed calls every week across the city, 
-                  Katie ensures you capture every builders enquiry — extension enquiries, renovation quotes, new build leads & commercial contracts.
+                  Katie ensures you capture every building enquiry — extension enquiries, renovation quotes, new build leads & commercial contracts.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
