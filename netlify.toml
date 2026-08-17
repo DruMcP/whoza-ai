@@ -9,13 +9,10 @@
 # === SEO MIGRATION: Old URLs → New Build (2026-05-14) ===
 # === WWW → APEX: Canonical hostname redirect ===
 [[redirects]]
-  from = "/*"
+  from = "https://www.whoza.ai/*"
   to = "https://whoza.ai/:splat"
   status = 301
   force = true
-
-  [redirects.conditions]
-    Host = ["www.whoza.ai"]
 
 [[redirects]]
   from = "/roadmap"
@@ -84,7 +81,7 @@
 
 [[redirects]]
   from = "/uk/ai-visibility/*"
-  to = "/"
+  to = "/locations"
   status = 301
 
 [[redirects]]
