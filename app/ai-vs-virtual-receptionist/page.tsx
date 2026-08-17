@@ -6,22 +6,22 @@ import { ArrowRight, Check, Bot, UserCheck } from "lucide-react"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "AI Receptionist vs Virtual: Best for UK Trades? (2026)",
-  description: "Compare whoza.ai vs virtual receptionists for UK trades. AI answers 24/7 from £59/month vs £200+/month for human services. Honest feature comparison.",
+  title: "Virtual Receptionist Cost UK (2026): Real Prices vs AI £59",
+  description: "What a UK virtual receptionist really costs in 2026: published prices £45–£230/mo plus per-call fees, vs AI call answering at £59/mo flat. Checked Aug 2026.",
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "https://whoza.ai/ai-vs-virtual-receptionist",
     siteName: "Whoza.ai",
-    title: "AI Receptionist vs Virtual: Best for UK Trades? (2026)",
-    description: "AI vs virtual receptionist: honest comparison for UK tradespeople. Tested on cost, 24/7 availability, WhatsApp delivery & review collection. Real data.",
+    title: "Virtual Receptionist Cost UK (2026): Real Prices vs AI £59",
+    description: "UK virtual receptionist prices, checked August 2026: £45–£230/mo plus £2.99-per-call overage, versus flat-rate AI call answering at £59/mo for trades.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "AI vs virtual receptionist comparison" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
-    title: "AI Receptionist vs Virtual: Best for UK Trades? (2026)",
-    description: "AI vs virtual receptionist: honest comparison for UK tradespeople. Tested on cost, 24/7 availability, WhatsApp delivery & review collection. Real data.",
+    title: "Virtual Receptionist Cost UK (2026): Real Prices vs AI £59",
+    description: "UK virtual receptionist prices, checked August 2026: £45–£230/mo plus £2.99-per-call overage, versus flat-rate AI call answering at £59/mo for trades.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {
