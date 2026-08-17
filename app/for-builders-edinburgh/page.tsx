@@ -287,6 +287,30 @@ export default function ForBuilderEdinburghPage() {
 
         <div className="section-divider" />
 
+        {/* ─── LOCAL CONTEXT ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Builders in Edinburgh Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                The New Town and Stockbridge are home to Georgian townhouses built between 1760 and 1840 — Category A listed buildings where almost every external alteration requires planning permission and listed building consent. Kitchen and bathroom renovations inside these properties command premium rates but demand trades who understand the constraints. Leith and Portobello offer a different dynamic: regeneration areas with new-build apartments alongside Victorian tenements that need sympathetic restoration.
+              </p>
+              <p>
+                Edinburgh is colder and drier than Glasgow but exposed to high winds from the Firth of Forth. East-coast winds drive rain horizontally, damaging roofs and exterior pointing on properties across Morningside and Bruntsfield. Winter temperatures regularly drop below freezing, and with sunset as early as 3:30pm in December, emergency building repairs often need immediate response outside normal working hours.
+              </p>
+              <p>
+                The city&apos;s tourism economy creates a unique pressure: short-term let operators in the Old Town and New Town need rapid turnaround between bookings. A leaking shower or broken lock discovered at 7pm on a Friday can mean a cancelled reservation. Property managers handling multiple Airbnb units need builders who answer immediately — and when you&apos;re mid-job in Corstorphine, Katie ensures that urgent repair enquiry never hits voicemail.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
         {/* ─── CITY LINKS ─── */}
         <section className="py-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

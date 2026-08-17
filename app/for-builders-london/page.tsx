@@ -292,6 +292,30 @@ export default function ForBuilderLondonPage() {
 
         <div className="section-divider" />
 
+        {/* ─── LOCAL CONTEXT ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Builders in London Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                From Kensington and Chelsea to Hackney and Stratford, London&apos;s builder market is fiercely competitive. Victorian terraces in Islington and period conversions in Camden demand specialist trades who understand Party Wall Act requirements and conservation area planning restrictions. With 15+ trade businesses per postcode in central London, customers rarely wait for a callback — they simply call the next number on Google.
+              </p>
+              <p>
+                The housing stock varies dramatically by borough. Croydon and Bromley in the south are dominated by 1930s semi-detached homes ripe for loft conversions and rear extensions, while Canary Wharf and Nine Elms see constant warranty-period snagging on new-build apartments. Winter freeze-thaw cycles stress older roofing across the city, and summer heatwaves drive air conditioning and ventilation enquiries that builders increasingly field.
+              </p>
+              <p>
+                Parking and congestion add hidden friction too — trades spend 20–30% of billable time navigating ULEZ, congestion charge, and resident parking restrictions. When a caller in Kensington books a £45k basement dig without understanding access costs, Katie captures the enquiry, flags the postcode, and gives you the full context before you commit to a site visit. That qualification alone saves hours of unbillable travel.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
         {/* ─── CITY LINKS ─── */}
         <section className="py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

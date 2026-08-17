@@ -287,6 +287,30 @@ export default function ForRooferEdinburghPage() {
 
         <div className="section-divider" />
 
+        {/* ─── LOCAL CONTEXT ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Roofers in Edinburgh Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                Comely Bank and the New Town are dominated by Georgian townhouses with original slate roofs that are now approaching 200 years old. These Category A listed buildings require specialist conservation trades for any external work, and the planning process can add weeks to what seems like a simple repair. Portobello and Leith present a different challenge: regeneration areas where modern flat-roofed apartments sit alongside Victorian tenements, each needing entirely different expertise.
+              </p>
+              <p>
+                Edinburgh&apos;s position on the Firth of Forth exposes it to fierce east-coast winds that drive rain horizontally into roof spaces and behind pointing. The city is colder and drier than Glasgow, but wind damage is the dominant roofing issue — particularly on elevated properties in Bruntsfield and Morningside where gusts accelerate across the rooftops. Winter temperatures regularly drop below freezing, and with sunset as early as 3:30pm in mid-December, emergency leaks are often discovered after dark when most roofers have finished for the day.
+              </p>
+              <p>
+                The Festival economy in August creates a unique spike in demand. With thousands of visitors filling short-term lets across the Old Town and New Town, property managers need rapid turnaround on maintenance issues. A slipped tile or blocked gutter can mean a bad review and a cancelled booking. When a property manager calls at 7pm during the Fringe, Katie captures the enquiry with the urgency context you need to decide whether to dispatch an emergency repair team or schedule for first light.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
         {/* ─── CITY LINKS ─── */}
         <section className="py-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

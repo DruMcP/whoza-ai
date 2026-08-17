@@ -292,6 +292,30 @@ export default function ForRooferLondonPage() {
 
         <div className="section-divider" />
 
+        {/* ─── LOCAL CONTEXT ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Roofers in London Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                Chelsea and Kensington in west London are filled with Victorian terraces that still carry their original slate roofs — beautiful but fragile after 150 years of British weather. Stratford and Canary Wharf present the opposite challenge: new-build apartments with flat roofs and green roof installations that need specialist waterproofing knowledge. Bromley and Croydon in the south sit somewhere between, with 1930s semi-detached homes and 1960s estates where flat roof repairs and gutter replacements are the bread and butter of local roofers.
+              </p>
+              <p>
+                London&apos;s hard water and urban heat island effect create distinct roofing stresses. Summer heatwaves cause thermal expansion that cracks older slate and tile, while winter freeze-thaw cycles — particularly on north-facing slopes in Camden and Islington — accelerate mortar and pointing deterioration. With 32,000+ trade businesses competing across the capital, a missed call about a slipped tile often means the customer has already booked someone else by the time you check your phone.
+              </p>
+              <p>
+                Emergency roofing calls in London peak during commute hours — 7–9am and 5–7pm — when trades are on the road between jobs or stuck in congestion. A customer in Hackney discovering water coming through their ceiling at 6pm will call three roofers in quick succession. Katie answers instantly, captures the postcode and damage details, and delivers the enquiry to your WhatsApp with an emergency flag. You see it immediately and can respond before the caller moves down their list.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
         {/* ─── CITY LINKS ─── */}
         <section className="py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

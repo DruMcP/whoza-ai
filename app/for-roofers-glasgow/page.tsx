@@ -287,6 +287,30 @@ export default function ForRooferGlasgowPage() {
 
         <div className="section-divider" />
 
+        {/* ─── LOCAL CONTEXT ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Roofers in Glasgow Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                Partick and Hillhead in the West End are lined with sandstone tenements whose slate roofs have endured over a century of Glasgow&apos;s notorious weather. Pollokshields and Shawlands in the Southside mix tenement flats with larger Victorian villas where roof maintenance is a constant priority. Milngavie and Bearsden offer suburban detached homes with more conventional pitched roofs, but even these face the same relentless rain that defines the city.
+              </p>
+              <p>
+                Glasgow receives 1,124mm of rainfall per year — the highest of any major UK city. Persistent damp and driving wind from the west cause gutter overflow, flashing failures, and gradual slate slippage that can turn a minor leak into a major repair. Harsh winters bring frequent freeze-thaw cycles that crack mortar and pointing, particularly on older properties in Dennistoun and the East End where maintenance budgets have been stretched thin.
+              </p>
+              <p>
+                The Glasgow Housing Association manages 43,000 homes and maintains approved contractor lists for responsive repairs. Getting and staying on these lists requires demonstrable reliability — including answering calls during peak emergency periods. When a GHA property in Drumchapel reports a roof leak at 5:30pm and you&apos;re finishing a job in Newton Mearns, Katie captures the enquiry, notes the housing association context, and delivers it to your WhatsApp with the urgency flagged. That responsiveness is what keeps you on the approved list.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
         {/* ─── CITY LINKS ─── */}
         <section className="py-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

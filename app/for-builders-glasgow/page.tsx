@@ -287,6 +287,30 @@ export default function ForBuilderGlasgowPage() {
 
         <div className="section-divider" />
 
+        {/* ─── LOCAL CONTEXT ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Builders in Glasgow Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                Hyndland and Partick in the West End are defined by sandstone tenements built between 1880 and 1920 — high ceilings, shared services, and a steady demand for kitchen and bathroom renovations. Shawlands and Pollokshields in the Southside offer a mix of tenement flats and Victorian villas where loft conversions are increasingly popular. Bearsden and Milngavie in the north-west provide a different market entirely: suburban detached homes where extensions and garden room builds dominate enquiry types.
+              </p>
+              <p>
+                Glasgow has the highest rainfall of any major UK city at 1,124mm per year. Persistent damp and driving rain cause gutter overflow, external stone deterioration, and roof leaks that keep builders busy year-round. Harsh winters with frequent freeze-thaw cycles stress pipes and heating systems, while short daylight hours in December — sunset around 4pm — mean emergency callouts often happen in darkness when trades are already stretched.
+              </p>
+              <p>
+                The factoring system is unique to Glasgow. Most tenement flats are managed by factoring companies like FirstPort and Factoring Services, who maintain approved contractor lists. Getting on these lists is lucrative but requires demonstrating reliable communication. When a factor in Hillhead needs an emergency repair quote at 6pm, Katie captures the call, marks it urgent, and delivers the details to your WhatsApp before the factor moves to their second-choice builder.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
         {/* ─── CITY LINKS ─── */}
         <section className="py-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

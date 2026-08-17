@@ -292,6 +292,30 @@ export default function ForBuilderBirminghamPage() {
 
         <div className="section-divider" />
 
+        {/* ─── LOCAL CONTEXT ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Builders in Birmingham Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                Edgbaston and Harborne in the south-west are known for their Victorian villas — generous rooms, high ceilings, and original features that command premium renovation budgets. Moseley and Kings Heath attract a steady stream of extension and loft conversion enquiries from young families upsizing rather than moving. Digbeth and the City Centre, meanwhile, are transforming under the Big City Plan, with £10bn in infrastructure investment creating constant demand for commercial fit-out and new-build finishing trades.
+              </p>
+              <p>
+                Birmingham&apos;s inland position means colder winters than coastal cities, with temperatures regularly dropping below freezing in January and February. Pipe freezes in poorly insulated 1930s semis across Kingstanding and Erdington trigger emergency callouts, while summer thunderstorms cause flash flooding and drainage issues — particularly in Digbeth, where the canal network creates unique basement flooding risks.
+              </p>
+              <p>
+                As Europe&apos;s youngest city, with 40% of the population under 25, Birmingham has a high density of first-time buyers entering the market in areas like Sutton Coldfield and Solihull. These buyers need reliable trades for surveys, renovations, and snagging — but they also expect instant communication. Katie answers when you&apos;re on a job in Castle Vale and captures the enquiry before the caller moves on to the next builder in the search results.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
         {/* ─── CITY LINKS ─── */}
         <section className="py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -292,6 +292,30 @@ export default function ForBuilderManchesterPage() {
 
         <div className="section-divider" />
 
+        {/* ─── LOCAL CONTEXT ─── */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Why Builders in Manchester Need AI Call Answering
+              </h2>
+            </div>
+            <div className="space-y-6 text-white/70 leading-relaxed">
+              <p>
+                Didsbury and Chorlton in south Manchester are filled with red brick terraces built between 1890 and 1930 — solid construction but ageing services that keep builders busy with loft conversions and kitchen extensions. Meanwhile, Ancoats and the Northern Quarter have seen explosive regeneration, turning former cotton mills into high-end apartments and commercial spaces that demand specialist fit-out trades. Salford Quays and MediaCity add new-build warranty snagging to the mix.
+              </p>
+              <p>
+                Manchester&apos;s high rainfall — averaging 867mm per year, well above the UK average — means damp issues, gutter overflow, and persistent roof leaks are constant triggers for emergency calls. Winter cold snaps, though rarely severe, cause pipe freezes in poorly insulated Victorian properties, creating sudden spikes in building repair enquiries that can overwhelm a solo tradesperson.
+              </p>
+              <p>
+                The Manchester planning portal is notoriously strict in conservation areas, particularly around Castlefield and parts of Chorlton. A caller from Prestwich asking about a rear extension may not know their street falls under Article 4 direction. Katie captures the postcode, notes the job type, and delivers it to your WhatsApp with the location context you need to check planning constraints before returning the call. That preparation turns a cold enquiry into a qualified lead.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
         {/* ─── CITY LINKS ─── */}
         <section className="py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
