@@ -15,22 +15,36 @@ const LIVE_CITY_PAGES: Record<string, string[]> = {
   "gas-engineers": ["london","glasgow","edinburgh"],
 };
 
+// All live trade hub pages (17 total)
+const ALL_TRADE_HUBS = [
+  "plumbers", "electricians", "builders", "roofers",
+  "heating-engineers", "gas-engineers",
+  // Additional hubs not in city combos but still live and indexable
+  "locksmiths", "carpenters", "painters-decorators", "landscapers",
+  "pest-control", "cleaners", "drainage", "joiners", "plasterers",
+  "tilers", "handymen",
+];
+
 const baseUrl = 'https://whoza.ai'
 
 function gitLastMod(filePath: string): string {
   try {
-    const date = execSync(`git log -1 --format=%cs -- "${filePath}"`, {
+    const date = execSync(`git log -1 --format=%cI -- "${filePath}"`, {
       encoding: 'utf8',
       cwd: process.cwd(),
     }).trim()
-    return date || fallbackDate()
+    // Return YYYY-MM-DD in UTC to avoid future-dating in other timezones
+    if (date) {
+      return new Date(date).toISOString().split('T')[0]
+    }
+    return fallbackDate()
   } catch {
     return fallbackDate()
   }
 }
 
 function fallbackDate(): string {
-  return gitLastMod('app/sitemap.ts')
+  return new Date().toISOString().split('T')[0]
 }
 
 function pageUrl(path: string, filePath: string, opts: Omit<MetadataRoute.Sitemap[0], 'url' | 'lastModified'>): MetadataRoute.Sitemap[0] {
@@ -103,9 +117,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     pageUrl('/whoza-vs-arrow', 'app/whoza-vs-arrow/page.tsx', { changeFrequency: 'monthly', priority: 0.8 }),
   ]
 
-  // Trade pages (17)
-  const tradeSlugs = Object.keys(LIVE_CITY_PAGES)
-  const tradePages: MetadataRoute.Sitemap = tradeSlugs.map(slug =>
+  // Trade pages (17 total — all live trade hubs)
+  const tradePages: MetadataRoute.Sitemap = ALL_TRADE_HUBS.map(slug =>
     pageUrl(`/for-${slug}`, `app/for-${slug}/page.tsx`, { changeFrequency: 'weekly', priority: 0.9 })
   )
 
@@ -143,20 +156,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const toolPages: MetadataRoute.Sitemap = [
     pageUrl('/tools/quote-generator', 'app/tools/quote-generator/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
     pageUrl('/tools/emergency-pricing', 'app/tools/emergency-pricing/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
-    pageUrl('/tools/emergency-pricing', 'app/tools/emergency-pricing/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
     pageUrl('/tools/rate-checker', 'app/tools/rate-checker/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
     pageUrl('/tools/voicemail-scripts', 'app/tools/voicemail-scripts/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
     pageUrl('/watch', 'app/watch/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
   ]
 
   // Orphaned pages — discovered pages with content but missing from sitemap
+  // NOTE: /missed-calls-cost-calculator is already in resourcePages (priority 0.7)
   const orphanedPages: MetadataRoute.Sitemap = [
     pageUrl('/accents', 'app/accents/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
     pageUrl('/booking', 'app/booking/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
     pageUrl('/how-many-calls-at-once', 'app/how-many-calls-at-once/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
     pageUrl('/integrations', 'app/integrations/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
     pageUrl('/is-it-a-phone-tree', 'app/is-it-a-phone-tree/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
-    pageUrl('/missed-calls-cost-calculator', 'app/missed-calls-cost-calculator/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
     pageUrl('/multi-location', 'app/multi-location/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
     pageUrl('/will-my-customers-mind', 'app/will-my-customers-mind/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
   ]

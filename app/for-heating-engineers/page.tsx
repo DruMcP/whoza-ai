@@ -366,7 +366,7 @@ export default function ForHvacPage() {
 
         
         {/* ─── CITY LINKS ─── */}
-        <TradeCityLinks tradeSlug="heating-engineers" />
+        <TradeCityLinks tradeSlug="heating engineers" />
 
         <div className="section-divider" />
 

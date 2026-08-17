@@ -387,7 +387,7 @@ export default function ForGasEngineersPage() {
         {/* ─── FAQ ─── */}
         
         {/* ─── CITY LINKS ─── */}
-        <TradeCityLinks tradeSlug="gas-engineers" />
+        <TradeCityLinks tradeSlug="gas engineers" />
 
         <div className="section-divider" />
 <section className="py-16 lg:py-24">

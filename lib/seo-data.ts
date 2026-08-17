@@ -37,6 +37,26 @@ export const TRADE_NAMES: Record<string, [string, string]> = {
   "gas-engineers": ["Gas Engineer", "Gas Engineers"],
 };
 
+// Adjectival form for each trade — used in "every {adjective} enquiry" etc.
+export const TRADE_ADJECTIVES: Record<string, string> = {
+  "plumbers": "plumbing",
+  "electricians": "electrical",
+  "builders": "building",
+  "roofers": "roofing",
+  "locksmiths": "locksmith",
+  "landscapers": "landscaping",
+  "heating-engineers": "heating",
+  "pest-control": "pest control",
+  "cleaners": "cleaning",
+  "drainage": "drainage",
+  "joiners": "joinery",
+  "plasterers": "plastering",
+  "tilers": "tiling",
+  "carpenters": "carpentry",
+  "handymen": "handyman",
+  "gas-engineers": "gas",
+};
+
 export const CITY_REGION: Record<string, string> = {
   london: "Greater London",
   manchester: "Greater Manchester",

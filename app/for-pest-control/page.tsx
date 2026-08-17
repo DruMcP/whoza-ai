@@ -475,7 +475,7 @@ export default function ForPestControlPage() {
         {/* ─── FAQ ─── */}
         
         {/* ─── CITY LINKS ─── */}
-        <TradeCityLinks tradeSlug="pest-control" />
+        <TradeCityLinks tradeSlug="pest control" />
 
         <div className="section-divider" />
 <section className="py-16 lg:py-24">

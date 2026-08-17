@@ -38,15 +38,15 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    "question": "How much does AI call answering cost for gas-engineers in London?",
-    "answer": "whoza.ai starts at £59/month for the Starter plan. That's less than one gas engineer job in London. Every plan includes unlimited AI calls, WhatsApp delivery, and a 7-day free trial. Most gas-engineers recover the cost within 48 hours by capturing just one missed job."
+    "question": "How much does AI call answering cost for gas engineers in London?",
+    "answer": "whoza.ai starts at £59/month for the Starter plan. That's less than one gas engineer job in London. Every plan includes unlimited AI calls, WhatsApp delivery, and a 7-day free trial. Most gas engineers recover the cost within 48 hours by capturing just one missed job."
   },
   {
-    "question": "Can Katie handle emergency calls for gas-engineers in London?",
+    "question": "Can Katie handle emergency calls for gas engineers in London?",
     "answer": "Absolutely. Katie answers 24/7, including nights, weekends, and bank holidays. She identifies emergency calls and marks them as highest priority in your WhatsApp alert. Whether you're in London or anywhere in the UK, you'll see the emergency tag immediately and can respond within minutes."
   },
   {
-    "question": "What information does Katie collect from gas-engineers customers in London?",
+    "question": "What information does Katie collect from gas engineers customers in London?",
     "answer": "Katie captures: full name, phone number, London postcode, property type, job description, urgency level, preferred appointment time, and how they found you. For emergencies, she also asks about immediate safety concerns and property damage extent."
   },
   {
@@ -55,11 +55,11 @@ const faqs = [
   },
   {
     "question": "How quickly can I get set up as a gas engineer in London?",
-    "answer": "Most gas-engineers in London are live and capturing calls within 30 minutes. Sign up, connect your number via call forwarding, set your greeting and business details, and Katie starts answering immediately. No hardware, no IT team, no technical knowledge required."
+    "answer": "Most gas engineers in London are live and capturing calls within 30 minutes. Sign up, connect your number via call forwarding, set your greeting and business details, and Katie starts answering immediately. No hardware, no IT team, no technical knowledge required."
   },
   {
-    "question": "What makes whoza.ai different for gas-engineers in London?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for gas-engineers. She understands CP12 certificates, gas leaks, boiler breakdowns & carbon monoxide emergencies — and with 32,000+ trade businesses competing in London, capturing every call gives you a real competitive edge."
+    "question": "What makes whoza.ai different for gas engineers in London?",
+    "answer": "Unlike generic call answering services, Katie is trained specifically for gas engineers. She understands CP12 certificates, gas leaks, boiler breakdowns & carbon monoxide emergencies — and with 32,000+ trade businesses competing in London, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -156,7 +156,7 @@ export default function ForGasEngineerLondonPage() {
                 London Gas Engineers Market
               </h2>
               <p className="text-white/60 text-lg max-w-2xl mx-auto">
-                The numbers that matter for gas-engineers in London.
+                The numbers that matter for gas engineers in London.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -300,7 +300,7 @@ export default function ForGasEngineerLondonPage() {
                 More Gas Engineers Locations
               </h2>
               <p className="text-white/60">
-                Katie answers calls for gas-engineers across the UK.
+                Katie answers calls for gas engineers across the UK.
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-3">
@@ -319,7 +319,7 @@ export default function ForGasEngineerLondonPage() {
                 href="/for-gas-engineers"
                 className={`inline-flex items-center text-red-400 hover:text-red-300 font-medium transition-colors`}
               >
-                View all gas-engineers pages
+                View all gas engineers pages
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
@@ -336,7 +336,7 @@ export default function ForGasEngineerLondonPage() {
                 Questions Gas Engineers in London Ask
               </h2>
               <p className="text-white/60">
-                Everything you need to know about AI call answering for gas-engineers in London.
+                Everything you need to know about AI call answering for gas engineers in London.
               </p>
             </div>
             <div className="space-y-4">

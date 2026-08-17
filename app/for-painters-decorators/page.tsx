@@ -363,7 +363,7 @@ export default function ForPaintersDecoratorsPage() {
 
         
         {/* ─── CITY LINKS ─── */}
-        <TradeCityLinks tradeSlug="painters-decorators" />
+        <TradeCityLinks tradeSlug="painters and decorators" />
 
         <div className="section-divider" />
 
