@@ -170,7 +170,7 @@ export default function Home() {
                 and number instead of hanging up.
               </li>
               <li>
-                <a href="/resources/missed-call-cost-calculator" className="font-semibold underline">
+                <a href="/missed-calls-cost-calculator" className="font-semibold underline">
                   Missed Call Cost Calculator
                 </a>{" "}
                 — the original tool behind our{" "}
