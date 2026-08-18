@@ -7,7 +7,7 @@ import Image from "next/image"
 
 import { trackCTA } from "@/lib/gtag"
 
-/* ── Live counter constants (ONS-derived) ── */
+/* ── Live counter constants (Moneypenny-derived) ── */
 const CALL_RATE = 0.31        // calls per second across UK trades
 const AVG_JOB_VALUE = 120     // £
 const CONVERSION_RATE = 0.35  // ~35% of missed calls = lost jobs
@@ -267,7 +267,7 @@ export function Hero() {
 
         <p className="text-base text-slate-400 leading-normal m-0">
           <span className="sr-only">
-            Live statistics from the Office for National Statistics:
+            Live statistics from the Moneypenny Small Business Call Report (2020):
           </span>
           Since you opened this page, UK trades have missed{" "}
           <span

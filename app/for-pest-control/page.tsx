@@ -60,7 +60,7 @@ const faqs = [
   },
   {
     question: "Will customers know they're talking to AI?",
-    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone — especially during panic situations like wasp stings or rat sightings. In user surveys, 89% of callers are satisfied with the AI experience — they just want the pest problem solved fast.",
+    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone — especially during panic situations like wasp stings or rat sightings. Most callers are satisfied with the AI experience — they just want the pest problem solved fast.",
   },
   {
     question: "Does it work with my existing business phone number?",

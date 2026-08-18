@@ -27,7 +27,7 @@ import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "AI Receptionist Plumbers UK | From £59/mo — Never Miss Jobs",
-  description: "UK plumbers lose £12K+/year to missed calls. Whoza.ai answers 24/7, qualifies boiler repairs & leaks, sends job details to WhatsApp. 7-day free trial.",
+  description: "UK plumbers miss calls worth £2,600+/year on average (conservative estimate). Whoza.ai answers 24/7, qualifies boiler repairs & leaks, sends job details to WhatsApp. 7-day free trial.",
   alternates: {
     canonical: "https://whoza.ai/for-plumbers",
   },
@@ -37,14 +37,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/for-plumbers",
     siteName: "Whoza.ai",
     title: "AI Receptionist Plumbers UK | From £59/mo — Never Miss Jobs",
-    description: "UK plumbers lose £12K+/year to missed calls. Whoza.ai answers 24/7, qualifies boiler repairs & leaks, sends job details to WhatsApp. 7-day free trial.",
+    description: "UK plumbers miss calls worth £2,600+/year on average (conservative estimate). Whoza.ai answers 24/7, qualifies boiler repairs & leaks, sends job details to WhatsApp. 7-day free trial.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Plumbers" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "AI Receptionist Plumbers UK | From £59/mo — Never Miss Jobs",
-    description: "UK plumbers lose £12K+/year to missed calls. Whoza.ai answers 24/7, qualifies boiler repairs & leaks, sends job details to WhatsApp. 7-day free trial.",
+    description: "UK plumbers miss calls worth £2,600+/year on average (conservative estimate). Whoza.ai answers 24/7, qualifies boiler repairs & leaks, sends job details to WhatsApp. 7-day free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {
@@ -68,7 +68,7 @@ const faqs = [
   },
   {
     question: "Will customers know they're talking to AI?",
-    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. In user surveys, 89% of callers are satisfied with the AI experience — they just want their leak fixed fast.",
+    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience — they just want their leak fixed fast.",
   },
   {
     question: "Does it work with my existing business phone number?",
@@ -148,7 +148,7 @@ export default function ForPlumbersPage() {
                   From £59/mo — Never Miss Jobs
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
-                  UK plumbers lose £12K+/year to missed calls. Whoza.ai is an AI receptionist for plumbers: answers 24/7, qualifies boiler repairs and emergency leaks, and sends job details to your WhatsApp in 3 seconds.
+                  UK plumbers miss calls worth £2,600+/year on average (conservative estimate). Whoza.ai is an AI receptionist for plumbers: answers 24/7, qualifies boiler repairs and emergency leaks, and sends job details to your WhatsApp in 3 seconds.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -397,7 +397,7 @@ export default function ForPlumbersPage() {
                 },
                 {
                   q: "Will customers know they're talking to AI?",
-                  a: "Katie introduces herself as your AI assistant and explains that she's capturing details so you can call back prepared. Most customers are relieved to speak to someone immediately rather than leaving a voicemail. In our surveys, 89% of callers are satisfied with the AI experience."
+                  a: "Katie introduces herself as your AI assistant and explains that she's capturing details so you can call back prepared. Most customers are relieved to speak to someone immediately rather than leaving a voicemail. Most callers are satisfied with the AI experience."
                 },
                 {
                   q: "Can Katie book plumbing appointments directly into my calendar?",

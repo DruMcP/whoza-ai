@@ -85,7 +85,7 @@ const faqs = [
   },
   {
     question: "Will customers trust an AI with their lockout emergency?",
-    answer: "Katie introduces herself as your AI assistant and explains that she's capturing details so you can respond immediately. Most lockout customers are relieved to speak to someone right away rather than leaving a voicemail. Katie reassures them that their locksmith has been notified and will call back within minutes. In our surveys, 89% of callers are satisfied with the AI experience."
+    answer: "Katie introduces herself as your AI assistant and explains that she's capturing details so you can respond immediately. Most lockout customers are relieved to speak to someone right away rather than leaving a voicemail. Katie reassures them that their locksmith has been notified and will call back within minutes. Most callers are satisfied with the AI experience."
   }
 ]
 

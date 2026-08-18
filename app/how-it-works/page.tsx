@@ -53,7 +53,7 @@ const howItWorksFaqs = [
   },
   {
     question: "Will customers know they're talking to AI?",
-    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. In user surveys, 89% of callers are satisfied with the AI experience — they just want their problem fixed fast.",
+    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience — they just want their problem fixed fast.",
   },
   {
     question: "How does the WhatsApp delivery work?",

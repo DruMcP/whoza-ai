@@ -55,7 +55,7 @@ const faqs = [
   },
   {
     question: "Will customers know they're talking to an AI receptionist?",
-    answer: "Katie introduces herself as your AI assistant. Most callers are relieved to get an immediate, friendly response rather than voicemail. In our surveys, 89% of callers are satisfied with the AI experience, and many appreciate the instant WhatsApp confirmation with all their details."
+    answer: "Katie introduces herself as your AI assistant. Most callers are relieved to get an immediate, friendly response rather than voicemail. Most callers are satisfied with the AI experience, and many appreciate the instant WhatsApp confirmation with all their details."
   },
   {
     question: "Can Katie handle calls about planning permission and building regulations?",

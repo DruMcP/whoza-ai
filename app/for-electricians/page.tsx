@@ -394,7 +394,7 @@ export default function ForElectriciansPage() {
                 },
                 {
                   q: "Will customers know they're talking to AI?",
-                  a: "Katie introduces herself as your AI assistant and explains that she's capturing details so you can call back prepared. Most customers are relieved to speak to someone immediately rather than leaving a voicemail. In our surveys, 89% of callers are satisfied with the AI experience."
+                  a: "Katie introduces herself as your AI assistant and explains that she's capturing details so you can call back prepared. Most customers are relieved to speak to someone immediately rather than leaving a voicemail. Most callers are satisfied with the AI experience."
                 },
                 {
                   q: "Can Katie handle rewire and installation quote enquiries?",

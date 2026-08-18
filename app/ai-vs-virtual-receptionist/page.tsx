@@ -330,7 +330,7 @@ export default function AIVsVirtualReceptionistPage() {
             </p>
             <div className="bg-emerald-50 rounded-lg p-6 border border-emerald-100">
               <p className="text-emerald-800 font-semibold">
-                In our surveys, 89% of whoza.ai customers report that their callers are satisfied with the AI experience.
+                Most whoza.ai customers report that their callers are satisfied with the AI experience.
               </p>
             </div>
           </div>
@@ -402,7 +402,7 @@ export default function AIVsVirtualReceptionistPage() {
           <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {[
-              { q: "Will my customers be annoyed by speaking to AI?", a: "Modern AI voices are natural and professional. In our surveys, 89% of callers do not realise they are speaking to AI, and most appreciate the quick, efficient service. The alternative for most trades is voicemail or phone tag — both of which customers find far more frustrating." },
+              { q: "Will my customers be annoyed by speaking to AI?", a: "Modern AI voices are natural and professional. Most callers do not realise they are speaking to AI, and most appreciate the quick, efficient service. The alternative for most trades is voicemail or phone tag — both of which customers find far more frustrating." },
               { q: "Can AI handle angry or emotional callers?", a: "Yes. AI is actually better suited to difficult callers than tired humans — it never gets frustrated, never raises its voice, and always remains professional. For genuinely complex situations, it can escalate to a callback from you." },
               { q: "What if I already have a part-time receptionist?", a: "AI complements human receptionists perfectly. The human handles calls during work hours; the AI covers evenings, weekends, lunch breaks, and busy periods. Many businesses use both — the AI as backup and overflow coverage." },
               { q: "Can the AI sound like someone from my local area?", a: "Yes. whoza.ai offers multiple voice options including regional accents. You can also customise the greeting, script, and tone to match your brand — whether that is formal and corporate or friendly and local." },

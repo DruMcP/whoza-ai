@@ -85,7 +85,7 @@ const faqs = [
   },
   {
     question: "Will customers trust an AI with their home painting project?",
-    answer: "Katie introduces herself as your AI assistant and explains that she's capturing details so you can provide an accurate quote. Most customers appreciate the immediate response and detailed information gathering. In our surveys, 89% of callers are satisfied with the AI experience, and painting customers particularly like that Katie captures room sizes, surface conditions, and colour preferences — saving time on the initial quote call."
+    answer: "Katie introduces herself as your AI assistant and explains that she's capturing details so you can provide an accurate quote. Most customers appreciate the immediate response and detailed information gathering. Most callers are satisfied with the AI experience, and painting customers particularly like that Katie captures room sizes, surface conditions, and colour preferences — saving time on the initial quote call."
   }
 ]
 

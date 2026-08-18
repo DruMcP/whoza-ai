@@ -85,7 +85,7 @@ const faqs = [
   },
   {
     question: "Will customers trust an AI with their boiler emergency?",
-    answer: "Katie introduces herself as your AI assistant and explains that she's capturing details so you can call back prepared. Most customers are relieved to speak to someone immediately rather than leaving a voicemail. In our surveys, 89% of callers are satisfied with the AI experience, and heating customers particularly appreciate that Katie captures fault details that help you diagnose before you arrive."
+    answer: "Katie introduces herself as your AI assistant and explains that she's capturing details so you can call back prepared. Most customers are relieved to speak to someone immediately rather than leaving a voicemail. Most callers are satisfied with the AI experience, and heating customers particularly appreciate that Katie captures fault details that help you diagnose before you arrive."
   }
 ]
 

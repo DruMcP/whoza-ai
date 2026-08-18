@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     question: "Will customers know they're talking to AI?",
-    answer: "Katie introduces herself as your AI assistant. Customers appreciate the honesty and the instant response. Most prefer a friendly AI that answers immediately over voicemail or a ringing phone. In our surveys, 89% of callers are satisfied with the AI experience."
+    answer: "Katie introduces herself as your AI assistant. Customers appreciate the honesty and the instant response. Most prefer a friendly AI that answers immediately over voicemail or a ringing phone. Most callers are satisfied with the AI experience."
   },
   {
     question: "Can Katie handle insurance roofing claims?",
