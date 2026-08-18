@@ -14,6 +14,19 @@
   status = 301
   force = true
 
+# === whoza.co.uk → whoza.ai: Eliminate duplicate site ===
+[[redirects]]
+  from = "https://whoza.co.uk/*"
+  to = "https://whoza.ai/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.whoza.co.uk/*"
+  to = "https://whoza.ai/:splat"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/trade/hvac"
   to = "/for-heating-engineers"
@@ -59,7 +72,7 @@
 
 [[redirects]]
   from = "/blog/best-ai-phone-answering-uk-trades-2026"
-  to = "/blog/ai-phone-technology-complete-guide"
+  to = "/best-ai-call-handler-uk-trades"
   status = 301
   force = true
 

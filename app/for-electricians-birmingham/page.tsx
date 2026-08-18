@@ -93,7 +93,7 @@ export default function ForElectricianBirminghamPage() {
                   Electricians in Birmingham
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6">
-                  Never Miss a{" "}
+                  Never Miss an{" "}
                   <span className="text-amber-400">Electrician</span>{" "}
                   Job in Birmingham Again
                 </h1>
