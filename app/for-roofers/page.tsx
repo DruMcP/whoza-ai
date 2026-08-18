@@ -61,6 +61,18 @@ const faqs = [
   {
     question: "Does whoza.ai work with my existing roofer phone number?",
     answer: "Yes. You simply forward your existing business number to your whoza.ai number. Your customers call the same number they always have — they just get answered every time instead of hitting voicemail. No need to change business cards, van signage, or Google listings."
+  },
+  {
+    question: "How much does an AI receptionist cost in the UK?",
+    answer: "AI receptionists for UK trades start at £59 per month with whoza.ai, which includes unlimited calls, WhatsApp delivery, and a 7-day free trial with no contract."
+  },
+  {
+    question: "Is an AI receptionist better than a human answering service for roofers?",
+    answer: "An AI receptionist answers every call instantly at lower cost, but a human service suits firms needing complex emotional rapport or bespoke scripting beyond current AI capability."
+  },
+  {
+    question: "Can an AI receptionist handle emergency roofing calls?",
+    answer: "Yes — Katie identifies emergency roofing keywords like 'storm damage' and 'active leak' and marks them as urgent priority, sending an immediate WhatsApp alert even during severe weather."
   }
 ]
 
@@ -252,8 +264,16 @@ export default function ForRoofersPage() {
           serviceUrl="/for-roofers"
           items={[
             {
+              label: "Instant pickup",
+              answer: "Whoza answers every call in your business name within seconds, so callers with storm damage do not hang up and ring a competitor.",
+            },
+            {
               label: "Job triage",
               answer: "Katie asks what the roofing issue is — leak, storm damage, missing tiles, or full re-roof — and estimates urgency. Emergency weather damage calls are flagged immediately.",
+            },
+            {
+              label: "Emergency prioritisation",
+              answer: "Storm damage, leak through ceiling, or exposed felt — Katie recognises emergency keywords and marks the enquiry as urgent. You get an immediate WhatsApp even during bad weather.",
             },
             {
               label: "Calendar sync",
@@ -264,12 +284,12 @@ export default function ForRoofersPage() {
               answer: "A structured message lands on your phone in 3 seconds: name, number, postcode, problem, urgency, and estimated value. Tap Accept, Call Back, or Decline.",
             },
             {
-              label: "Emergency prioritisation",
-              answer: "Storm damage, leak through ceiling, or exposed felt — Katie recognises emergency keywords and marks the enquiry as urgent. You get an immediate WhatsApp even during bad weather.",
+              label: "Cost",
+              answer: "Whoza starts at £59 per month for UK roofers, with no long-term contract and a 7-day free trial.",
             },
             {
-              label: "Spam filtering",
-              answer: "Katie identifies and filters out cold callers, PPI claims, and spam so you only see genuine roofing enquiries in your WhatsApp.",
+              label: "Setup time",
+              answer: "Setup takes about 30 minutes and keeps your existing business phone number.",
             },
           ]}
         />
@@ -363,7 +383,75 @@ export default function ForRoofersPage() {
         <div className="section-divider" />
         <Pricing />
 
-        
+        {/* ─── FAQ ─── */}
+        <section className="section-padding-lg bg-white relative">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[var(--navy-900)] mb-4">
+                Roofer FAQ
+              </h2>
+              <p className="text-[var(--slate-500)] text-lg max-w-2xl mx-auto">
+                Common questions from roofers about AI call answering.
+              </p>
+            </div>
+            <div className="space-y-6">
+              {[
+                {
+                  q: "How much does AI call handling cost for roofers?",
+                  a: "Whoza.ai starts at £59/month for the Starter plan. That's less than the cost of one missed emergency repair. Every plan includes unlimited AI calls, WhatsApp delivery, and a 7-day free trial. Overage minutes are billed at £0.40/minute. One captured £14,000 re-roof pays for 20+ years of service."
+                },
+                {
+                  q: "Can Katie handle storm damage emergencies at 2am?",
+                  a: "Yes. Katie answers 24/7, including nights, weekends, and bank holidays. She identifies storm damage by keywords like 'leak', 'water coming through', 'storm damage', and 'wind damage' — and marks the enquiry as emergency priority. You get an immediate WhatsApp with 'STORM DAMAGE — URGENT' in the header."
+                },
+                {
+                  q: "What information does Katie collect from roofing customers?",
+                  a: "Katie collects: full name, phone number, postcode, property type (house/flat/commercial), roof type (tile/slate/flat/metal), problem description (leak/storm damage/loose tiles/full re-roof), urgency level (routine/urgent/emergency), insurance status, whether photos are available, and how they found you."
+                },
+                {
+                  q: "Will customers know they're talking to AI?",
+                  a: "Katie introduces herself as your AI assistant. Customers appreciate the honesty and the instant response. Most prefer a friendly AI that answers immediately over voicemail or a ringing phone. Most callers are satisfied with the AI experience."
+                },
+                {
+                  q: "Can Katie handle insurance roofing claims?",
+                  a: "Yes. Katie specifically asks about insurance status and captures the insurance company name, policy number, and loss adjuster details when available. Insurance work is tagged as 'insurance' in your dashboard for specialised follow-up. These are often your highest-value jobs."
+                },
+                {
+                  q: "How quickly can I get set up as a roofer?",
+                  a: "Most roofers are fully set up in under 30 minutes. You'll forward your existing business number to your new whoza.ai number, customize your agent's greeting, and you're live. No technical knowledge required. Katie starts capturing calls the same day."
+                },
+                {
+                  q: "What happens if Katie can't handle a complex roofing enquiry?",
+                  a: "Katie is trained to recognise when she needs to transfer to a human. For complex queries, large commercial projects, or if the customer specifically requests you, she'll take a message and notify you immediately via WhatsApp and SMS. You can call them back within minutes."
+                },
+                {
+                  q: "Does whoza.ai work with my existing roofer phone number?",
+                  a: "Yes. You simply forward your existing business number to your whoza.ai number. Your customers call the same number they always have — they just get answered every time instead of hitting voicemail. No need to change business cards, van signage, or Google listings."
+                },
+                {
+                  q: "How much does an AI receptionist cost in the UK?",
+                  a: "AI receptionists for UK trades start at £59 per month with whoza.ai, which includes unlimited calls, WhatsApp delivery, and a 7-day free trial with no contract."
+                },
+                {
+                  q: "Is an AI receptionist better than a human answering service for roofers?",
+                  a: "An AI receptionist answers every call instantly at lower cost, but a human service suits firms needing complex emotional rapport or bespoke scripting beyond current AI capability."
+                },
+                {
+                  q: "Can an AI receptionist handle emergency roofing calls?",
+                  a: "Yes — Katie identifies emergency roofing keywords like 'storm damage' and 'active leak' and marks them as urgent priority, sending an immediate WhatsApp alert even during severe weather."
+                }
+              ].map((faq, idx) => (
+                <div key={idx} className="bg-[var(--off-white)] rounded-xl border border-[var(--border)] p-6">
+                  <h3 className="text-lg font-semibold text-[var(--navy-900)] mb-2">{faq.q}</h3>
+                  <p className="text-[var(--slate-500)] leading-relaxed">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+
         {/* ─── CITY LINKS ─── */}
         <TradeCityLinks tradeSlug="roofers" />
 

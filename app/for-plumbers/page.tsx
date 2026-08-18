@@ -87,6 +87,18 @@ const faqs = [
     question: "What happens if Katie can't handle a complex plumbing enquiry?",
     answer: "Katie is trained to recognise when a call needs human attention. For complex quotes or unusual situations, she takes a detailed message and flags it for your immediate callback. You receive the full context in WhatsApp so you can call back prepared with all the details.",
   },
+  {
+    question: "How much does an AI receptionist cost in the UK?",
+    answer: "AI receptionists for UK trades start at £59 per month with whoza.ai, which includes unlimited calls, WhatsApp delivery, and a 7-day free trial with no contract.",
+  },
+  {
+    question: "Is an AI receptionist better than a human answering service for plumbers?",
+    answer: "An AI receptionist answers every call instantly at lower cost, but a human service suits firms needing complex emotional rapport or bespoke scripting beyond current AI capability.",
+  },
+  {
+    question: "Can an AI receptionist handle emergency plumbing calls?",
+    answer: "Yes — Katie identifies emergency plumbing keywords like 'burst pipe' and 'flooding' and marks them as urgent priority, sending an immediate WhatsApp alert even at 2am.",
+  },
 ]
 
 export const revalidate = 3600
@@ -204,8 +216,16 @@ export default function ForPlumbersPage() {
           serviceUrl="/for-plumbers"
           items={[
             {
+              label: "Instant pickup",
+              answer: "Whoza answers every call in your business name within seconds, so callers with a burst pipe do not hang up and ring a competitor.",
+            },
+            {
               label: "Job triage",
-              answer: "Katie asks what the plumbing issue is — burst pipe, boiler breakdown, blocked drain, or leak — and estimates urgency. Emergency calls are flagged immediately so you see them first.",
+              answer: "Katie asks what the plumbing issue is — burst pipe, boiler breakdown, blocked drain, or leak — and estimates urgency. Emergency calls are flagged immediately.",
+            },
+            {
+              label: "Emergency prioritisation",
+              answer: "Burst pipe, flooding, no water, or leak through ceiling — Katie recognises emergency keywords and marks the enquiry as urgent. You get an immediate WhatsApp even at 2am.",
             },
             {
               label: "Calendar sync",
@@ -216,12 +236,12 @@ export default function ForPlumbersPage() {
               answer: "A structured message lands on your phone in 3 seconds: name, number, postcode, problem, urgency, and estimated value. Tap Accept, Call Back, or Decline.",
             },
             {
-              label: "Emergency prioritisation",
-              answer: "Burst pipe, flooding, no water, or leak through ceiling — Katie recognises emergency keywords and marks the enquiry as urgent. You get an immediate WhatsApp even at 2am.",
+              label: "Cost",
+              answer: "Whoza starts at £59 per month for UK plumbers, with no long-term contract and a 7-day free trial.",
             },
             {
-              label: "Spam filtering",
-              answer: "Katie identifies and filters out cold callers, PPI claims, and spam so you only see genuine plumbing enquiries in your WhatsApp.",
+              label: "Setup time",
+              answer: "Setup takes about 30 minutes and keeps your existing business phone number.",
             },
           ]}
         />
@@ -434,6 +454,18 @@ export default function ForPlumbersPage() {
                 {
                   q: "Can Katie book plumbing appointments directly into my calendar?",
                   a: "Katie captures all the details needed for booking: customer name, phone, address, job type, urgency, and preferred time slots. While she doesn't directly write to your calendar, she delivers everything structured in a WhatsApp message that you can action in seconds. Zapier integration is available on Growth plans for automatic calendar syncing."
+                },
+                {
+                  q: "How much does an AI receptionist cost in the UK?",
+                  a: "AI receptionists for UK trades start at £59 per month with whoza.ai, which includes unlimited calls, WhatsApp delivery, and a 7-day free trial with no contract."
+                },
+                {
+                  q: "Is an AI receptionist better than a human answering service for plumbers?",
+                  a: "An AI receptionist answers every call instantly at lower cost, but a human service suits firms needing complex emotional rapport or bespoke scripting beyond current AI capability."
+                },
+                {
+                  q: "Can an AI receptionist handle emergency plumbing calls?",
+                  a: "Yes — Katie identifies emergency plumbing keywords like 'burst pipe' and 'flooding' and marks them as urgent priority, sending an immediate WhatsApp alert even at 2am."
                 }
               ].map((faq, idx) => (
                 <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
