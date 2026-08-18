@@ -27,32 +27,31 @@ const ALL_TRADE_HUBS = [
 
 const baseUrl = 'https://whoza.ai'
 
-function gitLastMod(filePath: string): string {
+function gitLastMod(filePath: string): string | undefined {
   try {
     const date = execSync(`git log -1 --format=%cI -- "${filePath}"`, {
       encoding: 'utf8',
       cwd: process.cwd(),
     }).trim()
-    // Return YYYY-MM-DD in UTC to avoid future-dating in other timezones
     if (date) {
       return new Date(date).toISOString().split('T')[0]
     }
-    return fallbackDate()
   } catch {
-    return fallbackDate()
+    // git cannot determine date — omit lastmod rather than fabricate
   }
-}
-
-function fallbackDate(): string {
-  return new Date().toISOString().split('T')[0]
+  return undefined
 }
 
 function pageUrl(path: string, filePath: string, opts: Omit<MetadataRoute.Sitemap[0], 'url' | 'lastModified'>): MetadataRoute.Sitemap[0] {
-  return {
+  const lastMod = gitLastMod(filePath)
+  const entry: MetadataRoute.Sitemap[0] = {
     url: `${baseUrl}${path}`,
-    lastModified: gitLastMod(filePath),
     ...opts,
   }
+  if (lastMod) {
+    entry.lastModified = lastMod
+  }
+  return entry
 }
 
 /**
@@ -196,13 +195,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogPosts: MetadataRoute.Sitemap = blogSlugs.map((slug) => {
     const post = blogPostContents[slug]
     const staticPagePath = `app/blog/${slug}/page.tsx`
-    const lastModified = post?.date || (existsSync(staticPagePath) ? gitLastMod(staticPagePath) : fallbackDate())
-    return {
+    const lastModified = post?.date || (existsSync(staticPagePath) ? gitLastMod(staticPagePath) : undefined)
+    const entry: MetadataRoute.Sitemap[0] = {
       url: `${baseUrl}/blog/${slug}`,
-      lastModified,
       changeFrequency: 'monthly',
       priority: 0.7,
     }
+    if (lastModified) {
+      entry.lastModified = lastModified
+    }
+    return entry
   })
 
   // Legal pages
