@@ -93,7 +93,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     pageUrl('/signup', 'app/signup/page.tsx', { changeFrequency: 'monthly', priority: 0.9 }),
     pageUrl('/pricing', 'app/pricing/page.tsx', { changeFrequency: 'weekly', priority: 0.9 }),
     pageUrl('/how-it-works', 'app/how-it-works/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
-    pageUrl('/blog', 'app/blog/page.tsx', { changeFrequency: 'weekly', priority: 0.8 }),
+    // /blog entry built separately after newestPostDate is computed
     pageUrl('/faq', 'app/faq/page.tsx', { changeFrequency: 'monthly', priority: 0.8 }),
     pageUrl('/support', 'app/support/page.tsx', { changeFrequency: 'monthly', priority: 0.5 }),
     pageUrl('/contact', 'app/contact/page.tsx', { changeFrequency: 'monthly', priority: 0.5 }),
@@ -192,6 +192,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts — dynamically discovered from content + static files
   const blogSlugs = discoverBlogSlugs()
 
+  // Find newest blog post date for /blog listing page lastmod
+  const newestPostDate = blogSlugs
+    .map((slug) => {
+      const post = blogPostContents[slug]
+      const staticPagePath = `app/blog/${slug}/page.tsx`
+      return post?.date || (existsSync(staticPagePath) ? gitLastMod(staticPagePath) : undefined)
+    })
+    .filter((d): d is string => !!d)
+    .sort((a, b) => b.localeCompare(a))[0]
+
   const blogPosts: MetadataRoute.Sitemap = blogSlugs.map((slug) => {
     const post = blogPostContents[slug]
     const staticPagePath = `app/blog/${slug}/page.tsx`
@@ -222,8 +232,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     pageUrl('/complaints', 'app/complaints/page.tsx', { changeFrequency: 'yearly', priority: 0.3 }),
   ]
 
+  // /blog listing page — lastmod = newest child post (not git date of listing page)
+  const blogIndexEntry: MetadataRoute.Sitemap[0] = {
+    url: `${baseUrl}/blog`,
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  }
+  if (newestPostDate) {
+    blogIndexEntry.lastModified = newestPostDate
+  }
+
   return [
     ...corePages,
+    blogIndexEntry,
     ...comparisonPages,
     ...tradePages,
     ...comboPages,
