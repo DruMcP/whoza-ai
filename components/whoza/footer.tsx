@@ -4,6 +4,7 @@ import { Shield } from "lucide-react"
 import { useState } from "react"
 import { WaitlistModal } from "./waitlist-modal"
 import { trackCTA } from "@/lib/gtag"
+import { COMPANY } from "@/lib/company"
 
 const footerLinks = {
   product: [
@@ -267,7 +268,7 @@ export function Footer() {
           {/* Company details */}
           <div className="mt-6 pt-6 border-t border-white/5 text-center">
             <p className="text-xs text-white/30">
-              WHOZA AI LTD · Registered in Scotland — Company Number SC787047 · ICO Registration: ZC077271
+              WHOZA AI LTD · Registered in Scotland — Company Number {COMPANY.companyNumber} · ICO Registration: ZC077271
             </p>
             <p className="text-xs text-white/30 mt-1">
               Registered address: 6 Atholl Crescent, 6, Perth, PH1 5JN, United Kingdom

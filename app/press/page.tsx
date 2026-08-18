@@ -2,12 +2,13 @@ import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { organizationSchemaObject } from "@/components/whoza/organization-schema"
+import { COMPANY } from "@/lib/company"
 import { Star, Quote, Newspaper, TrendingUp, PhoneOff, Building2, Calendar, Mail, ExternalLink } from "lucide-react"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Press Centre | whoza.ai",
-  description: "Media resources, press releases, and company information for whoza.ai — the AI call answering platform for UK tradespeople. Founded 2025. Company: SC787047.",
+  description: "Media resources, press releases, and company information for whoza.ai — the AI call answering platform for UK tradespeople. Incorporated " + COMPANY.incorporatedOnDisplay + ". Company: " + COMPANY.companyNumber + ".",
   alternates: { canonical: "https://whoza.ai/press" },
   robots: { index: true, follow: true },
   openGraph: {
@@ -49,7 +50,7 @@ export default function PressPage() {
             </h2>
             <div className="bg-white/5 border border-white/10 rounded-xl p-6 md:p-8">
               <p className="text-white/80 leading-relaxed text-lg">
-                <strong className="text-white">whoza.ai</strong> is an AI-powered call answering platform for UK tradespeople. Founded in 2025 in Tomintoul, Scotland, the company provides 24/7 AI voice agents that answer missed calls, qualify leads, and deliver enquiries via WhatsApp. Its flagship agent, Katie, speaks with a natural Scottish accent. whoza.ai serves plumbers, electricians, builders, roofers, and other trade businesses across the United Kingdom. Plans start from only £59 per month. Registered as Whoza AI Ltd (Companies House: SC787047, ICO: ZC077271).
+                <strong className="text-white">whoza.ai</strong> is an AI-powered call answering platform for UK tradespeople. Incorporated in early 2026 in Tomintoul, Scotland, the company provides 24/7 AI voice agents that answer missed calls, qualify leads, and deliver enquiries via WhatsApp. Its flagship agent, Katie, speaks with a natural Scottish accent. whoza.ai serves plumbers, electricians, builders, roofers, and other trade businesses across the United Kingdom. Plans start from only £59 per month. Registered as Whoza AI Ltd (Companies House: {COMPANY.companyNumber}, ICO: ZC077271).
               </p>
               <div className="mt-4 flex items-center gap-2 text-white/40 text-sm">
                 <span className="bg-white/5 px-2 py-1 rounded">75 words</span>
@@ -186,8 +187,8 @@ export default function PressPage() {
                   qualified enquiry was ever lost to circumstance.
                 </p>
                 <p>
-                  <strong className="text-white">Whoza AI Ltd</strong> was formally incorporated in Scotland in 2025 
-                  (Companies House SC787047), with its operational base established in Tomintoul, Banffshire — a village in the 
+                  <strong className="text-white">Whoza AI Ltd</strong> was formally incorporated in Scotland on {COMPANY.incorporatedOnDisplay} 
+                  (Companies House {COMPANY.companyNumber}), with its operational base established in Tomintoul, Banffshire — a village in the 
                   Cairngorms National Park. The company launched its flagship AI agent, <strong className="text-white">Katie</strong>, 
                   in early 2026, targeting UK trades with a simple value proposition: never miss a job again.
                 </p>
@@ -218,8 +219,8 @@ export default function PressPage() {
                 <dd className="text-white font-medium">Whoza AI Ltd</dd>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-5">
-                <dt className="text-white/40 text-sm mb-1">Founded</dt>
-                <dd className="text-white font-medium">2025</dd>
+                <dt className="text-white/40 text-sm mb-1">Incorporated</dt>
+                <dd className="text-white font-medium">{COMPANY.incorporatedOnDisplay}</dd>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-5">
                 <dt className="text-white/40 text-sm mb-1">Operational base</dt>
@@ -231,7 +232,7 @@ export default function PressPage() {
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-5">
                 <dt className="text-white/40 text-sm mb-1">Companies House</dt>
-                <dd className="text-white font-medium">SC787047</dd>
+                <dd className="text-white font-medium">{COMPANY.companyNumber}</dd>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-5">
                 <dt className="text-white/40 text-sm mb-1">ICO Registration</dt>
@@ -258,110 +259,29 @@ export default function PressPage() {
             </dl>
           </section>
 
-          {/* ─── PRESS KIT ─── */}
-          <section className="mb-16">
-            <h2 className="text-xl font-bold text-white/40 uppercase tracking-wider mb-4 flex items-center gap-2">
-              <Newspaper className="w-5 h-5" />
-              Press Kit
-            </h2>
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-              <p className="text-white/80 mb-4">
-                Download our press kit for high-resolution logos, founder photos, product screenshots, 
-                and brand guidelines.
-              </p>
-              <button className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-sm transition">
-                <Newspaper className="w-4 h-4" />
-                Download Press Kit (ZIP)
-              </button>
-            </div>
-          </section>
-
-          {/* ─── RECENT NEWS ─── */}
-          <section className="mb-16">
-            <h2 className="text-xl font-bold text-white/40 uppercase tracking-wider mb-4 flex items-center gap-2">
-              <Calendar className="w-5 h-5" />
-              Recent News
-            </h2>
-            <ul className="space-y-4">
-              <li className="bg-white/5 border border-white/10 rounded-xl p-5">
-                <div className="flex items-start gap-4">
-                  <div className="bg-emerald-500/10 text-emerald-400 text-sm font-medium px-3 py-1 rounded-full shrink-0">
-                    July 2026
-                  </div>
-                  <div>
-                    <p className="text-white font-medium">
-                      whoza.ai publishes independent research on the £2.3 billion annual cost of missed calls to UK trades
-                    </p>
-                    <a href="/research/the-true-cost-of-missed-calls-2026" className="text-emerald-400 text-sm hover:underline mt-1 inline-flex items-center gap-1">
-                      Read the report <ExternalLink className="w-3 h-3" />
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li className="bg-white/5 border border-white/10 rounded-xl p-5">
-                <div className="flex items-start gap-4">
-                  <div className="bg-emerald-500/10 text-emerald-400 text-sm font-medium px-3 py-1 rounded-full shrink-0">
-                    June 2026
-                  </div>
-                  <div>
-                    <p className="text-white font-medium">
-                      whoza.ai launches expanded AI voice agent with natural Scottish accent and WhatsApp delivery
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li className="bg-white/5 border border-white/10 rounded-xl p-5">
-                <div className="flex items-start gap-4">
-                  <div className="bg-emerald-500/10 text-emerald-400 text-sm font-medium px-3 py-1 rounded-full shrink-0">
-                    May 2026
-                  </div>
-                  <div>
-                    <p className="text-white font-medium">
-                      whoza.ai secures seed funding to expand nationwide coverage for UK trade businesses
-                    </p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </section>
+          {/* ─── JSON-LD ─── */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "NewsArticle",
+                "headline": "Press Centre — whoza.ai",
+                "description": "Media resources and company information for whoza.ai.",
+                "image": "https://whoza.ai/og-image.webp",
+                "author": {
+                  "@type": "Organization",
+                  "name": "whoza.ai",
+                },
+                "publisher": organizationSchemaObject,
+                "datePublished": "2026-01-09",
+                "dateModified": "2026-01-09",
+              }),
+            }}
+          />
         </article>
       </main>
       <Footer />
-
-      {/* ─── SCHEMA MARKUP ─── */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify([
-            {
-              "@context": "https://schema.org",
-              "@type": "AboutPage",
-              "@id": "https://whoza.ai/press#aboutpage",
-              "url": "https://whoza.ai/press",
-              "name": "Press Centre | whoza.ai",
-              "description": "Media resources, press releases, and company information for whoza.ai — the AI call answering platform for UK tradespeople.",
-              "mainEntity": {
-                "@id": "https://whoza.ai/#organization"
-              }
-            },
-            organizationSchemaObject,
-            {
-              "@context": "https://schema.org",
-              "@type": "Person",
-              "@id": "https://whoza.ai/#dru-mcpherson",
-              "name": "Dru McPherson",
-              "givenName": "Dru",
-              "familyName": "McPherson",
-              "jobTitle": "Founder & CEO",
-              "worksFor": {
-                "@id": "https://whoza.ai/#organization"
-              },
-              "url": "https://whoza.ai/press",
-              "description": "Founder and CEO of whoza.ai, an AI-powered call answering platform for UK tradespeople."
-            }
-          ])
-        }}
-      />
     </>
   )
 }

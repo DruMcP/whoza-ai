@@ -9,11 +9,13 @@
  * change once a profile is confirmed live and owned by whoza.ai.
  */
 
+import { COMPANY } from "@/lib/company";
+
 export const organizationSchemaObject = {
   "@type": "Organization",
   "@id": "https://whoza.ai/#organization",
   "name": "Whoza.ai",
-  "legalName": "WHOZA AI LTD",
+  "legalName": COMPANY.legalName,
   "alternateName": "whoza.ai",
   "url": "https://whoza.ai",
   "logo": {
@@ -26,14 +28,14 @@ export const organizationSchemaObject = {
   "description":
     "AI call answering service built in Scotland for UK tradespeople. Katie answers every missed call 24/7, qualifies jobs, and sends details to WhatsApp.",
   "slogan": "While you work, we book. Job done.",
-  "foundingDate": "2025",
+  "foundingDate": COMPANY.incorporatedOn,
   "telephone": "+447463141750",
   "email": "support@whoza.ai",
   "identifier": [
     {
       "@type": "PropertyValue",
       "name": "Company number",
-      "value": "SC787047",
+      "value": COMPANY.companyNumber,
     },
     {
       "@type": "PropertyValue",
@@ -107,6 +109,7 @@ export const organizationSchemaObject = {
   //     confirm which, if any, are genuinely owned before treating as a profile
   //     to add)
   "sameAs": [
+    COMPANY.registerUrl,
     "https://www.linkedin.com/company/whoza",
     "https://www.facebook.com/profile.php?id=61586217731657",
   ],
