@@ -206,6 +206,12 @@ const nextConfig = {
         permanent: true,
       },
 
+    {
+      source: '/blog/best-ai-call-answering-service-uk-trades-2026',
+      destination: '/best-ai-call-handler-uk-trades',
+      permanent: true,
+    },
+
       // === Trailing slash redirects (CRITICAL: prevents duplicate content) ===
       {
         source: '/:path+/',

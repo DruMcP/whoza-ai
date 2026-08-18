@@ -17,6 +17,7 @@ export default function robots(): MetadataRoute.Robots {
           "/sign-in/",
           "/dashboard/",
           "/cdn-cgi/",
+          "/.netlify/",
           "/*.json$",
           "/*?nocache=",
         ],

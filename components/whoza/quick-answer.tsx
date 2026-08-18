@@ -19,8 +19,9 @@ interface QuickAnswerProps {
 /**
  * QuickAnswer — Answer-first block for AI Overview extraction
  *
- * Renders as a plain accordion. Schema is a sibling `FAQPage` block in the page,
- * NOT inside this component, so it can be server-rendered.
+ * Renders as a bold-label + sentence list for maximum scraper compatibility.
+ * Schema is a sibling `FAQPage` block in the page, NOT inside this component,
+ * so it can be server-rendered.
  */
 export function QuickAnswer({
   heading = "What whoza.ai does for your trade",
@@ -44,7 +45,33 @@ export function QuickAnswer({
           {heading}
         </h2>
 
-        <div className="space-y-2">
+        {/* Desktop: always visible bold-label + sentence format */}
+        <div className="hidden md:block space-y-4">
+          {items.map((item) => (
+            <p
+              key={item.label}
+              className="text-[15px] text-slate-700 dark:text-slate-300 leading-relaxed"
+            >
+              <strong className="text-slate-900 dark:text-white">
+                {item.label}:
+              </strong>{" "}
+              {item.answer}
+            </p>
+          ))}
+          {serviceUrl && (
+            <p className="pt-2">
+              <a
+                href={serviceUrl}
+                className="text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:underline"
+              >
+                Learn more about whoza.ai for {tradeName}s →
+              </a>
+            </p>
+          )}
+        </div>
+
+        {/* Mobile: accordion for compactness */}
+        <div className="md:hidden space-y-2">
           {items.map((item, idx) => {
             const isOpen = openIndex === idx
             return (
@@ -59,7 +86,12 @@ export function QuickAnswer({
                   aria-expanded={isOpen}
                   aria-controls={`qa-panel-${idx}`}
                 >
-                  <span className="text-[15px]">{item.label}</span>
+                  <span className="text-[15px]">
+                    <strong>{item.label}:</strong>{" "}
+                    <span className="font-normal text-slate-600 dark:text-slate-300">
+                      {isOpen ? "" : item.answer.slice(0, 60) + "…"}
+                    </span>
+                  </span>
                   <ChevronDown
                     className={`w-5 h-5 text-slate-400 transition-transform duration-200 ${
                       isOpen ? "rotate-180" : ""
@@ -78,7 +110,7 @@ export function QuickAnswer({
                   className="overflow-hidden"
                 >
                   <div className="px-5 pb-4 text-slate-600 dark:text-slate-300 leading-relaxed text-[15px]">
-                    {item.answer}
+                    <strong>{item.label}:</strong> {item.answer}
                     {serviceUrl && (
                       <a
                         href={serviceUrl}

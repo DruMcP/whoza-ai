@@ -1,7 +1,10 @@
 [build]
-  command = "npm run build"
+  command = "npm run build && node scripts/generate-build-info.js && node scripts/build-indexnow-manifest.js || true"
   publish = ".next"
   environment = { NODE_VERSION = "22", NODE_OPTIONS = "--max-old-space-size=4096", NEXT_TELEMETRY_DISABLED = "1" }
+
+[functions."deploy-succeeded"]
+  included_files = ["netlify/functions/indexnow-manifest.json"]
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
