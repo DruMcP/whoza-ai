@@ -22,6 +22,7 @@ import { GrowthEngine } from "@/components/whoza/growth-engine"
 import { DashboardPreview } from "@/components/whoza/dashboard-preview"
 import { ClaireDashboard } from "@/components/whoza/claire-dashboard"
 import { Testimonials } from "@/components/whoza/testimonials"
+import { QuickAnswer } from "@/components/whoza/quick-answer"
 import { ComparisonTable } from "@/components/whoza/comparison-table"
 import Image from "next/image"
 
@@ -193,6 +194,37 @@ export default function ForPlumbersPage() {
             </div>
           </div>
         </section>
+
+        <div className="section-divider" />
+
+        {/* ─── QUICK ANSWER ─── */}
+        <QuickAnswer
+          heading="What whoza.ai does for plumbers"
+          tradeName="plumber"
+          serviceUrl="/for-plumbers"
+          items={[
+            {
+              label: "Job triage",
+              answer: "Katie asks what the plumbing issue is — burst pipe, boiler breakdown, blocked drain, or leak — and estimates urgency. Emergency calls are flagged immediately so you see them first.",
+            },
+            {
+              label: "Calendar sync",
+              answer: "Katie checks your connected calendar and offers customers specific appointment slots. When they confirm, the booking is saved and both parties get confirmation.",
+            },
+            {
+              label: "WhatsApp delivery",
+              answer: "A structured message lands on your phone in 3 seconds: name, number, postcode, problem, urgency, and estimated value. Tap Accept, Call Back, or Decline.",
+            },
+            {
+              label: "Emergency prioritisation",
+              answer: "Burst pipe, flooding, no water, or leak through ceiling — Katie recognises emergency keywords and marks the enquiry as urgent. You get an immediate WhatsApp even at 2am.",
+            },
+            {
+              label: "Spam filtering",
+              answer: "Katie identifies and filters out cold callers, PPI claims, and spam so you only see genuine plumbing enquiries in your WhatsApp.",
+            },
+          ]}
+        />
 
         <div className="section-divider" />
 
