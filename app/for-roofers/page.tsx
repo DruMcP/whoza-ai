@@ -18,6 +18,7 @@ import { GrowthEngine } from "@/components/whoza/growth-engine"
 import { DashboardPreview } from "@/components/whoza/dashboard-preview"
 import { ClaireDashboard } from "@/components/whoza/claire-dashboard"
 import { Testimonials } from "@/components/whoza/testimonials"
+import { QuickAnswer } from "@/components/whoza/quick-answer"
 import { ComparisonTable } from "@/components/whoza/comparison-table"
 import { Pricing } from "@/components/whoza/pricing"
 import { FinalCTA } from "@/components/whoza/final-cta"
@@ -243,6 +244,35 @@ export default function ForRoofersPage() {
         </section>
 
         <SocialProofBand />
+
+        {/* ─── QUICK ANSWER ─── */}
+        <QuickAnswer
+          heading="What whoza.ai does for roofers"
+          tradeName="roofer"
+          serviceUrl="/for-roofers"
+          items={[
+            {
+              label: "Job triage",
+              answer: "Katie asks what the roofing issue is — leak, storm damage, missing tiles, or full re-roof — and estimates urgency. Emergency weather damage calls are flagged immediately.",
+            },
+            {
+              label: "Calendar sync",
+              answer: "Katie checks your connected calendar and offers customers specific appointment slots. When they confirm, the booking is saved and both parties get confirmation.",
+            },
+            {
+              label: "WhatsApp delivery",
+              answer: "A structured message lands on your phone in 3 seconds: name, number, postcode, problem, urgency, and estimated value. Tap Accept, Call Back, or Decline.",
+            },
+            {
+              label: "Emergency prioritisation",
+              answer: "Storm damage, leak through ceiling, or exposed felt — Katie recognises emergency keywords and marks the enquiry as urgent. You get an immediate WhatsApp even during bad weather.",
+            },
+            {
+              label: "Spam filtering",
+              answer: "Katie identifies and filters out cold callers, PPI claims, and spam so you only see genuine roofing enquiries in your WhatsApp.",
+            },
+          ]}
+        />
 
         {/* PAIN POINTS */}
         <section className="section-padding-lg bg-white relative">
