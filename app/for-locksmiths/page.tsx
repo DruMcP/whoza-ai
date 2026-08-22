@@ -189,7 +189,9 @@ export default function ForLocksmithsPage() {
         { name: "Home", item: "https://whoza.ai" },
         { name: "For Locksmiths", item: "https://whoza.ai/for-locksmiths" },
       ]} />
-      <FAQPageSchema faqs={faqs} />
+      <div className="trade-faq">
+      <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
+      </div>
 
       <main id="main-content" role="main" className="pb-24 lg:pb-0">
         {/* HERO */}
@@ -201,7 +203,7 @@ export default function ForLocksmithsPage() {
                   <Lock className="w-4 h-4" />
                   Built for UK Locksmiths
                 </div>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 trade-headline">
                   Never Miss a Lockout Call — Even at 3am
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8">

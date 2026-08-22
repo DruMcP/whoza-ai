@@ -73,7 +73,9 @@ export default function ForRooferEdinburghPage() {
         { name: "For Roofers", item: "https://whoza.ai/for-roofers" },
         { name: "Edinburgh", item: "https://whoza.ai/for-roofers-edinburgh" },
       ]} />
-      <FAQPageSchema faqs={faqs} />
+      <div className="trade-faq">
+      <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
+      </div>
 
             <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
       <CityTradeSchema trade="Roofer" tradePlural="Roofers" city="Edinburgh" region="City of Edinburgh" pageUrl="https://whoza.ai/for-roofers-edinburgh" />
@@ -89,7 +91,7 @@ export default function ForRooferEdinburghPage() {
                   <Home className="w-4 h-4" />
                   Roofers in Edinburgh
                 </div>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   Never Miss a{" "}
                   <span className="text-slate-400">Roofer</span>{" "}
                   Job in Edinburgh Again

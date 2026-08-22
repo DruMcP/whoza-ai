@@ -12,10 +12,11 @@
 
 export interface FAQPageSchemaProps {
   faqs: { question: string; answer: string }[]
+  speakableSelectors?: string[]
 }
 
-export function FAQPageSchema({ faqs }: FAQPageSchemaProps) {
-  const schema = {
+export function FAQPageSchema({ faqs, speakableSelectors }: FAQPageSchemaProps) {
+  const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: faqs.map((faq) => ({
@@ -26,6 +27,13 @@ export function FAQPageSchema({ faqs }: FAQPageSchemaProps) {
         text: faq.answer,
       },
     })),
+  }
+
+  if (speakableSelectors && speakableSelectors.length > 0) {
+    schema.speakable = {
+      "@type": "SpeakableSpecification",
+      cssSelector: speakableSelectors,
+    }
   }
 
   return (

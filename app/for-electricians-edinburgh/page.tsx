@@ -73,7 +73,9 @@ export default function ForElectricianEdinburghPage() {
         { name: "For Electricians", item: "https://whoza.ai/for-electricians" },
         { name: "Edinburgh", item: "https://whoza.ai/for-electricians-edinburgh" },
       ]} />
-      <FAQPageSchema faqs={faqs} />
+      <div className="trade-faq">
+      <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
+      </div>
 
             <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
       <CityTradeSchema trade="Electrician" tradePlural="Electricians" city="Edinburgh" region="City of Edinburgh" pageUrl="https://whoza.ai/for-electricians-edinburgh" />
@@ -89,7 +91,7 @@ export default function ForElectricianEdinburghPage() {
                   <Wrench className="w-4 h-4" />
                   Electricians in Edinburgh
                 </div>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   Never Miss an{" "}
                   <span className="text-yellow-400">Electrician</span>{" "}
                   Job in Edinburgh Again

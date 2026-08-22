@@ -189,7 +189,7 @@ export default function ForHvacPage() {
         { name: "Home", item: "https://whoza.ai" },
         { name: "For Heating Engineers", item: "https://whoza.ai/for-heating-engineers" },
       ]} />
-      <FAQPageSchema faqs={faqs} />
+      <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
 
       <main id="main-content" role="main" className="pb-24 lg:pb-0">
         {/* HERO */}
@@ -201,7 +201,7 @@ export default function ForHvacPage() {
                   <Flame className="w-4 h-4" />
                   Built for UK Heating Engineers
                 </div>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 trade-headline">
                   Never Miss a Boiler Breakdown — Even at 2am
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8">
@@ -370,8 +370,8 @@ export default function ForHvacPage() {
         <div className="section-divider" />
 
 {/* FAQ */}
-        <section id="faq" className="section-padding-lg bg-white relative">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="faq" className="trade-faq section-padding-lg bg-white relative">
+          <div className="trade-faq max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <span className="inline-block px-4 py-1.5 rounded-full bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] text-sm font-medium mb-4">
                 Got Questions?

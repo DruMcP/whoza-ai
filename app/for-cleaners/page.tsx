@@ -94,7 +94,7 @@ export default function ForCleanersPage() {
         { name: "Home", item: "https://whoza.ai" },
         { name: "For Cleaners", item: "https://whoza.ai/for-cleaners" },
       ]} />
-      <FAQPageSchema faqs={faqs} />
+      <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
 
       {/* Schema JSON-LD */}
             <script
@@ -133,7 +133,7 @@ export default function ForCleanersPage() {
                   <Sparkles className="w-4 h-4" />
                   Built for UK Cleaners
                 </div>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   AI Call Answering for Cleaners UK —{" "}
                   <span className="text-blue-400">Never Miss a Booking</span>
                 </h1>

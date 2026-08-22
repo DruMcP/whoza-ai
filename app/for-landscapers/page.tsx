@@ -90,7 +90,7 @@ export default function ForLandscapersPage() {
         { name: "Home", item: "https://whoza.ai" },
         { name: "For Landscapers", item: "https://whoza.ai/for-landscapers" },
       ]} />
-      <FAQPageSchema faqs={faqs} />
+      <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
 
       {/* Schema JSON-LD */}
             <script
@@ -129,7 +129,7 @@ export default function ForLandscapersPage() {
                   <TreePine className="w-4 h-4" />
                   Built for UK Landscapers
                 </div>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   AI Call Answering for{" "}
                   <span className="text-green-400">Landscapers</span>{" "}
                   UK — Never Miss a Job

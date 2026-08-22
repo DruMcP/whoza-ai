@@ -162,7 +162,9 @@ export default function ForBuildersPage() {
         { name: "Home", item: "https://whoza.ai" },
         { name: "For Builders", item: "https://whoza.ai/for-builders" },
       ]} />
-      <FAQPageSchema faqs={faqs} />
+      <div className="trade-faq">
+      <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
+      </div>
 
       <main id="main-content" role="main" className="pb-24 lg:pb-0">
         {/* HERO */}
@@ -174,7 +176,7 @@ export default function ForBuildersPage() {
                   <Building className="w-4 h-4" />
                   Built for UK Builders
                 </div>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 trade-headline">
                   Never Miss a Building Enquiry — Even From Site
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8">

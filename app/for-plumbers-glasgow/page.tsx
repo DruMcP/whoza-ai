@@ -73,7 +73,9 @@ export default function ForPlumberGlasgowPage() {
         { name: "For Plumbers", item: "https://whoza.ai/for-plumbers" },
         { name: "Glasgow", item: "https://whoza.ai/for-plumbers-glasgow" },
       ]} />
-      <FAQPageSchema faqs={faqs} />
+      <div className="trade-faq">
+      <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
+      </div>
 
             <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
       <CityTradeSchema trade="Plumber" tradePlural="Plumbers" city="Glasgow" region="Greater Glasgow" pageUrl="https://whoza.ai/for-plumbers-glasgow" />
@@ -89,7 +91,7 @@ export default function ForPlumberGlasgowPage() {
                   <Wrench className="w-4 h-4" />
                   Plumbers in Glasgow
                 </div>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   Never Miss a{" "}
                   <span className="text-blue-400">Plumber</span>{" "}
                   Job in Glasgow Again

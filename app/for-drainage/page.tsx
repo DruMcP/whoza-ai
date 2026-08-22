@@ -94,7 +94,7 @@ export default function ForDrainagePage() {
         { name: "Home", item: "https://whoza.ai" },
         { name: "For Drainage", item: "https://whoza.ai/for-drainage" },
       ]} />
-      <FAQPageSchema faqs={faqs} />
+      <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
 
       {/* Schema JSON-LD */}
             <script
@@ -133,7 +133,7 @@ export default function ForDrainagePage() {
                   <Droplets className="w-4 h-4" />
                   Built for UK Drainage Companies
                 </div>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   AI Call Answering for{" "}
                   <span className="text-blue-400">Drainage</span>{" "}
                   Companies UK — Never Miss an Emergency
