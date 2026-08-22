@@ -218,7 +218,7 @@ export default function ForJoinersPage() {
                   icon: Hammer,
                   title: "Commercial Clients Expect Fast Response",
                   description: "A builder calls about joinery for a 6-house development. He needs staircases, doors, and skirting for all units. You don't answer because you're in the workshop. He calls another joiner who picks up immediately. You lost a £40,000 contract because the phone rang at the wrong moment.",
-                  stat: "78% hire first responder",
+                  stat: "First responder gets the job",
                   color: "amber",
                 },
               ].map((item, idx) => {

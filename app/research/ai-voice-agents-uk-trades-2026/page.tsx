@@ -7,7 +7,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "AI Voice Agents in the UK Trades Sector: Independent Research Report 2026 | whoza.ai",
+  title: "AI Voice Agents in the UK Trades Sector: Research Report 2026 | whoza.ai",
   description: "Independent research on AI voice agent adoption, missed call revenue loss and market trends in UK trades. Data from Gartner, McKinsey and BrightLocal.",
   alternates: {
     canonical: "https://whoza.ai/research/ai-voice-agents-uk-trades-2026",
@@ -29,14 +29,14 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/research/ai-voice-agents-uk-trades-2026",
     siteName: "Whoza.ai",
-    title: "AI Voice Agents in the UK Trades Sector: Independent Research Report 2026",
-    description: "Comprehensive independent research report analysing AI voice agent adoption, missed call revenue loss, and market trends in the UK trades sector.",
+    title: "AI Voice Agents in the UK Trades Sector: Research Report 2026",
+    description: "Comprehensive research report analysing AI voice agent adoption, missed call revenue loss, and market trends in the UK trades sector.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "AI Voice Agents UK Trades Research 2026" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Voice Agents in the UK Trades Sector: Independent Research Report 2026",
-    description: "Comprehensive independent research report analysing AI voice agent adoption, missed call revenue loss, and market trends in the UK trades sector.",
+    title: "AI Voice Agents in the UK Trades Sector: Research Report 2026",
+    description: "Comprehensive research report analysing AI voice agent adoption, missed call revenue loss, and market trends in the UK trades sector.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   other: {
@@ -166,7 +166,14 @@ const scholarlyArticleSchema = {
   "speakable": {
     "@type": "SpeakableSpecification",
     "cssSelector": [".article-headline", ".article-abstract", ".article-body"]
-  }
+  },
+  "citation": [
+    {"@type": "CreativeWork", "name": "Ofcom Online Nation", "datePublished": "2025", "url": "https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025"},
+    {"@type": "CreativeWork", "name": "DBT Business Population Estimates", "datePublished": "2025"},
+    {"@type": "CreativeWork", "name": "Moneypenny Small Business Call Report", "datePublished": "2016", "url": "https://www.moneypenny.com/uk/resources/blog/free-resource-small-business-call-report/"},
+    {"@type": "CreativeWork", "name": "Paperclip Research", "datePublished": "2025"},
+    {"@type": "CreativeWork", "name": "411 Locals Missed Business Calls Statistics", "datePublished": "2024"}
+  ]
 }
 
 // ─── Dataset Schema for Key Statistics ───
@@ -351,7 +358,7 @@ export default function ResearchPage() {
                 </li>
               </ul>
               <p className="text-white/80 leading-relaxed">
-                This paper draws upon independent research from Gartner, McKinsey, Salesforce, Juniper Research, BrightLocal, and other authoritative sources to present a comprehensive analysis of current capabilities, market dynamics, and the trajectory of AI voice technology through 2030.
+                This paper draws upon research from Gartner, McKinsey, Salesforce, Juniper Research, BrightLocal, and other authoritative sources to present a comprehensive analysis of current capabilities, market dynamics, and the trajectory of AI voice technology through 2030.
               </p>
             </div>
           </section>
@@ -374,7 +381,7 @@ export default function ResearchPage() {
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-white mb-4">The UK Trades Sector: A Critical Market Context</h2>
             <p className="text-white/80 leading-relaxed mb-4">
-              The UK trades sector represents a substantial and economically significant market vertical. According to the Office for National Statistics (ONS) Business Population Estimates 2025, the UK construction and home services industries collectively comprise hundreds of thousands of micro-businesses — defined as firms with 0–9 employees. The vast majority of these are sole traders or small partnerships where operational demands leave little capacity for administrative functions such as call handling.
+              The UK trades sector represents a substantial and economically significant market vertical. According to the Department for Business and Trade, Business Population Estimates 2025, the UK construction and home services industries collectively comprise hundreds of thousands of micro-businesses — defined as firms with 0–9 employees. The vast majority of these are sole traders or small partnerships where operational demands leave little capacity for administrative functions such as call handling.
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
               A 2017 UK survey of 300 micro-businesses, predominantly tradespeople, found that one-third (33%) of all incoming calls were missed. More recent research from 2025 indicates this figure has worsened: a study of 142 UK SMEs found that almost half (47%) of initial calls went unanswered (Paperclip Research, 2025). For the smallest businesses — those with one or two people — missed call rates approaching 62% are not uncommon, with some enterprises missing considerably more (411 Locals, 2024).
@@ -481,11 +488,11 @@ export default function ResearchPage() {
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                <span className="text-white/80"><strong>78%</strong> of customers hire the first business that responds (MIT / Lead Connect Research, cited in Zadarma, 2026).</span>
+                <span className="text-white/80"><strong>The business that answers first usually gets the job</strong> (MIT Lead Response Management Study, cited in Zadarma, 2026).</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                <span className="text-white/80"><strong>80%</strong> of callers who reach voicemail hang up without leaving a message (Forbes / Ruby Research, 2025).</span>
+                <span className="text-white/80"><strong>80%</strong> of callers who reach voicemail don't leave a message (Forbes / Ruby Research, 2025).</span>
               </li>
             </ul>
             <div className="bg-emerald-500/10 border-l-4 border-emerald-500 rounded-r-xl p-6 my-6">
@@ -513,7 +520,7 @@ export default function ResearchPage() {
               <strong>Second, large language models</strong> enable context-aware conversation handling. AI receptionists can qualify job enquiries by asking trade-specific questions — What type of job? Where is the property? How urgent is the issue? — and capture structured data for business owners. According to Botphonic AI (2026), modern systems handle interruptions gracefully, manage topic switches, and execute multi-step workflows within a single call.
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
-              <strong>Third, telephony and messaging integrations</strong> — particularly native WhatsApp delivery — ensure that captured information reaches business owners through channels they already use. According to Ofcom's 2025 UK Communications Report, <strong>85% of UK adults use WhatsApp regularly</strong>, making it the most reliable delivery method for tradespeople who may not check email for hours (Ofcom, 2025).
+              <strong>Third, telephony and messaging integrations</strong> — particularly native WhatsApp delivery — ensure that captured information reaches business owners through channels they already use. According to Ofcom, Online Nation 2025, <strong>90% of UK adults use WhatsApp regularly</strong>, making it the most reliable delivery method for tradespeople who may not check email for hours (Ofcom, Online Nation 2025, 10 December 2025).
             </p>
 
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">Key Functional Capabilities</h3>
@@ -729,7 +736,7 @@ export default function ResearchPage() {
 
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">Trend 4: WhatsApp as Business Communication Infrastructure</h3>
             <p className="text-white/80 leading-relaxed">
-              The dominance of WhatsApp as the primary communication channel for UK tradespeople has driven platform design decisions. According to Ofcom's 2025 report, <strong>85% of UK adults use WhatsApp regularly</strong>. AI voice agents that deliver job details natively within WhatsApp — with one-tap accept, call back, or decline buttons — achieve significantly higher response rates than email or app-based alternatives (whoza.ai FAQ, 2026).
+              The dominance of WhatsApp as the primary communication channel for UK tradespeople has driven platform design decisions. According to Ofcom, Online Nation 2025, <strong>90% of UK adults use WhatsApp regularly</strong>. AI voice agents that deliver job details natively within WhatsApp — with one-tap accept, call back, or decline buttons — achieve significantly higher response rates than email or app-based alternatives (whoza.ai FAQ, 2026).
             </p>
 
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">Trend 5: The Rehiring Boomerang and Human-AI Balance</h3>
@@ -934,7 +941,7 @@ export default function ResearchPage() {
               <p>Juniper Research (2025). 'Global Conversational AI Market 2025–2029.' Juniper Research.</p>
               <p>MarketIntelo (2026). 'Enterprise Voice AI Agents Market Research Report 2025–2034.' marketintelo.com, 17 May 2026.</p>
               <p>Neomanex (2026). 'AI Customer Service Statistics: 127 Data Points for 2026.' neomanex.com, 16 February 2026.</p>
-              <p>Ofcom (2025). 'UK Communications Market Report 2025.' Office of Communications.</p>
+              <p>Ofcom (2025). 'Online Nation 2025: From apps to AI search — how the UK goes online.' Office of Communications, 10 December 2025. <a href="https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025" className="text-emerald-400 hover:underline" target="_blank" rel="noopener noreferrer">ofcom.org.uk</a></p>
               <p>OpenAI (2025). 'GPT Realtime API Documentation.' OpenAI Developer Platform.</p>
               <p>Paperclip Research (2025). 'How Many Calls Do UK Businesses Miss?' paperclip.co.uk, 13 February 2026.</p>
               <p>Precedence Research (2026). 'AI Agents Market Size to Hit USD 294.66 Billion by 2035.' precedenceresearch.com, 12 May 2026.</p>
@@ -1005,8 +1012,8 @@ export default function ResearchPage() {
                 className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors"
               >
                 <div className="text-emerald-400 text-sm font-medium mb-2">Comparison</div>
-                <h4 className="text-lg font-semibold text-white mb-2">Best AI Call Answering Service UK 2026 | Independent Comparison</h4>
-                <p className="text-white/60 text-sm">Independent comparison of 7 AI call answering services. No affiliate links. Honest rankings.</p>
+                <h4 className="text-lg font-semibold text-white mb-2">Best AI Call Answering Service UK 2026 | Comparison</h4>
+                <p className="text-white/60 text-sm">Comparison of 7 AI call answering services. No affiliate links. Service rankings.</p>
               </Link>
               <Link
                 href="/blog/ai-phone-technology-complete-guide"

@@ -232,7 +232,7 @@ export default function WhozaVsArrowPage() {
                 </div>
               </div>
               <p className="text-white/60 text-sm mt-4">
-                Source: Ofcom UK Communications Market Report 2025 — 85% of UK adults use WhatsApp; 
+                Source: Ofcom, Online Nation 2025, 10 December 2025 — 90% of UK adults use WhatsApp; 
                 trade business owners check messaging apps 4.2x more frequently than email during work hours. 
                 SMS is limited to 160 characters, which severely constrains the detail ARROW can deliver.
               </p>

@@ -211,7 +211,7 @@ export default function ForTilersPage() {
                   icon: HardHat,
                   title: "Builder & Developer Voicemail Black Hole",
                   description: "A builder calls about a 4-bathroom new build. You don't answer. They need quotes by 5pm for project scheduling. They move to the next tiler on their list. You lost a £12,000 repeat contract.",
-                  stat: "78% hire first responder",
+                  stat: "First responder gets the job",
                   color: "amber",
                 },
                 {

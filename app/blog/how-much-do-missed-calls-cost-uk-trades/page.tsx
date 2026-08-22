@@ -7,7 +7,7 @@ import { ArrowRight, PoundSterling, PhoneOff, TrendingUp, AlertTriangle, User, C
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Missed Calls Cost UK Trades? | Analysis 2026",
-  description: "What missed calls really cost UK trades: ONS data reveals £12K+ in lost revenue yearly. How AI answering recovers every enquiry. Read now.",
+  description: "What missed calls really cost UK trades: analysis reveals £12K+ in lost revenue yearly. How AI answering recovers every enquiry. Read now.",
   keywords: [
     "missed calls cost UK trades",
     "cost of unanswered calls plumber",
@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/blog/how-much-do-missed-calls-cost-uk-trades",
     siteName: "Whoza.ai",
     title: "How Much Do Missed Calls Cost UK Trades?",
-    description: "What missed calls really cost UK trades: ONS data reveals £12K+ in lost revenue yearly. How AI answering recovers every enquiry. Read now.",
+    description: "What missed calls really cost UK trades: analysis reveals £12K+ in lost revenue yearly. How AI answering recovers every enquiry. Read now.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Missed Calls Cost UK Trades" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "How Much Do Missed Calls Cost UK Trades?",
-    description: "What missed calls really cost UK trades: ONS data reveals £12K+ in lost revenue yearly. How AI answering recovers every enquiry. Read now.",
+    description: "What missed calls really cost UK trades: analysis reveals £12K+ in lost revenue yearly. How AI answering recovers every enquiry. Read now.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {
@@ -142,18 +142,14 @@ export default function MissedCallsCostPage() {
               <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-6 text-center">
                 <div className="text-4xl font-extrabold text-red-400 mb-2">33%</div>
                 <p className="text-sm text-white/60">of small businesses fail to answer incoming calls</p>
-                <p className="text-xs text-white/40 mt-2">Moneypenny Small Business Call Report, 2020</p>
+                <p className="text-xs text-white/40 mt-2">Moneypenny Small Business Call Report, 2016</p>
               </div>
               <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-6 text-center">
                 <div className="text-4xl font-extrabold text-red-400 mb-2">69%</div>
-                <p className="text-sm text-white/60">of voicemail callers hang up without leaving a message</p>
-                <p className="text-xs text-white/40 mt-2">Moneypenny Small Business Call Report, 2020</p>
+                <p className="text-sm text-white/60">of voicemail callers don't leave a message</p>
+                <p className="text-xs text-white/40 mt-2">Moneypenny Small Business Call Report, 2016</p>
               </div>
-              <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-6 text-center">
-                <div className="text-4xl font-extrabold text-red-400 mb-2">78%</div>
-                <p className="text-sm text-white/60">of customers hire whoever responds first</p>
-                <p className="text-xs text-white/40 mt-2">JP Automations Consumer Study 2026</p>
-              </div>
+
             </div>
           </section>
 
@@ -390,7 +386,7 @@ export default function MissedCallsCostPage() {
                 <p className="text-white/60 text-sm">Most tradespeople check voicemail hours later, if at all. The caller expects a callback within 30 minutes. When you call back at 6pm, they've already hired someone else.</p>
               </div>
               <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-4">
-                <h4 className="font-semibold text-red-400 mb-1">Scenario 2: They call your competitor (78% of callers)</h4>
+                <h4 className="font-semibold text-red-400 mb-1">Scenario 2: They call your competitor</h4>
                 <p className="text-white/60 text-sm">The customer calls 3-4 businesses from Google. The first one that answers gets the job. You weren't even in the running because you didn't pick up.</p>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-lg p-4">
@@ -470,7 +466,7 @@ export default function MissedCallsCostPage() {
             {[
               { q: "How many calls do tradespeople actually miss?", a: "The average UK tradesperson misses 6 calls per working day — 30 per week, 1,440 per year. Approximately 40% of these are genuine new enquiries, meaning 576 potential jobs are missed annually." },
               { q: "What's the average value of a missed call?", a: "At £280 average job value and 35% conversion rate, each missed enquiry is worth £98 in expected revenue. With 576 missed enquiries per year, that's £56,448 in lost revenue annually for a typical tradesperson." },
-              { q: "Do customers really hire the first responder?", a: "Yes. 78% of customers hire the first business that responds. In emergency situations, this number is even higher — customers call 3-4 businesses simultaneously and hire whoever answers first." },
+              { q: "Do customers really hire the first responder?", a: "Yes. The business that answers first usually gets the job. In emergency situations, customers call 3-4 businesses simultaneously and hire whoever answers first." },
               { q: "What happens if I return the call within 5 minutes?", a: "Returning a missed call within 5 minutes increases conversion by 391%. After 30 minutes, your odds of booking the job drop by 80%. Speed is the single most important factor in recovering missed calls." },
               { q: "How much can I save with AI call answering?", a: "AI call answering costs £59-£399 per month. If you miss just 5 calls per week worth £280 each, that's £72,800 in potential annual revenue. Even capturing 20% of those missed calls covers the AI cost many times over." },
             ].map((faq, i) => (
@@ -518,7 +514,7 @@ export default function MissedCallsCostPage() {
                 <div className="w-8 h-8 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center font-bold shrink-0">4</div>
                 <div>
                   <h4 className="font-semibold text-white mb-1">The caller calls your competitor</h4>
-                  <p className="text-white/60 text-sm">They open Google and call the next number. The first business that answers gets the job 78% of the time. You are not even in the running.</p>
+                  <p className="text-white/60 text-sm">They open Google and call the next number. The first business that answers usually gets the job. You are not even in the running.</p>
                 </div>
               </div>
               <div className="flex gap-4">

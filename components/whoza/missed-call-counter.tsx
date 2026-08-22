@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 
-// Based on: 33% of small businesses fail to answer incoming calls (Moneypenny Small Business Call Report, 2020)
+// Based on: 33% of small businesses fail to answer incoming calls (Moneypenny Small Business Call Report, 2016)
 // ~2.4M UK trade businesses, ~8 calls/day average
 // = ~2,640,000 missed calls/day = ~110,000/hour = ~30.6/second
 const MISSED_CALLS_PER_SECOND = 30.6
@@ -88,7 +88,7 @@ export function MissedCallCounter() {
           in lost work.
         </p>
         <p className="text-xs mt-1 text-gray-500">
-          Source: Moneypenny Small Business Call Report, 2020, 33% of small businesses fail to answer
+          Source: Moneypenny Small Business Call Report, 2016, 33% of small businesses fail to answer
         </p>
         <p className="text-xs mt-1 font-medium text-emerald-500">
           That&apos;s why we built Katie&apos;s Revenue Team

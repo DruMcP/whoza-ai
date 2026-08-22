@@ -211,7 +211,7 @@ export default function ForDrainagePage() {
                   icon: Building2,
                   title: "Insurance & Commercial Contracts",
                   description: "Insurance companies and property managers expect fast callback — voicemail loses contracts. A property manager calls about a blocked drain at a rental property. You don't answer. They call your competitor who picks up immediately. You lost a £280 repair plus the ongoing commercial contract worth £15,000+ annually.",
-                  stat: "78% hire first responder",
+                  stat: "First responder gets the job",
                   color: "amber",
                 },
                 {

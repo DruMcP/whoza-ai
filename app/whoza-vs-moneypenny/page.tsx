@@ -229,10 +229,7 @@ export default function VsMoneypennyPage() {
               </h2>
               <div className="bg-white/5 border border-white/10 rounded-xl p-6">
                 <p className="text-white/70 leading-relaxed mb-4">
-                  The AI vs human debate isn't ideological — it's mathematical. A full-time human receptionist 
-                  costs £20,000–£25,000/year in the UK (ONS 2024 wage data). Even a part-time shared service 
-                  like Moneypenny starts at £150/month (£1,800/year). AI call handling at £59/month (£708/year) 
-                  represents a 60–85% cost reduction.
+                  The AI vs human debate isn't ideological — it's mathematical. A receptionist earns £18,000 starter, £22,000 experienced (National Careers Service, gov.uk). With employer National Insurance and pension contributions the annual cost is roughly £20,000–£25,000. Even a part-time shared service like Moneypenny starts at £150/month (£1,800/year). AI call handling at £59/month (£708/year) costs significantly less. This comparison is on call-handling cost alone; a receptionist works 38–40 hours a week and handles tasks beyond answering calls.
                 </p>
                 <p className="text-white/70 leading-relaxed mb-4">
                   But cost isn't everything. Moneypenny's humans excel at empathy, relationship-building, 

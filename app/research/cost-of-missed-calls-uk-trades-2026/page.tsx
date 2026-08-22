@@ -45,7 +45,7 @@ export default function CostOfMissedCallsPage() {
 
             <h2 className="text-2xl font-bold mb-4 mt-8">Key Findings</h2>
             <ul className="list-disc list-inside text-white/80 mb-6 space-y-2">
-              <li>33% of small UK trade businesses fail to answer incoming calls (Moneypenny Small Business Call Report, 2020)</li>
+              <li>33% of small UK trade businesses fail to answer incoming calls (Moneypenny Small Business Call Report, 2016)</li>
               <li>Average revenue per trade enquiry: £420 (plumbing) to £8,500 (builders)</li>
               <li>24% of missed calls result in a competitor being contacted within 15 minutes</li>
               <li>Emergency call abandonment rates peak at 34% during lunch hours (12:00–14:00)</li>

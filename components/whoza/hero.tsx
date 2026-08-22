@@ -267,7 +267,7 @@ export function Hero() {
 
         <p className="text-base text-slate-400 leading-normal m-0">
           <span className="sr-only">
-            Live statistics from the Moneypenny Small Business Call Report (2020):
+            Live statistics from the Moneypenny Small Business Call Report (2016):
           </span>
           Since you opened this page, UK trades have missed{" "}
           <span
@@ -287,7 +287,7 @@ export function Hero() {
           in lost work.
         </p>
         <p className="text-xs text-gray-500 my-2 mb-1">
-          Source: Moneypenny Small Business Call Report, 2020, 33% of small businesses fail to answer
+          Source: Moneypenny Small Business Call Report, 2016, 33% of small businesses fail to answer
         </p>
       </section>
     </>

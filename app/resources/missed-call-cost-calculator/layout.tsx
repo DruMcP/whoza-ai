@@ -53,12 +53,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   {
                     "@type": "Question",
                     "name": "How much do missed calls cost UK tradespeople?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Missed calls cost UK tradespeople £3,000-£12,000 per year on average. Based on the Moneypenny Small Business Call Report (2020), 33% of small businesses fail to answer incoming calls. With an average job value of £280 and 35% conversion rate, 10 missed calls per week = £5,096 in lost annual revenue." },
+                    "acceptedAnswer": { "@type": "Answer", "text": "Missed calls cost UK tradespeople £3,000-£12,000 per year on average. Based on the Moneypenny Small Business Call Report (2016), 33% of small businesses fail to answer incoming calls. With an average job value of £280 and 35% conversion rate, 10 missed calls per week = £5,096 in lost annual revenue." },
                   },
                   {
                     "@type": "Question",
                     "name": "What percentage of calls do trade businesses miss?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "33% of small UK businesses fail to answer incoming calls, according to the Moneypenny Small Business Call Report (2020). Plumbers miss the most calls (68%) because they're often working in areas with poor phone signal." },
+                    "acceptedAnswer": { "@type": "Answer", "text": "33% of small UK businesses fail to answer incoming calls, according to the Moneypenny Small Business Call Report (2016). Plumbers miss the most calls (68%) because they're often working in areas with poor phone signal." },
                   },
                   {
                     "@type": "Question",

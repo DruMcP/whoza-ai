@@ -107,7 +107,18 @@ const scholarlyArticleSchema = {
   "speakable": {
     "@type": "SpeakableSpecification",
     "cssSelector": [".article-headline", ".article-abstract", ".article-body"]
-  }
+  },
+  "citation": [
+    {"@type": "CreativeWork", "name": "Moneypenny Small Business Call Report", "datePublished": "2016", "url": "https://www.moneypenny.com/uk/resources/blog/free-resource-small-business-call-report/"},
+    {"@type": "CreativeWork", "name": "Forbes/Ruby Research", "datePublished": "2025"},
+    {"@type": "CreativeWork", "name": "PATLive Missed Call Statistics", "datePublished": "2025"},
+    {"@type": "CreativeWork", "name": "Dialzara Missed Call Statistics", "datePublished": "2025"},
+    {"@type": "CreativeWork", "name": "Replicant AI State of Customer Service", "datePublished": "2024"},
+    {"@type": "CreativeWork", "name": "IDC AI ROI Study", "datePublished": "2025"},
+    {"@type": "CreativeWork", "name": "Voco HQ True Cost of Missed Calls", "datePublished": "2026"},
+    {"@type": "CreativeWork", "name": "EchoCall AI Voice Agent Statistics", "datePublished": "2026"},
+    {"@type": "CreativeWork", "name": "411 Locals Missed Business Calls Statistics", "datePublished": "2024"}
+  ],
 }
 
 // ─── Dataset Schema for Key Statistics ───
@@ -235,7 +246,7 @@ export default function ResearchPage() {
         <article className="prose prose-lg max-w-none prose-invert">
           <h2>Executive Summary</h2>
           <p>
-            The telephone remains the primary channel through which UK trade businesses acquire new customers. Yet the majority of these businesses are structurally unable to answer the calls that represent their livelihood. This report examines the financial impact of missed calls on the UK trades sector, drawing on independent research, industry surveys, and economic data to quantify a problem that costs the sector billions of pounds annually.
+            The telephone remains the primary channel through which UK trade businesses acquire new customers. Yet the majority of these businesses are structurally unable to answer the calls that represent their livelihood. This report examines the financial impact of missed calls on the UK trades sector, drawing on research, industry surveys, and economic data to quantify a problem that costs the sector billions of pounds annually.
           </p>
           <p>
             For trade businesses considering <Link href="/" className="text-emerald-400 hover:underline">AI-powered call answering</Link>, the data provides a compelling case. A typical plumber, electrician, or builder loses between £50,000 and £80,000 annually through missed calls, voicemail abandonment, and competitive displacement. <Link href="/blog/ai-receptionist-vs-human-cost-guide-2026" className="text-emerald-400 hover:underline">AI receptionists cost 94% less than human staff</Link> while delivering 24/7 coverage and unlimited call handling.
@@ -366,12 +377,12 @@ export default function ResearchPage() {
 
           <h3>The Voicemail Tax</h3>
           <p>
-            Research confirms voicemail is effectively a dead end. 80% of callers who reach voicemail hang up without leaving a message. Of the 20% who leave a message, only 40% receive a callback within 24 hours. Voicemail captures approximately 8% of potential leads — a 92% loss rate (Forbes/Ruby, 2025).
+            Research confirms voicemail is effectively a dead end. 80% of callers who reach voicemail don't leave a message. Of the 20% who leave a message, only 40% receive a callback within 24 hours. Voicemail captures approximately 8% of potential leads — a 92% loss rate (Forbes/Ruby, 2025).
           </p>
 
           <h3>Competitive Displacement</h3>
           <p>
-            The most damaging hidden cost is competitive displacement. Dialzara's 2025 research found that 62% of unanswered callers immediately contact a competitor. Lead Connect's analysis confirmed that 78% of customers hire the first business that responds. When a trade business misses a call, the caller does not wait — they move to the next name on their list (Dialzara, 2025; Lead Connect, 2023).
+            The most damaging hidden cost is competitive displacement. Dialzara's 2025 research found that 62% of unanswered callers immediately contact a competitor. The business that answers first usually gets the job. When a trade business misses a call, the caller does not wait — they move to the next name on their list (Dialzara, 2025).
           </p>
 
           <h2>What Tradespeople Say: Industry Voices</h2>
@@ -456,9 +467,8 @@ export default function ResearchPage() {
             <li>BT/Avaya (2025). "Cost of Missed Calls to UK Businesses." Cited in Voco HQ, 2026.</li>
             <li>Dialzara (2025). "Missed Call Statistics: 62% Contact Competitor." dialzara.com.</li>
             <li>EchoCall (2026). "AI Voice Agent & Conversational AI Statistics 2026." echocall.de.</li>
-            <li>Forbes/Ruby Research (2025). "80% of Callers Hang Up on Voicemail." Forbes.</li>
+            <li>Forbes/Ruby Research (2025). "80% of Callers Don't Leave a Message." Forbes.</li>
             <li>IDC (2025). "AI ROI Study: Payback Periods and Returns." International Data Corporation.</li>
-            <li>Lead Connect (2023). "78% of Customers Hire First Responder." leadconnect.com.</li>
             <li>Moneypenny (2025). "Receptionist Service Pricing and Comparison." moneypenny.co.uk.</li>
             <li>PATLive (2025). "Missed Call Statistics: 85% Never Call Back." patlive.com.</li>
             <li>Replicant AI (2024). "State of Customer Service: Missed Call Rates by Business Size." replicant.ai.</li>

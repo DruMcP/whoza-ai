@@ -207,7 +207,7 @@ export default function ForLandscapersPage() {
                   icon: Building,
                   title: "Commercial Clients Go to First Responder",
                   description: "An estate manager calls about a £4,000/month maintenance contract for a hotel grounds. You don't answer because you're laying patio slabs. They call competitor #2 who answers immediately. You lost £48,000 in annual recurring revenue.",
-                  stat: "78% hire first responder",
+                  stat: "First responder gets the job",
                   color: "amber",
                 },
                 {

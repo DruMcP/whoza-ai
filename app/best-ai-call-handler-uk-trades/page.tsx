@@ -629,10 +629,10 @@ export default function BestAICallHandlerPage() {
           Before comparing solutions, let us understand the scale of the problem. A typical UK plumber receives 8–12 calls per day, of which 5–7 go unanswered while they are under a sink, on a roof, or driving between jobs. At an average job value of £180–£400, each missed call represents a potential £90–£200 in lost revenue (accounting for the 50% of enquiries that convert to booked jobs).
         </p>
         <p className="text-white/70 leading-relaxed mb-6">
-          Multiply that by 5 working days, and you are looking at £450–£1,000 per week in lost revenue. Over a year, that is £23,400–£52,000 for a single plumber. For a multi-van operation, the numbers scale linearly. The Moneypenny Small Business Call Report (2020) confirms this: 33% of small UK businesses fail to answer incoming calls, and the Federation of Small Businesses (FSB) estimates that missed calls cost UK small businesses £1,200 per year on average — but for trades with higher job values, the figure is significantly higher.
+          Multiply that by 5 working days, and you are looking at £450–£1,000 per week in lost revenue. Over a year, that is £23,400–£52,000 for a single plumber. For a multi-van operation, the numbers scale linearly. The Moneypenny Small Business Call Report (2016) confirms this: 33% of small UK businesses fail to answer incoming calls, and the Federation of Small Businesses (FSB) estimates that missed calls cost UK small businesses £1,200 per year on average — but for trades with higher job values, the figure is significantly higher.
         </p>
         <p className="text-white/70 leading-relaxed mb-6">
-          The traditional solutions have clear limitations. Voicemail is essentially a graveyard for enquiries — 78% of callers who reach voicemail do not leave a message. Call forwarding to a family member is unreliable and unprofessional. Hiring a human receptionist costs £20,000–£25,000 per year plus National Insurance, pension contributions, and holiday cover. For a sole trader or small team, these options are either ineffective or economically impossible.
+          The traditional solutions have clear limitations. Voicemail is essentially a graveyard for enquiries — 69% of voicemail callers don't leave a message (Moneypenny Small Business Call Report, 2016). Call forwarding to a family member is unreliable and unprofessional. Hiring a human receptionist costs £20,000–£25,000 per year plus National Insurance, pension contributions, and holiday cover (ONS 2024 average wages data). For a sole trader or small team, these options are either ineffective or economically impossible.
         </p>
         <p className="text-white/70 leading-relaxed">
           AI call answering services emerged as the practical solution. They answer every call, 24/7, without sick days, holidays, or wage demands. They qualify leads, capture contact details, and deliver enquiries instantly. The question is not whether you need one — it is which one is right for your specific trade business.
@@ -766,7 +766,7 @@ export default function BestAICallHandlerPage() {
           <h2 className="text-3xl font-bold text-white mb-4">Bottom Line</h2>
           <p className="text-lg text-white/60 mb-8 max-w-2xl mx-auto">
             For UK tradespeople in 2026, AI call handling has gone from a luxury to a necessity.
-            The Moneypenny Small Business Call Report (2020) reports that 33% of small businesses fail to answer incoming calls - and every unanswered call is a job your competitor gets instead.
+            The Moneypenny Small Business Call Report (2016) reports that 33% of small businesses fail to answer incoming calls - and every unanswered call is a job your competitor gets instead.
           </p>
           <p className="text-lg text-white/60 mb-8 max-w-2xl mx-auto">
             If you want the most capable system - one that answers calls, collects reviews, tracks competitors,
@@ -785,7 +785,7 @@ export default function BestAICallHandlerPage() {
             Page compiled: 2026-07-12 · Competitors reviewed: whoza.ai, Clara (heyitsclara.com), Trade Receptionist (tradereceptionist.com),
             Moneypenny (moneypenny.com), Rosie AI (heyrosie.com), Down To Earth AI (downtoearthai.com), Bizwings (bizwings.ai) · All pricing and features verified against live sites as of July 2026
             <br />
-            <span className="mt-1 block">An independent comparison compiled from publicly available pricing, feature lists, and third-party reviews. Last updated: 2026-07-12.</span>
+            <span className="mt-1 block">A comparison compiled from publicly available pricing, feature lists, and third-party reviews. Last updated: 2026-07-12.</span>
           </p>
         </section>
       </main>

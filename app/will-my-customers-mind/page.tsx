@@ -135,7 +135,7 @@ export default function WillMyCustomersMindPage() {
               </div>
             </div>
             <p className="text-white/70 leading-relaxed">
-              The Moneypenny Small Business Call Report (2020) reports that 33% of small businesses fail to answer incoming calls. Every one of those is a job your competitor gets instead. Katie doesn't replace you — she replaces the beep.
+              The Moneypenny Small Business Call Report (2016) reports that 33% of small businesses fail to answer incoming calls. Every one of those is a job your competitor gets instead. Katie doesn't replace you — she replaces the beep.
             </p>
           </section>
 

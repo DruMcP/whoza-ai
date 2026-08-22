@@ -271,7 +271,7 @@ export default function ForPlumbersPage() {
                   icon: Wrench,
                   title: "Boiler Breakdowns on Sundays",
                   description: "Family with no hot water on a freezing Sunday morning. They call you first because you have great reviews. You don't answer. They call competitor #2 who answers immediately. You lost a £280 repair plus a £1,800 annual service contract.",
-                  stat: "78% hire first responder",
+                  stat: "First responder gets the job",
                   color: "amber",
                 },
                 {

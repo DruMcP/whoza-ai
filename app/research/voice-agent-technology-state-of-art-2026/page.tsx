@@ -829,7 +829,7 @@ export default function VoiceAgentTechnologyPage() {
                       Best AI Call Answering Service UK 2026
                     </div>
                     <div className="text-sm text-white/50">
-                      Independent comparison of 7 AI call answering services with real pricing and honest rankings.
+                      Comparison of 7 AI call answering services with real pricing and service rankings.
                     </div>
                   </div>
                 </div>

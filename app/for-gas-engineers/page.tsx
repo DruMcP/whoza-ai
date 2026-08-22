@@ -204,7 +204,7 @@ export default function ForGasEngineersPage() {
                   icon: Shield,
                   title: "CP12 Certificate Renewals Go to Voicemail",
                   description: "Landlord with 12 properties needs annual CP12s for all tenants. Leaves a voicemail. By the time you call back 4 hours later, they've already booked another Gas Safe engineer for the entire portfolio. You lost £960 in certificate work and a reliable annual repeat customer.",
-                  stat: "78% hire first responder",
+                  stat: "First responder gets the job",
                   color: "amber",
                 },
                 {

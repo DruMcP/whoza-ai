@@ -209,7 +209,7 @@ export default function ForCarpentersPage() {
                   icon: Hammer,
                   title: "Builder Enquiries Lost to Voicemail",
                   description: "A developer calls about fitting out 6 apartments with wardrobes and kitchens. They need fast response for project scheduling. You don't answer. They call competitor #2 who answers immediately. You lost a £28,000 contract and 6 months of repeat work.",
-                  stat: "78% hire first responder",
+                  stat: "First responder gets the job",
                   color: "amber",
                 },
                 {

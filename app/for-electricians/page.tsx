@@ -268,7 +268,7 @@ export default function ForElectriciansPage() {
                   icon: FileCheck,
                   title: "EICR Certificate Enquiries Go to Voicemail",
                   description: "Letting agent needs 8 EICRs done before a new tenancy starts next week. Leaves a voicemail. By the time you call back 3 hours later, they've already booked another electrician for the entire portfolio. You lost £1,440 in certificate work.",
-                  stat: "78% hire first responder",
+                  stat: "First responder gets the job",
                   color: "amber",
                 },
                 {

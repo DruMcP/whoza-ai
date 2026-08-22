@@ -224,7 +224,7 @@ export default function ForPestControlPage() {
                   icon: Building,
                   title: "Commercial Contracts Lost",
                   description: "Property managers and restaurant owners need fast response. They expect callback within the hour. Miss their call and they move to your competitor. Commercial contracts are worth £5,000-£50,000 annually.",
-                  stat: "78% hire first responder",
+                  stat: "First responder gets the job",
                   color: "blue",
                 },
               ].map((item, idx) => {

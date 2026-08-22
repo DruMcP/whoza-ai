@@ -178,7 +178,7 @@ export default function MissedCallCostCalculatorPage() {
               </div>
             </div>
             <p className="text-center text-xs text-slate-500 mt-4">
-              Source: Moneypenny Small Business Call Report, 2020
+              Source: Moneypenny Small Business Call Report, 2016
             </p>
           </div>
         </section>

@@ -120,7 +120,7 @@ const faqSchema = {
       "name": "Do callers leave voicemail when tradespeople don't answer?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "69% of callers who reach voicemail hang up without leaving a message.",
+        "text": "69% of callers who reach voicemail don't leave a message.",
       },
     },
     {
@@ -253,12 +253,12 @@ export default function MissedCallIndexPage() {
               3. Voicemail loses 69% of callers before the beep
             </h3>
             <p className="text-white/80 leading-relaxed text-lg mb-4">
-              <strong>69% of callers who reach voicemail hang up without leaving a message.</strong> Seven out of ten people who hit your recorded greeting are gone before the beep. Voicemail isn&apos;t a safety net. It&apos;s a polite way of telling customers to try your competitor.
+              <strong>69% of callers who reach voicemail don't leave a message.</strong> Seven out of ten people who hit your recorded greeting are gone before the beep. Voicemail isn&apos;t a safety net. It&apos;s a polite way of telling customers to try your competitor.
             </p>
             <figure className="mb-4">
               <Image
                 src="/images/chart_missed_call_funnel.webp"
-                alt="Where a week of calls goes: 12 inbound calls, 4 unanswered (33%), roughly 3 of those callers hanging up at voicemail (69%). Source: Moneypenny Small Business Call Report, 2020."
+                alt="Where a week of calls goes: 12 inbound calls, 4 unanswered (33%), roughly 3 of those callers hanging up at voicemail (69%). Source: Moneypenny Small Business Call Report, 2016."
                 width={1280}
                 height={720}
                 loading="lazy"
@@ -268,13 +268,13 @@ export default function MissedCallIndexPage() {
               <noscript>
                 <img
                   src="/images/chart_missed_call_funnel.png"
-                  alt="Where a week of calls goes: 12 inbound calls, 4 unanswered (33%), roughly 3 of those callers hanging up at voicemail (69%). Source: Moneypenny Small Business Call Report, 2020."
+                  alt="Where a week of calls goes: 12 inbound calls, 4 unanswered (33%), roughly 3 of those callers hanging up at voicemail (69%). Source: Moneypenny Small Business Call Report, 2016."
                   className="w-full rounded-xl"
                 />
               </noscript>
               <figcaption className="text-sm text-white/50 mt-2">
                 Where a week of calls goes: 12 inbound calls, 4 unanswered (33%), roughly 3 of those callers
-                hanging up at voicemail (69%). Source: Moneypenny Small Business Call Report, 2020.
+                hanging up at voicemail (69%). Source: Moneypenny Small Business Call Report, 2016.
               </figcaption>
             </figure>
           </div>
@@ -604,7 +604,7 @@ export default function MissedCallIndexPage() {
             <div>
               <h3 className="text-lg font-semibold mb-2">Do callers leave voicemail when tradespeople don&apos;t answer?</h3>
               <p className="text-white/80 leading-relaxed">
-                69% of callers who reach voicemail hang up without leaving a message.
+                69% of callers who reach voicemail don't leave a message.
               </p>
             </div>
             <div>

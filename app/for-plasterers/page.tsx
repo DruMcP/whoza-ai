@@ -211,7 +211,7 @@ export default function ForPlasterersPage() {
                   icon: AlertTriangle,
                   title: "Emergency Repair Calls",
                   description: "Homeowner calls with blown plaster and water damage from a leak. They need urgent repair before mould spreads. You don't answer because you're mid-skim. They call the next number on Google. You lost a £400 emergency repair and a potential full re-skim referral.",
-                  stat: "78% hire first responder",
+                  stat: "First responder gets the job",
                   color: "amber",
                 },
                 {

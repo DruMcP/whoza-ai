@@ -54,7 +54,7 @@ export function CalculatorForm() {
             onChange={(e) => setAnswerRate(Number(e.target.value))}
             className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 outline-none text-lg font-semibold"
           />
-          <p className="text-xs text-slate-500 mt-1">UK average varies by trade (Moneypenny 2020: 33% of small businesses miss calls)</p>
+          <p className="text-xs text-slate-500 mt-1">UK average varies by trade (Moneypenny 2016: 33% of small businesses miss calls)</p>
         </div>
       </div>
 

@@ -121,7 +121,7 @@ export default function BlogPost() {
             If you run a plumbing, electrical, roofing, or building business in the UK, you have probably asked yourself: should I hire a receptionist, or is there a better way to handle incoming calls? The decision has significant financial implications. A full-time human receptionist costs between £27,800 and £38,700 annually when all overhead is included. An <a href="/" className="text-emerald-400 hover:underline">AI receptionist</a> costs between £708 and £1,500 per year — a 94-98% reduction.
           </p>
           <p>
-            This guide provides a comprehensive, data-driven comparison of human and AI receptionists for UK trade businesses in 2026. We examine real costs, features, ROI, and implementation considerations to help you make an informed decision. These figures are backed by independent research. Our <a href="/research/the-true-cost-of-missed-calls-2026" className="text-emerald-400 hover:underline">UK Trades Industry Financial Impact Report</a> draws on data from Replicant AI, BT Business, and the Federation of Small Businesses to quantify the missed call crisis.
+            This guide provides a comprehensive, data-driven comparison of human and AI receptionists for UK trade businesses in 2026. We examine real costs, features, ROI, and implementation considerations to help you make an informed decision. These figures are backed by research. Our <a href="/research/the-true-cost-of-missed-calls-2026" className="text-emerald-400 hover:underline">UK Trades Industry Financial Impact Report</a> draws on data from Replicant AI, BT Business, and the Federation of Small Businesses to quantify the missed call crisis.
           </p>
 
           <h2>Cost Comparison at a Glance</h2>

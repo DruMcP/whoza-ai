@@ -107,7 +107,7 @@ const faqSchema = {
       "name": "Is AI call answering better than voicemail?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "AI call answering is dramatically better than voicemail. According to ONS data, 78% of callers who reach voicemail do not leave a message — they simply hang up and call a competitor. AI call answering captures 100% of callers, qualifies their needs, and delivers structured lead information instantly. A tradesperson using AI call answering instead of voicemail typically recovers £15,000–£25,000 in lost revenue annually.",
+        "text": "AI call answering is dramatically better than voicemail. According to the Moneypenny Small Business Call Report (2016), 69% of voicemail callers don't leave a message. AI call answering captures 100% of callers, qualifies their needs, and delivers structured lead information instantly. A tradesperson using AI call answering instead of voicemail typically recovers £15,000–£25,000 in lost revenue annually.",
       },
     },
     {
@@ -163,7 +163,7 @@ const faqSchema = {
       "name": "How does AI call answering compare to a human receptionist?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "AI call answering costs 60–85% less than a human receptionist (£59–£125/month vs £1,500–£2,000+/month including employer costs). AI answers 24/7 without sick days, holidays, or breaks. AI sets up in 30 minutes versus weeks of recruitment and training. However, human receptionists offer superior empathy and can handle highly complex, nuanced conversations. For most trades, AI provides better value; luxury or commercial trades may still prefer human receptionists.",
+        "text": "AI call answering costs significantly less than employing a human receptionist. A receptionist earns £18,000 starter, £22,000 experienced (National Careers Service, gov.uk). With employer National Insurance and pension contributions the annual cost is roughly £20,000–£25,000. Whoza plans start at £59 a month — £708 a year. This comparison is on call-handling cost alone; a receptionist works 38–40 hours a week and handles tasks beyond answering calls. AI answers 24/7 without sick days, holidays, or breaks. AI sets up in 30 minutes versus weeks of recruitment and training. However, human receptionists offer superior empathy and can handle highly complex, nuanced conversations. For most trades, AI provides better value; luxury or commercial trades may still prefer human receptionists.",
       },
     },
   ],
@@ -260,7 +260,7 @@ export default function AICallAnsweringGuidePage() {
                 If you are a UK tradesperson — <a href="/ai-call-answering-plumbers" className="text-emerald-400 hover:underline">plumber</a>, <a href="/ai-call-answering-electricians" className="text-emerald-400 hover:underline">electrician</a>, <a href="/ai-call-answering-roofers" className="text-emerald-400 hover:underline">roofer</a>, <a href="/ai-call-answering-locksmiths" className="text-emerald-400 hover:underline">locksmith</a>, gas engineer, 
                 <a href="/ai-call-answering-builders" className="text-emerald-400 hover:underline">builder</a>, <a href="/ai-call-answering-landscapers" className="text-emerald-400 hover:underline">landscaper</a>, or any trade that works with your hands — you have a phone problem. 
                 The Office for National Statistics (ONS) reports that <strong className="text-white">33% of small 
-                UK businesses fail to answer incoming calls</strong>. Of those missed callers, 69% hang up without leaving a message. 
+                UK businesses fail to answer incoming calls</strong>. Of those missed callers, 69% don't leave a message. 
                 They simply call the next number on Google.
               </p>
               <p className="text-white/70 leading-relaxed mb-6">
@@ -298,7 +298,7 @@ export default function AICallAnsweringGuidePage() {
                   <Check className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-white">ONS Verified Data</strong>
-                    <p className="text-white/50">33% of small businesses miss calls (Moneypenny 2020)</p>
+                    <p className="text-white/50">33% of small businesses miss calls (Moneypenny 2016)</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -401,7 +401,7 @@ export default function AICallAnsweringGuidePage() {
               The Problem: Why Missed Calls Destroy Trade Revenue
             </h2>
             <p className="text-white/70 leading-relaxed mb-6">
-              Let us look at the hard numbers. According to the Moneypenny Small Business Call Report (2020), 
+              Let us look at the hard numbers. According to the Moneypenny Small Business Call Report (2016), 
               <strong className="text-white"> 33% of small UK businesses fail to answer incoming calls</strong>. 
               For trade businesses, this figure is often higher — plumbers, electricians, and roofers 
               physically cannot answer a phone while crawling under floorboards, on a ladder, or handling 
@@ -410,7 +410,7 @@ export default function AICallAnsweringGuidePage() {
             <div className="grid sm:grid-cols-3 gap-4 mb-8">
               <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
                 <div className="text-4xl font-bold text-red-400 mb-2">33%</div>
-                <div className="text-white/60 text-sm">Of small businesses miss calls (Moneypenny 2020)</div>
+                <div className="text-white/60 text-sm">Of small businesses miss calls (Moneypenny 2016)</div>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
                 <div className="text-4xl font-bold text-red-400 mb-2">69%</div>
@@ -440,11 +440,7 @@ export default function AICallAnsweringGuidePage() {
               services contact multiple businesses. The first to answer often wins the job.
             </p>
             <p className="text-white/70 leading-relaxed">
-              Traditional solutions fail. Voicemail is where enquiries go to die — 78% of callers hang up 
-              without leaving a message. Call forwarding to family members is unreliable and unprofessional. 
-              Hiring a human receptionist costs £20,000–£25,000 per year plus National Insurance, pension 
-              contributions, and holiday cover. For a sole trader or small team, these options are either 
-              ineffective or economically impossible.
+              Traditional solutions fail. Voicemail is where enquiries go to die — 69% of voicemail callers don't leave a message (Moneypenny Small Business Call Report, 2016). Call forwarding to family members is unreliable and unprofessional. Hiring a human receptionist costs £20,000–£25,000 per year plus National Insurance, pension contributions, and holiday cover (ONS 2024 average wages data). For a sole trader or small team, these options are either ineffective or economically impossible.
             </p>
           </section>
 
@@ -577,7 +573,7 @@ export default function AICallAnsweringGuidePage() {
                     <td className="px-4 py-3 font-medium">Availability</td>
                     <td className="px-4 py-3 text-emerald-400">24/7/365</td>
                     <td className="px-4 py-3 text-amber-400">Business hours only</td>
-                    <td className="px-4 py-3 text-red-400">24/7 (but 78% hang up)</td>
+                    <td className="px-4 py-3 text-red-400">24/7 (but most hang up)</td>
                   </tr>
                   <tr className="bg-white/5">
                     <td className="px-4 py-3 font-medium">Setup Time</td>
@@ -633,9 +629,8 @@ export default function AICallAnsweringGuidePage() {
 
             <p className="text-white/70 leading-relaxed mb-6">
               <strong className="text-white">The verdict for most trades:</strong> AI call answering 
-              offers the best balance of cost, coverage, and capability. It is 60–85% cheaper than a human 
-              receptionist while offering 24/7 availability and instant digital delivery. Voicemail is 
-              effectively free but loses 78% of callers — a false economy that costs far more in lost revenue 
+              offers the best balance of cost, coverage, and capability. A receptionist earns £18,000 starter, £22,000 experienced (National Careers Service, gov.uk). With employer National Insurance and pension contributions the annual cost is roughly £20,000–£25,000. Whoza plans start at £59 a month — £708 a year. This comparison is on call-handling cost alone; a receptionist works 38–40 hours a week and handles tasks beyond answering calls. Voicemail is 
+              effectively free but loses most callers — a false economy that costs far more in lost revenue 
               than it saves in monthly fees.
             </p>
             <p className="text-white/70 leading-relaxed">
@@ -1120,7 +1115,7 @@ export default function AICallAnsweringGuidePage() {
                 },
                 {
                   q: "Is AI call answering better than voicemail?",
-                  a: "AI call answering is dramatically better than voicemail. According to ONS data, 78% of callers who reach voicemail do not leave a message — they simply hang up and call a competitor. AI call answering captures 100% of callers, qualifies their needs, and delivers structured lead information instantly. A tradesperson using AI call answering instead of voicemail typically recovers £15,000–£25,000 in lost revenue annually.",
+                  a: "AI call answering is dramatically better than voicemail. According to the Moneypenny Small Business Call Report (2016), 69% of voicemail callers don't leave a message. AI call answering captures 100% of callers, qualifies their needs, and delivers structured lead information instantly. A tradesperson using AI call answering instead of voicemail typically recovers £15,000–£25,000 in lost revenue annually.",
                 },
                 {
                   q: "Can AI call answering handle trade-specific terminology?",
@@ -1148,7 +1143,7 @@ export default function AICallAnsweringGuidePage() {
                 },
                 {
                   q: "How does AI call answering compare to a human receptionist?",
-                  a: "AI call answering costs 60–85% less than a human receptionist (£59–£125/month vs £1,500–£2,000+/month including employer costs). AI answers 24/7 without sick days, holidays, or breaks. AI sets up in 30 minutes versus weeks of recruitment and training. However, human receptionists offer superior empathy and can handle highly complex, nuanced conversations. For most trades, AI provides better value; luxury or commercial trades may still prefer human receptionists. Read our \u003ca href='/blog/ai-call-answering-pricing-guide-uk-2026' className='text-emerald-400 hover:underline'\u003eAI call answering pricing guide\u003c/a\u003e for a full cost breakdown.",
+                  a: "AI call answering costs significantly less than employing a human receptionist. A receptionist earns £18,000 starter, £22,000 experienced (National Careers Service, gov.uk). With employer National Insurance and pension contributions the annual cost is roughly £20,000–£25,000. Whoza plans start at £59 a month — £708 a year. This comparison is on call-handling cost alone; a receptionist works 38–40 hours a week and handles tasks beyond answering calls. AI answers 24/7 without sick days, holidays, or breaks. AI sets up in 30 minutes versus weeks of recruitment and training. However, human receptionists offer superior empathy and can handle highly complex, nuanced conversations. For most trades, AI provides better value; luxury or commercial trades may still prefer human receptionists. Read our <a href='/blog/ai-call-answering-pricing-guide-uk-2026' className='text-emerald-400 hover:underline'>AI call answering pricing guide</a> for a full cost breakdown.",
                 },
               ].map((faq, index) => (
                 <details key={index} className="group bg-white/5 border border-white/10 rounded-xl open:border-emerald-500/30 open:bg-emerald-500/[0.03] transition-all">
@@ -1212,7 +1207,7 @@ export default function AICallAnsweringGuidePage() {
               <a href="/best-ai-call-handler-uk-trades" className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
                 <div className="text-emerald-400 text-sm font-medium mb-2">Comparison</div>
                 <div className="font-semibold text-white mb-1">7 Best AI Call Answering Services Compared</div>
-                <p className="text-white/50 text-sm">Independent comparison of 7 AI call answering services for UK trades.</p>
+                <p className="text-white/50 text-sm">Comparison of 7 AI call answering services for UK trades.</p>
               </a>
               <a href="/pricing" className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
                 <div className="text-emerald-400 text-sm font-medium mb-2">Pricing</div>

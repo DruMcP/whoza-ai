@@ -115,7 +115,7 @@ const blogPosts = [
   {
     slug: "research/ai-voice-agents-uk-trades-2026",
     title: "AI Voice Agents in the UK Trades Sector: Independent Research Report 2026",
-    excerpt: "Comprehensive independent research report analysing AI voice agent adoption, missed call revenue loss, and market trends. Data from Gartner, McKinsey, Juniper Research, BrightLocal, and ONS.",
+    excerpt: "Comprehensive research report analysing AI voice agent adoption, missed call revenue loss, and market trends. Data from Gartner, McKinsey, Juniper Research, BrightLocal, and ONS.",
     readTime: "25 min read",
     date: "2026-06-18",
     category: "Research",

@@ -142,7 +142,12 @@ const scholarlyArticleSchema = {
   "speakable": {
     "@type": "SpeakableSpecification",
     "cssSelector": [".article-headline", ".article-abstract", ".article-body"]
-  }
+  },
+  "citation": [
+    {"@type": "CreativeWork", "name": "Moneypenny Small Business Call Report", "datePublished": "2016", "url": "https://www.moneypenny.com/uk/resources/blog/free-resource-small-business-call-report/"},
+    {"@type": "CreativeWork", "name": "Forbes/Ruby Research", "datePublished": "2025"},
+    {"@type": "CreativeWork", "name": "PATLive Missed Call Statistics", "datePublished": "2025"}
+  ],
 }
 
 const datasetSchema = {
@@ -300,7 +305,7 @@ export default function ResearchPage() {
               <ul className="space-y-2 mb-4">
                 <li className="flex items-start gap-2 text-white/80">
                   <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                  <strong>78% of customers hire the first business that responds</strong> to their inquiry, yet the average company takes 47 hours to respond, and only 7-23% reply within the critical five-minute window.
+                  <strong>The business that answers first usually gets the job</strong>, yet the average company takes 47 hours to respond, and only 7-23% reply within the critical five-minute window.
                 </li>
                 <li className="flex items-start gap-2 text-white/80">
                   <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
@@ -320,7 +325,7 @@ export default function ResearchPage() {
                 </li>
               </ul>
               <p className="text-white/80 leading-relaxed">
-                This paper draws upon independent research from MIT, Harvard Business Review, Zendesk, BrightLocal, SurveyMonkey, and other authoritative sources to present a data-driven analysis of how AI voice agents are redefining the caller experience for small businesses.
+                This paper draws upon research from MIT, Harvard Business Review, Zendesk, BrightLocal, SurveyMonkey, and other authoritative sources to present a data-driven analysis of how AI voice agents are redefining the caller experience for small businesses.
               </p>
             </div>
           </section>
@@ -353,7 +358,7 @@ export default function ResearchPage() {
             </p>
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">The Voicemail Abyss</h3>
             <p className="text-white/80 leading-relaxed mb-4">
-              Research reveals a stark pattern of caller abandonment. Forbes and Ruby Research found that <strong>80% of callers who reach voicemail hang up without leaving a message</strong>. PATLive confirms 85% of unanswered callers never call back. For callers, voicemail signals the business does not prioritise their enquiry.
+              Research reveals a stark pattern of caller abandonment. Forbes and Ruby Research found that <strong>80% of callers who reach voicemail don't leave a message</strong>. PATLive confirms 85% of unanswered callers never call back. For callers, voicemail signals the business does not prioritise their enquiry.
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
               The voicemail problem is compounded by callback delays. A 2025 study of 142 UK SMEs found average callback response time exceeds six hours — by which point callers have typically hired a competitor. The Drift Lead Response Report found waiting just five minutes increases lead loss risk by 10 times; waiting 10 minutes increases it by 100 times.
@@ -421,7 +426,7 @@ export default function ResearchPage() {
               Dr. James Oldroyd at MIT conducted the foundational research, analysing 15,000+ leads across industries. The study established the five-minute rule: <strong>companies responding within five minutes are 100 times more likely to make contact than those waiting 30 minutes</strong>, and 21 times more likely to qualify the lead. Published in Harvard Business Review as &quot;The Short Life of Online Sales Leads.&quot;
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
-              Velocify found that calling a lead within one minute of inquiry boosts conversion rates by 391% compared to waiting just two minutes. InsideSales.com confirmed that <strong>50% of sales go to the vendor that responds first</strong> — not the best vendor, but the fastest. Lead Connect&apos;s 2023 study found that 78% of customers hire the first business that responds to their enquiry.
+              Velocify found that calling a lead within one minute of inquiry boosts conversion rates by 391% compared to waiting just two minutes. InsideSales.com confirmed that <strong>50% of sales go to the vendor that responds first</strong> — not the best vendor, but the fastest. The business that answers first usually gets the job.
             </p>
 
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">The Decay Curve</h3>

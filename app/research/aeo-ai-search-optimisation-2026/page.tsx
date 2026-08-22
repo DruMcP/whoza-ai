@@ -115,7 +115,14 @@ const scholarlyArticleSchema = {
   "speakable": {
     "@type": "SpeakableSpecification",
     "cssSelector": [".article-headline", ".article-abstract", ".article-body"]
-  }
+  },
+  "citation": [
+    {"@type": "CreativeWork", "name": "BrightEdge Research", "datePublished": "2025"},
+    {"@type": "CreativeWork", "name": "Ahrefs SEO Statistics", "datePublished": "2025"},
+    {"@type": "CreativeWork", "name": "Semrush Search Engine Data", "datePublished": "2025"},
+    {"@type": "CreativeWork", "name": "HubSpot Consumer Research", "datePublished": "2025"},
+    {"@type": "CreativeWork", "name": "Google Search Quality Guidelines", "datePublished": "2025"}
+  ],
 }
 
 const datasetSchema = {
@@ -284,7 +291,7 @@ export default function ResearchPage() {
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-white mb-4">The AI Search Revolution: By the Numbers</h2>
             <p className="text-white/80 leading-relaxed mb-4">
-              The scale and velocity of the AI search transformation is best understood through quantitative metrics. The following data, compiled from independent research organisations and verified primary sources, documents the scope of the shift.
+              The scale and velocity of the AI search transformation is best understood through quantitative metrics. The following data, compiled from research organisations and verified primary sources, documents the scope of the shift.
             </p>
 
             <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden mb-6">

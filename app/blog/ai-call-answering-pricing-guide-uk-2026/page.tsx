@@ -1172,7 +1172,7 @@ export default function PricingGuidePage() {
               <a href="/best-ai-call-handler-uk-trades" className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
                 <div className="text-emerald-400 text-sm font-medium mb-2">Comparison</div>
                 <div className="font-semibold text-white mb-1">7 Best AI Call Answering Services Compared</div>
-                <p className="text-white/50 text-sm">Independent comparison of 7 AI call answering services for UK trades.</p>
+                <p className="text-white/50 text-sm">Comparison of 7 AI call answering services for UK trades.</p>
               </a>
               <a href="/" className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
                 <div className="text-emerald-400 text-sm font-medium mb-2">Calculator</div>

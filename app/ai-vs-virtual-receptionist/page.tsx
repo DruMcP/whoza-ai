@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 }
 
 const comparisons = [
-  { category: "Cost", ai: "£59/mo flat", human: "£200-400/mo", winner: "ai", detail: "AI costs 70-85% less than human receptionists." },
+  { category: "Cost", ai: "£59/mo flat", human: "£200-400/mo", winner: "ai", detail: "AI costs significantly less than a virtual receptionist service." },
   { category: "Availability", ai: "24/7, 365 days", human: "Shift-based, sick days, holidays", winner: "ai", detail: "AI never sleeps, takes breaks, or calls in sick." },
   { category: "Simultaneous calls", ai: "1–5 per plan", human: "1-2 per agent", winner: "ai", detail: "Starter handles 1, Growth 2, Pro 3, Scale 5. No queuing within your tier." },
   { category: "Setup time", ai: "30 minutes", human: "2-5 days", winner: "ai", detail: "AI is live immediately. Humans need training." },
@@ -51,7 +51,7 @@ export default function AIVsVirtualReceptionistPage() {
           {
             "@type": "Question",
             "name": "Is an AI call handler better than a virtual receptionist?",
-            "acceptedAnswer": { "@type": "Answer", "text": "For most UK tradespeople, yes. AI call handlers cost 70-85% less (£59 vs £200-400/month), answer unlimited calls simultaneously, work 24/7, and deliver leads via WhatsApp. Human virtual receptionists offer personal warmth but cost significantly more and handle only 1-2 calls at a time." }
+            "acceptedAnswer": { "@type": "Answer", "text": "For most UK tradespeople, yes. AI call handlers cost significantly less than a virtual receptionist service (£59 vs £200-400/month), answer unlimited calls simultaneously, work 24/7, and deliver leads via WhatsApp. Human virtual receptionists offer personal warmth but cost significantly more and handle only 1-2 calls at a time." }
           },
           {
             "@type": "Question",
@@ -319,7 +319,7 @@ export default function AIVsVirtualReceptionistPage() {
           <h2 className="text-3xl font-bold text-slate-900 mb-6">Customer Experience: What Do Callers Actually Prefer?</h2>
           <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-8">
             <p className="text-slate-600 mb-4">
-              The alternative for most trade businesses is not a human receptionist. It is voicemail. And voicemail is terrible. 69% of callers hang up without leaving a message. Of the 31% who leave a message, most never get a callback because tradespeople forget to check voicemail or call back hours later.
+              The alternative for most trade businesses is not a human receptionist. It is voicemail. And voicemail is terrible. 69% of callers don't leave a message. Of the 31% who leave a message, most never get a callback because tradespeople forget to check voicemail or call back hours later.
             </p>
             <p className="text-slate-600 mb-4">
               The other alternative is phone tag. You miss the call. You call back. They are busy. They call back. You are on a job. After 3-4 attempts, you connect. The customer is frustrated. You are stressed. This is not a good experience for anyone.
