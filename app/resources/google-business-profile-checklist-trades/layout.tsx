@@ -15,7 +15,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "Google Business Profile Checklist for UK Trades | whoza.ai",
     description: "Complete interactive checklist to optimise your Google Business Profile for UK tradespeople.",
     images: ["https://whoza.ai/og-image.webp"],

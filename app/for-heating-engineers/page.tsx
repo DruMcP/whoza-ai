@@ -43,7 +43,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "AI Call Handling for Heating Engineers UK | whoza.ai",
     description: "Katie answers 24/7 for heating engineers. Captures boiler breakdowns, annual services and emergencies. WhatsApp alerts in 3 seconds. Start your free trial.",
     images: ["https://whoza.ai/og-image.webp"],

@@ -16,7 +16,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "Hourly Rate Checker UK Trades | whoza.ai",
     description: "Free rate checker. See how your hourly rate compares to regional averages and top earners.",
     images: ["https://whoza.ai/og-image.webp"],

@@ -23,7 +23,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "AI Receptionist Cost vs In-House | £59/mo vs £25K/yr — Whoza",
     description: "Compare AI receptionist costs: Whoza.ai from £59/month vs £25K+/year for human staff. Monthly 7-day free trial. Pay only for booked jobs. See the comparison.",
     images: ["https://whoza.ai/og-image.webp"],

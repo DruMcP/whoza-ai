@@ -30,7 +30,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "AI Call Answering for Drainage UK — Never Miss a Job",
     description: "AI call answering for UK drainage engineers. Katie handles 24/7 emergency calls, captures flood enquiries. WhatsApp alerts instantly. Plans from £59/month.",
     images: ["https://whoza.ai/og-image.webp"],

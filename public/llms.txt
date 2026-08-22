@@ -4,39 +4,39 @@
 
 ## Core Pages
 
-- [Homepage](https://whoza.ai/) — AI call answering for UK tradespeople
-- [How It Works](https://whoza.ai/how-it-works) — 30-minute setup, keep your number
-- [Pricing](https://whoza.ai/pricing) — Plans from £59/month, no contract
-- [FAQ](https://whoza.ai/faq) — Common questions answered
-- [Support](https://whoza.ai/support) — Help centre and contact
-- [Blog](https://whoza.ai/blog) — Trade business growth guides
-- [Contact](https://whoza.ai/contact) — Get in touch
-- [About](https://whoza.ai/about) — Our story
-- [Refer](https://whoza.ai/refer) — Refer a tradesperson
-- [Trust & Compliance](https://whoza.ai/trust) — Security and certifications
+- [Homepage](https://whoza.ai/) - AI call answering for UK tradespeople
+- [How It Works](https://whoza.ai/how-it-works) - 30-minute setup, keep your number
+- [Pricing](https://whoza.ai/pricing) - Plans from £59/month, no contract
+- [FAQ](https://whoza.ai/faq) - Common questions answered
+- [Support](https://whoza.ai/support) - Help centre and contact
+- [Blog](https://whoza.ai/blog) - Trade business growth guides
+- [Contact](https://whoza.ai/contact) - Get in touch
+- [About](https://whoza.ai/about) - Our story
+- [Refer](https://whoza.ai/refer) - Refer a tradesperson
+- [Trust & Compliance](https://whoza.ai/trust) - Security and certifications
 
 ## Service Areas
 
 ### Emergency Trades (24/7 Critical)
-- [Plumbers](https://whoza.ai/for-plumbers) — Burst pipes, boiler breakdowns
-- [Electricians](https://whoza.ai/for-electricians) — Emergency callouts
-- [Gas Engineers](https://whoza.ai/for-gas-engineers) — Carbon monoxide, gas leaks
-- [Locksmiths](https://whoza.ai/for-locksmiths) — Lockouts, break-ins
-- [Heating Engineers](https://whoza.ai/for-heating-engineers) — No heating/hot water
-- [Drainage](https://whoza.ai/for-drainage) — Floods, sewage backups
+- [Plumbers](https://whoza.ai/for-plumbers) - Burst pipes, boiler breakdowns
+- [Electricians](https://whoza.ai/for-electricians) - Emergency callouts
+- [Gas Engineers](https://whoza.ai/for-gas-engineers) - Carbon monoxide, gas leaks
+- [Locksmiths](https://whoza.ai/for-locksmiths) - Lockouts, break-ins
+- [Heating Engineers](https://whoza.ai/for-heating-engineers) - No heating/hot water
+- [Drainage](https://whoza.ai/for-drainage) - Floods, sewage backups
 
 ### Planned Trades
-- [Builders](https://whoza.ai/for-builders) — Extensions, renovations
-- [Roofers](https://whoza.ai/for-roofers) — Repairs, replacements
-- [Carpenters](https://whoza.ai/for-carpenters) — Bespoke furniture, kitchens
-- [Joiners](https://whoza.ai/for-joiners) — Staircases, bespoke joinery
-- [Plasterers](https://whoza.ai/for-plasterers) — Skimming, rendering
-- [Tilers](https://whoza.ai/for-tilers) — Bathrooms, kitchens, floors
-- [Painters & Decorators](https://whoza.ai/for-painters-decorators) — Interior, exterior
-- [Landscapers](https://whoza.ai/for-landscapers) — Design, maintenance, patios
-- [Cleaners](https://whoza.ai/for-cleaners) — Domestic, commercial
-- [Handymen](https://whoza.ai/for-handymen) — General repairs
-- [Pest Control](https://whoza.ai/for-pest-control) — Rodents, insects
+- [Builders](https://whoza.ai/for-builders) - Extensions, renovations
+- [Roofers](https://whoza.ai/for-roofers) - Repairs, replacements
+- [Carpenters](https://whoza.ai/for-carpenters) - Bespoke furniture, kitchens
+- [Joiners](https://whoza.ai/for-joiners) - Staircases, bespoke joinery
+- [Plasterers](https://whoza.ai/for-plasterers) - Skimming, rendering
+- [Tilers](https://whoza.ai/for-tilers) - Bathrooms, kitchens, floors
+- [Painters & Decorators](https://whoza.ai/for-painters-decorators) - Interior, exterior
+- [Landscapers](https://whoza.ai/for-landscapers) - Design, maintenance, patios
+- [Cleaners](https://whoza.ai/for-cleaners) - Domestic, commercial
+- [Handymen](https://whoza.ai/for-handymen) - General repairs
+- [Pest Control](https://whoza.ai/for-pest-control) - Rodents, insects
 
 ## City Pages
 
@@ -62,12 +62,13 @@
 
 ## Research
 
-- [Can an AI Voice Agent Tell a Blocked Drain from a Gas Leak?](https://whoza.ai/research/emergency-triage-safety-ai-voice-agents-2026) — Emergency triage safety for AI voice agents (July 2026)
-- [The True Cost of Missed Calls](https://whoza.ai/research/the-true-cost-of-missed-calls-2026) — Data-driven analysis of lost revenue
-- [AEO & AI Search Optimisation](https://whoza.ai/research/aeo-ai-search-optimisation-2026) — How tradespeople get found in AI search
-- [AI Voice Agents for UK Trades](https://whoza.ai/research/ai-voice-agents-uk-trades-2026) — Market overview
-- [Caller Experience Revolution](https://whoza.ai/research/caller-experience-revolution-ai-voice-agents-2026) — What customers expect from AI phone agents
-- [Voice Agent Technology State of the Art](https://whoza.ai/research/voice-agent-technology-state-of-art-2026) — Technical capabilities
+- [Can an AI Voice Agent Tell a Blocked Drain from a Gas Leak?](https://whoza.ai/research/emergency-triage-safety-ai-voice-agents-2026) - Emergency triage safety for AI voice agents (July 2026)
+- [The True Cost of Missed Calls](https://whoza.ai/research/the-true-cost-of-missed-calls-2026) - Data-driven analysis of lost revenue
+- [AEO & AI Search Optimisation](https://whoza.ai/research/aeo-ai-search-optimisation-2026) - How tradespeople get found in AI search
+- [AI Voice Agents for UK Trades](https://whoza.ai/research/ai-voice-agents-uk-trades-2026) - Market overview
+- [Caller Experience Revolution](https://whoza.ai/research/caller-experience-revolution-ai-voice-agents-2026) - What customers expect from AI phone agents
+- [Voice Agent Technology State of the Art](https://whoza.ai/research/voice-agent-technology-state-of-art-2026) - Technical capabilities
+- [Missed Call Index Q3 2026](https://whoza.ai/research/missed-call-index-q3-2026) - A third of UK small-business calls go unanswered. £2.3bn of trades revenue at risk.
 
 ## Comparison Pages
 
@@ -89,6 +90,6 @@
 
 ---
 
-**Full documentation:** [llms-full.txt](https://whoza.ai/llms-full.txt)  
-**Last updated:** 2026-07-29  
-**Company:** WHOZA AI LTD, Perth, Scotland
+**Full documentation:** [llms-full.txt](https://whoza.ai/llms-full.txt)
+**Last updated:** 2026-08-23
+**Company:** WHOZA AI LTD, registered in Perth, Scotland · operating from Tomintoul, AB37 9HA

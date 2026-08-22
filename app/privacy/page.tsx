@@ -27,7 +27,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "Privacy Policy | whoza.ai",
     description: "whoza.ai privacy policy — ICO-registered, UK GDPR compliant. Learn how we protect your data.",
     images: ["https://whoza.ai/og-image.webp"],

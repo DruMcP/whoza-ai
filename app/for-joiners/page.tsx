@@ -30,7 +30,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "AI Call Answering for Joiners UK — Never Miss a Job",
     description: "AI call answering for UK joiners. Katie captures 24/7 enquiries for kitchens, staircases and fitted furniture. WhatsApp alerts instantly. Plans from £59.",
     images: ["https://whoza.ai/og-image.webp"],

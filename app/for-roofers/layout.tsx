@@ -17,7 +17,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "AI for Roofers | Never Miss a Storm Season Call — Whoza.ai",
     description: "Whoza.ai answers roofing calls 24/7. Qualifies tile repairs, leak emergencies & gutter jobs. Details to WhatsApp. 23 calls = £8K recovered. Free trial.",
     images: ["https://whoza.ai/og-image.webp"],

@@ -5024,7 +5024,7 @@ Built in Scotland. Working for UK trades.`,
   },
   "i-spent-two-weeks-comparing-virtual-receptionist-prices-ross-the-joiner": {
     title: "I Spent Two Weeks Googling 'Virtual Receptionist Cost' Before I Realised I Was Buying the Wrong Thing",
-    excerpt: "A self-employed joiner from Glasgow spent 14 days comparing virtual receptionist prices. He discovered the cheapest option was not the best value — and the best value was not what he expected.",
+    excerpt: "A self-employed joiner from Glasgow spent 14 days comparing virtual receptionist prices. He discovered the cheapest option was not the best value.",
     readTime: "14 min read",
     date: "2026-08-08",
     category: "UGC / Real Stories",

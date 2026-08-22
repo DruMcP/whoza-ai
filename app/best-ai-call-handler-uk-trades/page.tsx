@@ -19,7 +19,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "The Best AI Call Handler for UK Tradespeople (2026)",
     description: "We tested 6 AI call handlers for UK tradespeople. Compare whoza.ai, Clara, Trade Receptionist, Moneypenny, Rosie AI and Down To Earth AI on price, features, and setup fees.",
     images: ["https://whoza.ai/og-image.webp"],

@@ -27,7 +27,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "Case Studies — AI Call Answering for UK Trades | whoza.ai",
     description: "See how UK tradespeople win more jobs with whoza.ai's AI call answering. Real results: 98% answer rates, doubled bookings, thousands in revenue saved.",
     images: ["https://whoza.ai/og-image.webp"],

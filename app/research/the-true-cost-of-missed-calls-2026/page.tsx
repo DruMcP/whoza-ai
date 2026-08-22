@@ -35,7 +35,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "The True Cost of Missed Calls: UK Trades Industry Financial Impact Report 2026",
     description: "Independent research report quantifying the financial impact of missed calls on UK trade businesses.",
     images: ["https://whoza.ai/og-image.webp"],

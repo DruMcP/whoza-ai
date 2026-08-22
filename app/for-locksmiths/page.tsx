@@ -43,7 +43,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "AI Call Handling for Locksmiths UK — 24/7 Lockout Help",
     description: "Katie answers 24/7 for locksmiths. Captures emergency lockouts, key replacements and security upgrades. WhatsApp alerts in 3 seconds. Start your free trial.",
     images: ["https://whoza.ai/og-image.webp"],

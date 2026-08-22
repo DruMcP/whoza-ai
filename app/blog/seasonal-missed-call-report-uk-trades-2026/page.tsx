@@ -27,7 +27,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "Seasonal Missed Call Report 2026 | whoza.ai",
     description: "Original analysis of 10,000+ trade calls. Winter boiler enquiries spike 340%. Discover which months cost UK trades the most in lost revenue. Data by trade.",
     images: ["https://whoza.ai/og-image.webp"],

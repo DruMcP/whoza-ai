@@ -16,7 +16,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "Emergency Callout Pricing Calculator UK | whoza.ai",
     description: "Free calculator for UK tradespeople. Price emergency callouts with real market data.",
     images: ["https://whoza.ai/og-image.webp"],

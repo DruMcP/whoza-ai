@@ -23,7 +23,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "How It Works | whoza.ai",
     description: "Discover how whoza.ai's AI voice agent Katie answers calls, qualifies leads and books jobs for UK tradespeople — 24/7. Setup in 30 mins. Plans from £59.",
     images: ["https://whoza.ai/og-image.webp"],

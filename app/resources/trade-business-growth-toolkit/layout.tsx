@@ -15,7 +15,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "Free Trade Business Growth Toolkit | whoza.ai",
     description: "Download the free Trade Business Growth Toolkit for UK tradespeople.",
     images: ["https://whoza.ai/og-image.webp"],

@@ -16,7 +16,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "Free Voicemail Script Generator UK Trades | whoza.ai",
     description: "Generate tailored voicemail scripts for your trade business. Free — no signup.",
     images: ["https://whoza.ai/og-image.webp"],

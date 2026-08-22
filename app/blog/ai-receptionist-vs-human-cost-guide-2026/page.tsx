@@ -31,7 +31,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "AI Receptionist vs Human Receptionist: 2026 Cost Guide",
     description: "AI receptionist vs human: cost comparison for UK trades. £59/month vs £25K/year. Speed, accuracy, and availability compared. Read the analysis.",
     images: ["https://whoza.ai/og-image.webp"],

@@ -74,7 +74,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     twitter: {
       card: "summary_large_image",
-      site: "@whozaai",
       title: tradeData.headline,
       description: tradeData.metaDescription,
       images: ["https://whoza.ai/og-image.webp"],

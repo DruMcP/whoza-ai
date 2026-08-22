@@ -58,8 +58,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@whozaai',
-    creator: '@whozaai',
     title: 'AI Receptionist for UK Trades | 24/7 | From £59 — Whoza.ai',
     description: "Stop losing £12,000/year to missed calls. Whoza.ai's AI receptionist answers 24/7, captures leads, and grows your visibility. Start free.",
     images: ['https://whoza.ai/og-image.webp'],
