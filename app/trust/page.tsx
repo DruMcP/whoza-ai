@@ -107,6 +107,9 @@ export default function TrustPage() {
 
         <div className="mt-12 bg-white/5 border border-white/10 rounded-xl p-6 text-center">
           <p className="text-white/60 mb-4">
+            We publish <a href="/data" className="text-emerald-400 hover:underline">the source of every statistic we use</a>.
+          </p>
+          <p className="text-white/60 mb-4">
             For security-related questions or to request our full security documentation, contact us directly.
           </p>
           <Link

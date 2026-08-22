@@ -475,6 +475,11 @@ export default function ResearchPage() {
             <li>Voco HQ (2026). "True Cost of Missed Calls for UK Businesses 2026." vocohq.co.uk.</li>
           </ol>
         </section>
+        <div className="mt-12 text-center">
+          <p className="text-white/40 text-sm">
+            <a href="/data" className="text-emerald-400 hover:underline">Sources and methodology</a> for all figures in this report.
+          </p>
+        </div>
       </main>
 
       <Footer />
