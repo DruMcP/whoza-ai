@@ -54,7 +54,7 @@ const faqs = [
     "answer": "Yes. You simply set up call forwarding from your existing London business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
-    "question": "How quickly can I get set up as a electrician in London?",
+    "question": "How quickly can I get set up as an electrician in London?",
     "answer": "Most electricians in London are live and capturing calls within 30 minutes. Sign up, connect your number via call forwarding, set your greeting and business details, and Katie starts answering immediately. No hardware, no IT team, no technical knowledge required."
   },
   {
