@@ -40,8 +40,8 @@ export const metadata: Metadata = {
     images: ["https://whoza.ai/og-image.webp"],
   },
   other: {
-    "article:published_time": "2026-06-20",
-    "article:modified_time": "2026-06-20",
+    "article:published_time": "2026-08-23",
+    "article:modified_time": "2026-08-23",
     "article:author": "whoza.ai",
     "article:section": "Research",
     "article:tag": "Answer Engine Optimisation, AEO, AI Search, SEO, Small Business, Structured Data, Local Search, Google AI Overviews, ChatGPT",
@@ -57,8 +57,8 @@ const scholarlyArticleSchema = {
   "headline": "Answer Engine Optimisation: Why Small Businesses Must Prepare for AI-Driven Search or Risk Invisibility in 2026 and Beyond",
   "description": "Research report examining the transformation of search through AI-powered answer engines, the principles of Answer Engine Optimisation (AEO), and specific strategies small businesses must adopt to maintain visibility as traditional search gives way to AI-mediated discovery.",
   "image": "https://whoza.ai/og-image.webp",
-  "datePublished": "2026-06-20",
-  "dateModified": "2026-06-20",
+  "datePublished": "2026-08-23",
+  "dateModified": "2026-08-23",
   "author": {
     "@type": "Organization",
     "name": "whoza.ai",
@@ -133,8 +133,12 @@ const datasetSchema = {
   "creator": {
     "@id": "https://whoza.ai/#dru-mcpherson"
   },
-  "datePublished": "2026-06-20",
   "license": "https://creativecommons.org/licenses/by/4.0/",
+  "distribution": {
+    "@type": "DataDownload",
+    "contentUrl": "https://whoza.ai/research/aeo-ai-search-optimisation-2026",
+    "encodingFormat": "text/html"
+  },
   "distribution": {
     "@type": "DataDownload",
     "contentUrl": "https://whoza.ai/research/aeo-ai-search-optimisation-2026",
@@ -185,14 +189,14 @@ export default function ResearchPage() {
           </div>
           <div className="flex flex-wrap items-center gap-4 text-white/40 text-sm mb-4">
             <div className="flex items-center gap-2"><User className="w-4 h-4" /><span>whoza.ai Research</span></div>
-            <div className="flex items-center gap-2"><Calendar className="w-4 h-4" /><time dateTime="2026-06-06">June 2026</time></div>
+            <div className="flex items-center gap-2"><Calendar className="w-4 h-4" /><time dateTime="2026-08-23">August 2026</time></div>
             <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>28 min read</span></div>
           </div>
           <h1 className="article-headline text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
             Answer Engine Optimisation
           </h1>
           <div className="mt-2 text-white/30 text-sm">
-            Last updated: <time dateTime="2026-06-06">2026-06-06</time>
+            Last updated: <time dateTime="2026-08-23">2026-08-23</time>
           </div>
           <p className="text-xl text-white/60 leading-relaxed">
             Why Small Businesses Must Prepare for AI-Driven Search or Risk Invisibility in 2026 and Beyond
@@ -206,7 +210,7 @@ export default function ResearchPage() {
             </div>
             <div>
               <p className="font-medium text-white">Download the Full Research Paper</p>
-              <p className="text-sm text-white/50">PDF format | 32 pages | June 2026</p>
+              <p className="text-sm text-white/50">PDF format | 32 pages | August 2026</p>
             </div>
           </div>
           <a href="/downloads/AEO_AI_Search_Optimisation_2026.pdf" className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg transition-colors text-sm">
@@ -273,6 +277,9 @@ export default function ResearchPage() {
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
               Alphabet's Q4 2025 earnings report confirmed that Google Search generated <strong>USD 224.53 billion in revenue</strong> during fiscal year 2025, with AI-powered features driving a 17% year-over-year increase in search advertising revenue. AI Overviews are the new default for nearly half of all searches, and their coverage is expanding.
+            </p>
+            <p className="text-white/80 leading-relaxed mb-4">
+              The UK picture is equally striking. Ofcom's Online Nation 2025 report found that <strong>about 30% of UK Google searches now show AI Overviews</strong>, and more than half of adults (53%) see them often. Meanwhile, ChatGPT took <strong>1.8 billion UK visits in the first eight months of 2025</strong> — up from 368 million in 2024 — making it the fastest-growing consumer AI platform in Britain (<a href="https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025" className="text-emerald-400 hover:underline" target="_blank" rel="noopener noreferrer">Ofcom, Online Nation 2025</a>). For UK tradespeople, this means the old SEO playbook — ranking on page one of Google — is no longer sufficient. Customers are asking AI for recommendations, and the businesses that appear in those answers are winning the work.
             </p>
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">The Competitive Landscape</h3>
             <p className="text-white/80 leading-relaxed mb-4">
@@ -702,7 +709,7 @@ export default function ResearchPage() {
               </Link>
               <Link href="/research/ai-voice-agents-uk-trades-2026" className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
                 <div className="text-amber-400 text-sm font-medium mb-2">Research</div>
-                <h3 className="text-lg font-semibold text-white mb-2">AI Voice Agents in the UK Trades Sector: Independent Research Report 2026</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">AI Voice Agents in the UK Trades Sector: Research Report 2026</h3>
                 <p className="text-white/60 text-sm">Comprehensive market analysis covering AI voice agent adoption, missed call revenue loss, and future predictions for UK trades.</p>
               </Link>
               <Link href="/research/voice-agent-technology-state-of-art-2026" className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">

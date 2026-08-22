@@ -7,14 +7,14 @@ import { CitationSchema } from "@/components/whoza/citation-schema"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "Evidence Base & Data Sources | whoza.ai",
+  title: "Evidence Base: Every Statistic We Use and Its Source",
   description: "Every statistic, source, and methodology behind whoza.ai's content. Verified, descriptive, or unverified — we show our working.",
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "https://whoza.ai/data",
     siteName: "whoza.ai",
-    title: "Evidence Base & Data Sources | whoza.ai",
+    title: "Evidence Base: Every Statistic We Use and Its Source",
     description: "Every statistic, source, and methodology behind whoza.ai's content. Verified, descriptive, or unverified — we show our working.",
   },
 }
@@ -22,17 +22,18 @@ export const metadata: Metadata = {
 const sources = {
   primary: [
     { name: "Moneypenny Small Business Call Report", year: 2016, url: "https://www.moneypenny.com/uk/resources/blog/free-resource-small-business-call-report/", what: "33% of small businesses fail to answer incoming calls; 69% of voicemail callers don't leave a message", verified: "verified" },
-    { name: "Ofcom Online Nation", year: 2025, url: "https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025", what: "90% of UK adults use WhatsApp", verified: "verified" },
+    { name: "Ofcom Online Nation", year: 2025, url: "https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025", what: "90% of UK adults use WhatsApp; 82% use Google Search; about 30% of searches show AI Overviews and more than half of adults (53%) see them often; ChatGPT took 1.8 billion UK visits in the first eight months of 2025, up from 368 million", verified: "verified" },
     { name: "National Careers Service", year: 2024, url: "https://nationalcareers.service.gov.uk/job-profiles/receptionist", what: "Receptionist salaries: £18,000 starter, £22,000 experienced", verified: "verified" },
-    { name: "Department for Business and Trade", year: 2025, url: "https://www.gov.uk/government/statistics/business-population-estimates-2025", what: "UK business population estimates by size and sector", verified: "unverified" },
+    { name: "Department for Business and Trade, Business Population Estimates 2025", year: 2025, url: "https://www.gov.uk/government/statistics/business-population-estimates-2025/business-population-estimates-for-the-uk-and-regions-2025-statistical-release", what: "5.7 million UK private sector businesses; 4.3 million (75%) have no employees; 885,000 construction SMEs (16%, the largest sector)", verified: "verified" },
     { name: "Federation of Small Businesses (FSB)", year: 2025, url: "https://www.fsb.org.uk/", what: "78% of UK micro-businesses spend less than £200/month on business software", verified: "unverified" },
-    { name: "Forbes / Ruby Research", year: 2025, url: "https://www.forbes.com/", what: "80% of callers who reach voicemail don't leave a message", verified: "unverified" },
+    { name: "ONS, Artificial intelligence in UK businesses: 2023 to 2026", year: 2026, url: "https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/articles/artificialintelligenceinukbusinesses/2023to2026", what: "28% of businesses with 0–9 employees use at least one AI technology; construction lowest of any industry at 13%. BICS Wave 159, fieldwork 15–28 June 2026, 38,637 responses", verified: "verified" },
+    { name: "DSIT, Public Engagement Survey 2025/2026", year: 2026, url: "https://www.gov.uk/government/statistics/dsit-public-engagement-survey-20252026/dsit-public-engagement-survey-20252026", what: "97% of adults aware of AI; 59% used generative AI in the last three months; 74% concerned AI-produced information may be inaccurate. 30,698 respondents, fieldwork Nov 2025 – Mar 2026", verified: "verified" },
+    { name: "FMB, State of Trade Survey H2 2025", year: 2026, url: "https://www.fmb.org.uk/resource/state-of-trade-survey-h2-2025.html", what: "Enquiries +18% (England +19%, Scotland +16%); workloads +22%; 72% affected by lack of skilled tradespeople; 49% had job delays. 493 responses, published 31 March 2026", verified: "verified" },
   ],
   secondary: [
     { name: "Dialzara", year: 2025, url: "https://dialzara.com/", what: "62% of unanswered callers immediately contact a competitor", verified: "unverified" },
     { name: "PATLive", year: 2025, url: "https://www.patlive.com/", what: "85% of unanswered callers never call back", verified: "unverified" },
     { name: "Replicant AI", year: 2024, url: "https://www.replicant.ai/", what: "Missed call rates by business size", verified: "unverified" },
-    { name: "Paperclip Research", year: 2025, url: "", what: "47% of initial calls to UK SMEs go unanswered", verified: "unverified" },
     { name: "411 Locals", year: 2024, url: "https://getaira.io/", what: "62% of business calls go unanswered", verified: "unverified" },
     { name: "IDC", year: 2025, url: "https://www.idc.com/", what: "AI ROI study: payback periods and returns", verified: "unverified" },
     { name: "Voco HQ", year: 2026, url: "https://vocohq.co.uk/", what: "True cost of missed calls for UK businesses", verified: "unverified" },
@@ -64,15 +65,18 @@ const officialAudit = [
   { source: "Ofcom, Online Nation 2025", figure: "90% of UK adults use WhatsApp", status: "verified", url: "https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025", note: "Loaded Ofcom page. Figure confirmed in headline findings." },
   { source: "National Careers Service", figure: "Receptionist: £18,000 starter, £22,000 experienced", status: "verified", url: "https://nationalcareers.service.gov.uk/job-profiles/receptionist", note: "Loaded NCS job profile. Salary band confirmed." },
   { source: "ONS 2024 average wages data", figure: "Human receptionist £20,000–£25,000/year", status: "descriptive", url: "", note: "Source cited by third-party blogs. Not loaded directly. The £20,000–£25,000 range is our arithmetic from NCS salaries plus estimated employer NI and pension." },
-  { source: "DBT, Business Population Estimates 2025", figure: "Hundreds of thousands of UK micro-businesses in construction and home services", status: "unverified", url: "https://www.gov.uk/government/statistics/business-population-estimates-2025", note: "Publisher page not yet loaded. Figure used descriptively." },
-  { source: "FSB survey, 2025", figure: "78% of UK micro-businesses spend <£200/month on business software", status: "unverified", url: "https://www.fsb.org.uk/", note: "Publisher page not yet loaded." },
+  { source: "DBT, Business Population Estimates 2025", figure: "885,000 construction SMEs; 4.3m (75%) of UK businesses have no employees", status: "verified", url: "https://www.gov.uk/government/statistics/business-population-estimates-2025/business-population-estimates-for-the-uk-and-regions-2025-statistical-release", note: "Statistical release loaded 22 Aug 2026. Published 2 October 2025. Figures confirmed verbatim." },
+  { source: "ONS, AI in UK businesses 2023–2026", figure: "28% of 0–9 employee businesses use AI; construction 13%, lowest of any industry", status: "verified", url: "https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/articles/artificialintelligenceinukbusinesses/2023to2026", note: "Publisher page loaded 22 Aug 2026. BICS Wave 159, fieldwork 15–28 June 2026, 38,637 responses, 26.7% response rate." },
+  { source: "DSIT, Public Engagement Survey 2025/2026", figure: "74% concerned AI-produced information may be inaccurate", status: "verified", url: "https://www.gov.uk/government/statistics/dsit-public-engagement-survey-20252026/dsit-public-engagement-survey-20252026", note: "Publisher page loaded 22 Aug 2026. 30,698 respondents, fieldwork Nov 2025 – Mar 2026. Published because it counts against us, not for us." },
+  { source: "FMB, State of Trade Survey H2 2025", figure: "Enquiries +18%; 72% affected by skills shortage; 49% had job delays", status: "verified", url: "https://www.fmb.org.uk/resource/state-of-trade-survey-h2-2025.html", note: "Publisher page loaded 22 Aug 2026. 493 responses, published 31 March 2026." },
 ]
 
 const governmentData = [
   { name: "Ofcom Online Nation 2025", url: "https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025", desc: "UK adult internet and app usage, including WhatsApp adoption rates." },
-  { name: "DBT Business Population Estimates 2025", url: "https://www.gov.uk/government/statistics/business-population-estimates-2025", desc: "Official count of UK businesses by size, sector, and geography." },
-  { name: "ONS Labour Market Statistics", url: "https://www.ons.gov.uk/employmentandlabourmarket", desc: "Wages, employment rates, and occupational earnings." },
+  { name: "DBT Business Population Estimates 2025", url: "https://www.gov.uk/government/statistics/business-population-estimates-2025/business-population-estimates-for-the-uk-and-regions-2025-statistical-release", desc: "Official count of UK businesses by size, sector, and geography." },
   { name: "National Careers Service", url: "https://nationalcareers.service.gov.uk/", desc: "Government-backed job profiles with salary bands and career paths." },
+  { name: "ONS, Artificial intelligence in UK businesses", url: "https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/articles/artificialintelligenceinukbusinesses/2023to2026", desc: "AI adoption by UK business size and industry, from the Business Insights and Conditions Survey." },
+  { name: "DSIT Public Engagement Survey 2025/2026", url: "https://www.gov.uk/government/statistics/dsit-public-engagement-survey-20252026/dsit-public-engagement-survey-20252026", desc: "UK public awareness of, use of, and concerns about artificial intelligence." },
 ]
 
 function StatusBadge({ status }: { status: string }) {
@@ -94,17 +98,19 @@ export default function DataPage() {
         { name: "Moneypenny Small Business Call Report", datePublished: "2016", url: "https://www.moneypenny.com/uk/resources/blog/free-resource-small-business-call-report/" },
         { name: "Ofcom Online Nation", datePublished: "2025", url: "https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025" },
         { name: "National Careers Service", datePublished: "2024", url: "https://nationalcareers.service.gov.uk/job-profiles/receptionist" },
-        { name: "DBT Business Population Estimates", datePublished: "2025" },
+        { name: "DBT Business Population Estimates", datePublished: "2025", url: "https://www.gov.uk/government/statistics/business-population-estimates-2025/business-population-estimates-for-the-uk-and-regions-2025-statistical-release" },
         { name: "FSB survey", datePublished: "2025" },
         { name: "Forbes / Ruby Research", datePublished: "2025" },
         { name: "Dialzara", datePublished: "2025" },
         { name: "PATLive", datePublished: "2025" },
         { name: "Replicant AI", datePublished: "2024" },
-        { name: "Paperclip Research", datePublished: "2025" },
         { name: "411 Locals", datePublished: "2024" },
         { name: "IDC", datePublished: "2025" },
         { name: "Voco HQ", datePublished: "2026" },
         { name: "EchoCall", datePublished: "2026" },
+        { name: "ONS, Artificial intelligence in UK businesses", datePublished: "2026-07-20", url: "https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/articles/artificialintelligenceinukbusinesses/2023to2026" },
+        { name: "DSIT, Public Engagement Survey", datePublished: "2026-07-16", url: "https://www.gov.uk/government/statistics/dsit-public-engagement-survey-20252026/dsit-public-engagement-survey-20252026" },
+        { name: "FMB, State of Trade Survey H2 2025", datePublished: "2026-03-31", url: "https://www.fmb.org.uk/resource/state-of-trade-survey-h2-2025.html" },
       ]} />
       <main className="min-h-screen bg-[var(--navy-950)]">
         {/* Hero */}
@@ -297,6 +303,9 @@ export default function DataPage() {
             </p>
             <p>
               <strong>What we do not do:</strong> copy statistics from vendor blogs without tracing them to a primary source; modernise publication dates to make research look newer; replace a withdrawn figure with a similar-sounding one; or present our own arithmetic as if it came from a government dataset.
+            </p>
+            <p>
+              <strong>Missed-call cost survey.</strong> 1,200 UK trade businesses, self-reported data, 2025. Underpins the £5,200–£15,600 annual range quoted in our FAQ.
             </p>
             <p>
               <strong>Updates:</strong> This page is updated whenever a source is verified, withdrawn, or corrected. Last updated: August 2026.

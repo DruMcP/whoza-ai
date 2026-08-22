@@ -786,7 +786,7 @@ export default function ResearchPage() {
                 className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors"
               >
                 <div className="text-amber-400 text-sm font-medium mb-2">Research</div>
-                <h3 className="text-lg font-semibold text-white mb-2">AI Voice Agents in the UK Trades Sector: Independent Research Report 2026</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">AI Voice Agents in the UK Trades Sector: Research Report 2026</h3>
                 <p className="text-white/60 text-sm">Comprehensive market analysis covering AI voice agent adoption, missed call revenue loss, and future predictions for UK trades.</p>
               </Link>
               <Link

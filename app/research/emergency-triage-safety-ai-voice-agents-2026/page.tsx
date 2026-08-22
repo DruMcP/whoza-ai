@@ -123,7 +123,7 @@ export default function ResearchPage() {
         <section className="mb-16">
           <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <FileText className="w-4 h-4" />
-            Independent Research — July 2026
+            Research — July 2026
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4 leading-tight">
             Can an AI Voice Agent Tell a Blocked Drain from a Gas Leak?

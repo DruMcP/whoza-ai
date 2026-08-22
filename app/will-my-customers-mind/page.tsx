@@ -105,6 +105,16 @@ export default function WillMyCustomersMindPage() {
           </section>
 
           <section className="mb-12">
+            <h2 className="text-2xl font-bold text-white mb-4">What the Public Actually Thinks About AI</h2>
+            <p className="text-white/70 leading-relaxed mb-4">
+              The DSIT Public Engagement Survey 2025/2026 (30,698 respondents, fieldwork November 2025 – March 2026) found that <strong>97% of UK adults are aware of AI</strong>, and <strong>59% have used generative AI in the last three months</strong>. AI is not fringe technology — it is mainstream consumer behaviour.
+            </p>
+            <p className="text-white/70 leading-relaxed mb-4">
+              The same survey found that <strong>74% are concerned AI-produced information may be inaccurate</strong>. That is the concern to address — not whether AI answers the phone, but whether it answers it well. Katie says yes when asked, handles the booking accurately, and transfers to a human when requested. The transparency is what turns the 74% concern into acceptance.
+            </p>
+          </section>
+
+          <section className="mb-12">
             <h2 className="text-2xl font-bold text-white mb-4">The Real Choice</h2>
             <div className="grid sm:grid-cols-2 gap-4 mb-6">
               <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-6">
