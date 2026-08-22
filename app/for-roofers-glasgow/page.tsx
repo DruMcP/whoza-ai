@@ -73,7 +73,7 @@ export default function ForRooferGlasgowPage() {
         { name: "For Roofers", item: "https://whoza.ai/for-roofers" },
         { name: "Glasgow", item: "https://whoza.ai/for-roofers-glasgow" },
       ]} />
-      <div className="trade-faq">
+      <div>
       <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
       </div>
 
@@ -341,7 +341,7 @@ export default function ForRooferGlasgowPage() {
 
         <div className="section-divider" />
 
-        <section className="py-16 lg:py-24">
+        <section className="trade-faq py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">
