@@ -4,6 +4,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
+import { QuickAnswer } from "@/components/whoza/quick-answer"
 import { VideoSchema } from "@/components/whoza/schema-markup"
 import { Button } from "@/components/ui/button"
 import { WaitlistModal } from "@/components/whoza/waitlist-modal"
@@ -94,7 +95,7 @@ export default function ForPlasterersPage() {
         { name: "Home", item: "https://whoza.ai" },
         { name: "For Plasterers", item: "https://whoza.ai/for-plasterers" },
       ]} />
-      <FAQPageSchema faqs={faqs} />
+      <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
 
       {/* Schema JSON-LD */}
             <script
@@ -133,7 +134,7 @@ export default function ForPlasterersPage() {
                   <Home className="w-4 h-4" />
                   Built for UK Plasterers
                 </div>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   AI Call Answering for{" "}
                   <span className="text-blue-400">Plasterers</span>{" "}
                   UK — Never Miss a Job
@@ -184,6 +185,30 @@ export default function ForPlasterersPage() {
             </div>
           </div>
         </section>
+        {/* ─── QUICK ANSWER ─── */}
+        <QuickAnswer
+          heading="What whoza.ai does for plasterers"
+          tradeName="plasterer"
+          serviceUrl="/for-plasterers"
+          items={[            {
+              label: "Instant pickup",
+              answer: "Katie answers every plastering enquiry in 2 rings, even when you are up to your elbows in plaster.",
+            },            {
+              label: "Job qualification",
+              answer: "She captures room dimensions, surface condition, finish type, and budget in 45 seconds.",
+            },            {
+              label: "Schedule sync",
+              answer: "Katie checks your availability and offers customers specific booking slots.",
+            },            {
+              label: "Commercial tagging",
+              answer: "Large commercial plastering contracts are flagged for priority follow-up.",
+            },            {
+              label: "WhatsApp brief",
+              answer: "A structured message with full job details lands on your phone before you call back.",
+            }
+          ]}
+        />
+
 
         <div className="section-divider" />
 

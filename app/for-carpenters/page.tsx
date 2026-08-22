@@ -4,6 +4,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
+import { QuickAnswer } from "@/components/whoza/quick-answer"
 import { VideoSchema } from "@/components/whoza/schema-markup"
 import { ArrowRight, Phone, Hammer, Clock, PoundSterling, Shield, CheckCircle2, Star, TreePine, AlertTriangle } from "lucide-react"
 import Link from "next/link"
@@ -92,7 +93,7 @@ export default function ForCarpentersPage() {
         { name: "Home", item: "https://whoza.ai" },
         { name: "For Carpenters", item: "https://whoza.ai/for-carpenters" },
       ]} />
-      <FAQPageSchema faqs={faqs} />
+      <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
 
       {/* Schema JSON-LD */}
             <script
@@ -131,7 +132,7 @@ export default function ForCarpentersPage() {
                   <Hammer className="w-4 h-4" />
                   Built for UK Carpenters
                 </div>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   Never Miss a{" "}
                   <span className="text-amber-400">Carpentry</span>{" "}
                   Job Again
@@ -182,6 +183,30 @@ export default function ForCarpentersPage() {
             </div>
           </div>
         </section>
+        {/* ─── QUICK ANSWER ─── */}
+        <QuickAnswer
+          heading="What whoza.ai does for carpenters"
+          tradeName="carpenter"
+          serviceUrl="/for-carpenters"
+          items={[            {
+              label: "Instant pickup",
+              answer: "Katie answers every carpentry call in 2 rings, even when the table saw is screaming.",
+            },            {
+              label: "Project capture",
+              answer: "She records project type, materials preference, budget range, timeline, and whether it is commercial or residential.",
+            },            {
+              label: "Bespoke qualification",
+              answer: "Detailed capture for bespoke kitchens, fitted wardrobes, staircases, and cabinets gives you a full brief before callback.",
+            },            {
+              label: "Commercial priority",
+              answer: "Developer and builder enquiries get priority tagging for fast follow-up.",
+            },            {
+              label: "WhatsApp delivery",
+              answer: "A structured message lands on your phone in 3 seconds with all project details.",
+            }
+          ]}
+        />
+
 
         <div className="section-divider" />
 

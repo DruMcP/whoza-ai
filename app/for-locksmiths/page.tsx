@@ -4,6 +4,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
+import { QuickAnswer } from "@/components/whoza/quick-answer"
 import { SocialProofBand } from "@/components/whoza/social-proof"
 import { VideoExplainer } from "@/components/whoza/video-explainer"
 import { LostRevenueCalculator } from "@/components/whoza/lost-revenue-calculator"
@@ -189,7 +190,9 @@ export default function ForLocksmithsPage() {
         { name: "Home", item: "https://whoza.ai" },
         { name: "For Locksmiths", item: "https://whoza.ai/for-locksmiths" },
       ]} />
-      <FAQPageSchema faqs={faqs} />
+      <div className="trade-faq">
+      <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
+      </div>
 
       <main id="main-content" role="main" className="pb-24 lg:pb-0">
         {/* HERO */}
@@ -201,7 +204,7 @@ export default function ForLocksmithsPage() {
                   <Lock className="w-4 h-4" />
                   Built for UK Locksmiths
                 </div>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 trade-headline">
                   Never Miss a Lockout Call — Even at 3am
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8">
@@ -271,6 +274,30 @@ export default function ForLocksmithsPage() {
             </div>
           </div>
         </section>
+        {/* ─── QUICK ANSWER ─── */}
+        <QuickAnswer
+          heading="What whoza.ai does for locksmiths"
+          tradeName="locksmith"
+          serviceUrl="/for-locksmiths"
+          items={[            {
+              label: "Instant pickup",
+              answer: "Katie answers every lockout call in under 3 seconds — even at midnight on a bank holiday.",
+            },            {
+              label: "Job identification",
+              answer: "She identifies emergency lockouts, key replacements, security upgrades, and commercial enquiries.",
+            },            {
+              label: "Context capture",
+              answer: "Property type, lock type, access situation, and insurance status are recorded.",
+            },            {
+              label: "Priority tagging",
+              answer: "Emergency lockouts get highest priority; landlord and commercial enquiries are tagged for repeat revenue.",
+            },            {
+              label: "WhatsApp alert",
+              answer: "A full job brief with customer number and exact location lands on your phone instantly.",
+            }
+          ]}
+        />
+
 
         <SocialProofBand />
 

@@ -115,7 +115,7 @@ export default function ForPlumbersPage() {
         { name: "Home", item: "https://whoza.ai" },
         { name: "For Plumbers", item: "https://whoza.ai/for-plumbers" },
       ]} />
-      <FAQPageSchema faqs={faqs} />
+      <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
 
       {/* Schema JSON-LD */}
             <script
@@ -154,7 +154,7 @@ export default function ForPlumbersPage() {
                   <Droplets className="w-4 h-4" />
                   Built for UK Plumbers
                 </div>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   AI Receptionist for{" "}
                   <span className="text-blue-400">Plumbers UK</span>:{" "}
                   From £59/mo — Never Miss Jobs
@@ -410,7 +410,7 @@ export default function ForPlumbersPage() {
         <div className="section-divider" />
 
                 {/* ─── FAQ ─── */}
-        <section id="faq" className="py-16 lg:py-24">
+        <section id="faq" className="trade-faq py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">

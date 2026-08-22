@@ -4,6 +4,7 @@ import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FileText, Download, BookOpen, ArrowLeft, Calendar, User, BarChart3, Clock, CheckCircle } from "lucide-react"
 import Link from "next/link"
+import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
@@ -227,6 +228,12 @@ const breadcrumbSchema = {
   ]
 }
 
+const faqs = [
+    { question: "What percentage of small business calls go unanswered?", answer: "Small businesses miss an average of 62% of incoming calls during working hours (411 Locals, 2024), rising to over 80% during peak periods. UK SMEs miss 47% of initial calls (Paperclip Research, 2025). 85% of callers who do not get through will never call back (PATLive, 2025)." },
+    { question: "What is the lifetime value of a single missed call?", answer: "The lifetime value of a single missed call is approximately £1,200 (Quality Company Formations, 2025). This includes immediate job value, repeat business, referrals, and review value. A plumber missing five calls per week at £350 average job value loses £91,000 annually." },
+    { question: "What capabilities do modern AI voice agents offer for trade businesses?", answer: "Modern AI voice agents offer 24/7 call answering, lead qualification with trade-specific questioning, spam filtering, WhatsApp delivery, calendar integration, and multi-language support. End-to-end speech models like OpenAI's Realtime API achieve sub-200ms latency, and 94% of callers believe they are speaking to a human receptionist." },
+    { question: "What is the UK total annual loss to missed calls?", answer: "UK businesses lose approximately £30 billion annually to missed calls (BT/Avaya, 2025). The average small business loses ~£120,000 annually (AMBS Call Center, 2025). 62% of unanswered callers immediately contact a competitor (Dialzara, 2025)." }
+]
 export default function ResearchPage() {
   return (
     <div className="min-h-screen bg-[var(--navy-900)] text-white">
@@ -1035,7 +1042,34 @@ export default function ResearchPage() {
             <a href="/data" className="text-emerald-400 hover:underline">Sources and methodology</a> for all figures in this report.
           </p>
         </div>
-      </main>
+      
+{/* FAQ Section */}
+<section className="py-16 lg:py-24 bg-white/5 border-t border-white/10">
+  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+    <div className="space-y-6">
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">What percentage of small business calls go unanswered?</h3>
+        <p className="text-white/70 leading-relaxed">Small businesses miss an average of 62% of incoming calls during working hours (411 Locals, 2024), rising to over 80% during peak periods. UK SMEs miss 47% of initial calls (Paperclip Research, 2025). 85% of callers who do not get through will never call back (PATLive, 2025).</p>
+      </div>
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">What is the lifetime value of a single missed call?</h3>
+        <p className="text-white/70 leading-relaxed">The lifetime value of a single missed call is approximately £1,200 (Quality Company Formations, 2025). This includes immediate job value, repeat business, referrals, and review value. A plumber missing five calls per week at £350 average job value loses £91,000 annually.</p>
+      </div>
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">What capabilities do modern AI voice agents offer for trade businesses?</h3>
+        <p className="text-white/70 leading-relaxed">Modern AI voice agents offer 24/7 call answering, lead qualification with trade-specific questioning, spam filtering, WhatsApp delivery, calendar integration, and multi-language support. End-to-end speech models like OpenAI's Realtime API achieve sub-200ms latency, and 94% of callers believe they are speaking to a human receptionist.</p>
+      </div>
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">What is the UK total annual loss to missed calls?</h3>
+        <p className="text-white/70 leading-relaxed">UK businesses lose approximately £30 billion annually to missed calls (BT/Avaya, 2025). The average small business loses ~£120,000 annually (AMBS Call Center, 2025). 62% of unanswered callers immediately contact a competitor (Dialzara, 2025).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <FAQPageSchema faqs={faqs} />
+</main>
 
       <Footer />
     </div>

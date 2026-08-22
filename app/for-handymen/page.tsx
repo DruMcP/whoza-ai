@@ -4,6 +4,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
+import { QuickAnswer } from "@/components/whoza/quick-answer"
 import { VideoSchema } from "@/components/whoza/schema-markup"
 import { Button } from "@/components/ui/button"
 import { WaitlistModal } from "@/components/whoza/waitlist-modal"
@@ -90,7 +91,7 @@ export default function ForHandymenPage() {
         { name: "Home", item: "https://whoza.ai" },
         { name: "For Handymen", item: "https://whoza.ai/for-handymen" },
       ]} />
-      <FAQPageSchema faqs={faqs} />
+      <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
 
       {/* Schema JSON-LD */}
             <script
@@ -129,7 +130,7 @@ export default function ForHandymenPage() {
                   <Hammer className="w-4 h-4" />
                   Built for UK Handymen
                 </div>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   AI Call Answering for{" "}
                   <span className="text-blue-400">Handymen</span>{" "}
                   UK — Never Miss a Job
@@ -180,6 +181,30 @@ export default function ForHandymenPage() {
             </div>
           </div>
         </section>
+        {/* ─── QUICK ANSWER ─── */}
+        <QuickAnswer
+          heading="What whoza.ai does for handymen"
+          tradeName="handyman"
+          serviceUrl="/for-handymen"
+          items={[            {
+              label: "Instant pickup",
+              answer: "Katie answers every handyman enquiry in 2 rings, even when you are on a ladder.",
+            },            {
+              label: "Job variety",
+              answer: "She handles everything from furniture assembly to plumbing repairs to painting jobs.",
+            },            {
+              label: "Urgency sorting",
+              answer: "Emergency repairs get flagged for immediate callback; non-urgent jobs are scheduled.",
+            },            {
+              label: "Location capture",
+              answer: "Postcode and property details are recorded so you know where to go.",
+            },            {
+              label: "WhatsApp delivery",
+              answer: "A structured message with job details lands on your phone in 3 seconds.",
+            }
+          ]}
+        />
+
 
         <div className="section-divider" />
 

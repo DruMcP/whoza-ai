@@ -4,6 +4,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
+import { QuickAnswer } from "@/components/whoza/quick-answer"
 import { VideoSchema } from "@/components/whoza/schema-markup"
 import { Button } from "@/components/ui/button"
 import { WaitlistModal } from "@/components/whoza/waitlist-modal"
@@ -90,7 +91,7 @@ export default function ForLandscapersPage() {
         { name: "Home", item: "https://whoza.ai" },
         { name: "For Landscapers", item: "https://whoza.ai/for-landscapers" },
       ]} />
-      <FAQPageSchema faqs={faqs} />
+      <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
 
       {/* Schema JSON-LD */}
             <script
@@ -129,7 +130,7 @@ export default function ForLandscapersPage() {
                   <TreePine className="w-4 h-4" />
                   Built for UK Landscapers
                 </div>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   AI Call Answering for{" "}
                   <span className="text-green-400">Landscapers</span>{" "}
                   UK — Never Miss a Job
@@ -180,6 +181,30 @@ export default function ForLandscapersPage() {
             </div>
           </div>
         </section>
+        {/* ─── QUICK ANSWER ─── */}
+        <QuickAnswer
+          heading="What whoza.ai does for landscapers"
+          tradeName="landscaper"
+          serviceUrl="/for-landscapers"
+          items={[            {
+              label: "Instant pickup",
+              answer: "Katie answers every garden enquiry in 2 rings, even when you are mid-plant or on a digger.",
+            },            {
+              label: "Project qualification",
+              answer: "She captures garden size, style preference, features, budget range, and start month in 60 seconds.",
+            },            {
+              label: "Spring rush handling",
+              answer: "Unlimited simultaneous calls mean no busy signals during your busiest season.",
+            },            {
+              label: "Commercial tagging",
+              answer: "Commercial maintenance contracts are identified and flagged for priority handling.",
+            },            {
+              label: "WhatsApp brief",
+              answer: "A full design brief arrives on your phone before you call back.",
+            }
+          ]}
+        />
+
 
         <div className="section-divider" />
 

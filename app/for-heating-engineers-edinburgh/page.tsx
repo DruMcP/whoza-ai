@@ -73,7 +73,9 @@ export default function ForHeatingEngineerEdinburghPage() {
         { name: "For Heating Engineers", item: "https://whoza.ai/for-heating-engineers" },
         { name: "Edinburgh", item: "https://whoza.ai/for-heating-engineers-edinburgh" },
       ]} />
-      <FAQPageSchema faqs={faqs} />
+      <div className="trade-faq">
+      <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
+      </div>
 
             <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
       <CityTradeSchema trade="Heating Engineer" tradePlural="Heating Engineers" city="Edinburgh" region="City of Edinburgh" pageUrl="https://whoza.ai/for-heating-engineers-edinburgh" />
@@ -89,7 +91,7 @@ export default function ForHeatingEngineerEdinburghPage() {
                   <Flame className="w-4 h-4" />
                   Heating Engineers in Edinburgh
                 </div>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   Never Miss a{" "}
                   <span className="text-orange-400">Heating Engineer</span>{" "}
                   Job in Edinburgh Again

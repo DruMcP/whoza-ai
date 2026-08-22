@@ -3,6 +3,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import type { Metadata } from "next"
+import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 
 export const metadata: Metadata = {
   title: "Voice Agent Technology: State of the Art, Architecture & Future 2026 | whoza.ai",
@@ -66,10 +67,17 @@ const breadcrumbItems = [
   },
 ]
 
+const faqs = [
+    { question: "What is the 200-millisecond barrier in voice agent technology?", answer: "Research published in PNAS by Stivers and colleagues established that humans hand off conversational turns in approximately 200ms. Traditional stitched voice AI pipelines (STT → LLM → TTS) produced 600ms-1.7s latency, which is conversationally broken. Modern end-to-end models like OpenAI's Realtime API achieve sub-200ms latency, crossing the human conversational threshold." },
+    { question: "How has speech synthesis crossed the uncanny valley?", answer: "CosyVoice v2 achieved a MOS (Mean Opinion Score) of 5.53 for naturalness, exceeding the typical human speech range of 4.5-5.0. In blind testing, 94% of callers believed they were speaking to a human receptionist rather than an AI system. Contemporary voice agents preserve prosodic information, emotional tone, and speaker characteristics." },
+    { question: "What is the global conversational AI market size?", answer: "The global conversational AI market reached USD 17.12 billion in 2026 and is projected to reach USD 42.51 billion by 2030 at a 25.5% CAGR. Gartner projects that 80% of customer service organisations will have adopted generative AI by end of 2026, and conversational AI will reduce labour costs by USD 80 billion annually." },
+    { question: "What is the difference between stacked and end-to-end voice AI?", answer: "Stacked pipelines chain separate STT, LLM, and TTS components, each adding latency (total 600ms-1.7s) and compounding errors. End-to-end models like OpenAI's Realtime API process audio natively through a single neural network, reducing latency to under 200ms while maintaining conversational nuance including filler words, pauses, and emotional tone." }
+]
 export default function VoiceAgentTechnologyPage() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbItems} />
+      
 
       {/* Schema: ScholarlyArticle */}
       <script
@@ -898,7 +906,34 @@ export default function VoiceAgentTechnologyPage() {
             <a href="/data" className="text-emerald-400 hover:underline">Sources and methodology</a> for all figures in this report.
           </p>
         </div>
-      </main>
+      
+{/* FAQ Section */}
+<section className="py-16 lg:py-24 bg-white/5 border-t border-white/10">
+  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+    <div className="space-y-6">
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">What is the 200-millisecond barrier in voice agent technology?</h3>
+        <p className="text-white/70 leading-relaxed">Research published in PNAS by Stivers and colleagues established that humans hand off conversational turns in approximately 200ms. Traditional stitched voice AI pipelines (STT → LLM → TTS) produced 600ms-1.7s latency, which is conversationally broken. Modern end-to-end models like OpenAI's Realtime API achieve sub-200ms latency, crossing the human conversational threshold.</p>
+      </div>
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">How has speech synthesis crossed the uncanny valley?</h3>
+        <p className="text-white/70 leading-relaxed">CosyVoice v2 achieved a MOS (Mean Opinion Score) of 5.53 for naturalness, exceeding the typical human speech range of 4.5-5.0. In blind testing, 94% of callers believed they were speaking to a human receptionist rather than an AI system. Contemporary voice agents preserve prosodic information, emotional tone, and speaker characteristics.</p>
+      </div>
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">What is the global conversational AI market size?</h3>
+        <p className="text-white/70 leading-relaxed">The global conversational AI market reached USD 17.12 billion in 2026 and is projected to reach USD 42.51 billion by 2030 at a 25.5% CAGR. Gartner projects that 80% of customer service organisations will have adopted generative AI by end of 2026, and conversational AI will reduce labour costs by USD 80 billion annually.</p>
+      </div>
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">What is the difference between stacked and end-to-end voice AI?</h3>
+        <p className="text-white/70 leading-relaxed">Stacked pipelines chain separate STT, LLM, and TTS components, each adding latency (total 600ms-1.7s) and compounding errors. End-to-end models like OpenAI's Realtime API process audio natively through a single neural network, reducing latency to under 200ms while maintaining conversational nuance including filler words, pauses, and emotional tone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <FAQPageSchema faqs={faqs} />
+</main>
 
       <Footer />
     </>

@@ -3,6 +3,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { ArrowRight, Check, MessageCircle, PoundSterling, Shield, Star, Zap } from "lucide-react"
+import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
@@ -53,9 +54,15 @@ const comparisonData = [
 
 export const revalidate = 3600
 
+const faqs = [
+    { question: "Is Team-Connect actually cheaper than whoza.ai when you factor in features?", answer: "Team-Connect's base price is lower, but whoza.ai includes more features at every tier. Team-Connect charges extra for WhatsApp delivery, calendar integration, and custom voices — features included in whoza.ai's Growth plan. When comparing equivalent feature sets, whoza.ai is typically cheaper overall." },
+    { question: "Does Team-Connect offer WhatsApp delivery like whoza.ai?", answer: "No. Team-Connect does not offer WhatsApp delivery. whoza.ai provides native WhatsApp integration with instant push notifications, one-tap response buttons, and rich media support. According to Ofcom, 90% of UK adults use WhatsApp regularly, making it the most reliable channel for reaching tradespeople." },
+    { question: "When is Team-Connect the better choice over whoza.ai?", answer: "Team-Connect may suit businesses that need basic call answering at the lowest possible price and do not require WhatsApp delivery, review collection, competitor analysis, or calendar integration. For tradespeople who want growth tools and comprehensive automation, whoza.ai offers more value." }
+]
 export default function VsTeamConnectPage() {
   return (
     <>
+      
       <div className="min-h-screen bg-[var(--navy-900)] text-white">
         <Header />
         <BreadcrumbSchema items={[
@@ -309,7 +316,30 @@ export default function VsTeamConnectPage() {
             </div>
           </section>
 
-        </main>
+        
+{/* FAQ Section */}
+<section className="py-16 lg:py-24 bg-white/5 border-t border-white/10">
+  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+    <div className="space-y-6">
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">Is Team-Connect actually cheaper than whoza.ai when you factor in features?</h3>
+        <p className="text-white/70 leading-relaxed">Team-Connect's base price is lower, but whoza.ai includes more features at every tier. Team-Connect charges extra for WhatsApp delivery, calendar integration, and custom voices — features included in whoza.ai's Growth plan. When comparing equivalent feature sets, whoza.ai is typically cheaper overall.</p>
+      </div>
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">Does Team-Connect offer WhatsApp delivery like whoza.ai?</h3>
+        <p className="text-white/70 leading-relaxed">No. Team-Connect does not offer WhatsApp delivery. whoza.ai provides native WhatsApp integration with instant push notifications, one-tap response buttons, and rich media support. According to Ofcom, 90% of UK adults use WhatsApp regularly, making it the most reliable channel for reaching tradespeople.</p>
+      </div>
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">When is Team-Connect the better choice over whoza.ai?</h3>
+        <p className="text-white/70 leading-relaxed">Team-Connect may suit businesses that need basic call answering at the lowest possible price and do not require WhatsApp delivery, review collection, competitor analysis, or calendar integration. For tradespeople who want growth tools and comprehensive automation, whoza.ai offers more value.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <FAQPageSchema faqs={faqs} />
+</main>
 
         <Footer />
       </div>

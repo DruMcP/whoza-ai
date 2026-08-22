@@ -4,6 +4,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
+import { QuickAnswer } from "@/components/whoza/quick-answer"
 import { VideoSchema } from "@/components/whoza/schema-markup"
 import { ArrowRight, Phone, Flame, Shield, Clock, PoundSterling, CheckCircle2, Star, AlertTriangle } from "lucide-react"
 import Link from "next/link"
@@ -87,7 +88,7 @@ export default function ForGasEngineersPage() {
         { name: "Home", item: "https://whoza.ai" },
         { name: "For Gas Engineers", item: "https://whoza.ai/for-gas-engineers" },
       ]} />
-      <FAQPageSchema faqs={faqs} />
+      <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
 
       {/* Schema JSON-LD */}
             <script
@@ -126,7 +127,7 @@ export default function ForGasEngineersPage() {
                   <Flame className="w-4 h-4" />
                   Built for Gas Safe Engineers
                 </div>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   Never Miss a{" "}
                   <span className="text-orange-400">Gas Safety</span>{" "}
                   Call Again
@@ -177,6 +178,30 @@ export default function ForGasEngineersPage() {
             </div>
           </div>
         </section>
+        {/* ─── QUICK ANSWER ─── */}
+        <QuickAnswer
+          heading="What whoza.ai does for gas engineers"
+          tradeName="gas engineer"
+          serviceUrl="/for-gas-engineers"
+          items={[            {
+              label: "Instant pickup",
+              answer: "Katie answers every gas enquiry in 2 rings, even when you are on a boiler job.",
+            },            {
+              label: "System identification",
+              answer: "She identifies boiler type from customer descriptions and asks clarifying questions.",
+            },            {
+              label: "Fault capture",
+              answer: "Boiler make, model, fault symptoms, property size, and heating system type are all recorded.",
+            },            {
+              label: "Emergency tagging",
+              answer: "No heating, no hot water, and gas leak keywords trigger urgent priority alerts.",
+            },            {
+              label: "WhatsApp brief",
+              answer: "You get a full system context message before you call back, including parts to bring.",
+            }
+          ]}
+        />
+
 
         <div className="section-divider" />
 
@@ -389,7 +414,7 @@ export default function ForGasEngineersPage() {
         <TradeCityLinks tradeSlug="gas engineers" />
 
         <div className="section-divider" />
-<section className="py-16 lg:py-24">
+<section className="trade-faq py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">

@@ -73,7 +73,7 @@ export default function ForHeatingEngineerLondonPage() {
         { name: "For Heating Engineers", item: "https://whoza.ai/for-heating-engineers" },
         { name: "London", item: "https://whoza.ai/for-heating-engineers-london" },
       ]} />
-      <FAQPageSchema faqs={faqs} />
+      <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
 
       {/* Schema JSON-LD */}
             <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
@@ -91,7 +91,7 @@ export default function ForHeatingEngineerLondonPage() {
                   <HardHat className="w-4 h-4" />
                   Heating Engineers in London
                 </div>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   Never Miss a{" "}
                   <span className="text-orange-400">Heating Engineer</span>{" "}
                   Job in London Again
@@ -349,7 +349,7 @@ export default function ForHeatingEngineerLondonPage() {
         <div className="section-divider" />
 
         {/* ─── FAQ ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="trade-faq py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">
@@ -359,7 +359,7 @@ export default function ForHeatingEngineerLondonPage() {
                 Everything you need to know about AI call answering for heating engineers in London.
               </p>
             </div>
-            <div className="space-y-4">
+            <div className="trade-faq space-y-4">
               {faqs.map((faq, idx) => (
                 <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6" itemScope itemType="https://schema.org/Question">
                   <h3 className="text-lg font-semibold mb-3" itemProp="name">{faq.question}</h3>

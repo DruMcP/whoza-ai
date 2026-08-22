@@ -4,6 +4,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
+import { QuickAnswer } from "@/components/whoza/quick-answer"
 import { VideoSchema } from "@/components/whoza/schema-markup"
 import { Button } from "@/components/ui/button"
 import { WaitlistModal } from "@/components/whoza/waitlist-modal"
@@ -94,7 +95,7 @@ export default function ForCleanersPage() {
         { name: "Home", item: "https://whoza.ai" },
         { name: "For Cleaners", item: "https://whoza.ai/for-cleaners" },
       ]} />
-      <FAQPageSchema faqs={faqs} />
+      <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
 
       {/* Schema JSON-LD */}
             <script
@@ -133,7 +134,7 @@ export default function ForCleanersPage() {
                   <Sparkles className="w-4 h-4" />
                   Built for UK Cleaners
                 </div>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   AI Call Answering for Cleaners UK —{" "}
                   <span className="text-blue-400">Never Miss a Booking</span>
                 </h1>
@@ -183,6 +184,30 @@ export default function ForCleanersPage() {
             </div>
           </div>
         </section>
+        {/* ─── QUICK ANSWER ─── */}
+        <QuickAnswer
+          heading="What whoza.ai does for cleaners"
+          tradeName="cleaner"
+          serviceUrl="/for-cleaners"
+          items={[            {
+              label: "Instant pickup",
+              answer: "Katie answers every cleaning enquiry in 2 rings, even when you are mid-job with gloves on.",
+            },            {
+              label: "Service qualification",
+              answer: "She captures property type, cleaning scope, frequency, and special requirements in under a minute.",
+            },            {
+              label: "Schedule sync",
+              answer: "Katie checks your availability and offers customers specific booking slots.",
+            },            {
+              label: "Commercial tagging",
+              answer: "Office and contract cleaning enquiries are flagged for priority follow-up.",
+            },            {
+              label: "WhatsApp brief",
+              answer: "You get customer details, property info, and service requirements before you call back.",
+            }
+          ]}
+        />
+
 
         <div className="section-divider" />
 

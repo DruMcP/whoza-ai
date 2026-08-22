@@ -4,6 +4,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
+import { QuickAnswer } from "@/components/whoza/quick-answer"
 import { VideoSchema } from "@/components/whoza/schema-markup"
 import { Button } from "@/components/ui/button"
 import { WaitlistModal } from "@/components/whoza/waitlist-modal"
@@ -94,7 +95,7 @@ export default function ForPestControlPage() {
         { name: "Home", item: "https://whoza.ai" },
         { name: "For Pest Control", item: "https://whoza.ai/for-pest-control" },
       ]} />
-      <FAQPageSchema faqs={faqs} />
+      <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
 
       {/* Schema JSON-LD */}
             <script
@@ -133,7 +134,7 @@ export default function ForPestControlPage() {
                   <Bug className="w-4 h-4" />
                   Built for UK Pest Control
                 </div>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   AI Call Answering for Pest Control UK —{" "}
                   <span className="text-amber-400">Never Miss an Infestation Call</span>
                 </h1>
@@ -183,6 +184,30 @@ export default function ForPestControlPage() {
             </div>
           </div>
         </section>
+        {/* ─── QUICK ANSWER ─── */}
+        <QuickAnswer
+          heading="What whoza.ai does for pest control operators"
+          tradeName="pest control operator"
+          serviceUrl="/for-pest-control"
+          items={[            {
+              label: "Instant pickup",
+              answer: "Katie answers every pest control call in 2 rings, even when you are treating a property.",
+            },            {
+              label: "Pest identification",
+              answer: "She captures pest type, infestation severity, property type, and access details.",
+            },            {
+              label: "Emergency tagging",
+              answer: "Active infestations and health hazards get marked as urgent priority.",
+            },            {
+              label: "Commercial tagging",
+              answer: "Restaurant, hotel, and food business enquiries are flagged for immediate response.",
+            },            {
+              label: "WhatsApp alert",
+              answer: "A structured message with pest details and property info lands on your phone in 3 seconds.",
+            }
+          ]}
+        />
+
 
         <div className="section-divider" />
 
@@ -477,7 +502,7 @@ export default function ForPestControlPage() {
         <TradeCityLinks tradeSlug="pest control" />
 
         <div className="section-divider" />
-<section className="py-16 lg:py-24">
+<section className="trade-faq py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">

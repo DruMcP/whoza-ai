@@ -4,6 +4,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
+import { QuickAnswer } from "@/components/whoza/quick-answer"
 import { VideoSchema } from "@/components/whoza/schema-markup"
 import { Button } from "@/components/ui/button"
 import { WaitlistModal } from "@/components/whoza/waitlist-modal"
@@ -94,7 +95,7 @@ export default function ForTilersPage() {
         { name: "Home", item: "https://whoza.ai" },
         { name: "For Tilers", item: "https://whoza.ai/for-tilers" },
       ]} />
-      <FAQPageSchema faqs={faqs} />
+      <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
 
       {/* Schema JSON-LD */}
             <script
@@ -133,7 +134,7 @@ export default function ForTilersPage() {
                   <LayoutGrid className="w-4 h-4" />
                   Built for UK Tilers
                 </div>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   AI Call Answering for{" "}
                   <span className="text-blue-400">Tilers</span>{" "}
                   UK — Never Miss a Job
@@ -184,6 +185,30 @@ export default function ForTilersPage() {
             </div>
           </div>
         </section>
+        {/* ─── QUICK ANSWER ─── */}
+        <QuickAnswer
+          heading="What whoza.ai does for tilers"
+          tradeName="tiler"
+          serviceUrl="/for-tilers"
+          items={[            {
+              label: "Instant pickup",
+              answer: "Katie answers every tiling enquiry in 2 rings, even when you are cutting tiles on site.",
+            },            {
+              label: "Project scope",
+              answer: "She captures room type, tile type, area size, pattern preference, and budget.",
+            },            {
+              label: "Schedule sync",
+              answer: "Katie checks your diary and offers customers specific appointment slots.",
+            },            {
+              label: "Commercial tagging",
+              answer: "Bathroom and kitchen fitting company enquiries are flagged for priority follow-up.",
+            },            {
+              label: "WhatsApp brief",
+              answer: "A structured message with full project details lands on your phone in 3 seconds.",
+            }
+          ]}
+        />
+
 
         <div className="section-divider" />
 

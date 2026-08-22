@@ -175,7 +175,7 @@ export default function ForRoofersPage() {
         { name: "Home", item: "https://whoza.ai" },
         { name: "For Roofers", item: "https://whoza.ai/for-roofers" },
       ]} />
-      <FAQPageSchema faqs={faqs} />
+      <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
 
       <main id="main-content" role="main" className="pb-24 lg:pb-0">
         {/* HERO */}
@@ -187,7 +187,7 @@ export default function ForRoofersPage() {
                   <Home className="w-4 h-4" />
                   Built for UK Roofers
                 </div>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 trade-headline">
                   AI Customer Service for Roofers: Never Miss a Storm Call
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8">
