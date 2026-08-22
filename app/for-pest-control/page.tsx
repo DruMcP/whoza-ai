@@ -4,6 +4,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
+import { QuickAnswer } from "@/components/whoza/quick-answer"
 import { VideoSchema } from "@/components/whoza/schema-markup"
 import { Button } from "@/components/ui/button"
 import { WaitlistModal } from "@/components/whoza/waitlist-modal"
@@ -183,6 +184,30 @@ export default function ForPestControlPage() {
             </div>
           </div>
         </section>
+        {/* ─── QUICK ANSWER ─── */}
+        <QuickAnswer
+          heading="What whoza.ai does for pest control operators"
+          tradeName="pest control operator"
+          serviceUrl="/for-pest-control"
+          items={[            {
+              label: "Instant pickup",
+              answer: "Katie answers every pest control call in 2 rings, even when you are treating a property.",
+            },            {
+              label: "Pest identification",
+              answer: "She captures pest type, infestation severity, property type, and access details.",
+            },            {
+              label: "Emergency tagging",
+              answer: "Active infestations and health hazards get marked as urgent priority.",
+            },            {
+              label: "Commercial tagging",
+              answer: "Restaurant, hotel, and food business enquiries are flagged for immediate response.",
+            },            {
+              label: "WhatsApp alert",
+              answer: "A structured message with pest details and property info lands on your phone in 3 seconds.",
+            }
+          ]}
+        />
+
 
         <div className="section-divider" />
 

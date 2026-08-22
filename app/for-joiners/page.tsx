@@ -4,6 +4,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
+import { QuickAnswer } from "@/components/whoza/quick-answer"
 import { VideoSchema } from "@/components/whoza/schema-markup"
 import { Button } from "@/components/ui/button"
 import { WaitlistModal } from "@/components/whoza/waitlist-modal"
@@ -184,6 +185,30 @@ export default function ForJoinersPage() {
             </div>
           </div>
         </section>
+        {/* ─── QUICK ANSWER ─── */}
+        <QuickAnswer
+          heading="What whoza.ai does for joiners"
+          tradeName="joiner"
+          serviceUrl="/for-joiners"
+          items={[            {
+              label: "Instant pickup",
+              answer: "Katie answers every joinery call in 2 rings, even during workshop hours.",
+            },            {
+              label: "Project capture",
+              answer: "She records project type, materials preference, budget, timeline, and commercial or residential status.",
+            },            {
+              label: "Commercial priority",
+              answer: "Enquiries from builders, developers, and architects get priority tagging for fast follow-up.",
+            },            {
+              label: "Bespoke detail",
+              answer: "High-value bespoke projects get detailed capture for accurate quoting.",
+            },            {
+              label: "WhatsApp brief",
+              answer: "A structured message with full project details lands on your phone in 3 seconds.",
+            }
+          ]}
+        />
+
 
         <div className="section-divider" />
 

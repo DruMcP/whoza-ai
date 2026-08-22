@@ -5,6 +5,7 @@ import { TradeCityLinks } from "@/components/TradeCityLinks";
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
+import { QuickAnswer } from "@/components/whoza/quick-answer"
 import { SocialProofBand } from "@/components/whoza/social-proof"
 import { VideoExplainer } from "@/components/whoza/video-explainer"
 import { LostRevenueCalculator } from "@/components/whoza/lost-revenue-calculator"
@@ -243,6 +244,30 @@ export default function ForBuildersPage() {
             </div>
           </div>
         </section>
+        {/* ─── QUICK ANSWER ─── */}
+        <QuickAnswer
+          heading="What whoza.ai does for builders"
+          tradeName="builder"
+          serviceUrl="/for-builders"
+          items={[            {
+              label: "Instant pickup",
+              answer: "Katie answers every building enquiry in 2 rings, even when you are on site with power tools.",
+            },            {
+              label: "Project qualification",
+              answer: "She captures project type, property size, budget range, timeline, and planning status in 45 seconds.",
+            },            {
+              label: "Budget signals",
+              answer: "£50k+ extensions get flagged for same-day callback, so you prioritise high-value jobs.",
+            },            {
+              label: "Both contacts",
+              answer: "Both partners' details are captured — no more 'let me check with my wife' delays.",
+            },            {
+              label: "WhatsApp brief",
+              answer: "A full project brief arrives on your phone before you even call back.",
+            }
+          ]}
+        />
+
 
         <SocialProofBand />
 

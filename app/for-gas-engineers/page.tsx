@@ -4,6 +4,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
+import { QuickAnswer } from "@/components/whoza/quick-answer"
 import { VideoSchema } from "@/components/whoza/schema-markup"
 import { ArrowRight, Phone, Flame, Shield, Clock, PoundSterling, CheckCircle2, Star, AlertTriangle } from "lucide-react"
 import Link from "next/link"
@@ -177,6 +178,30 @@ export default function ForGasEngineersPage() {
             </div>
           </div>
         </section>
+        {/* ─── QUICK ANSWER ─── */}
+        <QuickAnswer
+          heading="What whoza.ai does for gas engineers"
+          tradeName="gas engineer"
+          serviceUrl="/for-gas-engineers"
+          items={[            {
+              label: "Instant pickup",
+              answer: "Katie answers every gas enquiry in 2 rings, even when you are on a boiler job.",
+            },            {
+              label: "System identification",
+              answer: "She identifies boiler type from customer descriptions and asks clarifying questions.",
+            },            {
+              label: "Fault capture",
+              answer: "Boiler make, model, fault symptoms, property size, and heating system type are all recorded.",
+            },            {
+              label: "Emergency tagging",
+              answer: "No heating, no hot water, and gas leak keywords trigger urgent priority alerts.",
+            },            {
+              label: "WhatsApp brief",
+              answer: "You get a full system context message before you call back, including parts to bring.",
+            }
+          ]}
+        />
+
 
         <div className="section-divider" />
 

@@ -4,6 +4,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
+import { QuickAnswer } from "@/components/whoza/quick-answer"
 import { VideoSchema } from "@/components/whoza/schema-markup"
 import { Button } from "@/components/ui/button"
 import { WaitlistModal } from "@/components/whoza/waitlist-modal"
@@ -180,6 +181,30 @@ export default function ForHandymenPage() {
             </div>
           </div>
         </section>
+        {/* ─── QUICK ANSWER ─── */}
+        <QuickAnswer
+          heading="What whoza.ai does for handymen"
+          tradeName="handyman"
+          serviceUrl="/for-handymen"
+          items={[            {
+              label: "Instant pickup",
+              answer: "Katie answers every handyman enquiry in 2 rings, even when you are on a ladder.",
+            },            {
+              label: "Job variety",
+              answer: "She handles everything from furniture assembly to plumbing repairs to painting jobs.",
+            },            {
+              label: "Urgency sorting",
+              answer: "Emergency repairs get flagged for immediate callback; non-urgent jobs are scheduled.",
+            },            {
+              label: "Location capture",
+              answer: "Postcode and property details are recorded so you know where to go.",
+            },            {
+              label: "WhatsApp delivery",
+              answer: "A structured message with job details lands on your phone in 3 seconds.",
+            }
+          ]}
+        />
+
 
         <div className="section-divider" />
 

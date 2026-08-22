@@ -4,6 +4,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
+import { QuickAnswer } from "@/components/whoza/quick-answer"
 import { SocialProofBand } from "@/components/whoza/social-proof"
 import { VideoExplainer } from "@/components/whoza/video-explainer"
 import { LostRevenueCalculator } from "@/components/whoza/lost-revenue-calculator"
@@ -268,6 +269,30 @@ export default function ForPaintersDecoratorsPage() {
             </div>
           </div>
         </section>
+        {/* ─── QUICK ANSWER ─── */}
+        <QuickAnswer
+          heading="What whoza.ai does for painters and decorators"
+          tradeName="painter"
+          serviceUrl="/for-painters-decorators"
+          items={[            {
+              label: "Instant pickup",
+              answer: "Katie answers every painting enquiry in 2 rings, even when you are on a ladder with a roller.",
+            },            {
+              label: "Project scope",
+              answer: "She captures room count, surface types, paint preferences, budget, and timeline.",
+            },            {
+              label: "Commercial tagging",
+              answer: "Office and commercial painting contracts are flagged for priority follow-up.",
+            },            {
+              label: "Schedule sync",
+              answer: "Katie checks your diary and offers customers specific appointment slots.",
+            },            {
+              label: "WhatsApp brief",
+              answer: "You get full project details on your phone before calling back.",
+            }
+          ]}
+        />
+
 
         <SocialProofBand />
 

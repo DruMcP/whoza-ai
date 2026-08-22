@@ -4,6 +4,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
+import { QuickAnswer } from "@/components/whoza/quick-answer"
 import { VideoSchema } from "@/components/whoza/schema-markup"
 import { Button } from "@/components/ui/button"
 import { WaitlistModal } from "@/components/whoza/waitlist-modal"
@@ -184,6 +185,30 @@ export default function ForDrainagePage() {
             </div>
           </div>
         </section>
+        {/* ─── QUICK ANSWER ─── */}
+        <QuickAnswer
+          heading="What whoza.ai does for drainage engineers"
+          tradeName="drainage engineer"
+          serviceUrl="/for-drainage"
+          items={[            {
+              label: "Instant pickup",
+              answer: "Katie answers every drainage call in 2 rings, even when you are knee-deep in a manhole.",
+            },            {
+              label: "Emergency triage",
+              answer: "She identifies blocked drains, flooding, and sewage backups and marks emergencies as urgent.",
+            },            {
+              label: "Job qualification",
+              answer: "Property type, access details, blockage symptoms, and urgency are captured in 45 seconds.",
+            },            {
+              label: "Location capture",
+              answer: "Postcode and property details are recorded so you know exactly where to go.",
+            },            {
+              label: "WhatsApp alert",
+              answer: "A structured message with full job context lands on your phone in 3 seconds.",
+            }
+          ]}
+        />
+
 
         <div className="section-divider" />
 

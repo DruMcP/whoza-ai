@@ -4,6 +4,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
+import { QuickAnswer } from "@/components/whoza/quick-answer"
 import { SocialProofBand } from "@/components/whoza/social-proof"
 import { VideoExplainer } from "@/components/whoza/video-explainer"
 import { LostRevenueCalculator } from "@/components/whoza/lost-revenue-calculator"
@@ -271,6 +272,30 @@ export default function ForHvacPage() {
             </div>
           </div>
         </section>
+        {/* ─── QUICK ANSWER ─── */}
+        <QuickAnswer
+          heading="What whoza.ai does for heating engineers"
+          tradeName="heating engineer"
+          serviceUrl="/for-heating-engineers"
+          items={[            {
+              label: "Instant pickup",
+              answer: "Katie answers every heating call in 2 rings, even during winter peak when you are already on jobs.",
+            },            {
+              label: "System qualification",
+              answer: "She identifies boiler type from customer descriptions and asks the right clarifying questions.",
+            },            {
+              label: "Fault capture",
+              answer: "Boiler make, model, fault symptoms, property size, and heating system type are all recorded.",
+            },            {
+              label: "Emergency tagging",
+              answer: "No heating, no hot water, leaking, and error code keywords trigger urgent priority alerts.",
+            },            {
+              label: "Landlord tagging",
+              answer: "Landlord and letting agent calls are tagged for service contract upsell.",
+            }
+          ]}
+        />
+
 
         <SocialProofBand />
 

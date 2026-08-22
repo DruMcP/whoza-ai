@@ -4,6 +4,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
+import { QuickAnswer } from "@/components/whoza/quick-answer"
 import { VideoSchema } from "@/components/whoza/schema-markup"
 import { Button } from "@/components/ui/button"
 import { WaitlistModal } from "@/components/whoza/waitlist-modal"
@@ -183,6 +184,30 @@ export default function ForCleanersPage() {
             </div>
           </div>
         </section>
+        {/* ─── QUICK ANSWER ─── */}
+        <QuickAnswer
+          heading="What whoza.ai does for cleaners"
+          tradeName="cleaner"
+          serviceUrl="/for-cleaners"
+          items={[            {
+              label: "Instant pickup",
+              answer: "Katie answers every cleaning enquiry in 2 rings, even when you are mid-job with gloves on.",
+            },            {
+              label: "Service qualification",
+              answer: "She captures property type, cleaning scope, frequency, and special requirements in under a minute.",
+            },            {
+              label: "Schedule sync",
+              answer: "Katie checks your availability and offers customers specific booking slots.",
+            },            {
+              label: "Commercial tagging",
+              answer: "Office and contract cleaning enquiries are flagged for priority follow-up.",
+            },            {
+              label: "WhatsApp brief",
+              answer: "You get customer details, property info, and service requirements before you call back.",
+            }
+          ]}
+        />
+
 
         <div className="section-divider" />
 
