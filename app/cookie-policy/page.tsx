@@ -6,7 +6,7 @@ import { Cookie, Shield, ExternalLink } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Cookie Policy | whoza.ai",
-  description: "whoza.ai cookie policy — ICO-registered, UK GDPR compliant. Learn how we use cookies.",
+  description: "whoza.ai cookie policy — ICO-registered (ZC077271), UK GDPR compliant. Learn how we use cookies and manage your preferences.",
   alternates: {
     canonical: "https://whoza.ai/cookie-policy",
   },

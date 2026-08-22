@@ -25,7 +25,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://whoza.ai'),
   title: 'AI Receptionist for UK Trades | 24/7 | From £59 — Whoza.ai',
-  description: "Stop losing £12,000/year to missed calls. Whoza.ai's AI receptionist answers 24/7, collects reviews, and grows your visibility. Start your 7-day free trial.",
+  description: "Stop losing £12,000/year to missed calls. Whoza.ai's AI receptionist answers 24/7, captures leads, and grows your visibility. Start free.",
   // Keywords meta tag removed per SEO best practices — can be spam signal
   authors: [{ name: 'whoza.ai' }],
   publisher: 'whoza.ai',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     url: 'https://whoza.ai',
     siteName: 'Whoza.ai',
     title: 'AI Receptionist for UK Trades | 24/7 | From £59 — Whoza.ai',
-    description: "Stop losing £12,000/year to missed calls. Whoza.ai's AI receptionist answers 24/7, collects reviews, and grows your visibility. Start your 7-day free trial.",
+    description: "Stop losing £12,000/year to missed calls. Whoza.ai's AI receptionist answers 24/7, captures leads, and grows your visibility. Start free.",
     images: [
       {
         url: 'https://whoza.ai/og-image.webp',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     site: '@whozaai',
     creator: '@whozaai',
     title: 'AI Receptionist for UK Trades | 24/7 | From £59 — Whoza.ai',
-    description: "Stop losing £12,000/year to missed calls. Whoza.ai's AI receptionist answers 24/7, collects reviews, and grows your visibility. Start your 7-day free trial.",
+    description: "Stop losing £12,000/year to missed calls. Whoza.ai's AI receptionist answers 24/7, captures leads, and grows your visibility. Start free.",
     images: ['https://whoza.ai/og-image.webp'],
   },
   alternates: {
@@ -78,9 +78,9 @@ export const metadata: Metadata = {
   },
   other: {
     'geo.region': 'GB',
-    'geo.placename': 'United Kingdom',
-    'geo.position': '56.3950;-3.4306',
-    'ICBM': '56.3950, -3.4306',
+    'geo.placename': 'Tomintoul, Scotland',
+    'geo.position': '57.254141;-3.38239',
+    'ICBM': '57.254141, -3.38239',
   },
 }
 

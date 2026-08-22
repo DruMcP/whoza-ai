@@ -3,7 +3,7 @@ import { ChevronRight, MessageSquareWarning } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Complaints Procedure | Whoza.ai",
-  description: "How to make a complaint about WHOZA AI LTD's services and how we handle complaints fairly and promptly.",
+  description: "How to make a complaint about WHOZA AI LTD. We aim to resolve issues within 5 business days. Contact us via email or WhatsApp.",
   alternates: {
     canonical: "https://whoza.ai/complaints",
   },

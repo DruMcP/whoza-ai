@@ -7,7 +7,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "About whoza.ai — AI Call Answering for UK Trades",
-  description: "AI call answering for UK trades — never miss a job. whoza.ai was built by a former tradesperson who knows exactly what it's like to lose work because the phone rang while you were busy.",
+  description: "AI call answering for UK trades — never miss a job. whoza.ai was built by a former tradesperson who knows what it's like to lose work to missed calls.",
   alternates: {
     canonical: "https://whoza.ai/about",
   },
@@ -31,38 +31,6 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-}
-
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://whoza.ai/about#organization",
-  "name": "whoza.ai",
-  "url": "https://whoza.ai",
-  "logo": {
-    "@type": "ImageObject",
-    "url": "https://whoza.ai/og-image.webp",
-    "width": 512,
-    "height": 512
-  },
-  "sameAs": [
-    "https://twitter.com/whozaai",
-    "https://www.linkedin.com/company/whoza-ai",
-    "https://www.facebook.com/whozaai"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": "dru@whoza.ai",
-    "contactType": "customer service",
-    "areaServed": "GB",
-    "availableLanguage": ["English"]
-  },
-  "foundingDate": "2024",
-  "founder": {
-    "@id": "https://whoza.ai/#dru-mcpherson"
-  },
-  "description": "AI call answering for UK trades — never miss a job. whoza.ai provides AI-powered voice agents that answer missed calls 24/7, capture enquiries via WhatsApp, collect Google reviews, and track competitor visibility for UK tradespeople.",
-  "slogan": "AI call answering for UK trades — never miss a job"
 }
 
 const values = [
@@ -105,11 +73,6 @@ export default function AboutPage() {
         { name: "Home", item: "https://whoza.ai" },
         { name: "About", item: "https://whoza.ai/about" },
       ]} />
-      <script
-        id="organization-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
 
       <main id="main-content" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         {/* Brand Identity Block */}

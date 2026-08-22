@@ -5,7 +5,7 @@ import { Shield, ExternalLink } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Data Processing Agreement | whoza.ai",
-  description: "whoza.ai Data Processing Agreement — UK GDPR Article 28 compliant. ICO-registered.",
+  description: "whoza.ai Data Processing Agreement — UK GDPR Article 28 compliant. ICO-registered (ZC077271). Secure UK data handling for trade businesses.",
   alternates: {
     canonical: "https://whoza.ai/dpa",
   },

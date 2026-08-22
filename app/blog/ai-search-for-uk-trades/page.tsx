@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Your Next Customer Won't Google You. They'll Ask AI. | Whoza.ai",
   description:
-    "How UK customers now use AI like ChatGPT and Google's AI to find and vet tradespeople — and how to make sure your trade business is the one it recommends.",
+    "How UK customers now use AI like ChatGPT and Google AI Overviews to find tradespeople. What this means for your business visibility.",
   keywords: [
     "AI search for tradespeople",
     "ChatGPT find a tradesperson",

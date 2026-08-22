@@ -5,7 +5,7 @@ import { Shield } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Service Level Agreement | whoza.ai",
-  description: "whoza.ai SLA — 99.5% uptime guarantee. ICO-registered.",
+  description: "whoza.ai SLA — 99.5% uptime guarantee. ICO-registered (ZC077271). UK-based support. Learn our service level commitments.",
   alternates: {
     canonical: "https://whoza.ai/sla",
   },

@@ -5,7 +5,7 @@ import { Shield, RefreshCw } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Refund Policy | whoza.ai",
-  description: "whoza.ai refund policy — 30-day money-back guarantee. ICO-registered.",
+  description: "whoza.ai refund policy — 30-day money-back guarantee, no questions asked. ICO-registered (ZC077271). Cancel anytime, no contract.",
   alternates: {
     canonical: "https://whoza.ai/refund-policy",
   },

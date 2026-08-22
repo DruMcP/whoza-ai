@@ -11,6 +11,8 @@
 - [Support](https://whoza.ai/support) — Help centre and contact
 - [Blog](https://whoza.ai/blog) — Trade business growth guides
 - [Contact](https://whoza.ai/contact) — Get in touch
+- [About](https://whoza.ai/about) — Our story
+- [Refer](https://whoza.ai/refer) — Refer a tradesperson
 - [Trust & Compliance](https://whoza.ai/trust) — Security and certifications
 
 ## Service Areas
@@ -58,6 +60,15 @@
 - [Best AI Call Handler for UK Trades](https://whoza.ai/best-ai-call-handler-uk-trades)
 - [AI Call Answering Pricing Guide](https://whoza.ai/blog/ai-call-answering-pricing-guide-uk-2026)
 
+## Research
+
+- [Can an AI Voice Agent Tell a Blocked Drain from a Gas Leak?](https://whoza.ai/research/emergency-triage-safety-ai-voice-agents-2026) — Emergency triage safety for AI voice agents (July 2026)
+- [The True Cost of Missed Calls](https://whoza.ai/research/the-true-cost-of-missed-calls-2026) — Data-driven analysis of lost revenue
+- [AEO & AI Search Optimisation](https://whoza.ai/research/aeo-ai-search-optimisation-2026) — How tradespeople get found in AI search
+- [AI Voice Agents for UK Trades](https://whoza.ai/research/ai-voice-agents-uk-trades-2026) — Market overview
+- [Caller Experience Revolution](https://whoza.ai/research/caller-experience-revolution-ai-voice-agents-2026) — What customers expect from AI phone agents
+- [Voice Agent Technology State of the Art](https://whoza.ai/research/voice-agent-technology-state-of-art-2026) — Technical capabilities
+
 ## Comparison Pages
 
 - [vs Moneypenny](https://whoza.ai/whoza-vs-moneypenny)
@@ -79,5 +90,5 @@
 ---
 
 **Full documentation:** [llms-full.txt](https://whoza.ai/llms-full.txt)  
-**Last updated:** 2026-06-29  
+**Last updated:** 2026-07-29  
 **Company:** WHOZA AI LTD, Perth, Scotland

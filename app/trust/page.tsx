@@ -7,7 +7,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Trust & Security | whoza.ai",
-  description: "whoza.ai is ICO-registered (ZC077271), UK GDPR compliant, and running a SOC 2 Type II programme. Your data and your customers' data are protected. Plans from £59. Read now.",
+  description: "whoza.ai is ICO-registered (ZC077271), UK GDPR compliant, running a SOC 2 Type II programme. Your data and your customers' data are protected. Plans from £59.",
   alternates: {
     canonical: "https://whoza.ai/trust",
   },
@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/trust",
     siteName: "Whoza.ai",
     title: "Trust & Security | whoza.ai",
-    description: "whoza.ai is ICO-registered (ZC077271), UK GDPR compliant, and running a SOC 2 Type II programme. Your data and your customers' data are protected. Plans from £59. Read now.",
+    description: "whoza.ai is ICO-registered (ZC077271), UK GDPR compliant, running a SOC 2 Type II programme. Your data and your customers' data are protected. Plans from £59.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Trust & Security | whoza.ai" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@whozaai",
     title: "Trust & Security | whoza.ai",
-    description: "whoza.ai is ICO-registered (ZC077271), UK GDPR compliant, and running a SOC 2 Type II programme. Your data and your customers' data are protected. Plans from £59. Read now.",
+    description: "whoza.ai is ICO-registered (ZC077271), UK GDPR compliant, running a SOC 2 Type II programme. Your data and your customers' data are protected. Plans from £59.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {

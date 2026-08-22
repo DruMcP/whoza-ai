@@ -3,65 +3,6 @@ export function HomepageSchema() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
-        "@id": "https://whoza.ai/#organization",
-        "name": "Whoza.ai",
-        "alternateName": "whoza",
-        "url": "https://whoza.ai",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://whoza.ai/logo.png",
-          "width": 512,
-          "height": 512
-        },
-        "image": "https://whoza.ai/og-image.webp",
-        "description": "AI-powered receptionist for UK tradespeople. Never miss a call again.",
-        "slogan": "Never miss a job. Never chase a review. Never wonder where your next customer is coming from.",
-        "foundingDate": "2025",
-        "founders": [
-          { "@id": "https://whoza.ai/#dru-mcpherson" }
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "97 Main Street",
-          "addressLocality": "Tomintoul",
-          "addressRegion": "Moray",
-          "postalCode": "AB37 9HA",
-          "addressCountry": "GB"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+44-7308-048808",
-          "contactType": "customer support",
-          "availableLanguage": ["English"],
-          "areaServed": "GB"
-        },
-        "sameAs": [
-          "https://www.linkedin.com/company/whoza-ai",
-          "https://twitter.com/whozaai",
-          "https://www.facebook.com/whozaai"
-        ],
-        "hasOfferCatalog": {
-          "@id": "https://whoza.ai/#service"
-        }
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://whoza.ai/#website",
-        "url": "https://whoza.ai",
-        "name": "Whoza.ai",
-        "description": "AI receptionist for UK tradespeople",
-        "publisher": { "@id": "https://whoza.ai/#organization" },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": {
-            "@type": "EntryPoint",
-            "urlTemplate": "https://whoza.ai/blog?q={search_term_string}"
-          },
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
         "@type": "Service",
         "@id": "https://whoza.ai/#service",
         "serviceType": "AI Call Handling for UK Tradespeople",

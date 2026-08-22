@@ -8,7 +8,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "AI Call Answering UK — Coverage Across 8 Cities | whoza.ai",
-  description: "whoza.ai provides AI call answering for UK tradespeople in London, Manchester, Birmingham, Glasgow, Edinburgh, Bristol, Leeds and Liverpool. 24/7 coverage from £59/month.",
+  description: "whoza.ai provides AI call answering for UK tradespeople in London, Manchester, Birmingham, Glasgow, Edinburgh, Bristol, Leeds and Liverpool. 24/7 coverage.",
   alternates: {
     canonical: "https://whoza.ai/locations",
   },

@@ -98,10 +98,6 @@ export const organizationSchemaObject = {
   //   - Crunchbase company profile
   //   - Trustpilot business profile
   //   - Wikidata entity
-  //   - G2 product listing (verify it's genuinely live before adding — could not
-  //     be confirmed via search as of this writing)
-  //   - Yell business listing (verify it's genuinely live before adding — could not
-  //     be confirmed via search as of this writing)
   //   - YouTube channel (verify which handle is canonical — @whoza-ai and others
   //     may exist; confirm ownership before adding, and flag any handles that
   //     aren't actually whoza's for cleanup rather than adding them)
@@ -112,5 +108,7 @@ export const organizationSchemaObject = {
     COMPANY.registerUrl,
     "https://www.linkedin.com/company/whoza",
     "https://www.facebook.com/profile.php?id=61586217731657",
+    "https://www.yell.com/biz/whoza-ai-ltd-perth-11011120/",
+    "https://www.g2.com/sellers/whoza-ai",
   ],
 } as const

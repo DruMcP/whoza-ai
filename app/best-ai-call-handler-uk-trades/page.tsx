@@ -7,7 +7,7 @@ import { ArrowRight, Check, Star, Phone, MessageSquare, Clock, PoundSterling, Ca
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Best AI Call Handler UK Trades (2026)",
-  description: "We tested 6 AI call handlers for UK tradespeople. Compare whoza.ai, Clara, Trade Receptionist, Moneypenny, Rosie AI and Down To Earth AI on price, features, and setup fees.",
+  description: "We tested 6 AI call handlers for UK tradespeople. Compare whoza.ai, Clara, Trade Receptionist, Moneypenny, Rosie AI and Down To Earth AI on price,.",
   openGraph: {
     type: "website",
     locale: "en_GB",

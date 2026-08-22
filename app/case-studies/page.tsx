@@ -8,7 +8,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Case Studies — AI Call Answering for UK Trades | whoza.ai",
-  description: "See how UK tradespeople win more jobs with whoza.ai's AI call answering. Real results: 98% answer rates, doubled bookings, thousands in revenue saved.",
+  description: "See how UK tradespeople win more jobs with whoza.ai's AI call answering. Real results, real revenue recovery for trade businesses.",
   alternates: {
     canonical: "https://whoza.ai/case-studies",
   },

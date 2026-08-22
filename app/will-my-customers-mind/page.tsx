@@ -8,7 +8,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Will My Customers Mind an AI Answering My Phone? | whoza.ai",
-  description: "The honest answer: some callers can tell. But almost nobody hangs up — because the alternative is your voicemail. Here's what actually happens when Katie answers.",
+  description: "The honest answer: some callers can tell it's AI. But almost nobody hangs up — because the alternative is your voicemail. Here's what actually happens.",
   alternates: {
     canonical: "https://whoza.ai/will-my-customers-mind",
   },

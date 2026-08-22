@@ -8,7 +8,7 @@ export const revalidate = 3600
 
 export const metadata: Metadata = {
   title: "Privacy Policy | whoza.ai",
-  description: "whoza.ai privacy policy — ICO-registered, UK GDPR compliant. Learn how we protect your data.",
+  description: "whoza.ai privacy policy — ICO-registered (ZC077271), UK GDPR compliant. Learn how we protect your data, your rights, and your customers.",
   alternates: {
     canonical: "https://whoza.ai/privacy",
   },

@@ -3,7 +3,7 @@ import { Metadata } from "next"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "The True Cost of Missed Calls: UK Trades Industry Financial Impact Report 2026 | Whoza",
-  description: "Independent research on missed calls impact for UK trades. 34-62% missed, costing £50,000-£80,000 per business yearly.",
+  description: "Independent research on missed calls impact for UK trades. 34-62% missed, costing £50,000-£80,000 per business yearly. Read the full report.",
   keywords: [
     "missed calls cost UK trades",
     "missed call financial impact 2026",

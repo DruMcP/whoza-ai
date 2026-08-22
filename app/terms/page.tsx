@@ -8,7 +8,7 @@ export const revalidate = 3600
 
 export const metadata: Metadata = {
   title: "Terms of Service | whoza.ai",
-  description: "whoza.ai terms of service — no contracts, monthly rolling, 7-day free trial. Read our full terms.",
+  description: "whoza.ai terms of service — no contracts, monthly rolling, 7-day free trial. Read our full terms and conditions for UK trade businesses.",
   alternates: {
     canonical: "https://whoza.ai/terms",
   },

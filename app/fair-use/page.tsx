@@ -5,7 +5,7 @@ import { Shield, AlertTriangle } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Fair Use Policy | whoza.ai",
-  description: "whoza.ai fair use policy — usage limits and prohibited use. ICO-registered.",
+  description: "whoza.ai fair use policy — usage limits and prohibited use. ICO-registered (ZC077271). UK GDPR compliant. Read our terms.",
   alternates: {
     canonical: "https://whoza.ai/fair-use",
   },

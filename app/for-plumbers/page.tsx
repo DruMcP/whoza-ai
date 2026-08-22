@@ -28,7 +28,7 @@ import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "AI Receptionist Plumbers UK | From £59/mo — Never Miss Jobs",
-  description: "UK plumbers miss calls worth £2,600+/year on average (conservative estimate). Whoza.ai answers 24/7, qualifies boiler repairs & leaks, sends job details to WhatsApp. 7-day free trial.",
+  description: "UK plumbers miss calls worth £2,600+/year on average (conservative estimate). Whoza.ai answers 24/7, qualifies boiler repairs & leaks, sends job details.",
   alternates: {
     canonical: "https://whoza.ai/for-plumbers",
   },

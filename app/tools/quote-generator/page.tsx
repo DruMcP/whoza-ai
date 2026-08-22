@@ -4,10 +4,10 @@ import { QuoteGenerator } from "@/components/tools/quote-generator"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Free Quote Generator for UK Trades | whoza.ai",
-  description: "Create professional quotes for UK trade jobs in 60 seconds. Free quote generator with branded PDF output.",
+  description: "Create professional quotes for UK trade jobs in 60 seconds. Free quote generator with branded PDF output for plumbers, electricians, builders.",
   openGraph: {
     title: "Free Quote Generator for UK Trades | whoza.ai",
-    description: "Create professional quotes for UK trade jobs in 60 seconds. Free quote generator with branded PDF output.",
+    description: "Create professional quotes for UK trade jobs in 60 seconds. Free quote generator with branded PDF output for plumbers, electricians, builders.",
     url: "https://whoza.ai/tools/quote-generator",
     siteName: "Whoza.ai",
     locale: "en_GB",

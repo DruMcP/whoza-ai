@@ -44,16 +44,16 @@ const localBusinessSchema = {
   "description": "AI call answering for UK trades — never miss a job. whoza.ai provides AI-powered voice agents that answer missed calls 24/7, capture enquiries via WhatsApp, collect Google reviews, and track competitor visibility for UK tradespeople.",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "6 Atholl Crescent",
-    "addressLocality": "Perth",
-    "addressRegion": "Scotland",
-    "postalCode": "PH1 5JN",
+    "streetAddress": "97 Main Street",
+    "addressLocality": "Tomintoul",
+    "addressRegion": "Banffshire",
+    "postalCode": "AB37 9HA",
     "addressCountry": "GB"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "56.3950",
-    "longitude": "-3.4306"
+    "latitude": "57.254141",
+    "longitude": "-3.38239"
   },
   "areaServed": {
     "@type": "Country",
@@ -179,6 +179,21 @@ export default function ContactPage() {
               WHOZA AI LTD<br />
               6 Atholl Crescent, 6<br />
               Perth, PH1 5JN<br />
+              Scotland
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-6 bg-white/5 border border-white/10 rounded-xl p-6 flex items-start gap-5">
+          <div className="bg-emerald-500/10 rounded-lg p-3 flex-shrink-0">
+            <MapPin className="w-6 h-6 text-emerald-400" />
+          </div>
+          <div>
+            <h2 className="text-lg font-semibold mb-2">Operating Office</h2>
+            <p className="text-white/60 leading-relaxed">
+              WHOZA AI LTD<br />
+              97 Main Street<br />
+              Tomintoul, AB37 9HA<br />
               Scotland
             </p>
           </div>

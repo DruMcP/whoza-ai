@@ -4871,7 +4871,7 @@ With whoza.ai, you know exactly what you pay. GBP pricing. VAT included. No curr
         {
           heading: "Is whoza.ai a British company?",
           headingTag: "h3",
-          body: `Yes. Whoza AI Ltd is a Scottish limited company (SC874716), registered in Edinburgh. ICO registered (ZC077271). All customer data stays in the UK.`,
+          body: `Yes. Whoza AI Ltd is a Scottish limited company (SC874716), registered in Perth. ICO registered (ZC077271). All customer data stays in the UK.`,
         },
         {
           heading: "Where are my call recordings stored?",
@@ -4893,7 +4893,7 @@ Built in Scotland. Working for UK trades.`,
       faq: [
         {
           question: "Is whoza.ai a British company?",
-          answer: "Yes. Whoza AI Ltd is a Scottish limited company (SC874716), registered in Edinburgh. ICO registered (ZC077271). All customer data stays in the UK.",
+          answer: "Yes. Whoza AI Ltd is a Scottish limited company (SC874716), registered in Perth. ICO registered (ZC077271). All customer data stays in the UK.",
         },
         {
           question: "Where are my call recordings stored?",

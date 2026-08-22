@@ -8,7 +8,7 @@ import { ArrowRight, PoundSterling, TrendingUp, AlertTriangle } from "lucide-rea
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Missed Call Cost Calculator | Check Losses",
-  description: "Calculate how much missed calls cost your trade business. Enter job value, call volume, and conversion rate.",
+  description: "Calculate how much missed calls cost your trade business. Enter job value, call volume, and conversion rate. Free calculator for UK trades.",
   openGraph: {
     type: "website",
     locale: "en_GB",
