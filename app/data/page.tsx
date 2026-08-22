@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Evidence Base: Every Statistic We Use and Its Source",
   description: "Every statistic, source, and methodology behind whoza.ai's content. Verified, descriptive, or unverified — we show our working.",
+  alternates: {
+    canonical: "https://whoza.ai/data",
+    languages: { "x-default": "https://whoza.ai/data", "en-GB": "https://whoza.ai/data" },
+  },
   openGraph: {
     type: "website",
     locale: "en_GB",

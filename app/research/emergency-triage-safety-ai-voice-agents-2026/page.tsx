@@ -387,6 +387,11 @@ export default function ResearchPage() {
             This piece reflects my own view as founder of whoza.ai, informed by the research cited above. Where figures are drawn from other fields, particularly healthcare triage, I have tried to flag the limits of that comparison rather than overstate it.
           </p>
         </section>
+        <div className="mt-12 text-center">
+          <p className="text-white/40 text-sm">
+            <a href="/data" className="text-emerald-400 hover:underline">Sources and methodology</a> for all figures in this report.
+          </p>
+        </div>
       </main>
 
       <Footer />

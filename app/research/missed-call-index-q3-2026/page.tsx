@@ -645,6 +645,11 @@ export default function MissedCallIndexPage() {
             </Link>
           </p>
         </section>
+        <div className="mt-12 text-center">
+          <p className="text-white/40 text-sm">
+            <a href="/data" className="text-emerald-400 hover:underline">Sources and methodology</a> for all figures in this report.
+          </p>
+        </div>
       </main>
 
       <Footer />

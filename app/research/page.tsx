@@ -85,6 +85,9 @@ export default function ResearchLanding() {
           <p className="text-xl text-white/70 max-w-2xl">
             Research on AI voice technology, missed call impact, and trade business optimisation.
           </p>
+          <p className="text-white/60 mt-4">
+            Every statistic across our research is sourced in our <a href="/data" className="text-emerald-400 hover:underline">Evidence Base</a>.
+          </p>
         </section>
 
         <div className="grid md:grid-cols-2 gap-6">
