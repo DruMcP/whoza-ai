@@ -260,7 +260,7 @@ export default function VoiceAgentTechnologyPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
             <div className="mb-6">
               <span className="inline-block px-3 py-1 text-xs font-semibold bg-[#6366F1]/20 text-[#818CF8] rounded-full mb-4">
-                Independent Research
+                Research
               </span>
               <h1 className="article-headline text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
                 Voice Agent Technology

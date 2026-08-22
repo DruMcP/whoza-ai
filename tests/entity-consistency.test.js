@@ -138,6 +138,31 @@ describe("R7 Entity Consistency", () => {
     expect(failures).toEqual([]);
   });
 
+  test("R9b — no 'Independent research report' wording anywhere", () => {
+    const banned = ["Independent research report", "independent research report"];
+    const failures = [];
+    for (const file of allFiles) {
+      const content = fs.readFileSync(file, "utf8");
+      for (const term of banned) {
+        if (content.includes(term)) {
+          failures.push({ file: file.replace(process.cwd() + "/", ""), term });
+        }
+      }
+    }
+    expect(failures).toEqual([]);
+  });
+
+  test("R9b — no independence or honest-rankings claim anywhere", () => {
+    const banned = ["Independent comparison", "Independent Comparison",
+                    "independent comparison", "Honest rankings", "honest rankings"];
+    const failures = [];
+    for (const file of allFiles) {
+      const content = fs.readFileSync(file, "utf8");
+      for (const term of banned) if (content.includes(term)) failures.push({ file, term });
+    }
+    expect(failures).toEqual([]);
+  });
+
   test("R8.5 — no empty ld+json script tags in app/ (source-level check)", () => {
     // This is a source-level regex check, not a render-level DOM check.
     // Excludes scripts with dangerouslySetInnerHTML (those have content).

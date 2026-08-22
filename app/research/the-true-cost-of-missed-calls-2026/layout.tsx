@@ -3,7 +3,7 @@ import { Metadata } from "next"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "The True Cost of Missed Calls: UK Trades Industry Financial Impact Report 2026 | Whoza",
-  description: "Independent research on missed calls impact for UK trades. 34-62% missed, costing £50,000-£80,000 per business yearly. Read the full report.",
+  description: "Research on missed calls impact for UK trades. 34-62% missed, costing £50,000-£80,000 per business yearly. Read the full report.",
   keywords: [
     "missed calls cost UK trades",
     "missed call financial impact 2026",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/research/the-true-cost-of-missed-calls-2026",
     siteName: "Whoza.ai",
     title: "The True Cost of Missed Calls: UK Trades Industry Financial Impact Report 2026",
-    description: "Independent research: UK trades businesses miss 34-62% of calls, costing £50,000-£80,000 annually per business.",
+    description: "Research: UK trades businesses miss 34-62% of calls, costing £50,000-£80,000 annually per business.",
     images: [{ url: "https://whoza.ai/og/research-missed-calls-2026.jpg", width: 1200, height: 630, alt: "The True Cost of Missed Calls UK Trades Research Report 2026" }],
     publishedTime: "2026-06-25T00:00:00+00:00",
     modifiedTime: "2026-06-25T00:00:00+00:00",
@@ -50,7 +50,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               {
                 "@type": "ScholarlyArticle",
                 headline: "The True Cost of Missed Calls: UK Trades Industry Financial Impact Report 2026",
-                description: "Independent research report examining the financial impact of missed calls on UK trade businesses, drawing on data from Replicant AI, BT Business, the Federation of Small Businesses, and other independent sources.",
+                description: "Research report examining the financial impact of missed calls on UK trade businesses, drawing on data from Replicant AI, BT Business, the Federation of Small Businesses, and other independent sources.",
                 author: {
                   "@type": "Organization",
                   name: "Whoza",

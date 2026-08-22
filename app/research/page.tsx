@@ -26,7 +26,7 @@ const researchReports = [
   {
     date: "July 2026",
     title: "Can an AI Voice Agent Tell a Blocked Drain from a Gas Leak?",
-    description: "Independent research on emergency triage, liability and where AI voice agents genuinely belong in safety-critical trades. Healthcare triage benchmarks, UK law, and minimum safeguards.",
+    description: "Research on emergency triage, liability and where AI voice agents genuinely belong in safety-critical trades. Healthcare triage benchmarks, UK law, and minimum safeguards.",
     href: "/research/emergency-triage-safety-ai-voice-agents-2026",
     status: "live" as const,
   },
@@ -40,7 +40,7 @@ const researchReports = [
   {
     date: "June 2026",
     title: "Answer Engine Optimisation: Small Business & AI-Driven Search",
-    description: "Independent research on AEO — how small businesses must prepare for AI-driven search or risk invisibility.",
+    description: "Research on AEO — how small businesses must prepare for AI-driven search or risk invisibility.",
     href: "/research/aeo-ai-search-optimisation-2026",
     status: "live" as const,
   },
@@ -83,7 +83,7 @@ export default function ResearchLanding() {
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4 leading-tight">Research Library</h1>
           <p className="text-xl text-white/70 max-w-2xl">
-            Independent research on AI voice technology, missed call impact, and trade business optimisation.
+            Research on AI voice technology, missed call impact, and trade business optimisation.
           </p>
         </section>
 
