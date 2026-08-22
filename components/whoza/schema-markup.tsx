@@ -62,14 +62,6 @@ export function HomepageSchema() {
         }
       },
       {
-        "@type": "AggregateRating",
-        "itemReviewed": { "@id": "https://whoza.ai/#organization" },
-        "ratingValue": "4.8",
-        "bestRating": "5",
-        "ratingCount": "127",
-        "reviewCount": "127"
-      },
-      {
         "@type": "Service",
         "@id": "https://whoza.ai/#service",
         "serviceType": "AI Call Handling for UK Tradespeople",

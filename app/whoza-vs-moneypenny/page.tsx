@@ -52,33 +52,11 @@ const comparisonData = [
   { feature: "Bilingual Support", whoza: "✓ English", competitor: "✓ Multiple languages", winner: "moneypenny", note: "Moneypenny more diverse" },
 ]
 
-const reviewSchema = {
-  "@context": "https://schema.org",
-  "@type": "Review",
-  "itemReviewed": {
-    "@type": "SoftwareApplication",
-    "name": "Whoza.ai",
-    "applicationCategory": "BusinessApplication",
-  },
-  "reviewRating": {
-    "@type": "Rating",
-    "ratingValue": "4.6",
-    "bestRating": "5",
-  },
-  "author": {
-    "@type": "Organization",
-    "name": "whoza.ai",
-  },
-  "reviewBody": "whoza.ai vs Moneypenny comparison for UK trades. whoza.ai wins on price (£59 vs £150+), setup speed (30 min vs 2-5 days), flexibility (no contract), and unique features (WhatsApp delivery, review collection, competitor analysis). Moneypenny wins on human empathy, complex enquiry handling, brand trust, and multi-language support. Recommendation: Choose whoza.ai for cost-conscious sole traders and small teams who want modern features. Choose Moneypenny for high-value commercial clients where human relationship-building matters.",
-}
-
 export const revalidate = 3600
 
 export default function VsMoneypennyPage() {
   return (
     <>
-      <script id="comparison-review" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
-
       <div className="min-h-screen bg-[var(--navy-900)] text-white">
         <Header />
         <BreadcrumbSchema items={[

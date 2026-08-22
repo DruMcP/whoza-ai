@@ -187,41 +187,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         "@id": "https://whoza.ai/#organization"
       }
     },
-    "review": {
-      "@type": "Review",
-      "author": {
-        "@id": "https://whoza.ai/#organization"
-      },
-      "itemReviewed": {
-        "@id": "https://whoza.ai/#organization"
-      },
-      "reviewBody": "I was missing 5 emergency calls a week. Katie captured 47 calls in 3 weeks. £6,800 recovered. Best £59 I've ever spent.",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      },
-      "positiveNotes": {
-        "@type": "ItemList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Captured 47 missed calls in 3 weeks"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Recovered £6,800 in lost jobs"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Customers didn't realise it was AI"
-          }
-        ]
-      }
-    },
     "isPartOf": {
       "@type": "Blog",
       "@id": "https://whoza.ai/blog",

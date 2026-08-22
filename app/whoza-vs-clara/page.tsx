@@ -51,27 +51,6 @@ const comparisonData = [
   { feature: "Trade-Specific Training", whoza: "✓ 15+ trades", competitor: "✓ General trades", winner: "whoza", note: "whoze more specialised" },
 ]
 
-// AggregateReview schema for this comparison page
-const reviewSchema = {
-  "@context": "https://schema.org",
-  "@type": "Review",
-  "itemReviewed": {
-    "@type": "SoftwareApplication",
-    "name": "Whoza.ai",
-    "applicationCategory": "BusinessApplication",
-  },
-  "reviewRating": {
-    "@type": "Rating",
-    "ratingValue": "4.7",
-    "bestRating": "5",
-  },
-  "author": {
-    "@type": "Organization",
-    "name": "whoza.ai",
-  },
-  "reviewBody": "Independent comparison of whoza.ai vs Clara AI for UK trades. whoza.ai wins on features (WhatsApp, reviews, competitor analysis) and flexibility (no contract, longer guarantee). Clara wins on entry-level price (£49.99 vs £59). Both offer good UK voices. Recommendation: Choose Clara if budget is extremely tight and you only need basic call answering. Choose whoza.ai if you want the complete revenue system with review collection and growth insights.",
-}
-
 const faqs = [
   {
     question: "Which is cheaper: whoza.ai or Clara AI?",
@@ -96,8 +75,6 @@ export const revalidate = 3600
 export default function VsClaraPage() {
   return (
     <>
-      <script id="comparison-review" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
-
       <div className="min-h-screen bg-[var(--navy-900)] text-white">
         <Header />
         <FAQPageSchema faqs={faqs} />

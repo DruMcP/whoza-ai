@@ -52,33 +52,11 @@ const comparisonData = [
   { feature: "Money-Back", whoza: "30 days", competitor: "7 days", winner: "whoza", note: "whoze longer" },
 ]
 
-const reviewSchema = {
-  "@context": "https://schema.org",
-  "@type": "Review",
-  "itemReviewed": {
-    "@type": "SoftwareApplication",
-    "name": "Whoza.ai",
-    "applicationCategory": "BusinessApplication",
-  },
-  "reviewRating": {
-    "@type": "Rating",
-    "ratingValue": "4.5",
-    "bestRating": "5",
-  },
-  "author": {
-    "@type": "Organization",
-    "name": "whoza.ai",
-  },
-  "reviewBody": "whoza.ai vs Team-Connect comparison for UK trades. Team-Connect wins on absolute price (£9.99 entry vs £59). whoza.ai wins on features (WhatsApp, reviews, competitor analysis, spam filtering, trade specialisation), support quality, and guarantee length. Both have no contracts. Recommendation: Choose Team-Connect if you have extremely limited budget and just need basic call answering. Choose whoza.ai if you want a complete revenue system and can justify the £49/month extra for features that generate return.",
-}
-
 export const revalidate = 3600
 
 export default function VsTeamConnectPage() {
   return (
     <>
-      <script id="comparison-review" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
-
       <div className="min-h-screen bg-[var(--navy-900)] text-white">
         <Header />
         <BreadcrumbSchema items={[

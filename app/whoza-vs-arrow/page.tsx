@@ -54,34 +54,11 @@ const comparisonData = [
   { feature: "Calendar Integration", whoza: "✓ Auto-sync (Growth+)", competitor: "✗ Manual only", winner: "whoza", note: "whoze more automated" },
 ]
 
-// AggregateReview schema for this comparison page
-const reviewSchema = {
-  "@context": "https://schema.org",
-  "@type": "Review",
-  "itemReviewed": {
-    "@type": "SoftwareApplication",
-    "name": "Whoza.ai",
-    "applicationCategory": "BusinessApplication",
-  },
-  "reviewRating": {
-    "@type": "Rating",
-    "ratingValue": "4.8",
-    "bestRating": "5",
-  },
-  "author": {
-    "@type": "Organization",
-    "name": "whoza.ai",
-  },
-  "reviewBody": "Independent comparison of whoza.ai vs ARROW for UK trades. whoza.ai wins on price (cheaper at every tier), features (WhatsApp, reviews, competitor analysis, calendar sync), and flexibility (no contract). ARROW offers a longer free trial (14 days) but requires a credit card. Both provide good AI voice quality and 30-day money-back guarantees. Recommendation: Choose whoza.ai if you want the complete revenue system with WhatsApp delivery and review collection. Choose ARROW if you want a longer trial period and don't mind email delivery.",
-}
-
 export const revalidate = 3600
 
 export default function WhozaVsArrowPage() {
   return (
     <>
-      <script id="comparison-review" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
-
       <div className="min-h-screen bg-[var(--navy-900)] text-white">
         <Header />
         <BreadcrumbSchema items={[
