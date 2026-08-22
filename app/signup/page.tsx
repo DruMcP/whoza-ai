@@ -25,7 +25,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "Start Your Free Trial | Whoza",
     description:
       "Sign up for Whoza — the AI phone receptionist for UK trades. Katie answers every call 24/7 and books real jobs to your WhatsApp. 7-day free trial, no card, live in 30 minutes.",

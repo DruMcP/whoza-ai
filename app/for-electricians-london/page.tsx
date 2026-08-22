@@ -25,7 +25,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "AI Call Answering for Electricians in London | whoza.ai",
     description: "Stop losing electrician jobs to missed calls in London. Katie answers 24/7, captures emergency and EICR enquiries via WhatsApp. Plans from £59/month.",
     images: ["https://whoza.ai/og-image.webp"],

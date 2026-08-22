@@ -29,7 +29,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "AI Call Answering for UK Trades: Complete 2026 Guide",
     description: "How AI call answering works for UK tradespeople. Never miss a job again with 24/7 answering, WhatsApp delivery, and instant setup. Read the guide.",
     images: ["https://whoza.ai/og-image.webp"],

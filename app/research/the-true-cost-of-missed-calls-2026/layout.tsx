@@ -28,7 +28,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "The True Cost of Missed Calls — UK Trades Research 2026",
     description: "UK trades miss 34-62% of calls. Cost: £50,000-£80,000/year per business. Download the independent research report.",
     images: ["https://whoza.ai/og/research-missed-calls-2026.jpg"],

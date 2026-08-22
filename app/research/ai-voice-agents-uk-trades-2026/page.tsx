@@ -35,7 +35,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "AI Voice Agents in the UK Trades Sector: Independent Research Report 2026",
     description: "Comprehensive independent research report analysing AI voice agent adoption, missed call revenue loss, and market trends in the UK trades sector.",
     images: ["https://whoza.ai/og-image.webp"],
@@ -237,13 +236,9 @@ export default function ResearchPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetSchema) }}
       />
-      <script
-        id="schema-breadcrumb"
-        type="application/ld+json"
-      />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
-        { name: "Research", item: "https://whoza.ai/research/ai-voice-agents-uk-trades-2026" },
+        { name: "Research", item: "https://whoza.ai/research" },
         { name: "AI Voice Agents UK Trades 2026", item: "https://whoza.ai/research/ai-voice-agents-uk-trades-2026" },
       ]} />
 

@@ -28,7 +28,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "AI Call Answering for Carpenters UK — Never Miss a Job",
     description: "AI call answering for UK carpenters. Katie answers 24/7, captures bespoke furniture, kitchen fitting and renovation enquiries. Plans from £59. Free trial.",
     images: ["https://whoza.ai/og-image.webp"],

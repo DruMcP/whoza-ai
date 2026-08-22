@@ -35,7 +35,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "The Caller Experience Revolution: AI Voice Agents & Small Business",
     description: "Independent research on AI voice agents and caller experience for UK small businesses. Data from MIT, Harvard, Zendesk and BrightLocal. Download free.",
     images: ["https://whoza.ai/og-image.webp"],
@@ -210,13 +209,9 @@ export default function ResearchPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetSchema) }}
       />
-      <script
-        id="schema-breadcrumb"
-        type="application/ld+json"
-      />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
-        { name: "Research", item: "https://whoza.ai/research/caller-experience-revolution-ai-voice-agents-2026" },
+        { name: "Research", item: "https://whoza.ai/research" },
         { name: "The Caller Experience Revolution 2026", item: "https://whoza.ai/research/caller-experience-revolution-ai-voice-agents-2026" },
       ]} />
 

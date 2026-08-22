@@ -21,7 +21,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "Whoza.ai vs Trade Receptionist: Which is Better for UK Trades?",
     description: "Compare whoza.ai and Trade Receptionist for UK tradespeople. Honest comparison of pricing, setup, legal compliance, and platform quality.",
     images: ["https://whoza.ai/og-image.webp"],

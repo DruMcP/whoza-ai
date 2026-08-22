@@ -8,7 +8,7 @@ import { Star, Quote, Newspaper, TrendingUp, PhoneOff, Building2, Calendar, Mail
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Press Centre | whoza.ai",
-  description: "Media resources, press releases, and company information for whoza.ai — the AI call answering platform for UK tradespeople. Incorporated " + COMPANY.incorporatedOnDisplay + ". Company: " + COMPANY.companyNumber + ".",
+  description: "Media resources, press releases for whoza.ai — the AI call answering platform for UK tradespeople. Incorporated " + COMPANY.incorporatedOnDisplay + ". Company: " + COMPANY.companyNumber + ".",
   alternates: { canonical: "https://whoza.ai/press" },
   robots: { index: true, follow: true },
   openGraph: {

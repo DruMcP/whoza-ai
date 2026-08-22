@@ -118,7 +118,6 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     },
     twitter: {
       card: "summary_large_image",
-      site: "@whozaai",
       title: post.metaTitle || post.title,
       description: post.excerpt,
       images: ["https://whoza.ai/og-image.webp"],

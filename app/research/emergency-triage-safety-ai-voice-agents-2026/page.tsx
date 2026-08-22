@@ -40,7 +40,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "Can AI Voice Agents Safely Triage Emergencies?",
     description: "Independent research on whether AI voice agents can safely triage emergencies for UK trades.",
     images: ["https://whoza.ai/og-image.webp"],

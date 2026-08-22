@@ -16,7 +16,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "Lost Jobs Calculator UK | whoza.ai",
     description: "Free calculator for UK tradespeople. See what missed calls cost you.",
     images: ["https://whoza.ai/og-image.webp"],

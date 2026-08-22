@@ -27,7 +27,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "Will My Customers Mind an AI Answering My Phone? | whoza.ai",
     description: "The honest answer: some callers can tell. But almost nobody hangs up — because the alternative is your voicemail. Here's what actually happens when Katie answers.",
     images: ["https://whoza.ai/og-image.webp"],

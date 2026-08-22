@@ -25,7 +25,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "AI Call Answering for Gas Engineers in Glasgow | whoza.ai",
     description: "Stop losing gas engineer jobs to missed calls in Glasgow. Katie answers 24/7, captures gas leak and safety enquiries via WhatsApp. Plans from £59/month.",
     images: ["https://whoza.ai/og-image.webp"],

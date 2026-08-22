@@ -27,7 +27,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "Is It a Phone Tree? No. Here's What Actually Happens. | whoza.ai",
     description: "When people hear 'AI answers your phone', they picture a menu. Press 1 for sales. Press 2 for accounts. That's not what this is. There is no menu. There is no hold music. Here's how Katie actually works.",
     images: ["https://whoza.ai/og-image.webp"],

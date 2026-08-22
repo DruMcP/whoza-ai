@@ -19,7 +19,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "Virtual Receptionist Cost UK (2026): Real Prices vs AI £59",
     description: "UK virtual receptionist prices, checked August 2026: £45–£230/mo plus £2.99-per-call overage, versus flat-rate AI call answering at £59/mo for trades.",
     images: ["https://whoza.ai/og-image.webp"],

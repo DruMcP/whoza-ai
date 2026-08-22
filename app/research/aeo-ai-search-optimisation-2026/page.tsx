@@ -35,7 +35,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "Answer Engine Optimisation: Small Business & AI-Driven Search",
     description: "Independent research report on Answer Engine Optimisation (AEO) for small businesses.",
     images: ["https://whoza.ai/og-image.webp"],
@@ -162,7 +161,7 @@ export default function ResearchPage() {
       <script id="schema-dataset" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetSchema) }} />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
-        { name: "Research", item: "https://whoza.ai/research/aeo-ai-search-optimisation-2026" },
+        { name: "Research", item: "https://whoza.ai/research" },
         { name: "Answer Engine Optimisation 2026", item: "https://whoza.ai/research/aeo-ai-search-optimisation-2026" },
       ]} />
 

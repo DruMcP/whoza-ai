@@ -27,7 +27,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "AI Call Answering FAQ for UK Tradespeople",
     description: "Honest answers to the most asked questions about AI call handling for UK trades.",
     images: ["https://whoza.ai/og-image.webp"],

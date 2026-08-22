@@ -25,7 +25,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "Whoza.ai vs Team-Connect: AI Call Handler vs Budget Answering",
     description: "Honest comparison of whoza.ai and Team-Connect for UK tradespeople.",
     images: ["https://whoza.ai/og-image.webp"],
@@ -78,7 +77,7 @@ export default function VsTeamConnectPage() {
 
               <div className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 px-3 py-1 rounded-full text-xs font-medium mb-6">
                 <Star className="w-3 h-3" />
-                Independent Comparison — May 2026
+                Comparison — May 2026
               </div>
 
               <h1 className="text-4xl lg:text-5xl font-extrabold mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
@@ -261,7 +260,7 @@ export default function VsTeamConnectPage() {
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                "Independent comparison — May 2026",
+                "Comparison — May 2026",
                 "Pricing verified from competitor websites",
                 "No affiliate links or paid placement",
                 "Both services tested with real calls",

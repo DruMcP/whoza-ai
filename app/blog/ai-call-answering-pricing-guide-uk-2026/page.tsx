@@ -28,7 +28,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "AI Call Answering Cost UK (2026) | Pricing Guide",
     description: "Transparent AI call answering pricing guide for UK businesses. Compare whoza.ai plans now.Starter, Growth, Pro, and Scale. No hidden fees. 2026 guide.",
     images: ["https://whoza.ai/og-image.webp"],

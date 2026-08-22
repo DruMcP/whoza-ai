@@ -16,7 +16,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "Free Quote Generator for UK Trades | whoza.ai",
     description: "Create professional quotes for UK trade jobs in 60 seconds.",
     images: ["https://whoza.ai/og-image.webp"],

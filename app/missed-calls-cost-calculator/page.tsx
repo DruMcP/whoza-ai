@@ -20,7 +20,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "Missed Call Cost Calculator | How Much Revenue Are You Losing?",
     description: "Calculate how much missed calls cost your trade business. Free calculator for UK tradespeople.",
     images: ["https://whoza.ai/og-image.webp"],

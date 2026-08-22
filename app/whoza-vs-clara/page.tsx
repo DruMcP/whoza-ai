@@ -21,14 +21,13 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/whoza-vs-clara",
     siteName: "Whoza.ai",
     title: "Whoza.ai vs Clara AI: Honest Comparison for UK Trades",
-    description: "Independent comparison of whoza.ai and Clara AI. Price, features, and setup time compared.",
+    description: "Comparison of whoza.ai and Clara AI. Price, features, and setup time compared.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Whoza.ai vs Clara AI comparison" }],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "Whoza.ai vs Clara AI: Honest Comparison for UK Trades",
-    description: "Independent comparison of whoza.ai and Clara AI. Price, features, and setup time compared.",
+    description: "Comparison of whoza.ai and Clara AI. Price, features, and setup time compared.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {
@@ -97,7 +96,7 @@ export default function VsClaraPage() {
 
               <div className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 px-3 py-1 rounded-full text-xs font-medium mb-6">
                 <Star className="w-3 h-3" />
-                Independent Comparison — May 2026
+                Comparison — May 2026
               </div>
 
               <h1 className="text-4xl lg:text-5xl font-extrabold mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
@@ -309,7 +308,7 @@ export default function VsClaraPage() {
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                "Independent comparison — May 2026",
+                "Comparison — May 2026",
                 "Pricing verified from competitor websites",
                 "No affiliate links or paid placement",
                 "whoza.ai and Clara both reviewed",

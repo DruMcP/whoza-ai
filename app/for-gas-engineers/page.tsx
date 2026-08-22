@@ -27,7 +27,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "AI Call Answering for Gas Engineers UK — 24/7",
     description: "Katie answers 24/7 for gas engineers. Captures CP12 certificates, boiler breakdowns and gas leaks. WhatsApp alerts in 3 seconds. Start your free trial.",
     images: ["https://whoza.ai/og-image.webp"],

@@ -15,7 +15,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "Missed Call Cost Calculator UK | Trades | whoza.ai",
     description: "Free interactive calculator for UK tradespeople. Calculate how much missed calls cost your trade business.",
     images: ["https://whoza.ai/og-image.webp"],

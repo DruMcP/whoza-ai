@@ -22,7 +22,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "About whoza.ai — AI Call Answering for UK Trades",
     description: "AI call answering for UK trades — never miss a job. Built by a former tradesperson who knows what it's like to lose work because the phone rang while you were busy.",
     images: ["https://whoza.ai/og-image.webp"],

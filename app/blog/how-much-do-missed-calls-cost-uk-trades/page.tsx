@@ -25,7 +25,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "How Much Do Missed Calls Cost UK Trades?",
     description: "What missed calls really cost UK trades: ONS data reveals £12K+ in lost revenue yearly. How AI answering recovers every enquiry. Read now.",
     images: ["https://whoza.ai/og-image.webp"],

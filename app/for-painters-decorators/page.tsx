@@ -43,7 +43,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "AI Call Handling for Painters & Decorators UK | whoza.ai",
     description: "Katie answers 24/7 for painters & decorators. Captures interior, exterior & commercial painting enquiries. WhatsApp alerts in 3 seconds. Free trial.",
     images: ["https://whoza.ai/og-image.webp"],

@@ -89,15 +89,69 @@ describe("R7 Entity Consistency", () => {
     const failures = [];
     for (const file of appFiles) {
       const content = fs.readFileSync(file, "utf8");
-      // Match metadata export description
+      // Match metadata export description — skip interpolated strings (contain + operator)
       const metadataMatch = content.match(/export\s+const\s+metadata\s*:\s*Metadata\s*=\s*\{([\s\S]*?)\n\}/);
       if (metadataMatch) {
-        const descMatch = metadataMatch[1].match(/description:\s*"([^"]+)"/);
-        if (descMatch) {
-          const len = descMatch[1].length;
-          if (len < 120 || len > 160) {
-            failures.push({ file: file.replace(process.cwd() + "/", ""), length: len, desc: descMatch[1].substring(0, 50) + "..." });
+        const block = metadataMatch[1];
+        // Skip if description uses string concatenation (interpolated at runtime)
+        if (block.includes('description:') && !block.match(/description:\s*"[^"]*"\s*\+/)) {
+          const descMatch = block.match(/description:\s*"([^"]+)"/);
+          if (descMatch) {
+            const len = descMatch[1].length;
+            if (len < 120 || len > 160) {
+              failures.push({ file: file.replace(process.cwd() + "/", ""), length: len, desc: descMatch[1].substring(0, 50) + "..." });
+            }
           }
+        }
+      }
+    }
+    expect(failures).toEqual([]);
+  });
+
+  test("R8.1 — no dead X handle @whozaai anywhere in source", () => {
+    const banned = ["@whozaai"];
+    const failures = [];
+    for (const file of allFiles) {
+      const content = fs.readFileSync(file, "utf8");
+      for (const term of banned) {
+        if (content.includes(term)) {
+          failures.push({ file: file.replace(process.cwd() + "/", ""), term });
+        }
+      }
+    }
+    expect(failures).toEqual([]);
+  });
+
+  test("R8.6 — no 'Independent comparison' wording in comparison pages", () => {
+    // Only checks whosa-vs-* comparison pages and their metadata — not blog/research content
+    const banned = ["Independent comparison", "Independent Comparison"];
+    const comparisonFiles = appFiles.filter(f => f.includes("/whoza-vs-"));
+    const failures = [];
+    for (const file of comparisonFiles) {
+      const content = fs.readFileSync(file, "utf8");
+      for (const term of banned) {
+        if (content.includes(term)) {
+          failures.push({ file: file.replace(process.cwd() + "/", ""), term });
+        }
+      }
+    }
+    expect(failures).toEqual([]);
+  });
+
+  test("R8.5 — no empty ld+json script tags in app/ (source-level check)", () => {
+    // This is a source-level regex check, not a render-level DOM check.
+    // Excludes scripts with dangerouslySetInnerHTML (those have content).
+    const failures = [];
+    for (const file of appFiles) {
+      const content = fs.readFileSync(file, "utf8");
+      // Match self-closing <script type="application/ld+json" /> that does NOT have dangerouslySetInnerHTML
+      const orphanPattern = /<script[^>]*type=["']application\/ld\+json["'][^>]*\/>/g;
+      let match;
+      while ((match = orphanPattern.exec(content)) !== null) {
+        const start = Math.max(0, match.index - 200);
+        const context = content.substring(start, match.index + match[0].length);
+        if (!context.includes("dangerouslySetInnerHTML")) {
+          failures.push({ file: file.replace(process.cwd() + "/", ""), snippet: match[0] });
         }
       }
     }

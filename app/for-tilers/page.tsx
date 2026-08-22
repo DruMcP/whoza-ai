@@ -30,7 +30,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "AI Call Answering for Tilers UK — Never Miss a Job",
     description: "AI call answering for UK tilers. Katie captures 24/7 bathroom, kitchen, floor and commercial tiling enquiries. WhatsApp alerts in 3 seconds. Free trial.",
     images: ["https://whoza.ai/og-image.webp"],

@@ -30,7 +30,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "AI Call Answering for Cleaners UK — Never Miss a Booking",
     description: "AI call handling for UK cleaners. Katie answers 24/7, captures domestic, commercial and end-of-tenancy enquiries. WhatsApp alerts in 3 seconds. Free trial.",
     images: ["https://whoza.ai/og-image.webp"],

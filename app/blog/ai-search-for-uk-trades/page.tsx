@@ -32,7 +32,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "Your Next Customer Won't Google You. They'll Ask AI.",
     description:
       "UK customers have quietly switched to AI search. Here's what it means for trades — and how to be the name the AI recommends.",

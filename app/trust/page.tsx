@@ -22,7 +22,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "Trust & Security | whoza.ai",
     description: "whoza.ai is ICO-registered (ZC077271), UK GDPR compliant, running a SOC 2 Type II programme. Your data and your customers' data are protected. Plans from £59.",
     images: ["https://whoza.ai/og-image.webp"],

@@ -41,7 +41,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@whozaai",
     title: "Voice Agent Technology: State of the Art, Architecture & Future 2026",
     description:
       "Technical deep-dive into voice AI architecture. End-to-end neural models, latency below 200ms, speech synthesis and barge-in handling. Download free.",
