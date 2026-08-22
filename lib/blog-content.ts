@@ -5031,7 +5031,7 @@ Built in Scotland. Working for UK trades.`,
     metaTitle: "Virtual Receptionist Cost UK 2026: A Joiner's Honest Comparison",
     schema: {
       headline: "I Spent Two Weeks Googling 'Virtual Receptionist Cost' Before I Realised I Was Buying the Wrong Thing",
-      description: "A self-employed joiner from Glasgow spent 14 days comparing virtual receptionist prices. He discovered the cheapest option was not the best value — and the best value was not what he expected.",
+      description: "A Glasgow joiner spent 14 days comparing virtual receptionist prices. The cheapest option was not the best value — and the best value surprised him.",
     },
     content: {
       introduction: `I spent two weeks Googling "virtual receptionist cost" before I realised I was buying the wrong thing entirely.

@@ -85,7 +85,7 @@ const blogPosts = [
   {
     slug: "research/aeo-ai-search-optimisation-2026",
     title: "Answer Engine Optimisation: Why Small Businesses Must Prepare for AI-Driven Search or Risk Invisibility in 2026 and Beyond",
-    excerpt: "Independent research report on Answer Engine Optimisation (AEO). Data from BrightEdge, Ahrefs, Semrush, Princeton, HubSpot, Google, and 30+ authoritative sources. 48% AI Overview coverage, 60% zero-click rate, 14.2% AI conversion rate.",
+    excerpt: "Research report on Answer Engine Optimisation (AEO). Data from BrightEdge, Ahrefs, Semrush, Princeton, HubSpot, Google, and 30+ authoritative sources. 48% AI Overview coverage, 60% zero-click rate, 14.2% AI conversion rate.",
     readTime: "28 min read",
     date: "2026-06-20",
     category: "Research",
@@ -95,7 +95,7 @@ const blogPosts = [
   {
     slug: "research/caller-experience-revolution-ai-voice-agents-2026",
     title: "The Caller Experience Revolution: How AI Voice Agents Transform Customer Satisfaction, Trust, and Revenue Conversion in Small Business",
-    excerpt: "Independent research report examining how AI voice agents transform caller experience for small businesses. Data from MIT, Harvard Business Review, Zendesk, BrightLocal, and SurveyMonkey.",
+    excerpt: "Research report examining how AI voice agents transform caller experience for small businesses. Data from MIT, Harvard Business Review, Zendesk, BrightLocal, and SurveyMonkey.",
     readTime: "22 min read",
     date: "2026-06-20",
     category: "Research",
@@ -114,7 +114,7 @@ const blogPosts = [
   },
   {
     slug: "research/ai-voice-agents-uk-trades-2026",
-    title: "AI Voice Agents in the UK Trades Sector: Independent Research Report 2026",
+    title: "AI Voice Agents in the UK Trades Sector: Research Report 2026",
     excerpt: "Comprehensive research report analysing AI voice agent adoption, missed call revenue loss, and market trends. Data from Gartner, McKinsey, Juniper Research, BrightLocal, and ONS.",
     readTime: "25 min read",
     date: "2026-06-18",

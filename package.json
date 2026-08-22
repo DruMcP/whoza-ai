@@ -9,7 +9,8 @@
     "dev": "next dev",
     "build": "git fetch --unshallow --quiet || true && next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "vitest run"
   },
   "overrides": {
     "postcss": "^8.5.15"
@@ -86,7 +87,8 @@
     "@eslint/eslintrc": "^3",
     "@netlify/plugin-nextjs": "^5.15.13",
     "eslint": "^9",
-    "eslint-config-next": "^15.5.18"
+    "eslint-config-next": "^15.5.18",
+    "vitest": "^4.1.11"
   },
   "browserslist": [
     "> 0.5% in GB",

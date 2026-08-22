@@ -785,7 +785,7 @@ export default function BestAICallHandlerPage() {
             Page compiled: 2026-07-12 · Competitors reviewed: whoza.ai, Clara (heyitsclara.com), Trade Receptionist (tradereceptionist.com),
             Moneypenny (moneypenny.com), Rosie AI (heyrosie.com), Down To Earth AI (downtoearthai.com), Bizwings (bizwings.ai) · All pricing and features verified against live sites as of July 2026
             <br />
-            <span className="mt-1 block">A comparison compiled from publicly available pricing, feature lists, and third-party reviews. Last updated: 2026-07-12.</span>
+            <span className="mt-1 block">A comparison compiled from publicly available pricing, feature lists, and third-party reviews. Last updated: 2026-08-23.</span>
           </p>
         </section>
       </main>
