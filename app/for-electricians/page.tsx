@@ -56,20 +56,20 @@ const faqs = [
     answer: "whoza.ai starts at £59/month for the Starter plan. That's less than one EICR certificate job. Every plan includes unlimited AI calls, WhatsApp delivery, and a 7-day free trial. Most electricians recover the cost within 24 hours by capturing just one missed emergency call.",
   },
   {
-    question: "Can Katie handle emergency electrical calls at night?",
-    answer: "Absolutely. Katie answers 24/7, including nights, weekends, and bank holidays. She identifies electrical emergencies (no power, burning smell, sparking sockets, RCD tripping) and marks them as highest priority in your WhatsApp alert. You'll see the emergency tag immediately and can call back within minutes.",
+    question: "Can Katie handle electrical emergencies at 2am?",
+    answer: "Yes. Katie answers 24/7, including weekends and bank holidays. She identifies emergency electrical keywords like 'power cut', 'tripping', 'burning smell', 'sparking', 'fuse box', 'no lights' — and marks the enquiry as emergency priority. You get an immediate WhatsApp with 'ELECTRICAL EMERGENCY — URGENT' in the header, even at 2am.",
   },
   {
     question: "What information does Katie collect from electrical customers?",
     answer: "Katie captures: full name, phone number, postcode, property type (house/flat/commercial), job type (fault finding, EICR, rewiring, consumer unit upgrade, EV charger, emergency), urgency level, property age, and whether it's a landlord or homeowner. For emergencies, she also asks about safety hazards and whether power is completely off.",
   },
   {
-    question: "Does it work with my existing business phone number?",
-    answer: "Yes. You simply set up call forwarding from your existing electrician business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and your existing voicemail stays as a backup.",
+    question: "Does whoza.ai work with my existing business phone number?",
+    answer: "Yes. You keep your existing number. We set up call forwarding from your current line to your whoza.ai number. Most electricians have this active within 10 minutes. No need to change business cards, van signage, or Google Business Profile.",
   },
   {
-    question: "Can Katie handle EICR and landlord certificate enquiries?",
-    answer: "Yes. Katie is specifically trained to handle electrical safety certificate enquiries. She captures: property size, number of circuits, certificate type (EICR, PAT testing, fire alarm), number of properties, landlord or letting agent details, and urgency. These are tagged as 'landlord' in your dashboard for fast bulk follow-up — your biggest repeat customer base.",
+    question: "Can Katie handle EICR certificate enquiries?",
+    answer: "Yes. Katie identifies landlord-specific calls by keywords like 'EICR', 'electrical certificate', 'landlord', 'tenant', or 'rental property'. She captures the number of properties, number of circuits, preferred inspection dates, and tenant contact details. EICR enquiries get flagged as 'landlord/certificate' in your dashboard for efficient batch scheduling.",
   },
   {
     question: "How quickly can I get set up?",
@@ -94,6 +94,14 @@ const faqs = [
   {
     question: "Can an AI receptionist handle emergency electrical calls?",
     answer: "Yes — Katie identifies emergency electrical keywords like 'power cut' and 'burning smell' and marks them as urgent priority, sending an immediate WhatsApp alert even at 2am.",
+  },
+  {
+    question: "Will customers know they're talking to AI?",
+    answer: "Katie introduces herself as your AI assistant and explains that she's capturing details so you can call back prepared. Most customers are relieved to speak to someone immediately rather than leaving a voicemail. Most callers are satisfied with the AI experience.",
+  },
+  {
+    question: "Can Katie handle rewire and installation quote enquiries?",
+    answer: "Yes. Katie captures installation enquiries with: property type and size, number of rooms, current wiring condition, whether it's a partial or full rewire, and timeline. These high-value enquiries (£2,000-£8,000+) get flagged as 'installation quote' for priority follow-up.",
   },
 ]
 
@@ -417,56 +425,11 @@ export default function ForElectriciansPage() {
                 Common questions from electricians about AI call answering.
               </p>
             </div>
-            <div className="space-y-6">
-              {[
-                {
-                  q: "How much does AI call answering cost for electricians?",
-                  a: "Whoza.ai starts at £59/month for the Starter plan. One captured emergency electrical job averages £150-£300 callout. An EICR certificate averages £150-£220. At £59/month, one EICR pays for the whole year. Overage minutes are billed at £0.40/minute."
-                },
-                {
-                  q: "Can Katie handle electrical emergencies at 2am?",
-                  a: "Yes. Katie answers 24/7, including weekends and bank holidays. She identifies emergency electrical keywords like 'power cut', 'tripping', 'burning smell', 'sparking', 'fuse box', 'no lights' — and marks the enquiry as emergency priority. You get an immediate WhatsApp with 'ELECTRICAL EMERGENCY — URGENT' in the header, even at 2am."
-                },
-                {
-                  q: "What information does Katie collect from electrical customers?",
-                  a: "Katie collects: full name, phone number, postcode, property type (house/flat/commercial), electrical issue (power cut/tripping/faulty socket/lighting/rewiring/EICR), urgency level, property age, whether it's a rental property, and how they found you."
-                },
-                {
-                  q: "Can Katie handle EICR certificate enquiries?",
-                  a: "Yes. Katie identifies landlord-specific calls by keywords like 'EICR', 'electrical certificate', 'landlord', 'tenant', or 'rental property'. She captures the number of properties, number of circuits, preferred inspection dates, and tenant contact details. EICR enquiries get flagged as 'landlord/certificate' in your dashboard for efficient batch scheduling."
-                },
-                {
-                  q: "Does whoza.ai work with my existing business phone number?",
-                  a: "Yes. You keep your existing number. We set up call forwarding from your current line to your whoza.ai number. Most electricians have this active within 10 minutes. No need to change business cards, van signage, or Google Business Profile."
-                },
-                {
-                  q: "How quickly can I get set up?",
-                  a: "Most electricians are live within 30 minutes. You choose your voice (Katie or one of 12 alternatives), set your greeting, configure your WhatsApp number, and activate call forwarding. We guide you through each step. No technical knowledge required."
-                },
-                {
-                  q: "Will customers know they're talking to AI?",
-                  a: "Katie introduces herself as your AI assistant and explains that she's capturing details so you can call back prepared. Most customers are relieved to speak to someone immediately rather than leaving a voicemail. Most callers are satisfied with the AI experience."
-                },
-                {
-                  q: "Can Katie handle rewire and installation quote enquiries?",
-                  a: "Yes. Katie captures installation enquiries with: property type and size, number of rooms, current wiring condition, whether it's a partial or full rewire, and timeline. These high-value enquiries (£2,000-£8,000+) get flagged as 'installation quote' for priority follow-up."
-                },
-                {
-                  q: "How much does an AI receptionist cost in the UK?",
-                  a: "AI receptionists for UK trades start at £59 per month with whoza.ai, which includes unlimited calls, WhatsApp delivery, and a 7-day free trial with no contract."
-                },
-                {
-                  q: "Is an AI receptionist better than a human answering service for electricians?",
-                  a: "An AI receptionist answers every call instantly at lower cost, but a human service suits firms needing complex emotional rapport or bespoke scripting beyond current AI capability."
-                },
-                {
-                  q: "Can an AI receptionist handle emergency electrical calls?",
-                  a: "Yes — Katie identifies emergency electrical keywords like 'power cut' and 'burning smell' and marks them as urgent priority, sending an immediate WhatsApp alert even at 2am."
-                }
-              ].map((faq, idx) => (
+            <div className="space-y-4">
+              {faqs.map((faq, idx) => (
                 <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
-                  <h3 className="text-lg font-semibold text-white mb-2">{faq.q}</h3>
-                  <p className="text-white/60 leading-relaxed">{faq.a}</p>
+                  <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
+                  <p className="text-white/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                 </div>
               ))}
             </div>

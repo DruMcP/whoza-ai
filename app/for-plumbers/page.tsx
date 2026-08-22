@@ -71,8 +71,8 @@ const faqs = [
     answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience — they just want their leak fixed fast.",
   },
   {
-    question: "Does it work with my existing business phone number?",
-    answer: "Yes. You simply set up call forwarding from your existing plumbing business number to your whoza.ai number. Your customers dial the same number they've always used — Katie just answers when you can't. Setup takes under 10 minutes.",
+    question: "Does whoza.ai work with my existing business phone number?",
+    answer: "Yes. You keep your existing number. We set up call forwarding from your current line to your whoza.ai number. Most plumbers have this active within 10 minutes. No need to change business cards, van signage, or Google Business Profile.",
   },
   {
     question: "How quickly can I get set up?",
@@ -97,6 +97,10 @@ const faqs = [
   {
     question: "Can an AI receptionist handle emergency plumbing calls?",
     answer: "Yes — Katie identifies emergency plumbing keywords like 'burst pipe' and 'flooding' and marks them as urgent priority, sending an immediate WhatsApp alert even at 2am.",
+  },
+  {
+    question: "Can Katie distinguish between a routine service and an emergency?",
+    answer: "Yes. Katie is trained to identify urgency from the customer's language. 'Annual boiler service' or 'tap replacement' goes to routine scheduling. 'Burst pipe', 'flooding', 'no water', or 'sewage backup' gets emergency priority. She also asks specific questions to help you assess urgency before you call back.",
   },
 ]
 
@@ -420,56 +424,11 @@ export default function ForPlumbersPage() {
                 Common questions from plumbers about AI call answering.
               </p>
             </div>
-            <div className="space-y-6">
-              {[
-                {
-                  q: "How much does AI call answering cost for plumbers?",
-                  a: "Whoza.ai starts at £59/month for the Starter plan. One captured emergency plumbing job averages £120-£250 callout. At £59/month, one emergency callout pays for the whole year. Overage minutes are billed at £0.40/minute."
-                },
-                {
-                  q: "Can Katie handle burst pipe emergencies at 2am?",
-                  a: "Yes. Katie answers 24/7, including weekends and bank holidays. She identifies emergency plumbing keywords like 'burst pipe', 'flooding', 'no water', 'leak', 'blocked drain', 'overflowing toilet' — and marks the enquiry as emergency priority. You get an immediate WhatsApp with 'EMERGENCY — URGENT' in the header, even at 2am."
-                },
-                {
-                  q: "What information does Katie collect from plumbing customers?",
-                  a: "Katie collects: full name, phone number, postcode, property type (house/flat/commercial), plumbing issue (burst pipe/leak/blockage/drainage/boiler/no water), urgency level, property age, whether it's a rental property, and how they found you."
-                },
-                {
-                  q: "Can Katie distinguish between a routine service and an emergency?",
-                  a: "Yes. Katie is trained to identify urgency from the customer's language. 'Annual boiler service' or 'tap replacement' goes to routine scheduling. 'Burst pipe', 'flooding', 'no water', or 'sewage backup' gets emergency priority. She also asks specific questions to help you assess urgency before you call back."
-                },
-                {
-                  q: "Does whoza.ai work with my existing business phone number?",
-                  a: "Yes. You keep your existing number. We set up call forwarding from your current line to your whoza.ai number. Most plumbers have this active within 10 minutes. No need to change business cards, van signage, or Google Business Profile."
-                },
-                {
-                  q: "How quickly can I get set up?",
-                  a: "Most plumbers are live within 30 minutes. You choose your voice (Katie or one of 12 alternatives), set your greeting, configure your WhatsApp number, and activate call forwarding. We guide you through each step. No technical knowledge required."
-                },
-                {
-                  q: "Will customers know they're talking to AI?",
-                  a: "Katie introduces herself as your AI assistant and explains that she's capturing details so you can call back prepared. Most customers are relieved to speak to someone immediately rather than leaving a voicemail. Most callers are satisfied with the AI experience."
-                },
-                {
-                  q: "Can Katie book plumbing appointments directly into my calendar?",
-                  a: "Katie captures all the details needed for booking: customer name, phone, address, job type, urgency, and preferred time slots. While she doesn't directly write to your calendar, she delivers everything structured in a WhatsApp message that you can action in seconds. Zapier integration is available on Growth plans for automatic calendar syncing."
-                },
-                {
-                  q: "How much does an AI receptionist cost in the UK?",
-                  a: "AI receptionists for UK trades start at £59 per month with whoza.ai, which includes unlimited calls, WhatsApp delivery, and a 7-day free trial with no contract."
-                },
-                {
-                  q: "Is an AI receptionist better than a human answering service for plumbers?",
-                  a: "An AI receptionist answers every call instantly at lower cost, but a human service suits firms needing complex emotional rapport or bespoke scripting beyond current AI capability."
-                },
-                {
-                  q: "Can an AI receptionist handle emergency plumbing calls?",
-                  a: "Yes — Katie identifies emergency plumbing keywords like 'burst pipe' and 'flooding' and marks them as urgent priority, sending an immediate WhatsApp alert even at 2am."
-                }
-              ].map((faq, idx) => (
+            <div className="space-y-4">
+              {faqs.map((faq, idx) => (
                 <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
-                  <h3 className="text-lg font-semibold text-white mb-2">{faq.q}</h3>
-                  <p className="text-white/60 leading-relaxed">{faq.a}</p>
+                  <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
+                  <p className="text-white/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                 </div>
               ))}
             </div>
