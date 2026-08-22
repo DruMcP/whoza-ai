@@ -8,7 +8,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "AI Voice Agents in the UK Trades Sector: Research Report 2026 | whoza.ai",
-  description: "Independent research on AI voice agent adoption, missed call revenue loss and market trends in UK trades. Data from Gartner, McKinsey and BrightLocal.",
+  description: "Research on AI voice agent adoption, missed call revenue loss and market trends in UK trades. Data from Gartner, McKinsey and BrightLocal.",
   alternates: {
     canonical: "https://whoza.ai/research/ai-voice-agents-uk-trades-2026",
   },
@@ -56,7 +56,7 @@ const scholarlyArticleSchema = {
   "@type": ["ScholarlyArticle", "Article"],
   "@id": "https://whoza.ai/research/ai-voice-agents-uk-trades-2026",
   "headline": "AI Voice Agents in the UK Trades Sector: Market Analysis, Current Trends, and Future Iterations — 2026",
-  "description": "Independent research report examining the market vertical of AI-powered call handling and revenue optimisation systems for UK tradespeople. Covers missed call statistics, technology capabilities, competitive landscape, ROI analysis, and future predictions.",
+  "description": "Research report examining the market vertical of AI-powered call handling and revenue optimisation systems for UK tradespeople. Covers missed call statistics, technology capabilities, competitive landscape, ROI analysis, and future predictions.",
   "image": "https://whoza.ai/og-image.webp",
   "datePublished": "2026-06-18",
   "dateModified": "2026-06-18",

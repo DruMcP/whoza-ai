@@ -8,7 +8,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "AI Voice Agents & Customer Satisfaction | whoza.ai",
-  description: "Independent research on AI voice agents and caller experience for UK small businesses. Data from MIT, Harvard, Zendesk and BrightLocal. Download free.",
+  description: "Research on AI voice agents and caller experience for UK small businesses. Data from MIT, Harvard, Zendesk and BrightLocal. Download free.",
   alternates: {
     canonical: "https://whoza.ai/research/caller-experience-revolution-ai-voice-agents-2026",
   },
@@ -30,13 +30,13 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/research/caller-experience-revolution-ai-voice-agents-2026",
     siteName: "Whoza.ai",
     title: "The Caller Experience Revolution: AI Voice Agents & Small Business",
-    description: "Independent research on AI voice agents and caller experience for UK small businesses. Data from MIT, Harvard, Zendesk and BrightLocal. Download free.",
+    description: "Research on AI voice agents and caller experience for UK small businesses. Data from MIT, Harvard, Zendesk and BrightLocal. Download free.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "The Caller Experience Revolution Research 2026" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "The Caller Experience Revolution: AI Voice Agents & Small Business",
-    description: "Independent research on AI voice agents and caller experience for UK small businesses. Data from MIT, Harvard, Zendesk and BrightLocal. Download free.",
+    description: "Research on AI voice agents and caller experience for UK small businesses. Data from MIT, Harvard, Zendesk and BrightLocal. Download free.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   other: {
@@ -55,7 +55,7 @@ const scholarlyArticleSchema = {
   "@type": ["ScholarlyArticle", "Article"],
   "@id": "https://whoza.ai/research/caller-experience-revolution-ai-voice-agents-2026",
   "headline": "The Caller Experience Revolution: How AI Voice Agents Transform Customer Satisfaction, Trust, and Revenue Conversion in Small Business",
-  "description": "Independent research report examining how AI voice agents are fundamentally transforming the caller experience, moving it from a system characterised by friction, delay, and abandonment to one defined by immediacy, natural conversation, and measurable business outcomes.",
+  "description": "Research report examining how AI voice agents are fundamentally transforming the caller experience, moving it from a system characterised by friction, delay, and abandonment to one defined by immediacy, natural conversation, and measurable business outcomes.",
   "image": "https://whoza.ai/og-image.webp",
   "datePublished": "2026-06-20",
   "dateModified": "2026-06-20",

@@ -5,7 +5,7 @@ import { Footer } from "@/components/whoza/footer"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Cost of Missed Calls for UK Trades 2026 | whoza.ai Research",
-  description: "Independent research quantifying the financial impact of missed calls on UK trades businesses in 2026. Data, methodology, and citations.",
+  description: "Research quantifying the financial impact of missed calls on UK trades businesses in 2026. Data, methodology, and citations.",
   alternates: { canonical: "https://whoza.ai/research/cost-of-missed-calls-uk-trades-2026" },
   robots: { index: true, follow: true },
 }
@@ -23,7 +23,7 @@ export default function CostOfMissedCallsPage() {
               Cost of Missed Calls for UK Trades 2026
             </h1>
             <p className="text-white/60 text-lg mb-2">
-              Independent research on the financial impact of missed calls for UK trades businesses
+              Research on the financial impact of missed calls for UK trades businesses
             </p>
             <p className="text-sm text-white/40">Published July 2026 | whoza.ai Research Division</p>
           </header>
@@ -132,7 +132,7 @@ export default function CostOfMissedCallsPage() {
             "@type": "ScholarlyArticle",
             "@id": "https://whoza.ai/research/cost-of-missed-calls-uk-trades-2026#article",
             "headline": "Cost of Missed Calls for UK Trades 2026",
-            "description": "Independent research quantifying the financial impact of missed calls on UK trades businesses in 2026.",
+            "description": "Research quantifying the financial impact of missed calls on UK trades businesses in 2026.",
             "author": {
               "@id": "https://whoza.ai/#organization"
             },

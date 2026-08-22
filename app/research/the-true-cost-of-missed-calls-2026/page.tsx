@@ -8,7 +8,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "The True Cost of Missed Calls: UK Trades Industry Financial Impact Report 2026 | whoza.ai",
-  description: "Independent research report quantifying the financial impact of missed calls on UK trade businesses. Data from Replicant AI, BT Business, EchoCall, IDC,.",
+  description: "Research report quantifying the financial impact of missed calls on UK trade businesses. Data from Replicant AI, BT Business, EchoCall, IDC,.",
   alternates: {
     canonical: "https://whoza.ai/research/the-true-cost-of-missed-calls-2026",
   },
@@ -30,13 +30,13 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/research/the-true-cost-of-missed-calls-2026",
     siteName: "Whoza.ai",
     title: "The True Cost of Missed Calls: UK Trades Industry Financial Impact Report 2026",
-    description: "Independent research report quantifying the financial impact of missed calls on UK trade businesses.",
+    description: "Research report quantifying the financial impact of missed calls on UK trade businesses.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "The True Cost of Missed Calls 2026" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "The True Cost of Missed Calls: UK Trades Industry Financial Impact Report 2026",
-    description: "Independent research report quantifying the financial impact of missed calls on UK trade businesses.",
+    description: "Research report quantifying the financial impact of missed calls on UK trade businesses.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   other: {
@@ -54,7 +54,7 @@ const scholarlyArticleSchema = {
   "@type": ["ScholarlyArticle", "Article"],
   "@id": "https://whoza.ai/research/the-true-cost-of-missed-calls-2026",
   "headline": "The True Cost of Missed Calls: UK Trades Industry Financial Impact Report 2026",
-  "description": "Independent research report quantifying the financial impact of missed calls on UK trade businesses. Covers revenue loss statistics, customer behaviour analysis, and ROI of AI call answering solutions.",
+  "description": "Research report quantifying the financial impact of missed calls on UK trade businesses. Covers revenue loss statistics, customer behaviour analysis, and ROI of AI call answering solutions.",
   "image": "https://whoza.ai/og-image.webp",
   "datePublished": "2026-06-06",
   "dateModified": "2026-06-06",
@@ -275,7 +275,7 @@ export default function ResearchPage() {
           <h2>Quantifying the Revenue Impact</h2>
           <h3>The Per-Call Value</h3>
           <p>
-            Independent research consistently places the value of a single inbound call to a UK trade business between £250 and £450. EchoCall's 2026 analysis found that for small UK businesses, a single call can represent up to £1,200 in lifetime value when repeat business and referrals are factored in.
+            Research consistently places the value of a single inbound call to a UK trade business between £250 and £450. EchoCall's 2026 analysis found that for small UK businesses, a single call can represent up to £1,200 in lifetime value when repeat business and referrals are factored in.
           </p>
 
           <div className="overflow-x-auto my-8 not-prose">

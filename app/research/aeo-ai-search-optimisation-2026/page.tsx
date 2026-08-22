@@ -8,7 +8,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Answer Engine Optimisation: Why Small Businesses Must Prepare for AI-Driven Search | whoza.ai",
-  description: "Independent research on Answer Engine Optimisation (AEO). Data from BrightEdge, Ahrefs, Semrush, Princeton, HubSpot, Google and 30+ authoritative sources.",
+  description: "Research on Answer Engine Optimisation (AEO). Data from BrightEdge, Ahrefs, Semrush, Princeton, HubSpot, Google and 30+ authoritative sources.",
   alternates: {
     canonical: "https://whoza.ai/research/aeo-ai-search-optimisation-2026",
   },
@@ -30,13 +30,13 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/research/aeo-ai-search-optimisation-2026",
     siteName: "Whoza.ai",
     title: "Answer Engine Optimisation: Small Business & AI-Driven Search",
-    description: "Independent research report on Answer Engine Optimisation (AEO) for small businesses facing AI-driven search disruption.",
+    description: "Research report on Answer Engine Optimisation (AEO) for small businesses facing AI-driven search disruption.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Answer Engine Optimisation Research 2026" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Answer Engine Optimisation: Small Business & AI-Driven Search",
-    description: "Independent research report on Answer Engine Optimisation (AEO) for small businesses.",
+    description: "Research report on Answer Engine Optimisation (AEO) for small businesses.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   other: {
@@ -55,7 +55,7 @@ const scholarlyArticleSchema = {
   "@type": ["ScholarlyArticle", "Article"],
   "@id": "https://whoza.ai/research/aeo-ai-search-optimisation-2026",
   "headline": "Answer Engine Optimisation: Why Small Businesses Must Prepare for AI-Driven Search or Risk Invisibility in 2026 and Beyond",
-  "description": "Independent research report examining the transformation of search through AI-powered answer engines, the principles of Answer Engine Optimisation (AEO), and specific strategies small businesses must adopt to maintain visibility as traditional search gives way to AI-mediated discovery.",
+  "description": "Research report examining the transformation of search through AI-powered answer engines, the principles of Answer Engine Optimisation (AEO), and specific strategies small businesses must adopt to maintain visibility as traditional search gives way to AI-mediated discovery.",
   "image": "https://whoza.ai/og-image.webp",
   "datePublished": "2026-06-20",
   "dateModified": "2026-06-20",
@@ -371,7 +371,7 @@ export default function ResearchPage() {
             </p>
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">The Source Selection Framework</h3>
             <p className="text-white/80 leading-relaxed mb-4">
-              Independent researchers have identified a multi-factor scoring framework that explains AI citation patterns across ChatGPT, Perplexity, Google AI Overviews, and Bing Copilot:
+              Researchers have identified a multi-factor scoring framework that explains AI citation patterns across ChatGPT, Perplexity, Google AI Overviews, and Bing Copilot:
             </p>
             <div className="space-y-3 mb-6">
               <div className="flex items-start gap-3">
@@ -698,7 +698,7 @@ export default function ResearchPage() {
               <Link href="/research/caller-experience-revolution-ai-voice-agents-2026" className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
                 <div className="text-amber-400 text-sm font-medium mb-2">Research</div>
                 <h3 className="text-lg font-semibold text-white mb-2">The Caller Experience Revolution: How AI Voice Agents Transform Customer Satisfaction, Trust, and Revenue Conversion</h3>
-                <p className="text-white/60 text-sm">Independent research examining how AI voice agents transform caller experience for small businesses. Data from MIT, Harvard Business Review, Zendesk, and BrightLocal.</p>
+                <p className="text-white/60 text-sm">Research examining how AI voice agents transform caller experience for small businesses. Data from MIT, Harvard Business Review, Zendesk, and BrightLocal.</p>
               </Link>
               <Link href="/research/ai-voice-agents-uk-trades-2026" className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors">
                 <div className="text-amber-400 text-sm font-medium mb-2">Research</div>

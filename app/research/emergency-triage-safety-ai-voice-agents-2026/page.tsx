@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/research/emergency-triage-safety-ai-voice-agents-2026",
     siteName: "Whoza.ai",
     title: "Can an AI Voice Agent Tell a Blocked Drain from a Gas Leak?",
-    description: "Independent research on whether AI voice agents can safely triage gas, electrical and flood emergencies for UK trades — accuracy, liability, and safeguards.",
+    description: "Research on whether AI voice agents can safely triage gas, electrical and flood emergencies for UK trades — accuracy, liability, and safeguards.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Emergency Triage Safety Research 2026" }],
     publishedTime: "2026-07-29",
     modifiedTime: "2026-07-29",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Can AI Voice Agents Safely Triage Emergencies?",
-    description: "Independent research on whether AI voice agents can safely triage emergencies for UK trades.",
+    description: "Research on whether AI voice agents can safely triage emergencies for UK trades.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   other: {
@@ -58,7 +58,7 @@ const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Can an AI Voice Agent Tell a Blocked Drain from a Gas Leak?",
-  "description": "Independent research on whether AI voice agents can safely triage gas, electrical and flood emergencies for UK trades — accuracy, liability, and safeguards.",
+  "description": "Research on whether AI voice agents can safely triage gas, electrical and flood emergencies for UK trades — accuracy, liability, and safeguards.",
   "image": "https://whoza.ai/og-image.webp",
   "datePublished": "2026-07-29",
   "dateModified": "2026-07-29",
