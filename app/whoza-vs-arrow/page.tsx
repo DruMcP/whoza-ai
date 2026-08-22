@@ -3,6 +3,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { ArrowRight, Check, X, MessageCircle, PoundSterling, Clock, Shield, Star, Phone, TrendingUp, Zap } from "lucide-react"
+import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
@@ -55,9 +56,17 @@ const comparisonData = [
 
 export const revalidate = 3600
 
+const faqs = [
+    { question: "Which is cheaper: whoza.ai or ARROW?", answer: "whoza.ai is cheaper at every tier. whoza.ai's Starter plan costs £59/month compared to ARROW's entry plan at £79/month. whoza.ai's Growth plan is £125/month versus ARROW's Pro at £149/month. whoza.ai's Pro plan is £249/month versus ARROW's Enterprise at £299/month." },
+    { question: "Does ARROW offer WhatsApp delivery like whoza.ai?", answer: "No. ARROW delivers enquiries via email and SMS only, while whoza.ai offers native WhatsApp integration with instant push notifications, one-tap accept/decline/call back buttons, and rich media support. According to Ofcom's Online Nation 2025 report, 90% of UK adults use WhatsApp regularly." },
+    { question: "What features does whoza.ai have that ARROW lacks?", answer: "whoza.ai offers Claire (automated review collection) and Rex (competitor analysis reports) — genuine revenue drivers not available from ARROW. whoza.ai also provides calendar auto-sync, 12+ voice options with regional UK accents, and trade-specific training for 15+ trades. ARROW focuses on core call answering without follow-up systems or growth tools." },
+    { question: "How does AI voice quality compare between whoza.ai and ARROW?", answer: "Both services use advanced text-to-speech with good UK voice quality. whoza.ai offers 12+ voice options including regional accents (Northern, Scottish, Welsh, Midlands), while ARROW provides 3 standard voices. Both handle trade terminology correctly, but whoza.ai's 15+ trade-specific training modules provide more nuanced understanding for complex enquiries." },
+    { question: "How long does setup take for whoza.ai vs ARROW?", answer: "whoza.ai claims 30-minute setup, which held true in testing. ARROW's setup took 1 hour 23 minutes in testing, involving a more detailed onboarding form, manual configuration of call routing rules, and a verification period before the AI goes live." }
+]
 export default function WhozaVsArrowPage() {
   return (
     <>
+      
       <div className="min-h-screen bg-[var(--navy-900)] text-white">
         <Header />
         <BreadcrumbSchema items={[
@@ -434,7 +443,38 @@ export default function WhozaVsArrowPage() {
             </div>
           </section>
 
-        </main>
+        
+{/* FAQ Section */}
+<section className="py-16 lg:py-24 bg-white/5 border-t border-white/10">
+  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+    <div className="space-y-6">
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">Which is cheaper: whoza.ai or ARROW?</h3>
+        <p className="text-white/70 leading-relaxed">whoza.ai is cheaper at every tier. whoza.ai's Starter plan costs £59/month compared to ARROW's entry plan at £79/month. whoza.ai's Growth plan is £125/month versus ARROW's Pro at £149/month. whoza.ai's Pro plan is £249/month versus ARROW's Enterprise at £299/month.</p>
+      </div>
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">Does ARROW offer WhatsApp delivery like whoza.ai?</h3>
+        <p className="text-white/70 leading-relaxed">No. ARROW delivers enquiries via email and SMS only, while whoza.ai offers native WhatsApp integration with instant push notifications, one-tap accept/decline/call back buttons, and rich media support. According to Ofcom's Online Nation 2025 report, 90% of UK adults use WhatsApp regularly.</p>
+      </div>
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">What features does whoza.ai have that ARROW lacks?</h3>
+        <p className="text-white/70 leading-relaxed">whoza.ai offers Claire (automated review collection) and Rex (competitor analysis reports) — genuine revenue drivers not available from ARROW. whoza.ai also provides calendar auto-sync, 12+ voice options with regional UK accents, and trade-specific training for 15+ trades. ARROW focuses on core call answering without follow-up systems or growth tools.</p>
+      </div>
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">How does AI voice quality compare between whoza.ai and ARROW?</h3>
+        <p className="text-white/70 leading-relaxed">Both services use advanced text-to-speech with good UK voice quality. whoza.ai offers 12+ voice options including regional accents (Northern, Scottish, Welsh, Midlands), while ARROW provides 3 standard voices. Both handle trade terminology correctly, but whoza.ai's 15+ trade-specific training modules provide more nuanced understanding for complex enquiries.</p>
+      </div>
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">How long does setup take for whoza.ai vs ARROW?</h3>
+        <p className="text-white/70 leading-relaxed">whoza.ai claims 30-minute setup, which held true in testing. ARROW's setup took 1 hour 23 minutes in testing, involving a more detailed onboarding form, manual configuration of call routing rules, and a verification period before the AI goes live.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <FAQPageSchema faqs={faqs} />
+</main>
 
         <Footer />
       </div>

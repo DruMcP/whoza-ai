@@ -3,6 +3,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { ArrowRight, Check, X, PoundSterling, Shield, Star, TrendingUp, PhoneOff } from "lucide-react"
+import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
@@ -53,9 +54,16 @@ const comparisonData = [
 
 export const revalidate = 3600
 
+const faqs = [
+    { question: "How much cheaper is whoza.ai than Moneypenny?", answer: "whoza.ai is significantly cheaper. whoza.ai's Starter plan is £59/month versus Moneypenny's Small Business plan at £175/month. whoza.ai's Growth plan is £125/month versus Moneypenny's Business plan at £325/month. whoza.ai's Pro plan is £249/month versus Moneypenny's Corporate plan at £595/month." },
+    { question: "Is AI call answering better than human receptionists for trades?", answer: "AI call answering offers advantages for trade businesses: 24/7 coverage, unlimited simultaneous calls, instant response, and 94% cost reduction versus human staff. Human receptionists provide personal warmth but cannot answer when the tradesperson is on a job site, under a sink, or on a ladder. For trades where missed calls cost £50,000-£80,000 annually, AI coverage eliminates the structural problem." },
+    { question: "What do you actually get for your money with whoza.ai vs Moneypenny?", answer: "whoza.ai includes AI call answering, WhatsApp delivery, spam filtering, review collection (Claire), competitor analysis (Rex), and calendar integration. Moneypenny provides human receptionists with call answering, message taking, and transfer services. whoza.ai adds growth tools and automation; Moneypenny adds human rapport and complex enquiry handling." },
+    { question: "Should you start with a free trial before committing?", answer: "Both services offer trials. whoza.ai offers a 7-day free trial with no credit card required and no contract. Moneypenny typically requires a consultation and setup call before pricing is confirmed. Starting with a free trial allows you to test call quality, feature fit, and integration with your workflow before any financial commitment." }
+]
 export default function VsMoneypennyPage() {
   return (
     <>
+      
       <div className="min-h-screen bg-[var(--navy-900)] text-white">
         <Header />
         <BreadcrumbSchema items={[
@@ -336,7 +344,34 @@ export default function VsMoneypennyPage() {
             </div>
           </section>
 
-        </main>
+        
+{/* FAQ Section */}
+<section className="py-16 lg:py-24 bg-white/5 border-t border-white/10">
+  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+    <div className="space-y-6">
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">How much cheaper is whoza.ai than Moneypenny?</h3>
+        <p className="text-white/70 leading-relaxed">whoza.ai is significantly cheaper. whoza.ai's Starter plan is £59/month versus Moneypenny's Small Business plan at £175/month. whoza.ai's Growth plan is £125/month versus Moneypenny's Business plan at £325/month. whoza.ai's Pro plan is £249/month versus Moneypenny's Corporate plan at £595/month.</p>
+      </div>
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">Is AI call answering better than human receptionists for trades?</h3>
+        <p className="text-white/70 leading-relaxed">AI call answering offers advantages for trade businesses: 24/7 coverage, unlimited simultaneous calls, instant response, and 94% cost reduction versus human staff. Human receptionists provide personal warmth but cannot answer when the tradesperson is on a job site, under a sink, or on a ladder. For trades where missed calls cost £50,000-£80,000 annually, AI coverage eliminates the structural problem.</p>
+      </div>
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">What do you actually get for your money with whoza.ai vs Moneypenny?</h3>
+        <p className="text-white/70 leading-relaxed">whoza.ai includes AI call answering, WhatsApp delivery, spam filtering, review collection (Claire), competitor analysis (Rex), and calendar integration. Moneypenny provides human receptionists with call answering, message taking, and transfer services. whoza.ai adds growth tools and automation; Moneypenny adds human rapport and complex enquiry handling.</p>
+      </div>
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">Should you start with a free trial before committing?</h3>
+        <p className="text-white/70 leading-relaxed">Both services offer trials. whoza.ai offers a 7-day free trial with no credit card required and no contract. Moneypenny typically requires a consultation and setup call before pricing is confirmed. Starting with a free trial allows you to test call quality, feature fit, and integration with your workflow before any financial commitment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <FAQPageSchema faqs={faqs} />
+</main>
 
         <Footer />
       </div>

@@ -4,6 +4,7 @@ import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FileText, Download, BookOpen, ArrowLeft, Calendar, User, BarChart3, Clock, CheckCircle } from "lucide-react"
 import Link from "next/link"
+import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
@@ -163,6 +164,12 @@ const breadcrumbSchema = {
   ]
 }
 
+const faqs = [
+    { question: "What is Answer Engine Optimisation?", answer: "Answer Engine Optimisation (AEO) is the practice of designing content and digital presence so that AI-powered search systems select, cite, and use it in generated answers. Unlike traditional SEO which optimises for ranking position, AEO optimises for direct citation as a source in AI-generated answers." },
+    { question: "How does structured data increase AI citation probability?", answer: "Content with properly implemented structured data has a 2.5 times higher chance of appearing in AI-generated answers. 81% of pages cited in AI responses have schema markup (AccuraCast). FAQPage schema combined with FAQ content produces 350% more AI citations than FAQ content without schema (OtterlyAI)." },
+    { question: "What is the highest-impact first step for AEO?", answer: "The highest-impact first step is implementing complete LocalBusiness, Service, and FAQPage schema. The Otterly GEO Experiment recorded a +611% increase in Google AI Overview citations after schema implementation. Schema markup is free to implement and requires no ongoing cost." },
+    { question: "How does content freshness affect AI citations?", answer: "Content updated within 30 days receives 3.2 times more citations than stale content. 89.7% of all cited pages had been updated within the current year. Pages not updated quarterly are 3 times more likely to lose AI citations." }
+]
 export default function ResearchPage() {
   return (
     <div className="min-h-screen bg-[var(--navy-900)] text-white">
@@ -725,7 +732,34 @@ export default function ResearchPage() {
             <a href="/data" className="text-emerald-400 hover:underline">Sources and methodology</a> for all figures in this report.
           </p>
         </div>
-      </main>
+      
+{/* FAQ Section */}
+<section className="py-16 lg:py-24 bg-white/5 border-t border-white/10">
+  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+    <div className="space-y-6">
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">What is Answer Engine Optimisation?</h3>
+        <p className="text-white/70 leading-relaxed">Answer Engine Optimisation (AEO) is the practice of designing content and digital presence so that AI-powered search systems select, cite, and use it in generated answers. Unlike traditional SEO which optimises for ranking position, AEO optimises for direct citation as a source in AI-generated answers.</p>
+      </div>
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">How does structured data increase AI citation probability?</h3>
+        <p className="text-white/70 leading-relaxed">Content with properly implemented structured data has a 2.5 times higher chance of appearing in AI-generated answers. 81% of pages cited in AI responses have schema markup (AccuraCast). FAQPage schema combined with FAQ content produces 350% more AI citations than FAQ content without schema (OtterlyAI).</p>
+      </div>
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">What is the highest-impact first step for AEO?</h3>
+        <p className="text-white/70 leading-relaxed">The highest-impact first step is implementing complete LocalBusiness, Service, and FAQPage schema. The Otterly GEO Experiment recorded a +611% increase in Google AI Overview citations after schema implementation. Schema markup is free to implement and requires no ongoing cost.</p>
+      </div>
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">How does content freshness affect AI citations?</h3>
+        <p className="text-white/70 leading-relaxed">Content updated within 30 days receives 3.2 times more citations than stale content. 89.7% of all cited pages had been updated within the current year. Pages not updated quarterly are 3 times more likely to lose AI citations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <FAQPageSchema faqs={faqs} />
+</main>
 
       <Footer />
     </div>

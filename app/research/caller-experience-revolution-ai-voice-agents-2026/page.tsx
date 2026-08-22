@@ -4,6 +4,7 @@ import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FileText, Download, BookOpen, ArrowLeft, Calendar, User, BarChart3, Clock, CheckCircle } from "lucide-react"
 import Link from "next/link"
+import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
@@ -199,6 +200,12 @@ const breadcrumbSchema = {
   ]
 }
 
+const faqs = [
+    { question: "What percentage of callers who reach voicemail don't leave a message?", answer: "Forbes and Ruby Research found that 80% of callers who reach voicemail don't leave a message. PATLive confirms that 85% of unanswered callers never call back. For callers, voicemail signals that the business does not prioritise their enquiry." },
+    { question: "How much more likely is a business to connect with a lead if they respond within five minutes?", answer: "MIT's Lead Response Management Study found that companies responding within five minutes are 100 times more likely to make contact than those waiting 30 minutes, and 21 times more likely to qualify the lead. Velocify found that calling within one minute boosts conversion by 391% compared to waiting two minutes." },
+    { question: "What percentage of customers will avoid a company after one negative service experience?", answer: "Accenture research shows that 87% of customers with even one negative service experience will avoid that company in the future. For small businesses where word-of-mouth drives growth, a single missed call carries amplified consequences." },
+    { question: "What is the average business response time to leads?", answer: "Optifai's 2026 Pipeline Study of 939 B2B companies found the average lead response time is 47 hours — nearly two full days. Only 23% respond within five minutes, while 42% take longer than 24 hours. 23% never respond to leads at all." }
+]
 export default function ResearchPage() {
   return (
     <div className="min-h-screen bg-[var(--navy-900)] text-white">
@@ -805,7 +812,34 @@ export default function ResearchPage() {
             <a href="/data" className="text-emerald-400 hover:underline">Sources and methodology</a> for all figures in this report.
           </p>
         </div>
-      </main>
+      
+{/* FAQ Section */}
+<section className="py-16 lg:py-24 bg-white/5 border-t border-white/10">
+  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+    <div className="space-y-6">
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">What percentage of callers who reach voicemail don't leave a message?</h3>
+        <p className="text-white/70 leading-relaxed">Forbes and Ruby Research found that 80% of callers who reach voicemail don't leave a message. PATLive confirms that 85% of unanswered callers never call back. For callers, voicemail signals that the business does not prioritise their enquiry.</p>
+      </div>
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">How much more likely is a business to connect with a lead if they respond within five minutes?</h3>
+        <p className="text-white/70 leading-relaxed">MIT's Lead Response Management Study found that companies responding within five minutes are 100 times more likely to make contact than those waiting 30 minutes, and 21 times more likely to qualify the lead. Velocify found that calling within one minute boosts conversion by 391% compared to waiting two minutes.</p>
+      </div>
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">What percentage of customers will avoid a company after one negative service experience?</h3>
+        <p className="text-white/70 leading-relaxed">Accenture research shows that 87% of customers with even one negative service experience will avoid that company in the future. For small businesses where word-of-mouth drives growth, a single missed call carries amplified consequences.</p>
+      </div>
+      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-3">What is the average business response time to leads?</h3>
+        <p className="text-white/70 leading-relaxed">Optifai's 2026 Pipeline Study of 939 B2B companies found the average lead response time is 47 hours — nearly two full days. Only 23% respond within five minutes, while 42% take longer than 24 hours. 23% never respond to leads at all.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <FAQPageSchema faqs={faqs} />
+</main>
 
       <Footer />
     </div>
