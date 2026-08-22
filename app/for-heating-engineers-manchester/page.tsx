@@ -358,7 +358,7 @@ export default function ForHeatingEngineerManchesterPage() {
                 Everything you need to know about AI call answering for heating engineers in Manchester.
               </p>
             </div>
-            <div className="trade-faq space-y-4">
+            <div className="space-y-4">
               {faqs.map((faq, idx) => (
                 <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6" itemScope itemType="https://schema.org/Question">
                   <h3 className="text-lg font-semibold mb-3" itemProp="name">{faq.question}</h3>

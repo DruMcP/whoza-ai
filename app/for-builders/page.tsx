@@ -163,9 +163,7 @@ export default function ForBuildersPage() {
         { name: "Home", item: "https://whoza.ai" },
         { name: "For Builders", item: "https://whoza.ai/for-builders" },
       ]} />
-      <div className="trade-faq">
       <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
-      </div>
 
       <main id="main-content" role="main" className="pb-24 lg:pb-0">
         {/* HERO */}
@@ -461,6 +459,40 @@ export default function ForBuildersPage() {
                   How It Works
                 </a>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider" />
+<section className="trade-faq py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Questions Builders Ask
+              </h2>
+              <p className="text-white/60">
+                Everything you need to know about AI call answering for building businesses.
+              </p>
+            </div>
+            <div className="space-y-4">
+              {faqs.map((faq, idx) => (
+                <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
+                  <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
+                  <p className="text-white/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                </div>
+              ))}
+            </div>
+            <div className="mt-10 text-center">
+              <p className="text-white/50 text-sm">
+                Still have questions? Read our{" "}
+                <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-orange-400 hover:text-orange-300 underline">
+                  complete AI call answering guide
+                </a>{" "}
+                or{" "}
+                <a href="/pricing" className="text-orange-400 hover:text-orange-300 underline">
+                  compare all pricing plans
+                </a>.
+              </p>
             </div>
           </div>
         </section>
