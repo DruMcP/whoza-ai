@@ -118,7 +118,7 @@ export default function DataPage() {
         { name: "DSIT, Public Engagement Survey", datePublished: "2026-07-16", url: "https://www.gov.uk/government/statistics/dsit-public-engagement-survey-20252026/dsit-public-engagement-survey-20252026" },
         { name: "FMB, State of Trade Survey H2 2025", datePublished: "2026-03-31", url: "https://www.fmb.org.uk/resource/state-of-trade-survey-h2-2025.html" },
       ]} />
-      <main className="min-h-screen bg-[var(--navy-950)]">
+      <main className="min-h-screen bg-[var(--navy-900)] text-white">
         {/* Hero */}
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12">
           <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-tight mb-6">
