@@ -95,6 +95,14 @@ const faqSchema = {
     },
     {
       "@type": "Question",
+      "name": "What about late payers — can AI chase those too?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The best fix for late payment is invoicing the moment the job's finished, while the customer's still pleased with you — which is exactly what the invoicing agent is built to do. Construction firms currently wait 38 days on average to be paid; same-day invoicing cuts the queue before the chasing even starts.",
+      },
+    },
+    {
+      "@type": "Question",
       "name": "Is my customers' data safe?",
       "acceptedAnswer": {
         "@type": "Answer",

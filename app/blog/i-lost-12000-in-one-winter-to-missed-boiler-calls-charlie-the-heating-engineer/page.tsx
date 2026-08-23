@@ -1,3 +1,4 @@
+import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
@@ -73,76 +74,40 @@ export default function BlogPostPage() {
     }
   }
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much revenue can heating engineers lose to missed calls?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Heating engineers can lose £8,000-12,000 per month in winter due to missed boiler breakdown calls. In January 2026, one Manchester-based heating engineer missed 47 calls worth an estimated £11,900 in lost revenue."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Why do heating engineers miss so many calls?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Heating engineers miss calls because they work in environments where they cannot answer: under floors, in lofts, in airing cupboards, and during after-hours emergencies. 94% of overnight calls go unanswered."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How does AI call answering work for heating engineers?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "AI call answering captures every missed call, asks qualifying questions about the boiler fault, property type, and urgency, then sends a structured WhatsApp message with all details within 3 seconds."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What information does the AI capture from boiler breakdown calls?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The AI captures: boiler make and model, fault description or error code, property type and age, whether vulnerable occupants are present, contact details, postcode, and estimated job value."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does AI call answering cost for heating engineers?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "AI call answering for heating engineers starts at £59/month for the Starter plan. The Growth plan at £125/month includes 20 jobs and Zapier integration. Most heating engineers recover the cost within the first captured call."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "When are heating engineers busiest?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Heating engineers are busiest in January and February during cold snaps, when boiler breakdowns increase by up to 340%. December is also busy with pre-Christmas emergency repairs."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do customers mind speaking to AI instead of a human?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Most customers appreciate immediate response over waiting for voicemail. One heating engineer reported that customers were 'thrilled someone answered' at 2 AM, even though it was AI. The key is professional, empathetic response and instant callback."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the ROI of AI call answering for heating engineers?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "One Manchester heating engineer recovered £8,400 in captured call revenue in one month at a cost of £125/month — a 6,620% ROI. Net gain after subscription cost: £8,275."
-        }
-      }
-    ]
-  }
+  const faqs = [
+    {
+      question: "How much revenue can heating engineers lose to missed calls?",
+      answer: "Heating engineers can lose £8,000-12,000 per month in winter due to missed boiler breakdown calls. In January 2026, one Manchester-based heating engineer missed 47 calls worth an estimated £11,900 in lost revenue.",
+    },
+    {
+      question: "Why do heating engineers miss so many calls?",
+      answer: "Heating engineers miss calls because they work in environments where they cannot answer: under floors, in lofts, in airing cupboards, and during after-hours emergencies. 94% of overnight calls go unanswered.",
+    },
+    {
+      question: "How does AI call answering work for heating engineers?",
+      answer: "AI call answering captures every missed call, asks qualifying questions about the boiler fault, property type, and urgency, then sends a structured WhatsApp message with all details within 3 seconds.",
+    },
+    {
+      question: "What information does the AI capture from boiler breakdown calls?",
+      answer: "The AI captures: boiler make and model, fault description or error code, property type and age, whether vulnerable occupants are present, contact details, postcode, and estimated job value.",
+    },
+    {
+      question: "How much does AI call answering cost for heating engineers?",
+      answer: "AI call answering for heating engineers starts at £59/month for the Starter plan. The Growth plan at £125/month includes 20 jobs and Zapier integration. Most heating engineers recover the cost within the first captured call.",
+    },
+    {
+      question: "When are heating engineers busiest?",
+      answer: "Heating engineers are busiest in January and February during cold snaps, when boiler breakdowns increase by up to 340%. December is also busy with pre-Christmas emergency repairs.",
+    },
+    {
+      question: "Do customers mind speaking to AI instead of a human?",
+      answer: "Most customers appreciate immediate response over waiting for voicemail. One heating engineer reported that customers were 'thrilled someone answered' at 2 AM, even though it was AI. The key is professional, empathetic response and instant callback.",
+    },
+    {
+      question: "What is the ROI of AI call answering for heating engineers?",
+      answer: "One Manchester heating engineer recovered £8,400 in captured call revenue in one month at a cost of £125/month — a 6,620% ROI. Net gain after subscription cost: £8,275.",
+    },
+  ]
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -164,7 +129,7 @@ export default function BlogPostPage() {
     <>
       {/* Schema Blocks */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <FAQPageSchema faqs={faqs} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
 
       <Header />
@@ -405,6 +370,19 @@ export default function BlogPostPage() {
             <p className="text-white/70 leading-relaxed mb-6">
               And in winter? That's £8,000+ per month walking out the door.
             </p>
+
+            {/* FAQ */}
+            <section className="py-12 border-t border-white/10">
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8">Frequently Asked Questions</h2>
+              <div className="space-y-4">
+                {faqs.map((faq, idx) => (
+                  <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
+                    <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
+                    <p className="text-white/60 leading-relaxed">{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
 
             {/* Related Content */}
             <div className="border-t border-white/10 pt-8 mt-12">

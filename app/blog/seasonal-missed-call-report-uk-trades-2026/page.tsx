@@ -1,3 +1,4 @@
+import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
@@ -71,76 +72,40 @@ export default function BlogPostPage() {
     }
   }
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Which UK trades lose the most money to missed calls?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Heating engineers lose the most money to missed calls (£3.1M in winter alone), followed by roofers (£1.8M), plumbers (£1.2M), locksmiths (£890K), and builders (£765K). Emergency trades with high-value jobs lose disproportionately more than scheduled trades."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "When are missed calls most costly for UK tradespeople?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Missed calls peak in January (cold weather, boiler breakdowns), February (continued winter demand), November (pre-Christmas rush), and during summer storms (roofing emergencies). January alone accounts for 34% of annual missed call losses for heating engineers."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much revenue do UK trades lose to missed calls annually?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Based on data from 340 UK trade businesses, the total estimated annual revenue lost to missed calls is £18.2 million across all trades. This represents an average of £53,500 per business per year in lost opportunities."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Why do heating engineers lose the most money in winter?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Heating engineers lose the most in winter because boiler breakdowns spike by 340% during cold snaps. Average job values increase to £280-450 for emergency repairs. Additionally, 94% of overnight calls go unanswered, and 67% of weekend calls hit voicemail."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What percentage of trade calls go unanswered?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "On average, 33% of small UK businesses fail to answer incoming calls. This rises to 89% after 6 PM and 94% overnight. Weekends see 67% of calls unanswered. Emergency trades (heating, roofing, locksmiths) have the highest rates of missed calls."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How can tradespeople reduce missed call losses?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Tradespeople can reduce missed call losses by implementing AI call answering (captures 100% of calls 24/7), using dedicated business lines separate from personal phones, setting up professional voicemail with callback promises, and employing virtual receptionists during peak periods."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the average value of a missed trade call?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The average value of a missed trade call varies by trade: heating engineers (£350), roofers (£680), builders (£2,400 for large projects), plumbers (£280), electricians (£220), and locksmiths (£85). Emergency calls command 40-60% premiums over standard rates."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do missed calls affect trade businesses differently by region?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. London trades lose the most per missed call due to higher average job values, but also face the most competition. Northern trades (Manchester, Leeds, Glasgow) have higher missed call rates (71% vs 58% in London) but lower average job values. Rural trades have fewer total calls but higher conversion rates when they do answer."
-        }
-      }
-    ]
-  }
+  const faqs = [
+    {
+      question: "Which UK trades lose the most money to missed calls?",
+      answer: "Heating engineers lose the most money to missed calls (£3.1M in winter alone), followed by roofers (£1.8M), plumbers (£1.2M), locksmiths (£890K), and builders (£765K). Emergency trades with high-value jobs lose disproportionately more than scheduled trades.",
+    },
+    {
+      question: "When are missed calls most costly for UK tradespeople?",
+      answer: "Missed calls peak in January (cold weather, boiler breakdowns), February (continued winter demand), November (pre-Christmas rush), and during summer storms (roofing emergencies). January alone accounts for 34% of annual missed call losses for heating engineers.",
+    },
+    {
+      question: "How much revenue do UK trades lose to missed calls annually?",
+      answer: "Based on data from 340 UK trade businesses, the total estimated annual revenue lost to missed calls is £18.2 million across all trades. This represents an average of £53,500 per business per year in lost opportunities.",
+    },
+    {
+      question: "Why do heating engineers lose the most money in winter?",
+      answer: "Heating engineers lose the most in winter because boiler breakdowns spike by 340% during cold snaps. Average job values increase to £280-450 for emergency repairs. Additionally, 94% of overnight calls go unanswered, and 67% of weekend calls hit voicemail.",
+    },
+    {
+      question: "What percentage of trade calls go unanswered?",
+      answer: "On average, 33% of small UK businesses fail to answer incoming calls. This rises to 89% after 6 PM and 94% overnight. Weekends see 67% of calls unanswered. Emergency trades (heating, roofing, locksmiths) have the highest rates of missed calls.",
+    },
+    {
+      question: "How can tradespeople reduce missed call losses?",
+      answer: "Tradespeople can reduce missed call losses by implementing AI call answering (captures 100% of calls 24/7), using dedicated business lines separate from personal phones, setting up professional voicemail with callback promises, and employing virtual receptionists during peak periods.",
+    },
+    {
+      question: "What is the average value of a missed trade call?",
+      answer: "The average value of a missed trade call varies by trade: heating engineers (£350), roofers (£680), builders (£2,400 for large projects), plumbers (£280), electricians (£220), and locksmiths (£85). Emergency calls command 40-60% premiums over standard rates.",
+    },
+    {
+      question: "Do missed calls affect trade businesses differently by region?",
+      answer: "Yes. London trades lose the most per missed call due to higher average job values, but also face the most competition. Northern trades (Manchester, Leeds, Glasgow) have higher missed call rates (71% vs 58% in London) but lower average job values. Rural trades have fewer total calls but higher conversion rates when they do answer.",
+    },
+  ]
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -176,7 +141,7 @@ export default function BlogPostPage() {
     <>
       {/* Schema Blocks */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <FAQPageSchema faqs={faqs} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
@@ -749,6 +714,19 @@ export default function BlogPostPage() {
             <p className="text-white/70 leading-relaxed mb-6">
               For questions about this report, methodology, or to request trade-specific data, contact <a href="mailto:research@whoza.ai" className="text-[var(--katie-blue)] hover:underline">research@whoza.ai</a>.
             </p>
+
+            {/* FAQ */}
+            <section className="py-12 border-t border-white/10">
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8">Frequently Asked Questions</h2>
+              <div className="space-y-4">
+                {faqs.map((faq, idx) => (
+                  <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
+                    <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
+                    <p className="text-white/60 leading-relaxed">{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
 
             {/* Related Content */}
             <div className="border-t border-white/10 pt-8 mt-12">

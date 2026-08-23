@@ -3,6 +3,31 @@ import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { ArrowRight, Check, X, Clock, PoundSterling, Shield, AlertTriangle, Building, Globe, Scale } from "lucide-react"
+import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
+
+const faqs = [
+  {
+    question: "Is whoza.ai cheaper than Trade Receptionist?",
+    answer: "whoza.ai starts at £59/month. Trade Receptionist starts at £29/month (+VAT). However, Trade Receptionist charges per call while whoza.ai charges per minute - the same way the underlying infrastructure (Retell.ai + Twilio) is billed. At a realistic 4-minute average call, their £29 Starter plan costs more in infrastructure fees than they charge. Their 'unlimited calls' plan is mathematically unprofitable at realistic call durations.",
+  },
+  {
+    question: "Does whoza.ai use real people or AI?",
+    answer: "whoza.ai uses AI voice agents (Katie and Mark) who answer calls 24/7. Trade Receptionist also uses AI voice agents powered by Retell.ai. Both services use AI - the difference is who built the platform and how it is priced.",
+  },
+  {
+    question: "Which is faster to set up?",
+    answer: "Trade Receptionist claims setup in under 14 minutes. whoza.ai is typically live in 30 minutes. Both are fast - the real difference is what you get: a custom platform built for UK trades vs a template-based workflow distributed through a course community.",
+  },
+  {
+    question: "Why does whoza.ai charge per minute instead of per call?",
+    answer: "Because that is how the infrastructure costs work. Retell.ai and Twilio both charge per minute. Charging per call either subsidises long calls with short ones, or incentivises cutting calls short to control costs. Per-minute pricing is transparent and sustainable.",
+  },
+  {
+    question: "Can I cancel whoza.ai anytime?",
+    answer: "Yes. whoza.ai has no contracts - cancel anytime. Trade Receptionist also has no contract and offers a 14-day free trial with no card required.",
+  },
+]
+
 
 export const revalidate = 3600
 
@@ -94,37 +119,8 @@ export default function VsTradeReceptionistPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
 
       {/* FAQ Schema */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Is whoza.ai cheaper than Trade Receptionist?",
-            "acceptedAnswer": { "@type": "Answer", "text": "whoza.ai starts at £59/month. Trade Receptionist starts at £29/month (+VAT). However, Trade Receptionist charges per call while whoza.ai charges per minute - the same way the underlying infrastructure (Retell.ai + Twilio) is billed. At a realistic 4-minute average call, their £29 Starter plan costs more in infrastructure fees than they charge. Their 'unlimited calls' plan is mathematically unprofitable at realistic call durations." }
-          },
-          {
-            "@type": "Question",
-            "name": "Does whoza.ai use real people or AI?",
-            "acceptedAnswer": { "@type": "Answer", "text": "whoza.ai uses AI voice agents (Katie and Mark) who answer calls 24/7. Trade Receptionist also uses AI voice agents powered by Retell.ai. Both services use AI - the difference is who built the platform and how it is priced." }
-          },
-          {
-            "@type": "Question",
-            "name": "Which is faster to set up?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Trade Receptionist claims setup in under 14 minutes. whoza.ai is typically live in 30 minutes. Both are fast - the real difference is what you get: a custom platform built for UK trades vs a template-based workflow distributed through a course community." }
-          },
-          {
-            "@type": "Question",
-            "name": "Why does whoza.ai charge per minute instead of per call?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Because that is how the infrastructure costs work. Retell.ai and Twilio both charge per minute. Charging per call either subsidises long calls with short ones, or incentivises cutting calls short to control costs. Per-minute pricing is transparent and sustainable." }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I cancel whoza.ai anytime?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. whoza.ai has no contracts - cancel anytime. Trade Receptionist also has no contract and offers a 14-day free trial with no card required." }
-          }
-        ]
-      })}} />
+            <FAQPageSchema faqs={faqs} />
+
 
       <Header />
       <BreadcrumbSchema items={[
@@ -425,6 +421,21 @@ export default function VsTradeReceptionistPage() {
             </a>
           </div>
         </section>
+      {/* FAQ — visible matching schema */}
+      <section className="py-16 lg:py-24">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {faqs.map((faq, idx) => (
+              <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
+                <p className="text-white/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       </main>
 
       <Footer />

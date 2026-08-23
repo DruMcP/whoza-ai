@@ -357,6 +357,21 @@ export default function VsClaraPage() {
             </div>
           </section>
 
+        {/* FAQ — visible matching schema */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              {faqs.map((faq, idx) => (
+                <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
+                  <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
+                  <p className="text-white/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         </main>
 
         <Footer />

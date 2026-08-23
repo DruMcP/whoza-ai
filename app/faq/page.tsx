@@ -229,13 +229,13 @@ const faqSchema = {
 }
 
 const categories = [
-  { icon: PoundSterling, label: "Pricing & Cost", questions: [0, 4, 17, 21, 22, 23] },
-  { icon: Phone, label: "How It Works", questions: [2, 5, 6, 7, 9, 10, 14] },
+  { icon: PoundSterling, label: "Pricing & Cost", questions: [0, 4, 11, 13, 17, 21, 22] },
+  { icon: Phone, label: "How It Works", questions: [1, 2, 5, 6, 7, 9, 10, 14] },
   { icon: Wrench, label: "Trades & Services", questions: [8, 18] },
   { icon: Star, label: "Reviews & Growth", questions: [15, 20] },
   { icon: Shield, label: "Security & Trust", questions: [16] },
   { icon: TrendingUp, label: "ROI & Results", questions: [4, 17, 19] },
-  { icon: MessageCircle, label: "Comparisons", questions: [12] },
+  { icon: MessageCircle, label: "Comparisons", questions: [3, 12] },
 ]
 
 export const revalidate = 3600

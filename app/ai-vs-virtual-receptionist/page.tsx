@@ -1,3 +1,4 @@
+import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 import { Metadata } from "next"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { Header } from "@/components/whoza/header"
@@ -39,43 +40,35 @@ const comparisons = [
   { category: "Contract", ai: "None — cancel anytime", human: "12-month typical", winner: "ai", detail: "No lock-in with AI. Freedom to leave." },
 ]
 
+const faqs = [
+  {
+    question: "Is an AI call handler better than a virtual receptionist?",
+    answer: "For most UK tradespeople, yes. AI call handlers cost significantly less than a virtual receptionist service (£59 vs £200-400/month), answer unlimited calls simultaneously, work 24/7, and deliver leads via WhatsApp. Human virtual receptionists offer personal warmth but cost significantly more and handle only 1-2 calls at a time.",
+  },
+  {
+    question: "Do customers know they're talking to AI?",
+    answer: "Modern AI call handlers like whoza.ai use natural, conversational voices. Most callers don't realize it's AI. The focus is on solving their problem quickly, not pretending to be human. Trades report high customer satisfaction with AI handling.",
+  },
+  {
+    question: "Can AI handle complex trade enquiries?",
+    answer: "Yes. whoza.ai's AI is trained on trade-specific terminology — boilers, electrical faults, roofing materials, drainage issues. It asks the right qualifying questions (location, urgency, budget) and escalates complex cases to you immediately.",
+  },
+  {
+    question: "When should I choose a human receptionist instead?",
+    answer: "Choose human receptionists if you need emotional empathy (funeral services, counselling), handle very high-value bespoke enquiries (luxury renovations), or prefer building personal relationships with every caller. For typical trade enquiries, AI is more cost-effective.",
+  },
+  {
+    question: "How much can I save switching from virtual receptionist to AI?",
+    answer: "UK tradespeople save £1,700-4,100 per year switching from virtual receptionist (£200-400/month) to AI call handling (£59/month). whoza.ai includes unlimited calls, WhatsApp delivery, and 30-day money-back guarantee.",
+  },
+]
+
 export const revalidate = 3600
 
 export default function AIVsVirtualReceptionistPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Is an AI call handler better than a virtual receptionist?",
-            "acceptedAnswer": { "@type": "Answer", "text": "For most UK tradespeople, yes. AI call handlers cost significantly less than a virtual receptionist service (£59 vs £200-400/month), answer unlimited calls simultaneously, work 24/7, and deliver leads via WhatsApp. Human virtual receptionists offer personal warmth but cost significantly more and handle only 1-2 calls at a time." }
-          },
-          {
-            "@type": "Question",
-            "name": "Do customers know they're talking to AI?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Modern AI call handlers like whoza.ai use natural, conversational voices. Most callers don't realize it's AI. The focus is on solving their problem quickly, not pretending to be human. Trades report high customer satisfaction with AI handling." }
-          },
-          {
-            "@type": "Question",
-            "name": "Can AI handle complex trade enquiries?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. whoza.ai's AI is trained on trade-specific terminology — boilers, electrical faults, roofing materials, drainage issues. It asks the right qualifying questions (location, urgency, budget) and escalates complex cases to you immediately." }
-          },
-          {
-            "@type": "Question",
-            "name": "When should I choose a human receptionist instead?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Choose human receptionists if you need emotional empathy (funeral services, counselling), handle very high-value bespoke enquiries (luxury renovations), or prefer building personal relationships with every caller. For typical trade enquiries, AI is more cost-effective." }
-          },
-          {
-            "@type": "Question",
-            "name": "How much can I save switching from virtual receptionist to AI?",
-            "acceptedAnswer": { "@type": "Answer", "text": "UK tradespeople save £1,700-4,100 per year switching from virtual receptionist (£200-400/month) to AI call handling (£59/month). whoza.ai includes unlimited calls, WhatsApp delivery, and 30-day money-back guarantee." }
-          }
-        ]
-      })}} />
-
+      <FAQPageSchema faqs={faqs} />
       <Header />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
@@ -413,6 +406,21 @@ export default function AIVsVirtualReceptionistPage() {
                 <p className="text-slate-600">{faq.a}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              {faqs.map((faq, idx) => (
+                <div key={idx} className="bg-white rounded-xl border border-slate-200 shadow-sm p-6">
+                  <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
+                  <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
