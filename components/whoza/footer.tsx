@@ -59,6 +59,7 @@ const footerLinks = {
     { label: "Cookie Policy", href: "/cookie-policy" },
     { label: "Data Processing Agreement", href: "/dpa" },
     { label: "Fair Use Policy", href: "/fair-use" },
+    { label: "Call Recording", href: "/call-recording" },
     { label: "SLA", href: "/sla" },
     { label: "Refund Policy", href: "/refund-policy" },
     { label: "Cookie Settings", href: "#", onClick: () => { window.dispatchEvent(new CustomEvent('openCookieConsent')); } },
