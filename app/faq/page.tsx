@@ -51,7 +51,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      "name": "How do I stop missing calls as a plumber or electrician?",
+      "name": "How do I stop missed calls becoming lost jobs?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "The most effective way to stop missing calls is to use an AI call handler that answers 24/7. The Moneypenny Small Business Call Report (2016) found that 33% of small businesses fail to answer incoming calls, typically because tradespeople are on-site, driving, or doing the actual work. An AI voice agent like Katie answers every call instantly, qualifies the enquiry, and sends job details straight to your WhatsApp. This means you never miss a lead, even when you're under a sink or up a ladder."
@@ -198,7 +198,7 @@ const faqSchema = {
       "name": "Can I use whoza.ai for emergency calls?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, and this is one of the most valuable use cases. Katie is trained to recognise emergency keywords ('burst pipe', 'no heating', 'locked out', 'electrical fault') and immediately flags these as high-priority. Emergency enquiries bypass standard qualification and are sent to your WhatsApp with an 'URGENT' label and a loud notification. You can also set up escalation rules — for example, if an emergency call comes in at 2 AM, it can simultaneously notify you and a backup contact. According to a 2025 survey by the Association of Plumbing and Heating Contractors (APHC), 34% of emergency call-outs are lost to competitors because the first available engineer gets the job."
+        "text": "Yes, and this is one of the most valuable use cases. Katie is trained to recognise emergency keywords ('burst pipe', 'no heating', 'locked out', 'electrical fault', 'gas leak') and immediately flags these as high-priority. She asks safety questions to determine severity — whether there is immediate danger, vulnerable residents, or active flooding — and delivers the details to your WhatsApp with a red urgent flag within 3 seconds of the call ending. The message includes the caller's name, phone number, address, emergency description, severity level, and recommended action. The customer also receives an automatic confirmation text. Emergency enquiries bypass standard qualification and are sent to your WhatsApp with an 'URGENT' label and a loud notification. You can also set up escalation rules — for example, if an emergency call comes in at 2 AM, it can simultaneously notify you and a backup contact. For a detailed discussion of how AI voice agents handle trade emergencies, including the safeguards we think matter most, see our research paper at whoza.ai/research/emergency-triage-safety-ai-voice-agents-2026."
       }
     },
     {
@@ -225,11 +225,19 @@ const faqSchema = {
         "text": "Rex, whoza.ai's AI visibility assistant, monitors your competitors' online presence monthly and sends you an actionable report. It tracks: their Google review count and rating changes, their website updates and new content, their Google Business Profile activity, and their estimated search visibility in your area. The report includes specific recommendations — for example, 'Your competitor gained 8 reviews this month. To maintain parity, you need 2 more 5-star reviews per week.' or 'Your competitor started publishing weekly blog posts. Consider adding 2 location pages to maintain search position.' This intelligence helps you stay competitive without spending hours manually monitoring rivals."
       }
     },
+    {
+      "@type": "Question",
+      "name": "Is per-minute pricing or a flat monthly fee better for call answering?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Per-minute pricing and flat monthly fees suit different risk appetites. Per-minute billing means you pay only for the time you use, but costs spike unpredictably during busy weeks — a burst pipe Monday can mean 20 minutes of calls at 80p/minute, turning a £16 day into a £60 day. Flat monthly fees give you a fixed, budgetable cost with no bill shock, which is why most trade businesses prefer them. whoza.ai uses a flat monthly fee (£59–£399/month) with a per-job overage only after you exceed your included jobs. This means your base cost is predictable, and you only pay extra when you're already winning work."
+      }
+    },
   ],
 }
 
 const categories = [
-  { icon: PoundSterling, label: "Pricing & Cost", questions: [0, 4, 11, 13, 17, 21, 22] },
+  { icon: PoundSterling, label: "Pricing & Cost", questions: [0, 4, 11, 13, 17, 21, 22, 23] },
   { icon: Phone, label: "How It Works", questions: [1, 2, 5, 6, 7, 9, 10, 14] },
   { icon: Wrench, label: "Trades & Services", questions: [8, 18] },
   { icon: Star, label: "Reviews & Growth", questions: [15, 20] },
