@@ -103,6 +103,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     pageUrl('/locations', 'app/locations/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
     pageUrl('/sample-call', 'app/sample-call/page.tsx', { changeFrequency: 'weekly', priority: 0.7 }),
     pageUrl('/trust', 'app/trust/page.tsx', { changeFrequency: 'yearly', priority: 0.3 }),
+    pageUrl('/call-recording', 'app/call-recording/page.tsx', { changeFrequency: 'yearly', priority: 0.3 }),
     pageUrl('/best-ai-call-handler-uk-trades', 'app/best-ai-call-handler-uk-trades/page.tsx', { changeFrequency: 'monthly', priority: 0.8 }),
     pageUrl('/data', 'app/data/page.tsx', { changeFrequency: 'monthly', priority: 0.8 }),
     pageUrl('/ai-vs-virtual-receptionist', 'app/ai-vs-virtual-receptionist/page.tsx', { changeFrequency: 'monthly', priority: 0.8 }),

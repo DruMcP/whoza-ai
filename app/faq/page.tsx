@@ -233,6 +233,14 @@ const faqSchema = {
         "text": "Per-minute pricing and flat monthly fees suit different risk appetites. Per-minute billing means you pay only for the time you use, but the cost is unpredictable — a busy week with several long emergency calls costs far more than a quiet one, and you cannot budget for it in advance. Flat monthly fees give you a fixed, budgetable cost with no bill shock. whoza.ai uses a flat monthly fee (£59–£399/month). Each plan includes a set number of call minutes and booked enquiries; you are charged extra only if you exceed either allowance. This means your base cost is predictable, and you pay more only when the volume justifies it."
       }
     },
+    {
+      "@type": "Question",
+      "name": "Does whoza.ai record phone calls?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Calls answered by our AI agents are not recorded. A written transcript is generated for quality and service delivery purposes. Audio is never stored anywhere in the stack. Callers are notified at the beginning of each call that they are speaking with an AI assistant. For the full retention schedule, see whoza.ai/call-recording."
+      }
+    },
   ],
 }
 
@@ -241,7 +249,7 @@ const categories = [
   { icon: Phone, label: "How It Works", questions: [1, 2, 5, 6, 7, 9, 10, 14] },
   { icon: Wrench, label: "Trades & Services", questions: [8, 18] },
   { icon: Star, label: "Reviews & Growth", questions: [15, 20] },
-  { icon: Shield, label: "Security & Trust", questions: [16] },
+  { icon: Shield, label: "Security & Trust", questions: [16, 24] },
   { icon: TrendingUp, label: "ROI & Results", questions: [4, 17, 19] },
   { icon: MessageCircle, label: "Comparisons", questions: [3, 12] },
 ]

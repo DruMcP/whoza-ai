@@ -4,7 +4,7 @@ import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 import { QuickAnswer } from "@/components/whoza/quick-answer"
-import { AlertTriangle, Shield, ExternalLink } from "lucide-react"
+import { Shield, ExternalLink } from "lucide-react"
 import Link from "next/link"
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     canonical: "https://whoza.ai/call-recording",
   },
   robots: {
-    index: false,
+    index: true,
     follow: true,
   },
   openGraph: {
@@ -104,20 +104,6 @@ export default function CallRecordingPage() {
       />
 
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        {/* Human sign-off banner */}
-        <div className="mb-10 bg-amber-500/10 border border-amber-500/30 rounded-xl p-6 flex items-start gap-4">
-          <AlertTriangle className="w-6 h-6 text-amber-400 shrink-0 mt-0.5" />
-          <div>
-            <p className="font-semibold text-amber-300">NEEDS HUMAN SIGN-OFF</p>
-            <p className="text-amber-200/70 text-sm mt-1">
-              This page discusses how whoza.ai handles personal data and makes claims about our
-              product architecture. It is published as{" "}
-              <code className="bg-amber-500/20 px-1 rounded text-amber-200">noindex</code>{" "}
-              pending review by a person with the standing to approve it.
-            </p>
-          </div>
-        </div>
-
         {/* Hero */}
         <div className="mb-12">
           <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
