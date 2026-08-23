@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
+import { PreferredSourceButton } from "@/components/whoza/preferred-source-button"
 import { CheckCircle, AlertTriangle, XCircle, BookOpen, ExternalLink, Shield } from "lucide-react"
 import { CitationSchema } from "@/components/whoza/citation-schema"
 
@@ -317,6 +318,7 @@ export default function DataPage() {
             </p>
           </div>
         </section>
+        <PreferredSourceButton label="Prefer sources that show their working?" />
       </main>
       <Footer />
     </>

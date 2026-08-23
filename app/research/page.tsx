@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
+import { PreferredSourceButton } from "@/components/whoza/preferred-source-button"
 import { ArrowRight, FileText, BookOpen } from "lucide-react"
 import Link from "next/link"
 
@@ -111,6 +112,7 @@ export default function ResearchLanding() {
             </Link>
           ))}
         </div>
+        <PreferredSourceButton label="Want more research like this in your Google results?" />
       </main>
       <Footer />
     </div>

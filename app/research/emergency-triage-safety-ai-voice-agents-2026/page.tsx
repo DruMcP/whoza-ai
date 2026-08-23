@@ -1,3 +1,4 @@
+import { PreferredSourceButton } from "@/components/whoza/preferred-source-button"
 import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
@@ -392,6 +393,8 @@ export default function ResearchPage() {
             <a href="/data" className="text-emerald-400 hover:underline">Sources and methodology</a> for all figures in this report.
           </p>
         </div>
+      
+      <PreferredSourceButton label="Get more of our research in your Google results." />
       </main>
 
       <Footer />

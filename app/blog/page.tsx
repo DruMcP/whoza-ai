@@ -3,6 +3,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { BlogListingSchema } from "@/components/whoza/blog-schema"
+import { PreferredSourceButton } from "@/components/whoza/preferred-source-button"
 import { FileText, Clock, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
@@ -417,6 +418,7 @@ export default function BlogPage() {
             </Link>
           ))}
         </div>
+        <PreferredSourceButton label="See more from whoza.ai in Google." />
       </main>
 
       <Footer />

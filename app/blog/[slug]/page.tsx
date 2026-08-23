@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
+import { PreferredSourceButton } from "@/components/whoza/preferred-source-button"
 import { FileText, Clock, ArrowLeft, User, Calendar, CheckCircle } from "lucide-react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
@@ -426,6 +427,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
           </div>
         </article>
+        <PreferredSourceButton label="Prefer whoza.ai as a source in Google." />
       </main>
 
       <Footer />

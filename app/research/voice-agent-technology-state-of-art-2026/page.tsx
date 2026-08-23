@@ -1,3 +1,4 @@
+import { PreferredSourceButton } from "@/components/whoza/preferred-source-button"
 import { User, Calendar } from "lucide-react"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
@@ -933,6 +934,7 @@ export default function VoiceAgentTechnologyPage() {
 </section>
 
       <FAQPageSchema faqs={faqs} />
+      <PreferredSourceButton label="Get more of our research in your Google results." />
 </main>
 
       <Footer />

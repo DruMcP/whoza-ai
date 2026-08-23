@@ -1,3 +1,4 @@
+import { PreferredSourceButton } from "@/components/whoza/preferred-source-button"
 import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
@@ -759,6 +760,8 @@ export default function ResearchPage() {
 </section>
 
       <FAQPageSchema faqs={faqs} />
+
+<PreferredSourceButton label="Get more of our research in your Google results." />
 </main>
 
       <Footer />

@@ -131,6 +131,12 @@ export default function RootLayout({
       />
       */}
       {/* End Google Tag Manager */}
+      {/* Google Preferred Sources — R12 */}
+      <Script
+        id="google-preferred-source"
+        src="https://news.google.com/swg/js/v1/publisher.js"
+        strategy="lazyOnload"
+      />
       {/* Schema.org consolidated @graph — Organization + WebSite + SoftwareApplication */}
       <script
         id="schema-graph"
