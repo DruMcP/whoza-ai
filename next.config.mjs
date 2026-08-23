@@ -37,6 +37,22 @@ const nextConfig = {
 
     async redirects() {
     return [
+      // === Host canonicalisation: whoza.co.uk → whoza.ai (R14) ===
+      // netlify.toml carries the same rules but @netlify/plugin-nextjs does not
+      // apply them to Next-rendered routes, so they emit 302. These do the work.
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'whoza.co.uk' }],
+        destination: 'https://whoza.ai/:path*',
+        statusCode: 301,
+      },
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.whoza.co.uk' }],
+        destination: 'https://whoza.ai/:path*',
+        statusCode: 301,
+      },
+
       // === Signup convenience redirects ===
       { source: '/waitlist', destination: '/signup', permanent: true },
       { source: '/sign-up', destination: '/signup', permanent: true },
