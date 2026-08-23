@@ -251,6 +251,19 @@ export default function CallRecordingPage() {
           </div>
         </section>
 
+        {/* FAQ section — visible rendering of the same array passed to FAQPageSchema */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {faqs.map((faq, idx) => (
+              <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
+                <p className="text-white/60 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Links to legal pages */}
         <section className="mb-16">
           <h2 className="text-2xl font-bold mb-6">Source Documents</h2>

@@ -230,7 +230,7 @@ const faqSchema = {
       "name": "Is per-minute pricing or a flat monthly fee better for call answering?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Per-minute pricing and flat monthly fees suit different risk appetites. Per-minute billing means you pay only for the time you use, but costs spike unpredictably during busy weeks — a burst pipe Monday can mean 20 minutes of calls at 80p/minute, turning a £16 day into a £60 day. Flat monthly fees give you a fixed, budgetable cost with no bill shock, which is why most trade businesses prefer them. whoza.ai uses a flat monthly fee (£59–£399/month) with a per-job overage only after you exceed your included jobs. This means your base cost is predictable, and you only pay extra when you're already winning work."
+        "text": "Per-minute pricing and flat monthly fees suit different risk appetites. Per-minute billing means you pay only for the time you use, but the cost is unpredictable — a busy week with several long emergency calls costs far more than a quiet one, and you cannot budget for it in advance. Flat monthly fees give you a fixed, budgetable cost with no bill shock. whoza.ai uses a flat monthly fee (£59–£399/month). Each plan includes a set number of call minutes and booked enquiries; you are charged extra only if you exceed either allowance. This means your base cost is predictable, and you pay more only when the volume justifies it."
       }
     },
   ],
