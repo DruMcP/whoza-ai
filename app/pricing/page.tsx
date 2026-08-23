@@ -126,8 +126,8 @@ export default function PricingPage() {
                 "@id": "https://whoza.ai/pricing#service",
                 "name": "Whoza.ai AI Receptionist",
                 "provider": { "@id": "https://whoza.ai/#organization" },
-                "areaServed": ["GB", "US"],
-                "audience": { "@type": "Audience", "audienceType": "UK and US tradespeople" },
+                "areaServed": "GB",
+                "audience": { "@type": "Audience", "audienceType": "UK tradespeople" },
                 "hasOfferCatalog": {
                   "@type": "OfferCatalog",
                   "name": "Whoza.ai Plans",
