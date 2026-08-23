@@ -71,10 +71,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      "name": "I'm hopeless with technology. How hard is it to set up?",
+      "name": "I'm hopeless with technology. Honestly, how hard is it?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Setup takes about thirty minutes and is done for you. Everything arrives in WhatsApp — if you can read a text, you can run it.",
+        "text": "Setup takes about thirty minutes and is done for you — they ask about your services, prices and patch, and build it around that. Everything lands in WhatsApp. If you can read a text, you can run this.",
       },
     },
     {
@@ -87,10 +87,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      "name": "Can AI do my invoicing?",
+      "name": "Can AI really do my invoicing?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Whoza's invoicing agent is next on the roadmap: tap 'Job Done' in WhatsApp and a VAT-compliant invoice goes out via Xero or QuickBooks, or a Stripe payment link if you don't use accounting software.",
+        "text": "It can shortly — that's the next thing on Whoza's roadmap. You tap 'Job Done' in WhatsApp and a VAT-compliant invoice goes out via Xero or QuickBooks, or a Stripe payment link if you don't use accounting software. You're not replacing your accountant; you're removing the typing and the Tuesday-night delay.",
       },
     },
     {
