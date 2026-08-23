@@ -64,7 +64,7 @@ export const organizationSchemaObject = {
     "Emergency Call Handling",
     "WhatsApp Business Integration",
   ],
-  "areaServed": ["GB", "US"],
+  "areaServed": "GB",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "6 Atholl Crescent",
@@ -90,7 +90,7 @@ export const organizationSchemaObject = {
     "contactType": "Customer Support",
     "email": "support@whoza.ai",
     "telephone": "+447463141750",
-    "areaServed": ["GB", "US"],
+    "areaServed": "GB",
     "availableLanguage": ["English"],
   },
   // sameAs enrichment TODO — add each URL below only once the profile is confirmed
