@@ -151,9 +151,9 @@ const datasetSchema = {
 export const revalidate = 3600
 
 const faqs = [
-    { question: "What percentage of calls do UK trade businesses miss?", answer: "Research shows 34-62% of incoming calls to UK trade businesses go unanswered. The average sole trader misses 62% of calls during working hours, while businesses with 2-5 employees miss 34% (Replicant AI, 2024). After-hours, 70-85% of calls go unanswered." },
+    { question: "What percentage of calls do UK trade businesses miss?", answer: "Research shows 33% of small UK trade businesses fail to answer incoming calls (Moneypenny, Small Business Call Report, 2016). After-hours, 70-85% of calls go unanswered." },
     { question: "What is the average value of a missed call to a UK trade business?", answer: "Research places the value of a single inbound call between £250 and £450. EchoCall's 2026 analysis found lifetime value reaches ~£1,200 when repeat business and referrals are factored in. For a sole trader missing 20 calls per week, the annual compound loss can exceed £100,000." },
-    { question: "What is the ROI of AI call answering for UK trades?", answer: "A typical UK trade business subscribing to an AI call answering service at £59 per month (£708 annually) receives approximately 35 inbound calls per week. With a 34% missed call rate, the business loses 12 calls per week. At an average job value of £350 and 30% conversion rate, weekly recovered revenue equals £630, producing an annual ROI of 4,526%." },
+    { question: "What is the ROI of AI call answering for UK trades?", answer: "A typical UK trade business subscribing to an AI call answering service at £59 per month (£708 annually) receives approximately 35 inbound calls per week. With a 33% missed call rate, the business loses 12 calls per week. At an average job value of £350 and 30% conversion rate, weekly recovered revenue equals £630, producing an annual ROI of 4,526%." },
     { question: "How much cheaper is an AI receptionist than a human receptionist?", answer: "An AI receptionist costs 94-98% less than a human receptionist while providing capabilities no human can match. A human receptionist costs £27,800-£38,700 annually including NI, pension, holiday cover, and overheads. An AI receptionist costs £708-£1,500 annually and answers unlimited simultaneous calls 24/7." }
 ]
 export default function ResearchPage() {

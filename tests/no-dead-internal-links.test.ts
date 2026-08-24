@@ -19,16 +19,81 @@ function walk(dir: string, out: string[] = []): string[] {
 }
 
 /** Extract literal href="/…" and template href={`/…`} values from a file. */
-function extractHrefs(content: string): string[] {
+function extractLiteralHrefs(content: string): string[] {
   const out: string[] = []
-  // href="/foo"  or  href='/foo'
   for (const m of content.matchAll(/href=["'](\/(?:[^"']*))["']/g)) {
     out.push(m[1])
   }
-  // href={`/foo`}  — ONLY fully static template literals (no ${...})
   for (const m of content.matchAll(/href=\{`(\/[^`${`]*?)`\}/g)) {
     out.push(m[1])
   }
+  return out
+}
+
+/**
+ * Resolve template hrefs inside .map() blocks over hardcoded arrays.
+ * Returns every concrete href that would be emitted at runtime.
+ */
+function resolveTemplateHrefs(content: string): string[] {
+  const out: string[] = []
+
+  // Find .map() blocks over hardcoded string arrays.
+  // Capture the array contents and the iteration variable name.
+  const mapRe = /\[\s*"([^"]+)"((?:\s*,\s*"[^"]+")*)\s*\]\.map\(\s*(\w+)\s*=>/g
+
+  let m
+  while ((m = mapRe.exec(content)) !== null) {
+    const first = m[1]
+    const restRaw = m[2]
+    const varName = m[3]
+
+    // Build the full array of string values
+    const values: string[] = [first]
+    for (const rm of restRaw.matchAll(/"([^"]+)"/g)) {
+      values.push(rm[1])
+    }
+
+    // Find the matching closing of this .map() expression.
+    // We scan forward from the match, counting braces to locate the end.
+    let depth = 1 // we've consumed the opening '('
+    let pos = m.index + m[0].length
+    const len = content.length
+    while (pos < len && depth > 0) {
+      const ch = content[pos]
+      if (ch === "(") depth++
+      else if (ch === ")") depth--
+      pos++
+    }
+    const block = content.slice(m.index, pos)
+
+    // Look for a template href inside this block that uses the iteration variable.
+    // href={`/prefix-${VAR.transform()}-suffix`}
+    const pattern =
+      'href=\\{\\`([^\\`]*)\\$\\{[^\\`]*\\b' + varName + '\\b[^\\`]*\\}([^\\`]*)\\`\\}'
+    const hrefRe = new RegExp(pattern, 'g')
+
+    let hm
+    while ((hm = hrefRe.exec(block)) !== null) {
+      const prefix = hm[1]
+      const suffix = hm[2]
+
+      for (const rawVal of values) {
+        let val = rawVal
+        // Simulate the most common transforms seen in the codebase
+        if (hm[0].includes(".toLowerCase()")) {
+          val = val.toLowerCase()
+        }
+        if (hm[0].includes('.replace(/\\s+/g, "-")') || hm[0].includes(".replace(/\\s+/g, '-')")) {
+          val = val.replace(/\s+/g, "-")
+        }
+        if (hm[0].includes('.replace(/[^a-z]+/g, "-")')) {
+          val = val.toLowerCase().replace(/[^a-z]+/g, "-")
+        }
+        out.push(prefix + val + suffix)
+      }
+    }
+  }
+
   return out
 }
 
@@ -49,7 +114,6 @@ function addStaticRoutes(dir: string, prefix: string) {
     )
     const route = prefix + "/" + e.name
     if (hasPage) validRoutes.add(route)
-    // recurse if there are subdirectories with pages
     if (statSync(sub).isDirectory()) {
       try {
         addStaticRoutes(sub, route)
@@ -70,9 +134,11 @@ const blogKeys = (() => {
 })()
 for (const k of blogKeys) validRoutes.add("/blog/" + k)
 
-// 3. Trade × city pages
+// 3. Trade × city pages (canonical registry)
 for (const [trade, cities] of Object.entries(TRADE_CITY_PAGES)) {
-  for (const city of cities) validRoutes.add(`/${trade}-${city}`)
+  for (const city of cities) {
+    validRoutes.add(`/${trade}-${city}`)
+  }
 }
 
 // 4. Known dynamic routes with fixed slugs
@@ -100,7 +166,7 @@ try {
   }
 } catch { /* ignore */ }
 
-// 7. Allow-list: routes that are handled by rewrites/redirects or external
+// 7. Allow-list: routes handled by rewrites/redirects or external
 const ALLOWLIST = new Set([
   "/api",
   "/api/:path*",
@@ -131,26 +197,27 @@ describe("no dead internal links", () => {
 
   for (const f of files) {
     const content = readFileSync(f, "utf8")
-    for (const href of extractHrefs(content)) {
-      // Skip external, anchor-only, mail/tel, template variables
+
+    // Collect all hrefs: literal + resolved templates
+    const allHrefs = new Set<string>()
+    for (const href of extractLiteralHrefs(content)) allHrefs.add(href)
+    for (const href of resolveTemplateHrefs(content)) allHrefs.add(href)
+
+    for (const href of allHrefs) {
       if (href.startsWith("http")) continue
       if (href.startsWith("#")) continue
       if (href.startsWith("mailto:")) continue
       if (href.startsWith("tel:")) continue
-      if (href.includes("${")) continue // unexpanded template
       if (ALLOWLIST.has(href)) continue
       if (ALLOWLIST.has(href.replace(/:\*$/, ""))) continue
 
-      // Strip query strings and hashes for matching
       const clean = href.split(/[?#]/)[0]
 
       if (publicAssets.has(clean)) continue
       if (publicAssets.has(clean + ".html")) continue
-
-      // Check exact match
       if (validRoutes.has(clean)) continue
 
-      // Check parent route (e.g. /blog/foo matches if /blog exists)
+      // Check parent route
       let found = false
       for (let i = clean.length; i > 0; i--) {
         if (clean[i] === "/") {

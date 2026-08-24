@@ -36,9 +36,7 @@ const sources = {
     { name: "FMB, State of Trade Survey H2 2025", year: 2026, url: "https://www.fmb.org.uk/resource/state-of-trade-survey-h2-2025.html", what: "Enquiries +18% (England +19%, Scotland +16%); workloads +22%; 72% affected by lack of skilled tradespeople; 49% had job delays. 493 responses, published 31 March 2026", verified: "verified" },
   ],
   secondary: [
-    { name: "Dialzara", year: 2025, url: "https://dialzara.com/", what: "62% of unanswered callers immediately contact a competitor", verified: "unverified" },
     { name: "Replicant AI", year: 2024, url: "https://www.replicant.ai/", what: "Missed call rates by business size", verified: "unverified" },
-    { name: "411 Locals", year: 2024, url: "https://getaira.io/", what: "62% of business calls go unanswered", verified: "unverified" },
     { name: "IDC", year: 2025, url: "https://www.idc.com/", what: "AI ROI study: payback periods and returns", verified: "unverified" },
     { name: "Voco HQ", year: 2026, url: "https://vocohq.co.uk/", what: "True cost of missed calls for UK businesses", verified: "unverified" },
     { name: "Salesforce", year: 2026, url: "https://www.salesforce.com/", what: "82% of consumers expect an immediate response to sales enquiries", verified: "unverified" },
@@ -61,8 +59,12 @@ const removedClaims = [
     why: "Source could not be verified. No matching Forbes or Ruby study found. Replaced with Moneypenny Small Business Call Report (2016) figure of 69%.",
   },
   {
-    claim: "PATLive (2025) — 85% of unanswered callers never call back",
-    why: "Source could not be verified. No matching PATLive study found. Replaced with Moneypenny Small Business Call Report (2016) figure of 69%.",
+    claim: "411 Locals (2024) — 62% of business calls go unanswered",
+    why: "Source unverified. No peer-reviewed study or methodology disclosed. Replaced with Moneypenny Small Business Call Report (2016) figure of 33% of small UK trade businesses failing to answer incoming calls.",
+  },
+  {
+    claim: "Dialzara (2025) — 62% of unanswered callers immediately contact a competitor",
+    why: "Source unverified. No peer-reviewed study or methodology disclosed. Removed entirely pending verified replacement.",
   },
 ]
 

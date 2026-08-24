@@ -348,15 +348,7 @@ export default function ForPlumberBirminghamPage() {
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-3">
-              {["London", "Manchester", "Birmingham", "Glasgow", "Bristol", "Liverpool", "Leeds", "Edinburgh"].map(city => (
-                <Link
-                  key={city}
-                  href={`/for-plumbers-${city.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="bg-white/5 border border-white/10 rounded-full px-5 py-2.5 text-sm text-white/60 hover:bg-white/10 hover:text-white transition-colors"
-                >
-                  {city}
-                </Link>
-              ))}
+              <TradeCityLinks trade="for-plumbers" current="birmingham" />
             </div>
             <div className="mt-8 text-center">
               <Link
