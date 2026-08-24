@@ -7,6 +7,7 @@ import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 import { ArrowRight, Phone, Flame, Shield, Clock, PoundSterling, CheckCircle2, Star, AlertTriangle, TrendingUp, Users, Home } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { TradeCityLinks } from "@/components/whoza/trade-city-links"
 
 export const metadata: Metadata = {
   title: "AI Call Answering for Gas Engineers in Glasgow | whoza.ai",
@@ -318,16 +319,7 @@ export default function ForGasEngineerGlasgowPage() {
             <p className="text-white/60 mb-6">
               Katie answers calls for gas engineers in cities nationwide. Find your location:
             </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/for-gas-engineers-london" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">London</Link>
-              <Link href="/for-gas-engineers-manchester" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Manchester</Link>
-              <Link href="/for-gas-engineers-birmingham" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Birmingham</Link>
-              <Link href="/for-gas-engineers-leeds" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Leeds</Link>
-              <Link href="/for-gas-engineers-glasgow" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Glasgow</Link>
-              <Link href="/for-gas-engineers-bristol" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Bristol</Link>
-              <Link href="/for-gas-engineers-liverpool" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Liverpool</Link>
-              <Link href="/for-gas-engineers-edinburgh" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Edinburgh</Link>
-            </div>
+            <TradeCityLinks trade="for-gas-engineers" current="glasgow" />
             <div className="mt-6">
               <Link href="/for-gas-engineers" className="inline-flex items-center text-orange-400 hover:text-orange-300 text-sm font-medium transition-all">
                 View all Gas Engineers →

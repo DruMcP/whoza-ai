@@ -498,10 +498,6 @@ export default function ResearchPage() {
                 <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
                 <span className="text-white/80"><strong>The business that answers first usually gets the job</strong> (MIT Lead Response Management Study, cited in Zadarma, 2026).</span>
               </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                <span className="text-white/80"><strong>69%</strong> of callers who reach voicemail leave no message (Moneypenny, Small Business Call Report, 2016).</span>
-              </li>
             </ul>
             <div className="bg-emerald-500/10 border-l-4 border-emerald-500 rounded-r-xl p-6 my-6">
               <p className="text-emerald-200/90 font-medium leading-relaxed">

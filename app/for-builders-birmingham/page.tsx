@@ -7,6 +7,7 @@ import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 import { ArrowRight, Phone, HardHat, Shield, Clock, PoundSterling, CheckCircle2, Star, AlertTriangle, TrendingUp, Users, Home } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { TradeCityLinks } from "@/components/whoza/trade-city-links"
 
 export const metadata: Metadata = {
   title: "AI Call Answering for Builders in Birmingham | whoza.ai",

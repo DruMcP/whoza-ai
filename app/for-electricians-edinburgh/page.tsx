@@ -6,6 +6,7 @@ import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 import { ArrowRight, Phone, Wrench, Shield, Clock, PoundSterling, CheckCircle2, Star, AlertTriangle, TrendingUp, Users, Home } from "lucide-react"
 import Link from "next/link"
+import { TradeCityLinks } from "@/components/whoza/trade-city-links"
 import Image from "next/image"
 
 export const metadata: Metadata = {
@@ -341,16 +342,7 @@ export default function ForElectricianEdinburghPage() {
             <p className="text-white/60 mb-6">
               Katie answers calls for electricians in cities nationwide. Find your location:
             </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/for-electricians-london" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">London</Link>
-              <Link href="/for-electricians-manchester" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Manchester</Link>
-              <Link href="/for-electricians-birmingham" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Birmingham</Link>
-              <Link href="/for-electricians-leeds" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Leeds</Link>
-              <Link href="/for-electricians-glasgow" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Glasgow</Link>
-              <Link href="/for-electricians-bristol" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Bristol</Link>
-              <Link href="/for-electricians-liverpool" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Liverpool</Link>
-              <Link href="/for-electricians-edinburgh" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Edinburgh</Link>
-            </div>
+            <TradeCityLinks trade="for-electricians" current="edinburgh" />
             <div className="mt-6">
               <Link href="/for-electricians" className="inline-flex items-center text-yellow-400 hover:text-yellow-300 text-sm font-medium transition-all">
                 View all Electricians →

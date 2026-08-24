@@ -746,7 +746,6 @@ The technology combines large language models (LLMs), speech recognition, and bu
           list: [
             "**33%** of small businesses fail to answer incoming calls (Moneypenny Small Business Call Report, 2016)",
             "**69%** of voicemail callers don't leave a message (Moneypenny Small Business Call Report, 2016)",
-            "**69%** of callers who reach voicemail leave no message (Moneypenny Small Business Call Report, 2016)",
             "**47%** of initial calls went unanswered in a 2025 study of 142 UK SMEs",
             "**33%** of all incoming calls were missed by micro-businesses (0–9 employees) in a 2017 survey of 300 UK tradespeople — and the problem has worsened since",
           ],

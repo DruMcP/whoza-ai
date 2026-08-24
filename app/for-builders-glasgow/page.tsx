@@ -6,6 +6,7 @@ import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 import { ArrowRight, Phone, Home, Shield, Clock, PoundSterling, CheckCircle2, Star, AlertTriangle, TrendingUp, Users } from "lucide-react"
 import Link from "next/link"
+import { TradeCityLinks } from "@/components/whoza/trade-city-links"
 import Image from "next/image"
 
 export const metadata: Metadata = {
@@ -321,16 +322,7 @@ export default function ForBuilderGlasgowPage() {
             <p className="text-white/60 mb-6">
               Katie answers calls for builders in cities nationwide. Find your location:
             </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/for-builders-london" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">London</Link>
-              <Link href="/for-builders-manchester" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Manchester</Link>
-              <Link href="/for-builders-birmingham" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Birmingham</Link>
-              <Link href="/for-builders-leeds" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Leeds</Link>
-              <Link href="/for-builders-glasgow" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Glasgow</Link>
-              <Link href="/for-builders-bristol" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Bristol</Link>
-              <Link href="/for-builders-liverpool" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Liverpool</Link>
-              <Link href="/for-builders-edinburgh" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Edinburgh</Link>
-            </div>
+            <TradeCityLinks trade="for-builders" current="glasgow" />
             <div className="mt-6">
               <Link href="/for-builders" className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-all">
                 View all Builders →
