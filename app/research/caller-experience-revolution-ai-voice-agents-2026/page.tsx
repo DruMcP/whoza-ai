@@ -146,9 +146,7 @@ const scholarlyArticleSchema = {
     "cssSelector": [".article-headline", ".article-abstract", ".article-body"]
   },
   "citation": [
-    {"@type": "CreativeWork", "name": "Moneypenny Small Business Call Report", "datePublished": "2016", "url": "https://www.moneypenny.com/uk/resources/blog/free-resource-small-business-call-report/"},
-    {"@type": "CreativeWork", "name": "Forbes/Ruby Research", "datePublished": "2025"},
-    {"@type": "CreativeWork", "name": "PATLive Missed Call Statistics", "datePublished": "2025"}
+    {"@type": "CreativeWork", "name": "Moneypenny Small Business Call Report", "datePublished": "2016", "url": "https://www.moneypenny.com/uk/resources/blog/free-resource-small-business-call-report/"}
   ],
 }
 
@@ -202,7 +200,7 @@ const breadcrumbSchema = {
 }
 
 const faqs = [
-    { question: "What percentage of callers who reach voicemail don't leave a message?", answer: "Forbes and Ruby Research found that 80% of callers who reach voicemail don't leave a message. PATLive confirms that 85% of unanswered callers never call back. For callers, voicemail signals that the business does not prioritise their enquiry." },
+    { question: "What percentage of callers who reach voicemail don't leave a message?", answer: "69% of callers who reach voicemail leave no message (Moneypenny, Small Business Call Report, 2016). Most callers who don't get through simply move on to the next number." },
     { question: "How much more likely is a business to connect with a lead if they respond within five minutes?", answer: "MIT's Lead Response Management Study found that companies responding within five minutes are 100 times more likely to make contact than those waiting 30 minutes, and 21 times more likely to qualify the lead. Velocify found that calling within one minute boosts conversion by 391% compared to waiting two minutes." },
     { question: "What percentage of customers will avoid a company after one negative service experience?", answer: "Accenture research shows that 87% of customers with even one negative service experience will avoid that company in the future. For small businesses where word-of-mouth drives growth, a single missed call carries amplified consequences." },
     { question: "What is the average business response time to leads?", answer: "Optifai's 2026 Pipeline Study of 939 B2B companies found the average lead response time is 47 hours — nearly two full days. Only 23% respond within five minutes, while 42% take longer than 24 hours. 23% never respond to leads at all." }
@@ -366,7 +364,7 @@ export default function ResearchPage() {
             </p>
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">The Voicemail Abyss</h3>
             <p className="text-white/80 leading-relaxed mb-4">
-              Research reveals a stark pattern of caller abandonment. Forbes and Ruby Research found that <strong>80% of callers who reach voicemail don't leave a message</strong>. PATLive confirms 85% of unanswered callers never call back. For callers, voicemail signals the business does not prioritise their enquiry.
+              Research reveals a stark pattern of caller abandonment. Moneypenny's Small Business Call Report (2016) found that <strong>69% of callers who reach voicemail don't leave a message</strong>. Most callers who don't get through simply move on to the next number. For callers, voicemail signals the business does not prioritise their enquiry.
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
               The voicemail problem is compounded by callback delays. A 2025 study of 142 UK SMEs found average callback response time exceeds six hours — by which point callers have typically hired a competitor. The Drift Lead Response Report found waiting just five minutes increases lead loss risk by 10 times; waiting 10 minutes increases it by 100 times.
@@ -391,8 +389,8 @@ export default function ResearchPage() {
                 <tbody>
                   <tr className="border-b border-white/10">
                     <td className="px-4 py-3 text-white/80">Callers hanging up on voicemail</td>
-                    <td className="px-4 py-3 font-medium text-emerald-400">80%</td>
-                    <td className="px-4 py-3 text-white/60">Forbes/Ruby, 2025</td>
+                    <td className="px-4 py-3 font-medium text-emerald-400">69%</td>
+                    <td className="px-4 py-3 text-white/60">Moneypenny, 2016</td>
                   </tr>
                   <tr className="border-b border-white/10">
                     <td className="px-4 py-3 text-white/80">Callers who never call back</td>
@@ -751,7 +749,6 @@ export default function ResearchPage() {
                 <li>CaseyResponse (2026). &apos;Lead Response Time Statistics: The 5-Minute Rule.&apos;</li>
                 <li>Drift (2023). &apos;Lead Response Time Report.&apos; drift.com.</li>
                 <li>Five9 (2025). &apos;Gen Z and the AI Customer Service Paradox.&apos;</li>
-                <li>Forbes/Ruby Research (2025). &apos;Call Answering Statistics.&apos;</li>
                 <li>Freshworks (2025). &apos;How AI is Unlocking ROI in Customer Service: 58 Stats for 2025.&apos;</li>
                 <li>Gartner (2025). &apos;Predicts Agentic AI Will Autonomously Resolve 80% of Common Customer Service Issues by 2029.&apos;</li>
                 <li>Gladly (2025). &apos;How to Use AI to Improve CSAT Scores.&apos;</li>
@@ -821,7 +818,7 @@ export default function ResearchPage() {
     <div className="space-y-6">
       <div className="bg-white/5 border border-white/10 rounded-xl p-6">
         <h3 className="text-lg font-semibold text-white mb-3">What percentage of callers who reach voicemail don't leave a message?</h3>
-        <p className="text-white/70 leading-relaxed">Forbes and Ruby Research found that 80% of callers who reach voicemail don't leave a message. PATLive confirms that 85% of unanswered callers never call back. For callers, voicemail signals that the business does not prioritise their enquiry.</p>
+        <p className="text-white/70 leading-relaxed">69% of callers who reach voicemail leave no message (Moneypenny, Small Business Call Report, 2016). Most callers who don't get through simply move on to the next number.</p>
       </div>
       <div className="bg-white/5 border border-white/10 rounded-xl p-6">
         <h3 className="text-lg font-semibold text-white mb-3">How much more likely is a business to connect with a lead if they respond within five minutes?</h3>
