@@ -6,6 +6,11 @@ import { join } from "path"
 const appDir = new URL("../app", import.meta.url).pathname
 const outFile = new URL("../lib/trade-city-pages.ts", import.meta.url).pathname
 
+const KNOWN_CITIES = new Set([
+  "london", "manchester", "birmingham", "glasgow", "bristol",
+  "liverpool", "leeds", "edinburgh",
+])
+
 async function main() {
   const entries = await readdir(appDir, { withFileTypes: true })
   const map = {}
@@ -15,6 +20,7 @@ async function main() {
     const m = ent.name.match(/^(for-[\w-]+)-([\w-]+)$/)
     if (!m) continue
     const [, trade, city] = m
+    if (!KNOWN_CITIES.has(city)) continue
     if (!map[trade]) map[trade] = []
     map[trade].push(city)
   }

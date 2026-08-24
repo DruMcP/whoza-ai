@@ -1,81 +1,94 @@
 import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
-import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
-import { Calculator, CheckCircle, Briefcase, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import { Calculator, ClipboardCheck, TrendingUp, ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Free Resources for UK Tradespeople | whoza.ai",
-  description: "Free tools and guides for UK tradespeople: missed call cost calculator, Google Business Profile checklist, and trade business growth toolkit.",
-  alternates: {
-    canonical: "https://whoza.ai/resources",
-  },
+  metadataBase: new URL("https://whoza.ai"),
+  title: "Free Resources for UK Trades | whoza.ai",
+  description:
+    "Free tools and guides for UK tradespeople: lost revenue calculator, Google Business Profile checklist, and business growth toolkit.",
+  alternates: { canonical: "/resources" },
 }
 
 const resources = [
   {
-    href: "/resources/missed-call-cost-calculator",
-    title: "Missed Call Cost Calculator",
-    description: "Enter your trade, average job value, and missed calls per week. See exactly how much revenue you're losing — and what capturing those calls would be worth.",
-    icon: <Calculator className="w-8 h-8 text-emerald-400" />,
+    slug: "missed-call-cost-calculator",
+    title: "Lost Revenue Calculator",
+    description:
+      "Calculate how much missed calls are costing your trade business. Enter your average job value, weekly call volume, and missed call rate to see your annual lost revenue.",
+    icon: Calculator,
+    cta: "Calculate your losses",
   },
   {
-    href: "/resources/google-business-profile-checklist-trades",
+    slug: "google-business-profile-checklist-trades",
     title: "Google Business Profile Checklist",
-    description: "A step-by-step checklist to optimise your Google Business Profile for local search. Covers categories, photos, reviews, posts, and Q&A for 15+ trade types.",
-    icon: <CheckCircle className="w-8 h-8 text-blue-400" />,
+    description:
+      "A step-by-step checklist to optimise your Google Business Profile for local trade searches. Covers categories, photos, reviews, posts, and Q&A.",
+    icon: ClipboardCheck,
+    cta: "Get the checklist",
   },
   {
-    href: "/resources/trade-business-growth-toolkit",
+    slug: "trade-business-growth-toolkit",
     title: "Trade Business Growth Toolkit",
-    description: "Downloadable templates: quoting calculator, customer enquiry form, job sheet, and follow-up email scripts. Built for UK tradespeople.",
-    icon: <Briefcase className="w-8 h-8 text-amber-400" />,
+    description:
+      "A practical toolkit for growing your trade business: pricing frameworks, follow-up templates, seasonal planning guides, and referral systems.",
+    icon: TrendingUp,
+    cta: "Download the toolkit",
   },
 ]
 
 export default function ResourcesPage() {
   return (
-    <>
-      <BreadcrumbSchema items={[
-        { name: "Home", url: "https://whoza.ai/" },
-        { name: "Resources", url: "https://whoza.ai/resources" },
-      ]} />
+    <main className="min-h-screen bg-[var(--navy-950)] text-white">
       <Header />
-      <main className="min-h-screen bg-[var(--navy-900)] text-white">
-        <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12">
-          <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-tight mb-6">
-            Free Resources for <span className="text-emerald-400">UK Tradespeople</span>
-          </h1>
-          <p className="text-xl text-white/70 max-w-3xl">
-            Practical tools and checklists built for trade businesses. No signup required — use them, share them, improve your business.
-          </p>
-        </section>
 
-        <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {resources.map((r) => (
+      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+            Free Resources for UK Trades
+          </h1>
+          <p className="text-xl text-white/60 max-w-2xl mx-auto">
+            Practical tools and guides built specifically for UK tradespeople — no signup required.
+          </p>
+        </div>
+      </section>
+
+      <section className="pb-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto space-y-8">
+          {resources.map((r) => {
+            const Icon = r.icon
+            return (
               <Link
-                key={r.href}
-                href={r.href}
-                className="group bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors"
+                key={r.slug}
+                href={`/resources/${r.slug}`}
+                className="group block bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 transition-all"
               >
-                <div className="mb-4">{r.icon}</div>
-                <h2 className="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">
-                  {r.title}
-                </h2>
-                <p className="text-white/60 text-sm leading-relaxed mb-4">
-                  {r.description}
-                </p>
-                <span className="inline-flex items-center text-emerald-400 text-sm font-medium">
-                  Open resource <ArrowRight className="w-4 h-4 ml-1" />
-                </span>
+                <div className="flex items-start gap-6">
+                  <div className="shrink-0 w-12 h-12 bg-[var(--katie-blue)]/10 rounded-xl flex items-center justify-center">
+                    <Icon className="w-6 h-6 text-[var(--katie-blue)]" />
+                  </div>
+                  <div className="flex-1">
+                    <h2 className="text-2xl font-bold mb-2 group-hover:text-[var(--katie-blue)] transition-colors">
+                      {r.title}
+                    </h2>
+                    <p className="text-white/60 leading-relaxed mb-4">
+                      {r.description}
+                    </p>
+                    <span className="inline-flex items-center gap-2 text-[var(--katie-blue)] font-medium">
+                      {r.cta}
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </div>
+                </div>
               </Link>
-            ))}
-          </div>
-        </section>
-      </main>
+            )
+          })}
+        </div>
+      </section>
+
       <Footer />
-    </>
+    </main>
   )
 }

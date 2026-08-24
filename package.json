@@ -10,7 +10,8 @@
     "build": "git fetch --unshallow --quiet || true && next build",
     "start": "next start",
     "lint": "eslint .",
-    "test": "vitest run"
+    "test": "vitest run",
+    "gen:trade-cities": "node scripts/gen-trade-cities.mjs"
   },
   "overrides": {
     "postcss": "^8.5.15"
