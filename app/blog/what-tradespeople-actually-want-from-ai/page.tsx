@@ -325,11 +325,7 @@ export default function BlogPostPage() {
             <p className="text-white/80 leading-relaxed mb-4">
               What eats my evening isn&apos;t anything complicated. It&apos;s typing up enquiries, chasing reviews, working out who owes me what. The first of those is sorted — every call is captured, written up and searchable, so nothing lives in my head any more. The reviews now get chased automatically after each job ({" "}
               <Link href="/" className="text-emerald-400 hover:text-emerald-300 underline">Claire, one of the other AI agents on the team</Link>
-              , follows up while the customer still remembers you did a good turn), and reviews matter more than ever now that AI search engines lean on them so heavily when recommending local trades ({" "}
-              <Link href="/blog/how-reviews-influence-ai-search-recommendations-tradespeople-2026" className="text-emerald-400 hover:text-emerald-300 underline">
-                how-reviews-influence-ai-search-recommendations-tradespeople-2026
-              </Link>
-              ). On a Monday morning I get a summary of how the week&apos;s looking. That&apos;s an evening back, most weeks.
+              , follows up while the customer still remembers you did a good turn), and reviews matter more than ever now that AI search engines lean on them so heavily when recommending local trades (how-reviews-influence-ai-search-recommendations-tradespeople-2026). On a Monday morning I get a summary of how the week&apos;s looking. That&apos;s an evening back, most weeks.
             </p>
             <p className="text-white/80 leading-relaxed">
               The kitchen table, I&apos;d like to point out, is for dinner.
@@ -381,7 +377,7 @@ export default function BlogPostPage() {
             </p>
             <p className="text-white/80 leading-relaxed">
               This is where the model matters as much as the technology. Whoza&apos;s line is that they only make money when you make money: you pay for jobs you actually accept, there&apos;s no contract, and you can walk away whenever you like. For a{" "}
-              <Link href="/start" className="text-emerald-400 hover:text-emerald-300 underline">pre-revenue pilot</Link>
+              <Link href="/signup" className="text-emerald-400 hover:text-emerald-300 underline">pre-revenue pilot</Link>
               , that&apos;s a confident way to sell, and it&apos;s the only way I&apos;d have tried it. If it stops pulling its weight, I stop paying. Simple.
             </p>
           </section>
@@ -425,11 +421,11 @@ export default function BlogPostPage() {
               Want to see what it looks like on your own number?{" "}
               <Link href="/how-it-works" className="text-emerald-400 hover:text-emerald-300 underline">See how it works</Link>{" "}
               or{" "}
-              <Link href="/start" className="text-emerald-400 hover:text-emerald-300 underline">start the pilot</Link>{" "}
+              <Link href="/signup" className="text-emerald-400 hover:text-emerald-300 underline">start the pilot</Link>{" "}
               — no credit card, no contract, live in about half an hour.
             </p>
             <Link
-              href="/start"
+              href="/signup"
               className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl transition-colors"
             >
               Start Your Free Trial

@@ -371,7 +371,7 @@ export default function ForCarpentersPage() {
               ))}
             </div>
             <p className="mt-6 text-white/50 text-sm">
-              Read James's full story: <Link href="/blog/i-missed-4-calls-a-week-then-i-tried-ai-james-the-carpenter" className="text-amber-400 hover:text-amber-300 underline">I Missed 4 Calls a Week. Then I Tried AI.</Link>
+              Read James's full story: I Missed 4 Calls a Week. Then I Tried AI.
             </p>
           </div>
         </section>

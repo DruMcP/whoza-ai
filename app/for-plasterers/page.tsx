@@ -379,7 +379,7 @@ export default function ForPlasterersPage() {
               ))}
             </div>
             <p className="mt-6 text-white/50 text-sm">
-              Read Dean's full story: <Link href="/blog/i-missed-4-calls-a-day-then-i-tried-ai-dean-the-plasterer" className="text-blue-400 hover:text-blue-300 underline">I Missed 4 Calls a Day. Then I Tried AI.</Link>
+              Read Dean's full story: I Missed 4 Calls a Day. Then I Tried AI.
             </p>
           </div>
         </section>

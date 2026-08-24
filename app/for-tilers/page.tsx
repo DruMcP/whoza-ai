@@ -373,7 +373,7 @@ export default function ForTilersPage() {
               ))}
             </div>
             <p className="mt-6 text-white/50 text-sm">
-              Read Dave's full story: <Link href="/blog/i-captured-11-missed-jobs-in-one-month-dave-the-tiler" className="text-blue-400 hover:text-blue-300 underline">I Captured 11 Missed Jobs in One Month. Then I Tried AI.</Link>
+              Read Dave's full story: I Captured 11 Missed Jobs in One Month. Then I Tried AI.
             </p>
           </div>
         </section>

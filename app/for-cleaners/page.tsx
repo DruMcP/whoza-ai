@@ -378,7 +378,7 @@ export default function ForCleanersPage() {
               ))}
             </div>
             <p className="mt-6 text-white/50 text-sm">
-              Read Sarah's full story: <Link href="/blog/i-missed-4-calls-a-day-then-i-tried-ai-sarah-the-cleaner" className="text-blue-400 hover:text-blue-300 underline">I Missed 4 Calls a Day. Then I Tried AI.</Link>
+              Read Sarah's full story: I Missed 4 Calls a Day. Then I Tried AI.
             </p>
           </div>
         </section>

@@ -257,8 +257,8 @@ export default function AICallAnsweringGuidePage() {
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div className="bg-white/5 border border-white/10 rounded-xl p-8">
               <p className="text-white/70 leading-relaxed mb-6">
-                If you are a UK tradesperson — <a href="/ai-call-answering-plumbers" className="text-emerald-400 hover:underline">plumber</a>, <a href="/ai-call-answering-electricians" className="text-emerald-400 hover:underline">electrician</a>, <a href="/ai-call-answering-roofers" className="text-emerald-400 hover:underline">roofer</a>, <a href="/ai-call-answering-locksmiths" className="text-emerald-400 hover:underline">locksmith</a>, gas engineer, 
-                <a href="/ai-call-answering-builders" className="text-emerald-400 hover:underline">builder</a>, <a href="/ai-call-answering-landscapers" className="text-emerald-400 hover:underline">landscaper</a>, or any trade that works with your hands — you have a phone problem. 
+                If you are a UK tradesperson — <a href="/for-plumbers" className="text-emerald-400 hover:underline">plumber</a>, <a href="/for-electricians" className="text-emerald-400 hover:underline">electrician</a>, <a href="/for-roofers" className="text-emerald-400 hover:underline">roofer</a>, <a href="/for-locksmiths" className="text-emerald-400 hover:underline">locksmith</a>, gas engineer, 
+                <a href="/for-builders" className="text-emerald-400 hover:underline">builder</a>, <a href="/for-landscapers" className="text-emerald-400 hover:underline">landscaper</a>, or any trade that works with your hands — you have a phone problem. 
                 The Office for National Statistics (ONS) reports that <strong className="text-white">33% of small 
                 UK businesses fail to answer incoming calls</strong>. Of those missed callers, 69% don't leave a message. 
                 They simply call the next number on Google.
@@ -658,7 +658,7 @@ export default function AICallAnsweringGuidePage() {
                   <div className="w-10 h-10 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center">
                     <Wrench className="w-5 h-5" />
                   </div>
-                  <h3 className="font-bold text-white"><a href="/ai-call-answering-plumbers" className="hover:text-[var(--katie-blue)] transition-colors">Plumbers</a></h3>
+                  <h3 className="font-bold text-white"><a href="/for-plumbers" className="hover:text-[var(--katie-blue)] transition-colors">Plumbers</a></h3>
                 </div>
                 <p className="text-white/60 text-sm leading-relaxed mb-3">
                   Emergency callouts (£150–£400) make every missed call expensive. AI captures burst pipes, 
@@ -676,7 +676,7 @@ export default function AICallAnsweringGuidePage() {
                   <div className="w-10 h-10 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center">
                     <Zap className="w-5 h-5" />
                   </div>
-                  <h3 className="font-bold text-white"><a href="/ai-call-answering-electricians" className="hover:text-[var(--katie-blue)] transition-colors">Electricians</a></h3>
+                  <h3 className="font-bold text-white"><a href="/for-electricians" className="hover:text-[var(--katie-blue)] transition-colors">Electricians</a></h3>
                 </div>
                 <p className="text-white/60 text-sm leading-relaxed mb-3">
                   Consumer unit upgrades (£800–£2,500) and EICRs (£150–£300) require detailed qualification. 
@@ -694,7 +694,7 @@ export default function AICallAnsweringGuidePage() {
                   <div className="w-10 h-10 rounded-lg bg-slate-500/20 text-slate-400 flex items-center justify-center">
                     <Shield className="w-5 h-5" />
                   </div>
-                  <h3 className="font-bold text-white"><a href="/ai-call-answering-roofers" className="hover:text-[var(--katie-blue)] transition-colors">Roofers</a></h3>
+                  <h3 className="font-bold text-white"><a href="/for-roofers" className="hover:text-[var(--katie-blue)] transition-colors">Roofers</a></h3>
                 </div>
                 <p className="text-white/60 text-sm leading-relaxed mb-3">
                   Roof repairs (£300–£1,500) and replacements (£5,000–£15,000+) are high-value enquiries 
@@ -713,7 +713,7 @@ export default function AICallAnsweringGuidePage() {
                   <div className="w-10 h-10 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center">
                     <MessageSquare className="w-5 h-5" />
                   </div>
-                  <h3 className="font-bold text-white"><a href="/ai-call-answering-locksmiths" className="hover:text-[var(--katie-blue)] transition-colors">Locksmiths</a></h3>
+                  <h3 className="font-bold text-white"><a href="/for-locksmiths" className="hover:text-[var(--katie-blue)] transition-colors">Locksmiths</a></h3>
                 </div>
                 <p className="text-white/60 text-sm leading-relaxed mb-3">
                   Emergency lockouts (£80–£250) are time-critical. Customers call multiple locksmiths 
@@ -732,7 +732,7 @@ export default function AICallAnsweringGuidePage() {
                   <div className="w-10 h-10 rounded-lg bg-orange-500/20 text-orange-400 flex items-center justify-center">
                     <TrendingUp className="w-5 h-5" />
                   </div>
-                  <h3 className="font-bold text-white"><a href="/ai-call-answering-heating-engineers" className="hover:text-[var(--katie-blue)] transition-colors">Heating Engineers</a></h3>
+                  <h3 className="font-bold text-white"><a href="/for-heating-engineers" className="hover:text-[var(--katie-blue)] transition-colors">Heating Engineers</a></h3>
                 </div>
                 <p className="text-white/60 text-sm leading-relaxed mb-3">
                   Boiler breakdowns (£150–£400) and installations (£2,000–£4,500) peak in winter when 
@@ -751,7 +751,7 @@ export default function AICallAnsweringGuidePage() {
                   <div className="w-10 h-10 rounded-lg bg-stone-500/20 text-stone-400 flex items-center justify-center">
                     <Briefcase className="w-5 h-5" />
                   </div>
-                  <h3 className="font-bold text-white"><a href="/ai-call-answering-builders" className="hover:text-[var(--katie-blue)] transition-colors">Builders</a></h3>
+                  <h3 className="font-bold text-white"><a href="/for-builders" className="hover:text-[var(--katie-blue)] transition-colors">Builders</a></h3>
                 </div>
                 <p className="text-white/60 text-sm leading-relaxed mb-3">
                   Extensions (£20,000–£60,000), renovations (£10,000–£30,000), and smaller jobs 
@@ -770,7 +770,7 @@ export default function AICallAnsweringGuidePage() {
                   <div className="w-10 h-10 rounded-lg bg-green-500/20 text-green-400 flex items-center justify-center">
                     <Award className="w-5 h-5" />
                   </div>
-                  <h3 className="font-bold text-white"><a href="/ai-call-answering-landscapers" className="hover:text-[var(--katie-blue)] transition-colors">Landscapers</a></h3>
+                  <h3 className="font-bold text-white"><a href="/for-landscapers" className="hover:text-[var(--katie-blue)] transition-colors">Landscapers</a></h3>
                 </div>
                 <p className="text-white/60 text-sm leading-relaxed mb-3">
                   Garden redesigns (£3,000–£15,000) and maintenance contracts (£200–£500/month) 
@@ -789,7 +789,7 @@ export default function AICallAnsweringGuidePage() {
                   <div className="w-10 h-10 rounded-lg bg-red-500/20 text-red-400 flex items-center justify-center">
                     <Shield className="w-5 h-5" />
                   </div>
-                  <h3 className="font-bold text-white"><a href="/ai-call-answering-pest-control" className="hover:text-[var(--katie-blue)] transition-colors">Pest Control</a></h3>
+                  <h3 className="font-bold text-white"><a href="/for-pest-control" className="hover:text-[var(--katie-blue)] transition-colors">Pest Control</a></h3>
                 </div>
                 <p className="text-white/60 text-sm leading-relaxed mb-3">
                   Urgent pest issues (£80–£300) and commercial contracts (£500–£2,000/month) 
@@ -808,7 +808,7 @@ export default function AICallAnsweringGuidePage() {
                   <div className="w-10 h-10 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
                     <SparkleIcon />
                   </div>
-                  <h3 className="font-bold text-white"><a href="/ai-call-answering-cleaners" className="hover:text-[var(--katie-blue)] transition-colors">Cleaners</a></h3>
+                  <h3 className="font-bold text-white"><a href="/for-cleaners" className="hover:text-[var(--katie-blue)] transition-colors">Cleaners</a></h3>
                 </div>
                 <p className="text-white/60 text-sm leading-relaxed mb-3">
                   End-of-tenancy cleans (£150–£400), regular domestic (£15–£25/hour), and commercial 

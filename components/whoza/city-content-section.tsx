@@ -1,6 +1,6 @@
 "use client"
 
-import { LocationData, locations } from "@/lib/locations"
+import { formatGBPCompact } from "@/lib/format"
 import { MapPin, TrendingUp, Building2, Home, PhoneOff, PoundSterling, DollarSign, Map, Award, Clock, PhoneCall, Quote } from "lucide-react"
 import Link from "next/link"
 

@@ -475,7 +475,7 @@ export default function MissedCallIndexPage() {
             gap isn&apos;t a failure of the trades. It&apos;s the biggest competitive opening we&apos;ve had in twenty
             years. The plumber who answers every call doesn&apos;t need to be cheaper, faster or better. He just needs
             to pick up. See{" "}
-            <Link href="/compare" className="text-emerald-400 hover:underline">
+            <Link href="/ai-vs-virtual-receptionist" className="text-emerald-400 hover:underline">
               how Whoza compares to a traditional answering service
             </Link>
             .
