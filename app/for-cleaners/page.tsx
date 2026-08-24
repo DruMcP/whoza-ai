@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { TradeCityLinks } from "@/components/TradeCityLinks";
+import { TradeCityLinks } from "@/components/whoza/trade-city-links";
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
@@ -463,7 +463,7 @@ export default function ForCleanersPage() {
         </section>
 
 
-        <TradeCityLinks tradeSlug="cleaners" />
+        <TradeCityLinks trade="for-cleaners" />
 
         <div className="section-divider" />
 

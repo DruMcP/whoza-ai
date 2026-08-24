@@ -1,7 +1,7 @@
 "use client"
 
 import { Header } from "@/components/whoza/header"
-import { TradeCityLinks } from "@/components/TradeCityLinks";
+import { TradeCityLinks } from "@/components/whoza/trade-city-links";
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
@@ -360,7 +360,7 @@ export default function ForBuildersPage() {
 
         
         {/* ─── CITY LINKS ─── */}
-        <TradeCityLinks tradeSlug="builders" />
+        <TradeCityLinks trade="for-builders" />
 
         <div className="section-divider" />
 

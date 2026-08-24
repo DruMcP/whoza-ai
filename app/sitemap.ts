@@ -2,18 +2,7 @@ import { MetadataRoute } from 'next'
 import { execSync } from 'child_process'
 import { blogPostContents } from '@/lib/blog-content'
 import { existsSync, readdirSync } from 'fs'
-
-// Verified live /for-{trade}-{city} pages (August 2026)
-// Removed low-value combos flagged as duplicate by GSC.
-// Keeping: plumbers, electricians, builders, roofers, heating-engineers, gas-engineers
-const LIVE_CITY_PAGES: Record<string, string[]> = {
-  "plumbers": ["london","manchester","birmingham","glasgow","edinburgh"],
-  "electricians": ["london","manchester","birmingham","glasgow","edinburgh"],
-  "builders": ["london","manchester","birmingham","glasgow","edinburgh"],
-  "roofers": ["london","glasgow","edinburgh"],
-  "heating-engineers": ["london","manchester","glasgow","edinburgh"],
-  "gas-engineers": ["london","glasgow","edinburgh"],
-};
+import { TRADE_CITY_PAGES } from '@/lib/trade-city-pages'
 
 // All live trade hub pages (17 total)
 const ALL_TRADE_HUBS = [
@@ -123,9 +112,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     pageUrl(`/for-${slug}`, `app/for-${slug}/page.tsx`, { changeFrequency: 'weekly', priority: 0.9 })
   )
 
-  // City combo pages (55 live combinations only)
+  // City combo pages (25 live combinations)
   const comboPages: MetadataRoute.Sitemap = []
-  for (const [tradeSlug, cities] of Object.entries(LIVE_CITY_PAGES)) {
+  for (const [trade, cities] of Object.entries(TRADE_CITY_PAGES)) {
+    const tradeSlug = trade.replace(/^for-/, "")
     for (const city of cities) {
       comboPages.push(
         pageUrl(`/for-${tradeSlug}-${city}`, `app/for-${tradeSlug}-${city}/page.tsx`, { changeFrequency: 'monthly', priority: 0.8 })

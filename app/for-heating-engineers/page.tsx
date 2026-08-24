@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { TradeCityLinks } from "@/components/TradeCityLinks";
+import { TradeCityLinks } from "@/components/whoza/trade-city-links";
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
@@ -390,7 +390,7 @@ export default function ForHvacPage() {
 
         
         {/* ─── CITY LINKS ─── */}
-        <TradeCityLinks tradeSlug="heating engineers" />
+        <TradeCityLinks trade="for-heating-engineers" />
 
         <div className="section-divider" />
 
