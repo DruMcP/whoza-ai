@@ -488,7 +488,7 @@ export default function ResearchPage() {
             <ul className="space-y-3 mb-4">
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                <span className="text-white/80"><strong>85%</strong> of callers who do not get through will never call back (PATLive, 2025).</span>
+                <span className="text-white/80"><strong>69%</strong> of callers who reach voicemail leave no message (Moneypenny, Small Business Call Report, 2016).</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
@@ -500,7 +500,7 @@ export default function ResearchPage() {
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                <span className="text-white/80"><strong>80%</strong> of callers who reach voicemail don't leave a message (Forbes / Ruby Research, 2025).</span>
+                <span className="text-white/80"><strong>69%</strong> of callers who reach voicemail leave no message (Moneypenny, Small Business Call Report, 2016).</span>
               </li>
             </ul>
             <div className="bg-emerald-500/10 border-l-4 border-emerald-500 rounded-r-xl p-6 my-6">

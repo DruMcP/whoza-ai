@@ -241,8 +241,8 @@ export default function ResearchPage() {
               <span className="text-white/70">annual revenue lost per business from missed calls</span>
             </li>
             <li className="flex items-start">
-              <span className="text-emerald-400 font-bold mr-3 min-w-[80px]">85%</span>
-              <span className="text-white/70">of callers who reach voicemail never call back</span>
+              <span className="text-emerald-400 font-bold mr-3 min-w-[80px]">69%</span>
+              <span className="text-white/70">of callers who reach voicemail leave no message</span>
             </li>
             <li className="flex items-start">
               <span className="text-emerald-400 font-bold mr-3 min-w-[80px]">94%</span>
@@ -300,7 +300,7 @@ export default function ResearchPage() {
                 <tr className="border-b border-white/5 bg-white/5"><td className="p-3">Average SME missed call rate</td><td className="p-3">34%</td><td className="p-3">Replicant AI, 2024</td></tr>
                 <tr className="border-b border-white/5"><td className="p-3">Average value per qualified lead</td><td className="p-3">£250-£450</td><td className="p-3">EchoCall, 2026</td></tr>
                 <tr className="border-b border-white/5 bg-white/5"><td className="p-3">Lifetime value per missed call</td><td className="p-3">~£1,200</td><td className="p-3">EchoCall, 2026</td></tr>
-                <tr className="border-b border-white/5"><td className="p-3">Callers who never call back</td><td className="p-3">85%</td><td className="p-3">PATLive, 2025</td></tr>
+                <tr className="border-b border-white/5"><td className="p-3">Callers who reach voicemail leave no message</td><td className="p-3">69%</td><td className="p-3">Moneypenny, 2016</td></tr>
                 <tr className="border-b border-white/5 bg-white/5"><td className="p-3">Callers contacting competitor immediately</td><td className="p-3">62%</td><td className="p-3">Dialzara, 2025</td></tr>
               </tbody>
             </table>
@@ -385,7 +385,7 @@ export default function ResearchPage() {
 
           <h3>The Voicemail Tax</h3>
           <p>
-            Research confirms voicemail is effectively a dead end. 80% of callers who reach voicemail don't leave a message. Of the 20% who leave a message, only 40% receive a callback within 24 hours. Voicemail captures approximately 8% of potential leads — a 92% loss rate (Forbes/Ruby, 2025).
+            Research confirms voicemail is effectively a dead end. <strong>69% of callers who reach voicemail don't leave a message</strong> (Moneypenny, Small Business Call Report, 2016). Most callers who don't get through simply move on to the next number.
           </p>
 
           <h3>Competitive Displacement</h3>
@@ -475,10 +475,9 @@ export default function ResearchPage() {
             <li>BT/Avaya (2025). "Cost of Missed Calls to UK Businesses." Cited in Voco HQ, 2026.</li>
             <li>Dialzara (2025). "Missed Call Statistics: 62% Contact Competitor." dialzara.com.</li>
             <li>EchoCall (2026). "AI Voice Agent & Conversational AI Statistics 2026." echocall.de.</li>
-            <li>Forbes/Ruby Research (2025). "80% of Callers Don't Leave a Message." Forbes.</li>
             <li>IDC (2025). "AI ROI Study: Payback Periods and Returns." International Data Corporation.</li>
             <li>Moneypenny (2025). "Receptionist Service Pricing and Comparison." moneypenny.co.uk.</li>
-            <li>PATLive (2025). "Missed Call Statistics: 85% Never Call Back." patlive.com.</li>
+            <li>Moneypenny (2016). "Small Business Call Report." moneypenny.com.</li>
             <li>Replicant AI (2024). "State of Customer Service: Missed Call Rates by Business Size." replicant.ai.</li>
             <li>Voco HQ (2026). "True Cost of Missed Calls for UK Businesses 2026." vocohq.co.uk.</li>
           </ol>
