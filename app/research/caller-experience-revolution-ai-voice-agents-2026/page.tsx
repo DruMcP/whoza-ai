@@ -277,25 +277,6 @@ export default function ResearchPage() {
           </p>
         </div>
 
-        <div className="bg-white/5 border border-white/10 rounded-xl p-6 mb-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center">
-              <FileText className="w-5 h-5 text-emerald-400" />
-            </div>
-            <div>
-              <p className="font-medium text-white">Download the Full Research Paper</p>
-              <p className="text-sm text-white/50">PDF format | 28 pages | June 2026</p>
-            </div>
-          </div>
-          <a
-            href="/downloads/Caller_Experience_Revolution_2026.pdf"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg transition-colors text-sm"
-          >
-            <Download className="w-4 h-4" />
-            Download PDF
-          </a>
-        </div>
-
         <article className="article-body prose prose-invert prose-lg max-w-none">
 
           <section className="mb-12">

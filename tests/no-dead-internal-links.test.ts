@@ -25,8 +25,8 @@ function extractHrefs(content: string): string[] {
   for (const m of content.matchAll(/href=["'](\/(?:[^"']*))["']/g)) {
     out.push(m[1])
   }
-  // href={`/foo${bar}`}  → capture the static prefix
-  for (const m of content.matchAll(/href=\{`(\/[^${`]*)[^`]*`\}/g)) {
+  // href={`/foo`}  — ONLY fully static template literals (no ${...})
+  for (const m of content.matchAll(/href=\{`(\/[^`${`]*?)`\}/g)) {
     out.push(m[1])
   }
   return out
@@ -92,7 +92,15 @@ const citySlugs = (() => {
 })()
 for (const c of citySlugs) validRoutes.add("/" + c)
 
-// 6. Allow-list: routes that are handled by rewrites/redirects or external
+// 6. Static assets in public/
+const publicAssets = new Set<string>()
+try {
+  for (const f of walk("public")) {
+    publicAssets.add("/" + f.replace(/^public\//, ""))
+  }
+} catch { /* ignore */ }
+
+// 7. Allow-list: routes that are handled by rewrites/redirects or external
 const ALLOWLIST = new Set([
   "/api",
   "/api/:path*",
@@ -135,6 +143,9 @@ describe("no dead internal links", () => {
 
       // Strip query strings and hashes for matching
       const clean = href.split(/[?#]/)[0]
+
+      if (publicAssets.has(clean)) continue
+      if (publicAssets.has(clean + ".html")) continue
 
       // Check exact match
       if (validRoutes.has(clean)) continue
