@@ -681,7 +681,7 @@ export default function VoiceAgentTechnologyPage() {
                 End-user preferences strongly favour voice AI adoption when quality thresholds are met. According to independent surveys compiled by EchoCall (2026):
               </p>
               <ul className="space-y-2 ml-4">
-                <li>62% of end customers prefer self-service for simple issues provided it works effectively</li>
+                <li>A majority of end customers prefer self-service for simple issues provided it works effectively</li>
                 <li>71% of consumers expect 24/7 availability</li>
                 <li>3 out of 4 customers report that AI resolves their issues faster than human agents when well-trained</li>
                 <li>Generation Z prefers chat and voice AI over traditional hotlines by a 67% margin</li>

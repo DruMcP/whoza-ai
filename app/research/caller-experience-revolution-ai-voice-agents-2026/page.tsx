@@ -352,7 +352,7 @@ export default function ResearchPage() {
             </p>
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">The Ringout Problem</h3>
             <p className="text-white/80 leading-relaxed mb-4">
-              For businesses that do not use voicemail, the alternative is often worse: a continuous ring that eventually disconnects. Research from 411 Locals found that small businesses miss an average of 62% of incoming calls during working hours, rising to over 80% during peak periods such as Monday mornings and Friday afternoons when demand is highest and staff availability lowest.
+              For businesses that do not use voicemail, the alternative is often worse: a continuous ring that eventually disconnects. Research indicates missed call rates rise significantly during peak periods such as Monday mornings and Friday afternoons when demand is highest and staff availability lowest.
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
               The reasons are structural, not negligent. In a two-person plumbing business, both may be on job sites when a third call arrives. Electricians may be in loft spaces where answering is physically impossible. Roofers on ladders cannot safely take calls. Calls go unanswered not because the business does not care, but because they lack capacity at the moment the call arrives.
@@ -380,7 +380,7 @@ export default function ResearchPage() {
                   </tr>
                   <tr className="border-b border-white/10">
                     <td className="px-4 py-3 text-white/80">Calls missed by small businesses</td>
-                    <td className="px-4 py-3 font-medium text-emerald-400">62%</td>
+                    <td className="px-4 py-3 font-medium text-emerald-400">—</td>
                     <td className="px-4 py-3 text-white/60">411 Locals, 2024</td>
                   </tr>
                   <tr className="border-b border-white/10">
@@ -723,7 +723,6 @@ export default function ResearchPage() {
             <h2 className="text-2xl font-bold text-white mb-4">References</h2>
             <div className="bg-white/5 border border-white/10 rounded-xl p-6">
               <ul className="space-y-2 text-sm text-white/70">
-                <li>411 Locals (2024). &apos;Missed Business Calls Statistics: 62% of Business Calls Go Unanswered.&apos;</li>
                 <li>ACSI (2025). &apos;American Customer Satisfaction Index: National, Sector, and Industry Results.&apos;</li>
                 <li>Accenture. &apos;Customer Experience and Loyalty Research.&apos;</li>
                 <li>BrightLocal (2025). &apos;Local Consumer Review Survey 2025.&apos; BrightLocal Research, March 2026.</li>

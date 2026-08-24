@@ -227,7 +227,7 @@ export default function ResearchPage() {
           <h2 className="font-bold text-xl mb-6 text-white">Key Findings</h2>
           <ul className="space-y-4">
             <li className="flex items-start">
-              <span className="text-emerald-400 font-bold mr-3 min-w-[80px]">34-62%</span>
+              <span className="text-emerald-400 font-bold mr-3 min-w-[80px]">34%</span>
               <span className="text-white/70">of incoming calls to UK trade businesses go unanswered</span>
             </li>
             <li className="flex items-start">
@@ -264,7 +264,7 @@ export default function ResearchPage() {
             The missed call crisis in UK trades is not caused by negligence or indifference. It is a structural inevitability arising from the physical nature of trade work. When a <Link href="/for-plumbers" className="text-emerald-400 hover:underline">plumber</Link> is under a sink repairing a leak, they cannot answer the phone. When an <Link href="/for-electricians" className="text-emerald-400 hover:underline">electrician</Link> is in a consumer unit, they cannot safely take a call. When a <Link href="/for-roofers" className="text-emerald-400 hover:underline">roofer</Link> is on a ladder, reaching for a phone is a safety risk.
           </p>
           <p>
-            A 2024 survey of UK micro-businesses found that the average sole trader misses 62% of incoming calls during working hours. For businesses with 2-5 employees, the figure drops to 34%, but remains substantial (Replicant AI, 2024).
+            A 2024 survey of UK micro-businesses found that for businesses with 2-5 employees, the missed call rate is 34% (Replicant AI, 2024).
           </p>
 
           <h3>When Do Calls Get Missed?</h3>
@@ -294,13 +294,11 @@ export default function ResearchPage() {
                 </tr>
               </thead>
               <tbody className="text-white/80">
-                <tr className="border-b border-white/5"><td className="p-3">Average sole trader missed call rate</td><td className="p-3">62%</td><td className="p-3">Replicant AI, 2024</td></tr>
-                <tr className="border-b border-white/5 bg-white/5"><td className="p-3">Average SME missed call rate</td><td className="p-3">34%</td><td className="p-3">Replicant AI, 2024</td></tr>
+                                <tr className="border-b border-white/5 bg-white/5"><td className="p-3">Average SME missed call rate</td><td className="p-3">34%</td><td className="p-3">Replicant AI, 2024</td></tr>
                 <tr className="border-b border-white/5"><td className="p-3">Average value per qualified lead</td><td className="p-3">£250-£450</td><td className="p-3">EchoCall, 2026</td></tr>
                 <tr className="border-b border-white/5 bg-white/5"><td className="p-3">Lifetime value per missed call</td><td className="p-3">~£1,200</td><td className="p-3">EchoCall, 2026</td></tr>
                 <tr className="border-b border-white/5"><td className="p-3">Callers who reach voicemail leave no message</td><td className="p-3">69%</td><td className="p-3">Moneypenny, 2016</td></tr>
-                <tr className="border-b border-white/5 bg-white/5"><td className="p-3">Callers contacting competitor immediately</td><td className="p-3">62%</td><td className="p-3">Dialzara, 2025</td></tr>
-              </tbody>
+                              </tbody>
             </table>
             <p className="text-sm text-white/50 text-center mt-2">Table 1: Missed Call Financial Impact Statistics</p>
           </div>
@@ -388,7 +386,7 @@ export default function ResearchPage() {
 
           <h3>Competitive Displacement</h3>
           <p>
-            The most damaging hidden cost is competitive displacement. Dialzara's 2025 research found that 62% of unanswered callers immediately contact a competitor. The business that answers first usually gets the job. When a trade business misses a call, the caller does not wait — they move to the next name on their list (Dialzara, 2025).
+            The most damaging hidden cost is competitive displacement. When a trade business misses a call, the caller does not wait — they move to the next name on their list (Dialzara, 2025).
           </p>
 
           <h2>What Tradespeople Say: Industry Voices</h2>
@@ -419,7 +417,7 @@ export default function ResearchPage() {
           <h2>Conclusions</h2>
           <p>The missed call crisis in UK trades is not a minor operational inconvenience. It is a structural revenue leak that costs the average trade business £50,000-£80,000 annually in direct and compound losses.</p>
           <ol>
-            <li><strong>The problem is quantifiable and severe:</strong> With 34-62% of calls missed and each representing £250-£1,200 in lost revenue, the annual impact runs to tens of thousands of pounds.</li>
+            <li><strong>The problem is quantifiable and severe:</strong> With 34% of calls missed and each representing £250-£1,200 in lost revenue, the annual impact runs to tens of thousands of pounds.</li>
             <li><strong>The cost of answering is no longer prohibitive:</strong> AI receptionists cost 94% less than human staff while delivering 24/7 coverage and unlimited scalability.</li>
             <li><strong>ROI is immediate and substantial:</strong> At £59 per month with average recovery of £2,700+ per month, payback occurs within the first month.</li>
             <li><strong>The competitive dynamic is shifting:</strong> Businesses implementing AI call answering capture enquiries competitors miss, creating a self-reinforcing growth cycle.</li>
@@ -469,9 +467,7 @@ export default function ResearchPage() {
         <section className="mt-12 pt-8 border-t border-white/10">
           <h2 className="text-2xl font-bold mb-6 text-white">References</h2>
           <ol className="space-y-2 text-sm text-white/50">
-            <li>411 Locals (2024). "Missed Business Calls Statistics: 62% of Business Calls Go Unanswered." getaira.io.</li>
             <li>BT/Avaya (2025). "Cost of Missed Calls to UK Businesses." Cited in Voco HQ, 2026.</li>
-            <li>Dialzara (2025). "Missed Call Statistics: 62% Contact Competitor." dialzara.com.</li>
             <li>EchoCall (2026). "AI Voice Agent & Conversational AI Statistics 2026." echocall.de.</li>
             <li>IDC (2025). "AI ROI Study: Payback Periods and Returns." International Data Corporation.</li>
             <li>Moneypenny (2025). "Receptionist Service Pricing and Comparison." moneypenny.co.uk.</li>
@@ -493,7 +489,7 @@ export default function ResearchPage() {
     <div className="space-y-6">
       <div className="bg-white/5 border border-white/10 rounded-xl p-6">
         <h3 className="text-lg font-semibold text-white mb-3">What percentage of calls do UK trade businesses miss?</h3>
-        <p className="text-white/70 leading-relaxed">Research shows 34-62% of incoming calls to UK trade businesses go unanswered. The average sole trader misses 62% of calls during working hours, while businesses with 2-5 employees miss 34% (Replicant AI, 2024). After-hours, 70-85% of calls go unanswered.</p>
+        <p className="text-white/70 leading-relaxed">Research shows 34% of incoming calls to UK trade businesses with 2-5 employees go unanswered (Replicant AI, 2024). After-hours, 70-85% of calls go unanswered.</p>
       </div>
       <div className="bg-white/5 border border-white/10 rounded-xl p-6">
         <h3 className="text-lg font-semibold text-white mb-3">What is the average value of a missed call to a UK trade business?</h3>

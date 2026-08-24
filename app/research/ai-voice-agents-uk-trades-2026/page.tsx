@@ -127,7 +127,7 @@ const scholarlyArticleSchema = {
     },
     {
       "@type": "CreativeWork",
-      "name": "Missed Business Calls Statistics: 62% of Business Calls Go Unanswered",
+      "name": "Missed Business Calls Statistics: UK SME Call Answer Rates",
       "author": { "@type": "Organization", "name": "411 Locals" },
       "datePublished": "2024"
     },
@@ -230,10 +230,10 @@ const breadcrumbSchema = {
 }
 
 const faqs = [
-    { question: "What percentage of small business calls go unanswered?", answer: "Small businesses miss an average of 62% of incoming calls during working hours (411 Locals, 2024), rising to over 80% during peak periods. UK SMEs miss 47% of initial calls (Paperclip Research, 2025). 69% of callers who reach voicemail leave no message (Moneypenny, Small Business Call Report, 2016)." },
+    { question: "What percentage of small business calls go unanswered?", answer: "UK SMEs miss 47% of initial calls (Paperclip Research, 2025). 69% of callers who reach voicemail leave no message (Moneypenny, Small Business Call Report, 2016)." },
     { question: "What is the lifetime value of a single missed call?", answer: "The lifetime value of a single missed call is approximately £1,200 (Quality Company Formations, 2025). This includes immediate job value, repeat business, referrals, and review value. A plumber missing five calls per week at £350 average job value loses £91,000 annually." },
     { question: "What capabilities do modern AI voice agents offer for trade businesses?", answer: "Modern AI voice agents offer 24/7 call answering, lead qualification with trade-specific questioning, spam filtering, WhatsApp delivery, calendar integration, and multi-language support. End-to-end speech models like OpenAI's Realtime API achieve sub-200ms latency, and 94% of callers believe they are speaking to a human receptionist." },
-    { question: "What is the UK total annual loss to missed calls?", answer: "UK businesses lose approximately £30 billion annually to missed calls (BT/Avaya, 2025). The average small business loses ~£120,000 annually (AMBS Call Center, 2025). 62% of unanswered callers immediately contact a competitor (Dialzara, 2025)." }
+    { question: "What is the UK total annual loss to missed calls?", answer: "UK businesses lose approximately £30 billion annually to missed calls (BT/Avaya, 2025). The average small business loses ~£120,000 annually (AMBS Call Center, 2025)." }
 ]
 export default function ResearchPage() {
   return (
@@ -334,7 +334,7 @@ export default function ResearchPage() {
                 </li>
                 <li className="flex items-start gap-2 text-white/80">
                   <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                  UK trades businesses miss an estimated <strong>33–62% of incoming calls</strong>, with each missed call representing an average lost revenue of <strong>£250–£450</strong> (411 Locals, 2024; Paperclip Research, 2025).
+                  UK trades businesses miss an estimated <strong>33% of incoming calls</strong>, with each missed call representing an average lost revenue of <strong>£250–£450</strong> (411 Locals, 2024; Paperclip Research, 2025).
                 </li>
                 <li className="flex items-start gap-2 text-white/80">
                   <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
@@ -372,7 +372,7 @@ export default function ResearchPage() {
               The UK trades sector represents a substantial and economically significant market vertical. According to the Department for Business and Trade, Business Population Estimates 2025, the UK construction and home services industries collectively comprise hundreds of thousands of micro-businesses — defined as firms with 0–9 employees. The vast majority of these are sole traders or small partnerships where operational demands leave little capacity for administrative functions such as call handling.
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
-              A 2017 UK survey of 300 micro-businesses, predominantly tradespeople, found that one-third (33%) of all incoming calls were missed. More recent research from 2025 indicates this figure has worsened: a study of 142 UK SMEs found that almost half (47%) of initial calls went unanswered (Paperclip Research, 2025). For the smallest businesses — those with one or two people — missed call rates approaching 62% are not uncommon, with some enterprises missing considerably more (411 Locals, 2024).
+              A 2017 UK survey of 300 micro-businesses, predominantly tradespeople, found that one-third (33%) of all incoming calls were missed. More recent research from 2025 indicates this figure has worsened: a study of 142 UK SMEs found that almost half (47%) of initial calls went unanswered (Paperclip Research, 2025).
             </p>
             <p className="text-white/80 leading-relaxed mb-4">Several structural factors explain this crisis:</p>
             <ul className="space-y-3 mb-4">
@@ -419,7 +419,7 @@ export default function ResearchPage() {
                 <tbody>
                   <tr className="border-b border-white/10">
                     <td className="px-4 py-3 text-white/70">Small business calls unanswered</td>
-                    <td className="px-4 py-3 font-bold text-emerald-400">62%</td>
+                    <td className="px-4 py-3 font-bold text-emerald-400">—</td>
                     <td className="px-4 py-3 text-white/50">411 Locals, 2024</td>
                   </tr>
                   <tr className="border-b border-white/10">
@@ -434,7 +434,7 @@ export default function ResearchPage() {
                   </tr>
                   <tr className="border-b border-white/10">
                     <td className="px-4 py-3 text-white/70">Unanswered callers who contact competitor</td>
-                    <td className="px-4 py-3 font-bold text-emerald-400">62%</td>
+                    <td className="px-4 py-3 font-bold text-emerald-400">—</td>
                     <td className="px-4 py-3 text-white/50">Dialzara, 2025</td>
                   </tr>
                   <tr className="border-b border-white/10">
@@ -472,7 +472,7 @@ export default function ResearchPage() {
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                <span className="text-white/80"><strong>62%</strong> of unanswered callers immediately contact a competitor (Dialzara, 2025).</span>
+                <span className="text-white/80">Unanswered callers often contact a competitor immediately (Dialzara, 2025).</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
@@ -883,7 +883,7 @@ export default function ResearchPage() {
             <ol className="space-y-4 mb-6">
               <li className="flex items-start gap-3">
                 <span className="w-6 h-6 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">1</span>
-                <span className="text-white/80"><strong>The missed call crisis is quantifiable and severe:</strong> With 33–62% of calls to UK trade businesses going unanswered, and each unanswered call representing £250–£1,200 in lost revenue, the aggregate annual loss runs into billions of pounds. This is not a customer service inconvenience but a structural revenue leak.</span>
+                <span className="text-white/80"><strong>The missed call crisis is quantifiable and severe:</strong> With 33% of calls to UK trade businesses going unanswered, and each unanswered call representing £250–£1,200 in lost revenue, the aggregate annual loss runs into billions of pounds. This is not a customer service inconvenience but a structural revenue leak.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-6 h-6 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">2</span>
@@ -913,7 +913,6 @@ export default function ResearchPage() {
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-white mb-4">References</h2>
             <div className="space-y-3 text-sm text-white/70">
-              <p>411 Locals (2024). 'Missed Business Calls Statistics: 62% of Business Calls Go Unanswered.' Available at: getaira.io. Accessed June 2026.</p>
               <p>Botphonic AI (2026). 'AI Receptionist Trends 2026: A Business Revolution.' Botphonic.ai. Published 18 May 2026.</p>
               <p>BrightLocal (2025). 'Local Consumer Review Survey 2025.' BrightLocal Research. Published March 2026.</p>
               <p>Deloitte (2026). '2026 Global Contact Center Survey.' Deloitte Insights.</p>
@@ -934,7 +933,6 @@ export default function ResearchPage() {
               <p>Precedence Research (2026). 'AI Agents Market Size to Hit USD 294.66 Billion by 2035.' precedenceresearch.com, 12 May 2026.</p>
               <p>Resonate AI (2026). 'AI Receptionists 2026: 50+ Statistics.' resonateapp.com.</p>
               <p>Salesforce (2024). 'SMB Trends Report, 6th Edition.' Salesforce Research.</p>
-              <p>Sift Digital (2025). 'The Silent Profit Killer: Why 62% of Your Business Calls Go Unanswered.' Medium, 19 December 2025.</p>
               <p>Thryv (2025). 'AI Adoption Among Small Businesses Surges 41% in 2025.' Thryv Press Release, 17 July 2025.</p>
               <p>U.S. Chamber of Commerce (2025). 'Empowering Small Business: The Impact of Technology on U.S. Small Business.' U.S. Chamber Report, August 2025.</p>
               <p>Voco HQ (2026). 'True Cost of Missed Calls for UK Businesses 2026.' vocohq.co.uk, 5 January 2026.</p>
@@ -1027,7 +1025,7 @@ export default function ResearchPage() {
     <div className="space-y-6">
       <div className="bg-white/5 border border-white/10 rounded-xl p-6">
         <h3 className="text-lg font-semibold text-white mb-3">What percentage of small business calls go unanswered?</h3>
-        <p className="text-white/70 leading-relaxed">Small businesses miss an average of 62% of incoming calls during working hours (411 Locals, 2024), rising to over 80% during peak periods. UK SMEs miss 47% of initial calls (Paperclip Research, 2025). 69% of callers who reach voicemail leave no message (Moneypenny, Small Business Call Report, 2016).</p>
+        <p className="text-white/70 leading-relaxed">UK SMEs miss 47% of initial calls (Paperclip Research, 2025). 69% of callers who reach voicemail leave no message (Moneypenny, Small Business Call Report, 2016).</p>
       </div>
       <div className="bg-white/5 border border-white/10 rounded-xl p-6">
         <h3 className="text-lg font-semibold text-white mb-3">What is the lifetime value of a single missed call?</h3>
@@ -1039,7 +1037,7 @@ export default function ResearchPage() {
       </div>
       <div className="bg-white/5 border border-white/10 rounded-xl p-6">
         <h3 className="text-lg font-semibold text-white mb-3">What is the UK total annual loss to missed calls?</h3>
-        <p className="text-white/70 leading-relaxed">UK businesses lose approximately £30 billion annually to missed calls (BT/Avaya, 2025). The average small business loses ~£120,000 annually (AMBS Call Center, 2025). 62% of unanswered callers immediately contact a competitor (Dialzara, 2025).</p>
+        <p className="text-white/70 leading-relaxed">UK businesses lose approximately £30 billion annually to missed calls (BT/Avaya, 2025). The average small business loses ~£120,000 annually (AMBS Call Center, 2025).</p>
       </div>
     </div>
   </div>
