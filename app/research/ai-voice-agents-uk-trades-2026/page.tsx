@@ -230,7 +230,7 @@ const breadcrumbSchema = {
 }
 
 const faqs = [
-    { question: "What percentage of small business calls go unanswered?", answer: "Small businesses miss an average of 62% of incoming calls during working hours (411 Locals, 2024), rising to over 80% during peak periods. UK SMEs miss 47% of initial calls (Paperclip Research, 2025). 85% of callers who do not get through will never call back (PATLive, 2025)." },
+    { question: "What percentage of small business calls go unanswered?", answer: "Small businesses miss an average of 62% of incoming calls during working hours (411 Locals, 2024), rising to over 80% during peak periods. UK SMEs miss 47% of initial calls (Paperclip Research, 2025). 69% of callers who reach voicemail leave no message (Moneypenny, Small Business Call Report, 2016)." },
     { question: "What is the lifetime value of a single missed call?", answer: "The lifetime value of a single missed call is approximately £1,200 (Quality Company Formations, 2025). This includes immediate job value, repeat business, referrals, and review value. A plumber missing five calls per week at £350 average job value loses £91,000 annually." },
     { question: "What capabilities do modern AI voice agents offer for trade businesses?", answer: "Modern AI voice agents offer 24/7 call answering, lead qualification with trade-specific questioning, spam filtering, WhatsApp delivery, calendar integration, and multi-language support. End-to-end speech models like OpenAI's Realtime API achieve sub-200ms latency, and 94% of callers believe they are speaking to a human receptionist." },
     { question: "What is the UK total annual loss to missed calls?", answer: "UK businesses lose approximately £30 billion annually to missed calls (BT/Avaya, 2025). The average small business loses ~£120,000 annually (AMBS Call Center, 2025). 62% of unanswered callers immediately contact a competitor (Dialzara, 2025)." }
@@ -448,9 +448,9 @@ export default function ResearchPage() {
                     <td className="px-4 py-3 text-white/50">Paperclip Research, 2025</td>
                   </tr>
                   <tr className="border-b border-white/10">
-                    <td className="px-4 py-3 text-white/70">Callers who never call back</td>
-                    <td className="px-4 py-3 font-bold text-emerald-400">85%</td>
-                    <td className="px-4 py-3 text-white/50">PATLive, 2025</td>
+                    <td className="px-4 py-3 text-white/70">Callers who reach voicemail leave no message</td>
+                    <td className="px-4 py-3 font-bold text-emerald-400">69%</td>
+                    <td className="px-4 py-3 text-white/50">Moneypenny, 2016</td>
                   </tr>
                   <tr className="border-b border-white/10">
                     <td className="px-4 py-3 text-white/70">Unanswered callers who contact competitor</td>
@@ -1051,7 +1051,7 @@ export default function ResearchPage() {
     <div className="space-y-6">
       <div className="bg-white/5 border border-white/10 rounded-xl p-6">
         <h3 className="text-lg font-semibold text-white mb-3">What percentage of small business calls go unanswered?</h3>
-        <p className="text-white/70 leading-relaxed">Small businesses miss an average of 62% of incoming calls during working hours (411 Locals, 2024), rising to over 80% during peak periods. UK SMEs miss 47% of initial calls (Paperclip Research, 2025). 85% of callers who do not get through will never call back (PATLive, 2025).</p>
+        <p className="text-white/70 leading-relaxed">Small businesses miss an average of 62% of incoming calls during working hours (411 Locals, 2024), rising to over 80% during peak periods. UK SMEs miss 47% of initial calls (Paperclip Research, 2025). 69% of callers who reach voicemail leave no message (Moneypenny, Small Business Call Report, 2016).</p>
       </div>
       <div className="bg-white/5 border border-white/10 rounded-xl p-6">
         <h3 className="text-lg font-semibold text-white mb-3">What is the lifetime value of a single missed call?</h3>

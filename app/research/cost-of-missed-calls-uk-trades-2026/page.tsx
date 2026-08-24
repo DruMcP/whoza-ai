@@ -17,7 +17,7 @@ export const revalidate = 3600
 const faqs = [
     { question: "What percentage of small UK trade businesses fail to answer incoming calls?", answer: "The Moneypenny Small Business Call Report (2016) found that 33% of small UK trade businesses fail to answer incoming calls. For sole traders specifically, the missed call rate rises to 62% during working hours (Replicant AI, 2024)." },
     { question: "What is the average revenue per trade enquiry?", answer: "Average revenue per trade enquiry ranges from £420 for plumbing to £8,500 for builders. The variation is driven by differences in average job value, call volume, and customer urgency across trades." },
-    { question: "What percentage of missed calls result in a competitor being contacted?", answer: "24% of missed calls result in a competitor being contacted within 15 minutes. Additionally, 62% of unanswered callers immediately contact a competitor (Dialzara, 2025), and 85% of callers who do not get through will never call back (PATLive, 2025)." },
+    { question: "What percentage of missed calls result in a competitor being contacted?", answer: "24% of missed calls result in a competitor being contacted within 15 minutes. Additionally, 62% of unanswered callers immediately contact a competitor (Dialzara, 2025). 69% of callers who reach voicemail leave no message (Moneypenny, Small Business Call Report, 2016)." },
     { question: "What is the annualised loss per sole trader from missed calls?", answer: "Annualised loss per sole trader averages £18,400, with a range of £6,200 to £47,000 depending on trade, call volume, and average job value. UK trades businesses collectively lose an estimated £2.3 billion annually to missed calls." }
 ]
 export default function CostOfMissedCallsPage() {
@@ -150,7 +150,7 @@ export default function CostOfMissedCallsPage() {
       </div>
       <div className="bg-white/5 border border-white/10 rounded-xl p-6">
         <h3 className="text-lg font-semibold text-white mb-3">What percentage of missed calls result in a competitor being contacted?</h3>
-        <p className="text-white/70 leading-relaxed">24% of missed calls result in a competitor being contacted within 15 minutes. Additionally, 62% of unanswered callers immediately contact a competitor (Dialzara, 2025), and 85% of callers who do not get through will never call back (PATLive, 2025).</p>
+        <p className="text-white/70 leading-relaxed">24% of missed calls result in a competitor being contacted within 15 minutes. Additionally, 62% of unanswered callers immediately contact a competitor (Dialzara, 2025). 69% of callers who reach voicemail leave no message (Moneypenny, Small Business Call Report, 2016).</p>
       </div>
       <div className="bg-white/5 border border-white/10 rounded-xl p-6">
         <h3 className="text-lg font-semibold text-white mb-3">What is the annualised loss per sole trader from missed calls?</h3>

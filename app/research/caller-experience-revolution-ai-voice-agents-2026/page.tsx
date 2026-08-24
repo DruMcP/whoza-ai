@@ -759,7 +759,6 @@ export default function ResearchPage() {
                 <li>MIT/InsideSales.com. &apos;Lead Response Management Study.&apos; Analysis of 15,000+ leads.</li>
                 <li>Optifai (2026). &apos;Lead Response Time Benchmarks: 939 B2B Companies.&apos;</li>
                 <li>Paperclip Research (2025). &apos;How Many Calls Do UK Businesses Miss?&apos;</li>
-                <li>PATLive (2025). &apos;Missed Call Statistics and Business Impact.&apos;</li>
                 <li>PwC (2025). &apos;Future of Customer Experience Report.&apos;</li>
                 <li>SurveyMonkey (2026). &apos;Customer Service Statistics 2026: Humans vs AI Trends.&apos;</li>
                 <li>Twilio. &apos;Consumer Handoff Experience Statistics.&apos;</li>
