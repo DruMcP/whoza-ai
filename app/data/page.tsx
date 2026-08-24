@@ -37,7 +37,6 @@ const sources = {
   ],
   secondary: [
     { name: "Dialzara", year: 2025, url: "https://dialzara.com/", what: "62% of unanswered callers immediately contact a competitor", verified: "unverified" },
-    { name: "PATLive", year: 2025, url: "https://www.patlive.com/", what: "85% of unanswered callers never call back", verified: "unverified" },
     { name: "Replicant AI", year: 2024, url: "https://www.replicant.ai/", what: "Missed call rates by business size", verified: "unverified" },
     { name: "411 Locals", year: 2024, url: "https://getaira.io/", what: "62% of business calls go unanswered", verified: "unverified" },
     { name: "IDC", year: 2025, url: "https://www.idc.com/", what: "AI ROI study: payback periods and returns", verified: "unverified" },
@@ -58,12 +57,12 @@ const removedClaims = [
     why: "Withheld, not discredited. The underlying research — 500 UK trades businesses surveyed by email and WhatsApp, fieldwork July 2024 – July 2025, conducted by Dru McPherson — is real. The exact wording of the question that produced 78% is not retained. A specific claim needs the specific question behind it. The figure will return if and when that wording surfaces.",
   },
   {
-    claim: "AlwaysOnBooking Consumer Study 2026",
-    why: "No such organisation or report exists. Searched extensively. Removed from all citations.",
+    claim: "Forbes / Ruby Research (2025) — 80% of callers don't leave a message",
+    why: "Source could not be verified. No matching Forbes or Ruby study found. Replaced with Moneypenny Small Business Call Report (2016) figure of 69%.",
   },
   {
-    claim: "JP Automations Consumer Study 2026",
-    why: "JP Automations (jpautomations.co.uk) is a real AI automation vendor for UK trades — a direct competitor — but publishes no such study. Removed from all citations.",
+    claim: "PATLive (2025) — 85% of unanswered callers never call back",
+    why: "Source could not be verified. No matching PATLive study found. Replaced with Moneypenny Small Business Call Report (2016) figure of 69%.",
   },
 ]
 
@@ -106,9 +105,7 @@ export default function DataPage() {
         { name: "National Careers Service", datePublished: "2024", url: "https://nationalcareers.service.gov.uk/job-profiles/receptionist" },
         { name: "DBT Business Population Estimates", datePublished: "2025", url: "https://www.gov.uk/government/statistics/business-population-estimates-2025/business-population-estimates-for-the-uk-and-regions-2025-statistical-release" },
         { name: "FSB survey", datePublished: "2025" },
-        { name: "Forbes / Ruby Research", datePublished: "2025" },
         { name: "Dialzara", datePublished: "2025" },
-        { name: "PATLive", datePublished: "2025" },
         { name: "Replicant AI", datePublished: "2024" },
         { name: "411 Locals", datePublished: "2024" },
         { name: "IDC", datePublished: "2025" },

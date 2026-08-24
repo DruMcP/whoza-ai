@@ -459,8 +459,8 @@ export default function ResearchPage() {
                   </tr>
                   <tr className="border-b border-white/10">
                     <td className="px-4 py-3 text-white/70">Callers who hang up on voicemail</td>
-                    <td className="px-4 py-3 font-bold text-emerald-400">80%</td>
-                    <td className="px-4 py-3 text-white/50">Forbes / Ruby, 2025</td>
+                    <td className="px-4 py-3 font-bold text-emerald-400">69%</td>
+                    <td className="px-4 py-3 text-white/50">Moneypenny, 2016</td>
                   </tr>
                   <tr className="border-b border-white/10">
                     <td className="px-4 py-3 text-white/70">Annual revenue loss per small business</td>

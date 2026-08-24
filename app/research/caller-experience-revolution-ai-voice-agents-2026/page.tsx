@@ -393,9 +393,9 @@ export default function ResearchPage() {
                     <td className="px-4 py-3 text-white/60">Moneypenny, 2016</td>
                   </tr>
                   <tr className="border-b border-white/10">
-                    <td className="px-4 py-3 text-white/80">Callers who never call back</td>
-                    <td className="px-4 py-3 font-medium text-emerald-400">85%</td>
-                    <td className="px-4 py-3 text-white/60">PATLive, 2025</td>
+                    <td className="px-4 py-3 text-white/80">Callers who reach voicemail leave no message</td>
+                    <td className="px-4 py-3 font-medium text-emerald-400">69%</td>
+                    <td className="px-4 py-3 text-white/60">Moneypenny, 2016</td>
                   </tr>
                   <tr className="border-b border-white/10">
                     <td className="px-4 py-3 text-white/80">Calls missed by small businesses</td>

@@ -112,7 +112,6 @@ const scholarlyArticleSchema = {
   },
   "citation": [
     {"@type": "CreativeWork", "name": "Moneypenny Small Business Call Report", "datePublished": "2016", "url": "https://www.moneypenny.com/uk/resources/blog/free-resource-small-business-call-report/"},
-    {"@type": "CreativeWork", "name": "Forbes/Ruby Research", "datePublished": "2025"},
     {"@type": "CreativeWork", "name": "PATLive Missed Call Statistics", "datePublished": "2025"},
     {"@type": "CreativeWork", "name": "Dialzara Missed Call Statistics", "datePublished": "2025"},
     {"@type": "CreativeWork", "name": "Replicant AI State of Customer Service", "datePublished": "2024"},
