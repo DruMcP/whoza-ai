@@ -17,6 +17,7 @@ describe("formatGBPCompact", () => {
     expect(formatGBPCompact(1_054_000)).toBe("£1.05M")
     expect(formatGBPCompact(2_788_000)).toBe("£2.79M")
     expect(formatGBPCompact(12_500_000)).toBe("£13M")
+    expect(formatGBPCompact(999_600)).toBe("£1M")
   })
 
   it("accepts custom currency symbol", () => {

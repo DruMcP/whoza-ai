@@ -4,7 +4,7 @@
  */
 export function formatGBPCompact(value: number, currency: string = "£"): string {
   if (!Number.isFinite(value) || value <= 0) return `${currency}0`
-  if (value >= 1_000_000) {
+  if (value >= 1_000_000 || value >= 999_500) {
     const m = value / 1_000_000
     return `${currency}${m >= 10 ? Math.round(m) : m.toFixed(2).replace(/\.?0+$/, "")}M`
   }

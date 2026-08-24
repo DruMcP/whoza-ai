@@ -129,9 +129,10 @@ export function CityContentSection({ locationData }: CityContentSectionProps) {
                 Missed Call Revenue Impact
               </h3>
               <p className="text-white/70 text-sm leading-relaxed">
-                With {stats.missedCallsWeekly} missed calls every week, {locationData.city} tradespeople are losing
+                With {stats.missedCallsWeekly} missed calls every week, {locationData.city} tradespeople are losing{" "}
                 {formatGBPCompact(parseInt(stats.missedCallsWeekly.replace(/,/g, "")) * parseInt(stats.avgJob.replace(/[^0-9]/g, "")), currency)}+
-                in potential revenue every week. At a 35% conversion rate, that's over {formatGBPCompact(parseInt(stats.missedCallsWeekly.replace(/,/g, "")) * parseInt(stats.avgJob.replace(/[^0-9]/g, "")) * 0.35, currency)} in lost jobs every week. Katie ensures you capture every opportunity.
+                in potential revenue every week. At a 35% conversion rate, that's over{" "}
+                {formatGBPCompact(parseInt(stats.missedCallsWeekly.replace(/,/g, "")) * parseInt(stats.avgJob.replace(/[^0-9]/g, "")) * 0.35, currency)} in lost jobs every week. Katie ensures you capture every opportunity.
               </p>
             </div>
           )}

@@ -4641,7 +4641,7 @@ Question to ask: "Do you offer a free trial with no credit card required?" If th
           headingTag: "h2",
           body: `I used to think voicemail was fine. Customers would leave a message, I would ring back, job booked. That was 5 years ago. Not anymore.
 
-In 2026, 69% of callers who reach voicemail don't leave a message. Sixty-nine percent. Not 50%. Not 70%. Sixty-nine. If you rely on voicemail, you are missing 7 out of 10 callers.
+The Moneypenny Small Business Call Report (2016) found that 69% of callers who reach voicemail hang up without leaving a message. That is more than two-thirds of your enquiries gone in 30 seconds. If you rely on voicemail, you are missing 7 out of 10 callers.
 
 Why? Because customers have Google in their pocket. They call you. You do not answer. They hang up, search "roofer near me," and call the next person. Total time: 30 seconds. They do not wait. They do not leave messages. They move on.
 
