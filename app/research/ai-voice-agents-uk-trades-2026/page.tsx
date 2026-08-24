@@ -127,12 +127,6 @@ const scholarlyArticleSchema = {
     },
     {
       "@type": "CreativeWork",
-      "name": "Missed Business Calls Statistics: UK SME Call Answer Rates",
-      "author": { "@type": "Organization", "name": "411 Locals" },
-      "datePublished": "2024"
-    },
-    {
-      "@type": "CreativeWork",
       "name": "How Many Calls Do UK Businesses Miss?",
       "author": { "@type": "Organization", "name": "Paperclip Research" },
       "datePublished": "2025"
@@ -168,15 +162,8 @@ const scholarlyArticleSchema = {
   "speakable": {
     "@type": "SpeakableSpecification",
     "cssSelector": [".article-headline", ".article-abstract", ".article-body"]
-  },
-  "citation": [
-    {"@type": "CreativeWork", "name": "Ofcom Online Nation", "datePublished": "2025", "url": "https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025"},
-    {"@type": "CreativeWork", "name": "DBT Business Population Estimates", "datePublished": "2025"},
-    {"@type": "CreativeWork", "name": "Moneypenny Small Business Call Report", "datePublished": "2016", "url": "https://www.moneypenny.com/uk/resources/blog/free-resource-small-business-call-report/"},
-    {"@type": "CreativeWork", "name": "Paperclip Research", "datePublished": "2025"},
-    {"@type": "CreativeWork", "name": "411 Locals Missed Business Calls Statistics", "datePublished": "2024"}
-  ]
-}
+  }
+  }
 
 // ─── Dataset Schema for Key Statistics ───
 const datasetSchema = {
@@ -334,7 +321,7 @@ export default function ResearchPage() {
                 </li>
                 <li className="flex items-start gap-2 text-white/80">
                   <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                  UK trades businesses miss an estimated <strong>33% of incoming calls</strong>, with each missed call representing an average lost revenue of <strong>£250–£450</strong> (411 Locals, 2024; Paperclip Research, 2025).
+                  <strong>33% of small UK trade businesses fail to answer incoming calls</strong>, with each missed call representing an average lost revenue of <strong>£250–£450</strong> (Moneypenny, Small Business Call Report, 2016; Paperclip Research, 2025).
                 </li>
                 <li className="flex items-start gap-2 text-white/80">
                   <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
@@ -372,7 +359,7 @@ export default function ResearchPage() {
               The UK trades sector represents a substantial and economically significant market vertical. According to the Department for Business and Trade, Business Population Estimates 2025, the UK construction and home services industries collectively comprise hundreds of thousands of micro-businesses — defined as firms with 0–9 employees. The vast majority of these are sole traders or small partnerships where operational demands leave little capacity for administrative functions such as call handling.
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
-              A 2017 UK survey of 300 micro-businesses, predominantly tradespeople, found that one-third (33%) of all incoming calls were missed. More recent research from 2025 indicates this figure has worsened: a study of 142 UK SMEs found that almost half (47%) of initial calls went unanswered (Paperclip Research, 2025).
+              The Moneypenny Small Business Call Report (2016) surveyed 300 UK micro-businesses and found that one-third (33%) of all incoming calls were missed. More recent research from 2025 indicates this figure has worsened: a study of 142 UK SMEs found that almost half (47%) of initial calls went unanswered (Paperclip Research, 2025).
             </p>
             <p className="text-white/80 leading-relaxed mb-4">Several structural factors explain this crisis:</p>
             <ul className="space-y-3 mb-4">
@@ -420,7 +407,7 @@ export default function ResearchPage() {
                   <tr className="border-b border-white/10">
                     <td className="px-4 py-3 text-white/70">Small business calls unanswered</td>
                     <td className="px-4 py-3 font-bold text-emerald-400">—</td>
-                    <td className="px-4 py-3 text-white/50">411 Locals, 2024</td>
+                    <td className="px-4 py-3 text-white/50">—</td>
                   </tr>
                   <tr className="border-b border-white/10">
                     <td className="px-4 py-3 text-white/70">UK SME initial calls unanswered</td>
@@ -435,7 +422,7 @@ export default function ResearchPage() {
                   <tr className="border-b border-white/10">
                     <td className="px-4 py-3 text-white/70">Unanswered callers who contact competitor</td>
                     <td className="px-4 py-3 font-bold text-emerald-400">—</td>
-                    <td className="px-4 py-3 text-white/50">Dialzara, 2025</td>
+                    <td className="px-4 py-3 text-white/50">—</td>
                   </tr>
                   <tr className="border-b border-white/10">
                     <td className="px-4 py-3 text-white/70">Callers who hang up on voicemail</td>
@@ -472,7 +459,7 @@ export default function ResearchPage() {
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                <span className="text-white/80">Unanswered callers often contact a competitor immediately (Dialzara, 2025).</span>
+                <span className="text-white/80">Unanswered callers often contact a competitor immediately.</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
@@ -765,7 +752,7 @@ export default function ResearchPage() {
 
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">Hyper-Realistic Voice Synthesis</h3>
             <p className="text-white/80 leading-relaxed">
-              The speech recognition technology market is projected to grow from USD 12 billion to USD 50 billion by 2029 (WEF / Industry Data, 2025). Advances in voice synthesis will produce AI agents with regional accents, emotional range, and conversational mannerisms virtually indistinguishable from human speakers. ElevenLabs and similar providers are already delivering voices that handle interruptions, express empathy, and adapt tone to conversational context.
+              The speech recognition technology market is projected to grow from USD 12 billion to USD 50 billion by 2029. Advances in voice synthesis will produce AI agents with regional accents, emotional range, and conversational mannerisms virtually indistinguishable from human speakers. ElevenLabs and similar providers are already delivering voices that handle interruptions, express empathy, and adapt tone to conversational context.
             </p>
 
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">AI Search Optimisation (AEO)</h3>
@@ -847,7 +834,7 @@ export default function ResearchPage() {
               </table>
             </div>
             <p className="text-white/80 leading-relaxed mb-4">
-              AI voice agents deliver an average ROI of <strong>$3.50 for every $1 invested</strong>, with returns compounding from 41% in Year 1 to 124%+ by Year 3 (Industry Surveys, 2025). For small businesses, payback periods are typically measured in weeks rather than months or years.
+              AI voice agents deliver an average ROI of <strong>$3.50 for every $1 invested</strong>, with returns compounding from 41% in Year 1 to 124%+ by Year 3. For small businesses, payback periods are typically measured in weeks rather than months or years.
             </p>
 
             <h3 className="text-xl font-semibold text-white mb-3 mt-6">Indirect Revenue Benefits</h3>
@@ -883,7 +870,7 @@ export default function ResearchPage() {
             <ol className="space-y-4 mb-6">
               <li className="flex items-start gap-3">
                 <span className="w-6 h-6 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">1</span>
-                <span className="text-white/80"><strong>The missed call crisis is quantifiable and severe:</strong> With 33% of calls to UK trade businesses going unanswered, and each unanswered call representing £250–£1,200 in lost revenue, the aggregate annual loss runs into billions of pounds. This is not a customer service inconvenience but a structural revenue leak.</span>
+                <span className="text-white/80"><strong>The missed call crisis is quantifiable and severe:</strong> With 33% of small UK trade businesses failing to answer incoming calls, and each unanswered call representing £250–£1,200 in lost revenue, the aggregate annual loss runs into billions of pounds. This is not a customer service inconvenience but a structural revenue leak.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-6 h-6 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">2</span>

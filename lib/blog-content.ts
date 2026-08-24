@@ -838,7 +838,7 @@ Many whoza.ai users report capturing 5–10 additional jobs per month during bus
 
 - **82%** of consumers expect an immediate response to sales enquiries (Salesforce, 2026)
 - **60%** define "immediate" as 10 minutes or less (HubSpot, 2026)
-- **62%** will switch to a competitor after a poor response experience
+- A majority of customers will switch to a competitor after a poor response experience
 - **71%** of enquiries now come from mobile devices
 - **64%** expect the same response time regardless of hour (including evenings and weekends)
 

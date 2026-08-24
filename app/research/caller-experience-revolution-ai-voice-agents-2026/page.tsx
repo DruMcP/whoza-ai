@@ -144,11 +144,8 @@ const scholarlyArticleSchema = {
   "speakable": {
     "@type": "SpeakableSpecification",
     "cssSelector": [".article-headline", ".article-abstract", ".article-body"]
-  },
-  "citation": [
-    {"@type": "CreativeWork", "name": "Moneypenny Small Business Call Report", "datePublished": "2016", "url": "https://www.moneypenny.com/uk/resources/blog/free-resource-small-business-call-report/"}
-  ],
-}
+  }
+  }
 
 const datasetSchema = {
   "@context": "https://schema.org",
@@ -381,7 +378,7 @@ export default function ResearchPage() {
                   <tr className="border-b border-white/10">
                     <td className="px-4 py-3 text-white/80">Calls missed by small businesses</td>
                     <td className="px-4 py-3 font-medium text-emerald-400">—</td>
-                    <td className="px-4 py-3 text-white/60">411 Locals, 2024</td>
+                    <td className="px-4 py-3 text-white/60">—</td>
                   </tr>
                   <tr className="border-b border-white/10">
                     <td className="px-4 py-3 text-white/80">UK SME calls unanswered</td>

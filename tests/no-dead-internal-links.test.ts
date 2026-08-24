@@ -24,7 +24,7 @@ function extractLiteralHrefs(content: string): string[] {
   for (const m of content.matchAll(/href=["'](\/(?:[^"']*))["']/g)) {
     out.push(m[1])
   }
-  for (const m of content.matchAll(/href=\{`(\/[^`${`]*?)`\}/g)) {
+  for (const m of content.matchAll(/href=\{\`(\/[^`${`]*?)\`\}/g)) {
     out.push(m[1])
   }
   return out
@@ -69,31 +69,54 @@ function resolveTemplateHrefs(content: string): string[] {
     // Look for a template href inside this block that uses the iteration variable.
     // href={`/prefix-${VAR.transform()}-suffix`}
     const pattern =
-      'href=\\{\\`([^\\`]*)\\$\\{[^\\`]*\\b' + varName + '\\b[^\\`]*\\}([^\\`]*)\\`\\}'
+      'href=\\{\\`([^\\`]*\\$\\{[^\\`]*\\b' + varName + '\\b[^\\`]*\\}[^\\`]*)\\`\\}'
     const hrefRe = new RegExp(pattern, 'g')
 
     let hm
     while ((hm = hrefRe.exec(block)) !== null) {
-      const prefix = hm[1]
-      const suffix = hm[2]
+      const fullTemplate = hm[1]
 
       for (const rawVal of values) {
         let val = rawVal
         // Simulate the most common transforms seen in the codebase
-        if (hm[0].includes(".toLowerCase()")) {
+        if (fullTemplate.includes(".toLowerCase()")) {
           val = val.toLowerCase()
         }
-        if (hm[0].includes('.replace(/\\s+/g, "-")') || hm[0].includes(".replace(/\\s+/g, '-')")) {
+        if (fullTemplate.includes('.replace(/\\s+/g, "-")') || fullTemplate.includes(".replace(/\\s+/g, '-')")) {
           val = val.replace(/\s+/g, "-")
         }
-        if (hm[0].includes('.replace(/[^a-z]+/g, "-")')) {
+        if (fullTemplate.includes('.replace(/[^a-z]+/g, "-")')) {
           val = val.toLowerCase().replace(/[^a-z]+/g, "-")
         }
-        out.push(prefix + val + suffix)
+        // Reconstruct: replace ${varName...} with the transformed value
+        const resolved = fullTemplate.replace(/\$\{[^}]+\}/, val)
+        out.push(resolved)
       }
     }
   }
 
+  return out
+}
+
+/** Find template hrefs that contain ${ but were NOT resolved by resolveTemplateHrefs. */
+function findUnresolvableTemplates(content: string, file: string): string[] {
+  const out: string[] = []
+  // Match any href={`...${...}...`} template
+  for (const m of content.matchAll(/href=\{\`([^`]*\$\{[^`]*\}[^`]*)\`\}/g)) {
+    const template = m[1]
+    // Skip external/action links
+    if (template.startsWith("mailto:") || template.startsWith("tel:") || template.startsWith("http")) continue
+    // Skip anchor-only templates
+    if (template.startsWith("#")) continue
+    // Skip known dynamic route patterns (resolved by Next.js dynamic segments or registries)
+    if (template.includes("${city.slug}") || template.includes("${loc.slug}")) continue
+    if (template.includes("${key}") && file.includes("[slug]")) continue // dynamic blog/resource routes
+    if (template.includes("${r.slug}")) continue // dynamic resource routes
+    if (template.includes("${trade}") && template.includes("${city}") && file.includes("trade-city-links")) continue
+    // Skip if it was already resolved (contains no ${ anymore)
+    if (!template.includes("${")) continue
+    out.push(template)
+  }
   return out
 }
 
@@ -186,6 +209,13 @@ const ALLOWLIST = new Set([
   "/_next/static",
 ])
 
+// ── self-test fixture ──────────────────────────────────────────────────────
+
+const FIXTURE = `
+<a href="/blog/zzz-fake-dead-post">probe</a>
+<a href="/research/zzz-fake">probe2</a>
+`
+
 // ── test ───────────────────────────────────────────────────────────────────
 
 describe("no dead internal links", () => {
@@ -194,6 +224,8 @@ describe("no dead internal links", () => {
   }).filter(f => EXT_RE.test(f))
 
   const unresolved = new Map<string, string[]>() // href -> [files]
+  const unresolvable = new Map<string, string[]>() // template pattern -> [files]
+  let expandedCount = 0
 
   for (const f of files) {
     const content = readFileSync(f, "utf8")
@@ -201,7 +233,15 @@ describe("no dead internal links", () => {
     // Collect all hrefs: literal + resolved templates
     const allHrefs = new Set<string>()
     for (const href of extractLiteralHrefs(content)) allHrefs.add(href)
-    for (const href of resolveTemplateHrefs(content)) allHrefs.add(href)
+    const resolved = resolveTemplateHrefs(content)
+    expandedCount += resolved.length
+    for (const href of resolved) allHrefs.add(href)
+
+    // Check for unresolvable templates
+    for (const tmpl of findUnresolvableTemplates(content, f)) {
+      if (!unresolvable.has(tmpl)) unresolvable.set(tmpl, [])
+      unresolvable.get(tmpl)!.push(f)
+    }
 
     for (const href of allHrefs) {
       if (href.startsWith("http")) continue
@@ -217,22 +257,33 @@ describe("no dead internal links", () => {
       if (publicAssets.has(clean + ".html")) continue
       if (validRoutes.has(clean)) continue
 
-      // Check parent route
-      let found = false
-      for (let i = clean.length; i > 0; i--) {
-        if (clean[i] === "/") {
-          if (validRoutes.has(clean.slice(0, i))) {
-            found = true
-            break
-          }
-        }
-      }
-      if (found) continue
+      // Parent-route fallback REMOVED — a page route is not a wildcard.
+      // If a prefix genuinely needs matching, add it to ALLOWLIST with a comment.
 
       if (!unresolved.has(clean)) unresolved.set(clean, [])
       unresolved.get(clean)!.push(f)
     }
   }
+
+  it("self-test: fixture must produce unresolved links", () => {
+    const fixtureHrefs = extractLiteralHrefs(FIXTURE)
+    const fixtureUnresolved: string[] = []
+    for (const href of fixtureHrefs) {
+      const clean = href.split(/[?#]/)[0]
+      if (!validRoutes.has(clean) && !publicAssets.has(clean) && !ALLOWLIST.has(clean)) {
+        fixtureUnresolved.push(clean)
+      }
+    }
+    expect(fixtureUnresolved).toContain("/blog/zzz-fake-dead-post")
+    expect(fixtureUnresolved).toContain("/research/zzz-fake")
+  })
+
+  it(`has zero unresolvable template hrefs (resolver checked ${expandedCount} expanded URLs)`, () => {
+    const list = Array.from(unresolvable.entries())
+      .map(([tmpl, files]) => `${tmpl}  (${[...new Set(files)].join(", ")})`)
+      .sort()
+    expect(list).toEqual([])
+  })
 
   it("has zero unresolved internal href targets", () => {
     const list = Array.from(unresolved.entries())

@@ -117,15 +117,8 @@ const scholarlyArticleSchema = {
   "speakable": {
     "@type": "SpeakableSpecification",
     "cssSelector": [".article-headline", ".article-abstract", ".article-body"]
-  },
-  "citation": [
-    {"@type": "CreativeWork", "name": "BrightEdge Research", "datePublished": "2025"},
-    {"@type": "CreativeWork", "name": "Ahrefs SEO Statistics", "datePublished": "2025"},
-    {"@type": "CreativeWork", "name": "Semrush Search Engine Data", "datePublished": "2025"},
-    {"@type": "CreativeWork", "name": "HubSpot Consumer Research", "datePublished": "2025"},
-    {"@type": "CreativeWork", "name": "Google Search Quality Guidelines", "datePublished": "2025"}
-  ],
-}
+  }
+  }
 
 const datasetSchema = {
   "@context": "https://schema.org",
@@ -136,11 +129,6 @@ const datasetSchema = {
     "@id": "https://whoza.ai/#dru-mcpherson"
   },
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "distribution": {
-    "@type": "DataDownload",
-    "contentUrl": "https://whoza.ai/research/aeo-ai-search-optimisation-2026",
-    "encodingFormat": "text/html"
-  },
   "distribution": {
     "@type": "DataDownload",
     "contentUrl": "https://whoza.ai/research/aeo-ai-search-optimisation-2026",

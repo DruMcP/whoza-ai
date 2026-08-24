@@ -112,12 +112,10 @@ const scholarlyArticleSchema = {
   },
   "citation": [
     {"@type": "CreativeWork", "name": "Moneypenny Small Business Call Report", "datePublished": "2016", "url": "https://www.moneypenny.com/uk/resources/blog/free-resource-small-business-call-report/"},
-    {"@type": "CreativeWork", "name": "Dialzara Missed Call Statistics", "datePublished": "2025"},
     {"@type": "CreativeWork", "name": "Replicant AI State of Customer Service", "datePublished": "2024"},
     {"@type": "CreativeWork", "name": "IDC AI ROI Study", "datePublished": "2025"},
     {"@type": "CreativeWork", "name": "Voco HQ True Cost of Missed Calls", "datePublished": "2026"},
-    {"@type": "CreativeWork", "name": "EchoCall AI Voice Agent Statistics", "datePublished": "2026"},
-    {"@type": "CreativeWork", "name": "411 Locals Missed Business Calls Statistics", "datePublished": "2024"}
+    {"@type": "CreativeWork", "name": "EchoCall AI Voice Agent Statistics", "datePublished": "2026"}
   ],
 }
 
@@ -228,7 +226,7 @@ export default function ResearchPage() {
           <ul className="space-y-4">
             <li className="flex items-start">
               <span className="text-emerald-400 font-bold mr-3 min-w-[80px]">34%</span>
-              <span className="text-white/70">of incoming calls to UK trade businesses go unanswered</span>
+              <span className="text-white/70">of incoming calls to UK trade businesses with 2–5 employees go unanswered</span>
             </li>
             <li className="flex items-start">
               <span className="text-emerald-400 font-bold mr-3 min-w-[80px]">£250-£450</span>
@@ -386,7 +384,7 @@ export default function ResearchPage() {
 
           <h3>Competitive Displacement</h3>
           <p>
-            The most damaging hidden cost is competitive displacement. When a trade business misses a call, the caller does not wait — they move to the next name on their list (Dialzara, 2025).
+            The most damaging hidden cost is competitive displacement. When a trade business misses a call, the caller does not wait — they move to the next name on their list.
           </p>
 
           <h2>What Tradespeople Say: Industry Voices</h2>
@@ -489,7 +487,7 @@ export default function ResearchPage() {
     <div className="space-y-6">
       <div className="bg-white/5 border border-white/10 rounded-xl p-6">
         <h3 className="text-lg font-semibold text-white mb-3">What percentage of calls do UK trade businesses miss?</h3>
-        <p className="text-white/70 leading-relaxed">Research shows 34% of incoming calls to UK trade businesses with 2-5 employees go unanswered (Replicant AI, 2024). After-hours, 70-85% of calls go unanswered.</p>
+        <p className="text-white/70 leading-relaxed">Research shows 33% of small UK trade businesses fail to answer incoming calls (Moneypenny, Small Business Call Report, 2016). After-hours, 70-85% of calls go unanswered.</p>
       </div>
       <div className="bg-white/5 border border-white/10 rounded-xl p-6">
         <h3 className="text-lg font-semibold text-white mb-3">What is the average value of a missed call to a UK trade business?</h3>
@@ -497,7 +495,7 @@ export default function ResearchPage() {
       </div>
       <div className="bg-white/5 border border-white/10 rounded-xl p-6">
         <h3 className="text-lg font-semibold text-white mb-3">What is the ROI of AI call answering for UK trades?</h3>
-        <p className="text-white/70 leading-relaxed">A typical UK trade business subscribing to an AI call answering service at £59 per month (£708 annually) receives approximately 35 inbound calls per week. With a 34% missed call rate, the business loses 12 calls per week. At an average job value of £350 and 30% conversion rate, weekly recovered revenue equals £630, producing an annual ROI of 4,526%.</p>
+        <p className="text-white/70 leading-relaxed">A typical UK trade business subscribing to an AI call answering service at £59 per month (£708 annually) receives approximately 35 inbound calls per week. With a 33% missed call rate, the business loses 12 calls per week. At an average job value of £350 and 30% conversion rate, weekly recovered revenue equals £630, producing an annual ROI of 4,526%.</p>
       </div>
       <div className="bg-white/5 border border-white/10 rounded-xl p-6">
         <h3 className="text-lg font-semibold text-white mb-3">How much cheaper is an AI receptionist than a human receptionist?</h3>
