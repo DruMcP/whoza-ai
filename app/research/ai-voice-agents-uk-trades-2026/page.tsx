@@ -154,6 +154,23 @@ const scholarlyArticleSchema = {
       "name": "UK Communications Market Report 2025",
       "author": { "@type": "Organization", "name": "Ofcom" },
       "datePublished": "2025"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Moneypenny Small Business Call Report",
+      "datePublished": "2016",
+      "url": "https://www.moneypenny.com/uk/resources/blog/free-resource-small-business-call-report/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Ofcom Online Nation",
+      "datePublished": "2025",
+      "url": "https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "DBT Business Population Estimates",
+      "datePublished": "2025"
     }
   ],
   "inLanguage": "en-GB",

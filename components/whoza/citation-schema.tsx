@@ -3,6 +3,8 @@ interface Citation {
   url?: string
   author?: string
   datePublished?: string
+  /** Source-level caution — not emitted into JSON-LD (not a schema.org property). */
+  note?: string
 }
 
 export function CitationSchema({ citations }: { citations: Citation[] }) {

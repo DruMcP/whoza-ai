@@ -242,7 +242,7 @@ export default function ForCleanersPage() {
                   icon: Home,
                   title: "Evening & Weekend Emergency Cleans",
                   description: "Saturday night after a party. Sunday morning post-construction. Calls come in when you're off-duty or at home. Voicemail doesn't cut it — customers want immediate confirmation. By Monday morning, they've booked someone else who answered.",
-                  stat: "33% of calls go unanswered",
+                  stat: "1 in 3 firms miss calls",
                   color: "blue",
                 },
               ].map((item, idx) => {

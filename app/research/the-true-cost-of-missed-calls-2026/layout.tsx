@@ -1,9 +1,6 @@
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://whoza.ai"),
-  title: "The True Cost of Missed Calls: UK Trades Industry Financial Impact Report 2026 | Whoza",
-  description: "Research on missed calls impact for UK trades. 33% of small businesses miss incoming calls, costing £50,000-£80,000 per business yearly. Read the full report.",
   keywords: [
     "missed calls cost UK trades",
     "missed call financial impact 2026",
@@ -11,31 +8,6 @@ export const metadata: Metadata = {
     "AI call answering ROI",
     "missed call statistics UK",
   ],
-  alternates: {
-    canonical: "https://whoza.ai/research/the-true-cost-of-missed-calls-2026",
-  },
-  openGraph: {
-    type: "article",
-    locale: "en_GB",
-    url: "https://whoza.ai/research/the-true-cost-of-missed-calls-2026",
-    siteName: "Whoza.ai",
-    title: "The True Cost of Missed Calls: UK Trades Industry Financial Impact Report 2026",
-    description: "Research: 33% of small UK trade businesses fail to answer incoming calls, costing £50,000-£80,000 annually per business.",
-    images: [{ url: "https://whoza.ai/og/research-missed-calls-2026.jpg", width: 1200, height: 630, alt: "The True Cost of Missed Calls UK Trades Research Report 2026" }],
-    publishedTime: "2026-06-25T00:00:00+00:00",
-    modifiedTime: "2026-06-25T00:00:00+00:00",
-    authors: [{ name: "Whoza" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "The True Cost of Missed Calls — UK Trades Research 2026",
-    description: "UK trades: 33% of small businesses fail to answer incoming calls. Cost: £50,000-£80,000/year per business. Download the research report.",
-    images: ["https://whoza.ai/og/research-missed-calls-2026.jpg"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

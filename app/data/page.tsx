@@ -41,6 +41,7 @@ const sources = {
     { name: "Voco HQ", year: 2026, url: "https://vocohq.co.uk/", what: "True cost of missed calls for UK businesses", verified: "unverified" },
     { name: "Salesforce", year: 2026, url: "https://www.salesforce.com/", what: "82% of consumers expect an immediate response to sales enquiries", verified: "unverified" },
     { name: "HubSpot", year: 2026, url: "https://www.hubspot.com/", what: "60% define 'immediate' as 10 minutes or less", verified: "unverified" },
+    { name: "Paperclip Research", year: 2025, url: "https://www.paperclip.co.uk/missed-business-phone-calls-uk/", what: "47% of initial calls to UK SMEs go unanswered", verified: "unverified" },
   ],
   tertiary: [
     { name: "Unattributed — £250–£450 call value", year: 2026, url: "", what: "The value of a single inbound call to a UK trade business, cited on /research/the-true-cost-of-missed-calls-2026 as 'research consistently places'. No specific source named. Not verified.", verified: "unverified" },

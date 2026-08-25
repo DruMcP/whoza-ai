@@ -243,7 +243,7 @@ export default function ForTilersPage() {
                   icon: Briefcase,
                   title: "Commercial Deadlines Pass You By",
                   description: "Hotel manager calls about a 20-room retiling with a 3-week deadline. You're on another site. They need immediate confirmation. By the time you call back, the contract's signed. Lost £12,000+ project.",
-                  stat: "33% of calls unanswered",
+                  stat: "1 in 3 firms miss calls",
                   color: "red",
                 },
               ].map((item, idx) => {

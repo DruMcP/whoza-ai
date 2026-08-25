@@ -136,6 +136,12 @@ const scholarlyArticleSchema = {
       "name": "Customer Service Statistics 2026",
       "author": { "@type": "Organization", "name": "SurveyMonkey" },
       "datePublished": "2026"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Moneypenny Small Business Call Report",
+      "datePublished": "2016",
+      "url": "https://www.moneypenny.com/uk/resources/blog/free-resource-small-business-call-report/"
     }
   ],
   "inLanguage": "en-GB",

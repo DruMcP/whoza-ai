@@ -157,9 +157,18 @@ const blogKeys = (() => {
 })()
 for (const k of blogKeys) validRoutes.add("/blog/" + k)
 
-// 3. Trade × city pages (canonical registry)
+// ── 3. Trade × city pages (canonical registry) — verified against filesystem ──
+
+const registryMissing: string[] = []
 for (const [trade, cities] of Object.entries(TRADE_CITY_PAGES)) {
   for (const city of cities) {
+    const dir = `app/${trade}-${city}`
+    const page = `${dir}/page.tsx`
+    try {
+      statSync(page)
+    } catch {
+      registryMissing.push(`/${trade}-${city} (expected ${page})`)
+    }
     validRoutes.add(`/${trade}-${city}`)
   }
 }
@@ -264,6 +273,10 @@ describe("no dead internal links", () => {
       unresolved.get(clean)!.push(f)
     }
   }
+
+  it("TRADE_CITY_PAGES registry matches filesystem — every entry has a page.tsx", () => {
+    expect(registryMissing).toEqual([])
+  })
 
   it("self-test: fixture must produce unresolved links", () => {
     const fixtureHrefs = extractLiteralHrefs(FIXTURE)
