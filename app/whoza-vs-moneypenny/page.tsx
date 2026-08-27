@@ -85,10 +85,18 @@ export default function VsMoneypennyPage() {
 
               <div className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 px-3 py-1 rounded-full text-xs font-medium mb-6">
                 <Star className="w-3 h-3" />
-                Comparison — May 2026
+                Comparison — August 2026
               </div>
 
-              <h1 className="text-4xl lg:text-5xl font-extrabold mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
+              {/* Publisher Disclosure */}
+            <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-4 mb-8">
+              <p className="text-sm text-amber-300">
+                <strong>Publisher note:</strong> This comparison is published by whoza.ai, which is one of the products compared.
+                Competitor details are taken from their public pricing pages, verified August 2026.
+              </p>
+            </div>
+
+            <h1 className="text-4xl lg:text-5xl font-extrabold mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
                 Whoza.ai vs Moneypenny{" "}
                 <span className="block text-emerald-400 mt-2">£59 AI vs £150+ Human Receptionists</span>
               </h1>
@@ -188,7 +196,7 @@ export default function VsMoneypennyPage() {
                   For their mid-tier packages (£250-400/month), the saving increases to £2,300-4,100/year.
                 </p>
                 <p className="text-white/50 text-sm mt-2">
-                  Source: Moneypenny pricing page, accessed May 2026. Prices approximate; exact quotes vary by call volume.
+                  Source: Moneypenny pricing page, accessed August 2026. Prices approximate; exact quotes vary by call volume.
                 </p>
               </div>
             </div>
@@ -224,7 +232,7 @@ export default function VsMoneypennyPage() {
               </table>
             </div>
             <p className="text-xs text-white/40 mt-4 text-center">
-              Data sourced from moneypenny.co.uk pricing page and whoza.ai pricing page, accessed May 2026. Moneypenny prices are indicative; exact quotes require consultation.
+              Data sourced from moneypenny.co.uk pricing page and whoza.ai pricing page, accessed August 2026. Moneypenny prices are indicative; exact quotes require consultation.
             </p>
           </section>
 
@@ -254,17 +262,7 @@ export default function VsMoneypennyPage() {
               </div>
             </div>
 
-            {/* Quote */}
-            <div className="bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-xl p-8">
-              <blockquote className="text-lg text-white/80 italic leading-relaxed mb-4">
-                "I used Moneypenny for three years. Great service, lovely people, but £220/month was eating 
-                into my margins. Switched to whoza.ai six months ago. Do I miss the human touch? Sometimes. 
-                But I'm saving £1,900/year and I haven't lost a single job because of it."
-              </blockquote>
-              <cite className="text-white/50 text-sm not-italic">
-                — Sarah K., heating engineer, Bristol (review from MoneySavingExpert forums, February 2026)
-              </cite>
-            </div>
+            {/* Quote removed — original attributed to Sarah K., heating engineer, Bristol (MoneySavingExpert forums, February 2026) without permalink */}
 
             {/* What You Actually Get */}
             <div>
@@ -294,7 +292,7 @@ export default function VsMoneypennyPage() {
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                "Comparison — May 2026",
+                "Comparison — August 2026",
                 "Pricing verified from competitor websites",
                 "Moneypenny: 25+ year UK brand",
                 "whoze.ai: AI-native, founded 2025",

@@ -88,10 +88,18 @@ export default function WhozaVsArrowPage() {
 
               <div className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 px-3 py-1 rounded-full text-xs font-medium mb-6">
                 <Star className="w-3 h-3" />
-                Comparison — June 2026
+                Comparison — August 2026
               </div>
 
-              <h1 className="text-4xl lg:text-5xl font-extrabold mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
+              {/* Publisher Disclosure */}
+            <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-4 mb-8">
+              <p className="text-sm text-amber-300">
+                <strong>Publisher note:</strong> This comparison is published by whoza.ai, which is one of the products compared.
+                Competitor details are taken from their public pricing pages, verified August 2026.
+              </p>
+            </div>
+
+            <h1 className="text-4xl lg:text-5xl font-extrabold mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
                 Whoza.ai vs ARROW
                 <span className="block text-emerald-400 mt-2">Honest Head-to-Head for UK Trades</span>
               </h1>
@@ -178,7 +186,7 @@ export default function WhozaVsArrowPage() {
               </table>
             </div>
             <p className="text-xs text-white/40 mt-4 text-center">
-              Data sourced from arrow.ai pricing page and whoza.ai pricing page, accessed June 2026. Prices subject to change.
+              Data sourced from arrow.ai pricing page and whoza.ai pricing page, accessed August 2026. Prices subject to change.
             </p>
           </section>
 
@@ -376,24 +384,14 @@ export default function WhozaVsArrowPage() {
               </div>
             </div>
 
-            {/* Quote */}
-            <div className="bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-xl p-8">
-              <blockquote className="text-lg text-white/80 italic leading-relaxed mb-4">
-                "I used ARROW for three months. It answered calls well, but I was still manually copying enquiry 
-                details into my calendar and chasing reviews. Switched to whoza.ai and the automation just clicked — 
-                WhatsApp delivery, auto calendar entries, and the review requests happen without me thinking about it."
-              </blockquote>
-              <cite className="text-white/50 text-sm not-italic">
-                — James T., heating engineer, Leeds (review posted on Trustpilot, April 2026)
-              </cite>
-            </div>
+            {/* Quote removed — original attributed to James T., heating engineer, Leeds (Trustpilot, April 2026) without permalink */}
           </section>
 
           {/* Trust badges */}
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                "Comparison — June 2026",
+                "Comparison — August 2026",
                 "Pricing verified from competitor websites",
                 "No affiliate links or paid placement",
                 "whoza.ai and ARROW both reviewed",

@@ -2,29 +2,29 @@ import { Metadata } from "next"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
-import { ArrowRight, Check, X, Clock, PoundSterling, Shield, AlertTriangle, Building, Globe, Scale } from "lucide-react"
+import { ArrowRight, Check, X, Clock, PoundSterling, Shield, AlertTriangle, Building } from "lucide-react"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 
 const faqs = [
   {
     question: "Is whoza.ai cheaper than Trade Receptionist?",
-    answer: "whoza.ai starts at £59/month. Trade Receptionist starts at £29/month (+VAT). However, Trade Receptionist charges per call while whoza.ai charges per minute - the same way the underlying infrastructure (Retell.ai + Twilio) is billed. At a realistic 4-minute average call, their £29 Starter plan costs more in infrastructure fees than they charge. Their 'unlimited calls' plan is mathematically unprofitable at realistic call durations.",
+    answer: "whoza.ai starts at £59/month with per-minute pricing. Trade Receptionist starts at £29/month (+VAT) with per-call pricing. The total cost depends on your call volume and average call length. Both offer free trials so you can compare real costs for your business.",
   },
   {
     question: "Does whoza.ai use real people or AI?",
-    answer: "whoza.ai uses AI voice agents (Katie and Mark) who answer calls 24/7. Trade Receptionist also uses AI voice agents powered by Retell.ai. Both services use AI - the difference is who built the platform and how it is priced.",
+    answer: "whoza.ai uses AI voice agents (Katie and Mark) who answer calls 24/7. Trade Receptionist also uses AI voice agents. Both services use AI — compare them with real calls during their free trials.",
   },
   {
     question: "Which is faster to set up?",
-    answer: "Trade Receptionist claims setup in under 14 minutes. whoza.ai is typically live in 30 minutes. Both are fast - the real difference is what you get: a custom platform built for UK trades vs a template-based workflow distributed through a course community.",
+    answer: "Trade Receptionist claims setup in under 14 minutes. whoza.ai is typically live in 30 minutes. Both are fast — the real difference is what you get on the other side.",
   },
   {
     question: "Why does whoza.ai charge per minute instead of per call?",
-    answer: "Because that is how the infrastructure costs work. Retell.ai and Twilio both charge per minute. Charging per call either subsidises long calls with short ones, or incentivises cutting calls short to control costs. Per-minute pricing is transparent and sustainable.",
+    answer: "Voice AI and telephony infrastructure is billed by the minute. We price the same way, so what you pay tracks what the call actually costs. Per-call pricing averages across short and long calls, which means the price you see is not the cost of your specific call.",
   },
   {
     question: "Can I cancel whoza.ai anytime?",
-    answer: "Yes. whoza.ai has no contracts - cancel anytime. Trade Receptionist also has no contract and offers a 14-day free trial with no card required.",
+    answer: "Yes. whoza.ai has no contracts — cancel anytime. Trade Receptionist also has no contract and offers a 14-day free trial with no card required.",
   },
 ]
 
@@ -34,20 +34,20 @@ export const revalidate = 3600
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Whoza.ai vs Trade Receptionist | UK Trades",
-  description: "Compare whoza.ai vs Trade Receptionist for UK trades. AI answers calls 24/7 from £59/month vs £150+ for human services. Features and compliance compared.",
+  description: "Compare whoza.ai vs Trade Receptionist for UK trades. AI answers calls 24/7 from £59/month. Pricing, features, and setup time compared.",
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "https://whoza.ai/vs-trade-receptionist",
     siteName: "Whoza.ai",
     title: "Whoza.ai vs Trade Receptionist: Which is Better for UK Trades?",
-    description: "Compare whoza.ai and Trade Receptionist for UK tradespeople. Honest comparison of pricing, setup, legal compliance, and platform quality.",
+    description: "Compare whoza.ai and Trade Receptionist for UK tradespeople. Honest comparison of pricing, setup, and features.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Whoza.ai vs Trade Receptionist comparison" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Whoza.ai vs Trade Receptionist: Which is Better for UK Trades?",
-    description: "Compare whoza.ai and Trade Receptionist for UK tradespeople. Honest comparison of pricing, setup, legal compliance, and platform quality.",
+    description: "Compare whoza.ai and Trade Receptionist for UK tradespeople. Honest comparison of pricing, setup, and features.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {
@@ -59,11 +59,8 @@ const comparisonData = [
   { feature: "Monthly Price", whoza: "£59 (Starter)", competitor: "£29 / £59 / £119 (+VAT)", winner: "draw" },
   { feature: "Setup Time", whoza: "30 minutes", competitor: "~14 minutes (their claim)", winner: "competitor" },
   { feature: "Delivery Method", whoza: "WhatsApp", competitor: "WhatsApp job summaries", winner: "draw" },
-  { feature: "Legal Entity", whoza: "UK Limited Company", competitor: "Australian Sole Trader", winner: "whoza" },
-  { feature: "T&Cs / Privacy Policy", whoza: "Present", competitor: "Missing / non-functional", winner: "whoza" },
-  { feature: "Pricing Model", whoza: "Per minute (matches infra cost)", competitor: "Per call (hides real cost)", winner: "whoza" },
+  { feature: "Pricing Model", whoza: "Per minute", competitor: "Per call", winner: "draw" },
   { feature: "Money-Back Guarantee", whoza: "30 days", competitor: "None stated", winner: "whoza" },
-  { feature: "Build Quality", whoza: "Custom platform", competitor: "n8n template from course", winner: "whoza" },
   { feature: "Free Trial", whoza: "7 days, no card", competitor: "14 days, no card", winner: "competitor" },
   { feature: "Contract", whoza: "None", competitor: "None", winner: "draw" },
 ]
@@ -72,7 +69,7 @@ const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Whoza.ai vs Trade Receptionist: Which Is Better for UK Trades?",
-  "description": "An honest comparison of two very different approaches to AI call handling. See pricing, setup time, legal compliance, and why the platform behind your calls matters.",
+  "description": "An honest comparison of two approaches to AI call handling. See pricing, setup time, features, and why the platform behind your calls matters.",
   "author": {
     "@type": "Person",
     "name": "Dru McPherson",
@@ -99,13 +96,10 @@ const itemListSchema = {
     { "@type": "ListItem", "position": 1, "name": "Monthly Price", "description": "Whoza.ai: £59 (Starter). Trade Receptionist: £29 / £59 / £119 (+VAT). Result: Draw." },
     { "@type": "ListItem", "position": 2, "name": "Setup Time", "description": "Whoza.ai: 30 minutes. Trade Receptionist: ~14 minutes (their claim). Result: Trade Receptionist." },
     { "@type": "ListItem", "position": 3, "name": "Delivery Method", "description": "Whoza.ai: WhatsApp. Trade Receptionist: WhatsApp job summaries. Result: Draw." },
-    { "@type": "ListItem", "position": 4, "name": "Legal Entity", "description": "Whoza.ai: UK Limited Company. Trade Receptionist: Australian Sole Trader. Result: Whoza." },
-    { "@type": "ListItem", "position": 5, "name": "T&Cs / Privacy Policy", "description": "Whoza.ai: Present. Trade Receptionist: Missing / non-functional. Result: Whoza." },
-    { "@type": "ListItem", "position": 6, "name": "Pricing Model", "description": "Whoza.ai: Per minute (matches infrastructure cost). Trade Receptionist: Per call (hides real cost). Result: Whoza." },
-    { "@type": "ListItem", "position": 7, "name": "Money-Back Guarantee", "description": "Whoza.ai: 30 days. Trade Receptionist: None stated. Result: Whoza." },
-    { "@type": "ListItem", "position": 8, "name": "Build Quality", "description": "Whoza.ai: Custom platform. Trade Receptionist: n8n template from course. Result: Whoza." },
-    { "@type": "ListItem", "position": 9, "name": "Free Trial", "description": "Whoza.ai: 7 days, no card. Trade Receptionist: 14 days, no card. Result: Trade Receptionist." },
-    { "@type": "ListItem", "position": 10, "name": "Contract", "description": "Whoza.ai: None. Trade Receptionist: None. Result: Draw." }
+    { "@type": "ListItem", "position": 4, "name": "Pricing Model", "description": "Whoza.ai: Per minute. Trade Receptionist: Per call. Result: Draw." },
+    { "@type": "ListItem", "position": 5, "name": "Money-Back Guarantee", "description": "Whoza.ai: 30 days. Trade Receptionist: None stated. Result: Whoza." },
+    { "@type": "ListItem", "position": 6, "name": "Free Trial", "description": "Whoza.ai: 7 days, no card. Trade Receptionist: 14 days, no card. Result: Trade Receptionist." },
+    { "@type": "ListItem", "position": 7, "name": "Contract", "description": "Whoza.ai: None. Trade Receptionist: None. Result: Draw." }
   ]
 }
 
@@ -141,13 +135,21 @@ export default function VsTradeReceptionistPage() {
               </ol>
             </nav>
 
+            {/* Publisher Disclosure */}
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-8">
+              <p className="text-sm text-amber-800">
+                <strong>Publisher note:</strong> This comparison is published by whoza.ai, which is one of the products compared.
+                Competitor details are taken from their public pricing pages, verified August 2026.
+              </p>
+            </div>
+
             <h1 className="text-4xl lg:text-5xl font-extrabold text-white mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
               Whoza.ai vs Trade Receptionist:<br />
               <span className="text-emerald-400">Which is Better for UK Trades?</span>
             </h1>
             <p className="text-lg text-slate-400 max-w-2xl mb-8">
-              An honest comparison of two very different approaches to AI call handling.
-              See pricing, setup time, legal compliance, and why the platform behind your calls matters.
+              An honest comparison of two approaches to AI call handling.
+              See pricing, setup time, features, and why the platform behind your calls matters.
             </p>
             <a href="/pricing" className="inline-flex items-center gap-2 bg-white text-slate-900 font-bold px-6 py-3 rounded-lg hover:shadow-lg transition-all">
               Try whoza.ai free for 7 days <ArrowRight className="w-4 h-4" />
@@ -254,60 +256,40 @@ export default function VsTradeReceptionistPage() {
               </div>
               <div className="mt-4 pt-4 border-t border-amber-100">
                 <p className="text-lg text-amber-900 font-semibold">
-                  At 4 minutes per call, their £29 Starter plan costs them ~£38 in Retell/Twilio fees.
-                  That is not a sustainable business - it is a loss leader.
+                  At 4 minutes per call on a £29 plan, per-call pricing means the provider must average costs across all customers. Per-minute pricing means you pay for exactly what you use.
                 </p>
               </div>
             </div>
 
-            <div className="space-y-4 text-amber-800">
+            <div className="space-y-4 text-slate-700">
               <p className="leading-relaxed">
-                <strong>Charging per call is a pricing trick.</strong> It hides the real cost from customers.
-                Short calls subsidise long calls. Or worse - calls are artificially cut short to control costs.
-                Neither is good for your business.
+                <strong>Why we charge per minute.</strong> Voice AI and telephony infrastructure is billed by the minute by the providers underneath every service in this category. We price the same way, so what you pay tracks what the call actually costs. Per-call pricing has to average across short and long calls, which means the price you see is not the cost of your specific call.
               </p>
               <p className="leading-relaxed">
-                <strong>whoza.ai charges per minute because that is what the infrastructure costs.</strong>
-                No tricks. Predictable margins. Predictable quality. You know exactly what you are paying for.
+                At a £59 starter plan and a typical 4-minute call, our margin does not depend on keeping your customer off the phone. Predictable pricing. Predictable quality.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Who Is Actually Behind Your Calls? */}
+        {/* Who's behind your calls */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h2 className="text-3xl font-bold text-slate-900 mb-6">Who Is Actually Behind Your Calls?</h2>
-          <p className="text-lg text-slate-600 mb-8">
-            Your business calls are handled by a voice AI. The legal entity backing that service matters if something goes wrong.
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-emerald-50 rounded-xl p-6 border border-emerald-100">
-              <div className="flex items-center gap-2 mb-4">
-                <Building className="w-6 h-6 text-emerald-600" />
-                <h3 className="text-xl font-bold text-emerald-900">Whoza.ai</h3>
-              </div>
-              <ul className="space-y-3 text-emerald-800">
-                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> UK Limited Company</li>
-                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> Full Terms & Conditions</li>
-                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> Privacy Policy (GDPR compliant)</li>
-                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> ICO registered (ZC077271)</li>
-                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> UK-based team</li>
-              </ul>
+          <h2 className="text-3xl font-bold text-slate-900 mb-6">Who's Behind Your Calls?</h2>
+          <div className="bg-emerald-50 rounded-xl p-6 border border-emerald-100 max-w-2xl">
+            <div className="flex items-center gap-2 mb-4">
+              <Building className="w-6 h-6 text-emerald-600" />
+              <h3 className="text-xl font-bold text-emerald-900">Whoza.ai</h3>
             </div>
-            <div className="bg-slate-50 rounded-xl p-6 border border-slate-200">
-              <div className="flex items-center gap-2 mb-4">
-                <Globe className="w-6 h-6 text-slate-500" />
-                <h3 className="text-xl font-bold text-slate-700">Trade Receptionist</h3>
-              </div>
-              <ul className="space-y-3 text-slate-600">
-                <li className="flex items-start gap-2"><Scale className="w-5 h-5 text-slate-400 shrink-0 mt-0.5" /> Australian sole trader (ABN 12 386 387 099)</li>
-                <li className="flex items-start gap-2"><X className="w-5 h-5 text-red-400 shrink-0 mt-0.5" /> No UK company at Companies House</li>
-                <li className="flex items-start gap-2"><X className="w-5 h-5 text-red-400 shrink-0 mt-0.5" /> No functional Terms & Conditions</li>
-                <li className="flex items-start gap-2"><X className="w-5 h-5 text-red-400 shrink-0 mt-0.5" /> Privacy Policy link missing / non-functional</li>
-                <li className="flex items-start gap-2"><Globe className="w-5 h-5 text-slate-400 shrink-0 mt-0.5" /> Based in Melbourne, VIC 3004</li>
-              </ul>
-            </div>
+            <p className="text-emerald-800 mb-4">
+              Whoza AI Ltd is a UK limited company registered in Scotland (SC874716), ICO-registered (ZC077271), with full Terms & Conditions, a UK GDPR-compliant privacy policy and a UK-based team. If something goes wrong, there is a UK entity accountable for it.
+            </p>
+            <ul className="space-y-3 text-emerald-800">
+              <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> UK Limited Company</li>
+              <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> Full Terms & Conditions</li>
+              <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> Privacy Policy (GDPR compliant)</li>
+              <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> ICO registered (ZC077271)</li>
+              <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> UK-based team</li>
+            </ul>
           </div>
         </section>
 
@@ -354,8 +336,7 @@ export default function VsTradeReceptionistPage() {
             <p className="text-slate-700 leading-relaxed">
               <strong>But here is what those 30 minutes build:</strong> a custom platform designed specifically for UK trades,
               with proper legal compliance, GDPR-compliant privacy policy,
-              and a UK-based team you can actually reach. Trade Receptionist is a Retell.ai + n8n + Twilio template
-              distributed through a Skool community (&quot;Brendan&apos;s AI Community&quot;). It is not a purpose-built platform.
+              and a UK-based team you can actually reach.
             </p>
           </div>
         </section>

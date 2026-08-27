@@ -357,6 +357,14 @@ export default function BestAICallHandlerPage() {
               </ol>
             </nav>
 
+            {/* Publisher Disclosure */}
+            <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-4 mb-8">
+              <p className="text-sm text-amber-300">
+                <strong>Publisher note:</strong> This comparison is published by whoza.ai, which is one of the products compared.
+                Competitor details are taken from their public pricing pages, verified August 2026.
+              </p>
+            </div>
+
             <h1 className="text-4xl lg:text-5xl font-extrabold text-white mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
               The Best AI Call Handler<br />
               <span className="text-emerald-400">for UK Tradespeople (2026)</span>
