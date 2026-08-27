@@ -310,7 +310,7 @@ export const trades: TradeData[] = [
     singular: "joiner",
     plural: "joiners",
     display: "Joiners & Carpenters",
-    headline: "AI Call Answering for Joiners & Carpenters UK — Never Miss a Job",
+    headline: "AI Call Answering for Joiners & Carpenters UK",
     subheadline: "Bespoke kitchens, fitted wardrobes, staircases, doors — customers call when they want quality woodwork. Katie answers every call, captures the project details, and sends them to your WhatsApp.",
     metaDescription: "AI call handling for UK joiners and carpenters. Katie answers 24/7, captures bespoke furniture, fitting, and renovation enquiries. WhatsApp alerts in 3 seconds. 7-day free trial.",
     problemStatements: [
