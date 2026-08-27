@@ -236,27 +236,26 @@ export default function VsTradeReceptionistPage() {
               <div>
                 <h3 className="text-xl font-bold text-amber-900 mb-2">The Infrastructure Charges Per Minute</h3>
                 <p className="text-amber-800 leading-relaxed">
-                  Both whoza.ai and Trade Receptionist use Retell.ai for voice AI and Twilio for telephony.
-                  Both of these services charge <strong>per minute</strong>. That is a fact.
+                  Voice AI and telephony infrastructure across the industry is billed by the minute. whoza.ai prices per minute so what you pay tracks what the call actually costs.
                 </p>
               </div>
             </div>
 
             <div className="bg-white rounded-lg p-6 border border-amber-100 mb-6">
-              <h4 className="font-bold text-slate-900 mb-4">The Math Does Not Lie</h4>
+              <h4 className="font-bold text-slate-900 mb-4">Why Per-Minute Pricing Works</h4>
               <div className="grid sm:grid-cols-2 gap-6">
                 <div>
-                  <p className="text-sm text-slate-600 mb-2">Trade Receptionist Starter Plan</p>
-                  <p className="text-2xl font-extrabold text-slate-700">£29 <span className="text-sm font-normal text-slate-500">/ month for 100 calls</span></p>
+                  <p className="text-sm text-slate-600 mb-2">Per-call pricing</p>
+                  <p className="text-2xl font-extrabold text-slate-700">Fixed <span className="text-sm font-normal text-slate-500">/ month for a call allowance</span></p>
                 </div>
                 <div>
-                  <p className="text-sm text-slate-600 mb-2">Infrastructure cost at 4 min/call</p>
-                  <p className="text-2xl font-extrabold text-red-600">~£38 <span className="text-sm font-normal text-slate-500">/ month in Retell + Twilio fees</span></p>
+                  <p className="text-sm text-slate-600 mb-2">Per-minute pricing</p>
+                  <p className="text-2xl font-extrabold text-emerald-600">Pay for use <span className="text-sm font-normal text-slate-500">/ only what you consume</span></p>
                 </div>
               </div>
               <div className="mt-4 pt-4 border-t border-amber-100">
                 <p className="text-lg text-amber-900 font-semibold">
-                  At 4 minutes per call on a £29 plan, per-call pricing means the provider must average costs across all customers. Per-minute pricing means you pay for exactly what you use.
+                  Per-call pricing means the provider must average costs across all customers. Per-minute pricing means you pay for exactly what you use.
                 </p>
               </div>
             </div>
@@ -380,7 +379,7 @@ export default function VsTradeReceptionistPage() {
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
           <h2 className="text-3xl font-bold text-slate-900 mb-4">Ready to stop missing calls?</h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-            Join hundreds of UK tradespeople who&apos;ve switched to whoza.ai.
+            Join UK tradespeople who&apos;ve switched to whoza.ai.
             Start your 7-day free trial - no credit card required.
           </p>
           <a href="/pricing" className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-emerald-700 transition-colors shadow-lg hover:shadow-xl">

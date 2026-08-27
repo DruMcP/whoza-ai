@@ -87,6 +87,12 @@ export default function AIVsVirtualReceptionistPage() {
               </ol>
             </nav>
 
+            <div className="bg-slate-800/50 rounded-lg p-4 mb-6 border border-slate-700/50">
+              <p className="text-sm text-slate-400">
+                <strong>Publisher note:</strong> This comparison is published by whoza.ai, which is one of the products compared. Competitor details are taken from their public pricing pages, verified August 2026.
+              </p>
+            </div>
+
             <h1 className="text-4xl lg:text-5xl font-extrabold text-white mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
               AI Receptionist vs{" "}<br />
               <span className="text-emerald-400">Virtual Receptionist: Which Is Best for UK Trades? (2026)</span>
@@ -218,7 +224,7 @@ export default function AIVsVirtualReceptionistPage() {
 
         {/* Cost Comparison Detail */}
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h2 className="text-3xl font-bold text-slate-900 mb-6">Cost Comparison: The Numbers Do Not Lie</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-6">Cost Comparison: 12 Months Side by Side</h2>
           <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-8">
             <p className="text-slate-600 mb-6">
               A full-time human receptionist in the UK costs between £20,000 and £30,000 per year in salary. But the true cost is much higher. Add National Insurance, pension contributions, recruitment fees, training, desk space, phone, computer, and software licences. The total first-year cost is £26,000 to £35,000.
@@ -408,7 +414,7 @@ export default function AIVsVirtualReceptionistPage() {
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-3xl font-bold text-slate-900 mb-4">Ready to switch to AI call handling?</h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-            Join hundreds of UK tradespeople saving £2,900+ per year with whoza.ai.
+            Join UK tradespeople saving £2,900+ per year with whoza.ai.
             7-day free trial — no credit card required.
           </p>
           <a href="/pricing" className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-emerald-700 transition-colors shadow-lg">
