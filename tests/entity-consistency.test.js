@@ -24,7 +24,8 @@ function findFiles(dir, ext) {
 describe("R7 Entity Consistency", () => {
   const appFiles = findFiles(path.join(process.cwd(), "app"), [".tsx", ".ts"]);
   const componentFiles = findFiles(path.join(process.cwd(), "components"), [".tsx", ".ts"]);
-  const allFiles = [...appFiles, ...componentFiles];
+  const libFiles = findFiles(path.join(process.cwd(), "lib"), [".tsx", ".ts"]);
+  const allFiles = [...appFiles, ...componentFiles, ...libFiles];
 
   test("R7.1 — no duplicate Organization nodes on any page", () => {
     const failures = [];
@@ -62,12 +63,23 @@ describe("R7 Entity Consistency", () => {
   });
 
   test("R7.3 — Organization sameAs has ≥4 entries", () => {
-    const orgFile = path.join(process.cwd(), "components", "whoza", "organization-schema.tsx");
-    const content = fs.readFileSync(orgFile, "utf8");
-    const sameAsMatch = content.match(/"sameAs":\s*\[([\s\S]*?)\]/);
+    const identityFile = path.join(process.cwd(), "lib", "seo", "identity.ts");
+    const content = fs.readFileSync(identityFile, "utf8");
+    const sameAsMatch = content.match(/export const ORG_SAME_AS = \[([\s\S]*?)\]/);
     expect(sameAsMatch).toBeTruthy();
     const entries = sameAsMatch[1].split(",").filter((s) => s.trim().startsWith("\""));
     expect(entries.length).toBeGreaterThanOrEqual(4);
+  });
+
+  test("R7.4 — no broken founder LinkedIn URL", () => {
+    const failures = [];
+    for (const file of allFiles) {
+      const content = fs.readFileSync(file, "utf8");
+      if (content.includes("linkedin.com/in/drumcpherson")) {
+        failures.push(file);
+      }
+    }
+    expect(failures).toEqual([]);
   });
 
   test("R7.5 — contact page LocalBusiness points at Tomintoul", () => {

@@ -1,3 +1,5 @@
+import { FOUNDER_SAME_AS } from "@/lib/seo/identity"
+
 export function HomepageSchema() {
   const graph = {
     "@context": "https://schema.org",
@@ -51,11 +53,11 @@ export function HomepageSchema() {
         "@type": "Person",
         "@id": "https://whoza.ai/#dru-mcpherson",
         "name": "Dru McPherson",
-        "jobTitle": "Founder",
+        "jobTitle": "Founder & CEO",
         "worksFor": { "@id": "https://whoza.ai/#organization" },
         "knowsAbout": ["Trade Business", "Plumbing", "AI Voice Agents", "Customer Service", "UK Tradespeople"],
         "description": "Dru McPherson is the founder of whoza.ai, a former trade business owner who built Katie the AI call handler for UK tradespeople.",
-        "sameAs": ["https://www.linkedin.com/in/drumcpherson"],
+        "sameAs": [...FOUNDER_SAME_AS],
         "url": "https://whoza.ai",
         "email": "support@whoza.ai"
       },

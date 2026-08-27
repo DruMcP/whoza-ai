@@ -9,7 +9,8 @@
  * change once a profile is confirmed live and owned by whoza.ai.
  */
 
-import { COMPANY } from "@/lib/company";
+import { COMPANY } from "@/lib/company"
+import { ORG_SAME_AS } from "@/lib/seo/identity"
 
 export const organizationSchemaObject = {
   "@type": "Organization",
@@ -43,13 +44,7 @@ export const organizationSchemaObject = {
       "value": "ZC077271",
     },
   ],
-  "founders": [
-    {
-      "@type": "Person",
-      "name": "Dru McPherson",
-      "jobTitle": "Founder & CEO",
-    },
-  ],
+  "founder": { "@id": "https://whoza.ai/#dru-mcpherson" },
   "numberOfEmployees": {
     "@type": "QuantitativeValue",
     "value": "5-10",
@@ -104,11 +99,5 @@ export const organizationSchemaObject = {
   //   - Instagram (same caveat — multiple handles referencing "whoza" were found;
   //     confirm which, if any, are genuinely owned before treating as a profile
   //     to add)
-  "sameAs": [
-    COMPANY.registerUrl,
-    "https://www.linkedin.com/company/whoza",
-    "https://www.facebook.com/profile.php?id=61586217731657",
-    "https://www.yell.com/biz/whoza-ai-ltd-perth-11011120/",
-    "https://www.g2.com/sellers/whoza-ai",
-  ],
+  "sameAs": [...ORG_SAME_AS],
 } as const
