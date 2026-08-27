@@ -7,7 +7,7 @@ import type { Metadata } from "next"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 
 export const metadata: Metadata = {
-  title: "Voice Agent Technology: State of the Art, Architecture & Future 2026 | whoza.ai",
+  title: "Voice Agent Technology: State of the Art 2026",
   description:
     "Technical deep-dive into voice AI architecture. End-to-end neural models, latency below 200ms, speech synthesis and barge-in handling. Download free.",
   keywords: [

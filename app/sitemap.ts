@@ -95,6 +95,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     pageUrl('/call-recording', 'app/call-recording/page.tsx', { changeFrequency: 'yearly', priority: 0.3 }),
     pageUrl('/best-ai-call-handler-uk-trades', 'app/best-ai-call-handler-uk-trades/page.tsx', { changeFrequency: 'monthly', priority: 0.8 }),
     pageUrl('/data', 'app/data/page.tsx', { changeFrequency: 'monthly', priority: 0.8 }),
+    pageUrl('/resources', 'app/resources/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
     pageUrl('/ai-vs-virtual-receptionist', 'app/ai-vs-virtual-receptionist/page.tsx', { changeFrequency: 'monthly', priority: 0.8 }),
   ]
 

@@ -135,7 +135,7 @@ export default function Home() {
             </p>
             <ul className="space-y-4">
               <li>
-                <a href="/tools/lost-jobs-calculator" className="font-semibold underline">
+                <a href="/missed-calls-cost-calculator" className="font-semibold underline">
                   Lost Jobs Calculator
                 </a>{" "}
                 — work out how many jobs a year you lose to unanswered calls, and what those missed
@@ -174,7 +174,7 @@ export default function Home() {
                   Missed Call Cost Calculator
                 </a>{" "}
                 — the original tool behind our{" "}
-                <a href="/research/cost-of-missed-calls-uk-trades-2026" className="underline">
+                <a href="/research/the-true-cost-of-missed-calls-2026" className="underline">
                   Cost of Missed Calls to UK Trades 2026
                 </a>{" "}
                 research.

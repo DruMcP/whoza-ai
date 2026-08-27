@@ -390,26 +390,6 @@ export default function AIVsVirtualReceptionistPage() {
         </section>
 
         {/* FAQ */}
-        <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
-          <div className="space-y-4">
-            {[
-              { q: "Will my customers be annoyed by speaking to AI?", a: "Modern AI voices are natural and professional. Most callers do not realise they are speaking to AI, and most appreciate the quick, efficient service. The alternative for most trades is voicemail or phone tag — both of which customers find far more frustrating." },
-              { q: "Can AI handle angry or emotional callers?", a: "Yes. AI is actually better suited to difficult callers than tired humans — it never gets frustrated, never raises its voice, and always remains professional. For genuinely complex situations, it can escalate to a callback from you." },
-              { q: "What if I already have a part-time receptionist?", a: "AI complements human receptionists perfectly. The human handles calls during work hours; the AI covers evenings, weekends, lunch breaks, and busy periods. Many businesses use both — the AI as backup and overflow coverage." },
-              { q: "Can the AI sound like someone from my local area?", a: "Yes. whoza.ai offers multiple voice options including regional accents. You can also customise the greeting, script, and tone to match your brand — whether that is formal and corporate or friendly and local." },
-              { q: "How quickly can I switch from voicemail to AI?", a: "Setup takes 30 minutes. You can go from missing calls to having an AI receptionist answering them in under an hour. The 7-day free trial lets you test before making any commitment." },
-              { q: "Is AI really cheaper than a human receptionist?", a: "Dramatically cheaper. A human receptionist costs £26,000-£35,000 in year one including salary, NI, pension, and overheads. AI costs £708-£4,788 per year. The savings are £21,000-£30,000 annually — enough for a new work van or a full marketing budget." },
-            ].map((faq, i) => (
-              <div key={i} className="bg-white rounded-xl border border-slate-200 shadow-sm p-6">
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">{faq.q}</h3>
-                <p className="text-slate-600">{faq.a}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* FAQ */}
         <section className="py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>

@@ -146,6 +146,18 @@ export default function ForBuilderLondonPage() {
             </div>
           </div>
         </section>
+        {/* ─── CITY HUB LINK ─── */}
+        <section className="py-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p className="text-white/60">
+              Also available across all trades in 
+              <a href="/london" className="text-emerald-400 hover:underline">
+                London
+              </a>
+            </p>
+          </div>
+        </section>
+
 
         <div className="section-divider" />
 

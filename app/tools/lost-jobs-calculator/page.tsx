@@ -57,7 +57,7 @@ export default function LostJobsCalculatorPage() {
             &mdash; a fuller model including seasonal call peaks.
           </li>
           <li>
-            <a href="/research/cost-of-missed-calls-uk-trades-2026" className="underline">
+            <a href="/research/the-true-cost-of-missed-calls-2026" className="underline">
               The cost of missed calls to UK trades (2026 research)
             </a>{" "}
             &mdash; the sourced data behind these figures.

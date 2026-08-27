@@ -49,7 +49,7 @@ export function LostJobsCalculator() {
     setJobValue(tradeDefaults[value].jobValue)
   }
 
-  const shareText = `I scored ${score}/100 on the Lost Jobs Calculator. I lose £${Math.round(annualLoss).toLocaleString()}/year to missed calls 😱 Check yours: whoza.ai/tools/lost-jobs-calculator`
+  const shareText = `I scored ${score}/100 on the Lost Jobs Calculator. I lose £${Math.round(annualLoss).toLocaleString()}/year to missed calls 😱 Check yours: whoza.ai/missed-calls-cost-calculator`
 
   return (
     <div className="min-h-screen bg-[var(--navy-900)] text-white">

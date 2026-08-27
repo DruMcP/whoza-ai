@@ -9,7 +9,7 @@ import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "AI Voice Agents in the UK Trades Sector: Research Report 2026 | whoza.ai",
+  title: "AI Voice Agents in UK Trades: Research Report 2026",
   description: "Research on AI voice agent adoption, missed call revenue loss and market trends in UK trades. Data from Gartner, McKinsey and BrightLocal.",
   alternates: {
     canonical: "https://whoza.ai/research/ai-voice-agents-uk-trades-2026",

@@ -9,7 +9,7 @@ import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "The True Cost of Missed Calls: UK Trades Industry Financial Impact Report 2026 | whoza.ai",
+  title: "True Cost of Missed Calls: UK Trades Impact Report 2026",
   description: "Research report quantifying the financial impact of missed calls on UK trade businesses. Data from Replicant AI, BT Business, EchoCall, IDC,.",
   alternates: {
     canonical: "https://whoza.ai/research/the-true-cost-of-missed-calls-2026",
