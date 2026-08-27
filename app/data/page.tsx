@@ -86,6 +86,21 @@ const governmentData = [
   { name: "DSIT Public Engagement Survey 2025/2026", url: "https://www.gov.uk/government/statistics/dsit-public-engagement-survey-20252026/dsit-public-engagement-survey-20252026", desc: "UK public awareness of, use of, and concerns about artificial intelligence." },
 ]
 
+const whozaClaims = [
+  {
+    claim: "Early access limited to 50 UK trade businesses",
+    where: "/signup, /about, /best-ai-call-handler-uk-trades",
+    status: "active",
+    note: "Hard cap. We close sign-ups at 50 so every customer gets a working setup. No upgrade pressure, no arbitrary expansion.",
+  },
+  {
+    claim: "Customer count not publicly stated",
+    where: "All pages",
+    status: "active",
+    note: "We do not publish a total customer number. The 50 cap is the only numerical claim we make about our user base.",
+  },
+]
+
 function StatusBadge({ status }: { status: string }) {
   if (status === "verified") {
     return <span className="inline-flex items-center gap-1 text-emerald-400 text-sm font-medium"><CheckCircle className="w-4 h-4" /> Verified</span>
@@ -269,6 +284,26 @@ export default function DataPage() {
                 ))}
               </tbody>
             </table>
+          </div>
+        </section>
+
+        {/* Whoza.ai Own Claims */}
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-white/10">
+          <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+            <Shield className="w-6 h-6 text-emerald-400" />
+            Whoza.ai — Our Own Claims
+          </h2>
+          <p className="text-white/70 mb-6">
+            We apply the same scrutiny to our own marketing that we apply to third-party sources. Every claim about our own business is listed here with its evidence status.
+          </p>
+          <div className="space-y-6">
+            {whozaClaims.map((item, i) => (
+              <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <h3 className="text-lg font-semibold text-white mb-2">{item.claim}</h3>
+                <p className="text-white/50 text-sm mb-2">Found on: {item.where}</p>
+                <p className="text-white/70">{item.note}</p>
+              </div>
+            ))}
           </div>
         </section>
 

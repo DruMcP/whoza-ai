@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { EARLY_ACCESS_CAP } from "@/lib/data/company"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { WaitlistForm } from "@/components/whoza/waitlist-form"
@@ -53,13 +54,13 @@ export default function SignupPage() {
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Phone className="w-4 h-4" />
-            Limited to 50 tradespeople — early access
+            Limited to {EARLY_ACCESS_CAP} tradespeople — early access
           </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4">
             Start your free trial
           </h1>
           <p className="text-slate-400 text-lg max-w-md mx-auto">
-            Limited to the first 50 tradespeople — get early access.
+            Limited to the first {EARLY_ACCESS_CAP} tradespeople — get early access.
           </p>
         </div>
 

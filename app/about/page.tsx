@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { EARLY_ACCESS_CAP } from "@/lib/data/company"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
@@ -176,7 +177,7 @@ export default function AboutPage() {
         <section className="text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Never Miss a Call Again?</h2>
           <p className="text-lg text-white/60 max-w-2xl mx-auto mb-8">
-            Join 50 UK tradespeople already using whoza.ai. 7-day free trial. No credit card required. 
+            Join {EARLY_ACCESS_CAP} UK tradespeople already using whoza.ai. 7-day free trial. No credit card required. 
             Setup takes 30 minutes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
