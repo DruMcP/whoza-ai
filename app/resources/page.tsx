@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { Footer } from "@/components/whoza/footer"
 import Link from "next/link"
 import { Calculator, ClipboardCheck, TrendingUp, ArrowRight } from "lucide-react"
@@ -43,6 +44,12 @@ export default function ResourcesPage() {
   return (
     <main className="min-h-screen bg-[var(--navy-950)] text-white">
       <Header />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", item: "https://whoza.ai" },
+          { name: "Resources", item: "https://whoza.ai/resources" },
+        ]}
+      />
 
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

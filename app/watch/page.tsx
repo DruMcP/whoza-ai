@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import Script from "next/script"
 import { Header } from "@/components/whoza/header"
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { Footer } from "@/components/whoza/footer"
 import { WatchPageClient } from "./watch-page-client"
 
@@ -144,6 +145,12 @@ export default function WatchPage() {
 
       <div className="min-h-screen bg-[var(--navy-900)] text-white">
         <Header />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", item: "https://whoza.ai" },
+          { name: "Watch", item: "https://whoza.ai/watch" },
+        ]}
+      />
         <main id="main-content">
           <WatchPageClient />
         </main>

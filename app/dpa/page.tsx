@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { Footer } from "@/components/whoza/footer"
 import { Shield, ExternalLink } from "lucide-react"
 
@@ -21,6 +22,12 @@ export default function DataProcessingAgreement() {
   return (
     <div className="min-h-screen bg-[var(--navy-900)] text-white">
       <Header />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", item: "https://whoza.ai" },
+          { name: "DPA", item: "https://whoza.ai/dpa" },
+        ]}
+      />
       
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="mb-12">

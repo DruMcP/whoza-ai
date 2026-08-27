@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { Footer } from "@/components/whoza/footer"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
@@ -37,6 +38,12 @@ export default function SampleCallPage() {
   return (
     <>
       <Header />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", item: "https://whoza.ai" },
+          { name: "Sample Call", item: "https://whoza.ai/sample-call" },
+        ]}
+      />
       <main className="min-h-screen bg-[var(--navy-900)] text-white pt-20 pb-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-3xl sm:text-4xl font-bold mb-6">Sample AI Call</h1>

@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { WaitlistForm } from "@/components/whoza/waitlist-form"
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { Phone } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -40,6 +41,12 @@ export default function SignupPage() {
   return (
     <div className="min-h-screen bg-[#0f172a] text-white">
       <Header />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", item: "https://whoza.ai" },
+          { name: "Sign Up", item: "https://whoza.ai/signup" },
+        ]}
+      />
 
       <main className="max-w-xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
         {/* Hero section */}

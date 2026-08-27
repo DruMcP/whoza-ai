@@ -321,14 +321,14 @@ export default function GoogleBusinessProfileChecklistPage() {
                 <CheckCircle className="w-4 h-4" />
                 Interactive Checklist
               </div>
-              <h2
+              <h1
                 className="text-4xl lg:text-5xl font-extrabold text-white mb-6"
                 style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}
               >
-                Google Business Profile
+                Google Business Profile{" "}
                 <br />
                 <span className="text-emerald-400">Checklist for UK Trades</span>
-              </h2>
+              </h1>
               <p className="text-lg text-slate-400 max-w-2xl mb-8">
                 A complete, step-by-step checklist to optimise your Google Business Profile and rank higher in local
                 search. Tick items off as you go — your progress saves automatically.

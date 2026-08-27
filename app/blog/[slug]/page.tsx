@@ -334,10 +334,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <h3 className="text-xl font-semibold text-white mb-3 mt-6">{section.heading}</h3>
               )}
 
-              <div
-                className="text-white/80 leading-relaxed whitespace-pre-line mb-4"
-                dangerouslySetInnerHTML={{ __html: formatText(section.body) }}
-              />
+              {section.body && (
+                <div
+                  className="text-white/80 leading-relaxed whitespace-pre-line mb-4"
+                  dangerouslySetInnerHTML={{ __html: formatText(section.body) }}
+                />
+              )}
 
               {section.table && section.table.length > 0 && (
                 <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden mb-6">

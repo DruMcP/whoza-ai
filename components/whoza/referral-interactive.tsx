@@ -1,0 +1,277 @@
+"use client"
+
+import { useState, useEffect } from "react"
+import { motion } from "framer-motion"
+import { Copy, Check, Gift, Users, TrendingUp, Share2, MessageCircle, Mail } from "lucide-react"
+import { trackCTA, trackEvent } from "@/lib/gtag"
+
+// Generate a consistent demo referral code for this browser
+function getOrCreateReferralCode(): string {
+  const stored = localStorage.getItem("whoza_referral_code")
+  if (stored) return stored
+  const code = Math.random().toString(36).substring(2, 6).toUpperCase() +
+               Math.random().toString(36).substring(2, 6).toUpperCase()
+  localStorage.setItem("whoza_referral_code", code)
+  return code
+}
+
+interface ReferralStats {
+  total: number
+  pending: number
+  signed_up: number
+  paid: number
+  rewarded: number
+  reward_months_earned: number
+}
+
+export function ReferralInteractive() {
+  const [referralCode, setReferralCode] = useState<string>("")
+  const [referralLink, setReferralLink] = useState<string>("")
+  const [copied, setCopied] = useState(false)
+  const [friendEmail, setFriendEmail] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
+  const [stats, setStats] = useState<ReferralStats | null>(null)
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    const code = getOrCreateReferralCode()
+    setReferralCode(code)
+    setReferralLink(`https://whoza.ai/?ref=${code}`)
+    setIsLoading(false)
+
+    // Try to fetch stats if we have a contractor_id in localStorage
+    const contractorId = localStorage.getItem("whoza_contractor_id")
+    if (contractorId) {
+      fetch(`/api/referral/stats?contractor_id=${contractorId}`)
+        .then(r => r.json())
+        .then(data => {
+          if (data.success) setStats(data.stats)
+        })
+        .catch(() => {/* ignore */})
+    }
+  }, [])
+
+  const handleCopyLink = async () => {
+    if (!referralLink) return
+    try {
+      await navigator.clipboard.writeText(referralLink)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+      trackEvent("referral_link_copied", { code: referralCode, location: "refer-page" })
+    } catch {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    }
+  }
+
+  const handleShareWhatsApp = () => {
+    if (!referralLink) return
+    const text = `Check out Whoza.ai — an AI receptionist that answers missed calls 24/7 and books jobs via WhatsApp. Use my link and your first paid month is free after the trial: ${referralLink}`
+    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank")
+    trackCTA("Share Referral WhatsApp", "refer-page")
+  }
+
+  const handleShareEmail = () => {
+    if (!referralLink) return
+    const subject = "Try Whoza.ai — AI receptionist for trades"
+    const body = `Hi,\n\nI thought you'd be interested in Whoza.ai — an AI receptionist that answers missed calls 24/7 and sends job details straight to WhatsApp.\n\nUse my referral link and your first paid month is free after the 7-day trial:\n${referralLink}\n\nCheers!`
+    window.open(`mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, "_blank")
+    trackCTA("Share Referral Email", "refer-page")
+  }
+
+  const handleSubmitFriendEmail = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!friendEmail || !referralCode) return
+
+    setIsSubmitting(true)
+    setSubmitStatus("idle")
+
+    try {
+      const response = await fetch("/api/referral/create", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          code: referralCode,
+          email: friendEmail,
+          source: "refer-page",
+        }),
+      })
+
+      const data = await response.json()
+
+      if (data.success || data.message?.includes("already been referred")) {
+        setSubmitStatus("success")
+        setFriendEmail("")
+        trackEvent("referral_email_sent", { code: referralCode })
+      } else {
+        setSubmitStatus("error")
+      }
+    } catch {
+      setSubmitStatus("error")
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  if (isLoading) {
+    return (
+      <div className="py-16 bg-[var(--off-white)]">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="animate-pulse h-8 bg-gray-200 rounded w-1/3 mx-auto mb-4" />
+          <div className="animate-pulse h-4 bg-gray-200 rounded w-1/2 mx-auto" />
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <>
+      {/* Referral Link Section */}
+      <div className="py-16 bg-[var(--off-white)]">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-2xl p-8 shadow-lg border border-[var(--border)]"
+          >
+            <h2 className="text-2xl font-bold text-[var(--navy-900)] mb-2 text-center">
+              Your Referral Link
+            </h2>
+            <p className="text-[var(--slate-500)] text-center mb-6">
+              Share this link with other tradespeople
+            </p>
+
+            <div className="space-y-4">
+              <div className="flex gap-2">
+                <div className="flex-1 px-4 py-3 rounded-lg border border-[var(--border)] bg-[var(--off-white)] text-[var(--navy-900)] font-mono text-sm break-all">
+                  {referralLink || "Loading..."}
+                </div>
+                <button
+                  onClick={handleCopyLink}
+                  className="px-4 py-3 bg-[var(--navy-900)] text-white font-medium rounded-lg hover:bg-[var(--navy-800)] transition-colors"
+                  aria-label="Copy referral link"
+                >
+                  {copied ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
+                </button>
+              </div>
+
+              {/* Share Buttons */}
+              <div className="flex gap-3 justify-center">
+                <button
+                  onClick={handleShareWhatsApp}
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366]/20 transition-colors font-medium"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  WhatsApp
+                </button>
+                <button
+                  onClick={handleShareEmail}
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/20 transition-colors font-medium"
+                >
+                  <Mail className="w-4 h-4" />
+                  Email
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Send to a Friend */}
+      <div className="py-16 bg-white">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-[var(--navy-900)] rounded-2xl p-8 text-white"
+          >
+            <h2 className="text-2xl font-bold mb-2 text-center">Send to a Friend</h2>
+            <p className="text-white/70 text-center mb-6">
+              Enter your friend's email and we'll send them an invitation with your referral code.
+            </p>
+
+            <form onSubmit={handleSubmitFriendEmail} className="space-y-4">
+              <div className="flex gap-2">
+                <input
+                  type="email"
+                  value={friendEmail}
+                  onChange={(e) => setFriendEmail(e.target.value)}
+                  placeholder="friend@example.com"
+                  required
+                  className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-[var(--rex-green)]"
+                />
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="px-6 py-3 bg-[var(--rex-green)] text-white font-medium rounded-lg hover:bg-[var(--rex-green-hover)] transition-colors disabled:opacity-50"
+                >
+                  {isSubmitting ? "Sending..." : "Send"}
+                </button>
+              </div>
+
+              {submitStatus === "success" && (
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="text-[var(--rex-green)] text-sm text-center"
+                >
+                  Invitation sent successfully!
+                </motion.p>
+              )}
+              {submitStatus === "error" && (
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="text-red-400 text-sm text-center"
+                >
+                  Something went wrong. Please try again.
+                </motion.p>
+              )}
+            </form>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Stats Section */}
+      {stats && (
+        <div className="py-16 bg-[var(--off-white)]">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-2xl font-bold text-[var(--navy-900)] mb-6 text-center">
+                Your Referral Stats
+              </h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {[
+                  { label: "Total Referrals", value: stats.total, icon: Users, key: "total" },
+                  { label: "Signed Up", value: stats.signed_up, icon: TrendingUp, key: "signed_up" },
+                  { label: "Paid", value: stats.paid, icon: Check, key: "paid" },
+                  { label: "Free Months Earned", value: stats.reward_months_earned, icon: Gift, key: "rewarded" },
+                ].map((stat, index) => (
+                  <motion.div
+                    key={stat.key}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="bg-white rounded-xl p-6 text-center border border-[var(--border)]"
+                  >
+                    <stat.icon className="w-6 h-6 text-[var(--rex-green)] mx-auto mb-2" />
+                    <div className="text-3xl font-bold text-[var(--navy-900)]">{stat.value}</div>
+                    <div className="text-sm text-[var(--slate-500)]">{stat.label}</div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      )}
+    </>
+  )
+}
