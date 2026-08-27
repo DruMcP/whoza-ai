@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "whoza.ai" }],
   openGraph: {
-    title: "Voice Agent Technology: State of the Art, Architecture & Future 2026",
+    title: "Voice Agent Technology: State of the Art 2026",
     description:
       "Technical deep-dive into voice AI architecture. End-to-end neural models, latency below 200ms, speech synthesis and barge-in handling. Download free.",
     url: "https://whoza.ai/research/voice-agent-technology-state-of-art-2026",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Voice Agent Technology: State of the Art, Architecture & Future 2026",
+    title: "Voice Agent Technology: State of the Art 2026",
     description:
       "Technical deep-dive into voice AI architecture. End-to-end neural models, latency below 200ms, speech synthesis and barge-in handling. Download free.",
     images: ["https://whoza.ai/og-image.webp"],

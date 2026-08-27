@@ -1,3 +1,4 @@
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { Metadata } from "next"
 import { EmergencyPricingCalculator } from "@/components/tools/emergency-pricing"
 
@@ -28,5 +29,16 @@ export const metadata: Metadata = {
 export const revalidate = 3600
 
 export default function EmergencyPricingPage() {
-  return <EmergencyPricingCalculator />
+  return (
+    <>
+      <BreadcrumbSchema items={[
+
+        { name: "Home", item: "https://whoza.ai" },
+        { name: "Tools", item: "https://whoza.ai/tools" },
+        { name: "Emergency Pricing", item: "https://whoza.ai/tools/emergency-pricing" },
+      
+      ]} />
+      <EmergencyPricingCalculator />
+    </>
+  )
 }

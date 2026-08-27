@@ -72,7 +72,6 @@ export default function AboutPage() {
         { name: "Home", item: "https://whoza.ai" },
         { name: "About", item: "https://whoza.ai/about" },
       ]} />
-
       <main id="main-content" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         {/* Brand Identity Block */}
         <section className="mb-20">

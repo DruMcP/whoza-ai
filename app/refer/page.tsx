@@ -1,3 +1,4 @@
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import type { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
@@ -19,6 +20,10 @@ export const metadata: Metadata = {
 export default function ReferPage() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: "Home", item: "https://whoza.ai" },
+        { name: "Refer a Trade", item: "https://whoza.ai/refer" },
+      ]} />
       <Header />
       <main id="main-content" role="main">
         <ReferralClient />

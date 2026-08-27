@@ -1,3 +1,4 @@
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { Metadata } from "next"
 import { RateChecker } from "@/components/tools/rate-checker"
 
@@ -28,5 +29,16 @@ export const metadata: Metadata = {
 export const revalidate = 3600
 
 export default function RateCheckerPage() {
-  return <RateChecker />
+  return (
+    <>
+      <BreadcrumbSchema items={[
+
+        { name: "Home", item: "https://whoza.ai" },
+        { name: "Tools", item: "https://whoza.ai/tools" },
+        { name: "Rate Checker", item: "https://whoza.ai/tools/rate-checker" },
+      
+      ]} />
+      <RateChecker />
+    </>
+  )
 }

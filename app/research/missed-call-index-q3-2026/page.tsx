@@ -1,3 +1,4 @@
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { PreferredSourceButton } from "@/components/whoza/preferred-source-button"
 import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"

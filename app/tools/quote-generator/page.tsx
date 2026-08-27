@@ -1,3 +1,4 @@
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { Metadata } from "next"
 import { QuoteGenerator } from "@/components/tools/quote-generator"
 
@@ -28,5 +29,16 @@ export const metadata: Metadata = {
 export const revalidate = 3600
 
 export default function QuoteGeneratorPage() {
-  return <QuoteGenerator />
+  return (
+    <>
+      <BreadcrumbSchema items={[
+
+        { name: "Home", item: "https://whoza.ai" },
+        { name: "Tools", item: "https://whoza.ai/tools" },
+        { name: "Quote Generator", item: "https://whoza.ai/tools/quote-generator" },
+      
+      ]} />
+      <QuoteGenerator />
+    </>
+  )
 }

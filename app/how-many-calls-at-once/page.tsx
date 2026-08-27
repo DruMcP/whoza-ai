@@ -6,14 +6,14 @@ import { Phone, ArrowRight, Check } from "lucide-react"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "How Many Calls Can whoza.ai Handle at Once? | Concurrent Limits",
+  title: "How Many Calls Can whoza.ai Handle at Once?",
   description: "Honest answer: Starter = 1 call, Growth = 2, Pro = 3, Scale = 5. No hidden limits. No unexpected charges. See exactly what you get with whoza.ai.",
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "https://whoza.ai/how-many-calls-at-once",
     siteName: "Whoza.ai",
-    title: "How Many Calls Can whoza.ai Handle at Once? | Concurrent Limits",
+    title: "How Many Calls Can whoza.ai Handle at Once?",
     description: "Honest answer: Starter = 1 call, Growth = 2, Pro = 3, Scale = 5. No hidden limits. No unexpected charges. See exactly what you get with whoza.ai.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Whoza.ai Concurrent Call Limits" }],
   },

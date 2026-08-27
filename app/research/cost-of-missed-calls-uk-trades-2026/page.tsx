@@ -1,3 +1,4 @@
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { PreferredSourceButton } from "@/components/whoza/preferred-source-button"
 import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Cost of Missed Calls for UK Trades 2026 | whoza.ai Research",
   description: "Research quantifying the financial impact of missed calls on UK trades businesses in 2026. Data, methodology, and citations.",
-  alternates: { canonical: "https://whoza.ai/research/cost-of-missed-calls-uk-trades-2026" },
+  alternates: { canonical: "https://whoza.ai/research/the-true-cost-of-missed-calls-2026" },
   robots: { index: true, follow: true },
 }
 

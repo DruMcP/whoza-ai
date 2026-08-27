@@ -1,3 +1,4 @@
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { Metadata } from "next"
 import { LostJobsCalculator } from "@/components/tools/lost-jobs-calculator"
 
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Lost Jobs Calculator UK | See What Missed Calls Cost You | whoza.ai",
     description: "Free calculator for UK tradespeople. Enter your missed calls per week and see exactly how much revenue you're losing. ONS data backed.",
-    url: "https://whoza.ai/tools/lost-jobs-calculator",
+    url: "https://whoza.ai/missed-calls-cost-calculator",
     siteName: "Whoza.ai",
     locale: "en_GB",
     type: "website",
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {
-    canonical: "https://whoza.ai/tools/lost-jobs-calculator",
+    canonical: "https://whoza.ai/missed-calls-cost-calculator",
   },
 }
 

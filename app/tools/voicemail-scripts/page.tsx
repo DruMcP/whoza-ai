@@ -1,3 +1,4 @@
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { Metadata } from "next"
 import { VoicemailScriptGenerator } from "@/components/tools/voicemail-scripts"
 
@@ -28,5 +29,16 @@ export const metadata: Metadata = {
 export const revalidate = 3600
 
 export default function VoicemailScriptsPage() {
-  return <VoicemailScriptGenerator />
+  return (
+    <>
+      <BreadcrumbSchema items={[
+
+        { name: "Home", item: "https://whoza.ai" },
+        { name: "Tools", item: "https://whoza.ai/tools" },
+        { name: "Voicemail Scripts", item: "https://whoza.ai/tools/voicemail-scripts" },
+      
+      ]} />
+      <VoicemailScriptGenerator />
+    </>
+  )
 }

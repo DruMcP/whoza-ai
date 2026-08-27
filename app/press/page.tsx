@@ -1,3 +1,4 @@
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
@@ -24,6 +25,10 @@ export const revalidate = 3600
 export default function PressPage() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: "Home", item: "https://whoza.ai" },
+        { name: "Press", item: "https://whoza.ai/press" },
+      ]} />
       <Header />
       <main className="min-h-screen bg-black text-white">
         <article className="max-w-4xl mx-auto px-6 py-16">
@@ -119,7 +124,7 @@ export default function PressPage() {
                 <p className="text-sm text-white/70 mb-3">estimated annual revenue lost to missed calls across UK trades</p>
                 <a href="/research/missed-call-index-q3-2026" className="flex items-start gap-2 text-xs text-white/40 hover:text-emerald-400 transition-colors">
                   <ExternalLink className="w-3 h-3 mt-0.5 shrink-0" />
-                  <span>Source: whoza.ai research, 2026</span>
+                  <span>Source: whoza.ai research, 2026 — 885,000 UK trade SMEs × £2,600 avg annual loss</span>
                 </a>
               </div>
 

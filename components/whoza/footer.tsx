@@ -23,6 +23,10 @@ const footerLinks = {
     { label: "Email Support", href: "mailto:support@whoza.ai" },
   ],
   company: [
+    { label: "About", href: "/about" },
+    { label: "Trust & Security", href: "/trust" },
+    { label: "Integrations", href: "/integrations" },
+    { label: "Voice Accents", href: "/accents" },
     { label: "Blog", href: "/blog" },
     { label: "Case Studies", href: "/case-studies" },
     { label: "Watch Demo", href: "/watch" },
@@ -62,6 +66,10 @@ const footerLinks = {
     { label: "Call Recording", href: "/call-recording" },
     { label: "SLA", href: "/sla" },
     { label: "Refund Policy", href: "/refund-policy" },
+    { label: "Modern Slavery Statement", href: "/modern-slavery" },
+    { label: "Accessibility", href: "/accessibility" },
+    { label: "VAT Information", href: "/vat-info" },
+    { label: "Complaints", href: "/complaints" },
     { label: "Cookie Settings", href: "#", onClick: () => { window.dispatchEvent(new CustomEvent('openCookieConsent')); } },
   ],
 }
