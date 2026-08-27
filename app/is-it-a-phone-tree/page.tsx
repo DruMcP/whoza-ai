@@ -52,7 +52,7 @@ export default function IsItAPhoneTreePage() {
             Objection Answered
           </div>
           <h1 className="text-4xl lg:text-5xl font-bold mb-6" style={{ lineHeight: 1.1 }}>
-            Is It a Phone Tree?<br />
+            Is It a Phone Tree?{" "}<br />
             <span className="text-emerald-400">No. Here's What Actually Happens.</span>
           </h1>
           <p className="text-lg text-white/60 max-w-2xl">

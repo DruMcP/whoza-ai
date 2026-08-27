@@ -102,7 +102,7 @@ export function WatchPageClient() {
               60-Second Demo
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-              Watch Whoza Capture Every
+              Watch Whoza Capture Every{" "}
               <br />
               <span className="text-[var(--rex-green)]">Missed Enquiry</span>
             </h1>

@@ -101,7 +101,7 @@ export default function MissedCallsCostPage() {
               </div>
 
               <h1 className="text-4xl lg:text-5xl font-extrabold mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
-                How Much Do Missed Calls
+                How Much Do Missed Calls{" "}
                 <span className="block text-red-400 mt-2">Actually Cost UK Trades?</span>
               </h1>
 

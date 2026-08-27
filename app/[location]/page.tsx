@@ -32,6 +32,7 @@ import { StickyCTA, FloatingChatWidget } from "@/components/whoza/sticky-cta"
 import { LocaleProvider } from "@/lib/locale-context"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 import { locations, getLocationBySlug } from "@/lib/locations"
+import { TRADE_CITY_PAGES } from "@/lib/trade-city-pages"
 import { VideoSchema } from "@/components/whoza/schema-markup"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 
@@ -295,23 +296,33 @@ export default async function LocationPage({ params }: PageProps) {
               Whatever your trade, Katie&apos;s got you covered in {locationData.city}.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              <a href="/for-plumbers" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Plumbers</a>
-              <a href="/for-electricians" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Electricians</a>
-              <a href="/for-gas-engineers" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Gas Engineers</a>
-              <a href="/for-builders" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Builders</a>
-              <a href="/for-roofers" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Roofers</a>
-              <a href="/for-locksmiths" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Locksmiths</a>
-              <a href="/for-joiners" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Joiners</a>
-              <a href="/for-heating-engineers" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Heating Engineers</a>
-              <a href="/for-painters-decorators" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Painters & Decorators</a>
-              <a href="/for-carpenters" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Carpenters</a>
-              <a href="/for-cleaners" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Cleaners</a>
-              <a href="/for-drainage" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Drainage</a>
-              <a href="/for-handymen" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Handymen</a>
-              <a href="/for-landscapers" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Landscapers</a>
-              <a href="/for-pest-control" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Pest Control</a>
-              <a href="/for-plasterers" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Plasterers</a>
-              <a href="/for-tilers" className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">Tilers</a>
+              {[
+                { slug: "for-plumbers", label: "Plumbers" },
+                { slug: "for-electricians", label: "Electricians" },
+                { slug: "for-gas-engineers", label: "Gas Engineers" },
+                { slug: "for-builders", label: "Builders" },
+                { slug: "for-roofers", label: "Roofers" },
+                { slug: "for-locksmiths", label: "Locksmiths" },
+                { slug: "for-joiners", label: "Joiners" },
+                { slug: "for-heating-engineers", label: "Heating Engineers" },
+                { slug: "for-painters-decorators", label: "Painters & Decorators" },
+                { slug: "for-carpenters", label: "Carpenters" },
+                { slug: "for-cleaners", label: "Cleaners" },
+                { slug: "for-drainage", label: "Drainage" },
+                { slug: "for-handymen", label: "Handymen" },
+                { slug: "for-landscapers", label: "Landscapers" },
+                { slug: "for-pest-control", label: "Pest Control" },
+                { slug: "for-plasterers", label: "Plasterers" },
+                { slug: "for-tilers", label: "Tilers" },
+              ].map((trade) => {
+                const hasCityPage = TRADE_CITY_PAGES[trade.slug]?.includes(location)
+                const href = hasCityPage ? `/${trade.slug}-${location}` : `/${trade.slug}`
+                return (
+                  <a key={trade.slug} href={href} className="inline-block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/70 hover:text-white transition-all">
+                    {trade.label}
+                  </a>
+                )
+              })}
             </div>
           </div>
         </section>

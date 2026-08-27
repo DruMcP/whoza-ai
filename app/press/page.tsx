@@ -117,7 +117,7 @@ export default function PressPage() {
               <div className="bg-white/5 border border-white/10 rounded-xl p-6">
                 <div className="text-4xl font-extrabold text-emerald-400 mb-2">£2.3bn</div>
                 <p className="text-sm text-white/70 mb-3">estimated annual revenue lost to missed calls across UK trades</p>
-                <a href="/research/the-true-cost-of-missed-calls-2026" className="flex items-start gap-2 text-xs text-white/40 hover:text-emerald-400 transition-colors">
+                <a href="/research/missed-call-index-q3-2026" className="flex items-start gap-2 text-xs text-white/40 hover:text-emerald-400 transition-colors">
                   <ExternalLink className="w-3 h-3 mt-0.5 shrink-0" />
                   <span>Source: whoza.ai research, 2026</span>
                 </a>
@@ -190,7 +190,7 @@ export default function PressPage() {
                 </p>
                 <p>
                   The company's research arm has since published independent studies quantifying the 
-                  <a href="/research/the-true-cost-of-missed-calls-2026" className="text-emerald-400 hover:underline"> £2.3 billion annual cost of missed calls to UK trades</a>, 
+                  <a href="/research/missed-call-index-q3-2026" className="text-emerald-400 hover:underline"> £2.3 billion annual cost of missed calls to UK trades</a>, 
                   drawing on data from the Office for National Statistics, the Federation of Small Businesses, and direct market analysis.
                 </p>
               </div>

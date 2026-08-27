@@ -92,7 +92,7 @@ export default function AboutPage() {
               "I lost an £8,000 job because I was up a ladder. That was the moment I knew there had to be a better way."
             </blockquote>
             <cite className="text-white/50 not-italic">
-              — Dru McPherson, Founder
+              — Dru McPherson, Founder & CEO
             </cite>
           </div>
           <p className="text-lg text-white/60 max-w-3xl leading-relaxed">

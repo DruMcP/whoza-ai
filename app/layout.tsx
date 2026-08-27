@@ -64,11 +64,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://whoza.ai',
-    languages: {
-      'x-default': 'https://whoza.ai',
-      'en-GB': 'https://whoza.ai',
-      'en-US': 'https://whoza.ai',
-    },
   },
   verification: {
     google: 'HcL1Z5FshVtABkMZHyWoQMPp9Qyd7raEUoWi3_15S3U',

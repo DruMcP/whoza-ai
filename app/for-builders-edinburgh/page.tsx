@@ -71,8 +71,9 @@ export default function ForBuilderEdinburghPage() {
       <Header />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
+        { name: "Edinburgh", item: "https://whoza.ai/edinburgh" },
         { name: "For Builders", item: "https://whoza.ai/for-builders" },
-        { name: "Edinburgh", item: "https://whoza.ai/for-builders-edinburgh" },
+        { name: "Builders in Edinburgh", item: "https://whoza.ai/for-builders-edinburgh" },
       ]} />
       <div>
       <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />

@@ -71,8 +71,9 @@ export default function ForHeatingEngineerEdinburghPage() {
       <Header />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
+        { name: "Edinburgh", item: "https://whoza.ai/edinburgh" },
         { name: "For Heating Engineers", item: "https://whoza.ai/for-heating-engineers" },
-        { name: "Edinburgh", item: "https://whoza.ai/for-heating-engineers-edinburgh" },
+        { name: "Heating Engineers in Edinburgh", item: "https://whoza.ai/for-heating-engineers-edinburgh" },
       ]} />
       <div>
       <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />

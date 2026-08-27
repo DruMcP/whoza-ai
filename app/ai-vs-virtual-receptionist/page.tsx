@@ -88,7 +88,7 @@ export default function AIVsVirtualReceptionistPage() {
             </nav>
 
             <h1 className="text-4xl lg:text-5xl font-extrabold text-white mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
-              AI Receptionist vs<br />
+              AI Receptionist vs{" "}<br />
               <span className="text-emerald-400">Virtual Receptionist: Which Is Best for UK Trades? (2026)</span>
             </h1>
             <p className="text-lg text-slate-400 max-w-2xl mb-8">

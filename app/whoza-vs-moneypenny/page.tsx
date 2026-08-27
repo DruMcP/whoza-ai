@@ -89,7 +89,7 @@ export default function VsMoneypennyPage() {
               </div>
 
               <h1 className="text-4xl lg:text-5xl font-extrabold mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
-                Whoza.ai vs Moneypenny
+                Whoza.ai vs Moneypenny{" "}
                 <span className="block text-emerald-400 mt-2">£59 AI vs £150+ Human Receptionists</span>
               </h1>
 

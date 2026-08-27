@@ -33,16 +33,6 @@ export const metadata: Metadata = {
   },
 }
 
-const cityDescriptions: Record<string, string> = {
-  london: "London's 32,000+ trade businesses face fierce competition — 15+ plumbers per postcode in some areas. Katie ensures you never lose a job to a competitor while you're stuck on the North Circular.",
-  manchester: "From Salford Quays to Didsbury, Manchester tradespeople deal with storm-driven call spikes and student housing turnover. Katie answers every call so you can focus on the job.",
-  birmingham: "Covering Edgbaston to Solihull, Birmingham's 11,000+ trade businesses span vast suburban areas. Katie captures enquiries while you're driving between the 1930s semis and new-build apartments.",
-  leeds: "From Headingley's student terraces to Roundhay's family homes, Leeds tradespeople handle Victorian wiring and Yorkshire weather. Katie never misses a call, even when you're in a crawl space.",
-  glasgow: "Tenement emergencies in Partick, West End renter callouts, and harsh winter boiler breakdowns — Glasgow tradespeople need 24/7 coverage. Katie handles it all, from Govan to Shawlands.",
-  bristol: "Clifton's heat pump installations to Bedminster's renovations, Bristol tradespeople serve eco-conscious homeowners and listed buildings. Katie answers with the professionalism your customers expect.",
-  liverpool: "From Aigburth's student rentals to Woolton's Victorian terraces, Liverpool tradespeople battle coastal weather and regeneration demand. Katie captures every enquiry across Merseyside.",
-  edinburgh: "Georgian New Town emergencies, Festival season venue maintenance, and Portobello rental turnovers — Edinburgh trades need reliable call answering. Katie delivers, from Leith to Morningside.",
-}
 
 export const revalidate = 3600
 
@@ -98,7 +88,7 @@ export default function LocationsPage() {
                 <ArrowRight className="w-5 h-5 text-white/30 group-hover:text-white/60 group-hover:translate-x-1 transition-all" />
               </div>
               <p className="text-white/60 text-sm leading-relaxed mb-4">
-                {cityDescriptions[city.slug]}
+                {city.description}
               </p>
               <div className="flex flex-wrap gap-2">
                 {city.trades?.slice(0, 3).map(trade => (

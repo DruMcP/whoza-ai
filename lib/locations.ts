@@ -58,7 +58,7 @@ export const locations: LocationData[] = [
     lng: "-0.1278",
     trades: ["plumbers", "electricians", "builders"],
     population: "8.9M",
-    description: "London has 35,000+ trade businesses serving 3.5M households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",
+    description: "London has 32,000+ trade businesses serving 3.5M households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",
     challenges: [
       "High competition — 15+ plumbers per postcode in central London",
       "Emergency calls peak during commute hours when you're on the road",
@@ -126,7 +126,7 @@ export const locations: LocationData[] = [
     lng: "-2.2426",
     trades: ["plumbers", "electricians", "roofers"],
     population: "2.8M",
-    description: "Manchester has 10,000+ trade businesses serving 550K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",
+    description: "Manchester has 8,500+ trade businesses serving 550K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",
     challenges: [
       "Rapid property development creates surge demand for trades",
       "Weather emergencies (storms, flooding) cause call spikes",
@@ -262,7 +262,7 @@ export const locations: LocationData[] = [
     lng: "-1.5491",
     trades: ["electricians", "roofers", "landscapers"],
     population: "2.3M",
-    description: "Leeds has 8,500+ trade businesses serving 350K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59. Try free.",
+    description: "Leeds has 6,000+ trade businesses serving 350K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59. Try free.",
     challenges: [
       "Victorian wiring in older terraces needs specialist electricians",
       "Yorkshire weather puts constant demand on roofers",
@@ -330,7 +330,7 @@ export const locations: LocationData[] = [
     lng: "-4.2518",
     trades: ["plumbers", "builders", "electricians"],
     population: "1.7M",
-    description: "Glasgow has 9,000+ trade businesses serving 300K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",
+    description: "Glasgow has 5,500+ trade businesses serving 300K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",
     challenges: [
       "Tenement buildings have shared systems — emergencies affect multiple flats",
       "Harsh winters cause boiler and heating emergencies to spike",
@@ -398,7 +398,7 @@ export const locations: LocationData[] = [
     lng: "-2.5879",
     trades: ["plumbers", "electricians", "builders"],
     population: "700K",
-    description: "Bristol has 8,000+ trade businesses serving 460K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",
+    description: "Bristol has 4,800+ trade businesses serving 460K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",
     challenges: [
       "Hills and narrow streets make travel between jobs time-consuming",
       "Eco-conscious customers ask about energy-efficient solutions",
@@ -466,7 +466,7 @@ export const locations: LocationData[] = [
     lng: "-2.9916",
     trades: ["roofers", "plumbers", "electricians"],
     population: "900K",
-    description: "Liverpool has 7,500+ trade businesses serving 280K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",
+    description: "Liverpool has 4,200+ trade businesses serving 280K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",
     challenges: [
       "Aging Victorian housing needs constant roof and gutter maintenance",
       "Student areas (Aigburth, Wavertree) have high-turnover repairs",
@@ -534,7 +534,7 @@ export const locations: LocationData[] = [
     lng: "-3.1883",
     trades: ["builders", "plumbers", "electricians"],
     population: "540K",
-    description: "Edinburgh has 7,000+ trade businesses serving 250K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",
+    description: "Edinburgh has 4,500+ trade businesses serving 250K households. Katie answers emergency calls 24/7, captures enquiries via WhatsApp. Plans from £59/month.",
     challenges: [
       "Georgian and Victorian buildings need specialist conservation trades",
       "Festival season brings emergency maintenance demands for venues",

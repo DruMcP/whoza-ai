@@ -70,8 +70,9 @@ export default function ForHeatingEngineerManchesterPage() {
       <Header />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
+        { name: "Manchester", item: "https://whoza.ai/manchester" },
         { name: "For Heating Engineers", item: "https://whoza.ai/for-heating-engineers" },
-        { name: "Manchester", item: "https://whoza.ai/for-heating-engineers-manchester" },
+        { name: "Heating Engineers in Manchester", item: "https://whoza.ai/for-heating-engineers-manchester" },
       ]} />
       <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
 

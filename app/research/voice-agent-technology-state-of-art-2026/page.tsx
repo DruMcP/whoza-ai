@@ -272,7 +272,7 @@ export default function VoiceAgentTechnologyPage() {
                 Research
               </span>
               <h1 className="article-headline text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
-                Voice Agent Technology
+                Voice Agent Technology{" "}
                 <span className="block text-[#818CF8]">State of the Art, Architecture &amp; Future</span>
               </h1>
 

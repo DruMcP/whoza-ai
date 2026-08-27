@@ -127,7 +127,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="font-sans text-[clamp(36px,5vw,56px)] font-extrabold leading-[1.05] tracking-tight text-white mb-4 whitespace-pre-line"
           >
-            <span className="block">Your phone&apos;s ringing.</span>
+            <span className="block">Your phone&apos;s ringing.</span>{" "}
             <span className="block text-red-400">
               Katie&apos;s got it — in {city}.
             </span>

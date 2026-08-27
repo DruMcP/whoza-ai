@@ -134,7 +134,7 @@ export default function MissedCallCostCalculatorPage() {
                 className="text-4xl lg:text-5xl font-extrabold text-white mb-6"
                 style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}
               >
-                Missed Call Cost
+                Missed Call Cost{" "}
                 <br />
                 <span className="text-emerald-400">Calculator for UK Trades</span>
               </h1>

@@ -71,8 +71,9 @@ export default function ForPlumberBirminghamPage() {
       <Header />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
+        { name: "Birmingham", item: "https://whoza.ai/birmingham" },
         { name: "For Plumbers", item: "https://whoza.ai/for-plumbers" },
-        { name: "Birmingham", item: "https://whoza.ai/for-plumbers-birmingham" },
+        { name: "Plumbers in Birmingham", item: "https://whoza.ai/for-plumbers-birmingham" },
       ]} />
       <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
 

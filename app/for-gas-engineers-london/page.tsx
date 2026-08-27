@@ -71,8 +71,9 @@ export default function ForGasEngineerLondonPage() {
       <Header />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
+        { name: "London", item: "https://whoza.ai/london" },
         { name: "For Gas Engineers", item: "https://whoza.ai/for-gas-engineers" },
-        { name: "London", item: "https://whoza.ai/for-gas-engineers-london" },
+        { name: "Gas Engineers in London", item: "https://whoza.ai/for-gas-engineers-london" },
       ]} />
       <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
 

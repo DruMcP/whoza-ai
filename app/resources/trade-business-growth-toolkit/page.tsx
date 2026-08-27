@@ -107,7 +107,7 @@ export default function TradeBusinessGrowthToolkitPage() {
                   className="text-4xl lg:text-5xl font-extrabold text-white mb-6"
                   style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}
                 >
-                  Free Trade Business
+                  Free Trade Business{" "}
                   <br />
                   <span className="text-emerald-400">Growth Toolkit</span>
                 </h1>

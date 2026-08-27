@@ -184,7 +184,7 @@ export default function MissedCallIndexPage() {
           </h1>
           <p className="text-white/60 text-lg">
             A quarterly field report from Whoza on the calls UK trades businesses don&apos;t answer, written by{" "}
-            <span className="text-white font-medium">Dru McPherson</span>, founder.
+            <span className="text-white font-medium">Dru McPherson</span>, Founder & CEO, whoza.ai.
           </p>
         </header>
 

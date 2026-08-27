@@ -194,7 +194,7 @@ export default function PricingGuidePage() {
               </div>
 
               <h1 className="text-4xl lg:text-5xl font-extrabold mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
-                How Much Does AI Call Answering
+                How Much Does AI Call Answering{" "}
                 <span className="block text-emerald-400 mt-2">Cost in the UK? (2026)</span>
               </h1>
 
@@ -266,7 +266,7 @@ export default function PricingGuidePage() {
                   <Check className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-white">Registered UK Company</strong>
-                    <p className="text-white/50">Company No. 12345678 — England & Wales</p>
+                    <p className="text-white/50">Company No. SC874716 — Scotland</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">

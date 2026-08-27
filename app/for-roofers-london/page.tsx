@@ -71,8 +71,9 @@ export default function ForRooferLondonPage() {
       <Header />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
+        { name: "London", item: "https://whoza.ai/london" },
         { name: "For Roofers", item: "https://whoza.ai/for-roofers" },
-        { name: "London", item: "https://whoza.ai/for-roofers-london" },
+        { name: "Roofers in London", item: "https://whoza.ai/for-roofers-london" },
       ]} />
       <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
 
