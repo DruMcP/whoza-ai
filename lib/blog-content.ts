@@ -39,6 +39,7 @@ export const blogPostContents: Record<string, BlogPostContent> = {
     category: "UGC / Real Stories",
     author: "Mike Harrison",
     authorTitle: "Self-Employed Roofer, Manchester",
+    metaTitle: "I Lost an £8,000 Roof Job Because I Was Up a Ladder",
     schema: {
       headline: "I Lost an £8,000 Roof Job Because I Was Up a Ladder. AI Fixed That.",
       description: "Self-employed roofer from Manchester shares his honest 5-week diary using AI call answering. Real numbers. Storm damage season. £9,400 in recovered jobs.",
@@ -5022,7 +5023,7 @@ Built in Scotland. Working for UK trades.`,
     category: "UGC / Real Stories",
     author: "Ross McAllister",
     authorTitle: "Self-Employed Joiner, Glasgow",
-    metaTitle: "Virtual Receptionist Cost UK 2026: A Joiner's Honest Comparison",
+    metaTitle: "Virtual Receptionist Cost UK 2026: A Joiner's Comparison",
     schema: {
       headline: "I Spent Two Weeks Googling 'Virtual Receptionist Cost' Before I Realised I Was Buying the Wrong Thing",
       description: "A Glasgow joiner spent 14 days comparing virtual receptionist prices. The cheapest option was not the best value — and the best value surprised him.",

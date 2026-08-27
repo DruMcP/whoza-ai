@@ -10,7 +10,7 @@ import Image from "next/image"
 import { TradeCityLinks } from "@/components/whoza/trade-city-links"
 
 export const metadata: Metadata = {
-  title: "AI Call Answering for Heating Engineers in Glasgow | whoza.ai",
+  title: "AI Call Answering for Heating Engineers in Glasgow",
   description: "Stop losing heating engineer jobs to missed calls in Glasgow. Katie answers 24/7, captures boiler and heating enquiries via WhatsApp. Plans from £59/month.",
   alternates: {
     canonical: "https://whoza.ai/for-heating-engineers-glasgow",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/for-heating-engineers-glasgow",
     siteName: "Whoza.ai",
-    title: "AI Call Answering for Heating Engineers in Glasgow | whoza.ai",
+    title: "AI Call Answering for Heating Engineers in Glasgow",
     description: "Stop losing heating engineer jobs to missed calls in Glasgow. Katie answers 24/7, captures boiler and heating enquiries via WhatsApp. Plans from £59/month.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Heating Engineers in Glasgow" }],
   },

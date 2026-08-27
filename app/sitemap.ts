@@ -90,7 +90,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     pageUrl('/refer', 'app/refer/page.tsx', { changeFrequency: 'monthly', priority: 0.5 }),
     pageUrl('/case-studies', 'app/case-studies/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
     pageUrl('/locations', 'app/locations/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
-    pageUrl('/sample-call', 'app/sample-call/page.tsx', { changeFrequency: 'weekly', priority: 0.7 }),
     pageUrl('/trust', 'app/trust/page.tsx', { changeFrequency: 'yearly', priority: 0.3 }),
     pageUrl('/call-recording', 'app/call-recording/page.tsx', { changeFrequency: 'yearly', priority: 0.3 }),
     pageUrl('/best-ai-call-handler-uk-trades', 'app/best-ai-call-handler-uk-trades/page.tsx', { changeFrequency: 'monthly', priority: 0.8 }),
@@ -158,7 +157,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const orphanedPages: MetadataRoute.Sitemap = [
     pageUrl('/accents', 'app/accents/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
     pageUrl('/booking', 'app/booking/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
-    pageUrl('/how-many-calls-at-once', 'app/how-many-calls-at-once/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
     pageUrl('/integrations', 'app/integrations/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
     pageUrl('/is-it-a-phone-tree', 'app/is-it-a-phone-tree/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
     pageUrl('/multi-location', 'app/multi-location/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),

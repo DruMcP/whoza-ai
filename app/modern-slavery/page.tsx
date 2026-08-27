@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { ChevronRight, ShieldCheck } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -15,6 +16,12 @@ export const revalidate = 3600
 export default function ModernSlaveryPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-950 to-black text-white">
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", item: "https://whoza.ai" },
+          { name: "Modern Slavery Statement", item: "https://whoza.ai/modern-slavery" },
+        ]}
+      />
       <div className="max-w-4xl mx-auto px-4 py-16 md:py-24">
         <div className="mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">

@@ -10,7 +10,7 @@ const PUBLISHED = "2026-07-23"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "Your Next Customer Won't Google You. They'll Ask AI. | Whoza.ai",
+  title: "Your Next Customer Won't Google You. They'll Ask AI.",
   description:
     "How UK customers now use AI like ChatGPT and Google AI Overviews to find tradespeople. What this means for your business visibility.",
   keywords: [

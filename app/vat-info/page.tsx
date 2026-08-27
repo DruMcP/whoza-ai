@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { Receipt, CheckCircle } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -15,6 +16,12 @@ export const revalidate = 3600
 export default function VatInfoPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-950 to-black text-white">
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", item: "https://whoza.ai" },
+          { name: "Pricing Information", item: "https://whoza.ai/vat-info" },
+        ]}
+      />
       <div className="max-w-4xl mx-auto px-4 py-16 md:py-24">
         <div className="mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">

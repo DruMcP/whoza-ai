@@ -228,6 +228,18 @@ const nextConfig = {
       permanent: true,
     },
 
+      // === Merge orphan pages ===
+      {
+        source: '/sample-call',
+        destination: '/how-it-works',
+        permanent: true,
+      },
+      {
+        source: '/how-many-calls-at-once',
+        destination: '/pricing',
+        permanent: true,
+      },
+
       // === Trailing slash redirects (CRITICAL: prevents duplicate content) ===
       {
         source: '/:path+/',

@@ -13,6 +13,8 @@ const footerLinks = {
     { label: "How It Works", href: "/#how-it-works" },
     { label: "Testimonials", href: "/#testimonials" },
     { label: "Locations", href: "/locations" },
+    { label: "Multi-Location", href: "/multi-location" },
+    { label: "Booking", href: "/booking" },
     { label: "Refer a Trade", href: "/refer" },
   ],
   support: [

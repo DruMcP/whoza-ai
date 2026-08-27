@@ -7,7 +7,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "Is It a Phone Tree? No. Here's What Actually Happens. | whoza.ai",
+  title: "Is It a Phone Tree? No. Here's What Actually Happens.",
   description: "When people hear 'AI answers your phone', they picture a phone tree menu. That's not Katie. No menus, no hold music. Here's how whoza.ai actually works.",
   alternates: {
     canonical: "https://whoza.ai/is-it-a-phone-tree",
@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/is-it-a-phone-tree",
     siteName: "Whoza.ai",
-    title: "Is It a Phone Tree? No. Here's What Actually Happens. | whoza.ai",
+    title: "Is It a Phone Tree? No. Here's What Actually Happens.",
     description: "When people hear 'AI answers your phone', they picture a menu. Press 1 for sales. Press 2 for accounts. That's not what this is. There is no menu. There is no hold music. Here's how Katie actually works.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Is it a phone tree? No." }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Is It a Phone Tree? No. Here's What Actually Happens. | whoza.ai",
+    title: "Is It a Phone Tree? No. Here's What Actually Happens.",
     description: "When people hear 'AI answers your phone', they picture a menu. Press 1 for sales. Press 2 for accounts. That's not what this is. There is no menu. There is no hold music. Here's how Katie actually works.",
     images: ["https://whoza.ai/og-image.webp"],
   },

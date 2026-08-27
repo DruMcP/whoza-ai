@@ -1,12 +1,13 @@
 import type { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { ReferralInteractive } from "@/components/whoza/referral-interactive"
 import { Gift, Share2, Users, ArrowRight } from "lucide-react"
 import { organizationSchemaObject } from "@/components/whoza/organization-schema"
 
 export const metadata: Metadata = {
-  title: "Refer a Trade Programme — Give a Free Month, Get a Free Month | whoza.ai",
+  title: "Refer a Trade — Give a Free Month, Get a Free Month",
   description: "Refer fellow UK tradespeople to Whoza.ai. When they join and stay, you both get rewarded. Earn up to a full year free.",
   alternates: {
     canonical: "https://whoza.ai/refer",
@@ -34,6 +35,12 @@ export default function ReferPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Header />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", item: "https://whoza.ai" },
+          { name: "Refer a Trade", item: "https://whoza.ai/refer" },
+        ]}
+      />
 
       <main>
         {/* Hero */}

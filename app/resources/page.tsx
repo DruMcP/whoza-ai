@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 const resources = [
   {
     slug: "missed-call-cost-calculator",
+    href: "/missed-calls-cost-calculator",
     title: "Lost Revenue Calculator",
     description:
       "Calculate how much missed calls are costing your trade business. Enter your average job value, weekly call volume, and missed call rate to see your annual lost revenue.",
@@ -69,7 +70,7 @@ export default function ResourcesPage() {
             return (
               <Link
                 key={r.slug}
-                href={`/resources/${r.slug}`}
+                href={r.href ?? `/resources/${r.slug}`}
                 className="group block bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 transition-all"
               >
                 <div className="flex items-start gap-6">

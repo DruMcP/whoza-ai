@@ -6,14 +6,14 @@ import { Mic, Check, ArrowRight, MapPin } from "lucide-react"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "UK AI Voice Accents | Scottish, English, Welsh, Irish | whoza.ai",
+  title: "UK AI Voice Accents | Scottish, English, Welsh, Irish",
   description: "Choose from 12+ UK AI voice accents: Scottish, English (Northern, Southern, Midlands), Welsh, and Irish. Your AI receptionist sounds local to your customers.",
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "https://whoza.ai/accents",
     siteName: "Whoza.ai",
-    title: "UK AI Voice Accents | Scottish, English, Welsh, Irish | whoza.ai",
+    title: "UK AI Voice Accents | Scottish, English, Welsh, Irish",
     description: "Choose from 12+ UK AI voice accents: Scottish, English (Northern, Southern, Midlands), Welsh, and Irish. Your AI receptionist sounds local to your customers.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Whoza.ai Voice Accents" }],
   },
