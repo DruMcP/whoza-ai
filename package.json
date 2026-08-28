@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "git fetch --unshallow --quiet || true && next build && node scripts/build-guard.js",
+    "build": "git fetch --unshallow --quiet || true && next build && node scripts/ci-seo-guard.js",
     "start": "next start",
     "lint": "eslint .",
     "test": "vitest run",
