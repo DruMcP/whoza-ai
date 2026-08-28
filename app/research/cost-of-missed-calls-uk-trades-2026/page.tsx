@@ -24,7 +24,11 @@ const faqs = [
 export default function CostOfMissedCallsPage() {
   return (
     <>
-      
+      <BreadcrumbSchema items={[
+        { name: "Home", item: "https://whoza.ai" },
+        { name: "Research", item: "https://whoza.ai/research" },
+        { name: "Cost of Missed Calls", item: "https://whoza.ai/research/the-true-cost-of-missed-calls-2026" },
+      ]} />
       <Header />
       <main className="min-h-screen bg-black text-white">
         <article className="max-w-4xl mx-auto px-6 py-16">

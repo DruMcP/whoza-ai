@@ -10,7 +10,7 @@ import { TradeLocations } from "@/components/whoza/trade-locations"
 // import { AudioDemo } from "@/components/whoza/audio-demo"
 import { Testimonials } from "@/components/whoza/testimonials"
 import { ComparisonTable } from "@/components/whoza/comparison-table"
-import { Pricing } from "@/components/whoza/pricing"
+import { PricingSummary } from "@/components/whoza/pricing-summary"
 import { FinalCTA } from "@/components/whoza/final-cta"
 import { Footer } from "@/components/whoza/footer"
 import { FloatingChatWidget } from "@/components/whoza/sticky-cta"
@@ -161,7 +161,7 @@ export default async function TradePage({ params }: PageProps) {
         <ComparisonTable />
         <div className="section-divider" />
         
-        <Pricing />
+        <PricingSummary />
         <div className="section-divider" />
         
         <TradeFAQ tradeData={tradeData} />

@@ -31,6 +31,11 @@ export const revalidate = 3600
 export default function LostJobsCalculatorPage() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: "Home", item: "https://whoza.ai" },
+        { name: "Tools", item: "https://whoza.ai/tools" },
+        { name: "Lost Jobs Calculator", item: "https://whoza.ai/missed-calls-cost-calculator" },
+      ]} />
       <LostJobsCalculator />
       <section
         aria-labelledby="lost-jobs-more"

@@ -112,7 +112,7 @@ export const trades: TradeData[] = [
     display: "Builders",
     headline: "AI Call Handling for Builders — Every Enquiry Captured",
     subheadline: "Extensions, renovations, new builds. Big jobs start with a phone call. Katie captures the full project scope, budget signals, and timeline — so you walk into every quote meeting prepared.",
-    metaDescription: "AI call handling for builders and construction companies. Katie qualifies extension, renovation, and new build enquiries 24/7. Captures budget range, timeline, and project scope. Free 7-day trial.",
+    metaDescription: "AI call handling for builders. Katie qualifies extension and renovation enquiries 24/7. Captures budget, timeline, and scope. Free 7-day trial.",
     problemStatements: [
       "Extension and renovation enquiries need detailed qualification — but you miss the call on site",
       "Unqualified site visits waste half a day and cost £200+ in fuel and labour",
@@ -152,7 +152,7 @@ export const trades: TradeData[] = [
     display: "Roofers",
     headline: "AI Call Handling for Roofers — Every Leak is a Lead",
     subheadline: "Storm damage, slipped tiles, full re-roofs. When water's coming through the ceiling, customers call fast and expect an answer. Katie never misses a roofing call — rain or shine, day or night.",
-    metaDescription: "AI call handling for roofers in the UK. Katie captures emergency leak calls, storm damage enquiries, and full re-roof quotes 24/7. WhatsApp alerts with job details and photos. Free trial.",
+    metaDescription: "AI call handling for UK roofers. Katie captures emergency leak and storm damage calls 24/7. WhatsApp alerts with job details. Free trial.",
     problemStatements: [
       "Storm damage calls peak when you're already on a roof — impossible to answer",
       "Customers with active leaks will call 3-4 roofers — first to answer gets the job",
@@ -192,7 +192,7 @@ export const trades: TradeData[] = [
     display: "Landscapers",
     headline: "AI Call Handling for Landscapers — Grow Your Business",
     subheadline: "Garden redesigns, patio installations, maintenance contracts. Customers have visions but struggle to describe them. Katie draws out the details — budget, timeline, garden size, style preferences — so you arrive with a plan, not just a tape measure.",
-    metaDescription: "AI call handling for landscapers and garden designers. Katie qualifies garden projects 24/7, captures budget, style preferences, and timeline. Never miss a £10k+ garden redesign enquiry. Free trial.",
+    metaDescription: "AI call handling for landscapers. Katie qualifies garden projects 24/7, captures budget and timeline. Never miss a £10k+ enquiry. Free trial.",
     problemStatements: [
       "Garden enquiries are vague ('I want something nice') — Katie asks the right questions to reveal scope",
       "You're working outdoors with dirty hands — answering the phone is impractical",
@@ -272,7 +272,7 @@ export const trades: TradeData[] = [
     display: "Heating Engineers",
     headline: "AI Call Handling for Heating Engineers — 24/7 Booking",
     subheadline: "Boiler breakdowns, no hot water, gas safety checks. When a customer's heating fails in winter, every minute matters. Katie answers every call with empathy, qualifies the fault, and sends you the full job details before you even pick up.",
-    metaDescription: "AI call handling for heating engineers and Gas Safe engineers in the UK. Katie answers boiler breakdowns, servicing, and installation calls 24/7. Captures fault details, boiler make/model, and property info via WhatsApp. 7-day free trial.",
+    metaDescription: "AI call handling for heating engineers. Katie answers boiler breakdown and servicing calls 24/7. Captures fault details via WhatsApp. Free trial.",
     problemStatements: [
       "Boiler breakdowns in winter = peak call volume when you're already on jobs",
       "Customers can't describe their heating system ('the white box thing') — Katie knows the right questions",
@@ -312,7 +312,7 @@ export const trades: TradeData[] = [
     display: "Joiners & Carpenters",
     headline: "AI Call Answering for Joiners & Carpenters UK",
     subheadline: "Bespoke kitchens, fitted wardrobes, staircases, doors — customers call when they want quality woodwork. Katie answers every call, captures the project details, and sends them to your WhatsApp.",
-    metaDescription: "AI call handling for UK joiners and carpenters. Katie answers 24/7, captures bespoke furniture, fitting, and renovation enquiries. WhatsApp alerts in 3 seconds. 7-day free trial.",
+    metaDescription: "AI call handling for UK joiners. Katie answers 24/7, captures bespoke furniture and renovation enquiries. WhatsApp alerts in 3 seconds. Free trial.",
     problemStatements: [
       "Joinery enquiries are detailed — customers describe bespoke projects that need careful quoting",
       "You can't tell if it's a simple door hinge or a £15k kitchen from a missed call",
@@ -352,7 +352,7 @@ export const trades: TradeData[] = [
     display: "Locksmiths",
     headline: "AI Call Handling for Locksmiths UK — 24/7 Lockout Help",
     subheadline: "Emergency lockouts, key replacements, security upgrades. When a customer is locked out at midnight or a tenant has lost their keys, every second counts. Katie answers every call instantly, qualifies the job, and sends you the details before you even pick up.",
-    metaDescription: "Stop losing lockout calls to voicemail. AI call handling for UK locksmiths. Katie answers 24/7, captures emergency lockouts, key replacements & security upgrades. WhatsApp alerts in 3 seconds. 7-day free trial.",
+    metaDescription: "AI call handling for UK locksmiths. Katie answers emergency lockouts 24/7. Captures location and job type. WhatsApp alerts in 3 seconds. Free trial.",
     problemStatements: [
       "Emergency lockout calls at 2am go straight to voicemail — customer calls the next locksmith on Google",
       "You can't tell if it's a £60 key copy or a £400 commercial lock change from a missed call",

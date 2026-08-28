@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: "Heating engineer shares 4-week winter diary. 47 missed boiler calls, £12,000 lost revenue. How AI call answering recovered £8,400. Real numbers. 2026.",
     type: "article",
     authors: ["Charlie Hardcastle"],
-    tags: ["UGC / Real Stories"],
+    tags: ["Customer Stories"],
     url: "https://whoza.ai/blog/i-lost-12000-in-one-winter-to-missed-boiler-calls-charlie-the-heating-engineer",
     siteName: "Whoza.ai",
     locale: "en_GB",
@@ -40,7 +40,7 @@ export default function BlogPostPage() {
   const post = {
     title: "I Lost £12,000 in One Winter to Missed Boiler Calls. Here's the Exact Maths.",
     date: "2026-06-27",
-    category: "UGC / Real Stories",
+    category: "Customer Stories",
     author: "Charlie Hardcastle",
     authorTitle: "Self-Employed Heating Engineer, Manchester",
     readTime: "12 min read",
@@ -65,7 +65,7 @@ export default function BlogPostPage() {
     },
     "datePublished": "2026-06-27",
     "dateModified": "2026-06-27",
-    "articleSection": "UGC / Real Stories",
+    "articleSection": "Customer Stories",
     "wordCount": 1850,
     "inLanguage": "en-GB",
     "mainEntityOfPage": {
@@ -173,6 +173,14 @@ export default function BlogPostPage() {
                 <p className="text-white font-medium text-sm">{post.author}</p>
                 <p className="text-white/50 text-xs">{post.authorTitle}</p>
               </div>
+            </div>
+            <div className="mt-4 bg-white/5 border border-white/10 rounded-lg p-4 max-w-2xl">
+              <p className="text-white/50 text-sm leading-relaxed">
+                <strong className="text-white/70">About this story.</strong>{" "}
+                This account is based on outcomes reported to us by a whoza.ai customer and written up by the whoza.ai team. Names and figures are the customer&apos;s own. Results vary — see our{" "}
+                <Link href="/data" className="text-emerald-400 hover:text-emerald-300 underline">evidence base</Link>{" "}
+                for how we handle numbers.
+              </p>
             </div>
           </div>
         </section>

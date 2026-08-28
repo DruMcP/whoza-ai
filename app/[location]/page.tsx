@@ -23,7 +23,7 @@ import { ClaireDashboard } from "@/components/whoza/claire-dashboard"
 import { Testimonials } from "@/components/whoza/testimonials"
 import { GoogleReviews } from "@/components/whoza/google-reviews"
 import { ComparisonTable } from "@/components/whoza/comparison-table"
-import { Pricing } from "@/components/whoza/pricing"
+import { PricingSummary } from "@/components/whoza/pricing-summary"
 import { FAQ } from "@/components/whoza/faq"
 import { FinalCTA } from "@/components/whoza/final-cta"
 import { Footer } from "@/components/whoza/footer"
@@ -283,7 +283,7 @@ export default async function LocationPage({ params }: PageProps) {
 
         {/* OFFER — Pricing (no-brainer) */}
         <div className="section-divider" />
-        <Pricing />
+        <PricingSummary />
 
         {/* TRADE LINKS — Cross-link to all trade pages */}
         <div className="section-divider" />

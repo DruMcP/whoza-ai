@@ -76,13 +76,36 @@ const supportTopics = [
   },
   {
     icon: Ticket,
-    title: "Billing \u0026 Subscriptions",
+    title: "Billing & Subscriptions",
     description: "Payment queries, plan changes, invoice requests",
   },
   {
     icon: MessageSquare,
     title: "Account Management",
     description: "Profile updates, team access, cancellation requests",
+  },
+]
+
+const commonQuestions = [
+  {
+    q: "How do I set up call forwarding?",
+    a: "Call forwarding is handled through your phone provider (BT, Virgin, Vodafone, etc.). Log in to your provider's portal or call their support line and ask to activate 'unconditional call forwarding' to the whoza.ai number we provide during onboarding. Most providers activate this within minutes.",
+  },
+  {
+    q: "Can I keep my existing business number?",
+    a: "Yes. whoza.ai works with your existing number through call forwarding. You do not need to change your number, business cards, website, or Google Business Profile. Callers dial your usual number — it forwards to Katie seamlessly.",
+  },
+  {
+    q: "How do I upgrade or downgrade my plan?",
+    a: "Email support@whoza.ai with your account email and the plan you'd like to switch to. Plan changes take effect at your next billing cycle. No penalties, no lock-in.",
+  },
+  {
+    q: "What if Katie gets something wrong?",
+    a: "Katie learns from corrections. If she misroutes a call, misprices a job, or misunderstands an enquiry, email us the call reference (in your WhatsApp summary) and what should have happened. We retrain her behaviour within 24 hours.",
+  },
+  {
+    q: "How do I cancel my account?",
+    a: "Email support@whoza.ai with 'Cancellation Request' in the subject line. Include your account email and the date you'd like service to end. We process cancellations within 48 hours and provide a final usage summary.",
   },
 ]
 
@@ -102,7 +125,7 @@ export default function SupportPage() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <HelpCircle className="w-4 h-4" />
-            We're here to help
+            We&apos;re here to help
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Support Centre</h1>
           <p className="text-white/60 text-lg max-w-2xl mx-auto">
@@ -115,7 +138,7 @@ export default function SupportPage() {
           <Mail className="w-10 h-10 text-emerald-400 mx-auto mb-4" />
           <h2 className="text-2xl font-bold mb-2">Email Support</h2>
           <p className="text-white/60 mb-4">
-            Our primary support channel. Send us any enquiry and we'll respond with a solution or next steps.
+            Our primary support channel. Send us any enquiry and we&apos;ll respond with a solution or next steps.
           </p>
           <a
             href="mailto:support@whoza.ai"
@@ -187,6 +210,19 @@ export default function SupportPage() {
           </div>
         </div>
 
+        {/* Common Questions */}
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-8 mb-16">
+          <h2 className="text-2xl font-bold mb-8 text-center">Common Questions</h2>
+          <div className="space-y-6">
+            {commonQuestions.map((item, i) => (
+              <div key={i} className="border-b border-white/10 pb-6 last:border-0 last:pb-0">
+                <h3 className="text-lg font-semibold mb-2">{item.q}</h3>
+                <p className="text-white/60 text-sm leading-relaxed">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Email Template Suggestion */}
         <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
           <h2 className="text-xl font-bold mb-4">How to Reach Us</h2>
@@ -215,7 +251,7 @@ export default function SupportPage() {
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-0.5">5.</span>
-                <span className="text-white/70 text-sm">Steps you've already tried</span>
+                <span className="text-white/70 text-sm">Steps you&apos;ve already tried</span>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-0.5">6.</span>

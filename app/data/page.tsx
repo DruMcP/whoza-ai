@@ -307,7 +307,120 @@ export default function DataPage() {
           </div>
         </section>
 
-        {/* UK Government Open Data */}
+        {/* Business Claims — Verified vs Unverified */}
+        <section id="business-claims" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-white/10">
+          <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+            <Shield className="w-6 h-6 text-emerald-400" />
+            Business Claims — Verified vs Unverified
+          </h2>
+          <p className="text-white/70 mb-6">
+            Every commercial claim on whoza.ai — revenue figures, savings, ROI — is listed here with its evidence status. We distinguish between numbers we can demonstrate, numbers that are illustrative estimates, and numbers we have removed.
+          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-sm">
+              <thead>
+                <tr className="border-b border-white/10 text-white/50">
+                  <th className="pb-3 font-medium">Claim</th>
+                  <th className="pb-3 font-medium">Where it appears</th>
+                  <th className="pb-3 font-medium">Evidence</th>
+                  <th className="pb-3 font-medium">Status</th>
+                </tr>
+              </thead>
+              <tbody className="text-white/80">
+                <tr className="border-b border-white/5">
+                  <td className="py-3 pr-4">£59/month Starter plan</td>
+                  <td className="py-3 pr-4">/pricing, homepage, city pages</td>
+                  <td className="py-3 pr-4">Published on Stripe checkout</td>
+                  <td className="py-3"><StatusBadge status="verified" /></td>
+                </tr>
+                <tr className="border-b border-white/5">
+                  <td className="py-3 pr-4">£20,000–£25,000/year human receptionist cost</td>
+                  <td className="py-3 pr-4">/pricing, /data, /ai-receptionist-vs-human-cost-guide-2026</td>
+                  <td className="py-3 pr-4">National Careers Service (£18k–£22k) + employer NI + pension arithmetic</td>
+                  <td className="py-3"><StatusBadge status="descriptive" /></td>
+                </tr>
+                <tr className="border-b border-white/5">
+                  <td className="py-3 pr-4">£400–£600 average emergency callout value</td>
+                  <td className="py-3 pr-4">Blog persona posts, case studies</td>
+                  <td className="py-3 pr-4">Self-reported by customers; illustrative estimate</td>
+                  <td className="py-3"><StatusBadge status="descriptive" /></td>
+                </tr>
+                <tr className="border-b border-white/5">
+                  <td className="py-3 pr-4">£8,400 recovered in 4 weeks (Charlie example)</td>
+                  <td className="py-3 pr-4">/blog/i-lost-12000-in-one-winter...</td>
+                  <td className="py-3 pr-4">Customer-reported; not independently audited</td>
+                  <td className="py-3"><StatusBadge status="descriptive" /></td>
+                </tr>
+                <tr className="border-b border-white/5">
+                  <td className="py-3 pr-4">98% answer rate achieved</td>
+                  <td className="py-3 pr-4">/case-studies</td>
+                  <td className="py-3 pr-4">Illustrative estimate based on typical customer-reported outcomes</td>
+                  <td className="py-3"><StatusBadge status="descriptive" /></td>
+                </tr>
+                <tr className="border-b border-white/5">
+                  <td className="py-3 pr-4">£5,200–£15,600 annual missed-call cost</td>
+                  <td className="py-3 pr-4">FAQ, blog posts</td>
+                  <td className="py-3 pr-4">1,200 UK trade business self-reported survey, 2025</td>
+                  <td className="py-3"><StatusBadge status="descriptive" /></td>
+                </tr>
+                <tr className="border-b border-white/5">
+                  <td className="py-3 pr-4">30-day money-back guarantee</td>
+                  <td className="py-3 pr-4">/pricing, homepage</td>
+                  <td className="py-3 pr-4">Published in Terms of Service</td>
+                  <td className="py-3"><StatusBadge status="verified" /></td>
+                </tr>
+                <tr className="border-b border-white/5">
+                  <td className="py-3 pr-4">7-day free trial</td>
+                  <td className="py-3 pr-4">/pricing, homepage</td>
+                  <td className="py-3 pr-4">Published on signup flow</td>
+                  <td className="py-3"><StatusBadge status="verified" /></td>
+                </tr>
+                <tr className="border-b border-white/5">
+                  <td className="py-3 pr-4">50-customer early access cap</td>
+                  <td className="py-3 pr-4">/signup, /about</td>
+                  <td className="py-3 pr-4">Stated publicly; no independent verification</td>
+                  <td className="py-3"><StatusBadge status="descriptive" /></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Dataset Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Dataset",
+            "name": "whoza.ai Evidence Base",
+            "description": "Verified, descriptive, and unverified statistics cited across whoza.ai content. Includes government sources, independent research, and our own claims with evidence status.",
+            "url": "https://whoza.ai/data",
+            "creator": {
+              "@type": "Organization",
+              "name": "whoza.ai",
+              "url": "https://whoza.ai"
+            },
+            "datePublished": "2026-08-28",
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "distribution": {
+              "@type": "DataDownload",
+              "encodingFormat": "HTML",
+              "contentUrl": "https://whoza.ai/data"
+            },
+            "variableMeasured": [
+              "UK small business call answer rates",
+              "AI adoption by UK business size and industry",
+              "UK trade business enquiry volumes",
+              "UK adult messaging app usage",
+              "UK public awareness of artificial intelligence"
+            ],
+            "spatialCoverage": {
+              "@type": "Place",
+              "name": "United Kingdom"
+            },
+            "temporalCoverage": "2016/2026"
+          })}}
+        />
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-white/10">
           <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
             <BookOpen className="w-6 h-6 text-blue-400" />

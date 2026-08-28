@@ -733,7 +733,7 @@ export default function BlogPostPage() {
               <h3 className="text-xl font-bold text-white mb-4">Related Content</h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 <a href="/blog/i-lost-12000-in-one-winter-to-missed-boiler-calls-charlie-the-heating-engineer" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors">
-                  <p className="text-[var(--katie-blue)] text-sm font-medium mb-1">UGC / Real Stories</p>
+                  <p className="text-[var(--katie-blue)] text-sm font-medium mb-1">Customer Stories</p>
                   <p className="text-white font-semibold">I Lost £12,000 in One Winter to Missed Boiler Calls — Charlie's Story</p>
                 </a>
                 <a href="/for-heating-engineers" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors">

@@ -28,30 +28,75 @@ const integrations = [
   {
     category: "Calendar",
     items: [
-      { name: "Google Calendar", desc: "Two-way sync. AI checks availability before booking.", icon: Calendar },
-      { name: "Outlook Calendar", desc: "Microsoft 365 and Exchange integration.", icon: Calendar },
-      { name: "Apple Calendar", desc: "iCloud calendar sync for Mac/iPhone users.", icon: Calendar },
+      {
+        name: "Google Calendar",
+        desc: "Two-way sync. AI checks availability before booking.",
+        detail: "Katie reads your Google Calendar in real time before offering slots to callers. When a customer confirms, the booking drops straight into your calendar with all job details pre-filled. No double-bookings, no back-and-forth. Supports multiple calendars and shared family or team calendars.",
+        icon: Calendar,
+      },
+      {
+        name: "Outlook Calendar",
+        desc: "Microsoft 365 and Exchange integration.",
+        detail: "Full integration with Microsoft 365 and Exchange Online. Katie checks your Outlook availability, respects your working hours, and writes confirmed bookings directly to your calendar. Ideal for tradespeople running their business on Microsoft tools.",
+        icon: Calendar,
+      },
+      {
+        name: "Apple Calendar",
+        desc: "iCloud calendar sync for Mac/iPhone users.",
+        detail: "Seamless iCloud calendar sync. Katie checks your Apple Calendar free slots, creates events with caller details, and sends you a WhatsApp summary. Perfect if you run your diary from an iPhone or Mac and want everything in one place.",
+        icon: Calendar,
+      },
     ],
   },
   {
     category: "Communication",
     items: [
-      { name: "WhatsApp Business", desc: "Instant job delivery + review requests via WhatsApp.", icon: MessageSquare },
-      { name: "Twilio", desc: "Phone number forwarding, SMS routing, call handling.", icon: Phone },
+      {
+        name: "WhatsApp Business",
+        desc: "Instant job delivery + review requests via WhatsApp.",
+        detail: "Every captured call becomes a structured WhatsApp message within 3 seconds. You tap Accept, Call Back, or Decline. Katie then sends an instant SMS confirmation to the customer. After job completion, automated review requests go out via WhatsApp to build your Google rating.",
+        icon: MessageSquare,
+      },
+      {
+        name: "Twilio",
+        desc: "Phone number forwarding, SMS routing, call handling.",
+        detail: "Enterprise-grade telephony backbone. Call forwarding from your existing BT, Virgin, or mobile number. SMS confirmations to customers. Fallback routing if you need live transfer. UK and international number support.",
+        icon: Phone,
+      },
     ],
   },
   {
     category: "Automation",
     items: [
-      { name: "Zapier", desc: "Connect whoza.ai to 5,000+ apps. No code required.", icon: Zap },
-      { name: "Make (Integromat)", desc: "Advanced workflow automation with visual builder.", icon: Zap },
+      {
+        name: "Zapier",
+        desc: "Connect whoza.ai to 5,000+ apps. No code required.",
+        detail: "Growth plan and above. Build no-code workflows that trigger when Katie captures a job: auto-create invoices in Xero, add leads to Mailchimp, post to Slack channels, update CRMs, or trigger any of 5,000+ Zapier apps. Set up in minutes without a developer.",
+        icon: Zap,
+      },
+      {
+        name: "Make (Integromat)",
+        desc: "Advanced workflow automation with visual builder.",
+        detail: "For power users who need complex multi-step automation. Visual workflow builder with conditional logic, data transformation, and custom API calls. Connect whoza.ai to bespoke internal systems, databases, or advanced CRM pipelines.",
+        icon: Zap,
+      },
     ],
   },
   {
     category: "Data & Payments",
     items: [
-      { name: "Stripe", desc: "Secure payment processing. No card data stored.", icon: Database },
-      { name: "Supabase", desc: "UK/EU-hosted database. GDPR-compliant data storage.", icon: Database },
+      {
+        name: "Stripe",
+        desc: "Secure payment processing. No card data stored.",
+        detail: "PCI-compliant payment processing for plan subscriptions and optional job deposits. Stripe handles all card data — whoza.ai never stores card numbers. Automatic invoicing, VAT handling, and secure subscription management.",
+        icon: Database,
+      },
+      {
+        name: "Supabase",
+        desc: "UK/EU-hosted database. GDPR-compliant data storage.",
+        detail: "All call data, transcripts, and customer records stored in Supabase with UK/EU hosting. Full GDPR compliance, row-level security, encrypted at rest. Your data never leaves European jurisdiction. Export or delete on request.",
+        icon: Database,
+      },
     ],
   },
 ]
@@ -92,7 +137,8 @@ export default function IntegrationsPage() {
                       </div>
                       <h3 className="font-semibold">{item.name}</h3>
                     </div>
-                    <p className="text-white/60 text-sm">{item.desc}</p>
+                    <p className="text-white/60 text-sm mb-3">{item.desc}</p>
+                    <p className="text-white/40 text-sm leading-relaxed">{item.detail}</p>
                   </div>
                 )
               })}

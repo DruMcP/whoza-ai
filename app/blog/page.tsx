@@ -41,7 +41,7 @@ const blogPosts = [
     excerpt: "Self-employed joiner from Glasgow spent 14 days comparing virtual receptionist prices. He discovered the cheapest option was not the best value — and the best value was not what he expected.",
     readTime: "14 min read",
     date: "2026-08-08",
-    category: "UGC / Real Stories",
+    category: "Customer Stories",
   },
   {
     slug: "what-tradespeople-actually-want-from-ai",
@@ -57,7 +57,7 @@ const blogPosts = [
     excerpt: "Heating engineer shares 4-week winter diary. 47 missed boiler calls, £12,000 lost revenue. How AI call answering recovered £8,400. Real numbers. 2026.",
     readTime: "10 min read",
     date: "2026-06-27",
-    category: "UGC / Real Stories",
+    category: "Customer Stories",
   },
   {
     slug: "seasonal-missed-call-report-uk-trades-2026",
@@ -129,7 +129,7 @@ const blogPosts = [
     excerpt: "Self-employed roofer from Manchester shares his honest 5-week diary using AI call answering. Real numbers. Storm damage season. £9,400 in recovered jobs.",
     readTime: "11 min read",
     date: "2026-06-17",
-    category: "UGC / Real Stories",
+    category: "Customer Stories",
   },
   {
     slug: "my-phone-rang-12-times-on-a-building-site-tom-the-builder",
@@ -137,7 +137,7 @@ const blogPosts = [
     excerpt: "Self-employed builder from Birmingham shares his honest 4-week diary using AI call answering. Real numbers. Extensions, renovations, emergency callouts. £7,200 in recovered jobs.",
     readTime: "10 min read",
     date: "2026-06-17",
-    category: "UGC / Real Stories",
+    category: "Customer Stories",
   },
   {
     slug: "ultimate-faq-tradespeople",
@@ -161,7 +161,7 @@ const blogPosts = [
     excerpt: "Self-employed heating engineer from Leeds reveals the 5 warning signs that cost him £18,000 a year. Number 3 made me sick when I worked it out.",
     readTime: "8 min read",
     date: "2026-06-08",
-    category: "UGC / Real Stories",
+    category: "Customer Stories",
   },
   {
     slug: "7-questions-every-uk-tradesperson-should-ask-before-hiring-a-call-answering-service",
@@ -169,7 +169,7 @@ const blogPosts = [
     excerpt: "Manchester locksmith asked the wrong questions and wasted £400 on a call answering service that did not work. Here is what she wishes she had asked first.",
     readTime: "9 min read",
     date: "2026-06-08",
-    category: "UGC / Buying Guide",
+    category: "Buying Guide",
   },
   {
     slug: "8-reasons-uk-tradespeople-switch-to-ai-call-handling-in-2026",
@@ -177,7 +177,7 @@ const blogPosts = [
     excerpt: "Bristol roofer Tom Bradley explains why 2026 is the year tradespeople are ditching voicemail and human receptionists for AI. Reason 6 surprised his accountant.",
     readTime: "10 min read",
     date: "2026-06-08",
-    category: "UGC / Trends",
+    category: "Trends",
   },
   {
     slug: "ai-phone-technology-complete-guide",
@@ -289,7 +289,7 @@ const blogPosts = [
     excerpt: "Gas Safe heating engineer from Walthamstow shares exact maths, 4-week tracked results, and honest review of AI call answering. Real numbers. No fluff. £6,650 recovered in one month.",
     readTime: "11 min read",
     date: "2026-06-05",
-    category: "UGC / Real Stories",
+    category: "Customer Stories",
   },
   {
     slug: "local-seo-trades-complete-guide",
@@ -305,7 +305,7 @@ const blogPosts = [
     excerpt: "Self-employed plumber from Clapham shares honest 4-week diary using AI call answering. Real numbers. No BS. £6,800 in recovered jobs.",
     readTime: "10 min read",
     date: "2026-06-02",
-    category: "UGC / Real Stories",
+    category: "Customer Stories",
   },
   {
     slug: "i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky",
@@ -321,7 +321,7 @@ const blogPosts = [
     excerpt: "Manchester roofer shares honest 4-week diary using AI call answering. Real numbers. No BS. Storm season missed calls, tile repairs, leak emergencies. £5,200 recovered in one month.",
     readTime: "9 min read",
     date: "2026-06-07",
-    category: "UGC / Real Stories",
+    category: "Customer Stories",
   },
   {
     slug: "i-was-missing-2000-extension-enquiries-every-month-then-i-tried-ai-steve-the-builder",
@@ -329,7 +329,7 @@ const blogPosts = [
     excerpt: "Self-employed builder from Bristol shares honest 5-week diary using AI call answering. Real numbers. No BS. High-value extension and renovation enquiries captured. £7,400 recovered in one month.",
     readTime: "10 min read",
     date: "2026-06-07",
-    category: "UGC / Real Stories",
+    category: "Customer Stories",
   },
   {
     slug: "3-am-lockout-calls-were-going-to-voicemail-now-i-catch-every-one-sarah-the-locksmith",
@@ -337,7 +337,7 @@ const blogPosts = [
     excerpt: "Self-employed locksmith from Leeds shares honest 3-week diary using AI call answering. Real numbers. No BS. Emergency lockouts, security upgrades, and after-hours calls. £4,800 recovered in 3 weeks.",
     readTime: "9 min read",
     date: "2026-06-07",
-    category: "UGC / Real Stories",
+    category: "Customer Stories",
   },
   {
     slug: "i-missed-spring-booking-season-ai-captured-47-calls-in-3-weeks-james-the-landscaper",
@@ -345,7 +345,7 @@ const blogPosts = [
     excerpt: "Self-employed landscaper from Reading shares honest 3-week diary using AI call answering. Real numbers. No BS. Spring booking rush, garden redesigns, maintenance contracts. £3,600 recovered in 3 weeks.",
     readTime: "8 min read",
     date: "2026-06-07",
-    category: "UGC / Real Stories",
+    category: "Customer Stories",
   },
   {
     slug: "how-much-do-missed-calls-cost-uk-trades",

@@ -20,7 +20,7 @@ import { ClaireDashboard } from "@/components/whoza/claire-dashboard"
 import { Testimonials } from "@/components/whoza/testimonials"
 import { QuickAnswer } from "@/components/whoza/quick-answer"
 import { ComparisonTable } from "@/components/whoza/comparison-table"
-import { Pricing } from "@/components/whoza/pricing"
+import { PricingSummary } from "@/components/whoza/pricing-summary"
 import { FinalCTA } from "@/components/whoza/final-cta"
 import { FloatingChatWidget } from "@/components/whoza/sticky-cta"
 import { VideoSchema } from "@/components/whoza/schema-markup"
@@ -381,7 +381,7 @@ export default function ForRoofersPage() {
         <div className="section-divider" />
         <ComparisonTable />
         <div className="section-divider" />
-        <Pricing />
+        <PricingSummary />
 
         {/* ─── FAQ ─── */}
         <section className="trade-faq section-padding-lg bg-white relative">

@@ -17,7 +17,7 @@ import { TrialExplanation } from "@/components/whoza/trial-explanation"
 import { Testimonials } from "@/components/whoza/testimonials"
 import { GoogleReviews } from "@/components/whoza/google-reviews"
 import { ComparisonTable } from "@/components/whoza/comparison-table"
-import { Pricing } from "@/components/whoza/pricing"
+import { PricingSummary } from "@/components/whoza/pricing-summary"
 import { FAQ } from "@/components/whoza/faq"
 import { FinalCTA } from "@/components/whoza/final-cta"
 import { Footer } from "@/components/whoza/footer"
@@ -192,7 +192,7 @@ export default function Home() {
 
         {/* DECIDE - Pricing */}
         <div className="section-divider" />
-        <Pricing />
+        <PricingSummary />
 
         {/* OBJECTIONS - FAQ (with Pricing) */}
         <div className="section-divider" />

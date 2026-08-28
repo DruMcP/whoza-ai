@@ -36,7 +36,7 @@ export const blogPostContents: Record<string, BlogPostContent> = {
     excerpt: "Self-employed roofer from Manchester shares his honest 5-week diary using AI call answering. Real numbers. Storm damage season. £9,400 in recovered jobs.",
     readTime: "11 min read",
     date: "2026-06-17",
-    category: "UGC / Real Stories",
+    category: "Customer Stories",
     author: "Mike Harrison",
     authorTitle: "Self-Employed Roofer, Manchester",
     metaTitle: "I Lost an £8,000 Roof Job Because I Was Up a Ladder",
@@ -211,7 +211,7 @@ Honestly? If you're a self-employed roofer or a small team working at height and
     excerpt: "Self-employed builder from Birmingham shares his honest 4-week diary using AI call answering. Real numbers. Extensions, renovations, emergency callouts. £7,200 in recovered jobs.",
     readTime: "10 min read",
     date: "2026-06-17",
-    category: "UGC / Real Stories",
+    category: "Customer Stories",
     author: "Tom Edwards",
     authorTitle: "Self-Employed Builder, Birmingham",
     schema: {
@@ -381,7 +381,7 @@ Honestly? If you're a builder with a small team, working on site every day, miss
     excerpt: "Self-employed plumber from Clapham shares honest 4-week diary using AI call answering. Real numbers. No BS. £6,800 in recovered jobs.",
     readTime: "10 min read",
     date: "2026-06-02",
-    category: "UGC / Real Stories",
+    category: "Customer Stories",
     author: "Gary Mitchell",
     authorTitle: "Self-Employed Plumber, Clapham",
     schema: {
@@ -547,7 +547,7 @@ Honestly? If you're a self-employed plumber, sparky, gas engineer, roofer, or bu
     excerpt: "Self-employed sparky from Lewisham shares his honest 3-week diary using AI call answering. Real numbers. No BS. £4,200 in recovered jobs.",
     readTime: "9 min read",
     date: "2026-05-31",
-    category: "UGC / Real Stories",
+    category: "Customer Stories",
     author: "Dave Williams",
     authorTitle: "Self-Employed Electrician, Lewisham",
     schema: {
@@ -933,7 +933,7 @@ Whether you're a solo plumber or a growing building firm, the competitive advant
     excerpt: "Gas Safe heating engineer from Walthamstow shares exact maths, 4-week tracked results, and honest review of AI call answering. Real numbers. No fluff. £6,650 recovered in one month.",
     readTime: "11 min read",
     date: "2026-06-05",
-    category: "UGC / Real Stories",
+    category: "Customer Stories",
     author: "Mark Harrison",
     authorTitle: "Gas Safe Heating Engineer, Walthamstow",
     schema: {
@@ -3670,7 +3670,7 @@ Your phone rings 24/7. Make sure it's always answered.`,
     excerpt: "Manchester roofer shares honest 4-week diary using AI call answering. Real numbers. No BS. Storm season missed calls, tile repairs, leak emergencies. £5,200 recovered in one month.",
     readTime: "9 min read",
     date: "2026-06-07",
-    category: "UGC / Real Stories",
+    category: "Customer Stories",
     author: "Tom Hartley",
     authorTitle: "Self-Employed Roofer, Manchester",
     schema: {
@@ -3836,7 +3836,7 @@ Honestly? If you're a self-employed roofer, plumber, sparky, gas engineer, or bu
     excerpt: "Self-employed builder from Bristol shares honest 5-week diary using AI call answering. Real numbers. No BS. High-value extension and renovation enquiries captured. £7,400 recovered in one month.",
     readTime: "10 min read",
     date: "2026-06-07",
-    category: "UGC / Real Stories",
+    category: "Customer Stories",
     author: "Steve Dawson",
     authorTitle: "Self-Employed Builder, Bristol",
     schema: {
@@ -4005,7 +4005,7 @@ Honestly? If you're a self-employed builder, plumber, sparky, gas engineer, or r
     excerpt: "Self-employed locksmith from Leeds shares honest 3-week diary using AI call answering. Real numbers. No BS. Emergency lockouts, security upgrades, and after-hours calls. £4,800 recovered in 3 weeks.",
     readTime: "9 min read",
     date: "2026-06-07",
-    category: "UGC / Real Stories",
+    category: "Customer Stories",
     author: "Sarah Jenkins",
     authorTitle: "Self-Employed Locksmith, Leeds",
     schema: {
@@ -4170,7 +4170,7 @@ Honestly? If you're a self-employed locksmith, plumber, sparky, gas engineer, or
     excerpt: "Self-employed landscaper from Reading shares honest 3-week diary using AI call answering. Real numbers. No BS. Spring booking rush, garden redesigns, maintenance contracts. £3,600 recovered in 3 weeks.",
     readTime: "8 min read",
     date: "2026-06-07",
-    category: "UGC / Real Stories",
+    category: "Customer Stories",
     author: "James Crawford",
     authorTitle: "Self-Employed Landscaper, Reading",
     schema: {
@@ -4333,13 +4333,13 @@ Honestly? If you're a self-employed landscaper, gardener, builder, plumber, spar
       ],
     },
   },
-  // ─── NEW UGC LISTICLE 1 ───
+  // ─── NEW LISTICLE 1 ───
   "5-signs-your-trade-business-is-losing-customers-to-missed-calls": {
     title: "5 Signs Your Trade Business is Losing Customers to Missed Calls",
     excerpt: "Self-employed heating engineer from Leeds reveals the 5 warning signs that cost him £18,000 a year. Number 3 made me sick when I worked it out.",
     readTime: "8 min read",
     date: "2026-06-08",
-    category: "UGC / Real Stories",
+    category: "Customer Stories",
     author: "Mark Henderson",
     authorTitle: "Self-Employed Heating Engineer, Leeds",
     metaTitle: "5 Signs Your Trade Business Loses Customers to Missed Calls",
@@ -4448,13 +4448,13 @@ That is the difference between a one-man band and a one-man business.`,
       ],
     },
   },
-  // ─── NEW UGC LISTICLE 2 ───
+  // ─── NEW LISTICLE 2 ───
   "7-questions-every-uk-tradesperson-should-ask-before-hiring-a-call-answering-service": {
     title: "7 Questions Every UK Tradesperson Should Ask Before Hiring a Call Answering Service",
     excerpt: "Manchester locksmith asked the wrong questions and wasted £400 on a call answering service that did not work. Here is what she wishes she had asked first.",
     readTime: "9 min read",
     date: "2026-06-08",
-    category: "UGC / Buying Guide",
+    category: "Buying Guide",
     author: "Sarah Williams",
     authorTitle: "Emergency Locksmith, Manchester",
     metaTitle: "7 Questions Before Hiring a Call Answering Service UK",
@@ -4618,13 +4618,13 @@ Question to ask: "Do you offer a free trial with no credit card required?" If th
       ],
     },
   },
-  // ─── NEW UGC LISTICLE 3 ───
+  // ─── NEW LISTICLE 3 ───
   "8-reasons-uk-tradespeople-switch-to-ai-call-handling-in-2026": {
     title: "8 Reasons UK Tradespeople Switch to AI Call Handling in 2026",
     excerpt: "Bristol roofer Tom Bradley explains why 2026 is the year tradespeople are ditching voicemail and human receptionists for AI. Reason 6 surprised his accountant.",
     readTime: "10 min read",
     date: "2026-06-08",
-    category: "UGC / Trends",
+    category: "Trends",
     author: "Tom Bradley",
     authorTitle: "Self-Employed Roofer, Bristol",
     metaTitle: "8 Reasons UK Trades Switch to AI Call Handling 2026",
@@ -5020,7 +5020,7 @@ Built in Scotland. Working for UK trades.`,
     excerpt: "A self-employed joiner from Glasgow spent 14 days comparing virtual receptionist prices. He discovered the cheapest option was not the best value.",
     readTime: "14 min read",
     date: "2026-08-08",
-    category: "UGC / Real Stories",
+    category: "Customer Stories",
     author: "Ross McAllister",
     authorTitle: "Self-Employed Joiner, Glasgow",
     metaTitle: "Virtual Receptionist Cost UK 2026: A Joiner's Comparison",

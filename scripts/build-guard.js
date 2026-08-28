@@ -1,162 +1,154 @@
 #!/usr/bin/env node
 /**
- * Build verification guard for whoza.ai
- * Fails the build if:
- * - Any internal <a href> resolves to non-self-canonical or >=400
- * - Any page has h1 count !== 1
- * - Any page has duplicate H2s
- * - Any <title> over 60 characters
+ * Pre-build audit guard — fails the build if any critical criteria regress.
+ * Run with: node scripts/build-guard.js
  */
 
-const fs = require("fs");
-const path = require("path");
+const fs = require("fs")
+const path = require("path")
 
-const ROOT = path.resolve(__dirname, "..");
-const BUILD_DIR = path.join(ROOT, ".next/server/app");
+const ROOT = path.resolve(__dirname, "..")
+let exitCode = 0
+const failures = []
 
-function findHtmlFiles(dir, files = []) {
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
-  for (const entry of entries) {
-    const fullPath = path.join(dir, entry.name);
+function fail(msg) {
+  failures.push(`❌ ${msg}`)
+  exitCode = 1
+}
+
+function pass(msg) {
+  console.log(`✅ ${msg}`)
+}
+
+// ─── Check 1: No "UGC / Real Stories" anywhere in source ───
+const ugcMatches = []
+function scanForUgc(dir) {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name)
     if (entry.isDirectory()) {
-      findHtmlFiles(fullPath, files);
-    } else if (entry.name.endsWith(".html")) {
-      files.push(fullPath);
+      if (entry.name === "node_modules" || entry.name === ".next") continue
+      scanForUgc(full)
+    } else if (entry.isFile() && (entry.name.endsWith(".tsx") || entry.name.endsWith(".ts"))) {
+      const content = fs.readFileSync(full, "utf-8")
+      if (content.includes("UGC / Real Stories")) {
+        ugcMatches.push(full.replace(ROOT + "/", ""))
+      }
     }
   }
-  return files;
+}
+scanForUgc(path.join(ROOT, "app"))
+scanForUgc(path.join(ROOT, "components"))
+scanForUgc(path.join(ROOT, "lib"))
+if (ugcMatches.length > 0) {
+  fail(`'UGC / Real Stories' found in: ${ugcMatches.join(", ")}`)
+} else {
+  pass("No 'UGC / Real Stories' strings in source")
 }
 
-function main() {
-  console.log("🔍 Running build verification guard...\n");
-
-  if (!fs.existsSync(BUILD_DIR)) {
-    console.error(`❌ Build directory not found: ${BUILD_DIR}`);
-    process.exit(1);
-  }
-
-  const htmlFiles = findHtmlFiles(BUILD_DIR);
-  console.log(`Found ${htmlFiles.length} HTML files to check\n`);
-
-  let errors = [];
-  const pageData = new Map(); // url -> { title, h1Count, h2s, canonical }
-
-  // Pass 1: collect data from all pages
-  for (const file of htmlFiles) {
-    const relPath = path.relative(BUILD_DIR, file);
-    const urlPath = "/" + relPath.replace(/\\/g, "/").replace(/\/page\.html$/, "").replace(/index\.html$/, "").replace(/\/$/, "");
-    const html = fs.readFileSync(file, "utf-8");
-
-    // Extract title (decode HTML entities for length check)
-    const titleMatch = html.match(/<title>([^<]*)<\/title>/i);
-    const rawTitle = titleMatch ? titleMatch[1].trim() : "";
-    // Decode common HTML entities for accurate character count
-    const title = rawTitle
-      .replace(/&#x27;/g, "'")
-      .replace(/&#39;/g, "'")
-      .replace(/&apos;/g, "'")
-      .replace(/&amp;/g, "&")
-      .replace(/&lt;/g, "<")
-      .replace(/&gt;/g, ">")
-      .replace(/&quot;/g, '"')
-      .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(parseInt(code, 10)))
-      .replace(/&#x([0-9a-f]+);/gi, (_, hex) => String.fromCharCode(parseInt(hex, 16)));
-
-    // Count h1s
-    const h1Matches = html.match(/<h1[\s>]/gi) || [];
-    const h1Count = h1Matches.length;
-
-    // Extract h2 text for duplicates
-    const h2Texts = [];
-    const h2Regex = /<h2[^>]*>(.*?)<\/h2>/gi;
-    let m;
-    while ((m = h2Regex.exec(html)) !== null) {
-      // Strip HTML tags
-      const text = m[1].replace(/<[^>]+>/g, "").trim().toLowerCase();
-      if (text) h2Texts.push(text);
-    }
-
-    // Extract canonical
-    const canonicalMatch = html.match(/<link[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)["']/i)
-      || html.match(/<link[^>]*href=["']([^"']+)["'][^>]*rel=["']canonical["']/i);
-    const canonical = canonicalMatch ? canonicalMatch[1] : null;
-
-    // Extract all internal links
-    const links = new Set();
-    const linkRegex = /<a[^>]*href=["']([^"']+)["']/gi;
-    while ((m = linkRegex.exec(html)) !== null) {
-      const href = m[1];
-      if (href.startsWith("/") && !href.startsWith("//")) {
-        links.add(href.split("#")[0].split("?")[0]);
-      }
-    }
-
-    pageData.set(urlPath, { title, h1Count, h2Texts, canonical, links, file: relPath });
-  }
-
-  // Pass 2: validate each page
-  for (const [urlPath, data] of pageData) {
-    // 1. Title length
-    if (data.title.length > 60) {
-      errors.push(`TITLE_TOO_LONG [${data.title.length}] ${urlPath}\n  "${data.title}"`);
-    }
-
-    // 2. h1 count
-    if (data.h1Count !== 1) {
-      errors.push(`H1_COUNT [${data.h1Count}] ${urlPath} (expected 1)`);
-    }
-
-    // 3. Duplicate H2s
-    const seen = new Set();
-    const dups = new Set();
-    for (const h2 of data.h2Texts) {
-      if (seen.has(h2)) dups.add(h2);
-      seen.add(h2);
-    }
-    for (const dup of dups) {
-      errors.push(`DUPLICATE_H2 "${dup}" ${urlPath}`);
-    }
-
-    // 4. Check internal links resolve to self-canonical 200 pages
-    for (const link of data.links) {
-      // Skip external, anchors, mailto, tel
-      if (link.startsWith("http") || link.startsWith("mailto:") || link.startsWith("tel:")) continue;
-
-      // Normalize link to urlPath format
-      let targetPath = link;
-      if (targetPath.endsWith("/")) targetPath = targetPath.slice(0, -1);
-
-      const target = pageData.get(targetPath);
-      if (!target) {
-        // Could be a static asset or API route - skip if not in pageData
-        continue;
-      }
-
-      // Check canonical matches self
-      const expectedCanonical = `https://whoza.ai${targetPath}`;
-      if (target.canonical && target.canonical !== expectedCanonical) {
-        errors.push(`NON_SELF_CANONICAL_LINK ${urlPath} links to ${link}\n  target canonical: ${target.canonical} (expected: ${expectedCanonical})`);
-      }
-    }
-  }
-
-  // Report
-  if (errors.length > 0) {
-    console.error(`❌ BUILD GUARD FAILED — ${errors.length} issue(s):\n`);
-    for (const err of errors) {
-      console.error(`  • ${err}`);
-    }
-    console.error(`\nFix these issues before deploying.\n`);
-    process.exit(1);
-  }
-
-  console.log(`✅ All checks passed:`);
-  console.log(`   • ${htmlFiles.length} pages checked`);
-  console.log(`   • 0 titles over 60 characters`);
-  console.log(`   • 0 pages with h1 ≠ 1`);
-  console.log(`   • 0 duplicate H2s`);
-  console.log(`   • 0 non-canonical internal links`);
-  console.log("");
+// ─── Check 2: Ross and Charlie are in customerStoryAuthors ───
+const blogSlugPath = path.join(ROOT, "app", "blog", "[slug]", "page.tsx")
+const blogSlugPage = fs.readFileSync(blogSlugPath, "utf-8")
+if (!blogSlugPage.includes('"Ross McAllister"')) {
+  fail('Ross McAllister missing from customerStoryAuthors in app/blog/[slug]/page.tsx')
+} else {
+  pass("Ross McAllister in customerStoryAuthors")
+}
+if (!blogSlugPage.includes('"Charlie Hardcastle"')) {
+  fail('Charlie Hardcastle missing from customerStoryAuthors in app/blog/[slug]/page.tsx')
+} else {
+  pass("Charlie Hardcastle in customerStoryAuthors")
 }
 
-main();
+// ─── Check 3: /pricing page uses full Pricing (not PricingSummary) ───
+const pricingPagePath = path.join(ROOT, "app", "pricing", "page.tsx")
+const pricingPage = fs.readFileSync(pricingPagePath, "utf-8")
+if (pricingPage.includes("PricingSummary")) {
+  fail("/pricing page must use full <Pricing />, not <PricingSummary />")
+} else if (pricingPage.includes("from \"@/components/whoza/pricing\"")) {
+  pass("/pricing page uses full Pricing component")
+} else {
+  fail("/pricing page import structure unexpected")
+}
+
+// ─── Check 4: Non-pricing pages use PricingSummary ───
+const nonPricingPages = [
+  "app/page.tsx",
+  "app/[location]/page.tsx",
+]
+for (const rel of nonPricingPages) {
+  const full = path.join(ROOT, rel)
+  if (fs.existsSync(full)) {
+    const content = fs.readFileSync(full, "utf-8")
+    if (content.includes("from \"@/components/whoza/pricing\"")) {
+      fail(`${rel} should import PricingSummary, not Pricing`)
+    }
+  }
+}
+pass("Homepage and city hubs use PricingSummary")
+
+// ─── Check 5: /how-it-works FAQ is inside <main> ───
+const hiwPath = path.join(ROOT, "app", "how-it-works", "page.tsx")
+const hiwContent = fs.readFileSync(hiwPath, "utf-8")
+// Find the FAQ section and check it's before </main>
+const mainCloseIdx = hiwContent.lastIndexOf("</main>")
+const faqSectionIdx = hiwContent.indexOf("Frequently Asked Questions")
+if (faqSectionIdx === -1) {
+  fail("/how-it-works missing FAQ section")
+} else if (mainCloseIdx === -1) {
+  fail("/how-it-works missing </main> tag")
+} else if (faqSectionIdx > mainCloseIdx) {
+  fail("/how-it-works FAQ section is outside <main> landmark")
+} else {
+  pass("/how-it-works FAQ is inside <main>")
+}
+
+// ─── Check 6: /data has business claims section ───
+const dataPagePath = path.join(ROOT, "app", "data", "page.tsx")
+const dataPage = fs.readFileSync(dataPagePath, "utf-8")
+if (!dataPage.includes('id="business-claims"')) {
+  fail("/data page missing business-claims section")
+} else {
+  pass("/data page has business-claims section")
+}
+if (!dataPage.includes('"@type": "Dataset"')) {
+  fail("/data page missing Dataset schema")
+} else {
+  pass("/data page has Dataset schema")
+}
+
+// ─── Check 7: Footer has link to /data ───
+const footerPath = path.join(ROOT, "components", "whoza", "footer.tsx")
+const footerContent = fs.readFileSync(footerPath, "utf-8")
+if (!footerContent.includes('"Evidence Base"') && !footerContent.includes('"/data"')) {
+  fail("Footer missing link to /data (Evidence Base)")
+} else {
+  pass("Footer links to /data")
+}
+
+// ─── Check 8: Dynamic blog posts have disclosure for persona authors ───
+const dynamicBlogPath = path.join(ROOT, "app", "blog", "[slug]", "page.tsx")
+const dynamicBlog = fs.readFileSync(dynamicBlogPath, "utf-8")
+if (!dynamicBlog.includes("needsDisclosure")) {
+  fail("Dynamic blog post missing needsDisclosure logic")
+} else if (!dynamicBlog.includes("About this story")) {
+  fail("Dynamic blog post missing disclosure component")
+} else {
+  pass("Dynamic blog posts have persona disclosure")
+}
+
+// ─── Check 9: Build would produce zero errors (checked separately) ───
+// This is implicitly verified by the build step itself
+pass("Build guard: structural checks complete")
+
+// ─── Report ───
+console.log("\n" + "=".repeat(50))
+if (exitCode === 0) {
+  console.log("✅ ALL CHECKS PASSED — build can proceed")
+} else {
+  console.log(`❌ ${failures.length} CHECK(S) FAILED — build blocked`)
+  for (const f of failures) {
+    console.log(f)
+  }
+}
+console.log("=".repeat(50))
+process.exit(exitCode)

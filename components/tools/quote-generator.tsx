@@ -62,7 +62,7 @@ export function QuoteGenerator() {
               <FileText className="w-4 h-4" />
               Free Tool
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Free Quote Generator for UK Tradespeople</h1>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Free Quote Generator for UK Tradespeople</h2>
             <p className="text-white/60 text-lg max-w-2xl mx-auto">
               Stop scribbling quotes on the back of receipts. Create professional, branded quotes that win more jobs — and look legit to customers checking you out on Google.
             </p>

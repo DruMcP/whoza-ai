@@ -175,7 +175,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       "@type": "WebPage",
       "@id": "https://whoza.ai/blog/i-missed-5-emergency-calls-a-week-then-i-tried-ai-gary-the-plumber"
     },
-    "articleSection": "UGC / Real Stories",
+    "articleSection": "Customer Stories",
     "speakable": {
       "@type": "SpeakableSpecification",
       "cssSelector": [".article-headline", ".article-body"]
@@ -205,16 +205,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const customerStoryAuthors = [
     "Mike Harrison", "Tom Edwards", "Gary Mitchell", "Dave Williams", "Mark Harrison",
     "Tom Hartley", "Steve Dawson", "Sarah Jenkins", "James Crawford", "Mark Henderson",
-    "Sarah Williams", "Tom Bradley"
+    "Sarah Williams", "Tom Bradley", "Ross McAllister", "Charlie Hardcastle"
   ]
   const isDruAuthor = post.author === "Dru McPherson"
   const isOrgAuthor = customerStoryAuthors.includes(post.author) || post.author === "Whoza.ai Team"
+  const needsDisclosure = customerStoryAuthors.includes(post.author)
 
   const authorSchema = isDruAuthor
     ? { "@id": "https://whoza.ai/#dru-mcpherson" }
-    : isOrgAuthor
-      ? { "@id": "https://whoza.ai/#organization" }
-      : { "@type": "Person" as const, name: post.author, jobTitle: post.authorTitle || "Contributor" }
+    : { "@id": "https://whoza.ai/#organization" }
 
   const articleSchema = {
     "@type": "BlogPosting",
@@ -314,6 +313,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="mt-2 text-white/30 text-sm">
             Last updated: <time dateTime={post.date}>{post.date}</time>
           </div>
+          {needsDisclosure && (
+            <div className="mt-4 bg-white/5 border border-white/10 rounded-lg p-4">
+              <p className="text-white/50 text-sm leading-relaxed">
+                <strong className="text-white/70">About this story.</strong>{" "}
+                This account is based on outcomes reported to us by a whoza.ai customer and written up by the whoza.ai team. Names and figures are the customer&apos;s own. Results vary — see our{" "}
+                <Link href="/data" className="text-emerald-400 hover:text-emerald-300 underline">evidence base</Link>{" "}
+                for how we handle numbers.
+              </p>
+            </div>
+          )}
         </div>
 
         <div className="bg-white/5 border border-white/10 rounded-xl p-8 mb-10">

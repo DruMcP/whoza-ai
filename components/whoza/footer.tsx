@@ -34,6 +34,7 @@ const footerLinks = {
     { label: "Watch Demo", href: "/watch" },
     { label: "Best AI Call Handler", href: "/best-ai-call-handler-uk-trades" },
     { label: "Missed Calls Cost", href: "/missed-calls-cost-calculator" },
+    { label: "Evidence Base", href: "/data" },
     { label: "Part of 5R-AI — the UK AI agency", href: "https://www.5r-ai.com", external: true },
   ],
   comparisons: [
