@@ -184,6 +184,84 @@ export default function Home() {
         </section>
 
         <div className="section-divider" />
+        {/* CITY COVERAGE — contextual in-body internal links (city pages were
+            orphaned: sitemap-only discovery, zero in-body links site-wide, GSC 2026-08-30) */}
+        <div className="section-divider" />
+        <section className="py-14" aria-labelledby="city-answering-heading">
+          <div className="max-w-5xl mx-auto px-4">
+            <h2 id="city-answering-heading" className="text-2xl md:text-3xl font-bold mb-3">
+              24/7 call answering for trades, city by city
+            </h2>
+            <p className="mb-6 opacity-80">
+              Whoza is built in Scotland for UK trades, with 12 UK and Scottish accent options — so
+              a caller from Glasgow or Aberdeen is understood first time. You only pay for jobs you
+              accept, never for calls answered. Pick your city:
+            </p>
+            <ul className="space-y-4">
+              <li>
+                <a href="/glasgow" className="font-semibold underline">
+                  AI call answering in Glasgow
+                </a>{" "}
+                — Glaswegian-ready voice handling for plumbers, electricians and joiners across the
+                city, with qualified jobs sent straight to your WhatsApp.
+              </li>
+              <li>
+                <a href="/edinburgh" className="font-semibold underline">
+                  AI call answering in Edinburgh
+                </a>{" "}
+                — capture tenement callouts and emergency heating jobs while you are on site, with
+                RED/AMBER/GREEN urgency triage on every call.
+              </li>
+              <li>
+                <a href="/leeds" className="font-semibold underline">
+                  AI call answering in Leeds
+                </a>{" "}
+                — 24/7 cover for Yorkshire trades, including spam and sales-call filtering so only
+                real enquiries reach your phone.
+              </li>
+              <li>
+                <a href="/manchester" className="font-semibold underline">
+                  AI call answering in Manchester
+                </a>{" "}
+                — keep your existing business number and let Katie or Mark answer the calls you
+                cannot take from the van.
+              </li>
+              <li>
+                <a href="/birmingham" className="font-semibold underline">
+                  AI call answering in Birmingham
+                </a>{" "}
+                — Midlands trade cover with calendar sync, so confirmed bookings land in your diary
+                without double-booking.
+              </li>
+              <li>
+                <a href="/london" className="font-semibold underline">
+                  AI call answering in London
+                </a>{" "}
+                — high call-volume cover for London trades, with searchable transcripts of every
+                enquiry and one-tap accept or decline.
+              </li>
+              <li>
+                <a href="/bristol" className="font-semibold underline">
+                  AI call answering in Bristol
+                </a>{" "}
+                — South West trade cover, plus Claire turning completed jobs into Google reviews on
+                autopilot.
+              </li>
+            </ul>
+            <p className="mt-6 opacity-80">
+              Not sure what unanswered calls are already costing you? Use the{" "}
+              <a href="/missed-calls-cost-calculator" className="font-semibold underline">
+                missed call cost calculator
+              </a>{" "}
+              — or read how our Aberdonian-accent build was covered by{" "}
+              <a href="/press" className="font-semibold underline">
+                the Press and Journal
+              </a>
+              .
+            </p>
+          </div>
+        </section>
+
         <StatsBand />
 
         {/* COMPARE - Why Whoza Wins */}
