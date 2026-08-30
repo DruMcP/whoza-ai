@@ -10,10 +10,11 @@ const PUBLISHED = "2026-07-23"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "Your Next Customer Won't Google You. They'll Ask AI.",
+  title: "AI Visibility: Why Most UK Trades Are Invisible to ChatGPT",
   description:
-    "How UK customers now use AI like ChatGPT and Google AI Overviews to find tradespeople. What this means for your business visibility.",
+    "Google visibility ≠ AI visibility. Here's why most UK trades show up fine on Google but are missing from ChatGPT's shortlist — and the 5 signals that fix it.",
   keywords: [
+    "AI visibility",
     "AI search for tradespeople",
     "ChatGPT find a tradesperson",
     "answer engine optimisation UK trades",
@@ -25,16 +26,16 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/blog/ai-search-for-uk-trades",
     siteName: "Whoza.ai",
-    title: "Your Next Customer Won't Google You. They'll Ask AI.",
+    title: "AI Visibility: Why Most UK Trades Are Invisible to ChatGPT",
     description:
-      "UK customers have quietly switched to AI search. Here's what it means for trades — and how to be the name the AI recommends.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "AI search for UK trades" }],
+      "Google visibility ≠ AI visibility. Here's why most UK trades show up fine on Google but are missing from ChatGPT's shortlist — and the 5 signals that fix it.",
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "AI visibility for UK trades" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Your Next Customer Won't Google You. They'll Ask AI.",
+    title: "AI Visibility: Why Most UK Trades Are Invisible to ChatGPT",
     description:
-      "UK customers have quietly switched to AI search. Here's what it means for trades — and how to be the name the AI recommends.",
+      "Google visibility ≠ AI visibility. Here's why most UK trades show up fine on Google but are missing from ChatGPT's shortlist — and the 5 signals that fix it.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {
@@ -82,14 +83,14 @@ export default function AISearchForTradesPost() {
       />
       <BlogPostArticleSchema
         slug="ai-search-for-uk-trades"
-        title="Your Next Customer Won't Google You. They'll Ask AI."
+        title="AI Visibility: Why Most UK Trades Are Invisible to ChatGPT"
         description="How UK customers now use AI to find and vet tradespeople — and how to make sure your trade business is the one it recommends."
         datePublished={PUBLISHED}
         dateModified={PUBLISHED}
         author="Dru McPherson"
         authorTitle="Founder, Whoza"
-        category="AI Search"
-        excerpt="UK customers have quietly switched to AI search. Here's what it means for trades — and how to be the name the AI recommends."
+        category="AI Visibility"
+        excerpt="Google visibility ≠ AI visibility. Here's why most UK trades show up fine on Google but are missing from ChatGPT's shortlist — and the 5 signals that fix it."
       />
       <FAQPageSchema faqs={faqs} />
 
@@ -101,13 +102,13 @@ export default function AISearchForTradesPost() {
             <Link href="/blog" className="hover:underline">← Back to Blog</Link>
           </nav>
 
-          <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-[#047857]">AI Search</p>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-[#047857]">AI Visibility</p>
           <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">
-            Your Next Customer Won&apos;t Google You. They&apos;ll Ask AI.
+            AI Visibility: Why Most UK Trades Are Invisible to ChatGPT
           </h1>
           <p className="mt-5 text-xl leading-relaxed text-[#5A6472]">
-            I run an AI company for UK trades — and the biggest shift I&apos;ve seen this year has nothing to do with my
-            product. It&apos;s how your customers now decide who to call.
+            A plumber asked his customer how she found him. She didn't say Google. She didn't say Checkatrade. 
+            She said: <em>"I asked ChatGPT for a good boiler engineer near me, and your name came up."</em>
           </p>
           <p className="mt-4 text-sm font-semibold text-[#047857]">By Dru · Founder of Whoza · Published 23 July 2026</p>
 
@@ -125,12 +126,12 @@ export default function AISearchForTradesPost() {
             </p>
 
             <div className="rounded-2xl border-l-4 border-[#047857] bg-[#F1F8F4] p-6">
-              <h2 className="!mt-0 text-xl font-bold text-[#047857]">The short version</h2>
+              <h2 className="!mt-0 text-xl font-bold text-[#047857]">What you&apos;ll learn in the next 6 minutes</h2>
               <ul className="mt-3 list-disc space-y-2 pl-5 text-base">
-                <li>Over half of UK adults (54%) now use AI tools like ChatGPT — up from 31% just a year earlier (Ofcom, 2025).</li>
-                <li>AI doesn&apos;t hand people ten links to ring around. It hands them a shortlist of about three names. I call it the AI Shortlist.</li>
-                <li>Most good trades are completely invisible in that shortlist — not because they&apos;re bad, but because nothing tells the AI they exist.</li>
-                <li>Getting named is learnable. It comes down to five signals we call Entity Confidence.</li>
+                <li>Why being #1 on Google doesn&apos;t mean AI will ever mention your name (and how to check in 2 minutes)</li>
+                <li>The exact 5 signals that make ChatGPT confident enough to recommend a tradesperson — most trades have 2 or fewer</li>
+                <li>A free 10-minute test that shows you exactly who&apos;s on the AI shortlist in your area — and why they&apos;re there</li>
+                <li>Why &ldquo;AI visibility&rdquo; is now a separate skill from SEO — and the 3 things that matter for one but not the other</li>
               </ul>
             </div>
 
@@ -215,29 +216,44 @@ export default function AISearchForTradesPost() {
               search and doesn&apos;t reveal a fixed local-business order. A whole young discipline has sprung up around
               this, usually called GEO or answer-engine optimisation; I&apos;m not claiming to have invented it. What
               we&apos;ve done is boil it down to the five signals that actually move the needle for a trade business — the
-              things that make an AI confident enough to say your name. We call it Entity Confidence:
+              things that make an AI confident enough to say your name. We call it Entity Confidence.
             </p>
-            <ol className="list-decimal space-y-2 pl-6">
-              <li><strong>Clarity.</strong> The machine can plainly tell who you are, what you do and where. Consistent name, number and services everywhere; structured data (JSON-LD — the code that spells your facts out for machines).</li>
-              <li><strong>Consensus.</strong> More than one independent source agrees you exist and you&apos;re good — reviews, directories and mentions that line up. (Yext found 86% of AI citations trace back to sources a business can actually influence. This is not out of your hands.)</li>
-              <li><strong>Answer-readiness.</strong> Somewhere online, in plain words, you actually answer the questions customers ask: what you do, your area, your hours, rough prices.</li>
-              <li><strong>Trust.</strong> Real reviews, accurate details, a real named human behind the business. AI is trained to be cautious about who it vouches for.</li>
-              <li><strong>Context.</strong> You&apos;re clearly tied to a place, and your information is current — not three years stale.</li>
-            </ol>
             <p>
-              That&apos;s it. It isn&apos;t magic, and it isn&apos;t gameable trickery. It&apos;s being unmistakably legible
-              to a machine that&apos;s trying very hard not to be wrong.
+              The first signal is what I call <strong>Clarity</strong> — and it&apos;s where most trades fall at the first hurdle. The machine has to be able to tell, without any ambiguity, who you are, what you do, and where you do it. That means your business name is identical everywhere it appears — your website, your Google Business Profile, your Checkatrade listing, your van signage. Not "Dave's Plumbing" in one place and "David Smith Plumbing Services" in another. Not a mobile number on your site and a landline on your directory listings. And crucially, not a vague "we cover Greater Manchester" when what you mean is "we work in Stockport, Cheadle and Bramhall." The AI sees mismatches as uncertainty — and uncertainty means it won&apos;t risk recommending you. Structured data helps enormously here: JSON-LD markup on your website that explicitly spells out your name, address, phone number and services in machine-readable code. Without it, the AI has to guess. With it, you&apos;re telling it directly.
+            </p>
+            <p>
+              The second signal is <strong>Consensus</strong> — do multiple independent sources agree that you exist and you&apos;re good at what you do? One glowing review on your own website means almost nothing to an AI, because of course you&apos;d only publish the good ones. But 47 Google reviews averaging 4.8 stars, plus a Checkatrade profile with 23 positive ratings, plus a mention in a local newspaper article about heating engineers — that&apos;s a pattern the AI can trust. Here&apos;s a statistic that matters: Yext found that 86% of AI citations trace back to sources a business can actually influence. This is not out of your hands. Every review you collect, every directory you claim, every local mention you earn — it all adds up to consensus. The businesses winning the AI shortlist aren&apos;t necessarily the best; they&apos;re the ones with the most consistent digital footprint across multiple platforms.
+            </p>
+            <p>
+              Third comes <strong>Answer-readiness</strong> — and this is where most trade websites fail spectacularly. When someone asks an AI "who&apos;s the best plumber in Leeds for emergency call-outs?", the AI isn&apos;t just looking for a business called "Leeds Plumbing." It&apos;s looking for a page, somewhere on the internet, that explicitly says "We offer 24/7 emergency plumbing services in Leeds, covering burst pipes, boiler breakdowns and blocked drains, with an average response time of 45 minutes." Most trade websites have a generic "Services" page and a contact form. That&apos;s not answer-ready. The AI can&apos;t extract a useful answer from vague claims. You need dedicated pages that answer specific questions in plain English — not jargon, not marketing fluff, just direct answers. FAQ pages are particularly powerful here, which is why we&apos;ve built them into every location and trade page on our own site. When the AI scans the web for an answer, it finds ours because we&apos;ve literally written the answer it&apos;s looking for.
+            </p>
+            <p>
+              The fourth signal is <strong>Trust</strong> — and this goes deeper than just having good reviews. AI systems are trained to be cautious about who they vouch for, because a bad recommendation damages the AI&apos;s credibility too. They look for signals that you&apos;re a real, legitimate business run by a real human being. That means a named founder or owner (not just "admin"), a real physical address (not a PO box), current information (not a blog post from 2019 as your latest update), and genuine engagement with customers (replying to reviews, answering questions on your Google Business Profile). One of the most powerful trust signals is simply longevity — a business that&apos;s been around for five years with consistent information across the web is far more likely to be recommended than a new business with a flashy website but no history. The AI is essentially asking: "If I recommend this person and something goes wrong, will I look stupid?" Your job is to make the answer an obvious no.
+            </p>
+            <p>
+              Finally, <strong>Context</strong> — the AI needs to know not just that you exist, but where you exist and when you&apos;re relevant. A plumber in London is useless to someone in Glasgow, and a heating engineer who only works weekdays is useless to someone with a boiler emergency on Sunday night. Your location needs to be crystal clear — not just "UK-wide coverage" but specific towns, postcodes, and service areas. Your hours need to be accurate and up-to-date. Your services need to match what people actually search for. And perhaps most importantly, your information needs to be current. An AI will hesitate to recommend a business whose website hasn&apos;t been updated in two years, whose last Google review was six months ago, or whose phone number goes to voicemail. Context is about being not just findable, but relevant and active right now.
+            </p>
+            <p>
+              That&apos;s the five. It isn&apos;t magic, and it isn&apos;t gameable trickery. It&apos;s being unmistakably legible to a machine that&apos;s trying very hard not to be wrong. Most trades I speak to have two, maybe three of these signals working. The ones winning the AI shortlist have all five — not because they&apos;re spending thousands on marketing, but because they&apos;ve made themselves easy for a cautious robot to confidently recommend.
             </p>
 
             <h2 className="pt-4 text-2xl font-bold">What I&apos;d do about it this month (even if you never touch Whoza)</h2>
-            <p><strong>Make yourself easy for a cautious robot to recommend.</strong> In rough order of payoff:</p>
-            <ul className="list-disc space-y-2 pl-6">
-              <li><strong>Claim and clean up your Google Business Profile</strong> — hours, services, area, all correct and matching your website.</li>
-              <li><strong>Make your name, number and trade identical everywhere they appear.</strong> Mismatches make AI hesitate.</li>
-              <li><strong>Put plain answers on your own site</strong> — the jobs you do, the areas you cover, whether you do out-of-hours call-outs, rough pricing. A lot of AI citations come straight from a business&apos;s own pages.</li>
-              <li><strong>Keep reviews coming, and reply to them.</strong> Consensus and freshness in one move.</li>
-              <li><strong>Ask the AIs about yourself.</strong> Type &ldquo;best [your trade] in [your town]&rdquo; into ChatGPT and Google&apos;s AI. If you&apos;re not there, now you know. It&apos;s free, and it&apos;s the wake-up call for most people. Do it today.</li>
-            </ul>
+            <p><strong>Make yourself easy for a cautious robot to recommend.</strong> These aren&apos;t quick hacks — they&apos;re structural changes that compound over time. The payoff is being on the AI shortlist when your competitors aren&apos;t even aware it exists.</p>
+            <p>
+              Start with your <strong>Google Business Profile</strong>. Not just claiming it — actually filling it out completely and keeping it current. Hours, services, service areas, photos, products, Q&A answers. Make sure every detail matches your website exactly. A mismatch as small as "Mon-Fri 8am-6pm" on your site and "Mon-Fri 8:00-18:00" on Google Business is enough to introduce uncertainty. The AI sees inconsistency as risk.
+            </p>
+            <p>
+              Next, audit your <strong>name, number and trade identity everywhere they appear</strong>. Your website, every directory, your van, your invoices, your email signature. They should be identical. If you&apos;re "Smith & Sons Plumbing" on Checkatrade but "Smith and Sons Plumbing Services" on Yelp, that&apos;s a problem. If your website shows a mobile number but your Google Business Profile shows a landline, that&apos;s a problem. The AI cross-references these sources; mismatches make it hesitate.
+            </p>
+            <p>
+              Then, put <strong>plain answers on your own site</strong>. Not marketing fluff — direct answers to the questions your customers actually ask. Do you do emergency call-outs? What areas do you cover? What are your rough prices? How quickly can you respond? A huge proportion of AI citations come directly from a business&apos;s own website, because it&apos;s the one source the business controls completely. If your site doesn&apos;t answer the question, the AI has to look elsewhere — and elsewhere might be a competitor.
+            </p>
+            <p>
+              Keep your <strong>reviews coming, and reply to every single one</strong> — positive and negative. This hits two signals at once: consensus (multiple independent sources saying you&apos;re good) and trust (you&apos;re engaged and responsive). A business with 50 reviews and zero replies looks abandoned. A business with 30 reviews and thoughtful replies to each looks active and customer-focused. The AI notices.
+            </p>
+            <p>
+              Finally, and this costs nothing but ten minutes: <strong>ask the AIs about yourself</strong>. Open ChatGPT, Google&apos;s AI Overview and Perplexity. Type "best [your trade] in [your town]." See who comes up. If it&apos;s not you, note who is there instead and what they have that you don&apos;t. Do this for your town and the two or three neighbouring towns you cover. Do it for "emergency [trade] near me." This is your baseline. It&apos;s free, it&apos;s eye-opening, and it tells you exactly which of the five signals you&apos;re missing.
+            </p>
 
             <div className="rounded-2xl border-l-4 border-[#047857] bg-[#F1F8F4] p-6">
               <h2 className="!mt-0 text-xl font-bold text-[#047857]">A 10-minute test you can run today (and one we run for you)</h2>
