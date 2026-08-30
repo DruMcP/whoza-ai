@@ -78,7 +78,7 @@ export default function AISearchForTradesPost() {
         items={[
           { name: "Home", item: "https://whoza.ai" },
           { name: "Blog", item: "https://whoza.ai/blog" },
-          { name: "Your Next Customer Won't Google You. They'll Ask AI.", item: "https://whoza.ai/blog/ai-search-for-uk-trades" },
+          { name: "AI Visibility: Why Most UK Trades Are Invisible to ChatGPT", item: "https://whoza.ai/blog/ai-search-for-uk-trades" },
         ]}
       />
       <BlogPostArticleSchema
