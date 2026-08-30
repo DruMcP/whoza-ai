@@ -33,6 +33,10 @@ const nextConfig = {
         destination: '/indexnow.txt',
       },
       {
+        source: '/e21bb887aa428bf0b443f84ba0bdc3583ef1f0e2799b5ff3e5125c411bcb0470.txt',
+        destination: '/e21bb887aa428bf0b443f84ba0bdc3583ef1f0e2799b5ff3e5125c411bcb0470.txt',
+      },
+      {
         source: '/robots.txt',
         destination: '/robots.txt',
       },
