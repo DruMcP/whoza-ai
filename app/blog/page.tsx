@@ -77,8 +77,8 @@ const blogPosts = [
   },
   {
     slug: "ai-search-for-uk-trades",
-    title: "Your Next Customer Won't Google You. They'll Ask AI.",
-    excerpt: "UK customers have quietly switched to AI search — over half of UK adults now use ChatGPT (Ofcom, 2025). Here's what it means for trades, and how to be the name the AI recommends. Founder analysis, every stat sourced.",
+    title: "AI Visibility: Why Most UK Trades Are Invisible to ChatGPT",
+    excerpt: "Google visibility ≠ AI visibility. Most UK trades show up fine on Google but are missing from ChatGPT's shortlist. Here's why — and the 5 signals that fix it.",
     readTime: "9 min read",
     date: "2026-07-23",
     category: "AI Search",
