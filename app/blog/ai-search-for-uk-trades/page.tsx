@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "AI Visibility: Why Most UK Trades Are Invisible to ChatGPT",
   description:
-    "Google visibility ≠ AI visibility. Here's why most UK trades show up fine on Google but are missing from ChatGPT's shortlist — and the 5 signals that fix it.",
+    "Google visibility ≠ AI visibility. Most UK trades rank fine on Google but are missing from ChatGPT's shortlist. Here's why — and how to fix it.",
   keywords: [
     "AI visibility",
     "AI search for tradespeople",
@@ -28,14 +28,14 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "AI Visibility: Why Most UK Trades Are Invisible to ChatGPT",
     description:
-      "Google visibility ≠ AI visibility. Here's why most UK trades show up fine on Google but are missing from ChatGPT's shortlist — and the 5 signals that fix it.",
+      "Google visibility ≠ AI visibility. Most UK trades rank fine on Google but are missing from ChatGPT's shortlist. Here's why — and how to fix it.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "AI visibility for UK trades" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "AI Visibility: Why Most UK Trades Are Invisible to ChatGPT",
     description:
-      "Google visibility ≠ AI visibility. Here's why most UK trades show up fine on Google but are missing from ChatGPT's shortlist — and the 5 signals that fix it.",
+      "Google visibility ≠ AI visibility. Most UK trades rank fine on Google but are missing from ChatGPT's shortlist. Here's why — and how to fix it.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {
@@ -90,7 +90,7 @@ export default function AISearchForTradesPost() {
         author="Dru McPherson"
         authorTitle="Founder, Whoza"
         category="AI Visibility"
-        excerpt="Google visibility ≠ AI visibility. Here's why most UK trades show up fine on Google but are missing from ChatGPT's shortlist — and the 5 signals that fix it."
+        excerpt="Google visibility ≠ AI visibility. Most UK trades rank fine on Google but are missing from ChatGPT's shortlist. Here's why — and how to fix it."
       />
       <FAQPageSchema faqs={faqs} />
 
@@ -127,12 +127,9 @@ export default function AISearchForTradesPost() {
 
             <div className="rounded-2xl border-l-4 border-[#047857] bg-[#F1F8F4] p-6">
               <h2 className="!mt-0 text-xl font-bold text-[#047857]">What you&apos;ll learn in the next 6 minutes</h2>
-              <ul className="mt-3 list-disc space-y-2 pl-5 text-base">
-                <li>Why being #1 on Google doesn&apos;t mean AI will ever mention your name (and how to check in 2 minutes)</li>
-                <li>The exact 5 signals that make ChatGPT confident enough to recommend a tradesperson — most trades have 2 or fewer</li>
-                <li>A free 10-minute test that shows you exactly who&apos;s on the AI shortlist in your area — and why they&apos;re there</li>
-                <li>Why &ldquo;AI visibility&rdquo; is now a separate skill from SEO — and the 3 things that matter for one but not the other</li>
-              </ul>
+              <p className="mt-3 text-base leading-relaxed text-[#33405A]">
+                Why being #1 on Google doesn&apos;t mean AI will ever mention your name — and how to check in 2 minutes. The exact signals that make ChatGPT confident enough to recommend a tradesperson (most trades have fewer than half). A free test that shows you who&apos;s on the AI shortlist in your area and why they&apos;re there. And why &ldquo;AI visibility&rdquo; is now a separate skill from SEO — with three things that matter for one but not the other.
+              </p>
             </div>
 
             <h2 className="pt-4 text-2xl font-bold">UK customers have quietly switched to AI</h2>
@@ -266,6 +263,18 @@ export default function AISearchForTradesPost() {
               </ul>
             </div>
 
+            <div className="rounded-2xl border border-[#047857]/20 bg-[#F1F8F4] p-6 text-center">
+              <p className="text-base font-semibold text-[#15233B]">
+                Want us to run this check for you?
+              </p>
+              <p className="mt-2 text-sm text-[#5A6472]">
+                Rex, our AI visibility agent, monitors where you show up across AI answers every week — and tells you exactly what to fix.
+              </p>
+              <Link href="/" className="mt-4 inline-block rounded-lg bg-[#047857] px-6 py-3 text-sm font-semibold text-white hover:bg-[#036845]">
+                See how Rex works →
+              </Link>
+            </div>
+
             <h2 className="pt-4 text-2xl font-bold">Where Whoza fits (the honest bit)</h2>
             <p>
               Full disclosure, since you&apos;ve read this far: this is part of the problem we built Whoza to solve. Our
@@ -274,6 +283,18 @@ export default function AISearchForTradesPost() {
               list above you can do yourself. But someone has to keep watching it, because the AIs change their answers
               constantly, and that&apos;s the bit a busy tradesperson never has time for.
             </p>
+
+            <div className="rounded-2xl border border-[#047857]/20 bg-[#F1F8F4] p-6 text-center">
+              <p className="text-base font-semibold text-[#15233B]">
+                Everything above you can do yourself. But if you want someone keeping watch...
+              </p>
+              <p className="mt-2 text-sm text-[#5A6472]">
+                Rex monitors your AI visibility weekly, tracks your competitors, and sends you a clear action list. No contract. Cancel anytime.
+              </p>
+              <Link href="/" className="mt-4 inline-block rounded-lg bg-[#047857] px-6 py-3 text-sm font-semibold text-white hover:bg-[#036845]">
+                Start free →
+              </Link>
+            </div>
 
             <h2 className="pt-4 text-2xl font-bold">Where this goes next</h2>
             <p>
