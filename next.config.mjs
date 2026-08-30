@@ -29,6 +29,10 @@ const nextConfig = {
         destination: '/llms-full.txt',
       },
       {
+        source: '/indexnow.txt',
+        destination: '/indexnow.txt',
+      },
+      {
         source: '/robots.txt',
         destination: '/robots.txt',
       },
