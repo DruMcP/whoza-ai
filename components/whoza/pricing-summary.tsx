@@ -204,11 +204,12 @@ export function PricingSummary() {
         </div>
       </div>
 
-      <WaitlistModal
-        isOpen={showWaitlist}
-        onClose={() => setShowWaitlist(false)}
-        plan={waitlistPlan}
-      />
+      {showWaitlist && (
+        <WaitlistModal
+          onClose={() => setShowWaitlist(false)}
+          plan={waitlistPlan}
+        />
+      )}
     </section>
   )
 }
