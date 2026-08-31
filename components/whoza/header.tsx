@@ -145,6 +145,13 @@ export function Header() {
                     {link.label}
                   </a>
               )}
+              <a
+                href="https://app.whoza.ai"
+                className="text-[13px] font-bold px-4 py-2 rounded-lg border border-white/20 text-white/80 hover:text-white hover:bg-white/10 no-underline transition-all whitespace-nowrap min-h-[44px] flex items-center"
+                aria-label="Log in to your Whoza dashboard"
+              >
+                Log in
+              </a>
               <button
                 onClick={() => setShowWaitlist(true)}
                 className="btn-primary text-[13px] font-bold px-4 py-2 rounded-lg border border-white/20 bg-white/10 text-white hover:bg-white/20 hover:scale-105 active:scale-95 no-underline cursor-pointer transition-all whitespace-nowrap min-h-[44px]"
@@ -192,12 +199,19 @@ export function Header() {
                     {link.label}
                   </a>
                 )}
+                <a
+                  href="https://app.whoza.ai"
+                  onClick={() => setMenuOpen(false)}
+                  className="text-center text-[13px] font-bold px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10 no-underline transition-colors mt-2 min-h-[44px] flex items-center justify-center"
+                >
+                  Log in
+                </a>
                 <button
                   onClick={() => {
                     setMenuOpen(false)
                     setShowWaitlist(true)
                   }}
-                  className="btn-primary text-center text-[13px] font-bold px-4 py-3 rounded-lg bg-white text-[#111418] no-underline cursor-pointer mt-2 min-h-[44px]"
+                  className="btn-primary text-center text-[13px] font-bold px-4 py-3 rounded-lg bg-white text-[#111418] no-underline cursor-pointer min-h-[44px]"
                 >
                   Start Free Trial
                 </button>
