@@ -29,12 +29,8 @@ const nextConfig = {
         destination: '/llms-full.txt',
       },
       {
-        source: '/indexnow.txt',
-        destination: '/indexnow.txt',
-      },
-      {
-        source: '/e21bb887aa428bf0b443f84ba0bdc3583ef1f0e2799b5ff3e5125c411bcb0470.txt',
-        destination: '/e21bb887aa428bf0b443f84ba0bdc3583ef1f0e2799b5ff3e5125c411bcb0470.txt',
+        source: '/e3ccefa46e90635781bcc5fff037809c.txt',
+        destination: '/e3ccefa46e90635781bcc5fff037809c.txt',
       },
       {
         source: '/robots.txt',

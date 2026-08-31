@@ -4,7 +4,7 @@
  * Rules:
  *   1. Only URLs in the manifest (which itself is built from git diff)
  *   2. Only real indexable HTML pages (verified against sitemap.xml, 200 OK, not noindex)
- *   3. Hard cap 50 per deploy — over cap submits nothing and logs
+ *   3. Hard cap 10,000 per deploy — over cap submits nothing and logs
  *   4. Gated behind INDEXNOW_ENABLED === 'true'
  *
  * The manifest is bundled via included_files in netlify.toml.
@@ -12,8 +12,12 @@
 
 const BASE_URL = 'https://whoza.ai'
 const SITEMAP_URL = `${BASE_URL}/sitemap.xml`
-const INDEXNOW_API = 'https://api.indexnow.org/IndexNow'
-const MAX_URLS = 50
+const INDEXNOW_API = 'https://api.indexnow.org/indexnow'
+const MAX_URLS = 10000
+
+// Hardcoded IndexNow key — must match scripts/build-indexnow-manifest.js
+const INDEXNOW_KEY = 'e3ccefa46e90635781bcc5fff037809c'
+const KEY_LOCATION = `${BASE_URL}/${INDEXNOW_KEY}.txt`
 
 async function fetchSitemapUrls() {
   try {
@@ -61,11 +65,36 @@ async function isIndexable(url) {
   }
 }
 
-async function submitToIndexNow(urls, key, keyLocation) {
+function logResponse(status, body) {
+  switch (status) {
+    case 200:
+      console.log(`[indexnow] HTTP 200 — Accepted. ${body}`)
+      break
+    case 202:
+      console.log(`[indexnow] HTTP 202 — Accepted, key validation pending (normal on first submission). ${body}`)
+      break
+    case 400:
+      console.warn(`[indexnow] HTTP 400 — Bad request. Likely malformed JSON. Body: ${body}`)
+      break
+    case 403:
+      console.warn(`[indexnow] HTTP 403 — Key not valid. The key file is missing or does not match. Check ${KEY_LOCATION}`)
+      break
+    case 422:
+      console.warn(`[indexnow] HTTP 422 — URLs don't belong to host, or key mismatch. Check for www vs apex inconsistency in urlList.`)
+      break
+    case 429:
+      console.warn(`[indexnow] HTTP 429 — Too many requests. Back off; submitting too often.`)
+      break
+    default:
+      console.warn(`[indexnow] HTTP ${status} — ${body}`)
+  }
+}
+
+async function submitToIndexNow(urls) {
   const payload = {
     host: BASE_URL.replace(/^https?:\/\//, ''),
-    key,
-    keyLocation,
+    key: INDEXNOW_KEY,
+    keyLocation: KEY_LOCATION,
     urlList: urls,
   }
 
@@ -76,14 +105,10 @@ async function submitToIndexNow(urls, key, keyLocation) {
       body: JSON.stringify(payload),
     })
 
-    if (res.status === 200 || res.status === 202) {
-      console.log(`[indexnow] batch submitted: ${urls.length} URLs — HTTP ${res.status}`)
-      return true
-    }
-
     const body = await res.text().catch(() => '')
-    console.warn(`[indexnow] batch submit failed: HTTP ${res.status} — ${body}`)
-    return false
+    logResponse(res.status, body)
+
+    return res.status === 200 || res.status === 202
   } catch (err) {
     console.warn('[indexnow] batch submit error:', err)
     return false
@@ -91,10 +116,12 @@ async function submitToIndexNow(urls, key, keyLocation) {
 }
 
 // Fallback: individual GET submission
-async function submitIndividual(url, key, keyLocation) {
-  const apiUrl = `${INDEXNOW_API}?url=${encodeURIComponent(url)}&key=${encodeURIComponent(key)}&keyLocation=${encodeURIComponent(keyLocation)}`
+async function submitIndividual(url) {
+  const apiUrl = `${INDEXNOW_API}?url=${encodeURIComponent(url)}&key=${encodeURIComponent(INDEXNOW_KEY)}`
   try {
     const res = await fetch(apiUrl, { method: 'GET' })
+    const body = await res.text().catch(() => '')
+    logResponse(res.status, body)
     return res.status === 200 || res.status === 202
   } catch {
     return false
@@ -111,14 +138,6 @@ exports.handler = async (event, context) => {
     return { statusCode: 200, body: 'IndexNow disabled by kill switch' }
   }
 
-  const key = process.env.INDEXNOW_KEY
-  const keyLocation = process.env.INDEXNOW_KEY_LOCATION
-
-  if (!key || !keyLocation) {
-    console.warn('[indexnow] INDEXNOW_KEY or INDEXNOW_KEY_LOCATION missing')
-    return { statusCode: 500, body: 'IndexNow key not configured' }
-  }
-
   // Read manifest
   let manifest
   try {
@@ -128,7 +147,7 @@ exports.handler = async (event, context) => {
     return { statusCode: 200, body: 'No manifest found' }
   }
 
-  console.log(`[indexnow] manifest: ${manifest.urlCount} URLs, capped=${manifest.capped}`)
+  console.log(`[indexnow] manifest: ${manifest.urlCount} URLs, capped=${manifest.capped}, source=${manifest.source || 'unknown'}`)
 
   if (manifest.capped || manifest.urls.length === 0) {
     console.log('[indexnow] no URLs to submit (empty or capped)')
@@ -168,12 +187,12 @@ exports.handler = async (event, context) => {
   }
 
   // Submit
-  const ok = await submitToIndexNow(validUrls, key, keyLocation)
+  const ok = await submitToIndexNow(validUrls)
   if (!ok && validUrls.length <= 10) {
     console.log('[indexnow] batch failed — trying individual submission')
     let success = 0
     for (const url of validUrls) {
-      if (await submitIndividual(url, key, keyLocation)) {
+      if (await submitIndividual(url)) {
         success++
       }
     }

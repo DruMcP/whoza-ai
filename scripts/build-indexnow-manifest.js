@@ -9,16 +9,35 @@
  *   - /sitemap.xml, /robots.txt, /llms.txt, /llms-full.txt
  *   - static assets (.json, .xml, .txt, .js, .css, .map, .webp, .png, etc.)
  *
+ * FIRST-RUN SEED: Set INDEXNOW_FIRST_RUN=true to submit all sitemap URLs once.
+ * This gates the initial bulk seed so it cannot repeat on later deploys.
+ *
  * Usage: node scripts/build-indexnow-manifest.js
  */
 
 const { execSync } = require('child_process')
-const { writeFileSync, mkdirSync } = require('fs')
+const { writeFileSync, mkdirSync, readFileSync } = require('fs')
 const { dirname } = require('path')
 
 const BASE_URL = 'https://whoza.ai'
 const MANIFEST_PATH = 'netlify/functions/indexnow-manifest.json'
-const MAX_URLS = 50
+const SITEMAP_PATH = 'public/sitemap.xml'
+const MAX_URLS = 10000
+
+// IndexNow key — 32-char hex. Generate once, treat as permanent.
+// If you change this, you must update netlify/functions/deploy-succeeded.js too.
+const INDEXNOW_KEY = 'e3ccefa46e90635781bcc5fff037809c'
+
+// Ensure the key file exists in public/ with exactly the key, no trailing newline
+function ensureKeyFile() {
+  const keyFilePath = `public/${INDEXNOW_KEY}.txt`
+  try {
+    writeFileSync(keyFilePath, INDEXNOW_KEY, { encoding: 'utf8' })
+    console.log(`[build-indexnow-manifest] key file written: ${keyFilePath}`)
+  } catch (err) {
+    console.warn(`[build-indexnow-manifest] failed to write key file:`, err)
+  }
+}
 
 // Map a changed file path to its canonical URL(s).
 // Returns empty array for non-page files or excluded paths.
@@ -72,35 +91,64 @@ function getChangedFiles() {
   }
 }
 
-function buildManifest() {
-  const changedFiles = getChangedFiles()
-  console.log(`[build-indexnow-manifest] ${changedFiles.length} changed files`)
-
-  const urlSet = new Set()
-
-  for (const file of changedFiles) {
-    const urls = fileToUrls(file)
-    for (const url of urls) {
-      urlSet.add(url)
+function getAllSitemapUrls() {
+  try {
+    const xml = readFileSync(SITEMAP_PATH, 'utf8')
+    const urls = new Set()
+    const matches = xml.matchAll(/<loc>([^<]+)<\/loc>/g)
+    for (const match of matches) {
+      urls.add(match[1].trim())
     }
+    return Array.from(urls).sort()
+  } catch {
+    console.warn('[build-indexnow-manifest] could not read sitemap.xml')
+    return []
   }
+}
 
-  const urls = Array.from(urlSet).sort()
+function buildManifest() {
+  // Step 1: ensure key file is present
+  ensureKeyFile()
+
+  const isFirstRun = process.env.INDEXNOW_FIRST_RUN === 'true'
+  let urls = []
+  let source = 'git-diff'
+
+  if (isFirstRun) {
+    // First-run seed: submit all sitemap URLs once
+    urls = getAllSitemapUrls()
+    source = 'first-run-seed'
+    console.log(`[build-indexnow-manifest] FIRST RUN: seeding ${urls.length} URLs from sitemap`)
+  } else {
+    // Normal deploy: derive changed URLs from git diff
+    const changedFiles = getChangedFiles()
+    console.log(`[build-indexnow-manifest] ${changedFiles.length} changed files`)
+
+    const urlSet = new Set()
+    for (const file of changedFiles) {
+      const fileUrls = fileToUrls(file)
+      for (const url of fileUrls) {
+        urlSet.add(url)
+      }
+    }
+
+    urls = Array.from(urlSet).sort()
+  }
 
   const manifest = {
     generatedAt: new Date().toISOString(),
     commitRef: process.env.COMMIT_REF || 'unknown',
     cachedCommitRef: process.env.CACHED_COMMIT_REF || 'unknown',
+    source,
     urlCount: urls.length,
     urls: urls.length > MAX_URLS ? [] : urls,
     capped: urls.length > MAX_URLS,
   }
 
-  // If over cap, write empty URLs array (function will log and skip)
   if (urls.length > MAX_URLS) {
-    console.log(`[build-indexnow-manifest] WARNING: ${urls.length} URLs changed — exceeds cap of ${MAX_URLS}. IndexNow will skip this deploy.`)
+    console.log(`[build-indexnow-manifest] WARNING: ${urls.length} URLs — exceeds cap of ${MAX_URLS}. IndexNow will skip this deploy.`)
   } else if (urls.length > 0) {
-    console.log(`[build-indexnow-manifest] ${urls.length} URLs to submit:`)
+    console.log(`[build-indexnow-manifest] ${urls.length} URLs to submit (${source}):`)
     for (const url of urls) {
       console.log(`  - ${url}`)
     }
