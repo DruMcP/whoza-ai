@@ -146,7 +146,7 @@ export function Header() {
                   </a>
               )}
               <a
-                href="https://app.whoza.ai"
+                href="https://app.whoza.ai/login"
                 className="text-[13px] font-bold px-4 py-2 rounded-lg border border-white/20 text-white/80 hover:text-white hover:bg-white/10 no-underline transition-all whitespace-nowrap min-h-[44px] flex items-center"
                 aria-label="Log in to your Whoza dashboard"
               >
@@ -200,7 +200,7 @@ export function Header() {
                   </a>
                 )}
                 <a
-                  href="https://app.whoza.ai"
+                  href="https://app.whoza.ai/login"
                   onClick={() => setMenuOpen(false)}
                   className="text-center text-[13px] font-bold px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10 no-underline transition-colors mt-2 min-h-[44px] flex items-center justify-center"
                 >
