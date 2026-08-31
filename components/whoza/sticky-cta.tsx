@@ -9,13 +9,19 @@ export function StickyCTA() {
   const [isDismissed, setIsDismissed] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      // Show after scrolling past the hero section (roughly 100vh)
-      const scrolled = window.scrollY > window.innerHeight * 0.8
-      setIsVisible(scrolled && !isDismissed)
+    // Dismissed: hide immediately rather than waiting for the next scroll event
+    if (isDismissed) {
+      setIsVisible(false)
+      return
     }
 
-    window.addEventListener("scroll", handleScroll)
+    const handleScroll = () => {
+      // Show after scrolling past the hero section (roughly 100vh)
+      setIsVisible(window.scrollY > window.innerHeight * 0.8)
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    handleScroll()
     return () => window.removeEventListener("scroll", handleScroll)
   }, [isDismissed])
 
