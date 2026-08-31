@@ -304,7 +304,7 @@ export default function PrivacyPolicy() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
-                <span><strong>What we store:</strong> the access and refresh tokens Google issues, encrypted at rest, solely to keep the connection alive. Free/busy data is used in the moment a caller is offered times and is not retained afterwards. Appointments we create are recorded against your account so the job can be shown in your dashboard.</span>
+                <span><strong>What we store:</strong> the access and refresh tokens Google issues, held in an access-controlled database that is encrypted at rest, solely to keep the connection alive. Free/busy data is used in the moment a caller is offered times and is not retained afterwards. Appointments we create are recorded against your account so the job can be shown in your dashboard.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
