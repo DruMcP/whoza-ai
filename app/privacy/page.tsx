@@ -272,7 +272,7 @@ export default function PrivacyPolicy() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
-                <span><strong>Hosting:</strong> Netlify (website and application hosting)</span>
+                <span><strong>Hosting:</strong> Netlify (marketing website), AWS (application hosting)</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-400 mt-1">•</span>
@@ -289,7 +289,48 @@ export default function PrivacyPolicy() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-xl font-semibold mb-4">10. Contact Us</h2>
+            <h2 className="text-xl font-semibold mb-4">10. Google Calendar Data (Google API Services)</h2>
+            <p className="text-white/70 leading-relaxed mb-4">
+              Connecting a Google Calendar is optional. It is only ever started by the trade practitioner themselves, from Calendar &amp; Booking in their dashboard, and can be disconnected there at any time. If you never connect a calendar, Whoza AI Ltd holds no Google data about you at all.
+            </p>
+            <ul className="space-y-3 text-white/70">
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span><strong>What we access:</strong> your calendar&apos;s busy periods (calendar.freebusy) so the AI receptionist can tell a caller which times are genuinely free, and the ability to create events (calendar.events) so a confirmed appointment is written into your diary.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span><strong>What we do NOT access:</strong> we do not read the titles, guests, descriptions, attachments or locations of your existing events. Availability is read as free/busy blocks only.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span><strong>What we store:</strong> the access and refresh tokens Google issues, encrypted at rest, solely to keep the connection alive. Free/busy data is used in the moment a caller is offered times and is not retained afterwards. Appointments we create are recorded against your account so the job can be shown in your dashboard.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span><strong>Who it is shared with:</strong> nobody. Google Calendar data is never sold, rented, shared with other Whoza customers, transferred to advertisers or data brokers, or used to train any artificial-intelligence or machine-learning model.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-400 mt-1">•</span>
+                <span><strong>Retention and deletion:</strong> disconnecting the calendar deletes the stored tokens immediately, as does closing your account. You may also revoke Whoza&apos;s access at any time from your own Google account security settings.</span>
+              </li>
+            </ul>
+            <p className="text-white/70 leading-relaxed mt-4">
+              Whoza AI Ltd&apos;s use of information received from Google APIs adheres to the{" "}
+              <a
+                href="https://developers.google.com/terms/api-services-user-data-policy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-emerald-400 hover:underline"
+              >
+                Google API Services User Data Policy
+              </a>
+              , including the Limited Use requirements.
+            </p>
+          </section>
+
+          <section className="mb-10">
+            <h2 className="text-xl font-semibold mb-4">11. Contact Us</h2>
             <p className="text-white/70 leading-relaxed">
               For privacy-related questions, data subject requests, or concerns about how we handle your information, contact:
             </p>
@@ -303,7 +344,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-xl font-semibold mb-4">11. Changes to This Policy</h2>
+            <h2 className="text-xl font-semibold mb-4">12. Changes to This Policy</h2>
             <p className="text-white/70 leading-relaxed">
               We may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements. We will notify you of significant changes via email or through your dashboard. The "Last updated" date at the top of this page indicates when the policy was last revised.
             </p>
