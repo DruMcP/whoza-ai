@@ -245,6 +245,23 @@ export function Footer() {
                 <Shield className="w-3.5 h-3.5 text-emerald-400" />
                 <span className="text-xs text-white/60">ICO: <a href="https://ico.org.uk/ESDWebPages/Entry/ZC077271" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">ZC077271</a></span>
               </div>
+              <a
+                href="https://theinstituteofai.co.uk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+                aria-label="Member of The Institute of AI"
+              >
+                <img
+                  src="/images/ioai-member-badge-dark.png"
+                  alt="IOAI Member — Dru McPherson"
+                  width="20"
+                  height="20"
+                  className="w-5 h-5 rounded-sm"
+                  loading="lazy"
+                />
+                <span className="text-xs text-white/60 hover:text-white transition-colors">IOAI Member</span>
+              </a>
             </div>
             <div className="flex items-center gap-4">
               <a
