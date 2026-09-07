@@ -94,7 +94,8 @@ export default function RootLayout({
     <link rel="preconnect" href="https://www.google-analytics.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
     {/* Preload LCP image — hero phone mockup */}
-    <link rel="preload" as="image" href="/images/hero-phone-3d.webp" type="image/webp" fetchPriority="high" />
+    {/* NOTE: Next.js Image with priority=true auto-injects preload; manual redundant */}
+    {/* <link rel="preload" as="image" href="/images/hero-phone-3d.webp" type="image/webp" fetchPriority="high" /> */}
         {/* Google Tag Manager */}
       <Script
         id="gtm-script"

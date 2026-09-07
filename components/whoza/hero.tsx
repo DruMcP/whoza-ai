@@ -20,9 +20,9 @@ const fadeUpVisible = (delay = 0) => ({
 })
 
 const fadeInRightVisible = (delay = 0) => ({
-  initial: { opacity: 0, x: 50 },
+  initial: { opacity: 1, x: 30 },
   animate: { opacity: 1, x: 0 },
-  transition: { duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] },
+  transition: { duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] },
 })
 
 export function Hero() {
@@ -242,7 +242,7 @@ export function Hero() {
                 alt="Katie AI WhatsApp interface showing a new boiler repair lead from Sarah Williams in Bristol"
                 width={420}
                 height={630}
-                quality={90}
+                quality={75}
                 priority
                 fetchPriority="high"
                 sizes="(max-width: 768px) 90vw, 40vw"

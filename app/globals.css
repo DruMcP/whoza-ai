@@ -35,17 +35,7 @@
 .hero-animated-gradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    #0F172A 0%,
-    #0F172A 20%,
-    #0F172A 40%,
-    #0F172A 60%,
-    #0F172A 80%,
-    #0F172A 100%
-  );
-  background-size: 400% 400%;
-  animation: gradientShift 15s ease-in-out infinite;
+  background: #0F172A;
   z-index: -1;
 }
 
