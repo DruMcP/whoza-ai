@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-and-deploy:
+  build-verify:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -57,23 +57,6 @@ jobs:
           ls -la .next/ | head -20
           echo "Build output size:"
           du -sh .next/
-
-      - name: Check Netlify token
-        run: |
-          echo "Checking NETLIFY_AUTH_TOKEN availability..."
-          if [ -n "$NETLIFY_AUTH_TOKEN" ]; then
-            echo "NETLIFY_AUTH_TOKEN is set (length: ${#NETLIFY_AUTH_TOKEN})"
-          else
-            echo "NETLIFY_AUTH_TOKEN is NOT set"
-            exit 1
-          fi
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-
-      - name: Deploy to Netlify
-        run: |
-          npm install -g netlify-cli
-          echo "Deploying to Netlify..."
-          netlify deploy --prod --site 9313ac92-d80f-4935-b4f7-61a0c5b07e2d --dir .next --debug
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          echo ""
+          echo "✅ Build verified. Netlify auto-deploys from git push to main."
+          echo "   Do NOT use netlify CLI deploy — it breaks the site."
