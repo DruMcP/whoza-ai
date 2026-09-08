@@ -27,8 +27,8 @@ import { ComparisonTable } from "@/components/whoza/comparison-table"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "AI Receptionist Plumbers UK | From £59/mo — Never Miss Jobs",
-  description: "UK plumbers miss calls worth £2,600+/year on average (conservative estimate). Whoza.ai answers 24/7, qualifies boiler repairs & leaks, sends job details.",
+  title: "Call Answering Service for Plumbers | From £59",
+  description: "24/7 call answering for UK plumbers. Every leak, burst pipe and boiler breakdown captured and sent to your WhatsApp in 3 seconds. Plans from £59.",
   alternates: {
     canonical: "https://whoza.ai/for-plumbers",
   },

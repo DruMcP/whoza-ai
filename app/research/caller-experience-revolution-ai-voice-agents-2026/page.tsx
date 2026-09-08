@@ -10,7 +10,7 @@ import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "AI Voice Agents & Customer Satisfaction | whoza.ai",
-  description: "Research on AI voice agents and caller experience for UK small businesses. Data from MIT, Harvard, Zendesk and BrightLocal. Download free.",
+  description: "Businesses responding within 5 minutes are 100x more likely to connect with leads. AI voice agent research 2026. Download free.",
   alternates: {
     canonical: "https://whoza.ai/research/caller-experience-revolution-ai-voice-agents-2026",
   },
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/research/caller-experience-revolution-ai-voice-agents-2026",
     siteName: "Whoza.ai",
     title: "The Caller Experience Revolution: AI Voice Agents & Small Business",
-    description: "Research on AI voice agents and caller experience for UK small businesses. Data from MIT, Harvard, Zendesk and BrightLocal. Download free.",
+    description: "Businesses responding within 5 minutes are 100x more likely to connect with leads. AI voice agent research 2026. Download free.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "The Caller Experience Revolution Research 2026" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "The Caller Experience Revolution: AI Voice Agents & Small Business",
-    description: "Research on AI voice agents and caller experience for UK small businesses. Data from MIT, Harvard, Zendesk and BrightLocal. Download free.",
+    description: "Businesses responding within 5 minutes are 100x more likely to connect with leads. AI voice agent research 2026. Download free.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   other: {

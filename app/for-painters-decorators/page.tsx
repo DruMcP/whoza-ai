@@ -28,8 +28,8 @@ import { ArrowRight, CheckCircle, Phone, Shield, Clock, PoundSterling, Paintbrus
 import { RelatedTrades } from "@/components/whoza/related-trades"
 
 export const metadata: Metadata = {
-  title: "AI Call Handling for Painters & Decorators UK | whoza.ai",
-  description: "Katie answers 24/7 for painters & decorators. Captures interior, exterior & commercial painting enquiries. WhatsApp alerts in 3 seconds. Free trial.",
+  title: "Call Answering Service for Painters & Decorators | From £59",
+  description: "24/7 call answering for UK painters & decorators. Every interior, exterior and commercial painting enquiry captured. WhatsApp alerts in 3 seconds. From £59.",
   alternates: {
     canonical: "https://whoza.ai/for-painters-decorators",
   },

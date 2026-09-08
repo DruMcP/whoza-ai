@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "AI for Roofers | Never Miss a Storm Season Call — Whoza.ai",
-  description: "Whoza.ai answers roofing calls 24/7. Qualifies tile repairs, leak emergencies & gutter jobs. Details to WhatsApp. 23 calls = £8K recovered. Free trial.",
+  title: "Call Answering Service for Roofers | From £59",
+  description: "24/7 call answering for UK roofers. Every leak, storm damage and re-roof enquiry captured and sent to your WhatsApp in 3 seconds. Plans from £59.",
   alternates: {
     canonical: "https://whoza.ai/for-roofers",
   },

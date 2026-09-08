@@ -10,7 +10,7 @@ import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Answer Engine Optimisation: Small Business AI Search Prep",
-  description: "Research on Answer Engine Optimisation (AEO). Data from BrightEdge, Ahrefs, Semrush, Princeton, HubSpot, Google and 30+ authoritative sources.",
+  description: "60% of consumers now use AI search to find local businesses. 2026 AEO research on ranking in ChatGPT, Perplexity and Gemini. Download free.",
   alternates: {
     canonical: "https://whoza.ai/research/aeo-ai-search-optimisation-2026",
   },
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/research/aeo-ai-search-optimisation-2026",
     siteName: "Whoza.ai",
     title: "Answer Engine Optimisation: Small Business & AI-Driven Search",
-    description: "Research report on Answer Engine Optimisation (AEO) for small businesses facing AI-driven search disruption.",
+    description: "60% of consumers now use AI search to find local businesses. 2026 AEO research on ranking in ChatGPT, Perplexity and Gemini. Download free.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Answer Engine Optimisation Research 2026" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Answer Engine Optimisation: Small Business & AI-Driven Search",
-    description: "Research report on Answer Engine Optimisation (AEO) for small businesses.",
+    description: "60% of consumers now use AI search to find local businesses. 2026 AEO research on ranking in ChatGPT, Perplexity and Gemini. Download free.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   other: {

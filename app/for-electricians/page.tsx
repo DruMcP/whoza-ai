@@ -24,8 +24,8 @@ import { ComparisonTable } from "@/components/whoza/comparison-table"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "AI for Electricians UK | Catch Every Rewire & Emergency Call",
-  description: "UK electricians: stop missing rewire enquiries and emergency callouts. Whoza.ai answers 24/7, qualifies jobs, and sends details to WhatsApp. 7-day free trial.",
+  title: "Call Answering Service for Electricians | From £59",
+  description: "24/7 call answering for UK electricians. Every rewire, EICR and emergency callout captured and sent to your WhatsApp in 3 seconds. Plans from £59.",
   alternates: {
     canonical: "https://whoza.ai/for-electricians",
   },

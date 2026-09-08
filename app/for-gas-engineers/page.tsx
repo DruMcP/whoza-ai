@@ -12,8 +12,8 @@ import { RelatedTrades } from "@/components/whoza/related-trades"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "AI Call Answering for Gas Engineers UK — 24/7",
-  description: "Katie answers 24/7 for gas engineers. Captures CP12 certificates, boiler breakdowns and gas leaks. WhatsApp alerts in 3 seconds. Start your free trial.",
+  title: "Call Answering Service for Gas Engineers | From £59",
+  description: "24/7 call answering for UK gas engineers. Every CP12 renewal, boiler breakdown and gas leak captured and sent to your WhatsApp in 3 seconds. Plans from £59.",
   alternates: {
     canonical: "https://whoza.ai/for-gas-engineers",
   },

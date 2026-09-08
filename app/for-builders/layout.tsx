@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "AI Call Handling for Builders UK — Never Miss a Job",
-  description: "Katie answers 24/7 for builders. Captures extensions, renovations and emergency structural enquiries. WhatsApp alerts in 3 seconds. Start free trial today.",
+  title: "Call Answering Service for Builders | From £59",
+  description: "24/7 call answering for UK builders. Every extension, renovation and new build enquiry captured and sent to your WhatsApp in 3 seconds. Plans from £59.",
   alternates: {
     canonical: "https://whoza.ai/for-builders",
   },

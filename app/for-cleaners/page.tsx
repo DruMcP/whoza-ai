@@ -15,8 +15,8 @@ import { RelatedTrades } from "@/components/whoza/related-trades"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "AI Call Answering for Cleaners UK — Never Miss a Booking",
-  description: "AI call handling for UK cleaners. Katie answers 24/7, captures domestic, commercial and end-of-tenancy enquiries. WhatsApp alerts in 3 seconds. Free trial.",
+  title: "Call Answering Service for Cleaners | From £59",
+  description: "24/7 call answering for UK cleaners. Every domestic, commercial and end-of-tenancy enquiry captured and sent to your WhatsApp in 3 seconds. From £59.",
   alternates: {
     canonical: "https://whoza.ai/for-cleaners",
   },

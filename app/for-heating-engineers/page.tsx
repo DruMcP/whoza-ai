@@ -28,8 +28,8 @@ import { ArrowRight, CheckCircle, Phone, Shield, Clock, PoundSterling, Flame, Th
 import { RelatedTrades } from "@/components/whoza/related-trades"
 
 export const metadata: Metadata = {
-  title: "AI Call Handling for Heating Engineers UK | whoza.ai",
-  description: "Katie answers 24/7 for heating engineers. Captures boiler breakdowns, annual services and emergencies. WhatsApp alerts in 3 seconds. Start your free trial.",
+  title: "Call Answering Service for Heating Engineers | From £59",
+  description: "24/7 call answering for UK heating engineers. Every boiler service, breakdown and emergency call captured and sent to WhatsApp in 3 seconds. Plans from £59.",
   alternates: {
     canonical: "https://whoza.ai/for-heating-engineers",
   },

@@ -28,8 +28,8 @@ import { ArrowRight, CheckCircle, Phone, Shield, Clock, PoundSterling, Lock, Key
 import { RelatedTrades } from "@/components/whoza/related-trades"
 
 export const metadata: Metadata = {
-  title: "AI Call Handling for Locksmiths UK — 24/7 Lockout Help",
-  description: "Katie answers 24/7 for locksmiths. Captures emergency lockouts, key replacements and security upgrades. WhatsApp alerts in 3 seconds. Start your free trial.",
+  title: "Call Answering Service for Locksmiths | From £59",
+  description: "24/7 call answering for UK locksmiths. Every lockout, key replacement and security upgrade captured and sent to your WhatsApp in 3 seconds. From £59.",
   alternates: {
     canonical: "https://whoza.ai/for-locksmiths",
   },

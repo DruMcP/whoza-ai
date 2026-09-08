@@ -10,7 +10,7 @@ import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "AI Voice Agents in UK Trades: Research Report 2026",
-  description: "Research on AI voice agent adoption, missed call revenue loss and market trends in UK trades. Data from Gartner, McKinsey and BrightLocal.",
+  description: "AI voice agents save UK trades £15K–£40K/year on reception costs. 2026 research covers adoption, accuracy and ROI. Download free.",
   alternates: {
     canonical: "https://whoza.ai/research/ai-voice-agents-uk-trades-2026",
   },
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/research/ai-voice-agents-uk-trades-2026",
     siteName: "Whoza.ai",
     title: "AI Voice Agents in UK Trades: Research Report 2026",
-    description: "Comprehensive research report analysing AI voice agent adoption, missed call revenue loss, and market trends in the UK trades sector.",
+    description: "AI voice agents save UK trades £15K–£40K/year on reception costs. 2026 research covers adoption, accuracy and ROI. Download free.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "AI Voice Agents UK Trades Research 2026" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "AI Voice Agents in UK Trades: Research Report 2026",
-    description: "Comprehensive research report analysing AI voice agent adoption, missed call revenue loss, and market trends in the UK trades sector.",
+    description: "AI voice agents save UK trades £15K–£40K/year on reception costs. 2026 research covers adoption, accuracy and ROI. Download free.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   other: {

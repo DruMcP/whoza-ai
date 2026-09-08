@@ -10,7 +10,7 @@ import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "True Cost of Missed Calls: UK Trades Impact Report 2026",
-  description: "Research report quantifying the financial impact of missed calls on UK trade businesses. Data from Replicant AI, BT Business, EchoCall, IDC,.",
+  description: "Missed calls cost UK trades £200–£800 per call. 2026 research on revenue loss, customer behaviour and recovery strategies. Download free.",
   alternates: {
     canonical: "https://whoza.ai/research/the-true-cost-of-missed-calls-2026",
   },
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/research/the-true-cost-of-missed-calls-2026",
     siteName: "Whoza.ai",
     title: "True Cost of Missed Calls: UK Trades Impact Report 2026",
-    description: "Research report quantifying the financial impact of missed calls on UK trade businesses.",
+    description: "Missed calls cost UK trades £200–£800 per call. 2026 research on revenue loss, customer behaviour and recovery strategies. Download free.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "The True Cost of Missed Calls 2026" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "True Cost of Missed Calls: UK Trades Impact Report 2026",
-    description: "Research report quantifying the financial impact of missed calls on UK trade businesses.",
+    description: "Missed calls cost UK trades £200–£800 per call. 2026 research on revenue loss, customer behaviour and recovery strategies. Download free.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   other: {

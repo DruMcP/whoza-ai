@@ -15,8 +15,8 @@ import { RelatedTrades } from "@/components/whoza/related-trades"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "AI Call Answering for Plasterers UK — Never Miss a Job",
-  description: "AI call answering for UK plasterers. Katie captures 24/7 skimming, rendering and dry lining enquiries. WhatsApp alerts instantly. Plans from £59. Free trial.",
+  title: "Call Answering Service for Plasterers | From £59",
+  description: "24/7 call answering for UK plasterers. Every skim, render and ceiling repair enquiry captured and sent to your WhatsApp in 3 seconds. Plans from £59.",
   alternates: {
     canonical: "https://whoza.ai/for-plasterers",
   },

@@ -10,21 +10,21 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "AI Receptionist Cost vs In-House | £59/mo vs £25K/yr — Whoza",
-  description: "Compare AI receptionist costs: Whoza.ai from £59/month vs £25K+/year for human staff. Monthly 7-day free trial. Pay only for booked jobs. See the comparison.",
+  title: "Virtual Receptionist Cost UK | Compare & Save £25K/yr",
+  description: "Compare virtual receptionist costs UK: Whoza.ai from £59/month vs £25K+/year for in-house staff. 7-day free trial. No contract. See full comparison.",
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "https://whoza.ai/pricing",
     siteName: "Whoza.ai",
-    title: "AI Receptionist Cost vs In-House | £59/mo vs £25K/yr — Whoza",
-    description: "Compare AI receptionist costs: Whoza.ai from £59/month vs £25K+/year for human staff. Monthly 7-day free trial. Pay only for booked jobs. See the comparison.",
+    title: "Virtual Receptionist Cost UK | Compare & Save £25K/yr",
+    description: "Compare virtual receptionist costs UK: Whoza.ai from £59/month vs £25K+/year for in-house staff. 7-day free trial. No contract. See full comparison.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Whoza.ai Pricing" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Receptionist Cost vs In-House | £59/mo vs £25K/yr — Whoza",
-    description: "Compare AI receptionist costs: Whoza.ai from £59/month vs £25K+/year for human staff. Monthly 7-day free trial. Pay only for booked jobs. See the comparison.",
+    title: "Virtual Receptionist Cost UK | Compare & Save £25K/yr",
+    description: "Compare virtual receptionist costs UK: Whoza.ai from £59/month vs £25K+/year for in-house staff. 7-day free trial. No contract. See full comparison.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {
