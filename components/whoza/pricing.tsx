@@ -140,35 +140,6 @@ export function Pricing() {
       cta: "Activate now",
       stripePlanId: "pro",
     },
-    {
-      name: "Scale",
-      description: "Multi-location businesses",
-      price: String(config.pricing.scale),
-      perJob: "2.25",
-      jobsIncluded: "100",
-      includedMinutes: "1,500",
-      period: "month",
-      color: "grey" as keyof typeof colorStyles,
-      popular: false,
-      features: [
-        { text: "Everything in Pro", included: true },
-        { text: "100 booked enquiries included", included: true },
-        { text: "Location-based call routing", included: true },
-        { text: "Executive summary email (all locations)", included: true },
-        { text: "Monthly competitor analysis", included: true },
-        { text: "Weekly actionable AI visibility insights", included: true },
-        { text: "Advanced Rex reporting", included: true },
-        { text: "Multi-location competitor intelligence", included: true },
-        { text: "Multi-location support", included: true },
-        { text: "Multi-calendar team sync", included: true },
-        { text: "Priority support", included: true },
-        { text: "Custom integrations", included: true },
-        { text: "Dedicated account manager", included: true },
-        { text: `${cs}2.25 per additional booked enquiry`, included: true },
-      ],
-      cta: "Activate now",
-      stripePlanId: "scale",
-    },
   ]
 
   return (
@@ -237,7 +208,7 @@ export function Pricing() {
         </motion.div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto reveal-stagger">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto reveal-stagger">
           {plans.map((plan, index) => {
             const colors = colorStyles[plan.color]
             return (
@@ -341,6 +312,14 @@ export function Pricing() {
         >
           <p className="text-sm text-[var(--slate-500)] max-w-xl mx-auto">
             7-day free trial on Starter. No contract. Cancel anytime.
+            {/* Scale is built and live, but sold on request rather than listed: a multi-site
+                firm wants a conversation before paying £399. Same rule as the dashboard. */}
+            <br />
+            Running multiple sites?{" "}
+            <a href="mailto:dru@whoza.ai?subject=Whoza%20Scale%20plan%20enquiry" className="font-semibold underline underline-offset-2">
+              Talk to us
+            </a>{" "}
+            about Scale.
           </p>
         </motion.div>
 

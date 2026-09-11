@@ -63,7 +63,7 @@ export function FinalCTA() {
           </p>
           <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/70 text-sm">
             <CheckCircle2 className="w-4 h-4 text-[var(--rex-green)]" />
-            7-day free trial on Starter: 20 minutes + 4 jobs included. Cancel anytime.
+            7-day free trial on Starter: 100 minutes + 10 jobs included. Cancel anytime.
           </div>
         </motion.div>
 
