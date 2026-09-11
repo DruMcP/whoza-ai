@@ -8,7 +8,7 @@ import { organizationSchemaObject } from "@/components/whoza/organization-schema
 
 export const metadata: Metadata = {
   title: "Refer a Trade — Give a Free Month, Get a Free Month",
-  description: "Refer fellow UK tradespeople to Whoza.ai. When they join and stay, you both get rewarded. Earn up to a full year free.",
+  description: "Refer fellow UK tradespeople to Whoza.ai. When they join and stay, you both get rewarded with free months, up to a full year free for you.",
   alternates: {
     canonical: "https://whoza.ai/refer",
   },
