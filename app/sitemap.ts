@@ -85,6 +85,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // /blog entry built separately after newestPostDate is computed
     pageUrl('/faq', 'app/faq/page.tsx', { changeFrequency: 'monthly', priority: 0.8 }),
     pageUrl('/support', 'app/support/page.tsx', { changeFrequency: 'monthly', priority: 0.5 }),
+    // The system guide — product help that used to sit behind the app login
+    pageUrl('/guide', 'app/guide/page.tsx', { changeFrequency: 'monthly', priority: 0.7 }),
+    pageUrl('/guide/how-it-works', 'app/guide/how-it-works/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
+    pageUrl('/guide/getting-started', 'app/guide/getting-started/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
+    pageUrl('/guide/whatsapp', 'app/guide/whatsapp/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
+    pageUrl('/guide/dashboard', 'app/guide/dashboard/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
+    pageUrl('/guide/faq', 'app/guide/faq/page.tsx', { changeFrequency: 'monthly', priority: 0.6 }),
     pageUrl('/contact', 'app/contact/page.tsx', { changeFrequency: 'monthly', priority: 0.5 }),
     pageUrl('/about', 'app/about/page.tsx', { changeFrequency: 'monthly', priority: 0.5 }),
     pageUrl('/refer', 'app/refer/page.tsx', { changeFrequency: 'monthly', priority: 0.5 }),

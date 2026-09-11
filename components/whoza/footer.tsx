@@ -19,6 +19,8 @@ const footerLinks = {
   ],
   support: [
     { label: "Help Centre", href: "/support" },
+    { label: "System Guide", href: "/guide" },
+    { label: "Getting Started", href: "/guide/getting-started" },
     { label: "Contact", href: "/contact" },
     { label: "FAQ", href: "/faq" },
     { label: "WhatsApp Support", href: "tel:+447463141750" },

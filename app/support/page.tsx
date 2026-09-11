@@ -1,8 +1,9 @@
 import { Metadata } from "next"
+import Link from "next/link"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
-import { Mail, MessageSquare, Phone, Clock, Ticket, HelpCircle, Zap, ArrowRight } from "lucide-react"
+import { BookOpen, Mail, MessageSquare, Phone, Clock, Ticket, HelpCircle, Zap, ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
@@ -191,6 +192,25 @@ export default function SupportPage() {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* The system guide. Most "how do I" questions are answered there without an email. */}
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-8 mb-16 flex flex-col sm:flex-row sm:items-center gap-6">
+          <BookOpen className="w-10 h-10 text-emerald-400 shrink-0" />
+          <div className="flex-1">
+            <h2 className="text-xl font-bold mb-1">Read the System Guide</h2>
+            <p className="text-white/60 text-sm">
+              How calls are answered, how to set yourself up, how the WhatsApp workflow runs, and
+              what every dashboard tab does. Most questions are answered there in a minute.
+            </p>
+          </div>
+          <Link
+            href="/guide"
+            className="inline-flex items-center gap-2 border border-white/15 hover:bg-white/10 text-white font-semibold px-6 py-3 rounded-xl transition-colors shrink-0"
+          >
+            Open the guide
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
 
         {/* Support Topics */}

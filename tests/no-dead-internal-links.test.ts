@@ -12,7 +12,10 @@ const EXT_RE = /\.(ts|tsx|js|jsx|md|mdx)$/
 function walk(dir: string, out: string[] = []): string[] {
   for (const e of readdirSync(dir)) {
     if (SKIP.has(e)) continue
-    const p = join(dir, e)
+    // join() gives backslashes on Windows, which made every file under public/ register as
+    // "/public\favicon.svg" instead of "/favicon.svg". The test then reported six assets that
+    // are sitting right there on disk as dead links. Linux paths have nothing to replace.
+    const p = join(dir, e).replace(/\\/g, "/")
     statSync(p).isDirectory() ? walk(p, out) : out.push(p)
   }
   return out

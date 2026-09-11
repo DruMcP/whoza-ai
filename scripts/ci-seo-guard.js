@@ -59,8 +59,14 @@ const pageData = new Map();
 const allInternalLinks = new Map();
 
 for (const htmlPath of htmlFiles) {
+  // Normalise the separator before anything else. On Windows path.join hands back backslashes,
+  // so every URL came out as "https://whoza.ai\guide\faq" and no canonical, internal link or
+  // inbound-link lookup could ever match — thousands of phantom failures that do not exist on
+  // CI. Linux has no backslashes to replace, so this changes nothing where the guard actually
+  // gates the deploy; it just makes the same run possible before pushing.
   const relPath = htmlPath
-    .replace(OUT_DIR, "")
+    .replace(/\\/g, "/")
+    .replace(OUT_DIR.replace(/\\/g, "/"), "")
     .replace(/\.html$/, "")
     .replace(/\/page$/, "")
     .replace(/\/index$/, "");
