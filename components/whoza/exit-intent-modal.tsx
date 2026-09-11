@@ -12,6 +12,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Mail, Download, Phone, Clock, Calendar } from "lucide-react";
+import { emailError } from "@/lib/validate-email";
 
 interface ExitIntentModalProps {
   onClose?: () => void;
@@ -22,6 +23,8 @@ export function ExitIntentModal({ onClose }: ExitIntentModalProps) {
   const [hasTriggered, setHasTriggered] = useState(false);
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  // A silent `return` told the reader nothing, so a typo looked like a dead button.
+  const [error, setError] = useState("");
   const [scrollDepth, setScrollDepth] = useState(0);
 
   // Track scroll depth for mobile trigger
@@ -84,7 +87,14 @@ export function ExitIntentModal({ onClose }: ExitIntentModalProps) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email || !email.includes("@")) return;
+    // `includes("@")` let xyz@gmail through, and the browser does too — neither requires a
+    // domain ending. The guide then went nowhere and the form still said it had sent.
+    const problem = emailError(email);
+    if (problem) {
+      setError(problem);
+      return;
+    }
+    setError("");
 
     // Track in GA
     if (typeof window !== "undefined" && (window as any).gtag) {
@@ -175,13 +185,22 @@ export function ExitIntentModal({ onClose }: ExitIntentModalProps) {
                     <input
                       type="email"
                       value={email}
-                      onChange={(e) => setEmail(e.target.value)}
+                      onChange={(e) => {
+                        setEmail(e.target.value);
+                        if (error) setError("");
+                      }}
                       placeholder="Enter your email"
                       aria-label="Email address"
                       className="w-full pl-10 pr-4 py-3 bg-[#1E293B] border border-[#334155] rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#2DD4BF] focus:border-transparent"
                       required
+                      aria-invalid={error ? true : undefined}
                     />
                   </div>
+                  {error && (
+                    <p role="alert" className="text-sm font-medium text-red-400">
+                      {error}
+                    </p>
+                  )}
                   <button
                     type="submit"
                     className="w-full py-3 px-4 bg-[#2DD4BF] hover:bg-[#14B8A6] text-[#0F172A] font-semibold rounded-xl transition-colors flex items-center justify-center gap-2"

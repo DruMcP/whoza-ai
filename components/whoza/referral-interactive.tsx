@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Copy, Check, Gift, Users, TrendingUp, Share2, MessageCircle, Mail } from "lucide-react"
 import { trackCTA, trackEvent } from "@/lib/gtag"
+import { emailError } from "@/lib/validate-email"
 
 // Generate a consistent demo referral code for this browser
 function getOrCreateReferralCode(): string {
@@ -31,6 +32,8 @@ export function ReferralInteractive() {
   const [friendEmail, setFriendEmail] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
+  // Said out loud rather than returned silently: a mistyped address used to do nothing.
+  const [emailProblem, setEmailProblem] = useState("")
   const [stats, setStats] = useState<ReferralStats | null>(null)
   const [isLoading, setIsLoading] = useState(true)
 
@@ -82,7 +85,13 @@ export function ReferralInteractive() {
 
   const handleSubmitFriendEmail = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!friendEmail || !referralCode) return
+    if (!referralCode) return
+    const problem = emailError(friendEmail)
+    if (problem) {
+      setEmailProblem(problem)
+      return
+    }
+    setEmailProblem("")
 
     setIsSubmitting(true)
     setSubmitStatus("idle")
@@ -220,6 +229,11 @@ export function ReferralInteractive() {
                 >
                   Invitation sent successfully!
                 </motion.p>
+              )}
+              {emailProblem && (
+                <p role="alert" className="text-red-400 text-sm text-center">
+                  {emailProblem}
+                </p>
               )}
               {submitStatus === "error" && (
                 <motion.p

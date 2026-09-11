@@ -100,7 +100,20 @@ export async function POST(req: NextRequest) {
     const timestamp = new Date().toISOString()
 
     // ── 1. Persist signup to database (backup / audit trail) ──
+    // Whether this address was already on the list, so the reply can say so rather than
+    // repeating the first-time confirmation at someone who has already signed up.
+    let alreadySubscribed = false
     if (supabase) {
+      try {
+        const { data: existing } = await supabase
+          .from("email_subscribers")
+          .select("email")
+          .eq("email", email.toLowerCase().trim())
+          .maybeSingle()
+        alreadySubscribed = Boolean(existing)
+      } catch {
+        // A failed lookup must not block the signup; it only costs a less precise message.
+      }
       try {
         const { error: dbError } = await supabase.from("email_subscribers").upsert(
           {
@@ -186,6 +199,7 @@ Timestamp: ${timestamp}
 
     return NextResponse.json({
       success: true,
+      alreadySubscribed,
       notified: ADMIN_EMAILS.length - adminErrors.length,
       total: ADMIN_EMAILS.length,
       userEmailId: userResult?.data?.id || null,

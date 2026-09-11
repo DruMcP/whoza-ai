@@ -33,6 +33,7 @@ export function WaitlistForm({ source = "homepage", plan, onSubmitted, variant =
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [alreadyOnList, setAlreadyOnList] = useState(false)
   const [errors, setErrors] = useState<Record<string, string>>({})
 
   // When used inside a modal with onSubmitted, let parent handle success UI
@@ -106,6 +107,11 @@ export function WaitlistForm({ source = "homepage", plan, onSubmitted, variant =
 
         if (!response.ok) throw new Error("Submission failed")
 
+        // Someone who is already on the list should be told so, not handed the same
+        // first-time confirmation that leaves them wondering whether it registered at all.
+        const result = await response.json().catch(() => ({}))
+        setAlreadyOnList(Boolean(result?.alreadySubscribed))
+
         if (isControlled) {
           onSubmitted()
         } else {
@@ -127,10 +133,12 @@ export function WaitlistForm({ source = "homepage", plan, onSubmitted, variant =
       <div className={`text-center ${isPage ? "py-12" : "py-6"}`}>
         <CheckCircle2 className={`w-12 h-12 text-emerald-400 mx-auto mb-4`} />
         <h2 className={`font-bold text-white font-sans ${isPage ? "text-3xl" : "text-2xl"}`}>
-          You're on the list!
+          {alreadyOnList ? "You're already on the list" : "You're on the list!"}
         </h2>
         <p className="mt-3 text-slate-400 text-sm leading-relaxed max-w-md mx-auto">
-          Dru will personally be in touch within 48 hours to get you started.
+          {alreadyOnList
+            ? "We already have this address, so there is nothing more to do. Dru will be in touch within 48 hours."
+            : "Dru will personally be in touch within 48 hours to get you started."}
         </p>
         <p className="mt-4 text-slate-500 text-sm">
           Got questions? Email{" "}
