@@ -7,6 +7,7 @@ import '@/components/whoza/styles/premium-v8.module.css'
 import { LocaleProvider } from '@/lib/locale-context'
 import { CookieBanner } from '@/components/whoza/cookie-banner'
 import { ScrollProgress } from '@/components/whoza/scroll-progress'
+import { BackToTop } from '@/components/whoza/back-to-top'
 
 import { organizationSchemaObject } from "@/components/whoza/organization-schema"
 import { WebVitals } from '@/components/whoza/web-vitals'
@@ -201,6 +202,7 @@ export default function RootLayout({
         </a>
         <LocaleProvider>
           <ScrollProgress />
+          <BackToTop />
           {children}
           <CookieBanner />
           <WebVitals />
