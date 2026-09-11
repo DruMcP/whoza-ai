@@ -87,8 +87,11 @@ export default function RootLayout({
   return (
     <html lang="en-GB" className={inter.variable}>
       <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+        <link rel="icon" href="/favicon-16.png" type="image/png" sizes="16x16" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
         <meta name="msvalidate.01" content="B6D3ACF2F126930811E983EEE49699D0" />
     <meta name="deploy-id" content="2026-06-07" />
     <link rel="preconnect" href="https://www.googletagmanager.com" />

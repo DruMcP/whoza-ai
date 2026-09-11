@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { WaitlistModal } from "./waitlist-modal"
+import { Logo } from "@/components/whoza/logo"
 
 const navLinks = [
   { href: "/#how-it-works", label: "How It Works", isPageLink: false },
@@ -127,10 +128,10 @@ export function Header() {
             {/* Logo */}
             <a
               href="/"
-              className="font-sans text-xl font-extrabold text-white hover:opacity-90 transition-opacity no-underline shrink-0"
+              className="flex items-center hover:opacity-90 transition-opacity no-underline shrink-0"
               aria-label="Whoza.ai Home"
             >
-              Whoza.ai
+              <Logo colorMode="light" className="h-7 w-auto" />
             </a>
 
             {/* Desktop links */}

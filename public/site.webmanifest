@@ -1,13 +1,13 @@
 {
-  "name": "whoza.ai - AI Employee for Local Visibility",
-  "short_name": "whoza.ai",
-  "description": "Rex makes sure local customers find you when they search on Google, ChatGPT, and other AI tools",
+  "name": "Whoza.ai — AI receptionist for UK trades",
+  "short_name": "Whoza.ai",
+  "description": "Katie answers every call, captures the job and sends it to your WhatsApp.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "theme_color": "#1a1a2e",
-  "background_color": "#1a1a2e",
+  "theme_color": "#0F172A",
+  "background_color": "#0F172A",
   "icons": [
     {
       "src": "/favicon.svg",
@@ -26,21 +26,34 @@
       "type": "image/png"
     }
   ],
-  "categories": ["business", "productivity"],
+  "categories": [
+    "business",
+    "productivity"
+  ],
   "shortcuts": [
     {
       "name": "Portal",
       "short_name": "Portal",
       "description": "Access your whoza.ai portal",
       "url": "/portal",
-      "icons": [{ "src": "/favicon.svg", "sizes": "96x96" }]
+      "icons": [
+        {
+          "src": "/favicon.svg",
+          "sizes": "96x96"
+        }
+      ]
     },
     {
       "name": "Tasks",
       "short_name": "Tasks",
       "description": "View your tasks",
       "url": "/tasks",
-      "icons": [{ "src": "/favicon.svg", "sizes": "96x96" }]
+      "icons": [
+        {
+          "src": "/favicon.svg",
+          "sizes": "96x96"
+        }
+      ]
     }
   ]
 }
