@@ -60,8 +60,8 @@ export function GrowthEngine() {
                       <Eye className="w-3 h-3 text-[var(--claire-amber)]" />
                     </div>
                     <div>
-                      <div className="text-white text-sm font-medium">Competitor X has more reviews and stronger profile data</div>
-                      <div className="text-[var(--claire-amber)] text-xs mt-1 font-medium">→ Action: Improve review count + get more jobs</div>
+                      <div className="text-white text-sm font-medium">Your nearest competitor has 41 reviews to your 32</div>
+                      <div className="text-[var(--claire-amber)] text-xs mt-1 font-medium">→ Action: ask 5 recent customers this week</div>
                     </div>
                   </div>
                 </motion.div>
