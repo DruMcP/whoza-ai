@@ -9,8 +9,10 @@ import Script from "next/script"
  * - Starter: £59/month, 10 jobs, 100 min, £4.50/extra job, 1 concurrent call
  * - Growth: £125/month, 20 jobs, 300 min, £3.25/extra job, 2 concurrent calls
  * - Pro: £230/month, 40 jobs, 700 min, £2.75/extra job, 3 concurrent calls
- * - Scale: £399/month, 100 jobs, 1500 min, £2.25/extra job, 5 concurrent calls
- * - Overage: £0.40/minute for extra minutes
+ * - Overage: £0.26/minute for extra minutes
+ *
+ * Scale (£399) is deliberately absent: it is sold on request, not listed, so the schema
+ * matches what the page actually shows.
  * - Currency: GBP, Country: GB
  */
 
@@ -32,12 +34,6 @@ const PLANS = [
     price: "230",
     description:
       "AI call handling for UK trades. 40 jobs included, 700 minutes included, 3 concurrent calls. £2.75 per extra job.",
-  },
-  {
-    name: "Scale",
-    price: "399",
-    description:
-      "AI call handling for UK trades. 100 jobs included, 1500 minutes included, 5 concurrent calls. £2.25 per extra job.",
   },
 ]
 

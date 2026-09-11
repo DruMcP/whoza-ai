@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     question: "Is there a free trial?",
-    answer: "Yes — the 7-day free trial is available on the Starter plan only. Your trial includes 20 minutes of call handling and up to 4 booked enquiries at no charge. No credit card required to start. If Whoza works for your business, you can upgrade to any plan. If not, you can cancel anytime during the trial with no charge.",
+    answer: "Yes — the 7-day free trial is available on the Starter plan only. Your trial includes 100 minutes of call handling and up to 10 booked enquiries at no charge. No credit card required to start. If Whoza works for your business, you can upgrade to any plan. If not, you can cancel anytime during the trial with no charge.",
     category: "General",
   },
   {
@@ -123,7 +123,7 @@ const faqs = [
   },
   {
     question: "What does the free trial include?",
-    answer: "The 7-day free trial is on the Starter plan only. It includes: 20 minutes of AI call handling, up to 4 booked enquiries, full access to the WhatsApp delivery system, and the complete dashboard. This gives you enough time to see real results from actual customer calls. Fair usage applies — the trial is designed for genuine business evaluation, not extended free service.",
+    answer: "The 7-day free trial is on the Starter plan only. It includes: 100 minutes of AI call handling, up to 10 booked enquiries, full access to the WhatsApp delivery system, and the complete dashboard. This gives you enough time to see real results from actual customer calls. Fair usage applies — the trial is designed for genuine business evaluation, not extended free service.",
     category: "General",
   },
 ]

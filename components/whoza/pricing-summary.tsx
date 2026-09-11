@@ -93,21 +93,6 @@ export function PricingSummary() {
         "White-label WhatsApp",
       ],
     },
-    {
-      name: "Scale",
-      description: "Multi-location routing",
-      price: String(config.pricing.scale),
-      jobsIncluded: "100",
-      period: "month",
-      color: "grey" as keyof typeof colorStyles,
-      popular: false,
-      features: [
-        "Everything in Pro",
-        "Location-based call routing",
-        "Executive summary email",
-        "Priority support",
-      ],
-    },
   ]
 
   return (
@@ -133,7 +118,7 @@ export function PricingSummary() {
           </motion.div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => {
             const colors = colorStyles[plan.color]
             return (
