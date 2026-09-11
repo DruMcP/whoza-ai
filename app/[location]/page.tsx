@@ -12,7 +12,6 @@ import { VideoExplainer } from "@/components/whoza/video-explainer"
 import { WhatsAppDelivery } from "@/components/whoza/whatsapp-delivery"
 import { PreLaunchProof } from "@/components/whoza/pre-launch-proof"
 import { HowWhozaWorks } from "@/components/whoza/how-whoza-works"
-import { TrialExplanation } from "@/components/whoza/trial-explanation"
 import { MeetTheTeam } from "@/components/whoza/meet-the-team"
 import { TrilletVoiceWidget } from "@/components/whoza/trillet-voice-widget"
 import { ControlSection } from "@/components/whoza/control-section"
@@ -239,7 +238,6 @@ export default async function LocationPage({ params }: PageProps) {
 
         {/* TRIAL EXPLANATION — How the 7-day free trial works */}
         <div className="section-divider" />
-        <TrialExplanation />
 
         {/* MEET THE TEAM — Katie, Claire, Rex */}
         <div className="section-divider" />

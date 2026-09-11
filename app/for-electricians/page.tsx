@@ -11,7 +11,6 @@ import { RelatedTrades } from "@/components/whoza/related-trades"
 import { LostRevenueCalculator } from "@/components/whoza/lost-revenue-calculator"
 import { PreLaunchProof } from "@/components/whoza/pre-launch-proof"
 import { HowWhozaWorks } from "@/components/whoza/how-whoza-works"
-import { TrialExplanation } from "@/components/whoza/trial-explanation"
 import { MeetTheTeam } from "@/components/whoza/meet-the-team"
 import { ControlSection } from "@/components/whoza/control-section"
 import { ReviewsEngine } from "@/components/whoza/reviews-engine"
@@ -563,7 +562,6 @@ export default function ForElectriciansPage() {
                 <LostRevenueCalculator trade="electrician" />
         <PreLaunchProof />
         <HowWhozaWorks />
-        <TrialExplanation />
         <MeetTheTeam businessName="Evans Electrical" />
         <ControlSection />
         <ReviewsEngine trade="electrician" />

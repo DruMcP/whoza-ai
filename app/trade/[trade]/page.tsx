@@ -21,7 +21,6 @@ import { LostRevenueCalculator } from "@/components/whoza/lost-revenue-calculato
 import { WhatsAppDelivery } from "@/components/whoza/whatsapp-delivery"
 import { PreLaunchProof } from "@/components/whoza/pre-launch-proof"
 import { HowWhozaWorks } from "@/components/whoza/how-whoza-works"
-import { TrialExplanation } from "@/components/whoza/trial-explanation"
 import { MeetTheTeam } from "@/components/whoza/meet-the-team"
 import { TrilletVoiceWidget } from "@/components/whoza/trillet-voice-widget"
 import { ControlSection } from "@/components/whoza/control-section"
@@ -128,7 +127,6 @@ export default async function TradePage({ params }: PageProps) {
         <HowWhozaWorks />
         <div className="section-divider" />
         
-        <TrialExplanation />
         <div className="section-divider" />
         
         <MeetTheTeam />

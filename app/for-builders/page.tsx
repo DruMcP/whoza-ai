@@ -11,7 +11,6 @@ import { VideoExplainer } from "@/components/whoza/video-explainer"
 import { LostRevenueCalculator } from "@/components/whoza/lost-revenue-calculator"
 import { PreLaunchProof } from "@/components/whoza/pre-launch-proof"
 import { HowWhozaWorks } from "@/components/whoza/how-whoza-works"
-import { TrialExplanation } from "@/components/whoza/trial-explanation"
 import { MeetTheTeam } from "@/components/whoza/meet-the-team"
 import { ControlSection } from "@/components/whoza/control-section"
 import { ReviewsEngine } from "@/components/whoza/reviews-engine"
@@ -338,7 +337,6 @@ export default function ForBuildersPage() {
         <div className="section-divider" />
         <HowWhozaWorks />
         <div className="section-divider" />
-        <TrialExplanation />
         <div className="section-divider" />
         <MeetTheTeam businessName="Harrison & Sons Builders" />
         <div className="section-divider" />
