@@ -4,7 +4,7 @@ import { SocialProofBar } from "@/components/whoza/social-proof-bar"
 import { SocialProofBand, StatsBand } from "@/components/whoza/social-proof"
 import { AudioDemo } from "@/components/whoza/audio-demo"
 import { VideoExplainer } from "@/components/whoza/video-explainer"
-import { DispatchLoop } from "@/components/whoza/dispatch-loop"
+import { HowWhozaWorks } from "@/components/whoza/how-whoza-works"
 import { MeetTheTeam } from "@/components/whoza/meet-the-team"
 import { PreLaunchProof } from "@/components/whoza/pre-launch-proof"
 import { ControlSection } from "@/components/whoza/control-section"
@@ -76,7 +76,7 @@ export default function Home() {
 
         {/* EDUCATE - How the system works */}
         <div className="section-divider" />
-        <DispatchLoop />
+        <HowWhozaWorks />
 
         {/* HOW IT WORKS - Setup process */}
         <div className="section-divider" />
