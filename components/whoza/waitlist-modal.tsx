@@ -13,6 +13,9 @@ interface WaitlistModalProps {
 
 export function WaitlistModal({ onClose, source = "homepage", plan }: WaitlistModalProps) {
   const [submitted, setSubmitted] = useState(false)
+  // The popup draws its own success screen, so it has to hear whether the address was
+  // already on the list; otherwise a repeat signup gets the first-time message again.
+  const [alreadyOnList, setAlreadyOnList] = useState(false)
 
   // Call sites pass onClose as an inline arrow, so its identity changes on every
   // parent render. Hold it in a ref to keep the effect below mount-scoped.
@@ -82,10 +85,12 @@ export function WaitlistModal({ onClose, source = "homepage", plan }: WaitlistMo
               </svg>
             </motion.div>
             <h2 className="text-2xl font-bold text-white font-sans">
-              You're on the list!
+              {alreadyOnList ? "You're already on the list" : "You're on the list!"}
             </h2>
             <p className="mt-3 text-slate-400 text-sm leading-relaxed">
-              Dru will personally be in touch within 48 hours to get you started.
+              {alreadyOnList
+                ? "We already have this address, so there is nothing more to do. Dru will be in touch within 48 hours."
+                : "Dru will personally be in touch within 48 hours to get you started."}
             </p>
             <p className="mt-4 text-slate-500 text-sm">
               Got questions? Email{" "}
@@ -119,7 +124,10 @@ export function WaitlistModal({ onClose, source = "homepage", plan }: WaitlistMo
                 source={source}
                 plan={plan}
                 variant="modal"
-                onSubmitted={() => setSubmitted(true)}
+                onSubmitted={(already) => {
+                  setAlreadyOnList(already)
+                  setSubmitted(true)
+                }}
               />
             </div>
           </>

@@ -105,11 +105,14 @@ export async function POST(req: NextRequest) {
     let alreadySubscribed = false
     if (supabase) {
       try {
-        const { data: existing } = await supabase
+        const { data: existing, error: lookupError } = await supabase
           .from("email_subscribers")
           .select("email")
           .eq("email", email.toLowerCase().trim())
           .maybeSingle()
+        // Supabase reports a failed query in `error` rather than throwing, so say so in the
+        // logs; otherwise a broken lookup looks exactly like "not on the list yet".
+        if (lookupError) console.error("Waitlist lookup error:", lookupError)
         alreadySubscribed = Boolean(existing)
       } catch {
         // A failed lookup must not block the signup; it only costs a less precise message.
@@ -149,7 +152,7 @@ export async function POST(req: NextRequest) {
         resend.emails.send({
           from: "Whoza.ai <support@whoza.ai>",
           to: adminEmail,
-          subject: `New Signup — ${trade} — ${email}`,
+          subject: `${alreadySubscribed ? "Repeat Signup" : "New Signup"} — ${trade} — ${email}`,
           text: `
 New signup:
 
@@ -167,7 +170,9 @@ Timestamp: ${timestamp}
     )
 
     // ── 3. Send user confirmation ──
-    const userResult = await resend.emails.send({
+    // Only the first time. Someone submitting again already has the welcome email, and a
+    // second copy each time they press the button reads as spam.
+    const userResult = alreadySubscribed ? null : await resend.emails.send({
       from: "Dru @ Whoza.ai <dru@whoza.ai>",
       replyTo: "dru@whoza.ai",
       to: email,

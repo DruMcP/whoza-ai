@@ -19,7 +19,8 @@ const tradeOptions = [
 interface WaitlistFormProps {
   source?: string
   plan?: string
-  onSubmitted?: () => void
+  /** Told whether the address was already on the list, so the parent can say so. */
+  onSubmitted?: (alreadySubscribed: boolean) => void
   variant?: "modal" | "page"
 }
 
@@ -110,10 +111,11 @@ export function WaitlistForm({ source = "homepage", plan, onSubmitted, variant =
         // Someone who is already on the list should be told so, not handed the same
         // first-time confirmation that leaves them wondering whether it registered at all.
         const result = await response.json().catch(() => ({}))
-        setAlreadyOnList(Boolean(result?.alreadySubscribed))
+        const already = Boolean(result?.alreadySubscribed)
+        setAlreadyOnList(already)
 
         if (isControlled) {
-          onSubmitted()
+          onSubmitted(already)
         } else {
           setSubmitted(true)
         }
