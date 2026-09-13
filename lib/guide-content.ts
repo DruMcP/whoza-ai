@@ -277,7 +277,7 @@ export const GUIDE_PAGES: GuidePage[] = [
           ],
           [
             "Do I need a card to start the trial?",
-            "Yes. Card details are taken up front and nothing is charged until day eight.",
+            "No. The seven-day trial starts without a card. You choose a paid plan when you want to stay.",
           ],
           [
             "Where do I accept jobs?",

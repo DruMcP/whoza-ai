@@ -2,9 +2,9 @@ import { Metadata } from "next"
 import { EARLY_ACCESS_CAP } from "@/lib/data/company"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
-import { WaitlistForm } from "@/components/whoza/waitlist-form"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
-import { Phone } from "lucide-react"
+import { APP_SIGNUP_URL } from "@/lib/signup"
+import { ArrowRight, Phone } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Start Your Free Trial | Whoza",
@@ -64,9 +64,26 @@ export default function SignupPage() {
           </p>
         </div>
 
-        {/* Form card */}
-        <div className="bg-[#1E2229] rounded-2xl p-6 sm:p-8 border border-white/[0.06]">
-          <WaitlistForm source="signup-page" variant="page" />
+        {/* Signup is open, and accounts live in the app, so this is a way in rather than a
+            waitlist form. */}
+        <div className="bg-[#1E2229] rounded-2xl p-6 sm:p-8 border border-white/[0.06] text-center">
+          <p className="text-slate-300 mb-6">
+            Seven days free on Starter, with a real UK number, 100 call minutes and 10 booked jobs.
+            Setup takes about half an hour.
+          </p>
+          <a
+            href={APP_SIGNUP_URL}
+            className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-500 px-6 py-3.5 font-semibold text-white transition-colors hover:bg-emerald-600"
+          >
+            Create your account
+            <ArrowRight className="w-4 h-4" aria-hidden="true" />
+          </a>
+          <p className="mt-4 text-sm text-slate-500">
+            Already have an account?{" "}
+            <a href="https://app.whoza.ai/login" className="text-emerald-400 hover:underline">
+              Log in
+            </a>
+          </p>
         </div>
 
         {/* Trust signals */}
