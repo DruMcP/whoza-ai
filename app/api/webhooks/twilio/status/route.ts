@@ -37,6 +37,17 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
 
     console.log(`[Twilio Status] ${requestId} | Call ${twilioCallSid} status: ${callStatus}`);
 
+    // Verify Twilio signature (in production), same check as the inbound webhook.
+    // Without it anyone can rewrite a call's status, duration and recording URL.
+    const signature = req.headers.get("x-twilio-signature");
+    const webhookUrl = `${process.env.NEXT_PUBLIC_APP_URL || "https://api.whoza.ai"}/api/webhooks/twilio/status`;
+    const isValid = twilioService.verifyWebhookSignature(webhookUrl, params, signature);
+
+    if (!isValid && process.env.NODE_ENV === "production") {
+      console.error(`[Twilio Status] ${requestId} | Invalid signature`);
+      return NextResponse.json({ error: "Invalid signature" }, { status: 403 });
+    }
+
     // Map Twilio status to our status enum
     const statusMap: Record<string, string> = {
       queued: "initiated",

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server"
 import { createClient } from "@supabase/supabase-js"
 import { evaluateCredit, getRollingWindow } from "@/lib/referral-service"
+import { requireInternalKey } from "@/lib/api-guard"
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -19,6 +20,10 @@ const supabase = createClient(
  *   - trial_completed: boolean
  */
 export async function POST(req: NextRequest) {
+  // Issues referral credit, so only the payment webhook handler may call it
+  const denied = requireInternalKey(req)
+  if (denied) return denied
+
   try {
     const body = await req.json()
     const { contractor_id, payment_number, trial_completed = true } = body

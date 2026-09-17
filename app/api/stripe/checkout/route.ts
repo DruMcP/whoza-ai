@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server"
 import Stripe from "stripe"
 import { STRIPE_PRODUCTS, CURRENCY } from "@/lib/stripe-config"
+import { rateLimit, sameOriginUrl } from "@/lib/api-guard"
 
 function getStripe() {
   const key = process.env.STRIPE_SECRET_KEY
@@ -9,6 +10,9 @@ function getStripe() {
 }
 
 export async function POST(req: Request) {
+  const limited = rateLimit(req, "stripe-checkout", 10, 10 * 60 * 1000)
+  if (limited) return limited
+
   try {
     const stripe = getStripe()
     const { planId, successUrl, cancelUrl } = await req.json()
@@ -38,8 +42,8 @@ export async function POST(req: Request) {
         },
       ],
       mode: "subscription",
-      success_url: successUrl || `${process.env.NEXT_PUBLIC_SITE_URL}/dashboard?success=true`,
-      cancel_url: cancelUrl || `${process.env.NEXT_PUBLIC_SITE_URL}/pricing?canceled=true`,
+      success_url: sameOriginUrl(req, successUrl, `${process.env.NEXT_PUBLIC_SITE_URL}/dashboard?success=true`),
+      cancel_url: sameOriginUrl(req, cancelUrl, `${process.env.NEXT_PUBLIC_SITE_URL}/pricing?canceled=true`),
       automatic_tax: { enabled: true },
       customer_creation: "always",
       allow_promotion_codes: true,
@@ -48,6 +52,6 @@ export async function POST(req: Request) {
     return NextResponse.json({ url: session.url })
   } catch (err: any) {
     console.error("Stripe checkout error:", err)
-    return NextResponse.json({ error: err.message }, { status: 500 })
+    return NextResponse.json({ error: "Could not start checkout" }, { status: 500 })
   }
 }

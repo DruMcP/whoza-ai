@@ -1,6 +1,7 @@
 import { Resend } from "resend"
 import { NextRequest, NextResponse } from "next/server"
 import { createClient } from "@supabase/supabase-js"
+import { rateLimit } from "@/lib/api-guard"
 
 export const dynamic = "force-dynamic"
 
@@ -85,6 +86,10 @@ dru@whoza.ai · whoza.ai
 }
 
 export async function POST(req: NextRequest) {
+  // Each accepted submission writes a row and sends email
+  const limited = rateLimit(req, "waitlist", 5, 10 * 60 * 1000)
+  if (limited) return limited
+
   let body: any
   try {
     body = await req.json()
