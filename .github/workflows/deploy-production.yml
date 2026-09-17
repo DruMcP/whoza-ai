@@ -26,8 +26,8 @@ jobs:
           cat > .env.local << 'EOF'
           # === SUPABASE ===
           NEXT_PUBLIC_SUPABASE_URL=https://ligjstpxqtkurvteyyhw.supabase.co
-          NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxpZ2pzdHB4cXRrdXJ2dGV5eWh3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc0NTA4MTksImV4cCI6MjA5MzAyNjgxOX0.ep7ipBwRgh6TmjEw87xJGDXfLRBHRKh1mgDq3_eUHrI
-          SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxpZ2pzdHB4cXRrdXJ2dGV5eWh3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NzQ1MDgxOSwiZXhwIjoyMDkzMDI2ODE5fQ.eb1X5gKZ8pKPwYDXfX2W3S_jqLgRHRKh1mgDq3_xGr0
+          NEXT_PUBLIC_SUPABASE_ANON_KEY=${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+          SUPABASE_SERVICE_ROLE_KEY=${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           # === SITE ===
           NEXT_PUBLIC_SITE_URL=https://whoza.ai
           # === STRIPE (placeholder for build — real keys set in Netlify runtime) ===
