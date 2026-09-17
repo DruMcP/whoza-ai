@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
+import { useSignedIn, APP_HOME_URL } from "@/hooks/use-signed-in"
 import { WaitlistModal } from "./waitlist-modal"
 import { Logo } from "@/components/whoza/logo"
 
@@ -20,6 +21,9 @@ const navLinks = [
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [showWaitlist, setShowWaitlist] = useState(false)
+  // Signed in to the app already? Then "Log in" and "Start Free Trial" are both the wrong
+  // thing to offer; one Dashboard button replaces them.
+  const signedIn = useSignedIn()
   const [scrolled, setScrolled] = useState(false)
   const menuButtonRef = useRef<HTMLButtonElement>(null)
   const mobileMenuRef = useRef<HTMLDivElement>(null)
@@ -146,20 +150,32 @@ export function Header() {
                     {link.label}
                   </a>
               )}
-              <a
-                href="https://app.whoza.ai/login"
-                className="text-[13px] font-bold px-4 py-2 rounded-lg border border-white/20 text-white/80 hover:text-white hover:bg-white/10 no-underline transition-all whitespace-nowrap min-h-[44px] flex items-center"
-                aria-label="Log in to your Whoza dashboard"
-              >
-                Log in
-              </a>
-              <button
-                onClick={() => setShowWaitlist(true)}
-                className="btn-primary text-[13px] font-bold px-4 py-2 rounded-lg border border-white/20 bg-white/10 text-white hover:bg-white/20 hover:scale-105 active:scale-95 no-underline cursor-pointer transition-all whitespace-nowrap min-h-[44px]"
-                aria-label="Start free trial"
-              >
-                Start Free Trial
-              </button>
+              {signedIn ? (
+                <a
+                  href={APP_HOME_URL}
+                  className="btn-primary text-[13px] font-bold px-4 py-2 rounded-lg border border-white/20 bg-white/10 text-white hover:bg-white/20 hover:scale-105 active:scale-95 no-underline transition-all whitespace-nowrap min-h-[44px] flex items-center"
+                  aria-label="Open your Whoza dashboard"
+                >
+                  Dashboard
+                </a>
+              ) : (
+                <>
+                  <a
+                    href="https://app.whoza.ai/login"
+                    className="text-[13px] font-bold px-4 py-2 rounded-lg border border-white/20 text-white/80 hover:text-white hover:bg-white/10 no-underline transition-all whitespace-nowrap min-h-[44px] flex items-center"
+                    aria-label="Log in to your Whoza dashboard"
+                  >
+                    Log in
+                  </a>
+                  <button
+                    onClick={() => setShowWaitlist(true)}
+                    className="btn-primary text-[13px] font-bold px-4 py-2 rounded-lg border border-white/20 bg-white/10 text-white hover:bg-white/20 hover:scale-105 active:scale-95 no-underline cursor-pointer transition-all whitespace-nowrap min-h-[44px]"
+                    aria-label="Start free trial"
+                  >
+                    Start Free Trial
+                  </button>
+                </>
+              )}
             </div>
 
             {/* Mobile hamburger */}
@@ -200,22 +216,34 @@ export function Header() {
                     {link.label}
                   </a>
                 )}
-                <a
-                  href="https://app.whoza.ai/login"
-                  onClick={() => setMenuOpen(false)}
-                  className="text-center text-[13px] font-bold px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10 no-underline transition-colors mt-2 min-h-[44px] flex items-center justify-center"
-                >
-                  Log in
-                </a>
-                <button
-                  onClick={() => {
-                    setMenuOpen(false)
-                    setShowWaitlist(true)
-                  }}
-                  className="btn-primary text-center text-[13px] font-bold px-4 py-3 rounded-lg bg-white text-[#111418] no-underline cursor-pointer min-h-[44px]"
-                >
-                  Start Free Trial
-                </button>
+                {signedIn ? (
+                  <a
+                    href={APP_HOME_URL}
+                    onClick={() => setMenuOpen(false)}
+                    className="btn-primary text-center text-[13px] font-bold px-4 py-3 rounded-lg bg-white text-[#111418] no-underline mt-2 min-h-[44px] flex items-center justify-center"
+                  >
+                    Dashboard
+                  </a>
+                ) : (
+                  <>
+                    <a
+                      href="https://app.whoza.ai/login"
+                      onClick={() => setMenuOpen(false)}
+                      className="text-center text-[13px] font-bold px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10 no-underline transition-colors mt-2 min-h-[44px] flex items-center justify-center"
+                    >
+                      Log in
+                    </a>
+                    <button
+                      onClick={() => {
+                        setMenuOpen(false)
+                        setShowWaitlist(true)
+                      }}
+                      className="btn-primary text-center text-[13px] font-bold px-4 py-3 rounded-lg bg-white text-[#111418] no-underline cursor-pointer min-h-[44px]"
+                    >
+                      Start Free Trial
+                    </button>
+                  </>
+                )}
               </div>
             </motion.div>
           )}
