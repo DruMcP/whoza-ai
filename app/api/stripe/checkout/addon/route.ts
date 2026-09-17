@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server"
 import Stripe from "stripe"
 import { STRIPE_ADDONS, CURRENCY } from "@/lib/stripe-config"
+import { rateLimit, sameOriginUrl } from "@/lib/api-guard"
 
 function getStripe() {
   const key = process.env.STRIPE_SECRET_KEY
@@ -9,6 +10,9 @@ function getStripe() {
 }
 
 export async function POST(req: Request) {
+  const limited = rateLimit(req, "stripe-checkout-addon", 10, 10 * 60 * 1000)
+  if (limited) return limited
+
   try {
     const stripe = getStripe()
     const { addonId, quantity = 1, successUrl, cancelUrl } = await req.json()
@@ -16,6 +20,10 @@ export async function POST(req: Request) {
     const addon = STRIPE_ADDONS[addonId as keyof typeof STRIPE_ADDONS]
     if (!addon) {
       return NextResponse.json({ error: "Invalid addon" }, { status: 400 })
+    }
+
+    if (!Number.isInteger(quantity) || quantity < 1 || quantity > 100) {
+      return NextResponse.json({ error: "Invalid quantity" }, { status: 400 })
     }
 
     const unitAmount = "price" in addon ? addon.price : addon.pricePerHour
@@ -40,8 +48,8 @@ export async function POST(req: Request) {
         },
       ],
       mode: "payment",
-      success_url: successUrl || `${process.env.NEXT_PUBLIC_SITE_URL}/dashboard?addon_success=true`,
-      cancel_url: cancelUrl || `${process.env.NEXT_PUBLIC_SITE_URL}/pricing?addon_canceled=true`,
+      success_url: sameOriginUrl(req, successUrl, `${process.env.NEXT_PUBLIC_SITE_URL}/dashboard?addon_success=true`),
+      cancel_url: sameOriginUrl(req, cancelUrl, `${process.env.NEXT_PUBLIC_SITE_URL}/pricing?addon_canceled=true`),
       automatic_tax: { enabled: true },
       allow_promotion_codes: true,
     })
@@ -49,6 +57,6 @@ export async function POST(req: Request) {
     return NextResponse.json({ url: session.url })
   } catch (err: any) {
     console.error("Stripe addon checkout error:", err)
-    return NextResponse.json({ error: err.message }, { status: 500 })
+    return NextResponse.json({ error: "Could not start checkout" }, { status: 500 })
   }
 }

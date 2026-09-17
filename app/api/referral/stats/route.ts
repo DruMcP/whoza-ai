@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
 import { createClient } from "@supabase/supabase-js"
+import { rateLimit } from "@/lib/api-guard"
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -12,9 +13,12 @@ const supabase = createClient(
  * Returns referral statistics for a contractor
  */
 export async function GET(req: NextRequest) {
+  const limited = rateLimit(req, "referral-stats", 30, 60 * 1000)
+  if (limited) return limited
+
   try {
     const { searchParams } = new URL(req.url)
-    const contractorId = searchParams.get("contractor_id")
+    const contractorId =searchParams.get("contractor_id")
 
     if (!contractorId) {
       return NextResponse.json(

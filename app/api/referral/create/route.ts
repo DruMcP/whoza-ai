@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
 import { createClient } from "@supabase/supabase-js"
+import { rateLimit } from "@/lib/api-guard"
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -16,6 +17,9 @@ const supabase = createClient(
  *   - utm_*: optional UTM params
  */
 export async function POST(req: NextRequest) {
+  const limited = rateLimit(req, "referral-create", 5, 10 * 60 * 1000)
+  if (limited) return limited
+
   try {
     const body = await req.json()
     const { code, email, source, utm_campaign, utm_source, utm_medium } = body
