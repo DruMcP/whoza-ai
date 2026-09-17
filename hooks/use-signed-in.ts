@@ -5,9 +5,10 @@ import { useEffect, useState } from "react"
 /** The flag app.whoza.ai leaves on the shared .whoza.ai domain while someone is signed in. */
 export const SIGNED_IN_COOKIE = "whoza_signed_in"
 
-/** Where a signed-in visitor goes. The app's root opens their dashboard, or the setup wizard if
- *  they have not finished it, so this site never needs to know which. */
-export const APP_HOME_URL = "https://app.whoza.ai/"
+/** Where a signed-in visitor goes. The dashboard address opens the dashboard, or the setup wizard
+ *  for an account that has not finished it, so this site never needs to know which. Not the bare
+ *  app.whoza.ai address: that one was retired and says the page does not exist. */
+export const APP_HOME_URL = "https://app.whoza.ai/trades-dashboard"
 
 export function hasSignedInCookie(cookieString: string): boolean {
   return cookieString
