@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { telephonyRouter } from "@/lib/telephony-router";
 import { createClient } from "@supabase/supabase-js";
+import { requireInternalKey } from "@/lib/api-guard";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || "";
@@ -16,6 +17,9 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);
  */
 
 export async function GET(req: NextRequest) {
+  const denied = requireInternalKey(req);
+  if (denied) return denied;
+
   try {
     const { searchParams } = new URL(req.url);
     const contractorId = searchParams.get("contractor_id");
@@ -48,6 +52,9 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
+  const denied = requireInternalKey(req);
+  if (denied) return denied;
+
   try {
     const body = await req.json();
     const { contractor_id, business_name, area_code, voice_clone_samples } = body;
@@ -81,6 +88,9 @@ export async function POST(req: NextRequest) {
 }
 
 export async function PATCH(req: NextRequest) {
+  const denied = requireInternalKey(req);
+  if (denied) return denied;
+
   try {
     const body = await req.json();
     const { contractor_id, updates } = body;

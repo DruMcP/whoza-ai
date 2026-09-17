@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server"
 import { createClient } from "@supabase/supabase-js"
 import { RexDecisionEngine } from "@/lib/rex/rexDecisionEngine"
+import { requireInternalKey } from "@/lib/api-guard"
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -8,6 +9,10 @@ const supabase = createClient(
 )
 
 export async function POST(req: NextRequest) {
+  // Each evaluation spends paid Google Places / Perplexity calls
+  const denied = requireInternalKey(req)
+  if (denied) return denied
+
   try {
     const { action, business_id, user_id } = await req.json()
 
@@ -40,13 +45,16 @@ export async function POST(req: NextRequest) {
   } catch (error) {
     console.error("Rex API error:", error)
     return NextResponse.json(
-      { error: "Internal server error", details: (error as Error).message },
+      { error: "Internal server error" },
       { status: 500 }
     )
   }
 }
 
 export async function GET(req: NextRequest) {
+  const denied = requireInternalKey(req)
+  if (denied) return denied
+
   try {
     const { searchParams } = new URL(req.url)
     const business_id = searchParams.get("business_id")
@@ -80,7 +88,7 @@ export async function GET(req: NextRequest) {
   } catch (error) {
     console.error("Rex API GET error:", error)
     return NextResponse.json(
-      { error: "Internal server error", details: (error as Error).message },
+      { error: "Internal server error" },
       { status: 500 }
     )
   }

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
 import { createClient } from "@supabase/supabase-js"
+import { requireInternalKey } from "@/lib/api-guard"
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -16,6 +17,9 @@ const supabase = createClient(
  *   - offset (optional): default 0
  */
 export async function GET(req: NextRequest) {
+  const denied = requireInternalKey(req)
+  if (denied) return denied
+
   try {
     const { searchParams } = new URL(req.url)
     const clientId = searchParams.get("client_id")
@@ -42,7 +46,7 @@ export async function GET(req: NextRequest) {
     if (error) {
       console.error("GET /api/enquiries error:", error)
       return NextResponse.json(
-        { error: "Failed to fetch enquiries", details: error.message },
+        { error: "Failed to fetch enquiries" },
         { status: 500 }
       )
     }
@@ -57,7 +61,7 @@ export async function GET(req: NextRequest) {
   } catch (error) {
     console.error("GET /api/enquiries exception:", error)
     return NextResponse.json(
-      { error: "Internal server error", details: (error as Error).message },
+      { error: "Internal server error" },
       { status: 500 }
     )
   }
@@ -69,6 +73,9 @@ export async function GET(req: NextRequest) {
  * Body: enquiry object (matches enquiries table schema)
  */
 export async function POST(req: NextRequest) {
+  const denied = requireInternalKey(req)
+  if (denied) return denied
+
   try {
     const body = await req.json()
 
@@ -116,7 +123,7 @@ export async function POST(req: NextRequest) {
     if (error) {
       console.error("POST /api/enquiries error:", error)
       return NextResponse.json(
-        { error: "Failed to create enquiry", details: error.message },
+        { error: "Failed to create enquiry" },
         { status: 500 }
       )
     }
@@ -128,7 +135,7 @@ export async function POST(req: NextRequest) {
   } catch (error) {
     console.error("POST /api/enquiries exception:", error)
     return NextResponse.json(
-      { error: "Internal server error", details: (error as Error).message },
+      { error: "Internal server error" },
       { status: 500 }
     )
   }

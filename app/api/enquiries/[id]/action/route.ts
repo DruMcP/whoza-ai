@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { processAcceptBilling, processDeclineBilling, isExcludedFromBilling } from "@/lib/billing";
+import { requireInternalKey } from "@/lib/api-guard";
 
 /**
  * Enquiry Action API
@@ -32,6 +33,10 @@ export async function POST(
   req: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
+  // "accept" bills the customer, so this must never be callable anonymously
+  const denied = requireInternalKey(req);
+  if (denied) return denied;
+
   const { id } = await params;
   const startTime = Date.now();
 
