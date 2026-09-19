@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build && node scripts/generate-build-info.js && node scripts/build-indexnow-manifest.js || true"
+  command = "npm run build && node scripts/generate-build-info.js && node scripts/build-indexnow-manifest.js"
   publish = ".next"
   environment = { NODE_VERSION = "22", NODE_OPTIONS = "--max-old-space-size=4096", NEXT_TELEMETRY_DISABLED = "1" }
 
@@ -197,6 +197,61 @@
   from = "/us/ai-visibility/*"
   to = "/gone"
   status = 410
+
+# === SECURITY: never serve dotfiles / config / credentials ===
+[[redirects]]
+  from = "/.env*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/.s3cfg"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/.git*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/*.pem"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/*.key"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/Makefile"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/makefile"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/*.sql"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/*.bak"
+  to = "/404.html"
+  status = 404
+  force = true
 
 # === US city slug 410 Gone — UK-only site ===
 [[redirects]]
@@ -493,6 +548,58 @@
 [[redirects]]
   from = "/start/*"
   to = "/signup"
+  status = 301
+
+# === Bing remediation: dead URLs Bing holds as 404 → 301 to nearest live page ===
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/for-plumbers-bristol"
+  to = "/for-plumbers"
+  status = 301
+
+[[redirects]]
+  from = "/for-heating-engineers-birmingham"
+  to = "/for-heating-engineers"
+  status = 301
+
+[[redirects]]
+  from = "/for-heating-engineers-bristol"
+  to = "/for-heating-engineers"
+  status = 301
+
+[[redirects]]
+  from = "/en"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/workspaces"
+  to = "/"
+  status = 301
+
+# === Trade×city matrix holes: combos that don't exist → trade hub (never 404) ===
+[[redirects]]
+  from = "/for-gas-engineers-birmingham"
+  to = "/for-gas-engineers"
+  status = 301
+
+[[redirects]]
+  from = "/for-gas-engineers-manchester"
+  to = "/for-gas-engineers"
+  status = 301
+
+[[redirects]]
+  from = "/for-roofers-birmingham"
+  to = "/for-roofers"
+  status = 301
+
+[[redirects]]
+  from = "/for-roofers-manchester"
+  to = "/for-roofers"
   status = 301
 
 [[headers]]

@@ -1,0 +1,69 @@
+name: Soft-404 & Exposure Guard
+
+# Regression guard for the Bing remediation (Task 5):
+# unknown/scanner probe paths must return 404, app internals must not be
+# exposed, and the homepage must stay 200 so a total outage can't pass.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for Netlify deploy to go live (poll canary: single-group robots.txt)
+        run: |
+          for i in $(seq 1 40); do
+            groups=$(curl -s https://whoza.ai/robots.txt | grep -ci '^User-agent:' || true)
+            # After the fix there is exactly ONE User-agent group.
+            # Before deploy completes the old file has 27 — keep waiting.
+            if [ "$groups" = "1" ]; then echo "Canary live after ~$((i*15))s"; exit 0; fi
+            sleep 15
+          done
+          echo "Canary never became live"; exit 1
+
+      - name: Probe paths must be 404
+        run: |
+          set -e
+          fail=0
+          for p in /.s3cfg /__debugbar /plugins.php /index-test.php /makefile /app_dev.php /trpc /.env /.env.production /.git/config /random-8f3a2b1c-9d4e-4f6a-a7c2-uuid-probe; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" "https://whoza.ai$p")
+            echo "$p -> $code"
+            if [ "$code" != "404" ]; then echo "::error::$p returned $code, expected 404"; fail=1; fi
+          done
+          exit $fail
+
+      - name: Dotfile / credential extensions must be 404
+        run: |
+          set -e
+          fail=0
+          for p in /test.pem /test.key /test.sql /test.bak /Makefile; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" "https://whoza.ai$p")
+            echo "$p -> $code"
+            if [ "$code" != "404" ]; then echo "::error::$p returned $code, expected 404"; fail=1; fi
+          done
+          exit $fail
+
+      - name: App internals must not be exposed
+        run: |
+          set -e
+          fail=0
+          for p in /.netlify/functions/deploy-succeeded /.netlify/ /api/ /dashboard/x; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" "https://whoza.ai$p")
+            echo "$p -> $code"
+            if [ "$code" = "200" ] || [ "$code" = "301" ] || [ "$code" = "308" ]; then echo "::error::$p returned $code (exposed/redirected)"; fail=1; fi
+          done
+          exit $fail
+
+      - name: Homepage and key pages stay 200 (outage detector)
+        run: |
+          set -e
+          fail=0
+          for p in / /pricing /locations /blog; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" "https://whoza.ai$p")
+            echo "$p -> $code"
+            if [ "$code" != "200" ]; then echo "::error::$p returned $code, expected 200"; fail=1; fi
+          done
+          exit $fail

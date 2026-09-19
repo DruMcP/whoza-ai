@@ -29,10 +29,6 @@ const nextConfig = {
         destination: '/llms-full.txt',
       },
       {
-        source: '/e3ccefa46e90635781bcc5fff037809c.txt',
-        destination: '/e3ccefa46e90635781bcc5fff037809c.txt',
-      },
-      {
         source: '/robots.txt',
         destination: '/robots.txt',
       },

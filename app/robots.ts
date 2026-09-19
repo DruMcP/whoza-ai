@@ -1,9 +1,18 @@
 import type { MetadataRoute } from "next"
 
+/**
+ * robots.txt — SINGLE wildcard group, deliberately.
+ *
+ * RFC 9309: a crawler obeys only the most specific matching group. A named
+ * group containing only `Allow: /` (e.g. for Bingbot) makes that crawler
+ * ignore every Disallow in the `*` group. Named per-agent groups must never
+ * be shipped unless they duplicate the full Disallow block verbatim — and
+ * 26 copies of the same rules is unmaintainable, so we use one group.
+ * The wildcard group already allows every crawler not explicitly disallowed.
+ */
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      // Standard crawlers
       {
         userAgent: "*",
         allow: ["/", "/_next/static/"],
@@ -22,56 +31,6 @@ export default function robots(): MetadataRoute.Robots {
           "/*?nocache=",
         ],
       },
-      // OpenAI
-      { userAgent: "OAI-SearchBot", allow: "/" },
-      { userAgent: "GPTBot", allow: "/" },
-      // Anthropic
-      { userAgent: "Claude-SearchBot", allow: "/" },
-      { userAgent: "Claude-Web", allow: "/" },
-      { userAgent: "Claude-User", allow: "/" },
-      // Perplexity
-      { userAgent: "PerplexityBot", allow: "/" },
-      { userAgent: "Perplexity-User", allow: "/" },
-      // Google
-      { userAgent: "Google-Extended", allow: "/" },
-      { userAgent: "Googlebot", allow: "/" },
-      { userAgent: "Googlebot-Image", allow: "/" },
-      // Bing
-      { userAgent: "Bingbot", allow: "/" },
-      { userAgent: "msnbot", allow: "/" },
-      // Meta
-      { userAgent: "Meta-ExternalAgent", allow: "/" },
-      { userAgent: "Meta-ExternalFetcher", allow: "/" },
-      { userAgent: "FacebookBot", allow: "/" },
-      // Apple
-      { userAgent: "Applebot", allow: "/" },
-      { userAgent: "Applebot-Extended", allow: "/" },
-      // ByteDance / TikTok
-      { userAgent: "Bytespider", allow: "/" },
-      { userAgent: "TikTokSpider", allow: "/" },
-      // Naver
-      { userAgent: "Naverbot", allow: "/" },
-      { userAgent: "Yeti", allow: "/" },
-      // DuckDuckGo
-      { userAgent: "DuckDuckBot", allow: "/" },
-      { userAgent: "DuckDuckGo-Favicons-Bot", allow: "/" },
-      // Common Crawl
-      { userAgent: "CCBot", allow: "/" },
-      // You.com
-      { userAgent: "YouBot", allow: "/" },
-      { userAgent: "You.com-Bot", allow: "/" },
-      // Imagesift
-      { userAgent: "ImagesiftBot", allow: "/" },
-      // Petal
-      { userAgent: "PetalBot", allow: "/" },
-      // Seznam
-      { userAgent: "SeznamBot", allow: "/" },
-      // Yandex
-      { userAgent: "YandexBot", allow: "/" },
-      // Sogou
-      { userAgent: "Sogou web spider", allow: "/" },
-      // Baidu
-      { userAgent: "Baiduspider", allow: "/" },
     ],
     sitemap: "https://whoza.ai/sitemap.xml",
   }

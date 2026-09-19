@@ -29,3 +29,4 @@ tsconfig.tsbuildinfo
 deploy-root/
 deploy-staging/
 *.log
+.indexnow-store.json

@@ -62,57 +62,57 @@ export function HomepageSchema() {
         "email": "support@whoza.ai"
       },
       {
-        "@type": "SoftwareApplication",
+        "@type": "Service",
         "@id": "https://whoza.ai/#katie",
-        "name": "Katie",
+        "name": "Katie — AI Call Answering Agent",
         "alternateName": "Katie by whoza.ai",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Any",
+        "serviceType": "AI voice call answering for UK tradespeople",
+        "provider": { "@id": "https://whoza.ai/#organization" },
+        "areaServed": { "@type": "Country", "name": "United Kingdom" },
         "offers": {
           "@type": "Offer",
           "price": "59",
           "priceCurrency": "GBP"
         },
         "url": "https://whoza.ai/for-plumbers",
-        "knowsAbout": ["Plumbing", "Electrical", "HVAC", "Building", "Roofing", "Customer Service", "Call Handling"],
         "description": "Katie is an AI voice agent that answers missed calls for UK tradespeople 24/7, qualifies customer enquiries, and sends them to WhatsApp for instant response."
       },
       {
-        "@type": "SoftwareApplication",
+        "@type": "Service",
         "@id": "https://whoza.ai/#mark",
-        "name": "Mark",
+        "name": "Mark — AI Call Answering Agent (male voice)",
         "alternateName": "Mark by whoza.ai",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Any",
+        "serviceType": "AI voice call answering for UK tradespeople",
+        "provider": { "@id": "https://whoza.ai/#organization" },
+        "areaServed": { "@type": "Country", "name": "United Kingdom" },
         "offers": {
           "@type": "Offer",
           "price": "59",
           "priceCurrency": "GBP"
         },
         "url": "https://whoza.ai/for-plumbers",
-        "knowsAbout": ["Plumbing", "Electrical", "HVAC", "Building", "Roofing", "Customer Service", "Call Handling"],
         "description": "Mark is an AI voice agent with a male voice that answers missed calls for UK tradespeople 24/7, qualifies customer enquiries, and sends them to WhatsApp for instant response."
       },
       {
-        "@type": "SoftwareApplication",
+        "@type": "Service",
         "@id": "https://whoza.ai/#claire",
-        "name": "Claire",
+        "name": "Claire — AI Review Collection Agent",
         "alternateName": "Claire by whoza.ai",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Any",
+        "serviceType": "AI review collection and reputation management",
+        "provider": { "@id": "https://whoza.ai/#organization" },
+        "areaServed": { "@type": "Country", "name": "United Kingdom" },
         "url": "https://whoza.ai/blog/how-to-get-more-google-reviews-trades",
-        "knowsAbout": ["Google Reviews", "Review Management", "Customer Feedback", "Reputation Management"],
         "description": "Claire is an AI review collection agent that automatically follows up after completed jobs to gather Google reviews and monitors competitor review activity."
       },
       {
-        "@type": "SoftwareApplication",
+        "@type": "Service",
         "@id": "https://whoza.ai/#rex",
-        "name": "Rex",
+        "name": "Rex — AI Visibility & Competitor Tracking Agent",
         "alternateName": "Rex by whoza.ai",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Any",
+        "serviceType": "AI visibility and competitor tracking",
+        "provider": { "@id": "https://whoza.ai/#organization" },
+        "areaServed": { "@type": "Country", "name": "United Kingdom" },
         "url": "https://whoza.ai/research/aeo-ai-search-optimisation-2026",
-        "knowsAbout": ["SEO", "Competitor Analysis", "AI Visibility", "ChatGPT Optimization", "Google AI Overviews"],
         "description": "Rex is an AI visibility and competitor tracking agent that analyses competitors monthly and delivers weekly action reports to improve ChatGPT, Google AI, and customer recommendations."
       },
       {
@@ -166,10 +166,6 @@ export function HomepageSchema() {
         "duration": "PT30S",
         "author": { "@id": "https://whoza.ai/#katie" },
         "publisher": { "@id": "https://whoza.ai/#organization" }
-      },
-      {
-        "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", ".faq-question", ".how-it-works-step"]
       }
     ]
   }
@@ -227,21 +223,11 @@ export function VideoSchema({
     duration,
     contentUrl,
     embedUrl,
-    author: {
-      "@type": "Organization",
-      name: "Whoza.ai",
-      url: "https://whoza.ai",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://whoza.ai/logo.png",
-        width: 512,
-        height: 512,
-      },
+    "author": {
+      "@id": "https://whoza.ai/#organization"
     },
-    publisher: {
-      "@type": "Organization",
-      name: "Whoza.ai",
-      url: "https://whoza.ai",
+    "publisher": {
+      "@id": "https://whoza.ai/#organization"
     },
     potentialAction: {
       "@type": "WatchAction",

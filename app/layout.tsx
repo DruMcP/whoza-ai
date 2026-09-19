@@ -157,6 +157,7 @@ export default function RootLayout({
               },
               {
                 "@type": "SoftwareApplication",
+                "@id": "https://whoza.ai/#software",
                 "name": "Whoza.ai",
                 "applicationCategory": "BusinessApplication",
                 "operatingSystem": "Any",

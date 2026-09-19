@@ -3,6 +3,7 @@ import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { locations } from "@/lib/locations"
+import { TRADE_CITY_PAGES } from "@/lib/trade-city-pages"
 import { MapPin, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
@@ -33,6 +34,18 @@ export const metadata: Metadata = {
   },
 }
 
+
+function formatTrade(slug: string): string {
+  return slug
+    .replace(/^for-/, "")
+    .split("-")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ")
+}
+
+function formatCity(slug: string): string {
+  return slug.charAt(0).toUpperCase() + slug.slice(1)
+}
 
 export const revalidate = 3600
 
@@ -103,6 +116,38 @@ export default function LocationsPage() {
             </Link>
           ))}
         </div>
+
+        {/* Trade × City hub — server-rendered links to every combo page (Bing crawlability) */}
+        <section className="mb-16" aria-label="Browse by trade and city">
+          <h2 className="text-2xl font-bold mb-2">
+            Browse by Trade and City
+          </h2>
+          <p className="text-white/60 mb-8">
+            Dedicated AI call answering pages for every trade we cover in each city — pick yours.
+          </p>
+          <div className="space-y-8">
+            {Object.entries(TRADE_CITY_PAGES).map(([trade, cities]) => (
+              <div key={trade}>
+                <h3 className="text-lg font-semibold text-white/90 mb-3">
+                  {formatTrade(trade)}
+                </h3>
+                <ul className="flex flex-wrap gap-3">
+                  {cities.map((city) => (
+                    <li key={`${trade}-${city}`}>
+                      <Link
+                        href={`/${trade}-${city}`}
+                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-white/70 hover:bg-white/[0.07] hover:border-white/20 hover:text-white transition-all"
+                      >
+                        <MapPin className="w-3.5 h-3.5 text-[var(--katie-blue)]" />
+                        {formatCity(city)}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* CTA */}
         <div className="text-center bg-white/5 border border-white/10 rounded-2xl p-10">
