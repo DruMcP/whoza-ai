@@ -46,14 +46,14 @@ jobs:
           done
           exit $fail
 
-      - name: "App internals must not be exposed"
+      - name: "App internals must not be exposed (follow redirects — slash normaliser may 308 first)"
         run: |
           set -e
           fail=0
           for p in /.netlify/functions/deploy-succeeded /.netlify/ /api/ /dashboard/x; do
-            code=$(curl -s -o /dev/null -w "%{http_code}" "https://whoza.ai$p")
-            echo "$p -> $code"
-            if [ "$code" = "200" ] || [ "$code" = "301" ] || [ "$code" = "308" ]; then echo "::error::$p returned $code (exposed/redirected)"; fail=1; fi
+            code=$(curl -sL -o /dev/null -w "%{http_code}" "https://whoza.ai$p")
+            echo "$p -> $code (final after redirects)"
+            if [ "$code" != "403" ] && [ "$code" != "404" ] && [ "$code" != "410" ]; then echo "::error::$p final status $code (exposed)"; fail=1; fi
           done
           exit $fail
 

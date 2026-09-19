@@ -71,10 +71,18 @@ async function main() {
 
   const targets = []
   for (const r of pathRules) {
+    // Splat/placeholder patterns (e.g. "/*.key") can't be probed literally.
+    if (r.from.includes("*") || r.from.includes(":")) continue
+    // status=404/410 rules are TERMINAL responses, not redirects — assert the
+    // probed path returns that status directly and move on.
+    if (r.status === 404 || r.status === 410) {
+      targets.push({ probe: r.from, expectStatus: r.status, kind: "terminal" })
+      continue
+    }
     targets.push({ probe: r.from, expectStatus: r.status, kind: "netlify" })
     // Also probe the trailing-slash variant — the global normaliser must not
     // strand slashed URLs on a dead unslashed route.
-    if (!r.from.endsWith("*") && !r.from.endsWith("/")) {
+    if (!r.from.endsWith("/")) {
       targets.push({ probe: r.from + "/", expectStatus: null, kind: "slash-variant" })
     }
   }
@@ -97,6 +105,27 @@ async function main() {
     seen.add(key)
 
     const url = BASE + t.probe
+
+    // Terminal rules (forced 404/410): assert the direct response, no walk.
+    if (t.kind === "terminal") {
+      let status
+      try {
+        const res = await fetch(url, {
+          redirect: "manual",
+          headers: { "user-agent": "whoza-redirect-guard/1.0" },
+        })
+        status = res.status
+      } catch (err) {
+        failures.push({ probe: t.probe, reason: `fetch error: ${err.message}` })
+        continue
+      }
+      checked++
+      if (status !== t.expectStatus) {
+        failures.push({ probe: t.probe, reason: `terminal rule returned ${status}, expected ${t.expectStatus}` })
+      }
+      continue
+    }
+
     let result
     try {
       result = await walk(url)
