@@ -455,6 +455,19 @@
   status = 301
   force = true
 
+# === Brief evidence-URL aliases (GSC remediation 2026-09-19) ===
+[[redirects]]
+  from = "/vs-moneypenny"
+  to = "/whoza-vs-moneypenny"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/electricians"
+  to = "/for-electricians"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/roadmap"
   to = "/"
