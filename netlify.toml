@@ -30,6 +30,14 @@
   status = 301
   force = true
 
+# === /video — retired route, video content lives at homepage #video-explainer ===
+# /video/ must resolve in ONE hop to a 200 (never redirect-into-404).
+[[redirects]]
+  from = "/video"
+  to = "/#video-explainer"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/trade/hvac"
   to = "/for-heating-engineers"

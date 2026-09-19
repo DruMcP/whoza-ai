@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 const howItWorksFaqs = [
   {
     question: "How does Katie actually answer my phone calls?",
-    answer: "When a customer calls your business number, Katie picks up instantly — usually within 2 rings. She greets them with your branded message, asks qualifying questions about their job, and captures all the details. The entire conversation happens in natural, conversational English. No menus, no hold music, no 'press 1 for sales'.",
+    answer: "When a customer calls your business number, Katie picks up instantly — usually within 2 rings. She greets them with your branded message, asks qualifying questions about their job, and captures all the details. The entire conversation happens in natural, conversational English. No menus, no hold music, no 'press 1 for sales'. If you've been burned by phone-tree menus before, see <a href=\"/is-it-a-phone-tree\" class=\"text-emerald-400 underline hover:text-emerald-300\">exactly what happens when a customer calls whoza.ai</a> — and why it's nothing like a phone tree.",
   },
   {
     question: "Do I need to change my business phone number?",

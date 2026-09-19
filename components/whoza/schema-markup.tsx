@@ -1,9 +1,16 @@
 import { FOUNDER_SAME_AS } from "@/lib/seo/identity"
 
-export function HomepageSchema() {
-  const graph = {
-    "@context": "https://schema.org",
-    "@graph": [
+/**
+ * buildHomepageEntityNodes — page-scoped entities (Service, founder Person,
+ * voice-agent Services, HowTo, AudioObject) for merging into a page-level
+ * @graph via JsonLdGraph. Every node references the canonical identity
+ * nodes (#organization, #website, #software) by @id — stated relationships,
+ * not inferred ones. The identity graph itself ships from app/layout.tsx
+ * because the App Router root layout cannot read the route without
+ * de-optimising every page to dynamic rendering.
+ */
+export function buildHomepageEntityNodes() {
+  return [
       {
         "@type": "Service",
         "@id": "https://whoza.ai/#service",
@@ -168,6 +175,12 @@ export function HomepageSchema() {
         "publisher": { "@id": "https://whoza.ai/#organization" }
       }
     ]
+}
+
+export function HomepageSchema() {
+  const graph = {
+    "@context": "https://schema.org",
+    "@graph": buildHomepageEntityNodes(),
   }
 
   return (
@@ -204,7 +217,11 @@ interface VideoSchemaProps {
  *     embedUrl="https://whoza.ai"
  *   />
  */
-export function VideoSchema({
+/**
+ * buildVideoNode — VideoObject node for merging into a page-level @graph
+ * (see JsonLdGraph). Publisher/author reference #organization by @id.
+ */
+export function buildVideoNode({
   name,
   description,
   embedUrl,
@@ -213,9 +230,9 @@ export function VideoSchema({
   uploadDate = "2026-05-06T00:00:00+00:00",
   duration = "PT60S",
 }: VideoSchemaProps) {
-  const schema = {
-    "@context": "https://schema.org",
+  return {
     "@type": "VideoObject",
+    "@id": "https://whoza.ai/#video",
     name,
     description,
     thumbnailUrl: [thumbnailUrl, "https://whoza.ai/og-image-1200x630.png"],
@@ -246,6 +263,21 @@ export function VideoSchema({
         availability: "https://schema.org/InStock",
       },
     },
+  }
+}
+
+export function VideoSchema({
+  name,
+  description,
+  embedUrl,
+  thumbnailUrl = "https://whoza.ai/og-image.png",
+  contentUrl = "https://whoza.ai/whoza-explainer.mp4",
+  uploadDate = "2026-05-06T00:00:00+00:00",
+  duration = "PT60S",
+}: VideoSchemaProps) {
+  const schema = {
+    "@context": "https://schema.org",
+    ...buildVideoNode({ name, description, embedUrl, thumbnailUrl, contentUrl, uploadDate, duration }),
   }
 
   return (

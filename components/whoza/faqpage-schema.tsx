@@ -15,10 +15,18 @@ export interface FAQPageSchemaProps {
   speakableSelectors?: string[]
 }
 
-export function FAQPageSchema({ faqs, speakableSelectors }: FAQPageSchemaProps) {
-  const schema: Record<string, unknown> = {
-    "@context": "https://schema.org",
+/**
+ * buildFaqPageNode — returns the FAQPage node for merging into a page-level
+ * @graph (see JsonLdGraph). Wires isPartOf → #website.
+ */
+export function buildFaqPageNode(
+  faqs: FAQPageSchemaProps["faqs"],
+  pageId: string,
+) {
+  return {
     "@type": "FAQPage",
+    "@id": pageId,
+    "isPartOf": { "@id": "https://whoza.ai/#website" },
     mainEntity: faqs.map((faq) => ({
       "@type": "Question",
       name: faq.question,
@@ -27,6 +35,13 @@ export function FAQPageSchema({ faqs, speakableSelectors }: FAQPageSchemaProps) 
         text: faq.answer,
       },
     })),
+  }
+}
+
+export function FAQPageSchema({ faqs, speakableSelectors }: FAQPageSchemaProps) {
+  const schema: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    ...buildFaqPageNode(faqs, "https://whoza.ai/#faq"),
   }
 
   if (speakableSelectors && speakableSelectors.length > 0) {

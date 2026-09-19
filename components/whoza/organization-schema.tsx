@@ -17,7 +17,7 @@ export const organizationSchemaObject = {
   "@id": "https://whoza.ai/#organization",
   "name": "Whoza.ai",
   "legalName": COMPANY.legalName,
-  "alternateName": ["whoza.ai", "whoza"],
+  "alternateName": ["Whoza", "Whoza AI", "whoza.ai", "WHOZA AI LTD"],
   "url": "https://whoza.ai",
   "logo": {
     "@type": "ImageObject",

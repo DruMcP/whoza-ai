@@ -254,6 +254,13 @@ const categories = [
   { icon: MessageCircle, label: "Comparisons", questions: [3, 12] },
 ]
 
+const contextualLinks: Record<string, { href: string; label: string }> = {
+  "Can customers tell it's an AI answering?": {
+    href: "/will-my-customers-mind",
+    label: "Will my customers mind an AI answering my phone?",
+  },
+}
+
 export const revalidate = 3600
 
 export default function FAQPage() {
@@ -335,6 +342,18 @@ export default function FAQPage() {
                         </summary>
                         <div className="px-6 pb-6 text-white/70 leading-relaxed">
                           {q.acceptedAnswer.text}
+                          {(() => {
+                            const link = contextualLinks[q.name]
+                            if (!link) return null
+                            return (
+                              <a
+                                href={link.href}
+                                className="block mt-3 text-emerald-400 underline hover:text-emerald-300 transition-colors"
+                              >
+                                {link.label} →
+                              </a>
+                            )
+                          })()}
                         </div>
                       </details>
                     ))}

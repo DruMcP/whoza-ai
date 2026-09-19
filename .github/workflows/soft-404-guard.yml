@@ -57,6 +57,9 @@ jobs:
           done
           exit $fail
 
+      - name: No redirect may terminate on a non-200 (redirect-into-404 guard)
+        run: node scripts/redirect-guard.js
+
       - name: Homepage and key pages stay 200 (outage detector)
         run: |
           set -e

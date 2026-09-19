@@ -22,25 +22,21 @@ import { FinalCTA } from "@/components/whoza/final-cta"
 import { Footer } from "@/components/whoza/footer"
 import { StickyCTA, FloatingChatWidget } from "@/components/whoza/sticky-cta"
 import { TrilletVoiceWidgetClient } from "@/components/whoza/trillet-voice-widget-client"
-import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
+import { buildBreadcrumbNode } from "@/components/whoza/breadcrumb-schema"
+import { JsonLdGraph } from "@/components/whoza/jsonld-graph"
 import { ClaireDashboard } from "@/components/whoza/claire-dashboard"
-import { HomepageSchema, VideoSchema } from "@/components/whoza/schema-markup"
-import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
+import { buildHomepageEntityNodes, buildVideoNode } from "@/components/whoza/schema-markup"
+import { buildFaqPageNode } from "@/components/whoza/faqpage-schema"
 import { ExitIntentModal } from "@/components/whoza/exit-intent-modal"
 
 
-export default function Home() {
-  return (
-    <>
-      <VideoSchema
-        name="Whoza.ai 60-Second Demo — Katie Answers Every Call"
-        description="Watch Katie, Whoza's AI call handler, capture a missed enquiry in under 60 seconds. The call is answered instantly, the enquiry lands in WhatsApp, Claire requests a review, and Rex delivers growth insights. Built for UK tradespeople."
-        embedUrl="https://whoza.ai"
-      />
-      <Header />
-      <BreadcrumbSchema items={[{ name: "Home", item: "https://whoza.ai" }]} />
-      <FAQPageSchema
-        faqs={[
+const HOMEPAGE_VIDEO = {
+  name: "Whoza.ai 60-Second Demo — Katie Answers Every Call",
+  description: "Watch Katie, Whoza's AI call handler, capture a missed enquiry in under 60 seconds. The call is answered instantly, the enquiry lands in WhatsApp, Claire requests a review, and Rex delivers growth insights. Built for UK tradespeople.",
+  embedUrl: "https://whoza.ai",
+}
+
+const HOMEPAGE_FAQS = [
           { question: "What counts as a booked job?", answer: "A booked job is a job enquiry that the tradesperson has accepted via the Whoza WhatsApp channel (e.g. replying ACCEPT to the WhatsApp job card). Job cards sent but not accepted do not count toward plan job allowances and are not billed as extra jobs." },
           { question: "How does the Refer a Trade programme work?", answer: "Refer a fellow tradesperson to Whoza.ai using your unique referral link. Your friend gets their first paid month free after their 7-day trial, on whichever plan they choose. You get one free month of your own current plan credited after they complete their second consecutive paid month. You can earn up to 12 free months per rolling 12-month period. No credit if they cancel before their second payment." },
           { question: "How much does Whoza cost in total?", answer: "You pay a monthly plan fee (Starter £59, Growth £125, Pro £230, Scale £399). Each plan includes a set number of call handling minutes and booked enquiries. Additional enquiries beyond your included amount are charged per booking. Overage minutes are billed at £0.40 per minute. There are no hidden setup fees or long-term contracts. You can cancel anytime." },
@@ -64,8 +60,24 @@ export default function Home() {
           { question: "Does whoza work with my other business tools?", answer: "Yes. On Growth and above, whoza connects with Zapier and Make, letting you sync enquiries with Google Sheets, Google Calendar, Xero, Mailchimp, and 8,000+ other apps." },
           { question: "What if I want to cancel?", answer: "Cancel anytime — no contracts, no cancellation fees, no hassle. We're confident you'll stay because the system pays for itself many times over, but if it's not right for your business, you can cancel with one click from your dashboard." },
           { question: "What does the free trial include?", answer: "The 7-day free trial is on the Starter plan only. It includes: 20 minutes of AI call handling, up to 4 booked enquiries, full access to the WhatsApp delivery system, and the complete dashboard. This gives you enough time to see real results from actual customer calls. Fair usage applies — the trial is designed for genuine business evaluation, not extended free service." },
+]
+
+export default function Home() {
+  return (
+    <>
+      {/* One page-level JSON-LD graph: every page entity with @id wiring.
+          The identity graph (#organization / #website / #software) ships from
+          app/layout.tsx and is referenced here by @id. */}
+      <JsonLdGraph
+        id="homepage-jsonld-graph"
+        nodes={[
+          ...buildHomepageEntityNodes(),
+          buildBreadcrumbNode([{ name: "Home", item: "https://whoza.ai" }]),
+          buildFaqPageNode(HOMEPAGE_FAQS, "https://whoza.ai/#faq"),
+          buildVideoNode(HOMEPAGE_VIDEO),
         ]}
       />
+      <Header />
 
       <main id="main-content" role="main" className="pb-24 lg:pb-0">
         {/* HOOK - Hero with clean hierarchy */}
@@ -285,7 +297,6 @@ export default function Home() {
       </main>
 
       <Footer />
-      <HomepageSchema />
       <FloatingChatWidget />
       <ExitIntentModal />
     </>
