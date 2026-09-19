@@ -40,12 +40,26 @@ function parseNetlifyRedirects(tomlPath) {
   return out
 }
 
+/** Fetch with retry — CI runners occasionally hit transient network flakes. */
+async function fetchWithRetry(url, opts, attempts = 3) {
+  let lastErr
+  for (let i = 0; i < attempts; i++) {
+    try {
+      return await fetch(url, opts)
+    } catch (err) {
+      lastErr = err
+      await new Promise((r) => setTimeout(r, 1000 * (i + 1)))
+    }
+  }
+  throw lastErr
+}
+
 /** Follow a URL manually so we can count hops and inspect each step. */
 async function walk(url, maxHops = MAX_HOPS) {
   const hops = []
   let current = url
   for (let i = 0; i <= maxHops; i++) {
-    const res = await fetch(current, {
+    const res = await fetchWithRetry(current, {
       redirect: "manual",
       headers: { "user-agent": "whoza-redirect-guard/1.0" },
     })
