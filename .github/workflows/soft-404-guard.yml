@@ -57,6 +57,7 @@ jobs:
           done
           exit $fail
 
+      - uses: actions/checkout@v4
       - name: "No redirect may terminate on a non-200 (redirect-into-404 guard)"
         run: node scripts/redirect-guard.js
 
