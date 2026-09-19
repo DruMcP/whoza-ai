@@ -27,8 +27,8 @@ import { ArrowRight, CheckCircle, Phone, Shield, Clock, PoundSterling, Flame, Th
 import { RelatedTrades } from "@/components/whoza/related-trades"
 
 export const metadata: Metadata = {
-  title: "Call Answering Service for Heating Engineers | From £59",
-  description: "24/7 call answering for UK heating engineers. Every boiler service, breakdown and emergency call captured and sent to WhatsApp in 3 seconds. Plans from £59.",
+  title: "UK Call Answering Service for Heating Engineers | From £59",
+  description: "24/7 call answering for UK heating engineers — Manchester to Glasgow. Boiler breakdowns and no-heat emergencies captured to WhatsApp in 3 seconds. From £59.",
   alternates: {
     canonical: "https://whoza.ai/for-heating-engineers",
   },

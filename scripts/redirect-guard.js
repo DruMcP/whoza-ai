@@ -109,6 +109,33 @@ async function main() {
   ]
   for (const p of EXTRA) targets.push({ probe: p, expectStatus: null, kind: "extra" })
 
+  // GSC remediation evidence battery (2026-09-19 brief) — fixed URLs that must
+  // serve 200. Redirects among them are walked; pages are checked directly.
+  const MUST_200 = [
+    "/research/voice-agent-technology-state-of-the-art-2026",
+    "/case-studies", "/ai-visibility-checker", "/support", "/vs-moneypenny",
+    "/blog/how-much-do-missed-calls-cost-uk-trades", "/london",
+    "/uk/ai-visibility/london/ai-receptionist", "/electricians",
+    "/blog/local-seo-trades-complete-guide", "/blog/how-to-grow-trade-business-uk-guide",
+    "/blog/how-to-get-more-google-reviews-trades", "/blog/ultimate-faq-tradespeople",
+    "/blog/roofing-lead-generation-guide", "/blog/how-to-get-more-plumbing-customers",
+    "/blog/24-7-call-answering-emergency-trades", "/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky",
+    "/blog/ai-receptionist-vs-human-cost-guide-2026", "/best-ai-call-handler-uk-trades",
+    "/ai-vs-virtual-receptionist", "/vs-trade-receptionist",
+    "/blog/how-does-ai-call-answering-work",
+    "/blog/i-missed-5-emergency-calls-a-week-then-i-tried-ai-gary-the-plumber",
+    "/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026",
+    "/for-gas-engineers", "/for-heating-engineers", "/for-painters-decorators",
+    "/for-gas-engineers-london", "/for-heating-engineers-manchester",
+  ]
+  for (const p of MUST_200) targets.push({ probe: p, expectStatus: null, kind: "extra" })
+
+  // Garbage URLs from the 404 export — must stay terminal 404 (never redirect,
+  // never 200). Historical crawl-queue noise; guard against accidental wiring.
+  const MUST_404 = ["/$", "/mo+", "/year", "/for-gutter-cleaners", "/for-fencers",
+    "/for-kitchen-fitters", "/for-security-installers", "/for-driveway-specialists"]
+  for (const p of MUST_404) targets.push({ probe: p, expectStatus: 404, kind: "terminal" })
+
   const failures = []
   const seen = new Set()
   let checked = 0

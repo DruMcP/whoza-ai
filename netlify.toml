@@ -111,6 +111,350 @@
   status = 301
   force = true
 
+# === Retired blog slugs — 301 to closest live equivalent (GSC 404 remediation, 2026-09-19) ===
+# Removing/re-slugging a post requires a redirect entry in the same commit.
+[[redirects]]
+  from = "/blog/what-is-ai-visibility-and-why-does-it-matter-for-your-trade-business"
+  to = "/blog/local-seo-trades-complete-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/what-is-ai-visibility-uk-tradespeople-2026"
+  to = "/blog/local-seo-trades-complete-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-uk-tradespeople-get-found-ai-search-2026"
+  to = "/blog/local-seo-trades-complete-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/why-bing-matters-for-ai-search-2026"
+  to = "/blog/local-seo-trades-complete-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/why-bing-matters-for-ai-search-the-perplexity-connection"
+  to = "/blog/local-seo-trades-complete-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/best-practices-tradespeople-london-local-ai-visibility-guide"
+  to = "/blog/local-seo-trades-complete-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/ai-search-optimization-beginners-guide-get-found-chatgpt-perplexity-2026"
+  to = "/blog/local-seo-trades-complete-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-ultimate-guide-to-ai-search-optimization-for-tradespeople"
+  to = "/blog/local-seo-trades-complete-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/top-10-ai-visibility-strategies-uk-tradespeople-2026"
+  to = "/blog/local-seo-trades-complete-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/manchester-vs-birmingham-local-seo-strategies-2026"
+  to = "/blog/local-seo-trades-complete-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-ai-search-engines-choose-which-local-businesses-to-recommend"
+  to = "/blog/local-seo-trades-complete-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-ai-search-engines-rank-local-tradespeople-aeo-geo-guide-2026"
+  to = "/blog/local-seo-trades-complete-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-ai-search-engines-choose-plumber-recommendation-manchester"
+  to = "/blog/local-seo-trades-complete-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-uk-tradespeople-can-get-recommended-by-chatgpt-in-2026"
+  to = "/blog/local-seo-trades-complete-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/electricians-guide-to-google-ai-overviews-how-to-get-featured"
+  to = "/blog/local-seo-trades-complete-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/electricians-guide"
+  to = "/blog/local-seo-trades-complete-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/electricians-guide-to-google-ai-overviews-2026"
+  to = "/blog/local-seo-trades-complete-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-uk-tradespeople-can-get-found-on-chatgpt-and-ai-search-in-2026"
+  to = "/blog/local-seo-trades-complete-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/ai-visibility-for-london-tradespeople-2026"
+  to = "/blog/local-seo-trades-complete-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/ai-visibility-manchester-trades-2026-guide"
+  to = "/blog/local-seo-trades-complete-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/google-ai-overviews-stealing-clicks-guide-uk-tradespeople"
+  to = "/blog/local-seo-trades-complete-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/why-your-business-isnt-showing-up-in-google-answers-and-how-to-fix-it"
+  to = "/blog/local-seo-trades-complete-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-uk-trades-business-playbook-for-ai-search-visibility-in-2026"
+  to = "/blog/how-to-grow-trade-business-uk-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/uk-trades-business-playbook-ai-search-visibility-2026"
+  to = "/blog/how-to-grow-trade-business-uk-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-reviews-influence-ai-search-recommendations-tradespeople-2026"
+  to = "/blog/how-to-get-more-google-reviews-trades"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-to-create-faq-page-ai-can-find-2026"
+  to = "/blog/ultimate-faq-tradespeople"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-to-create-an-faq-page-that-ai-can-find-and-reference"
+  to = "/blog/ultimate-faq-tradespeople"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/roofers-checklist-10-steps-to-ai-visibility-2026"
+  to = "/blog/roofing-lead-generation-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/roofers-checklist"
+  to = "/blog/roofing-lead-generation-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/roofers-10-step-checklist-ai-visibility-2026"
+  to = "/blog/roofing-lead-generation-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/missed-calls-missed-money"
+  to = "/blog/how-much-do-missed-calls-cost-uk-trades"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/missed-calls-cost-uk-trades"
+  to = "/blog/how-much-do-missed-calls-cost-uk-trades"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/roi-calculator-how-much-could-an-ai-call-handler-save-your-trade-business"
+  to = "/blog/how-much-do-missed-calls-cost-uk-trades"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-7-day-free-trial-what-to-expect-when-you-try-katie"
+  to = "/blog/how-much-do-missed-calls-cost-uk-trades"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/ai-call-answering-uk-trades"
+  to = "/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-truth-about-ai-voice-agents-what-google-reviews-say"
+  to = "/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/moneypenny-vs-whoza-ai-which-receptionist-service-is-right-for-trades"
+  to = "/blog/ai-receptionist-vs-human-cost-guide-2026"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/5-signs-your-trade-business-needs-an-ai-call-handler"
+  to = "/blog/ai-receptionist-vs-human-cost-guide-2026"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/ai-receptionist-vs-human"
+  to = "/blog/ai-receptionist-vs-human-cost-guide-2026"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/why-tradespeople-need-a-revenue-team-not-just-a-virtual-receptionist"
+  to = "/blog/ai-receptionist-vs-human-cost-guide-2026"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/best-ai-call-answering-service-uk-trades-2026"
+  to = "/best-ai-call-handler-uk-trades"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/hvac-emergency-call-handling"
+  to = "/blog/24-7-call-answering-emergency-trades"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/emergency-call-handling-guide"
+  to = "/blog/24-7-call-answering-emergency-trades"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/case-study-how-a-london-electrician-recovered-12k-month-with-ai-call-handling"
+  to = "/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/i-missed-half-my-calls-then-i-tried-ai-raj-the-handyman"
+  to = "/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/i-missed-4-calls-a-day-then-i-tried-ai-sarah-the-cleaner"
+  to = "/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/i-captured-11-missed-jobs-in-one-month-dave-the-tiler"
+  to = "/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/i-missed-4-calls-a-day-then-i-tried-ai-dean-the-plasterer"
+  to = "/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/i-missed-5-enquiries-a-week-then-i-tried-ai-james-the-landscaper"
+  to = "/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-katie-answers-captures-and-delivers-enquiries-in-3-seconds"
+  to = "/blog/how-does-ai-call-answering-work"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-whatsapp-delivery-changes-everything-for-tradespeople"
+  to = "/blog/how-does-ai-call-answering-work"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-whoza-ai-works-with-your-existing-phone-number"
+  to = "/blog/how-does-ai-call-answering-work"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-ai-call-handling-works-with-your-existing-phone-number"
+  to = "/blog/how-does-ai-call-answering-work"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-plumbers-can-get-found-in-chatgpt-2026"
+  to = "/blog/how-to-get-more-plumbing-customers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-plumbers-can-get-found-in-chatgpt-a-step-by-step-guide"
+  to = "/blog/how-to-get-more-plumbing-customers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-to-never-miss-an-emergency-call-again-plumbers-electricians-roofers"
+  to = "/blog/i-missed-5-emergency-calls-a-week-then-i-tried-ai-gary-the-plumber"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/whoza-vs-yourbusinessnumber"
+  to = "/vs-trade-receptionist"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/roadmap"
   to = "/"
@@ -563,6 +907,634 @@
   from = "/home"
   to = "/"
   status = 301
+
+# === Trade × city matrix policy (GSC 404 remediation, 2026-09-19) ===
+# 25 real combos serve 200; every other combination 301s to its trade hub.
+# Historical cause: sitemap once declared the full 136-combo matrix (commit b07f5f2)
+# for pages that never existed; Google re-crawls from its own history.
+[[redirects]]
+  from = "/for-builders-bristol"
+  to = "/for-builders"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-builders-leeds"
+  to = "/for-builders"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-builders-liverpool"
+  to = "/for-builders"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-carpenters-london"
+  to = "/for-carpenters"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-carpenters-manchester"
+  to = "/for-carpenters"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-carpenters-birmingham"
+  to = "/for-carpenters"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-carpenters-glasgow"
+  to = "/for-carpenters"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-carpenters-edinburgh"
+  to = "/for-carpenters"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-carpenters-bristol"
+  to = "/for-carpenters"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-carpenters-leeds"
+  to = "/for-carpenters"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-carpenters-liverpool"
+  to = "/for-carpenters"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-cleaners-london"
+  to = "/for-cleaners"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-cleaners-manchester"
+  to = "/for-cleaners"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-cleaners-birmingham"
+  to = "/for-cleaners"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-cleaners-glasgow"
+  to = "/for-cleaners"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-cleaners-edinburgh"
+  to = "/for-cleaners"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-cleaners-bristol"
+  to = "/for-cleaners"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-cleaners-leeds"
+  to = "/for-cleaners"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-cleaners-liverpool"
+  to = "/for-cleaners"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-drainage-london"
+  to = "/for-drainage"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-drainage-manchester"
+  to = "/for-drainage"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-drainage-birmingham"
+  to = "/for-drainage"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-drainage-glasgow"
+  to = "/for-drainage"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-drainage-edinburgh"
+  to = "/for-drainage"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-drainage-bristol"
+  to = "/for-drainage"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-drainage-leeds"
+  to = "/for-drainage"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-drainage-liverpool"
+  to = "/for-drainage"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-electricians-bristol"
+  to = "/for-electricians"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-electricians-leeds"
+  to = "/for-electricians"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-electricians-liverpool"
+  to = "/for-electricians"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-gas-engineers-bristol"
+  to = "/for-gas-engineers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-gas-engineers-leeds"
+  to = "/for-gas-engineers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-gas-engineers-liverpool"
+  to = "/for-gas-engineers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-handymen-london"
+  to = "/for-handymen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-handymen-manchester"
+  to = "/for-handymen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-handymen-birmingham"
+  to = "/for-handymen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-handymen-glasgow"
+  to = "/for-handymen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-handymen-edinburgh"
+  to = "/for-handymen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-handymen-bristol"
+  to = "/for-handymen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-handymen-leeds"
+  to = "/for-handymen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-handymen-liverpool"
+  to = "/for-handymen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-heating-engineers-leeds"
+  to = "/for-heating-engineers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-heating-engineers-liverpool"
+  to = "/for-heating-engineers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-joiners-london"
+  to = "/for-joiners"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-joiners-manchester"
+  to = "/for-joiners"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-joiners-birmingham"
+  to = "/for-joiners"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-joiners-glasgow"
+  to = "/for-joiners"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-joiners-edinburgh"
+  to = "/for-joiners"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-joiners-bristol"
+  to = "/for-joiners"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-joiners-leeds"
+  to = "/for-joiners"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-joiners-liverpool"
+  to = "/for-joiners"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-landscapers-london"
+  to = "/for-landscapers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-landscapers-manchester"
+  to = "/for-landscapers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-landscapers-birmingham"
+  to = "/for-landscapers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-landscapers-glasgow"
+  to = "/for-landscapers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-landscapers-edinburgh"
+  to = "/for-landscapers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-landscapers-bristol"
+  to = "/for-landscapers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-landscapers-leeds"
+  to = "/for-landscapers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-landscapers-liverpool"
+  to = "/for-landscapers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-locksmiths-london"
+  to = "/for-locksmiths"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-locksmiths-manchester"
+  to = "/for-locksmiths"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-locksmiths-birmingham"
+  to = "/for-locksmiths"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-locksmiths-glasgow"
+  to = "/for-locksmiths"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-locksmiths-edinburgh"
+  to = "/for-locksmiths"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-locksmiths-bristol"
+  to = "/for-locksmiths"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-locksmiths-leeds"
+  to = "/for-locksmiths"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-locksmiths-liverpool"
+  to = "/for-locksmiths"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-painters-decorators-london"
+  to = "/for-painters-decorators"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-painters-decorators-manchester"
+  to = "/for-painters-decorators"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-painters-decorators-birmingham"
+  to = "/for-painters-decorators"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-painters-decorators-glasgow"
+  to = "/for-painters-decorators"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-painters-decorators-edinburgh"
+  to = "/for-painters-decorators"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-painters-decorators-bristol"
+  to = "/for-painters-decorators"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-painters-decorators-leeds"
+  to = "/for-painters-decorators"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-painters-decorators-liverpool"
+  to = "/for-painters-decorators"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-pest-control-london"
+  to = "/for-pest-control"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-pest-control-manchester"
+  to = "/for-pest-control"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-pest-control-birmingham"
+  to = "/for-pest-control"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-pest-control-glasgow"
+  to = "/for-pest-control"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-pest-control-edinburgh"
+  to = "/for-pest-control"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-pest-control-bristol"
+  to = "/for-pest-control"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-pest-control-leeds"
+  to = "/for-pest-control"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-pest-control-liverpool"
+  to = "/for-pest-control"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-plasterers-london"
+  to = "/for-plasterers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-plasterers-manchester"
+  to = "/for-plasterers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-plasterers-birmingham"
+  to = "/for-plasterers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-plasterers-glasgow"
+  to = "/for-plasterers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-plasterers-edinburgh"
+  to = "/for-plasterers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-plasterers-bristol"
+  to = "/for-plasterers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-plasterers-leeds"
+  to = "/for-plasterers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-plasterers-liverpool"
+  to = "/for-plasterers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-plumbers-leeds"
+  to = "/for-plumbers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-plumbers-liverpool"
+  to = "/for-plumbers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-roofers-bristol"
+  to = "/for-roofers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-roofers-leeds"
+  to = "/for-roofers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-roofers-liverpool"
+  to = "/for-roofers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-tilers-london"
+  to = "/for-tilers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-tilers-manchester"
+  to = "/for-tilers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-tilers-birmingham"
+  to = "/for-tilers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-tilers-glasgow"
+  to = "/for-tilers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-tilers-edinburgh"
+  to = "/for-tilers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-tilers-bristol"
+  to = "/for-tilers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-tilers-leeds"
+  to = "/for-tilers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-tilers-liverpool"
+  to = "/for-tilers"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/for-plumbers-bristol"
