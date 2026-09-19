@@ -13,7 +13,7 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Wait for Netlify deploy to go live (poll canary: single-group robots.txt)
+      - name: "Wait for Netlify deploy to go live (poll canary: single-group robots.txt)"
         run: |
           for i in $(seq 1 40); do
             groups=$(curl -s https://whoza.ai/robots.txt | grep -ci '^User-agent:' || true)
@@ -24,7 +24,7 @@ jobs:
           done
           echo "Canary never became live"; exit 1
 
-      - name: Probe paths must be 404
+      - name: "Probe paths must be 404"
         run: |
           set -e
           fail=0
@@ -35,7 +35,7 @@ jobs:
           done
           exit $fail
 
-      - name: Dotfile / credential extensions must be 404
+      - name: "Dotfile / credential extensions must be 404"
         run: |
           set -e
           fail=0
@@ -46,7 +46,7 @@ jobs:
           done
           exit $fail
 
-      - name: App internals must not be exposed
+      - name: "App internals must not be exposed"
         run: |
           set -e
           fail=0
@@ -57,10 +57,10 @@ jobs:
           done
           exit $fail
 
-      - name: No redirect may terminate on a non-200 (redirect-into-404 guard)
+      - name: "No redirect may terminate on a non-200 (redirect-into-404 guard)"
         run: node scripts/redirect-guard.js
 
-      - name: Homepage and key pages stay 200 (outage detector)
+      - name: "Homepage and key pages stay 200 (outage detector)"
         run: |
           set -e
           fail=0
