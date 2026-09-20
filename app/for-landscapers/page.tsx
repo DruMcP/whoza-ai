@@ -13,6 +13,8 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { RelatedTrades } from "@/components/whoza/related-trades"
 import Image from "next/image"
+import { TradeCaseStudy, TradeLeadGen } from "@/components/whoza/trade-case-study"
+import { tradeCaseStudies } from "@/lib/trade-case-studies"
 
 export const metadata: Metadata = {
   title: "Call Answering Service for Landscapers | From £59",
@@ -363,7 +365,7 @@ export default function ForLandscapersPage() {
               ))}
             </div>
             <p className="mt-6 text-white/50 text-sm">
-              Read James's full story: <a href="/blog/i-missed-spring-booking-season-ai-captured-47-calls-in-3-weeks-james-the-landscaper" className="text-green-400 hover:text-green-300 underline">I Missed Spring Booking Season. AI Captured 47 Calls in 3 Weeks.</a>
+              Read James's full story: <a href="/for-landscapers" className="text-green-400 hover:text-green-300 underline">I Missed Spring Booking Season. AI Captured 47 Calls in 3 Weeks.</a>
             </p>
           </div>
         </section>
@@ -410,6 +412,29 @@ export default function ForLandscapersPage() {
         </section>
 
         <div className="section-divider" />
+
+        {(() => {
+          const data = tradeCaseStudies["for-landscapers"]
+          return (
+            <>
+              <div className="section-divider" />
+              <TradeCaseStudy trade={data.trade} stories={data.stories} />
+              {data.leadGen && (
+                <>
+                  <div className="section-divider" />
+                  <TradeLeadGen
+                    trade={data.trade}
+                    heading={data.leadGen.heading}
+                    intro={data.leadGen.intro}
+                    tips={data.leadGen.tips}
+                  />
+                </>
+              )}
+            </>
+          )
+        })()}
+
+
         {/* ─── FAQ ─── */}
 <section className="trade-faq py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

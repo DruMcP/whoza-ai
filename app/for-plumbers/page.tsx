@@ -24,6 +24,8 @@ import { Testimonials } from "@/components/whoza/testimonials"
 import { QuickAnswer } from "@/components/whoza/quick-answer"
 import { ComparisonTable } from "@/components/whoza/comparison-table"
 import Image from "next/image"
+import { TradeCaseStudy, TradeLeadGen } from "@/components/whoza/trade-case-study"
+import { tradeCaseStudies } from "@/lib/trade-case-studies"
 
 export const metadata: Metadata = {
   title: "Call Answering Service for Plumbers | From £59",
@@ -405,7 +407,7 @@ export default function ForPlumbersPage() {
               ))}
             </div>
             <p className="mt-6 text-white/50 text-sm">
-              Read Gary's full story: <a href="/blog/i-missed-5-emergency-calls-a-week-then-i-tried-ai-gary-the-plumber" className="text-blue-400 hover:text-blue-300 underline">I Missed 5 Emergency Calls a Week. Then I Tried AI.</a>
+              Read Gary's full story: <a href="/for-plumbers" className="text-blue-400 hover:text-blue-300 underline">I Missed 5 Emergency Calls a Week. Then I Tried AI.</a>
             </p>
           </div>
         </section>
@@ -413,6 +415,29 @@ export default function ForPlumbersPage() {
         <div className="section-divider" />
 
                 {/* ─── FAQ ─── */}
+
+        {(() => {
+          const data = tradeCaseStudies["for-plumbers"]
+          return (
+            <>
+              <div className="section-divider" />
+              <TradeCaseStudy trade={data.trade} stories={data.stories} />
+              {data.leadGen && (
+                <>
+                  <div className="section-divider" />
+                  <TradeLeadGen
+                    trade={data.trade}
+                    heading={data.leadGen.heading}
+                    intro={data.leadGen.intro}
+                    tips={data.leadGen.tips}
+                  />
+                </>
+              )}
+            </>
+          )
+        })()}
+
+
         <section id="faq" className="trade-faq py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">

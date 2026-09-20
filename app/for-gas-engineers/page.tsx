@@ -10,6 +10,8 @@ import { ArrowRight, Phone, Flame, Shield, Clock, PoundSterling, CheckCircle2, S
 import Link from "next/link"
 import { RelatedTrades } from "@/components/whoza/related-trades"
 import Image from "next/image"
+import { TradeCaseStudy, TradeLeadGen } from "@/components/whoza/trade-case-study"
+import { tradeCaseStudies } from "@/lib/trade-case-studies"
 
 export const metadata: Metadata = {
   title: "UK Call Answering Service for Gas Engineers | From £59",
@@ -360,7 +362,7 @@ export default function ForGasEngineersPage() {
               ))}
             </div>
             <p className="mt-6 text-white/50 text-sm">
-              Read more about how trades recover revenue: <a href="/blog/how-much-do-missed-calls-cost-uk-trades" className="text-orange-400 hover:text-orange-300 underline">How Much Do Missed Calls Cost UK Trades?</a>
+              Read more about how trades recover revenue: <a href="/research/missed-call-index" className="text-orange-400 hover:text-orange-300 underline">How Much Do Missed Calls Cost UK Trades?</a>
             </p>
           </div>
         </section>
@@ -407,6 +409,29 @@ export default function ForGasEngineersPage() {
         </section>
 
         <div className="section-divider" />
+
+
+        {(() => {
+          const data = tradeCaseStudies["for-gas-engineers"]
+          return (
+            <>
+              <div className="section-divider" />
+              <TradeCaseStudy trade={data.trade} stories={data.stories} />
+              {data.leadGen && (
+                <>
+                  <div className="section-divider" />
+                  <TradeLeadGen
+                    trade={data.trade}
+                    heading={data.leadGen.heading}
+                    intro={data.leadGen.intro}
+                    tips={data.leadGen.tips}
+                  />
+                </>
+              )}
+            </>
+          )
+        })()}
+
 
         {/* ─── FAQ ─── */}
         

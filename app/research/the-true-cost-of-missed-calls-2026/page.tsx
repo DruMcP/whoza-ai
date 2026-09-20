@@ -253,7 +253,7 @@ export default function ResearchPage() {
             The telephone remains the primary channel through which UK trade businesses acquire new customers. Yet the majority of these businesses are structurally unable to answer the calls that represent their livelihood. This report examines the financial impact of missed calls on the UK trades sector, drawing on research, industry surveys, and economic data to quantify a problem that costs the sector billions of pounds annually.
           </p>
           <p>
-            For trade businesses considering <Link href="/" className="text-emerald-400 hover:underline">AI-powered call answering</Link>, the data provides a compelling case. A typical plumber, electrician, or builder loses between £50,000 and £80,000 annually through missed calls, voicemail abandonment, and competitive displacement. <Link href="/blog/ai-receptionist-vs-human-cost-guide-2026" className="text-emerald-400 hover:underline">AI receptionists cost 94% less than human staff</Link> while delivering 24/7 coverage and unlimited call handling.
+            For trade businesses considering <Link href="/" className="text-emerald-400 hover:underline">AI-powered call answering</Link>, the data provides a compelling case. A typical plumber, electrician, or builder loses between £50,000 and £80,000 annually through missed calls, voicemail abandonment, and competitive displacement. <Link href="/blog/ai-call-answering-pricing-guide-uk-2026" className="text-emerald-400 hover:underline">AI receptionists cost 94% less than human staff</Link> while delivering 24/7 coverage and unlimited call handling.
           </p>
 
           <h2>The Missed Call Crisis in UK Trades</h2>
@@ -335,7 +335,7 @@ export default function ResearchPage() {
           </div>
 
           <p>
-            The headline figure is stark: an AI receptionist costs 94-98% less than a human receptionist while providing capabilities no human can match. AI agents answer unlimited simultaneous calls — a human can handle only one at a time. AI agents work 24/7, 365 days a year. See our <Link href="/blog/ai-receptionist-vs-human-cost-guide-2026" className="text-emerald-400 hover:underline">detailed cost comparison blog post</Link> for the full breakdown.
+            The headline figure is stark: an AI receptionist costs 94-98% less than a human receptionist while providing capabilities no human can match. AI agents answer unlimited simultaneous calls — a human can handle only one at a time. AI agents work 24/7, 365 days a year. See our <Link href="/blog/ai-call-answering-pricing-guide-uk-2026" className="text-emerald-400 hover:underline">detailed cost comparison blog post</Link> for the full breakdown.
           </p>
 
           <h2>Industry-Specific Loss Analysis</h2>
@@ -409,7 +409,7 @@ export default function ResearchPage() {
             ROI calculation: (£32,760 - £708) / £708 = <strong>4,526%</strong>. Even with conservative assumptions — 25% capture rate, £250 average job value — the annual recovered revenue equals £13,000, producing an ROI of <strong>1,735%</strong> (IDC, 2025).
           </p>
           <p>
-            Read the full <Link href="/blog/ai-receptionist-vs-human-cost-guide-2026" className="text-emerald-400 hover:underline">AI vs Human Receptionist cost analysis</Link> for detailed ROI scenarios.
+            Read the full <Link href="/blog/ai-call-answering-pricing-guide-uk-2026" className="text-emerald-400 hover:underline">AI vs Human Receptionist cost analysis</Link> for detailed ROI scenarios.
           </p>
 
           <h2>Conclusions</h2>
@@ -450,7 +450,7 @@ export default function ResearchPage() {
         <section className="mt-16 mb-12">
           <h2 className="text-2xl font-bold mb-6 text-white">Related Content</h2>
           <div className="grid sm:grid-cols-2 gap-4">
-            <Link href="/blog/ai-receptionist-vs-human-cost-guide-2026" className="group block bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-5 transition-colors">
+            <Link href="/blog/ai-call-answering-pricing-guide-uk-2026" className="group block bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-5 transition-colors">
               <h3 className="font-semibold mb-2 group-hover:text-emerald-400 transition-colors text-white">AI Receptionist vs Human Receptionist: 2026 Cost Guide</h3>
               <p className="text-sm text-white/60">Detailed feature comparison, pricing tiers, and ROI calculation.</p>
             </Link>

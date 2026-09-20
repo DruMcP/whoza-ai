@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
-import { ArrowRight, PoundSterling, Clock, Shield, Check, AlertTriangle, TrendingUp, Calculator, Phone, HelpCircle, Building, CreditCard, BadgeCheck, XCircle, FileText, BarChart3, Briefcase , Calendar, User } from "lucide-react"
+import { ArrowRight, PoundSterling, Clock, Shield, Check, AlertTriangle, TrendingUp, Calculator, Phone, HelpCircle, Building, CreditCard, BadgeCheck, XCircle, FileText, BarChart3, Briefcase , Calendar, User , Users } from "lucide-react"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
@@ -115,6 +115,30 @@ const faqSchema = {
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Cheap AI answering (£9–£30/month) typically uses basic auto-attendant or simple voice-menu technology, not true conversational AI. For tradespeople, this means callers get frustrated, hang up, or leave incomplete messages. True AI answering (£49–£125/month) uses natural language processing to have real conversations, ask trade-specific questions, and capture complete job details. The £40–£100 monthly difference often pays for itself with one extra captured job.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "How does AI call answering compare to a human receptionist on cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A full-time UK receptionist costs £27,800–£38,700 per year including employer NI, pension, holiday and sick cover, training, and office overheads. A virtual receptionist service costs £150–£400/month. AI call answering costs £59–£399/month flat with unlimited calls, 24/7 coverage, WhatsApp delivery, and no contract — a 94–98% saving versus in-house staff.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "What ROI can a trade business expect from AI call answering?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Conservative: capturing 25% of 5 missed weekly calls at £250 average job value recovers £15,000/year — a 2,119% ROI on the £708/year Starter plan. Realistic for a busy emergency plumber: ~355 recovered opportunities/year at £105 expected value recovers £37,128/year — a 5,148% ROI. On the £125/month Growth plan the realistic scenario returns 2,475% ROI.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Is AI call answering tax-deductible for UK tradespeople?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. AI call answering subscriptions are an allowable business expense for sole traders, partnerships, and limited companies — the full cost reduces taxable profit. For a basic-rate taxpayer the effective net cost of the £59/month Starter plan is around £47/month after income tax relief.",
       },
     },
   ],
@@ -338,8 +362,10 @@ export default function PricingGuidePage() {
                 <li><a href="#cheap-ai" className="hover:text-emerald-400 transition-colors">5. Is Cheap AI Answering Worth It?</a></li>
                 <li><a href="#roi-calculator" className="hover:text-emerald-400 transition-colors">6. ROI Calculator: How Many Jobs to Break Even</a></li>
                 <li><a href="#trade-examples" className="hover:text-emerald-400 transition-colors">7. Trade-Specific Cost Examples</a></li>
-                <li><a href="#faq" className="hover:text-emerald-400 transition-colors">8. Frequently Asked Questions</a></li>
-                <li><a href="#cta" className="hover:text-emerald-400 transition-colors">9. Start Your Free Trial</a></li>
+                <li><a href="#ai-vs-human" className="hover:text-emerald-400 transition-colors">8. AI vs Human Receptionist: True Cost</a></li>
+                <li><a href="#roi-real-numbers" className="hover:text-emerald-400 transition-colors">9. ROI: Real Numbers for Trade Businesses</a></li>
+                <li><a href="#faq" className="hover:text-emerald-400 transition-colors">10. Frequently Asked Questions</a></li>
+                <li><a href="#cta" className="hover:text-emerald-400 transition-colors">11. Start Your Free Trial</a></li>
               </ol>
             </div>
           </section>
@@ -1039,6 +1065,137 @@ export default function PricingGuidePage() {
             </div>
           </section>
 
+          {/* Section 8: AI vs Human Receptionist — merged from retired /blog/ai-call-answering-pricing-guide-uk-2026 */}
+          <section id="ai-vs-human" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
+              <Users className="w-7 h-7 text-emerald-400" />
+              AI vs Human Receptionist: The True Cost Comparison
+            </h2>
+            <p className="text-white/70 leading-relaxed mb-6">
+              Most pricing comparisons stop at salary. The real cost of a human receptionist includes employer
+              National Insurance, pension contributions, holiday and sick cover, training, management time, and
+              office space. Here is the full picture for UK trade businesses in 2026.
+            </p>
+
+            <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden mb-8">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-white/10 text-left">
+                    <th className="p-4 text-white/50 font-medium">Cost Component</th>
+                    <th className="p-4 text-white/50 font-medium">Annual Cost (UK)</th>
+                  </tr>
+                </thead>
+                <tbody className="text-white/70">
+                  <tr className="border-b border-white/5"><td className="p-4">Base salary (receptionist, full-time)</td><td className="p-4">£22,000 – £28,000</td></tr>
+                  <tr className="border-b border-white/5"><td className="p-4">Employer National Insurance</td><td className="p-4">£2,200 – £2,800</td></tr>
+                  <tr className="border-b border-white/5"><td className="p-4">Auto-enrolment pension contributions</td><td className="p-4">£600 – £900</td></tr>
+                  <tr className="border-b border-white/5"><td className="p-4">Holiday &amp; sick cover (temp/agency)</td><td className="p-4">£2,000 – £3,000</td></tr>
+                  <tr className="border-b border-white/5"><td className="p-4">Training, recruitment &amp; management time</td><td className="p-4">£1,000 – £2,000</td></tr>
+                  <tr><td className="p-4">Office space, desk, phone &amp; equipment</td><td className="p-4">£500 – £1,500</td></tr>
+                </tbody>
+                <tfoot>
+                  <tr className="border-t border-emerald-500/30 bg-emerald-500/5">
+                    <td className="p-4 font-bold text-white">True total cost per year</td>
+                    <td className="p-4 font-bold text-emerald-400">£27,800 – £38,700</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+
+            <h3 className="text-xl font-bold mb-4">What about a virtual receptionist service?</h3>
+            <p className="text-white/70 leading-relaxed mb-6">
+              A UK virtual receptionist service (human agents answering remotely) typically costs
+              <strong className="text-white"> £150–£400 per month (£1,800–£4,800 per year)</strong>, requires 2–5 days
+              setup, answers one call per agent at a time, delivers messages by email, usually requires a 12-month
+              contract, and needs trade knowledge trained from scratch. One joiner who spent two weeks comparing
+              four services found the cheapest at £150/month — still 2.5x the cost of an AI plan with fewer features.
+            </p>
+
+            <div className="grid sm:grid-cols-2 gap-4 mb-8">
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <h4 className="font-bold text-white mb-3">Human receptionist (or virtual service)</h4>
+                <ul className="space-y-2 text-sm text-white/60">
+                  <li>£27,800–£38,700/year (in-house) or £1,800–£4,800/year (virtual)</li>
+                  <li>Working hours only — evenings, weekends and simultaneous calls missed or charged extra</li>
+                  <li>Holiday cover, sick days and training required</li>
+                  <li>One call at a time per agent</li>
+                  <li>12-month contracts typical for virtual services</li>
+                </ul>
+              </div>
+              <div className="bg-emerald-500/5 border border-emerald-500/20 rounded-xl p-6">
+                <h4 className="font-bold text-emerald-400 mb-3">AI call answering (whoza.ai)</h4>
+                <ul className="space-y-2 text-sm text-white/70">
+                  <li>£708–£4,788/year (£59–£399/month, flat — unlimited calls)</li>
+                  <li>24/7/365 including bank holidays, unlimited simultaneous calls</li>
+                  <li>Never ill, never on holiday, no training or management overhead</li>
+                  <li>Pre-trained on trade terminology, delivers to WhatsApp in seconds</li>
+                  <li>No contract — cancel anytime, 7-day free trial</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-6">
+              <p className="text-white/80 leading-relaxed text-sm">
+                <strong className="text-emerald-400">The bottom line:</strong> AI call answering delivers comparable
+                (and for missed-call capture, superior) coverage for <strong className="text-white">94–98% less</strong> than an
+                in-house receptionist and roughly 60–85% less than a virtual receptionist service. And because the
+                subscription is an allowable business expense, the effective cost after tax relief is lower still —
+                one tradesperson&apos;s accountant described the tax deduction as the surprise bonus of the switch.
+              </p>
+            </div>
+          </section>
+
+          {/* Section 9: ROI — merged from retired /blog/ai-call-answering-pricing-guide-uk-2026 */}
+          <section id="roi-real-numbers" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
+              <TrendingUp className="w-7 h-7 text-emerald-400" />
+              ROI: Real Numbers for Trade Businesses
+            </h2>
+            <p className="text-white/70 leading-relaxed mb-6">
+              ROI depends on how many calls you miss and what a job is worth. Two scenarios — one conservative,
+              one realistic — using figures UK trades report: 33% of incoming calls go unanswered, 69% of voicemail
+              callers hang up, and 35% is a typical conversion rate on qualified enquiries.
+            </p>
+
+            <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden mb-8">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-white/10 text-left">
+                    <th className="p-4 text-white/50 font-medium">Scenario</th>
+                    <th className="p-4 text-white/50 font-medium">Assumptions</th>
+                    <th className="p-4 text-white/50 font-medium">Annual Recovered</th>
+                    <th className="p-4 text-white/50 font-medium">Annual Cost</th>
+                    <th className="p-4 text-white/50 font-medium">ROI</th>
+                  </tr>
+                </thead>
+                <tbody className="text-white/70">
+                  <tr className="border-b border-white/5">
+                    <td className="p-4 font-semibold text-white">Conservative</td>
+                    <td className="p-4">AI captures 25% of 5 missed calls/week (60 jobs/yr), £250 avg job</td>
+                    <td className="p-4">£15,000</td>
+                    <td className="p-4">£708 (Starter)</td>
+                    <td className="p-4 text-emerald-400 font-bold">2,119%</td>
+                  </tr>
+                  <tr>
+                    <td className="p-4 font-semibold text-white">Realistic (busy emergency plumber)</td>
+                    <td className="p-4">~7.4 billable opportunities/week recovered (355/yr), £105 expected value per call (£300 job × 35% conversion)</td>
+                    <td className="p-4">£37,128</td>
+                    <td className="p-4">£708 (Starter)</td>
+                    <td className="p-4 text-emerald-400 font-bold">5,148%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p className="text-white/70 leading-relaxed mb-4">
+              On the Growth plan (£125/month = £1,500/year), the realistic scenario returns <strong className="text-white">2,475% ROI</strong>.
+              Even a single recovered job typically covers months of service — a roofer capturing one £850 repair covers
+              over 14 months of the Starter plan. Against a human receptionist at £27,800–£38,700/year, AI answering
+              recovering £15,000–£37,000/year is not an expense — it is the highest-ROI line item most trade
+              businesses can add.
+            </p>
+          </section>
+
           {/* CTA Section 1 */}
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
             <div className="bg-gradient-to-br from-emerald-500/10 to-emerald-500/5 border border-emerald-500/20 rounded-xl p-8">
@@ -1125,6 +1282,38 @@ export default function PricingGuidePage() {
                   hang up, or leave incomplete messages. True AI answering (£49–£125/month) uses natural language 
                   processing to have real conversations, ask trade-specific questions, and capture complete job 
                   details. The £40–£100 monthly difference often pays for itself with one extra captured job.
+                </p>
+              </div>
+
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <h3 className="font-bold text-white mb-2">How does AI call answering compare to a human receptionist on cost?</h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  A full-time UK receptionist costs £27,800–£38,700 per year once employer National Insurance, pension,
+                  holiday and sick cover, training, and office overheads are included (base salary £22,000–£28,000).
+                  A virtual receptionist service costs £150–£400/month. AI call answering costs £59–£399/month flat with
+                  unlimited calls, 24/7 coverage, WhatsApp delivery, and no contract — a 94–98% saving versus in-house
+                  staff for superior missed-call capture.
+                </p>
+              </div>
+
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <h3 className="font-bold text-white mb-2">What ROI can a trade business expect from AI call answering?</h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  Conservative scenario: capturing 25% of 5 missed weekly calls at a £250 average job value recovers
+                  £15,000/year — a 2,119% ROI on the £708/year Starter plan. Realistic scenario for a busy emergency
+                  plumber: ~355 recovered opportunities/year at £105 expected value each recovers £37,128/year — a 5,148%
+                  ROI. On the £125/month Growth plan, the realistic scenario returns 2,475% ROI.
+                </p>
+              </div>
+
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <h3 className="font-bold text-white mb-2">Is AI call answering tax-deductible for UK tradespeople?</h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  Yes. AI call answering subscriptions are an allowable business expense for sole traders, partnerships,
+                  and limited companies — the full cost reduces your taxable profit. For a basic-rate taxpayer that
+                  means the effective net cost of the £59/month Starter plan is around £47/month after income tax
+                  relief; for limited companies the effective cost is reduced by 19–25% corporation tax. There is no
+                  benefit-in-kind or employment tax overhead as there would be with hiring staff.
                 </p>
               </div>
             </div>

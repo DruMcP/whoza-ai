@@ -369,7 +369,7 @@ export default function ForHandymenPage() {
               ))}
             </div>
             <p className="mt-6 text-white/50 text-sm">
-              Read our guide: <a href="/blog/how-does-ai-call-answering-work" className="text-blue-400 hover:text-blue-300 underline">How Does AI Call Answering Work?</a>
+              Read our guide: <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-blue-400 hover:text-blue-300 underline">How Does AI Call Answering Work?</a>
             </p>
           </div>
         </section>

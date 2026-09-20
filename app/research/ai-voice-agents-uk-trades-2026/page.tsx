@@ -981,7 +981,7 @@ export default function ResearchPage() {
                 <p className="text-white/60 text-sm">Technical deep-dive into voice AI architecture, latency engineering, speech synthesis benchmarks, and the agentic AI future.</p>
               </Link>
               <Link
-                href="/blog/how-much-do-missed-calls-cost-uk-trades"
+                href="/research/missed-call-index"
                 className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors"
               >
                 <div className="text-emerald-400 text-sm font-medium mb-2">Data</div>
@@ -1005,7 +1005,7 @@ export default function ResearchPage() {
                 <p className="text-white/60 text-sm">Comparison of 7 AI call answering services. No affiliate links. Service rankings.</p>
               </Link>
               <Link
-                href="/blog/ai-phone-technology-complete-guide"
+                href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026"
                 className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors"
               >
                 <div className="text-emerald-400 text-sm font-medium mb-2">AI Technology</div>

@@ -13,6 +13,8 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { RelatedTrades } from "@/components/whoza/related-trades"
 import Image from "next/image"
+import { TradeCaseStudy, TradeLeadGen } from "@/components/whoza/trade-case-study"
+import { tradeCaseStudies } from "@/lib/trade-case-studies"
 
 export const metadata: Metadata = {
   title: "Call Answering Service for Joiners | From £59",
@@ -426,6 +428,29 @@ export default function ForJoinersPage() {
         </section>
 
         <div className="section-divider" />
+
+        {(() => {
+          const data = tradeCaseStudies["for-joiners"]
+          return (
+            <>
+              <div className="section-divider" />
+              <TradeCaseStudy trade={data.trade} stories={data.stories} />
+              {data.leadGen && (
+                <>
+                  <div className="section-divider" />
+                  <TradeLeadGen
+                    trade={data.trade}
+                    heading={data.leadGen.heading}
+                    intro={data.leadGen.intro}
+                    tips={data.leadGen.tips}
+                  />
+                </>
+              )}
+            </>
+          )
+        })()}
+
+
         {/* ─── FAQ ─── */}
 <section className="trade-faq py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

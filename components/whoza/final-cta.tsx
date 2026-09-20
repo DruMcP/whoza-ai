@@ -123,7 +123,11 @@ export function FinalCTA() {
 
         {/* Reassurance */}
         <p className="mt-3 text-sm text-white/50 text-center">
-          Set up in 30 minutes and start catching more calls.
+          Set up in 30 minutes and start catching more calls. Prefer to go straight in?{" "}
+          <a href="/signup" className="text-[var(--rex-green)] hover:underline font-medium">
+            Create your account
+          </a>
+          .
         </p>
 
         {/* Trust Points */}

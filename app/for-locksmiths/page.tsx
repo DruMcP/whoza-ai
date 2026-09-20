@@ -25,6 +25,8 @@ import { VideoSchema } from "@/components/whoza/schema-markup"
 import Link from "next/link"
 import { ArrowRight, CheckCircle, Phone, Shield, Clock, PoundSterling, Lock, KeyRound, DoorOpen, AlertTriangle, Star } from "lucide-react"
 import { RelatedTrades } from "@/components/whoza/related-trades"
+import { TradeCaseStudy, TradeLeadGen } from "@/components/whoza/trade-case-study"
+import { tradeCaseStudies } from "@/lib/trade-case-studies"
 
 export const metadata: Metadata = {
   title: "Call Answering Service for Locksmiths | From £59",
@@ -486,7 +488,7 @@ export default function ForLocksmithsPage() {
                 <Link href="/for-painters-decorators" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
                   AI for Painters & Decorators
                 </Link>
-                <Link href="/blog/locksmith-24-7-call-answering" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                <Link href="/for-locksmiths" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
                   24/7 Call Answering for Locksmiths
                 </Link>
                 <Link href="/how-it-works" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
@@ -524,6 +526,29 @@ export default function ForLocksmithsPage() {
         </section>
 
         <div className="section-divider" />
+
+        {(() => {
+          const data = tradeCaseStudies["for-locksmiths"]
+          return (
+            <>
+              <div className="section-divider" />
+              <TradeCaseStudy trade={data.trade} stories={data.stories} />
+              {data.leadGen && (
+                <>
+                  <div className="section-divider" />
+                  <TradeLeadGen
+                    trade={data.trade}
+                    heading={data.leadGen.heading}
+                    intro={data.leadGen.intro}
+                    tips={data.leadGen.tips}
+                  />
+                </>
+              )}
+            </>
+          )
+        })()}
+
+
 <section className="trade-faq py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">

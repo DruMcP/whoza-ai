@@ -543,7 +543,7 @@ export default function GoogleBusinessProfileChecklistPage() {
           <h2 className="text-xl font-bold text-slate-900 mb-4">Related Resources</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Link
-              href="/blog/how-much-do-missed-calls-cost-uk-trades"
+              href="/research/missed-call-index"
               className="flex items-center gap-3 bg-white border border-slate-200 rounded-xl p-4 hover:border-emerald-300 hover:shadow-md transition-all"
             >
               <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center">

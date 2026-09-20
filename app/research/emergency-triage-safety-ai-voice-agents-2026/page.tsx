@@ -223,7 +223,7 @@ export default function ResearchPage() {
 
           <h3>Tier Two — Urgent but Not Immediately Dangerous</h3>
           <p>
-            <Link href="/blog/heating-engineer-emergency-call-handling" className="text-emerald-400 hover:underline">No heating for an elderly or vulnerable person in winter</Link>, total loss of hot water for a family with a newborn, a burst pipe actively damaging a property. These need a human the same day, ideally within the hour.
+            <Link href="/for-heating-engineers" className="text-emerald-400 hover:underline">No heating for an elderly or vulnerable person in winter</Link>, total loss of hot water for a family with a newborn, a burst pipe actively damaging a property. These need a human the same day, ideally within the hour.
           </p>
 
           <h3>Tier Three — Everything Else</h3>
@@ -301,7 +301,7 @@ export default function ResearchPage() {
 
           <h2>Questions Worth Asking Before You Trust Any of This</h2>
           <p>
-            If you run a gas, electrical, plumbing or roofing business and you are looking at an <Link href="/blog/how-does-ai-call-answering-work" className="text-emerald-400 hover:underline">AI answering service</Link>, or already using one, these are worth putting to us or to anyone else:
+            If you run a gas, electrical, plumbing or roofing business and you are looking at an <Link href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-emerald-400 hover:underline">AI answering service</Link>, or already using one, these are worth putting to us or to anyone else:
           </p>
           <ul>
             <li>What exactly happens on my account if a caller says they can smell gas? Ask for the actual script, not a description of it.</li>
@@ -315,7 +315,7 @@ export default function ResearchPage() {
 
           <h2>Where This Leaves Us</h2>
           <p>
-            None of this is an argument against AI voice agents in trades. The evidence for the upside is solid, and some of it is ours: the Health and Safety Executive's own data, echoed in <Link href="/research/the-true-cost-of-missed-calls-2026" className="text-emerald-400 hover:underline">our earlier research</Link>, suggests something like <Link href="/blog/how-much-do-missed-calls-cost-uk-trades" className="text-emerald-400 hover:underline">33 per cent of small UK trade businesses fail to answer incoming calls</Link> (Moneypenny Small Business Call Report, 2016) during working hours, and a caller who cannot reach anyone at all is arguably at more risk, not less — they are the one left ringing round strangers at midnight, or deciding to have a go at the gas fitting themselves. <Link href="/ai-vs-virtual-receptionist" className="text-emerald-400 hover:underline">Being reachable is a safety feature too</Link>, and it is one AI is unambiguously good at.
+            None of this is an argument against AI voice agents in trades. The evidence for the upside is solid, and some of it is ours: the Health and Safety Executive's own data, echoed in <Link href="/research/the-true-cost-of-missed-calls-2026" className="text-emerald-400 hover:underline">our earlier research</Link>, suggests something like <Link href="/research/missed-call-index" className="text-emerald-400 hover:underline">33 per cent of small UK trade businesses fail to answer incoming calls</Link> (Moneypenny Small Business Call Report, 2016) during working hours, and a caller who cannot reach anyone at all is arguably at more risk, not less — they are the one left ringing round strangers at midnight, or deciding to have a go at the gas fitting themselves. <Link href="/ai-vs-virtual-receptionist" className="text-emerald-400 hover:underline">Being reachable is a safety feature too</Link>, and it is one AI is unambiguously good at.
           </p>
           <p>
             But 'does it work' and 'is it safe on the small fraction of calls that are genuine emergencies' are different questions, and this industry, us included, has spent its energy answering the first one. I do not think that is dishonest exactly, but it is incomplete, and dressing it up as more finished research than it is does not help anyone — least of all the people building this technology in good faith.
@@ -382,7 +382,7 @@ export default function ResearchPage() {
             <li>Large-scale ASR accent audit, 2,700 speakers, ACL Anthology, 2022, cited via Kerson AI Solutions</li>
             <li>Cambridge-affiliated study of Whisper transcription accuracy across US and UK English speakers, Journal of the Acoustical Society of America, 2024, cited via Kerson AI Solutions</li>
             <li>whoza.ai Research, 'The True Cost of Missed Calls', 2026, whoza.ai/research/the-true-cost-of-missed-calls-2026</li>
-            <li>whoza.ai, 'How Much Do Missed Calls Cost UK Trades?', whoza.ai/blog/how-much-do-missed-calls-cost-uk-trades</li>
+            <li>whoza.ai, 'How Much Do Missed Calls Cost UK Trades?', whoza.ai/research/missed-call-index</li>
           </ol>
           <p className="text-sm text-white/40 mt-6 italic">
             This piece reflects my own view as founder of whoza.ai, informed by the research cited above. Where figures are drawn from other fields, particularly healthcare triage, I have tried to flag the limits of that comparison rather than overstate it.

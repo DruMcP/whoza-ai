@@ -26,6 +26,8 @@ import { VideoSchema } from "@/components/whoza/schema-markup"
 import Link from "next/link"
 import { ArrowRight, CheckCircle, Phone, Shield, Clock, PoundSterling, Home, Droplets, CloudRain, Wrench, Star } from "lucide-react"
 import { RelatedTrades } from "@/components/whoza/related-trades"
+import { TradeCaseStudy, TradeLeadGen } from "@/components/whoza/trade-case-study"
+import { tradeCaseStudies } from "@/lib/trade-case-studies"
 
 
 const faqs = [
@@ -381,6 +383,29 @@ export default function ForRoofersPage() {
         <div className="section-divider" />
         <PricingSummary />
 
+
+        {(() => {
+          const data = tradeCaseStudies["for-roofers"]
+          return (
+            <>
+              <div className="section-divider" />
+              <TradeCaseStudy trade={data.trade} stories={data.stories} />
+              {data.leadGen && (
+                <>
+                  <div className="section-divider" />
+                  <TradeLeadGen
+                    trade={data.trade}
+                    heading={data.leadGen.heading}
+                    intro={data.leadGen.intro}
+                    tips={data.leadGen.tips}
+                  />
+                </>
+              )}
+            </>
+          )
+        })()}
+
+
         {/* ─── FAQ ─── */}
         <section className="trade-faq section-padding-lg bg-white relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -543,7 +568,7 @@ export default function ForRoofersPage() {
                 <a href="/for-builders" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
                   AI for Builders
                 </a>
-                <a href="/blog/roofing-lead-generation-guide" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                <a href="/for-roofers" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
                   Roofing Lead Generation Guide
                 </a>
                 <a href="/how-it-works" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">

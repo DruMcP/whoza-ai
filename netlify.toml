@@ -52,6 +52,151 @@
 
 # === Retired blog posts → live equivalents (moved from next.config.mjs for cache immunity) ===
 [[redirects]]
+  from = "/blog/ai-receptionist-vs-human-cost-guide-2026"
+  to = "/blog/ai-call-answering-pricing-guide-uk-2026"
+  status = 301
+
+[[redirects]]
+  from = "/blog/how-much-do-missed-calls-cost-uk-trades"
+  to = "/research/missed-call-index"
+  status = 301
+
+[[redirects]]
+  from = "/blog/seasonal-missed-call-report-uk-trades-2026"
+  to = "/research/missed-call-index"
+  status = 301
+
+[[redirects]]
+  from = "/blog/i-lost-12000-in-one-winter-to-missed-boiler-calls-charlie-the-heating-engineer"
+  to = "/for-heating-engineers"
+  status = 301
+
+[[redirects]]
+  from = "/blog/what-tradespeople-actually-want-from-ai"
+  to = "/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026"
+  status = 301
+
+[[redirects]]
+  from = "/blog/i-spent-two-weeks-comparing-virtual-receptionist-prices-ross-the-joiner"
+  to = "/for-joiners"
+  status = 301
+
+[[redirects]]
+  from = "/blog/i-missed-5-emergency-calls-a-week-then-i-tried-ai-gary-the-plumber"
+  to = "/for-plumbers"
+  status = 301
+
+[[redirects]]
+  from = "/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky"
+  to = "/for-electricians"
+  status = 301
+
+[[redirects]]
+  from = "/blog/i-missed-spring-booking-season-ai-captured-47-calls-in-3-weeks-james-the-landscaper"
+  to = "/for-landscapers"
+  status = 301
+
+[[redirects]]
+  from = "/blog/roofing-lead-generation-guide"
+  to = "/for-roofers"
+  status = 301
+
+[[redirects]]
+  from = "/blog/builders-lead-generation-guide"
+  to = "/for-builders"
+  status = 301
+
+[[redirects]]
+  from = "/blog/heating-engineer-emergency-call-handling"
+  to = "/for-heating-engineers"
+  status = 301
+
+[[redirects]]
+  from = "/blog/locksmith-24-7-call-answering"
+  to = "/for-locksmiths"
+  status = 301
+
+[[redirects]]
+  from = "/blog/how-does-ai-call-answering-work"
+  to = "/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026"
+  status = 301
+
+[[redirects]]
+  from = "/blog/ai-call-answering-cost-uk"
+  to = "/blog/ai-call-answering-pricing-guide-uk-2026"
+  status = 301
+
+[[redirects]]
+  from = "/blog/ai-phone-technology-complete-guide"
+  to = "/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026"
+  status = 301
+
+[[redirects]]
+  from = "/blog/google-business-profile-trades"
+  to = "/blog/how-to-get-more-google-reviews-trades"
+  status = 301
+
+[[redirects]]
+  from = "/blog/how-to-get-more-plumbing-customers"
+  to = "/for-plumbers"
+  status = 301
+
+[[redirects]]
+  from = "/blog/local-seo-trades-complete-guide"
+  to = "/for-plumbers"
+  status = 301
+
+[[redirects]]
+  from = "/blog/5-signs-your-trade-business-is-losing-customers-to-missed-calls"
+  to = "/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026"
+  status = 301
+
+[[redirects]]
+  from = "/blog/7-questions-every-uk-tradesperson-should-ask-before-hiring-a-call-answering-service"
+  to = "/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026"
+  status = 301
+
+[[redirects]]
+  from = "/blog/8-reasons-uk-tradespeople-switch-to-ai-call-handling-in-2026"
+  to = "/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026"
+  status = 301
+
+[[redirects]]
+  from = "/blog/ultimate-faq-tradespeople"
+  to = "/faq"
+  status = 301
+
+[[redirects]]
+  from = "/blog/i-lost-4000-in-one-storm-season-then-ai-answered-my-phone-tom-the-roofer"
+  to = "/for-roofers"
+  status = 301
+
+[[redirects]]
+  from = "/blog/i-lost-a-8000-roof-job-because-i-was-up-a-ladder-mike-the-roofer"
+  to = "/for-roofers"
+  status = 301
+
+[[redirects]]
+  from = "/blog/i-was-missing-2000-extension-enquiries-every-month-then-i-tried-ai-steve-the-builder"
+  to = "/for-builders"
+  status = 301
+
+[[redirects]]
+  from = "/blog/i-worked-out-i-was-losing-30000-a-year-to-missed-calls-mark-the-gas-engineer"
+  to = "/for-gas-engineers"
+  status = 301
+
+[[redirects]]
+  from = "/blog/3-am-lockout-calls-were-going-to-voicemail-now-i-catch-every-one-sarah-the-locksmith"
+  to = "/for-locksmiths"
+  status = 301
+
+[[redirects]]
+  from = "/blog/my-phone-rang-12-times-on-a-building-site-tom-the-builder"
+  to = "/for-builders"
+  status = 301
+
+[[redirects]]
   from = "/blog/best-ai-call-answering-service-uk-2026"
   to = "/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026"
   status = 301
@@ -71,13 +216,13 @@
 
 [[redirects]]
   from = "/blog/missed-call-recovery-trades-guide"
-  to = "/blog/how-much-do-missed-calls-cost-uk-trades"
+  to = "/research/missed-call-index"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/ai-vs-human-receptionist-trades"
-  to = "/blog/ai-receptionist-vs-human-cost-guide-2026"
+  to = "/blog/ai-call-answering-pricing-guide-uk-2026"
   status = 301
   force = true
 
@@ -89,25 +234,25 @@
 
 [[redirects]]
   from = "/blog/how-ai-call-handlers-are-changing-the-game-for-uk-trades-2026"
-  to = "/blog/how-does-ai-call-answering-work"
+  to = "/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/missed-calls-missed-money-the-real-cost-for-tradespeople"
-  to = "/blog/how-much-do-missed-calls-cost-uk-trades"
+  to = "/research/missed-call-index"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/ai-receptionist-vs-human-receptionist-which-is-right-for-your-trade-business"
-  to = "/blog/ai-receptionist-vs-human-cost-guide-2026"
+  to = "/blog/ai-call-answering-pricing-guide-uk-2026"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/why-62-percent-of-trade-business-calls-go-unanswered"
-  to = "/blog/5-signs-your-trade-business-is-losing-customers-to-missed-calls"
+  to = "/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026"
   status = 301
   force = true
 
@@ -115,133 +260,133 @@
 # Removing/re-slugging a post requires a redirect entry in the same commit.
 [[redirects]]
   from = "/blog/what-is-ai-visibility-and-why-does-it-matter-for-your-trade-business"
-  to = "/blog/local-seo-trades-complete-guide"
+  to = "/for-plumbers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/what-is-ai-visibility-uk-tradespeople-2026"
-  to = "/blog/local-seo-trades-complete-guide"
+  to = "/for-plumbers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/how-uk-tradespeople-get-found-ai-search-2026"
-  to = "/blog/local-seo-trades-complete-guide"
+  to = "/for-plumbers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/why-bing-matters-for-ai-search-2026"
-  to = "/blog/local-seo-trades-complete-guide"
+  to = "/for-plumbers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/why-bing-matters-for-ai-search-the-perplexity-connection"
-  to = "/blog/local-seo-trades-complete-guide"
+  to = "/for-plumbers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/best-practices-tradespeople-london-local-ai-visibility-guide"
-  to = "/blog/local-seo-trades-complete-guide"
+  to = "/for-plumbers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/ai-search-optimization-beginners-guide-get-found-chatgpt-perplexity-2026"
-  to = "/blog/local-seo-trades-complete-guide"
+  to = "/for-plumbers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/the-ultimate-guide-to-ai-search-optimization-for-tradespeople"
-  to = "/blog/local-seo-trades-complete-guide"
+  to = "/for-plumbers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/top-10-ai-visibility-strategies-uk-tradespeople-2026"
-  to = "/blog/local-seo-trades-complete-guide"
+  to = "/for-plumbers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/manchester-vs-birmingham-local-seo-strategies-2026"
-  to = "/blog/local-seo-trades-complete-guide"
+  to = "/for-plumbers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/how-ai-search-engines-choose-which-local-businesses-to-recommend"
-  to = "/blog/local-seo-trades-complete-guide"
+  to = "/for-plumbers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/how-ai-search-engines-rank-local-tradespeople-aeo-geo-guide-2026"
-  to = "/blog/local-seo-trades-complete-guide"
+  to = "/for-plumbers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/how-ai-search-engines-choose-plumber-recommendation-manchester"
-  to = "/blog/local-seo-trades-complete-guide"
+  to = "/for-plumbers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/how-uk-tradespeople-can-get-recommended-by-chatgpt-in-2026"
-  to = "/blog/local-seo-trades-complete-guide"
+  to = "/for-plumbers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/electricians-guide-to-google-ai-overviews-how-to-get-featured"
-  to = "/blog/local-seo-trades-complete-guide"
+  to = "/for-plumbers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/electricians-guide"
-  to = "/blog/local-seo-trades-complete-guide"
+  to = "/for-plumbers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/electricians-guide-to-google-ai-overviews-2026"
-  to = "/blog/local-seo-trades-complete-guide"
+  to = "/for-plumbers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/how-uk-tradespeople-can-get-found-on-chatgpt-and-ai-search-in-2026"
-  to = "/blog/local-seo-trades-complete-guide"
+  to = "/for-plumbers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/ai-visibility-for-london-tradespeople-2026"
-  to = "/blog/local-seo-trades-complete-guide"
+  to = "/for-plumbers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/ai-visibility-manchester-trades-2026-guide"
-  to = "/blog/local-seo-trades-complete-guide"
+  to = "/for-plumbers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/google-ai-overviews-stealing-clicks-guide-uk-tradespeople"
-  to = "/blog/local-seo-trades-complete-guide"
+  to = "/for-plumbers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/why-your-business-isnt-showing-up-in-google-answers-and-how-to-fix-it"
-  to = "/blog/local-seo-trades-complete-guide"
+  to = "/for-plumbers"
   status = 301
   force = true
 
@@ -265,55 +410,55 @@
 
 [[redirects]]
   from = "/blog/how-to-create-faq-page-ai-can-find-2026"
-  to = "/blog/ultimate-faq-tradespeople"
+  to = "/faq"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/how-to-create-an-faq-page-that-ai-can-find-and-reference"
-  to = "/blog/ultimate-faq-tradespeople"
+  to = "/faq"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/roofers-checklist-10-steps-to-ai-visibility-2026"
-  to = "/blog/roofing-lead-generation-guide"
+  to = "/for-roofers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/roofers-checklist"
-  to = "/blog/roofing-lead-generation-guide"
+  to = "/for-roofers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/roofers-10-step-checklist-ai-visibility-2026"
-  to = "/blog/roofing-lead-generation-guide"
+  to = "/for-roofers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/missed-calls-missed-money"
-  to = "/blog/how-much-do-missed-calls-cost-uk-trades"
+  to = "/research/missed-call-index"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/missed-calls-cost-uk-trades"
-  to = "/blog/how-much-do-missed-calls-cost-uk-trades"
+  to = "/research/missed-call-index"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/roi-calculator-how-much-could-an-ai-call-handler-save-your-trade-business"
-  to = "/blog/how-much-do-missed-calls-cost-uk-trades"
+  to = "/research/missed-call-index"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/the-7-day-free-trial-what-to-expect-when-you-try-katie"
-  to = "/blog/how-much-do-missed-calls-cost-uk-trades"
+  to = "/research/missed-call-index"
   status = 301
   force = true
 
@@ -331,25 +476,25 @@
 
 [[redirects]]
   from = "/blog/moneypenny-vs-whoza-ai-which-receptionist-service-is-right-for-trades"
-  to = "/blog/ai-receptionist-vs-human-cost-guide-2026"
+  to = "/blog/ai-call-answering-pricing-guide-uk-2026"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/5-signs-your-trade-business-needs-an-ai-call-handler"
-  to = "/blog/ai-receptionist-vs-human-cost-guide-2026"
+  to = "/blog/ai-call-answering-pricing-guide-uk-2026"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/ai-receptionist-vs-human"
-  to = "/blog/ai-receptionist-vs-human-cost-guide-2026"
+  to = "/blog/ai-call-answering-pricing-guide-uk-2026"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/why-tradespeople-need-a-revenue-team-not-just-a-virtual-receptionist"
-  to = "/blog/ai-receptionist-vs-human-cost-guide-2026"
+  to = "/blog/ai-call-answering-pricing-guide-uk-2026"
   status = 301
   force = true
 
@@ -373,79 +518,79 @@
 
 [[redirects]]
   from = "/blog/case-study-how-a-london-electrician-recovered-12k-month-with-ai-call-handling"
-  to = "/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky"
+  to = "/for-electricians"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/i-missed-half-my-calls-then-i-tried-ai-raj-the-handyman"
-  to = "/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky"
+  to = "/for-electricians"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/i-missed-4-calls-a-day-then-i-tried-ai-sarah-the-cleaner"
-  to = "/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky"
+  to = "/for-electricians"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/i-captured-11-missed-jobs-in-one-month-dave-the-tiler"
-  to = "/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky"
+  to = "/for-electricians"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/i-missed-4-calls-a-day-then-i-tried-ai-dean-the-plasterer"
-  to = "/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky"
+  to = "/for-electricians"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/i-missed-5-enquiries-a-week-then-i-tried-ai-james-the-landscaper"
-  to = "/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky"
+  to = "/for-electricians"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/how-katie-answers-captures-and-delivers-enquiries-in-3-seconds"
-  to = "/blog/how-does-ai-call-answering-work"
+  to = "/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/how-whatsapp-delivery-changes-everything-for-tradespeople"
-  to = "/blog/how-does-ai-call-answering-work"
+  to = "/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/how-whoza-ai-works-with-your-existing-phone-number"
-  to = "/blog/how-does-ai-call-answering-work"
+  to = "/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/how-ai-call-handling-works-with-your-existing-phone-number"
-  to = "/blog/how-does-ai-call-answering-work"
+  to = "/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/how-plumbers-can-get-found-in-chatgpt-2026"
-  to = "/blog/how-to-get-more-plumbing-customers"
+  to = "/for-plumbers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/how-plumbers-can-get-found-in-chatgpt-a-step-by-step-guide"
-  to = "/blog/how-to-get-more-plumbing-customers"
+  to = "/for-plumbers"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/how-to-never-miss-an-emergency-call-again-plumbers-electricians-roofers"
-  to = "/blog/i-missed-5-emergency-calls-a-week-then-i-tried-ai-gary-the-plumber"
+  to = "/for-plumbers"
   status = 301
   force = true
 

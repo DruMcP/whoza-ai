@@ -26,6 +26,8 @@ import { VideoSchema } from "@/components/whoza/schema-markup"
 import Link from "next/link"
 import { ArrowRight, CheckCircle, Phone, Shield, Clock, PoundSterling, Building, Hammer, AlertTriangle, ClipboardList, Star } from "lucide-react"
 import { RelatedTrades } from "@/components/whoza/related-trades"
+import { TradeCaseStudy, TradeLeadGen } from "@/components/whoza/trade-case-study"
+import { tradeCaseStudies } from "@/lib/trade-case-studies"
 
 
 const faqs = [
@@ -450,7 +452,7 @@ export default function ForBuildersPage() {
                 <a href="/for-roofers" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
                   AI for Roofers
                 </a>
-                <a href="/blog/builders-lead-generation-guide" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                <a href="/for-builders" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
                   Builders Lead Generation Guide
                 </a>
                 <a href="/how-it-works" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
@@ -462,6 +464,29 @@ export default function ForBuildersPage() {
         </section>
 
         <div className="section-divider" />
+
+        {(() => {
+          const data = tradeCaseStudies["for-builders"]
+          return (
+            <>
+              <div className="section-divider" />
+              <TradeCaseStudy trade={data.trade} stories={data.stories} />
+              {data.leadGen && (
+                <>
+                  <div className="section-divider" />
+                  <TradeLeadGen
+                    trade={data.trade}
+                    heading={data.leadGen.heading}
+                    intro={data.leadGen.intro}
+                    tips={data.leadGen.tips}
+                  />
+                </>
+              )}
+            </>
+          )
+        })()}
+
+
 <section className="trade-faq py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">

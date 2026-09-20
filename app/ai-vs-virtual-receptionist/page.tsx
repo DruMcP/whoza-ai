@@ -256,7 +256,7 @@ export default function AIVsVirtualReceptionistPage() {
             </div>
             <div className="mt-6 bg-slate-50 rounded-lg p-4 border border-slate-200">
               <p className="text-slate-600 text-sm">
-                <strong>Real story:</strong> A Glasgow joiner spent two weeks comparing virtual receptionist prices and documented his findings. <a href="/blog/i-spent-two-weeks-comparing-virtual-receptionist-prices-ross-the-joiner" className="text-emerald-600 hover:text-emerald-700 font-semibold underline">Read his honest comparison →</a>
+                <strong>Real story:</strong> A Glasgow joiner spent two weeks comparing virtual receptionist prices and documented his findings. <a href="/for-joiners" className="text-emerald-600 hover:text-emerald-700 font-semibold underline">Read his honest comparison →</a>
               </p>
             </div>
           </div>

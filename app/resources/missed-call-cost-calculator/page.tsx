@@ -310,7 +310,7 @@ export default function MissedCallCostCalculatorPage() {
               <ArrowRight className="w-4 h-4 text-slate-400 ml-auto" />
             </Link>
             <Link
-              href="/blog/how-much-do-missed-calls-cost-uk-trades"
+              href="/research/missed-call-index"
               className="flex items-center gap-3 bg-white border border-slate-200 rounded-xl p-4 hover:border-emerald-300 hover:shadow-md transition-all"
             >
               <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center">

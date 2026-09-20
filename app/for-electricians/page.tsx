@@ -21,6 +21,8 @@ import { Testimonials } from "@/components/whoza/testimonials"
 import { QuickAnswer } from "@/components/whoza/quick-answer"
 import { ComparisonTable } from "@/components/whoza/comparison-table"
 import Image from "next/image"
+import { TradeCaseStudy, TradeLeadGen } from "@/components/whoza/trade-case-study"
+import { tradeCaseStudies } from "@/lib/trade-case-studies"
 
 export const metadata: Metadata = {
   title: "Call Answering Service for Electricians | From £59",
@@ -406,7 +408,7 @@ export default function ForElectriciansPage() {
               ))}
             </div>
             <p className="mt-6 text-white/50 text-sm">
-              Read Dave's full story: <a href="/blog/i-lost-3-emergency-callouts-a-day-heres-how-i-fixed-it-dave-the-sparky" className="text-amber-400 hover:text-amber-300 underline">I Lost 3 Emergency Callouts a Day. Here's How I Fixed It.</a>
+              Read Dave's full story: <a href="/for-electricians" className="text-amber-400 hover:text-amber-300 underline">I Lost 3 Emergency Callouts a Day. Here's How I Fixed It.</a>
             </p>
           </div>
         </section>
@@ -414,6 +416,29 @@ export default function ForElectriciansPage() {
         <div className="section-divider" />
 
                 {/* ─── FAQ ─── */}
+
+        {(() => {
+          const data = tradeCaseStudies["for-electricians"]
+          return (
+            <>
+              <div className="section-divider" />
+              <TradeCaseStudy trade={data.trade} stories={data.stories} />
+              {data.leadGen && (
+                <>
+                  <div className="section-divider" />
+                  <TradeLeadGen
+                    trade={data.trade}
+                    heading={data.leadGen.heading}
+                    intro={data.leadGen.intro}
+                    tips={data.leadGen.tips}
+                  />
+                </>
+              )}
+            </>
+          )
+        })()}
+
+
         <section id="faq" className="trade-faq py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">

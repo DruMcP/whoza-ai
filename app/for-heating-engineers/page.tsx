@@ -25,6 +25,8 @@ import { VideoSchema } from "@/components/whoza/schema-markup"
 import Link from "next/link"
 import { ArrowRight, CheckCircle, Phone, Shield, Clock, PoundSterling, Flame, Thermometer, Snowflake, Wrench, Star } from "lucide-react"
 import { RelatedTrades } from "@/components/whoza/related-trades"
+import { TradeCaseStudy, TradeLeadGen } from "@/components/whoza/trade-case-study"
+import { tradeCaseStudies } from "@/lib/trade-case-studies"
 
 export const metadata: Metadata = {
   title: "UK Call Answering Service for Heating Engineers | From £59",
@@ -393,6 +395,29 @@ export default function ForHvacPage() {
         <div className="section-divider" />
 
 {/* FAQ */}
+
+        {(() => {
+          const data = tradeCaseStudies["for-heating-engineers"]
+          return (
+            <>
+              <div className="section-divider" />
+              <TradeCaseStudy trade={data.trade} stories={data.stories} />
+              {data.leadGen && (
+                <>
+                  <div className="section-divider" />
+                  <TradeLeadGen
+                    trade={data.trade}
+                    heading={data.leadGen.heading}
+                    intro={data.leadGen.intro}
+                    tips={data.leadGen.tips}
+                  />
+                </>
+              )}
+            </>
+          )
+        })()}
+
+
         <section id="faq" className="trade-faq section-padding-lg bg-white relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -523,7 +548,7 @@ export default function ForHvacPage() {
                 <a href="/for-locksmiths" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
                   AI for Locksmiths
                 </a>
-                <a href="/blog/heating-engineer-emergency-call-handling" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                <a href="/for-heating-engineers" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
                   HVAC Emergency Call Handling Guide
                 </a>
                 <a href="/how-it-works" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">

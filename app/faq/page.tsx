@@ -241,12 +241,36 @@ const faqSchema = {
         "text": "No. Calls answered by our AI agents are not recorded. A written transcript is generated for quality and service delivery purposes. Audio is never stored anywhere in the stack. Callers are notified at the beginning of each call that they are speaking with an AI assistant. For the full retention schedule, see whoza.ai/call-recording."
       }
     },
+    {
+      "@type": "Question",
+      "name": "Is AI call answering tax-deductible for UK tradespeople?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. AI call answering subscriptions are an allowable business expense for sole traders, partnerships, and limited companies — the full cost reduces your taxable profit. For a basic-rate taxpayer, the effective net cost of the £59/month Starter plan is around £47/month after income tax relief; for limited companies the effective cost is reduced by 19–25% corporation tax. There is no benefit-in-kind or employment tax overhead as there would be with hiring staff."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the AI handle multiple calls at the same time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — unlimited simultaneous calls. Unlike a human receptionist or a virtual receptionist agent (who can only take one call at a time), AI answering scales instantly. If three customers ring at 8:15 on a Monday, all three are answered simultaneously, each in under 3 rings, and each gets a full qualification conversation. No hold music, no engaged tone, no voicemail. For trades this matters most during peak windows — Monday mornings, post-storm spikes for roofers, and cold-snap boiler emergencies for heating engineers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the AI understand UK regional accents?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Modern speech models are trained specifically on telephone audio in British English, including regional accents — Scottish, Geordie, Welsh, Northern Irish and more — plus the noisy real-world conditions tradespeople's customers actually call from (van engine running, site noise, wind). Early AI phones failed here because they were trained on clean American studio audio; 2026 models handle 8kHz phone-line quality, interruptions, and trade terminology as standard."
+      }
+    },
   ],
 }
 
 const categories = [
-  { icon: PoundSterling, label: "Pricing & Cost", questions: [0, 4, 11, 13, 17, 21, 22, 23] },
-  { icon: Phone, label: "How It Works", questions: [1, 2, 5, 6, 7, 9, 10, 14] },
+  { icon: PoundSterling, label: "Pricing & Cost", questions: [0, 4, 11, 13, 17, 21, 22, 23, 25] },
+  { icon: Phone, label: "How It Works", questions: [1, 2, 5, 6, 7, 9, 10, 14, 26, 27] },
   { icon: Wrench, label: "Trades & Services", questions: [8, 18] },
   { icon: Star, label: "Reviews & Growth", questions: [15, 20] },
   { icon: Shield, label: "Security & Trust", questions: [16, 24] },

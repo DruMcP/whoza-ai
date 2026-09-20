@@ -17,7 +17,7 @@ interface FAQItem {
  *
  * Current usage:
  *  - app/page.tsx (homepage) — unique FAQs, no duplication
- *  - app/blog/ai-receptionist-vs-human-cost-guide-2026/page.tsx — unique FAQs
+ *  - app/blog/ai-call-answering-pricing-guide-uk-2026/page.tsx — unique FAQs
  *
  * Each page passes its own FAQ data; there is no cross-page duplication.
  */

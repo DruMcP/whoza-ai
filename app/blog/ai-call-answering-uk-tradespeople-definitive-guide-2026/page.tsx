@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
-import { ArrowRight, Star, PoundSterling, Clock, Shield, Check, X, ChevronDown, Award, TrendingUp, Users, Zap, MessageSquare, BarChart3, HeadphonesIcon, Phone, Wrench, Calculator, Play, HelpCircle, Briefcase, Calendar, User } from "lucide-react"
+import { ArrowRight, Star, PoundSterling, Clock, Shield, Check, X, ChevronDown, Award, TrendingUp, Users, Zap, MessageSquare, BarChart3, HeadphonesIcon, Phone, Wrench, Calculator, Play, HelpCircle, Briefcase, Calendar, User, Cpu, HeartHandshake } from "lucide-react"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
@@ -348,13 +348,15 @@ export default function AICallAnsweringGuidePage() {
                 <li><a href="#what-is" className="hover:text-emerald-400 transition-colors">1. What Is AI Call Answering?</a></li>
                 <li><a href="#problem" className="hover:text-emerald-400 transition-colors">2. The Problem: Missed Calls Cost Trades Thousands</a></li>
                 <li><a href="#how-it-works" className="hover:text-emerald-400 transition-colors">3. How AI Call Answering Works (Step by Step)</a></li>
-                <li><a href="#comparison" className="hover:text-emerald-400 transition-colors">4. AI vs Human Receptionist vs Voicemail</a></li>
-                <li><a href="#trades" className="hover:text-emerald-400 transition-colors">5. Trade-Specific Benefits</a></li>
-                <li><a href="#pricing" className="hover:text-emerald-400 transition-colors">6. Pricing Guide & Hidden Costs</a></li>
-                <li><a href="#roi" className="hover:text-emerald-400 transition-colors">7. ROI Calculator</a></li>
-                <li><a href="#setup" className="hover:text-emerald-400 transition-colors">8. Setup: Get Started in 30 Minutes</a></li>
-                <li><a href="#faq" className="hover:text-emerald-400 transition-colors">9. Frequently Asked Questions</a></li>
-                <li><a href="#cta" className="hover:text-emerald-400 transition-colors">10. Start Your Free Trial</a></li>
+                <li><a href="#technology" className="hover:text-emerald-400 transition-colors">4. The Technology Behind the Voice (2026)</a></li>
+                <li><a href="#comparison" className="hover:text-emerald-400 transition-colors">5. AI vs Human Receptionist vs Voicemail</a></li>
+                <li><a href="#trades" className="hover:text-emerald-400 transition-colors">6. Trade-Specific Benefits</a></li>
+                <li><a href="#pricing" className="hover:text-emerald-400 transition-colors">7. Pricing Guide & Hidden Costs</a></li>
+                <li><a href="#roi" className="hover:text-emerald-400 transition-colors">8. ROI Calculator</a></li>
+                <li><a href="#setup" className="hover:text-emerald-400 transition-colors">9. Setup: Get Started in 30 Minutes</a></li>
+                <li><a href="#what-tradespeople-want" className="hover:text-emerald-400 transition-colors">10. What Tradespeople Actually Want From AI</a></li>
+                <li><a href="#faq" className="hover:text-emerald-400 transition-colors">11. Frequently Asked Questions</a></li>
+                <li><a href="#cta" className="hover:text-emerald-400 transition-colors">12. Start Your Free Trial</a></li>
               </ol>
             </div>
           </section>
@@ -537,6 +539,75 @@ export default function AICallAnsweringGuidePage() {
                 <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> Spam and robocall filtering included</li>
                 <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> Full call transcripts available in your dashboard</li>
                 <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> GDPR-compliant data handling (ICO registered)</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Section 3b: Technology — merged from retired /blog/ai-call-answering-uk-tradespeople-definitive-guide-2026 */}
+          <section id="technology" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
+              <Cpu className="w-7 h-7 text-emerald-400" />
+              The Technology Behind the Voice (2026)
+            </h2>
+            <p className="text-white/70 leading-relaxed mb-6">
+              AI call answering has moved fast. In 2024 it was a gimmick — robotic voices that frustrated callers.
+              In 2025 it became almost human. In 2026, it is indistinguishable from a professional receptionist
+              for job-qualification conversations. That jump was driven by improvements in four core technologies.
+            </p>
+
+            <div className="space-y-6 mb-8">
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <h3 className="font-semibold text-white mb-2">1. Speech-to-Text (Listening)</h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  Older speech recognition was trained on clean studio audio and fell apart on phone calls.
+                  Modern models (Whisper, Deepgram) are trained specifically on telephone audio — compressed,
+                  noisy, with background noise — and stream transcription in real time, so there is no awkward
+                  processing pause mid-conversation. Real-time streaming has eliminated the 2–3 second delays
+                  that made early AI phones feel broken.
+                </p>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <h3 className="font-semibold text-white mb-2">2. Natural Language Processing (Understanding)</h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  Large language models (GPT-4 class) now understand intent, not just keywords. They handle
+                  ambiguity ("the boiler's making that noise again"), interpret trade-specific terminology
+                  (combi vs conventional, RCD vs MCB), and maintain context across a multi-turn conversation —
+                  remembering the caller mentioned an upstairs leak when later asked about access.
+                </p>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <h3 className="font-semibold text-white mb-2">3. Decision Logic (Responding)</h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  For trade call answering, the AI does not need to know everything — it needs to ask the right
+                  questions. Decision frameworks are configured per trade: emergency vs routine triage, job-type
+                  classification, urgency flagging, and caller-detail capture. If a caller asks something outside
+                  the script ("can you tell me your opening hours?"), modern AI handles it gracefully instead of
+                  looping the same question.
+                </p>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <h3 className="font-semibold text-white mb-2">4. Text-to-Speech (Speaking)</h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  Neural voices (ElevenLabs, Deepgram Aura) are indistinguishable from human speakers for
+                  short interactions. Latency under 500ms means natural conversational rhythm. UK-accent voices
+                  (including regional variants) are now standard — important when your customers expect to hear
+                  someone local, not an American phone-bot.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-emerald-500/5 border border-emerald-500/20 rounded-xl p-6">
+              <h4 className="font-semibold text-emerald-400 mb-3">Why Telephone Audio Is the Hard Part</h4>
+              <p className="text-white/70 text-sm leading-relaxed mb-3">
+                Phone calls are 8kHz audio — dramatically lower quality than a podcast or voice note. Background
+                noise (traffic, site machinery, wind) makes it worse. Modern systems are specifically trained on
+                this, and still handle the awkward cases that trip up older tech:
+              </p>
+              <ul className="space-y-2 text-sm text-white/70">
+                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> Interruptions — the AI stops talking when the caller does, instead of speaking over them</li>
+                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> "I don't know" answers — captured as-is rather than forcing a menu choice</li>
+                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> UK regional accents — trained on British English, not just American</li>
+                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> Landline and mobile audio quality, both directions</li>
               </ul>
             </div>
           </section>
@@ -1090,6 +1161,74 @@ export default function AICallAnsweringGuidePage() {
           </section>
 
           {/* FAQ Section */}
+          {/* Section 7b: What Tradespeople Actually Want — merged from retired /blog/ai-call-answering-uk-tradespeople-definitive-guide-2026 */}
+          <section id="what-tradespeople-want" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
+              <HeartHandshake className="w-7 h-7 text-emerald-400" />
+              What Tradespeople Actually Want From AI
+            </h2>
+            <p className="text-white/70 leading-relaxed mb-8">
+              Most AI marketing is written by people who have never been on a roof at 7am. Strip away the hype
+              and the trade-business wishlist is refreshingly short — and it explains why AI call answering has
+              become the first AI tool most trades actually keep using.
+            </p>
+
+            <div className="space-y-4 mb-8">
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <h3 className="font-semibold text-white mb-2">1. Answer the phone. That is the entire headline.</h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  Not a dashboard, not a CRM, not "insights". Just answer the phone when both hands are in a
+                  boiler. Every missed call is £200–£800 walking to a competitor — 33% of incoming calls go
+                  unanswered during the working day, and 85% of those callers never ring back.
+                </p>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <h3 className="font-semibold text-white mb-2">2. Don't make me learn anything</h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  New software has a hidden cost: the hours spent learning it, then re-learning it after three
+                  months away. Call forwarding setup takes 2 minutes and requires zero ongoing input — the AI
+                  works even when you forget it exists.
+                </p>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <h3 className="font-semibold text-white mb-2">3. Give me my evenings back</h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  The average tradesperson spends 2+ hours every evening on admin: returning missed calls,
+                  quoting, invoicing, chasing payments. Tools that remove that — not add to it — are the ones
+                  that survive. At a typical £45/hour charge-out rate, admin eats more than £17,000 of billable
+                  value a year.
+                </p>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <h3 className="font-semibold text-white mb-2">4. Get me paid</h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  Chasing outstanding invoices is the least favourite job in every trade business — an average
+                  of £17,000 outstanding at any one time and 86 hours a year chasing it. Faster response to
+                  enquiries means jobs start sooner, finish sooner, and get invoiced sooner.
+                </p>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <h3 className="font-semibold text-white mb-2">5. Prove it works before I pay for it</h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  Tradespeople are rightly sceptical of subscriptions. That is why a 7-day free trial with real
+                  calls matters more than any case study — you see your own missed calls get answered before
+                  spending a penny. No contract, cancel anytime.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+              <h4 className="font-semibold text-white mb-3">The don't-want list (just as important)</h4>
+              <ul className="space-y-2 text-sm text-white/60">
+                <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-400 shrink-0 mt-0.5" /> Dashboards to check — if it needs me to log in, it has failed</li>
+                <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-400 shrink-0 mt-0.5" /> Apps to learn, update, and remember passwords for</li>
+                <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-400 shrink-0 mt-0.5" /> 12-month contracts for a tool I have not tested on my own calls</li>
+                <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-400 shrink-0 mt-0.5" /> "Call recording" as the headline feature — answer the phone first</li>
+              </ul>
+            </div>
+          </section>
+
+
           <section id="faq" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <h2 className="text-3xl font-bold mb-8 text-center flex items-center justify-center gap-3">
               <HelpCircle className="w-7 h-7 text-emerald-400" />

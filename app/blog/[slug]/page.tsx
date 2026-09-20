@@ -173,7 +173,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://whoza.ai/blog/i-missed-5-emergency-calls-a-week-then-i-tried-ai-gary-the-plumber"
+      "@id": "https://whoza.ai/for-plumbers"
     },
     "articleSection": "Customer Stories",
     "speakable": {
