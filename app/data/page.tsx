@@ -43,7 +43,6 @@ const sources = {
     { name: "Paperclip Research", year: 2025, url: "https://www.paperclip.co.uk/missed-business-phone-calls-uk/", what: "47% of initial calls to UK SMEs go unanswered", verified: "unverified" },
   ],
   tertiary: [
-    { name: "Unattributed — £250–£450 call value", year: 2026, url: "", what: "The value of a single inbound call to a UK trade business, cited on /research/the-true-cost-of-missed-calls-2026 as 'research consistently places'. No specific source named. Not verified.", verified: "unverified" },
     { name: "EchoCall", year: 2026, url: "https://echocall.de/", what: "AI voice agent statistics compilation", verified: "unverified" },
     { name: "Checkatrade", year: 2024, url: "https://www.checkatrade.com/", what: "Average UK tradesperson job values and call-out fees", verified: "descriptive" },
   ],

@@ -184,8 +184,8 @@ export default function Home() {
                   Missed Call Cost Calculator
                 </a>{" "}
                 — the original tool behind our{" "}
-                <a href="/research/the-true-cost-of-missed-calls-2026" className="underline">
-                  Cost of Missed Calls to UK Trades 2026
+                <a href="/research/missed-call-index" className="underline">
+                  Missed Call Index research
                 </a>{" "}
                 research.
               </li>

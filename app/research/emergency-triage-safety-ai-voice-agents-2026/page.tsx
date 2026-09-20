@@ -315,7 +315,7 @@ export default function ResearchPage() {
 
           <h2>Where This Leaves Us</h2>
           <p>
-            None of this is an argument against AI voice agents in trades. The evidence for the upside is solid, and some of it is ours: the Health and Safety Executive's own data, echoed in <Link href="/research/the-true-cost-of-missed-calls-2026" className="text-emerald-400 hover:underline">our earlier research</Link>, suggests something like <Link href="/research/missed-call-index" className="text-emerald-400 hover:underline">33 per cent of small UK trade businesses fail to answer incoming calls</Link> (Moneypenny Small Business Call Report, 2016) during working hours, and a caller who cannot reach anyone at all is arguably at more risk, not less — they are the one left ringing round strangers at midnight, or deciding to have a go at the gas fitting themselves. <Link href="/ai-vs-virtual-receptionist" className="text-emerald-400 hover:underline">Being reachable is a safety feature too</Link>, and it is one AI is unambiguously good at.
+            None of this is an argument against AI voice agents in trades. The evidence for the upside is solid, and some of it is ours: the Health and Safety Executive's own data, echoed in <Link href="/research/missed-call-index" className="text-emerald-400 hover:underline">our Missed Call Index research</Link>, suggests something like <Link href="/research/missed-call-index" className="text-emerald-400 hover:underline">33 per cent of small UK trade businesses fail to answer incoming calls</Link> (Moneypenny Small Business Call Report, 2016) during working hours, and a caller who cannot reach anyone at all is arguably at more risk, not less — they are the one left ringing round strangers at midnight, or deciding to have a go at the gas fitting themselves. <Link href="/ai-vs-virtual-receptionist" className="text-emerald-400 hover:underline">Being reachable is a safety feature too</Link>, and it is one AI is unambiguously good at.
           </p>
           <p>
             But 'does it work' and 'is it safe on the small fraction of calls that are genuine emergencies' are different questions, and this industry, us included, has spent its energy answering the first one. I do not think that is dishonest exactly, but it is incomplete, and dressing it up as more finished research than it is does not help anyone — least of all the people building this technology in good faith.
@@ -342,9 +342,9 @@ export default function ResearchPage() {
         <section className="mt-16 mb-12">
           <h2 className="text-2xl font-bold mb-6 text-white">Related Research</h2>
           <div className="grid sm:grid-cols-2 gap-4">
-            <Link href="/research/the-true-cost-of-missed-calls-2026" className="group block bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-5 transition-colors">
-              <h3 className="font-semibold mb-2 group-hover:text-emerald-400 transition-colors text-white">The True Cost of Missed Calls 2026</h3>
-              <p className="text-sm text-white/60">UK Trades Industry Financial Impact Report — quantifying revenue loss from missed calls.</p>
+            <Link href="/research/missed-call-index" className="group block bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-5 transition-colors">
+              <h3 className="font-semibold mb-2 group-hover:text-emerald-400 transition-colors text-white">The Missed Call Index — UK Trades</h3>
+              <p className="text-sm text-white/60">Per-trade cost modelling, the £2.3bn national picture, seasonal patterns and methodology.</p>
             </Link>
             <Link href="/research/ai-voice-agents-uk-trades-2026" className="group block bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-5 transition-colors">
               <h3 className="font-semibold mb-2 group-hover:text-emerald-400 transition-colors text-white">AI Voice Agents UK Trades 2026</h3>
@@ -381,7 +381,7 @@ export default function ResearchPage() {
             <li>Stanford study of commercial automatic speech recognition systems, cited via Kerson AI Solutions, 'Accent Bias in Speech Recognition: Challenges, Impacts, and Solutions', kerson.ai</li>
             <li>Large-scale ASR accent audit, 2,700 speakers, ACL Anthology, 2022, cited via Kerson AI Solutions</li>
             <li>Cambridge-affiliated study of Whisper transcription accuracy across US and UK English speakers, Journal of the Acoustical Society of America, 2024, cited via Kerson AI Solutions</li>
-            <li>whoza.ai Research, 'The True Cost of Missed Calls', 2026, whoza.ai/research/the-true-cost-of-missed-calls-2026</li>
+            <li>whoza.ai Research, 'The Missed Call Index', 2026, whoza.ai/research/missed-call-index</li>
             <li>whoza.ai, 'How Much Do Missed Calls Cost UK Trades?', whoza.ai/research/missed-call-index</li>
           </ol>
           <p className="text-sm text-white/40 mt-6 italic">

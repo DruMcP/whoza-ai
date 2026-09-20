@@ -699,7 +699,20 @@
 # === Consolidate duplicate research reports ===
 [[redirects]]
   from = "/research/cost-of-missed-calls-uk-trades-2026"
-  to = "/research/the-true-cost-of-missed-calls-2026"
+  to = "/research/missed-call-index"
+  status = 301
+  force = true
+
+# === R11 follow-up: one research hub + dated Q3 child edition ===
+[[redirects]]
+  from = "/research/missed-call-index-q3-2026"
+  to = "/research/missed-call-index/q3-2026"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/research/the-true-cost-of-missed-calls-2026"
+  to = "/research/missed-call-index"
   status = 301
   force = true
 

@@ -8,11 +8,11 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "Missed Call Index 2026: What Unanswered Calls Cost UK Trades",
+  title: "Missed Call Index Q3 2026: Findings and Data",
   description:
     "A third of UK small-business calls go unanswered. The Missed Call Index Q3 2026 models £2.3bn of trades revenue at risk — the data, the cost, and the fix.",
   alternates: {
-    canonical: "https://whoza.ai/research/missed-call-index-q3-2026",
+    canonical: "https://whoza.ai/research/missed-call-index/q3-2026",
   },
   robots: {
     index: true,
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "article",
     locale: "en_GB",
-    url: "https://whoza.ai/research/missed-call-index-q3-2026",
+    url: "https://whoza.ai/research/missed-call-index/q3-2026",
     siteName: "Whoza.ai",
-    title: "Missed Call Index 2026: What Unanswered Calls Cost UK Trades",
+    title: "Missed Call Index Q3 2026: Findings and Data",
     description:
       "A third of UK small-business calls go unanswered. The Missed Call Index Q3 2026 models £2.3bn of trades revenue at risk — the data, the cost, and the fix.",
     images: [
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Missed Call Index 2026: What Unanswered Calls Cost UK Trades",
+    title: "Missed Call Index Q3 2026: Findings and Data",
     description:
       "A third of UK small-business calls go unanswered. The Missed Call Index Q3 2026 models £2.3bn of trades revenue at risk — the data, the cost, and the fix.",
     images: ["https://whoza.ai/og-image.webp"],
@@ -147,8 +147,8 @@ const faqSchema = {
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://whoza.ai/research/missed-call-index-q3-2026",
-  "url": "https://whoza.ai/research/missed-call-index-q3-2026",
+  "@id": "https://whoza.ai/research/missed-call-index/q3-2026",
+  "url": "https://whoza.ai/research/missed-call-index/q3-2026",
   "speakable": {
     "@type": "SpeakableSpecification",
     "cssSelector": [

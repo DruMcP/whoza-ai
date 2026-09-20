@@ -19,16 +19,16 @@ export const revalidate = 3600
 const researchReports = [
   {
     date: "September 2026",
-    title: "The Missed Call Index: what unanswered calls cost UK trades",
-    description: "Per-trade cost modelling of missed calls (£16K–£33K lost per year), seasonal loss patterns, and the speed-to-lead data behind recovery.",
+    title: "The Missed Call Index — UK trades missed-call research",
+    description: "The standing index of UK trades missed-call research: per-trade cost modelling (£16K–£33K lost per year), the £2.3bn national picture, seasonal patterns, methodology and citations.",
     href: "/research/missed-call-index",
     status: "live" as const,
   },
   {
     date: "August 2026",
-    title: "The Missed Call Index — Q3 2026: what unanswered calls cost UK trades",
+    title: "Missed Call Index Q3 2026: Findings and Data",
     description: "A third of UK small-business calls go unanswered. The Missed Call Index Q3 2026 models £2.3bn of trades revenue at risk — the data, the cost, and the fix.",
-    href: "/research/missed-call-index-q3-2026",
+    href: "/research/missed-call-index/q3-2026",
     status: "live" as const,
   },
   {
@@ -36,13 +36,6 @@ const researchReports = [
     title: "Can an AI Voice Agent Tell a Blocked Drain from a Gas Leak?",
     description: "Research on emergency triage, liability and where AI voice agents genuinely belong in safety-critical trades. Healthcare triage benchmarks, UK law, and minimum safeguards.",
     href: "/research/emergency-triage-safety-ai-voice-agents-2026",
-    status: "live" as const,
-  },
-  {
-    date: "June 2026",
-    title: "The True Cost of Missed Calls",
-    description: "UK Trades Industry Financial Impact Report 2026. Quantifying revenue loss from missed calls across plumbing, electrical, roofing, building, and heating trades.",
-    href: "/research/the-true-cost-of-missed-calls-2026",
     status: "live" as const,
   },
   {
