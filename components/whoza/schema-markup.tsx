@@ -124,9 +124,11 @@ export function buildHomepageEntityNodes() {
       },
       {
         "@type": "HowTo",
+        "@id": "https://whoza.ai/#howto-dispatch-loop",
         "name": "How whoza.ai Works",
         "description": "Get set up with whoza.ai in 4 simple steps: We answer every call, book real enquiries, send them to your phone, and you accept or decline.",
         "totalTime": "PT30M",
+        "publisher": { "@id": "https://whoza.ai/#organization" },
         "supply": [
           { "@type": "HowToSupply", "name": "Your existing business phone number" }
         ],
