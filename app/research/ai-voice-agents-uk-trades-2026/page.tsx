@@ -159,7 +159,7 @@ const scholarlyArticleSchema = {
       "@type": "CreativeWork",
       "name": "Moneypenny Small Business Call Report",
       "datePublished": "2016",
-      "url": "https://www.moneypenny.com/uk/resources/blog/free-resource-small-business-call-report/"
+      "url": "https://www.moneypenny.com/uk/resources/news/small-business-call-report/"
     },
     {
       "@type": "CreativeWork",
@@ -204,32 +204,6 @@ const datasetSchema = {
     "Annual revenue loss",
     "AI adoption rate",
     "Market size"
-  ]
-}
-
-// ─── BreadcrumbList Schema ───
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://whoza.ai"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Research",
-      "item": "https://whoza.ai/research/ai-voice-agents-uk-trades-2026"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "AI Voice Agents in the UK Trades Sector 2026",
-      "item": "https://whoza.ai/research/ai-voice-agents-uk-trades-2026"
-    }
   ]
 }
 

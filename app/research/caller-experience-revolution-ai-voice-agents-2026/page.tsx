@@ -141,7 +141,7 @@ const scholarlyArticleSchema = {
       "@type": "CreativeWork",
       "name": "Moneypenny Small Business Call Report",
       "datePublished": "2016",
-      "url": "https://www.moneypenny.com/uk/resources/blog/free-resource-small-business-call-report/"
+      "url": "https://www.moneypenny.com/uk/resources/news/small-business-call-report/"
     }
   ],
   "inLanguage": "en-GB",
@@ -174,31 +174,6 @@ const datasetSchema = {
     "Conversion probability",
     "CSAT score",
     "Review count impact"
-  ]
-}
-
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://whoza.ai"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Research",
-      "item": "https://whoza.ai/research/caller-experience-revolution-ai-voice-agents-2026"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "The Caller Experience Revolution 2026",
-      "item": "https://whoza.ai/research/caller-experience-revolution-ai-voice-agents-2026"
-    }
   ]
 }
 

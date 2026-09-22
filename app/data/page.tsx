@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 const sources = {
   primary: [
-    { name: "Moneypenny Small Business Call Report", year: 2016, url: "https://www.moneypenny.com/uk/resources/blog/free-resource-small-business-call-report/", what: "33% of small businesses fail to answer incoming calls; 69% of voicemail callers don't leave a message", verified: "verified" },
+    { name: "Moneypenny Small Business Call Report", year: 2016, url: "https://www.moneypenny.com/uk/resources/news/small-business-call-report/", what: "33% of small businesses fail to answer incoming calls; 69% of voicemail callers don't leave a message", verified: "verified" },
     { name: "Ofcom Online Nation", year: 2025, url: "https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025", what: "90% of UK adults use WhatsApp; 82% use Google Search; about 30% of searches show AI Overviews and more than half of adults (53%) see them often; ChatGPT took 1.8 billion UK visits in the first eight months of 2025, up from 368 million", verified: "verified" },
     { name: "National Careers Service", year: 2024, url: "https://nationalcareers.service.gov.uk/job-profiles/receptionist", what: "Receptionist salaries: £18,000 starter, £22,000 experienced", verified: "verified" },
     { name: "Department for Business and Trade, Business Population Estimates 2025", year: 2025, url: "https://www.gov.uk/government/statistics/business-population-estimates-2025/business-population-estimates-for-the-uk-and-regions-2025-statistical-release", what: "5.7 million UK private sector businesses; 4.3 million (75%) have no employees; 885,000 construction SMEs (16%, the largest sector)", verified: "verified" },
@@ -113,10 +113,13 @@ function StatusBadge({ status }: { status: string }) {
 export default function DataPage() {
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", url: "https://whoza.ai/" }, { name: "Evidence Base", url: "https://whoza.ai/data" }]} />
+      <BreadcrumbSchema items={[
+        { name: "Home", item: "https://whoza.ai/" },
+        { name: "Evidence Base", item: "https://whoza.ai/data" },
+      ]} />
       <Header />
       <CitationSchema citations={[
-        { name: "Moneypenny Small Business Call Report", datePublished: "2016", url: "https://www.moneypenny.com/uk/resources/blog/free-resource-small-business-call-report/" },
+        { name: "Moneypenny Small Business Call Report", datePublished: "2016", url: "https://www.moneypenny.com/uk/resources/news/small-business-call-report/" },
         { name: "Ofcom Online Nation", datePublished: "2025", url: "https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025" },
         { name: "National Careers Service", datePublished: "2024", url: "https://nationalcareers.service.gov.uk/job-profiles/receptionist" },
         { name: "DBT Business Population Estimates", datePublished: "2025", url: "https://www.gov.uk/government/statistics/business-population-estimates-2025/business-population-estimates-for-the-uk-and-regions-2025-statistical-release" },

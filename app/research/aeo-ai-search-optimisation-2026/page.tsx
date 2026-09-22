@@ -143,16 +143,6 @@ const datasetSchema = {
   ]
 }
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://whoza.ai" },
-    { "@type": "ListItem", "position": 2, "name": "Research", "item": "https://whoza.ai/research/aeo-ai-search-optimisation-2026" },
-    { "@type": "ListItem", "position": 3, "name": "Answer Engine Optimisation 2026", "item": "https://whoza.ai/research/aeo-ai-search-optimisation-2026" }
-  ]
-}
-
 const faqs = [
     { question: "What is Answer Engine Optimisation?", answer: "Answer Engine Optimisation (AEO) is the practice of designing content and digital presence so that AI-powered search systems select, cite, and use it in generated answers. Unlike traditional SEO which optimises for ranking position, AEO optimises for direct citation as a source in AI-generated answers." },
     { question: "How does structured data increase AI citation probability?", answer: "Content with properly implemented structured data has a 2.5 times higher chance of appearing in AI-generated answers. 81% of pages cited in AI responses have schema markup (AccuraCast). FAQPage schema combined with FAQ content produces 350% more AI citations than FAQ content without schema (OtterlyAI)." },

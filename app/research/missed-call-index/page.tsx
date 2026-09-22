@@ -144,7 +144,11 @@ export default function MissedCallIndexPage() {
   return (
     <div className="min-h-screen bg-[var(--navy-900)] text-white">
       <Header variant="dark" />
-      <BreadcrumbSchema items={[{ name: "Home", href: "/" }, { name: "Research", href: "/research" }, { name: "Missed Call Index", href: "/research/missed-call-index" }]} />
+      <BreadcrumbSchema items={[
+        { name: "Home", item: "https://whoza.ai/" },
+        { name: "Research", item: "https://whoza.ai/research" },
+        { name: "Missed Call Index", item: "https://whoza.ai/research/missed-call-index" },
+      ]} />
 
       <script id="report-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reportSchema) }} />
       <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
@@ -439,8 +443,16 @@ export default function MissedCallIndexPage() {
           </h2>
           <div className="bg-white/5 border border-white/10 rounded-xl p-6 space-y-4 text-white/70 text-sm leading-relaxed">
             <p>
-              <strong className="text-white">Sources.</strong> This index combines: the Moneypenny Small Business
-              Call Report (2016) — a survey of 300 UK micro-businesses backed by call data across 10,000 firms;
+              <strong className="text-white">Sources.</strong> This index combines: the{" "}
+              <a
+                href="https://www.moneypenny.com/uk/resources/news/small-business-call-report/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-emerald-400 hover:underline"
+              >
+                Moneypenny Small Business Call Report
+              </a>
+              {" "}(2016) — a survey of 300 UK micro-businesses backed by call data across 10,000 firms;
               ONS UK Business Demography (2024); the Federation of Master Builders State of Trade Survey (Q1
               2025); Ofcom SME Communications Habits (2024); Replicant AI research on businesses with 2–5
               employees (2024); Checkatrade homeowner data; and Whoza platform data (~50 UK trade businesses,

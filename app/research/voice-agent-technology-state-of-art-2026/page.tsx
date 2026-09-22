@@ -60,11 +60,11 @@ export const metadata: Metadata = {
 }
 
 const breadcrumbItems = [
-  { name: "Home", url: "https://whoza.ai" },
-  { name: "Research", url: "https://whoza.ai/research" },
+  { name: "Home", item: "https://whoza.ai/" },
+  { name: "Research", item: "https://whoza.ai/research" },
   {
     name: "Voice Agent Technology 2026",
-    url: "https://whoza.ai/research/voice-agent-technology-state-of-art-2026",
+    item: "https://whoza.ai/research/voice-agent-technology-state-of-art-2026",
   },
 ]
 

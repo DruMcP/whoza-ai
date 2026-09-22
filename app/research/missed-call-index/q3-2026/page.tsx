@@ -1,4 +1,3 @@
-import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
 import { PreferredSourceButton } from "@/components/whoza/preferred-source-button"
 import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
@@ -89,10 +88,11 @@ const reportSchema = {
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
+  "@id": "https://whoza.ai/research/missed-call-index/q3-2026#breadcrumb",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://whoza.ai" },
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://whoza.ai/" },
     { "@type": "ListItem", "position": 2, "name": "Research", "item": "https://whoza.ai/research" },
-    { "@type": "ListItem", "position": 3, "name": "The Missed Call Index — Q3 2026" },
+    { "@type": "ListItem", "position": 3, "name": "The Missed Call Index — Q3 2026", "item": "https://whoza.ai/research/missed-call-index/q3-2026" },
   ],
 }
 
@@ -514,21 +514,47 @@ export default function MissedCallIndexPage() {
                   <td className="py-3 px-4 text-sm">1</td>
                   <td className="py-3 px-4 text-sm">33% of UK micro-businesses failed to answer incoming calls</td>
                   <td className="py-3 px-4 text-sm">
-                    Moneypenny Small Business Call Report (300 micro-businesses surveyed; call data from 10,000 firms)
+                    <a
+                      href="https://www.moneypenny.com/uk/resources/news/small-business-call-report/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-emerald-400 hover:underline"
+                    >
+                      Moneypenny Small Business Call Report
+                    </a>
+                    {" "}(300 micro-businesses surveyed; call data from 10,000 firms)
                   </td>
-                  <td className="py-3 px-4 text-sm">2020, UK edition</td>
+                  <td className="py-3 px-4 text-sm">2016</td>
                 </tr>
                 <tr className="border-b border-white/10">
                   <td className="py-3 px-4 text-sm">2</td>
                   <td className="py-3 px-4 text-sm">69% of callers who reach voicemail hang up with no message</td>
-                  <td className="py-3 px-4 text-sm">Moneypenny Small Business Call Report</td>
-                  <td className="py-3 px-4 text-sm">2020</td>
+                  <td className="py-3 px-4 text-sm">
+                    <a
+                      href="https://www.moneypenny.com/uk/resources/news/small-business-call-report/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-emerald-400 hover:underline"
+                    >
+                      Moneypenny Small Business Call Report
+                    </a>
+                  </td>
+                  <td className="py-3 px-4 text-sm">2016</td>
                 </tr>
                 <tr className="border-b border-white/10">
                   <td className="py-3 px-4 text-sm">3</td>
                   <td className="py-3 px-4 text-sm">Small/micro firms 3× more likely than large ones to rely on voicemail</td>
-                  <td className="py-3 px-4 text-sm">Moneypenny Small Business Call Report</td>
-                  <td className="py-3 px-4 text-sm">2020</td>
+                  <td className="py-3 px-4 text-sm">
+                    <a
+                      href="https://www.moneypenny.com/uk/resources/news/small-business-call-report/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-emerald-400 hover:underline"
+                    >
+                      Moneypenny Small Business Call Report
+                    </a>
+                  </td>
+                  <td className="py-3 px-4 text-sm">2016</td>
                 </tr>
                 <tr className="border-b border-white/10">
                   <td className="py-3 px-4 text-sm">4</td>
@@ -574,6 +600,10 @@ export default function MissedCallIndexPage() {
                 </tr>
               </tbody>
             </table>
+            <p className="text-white/50 text-sm mt-4">
+              Moneypenny rows 1–3 cite the Small Business Call Report originally published on 21 November 2016.
+              The source page was last updated on 27 January 2020; the figures are from the 2016 UK report.
+            </p>
           </div>
           <p className="text-white/80 leading-relaxed text-lg mt-6">
             <strong>Declared assumptions (ours, not sourced):</strong> 15 inbound calls/week; 1-in-5

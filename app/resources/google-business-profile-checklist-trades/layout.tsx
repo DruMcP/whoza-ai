@@ -84,6 +84,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               },
               {
                 "@type": "BreadcrumbList",
+                "@id": "https://whoza.ai/resources/google-business-profile-checklist-trades#breadcrumb",
                 "itemListElement": [
                   { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://whoza.ai/" },
                   { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://whoza.ai/resources" },

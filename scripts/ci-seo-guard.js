@@ -200,6 +200,54 @@ for (const [url, data] of pageData) {
 }
 if (jsonLdErrors === 0) pass("Check 4: All JSON-LD blocks are valid JSON");
 
+// 4b. Every BreadcrumbList ListItem has a non-empty item URL
+let breadcrumbErrors = 0;
+
+function isBreadcrumbListNode(node) {
+  const type = node?.["@type"];
+  return type === "BreadcrumbList" || (Array.isArray(type) && type.includes("BreadcrumbList"));
+}
+
+function walkJsonLd(node, visit) {
+  if (Array.isArray(node)) {
+    node.forEach((entry) => walkJsonLd(entry, visit));
+    return;
+  }
+  if (!node || typeof node !== "object") return;
+  visit(node);
+  Object.values(node).forEach((value) => walkJsonLd(value, visit));
+}
+
+for (const [url, data] of pageData) {
+  for (let i = 0; i < data.jsonLd.length; i++) {
+    let parsed;
+    try {
+      parsed = JSON.parse(data.jsonLd[i]);
+    } catch {
+      continue; // parse failures are already reported by Check 4
+    }
+
+    walkJsonLd(parsed, (node) => {
+      if (!isBreadcrumbListNode(node)) return;
+      const elements = node.itemListElement;
+      if (!Array.isArray(elements)) {
+        fail("4b", url, `BreadcrumbList block ${i + 1} is missing itemListElement`);
+        breadcrumbErrors++;
+        return;
+      }
+
+      elements.forEach((element, index) => {
+        const item = element?.item;
+        if (typeof item !== "string" || item.trim() === "") {
+          fail("4b", url, `BreadcrumbList block ${i + 1} itemListElement[${index}] has no non-empty item`);
+          breadcrumbErrors++;
+        }
+      });
+    });
+  }
+}
+if (breadcrumbErrors === 0) pass("Check 4b: Every breadcrumb ListItem has a non-empty item URL");
+
 // 5+6. Internal links resolve
 let linkErrors = 0;
 for (const [url, data] of pageData) {

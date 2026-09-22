@@ -255,8 +255,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const breadcrumbList = {
     "@type": "BreadcrumbList" as const,
+    "@id": `https://whoza.ai/blog/${slug}#breadcrumb`,
     itemListElement: [
-      { "@type": "ListItem" as const, position: 1, name: "Home", item: "https://whoza.ai" },
+      { "@type": "ListItem" as const, position: 1, name: "Home", item: "https://whoza.ai/" },
       { "@type": "ListItem" as const, position: 2, name: "Blog", item: "https://whoza.ai/blog" },
       { "@type": "ListItem" as const, position: 3, name: post.title, item: `https://whoza.ai/blog/${slug}` },
     ],

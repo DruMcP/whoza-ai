@@ -107,26 +107,6 @@ const videoSchema = {
   },
 }
 
-// Breadcrumb schema
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: "https://whoza.ai",
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "Watch Demo",
-      item: "https://whoza.ai/watch",
-    },
-  ],
-}
-
 export const revalidate = 3600
 
 export default function WatchPage() {
@@ -137,20 +117,14 @@ export default function WatchPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
       />
-      <Script
-        id="breadcrumb-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-
       <div className="min-h-screen bg-[var(--navy-900)] text-white">
         <Header />
-      <BreadcrumbSchema
-        items={[
-          { name: "Home", item: "https://whoza.ai" },
-          { name: "Watch", item: "https://whoza.ai/watch" },
-        ]}
-      />
+        <BreadcrumbSchema
+          items={[
+            { name: "Home", item: "https://whoza.ai" },
+            { name: "Watch", item: "https://whoza.ai/watch" },
+          ]}
+        />
         <main id="main-content">
           <WatchPageClient />
         </main>

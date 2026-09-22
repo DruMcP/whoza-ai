@@ -57,9 +57,15 @@ export function BlogPostArticleSchema({
   }
 
   if (breadcrumbItems && breadcrumbItems.length > 0) {
+    const normalizedBreadcrumbItems = breadcrumbItems.map((item) => ({
+      ...item,
+      item: item.item === "https://whoza.ai" ? "https://whoza.ai/" : item.item,
+    }))
+    const breadcrumbId = `${normalizedBreadcrumbItems[normalizedBreadcrumbItems.length - 1].item}#breadcrumb`
     const breadcrumbList = {
       "@type": "BreadcrumbList",
-      itemListElement: breadcrumbItems.map((item, index) => ({
+      "@id": breadcrumbId,
+      itemListElement: normalizedBreadcrumbItems.map((item, index) => ({
         "@type": "ListItem",
         position: index + 1,
         name: item.name,

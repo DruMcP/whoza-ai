@@ -109,12 +109,13 @@ export function TradeSchema({ tradeData }: TradeSchemaProps) {
 
   const breadcrumbSchema = {
     "@type": "BreadcrumbList",
+    "@id": `https://whoza.ai/trade/${tradeData.slug}#breadcrumb`,
     itemListElement: [
       {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://whoza.ai",
+        item: "https://whoza.ai/",
       },
       {
         "@type": "ListItem",
