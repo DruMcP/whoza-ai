@@ -2,21 +2,27 @@
 
 import { useState, useEffect, useRef, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X } from "lucide-react"
+import { ArrowRight, Menu, X } from "lucide-react"
 import { useSignedIn, APP_HOME_URL } from "@/hooks/use-signed-in"
 import { WaitlistModal } from "./waitlist-modal"
 import { Logo } from "@/components/whoza/logo"
 
+/* The mobile menu lists every link. The desktop pill shows only the first five,
+   matching the original app.whoza.ai navigation; the rest are all also in the
+   footer, so every page stays linked site-wide. */
 const navLinks = [
   { href: "/#how-it-works", label: "How It Works", isPageLink: false },
-  { href: "/#team", label: "Meet the Team", isPageLink: false },
+  { href: "/missed-calls-cost-calculator", label: "ROI Calculator", isPageLink: true },
   { href: "/pricing", label: "Pricing", isPageLink: true },
+  { href: "/#faq", label: "FAQ", isPageLink: false },
+  { href: "/guide", label: "Help & Guide", isPageLink: true },
+  { href: "/#team", label: "Meet the Team", isPageLink: false },
   { href: "/refer", label: "Refer a Trade", isPageLink: true },
   { href: "/#testimonials", label: "Testimonials", isPageLink: false },
   { href: "/blog", label: "Blog", isPageLink: true },
   { href: "/support", label: "Support", isPageLink: true },
-  { href: "/#faq", label: "FAQ", isPageLink: false },
 ]
+const desktopLinks = navLinks.slice(0, 5)
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -119,15 +125,20 @@ export function Header() {
         initial={{ y: 0, opacity: 1 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? 'backdrop-blur-xl bg-[#111418]/60 border-b border-white/10 shadow-lg shadow-black/10'
-            : 'backdrop-blur-md bg-[#111418]/80 border-b border-white/[0.08]'
-        }`}
+        className="fixed top-0 left-0 right-0 z-50 px-3 sm:px-4 pt-3"
         role="banner"
         aria-label="Main navigation"
       >
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Primary">
+        {/* Floating pill, as on the original app.whoza.ai: #0f1628 at 70% so the
+            page colour shows through (dark green over the hero, slate over mint). */}
+        <nav
+          className={`max-w-[1080px] mx-auto rounded-2xl border border-white/10 backdrop-blur-md transition-all duration-300 px-4 sm:px-6 ${
+            scrolled
+              ? 'bg-[rgba(15,22,40,0.82)] shadow-xl shadow-black/20'
+              : 'bg-[rgba(15,22,40,0.70)] shadow-lg shadow-black/15'
+          }`}
+          aria-label="Primary"
+        >
           <div className="flex items-center justify-between h-[56px]">
             {/* Logo */}
             <a
@@ -139,40 +150,45 @@ export function Header() {
             </a>
 
             {/* Desktop links */}
-            <div className="hidden md:flex items-center gap-6">
-              {navLinks.map((link) =>
+            <div className="hidden lg:flex items-center gap-7">
+              {desktopLinks.map((link) =>
                   <a
                     key={link.href}
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href, link.isPageLink)}
-                    className="text-white/70 hover:text-white text-sm font-medium no-underline transition-colors min-h-[44px] flex items-center"
+                    className="text-white/75 hover:text-white text-sm font-medium no-underline transition-colors min-h-[44px] flex items-center"
                   >
                     {link.label}
                   </a>
               )}
+            </div>
+
+            <div className="hidden lg:flex items-center gap-5">
               {signedIn ? (
                 <a
                   href={APP_HOME_URL}
-                  className="btn-primary text-[13px] font-bold px-4 py-2 rounded-lg border border-white/20 bg-white/10 text-white hover:bg-white/20 hover:scale-105 active:scale-95 no-underline transition-all whitespace-nowrap min-h-[44px] flex items-center"
+                  className="inline-flex items-center gap-1.5 rounded-xl bg-white text-[#0f1628] text-sm font-semibold px-4 h-10 no-underline hover:bg-white/90 transition-colors whitespace-nowrap"
                   aria-label="Open your Whoza dashboard"
                 >
                   Dashboard
+                  <ArrowRight className="w-4 h-4" aria-hidden="true" />
                 </a>
               ) : (
                 <>
                   <a
                     href="https://app.whoza.ai/login"
-                    className="text-[13px] font-bold px-4 py-2 rounded-lg border border-white/20 text-white/80 hover:text-white hover:bg-white/10 no-underline transition-all whitespace-nowrap min-h-[44px] flex items-center"
+                    className="text-white/75 hover:text-white text-sm font-medium no-underline transition-colors whitespace-nowrap min-h-[44px] flex items-center"
                     aria-label="Log in to your Whoza dashboard"
                   >
-                    Log in
+                    Log In
                   </a>
                   <button
                     onClick={() => setShowWaitlist(true)}
-                    className="btn-primary text-[13px] font-bold px-4 py-2 rounded-lg border border-white/20 bg-white/10 text-white hover:bg-white/20 hover:scale-105 active:scale-95 no-underline cursor-pointer transition-all whitespace-nowrap min-h-[44px]"
-                    aria-label="Start free trial"
+                    className="inline-flex items-center gap-1.5 rounded-xl bg-white text-[#0f1628] text-sm font-semibold px-4 h-10 border-none cursor-pointer hover:bg-white/90 transition-colors whitespace-nowrap"
+                    aria-label="Get started with a free trial"
                   >
-                    Start Free Trial
+                    Get Started
+                    <ArrowRight className="w-4 h-4" aria-hidden="true" />
                   </button>
                 </>
               )}
@@ -181,7 +197,7 @@ export function Header() {
             {/* Mobile hamburger */}
             <button
               ref={menuButtonRef}
-              className="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
+              className="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
               onClick={() => setMenuOpen((p) => !p)}
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"
@@ -190,9 +206,8 @@ export function Header() {
               {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
-        </nav>
 
-        {/* Mobile menu */}
+        {/* Mobile menu, inside the pill */}
         <AnimatePresence>
           {menuOpen && (
             <motion.div
@@ -202,9 +217,9 @@ export function Header() {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.25 }}
-              className="md:hidden bg-[#111418]/95 backdrop-blur-md border-t border-white/[0.08] overflow-hidden"
+              className="lg:hidden border-t border-white/10 overflow-hidden max-h-[calc(100vh-96px)] overflow-y-auto"
             >
-              <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-3">
+              <div className="py-3 flex flex-col gap-1">
                 {navLinks.map((link, index) =>
                   <a
                     key={link.href}
@@ -231,7 +246,7 @@ export function Header() {
                       onClick={() => setMenuOpen(false)}
                       className="text-center text-[13px] font-bold px-4 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10 no-underline transition-colors mt-2 min-h-[44px] flex items-center justify-center"
                     >
-                      Log in
+                      Log In
                     </a>
                     <button
                       onClick={() => {
@@ -240,7 +255,7 @@ export function Header() {
                       }}
                       className="btn-primary text-center text-[13px] font-bold px-4 py-3 rounded-lg bg-white text-[#111418] no-underline cursor-pointer min-h-[44px]"
                     >
-                      Start Free Trial
+                      Get Started
                     </button>
                   </>
                 )}
@@ -248,6 +263,7 @@ export function Header() {
             </motion.div>
           )}
         </AnimatePresence>
+        </nav>
       </motion.header>
 
       <AnimatePresence>
