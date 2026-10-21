@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useCallback, useEffect, useRef } from "react"
-import { ArrowRight, Loader2 } from "lucide-react"
+import { ArrowRight, Loader2, Play } from "lucide-react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import Image from "next/image"
 
@@ -141,34 +141,28 @@ export function Hero() {
               <span className="block">Never miss a job again.</span>
             </motion.h1>
 
-            {/* Tagline 1 */}
+            {/* Tagline */}
             <motion.p
               {...fadeUpVisible(0.2)}
-              className="font-sans text-[clamp(20px,2.5vw,28px)] font-bold text-white mb-1"
+              className="font-sans text-[clamp(19px,2.2vw,24px)] font-semibold leading-snug text-white/90 mb-4"
             >
               Your phone rings. Katie answers 24/7.
-            </motion.p>
-
-            {/* Tagline 2 */}
-            <motion.p
-              {...fadeUpVisible(0.25)}
-              className="font-sans text-[clamp(20px,2.5vw,28px)] font-bold text-white mb-4"
-            >
-              While you work, we book — Job done.
+              <br />
+              While you work, we book — job done.
             </motion.p>
 
             {/* Sub-paragraph */}
             <motion.p
               {...fadeUpVisible(0.3)}
-              className="font-sans text-lg leading-relaxed text-slate-400 mb-6 tracking-wide"
+              className="font-sans text-lg leading-relaxed text-slate-400 mb-6"
             >
-              The AI Receptionist built for UK trades. Answers every call, qualifies real jobs, and sends them to your WhatsApp. No apps. No contract. Live in 30 minutes.
+              The AI receptionist built for UK trades. It answers every call, qualifies the real jobs and sends them to your WhatsApp. Live in 30 minutes. No apps, no contract.
             </motion.p>
 
             {/* CTA Group */}
             <motion.div
               {...fadeUpVisible(0.4)}
-              className="flex flex-col gap-3 mb-5 items-start"
+              className="flex flex-col sm:flex-row gap-3 mb-4 items-stretch sm:items-center"
             >
               <button
                 onClick={handlePrimaryCTA}
@@ -188,14 +182,32 @@ export function Hero() {
                   </>
                 )}
               </button>
+
+              {/* Secondary: the 64-second call recording is the strongest proof on the page */}
+              <a
+                href="#katie-demo-audio"
+                onClick={() => trackCTA("Hear Katie answer a call", "hero")}
+                className="inline-flex items-center justify-center gap-2 font-sans text-base font-semibold text-white px-6 py-4 rounded-[14px] border border-white/20 hover:bg-white/10 no-underline min-h-[56px] whitespace-nowrap transition-colors"
+              >
+                <Play className="w-4 h-4 fill-current" aria-hidden="true" />
+                Hear Katie answer a call
+              </a>
             </motion.div>
 
-            {/* Positioning line */}
+            {/* Reassurance + press, directly under the CTAs */}
             <motion.p
               {...fadeUpVisible(0.45)}
-              className="font-sans text-[clamp(20px,2.2vw,24px)] font-extrabold text-white mb-4 pt-4 border-t border-white/10"
+              className="text-sm text-slate-400 mb-5"
             >
-              Not just a receptionist. <span className="text-emerald-400">A revenue team.</span>
+              7-day free trial · No card needed · As featured in{" "}
+              <a
+                href="https://www.pressandjournal.co.uk/fp/business/local/7072126/moray-virtual-receptionist-whoza-ai-speaking-aberdonian/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/80 underline underline-offset-2 hover:text-white"
+              >
+                The Press &amp; Journal
+              </a>
             </motion.p>
 
             {/* Trust Pills — 4 items */}

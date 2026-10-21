@@ -190,9 +190,10 @@
   min-height: 500px;
 }
 
+/* Below lg the phone sits after the copy, so the headline and CTA are the
+   first thing on a phone screen instead of the mockup. */
 @media (max-width: 1023px) {
   .phone-column {
-    order: -1;
     min-height: auto;
     padding: 20px 0;
   }
