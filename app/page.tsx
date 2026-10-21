@@ -1,7 +1,6 @@
 import { Header } from "@/components/whoza/header"
 import { Hero } from "@/components/whoza/hero"
-import { SocialProofBar } from "@/components/whoza/social-proof-bar"
-import { SocialProofBand } from "@/components/whoza/social-proof"
+import { PocketStats } from "@/components/whoza/pocket-stats"
 import { AudioDemo } from "@/components/whoza/audio-demo"
 import { HowWhozaWorks } from "@/components/whoza/how-whoza-works"
 import { MeetTheTeam } from "@/components/whoza/meet-the-team"
@@ -66,8 +65,7 @@ export default function Home() {
       <main id="main-content" role="main" className="pb-24 lg:pb-0">
         {/* HOOK - Hero with clean hierarchy */}
         <Hero />
-        <SocialProofBar />
-        <SocialProofBand />
+        <PocketStats />
 
         {/* EDUCATE - How the system works */}
         <div className="section-divider" />

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useCallback, useEffect, useRef } from "react"
+import { useState, useCallback } from "react"
 import { ArrowRight, Loader2, Play } from "lucide-react"
 import { motion } from "framer-motion"
 import Image from "next/image"
@@ -12,11 +12,6 @@ import { trackCTA } from "@/lib/gtag"
  * centred copy on a green-to-mint gradient, with the hand-held phone below.
  * The previous dark hero is kept in hero-dark-backup.tsx.
  */
-
-/* ── Live counter constants (Moneypenny-derived) ── */
-const CALL_RATE = 0.31        // calls per second across UK trades
-const AVG_JOB_VALUE = 120     // £
-const CONVERSION_RATE = 0.35  // ~35% of missed calls = lost jobs
 
 /* ── Framer-motion helper ── */
 const fadeUpVisible = (delay = 0) => ({
@@ -40,70 +35,6 @@ const HAND_MASK =
 
 export function Hero() {
   const [ctaLoading, setCtaLoading] = useState(false)
-
-  /* ── Live counter refs (no React re-renders) ── */
-  const counterRef = useRef<HTMLDivElement>(null)
-  const missedCallsRef = useRef<HTMLSpanElement>(null)
-  const lostValueRef = useRef<HTMLSpanElement>(null)
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
-
-  useEffect(() => {
-    const el = counterRef.current
-    if (!el) return
-    const obs = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          if (timerRef.current) return
-
-          // Reduced motion: show final values immediately
-          const prefersReducedMotion = typeof window !== 'undefined' &&
-            window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-          if (prefersReducedMotion) {
-            const now = Date.now();
-            const todayStart = new Date(new Date().toDateString()).getTime();
-            const secondsElapsed = Math.floor((now - todayStart) / 1000);
-            const missedCalls = Math.floor(secondsElapsed * CALL_RATE);
-            const lostValue = Math.floor(missedCalls * AVG_JOB_VALUE * CONVERSION_RATE);
-            if (missedCallsRef.current) {
-              missedCallsRef.current.textContent = missedCalls.toLocaleString("en-GB");
-            }
-            if (lostValueRef.current) {
-              lostValueRef.current.textContent = `£${lostValue.toLocaleString("en-GB")}`;
-            }
-            return;
-          }
-
-          let elapsed = 0
-          timerRef.current = setInterval(() => {
-            elapsed += 1
-            const missedCalls = Math.floor(elapsed * CALL_RATE)
-            const lostValue = Math.floor(missedCalls * AVG_JOB_VALUE * CONVERSION_RATE)
-            if (missedCallsRef.current) {
-              missedCallsRef.current.textContent = missedCalls.toLocaleString("en-GB")
-            }
-            if (lostValueRef.current) {
-              lostValueRef.current.textContent = `£${lostValue.toLocaleString("en-GB")}`
-            }
-          }, 1000)
-        } else {
-          if (timerRef.current) {
-            clearInterval(timerRef.current)
-            timerRef.current = null
-          }
-        }
-      },
-      { threshold: 0 }
-    )
-    obs.observe(el)
-    return () => {
-      obs.disconnect()
-      if (timerRef.current) {
-        clearInterval(timerRef.current)
-        timerRef.current = null
-      }
-    }
-  }, [])
 
   const handleTrialCTA = useCallback(() => {
     trackCTA("Try for free", "hero")
@@ -208,43 +139,6 @@ export function Hero() {
             }}
           />
         </motion.div>
-      </section>
-
-      {/* ══ LIVE COUNTER / STATS SECTION ══ */}
-      <section
-        ref={counterRef}
-        className="hero-stats text-center relative"
-        aria-label="Live statistics"
-      >
-        {/* Stats headline — same solid emerald as subheadline */}
-        <h2 className="stats-headline font-sans text-xl font-bold text-emerald-400 mb-4">
-          That&apos;s why we built Katie&apos;s Revenue Team
-        </h2>
-
-        <p className="text-base text-slate-400 leading-normal m-0">
-          <span className="sr-only">
-            Live statistics from the Moneypenny Small Business Call Report (2016):
-          </span>
-          Since you opened this page, UK trades have missed{" "}
-          <span
-            ref={missedCallsRef}
-            className="font-bold text-red-400 [font-variant-numeric:tabular-nums]"
-            aria-live="polite"
-          >
-            0
-          </span>{" "}
-          calls. That&apos;s approximately{" "}
-          <span
-            ref={lostValueRef}
-            className="font-bold text-red-400 [font-variant-numeric:tabular-nums]"
-          >
-            £0
-          </span>{" "}
-          in lost work.
-        </p>
-        <p className="text-xs text-gray-500 my-2 mb-1">
-          Source: Moneypenny Small Business Call Report, 2016, 33% of small businesses fail to answer
-        </p>
       </section>
     </>
   )
