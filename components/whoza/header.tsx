@@ -7,22 +7,16 @@ import { useSignedIn, APP_HOME_URL } from "@/hooks/use-signed-in"
 import { WaitlistModal } from "./waitlist-modal"
 import { Logo } from "@/components/whoza/logo"
 
-/* The mobile menu lists every link. The desktop pill shows only the first five,
-   matching the original app.whoza.ai navigation; the rest are all also in the
-   footer, so every page stays linked site-wide. */
+/* Same five links on desktop and mobile. Support, FAQ, How It Works, Meet the
+   Team, the calculator and the guide all live in the footer, so every page is
+   still linked site-wide. */
 const navLinks = [
-  { href: "/#how-it-works", label: "How It Works", isPageLink: false },
-  { href: "/missed-calls-cost-calculator", label: "ROI Calculator", isPageLink: true },
+  { href: "/", label: "Home", isPageLink: true },
   { href: "/pricing", label: "Pricing", isPageLink: true },
-  { href: "/#faq", label: "FAQ", isPageLink: false },
-  { href: "/guide", label: "Help & Guide", isPageLink: true },
-  { href: "/#team", label: "Meet the Team", isPageLink: false },
   { href: "/refer", label: "Refer a Trade", isPageLink: true },
   { href: "/#testimonials", label: "Testimonials", isPageLink: false },
   { href: "/blog", label: "Blog", isPageLink: true },
-  { href: "/support", label: "Support", isPageLink: true },
 ]
-const desktopLinks = navLinks.slice(0, 5)
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -151,7 +145,7 @@ export function Header() {
 
             {/* Desktop links */}
             <div className="hidden lg:flex items-center gap-7">
-              {desktopLinks.map((link) =>
+              {navLinks.map((link) =>
                   <a
                     key={link.href}
                     href={link.href}

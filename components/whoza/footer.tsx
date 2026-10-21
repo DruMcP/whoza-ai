@@ -18,7 +18,7 @@ const footerLinks = {
     { label: "Refer a Trade", href: "/refer" },
   ],
   support: [
-    { label: "Help Centre", href: "/support" },
+    { label: "Support", href: "/support" },
     { label: "System Guide", href: "/guide" },
     { label: "Getting Started", href: "/guide/getting-started" },
     { label: "Contact", href: "/contact" },
