@@ -6,8 +6,6 @@ import { AudioDemo } from "@/components/whoza/audio-demo"
 import { HowWhozaWorks } from "@/components/whoza/how-whoza-works"
 import { MeetTheTeam } from "@/components/whoza/meet-the-team"
 import { ControlSection } from "@/components/whoza/control-section"
-import { ReviewsEngine } from "@/components/whoza/reviews-engine"
-import { GrowthEngine } from "@/components/whoza/growth-engine"
 import { LostRevenueCalculator } from "@/components/whoza/lost-revenue-calculator"
 // import { AudioDemo } from "@/components/whoza/audio-demo" // removed for soft launch
 import { Testimonials } from "@/components/whoza/testimonials"
@@ -91,11 +89,6 @@ export default function Home() {
         {/* CONTROL - You stay in control */}
         <div className="section-divider" />
         <ControlSection />
-
-        {/* FEATURES - Reviews + Growth */}
-        <div className="section-divider" />
-        <ReviewsEngine />
-        <GrowthEngine />
 
         {/* URGENCY - Lost revenue */}
         <div className="section-divider" />
