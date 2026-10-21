@@ -1,16 +1,13 @@
 import { Header } from "@/components/whoza/header"
 import { Hero } from "@/components/whoza/hero"
 import { SocialProofBar } from "@/components/whoza/social-proof-bar"
-import { SocialProofBand, StatsBand } from "@/components/whoza/social-proof"
+import { SocialProofBand } from "@/components/whoza/social-proof"
 import { AudioDemo } from "@/components/whoza/audio-demo"
-import { VideoExplainer } from "@/components/whoza/video-explainer"
 import { HowWhozaWorks } from "@/components/whoza/how-whoza-works"
 import { MeetTheTeam } from "@/components/whoza/meet-the-team"
-import { PreLaunchProof } from "@/components/whoza/pre-launch-proof"
 import { ControlSection } from "@/components/whoza/control-section"
 import { ReviewsEngine } from "@/components/whoza/reviews-engine"
 import { GrowthEngine } from "@/components/whoza/growth-engine"
-import { DashboardPreview } from "@/components/whoza/dashboard-preview"
 import { LostRevenueCalculator } from "@/components/whoza/lost-revenue-calculator"
 // import { AudioDemo } from "@/components/whoza/audio-demo" // removed for soft launch
 import { Testimonials } from "@/components/whoza/testimonials"
@@ -21,20 +18,12 @@ import { FAQ } from "@/components/whoza/faq"
 import { FinalCTA } from "@/components/whoza/final-cta"
 import { Footer } from "@/components/whoza/footer"
 import { StickyCTA, FloatingChatWidget } from "@/components/whoza/sticky-cta"
-import { TrilletVoiceWidgetClient } from "@/components/whoza/trillet-voice-widget-client"
 import { buildBreadcrumbNode } from "@/components/whoza/breadcrumb-schema"
 import { JsonLdGraph } from "@/components/whoza/jsonld-graph"
-import { ClaireDashboard } from "@/components/whoza/claire-dashboard"
-import { buildHomepageEntityNodes, buildVideoNode } from "@/components/whoza/schema-markup"
+import { buildHomepageEntityNodes } from "@/components/whoza/schema-markup"
 import { buildFaqPageNode } from "@/components/whoza/faqpage-schema"
 import { ExitIntentModal } from "@/components/whoza/exit-intent-modal"
 
-
-const HOMEPAGE_VIDEO = {
-  name: "Whoza.ai 60-Second Demo — Katie Answers Every Call",
-  description: "Watch Katie, Whoza's AI call handler, capture a missed enquiry in under 60 seconds. The call is answered instantly, the enquiry lands in WhatsApp, Claire requests a review, and Rex delivers growth insights. Built for UK tradespeople.",
-  embedUrl: "https://whoza.ai",
-}
 
 const HOMEPAGE_FAQS = [
           { question: "What counts as a booked job?", answer: "A booked job is a job enquiry that the tradesperson has accepted via the Whoza WhatsApp channel (e.g. replying ACCEPT to the WhatsApp job card). Job cards sent but not accepted do not count toward plan job allowances and are not billed as extra jobs." },
@@ -74,7 +63,6 @@ export default function Home() {
           ...buildHomepageEntityNodes(),
           buildBreadcrumbNode([{ name: "Home", item: "https://whoza.ai" }]),
           buildFaqPageNode(HOMEPAGE_FAQS, "https://whoza.ai/#faq"),
-          buildVideoNode(HOMEPAGE_VIDEO),
         ]}
       />
       <Header />
@@ -96,23 +84,9 @@ export default function Home() {
         <div className="section-divider" />
         <MeetTheTeam />
 
-        {/* SHOW - Video explainer + Audio demo */}
+        {/* SHOW - Audio demo */}
         <div className="section-divider" />
-        <VideoExplainer />
         <AudioDemo />
-
-        {/* EXAMPLE SCENARIO - Day in the life */}
-        <div className="section-divider" />
-        <PreLaunchProof />
-
-        {/* LIVE DEMO */}
-        <div className="section-divider" />
-        <section className="py-12 bg-[var(--navy-900)] dark-section" aria-label="Live demo">
-          <div className="max-w-7xl mx-auto px-4 text-center">
-            <p className="text-white/60 text-sm mb-4">Experience the demo — no signup needed</p>
-            <TrilletVoiceWidgetClient />
-          </div>
-        </section>
 
         {/* CONTROL - You stay in control */}
         <div className="section-divider" />
@@ -123,12 +97,7 @@ export default function Home() {
         <ReviewsEngine />
         <GrowthEngine />
 
-        {/* DASHBOARD — See your ROI + Claire Reviews */}
-        <div className="section-divider" />
-        <DashboardPreview />
-        <ClaireDashboard />
-
-        {/* URGENCY - Lost revenue + Stats */}
+        {/* URGENCY - Lost revenue */}
         <div className="section-divider" />
         <LostRevenueCalculator />
 
@@ -271,8 +240,6 @@ export default function Home() {
             </p>
           </div>
         </section>
-
-        <StatsBand />
 
         {/* COMPARE - Why Whoza Wins */}
         <div className="section-divider" />
