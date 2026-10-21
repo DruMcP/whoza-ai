@@ -7,7 +7,6 @@ import { HowWhozaWorks } from "@/components/whoza/how-whoza-works"
 import { MeetTheTeam } from "@/components/whoza/meet-the-team"
 import { ControlSection } from "@/components/whoza/control-section"
 // import { AudioDemo } from "@/components/whoza/audio-demo" // removed for soft launch
-import { Testimonials } from "@/components/whoza/testimonials"
 import { GoogleReviews } from "@/components/whoza/google-reviews"
 import { ComparisonTable } from "@/components/whoza/comparison-table"
 import { PricingSummary } from "@/components/whoza/pricing-summary"
@@ -241,10 +240,12 @@ export default function Home() {
         <div className="section-divider" />
         <FAQ />
 
-        {/* VALIDATE - Social proof */}
+        {/* VALIDATE - Social proof. The header and footer "Testimonials" links
+            point at /#testimonials, so the id lives on the Google reviews. */}
         <div className="section-divider" />
-        <Testimonials />
-        <GoogleReviews />
+        <div id="testimonials">
+          <GoogleReviews />
+        </div>
 
         {/* CLOSE - Hard close */}
         <div className="section-divider" />
