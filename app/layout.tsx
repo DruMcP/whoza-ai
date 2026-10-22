@@ -85,8 +85,19 @@ export default function RootLayout({
 }) {
   // Cache-busting comment v2 — force fresh chunk hash
   return (
-    <html lang="en-GB" className={inter.variable}>
+    // suppressHydrationWarning: the inline script below sets data-v2-seen on
+    // <html> before React hydrates, which is intentional.
+    <html lang="en-GB" className={inter.variable} suppressHydrationWarning>
       <head>
+        {/* First-visit entrance: mark the session as seen before first paint, so
+            the CSS entrance animation (globals.css, "First-visit entrance") runs
+            on the first page of a session only. Fails safe: no storage, no animation. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{var s=window.sessionStorage;if(s.getItem('v2-seen')){document.documentElement.setAttribute('data-v2-seen','')}else{s.setItem('v2-seen','1')}}catch(e){document.documentElement.setAttribute('data-v2-seen','')}",
+          }}
+        />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
