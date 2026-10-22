@@ -13,9 +13,11 @@ import { trackCTA } from "@/lib/gtag"
  * The previous dark hero is kept in hero-dark-backup.tsx.
  */
 
-/* ── Framer-motion helper ── */
+/* ── Framer-motion helper ──
+   Starts at 0.001, not 0: Chrome ignores opacity-0 elements for LCP until they
+   fade in, which held the homepage LCP back to ~1.5s. Visually identical. */
 const fadeUpVisible = (delay = 0) => ({
-  initial: { opacity: 0, y: 20 },
+  initial: { opacity: 0.001, y: 20 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] },
 })
