@@ -245,7 +245,7 @@ export default async function LocationPage({ params }: PageProps) {
 
         {/* VOICE AGENT DEMO — Experience Katie live */}
         <div className="section-divider" />
-        <section className="py-12 bg-[var(--navy-900)] dark-section">
+        <section className="py-12 bg-[var(--v2-navy)] text-white dark-section">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <p className="text-white/60 text-sm mb-4">Experience the demo — no signup needed</p>
             <TrilletVoiceWidget buttonLabel="Talk to Katie" />
@@ -285,7 +285,7 @@ export default async function LocationPage({ params }: PageProps) {
 
         {/* TRADE LINKS — Cross-link to all trade pages */}
         <div className="section-divider" />
-        <section className="py-12 bg-[var(--navy-900)]">
+        <section className="py-12 bg-[var(--v2-navy)] text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">
               AI Call Handling for Every Trade in {locationData.city}
@@ -331,14 +331,14 @@ export default async function LocationPage({ params }: PageProps) {
 
         {/* CITY FAQ — visible matching schema */}
         <div className="section-divider" />
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Questions from {locationData.city} Tradespeople</h2>
+            <h2 className="v2-h2 text-center mb-12">Questions from {locationData.city} Tradespeople</h2>
             <div className="space-y-4">
               {cityFaqs.map((faq, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                   <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
-                  <p className="text-white/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                  <p className="text-[var(--v2-body)] leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                 </div>
               ))}
             </div>

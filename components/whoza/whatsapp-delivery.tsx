@@ -49,7 +49,6 @@ export function WhatsAppDelivery({ trade }: WhatsAppDeliveryProps) {
     <section className="py-28 lg:py-44 bg-[var(--navy-900)] relative overflow-hidden dark-section" aria-label="WhatsApp delivery">
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-[var(--rex-green)]/10 rounded-full blur-[120px]" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -133,7 +132,7 @@ export function WhatsAppDelivery({ trade }: WhatsAppDeliveryProps) {
                           <div className="flex items-start gap-2">
                             <Phone className="w-3.5 h-3.5 text-[#25d366] mt-0.5 shrink-0" />
                             <div>
-                              <span className="text-[10px] text-white/50 uppercase tracking-wider">Name</span>
+                              <span className="text-[10px] text-white/70 uppercase tracking-wider">Name</span>
                               <div className="text-sm font-medium">{job.name}</div>
                             </div>
                           </div>
@@ -141,7 +140,7 @@ export function WhatsAppDelivery({ trade }: WhatsAppDeliveryProps) {
                           <div className="flex items-start gap-2">
                             <MapPin className="w-3.5 h-3.5 text-[#25d366] mt-0.5 shrink-0" />
                             <div>
-                              <span className="text-[10px] text-white/50 uppercase tracking-wider">Area</span>
+                              <span className="text-[10px] text-white/70 uppercase tracking-wider">Area</span>
                               <div className="text-sm">{job.area}</div>
                             </div>
                           </div>
@@ -149,7 +148,7 @@ export function WhatsAppDelivery({ trade }: WhatsAppDeliveryProps) {
                           <div className="flex items-start gap-2">
                             <Clock className="w-3.5 h-3.5 text-[#25d366] mt-0.5 shrink-0" />
                             <div>
-                              <span className="text-[10px] text-white/50 uppercase tracking-wider">Urgency</span>
+                              <span className="text-[10px] text-white/70 uppercase tracking-wider">Urgency</span>
                               <div className="text-sm">
                                 <span className="inline-flex items-center gap-1">
                                   <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
@@ -162,7 +161,7 @@ export function WhatsAppDelivery({ trade }: WhatsAppDeliveryProps) {
                           <div className="flex items-start gap-2">
                             <CheckCircle2 className="w-3.5 h-3.5 text-[#25d366] mt-0.5 shrink-0" />
                             <div>
-                              <span className="text-[10px] text-white/50 uppercase tracking-wider">Preferred Time</span>
+                              <span className="text-[10px] text-white/70 uppercase tracking-wider">Preferred Time</span>
                               <div className="text-sm font-medium text-white">{job.time}</div>
                             </div>
                           </div>
@@ -172,7 +171,7 @@ export function WhatsAppDelivery({ trade }: WhatsAppDeliveryProps) {
                         <div className="mt-3 pt-3 border-t border-white/20">
                           <div className="flex items-center justify-between">
                             <div>
-                              <span className="text-[10px] text-white/50 uppercase tracking-wider">Estimated Value</span>
+                              <span className="text-[10px] text-white/70 uppercase tracking-wider">Estimated Value</span>
                               <div className="text-lg font-bold text-white">{job.value}</div>
                             </div>
                           </div>
@@ -202,7 +201,7 @@ export function WhatsAppDelivery({ trade }: WhatsAppDeliveryProps) {
                           </button>
                           <button
                             onClick={handleDecline}
-                            className="flex items-center gap-1.5 px-3 py-2.5 rounded-full bg-red-500 text-white text-sm hover:bg-red-600 transition-colors shadow-lg"
+                            className="flex items-center gap-1.5 px-3 py-2.5 rounded-full bg-red-600 text-white text-sm hover:bg-red-700 transition-colors shadow-lg"
                           >
                             Decline
                           </button>

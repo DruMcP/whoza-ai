@@ -118,13 +118,9 @@ export default function ForLandscapersPage() {
             }
           })
         }}
-      />      <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
+      />      <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--v2-paper)] text-[var(--v2-body)]">
         {/* ─── HERO ─── */}
-        <section className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-green-500/10 rounded-full blur-[120px]" />
-            <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[100px]" />
-          </div>
+        <section className="bg-[var(--v2-navy)] text-white relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -143,29 +139,29 @@ export default function ForLandscapersPage() {
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
                     href="/"
-                    className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-4 text-lg rounded-lg transition-all hover:scale-[1.02] shadow-2xl shadow-emerald-500/40"
+                    className="v2-btn min-h-[54px] px-7 text-base"
                   >
                     Start Your Free 7-Day Trial
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                   <Link
                     href="/pricing"
-                    className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 text-lg rounded-lg transition-all border border-white/20"
+                    className="v2-btn-secondary min-h-[54px] px-7 text-base text-white border-white/25 hover:border-white"
                   >
                     See Pricing
                   </Link>
                 </div>
-                <div className="flex flex-wrap gap-4 text-sm text-white/50">
+                <div className="flex flex-wrap gap-4 text-sm text-white/65">
                   <span className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                     No credit card required
                   </span>
                   <span className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                     Setup in 30 minutes
                   </span>
                   <span className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                     Cancel anytime
                   </span>
                 </div>
@@ -211,13 +207,13 @@ export default function ForLandscapersPage() {
         <div className="section-divider" />
 
         {/* ─── PAIN POINTS ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 The Real Cost of Missed Landscaping Calls
               </h2>
-              <p className="text-white/60 text-lg max-w-2xl mx-auto">
+              <p className="v2-lead max-w-2xl mx-auto">
                 Every missed call is a job going to your competitor. Here's what landscapers lose every single week.
               </p>
             </div>
@@ -250,22 +246,22 @@ export default function ForLandscapersPage() {
                                    item.color === "amber" ? "text-amber-400 bg-amber-500/10 border-amber-500/20" :
                                    "text-blue-400 bg-blue-500/10 border-blue-500/20"
                 return (
-                  <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/[0.07] transition-colors">
+                  <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 hover:border-[#b9c6bf] transition-colors">
                     <div className={`w-12 h-12 rounded-xl ${colorClass} flex items-center justify-center mb-4 border`}>
                       <Icon className="w-6 h-6" />
                     </div>
                     <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                    <p className="text-white/60 leading-relaxed mb-4">{item.description}</p>
-                    <div className="text-sm font-medium text-emerald-400">{item.stat}</div>
+                    <p className="text-[var(--v2-body)] leading-relaxed mb-4">{item.description}</p>
+                    <div className="text-sm font-medium text-[var(--v2-green)]">{item.stat}</div>
                   </div>
                 )
               })}
             </div>
-            <div className="mt-12 bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-6 text-center">
-              <p className="text-emerald-200 font-medium text-lg">
+            <div className="mt-12 bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-6 text-center">
+              <p className="text-[var(--v2-green-ink)] font-medium text-lg">
                 The average UK landscaper misses 8 calls per week = <strong>£76,800</strong> in lost revenue per year
               </p>
-              <p className="text-emerald-200/70 text-sm mt-1">
+              <p className="text-[var(--v2-body)] text-sm mt-1">
                 Source: UK SME Communications Survey 2025 — based on £8,000 avg redesign value, 35% conversion rate, seasonal adjustments
               </p>
             </div>
@@ -275,13 +271,13 @@ export default function ForLandscapersPage() {
         <div className="section-divider" />
 
         {/* ─── HOW KATIE WORKS ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 How Katie Works for Landscapers
               </h2>
-              <p className="text-white/60 text-lg max-w-2xl mx-auto">
+              <p className="v2-lead max-w-2xl mx-auto">
                 Three simple steps from missed call to booked site visit. No apps to check. No dashboards to monitor.
               </p>
             </div>
@@ -309,17 +305,17 @@ export default function ForLandscapersPage() {
                 const Icon = item.icon
                 return (
                   <div key={idx} className="relative">
-                    <div className="bg-white/5 border border-white/10 rounded-xl p-8 h-full">
-                      <div className="text-5xl font-bold text-white/10 mb-4">{item.step}</div>
-                      <div className="w-12 h-12 rounded-xl bg-green-500/10 border border-green-500/20 flex items-center justify-center mb-4">
+                    <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-8 h-full">
+                      <div className="text-5xl font-bold text-slate-200 mb-4">{item.step}</div>
+                      <div className="w-12 h-12 rounded-2xl bg-green-500/10 border border-green-500/20 flex items-center justify-center mb-4">
                         <Icon className="w-6 h-6 text-green-400" />
                       </div>
                       <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                      <p className="text-white/60 leading-relaxed">{item.description}</p>
+                      <p className="text-[var(--v2-body)] leading-relaxed">{item.description}</p>
                     </div>
                     {idx < 2 && (
                       <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
-                        <ArrowRight className="w-8 h-8 text-white/20" />
+                        <ArrowRight className="w-8 h-8 text-slate-300" />
                       </div>
                     )}
                   </div>
@@ -341,30 +337,30 @@ export default function ForLandscapersPage() {
         <div className="section-divider" />
 
         {/* ─── TESTIMONIAL ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-8">
+            <div className="v2-eyebrow inline-flex items-center gap-2 mb-8">
               <Star className="w-4 h-4" />
               Landscaper Success Story
             </div>
-            <blockquote className="text-2xl sm:text-3xl font-medium leading-relaxed text-white/90 mb-8">
-              "I used to miss 4-5 enquiries a week during spring because I was on job sites with my hands full. In 6 weeks using whoza.ai, I captured 23 jobs I would have missed, recovering <span className="text-emerald-400 font-bold">£14,200</span> in revenue. It cost me £59 for the month."
+            <blockquote className="text-2xl sm:text-3xl font-medium leading-relaxed text-[var(--v2-ink)] mb-8">
+              "I used to miss 4-5 enquiries a week during spring because I was on job sites with my hands full. In 6 weeks using whoza.ai, I captured 23 jobs I would have missed, recovering <span className="text-[var(--v2-green)] font-bold">£14,200</span> in revenue. It cost me £59 for the month."
             </blockquote>
             <div className="flex items-center justify-center gap-4">
               <div className="w-14 h-14 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 font-bold text-xl">
                 JT
               </div>
               <div className="text-left">
-                <p className="font-semibold text-white">James Turner</p>
-                <p className="text-white/50 text-sm">Owner, Turner Landscaping, Manchester</p>
+                <p className="font-semibold text-[var(--v2-ink)]">James Turner</p>
+                <p className="text-[var(--v2-muted)] text-sm">Owner, Turner Landscaping, Manchester</p>
               </div>
             </div>
             <div className="mt-4 flex items-center justify-center gap-1">
               {[1,2,3,4,5].map(i => (
-                <Star key={i} className="w-5 h-5 text-amber-400 fill-amber-400" />
+                <Star key={i} className="w-5 h-5 text-[var(--v2-green)] fill-amber-400" />
               ))}
             </div>
-            <p className="mt-6 text-white/50 text-sm">
+            <p className="mt-6 text-[var(--v2-muted)] text-sm">
               Read James's full story: <a href="/for-landscapers" className="text-green-400 hover:text-green-300 underline">I Missed Spring Booking Season. AI Captured 47 Calls in 3 Weeks.</a>
             </p>
           </div>
@@ -373,9 +369,9 @@ export default function ForLandscapersPage() {
         <div className="section-divider" />
 
         {/* ─── PRICING CTA ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="bg-[var(--v2-navy)] text-white v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            <h2 className="v2-h2 text-white mb-4">
               One Recovered Job Pays for the Whole Year
             </h2>
             <p className="text-white/60 text-lg max-w-2xl mx-auto mb-8">
@@ -384,28 +380,28 @@ export default function ForLandscapersPage() {
             <div className="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-10">
               <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
                 <div className="text-3xl font-bold text-white mb-1">£59</div>
-                <div className="text-sm text-white/50">per month</div>
-                <div className="text-xs text-white/40 mt-1">Starter Plan</div>
+                <div className="text-sm text-white/65">per month</div>
+                <div className="text-xs text-white/60 mt-1">Starter Plan</div>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-emerald-400 mb-1">£8,000</div>
-                <div className="text-sm text-white/50">avg redesign value</div>
-                <div className="text-xs text-white/40 mt-1">Garden redesign</div>
+                <div className="text-3xl font-bold text-[#6ee7b7] mb-1">£8,000</div>
+                <div className="text-sm text-white/65">avg redesign value</div>
+                <div className="text-xs text-white/60 mt-1">Garden redesign</div>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">1,256%</div>
-                <div className="text-sm text-white/50">ROI on 1 job</div>
-                <div className="text-xs text-white/40 mt-1">First month alone</div>
+                <div className="text-sm text-white/65">ROI on 1 job</div>
+                <div className="text-xs text-white/60 mt-1">First month alone</div>
               </div>
             </div>
             <Link
               href="/"
-              className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-4 text-lg rounded-lg transition-all hover:scale-[1.02] shadow-2xl shadow-emerald-500/40"
+              className="v2-btn min-h-[54px] px-7 text-base"
             >
               Start Your Free 7-Day Trial
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <p className="mt-4 text-sm text-white/50">
+            <p className="mt-4 text-sm text-white/65">
               No credit card. No contract. Cancel anytime. Setup in 30 minutes.
             </p>
           </div>
@@ -436,32 +432,32 @@ export default function ForLandscapersPage() {
 
 
         {/* ─── FAQ ─── */}
-<section className="trade-faq py-16 lg:py-24">
+<section className="trade-faq v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 Questions Landscapers Ask
               </h2>
-              <p className="text-white/60">
+              <p className="text-[var(--v2-body)]">
                 Everything you need to know about AI call answering for landscaping businesses.
               </p>
             </div>
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                   <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
-                  <p className="text-white/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                  <p className="text-[var(--v2-body)] leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                 </div>
               ))}
             </div>
             <div className="mt-10 text-center">
-              <p className="text-white/50 text-sm">
+              <p className="text-[var(--v2-muted)] text-sm">
                 Still have questions? Read our{" "}
-                <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-orange-400 hover:text-orange-300 underline">
+                <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] underline">
                   complete AI call answering guide
                 </a>{" "}
                 or{" "}
-                <a href="/pricing" className="text-orange-400 hover:text-orange-300 underline">
+                <a href="/pricing" className="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] underline">
                   compare all pricing plans
                 </a>.
               </p>
@@ -475,13 +471,13 @@ export default function ForLandscapersPage() {
         <div className="section-divider" />
 
         {/* ─── TRUST SIGNALS ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 Trusted by Landscapers Across the UK
               </h2>
-              <p className="text-white/60 max-w-2xl mx-auto">
+              <p className="text-[var(--v2-body)] max-w-2xl mx-auto">
                 From solo gardeners in London to multi-crew landscaping teams in Manchester, landscapers rely on Katie to capture every call.
               </p>
             </div>
@@ -494,17 +490,17 @@ export default function ForLandscapersPage() {
               ].map((item, idx) => {
                 const Icon = item.icon
                 return (
-                  <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+                  <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 text-center">
                     <Icon className="w-8 h-8 text-green-400 mx-auto mb-3" />
-                    <p className="font-semibold text-white">{item.label}</p>
-                    <p className="text-sm text-white/50">{item.sub}</p>
+                    <p className="font-semibold text-[var(--v2-ink)]">{item.label}</p>
+                    <p className="text-sm text-[var(--v2-muted)]">{item.sub}</p>
                   </div>
                 )
               })}
             </div>
             <div className="mt-12 flex flex-wrap justify-center gap-3">
               {["London", "Manchester", "Birmingham", "Glasgow", "Bristol", "Liverpool", "Leeds", "Edinburgh"].map(city => (
-                <span key={city} className="bg-white/5 border border-white/10 rounded-full px-4 py-2 text-sm text-white/60">
+                <span key={city} className="bg-white border border-[var(--v2-line)] rounded-full px-4 py-2 text-sm text-[var(--v2-body)]">
                   {city}
                 </span>
               ))}
@@ -512,21 +508,21 @@ export default function ForLandscapersPage() {
           </div>
         </section>
 
-      <section className="py-12 border-t border-white/10">
+      <section className="py-12 border-t border-[var(--v2-line)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-lg font-semibold text-white/70 mb-6 text-center">Also See: AI Call Answering for Related Trades</h3>
+          <h3 className="text-lg font-semibold text-[var(--v2-body)] mb-6 text-center">Also See: AI Call Answering for Related Trades</h3>
           <div className="grid sm:grid-cols-3 gap-4">
-            <a href="/for-roofers" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors text-center">
-              <div className="font-medium text-white">AI Call Answering for Roofers</div>
-              <p className="text-sm text-white/50 mt-1">Never miss a job</p>
+            <a href="/for-roofers" className="block bg-white border border-[var(--v2-line)] rounded-2xl p-4 hover:border-[#b9c6bf] transition-colors text-center">
+              <div className="font-medium text-[var(--v2-ink)]">AI Call Answering for Roofers</div>
+              <p className="text-sm text-[var(--v2-muted)] mt-1">Never miss a job</p>
             </a>
-            <a href="/for-builders" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors text-center">
-              <div className="font-medium text-white">AI Call Answering for Builders</div>
-              <p className="text-sm text-white/50 mt-1">Never miss a job</p>
+            <a href="/for-builders" className="block bg-white border border-[var(--v2-line)] rounded-2xl p-4 hover:border-[#b9c6bf] transition-colors text-center">
+              <div className="font-medium text-[var(--v2-ink)]">AI Call Answering for Builders</div>
+              <p className="text-sm text-[var(--v2-muted)] mt-1">Never miss a job</p>
             </a>
-            <a href="/for-handymen" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors text-center">
-              <div className="font-medium text-white">AI Call Answering for Handymen</div>
-              <p className="text-sm text-white/50 mt-1">Never miss a job</p>
+            <a href="/for-handymen" className="block bg-white border border-[var(--v2-line)] rounded-2xl p-4 hover:border-[#b9c6bf] transition-colors text-center">
+              <div className="font-medium text-[var(--v2-ink)]">AI Call Answering for Handymen</div>
+              <p className="text-sm text-[var(--v2-muted)] mt-1">Never miss a job</p>
             </a>
           </div>
         </div>
@@ -535,11 +531,7 @@ export default function ForLandscapersPage() {
         <div className="section-divider" />
 
         {/* ─── FINAL CTA ─── */}
-        <section className="py-16 lg:py-24 relative overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-green-500/10 rounded-full blur-[120px]" />
-            <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[100px]" />
-          </div>
+        <section className="bg-[var(--v2-navy)] text-white py-16 lg:py-24 relative overflow-hidden">
           <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
               Stop Losing Landscaping Jobs Today
@@ -549,15 +541,15 @@ export default function ForLandscapersPage() {
             </p>
             <Link
               href="/"
-              className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-4 text-lg rounded-lg transition-all hover:scale-[1.02] shadow-2xl shadow-emerald-500/40"
+              className="v2-btn min-h-[54px] px-7 text-base"
             >
               Start Your Free 7-Day Trial
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white/50">
+            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white/65">
               {["No credit card required", "Setup in 30 minutes", "Cancel anytime", "24/7 call answering"].map(point => (
                 <span key={point} className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                   {point}
                 </span>
               ))}

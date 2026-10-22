@@ -331,7 +331,7 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
                           {isSubmitting ? "Unlocking..." : "Get my recovery report"}
                         </button>
                       </form>
-                      <p className="text-[10px] text-white/30 mt-2 text-center">
+                      <p className="text-[11px] text-white/60 mt-2 text-center">
                         No spam. Unsubscribe anytime. We hate cold emails too.
                       </p>
                     </motion.div>

@@ -195,11 +195,11 @@ export default function ForHvacPage() {
 
       <main id="main-content" role="main" className="pb-24 lg:pb-0">
         {/* HERO */}
-        <section className="relative overflow-hidden bg-[var(--navy-900)] py-20 lg:py-28">
+        <section className="relative overflow-hidden bg-[var(--v2-navy)] text-white py-20 lg:py-28">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-flex items-center gap-2 bg-orange-500/10 text-orange-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <div className="inline-flex items-center gap-2 bg-orange-500/10 text-[#6ee7b7] px-4 py-2 rounded-full text-sm font-medium mb-6">
                   <Flame className="w-4 h-4" />
                   Built for UK Heating Engineers
                 </div>
@@ -212,32 +212,32 @@ export default function ForHvacPage() {
                 <div className="flex flex-wrap gap-4">
                   <Link
                     href="/"
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-xl transition-colors"
+                    className="v2-btn min-h-[54px] px-7 text-base"
                   >
                     Start 7-Day Free Trial
                     <ArrowRight className="w-5 h-5" />
                   </Link>
                   <Link
                     href="/how-it-works"
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-colors"
+                    className="v2-btn-secondary min-h-[54px] px-7 text-base text-white border-white/25 hover:border-white"
                   >
                     See How It Works
                   </Link>
                 </div>
-                <p className="mt-4 text-sm text-white/50">
-                  <a href="/" className="text-orange-400 hover:text-orange-300 underline">Try Katie free for 7 days</a> — no credit card required.
+                <p className="mt-4 text-sm text-white/65">
+                  <a href="/" className="text-[#6ee7b7] hover:text-white underline">Try Katie free for 7 days</a> — no credit card required.
                 </p>
-                <div className="flex items-center gap-6 mt-8 text-white/50 text-sm">
+                <div className="flex items-center gap-6 mt-8 text-white/65 text-sm">
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-orange-400" />
+                    <CheckCircle className="w-4 h-4 text-[#6ee7b7]" />
                     No credit card required
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-orange-400" />
+                    <CheckCircle className="w-4 h-4 text-[#6ee7b7]" />
                     Setup in 30 minutes
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-orange-400" />
+                    <CheckCircle className="w-4 h-4 text-[#6ee7b7]" />
                     Cancel anytime
                   </div>
                 </div>
@@ -246,11 +246,11 @@ export default function ForHvacPage() {
                 <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-full bg-orange-500/20 flex items-center justify-center">
-                      <Phone className="w-5 h-5 text-orange-400" />
+                      <Phone className="w-5 h-5 text-[#6ee7b7]" />
                     </div>
                     <div>
                       <p className="text-white font-medium">New Enquiry — Katie</p>
-                      <p className="text-white/50 text-sm">Boiler breakdown, 06:23</p>
+                      <p className="text-white/65 text-sm">Boiler breakdown, 06:23</p>
                     </div>
                   </div>
                   <div className="space-y-2 text-white/80 text-sm">
@@ -264,7 +264,7 @@ export default function ForHvacPage() {
                     <p>📊 Fault: Pressure gauge at 0 — possible leak</p>
                   </div>
                   <div className="flex gap-2 mt-4">
-                    <button className="flex-1 py-2 bg-orange-600 text-white rounded-lg text-sm font-medium">Accept</button>
+                    <button className="flex-1 py-2 bg-[var(--v2-green)] text-white rounded-lg text-sm font-medium">Accept</button>
                     <button className="flex-1 py-2 bg-white/10 text-white rounded-lg text-sm font-medium">Call Back</button>
                     <button className="flex-1 py-2 bg-white/10 text-white rounded-lg text-sm font-medium">Decline</button>
                   </div>
@@ -304,24 +304,24 @@ export default function ForHvacPage() {
         <section className="section-padding-lg bg-white relative">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] text-sm font-medium mb-4">
+              <span className="v2-eyebrow">
                 The Problem
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
+              <h2 className="v2-h2 text-balance">
                 Why Heating Engineers Lose Jobs to Missed Calls
               </h2>
-              <p className="mt-6 text-lg text-[var(--slate-500)] max-w-2xl mx-auto">
+              <p className="v2-lead mt-5 max-w-2xl mx-auto">
                 Boiler breakdowns are urgent, emotional, and time-sensitive. Customers with no heating in January will call 3-4 engineers. The first to answer — or at least capture the call professionally — gets the job.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 gap-8">
               {painPoints.map((point, idx) => (
-                <div key={idx} className="bg-[var(--off-white)] rounded-xl border border-[var(--border)] p-8">
-                  <div className="w-12 h-12 rounded-xl bg-[var(--katie-blue)]/10 flex items-center justify-center mb-4">
+                <div key={idx} className="bg-[var(--off-white)] rounded-2xl border border-[var(--border)] p-8">
+                  <div className="w-12 h-12 rounded-2xl bg-[var(--katie-blue)]/10 flex items-center justify-center mb-4">
                     <point.icon className="w-6 h-6 text-[var(--katie-blue)]" />
                   </div>
-                  <h3 className="text-xl font-bold text-[var(--navy-900)] mb-3">{point.title}</h3>
-                  <p className="text-[var(--slate-500)] leading-relaxed">{point.description}</p>
+                  <h3 className="text-xl font-bold text-[var(--v2-ink)] mb-3">{point.title}</h3>
+                  <p className="text-[var(--v2-body)] leading-relaxed">{point.description}</p>
                 </div>
               ))}
             </div>
@@ -338,25 +338,25 @@ export default function ForHvacPage() {
         <section className="section-padding-lg bg-white relative">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] text-sm font-medium mb-4">
+              <span className="v2-eyebrow">
                 How It Works
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
+              <h2 className="v2-h2 text-balance">
                 How Katie Works for Heating Engineers
               </h2>
-              <p className="mt-6 text-lg text-[var(--slate-500)] max-w-2xl mx-auto">
-                Four simple steps from missed call to booked callout. Katie handles the conversation. You handle the heating. Read our <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-amber-400 hover:text-amber-300 underline">complete guide to AI call answering</a> for more details.
+              <p className="v2-lead mt-5 max-w-2xl mx-auto">
+                Four simple steps from missed call to booked callout. Katie handles the conversation. You handle the heating. Read our <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] underline">complete guide to AI call answering</a> for more details.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {howItWorks.map((step) => (
                 <div key={step.step} className="relative">
-                  <div className="bg-[var(--off-white)] rounded-xl border border-[var(--border)] p-6 h-full">
-                    <div className="w-10 h-10 rounded-full bg-[var(--katie-blue)] text-white flex items-center justify-center font-bold text-lg mb-4">
+                  <div className="bg-[var(--off-white)] rounded-2xl border border-[var(--border)] p-6 h-full">
+                    <div className="w-10 h-10 rounded-full bg-[var(--katie-blue)] text-[var(--v2-ink)] flex items-center justify-center font-bold text-lg mb-4">
                       {step.step}
                     </div>
-                    <h3 className="text-lg font-bold text-[var(--navy-900)] mb-2">{step.title}</h3>
-                    <p className="text-[var(--slate-500)] text-sm leading-relaxed">{step.description}</p>
+                    <h3 className="text-lg font-bold text-[var(--v2-ink)] mb-2">{step.title}</h3>
+                    <p className="text-[var(--v2-body)] text-sm leading-relaxed">{step.description}</p>
                   </div>
                 </div>
               ))}
@@ -421,21 +421,21 @@ export default function ForHvacPage() {
         <section id="faq" className="trade-faq section-padding-lg bg-white relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] text-sm font-medium mb-4">
+              <span className="v2-eyebrow">
                 Got Questions?
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
+              <h2 className="v2-h2 text-balance">
                 Heating Engineer FAQ
               </h2>
-              <p className="mt-6 text-lg text-[var(--slate-500)]">
+              <p className="v2-lead mt-5">
                 Everything you need to know about AI call handling for heating engineering businesses
               </p>
             </div>
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
-                <div key={idx} className="bg-[var(--off-white)] rounded-xl border border-[var(--border)] px-6 py-5">
-                  <h3 className="text-[var(--navy-900)] font-semibold mb-2">{faq.question}</h3>
-                  <p className="text-[var(--slate-500)] leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                <div key={idx} className="bg-[var(--off-white)] rounded-2xl border border-[var(--border)] px-6 py-5">
+                  <h3 className="text-[var(--v2-ink)] font-semibold mb-2">{faq.question}</h3>
+                  <p className="text-[var(--v2-body)] leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                   {faq.question.includes("How much does") && (
                     <p className="mt-2 text-sm">
                       <a href="/pricing" className="text-[var(--katie-blue)] hover:underline">Plans start at £59/month</a>. See full pricing and plan details.
@@ -443,7 +443,7 @@ export default function ForHvacPage() {
                   )}
                   {faq.question.includes("How does AI call answering work") && (
                     <p className="mt-2 text-sm">
-                      Read our <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-amber-400 hover:text-amber-300 underline">complete guide to AI call answering</a> for more details.
+                      Read our <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] underline">complete guide to AI call answering</a> for more details.
                     </p>
                   )}
                 </div>
@@ -457,11 +457,11 @@ export default function ForHvacPage() {
         {/* TESTIMONIAL */}
         <section className="section-padding-lg bg-[var(--off-white)] relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="inline-flex items-center gap-2 bg-orange-500/10 text-orange-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 bg-[var(--v2-mint)] text-[var(--v2-green)] px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Star className="w-4 h-4" />
               Heating Engineer Testimonial
             </div>
-            <blockquote className="text-2xl sm:text-3xl font-medium text-[var(--navy-900)] leading-relaxed mb-8">
+            <blockquote className="text-2xl sm:text-3xl font-medium text-[var(--v2-ink)] leading-relaxed mb-8">
               "I was under a floorboard in Solihull fixing a leak when my phone rang three times. Two were annual service bookings. One was a boiler replacement in Edgbaston worth £3,800. Katie captured all three with full details — boiler models, addresses, tenant contacts. I called back at 5pm and booked the replacement for Thursday. The service calls I scheduled for next month."
             </blockquote>
             <div className="flex items-center justify-center gap-4">
@@ -469,15 +469,15 @@ export default function ForHvacPage() {
                 RK
               </div>
               <div className="text-left">
-                <p className="font-semibold text-[var(--navy-900)]">Robert Khan</p>
-                <p className="text-sm text-[var(--slate-500)]">Khan Heating Solutions, Birmingham</p>
+                <p className="font-semibold text-[var(--v2-ink)]">Robert Khan</p>
+                <p className="text-sm text-[var(--v2-body)]">Khan Heating Solutions, Birmingham</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* PRICING CTA */}
-        <section className="section-padding-lg bg-[var(--navy-900)] relative">
+        <section className="section-padding-lg bg-[var(--v2-navy)] text-white relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               One Boiler Replacement Pays for 5 Years of Katie
@@ -488,29 +488,29 @@ export default function ForHvacPage() {
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <Link
                 href="/"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-xl transition-colors"
+                className="v2-btn min-h-[54px] px-7 text-base"
               >
                 Start 7-Day Free Trial
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 href="/pricing"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-colors"
+                className="v2-btn-secondary min-h-[54px] px-7 text-base text-white border-white/25 hover:border-white"
               >
                 See Pricing — Plans from £59/month
               </Link>
             </div>
-            <div className="flex items-center justify-center gap-6 text-white/50 text-sm">
+            <div className="flex items-center justify-center gap-6 text-white/65 text-sm">
               <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4 text-orange-400" />
+                <Shield className="w-4 h-4 text-[#6ee7b7]" />
                 GDPR compliant
               </div>
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-orange-400" />
+                <Clock className="w-4 h-4 text-[#6ee7b7]" />
                 24/7 answering
               </div>
               <div className="flex items-center gap-2">
-                <PoundSterling className="w-4 h-4 text-orange-400" />
+                <PoundSterling className="w-4 h-4 text-[#6ee7b7]" />
                 £59/month
               </div>
             </div>
@@ -521,43 +521,43 @@ export default function ForHvacPage() {
         <section className="section-padding-lg bg-white relative">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-2xl font-bold text-[var(--navy-900)] mb-4">
+              <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-4">
                 Trusted by Heating Engineers Across the UK
               </h2>
-              <p className="text-[var(--slate-500)]">
+              <p className="text-[var(--v2-body)]">
                 From Birmingham to Glasgow, heating engineers trust Katie to capture every call.
               </p>
             </div>
             <div className="grid sm:grid-cols-3 gap-6 mb-12">
-              <div className="text-center p-6 bg-[var(--off-white)] rounded-xl border border-[var(--border)]">
+              <div className="text-center p-6 bg-[var(--off-white)] rounded-2xl border border-[var(--border)]">
                 <div className="text-3xl font-bold text-[var(--katie-blue)] mb-1">£3,200</div>
-                <p className="text-sm text-[var(--slate-500)]">Average boiler replacement value</p>
+                <p className="text-sm text-[var(--v2-body)]">Average boiler replacement value</p>
               </div>
-              <div className="text-center p-6 bg-[var(--off-white)] rounded-xl border border-[var(--border)]">
+              <div className="text-center p-6 bg-[var(--off-white)] rounded-2xl border border-[var(--border)]">
                 <div className="text-3xl font-bold text-[var(--katie-blue)] mb-1">67%</div>
-                <p className="text-sm text-[var(--slate-500)]">Emergency calls made after 6pm</p>
+                <p className="text-sm text-[var(--v2-body)]">Emergency calls made after 6pm</p>
               </div>
-              <div className="text-center p-6 bg-[var(--off-white)] rounded-xl border border-[var(--border)]">
+              <div className="text-center p-6 bg-[var(--off-white)] rounded-2xl border border-[var(--border)]">
                 <div className="text-3xl font-bold text-[var(--katie-blue)] mb-1">£150</div>
-                <p className="text-sm text-[var(--slate-500)]">Average emergency callout fee</p>
+                <p className="text-sm text-[var(--v2-body)]">Average emergency callout fee</p>
               </div>
             </div>
             <div className="text-center">
-              <p className="text-[var(--slate-500)] mb-4">Also explore:</p>
+              <p className="text-[var(--v2-body)] mb-4">Also explore:</p>
               <div className="flex flex-wrap justify-center gap-3">
-                <a href="/for-locksmiths" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                <a href="/for-locksmiths" className="px-4 py-2 bg-white border border-[var(--v2-line)] rounded-full text-[var(--v2-ink)] hover:border-[var(--v2-ink)]">
                   AI for Locksmiths
                 </a>
-                <a href="/for-heating-engineers" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                <a href="/for-heating-engineers" className="px-4 py-2 bg-white border border-[var(--v2-line)] rounded-full text-[var(--v2-ink)] hover:border-[var(--v2-ink)]">
                   HVAC Emergency Call Handling Guide
                 </a>
-                <a href="/how-it-works" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                <a href="/how-it-works" className="px-4 py-2 bg-white border border-[var(--v2-line)] rounded-full text-[var(--v2-ink)] hover:border-[var(--v2-ink)]">
                   How It Works
                 </a>
-                <a href="/best-ai-call-handler-uk-trades" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                <a href="/best-ai-call-handler-uk-trades" className="px-4 py-2 bg-white border border-[var(--v2-line)] rounded-full text-[var(--v2-ink)] hover:border-[var(--v2-ink)]">
                   7 Best AI Call Answering Services Compared
                 </a>
-                <a href="/pricing" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                <a href="/pricing" className="px-4 py-2 bg-white border border-[var(--v2-line)] rounded-full text-[var(--v2-ink)] hover:border-[var(--v2-ink)]">
                   Plans from £59/month
                 </a>
               </div>
@@ -565,21 +565,21 @@ export default function ForHvacPage() {
           </div>
         </section>
 
-        <section className="py-12 border-t border-white/10">
+        <section className="py-12 border-t border-[var(--v2-line)]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 className="text-lg font-semibold text-white/70 mb-6 text-center">Also See: AI Call Answering for Related Trades</h3>
+            <h3 className="text-lg font-semibold text-[var(--v2-body)] mb-6 text-center">Also See: AI Call Answering for Related Trades</h3>
             <div className="grid sm:grid-cols-3 gap-4">
-              <a href="/for-plumbers" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors text-center">
-                <div className="font-medium text-white">AI Call Answering for Plumbers</div>
-                <p className="text-sm text-white/50 mt-1">Never miss a job</p>
+              <a href="/for-plumbers" className="block bg-white border border-[var(--v2-line)] rounded-2xl p-4 hover:border-[#b9c6bf] transition-colors text-center">
+                <div className="font-medium text-[var(--v2-ink)]">AI Call Answering for Plumbers</div>
+                <p className="text-sm text-[var(--v2-muted)] mt-1">Never miss a job</p>
               </a>
-              <a href="/for-electricians" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors text-center">
-                <div className="font-medium text-white">AI Call Answering for Electricians</div>
-                <p className="text-sm text-white/50 mt-1">Never miss a job</p>
+              <a href="/for-electricians" className="block bg-white border border-[var(--v2-line)] rounded-2xl p-4 hover:border-[#b9c6bf] transition-colors text-center">
+                <div className="font-medium text-[var(--v2-ink)]">AI Call Answering for Electricians</div>
+                <p className="text-sm text-[var(--v2-muted)] mt-1">Never miss a job</p>
               </a>
-              <a href="/for-gas-engineers" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors text-center">
-                <div className="font-medium text-white">AI Call Answering for Heating Engineers</div>
-                <p className="text-sm text-white/50 mt-1">Never miss a job</p>
+              <a href="/for-gas-engineers" className="block bg-white border border-[var(--v2-line)] rounded-2xl p-4 hover:border-[#b9c6bf] transition-colors text-center">
+                <div className="font-medium text-[var(--v2-ink)]">AI Call Answering for Heating Engineers</div>
+                <p className="text-sm text-[var(--v2-muted)] mt-1">Never miss a job</p>
               </a>
             </div>
           </div>
