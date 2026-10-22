@@ -923,6 +923,14 @@
   a.v2-card:hover, .v2-card-link:hover { border-color: #b9c6bf; transform: translateY(-2px); }
   .v2-dark .v2-card { background: var(--v2-navy-2); border-color: rgba(255, 255, 255, 0.08); }
 
+  /* Content pages: headings and bold runs default to ink. Inside a dark
+     .v2-island (CTA box, solid button) they inherit the island's white. Both
+     selectors sit at 0,1,0 and in this layer, so any text-* utility wins. */
+  .v2-page :where(h1, h2, h3, h4, strong) { color: var(--v2-ink); }
+  .v2-page :where(.v2-island, .v2-dark, .dark-section) :where(h1, h2, h3, h4, strong) { color: inherit; }
+  .v2-page :where(h1) { letter-spacing: -0.025em; }
+  .v2-page :where(h2) { letter-spacing: -0.02em; }
+
 }
 
 /* ---------- First-visit entrance ----------
@@ -950,3 +958,9 @@ html:not([data-v2-seen]) header[role="banner"] nav {
   .v2-btn, .v2-btn-secondary, .v2-card { transition: none; }
 }
 
+
+/* FAQ answers are stored as HTML strings that also feed the FAQPage JSON-LD,
+   so their link classes stay as written; on the light pages they take the
+   v2 green from here instead. */
+.v2-page a:is(.text-emerald-400, .text-amber-400),
+.trade-faq a:is(.text-emerald-400, .text-amber-400) { color: var(--v2-green); }

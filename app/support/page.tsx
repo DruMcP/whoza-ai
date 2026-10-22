@@ -114,7 +114,7 @@ export const revalidate = 3600
 
 export default function SupportPage() {
   return (
-    <div className="min-h-screen bg-[var(--navy-900)] text-white">
+    <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
@@ -124,32 +124,32 @@ export default function SupportPage() {
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Hero */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="v2-eyebrow inline-flex items-center gap-2 mb-6">
             <HelpCircle className="w-4 h-4" />
             We&apos;re here to help
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Support Centre</h1>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto">
+          <p className="v2-lead max-w-2xl mx-auto">
             Problem solutions, general enquiries, callbacks, and ticketing — all handled via email for a clear record and fast resolution.
           </p>
         </div>
 
         {/* Primary Email Support Banner */}
-        <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-2xl p-8 mb-12 text-center">
-          <Mail className="w-10 h-10 text-emerald-400 mx-auto mb-4" />
+        <div className="bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-8 mb-12 text-center">
+          <Mail className="w-10 h-10 text-[var(--v2-green)] mx-auto mb-4" />
           <h2 className="text-2xl font-bold mb-2">Email Support</h2>
-          <p className="text-white/60 mb-4">
+          <p className="text-[var(--v2-body)] mb-4">
             Our primary support channel. Send us any enquiry and we&apos;ll respond with a solution or next steps.
           </p>
           <a
             href="mailto:support@whoza.ai"
-            className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-6 py-3 rounded-xl transition-colors"
+            className="inline-flex items-center gap-2 bg-[var(--v2-green)] hover:bg-[var(--v2-green-hover)] text-white font-semibold px-6 py-3 rounded-2xl transition-colors"
           >
             <Mail className="w-5 h-5" />
             support@whoza.ai
             <ArrowRight className="w-4 h-4" />
           </a>
-          <p className="text-white/40 text-sm mt-3 flex items-center justify-center gap-1">
+          <p className="text-[var(--v2-muted)] text-sm mt-3 flex items-center justify-center gap-1">
             <Clock className="w-3 h-3" />
             Typical response: within 24 hours
           </p>
@@ -162,17 +162,17 @@ export default function SupportPage() {
               key={channel.title}
               className={`rounded-2xl p-6 border ${
                 channel.primary
-                  ? "bg-emerald-500/5 border-emerald-500/20"
-                  : "bg-white/5 border-white/10"
+                  ? "bg-[var(--v2-mint)] border-[var(--v2-green)]/20"
+                  : "bg-white border-[var(--v2-line)]"
               }`}
             >
-              <channel.icon className={`w-8 h-8 mb-4 ${channel.primary ? "text-emerald-400" : "text-white/60"}`} />
+              <channel.icon className={`w-8 h-8 mb-4 ${channel.primary ? "text-[var(--v2-green)]" : "text-[var(--v2-body)]"}`} />
               <h3 className="text-lg font-semibold mb-2">{channel.title}</h3>
-              <p className="text-white/60 text-sm mb-4">{channel.description}</p>
+              <p className="text-[var(--v2-body)] text-sm mb-4">{channel.description}</p>
               {channel.email ? (
                 <a
                   href={`mailto:${channel.email}`}
-                  className="text-emerald-400 hover:text-emerald-300 text-sm font-medium transition-colors"
+                  className="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] text-sm font-medium transition-colors"
                 >
                   {channel.email}
                 </a>
@@ -181,12 +181,12 @@ export default function SupportPage() {
                   href={channel.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-emerald-400 hover:text-emerald-300 text-sm font-medium transition-colors"
+                  className="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] text-sm font-medium transition-colors"
                 >
                   {channel.linkText}
                 </a>
               )}
-              <p className="text-white/40 text-xs mt-3 flex items-center gap-1">
+              <p className="text-[var(--v2-muted)] text-xs mt-3 flex items-center gap-1">
                 <Clock className="w-3 h-3" />
                 {channel.responseTime}
               </p>
@@ -195,18 +195,18 @@ export default function SupportPage() {
         </div>
 
         {/* The system guide. Most "how do I" questions are answered there without an email. */}
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-8 mb-16 flex flex-col sm:flex-row sm:items-center gap-6">
-          <BookOpen className="w-10 h-10 text-emerald-400 shrink-0" />
+        <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-8 mb-16 flex flex-col sm:flex-row sm:items-center gap-6">
+          <BookOpen className="w-10 h-10 text-[var(--v2-green)] shrink-0" />
           <div className="flex-1">
             <h2 className="text-xl font-bold mb-1">Read the System Guide</h2>
-            <p className="text-white/60 text-sm">
+            <p className="text-[var(--v2-body)] text-sm">
               How calls are answered, how to set yourself up, how the WhatsApp workflow runs, and
               what every dashboard tab does. Most questions are answered there in a minute.
             </p>
           </div>
           <Link
             href="/guide"
-            className="inline-flex items-center gap-2 border border-white/15 hover:bg-white/10 text-white font-semibold px-6 py-3 rounded-xl transition-colors shrink-0"
+            className="inline-flex items-center gap-2 border border-white/15 hover:border-[#b9c6bf] text-[var(--v2-ink)] font-semibold px-6 py-3 rounded-2xl transition-colors shrink-0"
           >
             Open the guide
             <ArrowRight className="w-4 h-4" />
@@ -220,69 +220,69 @@ export default function SupportPage() {
             {supportTopics.map((topic) => (
               <div
                 key={topic.title}
-                className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors"
+                className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 hover:border-[#b9c6bf] transition-colors"
               >
-                <topic.icon className="w-8 h-8 text-emerald-400 mb-4" />
+                <topic.icon className="w-8 h-8 text-[var(--v2-green)] mb-4" />
                 <h3 className="text-lg font-semibold mb-2">{topic.title}</h3>
-                <p className="text-white/60 text-sm">{topic.description}</p>
+                <p className="text-[var(--v2-body)] text-sm">{topic.description}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Common Questions */}
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-8 mb-16">
+        <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-8 mb-16">
           <h2 className="text-2xl font-bold mb-8 text-center">Common Questions</h2>
           <div className="space-y-6">
             {commonQuestions.map((item, i) => (
-              <div key={i} className="border-b border-white/10 pb-6 last:border-0 last:pb-0">
+              <div key={i} className="border-b border-[var(--v2-line)] pb-6 last:border-0 last:pb-0">
                 <h3 className="text-lg font-semibold mb-2">{item.q}</h3>
-                <p className="text-white/60 text-sm leading-relaxed">{item.a}</p>
+                <p className="text-[var(--v2-body)] text-sm leading-relaxed">{item.a}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Email Template Suggestion */}
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+        <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-8">
           <h2 className="text-xl font-bold mb-4">How to Reach Us</h2>
-          <p className="text-white/60 mb-6">
+          <p className="text-[var(--v2-body)] mb-6">
             For the fastest resolution, include these details in your email:
           </p>
           <div className="grid md:grid-cols-2 gap-4">
             <div className="space-y-3">
               <div className="flex items-start gap-3">
-                <span className="text-emerald-400 mt-0.5">1.</span>
-                <span className="text-white/70 text-sm">Your business name and account email</span>
+                <span className="text-[var(--v2-green)] mt-0.5">1.</span>
+                <span className="text-[var(--v2-body)] text-sm">Your business name and account email</span>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-emerald-400 mt-0.5">2.</span>
-                <span className="text-white/70 text-sm">A clear description of the issue or enquiry</span>
+                <span className="text-[var(--v2-green)] mt-0.5">2.</span>
+                <span className="text-[var(--v2-body)] text-sm">A clear description of the issue or enquiry</span>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-emerald-400 mt-0.5">3.</span>
-                <span className="text-white/70 text-sm">Any error messages or screenshots</span>
+                <span className="text-[var(--v2-green)] mt-0.5">3.</span>
+                <span className="text-[var(--v2-body)] text-sm">Any error messages or screenshots</span>
               </div>
             </div>
             <div className="space-y-3">
               <div className="flex items-start gap-3">
-                <span className="text-emerald-400 mt-0.5">4.</span>
-                <span className="text-white/70 text-sm">When the issue started (date and time)</span>
+                <span className="text-[var(--v2-green)] mt-0.5">4.</span>
+                <span className="text-[var(--v2-body)] text-sm">When the issue started (date and time)</span>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-emerald-400 mt-0.5">5.</span>
-                <span className="text-white/70 text-sm">Steps you&apos;ve already tried</span>
+                <span className="text-[var(--v2-green)] mt-0.5">5.</span>
+                <span className="text-[var(--v2-body)] text-sm">Steps you&apos;ve already tried</span>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-emerald-400 mt-0.5">6.</span>
-                <span className="text-white/70 text-sm">Callback number (if you want us to call you)</span>
+                <span className="text-[var(--v2-green)] mt-0.5">6.</span>
+                <span className="text-[var(--v2-body)] text-sm">Callback number (if you want us to call you)</span>
               </div>
             </div>
           </div>
-          <div className="mt-6 pt-6 border-t border-white/10">
+          <div className="mt-6 pt-6 border-t border-[var(--v2-line)]">
             <a
               href="mailto:support@whoza.ai"
-              className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-6 py-3 rounded-xl transition-colors"
+              className="inline-flex items-center gap-2 bg-[var(--v2-green)] hover:bg-[var(--v2-green-hover)] text-white font-semibold px-6 py-3 rounded-2xl transition-colors"
             >
               <Mail className="w-5 h-5" />
               Email support@whoza.ai

@@ -122,9 +122,9 @@ export default function VsTradeReceptionistPage() {
         { name: "vs Trade Receptionist", item: "https://whoza.ai/vs-trade-receptionist" },
       ]} />
 
-      <main className="pb-24 lg:pb-0">
+      <main className="pb-24 lg:pb-0 v2-page">
         {/* Hero */}
-        <section className="dark-section relative overflow-hidden" style={{ background: "linear-gradient(135deg, #0F1729 0%, #1A1A2E 50%, #0F1729 100%)" }}>
+        <section className="dark-section relative overflow-hidden v2-island" style={{ background: "linear-gradient(135deg, #0F1729 0%, #1A1A2E 50%, #0F1729 100%)" }}>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
             {/* Breadcrumb nav */}
             <nav aria-label="Breadcrumb" className="mb-8">
@@ -145,7 +145,7 @@ export default function VsTradeReceptionistPage() {
 
             <h1 className="text-4xl lg:text-5xl font-extrabold text-white mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
               Whoza.ai vs Trade Receptionist:<br />
-              <span className="text-emerald-400">Which is Better for UK Trades?</span>
+              <span className="text-[#6ee7b7]">Which is Better for UK Trades?</span>
             </h1>
             <p className="text-lg text-slate-400 max-w-2xl mb-8">
               An honest comparison of two approaches to AI call handling.
@@ -160,12 +160,12 @@ export default function VsTradeReceptionistPage() {
         {/* Comparison Table */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Head-to-Head Comparison</h2>
-          <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
+          <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm">
             <table className="w-full text-left text-sm">
               <thead>
-                <tr className="bg-slate-900 text-white">
+                <tr className="bg-slate-900 text-white v2-island">
                   <th className="px-6 py-4 font-semibold">Feature</th>
-                  <th className="px-6 py-4 font-semibold text-emerald-400">Whoza.ai</th>
+                  <th className="px-6 py-4 font-semibold text-[#6ee7b7]">Whoza.ai</th>
                   <th className="px-6 py-4 font-semibold text-slate-400">Trade Receptionist</th>
                   <th className="px-6 py-4 font-semibold">Winner</th>
                 </tr>
@@ -178,7 +178,7 @@ export default function VsTradeReceptionistPage() {
                     <td className="px-6 py-4 text-slate-600">{row.competitor}</td>
                     <td className="px-6 py-4">
                       {row.winner === "whoza" ? (
-                        <span className="inline-flex items-center gap-1 text-emerald-600 font-semibold"><Check className="w-4 h-4" /> Whoza</span>
+                        <span className="inline-flex items-center gap-1 text-[var(--v2-green)] font-semibold"><Check className="w-4 h-4" /> Whoza</span>
                       ) : row.winner === "competitor" ? (
                         <span className="inline-flex items-center gap-1 text-blue-600 font-semibold">Trade Receptionist</span>
                       ) : (
@@ -195,32 +195,32 @@ export default function VsTradeReceptionistPage() {
         {/* Pricing Comparison */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">Pricing Comparison</h2>
-          <div className="bg-white rounded-xl border border-slate-200 p-8 shadow-sm">
+          <div className="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <div className="flex items-center gap-2 mb-2">
-                  <PoundSterling className="w-6 h-6 text-emerald-600" />
+                  <PoundSterling className="w-6 h-6 text-[var(--v2-green)]" />
                   <h3 className="text-2xl font-bold text-emerald-700">Whoza.ai</h3>
                 </div>
-                <div className="text-4xl font-extrabold text-emerald-600 mb-2">£59<span className="text-lg font-medium text-slate-500">/mo</span></div>
+                <div className="text-4xl font-extrabold text-[var(--v2-green)] mb-2">£59<span className="text-lg font-medium text-slate-500">/mo</span></div>
                 <p className="text-slate-600 mb-4">Starter plan. Per-minute pricing. No contract.</p>
                 <ul className="space-y-2 text-sm text-slate-700">
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> 7-day free trial</li>
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> 30-day money-back guarantee</li>
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> No setup fees</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[var(--v2-green)]" /> 7-day free trial</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[var(--v2-green)]" /> 30-day money-back guarantee</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[var(--v2-green)]" /> No setup fees</li>
                 </ul>
               </div>
               <div>
                 <div className="flex items-center gap-2 mb-2">
-                  <PoundSterling className="w-6 h-6 text-slate-400" />
+                  <PoundSterling className="w-6 h-6 text-[var(--v2-muted)]" />
                   <h3 className="text-2xl font-bold text-slate-700">Trade Receptionist</h3>
                 </div>
                 <div className="text-4xl font-extrabold text-slate-500 mb-2">£29<span className="text-lg font-medium text-slate-500">/mo (+VAT)</span></div>
                 <p className="text-slate-600 mb-4">Starter plan (100 calls). Per-call pricing. No contract.</p>
                 <ul className="space-y-2 text-sm text-slate-700">
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-blue-500" /> 14-day free trial</li>
-                  <li className="flex items-center gap-2"><X className="w-4 h-4 text-red-400" /> No money-back guarantee stated</li>
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-blue-500" /> No setup fees</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-blue-600" /> 14-day free trial</li>
+                  <li className="flex items-center gap-2"><X className="w-4 h-4 text-red-600" /> No money-back guarantee stated</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-blue-600" /> No setup fees</li>
                 </ul>
               </div>
             </div>
@@ -230,7 +230,7 @@ export default function VsTradeReceptionistPage() {
         {/* Why Per-Minute Pricing Matters */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Per-Minute Pricing Matters</h2>
-          <div className="bg-amber-50 rounded-xl p-8 border border-amber-200">
+          <div className="bg-amber-50 rounded-2xl p-8 border border-amber-200">
             <div className="flex items-start gap-4 mb-6">
               <AlertTriangle className="w-8 h-8 text-amber-600 shrink-0 mt-1" />
               <div>
@@ -250,7 +250,7 @@ export default function VsTradeReceptionistPage() {
                 </div>
                 <div>
                   <p className="text-sm text-slate-600 mb-2">Per-minute pricing</p>
-                  <p className="text-2xl font-extrabold text-emerald-600">Pay for use <span className="text-sm font-normal text-slate-500">/ only what you consume</span></p>
+                  <p className="text-2xl font-extrabold text-[var(--v2-green)]">Pay for use <span className="text-sm font-normal text-slate-500">/ only what you consume</span></p>
                 </div>
               </div>
               <div className="mt-4 pt-4 border-t border-amber-100">
@@ -274,20 +274,20 @@ export default function VsTradeReceptionistPage() {
         {/* Who's behind your calls */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">Who's Behind Your Calls?</h2>
-          <div className="bg-emerald-50 rounded-xl p-6 border border-emerald-100 max-w-2xl">
+          <div className="bg-emerald-50 rounded-2xl p-6 border border-emerald-100 max-w-2xl">
             <div className="flex items-center gap-2 mb-4">
-              <Building className="w-6 h-6 text-emerald-600" />
+              <Building className="w-6 h-6 text-[var(--v2-green)]" />
               <h3 className="text-xl font-bold text-emerald-900">Whoza.ai</h3>
             </div>
             <p className="text-emerald-800 mb-4">
               Whoza AI Ltd is a UK limited company registered in Scotland (SC874716), ICO-registered (ZC077271), with full Terms & Conditions, a UK GDPR-compliant privacy policy and a UK-based team. If something goes wrong, there is a UK entity accountable for it.
             </p>
             <ul className="space-y-3 text-emerald-800">
-              <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> UK Limited Company</li>
-              <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> Full Terms & Conditions</li>
-              <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> Privacy Policy (GDPR compliant)</li>
-              <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> ICO registered (ZC077271)</li>
-              <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> UK-based team</li>
+              <li className="flex items-start gap-2"><Check className="w-5 h-5 text-[var(--v2-green)] shrink-0 mt-0.5" /> UK Limited Company</li>
+              <li className="flex items-start gap-2"><Check className="w-5 h-5 text-[var(--v2-green)] shrink-0 mt-0.5" /> Full Terms & Conditions</li>
+              <li className="flex items-start gap-2"><Check className="w-5 h-5 text-[var(--v2-green)] shrink-0 mt-0.5" /> Privacy Policy (GDPR compliant)</li>
+              <li className="flex items-start gap-2"><Check className="w-5 h-5 text-[var(--v2-green)] shrink-0 mt-0.5" /> ICO registered (ZC077271)</li>
+              <li className="flex items-start gap-2"><Check className="w-5 h-5 text-[var(--v2-green)] shrink-0 mt-0.5" /> UK-based team</li>
             </ul>
           </div>
         </section>
@@ -302,36 +302,36 @@ export default function VsTradeReceptionistPage() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold">1</div>
+                <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-[var(--v2-green)] font-bold">1</div>
                 <div>
                   <h4 className="font-bold text-slate-900">Connect your number</h4>
                   <p className="text-sm text-slate-600">2 minutes - forward your existing business number</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold">2</div>
+                <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-[var(--v2-green)] font-bold">2</div>
                 <div>
                   <h4 className="font-bold text-slate-900">Set your hours</h4>
                   <p className="text-sm text-slate-600">3 minutes - tell Katie when to answer</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold">3</div>
+                <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-[var(--v2-green)] font-bold">3</div>
                 <div>
                   <h4 className="font-bold text-slate-900">Receive your first lead</h4>
                   <p className="text-sm text-slate-600">25 minutes - test call, then go live</p>
                 </div>
               </div>
             </div>
-            <div className="bg-slate-50 rounded-xl p-6 flex items-center justify-center">
+            <div className="bg-slate-50 rounded-2xl p-6 flex items-center justify-center">
               <div className="text-center">
-                <Clock className="w-12 h-12 text-emerald-500 mx-auto mb-3" />
-                <div className="text-4xl font-extrabold text-emerald-600">30 min</div>
+                <Clock className="w-12 h-12 text-[var(--v2-green)] mx-auto mb-3" />
+                <div className="text-4xl font-extrabold text-[var(--v2-green)]">30 min</div>
                 <p className="text-slate-600 mt-2">From signup to first real call handled</p>
               </div>
             </div>
           </div>
-          <div className="mt-8 bg-slate-50 rounded-xl p-6 border border-slate-200">
+          <div className="mt-8 bg-slate-50 rounded-2xl p-6 border border-slate-200">
             <p className="text-slate-700 leading-relaxed">
               <strong>But here is what those 30 minutes build:</strong> a custom platform designed specifically for UK trades,
               with proper legal compliance, GDPR-compliant privacy policy,
@@ -343,7 +343,7 @@ export default function VsTradeReceptionistPage() {
         {/* Founder Story */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">Built by a Former Tradesperson</h2>
-          <div className="bg-gradient-to-br from-slate-50 to-emerald-50 rounded-xl p-8 border border-slate-200">
+          <div className="bg-gradient-to-br from-slate-50 to-emerald-50 rounded-xl p-8 border border-slate-200 v2-island">
             <div className="flex items-start gap-6">
               <div className="w-16 h-16 rounded-full bg-slate-200 flex items-center justify-center text-2xl shrink-0">👤</div>
               <div>
@@ -382,7 +382,7 @@ export default function VsTradeReceptionistPage() {
             Join UK tradespeople who&apos;ve switched to whoza.ai.
             Start your 7-day free trial - no credit card required.
           </p>
-          <a href="/pricing" className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-emerald-700 transition-colors shadow-lg hover:shadow-xl">
+          <a href="/pricing" className="inline-flex items-center gap-2 bg-[var(--v2-green)] text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-[var(--v2-green-hover)] transition-colors shadow-lg hover:shadow-xl v2-island">
             Try whoza.ai free for 7 days <ArrowRight className="w-5 h-5" />
           </a>
         </section>
@@ -391,25 +391,25 @@ export default function VsTradeReceptionistPage() {
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-slate-200">
           <h3 className="text-lg font-bold text-slate-900 mb-4">Related Articles</h3>
           <div className="grid sm:grid-cols-2 gap-4">
-            <a href="/pricing" className="block p-4 rounded-lg border border-slate-200 hover:border-emerald-300 hover:bg-emerald-50 transition-all">
+            <a href="/pricing" className="block p-4 rounded-lg border border-slate-200 hover:border-[var(--v2-green)]/40 hover:bg-emerald-50 transition-all">
               <h4 className="font-bold text-emerald-700 mb-1">Whoza.ai Pricing</h4>
               <p className="text-sm text-slate-600">See all plans starting from £59/month</p>
             </a>
-            <a href="/support" className="block p-4 rounded-lg border border-slate-200 hover:border-emerald-300 hover:bg-emerald-50 transition-all">
+            <a href="/support" className="block p-4 rounded-lg border border-slate-200 hover:border-[var(--v2-green)]/40 hover:bg-emerald-50 transition-all">
               <h4 className="font-bold text-emerald-700 mb-1">Support Centre</h4>
               <p className="text-sm text-slate-600">Get help with setup and usage</p>
             </a>
           </div>
         </section>
       {/* FAQ — visible matching schema */}
-      <section className="py-16 lg:py-24">
+      <section className="v2-section">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
+              <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
-                <p className="text-white/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                <p className="text-[var(--v2-body)] leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
               </div>
             ))}
           </div>

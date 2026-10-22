@@ -284,7 +284,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-[var(--navy-900)] text-white">
+    <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header />
       <script
         id="blog-post-graph-schema"
@@ -295,23 +295,23 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <Link
           href="/blog"
-          className="inline-flex items-center gap-2 text-white/50 hover:text-emerald-400 transition-colors mb-8"
+          className="inline-flex items-center gap-2 text-[var(--v2-muted)] hover:text-[var(--v2-green)] transition-colors mb-8"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Blog
         </Link>
 
         <div className="mb-8">
-          <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="v2-eyebrow inline-flex items-center gap-2 mb-6">
             <FileText className="w-4 h-4" />
             {post.category}
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold mb-4 leading-tight">{post.title}</h1>
-          <div className="flex flex-wrap items-center gap-4 text-white/40 text-sm">
+          <div className="flex flex-wrap items-center gap-4 text-[var(--v2-muted)] text-sm">
             <div className="flex items-center gap-2">
               <User className="w-4 h-4" />
               <span>{post.author}</span>
-              {post.authorTitle && <span className="text-white/30">— {post.authorTitle}</span>}
+              {post.authorTitle && <span className="text-[var(--v2-muted)]">— {post.authorTitle}</span>}
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
@@ -322,54 +322,54 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <span>{post.readTime}</span>
             </div>
           </div>
-          <div className="mt-2 text-white/30 text-sm">
+          <div className="mt-2 text-[var(--v2-muted)] text-sm">
             Last updated: <time dateTime={post.date}>{post.date}</time>
           </div>
           {needsDisclosure && (
-            <div className="mt-4 bg-white/5 border border-white/10 rounded-lg p-4">
-              <p className="text-white/50 text-sm leading-relaxed">
-                <strong className="text-white/70">About this story.</strong>{" "}
+            <div className="mt-4 bg-white border border-[var(--v2-line)] rounded-lg p-4">
+              <p className="text-[var(--v2-muted)] text-sm leading-relaxed">
+                <strong className="text-[var(--v2-body)]">About this story.</strong>{" "}
                 This account is based on outcomes reported to us by a whoza.ai customer and written up by the whoza.ai team. Names and figures are the customer&apos;s own. Results vary — see our{" "}
-                <Link href="/data" className="text-emerald-400 hover:text-emerald-300 underline">evidence base</Link>{" "}
+                <Link href="/data" className="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] underline">evidence base</Link>{" "}
                 for how we handle numbers.
               </p>
             </div>
           )}
         </div>
 
-        <div className="bg-white/5 border border-white/10 rounded-xl p-8 mb-10">
-          <p className="text-white/70 text-lg leading-relaxed">{post.excerpt}</p>
+        <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-8 mb-10">
+          <p className="text-[var(--v2-body)] text-lg leading-relaxed">{post.excerpt}</p>
         </div>
 
-        <article className="prose prose-invert prose-lg max-w-none">
+        <article className="prose prose-lg max-w-none">
           <div
-            className="text-white/80 leading-relaxed whitespace-pre-line mb-10"
+            className="text-[var(--v2-body)] leading-relaxed whitespace-pre-line mb-10"
             dangerouslySetInnerHTML={{ __html: formatText(content.introduction) }}
           />
 
           {content.sections.map((section, idx) => (
             <section key={`section-${idx}`} className="mb-10">
               {section.headingTag === "h2" ? (
-                <h2 className="text-2xl font-bold text-white mb-4 mt-8">{section.heading}</h2>
+                <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-4 mt-8">{section.heading}</h2>
               ) : (
-                <h3 className="text-xl font-semibold text-white mb-3 mt-6">{section.heading}</h3>
+                <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">{section.heading}</h3>
               )}
 
               {section.body && (
                 <div
-                  className="text-white/80 leading-relaxed whitespace-pre-line mb-4"
+                  className="text-[var(--v2-body)] leading-relaxed whitespace-pre-line mb-4"
                   dangerouslySetInnerHTML={{ __html: formatText(section.body) }}
                 />
               )}
 
               {section.table && section.table.length > 0 && (
-                <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden mb-6">
+                <div className="bg-white border border-[var(--v2-line)] rounded-2xl overflow-hidden mb-6">
                   <table className="w-full text-sm">
                     <tbody>
                       {section.table.map((row, ridx) => (
-                        <tr key={`row-${ridx}`} className="border-b border-white/10 last:border-0">
-                          <td className="px-4 py-3 font-medium text-white/70 w-1/3">{row.label}</td>
-                          <td className="px-4 py-3 text-white/90">{row.value}</td>
+                        <tr key={`row-${ridx}`} className="border-b border-[var(--v2-line)] last:border-0">
+                          <td className="px-4 py-3 font-medium text-[var(--v2-body)] w-1/3">{row.label}</td>
+                          <td className="px-4 py-3 text-[var(--v2-ink)]">{row.value}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -381,36 +381,36 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <ul className="space-y-3 mb-6">
                   {section.list.map((item, lidx) => (
                     <li key={`list-${lidx}`} className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-white/80">{item}</span>
+                      <CheckCircle className="w-5 h-5 text-[var(--v2-green)] flex-shrink-0 mt-0.5" />
+                      <span className="text-[var(--v2-body)]">{item}</span>
                     </li>
                   ))}
                 </ul>
               )}
 
               {section.callout && (
-                <div className="bg-emerald-500/10 border-l-4 border-emerald-500 rounded-r-xl p-6 my-6">
-                  <p className="text-emerald-200/90 font-medium leading-relaxed">{section.callout}</p>
+                <div className="bg-[var(--v2-mint)] border-l-4 border-[var(--v2-green)] rounded-r-xl p-6 my-6">
+                  <p className="text-[var(--v2-green-ink)] font-medium leading-relaxed">{section.callout}</p>
                 </div>
               )}
             </section>
           ))}
 
-          <div className="bg-white/5 border border-white/10 rounded-xl p-8 mb-10">
+          <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-8 mb-10">
             <div
-              className="text-white/80 leading-relaxed whitespace-pre-line"
+              className="text-[var(--v2-body)] leading-relaxed whitespace-pre-line"
               dangerouslySetInnerHTML={{ __html: formatText(content.conclusion) }}
             />
           </div>
 
-          <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-8 mb-10 text-center">
+          <div className="bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-8 mb-10 text-center">
             <div
-              className="text-white/90 leading-relaxed mb-6"
+              className="text-[var(--v2-ink)] leading-relaxed mb-6"
               dangerouslySetInnerHTML={{ __html: formatText(content.cta) }}
             />
             <Link
               href="/"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--v2-green)] hover:bg-[var(--v2-green-hover)] text-white font-semibold rounded-xl transition-colors v2-island"
             >
               Start Your Free Trial
               <ArrowLeft className="w-4 h-4 rotate-180" />
@@ -418,12 +418,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
 
           <div className="mb-10">
-            <h2 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
+            <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-6">Frequently Asked Questions</h2>
             <div className="space-y-4">
               {content.faq.map((faq, fidx) => (
-                <div key={`faq-${fidx}`} className="bg-white/5 border border-white/10 rounded-xl p-6">
-                  <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
-                  <p className="text-white/70 leading-relaxed">{faq.answer}</p>
+                <div key={`faq-${fidx}`} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+                  <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-3">{faq.question}</h3>
+                  <p className="text-[var(--v2-body)] leading-relaxed">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -431,7 +431,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
           {/* Related Posts */}
           <div className="mb-10">
-            <h2 className="text-2xl font-bold text-white mb-6">Related Posts</h2>
+            <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-6">Related Posts</h2>
             <div className="grid gap-4">
               {Object.entries(blogPostContents)
                 .filter(([key]) => key !== slug)
@@ -440,11 +440,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   <Link
                     key={key}
                     href={`/blog/${key}`}
-                    className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors"
+                    className="block bg-white border border-[var(--v2-line)] rounded-2xl p-6 hover:border-[#b9c6bf] transition-colors"
                   >
-                    <div className="text-emerald-400 text-sm font-medium mb-2">{relatedPost.category}</div>
-                    <h3 className="text-lg font-semibold text-white mb-2">{relatedPost.title}</h3>
-                    <p className="text-white/60 text-sm line-clamp-2">{relatedPost.excerpt}</p>
+                    <div className="text-[var(--v2-green)] text-sm font-medium mb-2">{relatedPost.category}</div>
+                    <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-2">{relatedPost.title}</h3>
+                    <p className="text-[var(--v2-body)] text-sm line-clamp-2">{relatedPost.excerpt}</p>
                   </Link>
                 ))}
             </div>
@@ -461,7 +461,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 function formatText(text: string): string {
   const formatted = text
     // Convert markdown links to HTML anchor tags
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-emerald-400 hover:text-emerald-300 underline">$1</a>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] underline underline-offset-2">$1</a>')
     // Bold
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
     // Italic

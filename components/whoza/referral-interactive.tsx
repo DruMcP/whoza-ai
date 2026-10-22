@@ -170,14 +170,14 @@ export function ReferralInteractive() {
               <div className="flex gap-3 justify-center">
                 <button
                   onClick={handleShareWhatsApp}
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366]/20 transition-colors font-medium"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#25D366]/10 text-[#0f7a3d] hover:bg-[#25D366]/20 transition-colors font-medium"
                 >
                   <MessageCircle className="w-4 h-4" />
                   WhatsApp
                 </button>
                 <button
                   onClick={handleShareEmail}
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/20 transition-colors font-medium"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--v2-mint)] text-[var(--v2-green)] hover:bg-[#dcf5e6] transition-colors font-medium"
                 >
                   <Mail className="w-4 h-4" />
                   Email
@@ -215,7 +215,7 @@ export function ReferralInteractive() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="px-6 py-3 bg-[var(--rex-green)] text-white font-medium rounded-lg hover:bg-[var(--rex-green-hover)] transition-colors disabled:opacity-50"
+                  className="px-6 py-3 bg-[var(--v2-green)] text-white font-medium rounded-lg hover:bg-[var(--v2-green-hover)] transition-colors disabled:opacity-50"
                 >
                   {isSubmitting ? "Sending..." : "Send"}
                 </button>

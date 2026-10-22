@@ -9,10 +9,10 @@
 
 export function PreferredSourceButton({ label }: { label?: string }) {
   return (
-    <div className="mt-12 pt-8 border-t border-white/10 text-center">
-      {label && <p className="text-white/50 text-sm mb-4">{label}</p>}
+    <div className="mt-12 pt-8 border-t border-[var(--v2-line)] text-center">
+      {label && <p className="text-[var(--v2-muted)] text-sm mb-4">{label}</p>}
       <div className="mx-auto max-w-[280px]">
-        <div google-add-preferred-source-btn="" data-theme="dark" />
+        <div google-add-preferred-source-btn="" data-theme="light" />
       </div>
     </div>
   )

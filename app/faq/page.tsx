@@ -299,7 +299,7 @@ export default function FAQPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <div className="min-h-screen bg-[var(--navy-900)] text-white">
+      <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
         <Header />
         <BreadcrumbSchema items={[
           { name: "Home", item: "https://whoza.ai" },
@@ -309,14 +309,14 @@ export default function FAQPage() {
         <main id="main-content" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
           {/* Hero */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="v2-eyebrow inline-flex items-center gap-2 mb-6">
               <HelpCircle className="w-4 h-4" />
               Straight Answers
             </div>
             <h1 className="text-4xl lg:text-5xl font-extrabold mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
               AI Call Answering FAQ
             </h1>
-            <p className="text-lg text-white/60 max-w-2xl mx-auto">
+            <p className="text-lg text-[var(--v2-body)] max-w-2xl mx-auto">
               Honest answers to the questions UK tradespeople actually ask about AI call handling.
               No fluff. No jargon. Just the facts — with data to back them up.
             </p>
@@ -328,9 +328,9 @@ export default function FAQPage() {
               <a
                 key={cat.label}
                 href={`#${cat.label.toLowerCase().replace(/[^a-z]+/g, "-")}`}
-                className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2 rounded-full text-sm transition-colors"
+                className="inline-flex items-center gap-2 bg-white hover:border-[#b9c6bf] border border-[var(--v2-line)] px-4 py-2 rounded-full text-sm transition-colors"
               >
-                <cat.icon className="w-4 h-4 text-emerald-400" />
+                <cat.icon className="w-4 h-4 text-[var(--v2-green)]" />
                 {cat.label}
               </a>
             ))}
@@ -349,8 +349,8 @@ export default function FAQPage() {
                   className="scroll-mt-24"
                 >
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center">
-                      <cat.icon className="w-5 h-5 text-emerald-400" />
+                    <div className="w-10 h-10 rounded-full bg-[var(--v2-mint)] flex items-center justify-center">
+                      <cat.icon className="w-5 h-5 text-[var(--v2-green)]" />
                     </div>
                     <h2 className="text-2xl font-bold">{cat.label}</h2>
                   </div>
@@ -358,13 +358,13 @@ export default function FAQPage() {
                     {catQuestions.map((q, i) => (
                       <details
                         key={i}
-                        className="group bg-white/5 border border-white/10 rounded-xl overflow-hidden"
+                        className="group bg-white border border-[var(--v2-line)] rounded-2xl overflow-hidden"
                       >
                         <summary className="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/5 transition-colors">
                           <h3 className="text-lg font-semibold pr-4">{q.name}</h3>
-                          <ArrowRight className="w-5 h-5 text-white/40 group-open:rotate-90 transition-transform shrink-0" />
+                          <ArrowRight className="w-5 h-5 text-[var(--v2-muted)] group-open:rotate-90 transition-transform shrink-0" />
                         </summary>
-                        <div className="px-6 pb-6 text-white/70 leading-relaxed">
+                        <div className="px-6 pb-6 text-[var(--v2-body)] leading-relaxed">
                           {q.acceptedAnswer.text}
                           {(() => {
                             const link = contextualLinks[q.name]
@@ -372,7 +372,7 @@ export default function FAQPage() {
                             return (
                               <a
                                 href={link.href}
-                                className="block mt-3 text-emerald-400 underline hover:text-emerald-300 transition-colors"
+                                className="block mt-3 text-[var(--v2-green)] underline hover:text-[var(--v2-green-hover)] transition-colors"
                               >
                                 {link.label} →
                               </a>
@@ -388,7 +388,7 @@ export default function FAQPage() {
           </div>
 
           {/* Still Have Questions CTA */}
-          <div className="mt-16 text-center bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 border border-emerald-500/20 rounded-2xl p-8 lg:p-12">
+          <div className="mt-16 text-center bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 border border-emerald-500/20 rounded-2xl p-8 lg:p-12 v2-island">
             <h2 className="text-2xl font-bold mb-4">Still have questions?</h2>
             <p className="text-white/60 mb-6 max-w-lg mx-auto">
               Every trade business is different. If you want to talk through whether AI call handling makes sense for your specific situation, just ask.
@@ -396,7 +396,7 @@ export default function FAQPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="/support"
-                className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-emerald-700 transition-colors"
+                className="inline-flex items-center gap-2 bg-[var(--v2-green)] text-white font-bold px-6 py-3 rounded-lg hover:bg-[var(--v2-green-hover)] transition-colors"
               >
                 <MessageCircle className="w-4 h-4" />
                 Chat with Support
@@ -413,17 +413,17 @@ export default function FAQPage() {
 
           {/* Related Links */}
           <div className="mt-12 grid sm:grid-cols-3 gap-4">
-            <a href="/pricing" className="block p-4 rounded-lg border border-white/10 hover:border-emerald-500/30 hover:bg-emerald-500/5 transition-all">
-              <h4 className="font-bold text-emerald-400 mb-1">Pricing</h4>
-              <p className="text-sm text-white/50">See all plans starting from £59/month</p>
+            <a href="/pricing" className="block p-4 rounded-lg border border-[var(--v2-line)] hover:border-[var(--v2-green)]/30 hover:bg-[var(--v2-mint)] transition-all">
+              <h4 className="font-bold text-[var(--v2-green)] mb-1">Pricing</h4>
+              <p className="text-sm text-[var(--v2-muted)]">See all plans starting from £59/month</p>
             </a>
-            <a href="/how-it-works" className="block p-4 rounded-lg border border-white/10 hover:border-emerald-500/30 hover:bg-emerald-500/5 transition-all">
-              <h4 className="font-bold text-emerald-400 mb-1">How It Works</h4>
-              <p className="text-sm text-white/50">4-step setup in 30 minutes</p>
+            <a href="/how-it-works" className="block p-4 rounded-lg border border-[var(--v2-line)] hover:border-[var(--v2-green)]/30 hover:bg-[var(--v2-mint)] transition-all">
+              <h4 className="font-bold text-[var(--v2-green)] mb-1">How It Works</h4>
+              <p className="text-sm text-[var(--v2-muted)]">4-step setup in 30 minutes</p>
             </a>
-            <a href="/vs-trade-receptionist" className="block p-4 rounded-lg border border-white/10 hover:border-emerald-500/30 hover:bg-emerald-500/5 transition-all">
-              <h4 className="font-bold text-emerald-400 mb-1">Comparisons</h4>
-              <p className="text-sm text-white/50">See how whoza compares</p>
+            <a href="/vs-trade-receptionist" className="block p-4 rounded-lg border border-[var(--v2-line)] hover:border-[var(--v2-green)]/30 hover:bg-[var(--v2-mint)] transition-all">
+              <h4 className="font-bold text-[var(--v2-green)] mb-1">Comparisons</h4>
+              <p className="text-sm text-[var(--v2-muted)]">See how whoza compares</p>
             </a>
           </div>
         </main>

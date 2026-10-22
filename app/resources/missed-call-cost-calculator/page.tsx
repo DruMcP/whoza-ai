@@ -55,7 +55,7 @@ export default function MissedCallCostCalculatorPage() {
       <div className="mb-8">
         <div className="flex justify-between items-center mb-3">
           <label className="text-sm font-semibold text-slate-700">{label}</label>
-          <span className="text-emerald-600 font-bold text-lg">
+          <span className="text-[var(--v2-green)] font-bold text-lg">
             {value}
             {suffix}
           </span>
@@ -70,7 +70,7 @@ export default function MissedCallCostCalculatorPage() {
           className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-600"
           aria-label={label}
         />
-        <div className="flex justify-between text-xs text-slate-400 mt-1">
+        <div className="flex justify-between text-xs text-[var(--v2-muted)] mt-1">
           <span>
             {min}
             {suffix}
@@ -99,7 +99,7 @@ export default function MissedCallCostCalculatorPage() {
       <main id="main-content" role="main" className="pb-24 lg:pb-0">
         {/* Hero */}
         <section
-          className="dark-section relative overflow-hidden"
+          className="dark-section relative overflow-hidden v2-island"
           style={{ background: "linear-gradient(135deg, #0F1729 0%, #1A1A2E 50%, #0F1729 100%)" }}
         >
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
@@ -126,7 +126,7 @@ export default function MissedCallCostCalculatorPage() {
             </nav>
 
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <div className="v2-eyebrow v2-eyebrow-light inline-flex items-center gap-2 mb-6">
                 <Calculator className="w-4 h-4" />
                 Free Interactive Tool
               </div>
@@ -136,7 +136,7 @@ export default function MissedCallCostCalculatorPage() {
               >
                 Missed Call Cost{" "}
                 <br />
-                <span className="text-emerald-400">Calculator for UK Trades</span>
+                <span className="text-[#6ee7b7]">Calculator for UK Trades</span>
               </h1>
 
               <div className="mt-4 text-white/30 text-sm">
@@ -148,7 +148,7 @@ export default function MissedCallCostCalculatorPage() {
               </p>
               <a
                 href="#calculator"
-                className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-6 py-3 rounded-xl hover:bg-emerald-700 transition-all shadow-lg"
+                className="inline-flex items-center gap-2 bg-[var(--v2-green)] text-white font-bold px-6 py-3 rounded-xl hover:bg-[var(--v2-green-hover)] transition-all shadow-lg"
               >
                 Calculate My Losses <ArrowRight className="w-4 h-4" />
               </a>
@@ -161,19 +161,19 @@ export default function MissedCallCostCalculatorPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
               <div>
-                <div className="text-3xl font-extrabold text-emerald-600">33%</div>
+                <div className="text-3xl font-extrabold text-[var(--v2-green)]">33%</div>
                 <p className="text-sm text-slate-600 mt-1">of small businesses fail to answer calls</p>
               </div>
               <div>
-                <div className="text-3xl font-extrabold text-emerald-600">£280</div>
+                <div className="text-3xl font-extrabold text-[var(--v2-green)]">£280</div>
                 <p className="text-sm text-slate-600 mt-1">average UK job value</p>
               </div>
               <div>
-                <div className="text-3xl font-extrabold text-emerald-600">35%</div>
+                <div className="text-3xl font-extrabold text-[var(--v2-green)]">35%</div>
                 <p className="text-sm text-slate-600 mt-1">call-to-job conversion</p>
               </div>
               <div>
-                <div className="text-3xl font-extrabold text-emerald-600">69%</div>
+                <div className="text-3xl font-extrabold text-[var(--v2-green)]">69%</div>
                 <p className="text-sm text-slate-600 mt-1">hang up on voicemail</p>
               </div>
             </div>
@@ -224,17 +224,17 @@ export default function MissedCallCostCalculatorPage() {
             <div className="border-t border-slate-200 pt-8 mt-4">
               <h3 className="text-lg font-semibold text-slate-700 mb-6 text-center">Your Estimated Lost Revenue</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="bg-red-50 border border-red-100 rounded-xl p-6 text-center">
+                <div className="bg-red-50 border border-red-100 rounded-2xl p-6 text-center">
                   <div className="text-sm text-red-600 font-medium mb-1">Weekly Loss</div>
                   <div className="text-3xl font-extrabold text-red-600">{formatCurrency(weeklyLoss)}</div>
-                  <div className="text-xs text-red-400 mt-1">{weeklyConverted.toFixed(1)} lost jobs/week</div>
+                  <div className="text-xs text-red-600 mt-1">{weeklyConverted.toFixed(1)} lost jobs/week</div>
                 </div>
-                <div className="bg-orange-50 border border-orange-100 rounded-xl p-6 text-center">
+                <div className="bg-orange-50 border border-orange-100 rounded-2xl p-6 text-center">
                   <div className="text-sm text-orange-600 font-medium mb-1">Monthly Loss</div>
                   <div className="text-3xl font-extrabold text-orange-600">{formatCurrency(monthlyLoss)}</div>
                   <div className="text-xs text-orange-400 mt-1">{monthlyConverted.toFixed(1)} lost jobs/month</div>
                 </div>
-                <div className="bg-rose-50 border border-rose-100 rounded-xl p-6 text-center">
+                <div className="bg-rose-50 border border-rose-100 rounded-2xl p-6 text-center">
                   <div className="text-sm text-rose-600 font-medium mb-1">Yearly Loss</div>
                   <div className="text-3xl font-extrabold text-rose-600">{formatCurrency(yearlyLoss)}</div>
                   <div className="text-xs text-rose-400 mt-1">{yearlyConverted.toFixed(0)} lost jobs/year</div>
@@ -265,7 +265,7 @@ export default function MissedCallCostCalculatorPage() {
             </div>
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center shrink-0">
-                <TrendingUp className="w-6 h-6 text-emerald-600" />
+                <TrendingUp className="w-6 h-6 text-[var(--v2-green)]" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">AI call handling pays for itself</h3>
@@ -278,7 +278,7 @@ export default function MissedCallCostCalculatorPage() {
             </div>
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
-                <PoundSterling className="w-6 h-6 text-blue-500" />
+                <PoundSterling className="w-6 h-6 text-blue-600" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">Annual impact compounds quickly</h3>
@@ -298,20 +298,20 @@ export default function MissedCallCostCalculatorPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Link
               href="/pricing"
-              className="flex items-center gap-3 bg-white border border-slate-200 rounded-xl p-4 hover:border-emerald-300 hover:shadow-md transition-all"
+              className="flex items-center gap-3 bg-white border border-slate-200 rounded-2xl p-4 hover:border-[var(--v2-green)]/40 hover:shadow-md transition-all"
             >
               <div className="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center">
-                <PoundSterling className="w-5 h-5 text-emerald-600" />
+                <PoundSterling className="w-5 h-5 text-[var(--v2-green)]" />
               </div>
               <div>
                 <div className="font-semibold text-slate-900">View Pricing</div>
                 <div className="text-sm text-slate-500">Plans from £59/month</div>
               </div>
-              <ArrowRight className="w-4 h-4 text-slate-400 ml-auto" />
+              <ArrowRight className="w-4 h-4 text-[var(--v2-muted)] ml-auto" />
             </Link>
             <Link
               href="/research/missed-call-index"
-              className="flex items-center gap-3 bg-white border border-slate-200 rounded-xl p-4 hover:border-emerald-300 hover:shadow-md transition-all"
+              className="flex items-center gap-3 bg-white border border-slate-200 rounded-2xl p-4 hover:border-[var(--v2-green)]/40 hover:shadow-md transition-all"
             >
               <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center">
                 <Phone className="w-5 h-5 text-blue-600" />
@@ -320,7 +320,7 @@ export default function MissedCallCostCalculatorPage() {
                 <div className="font-semibold text-slate-900">Missed Call Recovery Guide</div>
                 <div className="text-sm text-slate-500">How to win back lost jobs</div>
               </div>
-              <ArrowRight className="w-4 h-4 text-slate-400 ml-auto" />
+              <ArrowRight className="w-4 h-4 text-[var(--v2-muted)] ml-auto" />
             </Link>
           </div>
         </section>
@@ -334,7 +334,7 @@ export default function MissedCallCostCalculatorPage() {
           </p>
           <a
             href="/pricing"
-            className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-emerald-700 transition-colors shadow-lg"
+            className="inline-flex items-center gap-2 bg-[var(--v2-green)] text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-[var(--v2-green-hover)] transition-colors shadow-lg v2-island"
           >
             Try whoza.ai Free for 7 Days <ArrowRight className="w-5 h-5" />
           </a>

@@ -100,7 +100,7 @@ export const revalidate = 3600
 
 export default function HowItWorksPage() {
   return (
-    <div className="min-h-screen bg-[var(--navy-900)] text-white">
+    <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
@@ -173,12 +173,12 @@ export default function HowItWorksPage() {
 
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="v2-eyebrow inline-flex items-center gap-2 mb-6">
             <Phone className="w-4 h-4" />
             Simple. Smart. 24/7.
           </div>
           <h1 className="text-4xl font-bold mb-4">How whoza.ai Works</h1>
-          <p className="text-white/60 text-lg max-w-2xl">
+          <p className="text-[var(--v2-body)] text-lg max-w-2xl">
             From the first ring to the booked job — here's how Katie becomes your AI revenue team in five simple steps.
           </p>
         </div>
@@ -187,14 +187,14 @@ export default function HowItWorksPage() {
           {steps.map((step, index) => (
             <div
               key={index}
-              className="bg-white/5 border border-white/10 rounded-xl p-6 flex items-start gap-5"
+              className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 flex items-start gap-5"
             >
-              <div className="bg-emerald-500/10 rounded-lg p-3 flex-shrink-0">
-                <step.icon className="w-6 h-6 text-emerald-400" />
+              <div className="bg-[var(--v2-mint)] rounded-lg p-3 flex-shrink-0">
+                <step.icon className="w-6 h-6 text-[var(--v2-green)]" />
               </div>
               <div>
                 <h2 className="text-xl font-semibold mb-2">{step.title}</h2>
-                <p className="text-white/60 leading-relaxed">{step.description}</p>
+                <p className="text-[var(--v2-body)] leading-relaxed">{step.description}</p>
               </div>
             </div>
           ))}
@@ -203,7 +203,7 @@ export default function HowItWorksPage() {
         <div className="mt-12 text-center">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-8 py-4 rounded-xl transition-colors"
+            className="inline-flex items-center gap-2 bg-[var(--v2-green)] hover:bg-[var(--v2-green-hover)] text-white font-semibold px-8 py-4 rounded-2xl transition-colors"
           >
             <Phone className="w-5 h-5" />
             See Katie in Action
@@ -213,12 +213,12 @@ export default function HowItWorksPage() {
         {/* FAQ — moved inside main for landmark consistency */}
         <section className="py-16 lg:py-24 mt-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">Frequently Asked Questions</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-[var(--v2-ink)]">Frequently Asked Questions</h2>
             <div className="space-y-4">
               {howItWorksFaqs.map((faq, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
-                  <h3 className="text-lg font-semibold mb-3 text-white">{faq.question}</h3>
-                  <p className="text-white/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+                  <h3 className="text-lg font-semibold mb-3 text-[var(--v2-ink)]">{faq.question}</h3>
+                  <p className="text-[var(--v2-body)] leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                 </div>
               ))}
             </div>

@@ -44,17 +44,17 @@ export default function SampleCallPage() {
           { name: "Sample Call", item: "https://whoza.ai/sample-call" },
         ]}
       />
-      <main className="min-h-screen bg-[var(--navy-900)] text-white pt-20 pb-16">
+      <main className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page pt-20 pb-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-3xl sm:text-4xl font-bold mb-6">Sample AI Call</h1>
-          <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-[var(--v2-body)] mb-8 max-w-2xl mx-auto">
             Hear Katie, whoza.ai's AI voice agent, answer a real trade enquiry in 64 seconds. 
             She captures all the details and sends them to your WhatsApp instantly. 
             Watch the demo on our homepage to see Katie in action.
           </p>
           <Link
             href="/"
-            className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-4 rounded-lg transition-all hover:scale-[1.02]"
+            className="inline-flex items-center justify-center bg-[var(--v2-green)] hover:bg-[var(--v2-green-hover)] text-white font-bold px-8 py-4 rounded-lg transition-all hover:scale-[1.02] v2-island"
           >
             Watch the Demo on Homepage
             <ArrowRight className="w-5 h-5 ml-2" />

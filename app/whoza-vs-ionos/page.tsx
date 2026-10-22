@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function WhozaVsIonosPage() {
   return (
-    <div className="min-h-screen bg-[var(--navy-900)] text-white">
+    <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header />
       <BreadcrumbSchema
         items={[
@@ -33,42 +33,42 @@ export default function WhozaVsIonosPage() {
 
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         <h1 className="text-3xl sm:text-4xl font-bold mb-6">
-          Whoza.ai vs <span className="text-[var(--katie-blue)]">IONOS</span>
+          Whoza.ai vs <span className="text-[var(--v2-green)]">IONOS</span>
         </h1>
-        <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
+        <p className="text-lg text-[var(--v2-body)] mb-8 max-w-2xl mx-auto">
           Full comparison coming soon. See how whoza.ai&apos;s AI call answering for UK tradespeople compares to IONOS.
         </p>
 
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-8 max-w-lg mx-auto mb-12">
+        <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-8 max-w-lg mx-auto mb-12">
           <h2 className="text-xl font-semibold mb-4">Try whoza.ai free for 7 days</h2>
-          <ul className="text-left text-white/70 space-y-3 mb-6">
+          <ul className="text-left text-[var(--v2-body)] space-y-3 mb-6">
             <li className="flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-[var(--rex-green)]" />
+              <Sparkles className="w-4 h-4 text-[var(--v2-green)]" />
               No credit card required
             </li>
             <li className="flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-[var(--rex-green)]" />
+              <Sparkles className="w-4 h-4 text-[var(--v2-green)]" />
               No contract — cancel anytime
             </li>
             <li className="flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-[var(--rex-green)]" />
+              <Sparkles className="w-4 h-4 text-[var(--v2-green)]" />
               Setup in 30 minutes
             </li>
             <li className="flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-[var(--rex-green)]" />
+              <Sparkles className="w-4 h-4 text-[var(--v2-green)]" />
               Keep your existing number
             </li>
           </ul>
           <a
             href="/"
-            className="inline-flex items-center justify-center gap-2 bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 text-white px-6 py-3 rounded-xl font-semibold transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-[var(--v2-green)] hover:bg-[var(--v2-green-hover)] text-white px-6 py-3 rounded-xl font-semibold transition-colors v2-island"
           >
             Start Free Trial
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>
 
-        <p className="text-sm text-white/40">
+        <p className="text-sm text-[var(--v2-muted)]">
           Comparison page will be updated with detailed feature comparison. Last updated: June 2026.
         </p>
       </main>

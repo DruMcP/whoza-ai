@@ -334,7 +334,7 @@ export default function AISearchForTradesPost() {
                 <li><a className="text-[#1155CC] underline" rel="noopener" target="_blank" href="https://www.localfalcon.com/blog/the-ai-visibility-crisis-why-83-percent-of-restaurants-dont-exist-in-chatgpt">LocalFalcon — The AI Visibility Crisis</a> (illustrative; US restaurants)</li>
                 <li><a className="text-[#1155CC] underline" rel="noopener" target="_blank" href="https://www.semrush.com/blog/ai-search-optimization-for-local-businesses/">Semrush — AI search / AI Overviews</a></li>
               </ul>
-              <p className="mt-3 text-xs italic text-[#8A94A2]">
+              <p className="mt-3 text-xs italic text-[var(--v2-muted)]">
                 A note on the numbers: UK adoption figures are from Ofcom&apos;s 2025 reports (fieldwork Sept–Nov 2025,
                 7,533 UK adults 16+). Consumer local-search figures are from BrightLocal&apos;s 2026 survey of ~1,000 US
                 consumers, treated as a leading indicator for the UK, not a UK measurement. Every statistic here has been

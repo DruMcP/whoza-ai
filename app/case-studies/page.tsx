@@ -73,7 +73,7 @@ export const revalidate = 3600
 
 export default function CaseStudiesPage() {
   return (
-    <div className="min-h-screen bg-[var(--navy-900)] text-white">
+    <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
@@ -83,13 +83,13 @@ export default function CaseStudiesPage() {
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
 
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="v2-eyebrow inline-flex items-center gap-2 mb-6">
             <Briefcase className="w-4 h-4" />
             Illustrative Examples
           </div>
           <h1 className="text-4xl font-bold mb-4">Case Studies</h1>
-          <p className="text-white/60 text-lg max-w-2xl">See how UK tradespeople are using whoza.ai to capture more leads, book more jobs, and never miss a call again.</p>
-          <p className="text-white/40 text-sm mt-4 max-w-2xl">
+          <p className="text-[var(--v2-body)] text-lg max-w-2xl">See how UK tradespeople are using whoza.ai to capture more leads, book more jobs, and never miss a call again.</p>
+          <p className="text-[var(--v2-muted)] text-sm mt-4 max-w-2xl">
             Figures shown are illustrative estimates based on typical industry benchmarks and customer-reported outcomes. 
             Results vary by business. No guarantee of specific revenue or savings is implied.
           </p>
@@ -97,12 +97,12 @@ export default function CaseStudiesPage() {
 
         <div className="grid gap-8">
           {caseStudies.map((study, i) => (
-            <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-8">
+            <div key={i} className="bg-white border border-[var(--v2-line)] rounded-2xl p-8">
               <div className="flex items-center gap-3 mb-4">
-                <div className="bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-full text-sm font-medium">
+                <div className="bg-[var(--v2-mint)] text-[var(--v2-green)] px-3 py-1 rounded-full text-sm font-medium">
                   {study.trade}
                 </div>
-                <div className="text-white/40 text-sm flex items-center gap-1">
+                <div className="text-[var(--v2-muted)] text-sm flex items-center gap-1">
                   <Users className="w-3 h-3" />
                   {study.location}
                 </div>
@@ -110,35 +110,35 @@ export default function CaseStudiesPage() {
               
               <h2 className="text-2xl font-bold mb-4">{study.headline}</h2>
               
-              <div className="bg-emerald-500/10 rounded-lg p-4 mb-6 inline-block">
+              <div className="bg-[var(--v2-mint)] rounded-lg p-4 mb-6 inline-block">
                 <div className="flex items-center gap-2">
-                  <TrendingUp className="w-5 h-5 text-emerald-400" />
-                  <span className="text-2xl font-bold text-emerald-400">{study.metric}</span>
+                  <TrendingUp className="w-5 h-5 text-[var(--v2-green)]" />
+                  <span className="text-2xl font-bold text-[var(--v2-green)]">{study.metric}</span>
                 </div>
-                <p className="text-emerald-300/70 text-sm mt-1">{study.metricLabel}</p>
+                <p className="text-[var(--v2-muted)] text-sm mt-1">{study.metricLabel}</p>
               </div>
               
-              <blockquote className="border-l-2 border-emerald-500/30 pl-4 mb-6">
-                <p className="text-white/70 italic leading-relaxed">"{study.quote}"</p>
+              <blockquote className="border-l-2 border-[var(--v2-green)]/30 pl-4 mb-6">
+                <p className="text-[var(--v2-body)] italic leading-relaxed">"{study.quote}"</p>
                 <div className="flex items-center gap-1 mt-3">
                   {[...Array(5)].map((_, j) => (
-                    <Star key={j} className="w-4 h-4 text-amber-400 fill-amber-400" />
+                    <Star key={j} className="w-4 h-4 text-amber-700 fill-amber-400" />
                   ))}
                 </div>
               </blockquote>
 
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-sm font-semibold text-white/80 mb-1">The Situation</h3>
-                  <p className="text-white/50 text-sm leading-relaxed">{study.situation}</p>
+                  <h3 className="text-sm font-semibold text-[var(--v2-body)] mb-1">The Situation</h3>
+                  <p className="text-[var(--v2-muted)] text-sm leading-relaxed">{study.situation}</p>
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold text-white/80 mb-1">What Changed</h3>
-                  <p className="text-white/50 text-sm leading-relaxed">{study.change}</p>
+                  <h3 className="text-sm font-semibold text-[var(--v2-body)] mb-1">What Changed</h3>
+                  <p className="text-[var(--v2-muted)] text-sm leading-relaxed">{study.change}</p>
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold text-white/80 mb-1">The Outcome</h3>
-                  <p className="text-white/50 text-sm leading-relaxed">{study.outcome}</p>
+                  <h3 className="text-sm font-semibold text-[var(--v2-body)] mb-1">The Outcome</h3>
+                  <p className="text-[var(--v2-muted)] text-sm leading-relaxed">{study.outcome}</p>
                 </div>
               </div>
             </div>
@@ -148,7 +148,7 @@ export default function CaseStudiesPage() {
         <div className="mt-16 text-center">
           <Link 
             href="/blog" 
-            className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors"
+            className="inline-flex items-center gap-2 text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] transition-colors"
           >
             <RefreshCw className="w-4 h-4" />
             Read more on the Blog

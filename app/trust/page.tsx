@@ -69,7 +69,7 @@ export const revalidate = 3600
 
 export default function TrustPage() {
   return (
-    <div className="min-h-screen bg-[var(--navy-900)] text-white">
+    <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
@@ -78,12 +78,12 @@ export default function TrustPage() {
 
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="v2-eyebrow inline-flex items-center gap-2 mb-6">
             <Shield className="w-4 h-4" />
             Your Data Is Protected
           </div>
           <h1 className="text-4xl font-bold mb-4">Trust & Security</h1>
-          <p className="text-white/60 text-lg max-w-2xl">
+          <p className="text-[var(--v2-body)] text-lg max-w-2xl">
             Security isn't a feature — it's the foundation. Here's how we protect your business, your customers, and every call Katie handles.
           </p>
         </div>
@@ -92,29 +92,29 @@ export default function TrustPage() {
           {trustItems.map((item, index) => (
             <div
               key={index}
-              className="bg-white/5 border border-white/10 rounded-xl p-6 flex items-start gap-5"
+              className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 flex items-start gap-5"
             >
-              <div className="bg-emerald-500/10 rounded-lg p-3 flex-shrink-0">
-                <item.icon className="w-6 h-6 text-emerald-400" />
+              <div className="bg-[var(--v2-mint)] rounded-lg p-3 flex-shrink-0">
+                <item.icon className="w-6 h-6 text-[var(--v2-green)]" />
               </div>
               <div>
                 <h2 className="text-xl font-semibold mb-2">{item.title}</h2>
-                <p className="text-white/60 leading-relaxed">{item.description}</p>
+                <p className="text-[var(--v2-body)] leading-relaxed">{item.description}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 bg-white/5 border border-white/10 rounded-xl p-6 text-center">
-          <p className="text-white/60 mb-4">
-            We publish <a href="/data" className="text-emerald-400 hover:underline">the source of every statistic we use</a>.
+        <div className="mt-12 bg-white border border-[var(--v2-line)] rounded-2xl p-6 text-center">
+          <p className="text-[var(--v2-body)] mb-4">
+            We publish <a href="/data" className="text-[var(--v2-green)] hover:underline">the source of every statistic we use</a>.
           </p>
-          <p className="text-white/60 mb-4">
+          <p className="text-[var(--v2-body)] mb-4">
             For security-related questions or to request our full security documentation, contact us directly.
           </p>
           <Link
             href="mailto:dru@whoza.ai"
-            className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-medium"
+            className="inline-flex items-center gap-2 text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] font-medium"
           >
             <Lock className="w-4 h-4" />
             Contact Security Team

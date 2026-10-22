@@ -75,9 +75,9 @@ export default function AIVsVirtualReceptionistPage() {
         { name: "AI vs Virtual Receptionist", item: "https://whoza.ai/ai-vs-virtual-receptionist" },
       ]} />
 
-      <main className="pb-24 lg:pb-0">
+      <main className="pb-24 lg:pb-0 v2-page">
         {/* Hero */}
-        <section className="dark-section relative overflow-hidden" style={{ background: "linear-gradient(135deg, #0F1729 0%, #1A1A2E 50%, #0F1729 100%)" }}>
+        <section className="dark-section relative overflow-hidden v2-island" style={{ background: "linear-gradient(135deg, #0F1729 0%, #1A1A2E 50%, #0F1729 100%)" }}>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
             <nav aria-label="Breadcrumb" className="mb-8">
               <ol className="flex items-center text-sm text-slate-400" style={{ listStyle: "none", padding: 0 }}>
@@ -95,7 +95,7 @@ export default function AIVsVirtualReceptionistPage() {
 
             <h1 className="text-4xl lg:text-5xl font-extrabold text-white mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
               AI Receptionist vs{" "}<br />
-              <span className="text-emerald-400">Virtual Receptionist: Which Is Best for UK Trades? (2026)</span>
+              <span className="text-[#6ee7b7]">Virtual Receptionist: Which Is Best for UK Trades? (2026)</span>
             </h1>
             <p className="text-lg text-slate-400 max-w-2xl mb-8">
               AI receptionist vs virtual receptionist: which is best for your UK trade business? We compare cost, 24/7 availability, WhatsApp delivery, and review collection with real data.
@@ -109,12 +109,12 @@ export default function AIVsVirtualReceptionistPage() {
         {/* Comparison Table */}
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Head-to-Head Comparison</h2>
-          <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
+          <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm">
             <table className="w-full text-left">
               <thead>
-                <tr className="bg-slate-900 text-white">
+                <tr className="bg-slate-900 text-white v2-island">
                   <th className="px-6 py-4 font-semibold">Feature</th>
-                  <th className="px-6 py-4 font-semibold text-emerald-400">AI Call Handler</th>
+                  <th className="px-6 py-4 font-semibold text-[#6ee7b7]">AI Call Handler</th>
                   <th className="px-6 py-4 font-semibold text-slate-400">Virtual Receptionist</th>
                   <th className="px-6 py-4 font-semibold">Winner</th>
                 </tr>
@@ -130,7 +130,7 @@ export default function AIVsVirtualReceptionistPage() {
                     <td className="px-6 py-4 text-slate-600">{row.human}</td>
                     <td className="px-6 py-4">
                       {row.winner === "ai" ? (
-                        <span className="inline-flex items-center gap-1 text-emerald-600 font-bold"><Bot className="w-4 h-4" /> AI</span>
+                        <span className="inline-flex items-center gap-1 text-[var(--v2-green)] font-bold"><Bot className="w-4 h-4" /> AI</span>
                       ) : (
                         <span className="inline-flex items-center gap-1 text-blue-600 font-bold"><UserCheck className="w-4 h-4" /> Human</span>
                       )}
@@ -146,31 +146,31 @@ export default function AIVsVirtualReceptionistPage() {
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Which Should You Choose?</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-emerald-50 rounded-xl p-8 border border-emerald-200">
+            <div className="bg-emerald-50 rounded-2xl p-8 border border-emerald-200">
               <div className="flex items-center gap-3 mb-6">
-                <Bot className="w-8 h-8 text-emerald-600" />
+                <Bot className="w-8 h-8 text-[var(--v2-green)]" />
                 <h3 className="text-2xl font-bold text-emerald-900">Choose AI If...</h3>
               </div>
               <ul className="space-y-3 text-emerald-800">
-                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> You miss calls while working on jobs</li>
-                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> You want to save £1,700+ per year</li>
-                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> You need 24/7 coverage without paying night rates</li>
-                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> You want WhatsApp delivery, not email summaries</li>
-                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> You handle 5+ calls per day</li>
-                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /> You want instant setup without training anyone</li>
+                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-[var(--v2-green)] shrink-0 mt-0.5" /> You miss calls while working on jobs</li>
+                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-[var(--v2-green)] shrink-0 mt-0.5" /> You want to save £1,700+ per year</li>
+                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-[var(--v2-green)] shrink-0 mt-0.5" /> You need 24/7 coverage without paying night rates</li>
+                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-[var(--v2-green)] shrink-0 mt-0.5" /> You want WhatsApp delivery, not email summaries</li>
+                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-[var(--v2-green)] shrink-0 mt-0.5" /> You handle 5+ calls per day</li>
+                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-[var(--v2-green)] shrink-0 mt-0.5" /> You want instant setup without training anyone</li>
               </ul>
             </div>
-            <div className="bg-blue-50 rounded-xl p-8 border border-blue-200">
+            <div className="bg-blue-50 rounded-2xl p-8 border border-blue-200">
               <div className="flex items-center gap-3 mb-6">
                 <UserCheck className="w-8 h-8 text-blue-600" />
                 <h3 className="text-2xl font-bold text-blue-900">Choose Human If...</h3>
               </div>
               <ul className="space-y-3 text-blue-800">
-                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" /> You handle sensitive/emotional enquiries (funerals, counselling)</li>
-                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" /> Your customers expect white-glove personal service</li>
-                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" /> You get fewer than 3 calls per week</li>
-                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" /> You prefer building personal relationships with every caller</li>
-                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" /> Budget is not a primary concern</li>
+                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" /> You handle sensitive/emotional enquiries (funerals, counselling)</li>
+                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" /> Your customers expect white-glove personal service</li>
+                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" /> You get fewer than 3 calls per week</li>
+                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" /> You prefer building personal relationships with every caller</li>
+                <li className="flex items-start gap-2"><Check className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" /> Budget is not a primary concern</li>
               </ul>
             </div>
           </div>
@@ -179,27 +179,27 @@ export default function AIVsVirtualReceptionistPage() {
         {/* Cost breakdown */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">Cost Breakdown: 12-Month Comparison</h2>
-          <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
             <div className="grid sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-slate-200">
               <div className="p-8">
                 <div className="flex items-center gap-2 mb-4">
-                  <Bot className="w-6 h-6 text-emerald-600" />
+                  <Bot className="w-6 h-6 text-[var(--v2-green)]" />
                   <h3 className="text-xl font-bold text-emerald-700">AI Call Handler</h3>
                 </div>
                 <div className="space-y-3 text-sm">
                   <div className="flex justify-between"><span>Monthly fee</span><span className="font-semibold">£59</span></div>
-                  <div className="flex justify-between"><span>Setup cost</span><span className="font-semibold text-emerald-600">£0</span></div>
-                  <div className="flex justify-between"><span>Overage charges</span><span className="font-semibold text-emerald-600">None</span></div>
-                  <div className="flex justify-between"><span>Contract</span><span className="font-semibold text-emerald-600">None</span></div>
+                  <div className="flex justify-between"><span>Setup cost</span><span className="font-semibold text-[var(--v2-green)]">£0</span></div>
+                  <div className="flex justify-between"><span>Overage charges</span><span className="font-semibold text-[var(--v2-green)]">None</span></div>
+                  <div className="flex justify-between"><span>Contract</span><span className="font-semibold text-[var(--v2-green)]">None</span></div>
                   <div className="border-t border-slate-200 pt-3 flex justify-between text-lg font-bold">
                     <span>12-month total</span>
-                    <span className="text-emerald-600">£708</span>
+                    <span className="text-[var(--v2-green)]">£708</span>
                   </div>
                 </div>
               </div>
               <div className="p-8">
                 <div className="flex items-center gap-2 mb-4">
-                  <UserCheck className="w-6 h-6 text-slate-400" />
+                  <UserCheck className="w-6 h-6 text-[var(--v2-muted)]" />
                   <h3 className="text-xl font-bold text-slate-600">Virtual Receptionist</h3>
                 </div>
                 <div className="space-y-3 text-sm">
@@ -225,7 +225,7 @@ export default function AIVsVirtualReceptionistPage() {
         {/* Cost Comparison Detail */}
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">Cost Comparison: 12 Months Side by Side</h2>
-          <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-8">
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8">
             <p className="text-slate-600 mb-6">
               A full-time human receptionist in the UK costs between £20,000 and £30,000 per year in salary. But the true cost is much higher. Add National Insurance, pension contributions, recruitment fees, training, desk space, phone, computer, and software licences. The total first-year cost is £26,000 to £35,000.
             </p>
@@ -243,20 +243,20 @@ export default function AIVsVirtualReceptionistPage() {
                   <tr className="bg-slate-100">
                     <th className="px-4 py-3 text-left font-semibold text-slate-900">Cost Factor</th>
                     <th className="px-4 py-3 text-left font-semibold text-slate-600">Human Receptionist</th>
-                    <th className="px-4 py-3 text-left font-semibold text-emerald-600">AI Call Handler</th>
+                    <th className="px-4 py-3 text-left font-semibold text-[var(--v2-green)]">AI Call Handler</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
-                  <tr><td className="px-4 py-3 font-medium">Annual cost</td><td className="px-4 py-3 text-slate-600">£26,000-£35,000</td><td className="px-4 py-3 text-emerald-600 font-semibold">£708-£4,788</td></tr>
-                  <tr><td className="px-4 py-3 font-medium">Monthly cost</td><td className="px-4 py-3 text-slate-600">£1,667-£2,500</td><td className="px-4 py-3 text-emerald-600 font-semibold">£59-£399</td></tr>
-                  <tr><td className="px-4 py-3 font-medium">Setup cost</td><td className="px-4 py-3 text-slate-600">£2,000-£5,000</td><td className="px-4 py-3 text-emerald-600 font-semibold">£0</td></tr>
-                  <tr><td className="px-4 py-3 font-medium">Ongoing overheads</td><td className="px-4 py-3 text-slate-600">£300-£600/year</td><td className="px-4 py-3 text-emerald-600 font-semibold">£0</td></tr>
+                  <tr><td className="px-4 py-3 font-medium">Annual cost</td><td className="px-4 py-3 text-slate-600">£26,000-£35,000</td><td className="px-4 py-3 text-[var(--v2-green)] font-semibold">£708-£4,788</td></tr>
+                  <tr><td className="px-4 py-3 font-medium">Monthly cost</td><td className="px-4 py-3 text-slate-600">£1,667-£2,500</td><td className="px-4 py-3 text-[var(--v2-green)] font-semibold">£59-£399</td></tr>
+                  <tr><td className="px-4 py-3 font-medium">Setup cost</td><td className="px-4 py-3 text-slate-600">£2,000-£5,000</td><td className="px-4 py-3 text-[var(--v2-green)] font-semibold">£0</td></tr>
+                  <tr><td className="px-4 py-3 font-medium">Ongoing overheads</td><td className="px-4 py-3 text-slate-600">£300-£600/year</td><td className="px-4 py-3 text-[var(--v2-green)] font-semibold">£0</td></tr>
                 </tbody>
               </table>
             </div>
             <div className="mt-6 bg-slate-50 rounded-lg p-4 border border-slate-200">
               <p className="text-slate-600 text-sm">
-                <strong>Real story:</strong> A Glasgow joiner spent two weeks comparing virtual receptionist prices and documented his findings. <a href="/for-joiners" className="text-emerald-600 hover:text-emerald-700 font-semibold underline">Read his honest comparison →</a>
+                <strong>Real story:</strong> A Glasgow joiner spent two weeks comparing virtual receptionist prices and documented his findings. <a href="/for-joiners" className="text-[var(--v2-green)] hover:text-emerald-700 font-semibold underline">Read his honest comparison →</a>
               </p>
             </div>
           </div>
@@ -265,7 +265,7 @@ export default function AIVsVirtualReceptionistPage() {
         {/* Availability */}
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">Availability: 40 Hours vs 168 Hours Per Week</h2>
-          <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-8">
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8">
             <p className="text-slate-600 mb-4">
               A human receptionist works 40 hours per week. Usually 9am to 5pm, Monday to Friday. They take lunch breaks, sick days, and holidays. They do not work evenings, weekends, or bank holidays. When they go home, your phone goes unanswered.
             </p>
@@ -287,24 +287,24 @@ export default function AIVsVirtualReceptionistPage() {
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">Call Quality: Consistency vs Variability</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6">
+            <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
               <h3 className="text-lg font-semibold text-slate-900 mb-4">Human Receptionist</h3>
               <ul className="space-y-3 text-slate-600">
                 <li className="flex items-start gap-2"><span className="text-red-500 mt-1">•</span>Good days and bad days</li>
                 <li className="flex items-start gap-2"><span className="text-red-500 mt-1">•</span>Gets tired, distracted, rushed</li>
                 <li className="flex items-start gap-2"><span className="text-red-500 mt-1">•</span>Forgets to ask certain questions</li>
                 <li className="flex items-start gap-2"><span className="text-red-500 mt-1">•</span>Interprets instructions differently</li>
-                <li className="flex items-start gap-2"><span className="text-emerald-500 mt-1">•</span>Warm, empathetic connection</li>
+                <li className="flex items-start gap-2"><span className="text-[var(--v2-green)] mt-1">•</span>Warm, empathetic connection</li>
               </ul>
             </div>
-            <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6">
+            <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
               <h3 className="text-lg font-semibold text-slate-900 mb-4">AI Call Handler</h3>
               <ul className="space-y-3 text-slate-600">
-                <li className="flex items-start gap-2"><span className="text-emerald-500 mt-1">•</span>Consistent by design — every call, every time</li>
-                <li className="flex items-start gap-2"><span className="text-emerald-500 mt-1">•</span>Never has a bad day or mood</li>
-                <li className="flex items-start gap-2"><span className="text-emerald-500 mt-1">•</span>Never forgets to ask for postcode</li>
-                <li className="flex items-start gap-2"><span className="text-emerald-500 mt-1">•</span>Captures details accurately every time</li>
-                <li className="flex items-start gap-2"><span className="text-emerald-500 mt-1">•</span>No training required — knows your business from day one</li>
+                <li className="flex items-start gap-2"><span className="text-[var(--v2-green)] mt-1">•</span>Consistent by design — every call, every time</li>
+                <li className="flex items-start gap-2"><span className="text-[var(--v2-green)] mt-1">•</span>Never has a bad day or mood</li>
+                <li className="flex items-start gap-2"><span className="text-[var(--v2-green)] mt-1">•</span>Never forgets to ask for postcode</li>
+                <li className="flex items-start gap-2"><span className="text-[var(--v2-green)] mt-1">•</span>Captures details accurately every time</li>
+                <li className="flex items-start gap-2"><span className="text-[var(--v2-green)] mt-1">•</span>No training required — knows your business from day one</li>
               </ul>
             </div>
           </div>
@@ -316,7 +316,7 @@ export default function AIVsVirtualReceptionistPage() {
         {/* Customer Experience */}
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">Customer Experience: What Do Callers Actually Prefer?</h2>
-          <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-8">
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8">
             <p className="text-slate-600 mb-4">
               The alternative for most trade businesses is not a human receptionist. It is voicemail. And voicemail is terrible. 69% of callers don't leave a message. Of the 31% who leave a message, most never get a callback because tradespeople forget to check voicemail or call back hours later.
             </p>
@@ -337,7 +337,7 @@ export default function AIVsVirtualReceptionistPage() {
         {/* Scalability */}
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">Scalability: What Happens When You Grow?</h2>
-          <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-8">
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8">
             <p className="text-slate-600 mb-6">
               Growth creates a dilemma for trade businesses with human receptionists. Here is how each scenario plays out:
             </p>
@@ -367,7 +367,7 @@ export default function AIVsVirtualReceptionistPage() {
         {/* When Human is Better */}
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">When Is a Human Receptionist the Better Choice?</h2>
-          <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-8">
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8">
             <p className="text-slate-600 mb-6">
               Despite the advantages of AI, there are situations where a human receptionist makes more sense. We are honest about this because AI is not the right choice for every business.
             </p>
@@ -396,12 +396,12 @@ export default function AIVsVirtualReceptionistPage() {
         </section>
 
         {/* FAQ */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
-                <div key={idx} className="bg-white rounded-xl border border-slate-200 shadow-sm p-6">
+                <div key={idx} className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
                   <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
                   <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
                 </div>
@@ -417,7 +417,7 @@ export default function AIVsVirtualReceptionistPage() {
             Join UK tradespeople saving £2,900+ per year with whoza.ai.
             7-day free trial — no credit card required.
           </p>
-          <a href="/pricing" className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-emerald-700 transition-colors shadow-lg">
+          <a href="/pricing" className="inline-flex items-center gap-2 bg-[var(--v2-green)] text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-[var(--v2-green-hover)] transition-colors shadow-lg v2-island">
             Try AI Call Handling Free <ArrowRight className="w-5 h-5" />
           </a>
         </section>

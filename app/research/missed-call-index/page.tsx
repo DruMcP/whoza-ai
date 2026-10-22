@@ -142,7 +142,7 @@ export const revalidate = 3600
 
 export default function MissedCallIndexPage() {
   return (
-    <div className="min-h-screen bg-[var(--navy-900)] text-white">
+    <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header variant="dark" />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai/" },
@@ -156,61 +156,61 @@ export default function MissedCallIndexPage() {
       <main id="main-content" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero */}
         <header className="mb-12">
-          <p className="text-emerald-400 font-semibold text-sm uppercase tracking-widest mb-3">Whoza Research</p>
+          <p className="text-[var(--v2-green)] font-semibold text-sm uppercase tracking-widest mb-3">Whoza Research</p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">The Missed Call Index — UK Trades Missed-Call Research</h1>
-          <p className="text-white/60 text-lg">
+          <p className="text-[var(--v2-body)] text-lg">
             Original analysis of 10,000+ trade calls, combined with named third-party sources. By{" "}
-            <span className="text-white font-medium">Dru McPherson</span>, Founder &amp; CEO, whoza.ai.
+            <span className="text-[var(--v2-ink)] font-medium">Dru McPherson</span>, Founder &amp; CEO, whoza.ai.
           </p>
         </header>
 
         {/* Intro */}
         <section className="mb-12">
-          <p className="intro-paragraph text-white/80 leading-relaxed text-lg mb-4">
+          <p className="intro-paragraph text-[var(--v2-body)] leading-relaxed text-lg mb-4">
             A third of calls to UK small businesses go unanswered. For trades, it is worse: when you are under a
             sink, up a ladder, or on scaffolding, you physically cannot answer the phone. The Moneypenny Small
             Business Call Report found 33% of small businesses fail to answer incoming calls during working hours —
             rising to 89% after 6 PM and 94% overnight.
           </p>
-          <p className="text-white/80 leading-relaxed text-lg mb-4">
+          <p className="text-[var(--v2-body)] leading-relaxed text-lg mb-4">
             The consequences are measurable. 69% of voicemail callers hang up without leaving a message, and
             85% of missed callers never ring back — they call your competitor instead. This index models what
             that costs, trade by trade, month by month.
           </p>
-          <p className="text-white/80 leading-relaxed text-lg">
+          <p className="text-[var(--v2-body)] leading-relaxed text-lg">
             For the quarterly model of revenue at risk across the UK trades sector (£2.3bn), see the{" "}
-            <Link href="/research/missed-call-index/q3-2026" className="text-emerald-400 hover:underline">Missed Call Index — Q3 2026</Link>.
+            <Link href="/research/missed-call-index/q3-2026" className="text-[var(--v2-green)] hover:underline">Missed Call Index — Q3 2026</Link>.
             Every statistic across our research is sourced in our{" "}
-            <Link href="/data" className="text-emerald-400 hover:underline">Evidence Base</Link>.
+            <Link href="/data" className="text-[var(--v2-green)] hover:underline">Evidence Base</Link>.
           </p>
         </section>
 
         {/* Suggested citation + Q3 edition */}
-        <section id="citation" className="mb-12 bg-white/5 border border-white/10 rounded-xl p-6 scroll-mt-24">
+        <section id="citation" className="mb-12 bg-white border border-[var(--v2-line)] rounded-2xl p-6 scroll-mt-24">
           <div className="grid sm:grid-cols-2 gap-6">
             <div>
-              <h2 className="font-semibold text-white mb-2 flex items-center gap-2">
+              <h2 className="font-semibold text-[var(--v2-ink)] mb-2 flex items-center gap-2">
                 Suggested citation
-                <a href="#citation" className="text-emerald-400/60 hover:text-emerald-400 text-sm opacity-0 hover:opacity-100 transition-opacity" aria-label="Link to citation section">#</a>
+                <a href="#citation" className="text-[var(--v2-muted)] hover:text-[var(--v2-green)] text-sm opacity-0 hover:opacity-100 transition-opacity" aria-label="Link to citation section">#</a>
               </h2>
-              <p className="text-white/60 text-sm leading-relaxed">
+              <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                 WHOZA AI LTD, <em>The Missed Call Index</em> (Q3 2026). Available at:{" "}
-                <span className="text-white/80">whoza.ai/research/missed-call-index</span>
+                <span className="text-[var(--v2-body)]">whoza.ai/research/missed-call-index</span>
               </p>
-              <p className="text-white/60 text-sm leading-relaxed mt-2">
+              <p className="text-[var(--v2-body)] text-sm leading-relaxed mt-2">
                 Press and media enquiries:{" "}
-                <a href="mailto:press@whoza.ai" className="text-emerald-400 hover:underline">press@whoza.ai</a>
+                <a href="mailto:press@whoza.ai" className="text-[var(--v2-green)] hover:underline">press@whoza.ai</a>
               </p>
             </div>
             <div id="q3-2026" className="scroll-mt-24">
-              <h2 className="font-semibold text-white mb-2 flex items-center gap-2">
+              <h2 className="font-semibold text-[var(--v2-ink)] mb-2 flex items-center gap-2">
                 Quarterly editions
-                <a href="#q3-2026" className="text-emerald-400/60 hover:text-emerald-400 text-sm opacity-0 hover:opacity-100 transition-opacity" aria-label="Link to quarterly editions section">#</a>
+                <a href="#q3-2026" className="text-[var(--v2-muted)] hover:text-[var(--v2-green)] text-sm opacity-0 hover:opacity-100 transition-opacity" aria-label="Link to quarterly editions section">#</a>
               </h2>
-              <p className="text-white/60 text-sm leading-relaxed">
+              <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                 This page is the standing index. The quarterly model of sector-wide revenue at risk is published
                 per edition — the latest:{" "}
-                <Link href="/research/missed-call-index/q3-2026" className="text-emerald-400 hover:underline">Missed Call Index Q3 2026: Findings and Data</Link> (£2.3bn model).
+                <Link href="/research/missed-call-index/q3-2026" className="text-[var(--v2-green)] hover:underline">Missed Call Index Q3 2026: Findings and Data</Link> (£2.3bn model).
               </p>
             </div>
           </div>
@@ -218,36 +218,36 @@ export default function MissedCallIndexPage() {
 
         {/* Stat band */}
         <section id="unanswered-rate" className="grid sm:grid-cols-3 gap-4 mb-16 scroll-mt-24">
-          <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
-            <p className="text-4xl font-bold text-emerald-400 mb-2">33%</p>
-            <p className="text-white/60 text-sm">of incoming calls to UK small businesses go unanswered during working hours (Moneypenny, 2016)</p>
+          <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 text-center">
+            <p className="text-4xl font-bold text-[var(--v2-green)] mb-2">33%</p>
+            <p className="text-[var(--v2-body)] text-sm">of incoming calls to UK small businesses go unanswered during working hours (Moneypenny, 2016)</p>
           </div>
-          <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
-            <p className="text-4xl font-bold text-emerald-400 mb-2">69%</p>
-            <p className="text-white/60 text-sm">of callers who reach voicemail hang up without leaving a message (Moneypenny, 2016)</p>
+          <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 text-center">
+            <p className="text-4xl font-bold text-[var(--v2-green)] mb-2">69%</p>
+            <p className="text-[var(--v2-body)] text-sm">of callers who reach voicemail hang up without leaving a message (Moneypenny, 2016)</p>
           </div>
-          <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
-            <p className="text-4xl font-bold text-emerald-400 mb-2">85%</p>
-            <p className="text-white/60 text-sm">of callers who can&apos;t reach a business never call back — they contact a competitor instead</p>
+          <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 text-center">
+            <p className="text-4xl font-bold text-[var(--v2-green)] mb-2">85%</p>
+            <p className="text-[var(--v2-body)] text-sm">of callers who can&apos;t reach a business never call back — they contact a competitor instead</p>
           </div>
         </section>
 
         {/* Per-trade cost table */}
         <section id="cost-per-trade" className="mb-16 scroll-mt-24">
           <h2 className="text-3xl font-bold mb-6 flex items-center gap-3 group">
-            <PoundSterling className="w-7 h-7 text-emerald-400" />
+            <PoundSterling className="w-7 h-7 text-[var(--v2-green)]" />
             The Annual Cost of Missed Calls, by Trade
-            <a href="#cost-per-trade" className="text-emerald-400/60 hover:text-emerald-400 text-lg opacity-0 group-hover:opacity-100 transition-opacity" aria-label="Link to per-trade cost section">#</a>
+            <a href="#cost-per-trade" className="text-[var(--v2-muted)] hover:text-[var(--v2-green)] text-lg opacity-0 group-hover:opacity-100 transition-opacity" aria-label="Link to per-trade cost section">#</a>
           </h2>
-          <p className="text-white/70 leading-relaxed mb-6">
+          <p className="text-[var(--v2-body)] leading-relaxed mb-6">
             Modelled from missed-call rates, average job values and typical conversion rates. Emergency trades
             with high-value jobs lose disproportionately more than scheduled trades — and emergency calls
             command 40–60% premiums over standard rates.
           </p>
-          <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+          <div className="bg-white border border-[var(--v2-line)] rounded-2xl overflow-hidden">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-white/10 text-left text-white/50">
+                <tr className="border-b border-[var(--v2-line)] text-left text-[var(--v2-muted)]">
                   <th className="px-6 py-4 font-medium">Trade</th>
                   <th className="px-6 py-4 font-medium">Avg Job Value</th>
                   <th className="px-6 py-4 font-medium">Missed / Week</th>
@@ -255,20 +255,20 @@ export default function MissedCallIndexPage() {
                   <th className="px-6 py-4 font-medium">Annual Loss</th>
                 </tr>
               </thead>
-              <tbody className="text-white/70">
+              <tbody className="text-[var(--v2-body)]">
                 {tradeData.map((t, i) => (
-                  <tr key={t.trade} className={i % 2 === 0 ? "bg-white/5" : "bg-white/[0.02]"}>
+                  <tr key={t.trade} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
                     <td className="px-6 py-4 font-medium">{t.trade}</td>
                     <td className="px-6 py-4">£{t.avgJob.toLocaleString()}</td>
                     <td className="px-6 py-4">{t.missedWeekly}</td>
                     <td className="px-6 py-4">{(t.conversion * 100).toFixed(0)}%</td>
-                    <td className="px-6 py-4 font-bold text-red-400">£{t.annualLoss.toLocaleString()}</td>
+                    <td className="px-6 py-4 font-bold text-red-600">£{t.annualLoss.toLocaleString()}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <p className="text-white/50 text-sm mt-3">
+          <p className="text-[var(--v2-muted)] text-sm mt-3">
             Based on the Moneypenny Small Business Call Report (33% unanswered rate) and Checkatrade/ONS average
             job values. Individual results vary by area and specialism.
           </p>
@@ -277,55 +277,55 @@ export default function MissedCallIndexPage() {
         {/* National cost — folded from the retired True Cost of Missed Calls report */}
         <section id="national-cost" className="mb-16 scroll-mt-24">
           <h2 className="text-3xl font-bold mb-6 flex items-center gap-3 group">
-            <TrendingUp className="w-7 h-7 text-emerald-400" />
+            <TrendingUp className="w-7 h-7 text-[var(--v2-green)]" />
             What It Costs: The National Picture
-            <a href="#national-cost" className="text-emerald-400/60 hover:text-emerald-400 text-lg opacity-0 group-hover:opacity-100 transition-opacity" aria-label="Link to national cost section">#</a>
+            <a href="#national-cost" className="text-[var(--v2-muted)] hover:text-[var(--v2-green)] text-lg opacity-0 group-hover:opacity-100 transition-opacity" aria-label="Link to national cost section">#</a>
           </h2>
-          <p className="text-white/70 leading-relaxed mb-6">
+          <p className="text-[var(--v2-body)] leading-relaxed mb-6">
             Scaling the per-trade model nationally: the UK has approximately 885,000 trades businesses (ONS UK
             Business Demography, 2024). At the Moneypenny baseline of 33% of calls unanswered — rising to 34%
             for businesses with 2–5 employees (Replicant AI, 2024) — the sector loses an estimated{" "}
-            <strong className="text-white">£2.3 billion per year</strong> to missed calls. The average sole trader
-            loses <strong className="text-white">£18,400 a year</strong> (range £6,200–£47,000 depending on trade,
+            <strong className="text-[var(--v2-ink)]">£2.3 billion per year</strong> to missed calls. The average sole trader
+            loses <strong className="text-[var(--v2-ink)]">£18,400 a year</strong> (range £6,200–£47,000 depending on trade,
             call volume and average job value).
           </p>
-          <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden mb-6">
+          <div className="bg-white border border-[var(--v2-line)] rounded-2xl overflow-hidden mb-6">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-white/10 text-left text-white/50">
+                <tr className="border-b border-[var(--v2-line)] text-left text-[var(--v2-muted)]">
                   <th className="px-6 py-4 font-medium">Model input</th>
                   <th className="px-6 py-4 font-medium">Value</th>
                   <th className="px-6 py-4 font-medium">Source</th>
                 </tr>
               </thead>
-              <tbody className="text-white/70">
-                <tr className="bg-white/5"><td className="px-6 py-4">UK trades businesses</td><td className="px-6 py-4">885,000</td><td className="px-6 py-4">ONS UK Business Demography, 2024</td></tr>
+              <tbody className="text-[var(--v2-body)]">
+                <tr className="bg-white"><td className="px-6 py-4">UK trades businesses</td><td className="px-6 py-4">885,000</td><td className="px-6 py-4">ONS UK Business Demography, 2024</td></tr>
                 <tr><td className="px-6 py-4">Average annual loss per business</td><td className="px-6 py-4">£2,600</td><td className="px-6 py-4">Modelled (FMB State of Trade Survey Q1 2025; Ofcom SME Communications Habits 2024)</td></tr>
-                <tr className="bg-white/5"><td className="px-6 py-4">Missed-call rate, working hours</td><td className="px-6 py-4">33%</td><td className="px-6 py-4">Moneypenny Small Business Call Report, 2016</td></tr>
+                <tr className="bg-white"><td className="px-6 py-4">Missed-call rate, working hours</td><td className="px-6 py-4">33%</td><td className="px-6 py-4">Moneypenny Small Business Call Report, 2016</td></tr>
                 <tr><td className="px-6 py-4">Missed-call rate, 2–5 employee firms</td><td className="px-6 py-4">34%</td><td className="px-6 py-4">Replicant AI, 2024</td></tr>
-                <tr className="bg-white/5"><td className="px-6 py-4">Implied sector-wide annual loss</td><td className="px-6 py-4 font-bold text-red-400">£2.3 billion</td><td className="px-6 py-4">885,000 × £2,600</td></tr>
+                <tr className="bg-white"><td className="px-6 py-4">Implied sector-wide annual loss</td><td className="px-6 py-4 font-bold text-red-600">£2.3 billion</td><td className="px-6 py-4">885,000 × £2,600</td></tr>
               </tbody>
             </table>
           </div>
-          <p className="text-white/70 leading-relaxed mb-6">
+          <p className="text-[var(--v2-body)] leading-relaxed mb-6">
             The compound effect makes it worse. A single missed call is not just one lost job: it is the immediate
             job value, plus 2–3 repeat jobs over five years, plus 1–2 referrals, plus the Google review the
             completed job would have generated. Combined, one missed call can represent{" "}
-            <strong className="text-white">£1,500–£3,000 in lifetime revenue</strong>.
+            <strong className="text-[var(--v2-ink)]">£1,500–£3,000 in lifetime revenue</strong>.
           </p>
           <div className="grid sm:grid-cols-2 gap-4 mb-6">
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-              <h3 className="font-semibold text-white mb-2">The weekly rhythm: when calls get missed</h3>
-              <ul className="text-white/60 text-sm leading-relaxed space-y-1 list-disc list-inside">
+            <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+              <h3 className="font-semibold text-[var(--v2-ink)] mb-2">The weekly rhythm: when calls get missed</h3>
+              <ul className="text-[var(--v2-body)] text-sm leading-relaxed space-y-1 list-disc list-inside">
                 <li>Monday 8–10am: 40–50% missed (weekend emergency backlog)</li>
                 <li>Lunch 12–2pm: 35–45% missed; emergency-call abandonment peaks at 34% between 12:00–14:00</li>
                 <li>Friday 3–5pm: 30–40% missed (weekend urgency calls)</li>
                 <li>Outside business hours: 70–85% missed (no coverage at all)</li>
               </ul>
             </div>
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-              <h3 className="font-semibold text-white mb-2">The hidden costs nobody budgets for</h3>
-              <ul className="text-white/60 text-sm leading-relaxed space-y-1 list-disc list-inside">
+            <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+              <h3 className="font-semibold text-[var(--v2-ink)] mb-2">The hidden costs nobody budgets for</h3>
+              <ul className="text-[var(--v2-body)] text-sm leading-relaxed space-y-1 list-disc list-inside">
                 <li>Returning voicemail and chasing callbacks: £6,000–£15,000/yr in lost productive time (Replicant AI, 2024)</li>
                 <li>The voicemail tax: 69% of callers who reach voicemail leave no message (Moneypenny, 2016)</li>
                 <li>Competitive displacement: 24% of missed calls result in a competitor being contacted within 15 minutes (operator surveys, 2025)</li>
@@ -333,22 +333,22 @@ export default function MissedCallIndexPage() {
             </div>
           </div>
           <div className="space-y-4 mb-6">
-            <blockquote className="border-l-4 border-emerald-400 pl-4 italic text-white/70">
+            <blockquote className="border-l-4 border-[var(--v2-green)] pl-4 italic text-[var(--v2-body)]">
               &ldquo;I was getting 40-50 calls a week and answering maybe 15 of them. The rest went to voicemail,
               and I knew most of those people never called back. I was working 60-hour weeks and still felt like
               I was treading water.&rdquo;
-              <footer className="text-sm text-white/50 mt-2 not-italic">— Plumbing contractor, South London</footer>
+              <footer className="text-sm text-[var(--v2-muted)] mt-2 not-italic">— Plumbing contractor, South London</footer>
             </blockquote>
-            <blockquote className="border-l-4 border-emerald-400 pl-4 italic text-white/70">
+            <blockquote className="border-l-4 border-[var(--v2-green)] pl-4 italic text-[var(--v2-body)]">
               &ldquo;Boilers don&apos;t break between 9 and 5. I used to get calls at 8pm from people with no
               heating, and I&apos;d either miss them because I was still on a job, or I&apos;d be too tired to deal
               with it properly. The emergency calls are the best-paying work, and I was giving them away.&rdquo;
-              <footer className="text-sm text-white/50 mt-2 not-italic">— Gas engineer, Manchester</footer>
+              <footer className="text-sm text-[var(--v2-muted)] mt-2 not-italic">— Gas engineer, Manchester</footer>
             </blockquote>
           </div>
-          <p className="text-white/70 leading-relaxed">
+          <p className="text-[var(--v2-body)] leading-relaxed">
             Want your own number? The model behind this table powers our free{" "}
-            <Link href="/missed-calls-cost-calculator" className="text-emerald-400 hover:underline">lost jobs calculator</Link> — enter
+            <Link href="/missed-calls-cost-calculator" className="text-[var(--v2-green)] hover:underline">lost jobs calculator</Link> — enter
             your trade, call volume and average job value to see what unanswered calls cost your business.
           </p>
         </section>
@@ -356,40 +356,40 @@ export default function MissedCallIndexPage() {
         {/* Seasonal patterns */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-            <Calendar className="w-7 h-7 text-emerald-400" />
+            <Calendar className="w-7 h-7 text-[var(--v2-green)]" />
             When the Losses Happen: Seasonal Patterns
           </h2>
-          <p className="text-white/70 leading-relaxed mb-6">
+          <p className="text-[var(--v2-body)] leading-relaxed mb-6">
             Missed calls are not evenly spread. Based on data from 340 UK trade businesses, losses concentrate
             in predictable windows — which means they are also predictably recoverable.
           </p>
           <div className="space-y-4 mb-8">
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-              <h3 className="font-semibold text-white mb-2">Winter: the heating surge</h3>
-              <p className="text-white/60 text-sm leading-relaxed">
+            <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+              <h3 className="font-semibold text-[var(--v2-ink)] mb-2">Winter: the heating surge</h3>
+              <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                 Boiler breakdown enquiries spike by 340% during cold snaps. Heating engineers lose the most of
                 any trade — £3.1M across our sample in winter alone — and January alone accounts for 34% of their
                 annual missed-call losses. Average emergency job values rise to £280–£450.
               </p>
             </div>
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-              <h3 className="font-semibold text-white mb-2">Spring and summer: roofing and outdoor trades</h3>
-              <p className="text-white/60 text-sm leading-relaxed">
+            <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+              <h3 className="font-semibold text-[var(--v2-ink)] mb-2">Spring and summer: roofing and outdoor trades</h3>
+              <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                 Summer storms drive roofing emergencies (£1.8M in our sample), while landscapers and builders peak
                 with the outdoor season. Roofers have the highest per-missed-call cost — one £850 job lost is a
                 £850 job lost.
               </p>
             </div>
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-              <h3 className="font-semibold text-white mb-2">November: the pre-Christmas rush</h3>
-              <p className="text-white/60 text-sm leading-relaxed">
+            <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+              <h3 className="font-semibold text-[var(--v2-ink)] mb-2">November: the pre-Christmas rush</h3>
+              <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                 The third peak of the year, across all trades, as homeowners rush to get work done before the
                 holidays.
               </p>
             </div>
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-              <h3 className="font-semibold text-white mb-2">Mondays and out-of-hours: the weekly rhythm</h3>
-              <p className="text-white/60 text-sm leading-relaxed">
+            <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+              <h3 className="font-semibold text-[var(--v2-ink)] mb-2">Mondays and out-of-hours: the weekly rhythm</h3>
+              <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                 Monday mornings are the single worst weekly window across every trade. After 6 PM the unanswered
                 rate hits 89%, overnight 94%, and weekends 67% — precisely when emergency trades (heating, roofing,
                 locksmiths) take their highest-value calls.
@@ -401,18 +401,18 @@ export default function MissedCallIndexPage() {
         {/* Speed to lead */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-            <Zap className="w-7 h-7 text-emerald-400" />
+            <Zap className="w-7 h-7 text-[var(--v2-green)]" />
             Why Speed Decides Who Gets the Job
           </h2>
-          <p className="text-white/70 leading-relaxed mb-6">
+          <p className="text-[var(--v2-body)] leading-relaxed mb-6">
             The single biggest factor in recovering a missed call is how fast you respond. Returning a missed call
             within 5 minutes increases conversion by 391%. After 30 minutes, your odds of booking the job drop by
             80%. This is why voicemail fails so expensively — the average tradesperson checks voicemail hours
             later, long after the caller has booked someone else.
           </p>
-          <div className="bg-emerald-500/5 border border-emerald-500/20 rounded-xl p-6">
-            <p className="text-white/80 text-sm leading-relaxed">
-              <strong className="text-emerald-400">The implication:</strong> the fix is not working harder at
+          <div className="bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-6">
+            <p className="text-[var(--v2-body)] text-sm leading-relaxed">
+              <strong className="text-[var(--v2-green)]">The implication:</strong> the fix is not working harder at
               callbacks — it is never missing the call in the first place. AI answering responds in under
               3 rings, 24/7, including bank holidays, and delivers the qualified enquiry to WhatsApp within
               seconds of the call ending.
@@ -423,10 +423,10 @@ export default function MissedCallIndexPage() {
         {/* Regional note */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-            <TrendingUp className="w-7 h-7 text-emerald-400" />
+            <TrendingUp className="w-7 h-7 text-[var(--v2-green)]" />
             Regional Variation
           </h2>
-          <p className="text-white/70 leading-relaxed">
+          <p className="text-[var(--v2-body)] leading-relaxed">
             London trades lose the most per missed call due to higher average job values, but also face the most
             competition. Northern trades (Manchester, Leeds, Glasgow) have higher missed-call rates (71% vs 58% in
             London) but lower average job values. Rural trades take fewer total calls but convert better when they
@@ -437,18 +437,18 @@ export default function MissedCallIndexPage() {
         {/* Methodology */}
         <section id="methodology" className="mb-16 scroll-mt-24">
           <h2 className="text-3xl font-bold mb-6 flex items-center gap-3 group">
-            <Phone className="w-7 h-7 text-emerald-400" />
+            <Phone className="w-7 h-7 text-[var(--v2-green)]" />
             Methodology
-            <a href="#methodology" className="text-emerald-400/60 hover:text-emerald-400 text-lg opacity-0 group-hover:opacity-100 transition-opacity" aria-label="Link to methodology section">#</a>
+            <a href="#methodology" className="text-[var(--v2-muted)] hover:text-[var(--v2-green)] text-lg opacity-0 group-hover:opacity-100 transition-opacity" aria-label="Link to methodology section">#</a>
           </h2>
-          <div className="bg-white/5 border border-white/10 rounded-xl p-6 space-y-4 text-white/70 text-sm leading-relaxed">
+          <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 space-y-4 text-[var(--v2-body)] text-sm leading-relaxed">
             <p>
-              <strong className="text-white">Sources.</strong> This index combines: the{" "}
+              <strong className="text-[var(--v2-ink)]">Sources.</strong> This index combines: the{" "}
               <a
                 href="https://www.moneypenny.com/uk/resources/news/small-business-call-report/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-emerald-400 hover:underline"
+                className="text-[var(--v2-green)] hover:underline"
               >
                 Moneypenny Small Business Call Report
               </a>
@@ -459,18 +459,18 @@ export default function MissedCallIndexPage() {
               Q3 2026 export pending publication in the next quarterly edition).
             </p>
             <p>
-              <strong className="text-white">Declared assumptions.</strong> Modelled figures assume a typical
+              <strong className="text-[var(--v2-ink)]">Declared assumptions.</strong> Modelled figures assume a typical
               tradesperson receives ~15 inbound calls per week and converts 1 in 5 missed calls into a booked job.
               Job values use Checkatrade/ONS trade averages. Annual losses = missed calls per week × average job
               value × conversion rate × 52 weeks.
             </p>
             <p>
-              <strong className="text-white">Period.</strong> This page is the standing index and is updated as new
+              <strong className="text-[var(--v2-ink)]">Period.</strong> This page is the standing index and is updated as new
               sources are verified. Quarterly editions publish the full sector model — the latest is the{" "}
-              <Link href="/research/missed-call-index/q3-2026" className="text-emerald-400 hover:underline">Q3 2026 edition</Link>.
+              <Link href="/research/missed-call-index/q3-2026" className="text-[var(--v2-green)] hover:underline">Q3 2026 edition</Link>.
             </p>
             <p>
-              <strong className="text-white">Limitations.</strong> Per-trade figures are modelled, not measured;
+              <strong className="text-[var(--v2-ink)]">Limitations.</strong> Per-trade figures are modelled, not measured;
               actual losses vary by area, specialism and season. The Whoza platform sample is small and is used
               for direction, not headline figures, until the export is published. Where sources disagree, both
               figures are shown with their scope rather than averaged.
@@ -481,29 +481,29 @@ export default function MissedCallIndexPage() {
         {/* FAQ */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold mb-8 flex items-center gap-3">
-            <Phone className="w-7 h-7 text-emerald-400" />
+            <Phone className="w-7 h-7 text-[var(--v2-green)]" />
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
             {faqSchema.mainEntity.map((f) => (
-              <div key={f.name} className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <h3 className="font-bold text-white mb-2">{f.name}</h3>
-                <p className="text-white/60 text-sm leading-relaxed">{f.acceptedAnswer.text}</p>
+              <div key={f.name} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+                <h3 className="font-bold text-[var(--v2-ink)] mb-2">{f.name}</h3>
+                <p className="text-[var(--v2-body)] text-sm leading-relaxed">{f.acceptedAnswer.text}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* CTA */}
-        <section className="text-center bg-emerald-500/5 border border-emerald-500/20 rounded-2xl p-8">
+        <section className="text-center bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-8">
           <h2 className="text-3xl font-bold mb-4">Stop the Leak</h2>
-          <p className="text-lg text-white/60 mb-6 max-w-2xl mx-auto">
+          <p className="text-lg text-[var(--v2-body)] mb-6 max-w-2xl mx-auto">
             AI call answering captures 100% of calls 24/7 for £59–£399/month flat — unlimited calls, no contract,
             7-day free trial. One recovered job usually covers months of service.
           </p>
           <Link
             href="/pricing"
-            className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-[var(--navy-900)] font-bold px-8 py-4 rounded-xl text-lg transition-colors"
+            className="inline-flex items-center gap-2 bg-[var(--v2-green)] hover:bg-emerald-400 text-white font-bold px-8 py-4 rounded-2xl text-lg transition-colors"
           >
             Start Your Free Trial <ArrowRight className="w-5 h-5" />
           </Link>

@@ -15,7 +15,7 @@ export const revalidate = 3600
 
 export default function ModernSlaveryPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-950 to-black text-white">
+    <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <BreadcrumbSchema
         items={[
           { name: "Home", item: "https://whoza.ai" },
@@ -24,10 +24,10 @@ export default function ModernSlaveryPage() {
       />
       <div className="max-w-4xl mx-auto px-4 py-16 md:py-24">
         <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[var(--v2-green)] to-emerald-500 bg-clip-text text-transparent">
             Modern Slavery Statement
           </h1>
-          <p className="text-slate-400 text-lg">
+          <p className="text-[var(--v2-muted)] text-lg">
             WHOZA AI LTD — Transparency in our operations and supply chain
           </p>
         </div>
@@ -36,10 +36,10 @@ export default function ModernSlaveryPage() {
           {/* Introduction */}
           <section>
             <div className="flex items-center gap-2 mb-4">
-              <ShieldCheck className="w-5 h-5 text-blue-400" />
-              <h2 className="text-xl font-semibold text-white">Our Commitment</h2>
+              <ShieldCheck className="w-5 h-5 text-[var(--v2-green)]" />
+              <h2 className="text-xl font-semibold text-[var(--v2-ink)]">Our Commitment</h2>
             </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 space-y-4 text-slate-300">
+            <div className="bg-white border border-[var(--v2-line)] rounded-lg p-6 space-y-4 text-[var(--v2-body)]">
               <p>
                 WHOZA AI LTD is committed to ensuring that modern slavery and human trafficking have no place in our operations or supply chain. We take a zero-tolerance approach to any form of forced labour, human trafficking, or exploitation.
               </p>
@@ -52,24 +52,24 @@ export default function ModernSlaveryPage() {
           {/* Organisation Structure */}
           <section>
             <div className="flex items-center gap-2 mb-4">
-              <ChevronRight className="w-5 h-5 text-blue-400" />
-              <h2 className="text-xl font-semibold text-white">Organisation Structure</h2>
+              <ChevronRight className="w-5 h-5 text-[var(--v2-green)]" />
+              <h2 className="text-xl font-semibold text-[var(--v2-ink)]">Organisation Structure</h2>
             </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 space-y-4 text-slate-300">
+            <div className="bg-white border border-[var(--v2-line)] rounded-lg p-6 space-y-4 text-[var(--v2-body)]">
               <p>
-                <strong className="text-white">Company:</strong> WHOZA AI LTD
+                <strong className="text-[var(--v2-ink)]">Company:</strong> WHOZA AI LTD
               </p>
               <p>
-                <strong className="text-white">Registered in:</strong> Scotland (Company Number: SC874716)
+                <strong className="text-[var(--v2-ink)]">Registered in:</strong> Scotland (Company Number: SC874716)
               </p>
               <p>
-                <strong className="text-white">Registered Office:</strong> 6 Atholl Crescent, Perth, PH1 5JN, United Kingdom
+                <strong className="text-[var(--v2-ink)]">Registered Office:</strong> 6 Atholl Crescent, Perth, PH1 5JN, United Kingdom
               </p>
               <p>
-                <strong className="text-white">Nature of Business:</strong> WHOZA AI LTD develops and operates an AI-powered voice call handling platform for UK tradespeople. We provide software-as-a-service (SaaS) technology.
+                <strong className="text-[var(--v2-ink)]">Nature of Business:</strong> WHOZA AI LTD develops and operates an AI-powered voice call handling platform for UK tradespeople. We provide software-as-a-service (SaaS) technology.
               </p>
               <p>
-                <strong className="text-white">Supply Chain:</strong> Our supply chain is primarily technology-focused, comprising software vendors, cloud infrastructure providers, telecommunications providers, and professional services firms. All suppliers are based in jurisdictions with strong labour protections (UK, EU, and US).
+                <strong className="text-[var(--v2-ink)]">Supply Chain:</strong> Our supply chain is primarily technology-focused, comprising software vendors, cloud infrastructure providers, telecommunications providers, and professional services firms. All suppliers are based in jurisdictions with strong labour protections (UK, EU, and US).
               </p>
             </div>
           </section>
@@ -77,11 +77,11 @@ export default function ModernSlaveryPage() {
           {/* Risk Assessment */}
           <section>
             <div className="flex items-center gap-2 mb-4">
-              <ChevronRight className="w-5 h-5 text-blue-400" />
-              <h2 className="text-xl font-semibold text-white">Risk Assessment</h2>
+              <ChevronRight className="w-5 h-5 text-[var(--v2-green)]" />
+              <h2 className="text-xl font-semibold text-[var(--v2-ink)]">Risk Assessment</h2>
             </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 space-y-4 text-slate-300">
-              <p className="text-white font-medium">We have assessed our operations and supply chain and identified the following risk areas:</p>
+            <div className="bg-white border border-[var(--v2-line)] rounded-lg p-6 space-y-4 text-[var(--v2-body)]">
+              <p className="text-[var(--v2-ink)] font-medium">We have assessed our operations and supply chain and identified the following risk areas:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>Cloud infrastructure and data centre operations (low risk — all providers have published modern slavery policies)</li>
                 <li>Software development and professional services (low risk — all workers are skilled professionals in regulated industries)</li>
@@ -89,7 +89,7 @@ export default function ModernSlaveryPage() {
                 <li>Office facilities and maintenance (low risk — UK-based contractors)</li>
               </ul>
               <p>
-                We consider our overall risk exposure to modern slavery to be <strong className="text-white">low</strong>, given the nature of our technology-focused business and the jurisdictions in which we operate.
+                We consider our overall risk exposure to modern slavery to be <strong className="text-[var(--v2-ink)]">low</strong>, given the nature of our technology-focused business and the jurisdictions in which we operate.
               </p>
             </div>
           </section>
@@ -97,11 +97,11 @@ export default function ModernSlaveryPage() {
           {/* Policies and Procedures */}
           <section>
             <div className="flex items-center gap-2 mb-4">
-              <ChevronRight className="w-5 h-5 text-blue-400" />
-              <h2 className="text-xl font-semibold text-white">Policies and Procedures</h2>
+              <ChevronRight className="w-5 h-5 text-[var(--v2-green)]" />
+              <h2 className="text-xl font-semibold text-[var(--v2-ink)]">Policies and Procedures</h2>
             </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 space-y-4 text-slate-300">
-              <p className="text-white font-medium">We have implemented the following measures:</p>
+            <div className="bg-white border border-[var(--v2-line)] rounded-lg p-6 space-y-4 text-[var(--v2-body)]">
+              <p className="text-[var(--v2-ink)] font-medium">We have implemented the following measures:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>All employees are paid at or above the National Living Wage</li>
                 <li>We conduct right-to-work checks for all UK employees</li>
@@ -115,10 +115,10 @@ export default function ModernSlaveryPage() {
           {/* Due Diligence */}
           <section>
             <div className="flex items-center gap-2 mb-4">
-              <ChevronRight className="w-5 h-5 text-blue-400" />
-              <h2 className="text-xl font-semibold text-white">Due Diligence</h2>
+              <ChevronRight className="w-5 h-5 text-[var(--v2-green)]" />
+              <h2 className="text-xl font-semibold text-[var(--v2-ink)]">Due Diligence</h2>
             </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 space-y-4 text-slate-300">
+            <div className="bg-white border border-[var(--v2-line)] rounded-lg p-6 space-y-4 text-[var(--v2-body)]">
               <p>
                 We conduct due diligence on all key suppliers before engagement. This includes reviewing their modern slavery statements where applicable, and requiring confirmation that they operate in compliance with applicable labour laws.
               </p>
@@ -131,10 +131,10 @@ export default function ModernSlaveryPage() {
           {/* Training */}
           <section>
             <div className="flex items-center gap-2 mb-4">
-              <ChevronRight className="w-5 h-5 text-blue-400" />
-              <h2 className="text-xl font-semibold text-white">Training and Awareness</h2>
+              <ChevronRight className="w-5 h-5 text-[var(--v2-green)]" />
+              <h2 className="text-xl font-semibold text-[var(--v2-ink)]">Training and Awareness</h2>
             </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 space-y-4 text-slate-300">
+            <div className="bg-white border border-[var(--v2-line)] rounded-lg p-6 space-y-4 text-[var(--v2-body)]">
               <p>
                 We provide training to relevant staff on identifying and preventing modern slavery. This includes:
               </p>
@@ -149,10 +149,10 @@ export default function ModernSlaveryPage() {
           {/* Key Performance Indicators */}
           <section>
             <div className="flex items-center gap-2 mb-4">
-              <ChevronRight className="w-5 h-5 text-blue-400" />
-              <h2 className="text-xl font-semibold text-white">Key Performance Indicators</h2>
+              <ChevronRight className="w-5 h-5 text-[var(--v2-green)]" />
+              <h2 className="text-xl font-semibold text-[var(--v2-ink)]">Key Performance Indicators</h2>
             </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 space-y-4 text-slate-300">
+            <div className="bg-white border border-[var(--v2-line)] rounded-lg p-6 space-y-4 text-[var(--v2-body)]">
               <p>We measure our effectiveness through:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>Percentage of key suppliers with published modern slavery statements: 100%</li>
@@ -166,17 +166,17 @@ export default function ModernSlaveryPage() {
           {/* Approval */}
           <section>
             <div className="flex items-center gap-2 mb-4">
-              <ChevronRight className="w-5 h-5 text-blue-400" />
-              <h2 className="text-xl font-semibold text-white">Board Approval</h2>
+              <ChevronRight className="w-5 h-5 text-[var(--v2-green)]" />
+              <h2 className="text-xl font-semibold text-[var(--v2-ink)]">Board Approval</h2>
             </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 space-y-4 text-slate-300">
+            <div className="bg-white border border-[var(--v2-line)] rounded-lg p-6 space-y-4 text-[var(--v2-body)]">
               <p>
                 This statement has been approved by the board of WHOZA AI LTD and will be reviewed annually.
               </p>
-              <div className="mt-4 p-4 bg-slate-900/50 rounded border border-slate-700">
-                <p><strong className="text-white">Date of Approval:</strong> 1 April 2025</p>
-                <p><strong className="text-white">Review Date:</strong> 1 April 2026</p>
-                <p><strong className="text-white">Signed:</strong> Dru McPhee, Director</p>
+              <div className="mt-4 p-4 bg-white rounded border border-[var(--v2-line)]">
+                <p><strong className="text-[var(--v2-ink)]">Date of Approval:</strong> 1 April 2025</p>
+                <p><strong className="text-[var(--v2-ink)]">Review Date:</strong> 1 April 2026</p>
+                <p><strong className="text-[var(--v2-ink)]">Signed:</strong> Dru McPhee, Director</p>
               </div>
             </div>
           </section>
@@ -184,15 +184,15 @@ export default function ModernSlaveryPage() {
           {/* Contact */}
           <section>
             <div className="flex items-center gap-2 mb-4">
-              <ChevronRight className="w-5 h-5 text-blue-400" />
-              <h2 className="text-xl font-semibold text-white">Contact and Reporting</h2>
+              <ChevronRight className="w-5 h-5 text-[var(--v2-green)]" />
+              <h2 className="text-xl font-semibold text-[var(--v2-ink)]">Contact and Reporting</h2>
             </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 space-y-4 text-slate-300">
+            <div className="bg-white border border-[var(--v2-line)] rounded-lg p-6 space-y-4 text-[var(--v2-body)]">
               <p>
                 If you have any concerns about modern slavery in our operations or supply chain, please contact us:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Email: <a href="mailto:dru@whoza.ai" className="text-blue-400 hover:text-blue-300 underline">dru@whoza.ai</a></li>
+                <li>Email: <a href="mailto:dru@whoza.ai" className="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] underline">dru@whoza.ai</a></li>
                 <li>Postal: WHOZA AI LTD, 6 Atholl Crescent, Perth, PH1 5JN</li>
               </ul>
               <p className="mt-4 text-sm">
@@ -201,7 +201,7 @@ export default function ModernSlaveryPage() {
             </div>
           </section>
 
-          <p className="text-slate-500 text-sm mt-12 pt-8 border-t border-slate-800">
+          <p className="text-slate-500 text-sm mt-12 pt-8 border-t border-[var(--v2-line)]">
             Last updated: 1 April 2025 | Next review: 1 April 2026
           </p>
         </div>

@@ -102,12 +102,12 @@ const whozaClaims = [
 
 function StatusBadge({ status }: { status: string }) {
   if (status === "verified") {
-    return <span className="inline-flex items-center gap-1 text-emerald-400 text-sm font-medium"><CheckCircle className="w-4 h-4" /> Verified</span>
+    return <span className="inline-flex items-center gap-1 text-[var(--v2-green)] text-sm font-medium"><CheckCircle className="w-4 h-4" /> Verified</span>
   }
   if (status === "descriptive") {
-    return <span className="inline-flex items-center gap-1 text-amber-400 text-sm font-medium"><AlertTriangle className="w-4 h-4" /> Descriptive</span>
+    return <span className="inline-flex items-center gap-1 text-amber-700 text-sm font-medium"><AlertTriangle className="w-4 h-4" /> Descriptive</span>
   }
-  return <span className="inline-flex items-center gap-1 text-red-400 text-sm font-medium"><XCircle className="w-4 h-4" /> Unverified</span>
+  return <span className="inline-flex items-center gap-1 text-red-600 text-sm font-medium"><XCircle className="w-4 h-4" /> Unverified</span>
 }
 
 export default function DataPage() {
@@ -131,39 +131,39 @@ export default function DataPage() {
         { name: "DSIT, Public Engagement Survey", datePublished: "2026-07-16", url: "https://www.gov.uk/government/statistics/dsit-public-engagement-survey-20252026/dsit-public-engagement-survey-20252026" },
         { name: "FMB, State of Trade Survey H2 2025", datePublished: "2026-03-31", url: "https://www.fmb.org.uk/resource/state-of-trade-survey-h2-2025.html" },
       ]} />
-      <main className="min-h-screen bg-[var(--navy-900)] text-white">
+      <main className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
         {/* Hero */}
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12">
-          <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-tight mb-6">
-            Evidence Base & <span className="text-emerald-400">Data Sources</span>
+          <h1 className="text-4xl sm:text-5xl font-bold text-[var(--v2-ink)] tracking-tight mb-6">
+            Evidence Base & <span className="text-[var(--v2-green)]">Data Sources</span>
           </h1>
-          <p className="text-xl text-white/70 max-w-3xl">
+          <p className="text-xl text-[var(--v2-body)] max-w-3xl">
             Every statistic on whoza.ai is either verified against its publisher, described as our own arithmetic, or explicitly marked as unverified. We do not invent sources, modernise dates, or replace withdrawn figures with ones that sound better.
           </p>
         </section>
 
         {/* Sources Table */}
-        <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-white/10">
-          <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-            <BookOpen className="w-6 h-6 text-emerald-400" />
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-[var(--v2-line)]">
+          <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-8 flex items-center gap-3">
+            <BookOpen className="w-6 h-6 text-[var(--v2-green)]" />
             Sources We Cite
           </h2>
 
-          <h3 className="text-lg font-semibold text-white mb-4">Primary Sources</h3>
+          <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-4">Primary Sources</h3>
           <div className="overflow-x-auto mb-10">
             <table className="w-full text-left text-sm">
               <thead>
-                <tr className="border-b border-white/10 text-white/50">
+                <tr className="border-b border-[var(--v2-line)] text-[var(--v2-muted)]">
                   <th className="pb-3 font-medium">Source</th>
                   <th className="pb-3 font-medium">What we use it for</th>
                   <th className="pb-3 font-medium">Status</th>
                 </tr>
               </thead>
-              <tbody className="text-white/80">
+              <tbody className="text-[var(--v2-body)]">
                 {sources.primary.map((s, i) => (
-                  <tr key={i} className="border-b border-white/5">
+                  <tr key={i} className="border-b border-[var(--v2-line)]">
                     <td className="py-3 pr-4">
-                      <a href={s.url} target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:underline inline-flex items-center gap-1">
+                      <a href={s.url} target="_blank" rel="noopener noreferrer" className="text-[var(--v2-green)] hover:underline inline-flex items-center gap-1">
                         {s.name} ({s.year}) <ExternalLink className="w-3 h-3" />
                       </a>
                     </td>
@@ -175,22 +175,22 @@ export default function DataPage() {
             </table>
           </div>
 
-          <h3 className="text-lg font-semibold text-white mb-4">Secondary Sources</h3>
+          <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-4">Secondary Sources</h3>
           <div className="overflow-x-auto mb-10">
             <table className="w-full text-left text-sm">
               <thead>
-                <tr className="border-b border-white/10 text-white/50">
+                <tr className="border-b border-[var(--v2-line)] text-[var(--v2-muted)]">
                   <th className="pb-3 font-medium">Source</th>
                   <th className="pb-3 font-medium">What we use it for</th>
                   <th className="pb-3 font-medium">Status</th>
                 </tr>
               </thead>
-              <tbody className="text-white/80">
+              <tbody className="text-[var(--v2-body)]">
                 {sources.secondary.map((s, i) => (
-                  <tr key={i} className="border-b border-white/5">
+                  <tr key={i} className="border-b border-[var(--v2-line)]">
                     <td className="py-3 pr-4">
                       {s.url ? (
-                        <a href={s.url} target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:underline inline-flex items-center gap-1">
+                        <a href={s.url} target="_blank" rel="noopener noreferrer" className="text-[var(--v2-green)] hover:underline inline-flex items-center gap-1">
                           {s.name} ({s.year}) <ExternalLink className="w-3 h-3" />
                         </a>
                       ) : (
@@ -205,21 +205,21 @@ export default function DataPage() {
             </table>
           </div>
 
-          <h3 className="text-lg font-semibold text-white mb-4">Tertiary / Descriptive Sources</h3>
+          <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-4">Tertiary / Descriptive Sources</h3>
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm">
               <thead>
-                <tr className="border-b border-white/10 text-white/50">
+                <tr className="border-b border-[var(--v2-line)] text-[var(--v2-muted)]">
                   <th className="pb-3 font-medium">Source</th>
                   <th className="pb-3 font-medium">What we use it for</th>
                   <th className="pb-3 font-medium">Status</th>
                 </tr>
               </thead>
-              <tbody className="text-white/80">
+              <tbody className="text-[var(--v2-body)]">
                 {sources.tertiary.map((s, i) => (
-                  <tr key={i} className="border-b border-white/5">
+                  <tr key={i} className="border-b border-[var(--v2-line)]">
                     <td className="py-3 pr-4">
-                      <a href={s.url} target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:underline inline-flex items-center gap-1">
+                      <a href={s.url} target="_blank" rel="noopener noreferrer" className="text-[var(--v2-green)] hover:underline inline-flex items-center gap-1">
                         {s.name} ({s.year}) <ExternalLink className="w-3 h-3" />
                       </a>
                     </td>
@@ -233,46 +233,46 @@ export default function DataPage() {
         </section>
 
         {/* What We Removed */}
-        <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-white/10">
-          <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-            <Shield className="w-6 h-6 text-amber-400" />
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-[var(--v2-line)]">
+          <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-8 flex items-center gap-3">
+            <Shield className="w-6 h-6 text-amber-700" />
             What We Removed and Why
           </h2>
           <div className="space-y-6">
             {removedClaims.map((item, i) => (
-              <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-white mb-2">{item.claim}</h3>
-                <p className="text-white/70">{item.why}</p>
+              <div key={i} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+                <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-2">{item.claim}</h3>
+                <p className="text-[var(--v2-body)]">{item.why}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* Official-Source Audit */}
-        <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-white/10">
-          <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-            <CheckCircle className="w-6 h-6 text-emerald-400" />
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-[var(--v2-line)]">
+          <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-8 flex items-center gap-3">
+            <CheckCircle className="w-6 h-6 text-[var(--v2-green)]" />
             Official-Source Audit
           </h2>
-          <p className="text-white/70 mb-6">
+          <p className="text-[var(--v2-body)] mb-6">
             Every government or official body citation classified. <strong>Verified</strong> means we loaded the publisher's page and confirmed the figure. <strong>Descriptive</strong> means the source exists but the specific number is our own arithmetic. <strong>Unverified</strong> means we have not yet loaded the publisher's page.
           </p>
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm">
               <thead>
-                <tr className="border-b border-white/10 text-white/50">
+                <tr className="border-b border-[var(--v2-line)] text-[var(--v2-muted)]">
                   <th className="pb-3 font-medium">Source</th>
                   <th className="pb-3 font-medium">Figure as cited</th>
                   <th className="pb-3 font-medium">Status</th>
                   <th className="pb-3 font-medium">Note</th>
                 </tr>
               </thead>
-              <tbody className="text-white/80">
+              <tbody className="text-[var(--v2-body)]">
                 {officialAudit.map((item, i) => (
-                  <tr key={i} className="border-b border-white/5">
+                  <tr key={i} className="border-b border-[var(--v2-line)]">
                     <td className="py-3 pr-4">
                       {item.url ? (
-                        <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:underline inline-flex items-center gap-1">
+                        <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-[var(--v2-green)] hover:underline inline-flex items-center gap-1">
                           {item.source} <ExternalLink className="w-3 h-3" />
                         </a>
                       ) : (
@@ -281,7 +281,7 @@ export default function DataPage() {
                     </td>
                     <td className="py-3 pr-4">{item.figure}</td>
                     <td className="py-3 pr-4"><StatusBadge status={item.status} /></td>
-                    <td className="py-3 text-white/60">{item.note}</td>
+                    <td className="py-3 text-[var(--v2-body)]">{item.note}</td>
                   </tr>
                 ))}
               </tbody>
@@ -290,94 +290,94 @@ export default function DataPage() {
         </section>
 
         {/* Whoza.ai Own Claims */}
-        <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-white/10">
-          <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-            <Shield className="w-6 h-6 text-emerald-400" />
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-[var(--v2-line)]">
+          <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-8 flex items-center gap-3">
+            <Shield className="w-6 h-6 text-[var(--v2-green)]" />
             Whoza.ai — Our Own Claims
           </h2>
-          <p className="text-white/70 mb-6">
+          <p className="text-[var(--v2-body)] mb-6">
             We apply the same scrutiny to our own marketing that we apply to third-party sources. Every claim about our own business is listed here with its evidence status.
           </p>
           <div className="space-y-6">
             {whozaClaims.map((item, i) => (
-              <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-white mb-2">{item.claim}</h3>
-                <p className="text-white/50 text-sm mb-2">Found on: {item.where}</p>
-                <p className="text-white/70">{item.note}</p>
+              <div key={i} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+                <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-2">{item.claim}</h3>
+                <p className="text-[var(--v2-muted)] text-sm mb-2">Found on: {item.where}</p>
+                <p className="text-[var(--v2-body)]">{item.note}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* Business Claims — Verified vs Unverified */}
-        <section id="business-claims" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-white/10">
-          <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-            <Shield className="w-6 h-6 text-emerald-400" />
+        <section id="business-claims" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-[var(--v2-line)]">
+          <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-8 flex items-center gap-3">
+            <Shield className="w-6 h-6 text-[var(--v2-green)]" />
             Business Claims — Verified vs Unverified
           </h2>
-          <p className="text-white/70 mb-6">
+          <p className="text-[var(--v2-body)] mb-6">
             Every commercial claim on whoza.ai — revenue figures, savings, ROI — is listed here with its evidence status. We distinguish between numbers we can demonstrate, numbers that are illustrative estimates, and numbers we have removed.
           </p>
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm">
               <thead>
-                <tr className="border-b border-white/10 text-white/50">
+                <tr className="border-b border-[var(--v2-line)] text-[var(--v2-muted)]">
                   <th className="pb-3 font-medium">Claim</th>
                   <th className="pb-3 font-medium">Where it appears</th>
                   <th className="pb-3 font-medium">Evidence</th>
                   <th className="pb-3 font-medium">Status</th>
                 </tr>
               </thead>
-              <tbody className="text-white/80">
-                <tr className="border-b border-white/5">
+              <tbody className="text-[var(--v2-body)]">
+                <tr className="border-b border-[var(--v2-line)]">
                   <td className="py-3 pr-4">£59/month Starter plan</td>
                   <td className="py-3 pr-4">/pricing, homepage, city pages</td>
                   <td className="py-3 pr-4">Published on Stripe checkout</td>
                   <td className="py-3"><StatusBadge status="verified" /></td>
                 </tr>
-                <tr className="border-b border-white/5">
+                <tr className="border-b border-[var(--v2-line)]">
                   <td className="py-3 pr-4">£20,000–£25,000/year human receptionist cost</td>
                   <td className="py-3 pr-4">/pricing, /data, /ai-receptionist-vs-human-cost-guide-2026</td>
                   <td className="py-3 pr-4">National Careers Service (£18k–£22k) + employer NI + pension arithmetic</td>
                   <td className="py-3"><StatusBadge status="descriptive" /></td>
                 </tr>
-                <tr className="border-b border-white/5">
+                <tr className="border-b border-[var(--v2-line)]">
                   <td className="py-3 pr-4">£400–£600 average emergency callout value</td>
                   <td className="py-3 pr-4">Blog persona posts, case studies</td>
                   <td className="py-3 pr-4">Self-reported by customers; illustrative estimate</td>
                   <td className="py-3"><StatusBadge status="descriptive" /></td>
                 </tr>
-                <tr className="border-b border-white/5">
+                <tr className="border-b border-[var(--v2-line)]">
                   <td className="py-3 pr-4">£8,400 recovered in 4 weeks (Charlie example)</td>
                   <td className="py-3 pr-4">/blog/i-lost-12000-in-one-winter...</td>
                   <td className="py-3 pr-4">Customer-reported; not independently audited</td>
                   <td className="py-3"><StatusBadge status="descriptive" /></td>
                 </tr>
-                <tr className="border-b border-white/5">
+                <tr className="border-b border-[var(--v2-line)]">
                   <td className="py-3 pr-4">98% answer rate achieved</td>
                   <td className="py-3 pr-4">/case-studies</td>
                   <td className="py-3 pr-4">Illustrative estimate based on typical customer-reported outcomes</td>
                   <td className="py-3"><StatusBadge status="descriptive" /></td>
                 </tr>
-                <tr className="border-b border-white/5">
+                <tr className="border-b border-[var(--v2-line)]">
                   <td className="py-3 pr-4">£5,200–£15,600 annual missed-call cost</td>
                   <td className="py-3 pr-4">FAQ, blog posts</td>
                   <td className="py-3 pr-4">1,200 UK trade business self-reported survey, 2025</td>
                   <td className="py-3"><StatusBadge status="descriptive" /></td>
                 </tr>
-                <tr className="border-b border-white/5">
+                <tr className="border-b border-[var(--v2-line)]">
                   <td className="py-3 pr-4">30-day money-back guarantee</td>
                   <td className="py-3 pr-4">/pricing, homepage</td>
                   <td className="py-3 pr-4">Published in Terms of Service</td>
                   <td className="py-3"><StatusBadge status="verified" /></td>
                 </tr>
-                <tr className="border-b border-white/5">
+                <tr className="border-b border-[var(--v2-line)]">
                   <td className="py-3 pr-4">7-day free trial</td>
                   <td className="py-3 pr-4">/pricing, homepage</td>
                   <td className="py-3 pr-4">Published on signup flow</td>
                   <td className="py-3"><StatusBadge status="verified" /></td>
                 </tr>
-                <tr className="border-b border-white/5">
+                <tr className="border-b border-[var(--v2-line)]">
                   <td className="py-3 pr-4">50-customer early access cap</td>
                   <td className="py-3 pr-4">/signup, /about</td>
                   <td className="py-3 pr-4">Stated publicly; no independent verification</td>
@@ -423,30 +423,30 @@ export default function DataPage() {
             "temporalCoverage": "2016/2026"
           })}}
         />
-        <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-white/10">
-          <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-            <BookOpen className="w-6 h-6 text-blue-400" />
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-[var(--v2-line)]">
+          <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-8 flex items-center gap-3">
+            <BookOpen className="w-6 h-6 text-[var(--v2-green)]" />
             UK Government Open Data We Use
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {governmentData.map((item, i) => (
-              <a key={i} href={item.url} target="_blank" rel="noopener noreferrer" className="bg-white/5 border border-white/10 rounded-xl p-5 hover:border-emerald-500/30 transition-colors">
-                <h3 className="text-white font-semibold mb-1 inline-flex items-center gap-2">
-                  {item.name} <ExternalLink className="w-3 h-3 text-emerald-400" />
+              <a key={i} href={item.url} target="_blank" rel="noopener noreferrer" className="bg-white border border-[var(--v2-line)] rounded-2xl p-5 hover:border-[var(--v2-green)]/30 transition-colors">
+                <h3 className="text-[var(--v2-ink)] font-semibold mb-1 inline-flex items-center gap-2">
+                  {item.name} <ExternalLink className="w-3 h-3 text-[var(--v2-green)]" />
                 </h3>
-                <p className="text-white/60 text-sm">{item.desc}</p>
+                <p className="text-[var(--v2-body)] text-sm">{item.desc}</p>
               </a>
             ))}
           </div>
         </section>
 
         {/* Methodology */}
-        <section id="methodology" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-white/10">
-          <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-            <BookOpen className="w-6 h-6 text-purple-400" />
+        <section id="methodology" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-[var(--v2-line)]">
+          <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-6 flex items-center gap-3">
+            <BookOpen className="w-6 h-6 text-[var(--v2-green)]" />
             Methodology
           </h2>
-          <div className="space-y-4 text-white/70">
+          <div className="space-y-4 text-[var(--v2-body)]">
             <p>
               <strong>Our rule:</strong> if we cannot show the exact question that produced a percentage, we do not show the percentage. We will state the qualitative point — "the business that answers first usually gets the job" — rather than attach a number we cannot defend.
             </p>

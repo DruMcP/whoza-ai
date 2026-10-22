@@ -48,7 +48,7 @@ export function QuoteGenerator() {
   }
 
   return (
-    <div className="min-h-screen bg-[var(--navy-900)] text-white">
+    <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header />
 
       <main className="pt-32 pb-20">
@@ -63,7 +63,7 @@ export function QuoteGenerator() {
               Free Tool
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Free Quote Generator for UK Tradespeople</h2>
-            <p className="text-white/60 text-lg max-w-2xl mx-auto">
+            <p className="v2-lead max-w-2xl mx-auto">
               Stop scribbling quotes on the back of receipts. Create professional, branded quotes that win more jobs — and look legit to customers checking you out on Google.
             </p>
           </motion.div>
@@ -72,53 +72,53 @@ export function QuoteGenerator() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 mb-8"
+              className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 md:p-8 mb-8"
             >
               <div className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h3 className="text-sm font-semibold text-white/80 mb-3">YOUR DETAILS</h3>
+                    <h3 className="text-sm font-semibold text-[var(--v2-body)] mb-3">YOUR DETAILS</h3>
                     <div className="space-y-3">
                       <input
                         type="text"
                         placeholder="Your business name *"
                         value={businessName}
                         onChange={(e) => setBusinessName(e.target.value)}
-                        className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-[var(--katie-blue)]"
+                        className="w-full px-4 py-3 rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] placeholder:text-slate-400 focus:outline-none focus:border-[var(--v2-green)]"
                       />
                       <input
                         type="tel"
                         placeholder="Your phone number *"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
-                        className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-[var(--katie-blue)]"
+                        className="w-full px-4 py-3 rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] placeholder:text-slate-400 focus:outline-none focus:border-[var(--v2-green)]"
                       />
                       <input
                         type="email"
                         placeholder="Your email *"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-[var(--katie-blue)]"
+                        className="w-full px-4 py-3 rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] placeholder:text-slate-400 focus:outline-none focus:border-[var(--v2-green)]"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <h3 className="text-sm font-semibold text-white/80 mb-3">CUSTOMER DETAILS</h3>
+                    <h3 className="text-sm font-semibold text-[var(--v2-body)] mb-3">CUSTOMER DETAILS</h3>
                     <div className="space-y-3">
                       <input
                         type="text"
                         placeholder="Customer name *"
                         value={customerName}
                         onChange={(e) => setCustomerName(e.target.value)}
-                        className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-[var(--katie-blue)]"
+                        className="w-full px-4 py-3 rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] placeholder:text-slate-400 focus:outline-none focus:border-[var(--v2-green)]"
                       />
                       <textarea
                         placeholder="Customer address"
                         value={customerAddress}
                         onChange={(e) => setCustomerAddress(e.target.value)}
                         rows={3}
-                        className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-[var(--katie-blue)] resize-none"
+                        className="w-full px-4 py-3 rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] placeholder:text-slate-400 focus:outline-none focus:border-[var(--v2-green)] resize-none"
                       />
                     </div>
                   </div>
@@ -130,24 +130,24 @@ export function QuoteGenerator() {
                     placeholder="Quote reference"
                     value={quoteRef}
                     onChange={(e) => setQuoteRef(e.target.value)}
-                    className="px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-[var(--katie-blue)]"
+                    className="px-4 py-3 rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] placeholder:text-slate-400 focus:outline-none focus:border-[var(--v2-green)]"
                   />
-                  <div className="px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white/60">
+                  <div className="px-4 py-3 rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-body)]">
                     {formatDate(new Date())}
                   </div>
                   <select
                     value={validDays}
                     onChange={(e) => setValidDays(Number(e.target.value))}
-                    className="px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:border-[var(--katie-blue)] appearance-none cursor-pointer"
+                    className="px-4 py-3 rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] focus:outline-none focus:border-[var(--v2-green)] appearance-none cursor-pointer"
                   >
-                    <option value={7} className="bg-[var(--navy-900)]">Valid 7 days</option>
-                    <option value={14} className="bg-[var(--navy-900)]">Valid 14 days</option>
-                    <option value={30} className="bg-[var(--navy-900)]">Valid 30 days</option>
+                    <option value={7} className="bg-white">Valid 7 days</option>
+                    <option value={14} className="bg-white">Valid 14 days</option>
+                    <option value={30} className="bg-white">Valid 30 days</option>
                   </select>
                 </div>
 
                 <div>
-                  <h3 className="text-sm font-semibold text-white/80 mb-3">LINE ITEMS</h3>
+                  <h3 className="text-sm font-semibold text-[var(--v2-body)] mb-3">LINE ITEMS</h3>
                   <div className="space-y-3">
                     {lineItems.map((item) => (
                       <div key={item.id} className="grid grid-cols-12 gap-2 items-center">
@@ -156,23 +156,23 @@ export function QuoteGenerator() {
                           placeholder="Description"
                           value={item.description}
                           onChange={(e) => updateLineItem(item.id, "description", e.target.value)}
-                          className="col-span-5 px-3 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-[var(--katie-blue)] text-sm"
+                          className="col-span-5 px-3 py-2 rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] placeholder:text-slate-400 focus:outline-none focus:border-[var(--v2-green)] text-sm"
                         />
                         <input
                           type="number"
                           placeholder="Qty"
                           value={item.quantity}
                           onChange={(e) => updateLineItem(item.id, "quantity", Number(e.target.value))}
-                          className="col-span-2 px-3 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-[var(--katie-blue)] text-sm"
+                          className="col-span-2 px-3 py-2 rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] placeholder:text-slate-400 focus:outline-none focus:border-[var(--v2-green)] text-sm"
                         />
                         <div className="col-span-3 relative">
-                          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-white/40 text-sm">£</span>
+                          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--v2-muted)] text-sm">£</span>
                           <input
                             type="number"
                             placeholder="Price"
                             value={item.unitPrice}
                             onChange={(e) => updateLineItem(item.id, "unitPrice", Number(e.target.value))}
-                            className="w-full pl-6 pr-3 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-[var(--katie-blue)] text-sm"
+                            className="w-full pl-6 pr-3 py-2 rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] placeholder:text-slate-400 focus:outline-none focus:border-[var(--v2-green)] text-sm"
                           />
                         </div>
                         <div className="col-span-1 text-right text-sm font-medium">
@@ -180,7 +180,7 @@ export function QuoteGenerator() {
                         </div>
                         <button
                           onClick={() => removeLineItem(item.id)}
-                          className="col-span-1 p-2 rounded-lg hover:bg-white/10 text-white/40 hover:text-[var(--coral)] transition-colors"
+                          className="col-span-1 p-2 rounded-lg hover:border-[#b9c6bf] text-[var(--v2-muted)] hover:text-[var(--coral)] transition-colors"
                         >
                           <Trash2 className="w-4 h-4" />
                         </button>
@@ -189,14 +189,14 @@ export function QuoteGenerator() {
                   </div>
                   <button
                     onClick={addLineItem}
-                    className="mt-3 flex items-center gap-2 text-sm text-[var(--katie-blue)] hover:text-white transition-colors"
+                    className="mt-3 flex items-center gap-2 text-sm text-[var(--v2-green)] hover:text-[var(--v2-ink)] transition-colors"
                   >
                     <Plus className="w-4 h-4" /> Add another line
                   </button>
                 </div>
 
-                <div className="bg-white/5 rounded-xl p-4 space-y-2">
-                  <div className="flex justify-between text-lg font-bold border-t border-white/10 pt-2">
+                <div className="bg-white rounded-2xl p-4 space-y-2">
+                  <div className="flex justify-between text-lg font-bold border-t border-[var(--v2-line)] pt-2">
                     <span>TOTAL:</span>
                     <span className="text-[var(--coral)]">£{total.toFixed(2)}</span>
                   </div>
@@ -206,32 +206,32 @@ export function QuoteGenerator() {
                   <select
                     value={paymentTerms}
                     onChange={(e) => setPaymentTerms(e.target.value)}
-                    className="px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:border-[var(--katie-blue)] appearance-none cursor-pointer"
+                    className="px-4 py-3 rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] focus:outline-none focus:border-[var(--v2-green)] appearance-none cursor-pointer"
                   >
-                    <option value="On completion" className="bg-[var(--navy-900)]">Payment: On completion</option>
-                    <option value="14 days" className="bg-[var(--navy-900)]">Payment: 14 days</option>
-                    <option value="30 days" className="bg-[var(--navy-900)]">Payment: 30 days</option>
+                    <option value="On completion" className="bg-white">Payment: On completion</option>
+                    <option value="14 days" className="bg-white">Payment: 14 days</option>
+                    <option value="30 days" className="bg-white">Payment: 30 days</option>
                   </select>
                   <input
                     type="text"
                     placeholder="Notes for customer"
                     value={notes}
                     onChange={(e) => setNotes(e.target.value)}
-                    className="px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-[var(--katie-blue)]"
+                    className="px-4 py-3 rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] placeholder:text-slate-400 focus:outline-none focus:border-[var(--v2-green)]"
                   />
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button
                     onClick={() => setShowPreview(true)}
-                    className="flex-1 py-4 rounded-lg bg-[var(--coral)] hover:bg-[var(--coral)]/90 text-white font-bold text-lg transition-colors flex items-center justify-center gap-2"
+                    className="flex-1 py-4 rounded-lg bg-[var(--coral)] hover:bg-[var(--coral)]/90 text-[var(--v2-ink)] font-bold text-lg transition-colors flex items-center justify-center gap-2"
                   >
                     <FileText className="w-5 h-5" />
                     GENERATE QUOTE
                   </button>
                   <button
                     onClick={() => setShowPreview(true)}
-                    className="flex-1 py-4 rounded-lg border border-white/20 hover:bg-white/10 text-white font-bold text-lg transition-colors flex items-center justify-center gap-2"
+                    className="flex-1 py-4 rounded-lg border border-[var(--v2-line)] hover:border-[#b9c6bf] text-[var(--v2-ink)] font-bold text-lg transition-colors flex items-center justify-center gap-2"
                   >
                     <Download className="w-5 h-5" />
                     PREVIEW
@@ -245,7 +245,7 @@ export function QuoteGenerator() {
               animate={{ opacity: 1, scale: 1 }}
               className="bg-white text-[var(--navy-900)] rounded-2xl p-8 mb-8"
             >
-              <div className="border-2 border-[var(--navy-900)]/10 rounded-xl p-6">
+              <div className="border-2 border-[var(--navy-900)]/10 rounded-2xl p-6">
                 <div className="flex justify-between items-start mb-6">
                   <div>
                     <h2 className="text-2xl font-bold text-[var(--navy-900)]">{businessName || "Your Business"}</h2>
@@ -307,7 +307,7 @@ export function QuoteGenerator() {
               <div className="mt-6 flex flex-col sm:flex-row gap-4">
                 <button
                   onClick={() => window.print()}
-                  className="flex-1 py-3 rounded-lg bg-[var(--navy-900)] hover:bg-[var(--navy-800)] text-white font-bold transition-colors flex items-center justify-center gap-2"
+                  className="flex-1 py-3 rounded-lg bg-[var(--navy-900)] hover:bg-[var(--navy-800)] text-white font-bold transition-colors flex items-center justify-center gap-2 v2-island"
                 >
                   <Download className="w-5 h-5" />
                   PRINT / SAVE PDF
@@ -320,7 +320,7 @@ export function QuoteGenerator() {
                 </button>
               </div>
 
-              <div className="mt-6 p-4 bg-[var(--coral)]/10 rounded-xl border border-[var(--coral)]/20">
+              <div className="mt-6 p-4 bg-[var(--coral)]/10 rounded-2xl border border-[var(--coral)]/20">
                 <p className="text-sm text-[var(--navy-900)] font-medium mb-2">💡 Win more quotes by answering every call</p>
                 <a
                   href="/pricing"

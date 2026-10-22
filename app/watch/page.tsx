@@ -117,7 +117,7 @@ export default function WatchPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
       />
-      <div className="min-h-screen bg-[var(--navy-900)] text-white">
+      <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
         <Header />
         <BreadcrumbSchema
           items={[

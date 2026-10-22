@@ -68,9 +68,9 @@ export default function MissedCallsCalculatorPage() {
         { name: "Missed Call Calculator", item: "https://whoza.ai/missed-calls-cost-calculator" },
       ]} />
 
-      <main className="pb-24 lg:pb-0">
+      <main className="pb-24 lg:pb-0 v2-page">
         {/* Hero */}
-        <section className="dark-section relative overflow-hidden" style={{ background: "linear-gradient(135deg, #0F1729 0%, #1A1A2E 50%, #0F1729 100%)" }}>
+        <section className="dark-section relative overflow-hidden v2-island" style={{ background: "linear-gradient(135deg, #0F1729 0%, #1A1A2E 50%, #0F1729 100%)" }}>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
             <nav aria-label="Breadcrumb" className="mb-8">
               <ol className="flex items-center text-sm text-slate-400" style={{ listStyle: "none", padding: 0 }}>
@@ -82,7 +82,7 @@ export default function MissedCallsCalculatorPage() {
 
             <h1 className="text-4xl lg:text-5xl font-extrabold text-white mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
               How Much Do Missed Calls{" "}<br />
-              <span className="text-emerald-400">Cost Your Trade Business?</span>
+              <span className="text-[#6ee7b7]">Cost Your Trade Business?</span>
             </h1>
             <p className="text-lg text-slate-400 max-w-2xl mb-8">
               Use our free calculator to see exactly how much revenue you're losing to missed calls every month. 
@@ -99,19 +99,19 @@ export default function MissedCallsCalculatorPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
               <div>
-                <div className="text-3xl font-extrabold text-emerald-600">33%</div>
+                <div className="text-3xl font-extrabold text-[var(--v2-green)]">33%</div>
                 <p className="text-sm text-slate-600 mt-1">of small businesses fail to answer calls</p>
               </div>
               <div>
-                <div className="text-3xl font-extrabold text-emerald-600">£280</div>
+                <div className="text-3xl font-extrabold text-[var(--v2-green)]">£280</div>
                 <p className="text-sm text-slate-600 mt-1">average job value</p>
               </div>
               <div>
-                <div className="text-3xl font-extrabold text-emerald-600">35%</div>
+                <div className="text-3xl font-extrabold text-[var(--v2-green)]">35%</div>
                 <p className="text-sm text-slate-600 mt-1">conversion rate</p>
               </div>
               <div>
-                <div className="text-3xl font-extrabold text-emerald-600">69%</div>
+                <div className="text-3xl font-extrabold text-[var(--v2-green)]">69%</div>
                 <p className="text-sm text-slate-600 mt-1">hang up on voicemail</p>
               </div>
             </div>
@@ -122,7 +122,7 @@ export default function MissedCallsCalculatorPage() {
         {/* Calculator */}
         <section id="calculator" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Calculate Your Missed Call Losses</h2>
-          <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-8">
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8">
             <CalculatorForm />
           </div>
         </section>
@@ -145,7 +145,7 @@ export default function MissedCallsCalculatorPage() {
             </div>
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center shrink-0">
-                <TrendingUp className="w-6 h-6 text-emerald-600" />
+                <TrendingUp className="w-6 h-6 text-[var(--v2-green)]" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">AI call handling pays for itself</h3>
@@ -158,7 +158,7 @@ export default function MissedCallsCalculatorPage() {
             </div>
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
-                <PoundSterling className="w-6 h-6 text-blue-500" />
+                <PoundSterling className="w-6 h-6 text-blue-600" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">Annual impact compounds quickly</h3>
@@ -179,19 +179,19 @@ export default function MissedCallsCalculatorPage() {
             whoza.ai answers every call, qualifies leads, and delivers them to your WhatsApp. 
             Start your 7-day free trial today.
           </p>
-          <a href="/pricing" className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-emerald-700 transition-colors shadow-lg">
+          <a href="/pricing" className="inline-flex items-center gap-2 bg-[var(--v2-green)] text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-[var(--v2-green-hover)] transition-colors shadow-lg v2-island">
             Try whoza.ai Free for 7 Days <ArrowRight className="w-5 h-5" />
           </a>
         </section>
       {/* FAQ — visible matching schema */}
-      <section className="py-16 lg:py-24">
+      <section className="v2-section">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
+              <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
-                <p className="text-white/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                <p className="text-[var(--v2-body)] leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
               </div>
             ))}
           </div>

@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 
 export default function SignupPage() {
   return (
-    <div className="min-h-screen bg-[#0f172a] text-white">
+    <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header />
       <BreadcrumbSchema
         items={[
@@ -52,35 +52,35 @@ export default function SignupPage() {
       <main className="max-w-xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
         {/* Hero section */}
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="v2-eyebrow inline-flex items-center gap-2 mb-6">
             <Phone className="w-4 h-4" />
             Limited to {EARLY_ACCESS_CAP} tradespeople — early access
           </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4">
             Start your free trial
           </h1>
-          <p className="text-slate-400 text-lg max-w-md mx-auto">
+          <p className="text-[var(--v2-muted)] text-lg max-w-md mx-auto">
             Limited to the first {EARLY_ACCESS_CAP} tradespeople — get early access.
           </p>
         </div>
 
         {/* Signup is open, and accounts live in the app, so this is a way in rather than a
             waitlist form. */}
-        <div className="bg-[#1E2229] rounded-2xl p-6 sm:p-8 border border-white/[0.06] text-center">
-          <p className="text-slate-300 mb-6">
+        <div className="bg-white rounded-2xl p-6 sm:p-8 border border-[var(--v2-line)] text-center">
+          <p className="text-[var(--v2-body)] mb-6">
             Seven days free on Starter, with a real UK number, 100 call minutes and 10 booked jobs.
             Setup takes about half an hour.
           </p>
           <a
             href={APP_SIGNUP_URL}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-500 px-6 py-3.5 font-semibold text-white transition-colors hover:bg-emerald-600"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[var(--v2-green)] px-6 py-3.5 font-semibold text-white transition-colors hover:bg-[var(--v2-green-hover)]"
           >
             Create your account
             <ArrowRight className="w-4 h-4" aria-hidden="true" />
           </a>
           <p className="mt-4 text-sm text-slate-500">
             Already have an account?{" "}
-            <a href="https://app.whoza.ai/login" className="text-emerald-400 hover:underline">
+            <a href="https://app.whoza.ai/login" className="text-[var(--v2-green)] hover:underline">
               Log in
             </a>
           </p>
@@ -93,11 +93,11 @@ export default function SignupPage() {
           </p>
           <p className="text-xs text-slate-600">
             By signing up, you agree to our{" "}
-            <a href="/terms" className="text-emerald-400 hover:underline">
+            <a href="/terms" className="text-[var(--v2-green)] hover:underline">
               Terms
             </a>{" "}
             and{" "}
-            <a href="/privacy" className="text-emerald-400 hover:underline">
+            <a href="/privacy" className="text-[var(--v2-green)] hover:underline">
               Privacy Policy
             </a>
             .

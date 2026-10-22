@@ -29,7 +29,7 @@ export default function ReferPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-[var(--off-white)]">
+    <div className="min-h-screen bg-[var(--v2-paper)]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -44,9 +44,9 @@ export default function ReferPage() {
 
       <main>
         {/* Hero */}
-        <div className="bg-[var(--navy-900)] pt-32 pb-20">
+        <div className="bg-[var(--v2-navy)] pt-32 pb-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--rex-green)]/20 text-[var(--rex-green)] text-sm font-medium mb-6">
+            <span className="v2-eyebrow v2-eyebrow-light inline-flex items-center gap-2 mb-6">
               <Gift className="w-4 h-4" />
               Refer a Trade Programme
             </span>
@@ -159,7 +159,7 @@ export default function ReferPage() {
             </p>
             <a
               href="/?ref=referral-cta"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--rex-green)] text-white font-bold rounded-lg hover:bg-[var(--rex-green-hover)] transition-colors"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--v2-green)] text-white font-bold rounded-lg hover:bg-[var(--v2-green-hover)] transition-colors"
             >
               Get Started with Whoza.ai
               <ArrowRight className="w-5 h-5" />

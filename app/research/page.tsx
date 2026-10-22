@@ -70,7 +70,7 @@ const researchReports = [
 
 export default function ResearchLanding() {
   return (
-    <div className="min-h-screen bg-[var(--navy-900)] text-white">
+    <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
@@ -78,16 +78,16 @@ export default function ResearchLanding() {
       ]} />
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <section className="mb-16">
-          <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="v2-eyebrow inline-flex items-center gap-2 mb-6">
             <BookOpen className="w-4 h-4" />
             Research Library
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4 leading-tight">Research Library</h1>
-          <p className="text-xl text-white/70 max-w-2xl">
+          <p className="text-xl text-[var(--v2-body)] max-w-2xl">
             Research on AI voice technology, missed call impact, and trade business optimisation.
           </p>
-          <p className="text-white/60 mt-4">
-            Every statistic across our research is sourced in our <a href="/data" className="text-emerald-400 hover:underline">Evidence Base</a>.
+          <p className="text-[var(--v2-body)] mt-4">
+            Every statistic across our research is sourced in our <a href="/data" className="text-[var(--v2-green)] hover:underline">Evidence Base</a>.
           </p>
         </section>
 
@@ -96,17 +96,17 @@ export default function ResearchLanding() {
             <Link
               key={report.href}
               href={report.href}
-              className="group block bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-6 transition-colors"
+              className="group block bg-white hover:border-[#b9c6bf] border border-[var(--v2-line)] rounded-2xl p-6 transition-colors"
             >
-              <div className="flex items-center gap-2 text-emerald-400 text-sm font-semibold mb-3">
+              <div className="flex items-center gap-2 text-[var(--v2-green)] text-sm font-semibold mb-3">
                 <FileText className="w-4 h-4" />
                 {report.date}
               </div>
-              <h2 className="text-xl font-bold mb-2 group-hover:text-emerald-400 transition-colors">
+              <h2 className="text-xl font-bold mb-2 group-hover:text-[var(--v2-green)] transition-colors">
                 {report.title}
               </h2>
-              <p className="text-white/60 text-sm mb-4">{report.description}</p>
-              <span className="inline-flex items-center gap-1 text-emerald-400 text-sm font-medium">
+              <p className="text-[var(--v2-body)] text-sm mb-4">{report.description}</p>
+              <span className="inline-flex items-center gap-1 text-[var(--v2-green)] text-sm font-medium">
                 Read report <ArrowRight className="w-4 h-4" />
               </span>
             </Link>

@@ -111,7 +111,7 @@ export function RateChecker() {
   }
 
   return (
-    <div className="min-h-screen bg-[var(--navy-900)] text-white">
+    <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header />
 
       <main className="pt-32 pb-20">
@@ -129,7 +129,7 @@ export function RateChecker() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Hourly Rate Checker for UK Tradespeople
             </h1>
-            <p className="text-white/60 text-lg max-w-2xl mx-auto">
+            <p className="v2-lead max-w-2xl mx-auto">
               Are you charging what you are worth? Compare your rate against regional averages and the top 10% in your trade. Most UK tradespeople undervalue their skills by 15–30%.
             </p>
           </motion.div>
@@ -139,21 +139,21 @@ export function RateChecker() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 mb-8"
+            className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 md:p-8 mb-8"
           >
             <div className="space-y-6">
               {/* Trade */}
               <div>
-                <label className="block text-sm font-medium text-white/80 mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2">
                   What trade are you in? <span className="text-[var(--coral)]">*</span>
                 </label>
                 <select
                   value={trade}
                   onChange={(e) => { setTrade(e.target.value); setShowResults(false) }}
-                  className="w-full px-4 py-3 min-h-[44px] rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:border-[var(--katie-blue)] appearance-none cursor-pointer"
+                  className="w-full px-4 py-3 min-h-[44px] rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] focus:outline-none focus:border-[var(--v2-green)] appearance-none cursor-pointer"
                 >
                   {trades.map((t) => (
-                    <option key={t.key} value={t.key} className="bg-[var(--navy-900)]">
+                    <option key={t.key} value={t.key} className="bg-white">
                       {t.label}
                     </option>
                   ))}
@@ -162,16 +162,16 @@ export function RateChecker() {
 
               {/* Region */}
               <div>
-                <label className="block text-sm font-medium text-white/80 mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2">
                   What region are you in? <span className="text-[var(--coral)]">*</span>
                 </label>
                 <select
                   value={region}
                   onChange={(e) => { setRegion(e.target.value); setShowResults(false) }}
-                  className="w-full px-4 py-3 min-h-[44px] rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:border-[var(--katie-blue)] appearance-none cursor-pointer"
+                  className="w-full px-4 py-3 min-h-[44px] rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] focus:outline-none focus:border-[var(--v2-green)] appearance-none cursor-pointer"
                 >
                   {regions.map((r) => (
-                    <option key={r} value={r} className="bg-[var(--navy-900)]">
+                    <option key={r} value={r} className="bg-white">
                       {r}
                     </option>
                   ))}
@@ -180,34 +180,34 @@ export function RateChecker() {
 
               {/* Current rate */}
               <div>
-                <label className="block text-sm font-medium text-white/80 mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2">
                   Your current hourly rate (optional)
                 </label>
                 <div className="relative">
-                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-white/40">£</span>
+                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[var(--v2-muted)]">£</span>
                   <input
                     type="number"
                     value={currentRate}
                     onChange={(e) => { setCurrentRate(e.target.value); setShowResults(false) }}
                     placeholder="e.g. 55"
-                    className="w-full pl-8 pr-4 py-3 min-h-[44px] rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-[var(--katie-blue)]"
+                    className="w-full pl-8 pr-4 py-3 min-h-[44px] rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] placeholder:text-slate-400 focus:outline-none focus:border-[var(--v2-green)]"
                   />
                 </div>
-                <p className="text-sm text-white/50 mt-1">Leave blank if you are unsure — we will show you the benchmark</p>
+                <p className="text-sm text-[var(--v2-muted)] mt-1">Leave blank if you are unsure — we will show you the benchmark</p>
               </div>
 
               {/* Experience */}
               <div>
-                <label className="block text-sm font-medium text-white/80 mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2">
                   Experience level <span className="text-[var(--coral)]">*</span>
                 </label>
                 <select
                   value={experience}
                   onChange={(e) => { setExperience(e.target.value); setShowResults(false) }}
-                  className="w-full px-4 py-3 min-h-[44px] rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:border-[var(--katie-blue)] appearance-none cursor-pointer"
+                  className="w-full px-4 py-3 min-h-[44px] rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] focus:outline-none focus:border-[var(--v2-green)] appearance-none cursor-pointer"
                 >
                   {experienceLevels.map((e) => (
-                    <option key={e.key} value={e.key} className="bg-[var(--navy-900)]">
+                    <option key={e.key} value={e.key} className="bg-white">
                       {e.label}
                     </option>
                   ))}
@@ -217,7 +217,7 @@ export function RateChecker() {
               {/* Calculate */}
               <button
                 onClick={() => setShowResults(true)}
-                className="w-full py-4 min-h-[56px] rounded-lg bg-[var(--coral)] hover:bg-[var(--coral)]/90 text-white font-bold text-lg transition-colors flex items-center justify-center gap-2"
+                className="w-full py-4 min-h-[56px] rounded-lg bg-[var(--coral)] hover:bg-[var(--coral)]/90 text-[var(--v2-ink)] font-bold text-lg transition-colors flex items-center justify-center gap-2"
               >
                 <Gauge className="w-5 h-5" />
                 CHECK MY RATE
@@ -230,7 +230,7 @@ export function RateChecker() {
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 mb-8"
+              className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 md:p-8 mb-8"
             >
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <TrendingUp className="w-6 h-6 text-[var(--coral)]" />
@@ -238,38 +238,38 @@ export function RateChecker() {
               </h2>
 
               {/* Main rate card */}
-              <div className="bg-[var(--coral)]/10 border border-[var(--coral)]/20 rounded-xl p-6 mb-6 text-center">
-                <p className="text-sm text-white/60 mb-1">Recommended Hourly Rate</p>
+              <div className="bg-[var(--coral)]/10 border border-[var(--coral)]/20 rounded-2xl p-6 mb-6 text-center">
+                <p className="text-sm text-[var(--v2-body)] mb-1">Recommended Hourly Rate</p>
                 <p className="text-5xl font-bold text-[var(--coral)]">£{yourRate}<span className="text-2xl">/hr</span></p>
-                <p className="text-sm text-white/50 mt-2">
+                <p className="text-sm text-[var(--v2-muted)] mt-2">
                   {tradeLabel} · {region} · {expInfo.label}
                 </p>
               </div>
 
               {/* Comparison */}
               <div className="grid md:grid-cols-3 gap-4 mb-8">
-                <div className="bg-white/5 rounded-xl p-4 text-center">
-                  <p className="text-sm text-white/60 mb-1">Regional Average</p>
-                  <p className="text-2xl font-bold text-[var(--katie-blue)]">£{regionalAvg}/hr</p>
+                <div className="bg-white rounded-2xl p-4 text-center">
+                  <p className="text-sm text-[var(--v2-body)] mb-1">Regional Average</p>
+                  <p className="text-2xl font-bold text-[var(--v2-green)]">£{regionalAvg}/hr</p>
                   {vsAvg !== null && (
-                    <p className={`text-xs mt-1 ${vsAvg >= 0 ? "text-[#10B981]" : "text-[var(--coral)]"}`}>
+                    <p className={`text-xs mt-1 ${vsAvg >= 0 ? "text-[var(--v2-green)]" : "text-[var(--coral)]"}`}>
                       You are {vsAvg >= 0 ? "above" : "below"} avg by {Math.abs(vsAvg)}%
                     </p>
                   )}
                 </div>
-                <div className="bg-white/5 rounded-xl p-4 text-center">
-                  <p className="text-sm text-white/60 mb-1">Top 10% Rate</p>
-                  <p className="text-2xl font-bold text-[#10B981]">£{top10Rate}/hr</p>
+                <div className="bg-white rounded-2xl p-4 text-center">
+                  <p className="text-sm text-[var(--v2-body)] mb-1">Top 10% Rate</p>
+                  <p className="text-2xl font-bold text-[var(--v2-green)]">£{top10Rate}/hr</p>
                 </div>
-                <div className="bg-white/5 rounded-xl p-4 text-center">
-                  <p className="text-sm text-white/60 mb-1">Gap to Top 10%</p>
-                  <p className="text-2xl font-bold text-white">+£{top10Rate - yourRate}/hr</p>
+                <div className="bg-white rounded-2xl p-4 text-center">
+                  <p className="text-sm text-[var(--v2-body)] mb-1">Gap to Top 10%</p>
+                  <p className="text-2xl font-bold text-[var(--v2-ink)]">+£{top10Rate - yourRate}/hr</p>
                 </div>
               </div>
 
               {/* Time-of-day rates */}
-              <div className="bg-white/5 rounded-xl p-6 mb-8">
-                <p className="text-sm text-white/60 font-medium mb-4 flex items-center gap-2">
+              <div className="bg-white rounded-2xl p-6 mb-8">
+                <p className="text-sm text-[var(--v2-body)] font-medium mb-4 flex items-center gap-2">
                   <Clock className="w-4 h-4" />
                   Recommended rates by time of day
                 </p>
@@ -282,9 +282,9 @@ export function RateChecker() {
                   ].map((t) => {
                     const rate = Math.round(yourRate * t.mult)
                     return (
-                      <div key={t.label} className="rounded-lg p-3 text-center border border-white/10 bg-white/5">
-                        <p className="text-xs text-white/50 mb-1">{t.label}</p>
-                        <p className="text-lg font-bold text-white">£{rate}/hr</p>
+                      <div key={t.label} className="rounded-lg p-3 text-center border border-[var(--v2-line)] bg-white">
+                        <p className="text-xs text-[var(--v2-muted)] mb-1">{t.label}</p>
+                        <p className="text-lg font-bold text-[var(--v2-ink)]">£{rate}/hr</p>
                       </div>
                     )
                   })}
@@ -292,23 +292,23 @@ export function RateChecker() {
               </div>
 
               {/* Annual projection */}
-              <div className="bg-white/5 rounded-xl p-6 mb-8">
-                <p className="text-sm text-white/60 font-medium mb-4 flex items-center gap-2">
+              <div className="bg-white rounded-2xl p-6 mb-8">
+                <p className="text-sm text-[var(--v2-body)] font-medium mb-4 flex items-center gap-2">
                   <MapPin className="w-4 h-4" />
                   Annual earning projection (40 hrs/week, 48 weeks)
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="rounded-lg p-4 border border-white/10 bg-white/5 text-center">
-                    <p className="text-xs text-white/50 mb-1">Normal rate only</p>
-                    <p className="text-xl font-bold text-white">£{annualNormal.toLocaleString()}</p>
+                  <div className="rounded-lg p-4 border border-[var(--v2-line)] bg-white text-center">
+                    <p className="text-xs text-[var(--v2-muted)] mb-1">Normal rate only</p>
+                    <p className="text-xl font-bold text-[var(--v2-ink)]">£{annualNormal.toLocaleString()}</p>
                   </div>
-                  <div className="rounded-lg p-4 border border-[var(--katie-blue)]/30 bg-[var(--katie-blue)]/5 text-center">
-                    <p className="text-xs text-white/50 mb-1">Evening premium mix</p>
-                    <p className="text-xl font-bold text-[var(--katie-blue)]">£{annualEvening.toLocaleString()}</p>
+                  <div className="rounded-xl p-4 border border-[var(--v2-green)]/25 bg-[var(--v2-mint)] text-center">
+                    <p className="text-xs text-white/65 mb-1">Evening premium mix</p>
+                    <p className="text-xl font-bold text-[var(--v2-green)]">£{annualEvening.toLocaleString()}</p>
                   </div>
-                  <div className="rounded-lg p-4 border border-[#10B981]/30 bg-[#10B981]/5 text-center">
-                    <p className="text-xs text-white/50 mb-1">Weekend premium mix</p>
-                    <p className="text-xl font-bold text-[#10B981]">£{annualWeekend.toLocaleString()}</p>
+                  <div className="rounded-lg p-4 border border-[var(--v2-green)]/30 bg-[var(--v2-mint)] text-center">
+                    <p className="text-xs text-[var(--v2-muted)] mb-1">Weekend premium mix</p>
+                    <p className="text-xl font-bold text-[var(--v2-green)]">£{annualWeekend.toLocaleString()}</p>
                   </div>
                 </div>
               </div>
@@ -317,14 +317,14 @@ export function RateChecker() {
               <div className="flex flex-col sm:flex-row gap-4 mb-6">
                 <button
                   onClick={handleCopy}
-                  className="flex-1 py-3 min-h-[48px] rounded-lg bg-white/10 hover:bg-white/20 text-white font-bold transition-colors flex items-center justify-center gap-2"
+                  className="flex-1 py-3 min-h-[48px] rounded-lg bg-white hover:border-[#b9c6bf] text-[var(--v2-ink)] font-bold transition-colors flex items-center justify-center gap-2"
                 >
-                  {copied ? <CheckCircle2 className="w-5 h-5 text-[#10B981]" /> : <Copy className="w-5 h-5" />}
+                  {copied ? <CheckCircle2 className="w-5 h-5 text-[var(--v2-green)]" /> : <Copy className="w-5 h-5" />}
                   {copied ? "COPIED" : "COPY BREAKDOWN"}
                 </button>
                 <a
                   href="/pricing"
-                  className="flex-1 py-3 min-h-[48px] rounded-lg bg-[var(--coral)] hover:bg-[var(--coral)]/90 text-white font-bold transition-colors flex items-center justify-center gap-2"
+                  className="flex-1 py-3 min-h-[48px] rounded-lg bg-[var(--coral)] hover:bg-[var(--coral)]/90 text-[var(--v2-ink)] font-bold transition-colors flex items-center justify-center gap-2"
                 >
                   <ArrowRight className="w-5 h-5" />
                   KATIE HANDLES THE ADMIN — FREE TRIAL

@@ -109,7 +109,7 @@ export const revalidate = 3600
 
 export default function ResearchPage() {
   return (
-    <div className="min-h-screen bg-[var(--navy-900)] text-white">
+    <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
@@ -122,7 +122,7 @@ export default function ResearchPage() {
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero */}
         <section className="mb-16">
-          <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="v2-eyebrow inline-flex items-center gap-2 mb-6">
             <FileText className="w-4 h-4" />
             Research — July 2026
           </div>
@@ -130,25 +130,25 @@ export default function ResearchPage() {
             Can an AI Voice Agent Tell a Blocked Drain from a Gas Leak?
           </h1>
 
-          <div className="flex flex-wrap items-center gap-4 text-white/40 text-sm mt-4">
+          <div className="flex flex-wrap items-center gap-4 text-[var(--v2-muted)] text-sm mt-4">
             <div className="flex items-center gap-2">
               <User className="w-4 h-4" />
               <span>Dru</span>
-              <span className="text-white/30">— Founder, whoza.ai</span>
+              <span className="text-[var(--v2-muted)]">— Founder, whoza.ai</span>
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
               <time dateTime="2026-07-29">2026-07-29</time>
             </div>
           </div>
-          <div className="mt-2 text-white/30 text-sm">
+          <div className="mt-2 text-[var(--v2-muted)] text-sm">
             Last updated: <time dateTime="2026-07-29">2026-07-29</time>
           </div>
 
-          <p className="text-2xl text-white/70 mb-6 mt-6">
+          <p className="text-2xl text-[var(--v2-body)] mb-6 mt-6">
             The safety question nobody in this industry has properly asked yet — an independent look at emergency triage, liability and where AI voice agents genuinely belong in safety-critical trades
           </p>
-          <div className="flex flex-wrap gap-4 text-sm text-white/50">
+          <div className="flex flex-wrap gap-4 text-sm text-[var(--v2-muted)]">
             <span className="flex items-center gap-2"><Clock className="w-4 h-4" /> 15 min read</span>
             <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> ICO Registered (ZC077271)</span>
             <span className="flex items-center gap-2"><FileText className="w-4 h-4" /> Safety & Liability</span>
@@ -156,33 +156,33 @@ export default function ResearchPage() {
         </section>
 
         {/* Key Findings */}
-        <section className="bg-white/5 border-l-4 border-emerald-400 p-6 mb-12 rounded-r-lg">
-          <h2 className="font-bold text-xl mb-6 text-white">Key Findings</h2>
+        <section className="bg-white border-l-4 border-[var(--v2-green)] p-6 mb-12 rounded-r-lg">
+          <h2 className="font-bold text-xl mb-6 text-[var(--v2-ink)]">Key Findings</h2>
           <ul className="space-y-4">
             <li className="flex items-start">
-              <span className="text-emerald-400 font-bold mr-3 min-w-[80px]">66.7%</span>
-              <span className="text-white/70">average accuracy of AI triage on emergency-level cases — roughly a third are still misjudged</span>
+              <span className="text-[var(--v2-green)] font-bold mr-3 min-w-[80px]">66.7%</span>
+              <span className="text-[var(--v2-body)]">average accuracy of AI triage on emergency-level cases — roughly a third are still misjudged</span>
             </li>
             <li className="flex items-start">
-              <span className="text-emerald-400 font-bold mr-3 min-w-[80px]">35% vs 19%</span>
-              <span className="text-white/70">word error rate gap on speech recognition for Black American speakers versus white American speakers</span>
+              <span className="text-[var(--v2-green)] font-bold mr-3 min-w-[80px]">35% vs 19%</span>
+              <span className="text-[var(--v2-body)]">word error rate gap on speech recognition for Black American speakers versus white American speakers</span>
             </li>
             <li className="flex items-start">
-              <span className="text-emerald-400 font-bold mr-3 min-w-[80px]">33%</span>
-              <span className="text-white/70">of small UK trade businesses fail to answer incoming calls — being unreachable carries its own risk</span>
+              <span className="text-[var(--v2-green)] font-bold mr-3 min-w-[80px]">33%</span>
+              <span className="text-[var(--v2-body)]">of small UK trade businesses fail to answer incoming calls — being unreachable carries its own risk</span>
             </li>
             <li className="flex items-start">
-              <span className="text-emerald-400 font-bold mr-3 min-w-[80px]">July 2026</span>
-              <span className="text-white/70">UK Jurisdiction Taskforce legal statement: businesses deploying AI owe a duty of care to callers</span>
+              <span className="text-[var(--v2-green)] font-bold mr-3 min-w-[80px]">July 2026</span>
+              <span className="text-[var(--v2-body)]">UK Jurisdiction Taskforce legal statement: businesses deploying AI owe a duty of care to callers</span>
             </li>
             <li className="flex items-start">
-              <span className="text-emerald-400 font-bold mr-3 min-w-[80px]">Zero</span>
-              <span className="text-white/70">published studies specifically measuring AI voice agent accuracy on trade emergency calls</span>
+              <span className="text-[var(--v2-green)] font-bold mr-3 min-w-[80px]">Zero</span>
+              <span className="text-[var(--v2-body)]">published studies specifically measuring AI voice agent accuracy on trade emergency calls</span>
             </li>
           </ul>
         </section>
 
-        <article className="prose prose-lg max-w-none prose-invert">
+        <article className="prose prose-lg max-w-none">
           {/* Executive Summary */}
           <h2>In Short</h2>
           <p>
@@ -191,13 +191,13 @@ export default function ResearchPage() {
 
           <h2>Why I'm Writing This One Myself</h2>
           <p>
-            I run a company that builds <Link href="/" className="text-emerald-400 hover:underline">AI voice agents for tradespeople</Link>, so you would be forgiven for reading this with one eyebrow raised. Fair enough. But it is precisely because I have spent the last two years elbow-deep in call transcripts, missed-call data and WhatsApp handoffs that I think this needs saying — and I would rather say it than have someone else say it about us.
+            I run a company that builds <Link href="/" className="text-[var(--v2-green)] hover:underline">AI voice agents for tradespeople</Link>, so you would be forgiven for reading this with one eyebrow raised. Fair enough. But it is precisely because I have spent the last two years elbow-deep in call transcripts, missed-call data and WhatsApp handoffs that I think this needs saying — and I would rather say it than have someone else say it about us.
           </p>
           <p>
             The moment this stopped being an abstract question for me was a call, appropriately enough, from a heating engineer using our platform. He was not asking about lead conversion or missed-call recovery, which is usually what these conversations are about. He wanted to know, quite specifically, what would happen if someone rang at two in the morning saying they could smell gas. Would Katie, our AI voice agent, understand what that meant? Would she pass it straight to him, or would she try to book it in as a boiler service for Tuesday?
           </p>
           <p>
-            I could answer him honestly, because we have built specific safeguards for exactly that scenario. But his question stayed with me, because I realised almost everything written about <Link href="/research/ai-voice-agents-uk-trades-2026" className="text-emerald-400 hover:underline">AI voice agents in this sector</Link> — including our own research — is about speed, conversion and cost. Nobody is publishing anything about accuracy on the calls that matter most: the ones where getting it wrong is not a lost job, it is a genuine hazard.
+            I could answer him honestly, because we have built specific safeguards for exactly that scenario. But his question stayed with me, because I realised almost everything written about <Link href="/research/ai-voice-agents-uk-trades-2026" className="text-[var(--v2-green)] hover:underline">AI voice agents in this sector</Link> — including our own research — is about speed, conversion and cost. Nobody is publishing anything about accuracy on the calls that matter most: the ones where getting it wrong is not a lost job, it is a genuine hazard.
           </p>
 
           <h2>Two Different Questions, and We Keep Answering the Easy One</h2>
@@ -223,7 +223,7 @@ export default function ResearchPage() {
 
           <h3>Tier Two — Urgent but Not Immediately Dangerous</h3>
           <p>
-            <Link href="/for-heating-engineers" className="text-emerald-400 hover:underline">No heating for an elderly or vulnerable person in winter</Link>, total loss of hot water for a family with a newborn, a burst pipe actively damaging a property. These need a human the same day, ideally within the hour.
+            <Link href="/for-heating-engineers" className="text-[var(--v2-green)] hover:underline">No heating for an elderly or vulnerable person in winter</Link>, total loss of hot water for a family with a newborn, a burst pipe actively damaging a property. These need a human the same day, ideally within the hour.
           </p>
 
           <h3>Tier Three — Everything Else</h3>
@@ -237,7 +237,7 @@ export default function ResearchPage() {
 
           <h2>There Is a Second Problem Underneath the First: Understanding the Words at All</h2>
           <p>
-            Voice AI does not fail randomly across accents — it fails in a pattern, and the pattern is not kind to a lot of the country our customers actually work in. <Link href="/research/voice-agent-technology-state-of-art-2026" className="text-emerald-400 hover:underline">A Stanford-led audit of five major commercial speech recognition services</Link> found word error rates of 35 per cent on Black American speakers versus 19 per cent on white American speakers. A separate large-scale audit covering 2,700 speakers found non-American English accents produced anywhere from two to twelve percentage points higher error rates than American English, sometimes sixteen to forty-nine per cent worse in relative terms. Perhaps most relevant here: a 2024 study affiliated with Cambridge found that OpenAI's Whisper model transcribed American speakers noticeably better than British speakers, despite both being native English speakers on paper.
+            Voice AI does not fail randomly across accents — it fails in a pattern, and the pattern is not kind to a lot of the country our customers actually work in. <Link href="/research/voice-agent-technology-state-of-art-2026" className="text-[var(--v2-green)] hover:underline">A Stanford-led audit of five major commercial speech recognition services</Link> found word error rates of 35 per cent on Black American speakers versus 19 per cent on white American speakers. A separate large-scale audit covering 2,700 speakers found non-American English accents produced anywhere from two to twelve percentage points higher error rates than American English, sometimes sixteen to forty-nine per cent worse in relative terms. Perhaps most relevant here: a 2024 study affiliated with Cambridge found that OpenAI's Whisper model transcribed American speakers noticeably better than British speakers, despite both being native English speakers on paper.
           </p>
           <p>
             None of that is a criticism of any one vendor — it is a structural pattern across the industry, driven largely by what these models were mostly trained on. But it matters enormously here, because the callers most likely to be misheard are often exactly the callers least likely to be using calm, clear, textbook phrasing: someone rattled about a gas smell, in a strong regional accent, talking quickly, possibly with children shouting in the background. Stacking a triage decision on top of speech recognition that is already less reliable for that exact caller is where I think the real risk compounds — and it gets almost no attention in an industry more preoccupied with how natural the AI's own voice sounds.
@@ -247,7 +247,7 @@ export default function ResearchPage() {
           <p>
             This is stitched together from patterns we see across many calls, not a transcript of any single real one, because I want to show what this looks like in practice rather than just describe it.
           </p>
-          <div className="bg-white/5 border border-white/10 rounded-xl p-6 my-6 italic text-white/80">
+          <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 my-6 italic text-[var(--v2-body)]">
             <p>Caller: 'Hiya, is this the boiler people? I've had this smell, like, since this morning, thought it was just the neighbours' bins but it's not going, and now the pilot light's gone a funny colour, sort of orange.'</p>
           </div>
           <p>
@@ -287,7 +287,7 @@ export default function ResearchPage() {
             <strong>When the system genuinely is not sure, it should round up, not down.</strong> Treating a routine call as urgent costs a phone call and a moment of someone's time. Treating a genuine emergency as routine costs far more. Any voice agent tuned to minimise 'unnecessary' escalations, rather than to minimise missed emergencies, has its incentives the wrong way round.
           </p>
           <p>
-            <Link href="/research/caller-experience-revolution-ai-voice-agents-2026" className="text-emerald-400 hover:underline">Callers should be told they are speaking to AI immediately and without being asked</Link> — not only because it supports trust, but because it is now a live factor in how a court would assess whether a business behaved reasonably.
+            <Link href="/research/caller-experience-revolution-ai-voice-agents-2026" className="text-[var(--v2-green)] hover:underline">Callers should be told they are speaking to AI immediately and without being asked</Link> — not only because it supports trust, but because it is now a live factor in how a court would assess whether a business behaved reasonably.
           </p>
           <p>
             For anything flagged tier one or two, a human needs to be reachable within a defined, tested window — not merely 'on call' in theory. If nobody actually answers, the safeguard does not exist.
@@ -301,7 +301,7 @@ export default function ResearchPage() {
 
           <h2>Questions Worth Asking Before You Trust Any of This</h2>
           <p>
-            If you run a gas, electrical, plumbing or roofing business and you are looking at an <Link href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-emerald-400 hover:underline">AI answering service</Link>, or already using one, these are worth putting to us or to anyone else:
+            If you run a gas, electrical, plumbing or roofing business and you are looking at an <Link href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-[var(--v2-green)] hover:underline">AI answering service</Link>, or already using one, these are worth putting to us or to anyone else:
           </p>
           <ul>
             <li>What exactly happens on my account if a caller says they can smell gas? Ask for the actual script, not a description of it.</li>
@@ -315,7 +315,7 @@ export default function ResearchPage() {
 
           <h2>Where This Leaves Us</h2>
           <p>
-            None of this is an argument against AI voice agents in trades. The evidence for the upside is solid, and some of it is ours: the Health and Safety Executive's own data, echoed in <Link href="/research/missed-call-index" className="text-emerald-400 hover:underline">our Missed Call Index research</Link>, suggests something like <Link href="/research/missed-call-index" className="text-emerald-400 hover:underline">33 per cent of small UK trade businesses fail to answer incoming calls</Link> (Moneypenny Small Business Call Report, 2016) during working hours, and a caller who cannot reach anyone at all is arguably at more risk, not less — they are the one left ringing round strangers at midnight, or deciding to have a go at the gas fitting themselves. <Link href="/ai-vs-virtual-receptionist" className="text-emerald-400 hover:underline">Being reachable is a safety feature too</Link>, and it is one AI is unambiguously good at.
+            None of this is an argument against AI voice agents in trades. The evidence for the upside is solid, and some of it is ours: the Health and Safety Executive's own data, echoed in <Link href="/research/missed-call-index" className="text-[var(--v2-green)] hover:underline">our Missed Call Index research</Link>, suggests something like <Link href="/research/missed-call-index" className="text-[var(--v2-green)] hover:underline">33 per cent of small UK trade businesses fail to answer incoming calls</Link> (Moneypenny Small Business Call Report, 2016) during working hours, and a caller who cannot reach anyone at all is arguably at more risk, not less — they are the one left ringing round strangers at midnight, or deciding to have a go at the gas fitting themselves. <Link href="/ai-vs-virtual-receptionist" className="text-[var(--v2-green)] hover:underline">Being reachable is a safety feature too</Link>, and it is one AI is unambiguously good at.
           </p>
           <p>
             But 'does it work' and 'is it safe on the small fraction of calls that are genuine emergencies' are different questions, and this industry, us included, has spent its energy answering the first one. I do not think that is dishonest exactly, but it is incomplete, and dressing it up as more finished research than it is does not help anyone — least of all the people building this technology in good faith.
@@ -327,12 +327,12 @@ export default function ResearchPage() {
 
         {/* FAQ Section */}
         <section className="mt-16 mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-white">Frequently Asked Questions</h2>
+          <h2 className="text-2xl font-bold mb-6 text-[var(--v2-ink)]">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqItems.map((faq, idx) => (
-              <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
-                <p className="text-white/70 leading-relaxed">{faq.answer}</p>
+              <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+                <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-3">{faq.question}</h3>
+                <p className="text-[var(--v2-body)] leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>
@@ -340,40 +340,40 @@ export default function ResearchPage() {
 
         {/* Related Content */}
         <section className="mt-16 mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-white">Related Research</h2>
+          <h2 className="text-2xl font-bold mb-6 text-[var(--v2-ink)]">Related Research</h2>
           <div className="grid sm:grid-cols-2 gap-4">
-            <Link href="/research/missed-call-index" className="group block bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-5 transition-colors">
-              <h3 className="font-semibold mb-2 group-hover:text-emerald-400 transition-colors text-white">The Missed Call Index — UK Trades</h3>
-              <p className="text-sm text-white/60">Per-trade cost modelling, the £2.3bn national picture, seasonal patterns and methodology.</p>
+            <Link href="/research/missed-call-index" className="group block bg-white hover:border-[#b9c6bf] border border-[var(--v2-line)] rounded-2xl p-5 transition-colors">
+              <h3 className="font-semibold mb-2 group-hover:text-[var(--v2-green)] transition-colors text-[var(--v2-ink)]">The Missed Call Index — UK Trades</h3>
+              <p className="text-sm text-[var(--v2-body)]">Per-trade cost modelling, the £2.3bn national picture, seasonal patterns and methodology.</p>
             </Link>
-            <Link href="/research/ai-voice-agents-uk-trades-2026" className="group block bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-5 transition-colors">
-              <h3 className="font-semibold mb-2 group-hover:text-emerald-400 transition-colors text-white">AI Voice Agents UK Trades 2026</h3>
-              <p className="text-sm text-white/60">Comprehensive analysis of AI voice agent adoption, market dynamics, and ROI for UK trade businesses.</p>
+            <Link href="/research/ai-voice-agents-uk-trades-2026" className="group block bg-white hover:border-[#b9c6bf] border border-[var(--v2-line)] rounded-2xl p-5 transition-colors">
+              <h3 className="font-semibold mb-2 group-hover:text-[var(--v2-green)] transition-colors text-[var(--v2-ink)]">AI Voice Agents UK Trades 2026</h3>
+              <p className="text-sm text-[var(--v2-body)]">Comprehensive analysis of AI voice agent adoption, market dynamics, and ROI for UK trade businesses.</p>
             </Link>
-            <Link href="/research/voice-agent-technology-state-of-art-2026" className="group block bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-5 transition-colors">
-              <h3 className="font-semibold mb-2 group-hover:text-emerald-400 transition-colors text-white">Voice Agent Technology: State of the Art 2026</h3>
-              <p className="text-sm text-white/60">End-to-end speech models, latency engineering, and the future of conversational AI.</p>
+            <Link href="/research/voice-agent-technology-state-of-art-2026" className="group block bg-white hover:border-[#b9c6bf] border border-[var(--v2-line)] rounded-2xl p-5 transition-colors">
+              <h3 className="font-semibold mb-2 group-hover:text-[var(--v2-green)] transition-colors text-[var(--v2-ink)]">Voice Agent Technology: State of the Art 2026</h3>
+              <p className="text-sm text-[var(--v2-body)]">End-to-end speech models, latency engineering, and the future of conversational AI.</p>
             </Link>
-            <Link href="/research/caller-experience-revolution-ai-voice-agents-2026" className="group block bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-5 transition-colors">
-              <h3 className="font-semibold mb-2 group-hover:text-emerald-400 transition-colors text-white">Caller Experience Revolution 2026</h3>
-              <p className="text-sm text-white/60">How AI voice agents are transforming customer experience for UK trades.</p>
+            <Link href="/research/caller-experience-revolution-ai-voice-agents-2026" className="group block bg-white hover:border-[#b9c6bf] border border-[var(--v2-line)] rounded-2xl p-5 transition-colors">
+              <h3 className="font-semibold mb-2 group-hover:text-[var(--v2-green)] transition-colors text-[var(--v2-ink)]">Caller Experience Revolution 2026</h3>
+              <p className="text-sm text-[var(--v2-body)]">How AI voice agents are transforming customer experience for UK trades.</p>
             </Link>
           </div>
         </section>
 
         {/* AEO cross-link */}
         <section className="mt-12 mb-12">
-          <div className="bg-emerald-500/5 border border-emerald-500/20 rounded-xl p-6">
-            <p className="text-white/70 text-sm">
-              This research is published as part of whoza.ai's <Link href="/research/aeo-ai-search-optimisation-2026" className="text-emerald-400 hover:underline">Answer Engine Optimisation</Link> programme — making independent, evidence-based research discoverable by AI search engines including ChatGPT, Perplexity, and Google Gemini.
+          <div className="bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-6">
+            <p className="text-[var(--v2-body)] text-sm">
+              This research is published as part of whoza.ai's <Link href="/research/aeo-ai-search-optimisation-2026" className="text-[var(--v2-green)] hover:underline">Answer Engine Optimisation</Link> programme — making independent, evidence-based research discoverable by AI search engines including ChatGPT, Perplexity, and Google Gemini.
             </p>
           </div>
         </section>
 
         {/* References */}
-        <section className="mt-12 pt-8 border-t border-white/10">
-          <h2 className="text-2xl font-bold mb-6 text-white">References</h2>
-          <ol className="space-y-3 text-sm text-white/50">
+        <section className="mt-12 pt-8 border-t border-[var(--v2-line)]">
+          <h2 className="text-2xl font-bold mb-6 text-[var(--v2-ink)]">References</h2>
+          <ol className="space-y-3 text-sm text-[var(--v2-muted)]">
             <li>Health and Safety Executive (HSE), 'Gas safety — Carbon monoxide awareness: frequently asked questions', hse.gov.uk/gas/domestic/co.htm</li>
             <li>Accuracy of online symptom assessment applications, large language models, and laypeople for self-triage decisions, npj Digital Medicine, 2025, nature.com/articles/s41746-025-01566-6</li>
             <li>UK Jurisdiction Taskforce, Legal Statement on Liability for AI Harms, published 22 July 2026; summarised in 'AI Liability Under English Law: UKJT Legal Statement', A&O Shearman, aoshearman.com</li>
@@ -384,13 +384,13 @@ export default function ResearchPage() {
             <li>whoza.ai Research, 'The Missed Call Index', 2026, whoza.ai/research/missed-call-index</li>
             <li>whoza.ai, 'How Much Do Missed Calls Cost UK Trades?', whoza.ai/research/missed-call-index</li>
           </ol>
-          <p className="text-sm text-white/40 mt-6 italic">
+          <p className="text-sm text-[var(--v2-muted)] mt-6 italic">
             This piece reflects my own view as founder of whoza.ai, informed by the research cited above. Where figures are drawn from other fields, particularly healthcare triage, I have tried to flag the limits of that comparison rather than overstate it.
           </p>
         </section>
         <div className="mt-12 text-center">
-          <p className="text-white/40 text-sm">
-            <a href="/data" className="text-emerald-400 hover:underline">Sources and methodology</a> for all figures in this report.
+          <p className="text-[var(--v2-muted)] text-sm">
+            <a href="/data" className="text-[var(--v2-green)] hover:underline">Sources and methodology</a> for all figures in this report.
           </p>
         </div>
       

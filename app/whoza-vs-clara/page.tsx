@@ -74,7 +74,7 @@ export const revalidate = 3600
 export default function VsClaraPage() {
   return (
     <>
-      <div className="min-h-screen bg-[var(--navy-900)] text-white">
+      <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
         <Header />
         <FAQPageSchema faqs={faqs} />
         <BreadcrumbSchema items={[
@@ -87,21 +87,21 @@ export default function VsClaraPage() {
           <section className="relative overflow-hidden" style={{ background: "linear-gradient(135deg, #0F1729 0%, #1A1A2E 50%, #0F1729 100%)" }}>
             <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
               <nav aria-label="Breadcrumb" className="mb-8">
-                <ol className="flex items-center text-sm text-white/40" style={{ listStyle: "none", padding: 0 }}>
-                  <li><a href="/" className="hover:text-white transition-colors">Home</a></li>
+                <ol className="flex items-center text-sm text-[var(--v2-muted)]" style={{ listStyle: "none", padding: 0 }}>
+                  <li><a href="/" className="hover:text-[var(--v2-ink)] transition-colors">Home</a></li>
                   <li className="mx-2">/</li>
-                  <li className="text-white">vs Clara AI</li>
+                  <li className="text-[var(--v2-ink)]">vs Clara AI</li>
                 </ol>
               </nav>
 
-              <div className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 px-3 py-1 rounded-full text-xs font-medium mb-6">
+              <div className="inline-flex items-center gap-2 bg-amber-50 text-amber-700 px-3 py-1 rounded-full text-xs font-medium mb-6">
                 <Star className="w-3 h-3" />
                 Comparison — August 2026
               </div>
 
               {/* Publisher Disclosure */}
-            <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-4 mb-8">
-              <p className="text-sm text-amber-300">
+            <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 mb-8">
+              <p className="text-sm text-amber-700">
                 <strong>Publisher note:</strong> This comparison is published by whoza.ai, which is one of the products compared.
                 Competitor details are taken from their public pricing pages, verified August 2026.
               </p>
@@ -109,20 +109,20 @@ export default function VsClaraPage() {
 
             <h1 className="text-4xl lg:text-5xl font-extrabold mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
                 Whoza.ai vs Clara AI
-                <span className="block text-emerald-400 mt-2">Honest Head-to-Head for UK Trades</span>
+                <span className="block text-[var(--v2-green)] mt-2">Honest Head-to-Head for UK Trades</span>
               </h1>
 
-              <p className="text-lg text-white/60 max-w-2xl mb-8">
+              <p className="text-lg text-[var(--v2-body)] max-w-2xl mb-8">
                 Clara (£49.99/month) and whoza.ai (£59/month) are the two most popular AI receptionists 
                 for UK tradespeople. We compared them on price, features, setup, and value — 
                 with real data from their websites and user reviews.
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <a href="#comparison-table" className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-emerald-700 transition-colors">
+                <a href="#comparison-table" className="inline-flex items-center gap-2 bg-[var(--v2-green)] text-white font-bold px-6 py-3 rounded-lg hover:bg-[var(--v2-green-hover)] transition-colors v2-island">
                   See Comparison Table <ArrowRight className="w-4 h-4" />
                 </a>
-                <a href="/pricing" className="inline-flex items-center gap-2 bg-white/10 text-white font-bold px-6 py-3 rounded-lg hover:bg-white/20 transition-colors">
+                <a href="/pricing" className="inline-flex items-center gap-2 bg-white text-[var(--v2-ink)] font-bold px-6 py-3 rounded-lg hover:border-[#b9c6bf] transition-colors">
                   Try whoza.ai Free <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
@@ -131,11 +131,11 @@ export default function VsClaraPage() {
 
           {/* Quick Verdict */}
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div className="bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 border border-emerald-500/20 rounded-2xl p-8">
+            <div className="bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 border border-emerald-500/20 rounded-2xl p-8 v2-island">
               <h2 className="text-2xl font-bold mb-4">Which service should you choose: whoza.ai or Clara AI?</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h3 className="font-bold text-emerald-400 mb-2 flex items-center gap-2">
+                  <h3 className="font-bold text-[#6ee7b7] mb-2 flex items-center gap-2">
                     <Check className="w-5 h-5" /> Choose whoza.ai if...
                   </h3>
                   <ul className="space-y-2 text-white/70 text-sm">
@@ -165,33 +165,33 @@ export default function VsClaraPage() {
           {/* Comparison Table */}
           <section id="comparison-table" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <h2 className="text-3xl font-bold mb-8 text-center">How do whoza.ai and Clara AI compare head-to-head?</h2>
-            <div className="overflow-x-auto rounded-xl border border-white/10">
+            <div className="overflow-x-auto rounded-2xl border border-[var(--v2-line)]">
               <table className="w-full text-left text-sm">
                 <thead>
-                  <tr className="bg-slate-900/80">
-                    <th className="px-6 py-4 font-semibold text-white">Feature</th>
-                    <th className="px-6 py-4 font-semibold text-emerald-400">Whoza.ai</th>
-                    <th className="px-6 py-4 font-semibold text-amber-400">Clara AI</th>
-                    <th className="px-6 py-4 font-semibold text-white">Winner</th>
+                  <tr className="bg-white">
+                    <th className="px-6 py-4 font-semibold text-[var(--v2-ink)]">Feature</th>
+                    <th className="px-6 py-4 font-semibold text-[var(--v2-green)]">Whoza.ai</th>
+                    <th className="px-6 py-4 font-semibold text-amber-700">Clara AI</th>
+                    <th className="px-6 py-4 font-semibold text-[var(--v2-ink)]">Winner</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-white/5">
+                <tbody className="divide-y divide-[var(--v2-line)]">
                   {comparisonData.map((row, i) => (
-                    <tr key={i} className={i % 2 === 0 ? "bg-white/5" : "bg-white/[0.02]"}>
-                      <td className="px-6 py-4 font-medium text-white">{row.feature}</td>
-                      <td className="px-6 py-4 text-emerald-300">{row.whoza}</td>
-                      <td className="px-6 py-4 text-amber-300">{row.competitor}</td>
+                    <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                      <td className="px-6 py-4 font-medium text-[var(--v2-ink)]">{row.feature}</td>
+                      <td className="px-6 py-4 text-[var(--v2-green)]">{row.whoza}</td>
+                      <td className="px-6 py-4 text-amber-700">{row.competitor}</td>
                       <td className="px-6 py-4">
-                        {row.winner === "whoza" && <span className="inline-flex items-center gap-1 text-emerald-400 font-semibold"><Check className="w-4 h-4" /> whoza</span>}
-                        {row.winner === "clara" && <span className="inline-flex items-center gap-1 text-amber-400 font-semibold"><Check className="w-4 h-4" /> Clara</span>}
-                        {row.winner === "draw" && <span className="text-white/50">Draw</span>}
+                        {row.winner === "whoza" && <span className="inline-flex items-center gap-1 text-[var(--v2-green)] font-semibold"><Check className="w-4 h-4" /> whoza</span>}
+                        {row.winner === "clara" && <span className="inline-flex items-center gap-1 text-amber-700 font-semibold"><Check className="w-4 h-4" /> Clara</span>}
+                        {row.winner === "draw" && <span className="text-[var(--v2-muted)]">Draw</span>}
                       </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <p className="text-xs text-white/40 mt-4 text-center">
+            <p className="text-xs text-[var(--v2-muted)] mt-4 text-center">
               Data sourced from clara.ai pricing page and whoza.ai pricing page, accessed August 2026. Prices subject to change.
             </p>
           </section>
@@ -201,18 +201,18 @@ export default function VsClaraPage() {
             {/* Price Section */}
             <div>
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
-                <PoundSterling className="w-6 h-6 text-emerald-400" />
+                <PoundSterling className="w-6 h-6 text-[var(--v2-green)]" />
                 Which is cheaper: whoza.ai or Clara AI?
               </h2>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <p className="text-white/70 leading-relaxed mb-4">
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+                <p className="text-[var(--v2-body)] leading-relaxed mb-4">
                   Clara's entry price of £49.99 beats whoza.ai's £59 by £9/month. Over a year, that's a £108 saving. 
                   However, Clara requires a 3-month minimum commitment (£149.97 upfront), while whoza.ai has no contract. 
                   Clara's mid-tier Pro plan at £99.99 is cheaper than whoza.ai's Growth at £125, but Clara Pro doesn't include 
                   review collection or competitor analysis — features that whoza.ai includes at the Growth level.
                 </p>
-                <p className="text-white/70 leading-relaxed">
-                  <strong className="text-white">Real-world cost example:</strong> A plumber receiving 15 calls/week. 
+                <p className="text-[var(--v2-body)] leading-relaxed">
+                  <strong className="text-[var(--v2-ink)]">Real-world cost example:</strong> A plumber receiving 15 calls/week. 
                   Clara Standard (£49.99) answers calls but delivers via email. whoza.ai Starter (£59) answers calls 
                   and delivers to WhatsApp. The £9/month difference is negligible compared to the convenience of 
                   WhatsApp delivery — which most tradespeople prefer according to a 2025 FSB survey showing 73% of 
@@ -224,30 +224,30 @@ export default function VsClaraPage() {
             {/* WhatsApp Section */}
             <div>
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
-                <MessageCircle className="w-6 h-6 text-emerald-400" />
+                <MessageCircle className="w-6 h-6 text-[var(--v2-green)]" />
                 Does Clara AI offer WhatsApp delivery like whoza.ai?
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-emerald-500/5 border border-emerald-500/20 rounded-xl p-6">
-                  <h3 className="font-bold text-emerald-400 mb-3">whoza.ai — WhatsApp</h3>
-                  <ul className="space-y-2 text-white/70 text-sm">
-                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> Instant push notification</li>
-                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> One-tap accept/decline/call back</li>
-                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> Already installed on every tradesperson's phone</li>
-                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> No login, no password, no app to learn</li>
+                <div className="bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-6">
+                  <h3 className="font-bold text-[var(--v2-green)] mb-3">whoza.ai — WhatsApp</h3>
+                  <ul className="space-y-2 text-[var(--v2-body)] text-sm">
+                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> Instant push notification</li>
+                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> One-tap accept/decline/call back</li>
+                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> Already installed on every tradesperson's phone</li>
+                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> No login, no password, no app to learn</li>
                   </ul>
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                  <h3 className="font-bold text-amber-400 mb-3">Clara — Email</h3>
-                  <ul className="space-y-2 text-white/70 text-sm">
-                    <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-400 shrink-0 mt-0.5" /> Must check inbox regularly</li>
-                    <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-400 shrink-0 mt-0.5" /> Can get buried under other emails</li>
-                    <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-400 shrink-0 mt-0.5" /> No instant notification on lock screen</li>
-                    <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-400 shrink-0 mt-0.5" /> Requires opening email app, reading, then action</li>
+                <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+                  <h3 className="font-bold text-amber-700 mb-3">Clara — Email</h3>
+                  <ul className="space-y-2 text-[var(--v2-body)] text-sm">
+                    <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-600 shrink-0 mt-0.5" /> Must check inbox regularly</li>
+                    <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-600 shrink-0 mt-0.5" /> Can get buried under other emails</li>
+                    <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-600 shrink-0 mt-0.5" /> No instant notification on lock screen</li>
+                    <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-600 shrink-0 mt-0.5" /> Requires opening email app, reading, then action</li>
                   </ul>
                 </div>
               </div>
-              <p className="text-white/60 text-sm mt-4">
+              <p className="text-[var(--v2-body)] text-sm mt-4">
                 Source: Ofcom, Online Nation 2025, 10 December 2025 — 90% of UK adults use WhatsApp; 
                 trade business owners check messaging apps 4.2x more frequently than email during work hours.
               </p>
@@ -256,11 +256,11 @@ export default function VsClaraPage() {
             {/* Features Section */}
             <div>
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
-                <Star className="w-6 h-6 text-emerald-400" />
+                <Star className="w-6 h-6 text-[var(--v2-green)]" />
                 What features does whoza.ai have that Clara AI lacks?
               </h2>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <p className="text-white/70 leading-relaxed mb-4">
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+                <p className="text-[var(--v2-body)] leading-relaxed mb-4">
                   whoza.ai's standout features are Claire (review collection) and Rex (competitor analysis). 
                   These aren't gimmicks — they're revenue drivers. According to BrightLocal's 2025 UK survey, 
                   businesses with 40+ Google reviews receive 3.5x more enquiries. Claire automates the review 
@@ -268,7 +268,7 @@ export default function VsClaraPage() {
                   reports help you understand why a rival is ranking higher on Google, giving you actionable steps 
                   to improve your visibility.
                 </p>
-                <p className="text-white/70 leading-relaxed">
+                <p className="text-[var(--v2-body)] leading-relaxed">
                   Clara focuses purely on call answering. It does this well — voice quality is good, 
                   setup is straightforward, and the AI understands trade terminology. But it's a single-tool 
                   solution. If you want reviews, competitor insights, or WhatsApp delivery, you'll need 
@@ -282,17 +282,17 @@ export default function VsClaraPage() {
             {/* Setup Section */}
             <div>
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
-                <Clock className="w-6 h-6 text-emerald-400" />
+                <Clock className="w-6 h-6 text-[var(--v2-green)]" />
                 How long does setup take for whoza.ai vs Clara AI?
               </h2>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <p className="text-white/70 leading-relaxed mb-4">
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+                <p className="text-[var(--v2-body)] leading-relaxed mb-4">
                   whoza.ai claims 30-minute setup. In our testing (August 2026), this held up — we went from 
                   sign-up to live call handling in 28 minutes. The process is: connect your number via call 
                   forwarding (2 mins), fill in your services and hours (5 mins), test with a sample call (3 mins), 
                   go live (18 mins for DNS/call routing propagation).
                 </p>
-                <p className="text-white/70 leading-relaxed">
+                <p className="text-[var(--v2-body)] leading-relaxed">
                   Clara's setup took 2 hours 47 minutes in our test. The process involves more configuration 
                   steps, a longer onboarding form, and a mandatory "training period" where the AI learns your 
                   business from submitted documents. This isn't necessarily bad — some users prefer the thoroughness — 
@@ -311,7 +311,7 @@ export default function VsClaraPage() {
                 "No affiliate links or paid placement",
                 "whoza.ai and Clara both reviewed",
               ].map((item) => (
-                <span key={item} className="inline-flex items-center gap-2 bg-white/5 text-white/60 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">
+                <span key={item} className="inline-flex items-center gap-2 bg-white text-[var(--v2-body)] text-xs font-medium px-3 py-1.5 rounded-full border border-[var(--v2-line)]">
                   <Shield className="w-3 h-3" /> {item}
                 </span>
               ))}
@@ -321,49 +321,49 @@ export default function VsClaraPage() {
           {/* CTA */}
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
             <h2 className="text-3xl font-bold mb-4">Which AI receptionist should you try first?</h2>
-            <p className="text-lg text-white/60 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-[var(--v2-body)] mb-8 max-w-2xl mx-auto">
               whoza.ai offers a 7-day free trial with no credit card. Clara offers a 7-day trial too. 
               Test them both with real calls and see which fits your workflow.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="/pricing" className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-emerald-700 transition-colors shadow-lg">
+              <a href="/pricing" className="inline-flex items-center gap-2 bg-[var(--v2-green)] text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-[var(--v2-green-hover)] transition-colors shadow-lg v2-island">
                 Start whoza.ai Free Trial <ArrowRight className="w-5 h-5" />
               </a>
-              <a href="/best-ai-call-handler-uk-trades" className="inline-flex items-center gap-2 bg-white/10 text-white font-bold px-6 py-4 rounded-xl hover:bg-white/20 transition-colors">
+              <a href="/best-ai-call-handler-uk-trades" className="inline-flex items-center gap-2 bg-white text-[var(--v2-ink)] font-bold px-6 py-4 rounded-2xl hover:border-[#b9c6bf] transition-colors">
                 Read More Comparisons <ArrowRight className="w-5 h-5" />
               </a>
             </div>
           </section>
           {/* Link to related comparison */}
-          <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center border-t border-white/10">
-            <p className="text-white/50 text-sm mb-3">Still deciding between AI and human reception?</p>
-            <a href="/ai-vs-virtual-receptionist" className="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-medium text-sm transition-colors">
+          <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center border-t border-[var(--v2-line)]">
+            <p className="text-[var(--v2-muted)] text-sm mb-3">Still deciding between AI and human reception?</p>
+            <a href="/ai-vs-virtual-receptionist" className="inline-flex items-center text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] font-medium text-sm transition-colors">
               Read: AI vs Human Receptionist for Contractors <ArrowRight className="ml-2 w-4 h-4" />
             </a>
           </section>
 
           {/* Compare with other services */}
-          <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center border-t border-white/10">
-            <p className="text-white/50 text-sm mb-4">Compare whoza.ai with other services:</p>
+          <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center border-t border-[var(--v2-line)]">
+            <p className="text-[var(--v2-muted)] text-sm mb-4">Compare whoza.ai with other services:</p>
             <div className="flex flex-wrap justify-center gap-3">
-              <a href="/whoza-vs-moneypenny" className="inline-flex items-center gap-2 bg-white/5 text-white/70 hover:text-white hover:bg-white/10 px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-white/10">
+              <a href="/whoza-vs-moneypenny" className="inline-flex items-center gap-2 bg-white text-[var(--v2-body)] hover:text-[var(--v2-ink)] hover:border-[#b9c6bf] px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-[var(--v2-line)]">
                 vs Moneypenny <ArrowRight className="w-3 h-3" />
               </a>
-              <a href="/whoza-vs-team-connect" className="inline-flex items-center gap-2 bg-white/5 text-white/70 hover:text-white hover:bg-white/10 px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-white/10">
+              <a href="/whoza-vs-team-connect" className="inline-flex items-center gap-2 bg-white text-[var(--v2-body)] hover:text-[var(--v2-ink)] hover:border-[#b9c6bf] px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-[var(--v2-line)]">
                 vs Team-Connect <ArrowRight className="w-3 h-3" />
               </a>
             </div>
           </section>
 
         {/* FAQ — visible matching schema */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                   <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
-                  <p className="text-white/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                  <p className="text-[var(--v2-body)] leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                 </div>
               ))}
             </div>

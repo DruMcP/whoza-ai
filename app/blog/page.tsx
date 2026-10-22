@@ -137,7 +137,7 @@ export const revalidate = 3600
 
 export default function BlogPage() {
   return (
-    <div className="min-h-screen bg-[var(--navy-900)] text-white">
+    <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header />
       <BlogListingSchema posts={blogPosts.map(({ slug, title, excerpt, date, category, url }) => ({ slug, title, excerpt, date, category, url }))} />
       <BreadcrumbSchema items={[
@@ -147,12 +147,12 @@ export default function BlogPage() {
 
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="v2-eyebrow inline-flex items-center gap-2 mb-6">
             <FileText className="w-4 h-4" />
             Trade Business Insights
           </div>
           <h1 className="text-4xl font-bold mb-4">whoza.ai Blog</h1>
-          <p className="text-white/60 text-lg max-w-2xl">
+          <p className="text-[var(--v2-body)] text-lg max-w-2xl">
             AI voice agent insights, business growth strategies, and practical tips to help UK tradespeople capture more leads and book more jobs.
           </p>
         </div>
@@ -162,26 +162,26 @@ export default function BlogPage() {
             <Link
               key={post.slug}
               href={post.isResearch ? `/${post.slug}` : `/blog/${post.slug}`}
-              className="group block bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-6 transition-colors"
+              className="group block bg-white hover:border-[#b9c6bf] border border-[var(--v2-line)] rounded-2xl p-6 transition-colors"
             >
               <div className="flex items-start justify-between gap-4">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
-                    <span className={`text-xs font-medium px-2 py-1 rounded-full ${post.isResearch ? 'text-amber-400 bg-amber-500/10' : 'text-emerald-400 bg-emerald-500/10'}`}>
+                    <span className={`text-xs font-medium px-2 py-1 rounded-full ${post.isResearch ? 'text-amber-700 bg-amber-50' : 'text-[var(--v2-green)] bg-[var(--v2-mint)]'}`}>
                       {post.category}
                     </span>
-                    <span className="text-xs text-white/40">{post.date}</span>
+                    <span className="text-xs text-[var(--v2-muted)]">{post.date}</span>
                   </div>
-                  <h2 className="text-xl font-semibold text-white group-hover:text-emerald-400 transition-colors mb-2">
+                  <h2 className="text-xl font-semibold text-[var(--v2-ink)] group-hover:text-[var(--v2-green)] transition-colors mb-2">
                     {post.title}
                   </h2>
-                  <p className="text-white/60 leading-relaxed mb-3">{post.excerpt}</p>
-                  <div className="flex items-center gap-2 text-white/40 text-sm">
+                  <p className="text-[var(--v2-body)] leading-relaxed mb-3">{post.excerpt}</p>
+                  <div className="flex items-center gap-2 text-[var(--v2-muted)] text-sm">
                     <Clock className="w-4 h-4" />
                     <span>{post.readTime}</span>
                   </div>
                 </div>
-                <ArrowRight className="w-5 h-5 text-white/30 group-hover:text-emerald-400 group-hover:translate-x-1 transition-all flex-shrink-0 mt-1" />
+                <ArrowRight className="w-5 h-5 text-[var(--v2-muted)] group-hover:text-[var(--v2-green)] group-hover:translate-x-1 transition-all flex-shrink-0 mt-1" />
               </div>
             </Link>
           ))}

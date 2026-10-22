@@ -15,7 +15,7 @@ export const revalidate = 3600
 
 export default function VatInfoPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-950 to-black text-white">
+    <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <BreadcrumbSchema
         items={[
           { name: "Home", item: "https://whoza.ai" },
@@ -24,10 +24,10 @@ export default function VatInfoPage() {
       />
       <div className="max-w-4xl mx-auto px-4 py-16 md:py-24">
         <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[var(--v2-green)] to-emerald-500 bg-clip-text text-transparent">
             Simple, Transparent Pricing
           </h1>
-          <p className="text-slate-400 text-lg">
+          <p className="text-[var(--v2-muted)] text-lg">
             No hidden fees. No setup costs. No VAT to add. The price you see is the price you pay.
           </p>
         </div>
@@ -36,22 +36,22 @@ export default function VatInfoPage() {
           {/* No VAT Charged */}
           <section>
             <div className="flex items-center gap-2 mb-4">
-              <CheckCircle className="w-5 h-5 text-emerald-400" />
-              <h2 className="text-xl font-semibold text-white">No VAT Charged</h2>
+              <CheckCircle className="w-5 h-5 text-[var(--v2-green)]" />
+              <h2 className="text-xl font-semibold text-[var(--v2-ink)]">No VAT Charged</h2>
             </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 space-y-4 text-slate-300">
+            <div className="bg-white border border-[var(--v2-line)] rounded-lg p-6 space-y-4 text-[var(--v2-body)]">
               <p>
-                <strong className="text-white">WHOZA AI LTD is not currently VAT-registered.</strong> Our annual turnover is below the UK VAT registration threshold (£85,000), so we do not charge VAT on any of our services.
+                <strong className="text-[var(--v2-ink)]">WHOZA AI LTD is not currently VAT-registered.</strong> Our annual turnover is below the UK VAT registration threshold (£85,000), so we do not charge VAT on any of our services.
               </p>
               <p>
                 This means the price you see on our website is exactly what you pay. No surprises, no tax add-ons at checkout.
               </p>
-              <div className="bg-slate-900/50 rounded border border-slate-700 p-4 space-y-2 text-sm mt-4">
-                <p className="text-emerald-400 font-semibold">What you see is what you pay:</p>
-                <p>Starter Plan: <strong className="text-white">£59/month</strong> — total, no extras</p>
-                <p>Growth Plan: <strong className="text-white">£125/month</strong> — total, no extras</p>
-                <p>Pro Plan: <strong className="text-white">£230/month</strong> — total, no extras</p>
-                <p>Scale Plan: <strong className="text-white">£399/month</strong> — total, no extras</p>
+              <div className="bg-white rounded border border-[var(--v2-line)] p-4 space-y-2 text-sm mt-4">
+                <p className="text-[var(--v2-green)] font-semibold">What you see is what you pay:</p>
+                <p>Starter Plan: <strong className="text-[var(--v2-ink)]">£59/month</strong> — total, no extras</p>
+                <p>Growth Plan: <strong className="text-[var(--v2-ink)]">£125/month</strong> — total, no extras</p>
+                <p>Pro Plan: <strong className="text-[var(--v2-ink)]">£230/month</strong> — total, no extras</p>
+                <p>Scale Plan: <strong className="text-[var(--v2-ink)]">£399/month</strong> — total, no extras</p>
               </div>
             </div>
           </section>
@@ -59,20 +59,20 @@ export default function VatInfoPage() {
           {/* Company Info */}
           <section>
             <div className="flex items-center gap-2 mb-4">
-              <Receipt className="w-5 h-5 text-blue-400" />
-              <h2 className="text-xl font-semibold text-white">Company Information</h2>
+              <Receipt className="w-5 h-5 text-[var(--v2-green)]" />
+              <h2 className="text-xl font-semibold text-[var(--v2-ink)]">Company Information</h2>
             </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 space-y-4 text-slate-300">
+            <div className="bg-white border border-[var(--v2-line)] rounded-lg p-6 space-y-4 text-[var(--v2-body)]">
               <p>
-                <strong className="text-white">Company Name:</strong> WHOZA AI LTD
+                <strong className="text-[var(--v2-ink)]">Company Name:</strong> WHOZA AI LTD
               </p>
               <p>
-                <strong className="text-white">Registered Address:</strong> 6 Atholl Crescent, Perth, PH1 5JN, United Kingdom
+                <strong className="text-[var(--v2-ink)]">Registered Address:</strong> 6 Atholl Crescent, Perth, PH1 5JN, United Kingdom
               </p>
               <p>
-                <strong className="text-white">Company Registration Number:</strong> SC874716 (Scotland)
+                <strong className="text-[var(--v2-ink)]">Company Registration Number:</strong> SC874716 (Scotland)
               </p>
-              <p className="text-sm text-slate-400 mt-4">
+              <p className="text-sm text-[var(--v2-muted)] mt-4">
                 If our turnover reaches the UK VAT registration threshold in the future, we will register for VAT and update this page accordingly. At that time, VAT will be applied in line with UK legislation.
               </p>
             </div>
@@ -81,10 +81,10 @@ export default function VatInfoPage() {
           {/* Invoicing */}
           <section>
             <div className="flex items-center gap-2 mb-4">
-              <Receipt className="w-5 h-5 text-blue-400" />
-              <h2 className="text-xl font-semibold text-white">Invoicing</h2>
+              <Receipt className="w-5 h-5 text-[var(--v2-green)]" />
+              <h2 className="text-xl font-semibold text-[var(--v2-ink)]">Invoicing</h2>
             </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 space-y-4 text-slate-300">
+            <div className="bg-white border border-[var(--v2-line)] rounded-lg p-6 space-y-4 text-[var(--v2-body)]">
               <p>
                 Invoices are issued for all subscription payments and are available in your account dashboard. Our invoices are simple and clear:
               </p>
@@ -95,7 +95,7 @@ export default function VatInfoPage() {
                 <li>Description of services</li>
                 <li>Total amount due</li>
               </ul>
-              <p className="text-sm text-slate-400 mt-4">
+              <p className="text-sm text-[var(--v2-muted)] mt-4">
                 No VAT line item appears on invoices because VAT is not charged.
               </p>
             </div>
@@ -104,21 +104,21 @@ export default function VatInfoPage() {
           {/* Contact */}
           <section>
             <div className="flex items-center gap-2 mb-4">
-              <Receipt className="w-5 h-5 text-blue-400" />
-              <h2 className="text-xl font-semibold text-white">Questions?</h2>
+              <Receipt className="w-5 h-5 text-[var(--v2-green)]" />
+              <h2 className="text-xl font-semibold text-[var(--v2-ink)]">Questions?</h2>
             </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 space-y-4 text-slate-300">
+            <div className="bg-white border border-[var(--v2-line)] rounded-lg p-6 space-y-4 text-[var(--v2-body)]">
               <p>
                 For any questions regarding pricing, invoicing, or billing, please contact us:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Email: <a href="mailto:dru@whoza.ai" className="text-blue-400 hover:text-blue-300 underline">dru@whoza.ai</a></li>
+                <li>Email: <a href="mailto:dru@whoza.ai" className="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] underline">dru@whoza.ai</a></li>
                 <li>Postal: WHOZA AI LTD, 6 Atholl Crescent, Perth, PH1 5JN</li>
               </ul>
             </div>
           </section>
 
-          <p className="text-slate-500 text-sm mt-12 pt-8 border-t border-slate-800">
+          <p className="text-slate-500 text-sm mt-12 pt-8 border-t border-[var(--v2-line)]">
             Last updated: May 2025
           </p>
         </div>

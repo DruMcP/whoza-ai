@@ -90,7 +90,7 @@ export const revalidate = 3600
 
 export default function CallRecordingPage() {
   return (
-    <div className="min-h-screen bg-[var(--navy-900)] text-white">
+    <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header />
       <BreadcrumbSchema
         items={[
@@ -106,14 +106,14 @@ export default function CallRecordingPage() {
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Hero */}
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="v2-eyebrow inline-flex items-center gap-2 mb-6">
             <Shield className="w-4 h-4" />
             Data Handling
           </div>
           <h1 className="text-4xl font-bold mb-4 retention-headline">
             Call Recording, Transcripts &amp; Data Retention
           </h1>
-          <p className="text-xl text-white/70 leading-relaxed retention-lead">
+          <p className="text-xl text-[var(--v2-body)] leading-relaxed retention-lead">
             This page describes how whoza.ai handles call data. It is not legal advice. Recording
             obligations vary by purpose, sector and lawful basis, and what follows is a statement of
             how Whoza operates — not a statement of what any business must do.
@@ -130,20 +130,20 @@ export default function CallRecordingPage() {
         {/* Retention schedule table */}
         <section className="mt-16 mb-16">
           <h2 className="text-2xl font-bold mb-6">Retention Schedule</h2>
-          <p className="text-white/70 mb-6">
+          <p className="text-[var(--v2-body)] mb-6">
             Exact retention periods per data class. Every figure below is drawn from our{" "}
-            <Link href="/privacy" className="text-emerald-400 hover:underline">
+            <Link href="/privacy" className="text-[var(--v2-green)] hover:underline">
               Privacy Policy
             </Link>{" "}
             or{" "}
-            <Link href="/trust" className="text-emerald-400 hover:underline">
+            <Link href="/trust" className="text-[var(--v2-green)] hover:underline">
               Trust Centre
             </Link>
             .
           </p>
           <div className="overflow-x-auto retention-table">
-            <table className="w-full text-sm text-left text-white/70 border border-white/10 rounded-lg">
-              <thead className="bg-white/5 text-white">
+            <table className="w-full text-sm text-left text-[var(--v2-body)] border border-[var(--v2-line)] rounded-lg">
+              <thead className="bg-white text-[var(--v2-ink)]">
                 <tr>
                   <th className="px-4 py-3">Data class</th>
                   <th className="px-4 py-3">What it is</th>
@@ -152,38 +152,38 @@ export default function CallRecordingPage() {
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-t border-white/10">
-                  <td className="px-4 py-3 font-medium text-white">Audio recordings</td>
+                <tr className="border-t border-[var(--v2-line)]">
+                  <td className="px-4 py-3 font-medium text-[var(--v2-ink)]">Audio recordings</td>
                   <td className="px-4 py-3">Call audio</td>
                   <td className="px-4 py-3">Not stored</td>
                   <td className="px-4 py-3">Audio is never stored anywhere in the stack.</td>
                 </tr>
-                <tr className="border-t border-white/10">
-                  <td className="px-4 py-3 font-medium text-white">Dashboard transcripts</td>
+                <tr className="border-t border-[var(--v2-line)]">
+                  <td className="px-4 py-3 font-medium text-[var(--v2-ink)]">Dashboard transcripts</td>
                   <td className="px-4 py-3">Transcripts and call notes visible in your dashboard</td>
                   <td className="px-4 py-3">30 days</td>
                   <td className="px-4 py-3">Removed from dashboard after 30 days.</td>
                 </tr>
-                <tr className="border-t border-white/10">
-                  <td className="px-4 py-3 font-medium text-white">Backend archive</td>
+                <tr className="border-t border-[var(--v2-line)]">
+                  <td className="px-4 py-3 font-medium text-[var(--v2-ink)]">Backend archive</td>
                   <td className="px-4 py-3">Transcripts and metadata for billing and dispute resolution</td>
                   <td className="px-4 py-3">90 days</td>
                   <td className="px-4 py-3">Retained in backend archive for billing and dispute resolution.</td>
                 </tr>
-                <tr className="border-t border-white/10">
-                  <td className="px-4 py-3 font-medium text-white">Caller contact records</td>
+                <tr className="border-t border-[var(--v2-line)]">
+                  <td className="px-4 py-3 font-medium text-[var(--v2-ink)]">Caller contact records</td>
                   <td className="px-4 py-3">Phone number, name, known details for recognising returning callers</td>
                   <td className="px-4 py-3">Account active + dispute window</td>
                   <td className="px-4 py-3">Separate data class with its own lawful basis.</td>
                 </tr>
-                <tr className="border-t border-white/10">
-                  <td className="px-4 py-3 font-medium text-white">Business profile data</td>
+                <tr className="border-t border-[var(--v2-line)]">
+                  <td className="px-4 py-3 font-medium text-[var(--v2-ink)]">Business profile data</td>
                   <td className="px-4 py-3">Your business details, preferences and settings</td>
                   <td className="px-4 py-3">Subscription duration + 6 months</td>
                   <td className="px-4 py-3">Retained for 6 months after cancellation.</td>
                 </tr>
-                <tr className="border-t border-white/10">
-                  <td className="px-4 py-3 font-medium text-white">Payment records</td>
+                <tr className="border-t border-[var(--v2-line)]">
+                  <td className="px-4 py-3 font-medium text-[var(--v2-ink)]">Payment records</td>
                   <td className="px-4 py-3">Invoice and payment history</td>
                   <td className="px-4 py-3">7 years</td>
                   <td className="px-4 py-3">UK tax regulations.</td>
@@ -196,7 +196,7 @@ export default function CallRecordingPage() {
         {/* What you give up / trade-off */}
         <section className="mb-16">
           <h2 className="text-2xl font-bold mb-6">The Trade-Off: What You Give Up Without Audio</h2>
-          <div className="space-y-4 text-white/70">
+          <div className="space-y-4 text-[var(--v2-body)]">
             <p>
               Choosing a transcript-only architecture means you cannot listen back to a disputed
               call. You cannot use recordings for staff training or quality assurance. A transcript
@@ -216,7 +216,7 @@ export default function CallRecordingPage() {
         {/* Questions to ask any provider */}
         <section className="mb-16">
           <h2 className="text-2xl font-bold mb-6">Questions Worth Asking Any Provider</h2>
-          <div className="space-y-4 text-white/70">
+          <div className="space-y-4 text-[var(--v2-body)]">
             <p>
               If you are comparing call-handling services, the following questions are worth asking
               regardless of which provider you choose:
@@ -242,9 +242,9 @@ export default function CallRecordingPage() {
           <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
+              <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
-                <p className="text-white/60 leading-relaxed">{faq.answer}</p>
+                <p className="text-[var(--v2-body)] leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>
@@ -256,45 +256,45 @@ export default function CallRecordingPage() {
           <div className="grid sm:grid-cols-2 gap-4">
             <Link
               href="/terms"
-              className="flex items-center justify-between p-4 rounded-lg border border-white/10 hover:border-emerald-500/30 hover:bg-emerald-500/5 transition-all"
+              className="flex items-center justify-between p-4 rounded-lg border border-[var(--v2-line)] hover:border-[var(--v2-green)]/30 hover:bg-[var(--v2-mint)] transition-all"
             >
-              <span className="font-semibold text-emerald-400">Terms of Service</span>
-              <ExternalLink className="w-4 h-4 text-white/40" />
+              <span className="font-semibold text-[var(--v2-green)]">Terms of Service</span>
+              <ExternalLink className="w-4 h-4 text-[var(--v2-muted)]" />
             </Link>
             <Link
               href="/privacy"
-              className="flex items-center justify-between p-4 rounded-lg border border-white/10 hover:border-emerald-500/30 hover:bg-emerald-500/5 transition-all"
+              className="flex items-center justify-between p-4 rounded-lg border border-[var(--v2-line)] hover:border-[var(--v2-green)]/30 hover:bg-[var(--v2-mint)] transition-all"
             >
-              <span className="font-semibold text-emerald-400">Privacy Policy</span>
-              <ExternalLink className="w-4 h-4 text-white/40" />
+              <span className="font-semibold text-[var(--v2-green)]">Privacy Policy</span>
+              <ExternalLink className="w-4 h-4 text-[var(--v2-muted)]" />
             </Link>
             <Link
               href="/trust"
-              className="flex items-center justify-between p-4 rounded-lg border border-white/10 hover:border-emerald-500/30 hover:bg-emerald-500/5 transition-all"
+              className="flex items-center justify-between p-4 rounded-lg border border-[var(--v2-line)] hover:border-[var(--v2-green)]/30 hover:bg-[var(--v2-mint)] transition-all"
             >
-              <span className="font-semibold text-emerald-400">Trust Centre</span>
-              <ExternalLink className="w-4 h-4 text-white/40" />
+              <span className="font-semibold text-[var(--v2-green)]">Trust Centre</span>
+              <ExternalLink className="w-4 h-4 text-[var(--v2-muted)]" />
             </Link>
             <Link
               href="/dpa"
-              className="flex items-center justify-between p-4 rounded-lg border border-white/10 hover:border-emerald-500/30 hover:bg-emerald-500/5 transition-all"
+              className="flex items-center justify-between p-4 rounded-lg border border-[var(--v2-line)] hover:border-[var(--v2-green)]/30 hover:bg-[var(--v2-mint)] transition-all"
             >
-              <span className="font-semibold text-emerald-400">Data Processing Agreement</span>
-              <ExternalLink className="w-4 h-4 text-white/40" />
+              <span className="font-semibold text-[var(--v2-green)]">Data Processing Agreement</span>
+              <ExternalLink className="w-4 h-4 text-[var(--v2-muted)]" />
             </Link>
             <Link
               href="/data"
-              className="flex items-center justify-between p-4 rounded-lg border border-white/10 hover:border-emerald-500/30 hover:bg-emerald-500/5 transition-all"
+              className="flex items-center justify-between p-4 rounded-lg border border-[var(--v2-line)] hover:border-[var(--v2-green)]/30 hover:bg-[var(--v2-mint)] transition-all"
             >
-              <span className="font-semibold text-emerald-400">Evidence Base</span>
-              <ExternalLink className="w-4 h-4 text-white/40" />
+              <span className="font-semibold text-[var(--v2-green)]">Evidence Base</span>
+              <ExternalLink className="w-4 h-4 text-[var(--v2-muted)]" />
             </Link>
           </div>
         </section>
 
         {/* Not legal advice disclaimer */}
-        <section className="mb-12 bg-white/5 border border-white/10 rounded-xl p-6">
-          <p className="text-white/50 text-sm">
+        <section className="mb-12 bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+          <p className="text-[var(--v2-muted)] text-sm">
             <strong>Not legal advice.</strong> This page describes how whoza.ai operates. It does
             not constitute legal advice, and it does not state what any business must do under UK
             GDPR, the Data Protection Act 2018, PECR or any other regime. Recording obligations
