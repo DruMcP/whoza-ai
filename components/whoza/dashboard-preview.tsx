@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Phone, Calendar, Star, TrendingUp, ArrowUpRight, Eye } from "lucide-react"
+import { Phone, Calendar, Star, TrendingUp, ArrowUpRight } from "lucide-react"
 
 const statsConfig = [
   { label: "Calls Answered", value: "147", change: "+23%", icon: Phone, color: "var(--katie-blue)" },
@@ -17,8 +17,6 @@ export function DashboardPreview() {
     <section className="py-20 lg:py-32 bg-[var(--navy-900)] relative overflow-hidden dark-section" aria-label="Dashboard preview">
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[var(--katie-blue)]/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[var(--rex-green)]/10 rounded-full blur-[100px]" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -29,14 +27,11 @@ export function DashboardPreview() {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--claire-amber)]/20 text-[var(--claire-amber)] text-sm font-medium mb-6">
-            <Eye className="w-4 h-4" />
-            Real-Time Dashboard
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight text-balance reveal">
+          <span className="v2-eyebrow v2-eyebrow-light">Real-Time Dashboard</span>
+          <h2 className="v2-h2 text-white text-balance reveal">
             See What Whoza Captures for You
           </h2>
-          <p className="mt-6 text-lg text-white/60 text-pretty">
+          <p className="v2-lead mt-5 text-white/70 text-pretty">
             Track every call, job, and pound recovered. 
             Know your ROI at a glance.
           </p>
@@ -59,7 +54,7 @@ export function DashboardPreview() {
                 <div className="w-3 h-3 rounded-full bg-green-400" />
               </div>
               <div className="flex-1 mx-4">
-                <div className="bg-white/10 rounded-lg px-3 py-1.5 text-center text-white/40 text-sm">
+                <div className="bg-white/10 rounded-lg px-3 py-1.5 text-center text-white/60 text-sm">
                   app.whoza.ai/dashboard
                 </div>
               </div>
@@ -136,7 +131,7 @@ export function DashboardPreview() {
                       <div className="w-2 h-2 rounded-full live-dot" style={{ backgroundColor: item.color }} />
                       <span className="text-white">{item.action}</span>
                       <span className="text-white/50">{item.detail}</span>
-                      <span className="ml-auto text-white/30">{item.time}</span>
+                      <span className="ml-auto text-white/55">{item.time}</span>
                     </div>
                   ))}
                 </div>

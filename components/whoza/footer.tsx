@@ -168,7 +168,7 @@ export function Footer() {
               AI revenue system for UK tradespeople. Capture missed calls, book more jobs, grow automatically. No contracts. Cancel anytime.
             </p>
 
-            <div className="mt-7 text-xs font-semibold uppercase tracking-[0.14em] text-white/40">Trades we cover</div>
+            <div className="mt-7 text-xs font-semibold uppercase tracking-[0.14em] text-white/55">Trades we cover</div>
             <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-1.5 max-w-sm" aria-label="Trades we cover">
               {trades.map((t) => (
                 <li key={t.href}>
@@ -285,13 +285,13 @@ export function Footer() {
         {/* Company details */}
         <div className="mt-8 pt-6 border-t border-white/[0.06] flex flex-col md:flex-row md:items-end md:justify-between gap-4">
           <div className="space-y-1">
-            <p className="text-xs text-white/35">
+            <p className="text-xs text-white/50">
               WHOZA AI LTD · Registered in Scotland — Company Number {COMPANY.companyNumber} · ICO Registration: ZC077271
             </p>
-            <p className="text-xs text-white/35">
+            <p className="text-xs text-white/50">
               Registered address: 6 Atholl Crescent, 6, Perth, PH1 5JN, United Kingdom
             </p>
-            <p className="text-xs text-white/35">
+            <p className="text-xs text-white/50">
               Office address: 97 Main Street, Tomintoul AB37 9HA
             </p>
           </div>

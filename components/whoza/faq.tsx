@@ -157,13 +157,11 @@ export function FAQ({ initialCategory = "All" }: { initialCategory?: string }) {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] text-sm font-medium mb-4">
-            Got Questions?
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance reveal">
+          <span className="v2-eyebrow">Got Questions?</span>
+          <h2 className="v2-h2 text-balance reveal">
             Frequently Asked Questions
           </h2>
-          <p className="mt-6 text-lg text-[var(--slate-500)]">
+          <p className="v2-lead mt-4">
             Everything you need to know about whoza.ai
           </p>
         </motion.div>
@@ -199,13 +197,13 @@ export function FAQ({ initialCategory = "All" }: { initialCategory?: string }) {
                 }}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   activeCategory === cat
-                    ? 'bg-[var(--katie-blue)] text-white shadow-md'
+                    ? 'bg-[var(--v2-ink)] text-white'
                     : 'bg-[var(--off-white)] text-[var(--slate-500)] hover:bg-[var(--slate-100)]'
                 }`}
               >
                 {cat}
                 {cat !== "All" && (
-                  <span className={`ml-1.5 text-xs ${activeCategory === cat ? 'text-white/70' : 'text-[var(--slate-400)]'}`}>
+                  <span className={`ml-1.5 text-xs ${activeCategory === cat ? 'text-white/70' : 'text-[var(--v2-muted)]'}`}>
                     {faqs.filter(f => f.category === cat).length}
                   </span>
                 )}
@@ -234,12 +232,12 @@ export function FAQ({ initialCategory = "All" }: { initialCategory?: string }) {
               <AccordionItem 
                 key={`${activeCategory}-${index}`}
                 value={`item-${activeCategory}-${index}`}
-                className="faq-item bg-[var(--off-white)] rounded-xl border border-[var(--border)] px-6 data-[state=open]:border-[var(--katie-blue)]/30 transition-all duration-300 hover:bg-[var(--rex-green)]/4"
+                className="faq-item bg-white rounded-2xl border border-[var(--v2-line)] px-6 data-[state=open]:border-[var(--v2-green)]/40 transition-colors duration-200 hover:border-[#b9c6bf]"
               >
-                <AccordionTrigger className="faq-toggle text-left text-[var(--navy-900)] font-semibold hover:no-underline py-5">
+                <AccordionTrigger className="faq-toggle text-left text-[var(--v2-ink)] text-[15px] sm:text-base font-semibold hover:no-underline py-5">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="faq-answer text-[var(--slate-500)] pb-5 leading-relaxed">
+                <AccordionContent className="faq-answer text-[var(--v2-body)] text-[15px] pb-5 leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -252,22 +250,19 @@ export function FAQ({ initialCategory = "All" }: { initialCategory?: string }) {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-12 p-8 bg-[var(--off-white)] rounded-xl border border-[var(--border)] text-center"
+          className="mt-12 p-8 sm:p-10 bg-[var(--v2-navy)] rounded-[20px] text-center"
         >
-          <div className="w-16 h-16 rounded-2xl bg-[var(--katie-blue)]/10 flex items-center justify-center mx-auto mb-4">
-            <MessageCircle className="w-8 h-8 text-[var(--katie-blue)]" />
-          </div>
-          <h3 className="text-xl font-bold text-[var(--navy-900)] mb-2">Still have questions?</h3>
-          <p className="text-[var(--slate-500)] mb-6">
+          <h3 className="text-2xl font-bold text-white tracking-tight mb-2">Still have questions?</h3>
+          <p className="text-white/65 mb-6">
             Our team is here to help you get started with your free trial.
           </p>
           <a 
             href="https://wa.me/447463141750"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/90 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+            className="v2-btn"
           >
-            <MessageCircle className="mr-2 w-4 h-4" />
+            <MessageCircle className="w-4 h-4" />
             Chat with Us
           </a>
         </motion.div>

@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { ArrowRight, Sparkles, PhoneCall, Star, TrendingUp } from "lucide-react"
+import { ArrowRight, PhoneCall, Star, TrendingUp } from "lucide-react"
 import { WaitlistModal } from "./waitlist-modal"
 import { trackCTA } from "@/lib/gtag"
 
@@ -25,7 +25,7 @@ const expectationCards = [
     description: "Never miss another call. Katie answers 24/7 and qualifies every enquiry.",
     icon: PhoneCall,
     color: "var(--katie-blue)",
-    bgLight: "bg-[var(--katie-blue)]/10",
+    bgLight: "bg-[var(--v2-green)]/10",
   },
   {
     title: "Better Reviews",
@@ -55,14 +55,11 @@ export function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--rex-green)]/10 border border-[var(--rex-green)]/20 mb-6">
-              <Sparkles className="w-4 h-4 text-[var(--rex-green)]" />
-              <span className="text-sm font-semibold text-[var(--rex-green)]">Feedback from verified users</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance reveal">
+            <span className="v2-eyebrow">Feedback from verified users</span>
+            <h2 className="v2-h2 text-balance reveal">
               What Early Users Are Saying
             </h2>
-            <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
+            <p className="v2-lead mt-5 text-pretty">
               Our service is now live with plumbers, electricians, builders, roofers and other tradespeople across the country. Every user below is a real business owner who started using whoza.ai to capture their missed calls. Read their genuine feedback about how AI call answering has changed their business.
             </p>
           </motion.div>
@@ -103,7 +100,7 @@ export function Testimonials() {
               <a
                 key={i}
                 href={href}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--slate-200)] text-sm text-[var(--slate-500)] shadow-sm hover:bg-[var(--katie-blue)]/5 hover:border-[var(--katie-blue)]/30 hover:text-[var(--navy-900)] transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--slate-200)] text-sm text-[var(--slate-500)] shadow-sm hover:bg-[var(--v2-green)]/10 hover:border-[var(--v2-green)]/30 hover:text-[var(--navy-900)] transition-all cursor-pointer"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
                 {trade}
@@ -113,7 +110,7 @@ export function Testimonials() {
               <a
                 key={`dup-${i}`}
                 href={href}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--slate-200)] text-sm text-[var(--slate-500)] shadow-sm hover:bg-[var(--katie-blue)]/5 hover:border-[var(--katie-blue)]/30 hover:text-[var(--navy-900)] transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--slate-200)] text-sm text-[var(--slate-500)] shadow-sm hover:bg-[var(--v2-green)]/10 hover:border-[var(--v2-green)]/30 hover:text-[var(--navy-900)] transition-all cursor-pointer"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
                 {trade}

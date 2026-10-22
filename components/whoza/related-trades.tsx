@@ -117,13 +117,13 @@ export function RelatedTrades({ currentTrade }: RelatedTradesProps) {
   if (!related || related.length === 0) return null
 
   return (
-    <section className="py-16 lg:py-24" aria-label="Related trades">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="v2-section-tight bg-white" aria-label="Related trades">
+      <div className="v2-container">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <h2 className="v2-h2 mb-4">
             Related Trades
           </h2>
-          <p className="text-white/60 max-w-2xl mx-auto">
+          <p className="v2-lead max-w-2xl mx-auto">
             Explore AI call answering solutions for other trades. Katie adapts to every industry.
           </p>
         </div>
@@ -134,11 +134,11 @@ export function RelatedTrades({ currentTrade }: RelatedTradesProps) {
               <Link
                 key={trade.slug}
                 href={trade.slug}
-                className="group bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-emerald-500/30 transition-all"
+                className="group v2-card no-underline hover:border-[#b9c6bf] hover:-translate-y-0.5"
               >
-                <Icon className="w-8 h-8 text-emerald-400 mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="font-semibold text-white mb-2">{trade.name}</h3>
-                <span className="inline-flex items-center text-emerald-400 text-sm">
+                <Icon className="w-7 h-7 text-[var(--v2-green)] mb-4" />
+                <h3 className="font-semibold text-[var(--v2-ink)] mb-2">{trade.name}</h3>
+                <span className="inline-flex items-center text-[var(--v2-green)] text-sm font-medium">
                   Learn more
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </span>

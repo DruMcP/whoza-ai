@@ -3,7 +3,7 @@
 // v2.1 - Updated priming stats + UK defaults
 import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
-import { Calculator, Phone, PoundSterling, TrendingUp, ArrowRight, PhoneMissed, Voicemail, Zap } from "lucide-react"
+import { Calculator, Phone, PoundSterling, TrendingUp, ArrowRight, PhoneMissed, Voicemail } from "lucide-react"
 import { Slider } from "@/components/ui/slider"
 import { trackCalculatorLead, trackCalculatorUse } from "@/lib/gtag"
 import { WaitlistModal } from "./waitlist-modal"
@@ -152,10 +152,10 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
                   whileHover={{ y: -3, transition: { duration: 0.2 } }}
-                  className="bg-white rounded-xl p-6 text-center shadow-md border border-[var(--border)] hover:shadow-lg hover:border-[var(--katie-blue)]/20 transition-all"
+                  className="bg-white rounded-xl p-6 text-center shadow-md border border-[var(--border)] hover:shadow-lg hover:border-[var(--v2-green)]/30 transition-all"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-[var(--katie-blue)]/10 flex items-center justify-center mx-auto mb-3">
-                    <StatIcon className="w-5 h-5 text-[var(--katie-blue)]" />
+                  <div className="w-10 h-10 rounded-lg bg-[var(--v2-green)]/10 flex items-center justify-center mx-auto mb-3">
+                    <StatIcon className="w-5 h-5 text-[var(--v2-green)]" />
                   </div>
                   <div className="text-3xl font-bold text-[var(--navy-900)]">{stat.pct}</div>
                   <p className="text-sm text-[var(--slate-500)] mt-2">{stat.text}</p>
@@ -173,15 +173,12 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto mb-12"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--rex-green)]/10 text-[var(--rex-green)] text-sm font-bold mb-4">
-            <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-            The numbers don't lie
-          </span>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--navy-900)] tracking-tight text-balance reveal">
+          <span className="v2-eyebrow">The numbers don't lie</span>
+          <h2 className="v2-h2 text-balance reveal">
             What Are Missed Calls{" "}
-            <span className="text-[var(--rex-green)]">Costing You?</span>
+            <span className="v2-accent">Costing You?</span>
           </h2>
-          <p className="mt-6 text-xl text-[var(--slate-500)] text-pretty">
+          <p className="v2-lead mt-5 text-pretty">
             Every missed call to your trade business is a potential job walking straight to your competitor. When a customer calls and you do not answer, 69% of voicemail callers don't leave a message. The business that answers first usually gets the job. Use the calculator below to see exactly how much revenue you are losing every week, month, and year.
           </p>
         </motion.div>
@@ -198,8 +195,8 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
               {/* Inputs */}
               <div className="p-6 sm:p-8 lg:p-10 space-y-8">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-2xl bg-[var(--katie-blue)]/10 flex items-center justify-center">
-                    <Calculator className="w-6 h-6 text-[var(--katie-blue)]" />
+                  <div className="w-12 h-12 rounded-2xl bg-[var(--v2-green)]/10 flex items-center justify-center">
+                    <Calculator className="w-6 h-6 text-[var(--v2-green)]" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-[var(--navy-900)]">Lost Jobs Calculator</h3>
@@ -214,7 +211,7 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
                       <Phone className="w-4 h-4 text-[var(--slate-500)]" />
                       Missed calls per week
                     </label>
-                    <span className="text-lg font-bold text-[var(--katie-blue)]" aria-live="polite" aria-atomic="true">{missedCalls[0]} calls</span>
+                    <span className="text-lg font-bold text-[var(--v2-green)]" aria-live="polite" aria-atomic="true">{missedCalls[0]} calls</span>
                   </div>
                   <Slider
                     value={missedCalls}
@@ -225,7 +222,7 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
                     aria-label="Missed calls per week"
                     aria-labelledby="missed-calls-label"
                     ariaValuetext={`${missedCalls[0]} calls per week`}
-                    className="[&_[role=slider]]:bg-[var(--katie-blue)] [&_[role=slider]]:border-0 [&_.bg-primary]:bg-[var(--katie-blue)]"
+                    className="[&_[role=slider]]:bg-[var(--v2-green)] [&_[role=slider]]:border-0 [&_.bg-primary]:bg-[var(--v2-green)]"
                   />
                   <div className="flex justify-between text-xs text-[var(--slate-500)]">
                     <span>1 call</span>
@@ -257,7 +254,7 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
                     <span>£{jobConfig.minValue}</span>
                     <span>£{jobConfig.maxValue.toLocaleString()}</span>
                   </div>
-                  <p className="text-xs text-[var(--katie-blue)] italic">{jobConfig.hint}</p>
+                  <p className="text-xs text-[var(--v2-green)] italic">{jobConfig.hint}</p>
                 </div>
 
                 {/* Conversion Rate */}
@@ -267,7 +264,7 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
                       <TrendingUp className="w-4 h-4 text-[var(--slate-500)]" />
                       Call-to-job conversion rate
                     </label>
-                    <span className="text-lg font-bold text-[var(--claire-amber)]" aria-live="polite" aria-atomic="true">{conversionRate[0]}%</span>
+                    <span className="text-lg font-bold text-amber-700" aria-live="polite" aria-atomic="true">{conversionRate[0]}%</span>
                   </div>
                   <Slider
                     value={conversionRate}
@@ -307,7 +304,7 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
                       className="bg-white/5 rounded-2xl p-5 border border-white/10"
                     >
                       <div className="flex items-center gap-2 mb-3">
-                        <Calculator className="w-4 h-4 text-[var(--katie-blue)]" />
+                        <Calculator className="w-4 h-4 text-[var(--v2-green)]" />
                         <span className="text-sm font-semibold text-white/90">See your monthly & yearly loss</span>
                       </div>
                       <p className="text-xs text-white/50 mb-4">
@@ -320,7 +317,7 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
                           onChange={(e) => { setEmail(e.target.value); setEmailError("") }}
                           placeholder="e.g. john@smithplumbing.co.uk"
                           aria-label="Email address for recovery report"
-                          className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/10 text-white text-sm placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-[var(--katie-blue)]"
+                          className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/10 text-white text-sm placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-[var(--v2-green)]"
                           required
                         />
                         {emailError && (
@@ -329,7 +326,7 @@ export function LostRevenueCalculator({ trade }: LostRevenueCalculatorProps) {
                         <button
                           type="submit"
                           disabled={isSubmitting}
-                          className="w-full py-3 rounded-lg bg-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/80 text-white font-semibold text-sm transition-colors disabled:opacity-60"
+                          className="w-full py-3 rounded-lg bg-[var(--v2-green)] hover:bg-[var(--v2-green)]/10 text-white font-semibold text-sm transition-colors disabled:opacity-60"
                         >
                           {isSubmitting ? "Unlocking..." : "Get my recovery report"}
                         </button>

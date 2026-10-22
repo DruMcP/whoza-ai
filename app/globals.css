@@ -833,8 +833,8 @@
   --v2-paper: #fbfcfa;        /* page background, warm white */
   --v2-mint: #effdf4;         /* hero tail and tinted bands */
   --v2-line: #e2e8e4;         /* borders and dividers */
-  --v2-green: #0d8656;        /* primary action: 4.6:1 with white text */
-  --v2-green-hover: #0a7149;
+  --v2-green: #0b7d50;        /* primary action and green text: 5.1:1 on white, 4.9:1 on mint */
+  --v2-green-hover: #096b44;
   --v2-green-ink: #09382b;    /* green headline text */
   --v2-navy: #0f1628;         /* dark sections */
   --v2-navy-2: #172038;       /* cards on dark sections */
@@ -842,79 +842,88 @@
   --v2-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
-/* Section rhythm */
-.v2-section { padding-block: clamp(64px, 8vw, 112px); }
-.v2-section-tight { padding-block: clamp(48px, 6vw, 80px); }
-.v2-container { width: 100%; max-width: 1120px; margin-inline: auto; padding-inline: clamp(16px, 4vw, 32px); }
-.v2-paper { background: var(--v2-paper); color: var(--v2-body); }
-.v2-mint { background: var(--v2-mint); color: var(--v2-body); }
-.v2-dark { background: var(--v2-navy); color: rgba(255, 255, 255, 0.78); }
+/* In the components layer so Tailwind utilities on the same element
+   (text-white, mb-4, w-full...) still win, as they would over any component class. */
+@layer components {
+  /* Section rhythm */
+  .v2-section { padding-block: clamp(64px, 8vw, 112px); }
+  .v2-section-tight { padding-block: clamp(48px, 6vw, 80px); }
+  .v2-container { width: 100%; max-width: 1120px; margin-inline: auto; padding-inline: clamp(16px, 4vw, 32px); }
+  .v2-paper { background: var(--v2-paper); color: var(--v2-body); }
+  .v2-mint { background: var(--v2-mint); color: var(--v2-body); }
+  .v2-dark { background: var(--v2-navy); color: rgba(255, 255, 255, 0.78); }
 
-/* Type */
-.v2-eyebrow {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--v2-green);
-  margin-bottom: 14px;
-}
-.v2-dark .v2-eyebrow { color: #6ee7b7; }
-.v2-h1 {
-  font-size: clamp(36px, 5vw, 60px);
-  line-height: 1.05;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: var(--v2-ink);
-}
-.v2-h2 {
-  font-size: clamp(28px, 3.4vw, 44px);
-  line-height: 1.1;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--v2-ink);
-}
-.v2-h3 { font-size: 20px; line-height: 1.3; font-weight: 650; letter-spacing: -0.01em; color: var(--v2-ink); }
-.v2-dark .v2-h1, .v2-dark .v2-h2, .v2-dark .v2-h3 { color: #fff; }
-.v2-lead { font-size: clamp(17px, 1.5vw, 20px); line-height: 1.6; color: var(--v2-body); }
-.v2-dark .v2-lead { color: rgba(255, 255, 255, 0.72); }
+  /* Type */
+  .v2-eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--v2-green);
+    margin-bottom: 14px;
+  }
+  .v2-dark .v2-eyebrow, .v2-eyebrow-light { color: #6ee7b7; }
+  .v2-eyebrow-center { display: block; text-align: center; }
+  /* Highlighted words inside a heading: one accent colour site-wide */
+  .v2-accent { color: var(--v2-green); }
+  .v2-dark .v2-accent, .v2-accent-light { color: #6ee7b7; }
+  .v2-h1 {
+    font-size: clamp(36px, 5vw, 60px);
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--v2-ink);
+  }
+  .v2-h2 {
+    font-size: clamp(28px, 3.4vw, 44px);
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--v2-ink);
+  }
+  .v2-h3 { font-size: 20px; line-height: 1.3; font-weight: 650; letter-spacing: -0.01em; color: var(--v2-ink); }
+  .v2-dark .v2-h1, .v2-dark .v2-h2, .v2-dark .v2-h3 { color: #fff; }
+  .v2-lead { font-size: clamp(17px, 1.5vw, 20px); line-height: 1.6; color: var(--v2-body); }
+  .v2-dark .v2-lead { color: rgba(255, 255, 255, 0.72); }
 
-/* Buttons */
-.v2-btn,
-.v2-btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  min-height: 48px;
-  padding: 0 22px;
-  border-radius: 999px;
-  font-size: 15px;
-  font-weight: 600;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: background-color 0.2s var(--v2-ease), border-color 0.2s var(--v2-ease), transform 0.2s var(--v2-ease);
-}
-.v2-btn { background: var(--v2-green); color: #fff; border: 1px solid transparent; }
-.v2-btn:hover { background: var(--v2-green-hover); }
-.v2-btn-secondary { background: transparent; color: var(--v2-ink); border: 1px solid var(--v2-line); }
-.v2-btn-secondary:hover { border-color: var(--v2-ink); }
-.v2-dark .v2-btn-secondary { color: #fff; border-color: rgba(255, 255, 255, 0.24); }
-.v2-dark .v2-btn-secondary:hover { border-color: #fff; }
-.v2-btn:active, .v2-btn-secondary:active { transform: scale(0.98); }
-.v2-btn:focus-visible, .v2-btn-secondary:focus-visible { outline: 2px solid var(--v2-green); outline-offset: 3px; }
+  /* Buttons */
+  .v2-btn,
+  .v2-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 0 22px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.2s var(--v2-ease), border-color 0.2s var(--v2-ease), transform 0.2s var(--v2-ease);
+  }
+  .v2-btn { background: var(--v2-green); color: #fff; border: 1px solid transparent; }
+  .v2-btn:hover { background: var(--v2-green-hover); }
+  .v2-btn-secondary { background: transparent; color: var(--v2-ink); border: 1px solid var(--v2-line); }
+  .v2-btn-secondary:hover { border-color: var(--v2-ink); }
+  .v2-dark .v2-btn-secondary { color: #fff; border-color: rgba(255, 255, 255, 0.24); }
+  .v2-dark .v2-btn-secondary:hover { border-color: #fff; }
+  .v2-btn:active, .v2-btn-secondary:active { transform: scale(0.98); }
+  .v2-btn:focus-visible, .v2-btn-secondary:focus-visible { outline: 2px solid var(--v2-green); outline-offset: 3px; }
 
-/* Cards: one radius, a hairline border, no glow */
-.v2-card {
-  background: #fff;
-  border: 1px solid var(--v2-line);
-  border-radius: var(--v2-radius);
-  padding: clamp(20px, 2.4vw, 28px);
-  transition: border-color 0.2s var(--v2-ease), transform 0.2s var(--v2-ease);
+  /* Cards: one radius, a hairline border, no glow */
+  .v2-card {
+    background: #fff;
+    border: 1px solid var(--v2-line);
+    border-radius: var(--v2-radius);
+    padding: clamp(20px, 2.4vw, 28px);
+    transition: border-color 0.2s var(--v2-ease), transform 0.2s var(--v2-ease);
+  }
+  a.v2-card:hover, .v2-card-link:hover { border-color: #b9c6bf; transform: translateY(-2px); }
+  .v2-dark .v2-card { background: var(--v2-navy-2); border-color: rgba(255, 255, 255, 0.08); }
+
 }
-a.v2-card:hover, .v2-card-link:hover { border-color: #b9c6bf; transform: translateY(-2px); }
-.v2-dark .v2-card { background: var(--v2-navy-2); border-color: rgba(255, 255, 255, 0.08); }
 
 /* ---------- First-visit entrance ----------
    Runs only on the first page of a session: an inline script in app/layout.tsx

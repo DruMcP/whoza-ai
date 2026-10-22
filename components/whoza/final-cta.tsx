@@ -8,10 +8,10 @@ import { WaitlistModal } from "./waitlist-modal"
 import { trackCTA } from "@/lib/gtag"
 
 const teamMembers = [
-  { name: "Katie", icon: Phone, bgClass: "bg-[var(--katie-blue)]/20 border-[var(--katie-blue)]/30", iconClass: "text-[var(--katie-blue)]" },
-  { name: "Mark", icon: Phone, bgClass: "bg-[var(--mark-grey)]/20 border-[var(--mark-grey)]/30", iconClass: "text-[var(--mark-grey)]" },
-  { name: "Claire", icon: Star, bgClass: "bg-[var(--claire-amber)]/20 border-[var(--claire-amber)]/30", iconClass: "text-[var(--claire-amber)]" },
-  { name: "Rex", icon: Eye, bgClass: "bg-[var(--rex-green)]/20 border-[var(--rex-green)]/30", iconClass: "text-[var(--rex-green)]" },
+  { name: "Katie", icon: Phone, bgClass: "bg-white/[0.06] border-white/10", iconClass: "text-[#6ee7b7]" },
+  { name: "Mark", icon: Phone, bgClass: "bg-white/[0.06] border-white/10", iconClass: "text-[#6ee7b7]" },
+  { name: "Claire", icon: Star, bgClass: "bg-white/[0.06] border-white/10", iconClass: "text-[#6ee7b7]" },
+  { name: "Rex", icon: Eye, bgClass: "bg-white/[0.06] border-white/10", iconClass: "text-[#6ee7b7]" },
 ]
 
 export function FinalCTA() {
@@ -19,13 +19,7 @@ export function FinalCTA() {
   
   return (
     <>
-    <section id="final-cta" className="section-padding-xl bg-[var(--navy-900)] relative overflow-hidden dark-section" aria-label="Call to action">
-      {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[var(--katie-blue)]/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-[var(--rex-green)]/10 rounded-full blur-[100px]" />
-      </div>
-
+    <section id="final-cta" className="v2-section bg-[var(--v2-navy)] relative overflow-hidden dark-section" aria-label="Call to action">
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Team Avatars */}
         <motion.div
@@ -41,9 +35,9 @@ export function FinalCTA() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`w-16 h-16 rounded-2xl ${member.bgClass} border flex items-center justify-center`}
+              className={`w-14 h-14 rounded-2xl ${member.bgClass} border flex items-center justify-center`}
             >
-              <member.icon className={`w-8 h-8 ${member.iconClass}`} />
+              <member.icon className={`w-6 h-6 ${member.iconClass}`} />
             </motion.div>
           ))}
         </motion.div>
@@ -54,15 +48,15 @@ export function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="heading-gradient text-4xl sm:text-5xl lg:text-7xl font-bold text-white tracking-tight text-balance reveal">
+          <h2 className="v2-h1 text-white text-balance reveal">
             Don't Miss Another Job
           </h2>
-          <p className="mt-8 text-xl lg:text-2xl text-white/70 max-w-2xl mx-auto text-pretty">
+          <p className="mt-6 text-lg lg:text-xl text-white/70 max-w-2xl mx-auto text-pretty">
             Every missed call is a job going to your competitor.
-            <span className="block mt-3 font-bold text-[var(--rex-green)] text-2xl">Try Whoza free for 7 days on Starter.</span>
+            <span className="block mt-3 font-semibold text-[#6ee7b7]">Try Whoza free for 7 days on Starter.</span>
           </p>
           <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/70 text-sm">
-            <CheckCircle2 className="w-4 h-4 text-[var(--rex-green)]" />
+            <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
             7-day free trial on Starter: 100 minutes + 10 jobs included. Cancel anytime.
           </div>
         </motion.div>
@@ -114,17 +108,17 @@ export function FinalCTA() {
               trackCTA("Start your free week", "final-cta")
               setShowWaitlist(true)
             }}
-            className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-6 text-lg rounded-lg transition-all hover:scale-105 active:scale-95 shadow-2xl shadow-[var(--rex-green)]/40 cursor-pointer"
+            className="v2-btn cursor-pointer" style={{ minHeight: 56, padding: "0 30px", fontSize: 17 }}
           >
             Start your free week
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <ArrowRight className="w-5 h-5" />
           </button>
         </motion.div>
 
         {/* Reassurance */}
         <p className="mt-3 text-sm text-white/50 text-center">
           Set up in 30 minutes and start catching more calls. Prefer to go straight in?{" "}
-          <a href="/signup" className="text-[var(--rex-green)] hover:underline font-medium">
+          <a href="/signup" className="text-[#6ee7b7] hover:underline font-medium">
             Create your account
           </a>
           .
@@ -140,7 +134,7 @@ export function FinalCTA() {
         >
           {["Installed in 30 minutes", "Runs in the background", "Always working for you"].map((point) => (
             <div key={point} className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[var(--rex-green)]" />
+              <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
               <span>{point}</span>
             </div>
           ))}

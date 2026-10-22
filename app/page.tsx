@@ -88,57 +88,57 @@ export default function Home() {
 
         {/* FREE TOOLS — contextual in-body internal links (not footer boilerplate) */}
         <div className="section-divider" />
-        <section className="py-14" aria-labelledby="free-tools-heading">
-          <div className="max-w-5xl mx-auto px-4">
-            <h2 id="free-tools-heading" className="text-2xl md:text-3xl font-bold mb-3">
+        <section className="v2-section-tight bg-[var(--v2-paper)]" aria-labelledby="free-tools-heading">
+          <div className="v2-container">
+            <h2 id="free-tools-heading" className="v2-h2 mb-4">
               Free tools for UK tradespeople
             </h2>
-            <p className="mb-6 opacity-80">
+            <p className="v2-lead mb-10 max-w-3xl">
               Built from our research into missed calls across UK trades. Free to use, no signup —
               every figure is based on real UK trade pricing and ONS call data.
             </p>
-            <ul className="space-y-4">
-              <li>
-                <a href="/missed-calls-cost-calculator" className="font-semibold underline">
+            <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <li className="v2-card text-[15px] leading-relaxed text-[var(--v2-muted)]">
+                <a href="/missed-calls-cost-calculator" className="block mb-1.5 text-base font-semibold text-[var(--v2-ink)] no-underline hover:text-[var(--v2-green)]">
                   Lost Jobs Calculator
                 </a>{" "}
                 — work out how many jobs a year you lose to unanswered calls, and what those missed
                 jobs are worth at your average job value.
               </li>
-              <li>
-                <a href="/tools/rate-checker" className="font-semibold underline">
+              <li className="v2-card text-[15px] leading-relaxed text-[var(--v2-muted)]">
+                <a href="/tools/rate-checker" className="block mb-1.5 text-base font-semibold text-[var(--v2-ink)] no-underline hover:text-[var(--v2-green)]">
                   Hourly Rate Checker for UK trades
                 </a>{" "}
                 — compare your hourly rate against typical rates for your trade and region before
                 you quote your next job.
               </li>
-              <li>
-                <a href="/tools/emergency-pricing" className="font-semibold underline">
+              <li className="v2-card text-[15px] leading-relaxed text-[var(--v2-muted)]">
+                <a href="/tools/emergency-pricing" className="block mb-1.5 text-base font-semibold text-[var(--v2-ink)] no-underline hover:text-[var(--v2-green)]">
                   Emergency Callout Pricing Calculator
                 </a>{" "}
                 — set a defensible out-of-hours callout charge, including evening, weekend and bank
                 holiday uplifts.
               </li>
-              <li>
-                <a href="/tools/quote-generator" className="font-semibold underline">
+              <li className="v2-card text-[15px] leading-relaxed text-[var(--v2-muted)]">
+                <a href="/tools/quote-generator" className="block mb-1.5 text-base font-semibold text-[var(--v2-ink)] no-underline hover:text-[var(--v2-green)]">
                   Free Quote Generator
                 </a>{" "}
                 — produce a clean, itemised quote you can send from your phone while you are still
                 on site.
               </li>
-              <li>
-                <a href="/tools/voicemail-scripts" className="font-semibold underline">
+              <li className="v2-card text-[15px] leading-relaxed text-[var(--v2-muted)]">
+                <a href="/tools/voicemail-scripts" className="block mb-1.5 text-base font-semibold text-[var(--v2-ink)] no-underline hover:text-[var(--v2-green)]">
                   Voicemail Script Generator
                 </a>{" "}
                 — write a voicemail greeting that actually gets callers to leave their name, job
                 and number instead of hanging up.
               </li>
-              <li>
-                <a href="/missed-calls-cost-calculator" className="font-semibold underline">
+              <li className="v2-card text-[15px] leading-relaxed text-[var(--v2-muted)]">
+                <a href="/missed-calls-cost-calculator" className="block mb-1.5 text-base font-semibold text-[var(--v2-ink)] no-underline hover:text-[var(--v2-green)]">
                   Missed Call Cost Calculator
                 </a>{" "}
                 — the original tool behind our{" "}
-                <a href="/research/missed-call-index" className="underline">
+                <a href="/research/missed-call-index" className="underline text-[var(--v2-green)]">
                   Missed Call Index research
                 </a>{" "}
                 research.
@@ -147,78 +147,77 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="section-divider" />
         {/* CITY COVERAGE — contextual in-body internal links (city pages were
             orphaned: sitemap-only discovery, zero in-body links site-wide, GSC 2026-08-30) */}
         <div className="section-divider" />
-        <section className="py-14" aria-labelledby="city-answering-heading">
-          <div className="max-w-5xl mx-auto px-4">
-            <h2 id="city-answering-heading" className="text-2xl md:text-3xl font-bold mb-3">
+        <section className="v2-section-tight bg-white border-t border-[var(--v2-line)]" aria-labelledby="city-answering-heading">
+          <div className="v2-container">
+            <h2 id="city-answering-heading" className="v2-h2 mb-4">
               24/7 call answering for trades, city by city
             </h2>
-            <p className="mb-6 opacity-80">
+            <p className="v2-lead mb-10 max-w-3xl">
               Whoza is built in Scotland for UK trades, with 12 UK and Scottish accent options — so
               a caller from Glasgow or Aberdeen is understood first time. You only pay for jobs you
               accept, never for calls answered. Pick your city:
             </p>
-            <ul className="space-y-4">
-              <li>
-                <a href="/glasgow" className="font-semibold underline">
+            <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <li className="v2-card text-[15px] leading-relaxed text-[var(--v2-muted)]">
+                <a href="/glasgow" className="block mb-1.5 text-base font-semibold text-[var(--v2-ink)] no-underline hover:text-[var(--v2-green)]">
                   AI call answering in Glasgow
                 </a>{" "}
                 — Glaswegian-ready voice handling for plumbers, electricians and joiners across the
                 city, with qualified jobs sent straight to your WhatsApp.
               </li>
-              <li>
-                <a href="/edinburgh" className="font-semibold underline">
+              <li className="v2-card text-[15px] leading-relaxed text-[var(--v2-muted)]">
+                <a href="/edinburgh" className="block mb-1.5 text-base font-semibold text-[var(--v2-ink)] no-underline hover:text-[var(--v2-green)]">
                   AI call answering in Edinburgh
                 </a>{" "}
                 — capture tenement callouts and emergency heating jobs while you are on site, with
                 RED/AMBER/GREEN urgency triage on every call.
               </li>
-              <li>
-                <a href="/leeds" className="font-semibold underline">
+              <li className="v2-card text-[15px] leading-relaxed text-[var(--v2-muted)]">
+                <a href="/leeds" className="block mb-1.5 text-base font-semibold text-[var(--v2-ink)] no-underline hover:text-[var(--v2-green)]">
                   AI call answering in Leeds
                 </a>{" "}
                 — 24/7 cover for Yorkshire trades, including spam and sales-call filtering so only
                 real enquiries reach your phone.
               </li>
-              <li>
-                <a href="/manchester" className="font-semibold underline">
+              <li className="v2-card text-[15px] leading-relaxed text-[var(--v2-muted)]">
+                <a href="/manchester" className="block mb-1.5 text-base font-semibold text-[var(--v2-ink)] no-underline hover:text-[var(--v2-green)]">
                   AI call answering in Manchester
                 </a>{" "}
                 — keep your existing business number and let Katie or Mark answer the calls you
                 cannot take from the van.
               </li>
-              <li>
-                <a href="/birmingham" className="font-semibold underline">
+              <li className="v2-card text-[15px] leading-relaxed text-[var(--v2-muted)]">
+                <a href="/birmingham" className="block mb-1.5 text-base font-semibold text-[var(--v2-ink)] no-underline hover:text-[var(--v2-green)]">
                   AI call answering in Birmingham
                 </a>{" "}
                 — Midlands trade cover with calendar sync, so confirmed bookings land in your diary
                 without double-booking.
               </li>
-              <li>
-                <a href="/london" className="font-semibold underline">
+              <li className="v2-card text-[15px] leading-relaxed text-[var(--v2-muted)]">
+                <a href="/london" className="block mb-1.5 text-base font-semibold text-[var(--v2-ink)] no-underline hover:text-[var(--v2-green)]">
                   AI call answering in London
                 </a>{" "}
                 — high call-volume cover for London trades, with searchable transcripts of every
                 enquiry and one-tap accept or decline.
               </li>
-              <li>
-                <a href="/bristol" className="font-semibold underline">
+              <li className="v2-card text-[15px] leading-relaxed text-[var(--v2-muted)]">
+                <a href="/bristol" className="block mb-1.5 text-base font-semibold text-[var(--v2-ink)] no-underline hover:text-[var(--v2-green)]">
                   AI call answering in Bristol
                 </a>{" "}
                 — South West trade cover, plus Claire turning completed jobs into Google reviews on
                 autopilot.
               </li>
             </ul>
-            <p className="mt-6 opacity-80">
+            <p className="v2-lead mt-10 max-w-3xl">
               Not sure what unanswered calls are already costing you? Use the{" "}
-              <a href="/missed-calls-cost-calculator" className="font-semibold underline">
+              <a href="/missed-calls-cost-calculator" className="font-semibold underline text-[var(--v2-green)]">
                 missed call cost calculator
               </a>{" "}
               — or read how our Aberdonian-accent build was covered by{" "}
-              <a href="/press" className="font-semibold underline">
+              <a href="/press" className="font-semibold underline text-[var(--v2-green)]">
                 the Press and Journal
               </a>
               .

@@ -1,23 +1,5 @@
 import { Plus_Jakarta_Sans } from "next/font/google"
-import {
-  Check,
-  CheckCircle2,
-  ChevronLeft,
-  MapPin,
-  Mic,
-  MoreVertical,
-  Phone,
-  PhoneForwarded,
-  PhoneOff,
-  PoundSterling,
-  Sparkles,
-  User,
-  Video,
-  Wrench,
-  X,
-  Zap,
-  type LucideIcon,
-} from "lucide-react"
+import { Check, CheckCircle2, ChevronLeft, MapPin, Mic, MoreVertical, Phone, PhoneForwarded, PhoneOff, PoundSterling, Sparkles, User, Video, Wrench, X, Zap, type LucideIcon } from "lucide-react"
 
 /**
  * How Whoza Works — the four-step dispatch loop, ported from app.whoza.ai unchanged.
@@ -117,7 +99,7 @@ function Step({ n, children }: { n: string; children: React.ReactNode }) {
     <div className="flex items-center gap-2">
       <span
         className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[11px] font-black text-white"
-        style={{ backgroundColor: EMERALD }}
+        style={{ backgroundColor: "#047857" }}
       >
         {n}
       </span>
@@ -149,13 +131,11 @@ export function HowWhozaWorks() {
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="reveal mx-auto max-w-2xl text-center">
-          <span className={label}>
-            <Zap size={12} /> How it works
-          </span>
-          <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl [font-family:var(--font-whoza-display)]">
-            The <span className="text-[#047857]">10-second</span> automated dispatch loop
+          <span className="v2-eyebrow">How it works</span>
+          <h2 className="v2-h2">
+            The <span className="v2-accent">10-second</span> automated dispatch loop
           </h2>
-          <p className="mt-3 text-sm text-slate-500 sm:text-base">
+          <p className="v2-lead mt-4">
             Whoza sits on your existing phone line and your business WhatsApp. Nothing new to learn.
           </p>
         </div>
@@ -249,7 +229,7 @@ export function HowWhozaWorks() {
                 <span className="flex items-center gap-2 font-bold text-slate-900">
                   <WhatsAppMark size={16} className="text-[#25D366]" /> New lead from Whoza
                 </span>
-                <span className="text-slate-400">now</span>
+                <span className="text-slate-500">now</span>
               </div>
               <ul className="mt-3 grid gap-1.5 text-slate-700 sm:grid-cols-2">
                 <li className="flex items-center gap-2">
@@ -285,7 +265,7 @@ export function HowWhozaWorks() {
                       <span className="flex items-center gap-3 font-semibold text-slate-800">
                         <CheckCircle2 size={17} className="shrink-0" style={{ color: EMERALD }} /> {text}
                       </span>
-                      <span className="text-xs text-slate-400">{time}</span>
+                      <span className="text-xs text-slate-500">{time}</span>
                     </li>
                   ))}
                 </ul>
@@ -320,12 +300,12 @@ export function HowWhozaWorks() {
                             <PoundSterling size={12} className="text-slate-500" /> £180 – £250 · ASAP
                           </li>
                         </ul>
-                        <p className="mt-1.5 text-right text-[10px] text-slate-500">10:24</p>
+                        <p className="mt-1.5 text-right text-[10px] text-slate-600">10:24</p>
                       </div>
                       <div className="grid grid-cols-2 gap-2">
                         <span
                           className="flex items-center justify-center gap-2 rounded-lg py-2.5 text-sm font-bold text-white"
-                          style={{ backgroundColor: EMERALD }}
+                          style={{ backgroundColor: "#047857" }}
                         >
                           <Check size={15} /> Accept
                         </span>

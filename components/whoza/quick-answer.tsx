@@ -62,7 +62,7 @@ export function QuickAnswer({
             <p className="pt-2">
               <a
                 href={serviceUrl}
-                className="text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:underline"
+                className="text-sm font-medium text-[var(--v2-green)] dark:text-emerald-400 hover:underline"
               >
                 Learn more about whoza.ai for {tradeName}s →
               </a>
