@@ -82,8 +82,19 @@ interface BlogPostPageProps {
 
 export const revalidate = 3600
 
+// Slugs that also have their own folder under app/blog/. Both routes would
+// prerender the same URL and whichever build output is written last wins, so
+// the page flipped between two different titles, texts and schemas from one
+// deploy to the next. The dedicated page is the one live on whoza.ai, so this
+// template must not generate these slugs.
+const DEDICATED_PAGE_SLUGS = new Set([
+  "ai-call-answering-uk-tradespeople-definitive-guide-2026",
+])
+
 export function generateStaticParams() {
-  return Object.keys(blogPostContents).map((slug) => ({ slug }))
+  return Object.keys(blogPostContents)
+    .filter((slug) => !DEDICATED_PAGE_SLUGS.has(slug))
+    .map((slug) => ({ slug }))
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
