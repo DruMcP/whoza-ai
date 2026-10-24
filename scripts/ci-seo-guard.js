@@ -219,6 +219,7 @@ function walkJsonLd(node, visit) {
 }
 
 for (const [url, data] of pageData) {
+  let breadcrumbCount = 0;
   for (let i = 0; i < data.jsonLd.length; i++) {
     let parsed;
     try {
@@ -229,6 +230,7 @@ for (const [url, data] of pageData) {
 
     walkJsonLd(parsed, (node) => {
       if (!isBreadcrumbListNode(node)) return;
+      breadcrumbCount++;
       const elements = node.itemListElement;
       if (!Array.isArray(elements)) {
         fail("4b", url, `BreadcrumbList block ${i + 1} is missing itemListElement`);
@@ -244,6 +246,10 @@ for (const [url, data] of pageData) {
         }
       });
     });
+  }
+  if (breadcrumbCount > 1) {
+    fail("4b", url, `Page emits ${breadcrumbCount} BreadcrumbList nodes — expected exactly 1`);
+    breadcrumbErrors++;
   }
 }
 if (breadcrumbErrors === 0) pass("Check 4b: Every breadcrumb ListItem has a non-empty item URL");
