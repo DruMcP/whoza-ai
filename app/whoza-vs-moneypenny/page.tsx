@@ -193,7 +193,7 @@ export default function VsMoneypennyPage() {
               <div className="mt-8 pt-6 border-t border-white/10 text-center">
                 <p className="text-white/70">
                   <strong className="text-emerald-400">Annual saving with whoza.ai: £1,092+</strong> — based on Moneypenny's entry-level pricing.
-                  For their mid-tier packages (£250-400/month), the saving increases to £2,300-4,100/year.
+                  For their mid-tier packages (£250-400/month), the saving increases to £2,300-4,100/year. Moneypenny does not publish pricing — figures are industry-reported estimates. Request a quote at moneypenny.com to confirm current rates.
                 </p>
                 <p className="text-white/50 text-sm mt-2">
                   Source: Moneypenny pricing page, accessed August 2026. Prices approximate; exact quotes vary by call volume.

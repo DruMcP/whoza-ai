@@ -8,7 +8,7 @@ import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 const faqs = [
   {
     question: "Is whoza.ai cheaper than Trade Receptionist?",
-    answer: "whoza.ai starts at £59/month with per-minute pricing. Trade Receptionist starts at £29/month (+VAT) with per-call pricing. The total cost depends on your call volume and average call length. Both offer free trials so you can compare real costs for your business.",
+    answer: "whoza.ai starts at £59/month with per-minute pricing. Trade Receptionist starts at £49/month (50 calls included, no VAT added). The total cost depends on your call volume and average call length. Both offer free trials so you can compare real costs for your business.",
   },
   {
     question: "Does whoza.ai use real people or AI?",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
 }
 
 const comparisonData = [
-  { feature: "Monthly Price", whoza: "£59 (Starter)", competitor: "£29 / £59 / £119 (+VAT)", winner: "draw" },
+  { feature: "Monthly Price", whoza: "£59 (Starter)", competitor: "£49 / £89 / £159 (no VAT)", winner: "draw" },
   { feature: "Setup Time", whoza: "30 minutes", competitor: "~14 minutes (their claim)", winner: "competitor" },
   { feature: "Delivery Method", whoza: "WhatsApp", competitor: "WhatsApp job summaries", winner: "draw" },
   { feature: "Pricing Model", whoza: "Per minute", competitor: "Per call", winner: "draw" },
@@ -93,7 +93,7 @@ const itemListSchema = {
   "@type": "ItemList",
   "name": "Whoza.ai vs Trade Receptionist feature comparison",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Monthly Price", "description": "Whoza.ai: £59 (Starter). Trade Receptionist: £29 / £59 / £119 (+VAT). Result: Draw." },
+    { "@type": "ListItem", "position": 1, "name": "Monthly Price", "description": "Whoza.ai: £59 (Starter). Trade Receptionist: £49 / £89 / £159 (no VAT). Result: Draw." },
     { "@type": "ListItem", "position": 2, "name": "Setup Time", "description": "Whoza.ai: 30 minutes. Trade Receptionist: ~14 minutes (their claim). Result: Trade Receptionist." },
     { "@type": "ListItem", "position": 3, "name": "Delivery Method", "description": "Whoza.ai: WhatsApp. Trade Receptionist: WhatsApp job summaries. Result: Draw." },
     { "@type": "ListItem", "position": 4, "name": "Pricing Model", "description": "Whoza.ai: Per minute. Trade Receptionist: Per call. Result: Draw." },
@@ -215,7 +215,7 @@ export default function VsTradeReceptionistPage() {
                   <PoundSterling className="w-6 h-6 text-slate-400" />
                   <h3 className="text-2xl font-bold text-slate-700">Trade Receptionist</h3>
                 </div>
-                <div className="text-4xl font-extrabold text-slate-500 mb-2">£29<span className="text-lg font-medium text-slate-500">/mo (+VAT)</span></div>
+                <div className="text-4xl font-extrabold text-slate-500 mb-2">£49<span className="text-lg font-medium text-slate-500">/mo (no VAT)</span></div>
                 <p className="text-slate-600 mb-4">Starter plan (100 calls). Per-call pricing. No contract.</p>
                 <ul className="space-y-2 text-sm text-slate-700">
                   <li className="flex items-center gap-2"><Check className="w-4 h-4 text-blue-500" /> 14-day free trial</li>

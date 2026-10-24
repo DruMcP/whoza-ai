@@ -8,7 +8,7 @@ import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Whoza.ai vs Team-Connect: AI vs Budget (2026)",
-  description: "Honest comparison of whoza.ai (£59-£399) vs Team-Connect (£9.99-£79.99) for UK trades. Features, reliability, and value analysed head-to-head. See which wins.",
+  description: "Honest comparison of whoza.ai (£59-£399) vs Team-Connect (£9.99-£199.99) for UK trades. Features, reliability, and value analysed head-to-head. See which wins.",
   keywords: [
     "whoza.ai vs Team-Connect",
     "Team-Connect receptionist review",
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
 }
 
 const comparisonData = [
-  { feature: "Entry Price", whoza: "£59", competitor: "£9.99", winner: "teamconnect", note: "Team-Connect cheapest entry" },
-  { feature: "Mid-Tier Price", whoza: "£125 (Growth)", competitor: "£29.99 (Professional)", winner: "teamconnect", note: "Team-Connect cheaper mid" },
-  { feature: "Top-Tier Price", whoza: "£399 (Scale)", competitor: "£79.99 (Business)", winner: "teamconnect", note: "Team-Connect cheaper top" },
+  { feature: "Entry Price", whoza: "£59", competitor: "£9.99", winner: "teamconnect", note: "£9.99 tier = landline only, no AI minutes" },
+  { feature: "Mid-Tier Price", whoza: "£125 (Growth)", competitor: "£19.99 (Lite)", winner: "teamconnect", note: "Team-Connect cheaper mid (30 AI min cap)" },
+  { feature: "Top-Tier Price", whoza: "£399 (Scale)", competitor: "£79.99 (Business Pro)", winner: "teamconnect", note: "Team-Connect cheaper top" },
   { feature: "WhatsApp Delivery", whoza: "✓ Native", competitor: "✗ SMS/Email", winner: "whoza", note: "whoze better delivery" },
   { feature: "Review Collection", whoza: "✓ Built-in", competitor: "✗ Not included", winner: "whoza", note: "whoze exclusive" },
   { feature: "Competitor Analysis", whoza: "✓ Monthly reports", competitor: "✗ Not available", winner: "whoza", note: "whoze exclusive" },
