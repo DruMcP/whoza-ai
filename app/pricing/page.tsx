@@ -10,21 +10,21 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "Virtual Receptionist Cost UK | Compare & Save £25K/yr",
-  description: "Compare virtual receptionist costs UK: Whoza.ai from £59/month vs £25K+/year for in-house staff. 7-day free trial. No contract. See full comparison.",
+  title: "Whoza Pricing 2026: AI Call Answering from £59/month",
+  description: "Whoza pricing 2026: plans from £59/month — what's included in each tier, overage rates, and how the 7-day free trial works. No contract, cancel anytime.",
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "https://whoza.ai/pricing",
     siteName: "Whoza.ai",
-    title: "Virtual Receptionist Cost UK | Compare & Save £25K/yr",
-    description: "Compare virtual receptionist costs UK: Whoza.ai from £59/month vs £25K+/year for in-house staff. 7-day free trial. No contract. See full comparison.",
+    title: "Whoza Pricing 2026: AI Call Answering from £59/month",
+    description: "Whoza pricing 2026: plans from £59/month — what's included in each tier, overage rates, and how the 7-day free trial works. No contract, cancel anytime.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Whoza.ai Pricing" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Virtual Receptionist Cost UK | Compare & Save £25K/yr",
-    description: "Compare virtual receptionist costs UK: Whoza.ai from £59/month vs £25K+/year for in-house staff. 7-day free trial. No contract. See full comparison.",
+    title: "Whoza Pricing 2026: AI Call Answering from £59/month",
+    description: "Whoza pricing 2026: plans from £59/month — what's included in each tier, overage rates, and how the 7-day free trial works. No contract, cancel anytime.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {
@@ -60,7 +60,7 @@ export default function PricingPage() {
                 Simple Pricing
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                AI Receptionist Cost vs In-House Staff: Save £25,000+/Year
+                Whoza Pricing: AI Call Answering Plans from £59/month
               </h1>
               <p className="text-white/60 max-w-2xl mx-auto text-lg mb-6">
                 Compare AI receptionist costs: Whoza.ai from £59/month vs £25,000+/year for a full-time human. One captured job pays for the entire year. 7-day free trial.

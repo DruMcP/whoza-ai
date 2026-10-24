@@ -6,15 +6,16 @@ import { ArrowRight, PoundSterling, Clock, Shield, Check, AlertTriangle, Trendin
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "AI Call Answering Cost UK (2026) | Pricing Guide",
-  description: "AI call answering cost UK 2026: per-job, per-minute and flat-rate prices compared across seven providers, plus hidden fees and break-even maths by trade.",
+  title: "Virtual Receptionist Cost UK 2026: 7 Providers Compared",
+  description: "Virtual receptionist cost UK 2026: 7 providers compared with real monthly prices, hidden fees, pricing models and trade-by-trade break-even maths.",
   keywords: [
+    "virtual receptionist cost UK",
+    "virtual receptionist pricing UK",
+    "how much does a virtual receptionist cost UK",
+    "virtual receptionist prices 2026",
     "AI receptionist cost UK",
     "AI answering service pricing UK",
-    "how much does AI call answering cost UK",
-    "cheapest AI receptionist UK",
-    "AI call answering pricing 2026",
-    "AI phone answering cost comparison UK",
+    "cheapest virtual receptionist UK",
     "virtual receptionist pricing UK trades",
   ],
   openGraph: {
@@ -22,14 +23,14 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/blog/ai-call-answering-pricing-guide-uk-2026",
     siteName: "Whoza.ai",
-    title: "AI Call Answering Cost UK (2026) | Pricing Guide",
-    description: "AI call answering cost UK 2026: per-job, per-minute and flat-rate prices compared across seven providers, plus hidden fees and break-even maths by trade.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "AI Call Answering Cost UK 2026 Pricing Guide" }],
+    title: "Virtual Receptionist Cost UK 2026: 7 Providers Compared",
+    description: "Virtual receptionist cost UK 2026: 7 providers compared with real monthly prices, hidden fees, pricing models and trade-by-trade break-even maths.",
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Virtual Receptionist Cost UK 2026: 7 Providers Compared" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Call Answering Cost UK (2026) | Pricing Guide",
-    description: "AI call answering cost UK 2026: per-job, per-minute and flat-rate prices compared across seven providers, plus hidden fees and break-even maths by trade.",
+    title: "Virtual Receptionist Cost UK 2026: 7 Providers Compared",
+    description: "Virtual receptionist cost UK 2026: 7 providers compared with real monthly prices, hidden fees, pricing models and trade-by-trade break-even maths.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {
@@ -42,8 +43,8 @@ export const metadata: Metadata = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "How Much Does AI Call Answering Cost in the UK? (2026 Pricing Guide)",
-  "description": "Transparent AI call answering pricing guide for UK businesses. Compare per-job, per-minute and per-month models. Hidden costs revealed.",
+  "headline": "Virtual Receptionist Cost UK: 7 Providers Compared (2026)",
+  "description": "Virtual receptionist cost UK 2026: 7 providers compared with real monthly prices, hidden fees, pricing models and trade-by-trade break-even maths.",
   "author": {
     "@type": "Organization",
     "name": "whoza.ai",
@@ -71,18 +72,18 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How much does AI call answering cost in the UK?",
+      "name": "How much does a virtual receptionist cost in the UK?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "AI call answering in the UK costs between £9 and £400+ per month depending on the provider and pricing model. Entry-level services like IONOS start at £9/month. Mid-tier AI services like Clara AI cost £49–£149/month. Premium human-assisted services like Moneypenny range from £150–£400+/month. Whoza.ai offers trade-specific plans from £59–£399/month with per-job pricing.",
+        "text": "A virtual receptionist in the UK costs between £9 and £400+ per month depending on the provider and pricing model. Entry-level services like IONOS start at £9/month. Mid-tier AI services like Clara AI cost £49–£149/month. Premium human-assisted services like Moneypenny range from £150–£400+/month. Whoza.ai offers trade-specific plans from £59–£399/month with per-job pricing.",
       },
     },
     {
       "@type": "Question",
-      "name": "What is the cheapest AI receptionist in the UK?",
+      "name": "What is the cheapest virtual receptionist in the UK?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The cheapest AI receptionist in the UK is IONOS at £9.99/month for basic call handling. However, cheapest is not always best value — IONOS uses basic auto-attendant technology, not true AI. For genuine AI conversation, Clara AI starts at £49/month and Whoza.ai at £59/month for tradespeople. Consider call quality, lead capture accuracy, and integration features when comparing price.",
+        "text": "The cheapest virtual receptionist in the UK is IONOS at £9.99/month for basic call handling. However, cheapest is not always best value — IONOS uses basic auto-attendant technology, not true AI. For genuine AI conversation, Clara AI starts at £49/month and Whoza.ai at £59/month for tradespeople. Consider call quality, lead capture accuracy, and integration features when comparing price.",
       },
     },
     {
@@ -210,8 +211,8 @@ export default function PricingGuidePage() {
               </div>
 
               <h1 className="text-4xl lg:text-5xl font-extrabold mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
-                How Much Does AI Call Answering{" "}
-                <span className="block text-emerald-400 mt-2">Cost in the UK? (2026)</span>
+                Virtual Receptionist Cost UK:{" "}
+                <span className="block text-emerald-400 mt-2">7 Providers Compared (2026)</span>
               </h1>
 
               <div className="flex flex-wrap items-center gap-4 text-white/40 text-sm mt-4">
@@ -230,8 +231,9 @@ export default function PricingGuidePage() {
               </div>
 
               <p className="text-lg text-white/60 max-w-2xl mb-8">
-                A fully transparent pricing guide comparing every major AI call answering service in the UK. 
-                Real prices, hidden costs, and trade-specific ROI calculations — no affiliate links, no BS.
+                A fully transparent virtual receptionist pricing guide comparing every major service in the UK —
+                AI and human alike. Real prices, hidden costs, and trade-specific ROI calculations — no affiliate
+                links, no BS.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -483,9 +485,9 @@ export default function PricingGuidePage() {
               Provider Breakdown: What You Actually Get
             </h2>
             <p className="text-white/70 leading-relaxed mb-8">
-              Providers are listed from cheapest to most expensive based on published 2026 pricing. Each summary 
-              sticks to verifiable facts — the pricing structure, the technology, and the kind of business each 
-              service suits best.
+              Every virtual receptionist provider is listed from cheapest to most expensive based on published
+              2026 pricing. Each summary sticks to verifiable facts — the pricing structure, the technology, and
+              the kind of business each service suits best.
             </p>
 
             <div className="space-y-8">
@@ -659,8 +661,8 @@ export default function PricingGuidePage() {
               Per-Job vs Per-Minute vs Per-Month: Which Model Wins?
             </h2>
             <p className="text-white/70 leading-relaxed mb-6">
-              Understanding pricing models is crucial — the same provider can cost £50 or £500 depending on 
-              how they charge. Here is how each model works and which suits tradespeople.
+              Understanding pricing models is crucial — the same virtual receptionist provider can cost £50 or
+              £500 depending on how they charge. Here is how each model works and which suits tradespeople.
             </p>
 
             <div className="grid md:grid-cols-3 gap-4 mb-8">
@@ -1059,8 +1061,8 @@ export default function PricingGuidePage() {
               What Should Your Trade Expect to Pay?
             </h2>
             <p className="text-white/70 leading-relaxed mb-6">
-              Different trades have different call patterns, job values, and AI requirements. Here is what 
-              each trade should budget for AI call answering in 2026.
+              Different trades have different call patterns, job values, and service requirements. Here is what
+              each trade should budget for a virtual receptionist in 2026.
             </p>
 
             <div className="space-y-6">
@@ -1153,9 +1155,9 @@ export default function PricingGuidePage() {
             <h2 className="text-3xl font-bold mb-8">Frequently Asked Questions</h2>
             <div className="space-y-4">
               <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <h3 className="font-bold text-white mb-2">How much does AI call answering cost in the UK?</h3>
+                <h3 className="font-bold text-white mb-2">How much does a virtual receptionist cost in the UK?</h3>
                 <p className="text-white/60 text-sm leading-relaxed">
-                  AI call answering in the UK costs between £9 and £400+ per month depending on the provider and 
+                  A virtual receptionist in the UK costs between £9 and £400+ per month depending on the provider and
                   pricing model. Entry-level services like IONOS start at £9/month. Mid-tier AI services like Clara 
                   AI cost £49–£149/month. Premium human-assisted services like Moneypenny range from £150–£400+/month. 
                   Whoza.ai offers trade-specific plans from 
@@ -1165,9 +1167,9 @@ export default function PricingGuidePage() {
                 </p>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <h3 className="font-bold text-white mb-2">What is the cheapest AI receptionist in the UK?</h3>
+                <h3 className="font-bold text-white mb-2">What is the cheapest virtual receptionist in the UK?</h3>
                 <p className="text-white/60 text-sm leading-relaxed">
-                  The cheapest AI receptionist in the UK is IONOS at £9.99/month for basic call handling. However, 
+                  The cheapest virtual receptionist in the UK is IONOS at £9.99/month for basic call handling. However, 
                   cheapest is not always best value — IONOS uses basic auto-attendant technology, not true AI. For 
                   genuine AI conversation, Clara AI starts at £49/month and Whoza.ai at £59/month for tradespeople. 
                   Consider call quality, lead capture accuracy, and integration features when comparing price.
