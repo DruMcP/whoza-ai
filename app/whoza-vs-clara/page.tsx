@@ -213,7 +213,7 @@ export default function VsClaraPage() {
                 </p>
                 <p className="text-white/70 leading-relaxed">
                   <strong className="text-white">Real-world cost example:</strong> A plumber receiving 15 calls/week. 
-                  Clara Standard (£49.99) answers calls but delivers via email. whoza.ai Starter (£59) answers calls 
+                  Clara Standard ($39.99 ≈ £30, USD billing) answers calls but delivers via email. whoza.ai Starter (£59) answers calls 
                   and delivers to WhatsApp. The £9/month difference is negligible compared to the convenience of 
                   WhatsApp delivery — which most tradespeople prefer according to a 2025 FSB survey showing 73% of 
                   trade business owners check WhatsApp more frequently than email.
