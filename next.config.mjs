@@ -1,5 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // IndexNow hash-gate prerequisite: a stable build ID keeps prerendered HTML
+  // byte-identical across rebuilds of unchanged source. Next's default random
+  // per-build ID embeds in every page's Flight payload, which would make the
+  // url→hash change-gate see every URL as changed on every build (all 120
+  // eligible → hard-cap abort every run). Stable ID = hash reflects real
+  // content changes only. See docs/INDEXNOW.md.
+  generateBuildId: async () => 'whoza-ai-stable',
   // Cache-busting deploy — force fresh CDN upload
   typescript: {
     ignoreBuildErrors: true,

@@ -9,8 +9,8 @@
  *   - Every batch is logged with a count and triggering reason.
  *
  * DISABLED BY DEFAULT. Requires INDEXNOW_ENABLED=true (set in Netlify UI only,
- * never committed). As of 2026-09-19 the IndexNow key file has been removed from
- * public/ as a circuit breaker — do not re-enable for at least 30 days.
+ * ENABLED 2026-10-24. INDEXNOW_ENABLED=true is set via the Netlify UI,
+ * production context only (never committed). Fresh key issued 2026-10-24.
  *
  * Persisted store: JSON at the first writable location of
  *   1. $INDEXNOW_STORE_PATH          (explicit override)
@@ -24,7 +24,7 @@
 const { writeFileSync, mkdirSync, readFileSync, existsSync } = require('fs')
 const { createHash } = require('crypto')
 const { dirname, join } = require('path')
-const { selectUrls, applySubmission, MAX_URLS_PER_RUN } = require('./indexnow-core')
+const { selectUrls, applySubmission, MAX_URLS_PER_RUN, hashForRoute } = require('./indexnow-core')
 
 const BASE_URL = 'https://whoza.ai'
 const MANIFEST_PATH = 'netlify/functions/indexnow-manifest.json'
@@ -91,30 +91,6 @@ function parseSitemapUrls(xml) {
   return urls.sort()
 }
 
-// Content hash for a route. Prefer the built HTML (true rendered content),
-// fall back to the page source file.
-function hashForRoute(pathname) {
-  const route = pathname.replace(/^\//, '')
-  const htmlCandidates = [
-    join('.next', 'server', 'app', `${route}.html`),
-    join('.next', 'server', 'app', route, 'page.html'),
-    join('.next', 'server', 'app', `${route}index.html`),
-    join('.next', 'server', 'app', 'index.html'), // homepage
-  ]
-  const srcCandidates = [
-    join('app', route, 'page.tsx'),
-    join('app', route, 'page.jsx'),
-    join('app', 'page.tsx'), // homepage
-  ]
-  for (const file of [...htmlCandidates, ...srcCandidates]) {
-    if (existsSync(file)) {
-      const content = readFileSync(file)
-      return createHash('sha1').update(content).digest('hex')
-    }
-  }
-  return null // unknown — treat as unchanged rather than guessing
-}
-
 async function verify200(url) {
   try {
     const res = await fetch(url, { method: 'GET', redirect: 'manual' })
@@ -129,7 +105,7 @@ async function buildManifest() {
   const empty = { generatedAt: new Date().toISOString(), source: 'disabled', urlCount: 0, urls: [], capped: false }
 
   if (!enabled) {
-    console.log('[indexnow] DISABLED (INDEXNOW_ENABLED !== true) — writing empty manifest. Do not re-enable before 2026-10-19; key file removed as circuit breaker.')
+    console.log('[indexnow] DISABLED (INDEXNOW_ENABLED !== true) — writing empty manifest. Production-only env var is unset in this context; previews and branch deploys must never submit.')
     writeFileSync(MANIFEST_PATH, JSON.stringify(empty, null, 2))
     return
   }
@@ -152,8 +128,9 @@ async function buildManifest() {
 
   if (aborted) {
     console.error(`[indexnow] ABORTED: ${aborted}`)
+    console.error('[indexnow] submission blocked by hard cap — deploy proceeds unaffected. Fix the store before the next content deploy.')
     writeFileSync(MANIFEST_PATH, JSON.stringify({ ...empty, source: 'aborted-cap', urls: [], capped: true }, null, 2))
-    process.exitCode = 1
+    // Cap blocks the SUBMISSION, never the deploy (exit 0 on purpose).
     return
   }
 
@@ -180,12 +157,13 @@ async function buildManifest() {
     if (valid.length > MAX_URLS_PER_RUN) {
       console.error(`[indexnow] FATAL: batch exceeds ${MAX_URLS_PER_RUN}/24h cap — not submitting`)
       writeFileSync(MANIFEST_PATH, JSON.stringify({ ...empty, source: 'aborted-cap', capped: true }, null, 2))
-      process.exitCode = 1
+      // Cap blocks the SUBMISSION, never the deploy (exit 0 on purpose).
       return
     }
     const nextStore = applySubmission(store, valid, hashes)
     writeStore(storePath, nextStore)
     console.log(`[indexnow] SUBMITTING ${valid.length} URLs (${valid.length}/${MAX_URLS_PER_RUN} daily cap). Store updated at ${storePath}`)
+    for (const u of valid) console.log(`[indexnow]   submit: ${u}`)
   } else {
     console.log('[indexnow] nothing to submit')
   }

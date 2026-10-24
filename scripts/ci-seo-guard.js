@@ -466,10 +466,149 @@ for (const [url, data] of pageData) {
 }
 if (disclosureErrors === 0) pass("Check 19: All Customer Stories have disclosure");
 
+// 20. Sitemap integrity: every built sitemap URL has a built page; every URL
+// in the DEPLOYED sitemap returns 200 and is not a redirect (live check).
+const { execSync } = require("child_process");
+const sitemapBodyPath = path.join(OUT_DIR, "sitemap.xml.body");
+let sitemapErrors = 0;
+if (!fs.existsSync(sitemapBodyPath)) {
+  fail(20, "/sitemap.xml", "built sitemap.xml.body missing — cannot verify sitemap integrity");
+  sitemapErrors++;
+} else {
+  const builtUrls = [...fs.readFileSync(sitemapBodyPath, "utf8").matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+  let builtOk = 0;
+  for (const u of builtUrls) {
+    const p = new URL(u).pathname;
+    const candidates =
+      p === "/"
+        ? [path.join(OUT_DIR, "index.html")]
+        : [path.join(OUT_DIR, p + ".html"), path.join(OUT_DIR, p, "index.html")];
+    if (candidates.some((c) => fs.existsSync(c))) {
+      builtOk++;
+    } else {
+      fail(20, u, "sitemap URL has no corresponding built HTML page");
+      sitemapErrors++;
+    }
+  }
+  try {
+    const deployed = execSync("curl -sS --max-time 20 https://whoza.ai/sitemap.xml", { encoding: "utf8" });
+    const liveUrls = [...deployed.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+    let liveOk = 0;
+    for (const u of liveUrls) {
+      const status = execSync(`curl -s -o /dev/null --max-time 15 -w "%{http_code}" '${u}'`, { encoding: "utf8" }).trim();
+      if (status === "200") {
+        liveOk++;
+      } else {
+        fail(20, u, `deployed sitemap URL returned HTTP ${status} (expected exactly 200 — redirects, 404s and 410s are all fails)`);
+        sitemapErrors++;
+      }
+    }
+    if (sitemapErrors === 0)
+      pass(`Check 20: Sitemap integrity — ${builtOk}/${builtUrls.length} built URLs have built pages; ${liveOk}/${liveUrls.length} deployed URLs return 200, no redirects`);
+  } catch (e) {
+    fail(20, "https://whoza.ai/sitemap.xml", `live sitemap check could not run: ${e.message}`);
+  }
+}
+
+// 21. Two-build sitemap diff: fail on >20 URL delta, warn loudly on 1-20.
+// scripts/sitemap-previous.xml is the previous build's snapshot. Intentional
+// sitemap changes must update the snapshot in the same commit (same rule as
+// redirects for re-slugged posts). Seeded from the 2026-10-24 build.
+const SITEMAP_SNAPSHOT = path.join(ROOT, "scripts", "sitemap-previous.xml");
+let sitemapDiffErrors = 0;
+if (!fs.existsSync(SITEMAP_SNAPSHOT)) {
+  fail(21, "scripts/sitemap-previous.xml", "snapshot missing — seed it from the current build's .next/server/app/sitemap.xml.body");
+  sitemapDiffErrors++;
+} else if (fs.existsSync(sitemapBodyPath)) {
+  const prevSet = new Set([...fs.readFileSync(SITEMAP_SNAPSHOT, "utf8").matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]));
+  const currSet = new Set([...fs.readFileSync(sitemapBodyPath, "utf8").matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]));
+  const added = [...currSet].filter((u) => !prevSet.has(u));
+  const removed = [...prevSet].filter((u) => !currSet.has(u));
+  const delta = added.length + removed.length;
+  if (delta > 20) {
+    fail(
+      21,
+      "/sitemap.xml",
+      `sitemap URL set changed by ${delta} (added ${added.length}: ${added.slice(0, 5).join(", ")}${added.length > 5 ? " …" : ""}; removed ${removed.length}: ${removed.slice(0, 5).join(", ")}${removed.length > 5 ? " …" : ""}) — over the ±20 threshold. If intentional, update scripts/sitemap-previous.xml in the same commit.`
+    );
+    sitemapDiffErrors++;
+  } else if (delta > 0) {
+    console.log(
+      `⚠️  Check 21: sitemap delta ${delta} URLs (added ${added.length}, removed ${removed.length}) — within tolerance but must be intentional: ${[...added.slice(0, 3), ...removed.slice(0, 3)].join(", ")}`
+    );
+  }
+  if (sitemapDiffErrors === 0 && delta === 0) pass("Check 21: Two-build sitemap diff — URL set unchanged vs previous build");
+}
+
+// 22. IndexNow gate (Task 1 of the 2026-10-24 Bing remediation): the 50/24h
+// cap is enforced in code but was not gated in CI. Assert the cap constant is
+// ≤ 50 everywhere it is enforced, the key file matches the key constant
+// exactly (32 chars, no trailing newline), and INDEXNOW_ENABLED is not
+// committed as true in any repo config — it lives in the Netlify UI,
+// production context only, so previews and branch deploys never submit.
+let indexnowErrors = 0;
+try {
+  const indexnowCore = require("./indexnow-core.js");
+  if (typeof indexnowCore.MAX_URLS_PER_RUN !== "number" || indexnowCore.MAX_URLS_PER_RUN > 50) {
+    fail(22, "scripts/indexnow-core.js", `MAX_URLS_PER_RUN=${indexnowCore.MAX_URLS_PER_RUN} exceeds the hard cap of 50 — a refactor must not be able to raise the cap without this build failing`);
+    indexnowErrors++;
+  }
+  if (/^[0-9a-f]{32}$/.test(indexnowCore.INDEXNOW_KEY)) {
+    const keyFile = path.join(ROOT, "public", `${indexnowCore.INDEXNOW_KEY}.txt`);
+    if (!fs.existsSync(keyFile)) {
+      fail(22, `public/${indexnowCore.INDEXNOW_KEY}.txt`, "IndexNow key file missing");
+      indexnowErrors++;
+    } else if (fs.readFileSync(keyFile, "utf8") !== indexnowCore.INDEXNOW_KEY) {
+      fail(22, `public/${indexnowCore.INDEXNOW_KEY}.txt`, "key file body must equal the key exactly (32 hex chars, no trailing newline)");
+      indexnowErrors++;
+    }
+  } else {
+    fail(22, "scripts/indexnow-core.js", `INDEXNOW_KEY '${indexnowCore.INDEXNOW_KEY}' is not 32 lowercase hex chars`);
+    indexnowErrors++;
+  }
+  const fnSrc = fs.readFileSync(path.join(ROOT, "netlify", "functions", "deploy-succeeded.js"), "utf8");
+  const fnCap = fnSrc.match(/MAX_URLS_PER_RUN\s*=\s*(\d+)/);
+  if (!fnCap || Number(fnCap[1]) > 50) {
+    fail(22, "netlify/functions/deploy-succeeded.js", "function-level cap missing or > 50 — defence in depth must hold");
+    indexnowErrors++;
+  }
+  const manifestPath = path.join(ROOT, "netlify", "functions", "indexnow-manifest.json");
+  if (fs.existsSync(manifestPath)) {
+    try {
+      const m = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+      if (typeof m.urlCount === "number" && m.urlCount > 50) {
+        fail(22, "netlify/functions/indexnow-manifest.json", `committed manifest has urlCount ${m.urlCount} > 50`);
+        indexnowErrors++;
+      }
+    } catch { /* builder rewrites the manifest every build */ }
+  }
+  // INDEXNOW_ENABLED=true must never appear in a committed config file.
+  const configCandidates = ["netlify.toml"];
+  for (const f of fs.readdirSync(ROOT)) {
+    if (/^\.(env|.*\.env).*/.test(f) || f.endsWith(".toml") || f.endsWith(".yml") || f.endsWith(".yaml")) configCandidates.push(f);
+  }
+  const wfDir = path.join(ROOT, ".github", "workflows");
+  if (fs.existsSync(wfDir)) for (const f of fs.readdirSync(wfDir)) configCandidates.push(path.join(".github", "workflows", f));
+  for (const f of [...new Set(configCandidates)]) {
+    const fp = path.join(ROOT, f);
+    if (!fs.existsSync(fp) || fs.statSync(fp).isDirectory()) continue;
+    const src = fs.readFileSync(fp, "utf8");
+    if (/INDEXNOW_ENABLED[\s\S]{0,40}?[=:]\s*['"]?true['"]?/i.test(src)) {
+      fail(22, f, "INDEXNOW_ENABLED=true is committed — it is production-only via the Netlify UI; previews and branch deploys must never submit");
+      indexnowErrors++;
+    }
+  }
+} catch (e) {
+  fail(22, "scripts/indexnow-core.js", `IndexNow gate could not run: ${e.message}`);
+  indexnowErrors++;
+}
+if (indexnowErrors === 0)
+  pass("Check 22: IndexNow gate — cap ≤50 in builder and function, key file exact-match, no committed non-production enablement");
+
 // ─── Report ───
 console.log("\n" + "=".repeat(60));
 if (exitCode === 0) {
-  console.log("✅ ALL 19 CHECKS PASSED — deploy can proceed");
+  console.log("✅ ALL 22 CHECKS PASSED — deploy can proceed");
 } else {
   console.log(`❌ ${failures.length} FAILURE(S) — deploy blocked`);
   console.log("\nFailure breakdown by check:");

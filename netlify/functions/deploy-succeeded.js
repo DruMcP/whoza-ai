@@ -11,9 +11,10 @@
 
 const INDEXNOW_API = 'https://api.indexnow.org/indexnow'
 const BASE_URL = 'https://whoza.ai'
-// Recorded IndexNow key (see scripts/indexnow-core.js). Key file removed from
-// public/ 2026-09-19 as a circuit breaker — restore it before re-enabling.
-const INDEXNOW_KEY = 'e3ccefa46e90635781bcc5fff037809c'
+// Recorded IndexNow key (see scripts/indexnow-core.js). Fresh key issued
+// 2026-10-24 — the pre-2026-09-19 key was retired after the submission
+// incident and must not be reused.
+const INDEXNOW_KEY = '15b2a26cf70099d0a3c60581a444d58f'
 const MAX_URLS_PER_RUN = 50
 
 const KEY_LOCATION = `${BASE_URL}/${INDEXNOW_KEY}.txt`
