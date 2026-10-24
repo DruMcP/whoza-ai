@@ -529,13 +529,22 @@ if (!fs.existsSync(SITEMAP_SNAPSHOT)) {
     fail(
       21,
       "/sitemap.xml",
-      `sitemap URL set changed by ${delta} (added ${added.length}: ${added.slice(0, 5).join(", ")}${added.length > 5 ? " …" : ""}; removed ${removed.length}: ${removed.slice(0, 5).join(", ")}${removed.length > 5 ? " …" : ""}) — over the ±20 threshold. If intentional, update scripts/sitemap-previous.xml in the same commit.`
+      `sitemap URL set changed by ${delta} (added ${added.length}: ${added.slice(0, 5).join(", ")}${added.length > 5 ? " …" : ""}; removed ${removed.length}: ${removed.slice(0, 5).join(", ")}${removed.length > 5 ? " …" : ""}) — over the ±20 runaway threshold. If intentional, update scripts/sitemap-previous.xml in the same commit.`
     );
     sitemapDiffErrors++;
   } else if (delta > 0) {
-    console.log(
-      `⚠️  Check 21: sitemap delta ${delta} URLs (added ${added.length}, removed ${removed.length}) — within tolerance but must be intentional: ${[...added.slice(0, 3), ...removed.slice(0, 3)].join(", ")}`
+    // Any non-zero delta fails the build. A warning is not a gate — the
+    // 43→16 consolidation and the 21,900-submission incident both began as
+    // unnoticed sitemap deltas. Intentional changes (new page, re-slug) must
+    // bump scripts/sitemap-previous.xml in the SAME commit, same rule as
+    // redirects. delta ≤20 gets the actionable message; >20 is called out
+    // as a possible runaway above.
+    fail(
+      21,
+      "/sitemap.xml",
+      `sitemap URL set changed by ${delta} (added ${added.length}: ${added.slice(0, 5).join(", ")}; removed ${removed.length}: ${removed.slice(0, 5).join(", ")}) — update scripts/sitemap-previous.xml in the same commit if this change is intentional`
     );
+    sitemapDiffErrors++;
   }
   if (sitemapDiffErrors === 0 && delta === 0) pass("Check 21: Two-build sitemap diff — URL set unchanged vs previous build");
 }
