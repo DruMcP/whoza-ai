@@ -96,8 +96,8 @@ export default function VsTeamConnectPage() {
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-extrabold mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
-                Whoza.ai vs Team-Connect
-                <span className="block text-emerald-400 mt-2">AI Revenue System vs Budget Answering</span>
+                Whoza.ai vs Team-Connect{" "}
+                <span className="block text-emerald-400 mt-2">— AI Revenue System vs Budget Answering</span>
               </h1>
 
               <p className="text-lg text-white/60 max-w-2xl mb-8">

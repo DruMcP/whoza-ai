@@ -307,6 +307,28 @@ for (const [url, data] of pageData) {
 }
 if (h1CountErrors === 0) pass("Check 8: Every page has exactly 1 h1");
 
+// 23. No lowercase→uppercase gluing inside any rendered h1/h2/h3.
+// Catches JSX whitespace-collapse concatenation ("ARROW" + "Honest" → "ARROWHonest").
+// Legitimate camelCase brand tokens are allow-listed by full-word substring; the
+// bug pattern must never be allow-listed.
+const HEADING_GLUE_ALLOWLIST = ["WhatsApp", "ChatGPT", "McPherson", "IoT", "ElevenLabs"];
+let headingGlueErrors = 0;
+for (const [url, data] of pageData) {
+  const raw = data.raw || "";
+  const blocks = [...raw.matchAll(/<h[123][^>]*>([\s\S]*?)<\/h[123]>/gi)];
+  blocks.forEach((b, i) => {
+    const text = b[1].replace(/<[^>]+>/g, "").replace(/&amp;/g, "&");
+    if (!/[a-z][A-Z]/.test(text)) return;
+    let masked = text;
+    for (const ok of HEADING_GLUE_ALLOWLIST) masked = masked.split(ok).join("");
+    if (/[a-z][A-Z]/.test(masked)) {
+      fail(23, url, `heading #${i + 1} glued lowercase→uppercase: "${text.slice(0, 80)}"`);
+      headingGlueErrors++;
+    }
+  });
+}
+if (headingGlueErrors === 0) pass("Check 23: No lowercase→uppercase gluing in any h1/h2/h3");
+
 // 9. Glued H1 tokens
 let gluedErrors = 0;
 for (const [url, data] of pageData) {
@@ -617,7 +639,7 @@ if (indexnowErrors === 0)
 // ─── Report ───
 console.log("\n" + "=".repeat(60));
 if (exitCode === 0) {
-  console.log("✅ ALL 22 CHECKS PASSED — deploy can proceed");
+  console.log("✅ ALL 23 CHECKS PASSED — deploy can proceed");
 } else {
   console.log(`❌ ${failures.length} FAILURE(S) — deploy blocked`);
   console.log("\nFailure breakdown by check:");

@@ -204,10 +204,12 @@ export default function ForHvacPage() {
                   Built for UK Heating Engineers
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 trade-headline">
-                  Never Miss a Boiler Breakdown — Even at 2am
+                  Call Answering Service for{" "}
+                  <span className="text-orange-400">Heating Engineers</span>{" "}
+                  <span className="block mt-2 text-2xl sm:text-3xl lg:text-4xl">Never Miss a Boiler Breakdown — Even at 2am</span>
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8">
-                  Boiler breakdowns, emergency heating, annual services, gas safety certificates. Katie answers every call you miss, captures the fault details, and sends them to your WhatsApp in 3 seconds. From £59/month — less than one callout fee.
+                  Boiler breakdowns, emergency heating, annual services, gas safety certificates. Katie, your AI receptionist, runs the call answering service for heating engineers: answers every call you miss, captures the fault details, and sends them to your WhatsApp in 3 seconds. From £59/month — less than one callout fee.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link

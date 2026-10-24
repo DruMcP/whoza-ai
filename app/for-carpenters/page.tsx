@@ -133,12 +133,12 @@ export default function ForCarpentersPage() {
                   Built for UK Carpenters
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
-                  Never Miss a{" "}
-                  <span className="text-amber-400">Carpentry</span>{" "}
-                  Job Again
+                  Call Answering Service for{" "}
+                  <span className="text-amber-400">Carpenters</span>{" "}
+                  <span className="block mt-2 text-2xl sm:text-3xl lg:text-4xl">Never Miss a Carpentry Job Again</span>
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
-                  Bespoke furniture, fitted kitchens, wardrobes, staircases — customers call when they want quality craftsmanship. Katie answers every call, captures the project details, and sends them to your WhatsApp.
+                  Bespoke furniture, fitted kitchens, wardrobes, staircases — customers call when they want quality craftsmanship. Katie, your AI receptionist, runs your call answering service: answers every call, captures the project details, and sends them to your WhatsApp.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link

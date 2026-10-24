@@ -189,10 +189,12 @@ export default function ForRoofersPage() {
                   Built for UK Roofers
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 trade-headline">
-                  AI Customer Service for Roofers: Never Miss a Storm Call
+                  Call Answering Service for{" "}
+                  <span className="text-emerald-400">Roofers</span>{" "}
+                  <span className="block mt-2 text-2xl sm:text-3xl lg:text-4xl">Never Miss a Storm Call</span>
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8">
-                  Whoza.ai provides AI customer service for roofers: answers every call 24/7, captures storm damage details, and sends them to your WhatsApp in 3 seconds. From £59/month — less than one missed repair.
+                  Whoza.ai is a call answering service for roofers — AI customer service that answers every call 24/7, captures storm damage details, and sends them to your WhatsApp in 3 seconds. From £59/month — less than one missed repair.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link

@@ -27,7 +27,7 @@ import { ArrowRight, CheckCircle, Phone, Shield, Clock, PoundSterling, Paintbrus
 import { RelatedTrades } from "@/components/whoza/related-trades"
 
 export const metadata: Metadata = {
-  title: "UK Call Answering for Painters & Decorators | From £59",
+  title: "Call Answering Service for Painters & Decorators | From £59",
   description: "24/7 call answering for UK painters & decorators — every interior, exterior and commercial enquiry captured to WhatsApp in 3 seconds. Plans from £59.",
   alternates: {
     canonical: "https://whoza.ai/for-painters-decorators",
@@ -202,10 +202,12 @@ export default function ForPaintersDecoratorsPage() {
                   Built for UK Painters & Decorators
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 trade-headline">
-                  Never Miss a Painting Enquiry — Even Up a Ladder
+                  Call Answering Service for{" "}
+                  <span className="text-emerald-400">Painters & Decorators</span>{" "}
+                  <span className="block mt-2 text-2xl sm:text-3xl lg:text-4xl">Never Miss a Painting Enquiry — Even Up a Ladder</span>
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8">
-                  Interior painting, exterior repaints, commercial contracts, emergency touch-ups, wallpapering. Katie answers every call you miss, captures the full job details, and sends them to your WhatsApp in 3 seconds. From £59/month — less than one room repaint.
+                  Interior painting, exterior repaints, commercial contracts, emergency touch-ups, wallpapering. Katie — your AI receptionist — provides the call answering service for painters and decorators: answers every call you miss, captures the full job details, and sends them to your WhatsApp in 3 seconds. From £59/month — less than one room repaint.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link

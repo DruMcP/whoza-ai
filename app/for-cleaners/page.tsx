@@ -135,11 +135,12 @@ export default function ForCleanersPage() {
                   Built for UK Cleaners
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
-                  AI Call Answering for Cleaners UK —{" "}
-                  <span className="text-blue-400">Never Miss a Booking</span>
+                  Call Answering Service for{" "}
+                  <span className="text-blue-400">Cleaners</span>{" "}
+                  <span className="block mt-2 text-2xl sm:text-3xl lg:text-4xl">Never Miss a Booking</span>
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
-                  Domestic, commercial, end-of-tenancy, carpet cleaning — customers call when they need it done fast. Katie answers every call, captures the job details, and sends them to your WhatsApp.
+                  Domestic, commercial, end-of-tenancy, carpet cleaning — customers call when they need it done fast. Katie, your AI receptionist, provides the call answering service: answers every call, captures the job details, and sends them to your WhatsApp.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link

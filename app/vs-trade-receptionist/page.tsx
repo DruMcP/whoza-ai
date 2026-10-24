@@ -144,7 +144,7 @@ export default function VsTradeReceptionistPage() {
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-extrabold text-white mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
-              Whoza.ai vs Trade Receptionist:<br />
+              Whoza.ai vs Trade Receptionist:{" "}<br />
               <span className="text-emerald-400">Which is Better for UK Trades?</span>
             </h1>
             <p className="text-lg text-slate-400 max-w-2xl mb-8">
