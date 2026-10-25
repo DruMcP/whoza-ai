@@ -30,7 +30,7 @@ import { CityContentSection } from "@/components/whoza/city-content-section"
 import { StickyCTA, FloatingChatWidget } from "@/components/whoza/sticky-cta"
 import { LocaleProvider } from "@/lib/locale-context"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
-import { locations, getLocationBySlug } from "@/lib/locations"
+import { locations, draftLocations, getLocationBySlug } from "@/lib/locations"
 import { TRADE_CITY_PAGES } from "@/lib/trade-city-pages"
 import { VideoSchema } from "@/components/whoza/schema-markup"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
@@ -47,9 +47,14 @@ export async function generateStaticParams() {
   }))
 }
 
+// Draft cities (lib/locations.ts draftLocations) render only when this flag is
+// set, so they can be reviewed on a preview build without being published.
+const SHOW_DRAFTS = process.env.WHOZA_SHOW_DRAFT_CITIES === "1"
+const isDraft = (slug: string) => draftLocations.some((d) => d.slug === slug)
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { location } = await params
-  const locationData = getLocationBySlug(location)
+  const locationData = getLocationBySlug(location, { includeDrafts: SHOW_DRAFTS })
   
   if (!locationData) {
     return {
@@ -82,10 +87,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: citySpecificDescription,
       images: ["https://whoza.ai/og-image.webp"],
     },
-    robots: {
-      index: true,
-      follow: true,
-    },
+    // Drafts are never indexable, even on a preview that renders them.
+    robots: isDraft(location) ? { index: false, follow: false } : { index: true, follow: true },
     other: {
       'geo.region': `GB-${locationData.region}`,
       'geo.placename': locationData.city,
@@ -97,7 +100,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function LocationPage({ params }: PageProps) {
   const { location } = await params
-  const locationData = getLocationBySlug(location)
+  const locationData = getLocationBySlug(location, { includeDrafts: SHOW_DRAFTS })
+  const draft = isDraft(location)
 
   if (!locationData) {
     notFound()
@@ -108,7 +112,8 @@ export default async function LocationPage({ params }: PageProps) {
     notFound()
   }
 
-  const jobsThisWeek = stableNum(location, 100, 180)
+  // Drafts show no "enquiries captured this week" counter: there is no real figure behind it.
+  const jobsThisWeek = draft ? undefined : stableNum(location, 100, 180)
 
   // City-specific FAQ content — unique per city
   const cityFaqs = [
@@ -118,11 +123,11 @@ export default async function LocationPage({ params }: PageProps) {
     },
     {
       question: `What's the average response time for tradespeople in ${locationData.city}?`,
-      answer: `${locationData.responseTime || "Most tradespeople in " + locationData.city + " respond within 20-30 minutes"}. Katie ensures you never miss the initial enquiry — she answers instantly, 24/7, and sends you the full job details via WhatsApp so you can call back prepared with all the context.`,
+      answer: `${locationData.responseTime || "Response times vary by trade and how busy you are"}. Katie ensures you never miss the initial enquiry — she answers instantly, 24/7, and sends you the full job details via WhatsApp so you can call back prepared with all the context.`,
     },
     {
       question: `Are missed calls a big problem for ${locationData.city} tradespeople?`,
-      answer: `Yes — ${locationData.localStats?.missedCallsWeekly || "thousands of"} calls go unanswered every week in ${locationData.city}. ${locationData.callVolume || ""} Many tradespeople miss calls while on site, driving between jobs, or during evenings and weekends. At an average job value of ${locationData.localStats?.avgJob || "£280"}, that's significant lost revenue every month. Katie captures every call so you don't lose a single job.`,
+      answer: `Yes — ${locationData.localStats?.missedCallsWeekly ? `${locationData.localStats.missedCallsWeekly} calls go unanswered every week in ${locationData.city}.` : `research by Moneypenny (2016) found that 33% of small UK businesses fail to answer incoming calls, and ${locationData.city} trades are no exception.`} ${locationData.callVolume || ""} Many tradespeople miss calls while on site, driving between jobs, or during evenings and weekends. At an average job value of ${locationData.localStats?.avgJob || "£280"}, that's significant lost revenue every month. Katie captures every call so you don't lose a single job.`,
     },
     {
       question: `Does whoza.ai work with local trade associations in ${locationData.city}?`,
@@ -201,11 +206,13 @@ export default async function LocationPage({ params }: PageProps) {
           jobsThisWeek={jobsThisWeek}
         />
         <SocialProofBar />
-        <GeoProofBand 
-          city={locationData.city}
-          country={locationData.country}
-          jobsThisWeek={jobsThisWeek}
-        />
+        {!draft && (
+          <GeoProofBand
+            city={locationData.city}
+            country={locationData.country}
+            jobsThisWeek={jobsThisWeek}
+          />
+        )}
         <SocialProofBand />
 
         {/* CITY-SPECIFIC CONTENT — Unique value for each location */}

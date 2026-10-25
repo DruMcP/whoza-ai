@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
-import { locations } from "@/lib/locations"
+import { locations, draftLocations } from "@/lib/locations"
 import { TRADE_CITY_PAGES } from "@/lib/trade-city-pages"
 import { MapPin, ArrowRight } from "lucide-react"
 import Link from "next/link"
@@ -116,6 +116,13 @@ export default function LocationsPage() {
             </Link>
           ))}
         </div>
+
+        {/* Cities with a draft page (lib/locations.ts draftLocations) are named
+            here as plain text until their pages are published. */}
+        <p className="text-[var(--v2-body)] text-center max-w-3xl mx-auto mb-16">
+          Katie answers calls for tradespeople anywhere in the UK, including{" "}
+          {draftLocations.map((d) => d.city).join(", ").replace(/, ([^,]*)$/, " and $1")}.
+        </p>
 
         {/* Trade × City hub — server-rendered links to every combo page (Bing crawlability) */}
         <section className="mb-16" aria-label="Browse by trade and city">

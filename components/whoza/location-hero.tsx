@@ -43,10 +43,11 @@ const londonBoroughs = [
   "Islington", "Greenwich", "Westminster", "and all London boroughs",
 ]
 
-export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: LocationHeroProps) {
+export function LocationHero({ city, trade, region, jobsThisWeek }: LocationHeroProps) {
   const { country, config } = useLocale()
   const cityKey = city.toLowerCase()
-  const stats = cityStats[cityKey] || { businesses: "5,000+", households: "250K", avgJob: "£300" }
+  // No made-up fallback: cities without real figures get no stat bar.
+  const stats = cityStats[cityKey]
   const [showWaitlist, setShowWaitlist] = useState(false)
 
   // Natural H1 — no keyword stuffing, punchy and human
@@ -107,7 +108,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             }}
           >
             <MapPin className="w-4 h-4" />
-            {jobsThisWeek}+ enquiries captured this week in {city}
+            {jobsThisWeek ? `${jobsThisWeek}+ enquiries captured this week in ${city}` : `Answering calls for trades in ${city}`}
           </motion.div>
 
           {/* H1 — Punchy, natural, no keyword stuffing */}
@@ -249,6 +250,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
           </motion.ul>
 
           {/* City-specific stat bar */}
+          {stats && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -268,6 +270,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
               <div className="text-xs text-slate-400 mt-1">average job<br />in {city}</div>
             </div>
           </motion.div>
+          )}
 
           {/* Founder Bar */}
           <motion.div
@@ -351,7 +354,8 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             </p>
             <footer className="flex items-center gap-3">
               <cite className="text-[13px] text-slate-500 not-italic">
-                — Ludmila Lamont, {city}
+                {/* Her real review; no city, since this hero renders on every city page. */}
+                — Ludmila Lamont
               </cite>
               <span className="text-[13px] text-emerald-500">★★★★★ Google Review</span>
             </footer>

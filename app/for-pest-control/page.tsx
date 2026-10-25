@@ -131,11 +131,12 @@ export default function ForPestControlPage() {
                   Built for UK Pest Control
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
-                  AI Call Answering for Pest Control UK —{" "}
-                  <span className="text-[#6ee7b7]">Never Miss an Infestation Call</span>
+                  Call Answering Service for{" "}
+                  <span className="text-[#6ee7b7]">Pest Control</span>{" "}
+                  <span className="block mt-2 text-2xl sm:text-3xl lg:text-4xl">Never Miss an Infestation Call</span>
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
-                  Wasps, rats, bed bugs, mice — customers call in panic. Katie answers every call, calms the situation, and captures the full infestation details so you arrive prepared.
+                  Wasps, rats, bed bugs, mice — customers call in panic. Katie, your AI receptionist, provides the call answering service: answers every call, calms the situation, and captures the full infestation details so you arrive prepared.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link

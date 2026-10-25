@@ -11,6 +11,7 @@
 
 import { COMPANY } from "@/lib/company"
 import { ORG_SAME_AS } from "@/lib/seo/identity"
+import { KEY_CITIES } from "@/lib/locations"
 
 export const organizationSchemaObject = {
   "@type": "Organization",
@@ -61,7 +62,11 @@ export const organizationSchemaObject = {
     "Emergency Call Handling",
     "WhatsApp Business Integration",
   ],
-  "areaServed": "GB",
+  // UK-wide, with the client's key cities named (lib/locations.ts KEY_CITIES).
+  "areaServed": [
+    { "@type": "Country", "name": "United Kingdom" },
+    ...KEY_CITIES.map((name) => ({ "@type": "City", "name": name })),
+  ],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "6 Atholl Crescent",

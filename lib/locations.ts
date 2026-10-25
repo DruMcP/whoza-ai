@@ -595,8 +595,231 @@ export const locations: LocationData[] = [
   },
 ]
 
-export function getLocationBySlug(slug: string): LocationData | undefined {
-  return locations.find((loc) => loc.slug === slug)
+/**
+ * Draft cities, from the client's key-city list (25 Oct 2026). Built but NOT
+ * published: they are not in `locations` (so no hub, footer or cross-links),
+ * not in app/sitemap.ts, render only when WHOZA_SHOW_DRAFT_CITIES=1, and
+ * carry noindex even then. The keyword brief gates new URLs until Search
+ * Console "Indexed" recovers to 150+.
+ *
+ * To publish one: move its entry into `locations`, add it to app/sitemap.ts,
+ * update the CI sitemap delta, and for sheffield, newcastle, cardiff, coventry
+ * and belfast delete the old "redirect to /" rule in next.config.mjs.
+ *
+ * Content rule: only verifiable facts. No testimonials, case studies or
+ * statistics until there are real ones to cite.
+ */
+export const draftLocations: LocationData[] = [
+  {
+    slug: "southampton",
+    city: "Southampton",
+    country: "uk",
+    region: "England",
+    lat: "50.9097",
+    lng: "-1.4044",
+    trades: ["plumbers", "electricians", "builders"],
+    description: "Katie answers calls 24/7 for tradespeople across Southampton, from Shirley to Woolston, and sends every enquiry straight to your WhatsApp. Plans from £59/month.",
+    challenges: [
+      "Student lets around Portswood and Highfield need fast turnaround between tenancies",
+      "Docks, cruise terminals and the Itchen Bridge make cross-city travel unpredictable",
+      "A mix of Victorian terraces and post-war rebuilds needs different expertise",
+      "Landlord enquiries arrive at all hours, often from agents managing many properties",
+    ],
+    neighbourhoods: ["Shirley", "Portswood", "Highfield", "Bassett", "Bitterne", "Woolston", "Sholing", "Freemantle", "Ocean Village", "Totton"],
+    associations: ["NICEIC registered electricians", "Gas Safe engineers", "FMB accredited builders", "TrustMark registered businesses"],
+    cityContext: {
+      housingStock: "Southampton's centre was heavily bombed in the Second World War and rebuilt, so post-war flats and offices sit alongside surviving Victorian and Edwardian terraces in Shirley, Freemantle and Portswood. Two universities (Southampton and Solent) mean a large stock of shared student houses, while Bassett and Highfield have larger detached homes. Newer waterfront flats around Ocean Village and the city centre bring communal heating and modern electrical systems.",
+      weatherImpact: "Southampton sits at the head of Southampton Water, where the Test and Itchen meet, so low-lying areas face tidal and surface-water flood risk. The south-coast climate is milder than most of the UK, but Atlantic storms bring wind-driven rain that finds its way through ageing roofs, gutters and pointing.",
+      permittingNotes: "Work in Southampton follows the Building Regulations for England. Landlords must hold an annual gas safety record and an electrical installation condition report (EICR) at least every five years, which creates steady compliance work. Larger shared houses need an HMO licence from the city council.",
+      marketDynamics: "The port, the cruise industry and two universities shape Southampton's trade work. Letting agents and landlords want quick quotes and same-week fixes between tenancies, and homeowners in the suburbs compare several trades before booking. The tradesperson who answers first usually wins the job.",
+      tradeShortage: "Like the rest of the South East, Southampton has more work than qualified trades in several areas, especially heat pump installers, EV charger fitters and Gas Safe engineers. When customers struggle to get a reply, an answered call is a real advantage.",
+    },
+  },
+  {
+    slug: "coventry",
+    city: "Coventry",
+    country: "uk",
+    region: "England",
+    lat: "52.4068",
+    lng: "-1.5197",
+    trades: ["plumbers", "electricians", "builders"],
+    description: "Katie answers calls 24/7 for tradespeople across Coventry, from Earlsdon to Wyken, and sends every enquiry straight to your WhatsApp. Plans from £59/month.",
+    challenges: [
+      "Student houses near Coventry University and the University of Warwick need quick repairs between tenancies",
+      "Ring road traffic makes it hard to answer the phone between jobs",
+      "Post-war estates, 1930s semis and Victorian terraces each need different know-how",
+      "Commuter homeowners call in the evening when you're off the tools",
+    ],
+    neighbourhoods: ["Earlsdon", "Chapelfields", "Stoke", "Cheylesmore", "Radford", "Foleshill", "Tile Hill", "Canley", "Wyken", "Allesley"],
+    associations: ["NICEIC registered electricians", "Gas Safe engineers", "FMB accredited builders", "TrustMark registered businesses"],
+    cityContext: {
+      housingStock: "Much of Coventry's centre was destroyed in the bombing of November 1940 and rebuilt after the war, which is why the city has large post-war council estates alongside Victorian terraces in Earlsdon and Chapelfields and 1930s semis in the suburbs. Student housing around the city centre and Canley adds a large rented sector with frequent maintenance needs.",
+      weatherImpact: "Coventry has an inland Midlands climate: colder winter nights than the coast and heavy summer downpours. Cold snaps bring a rush of boiler breakdowns and frozen pipes, while sudden heavy rain tests gutters, flat roofs and older drainage.",
+      permittingNotes: "Work in Coventry follows the Building Regulations for England. Landlords need an annual gas safety record and an EICR at least every five years, and larger shared houses need an HMO licence from the city council, all of which bring regular compliance jobs.",
+      marketDynamics: "Coventry's car-making heritage has given way to universities, logistics and advanced manufacturing. That means a mix of landlords, first-time buyers renovating older homes and families extending 1930s semis. Customers often ring two or three trades at once and book whoever calls back first.",
+      tradeShortage: "The Midlands, like the rest of England, is short of qualified trades in areas such as heat pumps, EV chargers and rewiring older homes. Trades who reply quickly can pick the better jobs.",
+    },
+  },
+  {
+    slug: "sheffield",
+    city: "Sheffield",
+    country: "uk",
+    region: "England",
+    lat: "53.3811",
+    lng: "-1.4701",
+    trades: ["plumbers", "electricians", "builders"],
+    description: "Katie answers calls 24/7 for tradespeople across Sheffield, from Crookes to Dore, and sends every enquiry straight to your WhatsApp. Plans from £59/month.",
+    challenges: [
+      "Steep hills and stone terraces make access and parking slow on every job",
+      "Student houses in Crookes, Broomhill and Sharrow need fast turnaround",
+      "Western suburbs near the Peak District get harsher winters than the city centre",
+      "Victorian stone homes hide old pipework and wiring that turns small jobs into big ones",
+    ],
+    neighbourhoods: ["Crookes", "Walkley", "Broomhill", "Ecclesall", "Nether Edge", "Sharrow", "Hillsborough", "Meersbrook", "Kelham Island", "Dore"],
+    associations: ["NICEIC registered electricians", "Gas Safe engineers", "FMB accredited builders", "TrustMark registered businesses"],
+    cityContext: {
+      housingStock: "Sheffield is built over hills and valleys, so many Victorian and Edwardian terraces in Crookes, Walkley and Meersbrook sit on steep streets with stepped access. Stone-built homes are common in the west of the city, the old industrial areas such as Kelham Island now have converted flats, and the two universities create a large student rental market.",
+      weatherImpact: "Sheffield's western edge runs into the Peak District, so higher suburbs see more snow and frost than the centre. The city's rivers, including the Don and the Sheaf, have flooded before, most seriously in 2007, and heavy rain on steep streets puts pressure on drains, gutters and retaining walls.",
+      permittingNotes: "Work in Sheffield follows the Building Regulations for England. The city has many conservation areas and listed buildings, which affect windows, roofs and external work. Landlords need annual gas safety records and five-yearly EICRs.",
+      marketDynamics: "From students and landlords to families extending stone semis, Sheffield's customers want someone who picks up. Hills and traffic mean trades spend a lot of time driving between jobs, exactly when calls get missed.",
+      tradeShortage: "Sheffield shares the national shortage of Gas Safe engineers, electricians and heat pump installers, and stone and heritage skills are harder still to find. A quick answer helps a tradesperson stand out.",
+    },
+  },
+  {
+    slug: "newcastle",
+    city: "Newcastle",
+    country: "uk",
+    region: "England",
+    lat: "54.9783",
+    lng: "-1.6178",
+    trades: ["plumbers", "electricians", "builders"],
+    description: "Katie answers calls 24/7 for tradespeople across Newcastle upon Tyne, from Jesmond to Byker, and sends every enquiry straight to your WhatsApp. Plans from £59/month.",
+    challenges: [
+      "Tyneside flats share walls, roofs and drains, so one leak can mean two customers",
+      "Student lets in Jesmond and Heaton need quick repairs between tenancies",
+      "Cold North Sea winds bring winter boiler and frozen-pipe emergencies",
+      "Bridges and city-centre traffic make cross-river callouts slow",
+    ],
+    neighbourhoods: ["Jesmond", "Heaton", "Gosforth", "Sandyford", "Fenham", "Byker", "Walker", "Benwell", "Kenton", "Ouseburn"],
+    associations: ["NICEIC registered electricians", "Gas Safe engineers", "FMB accredited builders", "TrustMark registered businesses"],
+    cityContext: {
+      housingStock: "Newcastle is known for the Tyneside flat: Victorian and Edwardian terraces split into an upper and a lower flat, each with its own front door. They are common in Heaton, Fenham and Sandyford and bring shared drainage, roofs and party walls into many jobs. Jesmond and Gosforth have larger period houses, and the quayside and Ouseburn have newer flats.",
+      weatherImpact: "On the north-east coast, Newcastle gets cold winds off the North Sea, frequent frosts and sea fret. Winter brings boiler breakdowns and frozen pipes, and wind-driven rain tests chimneys, slates and pointing on older terraces.",
+      permittingNotes: "Work in Newcastle follows the Building Regulations for England. Conservation areas cover much of the city centre and older suburbs. Landlords need annual gas safety records and five-yearly EICRs, and shared houses may need an HMO licence.",
+      marketDynamics: "Two universities, a large private rented sector and plenty of period homes keep Newcastle trades busy. Customers often call several firms for the same job, and landlords and letting agents give repeat work to whoever is easiest to reach.",
+      tradeShortage: "The North East is short of qualified trades in areas such as heat pumps, EV chargers and rewires. When customers can't get through, the first trade to reply usually wins the work.",
+    },
+  },
+  {
+    slug: "aberdeen",
+    city: "Aberdeen",
+    country: "uk",
+    region: "Scotland",
+    lat: "57.1497",
+    lng: "-2.0943",
+    trades: ["plumbers", "electricians", "heating engineers"],
+    description: "Katie answers calls 24/7 for tradespeople across Aberdeen, from Rosemount to Bridge of Don, and sends every enquiry straight to your WhatsApp. Plans from £59/month.",
+    challenges: [
+      "Granite buildings are hard-wearing but complex to alter, drill and damp-proof",
+      "Long, cold winters drive heating breakdowns and frozen-pipe emergencies",
+      "Jobs across Aberdeenshire mean long drives between calls",
+      "Tenement flats share stairs, roofs and services with several owners",
+    ],
+    neighbourhoods: ["Rosemount", "Ferryhill", "Old Aberdeen", "Torry", "Mannofield", "Cults", "Kincorth", "Bridge of Don", "Dyce", "Hazlehead"],
+    associations: ["SELECT member electricians", "Gas Safe engineers", "SNIPEF member plumbers", "Federation of Master Builders"],
+    cityContext: {
+      housingStock: "Aberdeen is the Granite City: much of its housing, from Victorian tenements in Rosemount and Ferryhill to large villas in the West End and Cults, is built from local grey granite. Granite lasts, but thick solid walls make drilling, insulation and damp work slower. The city also has post-war estates and newer developments towards Dyce and Bridge of Don.",
+      weatherImpact: "Aberdeen has one of the coldest climates of any UK city, with long winters, strong North Sea winds and sea haar. Heating systems work hard for much of the year, and winter brings the most emergency calls for boilers and burst pipes.",
+      permittingNotes: "Work in Aberdeen follows the Scottish Building Standards, which differ from England's, and many jobs need a building warrant from the council. Tenement repairs often involve several owners under shared title deeds, and much of the city centre is in conservation areas.",
+      marketDynamics: "Aberdeen's economy has long been built on North Sea oil and gas and is now shifting towards wider energy work. Busy professionals and landlords want a reply the same day, and work across Aberdeenshire means trades are often driving when the phone rings.",
+      tradeShortage: "North-east Scotland is short of qualified heating engineers, electricians and heat pump installers. A missed call often means a customer simply rings the next name on the list.",
+    },
+  },
+  {
+    slug: "inverness",
+    city: "Inverness",
+    country: "uk",
+    region: "Scotland",
+    lat: "57.4778",
+    lng: "-4.2247",
+    trades: ["plumbers", "electricians", "heating engineers"],
+    description: "Katie answers calls 24/7 for tradespeople across Inverness and the Highlands, from Crown to Culloden, and sends every enquiry straight to your WhatsApp. Plans from £59/month.",
+    challenges: [
+      "Long drives across the Highlands mean hours without a free hand for the phone",
+      "Patchy mobile signal in rural areas means calls drop or never connect",
+      "Many rural homes are off the gas grid and run on oil, LPG or heat pumps",
+      "Tourist lets need fast fixes in the busy summer season",
+    ],
+    neighbourhoods: ["Crown", "Hilton", "Dalneigh", "Merkinch", "Kinmylies", "Lochardil", "Smithton", "Culloden", "Westhill", "Balloch"],
+    associations: ["SELECT member electricians", "Gas Safe engineers", "OFTEC registered technicians", "SNIPEF member plumbers"],
+    cityContext: {
+      housingStock: "Inverness mixes Victorian stone villas in the Crown, newer estates in Smithton, Culloden and Westhill, and older council housing in Merkinch and Dalneigh. Around the city, many rural homes and holiday lets are detached properties off the mains gas grid.",
+      weatherImpact: "Highland winters are long and cold, with snow and ice that make rural roads slow. Heating failures in remote homes are urgent, and storms bring roof, gutter and power problems across a wide area.",
+      permittingNotes: "Work in Inverness follows the Scottish Building Standards, and larger jobs need a building warrant from the Highland Council. Short-term lets in Scotland need a licence, which brings safety checks for gas and electrics.",
+      marketDynamics: "Inverness is the main service centre for a huge, thinly populated area, so trades cover long distances. Homeowners, tourist-let owners and businesses all compete for a small pool of trades, and they book whoever answers.",
+      tradeShortage: "The Highlands are short of tradespeople in almost every discipline, especially heating engineers qualified for oil and heat pump systems. With long travel times, missing a call while driving is the norm rather than the exception.",
+    },
+  },
+  {
+    slug: "cardiff",
+    city: "Cardiff",
+    country: "uk",
+    region: "Wales",
+    lat: "51.4816",
+    lng: "-3.1791",
+    trades: ["plumbers", "electricians", "builders"],
+    description: "Katie answers calls 24/7 for tradespeople across Cardiff, from Canton to Cardiff Bay, and sends every enquiry straight to your WhatsApp. Plans from £59/month.",
+    challenges: [
+      "Large student rental areas in Cathays and Roath need quick repairs",
+      "Wet Atlantic weather brings damp, leaks and roof work all year",
+      "Victorian terraces hide old wiring and lead pipework",
+      "Match days and city-centre events make traffic unpredictable",
+    ],
+    neighbourhoods: ["Canton", "Pontcanna", "Roath", "Cathays", "Llandaff", "Whitchurch", "Splott", "Grangetown", "Cardiff Bay", "Penarth"],
+    associations: ["NICEIC registered electricians", "Gas Safe engineers", "FMB accredited builders", "TrustMark registered businesses"],
+    cityContext: {
+      housingStock: "Cardiff grew fast in the Victorian coal-export era, so Roath, Cathays, Canton and Splott are packed with terraced houses, many now rented to students and young professionals. Llandaff and Whitchurch have larger family homes, and Cardiff Bay has modern flats on the old docks.",
+      weatherImpact: "Cardiff gets plenty of Atlantic rain and mild, damp winters. Persistent wet weather causes damp, condensation and roof leaks in older terraces, and storms put pressure on gutters, flat roofs and drains.",
+      permittingNotes: "Wales has its own Building Regulations, separate from England's since 2011. Private landlords must register with Rent Smart Wales, and rented homes need regular gas and electrical safety checks, which bring steady compliance work.",
+      marketDynamics: "As the Welsh capital with three universities, Cardiff has a big rented sector and a steady flow of renovation work in its terraces. Letting agents and homeowners usually call more than one trade, so answering first matters.",
+      tradeShortage: "Wales shares the UK-wide shortage of Gas Safe engineers, electricians and heat pump installers. With demand outstripping supply, trades who answer quickly can choose their jobs.",
+    },
+  },
+  {
+    slug: "belfast",
+    city: "Belfast",
+    country: "uk",
+    region: "Northern Ireland",
+    lat: "54.5973",
+    lng: "-5.9301",
+    trades: ["plumbers", "electricians", "heating engineers"],
+    description: "Katie answers calls 24/7 for tradespeople across Belfast, from Stranmillis to Ballyhackamore, and sends every enquiry straight to your WhatsApp. Plans from £59/month.",
+    challenges: [
+      "Many homes still heat with oil, so breakdowns need oil-qualified engineers",
+      "Red-brick terraces have old wiring and pipework behind every wall",
+      "Student lets around Queen's University need fast turnaround",
+      "Wet, windy weather keeps roofers and plumbers busy all winter",
+    ],
+    neighbourhoods: ["Malone", "Stranmillis", "Botanic", "Lisburn Road", "Ormeau", "Ballyhackamore", "Titanic Quarter", "Andersonstown", "Castlereagh", "Newtownabbey"],
+    associations: ["NICEIC registered electricians", "Gas Safe engineers", "OFTEC registered technicians", "SNIPEF member plumbers"],
+    cityContext: {
+      housingStock: "Belfast is known for red-brick Victorian and Edwardian terraces, from the Holylands and Ormeau to east Belfast, with larger period houses around Malone and Stranmillis and new flats in the Titanic Quarter. Many older homes still have original pipework and wiring that turn small jobs into bigger ones.",
+      weatherImpact: "Belfast's maritime climate brings frequent rain and strong winds off Belfast Lough. Winter cold snaps cause boiler breakdowns and frozen pipes, and persistent damp keeps roofers busy.",
+      permittingNotes: "Northern Ireland has its own Building Regulations, separate from the rest of the UK. Gas work must be done by Gas Safe registered engineers, and because Northern Ireland's gas network is newer than Great Britain's, many homes still use oil heating, so OFTEC-qualified technicians are in demand.",
+      marketDynamics: "Belfast's growing tech and services economy and two universities create steady demand from homeowners, landlords and businesses. Customers expect a quick reply and will move on to another firm if no one picks up.",
+      tradeShortage: "Northern Ireland has a shortage of qualified heating engineers, especially those who can work on both oil and gas systems, as well as electricians for older properties. Answering every call protects work that is otherwise lost.",
+    },
+  },
+]
+
+/** The client's key cities for targeting copy and schema (25 Oct 2026). */
+export const KEY_CITIES = [
+  "London", "Birmingham", "Southampton", "Manchester", "Coventry", "Sheffield", "Newcastle",
+  "Glasgow", "Edinburgh", "Aberdeen", "Inverness", "Cardiff", "Belfast",
+]
+
+export function getLocationBySlug(slug: string, opts: { includeDrafts?: boolean } = {}): LocationData | undefined {
+  return locations.find((loc) => loc.slug === slug) ?? (opts.includeDrafts ? draftLocations.find((loc) => loc.slug === slug) : undefined)
 }
 
 export function getLocationsByCountry(country: Country): LocationData[] {
