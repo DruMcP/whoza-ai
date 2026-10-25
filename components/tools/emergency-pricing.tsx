@@ -130,7 +130,7 @@ export function EmergencyPricingCalculator() {
     <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header />
 
-      <main className="pt-32 pb-20">
+      <main id="main-content" className="pt-32 pb-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <motion.div
@@ -160,10 +160,10 @@ export function EmergencyPricingCalculator() {
             <div className="space-y-6">
               {/* Trade */}
               <div>
-                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2" htmlFor="ep-field-1">
                   What trade are you in? <span className="text-[var(--coral)]">*</span>
                 </label>
-                <select
+                <select id="ep-field-1"
                   value={trade}
                   onChange={(e) => { setTrade(e.target.value); setShowResults(false) }}
                   className="w-full px-4 py-3 min-h-[44px] rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] focus:outline-none focus:border-[var(--v2-green)] appearance-none cursor-pointer"
@@ -178,10 +178,10 @@ export function EmergencyPricingCalculator() {
 
               {/* Region */}
               <div>
-                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2" htmlFor="ep-field-2">
                   What region are you in? <span className="text-[var(--coral)]">*</span>
                 </label>
-                <select
+                <select id="ep-field-2"
                   value={region}
                   onChange={(e) => { setRegion(e.target.value); setShowResults(false) }}
                   className="w-full px-4 py-3 min-h-[44px] rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] focus:outline-none focus:border-[var(--v2-green)] appearance-none cursor-pointer"
@@ -196,10 +196,10 @@ export function EmergencyPricingCalculator() {
 
               {/* Time of day */}
               <div>
-                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2" htmlFor="ep-field-3">
                   When is the callout? <span className="text-[var(--coral)]">*</span>
                 </label>
-                <select
+                <select id="ep-field-3"
                   value={timeOfDay}
                   onChange={(e) => { setTimeOfDay(e.target.value); setShowResults(false) }}
                   className="w-full px-4 py-3 min-h-[44px] rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] focus:outline-none focus:border-[var(--v2-green)] appearance-none cursor-pointer"
@@ -214,10 +214,10 @@ export function EmergencyPricingCalculator() {
 
               {/* Complexity */}
               <div>
-                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2" htmlFor="ep-field-4">
                   Job complexity <span className="text-[var(--coral)]">*</span>
                 </label>
-                <select
+                <select id="ep-field-4"
                   value={complexity}
                   onChange={(e) => { setComplexity(e.target.value); setShowResults(false) }}
                   className="w-full px-4 py-3 min-h-[44px] rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] focus:outline-none focus:border-[var(--v2-green)] appearance-none cursor-pointer"

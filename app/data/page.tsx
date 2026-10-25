@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     siteName: "whoza.ai",
     title: "Evidence Base: Every Statistic We Use and Its Source",
     description: "Every statistic, source, and methodology behind whoza.ai's content. Verified, descriptive, or unverified — we show our working.",
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai evidence base" }],
   },
 }
 
@@ -131,7 +132,7 @@ export default function DataPage() {
         { name: "DSIT, Public Engagement Survey", datePublished: "2026-07-16", url: "https://www.gov.uk/government/statistics/dsit-public-engagement-survey-20252026/dsit-public-engagement-survey-20252026" },
         { name: "FMB, State of Trade Survey H2 2025", datePublished: "2026-03-31", url: "https://www.fmb.org.uk/resource/state-of-trade-survey-h2-2025.html" },
       ]} />
-      <main className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
+      <main id="main-content" className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
         {/* Hero */}
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12">
           <h1 className="text-4xl sm:text-5xl font-bold text-[var(--v2-ink)] tracking-tight mb-6">

@@ -55,7 +55,7 @@ export function LostJobsCalculator() {
     <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header />
 
-      <main className="pt-32 pb-20">
+      <main id="main-content" className="pt-32 pb-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <motion.div
@@ -173,7 +173,7 @@ export function LostJobsCalculator() {
                 <label className="block text-sm font-medium text-[var(--v2-body)] mb-2">
                   Your email (optional)
                 </label>
-                <input
+                <input aria-label="Your email address"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}

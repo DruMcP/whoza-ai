@@ -6,7 +6,9 @@ import { ArrowLeft, Home, PhoneOff } from "lucide-react"
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-[var(--navy-900)] flex items-center justify-center px-4">
+    <main id="main-content" className="min-h-screen bg-[var(--navy-900)] flex items-center justify-center px-4">
+      {/* React 19 hoists this into <head>; the page otherwise inherits the homepage title. */}
+      <title>Page not found | whoza.ai</title>
       <div className="max-w-lg w-full text-center">
         {/* Icon */}
         <motion.div
@@ -76,6 +78,6 @@ export default function NotFound() {
           .
         </motion.p>
       </div>
-    </div>
+    </main>
   )
 }

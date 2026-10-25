@@ -40,7 +40,7 @@ export default function HowManyCallsPage() {
         { name: "How Many Calls At Once", item: "https://whoza.ai/how-many-calls-at-once" },
       ]} />
 
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+      <main id="main-content" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
         <div className="mb-12">
           <div className="inline-flex items-center gap-2 bg-[var(--v2-mint)] text-[var(--v2-green)] px-4 py-2 rounded-full text-sm font-medium mb-6">
             Honest Answer

@@ -145,7 +145,7 @@ export default function BlogPage() {
         { name: "Blog", item: "https://whoza.ai/blog" },
       ]} />
 
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <main id="main-content" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="mb-12">
           <div className="v2-eyebrow inline-flex items-center gap-2 mb-6">
             <FileText className="w-4 h-4" />

@@ -40,7 +40,7 @@ export default function QuoteGeneratorPage() {
       ]} />
       <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
         <Header />
-        <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <main id="main-content" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Free Quote Generator for UK Trades</h1>
             <p className="v2-lead max-w-2xl mx-auto">

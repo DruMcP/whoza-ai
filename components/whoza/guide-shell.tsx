@@ -117,7 +117,7 @@ export function GuideShell({ page }: { page: GuidePage }) {
       <Header />
       <BreadcrumbSchema items={breadcrumbs} />
 
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <main id="main-content" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
         <div className="lg:grid lg:grid-cols-[16rem_1fr] lg:gap-12">
           {/* Contents. A plain list of links, sticky on desktop, scrolled sideways on a phone. */}
           <nav aria-label="Guide contents" className="mb-10 lg:mb-0">

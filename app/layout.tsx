@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from 'next'
-import Script from 'next/script'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import './hero-widget-fix.css'
 import '@/components/whoza/styles/premium-v8.module.css'
 import { LocaleProvider } from '@/lib/locale-context'
+import { Analytics } from "@/components/whoza/analytics"
 import { CookieBanner } from '@/components/whoza/cookie-banner'
 import { ScrollProgress } from '@/components/whoza/scroll-progress'
 import { BackToTop } from '@/components/whoza/back-to-top'
@@ -105,49 +105,18 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
         <meta name="msvalidate.01" content="B6D3ACF2F126930811E983EEE49699D0" />
     <meta name="deploy-id" content="2026-06-07" />
-    <link rel="preconnect" href="https://www.googletagmanager.com" />
-    <link rel="preconnect" href="https://www.google-analytics.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
     {/* Preload LCP image — hero phone mockup */}
     {/* NOTE: Next.js Image with priority=true auto-injects preload; manual redundant */}
     {/* <link rel="preload" as="image" href="/images/hero-phone-3d.webp" type="image/webp" fetchPriority="high" /> */}
-        {/* Google Tag Manager */}
-      <Script
-        id="gtm-script"
-        strategy="lazyOnload"
-        dangerouslySetInnerHTML={{
-          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WBCCZVB4');`,
-        }}
-      />
-      {/* Google Analytics 4 */}
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-VCQND9WPW9"
-        strategy="lazyOnload"
-      />
-      <Script
-        id="ga4-script"
-        strategy="lazyOnload"
-        dangerouslySetInnerHTML={{
-          __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-VCQND9WPW9');`,
-        }}
-      />
-      {/* Meta Pixel — disabled until pixel ID configured */}
-      {/*
-      <Script
-        id="meta-pixel"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js'); fbq('init', 'PLACEHOLDER_PIXEL_ID'); fbq('track', 'PageView');`,
-        }}
-      />
-      */}
-      {/* End Google Tag Manager */}
-      {/* Google Preferred Sources — R12 */}
-      <Script
-        id="google-preferred-source"
-        src="https://news.google.com/swg/js/v1/publisher.js"
-        strategy="lazyOnload"
-      />
+        {/* Google tag stub. Calls are queued in dataLayer with consent denied;
+            nothing is requested from Google until the visitor accepts analytics
+            cookies, then components/whoza/analytics.tsx loads GTM + GA4. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});",
+          }}
+        />
       {/* Schema.org consolidated @graph — Organization + WebSite + SoftwareApplication */}
       <script
         id="schema-graph"
@@ -199,15 +168,6 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         {/* Cache-busting deploy 2026-06-07 */}
         <div data-deploy="2026-06-07" style={{display:'none'}} />
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-WBCCZVB4"
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          />
-        </noscript>
         {/* Skip link — WCAG 2.4.1 */}
         <a
           href="#main-content"
@@ -220,6 +180,7 @@ export default function RootLayout({
           <BackToTop />
           {children}
           <CookieBanner />
+          <Analytics />
           <WebVitals />
         </LocaleProvider>
       </body>

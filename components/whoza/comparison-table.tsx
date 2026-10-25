@@ -25,7 +25,8 @@ const groups: Group[] = [
         outcome: "Pay only for jobs you accept — unaccepted enquiries are never billed",
         whoza: "yes",
         typical: "no",
-        outcomeLink: "#booked-job-definition",
+        // The definition lives on /pricing; a bare "#..." was dead on every other page.
+        outcomeLink: "/pricing#booked-job-definition",
       },
       {
         outcome: "No contract — cancel anytime, 30-day money-back guarantee",

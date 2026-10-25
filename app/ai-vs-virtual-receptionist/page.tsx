@@ -75,7 +75,7 @@ export default function AIVsVirtualReceptionistPage() {
         { name: "AI vs Virtual Receptionist", item: "https://whoza.ai/ai-vs-virtual-receptionist" },
       ]} />
 
-      <main className="pb-24 lg:pb-0 v2-page">
+      <main id="main-content" className="pb-24 lg:pb-0 v2-page">
         {/* Hero */}
         <section className="dark-section relative overflow-hidden v2-island" style={{ background: "linear-gradient(135deg, #0F1729 0%, #1A1A2E 50%, #0F1729 100%)" }}>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">

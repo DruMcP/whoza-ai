@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { readVerifiedRetellBody } from "@/lib/retell-webhook";
 
 /**
  * Retell Function Webhook Handler
@@ -21,8 +22,11 @@ interface RetellFunctionRequest {
 export async function POST(req: NextRequest): Promise<NextResponse> {
   const requestId = crypto.randomUUID();
 
+  const verified = await readVerifiedRetellBody<RetellFunctionRequest>(req);
+  if ("reject" in verified) return verified.reject;
+
   try {
-    const body: RetellFunctionRequest = await req.json();
+    const body = verified.body;
     const { call_id, function_name, arguments: args } = body;
 
     console.log(`[Retell Function] ${requestId} | Call ${call_id} | ${function_name}`);

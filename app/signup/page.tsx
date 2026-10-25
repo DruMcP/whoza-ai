@@ -49,7 +49,7 @@ export default function SignupPage() {
         ]}
       />
 
-      <main className="max-w-xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+      <main id="main-content" className="max-w-xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
         {/* Hero section */}
         <div className="text-center mb-10">
           <div className="v2-eyebrow inline-flex items-center gap-2 mb-6">

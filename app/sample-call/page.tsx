@@ -44,7 +44,7 @@ export default function SampleCallPage() {
           { name: "Sample Call", item: "https://whoza.ai/sample-call" },
         ]}
       />
-      <main className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page pt-20 pb-16">
+      <main id="main-content" className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page pt-20 pb-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-3xl sm:text-4xl font-bold mb-6">Sample AI Call</h1>
           <p className="text-lg text-[var(--v2-body)] mb-8 max-w-2xl mx-auto">

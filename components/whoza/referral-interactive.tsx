@@ -203,14 +203,14 @@ export function ReferralInteractive() {
             </p>
 
             <form onSubmit={handleSubmitFriendEmail} className="space-y-4">
-              <div className="flex gap-2">
-                <input
+              <div className="flex flex-col sm:flex-row gap-2">
+                <input aria-label="Your friend's email address"
                   type="email"
                   value={friendEmail}
                   onChange={(e) => setFriendEmail(e.target.value)}
                   placeholder="friend@example.com"
                   required
-                  className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-[var(--rex-green)]"
+                  className="flex-1 min-w-0 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-[var(--rex-green)]"
                 />
                 <button
                   type="submit"

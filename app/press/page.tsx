@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     description: "Media resources, press releases, and company information for whoza.ai — the AI call answering platform for UK tradespeople.",
     url: "https://whoza.ai/press",
     type: "website",
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai press centre" }],
   },
 }
 
@@ -30,7 +31,7 @@ export default function PressPage() {
         { name: "Press", item: "https://whoza.ai/press" },
       ]} />
       <Header />
-      <main className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
+      <main id="main-content" className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
         <article className="max-w-4xl mx-auto px-6 py-16">
           {/* ─── HEADER ─── */}
           <header className="mb-12">

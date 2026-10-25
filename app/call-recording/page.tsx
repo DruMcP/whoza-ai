@@ -103,7 +103,7 @@ export default function CallRecordingPage() {
         speakableSelectors={[".retention-headline", ".retention-lead", ".retention-table"]}
       />
 
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <main id="main-content" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Hero */}
         <div className="mb-12">
           <div className="v2-eyebrow inline-flex items-center gap-2 mb-6">

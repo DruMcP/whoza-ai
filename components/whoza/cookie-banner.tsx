@@ -13,9 +13,11 @@ interface CookiePreferences {
 }
 
 const STORAGE_KEY = "whoza_cookie_consent"
+// Fired on window whenever the visitor saves a choice; components/whoza/analytics.tsx listens.
+export const CONSENT_EVENT = "whoza-consent-change"
 const CONSENT_EXPIRY_MS = 365 * 24 * 60 * 60 * 1000 // 12 months
 
-function getStoredConsent(): CookiePreferences | null {
+export function getStoredConsent(): CookiePreferences | null {
   if (typeof window === "undefined") return null
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
@@ -37,7 +39,12 @@ function setStoredConsent(preferences: Omit<CookiePreferences, "timestamp">) {
     ...preferences,
     timestamp: Date.now(),
   }
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(payload))
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(payload))
+  } catch {
+    // Storage blocked (private mode): the choice applies to this page view only.
+  }
+  window.dispatchEvent(new Event(CONSENT_EVENT))
 }
 
 export function CookieBanner() {
@@ -109,16 +116,22 @@ export function CookieBanner() {
               <div className="flex items-start gap-3 flex-1">
                 <Cookie className="w-5 h-5 text-emerald-400 mt-0.5 shrink-0" />
                 <p className="text-sm text-white/90 leading-relaxed">
-                  We use cookies to improve your experience.
-                  Essential cookies are always on.
+                  We&apos;d like to use Google Analytics cookies to see how visitors use the site.
+                  They only load if you accept. Essential cookies are always on.
                 </p>
               </div>
               <div className="flex flex-wrap items-center gap-2 shrink-0">
                 <button
                   onClick={acceptAll}
-                  className="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-semibold rounded-lg transition-colors min-h-[44px]"
+                  className="px-5 py-2.5 bg-[var(--v2-green)] hover:bg-[var(--v2-green-hover)] text-white text-sm font-semibold rounded-lg transition-colors min-h-[44px]"
                 >
                   Accept
+                </button>
+                <button
+                  onClick={acceptEssential}
+                  className="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white text-sm font-semibold rounded-lg transition-colors min-h-[44px]"
+                >
+                  Reject
                 </button>
                 <button
                   onClick={() => setShowModal(true)}
@@ -182,7 +195,7 @@ export function CookieBanner() {
                 <div>
                   <h4 className="font-medium text-white">Analytics</h4>
                   <p className="text-sm text-white/90 mt-1">
-                    Helps us improve our website. We use privacy-focused analytics to understand how tradespeople use Whoza. We do not use Google Analytics or any ad-tracking cookies.
+                    Google Analytics, to see which pages tradespeople use so we can improve them. Off unless you turn it on. We do not use ad-tracking cookies.
                   </p>
                 </div>
               </div>
@@ -203,7 +216,7 @@ export function CookieBanner() {
                 <div>
                   <h4 className="font-medium text-white">Functional</h4>
                   <p className="text-sm text-white/90 mt-1">
-                    Remembers your preferences. Saves your choices so you don&apos;t have to set them again.
+                    Remembers your preferences, and shows Google&apos;s &ldquo;add as a preferred source&rdquo; button on research and blog pages.
                   </p>
                 </div>
               </div>

@@ -235,7 +235,7 @@ export default function ResearchPage() {
         { name: "AI Voice Agents UK Trades 2026", item: "https://whoza.ai/research/ai-voice-agents-uk-trades-2026" },
       ]} />
 
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <main id="main-content" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Back link */}
         <Link
           href="/blog"

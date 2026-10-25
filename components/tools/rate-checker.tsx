@@ -114,7 +114,7 @@ export function RateChecker() {
     <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header />
 
-      <main className="pt-32 pb-20">
+      <main id="main-content" className="pt-32 pb-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <motion.div
@@ -144,10 +144,10 @@ export function RateChecker() {
             <div className="space-y-6">
               {/* Trade */}
               <div>
-                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2" htmlFor="rc-field-1">
                   What trade are you in? <span className="text-[var(--coral)]">*</span>
                 </label>
-                <select
+                <select id="rc-field-1"
                   value={trade}
                   onChange={(e) => { setTrade(e.target.value); setShowResults(false) }}
                   className="w-full px-4 py-3 min-h-[44px] rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] focus:outline-none focus:border-[var(--v2-green)] appearance-none cursor-pointer"
@@ -162,10 +162,10 @@ export function RateChecker() {
 
               {/* Region */}
               <div>
-                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2" htmlFor="rc-field-2">
                   What region are you in? <span className="text-[var(--coral)]">*</span>
                 </label>
-                <select
+                <select id="rc-field-2"
                   value={region}
                   onChange={(e) => { setRegion(e.target.value); setShowResults(false) }}
                   className="w-full px-4 py-3 min-h-[44px] rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] focus:outline-none focus:border-[var(--v2-green)] appearance-none cursor-pointer"
@@ -180,12 +180,12 @@ export function RateChecker() {
 
               {/* Current rate */}
               <div>
-                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2" htmlFor="rc-field-3">
                   Your current hourly rate (optional)
                 </label>
                 <div className="relative">
                   <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[var(--v2-muted)]">£</span>
-                  <input
+                  <input id="rc-field-3"
                     type="number"
                     value={currentRate}
                     onChange={(e) => { setCurrentRate(e.target.value); setShowResults(false) }}
@@ -198,10 +198,10 @@ export function RateChecker() {
 
               {/* Experience */}
               <div>
-                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2" htmlFor="rc-field-4">
                   Experience level <span className="text-[var(--coral)]">*</span>
                 </label>
-                <select
+                <select id="rc-field-4"
                   value={experience}
                   onChange={(e) => { setExperience(e.target.value); setShowResults(false) }}
                   className="w-full px-4 py-3 min-h-[44px] rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] focus:outline-none focus:border-[var(--v2-green)] appearance-none cursor-pointer"

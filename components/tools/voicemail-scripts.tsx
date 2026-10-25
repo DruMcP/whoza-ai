@@ -118,7 +118,7 @@ export function VoicemailScriptGenerator() {
     <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header />
 
-      <main className="pt-32 pb-20">
+      <main id="main-content" className="pt-32 pb-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <motion.div
@@ -148,10 +148,10 @@ export function VoicemailScriptGenerator() {
             <div className="space-y-6">
               {/* Name */}
               <div>
-                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2" htmlFor="vm-field-1">
                   Your name <span className="text-[var(--coral)]">*</span>
                 </label>
-                <input
+                <input id="vm-field-1"
                   type="text"
                   value={name}
                   onChange={(e) => { setName(e.target.value); setShowResults(false) }}
@@ -162,10 +162,10 @@ export function VoicemailScriptGenerator() {
 
               {/* Business name */}
               <div>
-                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2" htmlFor="vm-field-2">
                   Business name
                 </label>
-                <input
+                <input id="vm-field-2"
                   type="text"
                   value={businessName}
                   onChange={(e) => { setBusinessName(e.target.value); setShowResults(false) }}
@@ -177,10 +177,10 @@ export function VoicemailScriptGenerator() {
 
               {/* Phone */}
               <div>
-                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2" htmlFor="vm-field-3">
                   Your phone number <span className="text-[var(--coral)]">*</span>
                 </label>
-                <input
+                <input id="vm-field-3"
                   type="tel"
                   value={phone}
                   onChange={(e) => { setPhone(e.target.value); setShowResults(false) }}
@@ -191,10 +191,10 @@ export function VoicemailScriptGenerator() {
 
               {/* Trade */}
               <div>
-                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2" htmlFor="vm-field-4">
                   Your trade <span className="text-[var(--coral)]">*</span>
                 </label>
-                <select
+                <select id="vm-field-4"
                   value={trade}
                   onChange={(e) => { setTrade(e.target.value); setShowResults(false) }}
                   className="w-full px-4 py-3 min-h-[44px] rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] focus:outline-none focus:border-[var(--v2-green)] appearance-none cursor-pointer"

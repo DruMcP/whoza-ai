@@ -76,7 +76,7 @@ export default function ResearchLanding() {
         { name: "Home", item: "https://whoza.ai" },
         { name: "Research", item: "https://whoza.ai/research" },
       ]} />
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main id="main-content" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <section className="mb-16">
           <div className="v2-eyebrow inline-flex items-center gap-2 mb-6">
             <BookOpen className="w-4 h-4" />

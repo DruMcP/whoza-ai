@@ -346,7 +346,7 @@ export default function BestAICallHandlerPage() {
         { name: "Best AI Call Handler", item: "https://whoza.ai/best-ai-call-handler-uk-trades" },
       ]} />
 
-      <main className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
+      <main id="main-content" className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
         {/* Hero */}
         <section className="relative overflow-hidden" style={{ background: "linear-gradient(135deg, #0F1729 0%, #1A1A2E 50%, #0F1729 100%)" }}>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">

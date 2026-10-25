@@ -162,7 +162,7 @@ export default function ResearchPage() {
         { name: "Answer Engine Optimisation 2026", item: "https://whoza.ai/research/aeo-ai-search-optimisation-2026" },
       ]} />
 
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <main id="main-content" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <Link href="/blog" className="inline-flex items-center gap-2 text-[var(--v2-muted)] hover:text-[var(--v2-green)] transition-colors mb-8">
           <ArrowLeft className="w-4 h-4" />
           Back to Blog

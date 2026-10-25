@@ -119,7 +119,7 @@ export default function ResearchPage() {
       <script id="schema-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <FAQPageSchema faqs={faqItems} />
 
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main id="main-content" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero */}
         <section className="mb-16">
           <div className="v2-eyebrow inline-flex items-center gap-2 mb-6">

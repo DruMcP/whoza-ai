@@ -292,7 +292,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(graphSchema) }}
       />
 
-      <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <main id="main-content" className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <Link
           href="/blog"
           className="inline-flex items-center gap-2 text-[var(--v2-muted)] hover:text-[var(--v2-green)] transition-colors mb-8"

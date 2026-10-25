@@ -1,4 +1,5 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
+import { requireInternalKey } from "@/lib/api-guard";
 import { telephonyFeatures, validateRetellTwilioConfig, logTelephonyConfig } from "@/lib/telephony-config";
 import { twilioService } from "@/lib/twilio-service";
 import { retellService } from "@/lib/retell-service";
@@ -12,7 +13,11 @@ import { elevenLabsService } from "@/lib/elevenlabs-service";
  * Safe to call — no side effects.
  */
 
-export async function GET() {
+export async function GET(req: NextRequest) {
+  // Calls Retell and ElevenLabs on every hit and reports config state: internal only.
+  const denied = requireInternalKey(req);
+  if (denied) return denied;
+
   logTelephonyConfig();
 
   const retellValidation = validateRetellTwilioConfig();

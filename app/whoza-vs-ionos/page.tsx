@@ -31,7 +31,7 @@ export default function WhozaVsIonosPage() {
         ]}
       />
 
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+      <main id="main-content" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         <h1 className="text-3xl sm:text-4xl font-bold mb-6">
           Whoza.ai vs <span className="text-[var(--v2-green)]">IONOS</span>
         </h1>

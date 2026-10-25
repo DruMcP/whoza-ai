@@ -43,8 +43,9 @@ const resources = [
 
 export default function ResourcesPage() {
   return (
-    <main className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
+    <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header />
+      <main id="main-content">
       <BreadcrumbSchema
         items={[
           { name: "Home", item: "https://whoza.ai" },
@@ -96,7 +97,8 @@ export default function ResourcesPage() {
         </div>
       </section>
 
+      </main>
       <Footer />
-    </main>
+    </div>
   )
 }

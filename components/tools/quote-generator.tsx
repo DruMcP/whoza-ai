@@ -3,8 +3,6 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { FileText, Plus, Trash2, Download, ArrowRight } from "lucide-react"
-import { Header } from "@/components/whoza/header"
-import { Footer } from "@/components/whoza/footer"
 import Script from "next/script"
 
 interface LineItem {
@@ -40,18 +38,23 @@ export function QuoteGenerator() {
   }
 
   const updateLineItem = (id: string, field: keyof LineItem, value: string | number) => {
+    // Quantities and prices stay finite and non-negative, so totals never read
+    // "£-50.00" or "£1e+21".
+    if (typeof value === "number") value = Number.isFinite(value) ? Math.min(Math.max(value, 0), field === "quantity" ? 10000 : 1000000) : 0
     setLineItems(lineItems.map((item) => (item.id === id ? { ...item, [field]: value } : item)))
   }
+
+  const money = (n: number) => n.toLocaleString("en-GB", { minimumFractionDigits: 2, maximumFractionDigits: 2 })
 
   const formatDate = (date: Date) => {
     return date.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })
   }
 
   return (
-    <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
-      <Header />
-
-      <main className="pt-32 pb-20">
+    // Embedded in app/tools/quote-generator/page.tsx, which already renders the
+    // header, <main> and footer around it.
+    <div className="v2-page">
+      <div className="pt-8 pb-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -79,21 +82,21 @@ export function QuoteGenerator() {
                   <div>
                     <h3 className="text-sm font-semibold text-[var(--v2-body)] mb-3">YOUR DETAILS</h3>
                     <div className="space-y-3">
-                      <input
+                      <input aria-label="Your business name"
                         type="text"
                         placeholder="Your business name *"
                         value={businessName}
                         onChange={(e) => setBusinessName(e.target.value)}
                         className="w-full px-4 py-3 rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] placeholder:text-slate-400 focus:outline-none focus:border-[var(--v2-green)]"
                       />
-                      <input
+                      <input aria-label="Your phone number"
                         type="tel"
                         placeholder="Your phone number *"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         className="w-full px-4 py-3 rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] placeholder:text-slate-400 focus:outline-none focus:border-[var(--v2-green)]"
                       />
-                      <input
+                      <input aria-label="Your email"
                         type="email"
                         placeholder="Your email *"
                         value={email}
@@ -106,14 +109,14 @@ export function QuoteGenerator() {
                   <div>
                     <h3 className="text-sm font-semibold text-[var(--v2-body)] mb-3">CUSTOMER DETAILS</h3>
                     <div className="space-y-3">
-                      <input
+                      <input aria-label="Customer name"
                         type="text"
                         placeholder="Customer name *"
                         value={customerName}
                         onChange={(e) => setCustomerName(e.target.value)}
                         className="w-full px-4 py-3 rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] placeholder:text-slate-400 focus:outline-none focus:border-[var(--v2-green)]"
                       />
-                      <textarea
+                      <textarea aria-label="Customer address"
                         placeholder="Customer address"
                         value={customerAddress}
                         onChange={(e) => setCustomerAddress(e.target.value)}
@@ -125,7 +128,7 @@ export function QuoteGenerator() {
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-4">
-                  <input
+                  <input aria-label="Quote reference"
                     type="text"
                     placeholder="Quote reference"
                     value={quoteRef}
@@ -136,6 +139,7 @@ export function QuoteGenerator() {
                     {formatDate(new Date())}
                   </div>
                   <select
+                    aria-label="Quote valid for"
                     value={validDays}
                     onChange={(e) => setValidDays(Number(e.target.value))}
                     className="px-4 py-3 rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] focus:outline-none focus:border-[var(--v2-green)] appearance-none cursor-pointer"
@@ -154,6 +158,7 @@ export function QuoteGenerator() {
                         <input
                           type="text"
                           placeholder="Description"
+                          aria-label="Line item description"
                           value={item.description}
                           onChange={(e) => updateLineItem(item.id, "description", e.target.value)}
                           className="col-span-5 px-3 py-2 rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] placeholder:text-slate-400 focus:outline-none focus:border-[var(--v2-green)] text-sm"
@@ -161,6 +166,8 @@ export function QuoteGenerator() {
                         <input
                           type="number"
                           placeholder="Qty"
+                          aria-label="Quantity"
+                          min={0}
                           value={item.quantity}
                           onChange={(e) => updateLineItem(item.id, "quantity", Number(e.target.value))}
                           className="col-span-2 px-3 py-2 rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] placeholder:text-slate-400 focus:outline-none focus:border-[var(--v2-green)] text-sm"
@@ -170,13 +177,15 @@ export function QuoteGenerator() {
                           <input
                             type="number"
                             placeholder="Price"
+                            aria-label="Unit price in pounds"
+                            min={0}
                             value={item.unitPrice}
                             onChange={(e) => updateLineItem(item.id, "unitPrice", Number(e.target.value))}
                             className="w-full pl-6 pr-3 py-2 rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] placeholder:text-slate-400 focus:outline-none focus:border-[var(--v2-green)] text-sm"
                           />
                         </div>
                         <div className="col-span-1 text-right text-sm font-medium">
-                          £{(item.quantity * item.unitPrice).toFixed(2)}
+                          £{money(item.quantity * item.unitPrice)}
                         </div>
                         <button
                           onClick={() => removeLineItem(item.id)}
@@ -198,12 +207,13 @@ export function QuoteGenerator() {
                 <div className="bg-white rounded-2xl p-4 space-y-2">
                   <div className="flex justify-between text-lg font-bold border-t border-[var(--v2-line)] pt-2">
                     <span>TOTAL:</span>
-                    <span className="text-[var(--coral)]">£{total.toFixed(2)}</span>
+                    <span className="text-[var(--coral)]">£{money(total)}</span>
                   </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <select
+                    aria-label="Payment terms"
                     value={paymentTerms}
                     onChange={(e) => setPaymentTerms(e.target.value)}
                     className="px-4 py-3 rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] focus:outline-none focus:border-[var(--v2-green)] appearance-none cursor-pointer"
@@ -212,7 +222,7 @@ export function QuoteGenerator() {
                     <option value="14 days" className="bg-white">Payment: 14 days</option>
                     <option value="30 days" className="bg-white">Payment: 30 days</option>
                   </select>
-                  <input
+                  <input aria-label="Notes for customer"
                     type="text"
                     placeholder="Notes for customer"
                     value={notes}
@@ -278,8 +288,8 @@ export function QuoteGenerator() {
                       <tr key={item.id} className="border-b border-[var(--navy-900)]/5">
                         <td className="py-2 text-sm">{item.description || "—"}</td>
                         <td className="py-2 text-sm text-right">{item.quantity}</td>
-                        <td className="py-2 text-sm text-right">£{item.unitPrice.toFixed(2)}</td>
-                        <td className="py-2 text-sm text-right font-medium">£{(item.quantity * item.unitPrice).toFixed(2)}</td>
+                        <td className="py-2 text-sm text-right">£{money(item.unitPrice)}</td>
+                        <td className="py-2 text-sm text-right font-medium">£{money(item.quantity * item.unitPrice)}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -289,7 +299,7 @@ export function QuoteGenerator() {
                   <div className="w-64 space-y-2">
                     <div className="flex justify-between text-lg font-bold border-t-2 border-[var(--navy-900)]/10 pt-2">
                       <span>TOTAL</span>
-                      <span className="text-[var(--coral)]">£{total.toFixed(2)}</span>
+                      <span className="text-[var(--coral)]">£{money(total)}</span>
                     </div>
                   </div>
                 </div>
@@ -332,9 +342,7 @@ export function QuoteGenerator() {
             </motion.div>
           )}
         </div>
-      </main>
-
-      <Footer />
+      </div>
 
       <Script
         id="quote-schema"

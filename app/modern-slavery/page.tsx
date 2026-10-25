@@ -1,5 +1,7 @@
 import { Metadata } from "next"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
+import { Header } from "@/components/whoza/header"
+import { Footer } from "@/components/whoza/footer"
 import { ChevronRight, ShieldCheck } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -22,7 +24,9 @@ export default function ModernSlaveryPage() {
           { name: "Modern Slavery Statement", item: "https://whoza.ai/modern-slavery" },
         ]}
       />
-      <div className="max-w-4xl mx-auto px-4 py-16 md:py-24">
+      <Header />
+      {/* pt-32 clears the fixed header */}
+      <main id="main-content" className="max-w-4xl mx-auto px-4 pt-32 pb-16 md:pb-24">
         <div className="mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[var(--v2-green)] to-emerald-500 bg-clip-text text-transparent">
             Modern Slavery Statement
@@ -205,7 +209,8 @@ export default function ModernSlaveryPage() {
             Last updated: 1 April 2025 | Next review: 1 April 2026
           </p>
         </div>
-      </div>
+      </main>
+      <Footer />
     </div>
   )
 }

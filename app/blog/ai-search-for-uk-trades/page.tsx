@@ -96,7 +96,7 @@ export default function AISearchForTradesPost() {
 
       <Header />
 
-      <main className="bg-white text-[#15233B]">
+      <main id="main-content" className="bg-white text-[#15233B]">
         <article className="mx-auto max-w-3xl px-6 py-16">
           <nav className="mb-8 text-sm text-[#5A6472]">
             <Link href="/blog" className="hover:underline">← Back to Blog</Link>
