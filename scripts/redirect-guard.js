@@ -198,6 +198,26 @@ async function main() {
     }
   }
 
+  // IndexNow key file assertion (post-deploy): 200, text/plain, body === key
+  {
+    const { INDEXNOW_KEY } = require('./indexnow-core')
+    try {
+      const kr = await fetch(`${BASE}/${INDEXNOW_KEY}.txt`)
+      const kb = await kr.text()
+      if (kr.status !== 200) {
+        failures.push({ probe: `/${INDEXNOW_KEY}.txt`, reason: `key file returns ${kr.status}, expected 200` })
+      } else if (kb !== INDEXNOW_KEY) {
+        failures.push({ probe: `/${INDEXNOW_KEY}.txt`, reason: `body is ${kb.length} chars, expected exactly the 32-char key (no trailing newline)` })
+      }
+      const ct = String(kr.headers.get('content-type') || '')
+      if (!ct.includes('text/plain')) {
+        failures.push({ probe: `/${INDEXNOW_KEY}.txt`, reason: `content-type '${ct}', expected text/plain` })
+      }
+    } catch (err) {
+      failures.push({ probe: `/${INDEXNOW_KEY}.txt`, reason: `fetch failed: ${err.message}` })
+    }
+  }
+
   console.log(`redirect-guard: ${checked} redirect chains walked against ${BASE}`)
   if (failures.length === 0) {
     console.log("✅ ALL REDIRECT CHAINS TERMINATE ON 200/410 — no redirect-into-404")

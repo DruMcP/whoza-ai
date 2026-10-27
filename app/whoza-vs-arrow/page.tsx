@@ -100,7 +100,7 @@ export default function WhozaVsArrowPage() {
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-extrabold mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
-                Whoza.ai vs ARROW
+                Whoza.ai vs ARROW{" "}
                 <span className="block text-[var(--v2-green)] mt-2">Honest Head-to-Head for UK Trades</span>
               </h1>
 

@@ -1,0 +1,486 @@
+{
+  "version": 1,
+  "seededAt": "2026-10-24T15:10:24.573Z",
+  "urls": {
+    "https://whoza.ai/": {
+      "hash": "2ddf350059a4b4a88cff3a8cacc592472a21ed6e",
+      "lastSubmittedAt": 1792859806730
+    },
+    "https://whoza.ai/about": {
+      "hash": "f5880b7d441f9308678d82867f11b743eff20390",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/accents": {
+      "hash": "ad1ebd21851b36a6c43c0ebeef386f7d5f8c8144",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/accessibility": {
+      "hash": "f921ad25cde69c85026c167cd3c9ec052bdda184",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/ai-vs-virtual-receptionist": {
+      "hash": "1d60c5cb859c118acc13873d91cc7d3bba7af08e",
+      "lastSubmittedAt": 1792859806730
+    },
+    "https://whoza.ai/best-ai-call-handler-uk-trades": {
+      "hash": "27f3b688c1292f5a24a3977ae6264f2bcfbdd657",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/birmingham": {
+      "hash": "6b9e0b81616bc82fa4325798f6eb5bbed6c2018e",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/blog": {
+      "hash": "7cbc7541d828bc3db52806adf3fbafe2f3fe92e2",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/blog/24-7-call-answering-emergency-trades": {
+      "hash": "08c6d61b59dd0d2e7a4a302bf67637fa3398998f",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/blog/ai-call-answering-pricing-guide-uk-2026": {
+      "hash": "2d002c1a8649493542094ece73cb95f2962f364a",
+      "lastSubmittedAt": 1792859806730
+    },
+    "https://whoza.ai/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026": {
+      "hash": "1b84e7b20c22d45751be37d031550298412df732",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/blog/ai-search-for-uk-trades": {
+      "hash": "666c882de0081b50923fd0dee5ed171ffb7d644e",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/blog/how-to-get-more-google-reviews-trades": {
+      "hash": "11f3745bcda27190aef8f8a596bd95110067b587",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/blog/how-to-grow-trade-business-uk-guide": {
+      "hash": "b1a62ab1c4a0e6d1b04989ef97ca35219530365f",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/blog/why-uk-trades-need-ai-built-in-scotland": {
+      "hash": "3a4b3e9a4dc0a8de37788e88728c80216d44b87e",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/booking": {
+      "hash": "a9b485e2ebf185d8dc35c3deb0fa39127495e578",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/bristol": {
+      "hash": "1b12fa09aa284838e7ea4b8af65ecc0a3d047be0",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/call-recording": {
+      "hash": "c62c1677d38b08962f2a4e1dbe5edde7b63defe6",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/case-studies": {
+      "hash": "7811b4cfe5d9526d84bc37e4dcab0d50b5a774c3",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/complaints": {
+      "hash": "4348158637fe5d50e3fe22769f88d0b38e45ca04",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/contact": {
+      "hash": "aa6bdafdc7d4fac285eb61fa5262a1e927f63ca8",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/cookie-policy": {
+      "hash": "1f0641061e9a09e19cb4b3c62a5db9d52c6476d1",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/data": {
+      "hash": "9c20d971ab5940a2918737e39df0d75844aaca89",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/dpa": {
+      "hash": "489e033adca3e845682af1ca5b6157f6aa2c0330",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/edinburgh": {
+      "hash": "5e447a67c6a8b196e12a38a9f1c5eeb0e744e042",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/fair-use": {
+      "hash": "e86e6007dc98a2807e725a5d41cf8fb3ce2d9739",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/faq": {
+      "hash": "7cc301720538ae213c48ed98fa4faf6580f3513b",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-builders": {
+      "hash": "2ad563b0bda6522e129e15824c068cfdd7adf033",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-builders-birmingham": {
+      "hash": "b1a9df0f58a1b7855c4d062da5d89202b031bd1a",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-builders-edinburgh": {
+      "hash": "dbabfef10ba23e746a1cbc76df405e738fe38443",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-builders-glasgow": {
+      "hash": "e164a4963e64a6df034c8e13f27d65d6cc4e394b",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-builders-london": {
+      "hash": "51f4ad1c4ee049d330c60ec39fb5de0b43c536a7",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-builders-manchester": {
+      "hash": "940d432b0f7774b043fe40aa3808f76748a50aeb",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-carpenters": {
+      "hash": "011806831696050abe6538b4e7a5a2681bbe8e0e",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-cleaners": {
+      "hash": "ce50c899b87e62c1c8ae801e6642ffedf7009648",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-drainage": {
+      "hash": "640dc24d76e633d8f9a73e99ff2550629f8b49ed",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-electricians": {
+      "hash": "be65ee288f2d6e19913bc1b5a5ec423bd29d7c22",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-electricians-birmingham": {
+      "hash": "9fa5b2d3415c1c66699c1e0adc91559e378ca1f1",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-electricians-edinburgh": {
+      "hash": "0870207f65d9a7301a1867cf90a45b437c692d75",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-electricians-glasgow": {
+      "hash": "277caee614523f43753f2144bc172bb0ca4c24a6",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-electricians-london": {
+      "hash": "5d13d62e11fe6896297a0f010e5d505baedf23ca",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-electricians-manchester": {
+      "hash": "dc7da695d0c5ced96f781dc1bab30f113b3f6ee8",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-gas-engineers": {
+      "hash": "1eb75540b7d897fb2f58bea78fd7418a8d1138d9",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-gas-engineers-edinburgh": {
+      "hash": "2c0438b4a926cf769227ddf879a493f4b55d355a",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-gas-engineers-glasgow": {
+      "hash": "22de5cd19e07607096d2bcd658cd8cf194d90d43",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-gas-engineers-london": {
+      "hash": "d02e3a8491f12ed131e7dcc6e867cad9b155cf27",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-handymen": {
+      "hash": "061bf2c2be12f9519b9511a1d3405b90d8807419",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-heating-engineers": {
+      "hash": "8a78b9a57646c682b344971a0ccbb7587ad53c01",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-heating-engineers-edinburgh": {
+      "hash": "6a2d7444863b3d5a49a5845eed527a251ab2f3f2",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-heating-engineers-glasgow": {
+      "hash": "0ddfc914188b331ef9a8f6b4c43ebadf6c2bf46e",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-heating-engineers-london": {
+      "hash": "2e5b49dffcdc66105422ed064a0f6ad46d80681c",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-heating-engineers-manchester": {
+      "hash": "8a67ae19b6f9e8b6424b4a3aa1e095bd857cb245",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-joiners": {
+      "hash": "2a18711b00a3971460562c5d80a353e5e6e6d1eb",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-landscapers": {
+      "hash": "ef110ea9456836e24b0558ad007e4034a533eae4",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-locksmiths": {
+      "hash": "5d4b6a713c0ab592896421f61e8e021ce3576438",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-painters-decorators": {
+      "hash": "6591a02b0ca166cd49b51918d1c3656965e53d73",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-pest-control": {
+      "hash": "b3e264ec82e88b548c28f4074f33a85be251bbfc",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-plasterers": {
+      "hash": "4394ad65e83d5d54ba4efcf6bc46e120d573eb66",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-plumbers": {
+      "hash": "fd941d963702c7c468769bebdbe427dd72db0240",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-plumbers-birmingham": {
+      "hash": "c2ef907418aeff1273c01a520d45dd1407a038b9",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-plumbers-edinburgh": {
+      "hash": "c3e3ad5da54eec089df911dcabe50cbad95a914b",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-plumbers-glasgow": {
+      "hash": "79181c3e818bd1eeb169dc50b4238ae2b8f89a09",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-plumbers-london": {
+      "hash": "1ec3d50be7e046c241cdc62816b8d4fefa9a6e2f",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-plumbers-manchester": {
+      "hash": "6ffbefbf18d74bbfce0c334914bbe4b8274b7e73",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-roofers": {
+      "hash": "49d6fd755f832252f85ecffcd4675014af613808",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-roofers-edinburgh": {
+      "hash": "270f770eb75ee04282ce55f582f046ee7420f5aa",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-roofers-glasgow": {
+      "hash": "95eaf5a57a2399f86bf8cd9a20a939118d9e5444",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-roofers-london": {
+      "hash": "0abb4de39001e93aa0f1287ae4c5285cf7bbf530",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/for-tilers": {
+      "hash": "9e2371e03d23cd6582ebc8d4cf85f39812cbaedb",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/glasgow": {
+      "hash": "df11264f60888a21ba960cddba97e7deaee62ddc",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/guide": {
+      "hash": "9ff78dc0e9006f77b8b9202752bbd0e8ed6b9749",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/guide/dashboard": {
+      "hash": "2b11085b10193efa2c2494380beade36592eb46a",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/guide/faq": {
+      "hash": "48feeff76c632a23b520aa20a6d8a76bd0fd561f",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/guide/getting-started": {
+      "hash": "dc7b8566a4c7a6cb1f0771ebfed9b3998e7a226a",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/guide/how-it-works": {
+      "hash": "73ba7d97c7e89c31a804147f5bd7c51e1fecb307",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/guide/whatsapp": {
+      "hash": "10cf79777468b2aad8b5070ca2781da632facdd5",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/how-it-works": {
+      "hash": "ead4c8610797c976de1c4825a5048528c769783d",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/integrations": {
+      "hash": "5b8e4a32cded7449e4ae5ef886d23050d31a75b3",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/is-it-a-phone-tree": {
+      "hash": "edd59dfb43e904cb6b4db531473203422af227f4",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/leeds": {
+      "hash": "53b4d3f92d18e112db14e63b943cf6ee532a3670",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/liverpool": {
+      "hash": "675861cff9938364c2b2a5eae3306cdc85e48315",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/locations": {
+      "hash": "178c2c53526a4088bc1fe41c0591691bb55b2694",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/london": {
+      "hash": "9f7d2994cf41dfcc4d1631a366550ffb8d65bab4",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/manchester": {
+      "hash": "c003836af79e13f048e4f150bfb8338848c887f6",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/missed-calls-cost-calculator": {
+      "hash": "5bae7351d46054a0a8e41a0754f33091e0edfc29",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/modern-slavery": {
+      "hash": "c77fffa7894877b66a37a366a16b5bcdc6a7291f",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/multi-location": {
+      "hash": "ff8ef75dfcb07bac7f5f2eb966316c1f40f29a2d",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/press": {
+      "hash": "0b62fbd98c63edbab821c6facfe96f1316aa082e",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/pricing": {
+      "hash": "711e573f1a17cd16b862098c2a5de059223685c9",
+      "lastSubmittedAt": 1792859806730
+    },
+    "https://whoza.ai/privacy": {
+      "hash": "08f41557a868c86ef86fdd3d4c0edd4bb8ae4316",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/refer": {
+      "hash": "3cbb5a4ec73fb8c1e0188993b2b3a771ee39094a",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/refund-policy": {
+      "hash": "c31236c4e1d387e57342425bbd45f16edbecc5d1",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/research": {
+      "hash": "6dcdb6686a2b3e7676021c52d7b0025ba84acd0e",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/research/aeo-ai-search-optimisation-2026": {
+      "hash": "c85cea8d16cdacf5478f65ec6bed298b05c96c2c",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/research/ai-voice-agents-uk-trades-2026": {
+      "hash": "aa5f7b61e6e8b8550d61503d28c7590e46016e4a",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/research/caller-experience-revolution-ai-voice-agents-2026": {
+      "hash": "125cf7a46d8c342288b421bb3987e49a99cf2d31",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/research/emergency-triage-safety-ai-voice-agents-2026": {
+      "hash": "ccc8275f771e85320788e21154f0343254619fc8",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/research/missed-call-index": {
+      "hash": "5724a67a1ef0257176f40230ab9202014bc4a047",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/research/missed-call-index/q3-2026": {
+      "hash": "c673be43b37537ed782166f1e42cd277cbfc5bd9",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/research/voice-agent-technology-state-of-art-2026": {
+      "hash": "7115d74fa37c8d9467625ac2c8f1cb331688ed6b",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/resources": {
+      "hash": "da2c1ef06a9fc171ba2c86a87d5acca51beb3221",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/resources/google-business-profile-checklist-trades": {
+      "hash": "b04f22c00abdb64ddf78c154340120655097b9f6",
+      "lastSubmittedAt": 1792859806730
+    },
+    "https://whoza.ai/resources/trade-business-growth-toolkit": {
+      "hash": "98c174744483f6a5af28e54eb29b721ac30819ae",
+      "lastSubmittedAt": 1792859806730
+    },
+    "https://whoza.ai/signup": {
+      "hash": "b0601448f36ee6fbac3dbd8f3c9f9b0632828f32",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/sla": {
+      "hash": "0a6800e3435b78b0a546489c55fed6a4d688f321",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/support": {
+      "hash": "c3dd55e56d91d10838d524fc7e7397a332ff6483",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/terms": {
+      "hash": "0767cafa257054a10b9180617fba9d614c1d6225",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/tools/emergency-pricing": {
+      "hash": "d766da2b9c3814cf1a6df66e36955264699e4f35",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/tools/quote-generator": {
+      "hash": "a22a2ea6f6dceb77efd60fa78eb4c001ddfbea4b",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/tools/rate-checker": {
+      "hash": "f1c84e5948347df609206b7167990ae4d84a91b4",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/tools/voicemail-scripts": {
+      "hash": "02727462ae98a10995cb47e540058f27499f835d",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/trust": {
+      "hash": "077628834346358ec933dfe94c223b0272b37d3a",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/vat-info": {
+      "hash": "29818dfe23a169b5bfe813229a57dda0ffd569e4",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/vs-trade-receptionist": {
+      "hash": "65d0c79ad91836c93c7b23da227b36fbbbe01f10",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/watch": {
+      "hash": "ea9a155300c903206a6202290a23be33bddb738a",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/whoza-vs-arrow": {
+      "hash": "17ee1f0f68af27e5b95ca9462b4aebf723fec36b",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/whoza-vs-clara": {
+      "hash": "98923e847f32bc17c8329b8b53cf0b880adc8258",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/whoza-vs-moneypenny": {
+      "hash": "273180aba88c66c285ca0a667693f4afddf6c19a",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/whoza-vs-team-connect": {
+      "hash": "5caee00c3db75d8879a5abb8686ad59d97528ed1",
+      "lastSubmittedAt": 1792854624573
+    },
+    "https://whoza.ai/will-my-customers-mind": {
+      "hash": "5ddb1d051c0b2d3c885769ceb46ca26892af2dda",
+      "lastSubmittedAt": 1792854624573
+    }
+  }
+}

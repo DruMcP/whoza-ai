@@ -36,8 +36,8 @@ export const metadata: Metadata = {
 }
 
 const comparisonData = [
-  { feature: "Monthly Price (Entry)", whoza: "£59", competitor: "£49.99", winner: "clara", note: "Clara cheaper by £9" },
-  { feature: "Monthly Price (Mid)", whoza: "£125 (Growth)", competitor: "£99.99 (Pro)", winner: "clara", note: "Clara cheaper by £25" },
+  { feature: "Monthly Price (Entry)", whoza: "£59", competitor: "$39.99 (≈£30)", winner: "clara", note: "Clara cheaper by ≈£29 (USD billing)" },
+  { feature: "Monthly Price (Mid)", whoza: "£125 (Growth)", competitor: "$69.99 (≈£52)", winner: "clara", note: "Clara cheaper by ≈£73 (USD billing)" },
   { feature: "WhatsApp Delivery", whoza: "✓ Native integration", competitor: "✗ Email only", winner: "whoza", note: "Major differentiator" },
   { feature: "Review Collection", whoza: "✓ Built-in (Claire)", competitor: "✗ Not available", winner: "whoza", note: "whoze exclusive" },
   { feature: "Competitor Analysis", whoza: "✓ Monthly reports (Rex)", competitor: "✗ Not available", winner: "whoza", note: "whoze exclusive" },
@@ -53,7 +53,7 @@ const comparisonData = [
 const faqs = [
   {
     question: "Which is cheaper: whoza.ai or Clara AI?",
-    answer: "Clara AI is cheaper at entry level (£49.99 vs £59) and mid-tier (£99.99 vs £125). However, whoza.ai includes WhatsApp delivery with Accept/Call Back/Decline buttons as standard, which Clara charges extra for. For most tradespeople, the total cost is comparable once you factor in features."
+    answer: "Clara AI is cheaper at entry level ($39.99 ≈ £30 vs £59) and mid-tier ($69.99 ≈ £52 vs £125), both billed in USD. However, whoza.ai includes WhatsApp delivery with Accept/Call Back/Decline buttons as standard, which Clara charges extra for. For most tradespeople, the total cost is comparable once you factor in features."
   },
   {
     question: "Does Clara AI deliver calls to WhatsApp like whoza.ai?",
@@ -108,12 +108,12 @@ export default function VsClaraPage() {
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-extrabold mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
-                Whoza.ai vs Clara AI
+                Whoza.ai vs Clara AI{" "}
                 <span className="block text-[var(--v2-green)] mt-2">Honest Head-to-Head for UK Trades</span>
               </h1>
 
               <p className="text-lg text-[var(--v2-body)] max-w-2xl mb-8">
-                Clara (£49.99/month) and whoza.ai (£59/month) are the two most popular AI receptionists 
+                Clara ($39.99/month ≈ £30, billed in USD) and whoza.ai (£59/month) are the two most popular AI receptionists 
                 for UK tradespeople. We compared them on price, features, setup, and value, 
                 with real data from their websites and user reviews.
               </p>
@@ -151,7 +151,7 @@ export default function VsClaraPage() {
                     <Check className="w-5 h-5" /> Choose Clara if...
                   </h3>
                   <ul className="space-y-2 text-white/70 text-sm">
-                    <li>• Budget is your #1 concern (£49.99 vs £59)</li>
+                    <li>• Budget is your #1 concern ($39.99 ≈ £30 vs £59)</li>
                     <li>• You only need basic call answering</li>
                     <li>• You're okay with email delivery</li>
                     <li>• You don't need review collection</li>
@@ -206,14 +206,14 @@ export default function VsClaraPage() {
               </h2>
               <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-                  Clara's entry price of £49.99 beats whoza.ai's £59 by £9/month. Over a year, that's a £108 saving. 
+                  Clara's entry price of $39.99 (≈£30, billed in USD) beats whoza.ai's £59 by ≈£29/month. Over a year, that's a ≈£350 saving. 
                   However, Clara requires a 3-month minimum commitment (£149.97 upfront), while whoza.ai has no contract. 
-                  Clara's mid-tier Pro plan at £99.99 is cheaper than whoza.ai's Growth at £125, but Clara Pro doesn't include 
+                  Clara's mid-tier Pro plan at $69.99 (≈£52) is cheaper than whoza.ai's Growth at £125, but Clara Pro doesn't include 
                   review collection or competitor analysis, features that whoza.ai includes at the Growth level.
                 </p>
                 <p className="text-[var(--v2-body)] leading-relaxed">
                   <strong className="text-[var(--v2-ink)]">Real-world cost example:</strong> A plumber receiving 15 calls/week. 
-                  Clara Standard (£49.99) answers calls but delivers via email. whoza.ai Starter (£59) answers calls 
+                  Clara Standard ($39.99 ≈ £30, USD billing) answers calls but delivers via email. whoza.ai Starter (£59) answers calls 
                   and delivers to WhatsApp. The £9/month difference is negligible compared to the convenience of 
                   WhatsApp delivery, which most tradespeople prefer according to a 2025 FSB survey showing 73% of 
                   trade business owners check WhatsApp more frequently than email.

@@ -77,15 +77,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   },
                 ],
               },
-              {
-                "@type": "BreadcrumbList",
-                "@id": "https://whoza.ai/resources/missed-call-cost-calculator#breadcrumb",
-                "itemListElement": [
-                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://whoza.ai/" },
-                  { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://whoza.ai/resources" },
-                  { "@type": "ListItem", "position": 3, "name": "Missed Call Cost Calculator", "item": "https://whoza.ai/resources/missed-call-cost-calculator" },
-                ],
-              },
             ],
           }),
         }}

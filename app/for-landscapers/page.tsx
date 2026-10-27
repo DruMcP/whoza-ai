@@ -129,12 +129,12 @@ export default function ForLandscapersPage() {
                   Built for UK Landscapers
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
-                  AI Call Answering for{" "}
-                  <span className="text-green-400">Landscapers</span>{" "}
-                  UK: Never Miss a Job
+                  Call Answering Service for{" "}
+                  <span className="text-[#6ee7b7]">Landscapers</span>{" "}
+                  <span className="block mt-2 text-2xl sm:text-3xl lg:text-4xl">Never Miss a Job</span>
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
-                  Garden design, maintenance, patio laying, fencing. Customers call when they want their outdoor space transformed. Katie answers every call, captures the project details, and sends them to your WhatsApp.
+                  Garden design, maintenance, patio laying, fencing. Customers call when they want their outdoor space transformed. Katie, your AI receptionist, runs the call answering service: answers every call, captures the project details, and sends them to your WhatsApp.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link

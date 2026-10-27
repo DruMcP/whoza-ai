@@ -51,7 +51,7 @@ export default function PressPage() {
           <section className="mb-16">
             <h2 className="text-xl font-bold text-[var(--v2-muted)] uppercase tracking-wider mb-4 flex items-center gap-2">
               <Quote className="w-5 h-5" />
-              Company Boilerplate
+              Company Boilerplate{" "}
               <span className="text-xs normal-case tracking-normal text-[var(--v2-muted)] ml-2 bg-white px-2 py-1 rounded">For journalist use: 75 words</span>
             </h2>
             <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 md:p-8">

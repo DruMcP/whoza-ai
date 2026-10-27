@@ -177,10 +177,12 @@ export default function ForBuildersPage() {
                   Built for UK Builders
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 trade-headline">
-                  Never Miss a Building Enquiry, Even From Site
+                  Call Answering Service for{" "}
+                  <span className="text-[#6ee7b7]">Builders</span>{" "}
+                  <span className="block mt-2 text-2xl sm:text-3xl lg:text-4xl">Never Miss a Building Enquiry, Even From Site</span>
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8">
-                  Extensions, renovations, new builds, emergency structural work. Katie answers every call you miss, captures the full project details, and sends them to your WhatsApp in 3 seconds. From £59/month, less than one missed quote.
+                  Extensions, renovations, new builds, emergency structural work. Katie, your AI receptionist, provides a 24/7 call answering service for builders: answers every call you miss, captures the full project details, and sends them to your WhatsApp in 3 seconds. From £59/month, less than one missed quote.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link

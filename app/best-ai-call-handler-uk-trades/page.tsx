@@ -367,7 +367,7 @@ export default function BestAICallHandlerPage() {
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-extrabold text-[var(--v2-ink)] mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
-              The Best AI Call Handler<br />
+              The Best AI Call Handler{" "}<br />
               <span className="text-[var(--v2-green)]">for UK Tradespeople (2026)</span>
             </h1>
             <p className="text-lg text-[var(--v2-body)] max-w-2xl mb-8">

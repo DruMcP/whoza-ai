@@ -8,11 +8,11 @@
  *
  * Recorded IndexNow key (DISABLED — key file removed from public/ on 2026-09-19
  * as a circuit breaker). To restore after the 30-day crawl-trust recovery:
- *   1. Recreate public/e3ccefa46e90635781bcc5fff037809c.txt containing exactly
+ *   1. Recreate public/15b2a26cf70099d0a3c60581a444d58f.txt containing exactly
  *      the 32-char key, no trailing newline.
  *   2. Set INDEXNOW_ENABLED=true in the Netlify UI (not committed to the repo).
  */
-const INDEXNOW_KEY = 'e3ccefa46e90635781bcc5fff037809c'
+const INDEXNOW_KEY = '15b2a26cf70099d0a3c60581a444d58f'
 const MAX_URLS_PER_RUN = 50
 const MIN_RESUBMIT_DAYS = 30
 const DAY_MS = 24 * 60 * 60 * 1000
@@ -84,6 +84,36 @@ module.exports = {
   INDEXNOW_KEY,
   MAX_URLS_PER_RUN,
   MIN_RESUBMIT_DAYS,
+  DAY_MS,
   selectUrls,
   applySubmission,
+  hashForRoute,
+}
+
+// Content hash for a route. Prefer the built HTML (true rendered content),
+// fall back to the page source file. Requires deterministic builds — see
+// generateBuildId in next.config.mjs and docs/INDEXNOW.md.
+function hashForRoute(pathname) {
+  const { readFileSync, existsSync } = require('fs')
+  const { createHash } = require('crypto')
+  const { join } = require('path')
+  const route = pathname.replace(/^\//, '')
+  const htmlCandidates = [
+    join('.next', 'server', 'app', `${route}.html`),
+    join('.next', 'server', 'app', route, 'page.html'),
+    join('.next', 'server', 'app', `${route}index.html`),
+    join('.next', 'server', 'app', 'index.html'), // homepage
+  ]
+  const srcCandidates = [
+    join('app', route, 'page.tsx'),
+    join('app', route, 'page.jsx'),
+    join('app', 'page.tsx'), // homepage
+  ]
+  for (const file of [...htmlCandidates, ...srcCandidates]) {
+    if (existsSync(file)) {
+      const content = readFileSync(file)
+      return createHash('sha1').update(content).digest('hex')
+    }
+  }
+  return null // unknown — treat as unchanged rather than guessing
 }

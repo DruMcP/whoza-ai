@@ -156,12 +156,12 @@ export default function ForPlumbersPage() {
                   Built for UK Plumbers
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
-                  AI Receptionist for{" "}
-                  <span className="text-[#6ee7b7]">Plumbers UK</span>:{" "}
-                  From £59/mo, Never Miss Jobs
+                  Call Answering Service for{" "}
+                  <span className="text-[#6ee7b7]">Plumbers UK</span>{" "}
+                  <span className="block mt-2 text-2xl sm:text-3xl lg:text-4xl">From £59/mo, Never Miss Jobs</span>
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
-                  UK plumbers miss calls worth £2,600+/year on average (conservative estimate). Whoza.ai is an AI receptionist for plumbers: answers 24/7, qualifies boiler repairs and emergency leaks, and sends job details to your WhatsApp in 3 seconds.
+                  UK plumbers miss calls worth £2,600+/year on average (conservative estimate). Whoza.ai is an AI receptionist for plumbers, a 24/7 call answering service: answers around the clock, qualifies boiler repairs and emergency leaks, and sends job details to your WhatsApp in 3 seconds.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link

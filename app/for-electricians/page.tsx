@@ -157,9 +157,9 @@ export default function ForElectriciansPage() {
                   Built for UK Electricians
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
-                  AI for Electricians UK:{" "}
-                  <span className="text-[#6ee7b7]">Catch Every Rewire</span>{" "}
-                  & Emergency Call
+                  Call Answering Service for{" "}
+                  <span className="text-[#6ee7b7]">Electricians</span>{" "}
+                  <span className="block mt-2 text-2xl sm:text-3xl lg:text-4xl">Catch Every Rewire & Emergency Call</span>
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   UK electricians lose £15,000+/year to missed calls. Whoza.ai is an AI call answering service built for sparkies: answers 24/7, qualifies EICRs, rewires, and emergency faults, and sends full details to your WhatsApp in 3 seconds.

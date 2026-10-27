@@ -7,21 +7,21 @@ import { ArrowRight, Check, Bot, UserCheck } from "lucide-react"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "Virtual Receptionist Cost UK (2026): Real Prices vs AI £59",
-  description: "What a UK virtual receptionist really costs in 2026: published prices £45 to £230/mo plus per-call fees, vs AI call answering at £59/mo flat. Checked Aug 2026.",
+  title: "AI Receptionist vs Virtual Receptionist UK (2026)",
+  description: "AI receptionist vs virtual receptionist: software that answers every call 24/7 versus a remote human team. Compare UK costs, coverage and call handling.",
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "https://whoza.ai/ai-vs-virtual-receptionist",
     siteName: "Whoza.ai",
-    title: "Virtual Receptionist Cost UK (2026): Real Prices vs AI £59",
-    description: "UK virtual receptionist prices, checked August 2026: £45 to £230/mo plus £2.99-per-call overage, versus flat-rate AI call answering at £59/mo for trades.",
+    title: "AI Receptionist vs Virtual Receptionist UK (2026)",
+    description: "AI receptionist vs virtual receptionist: software that answers every call 24/7 versus a remote human team. Compare UK costs, coverage and call handling.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "AI vs virtual receptionist comparison" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Virtual Receptionist Cost UK (2026): Real Prices vs AI £59",
-    description: "UK virtual receptionist prices, checked August 2026: £45 to £230/mo plus £2.99-per-call overage, versus flat-rate AI call answering at £59/mo for trades.",
+    title: "AI Receptionist vs Virtual Receptionist UK (2026)",
+    description: "AI receptionist vs virtual receptionist: software that answers every call 24/7 versus a remote human team. Compare UK costs, coverage and call handling.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {

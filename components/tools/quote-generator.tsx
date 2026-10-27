@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { FileText, Plus, Trash2, Download, ArrowRight } from "lucide-react"
 import Script from "next/script"
@@ -18,7 +18,14 @@ export function QuoteGenerator() {
   const [email, setEmail] = useState("")
   const [customerName, setCustomerName] = useState("")
   const [customerAddress, setCustomerAddress] = useState("")
-  const [quoteRef, setQuoteRef] = useState(`WH-${String(Math.floor(Math.random() * 900) + 100).padStart(3, "0")}`)
+  // Deterministic prerender: the random default ref is assigned after mount.
+  // A Math.random() in the useState initializer would bake a different value
+  // into the prerendered HTML on every build, defeating the IndexNow
+  // content-hash gate (see docs/INDEXNOW.md).
+  const [quoteRef, setQuoteRef] = useState("")
+  useEffect(() => {
+    setQuoteRef(`WH-${String(Math.floor(Math.random() * 900) + 100).padStart(3, "0")}`)
+  }, [])
   const [validDays, setValidDays] = useState(14)
   const [paymentTerms, setPaymentTerms] = useState("On completion")
   const [notes, setNotes] = useState("")

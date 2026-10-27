@@ -126,12 +126,12 @@ export default function ForGasEngineersPage() {
                   Built for Gas Safe Engineers
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
-                  Never Miss a{" "}
-                  <span className="text-[#6ee7b7]">Gas Safety</span>{" "}
-                  Call Again
+                  Call Answering Service for{" "}
+                  <span className="text-[#6ee7b7]">Gas Engineers</span>{" "}
+                  <span className="block mt-2 text-2xl sm:text-3xl lg:text-4xl">Never Miss a Gas Safety Call Again</span>
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
-                  Boiler breakdowns in winter. CP12 certificate renewals. Gas leak emergencies. Carbon monoxide alarms. When customers call about gas, it's urgent. Katie answers 24/7, captures every enquiry, and delivers it to your WhatsApp in 3 seconds.
+                  Boiler breakdowns in winter. CP12 certificate renewals. Gas leak emergencies. Carbon monoxide alarms. When customers call about gas, it's urgent. Katie, your AI receptionist, runs the call answering service for gas engineers: answers 24/7, captures every enquiry, and delivers it to your WhatsApp in 3 seconds.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
