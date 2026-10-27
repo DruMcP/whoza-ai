@@ -388,7 +388,7 @@ export default function FAQPage() {
           </div>
 
           {/* Still Have Questions CTA */}
-          <div className="mt-16 text-center bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 border border-emerald-500/20 rounded-2xl p-8 lg:p-12 v2-island">
+          <div className="mt-16 text-center bg-[var(--v2-navy)] text-white border border-white/10 rounded-2xl p-8 lg:p-12 v2-island">
             <h2 className="text-2xl font-bold mb-4">Still have questions?</h2>
             <p className="text-white/60 mb-6 max-w-lg mx-auto">
               Every trade business is different. If you want to talk through whether AI call handling makes sense for your specific situation, just ask.

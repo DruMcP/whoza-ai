@@ -72,7 +72,7 @@ export default function PressPage() {
               <Star className="w-5 h-5" />
               From the Founder
             </h2>
-            <div className="bg-gradient-to-br from-emerald-500/5 to-blue-500/5 border border-emerald-500/10 rounded-xl p-6 md:p-10 v2-island">
+            <div className="bg-[var(--v2-navy)] text-white border border-white/10 rounded-2xl p-6 md:p-10 v2-island">
               <blockquote className="text-2xl md:text-3xl font-medium leading-relaxed text-white/90 mb-8">
                 "We built whoza.ai because the best tradesperson in the world still loses jobs when they're up a ladder and their phone rings."
               </blockquote>

@@ -983,7 +983,7 @@ export default function PricingGuidePage() {
               </div>
             </div>
 
-              <p className="text-[var(--v2-body)] leading-relaxed mb-6">
+              <p className="text-[var(--v2-body)] leading-relaxed mt-8 mb-6">
                 ROI depends on how many calls you miss and what a job is worth. Two scenarios (one conservative,
                 one realistic) using figures UK trades report: 33% of incoming calls go unanswered, 69% of voicemail
                 callers hang up, and 35% is a typical conversion rate on qualified enquiries.
@@ -1109,7 +1109,7 @@ export default function PricingGuidePage() {
 
           {/* Section 7: Trade-Specific Examples */}
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
-            <div className="bg-gradient-to-br from-emerald-500/10 to-emerald-500/5 border border-emerald-500/20 rounded-xl p-8 v2-island">
+            <div className="bg-[var(--v2-navy)] text-white border border-white/10 rounded-2xl p-8 v2-island">
               <p className="text-2xl font-bold text-white mb-4">Get 7 Days Free, No Credit Card Required</p>
               <p className="text-white/60 mb-6 max-w-xl mx-auto">
                 See exactly how many calls you are missing and what they are worth. Whoza.ai's 7-day trial 

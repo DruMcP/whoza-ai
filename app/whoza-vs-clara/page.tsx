@@ -131,7 +131,7 @@ export default function VsClaraPage() {
 
           {/* Quick Verdict */}
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div className="bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 border border-emerald-500/20 rounded-2xl p-8 v2-island">
+            <div className="bg-[var(--v2-navy)] text-white border border-white/10 rounded-2xl p-8 v2-island">
               <h2 className="text-2xl font-bold mb-4">Which service should you choose: whoza.ai or Clara AI?</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
