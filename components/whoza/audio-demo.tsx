@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Play, Pause, Volume2, Sparkles, MessageCircle, ChevronRight } from "lucide-react"
+import { Play, Pause, Volume2, MessageCircle, ChevronRight, MapPin } from "lucide-react"
 
 function trackGA4(event: string, params?: Record<string, unknown>) {
   if (typeof window !== "undefined" && "gtag" in window) {
@@ -22,7 +22,7 @@ function WaveformBars({ isPlaying }: { isPlaying: boolean }) {
         return (
           <motion.div
             key={i}
-            className="w-[3px] rounded-full bg-gradient-to-t from-[var(--katie-blue)] to-cyan-300"
+            className="w-[3px] rounded-full bg-[#6ee7b7]"
             animate={
               isPlaying
                 ? {
@@ -58,7 +58,7 @@ function PulseRings({ isPlaying }: { isPlaying: boolean }) {
       {[0, 1, 2].map((i) => (
         <motion.div
           key={i}
-          className="absolute rounded-full border-2 border-[var(--katie-blue)]/30"
+          className="absolute rounded-full border-2 border-[#6ee7b7]/30"
           initial={{ width: 64, height: 64, opacity: 0.6 }}
           animate={{
             width: [64, 120, 160],
@@ -77,7 +77,19 @@ function PulseRings({ isPlaying }: { isPlaying: boolean }) {
   )
 }
 
-export function AudioDemo() {
+// City pages, linked from the homepage demo. Leeds and Bristol have no other
+// in-body link, so without this they are orphans (GSC, 30 Aug 2026).
+const CITIES = [
+  { name: "Glasgow", href: "/glasgow" },
+  { name: "Edinburgh", href: "/edinburgh" },
+  { name: "Leeds", href: "/leeds" },
+  { name: "Manchester", href: "/manchester" },
+  { name: "Birmingham", href: "/birmingham" },
+  { name: "London", href: "/london" },
+  { name: "Bristol", href: "/bristol" },
+]
+
+export function AudioDemo({ showCities = false }: { showCities?: boolean }) {
   const [isPlaying, setIsPlaying] = useState(false)
   const [progress, setProgress] = useState(0)
   const [currentTime, setCurrentTime] = useState(0)
@@ -211,13 +223,9 @@ export function AudioDemo() {
     <section
       ref={sectionRef}
       id="katie-demo-audio"
-      className="section-padding-lg relative overflow-hidden bg-[#0f172a] text-white"
-      aria-label="Katie audio demo"
+      className="section-padding-lg relative overflow-hidden bg-[var(--v2-navy)] text-white"
       aria-label="Katie demo audio player"
     >
-      {/* Background ambient glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[var(--katie-blue)]/5 rounded-full blur-[120px] pointer-events-none" />
-      
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <motion.div
@@ -226,18 +234,15 @@ export function AudioDemo() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--katie-blue)]/10 border border-[var(--katie-blue)]/20 text-[var(--katie-blue)] text-sm font-medium mb-6">
-            <Sparkles className="w-4 h-4" />
-            AI Voice Demo
-          </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight">
+          <span className="v2-eyebrow v2-eyebrow-light">AI Voice Demo</span>
+          <h2 className="v2-h2 text-white mb-4">
             Hear Katie answer a{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--katie-blue)] to-cyan-300">
+            <span className="v2-accent-light">
               real call
             </span>
           </h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-            Listen to Katie qualify a leaking tap enquiry and send it straight to WhatsApp — in 64 seconds.
+          <p className="v2-lead text-white/70 max-w-2xl mx-auto">
+            Listen to Katie qualify a leaking tap enquiry and send it straight to WhatsApp, in 64 seconds.
           </p>
         </motion.div>
 
@@ -280,10 +285,10 @@ export function AudioDemo() {
                   className={`
                     relative z-10 w-20 h-20 rounded-full flex items-center justify-center
                     transition-all duration-300 ease-out
-                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--katie-blue)] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f172a]
+                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6ee7b7] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f172a]
                     ${isLoaded
                       ? isPlaying
-                        ? "bg-gradient-to-br from-[var(--katie-blue)] to-cyan-400 text-white shadow-lg shadow-[var(--katie-blue)]/30 hover:scale-105 active:scale-95 cursor-pointer"
+                        ? "bg-[var(--v2-green)] hover:bg-[var(--v2-green-hover)] text-white shadow-lg shadow-black/30 hover:scale-105 active:scale-95 cursor-pointer"
                         : "bg-white text-[var(--navy-900)] hover:scale-105 active:scale-95 cursor-pointer shadow-xl"
                       : "bg-white/10 text-white/30 cursor-not-allowed"
                     }
@@ -323,7 +328,7 @@ export function AudioDemo() {
 
                 {/* Progress Bar */}
                 <div
-                  className="relative h-2 bg-white/10 rounded-full cursor-pointer group mt-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--katie-blue)] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f172a]"
+                  className="relative h-2 bg-white/10 rounded-full cursor-pointer group mt-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6ee7b7] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f172a]"
                   onClick={handleSeek}
                   role="slider"
                   aria-label="Audio progress"
@@ -350,7 +355,7 @@ export function AudioDemo() {
                   }}
                 >
                   <div
-                    className="absolute top-0 left-0 h-full bg-gradient-to-r from-[var(--katie-blue)] to-cyan-300 rounded-full transition-all"
+                    className="absolute top-0 left-0 h-full bg-[#6ee7b7] rounded-full transition-all"
                     style={{
                       width: `${progress}%`,
                       transitionDuration: "100ms",
@@ -359,7 +364,7 @@ export function AudioDemo() {
                   />
                   {/* Glow thumb */}
                   <div
-                    className="absolute top-1/2 -translate-y-1/2 w-5 h-5 bg-white rounded-full shadow-lg shadow-[var(--katie-blue)]/50 opacity-0 group-hover:opacity-100 transition-opacity"
+                    className="absolute top-1/2 -translate-y-1/2 w-5 h-5 bg-white rounded-full shadow-lg shadow-black/40 opacity-0 group-hover:opacity-100 transition-opacity"
                     style={{ left: `calc(${progress}% - 10px)` }}
                   />
                 </div>
@@ -369,7 +374,7 @@ export function AudioDemo() {
                   <span className="text-sm text-slate-400 font-medium tabular-nums">
                     {formatTime(currentTime)} / {formatTime(duration)}
                   </span>
-                  <div className="flex items-center gap-2 text-sm text-slate-500">
+                  <div className="flex items-center gap-2 text-sm text-white/60">
                     <Volume2 className="w-4 h-4" />
                     <span>Demo call · 2.8 MB</span>
                   </div>
@@ -396,7 +401,7 @@ export function AudioDemo() {
                   {isPlaying ? "Katie is speaking..." : hasStarted ? "Demo paused" : "Press play to start"}
                 </span>
               </div>
-              <span className="text-sm text-slate-500">
+              <span className="text-sm text-white/60">
                 64-second demo call
               </span>
             </div>
@@ -411,17 +416,38 @@ export function AudioDemo() {
           className="mt-10 text-center"
         >
           <p className="text-slate-400 text-sm mb-4">
-            That was a 64-second call. Katie captured the issue, location, and availability — then sent it to WhatsApp.
+            That was a 64-second call. Katie captured the issue, location, and availability, then sent it to WhatsApp.
           </p>
           <a
             href="#final-cta"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[var(--katie-blue)] to-cyan-500 text-white font-semibold hover:shadow-lg hover:shadow-[var(--katie-blue)]/20 transition-all hover:scale-105"
+            className="v2-btn"
           >
             <MessageCircle className="w-4 h-4" />
             Get Katie for your business
             <ChevronRight className="w-4 h-4" />
           </a>
         </motion.div>
+
+        {showCities && (
+          <div className="mt-14 border-t border-white/10 pt-10 text-center">
+            <p className="text-[15px] text-white/70">
+              12 UK and Irish accents, so callers hear a local voice. AI call answering for trades in:
+            </p>
+            <ul className="mt-5 flex flex-wrap justify-center gap-2">
+              {CITIES.map((city) => (
+                <li key={city.href}>
+                  <a
+                    href={city.href}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3.5 py-2 text-[14px] font-medium text-white/90 no-underline transition-colors hover:border-white/40 hover:bg-white/10 hover:text-white"
+                  >
+                    <MapPin className="h-3.5 w-3.5 text-[#6ee7b7]" aria-hidden="true" />
+                    {city.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </section>
   )

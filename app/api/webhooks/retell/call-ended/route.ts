@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { readVerifiedRetellBody } from "@/lib/retell-webhook";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || "";
@@ -16,8 +17,11 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);
 export async function POST(req: NextRequest): Promise<NextResponse> {
   const requestId = crypto.randomUUID();
 
+  const verified = await readVerifiedRetellBody<Record<string, any>>(req);
+  if ("reject" in verified) return verified.reject;
+
   try {
-    const body = await req.json();
+    const body = verified.body;
 
     const {
       call_id: retellCallId,

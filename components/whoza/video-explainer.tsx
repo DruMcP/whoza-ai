@@ -133,8 +133,8 @@ export function VideoExplainer() {
                         </div>
 
                         <div className="pt-2 border-t border-white/20 flex items-center justify-between">
-                          <span className="text-lg font-bold">£250 – £450</span>
-                          <span className="text-xs text-white/60">estimated</span>
+                          <span className="text-lg font-bold">£250 to £450</span>
+                          <span className="text-xs text-white/85">estimated</span>
                         </div>
                       </div>
 

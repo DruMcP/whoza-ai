@@ -10,8 +10,8 @@ interface ReviewsEngineProps {
 export function ReviewsEngine({ trade }: ReviewsEngineProps) {
 
   const reviewContext = trade === "electrician" 
-    ? "Your electrical work is complete — we'd love your feedback!"
-    : "Your boiler repair is complete — we'd love your feedback!"
+    ? "Your electrical work is complete. We'd love your feedback!"
+    : "Your boiler repair is complete. We'd love your feedback!"
 
   return (
     <section className="py-20 lg:py-32 bg-[var(--rex-green)]/5" aria-label="Review engine">
@@ -23,14 +23,11 @@ export function ReviewsEngine({ trade }: ReviewsEngineProps) {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--rex-green)]/15 text-[var(--rex-green)] text-base font-bold mb-6 border border-[var(--rex-green)]/25 shadow-sm">
-              <Star className="w-5 h-5 fill-current" />
-              Claire — Every Job Becomes Your Next Review
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance reveal">
-              Every Completed Job Becomes Your Next Review — And Your Next Customer
+            <span className="v2-eyebrow">Claire: Every Job Becomes Your Next Review</span>
+            <h2 className="v2-h2 text-balance reveal">
+              Every Completed Job Becomes Your Next Review, And Your Next Customer
             </h2>
-            <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
+            <p className="v2-lead mt-5 text-pretty">
               Claire automatically turns completed work into 5-star Google reviews, helping more customers choose you.
               <span className="block mt-2 font-semibold text-[var(--navy-900)]">Post-job review capture that builds trust and brings future work.</span>
             </p>
@@ -38,8 +35,8 @@ export function ReviewsEngine({ trade }: ReviewsEngineProps) {
             <div className="mt-10 space-y-4 reveal-stagger">
               {[
                 { icon: MessageSquare, text: "Automatic WhatsApp follow-up after every completed job", color: "text-[var(--rex-green)]" },
-                { icon: Star, text: "Smart timing — reaches out when customer satisfaction is highest", color: "text-[var(--claire-amber)]" },
-                { icon: ThumbsUp, text: "Handle issues privately before they become public feedback", color: "text-[var(--katie-blue)]" },
+                { icon: Star, text: "Smart timing: reaches out when customer satisfaction is highest", color: "text-[var(--claire-amber)]" },
+                { icon: ThumbsUp, text: "Handle issues privately before they become public feedback", color: "text-[var(--v2-green)]" },
                 { icon: TrendingUp, text: "Track how reviews translate into more calls", color: "text-[var(--mark-grey)]" },
               ].map((feature, index) => (
                 <motion.div
@@ -63,7 +60,7 @@ export function ReviewsEngine({ trade }: ReviewsEngineProps) {
                 <CheckCircle2 className="w-5 h-5 text-[var(--rex-green)]" />
                 <span className="font-semibold text-[var(--navy-900)]">Included in Growth plan and above</span>
               </div>
-              <p className="text-sm text-[var(--slate-500)]">Automatic post-job conversion after every completed job.</p>
+              <p className="text-sm text-[var(--v2-body)]">Automatic post-job conversion after every completed job.</p>
             </div>
           </motion.div>
 

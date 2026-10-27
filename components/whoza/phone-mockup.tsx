@@ -19,7 +19,7 @@ export function PhoneMockup({ city, trade }: { city?: string; trade?: string }) 
       >
         <Image
           src="/images/hero-phone-3d.webp"
-          alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+          alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
           width={735}
           height={1103}
           className="w-full max-w-[320px] sm:max-w-[380px] h-auto drop-shadow-2xl"

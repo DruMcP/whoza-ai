@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "AI Call Answering for Electricians in Manchester | whoza.ai",
     description: "Stop losing electrician jobs to missed calls in Manchester. Katie answers 24/7, captures emergency and EICR enquiries via WhatsApp. Plans from £59/month.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Electricians in Manchester" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Electricians in Manchester" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     "question": "Does it work with my existing Manchester business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing Manchester business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "answer": "Yes. You simply set up call forwarding from your existing Manchester business number to your whoza.ai number. Your customers dial the same number they've always used. Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
     "question": "How quickly can I get set up as an electrician in Manchester?",
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     "question": "What makes whoza.ai different for electricians in Manchester?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for electricians. She understands EICR enquiries, emergency faults, consumer unit upgrades & power outages — and with 8,500+ trade businesses competing in Manchester, capturing every call gives you a real competitive edge."
+    "answer": "Unlike generic call answering services, Katie is trained specifically for electricians. She understands EICR enquiries, emergency faults, consumer unit upgrades & power outages, and with 8,500+ trade businesses competing in Manchester, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -78,57 +78,53 @@ export default function ForElectricianManchesterPage() {
       <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
 
       {/* Schema JSON-LD */}
-            <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
+            <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--v2-paper)] text-[var(--v2-body)]">
       <CityTradeSchema trade="Electrician" tradePlural="Electricians" city="Manchester" region="Greater Manchester" pageUrl="https://whoza.ai/for-electricians-manchester" />
         {/* ─── HERO ─── */}
-        <section className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[120px]" />
-            <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[100px]" />
-          </div>
+        <section className="bg-[var(--v2-navy)] text-white relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <div className="inline-flex items-center gap-2 bg-amber-500/10 text-[#6ee7b7] px-4 py-2 rounded-full text-sm font-medium mb-6">
                   <Zap className="w-4 h-4" />
                   Electricians in Manchester
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   Never Miss an{" "}
-                  <span className="text-amber-400">Electrician</span>{" "}
+                  <span className="text-[#6ee7b7]">Electrician</span>{" "}
                   Job in Manchester Again
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Manchester has 8,500+ trade businesses competing for 540K households. 
                   With 3,400 missed calls every week across the city, 
-                  Katie ensures you capture every electrical enquiry — EICR enquiries, emergency faults, consumer unit upgrades & power outages.
+                  Katie ensures you capture every electrical enquiry: EICR enquiries, emergency faults, consumer unit upgrades & power outages.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
                     href="/"
-                    className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-4 text-lg rounded-lg transition-all hover:scale-[1.02] shadow-2xl shadow-emerald-500/40"
+                    className="v2-btn min-h-[54px] px-7 text-base"
                   >
                     Start Your Free 7-Day Trial
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                   <Link
                     href="/pricing"
-                    className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 text-lg rounded-lg transition-all border border-white/20"
+                    className="v2-btn-secondary min-h-[54px] px-7 text-base text-white border-white/25 hover:border-white"
                   >
                     See Pricing
                   </Link>
                 </div>
-                <div className="flex flex-wrap gap-4 text-sm text-white/50">
+                <div className="flex flex-wrap gap-4 text-sm text-white/65">
                   <span className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                     No credit card required
                   </span>
                   <span className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                     Setup in 30 minutes
                   </span>
                   <span className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                     Cancel anytime
                   </span>
                 </div>
@@ -136,7 +132,7 @@ export default function ForElectricianManchesterPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -149,9 +145,9 @@ export default function ForElectricianManchesterPage() {
         {/* ─── CITY HUB LINK ─── */}
         <section className="py-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-white/60">
+            <p className="text-[var(--v2-body)]">
               Also available across all trades in 
-              <a href="/manchester" className="text-emerald-400 hover:underline">
+              <a href="/manchester" className="text-[var(--v2-green)] hover:underline">
                 Manchester
               </a>
             </p>
@@ -162,13 +158,13 @@ export default function ForElectricianManchesterPage() {
         <div className="section-divider" />
 
         {/* ─── LOCAL STATS ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 Manchester Electricians Market
               </h2>
-              <p className="text-white/60 text-lg max-w-2xl mx-auto">
+              <p className="v2-lead max-w-2xl mx-auto">
                 The numbers that matter for electricians in Manchester.
               </p>
             </div>
@@ -182,10 +178,10 @@ export default function ForElectricianManchesterPage() {
               ].map((item, idx) => {
                 const Icon = item.icon
                 return (
-                  <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+                  <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 text-center">
                     <Icon className={`w-8 h-8 ${item.color} mx-auto mb-3`} />
-                    <div className="text-2xl font-bold text-white mb-1">{item.value}</div>
-                    <div className="text-sm text-white/50">{item.label}</div>
+                    <div className="text-2xl font-bold text-[var(--v2-ink)] mb-1">{item.value}</div>
+                    <div className="text-sm text-[var(--v2-muted)]">{item.label}</div>
                   </div>
                 )
               })}
@@ -196,50 +192,50 @@ export default function ForElectricianManchesterPage() {
         <div className="section-divider" />
 
         {/* ─── SCENARIO ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 The Real Cost of Missed Calls for Electricians in Manchester
               </h2>
-              <p className="text-white/60 text-lg max-w-2xl mx-auto">
+              <p className="v2-lead max-w-2xl mx-auto">
                 Rapid property development creates surge demand for trades. Weather emergencies cause unpredictable call spikes. Student housing market needs fast-turnaround maintenance. Old industrial buildings require specialist trade knowledge.
               </p>
             </div>
             <div className="space-y-8">
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <div className="flex items-start gap-4">
-                  <div className={`w-12 h-12 rounded-xl bg-amber-500/10 border-amber-500/20 border flex items-center justify-center flex-shrink-0`}>
-                    <AlertTriangle className={`w-6 h-6 text-amber-400`} />
+                  <div className={`w-12 h-12 rounded-xl bg-[var(--v2-mint)] border-[var(--v2-green)]/20 border flex items-center justify-center flex-shrink-0`}>
+                    <AlertTriangle className={`w-6 h-6 text-[var(--v2-green)]`} />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">While You're on the Job</h3>
-                    <p className="text-white/60 leading-relaxed">
+                    <p className="text-[var(--v2-body)] leading-relaxed">
                       You're on a commercial job doing a three-phase upgrade. Phone is on silent in the van. Missed 3 calls: one consumer unit upgrade (£850), one EV charger installation (£1,200), and one EICR for a landlord with 6 properties.
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-red-400" />
+                  <div className="w-12 h-12 rounded-2xl bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-6 h-6 text-[var(--v2-green)]" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">After Hours & Emergencies</h3>
-                    <p className="text-white/60 leading-relaxed">
+                    <p className="text-[var(--v2-body)] leading-relaxed">
                       Family sitting in the dark with no heating in winter. They call you first because you have great reviews. You don't answer. They call the next electrician on Google who picks up immediately.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="mt-8 bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-6 text-center">
-              <p className="text-emerald-200 font-medium text-lg">
+            <div className="mt-8 bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-6 text-center">
+              <p className="text-[var(--v2-green-ink)] font-medium text-lg">
                 The average Manchester electrician misses multiple calls per day = 
                 <strong> £43,680</strong> in lost revenue per year
               </p>
-              <p className="text-emerald-200/70 text-sm mt-1">
+              <p className="text-[var(--v2-body)] text-sm mt-1">
                 Based on £350 avg job value with 35% conversion rate
               </p>
             </div>
@@ -249,13 +245,13 @@ export default function ForElectricianManchesterPage() {
         <div className="section-divider" />
 
         {/* ─── HOW KATIE WORKS ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 How Katie Works for Electricians in Manchester
               </h2>
-              <p className="text-white/60 text-lg max-w-2xl mx-auto">
+              <p className="v2-lead max-w-2xl mx-auto">
                 Three simple steps from missed call to booked job. No apps to check. No dashboards to monitor.
               </p>
             </div>
@@ -265,7 +261,7 @@ export default function ForElectricianManchesterPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your Manchester number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your Manchester number. Katie picks up in under 2 rings with your branded greeting, 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",
@@ -283,17 +279,17 @@ export default function ForElectricianManchesterPage() {
                 const Icon = item.icon
                 return (
                   <div key={idx} className="relative">
-                    <div className="bg-white/5 border border-white/10 rounded-xl p-8 h-full">
-                      <div className="text-5xl font-bold text-white/10 mb-4">{item.step}</div>
-                      <div className={`w-12 h-12 rounded-xl bg-amber-500/10 border-amber-500/20 border flex items-center justify-center mb-4`}>
-                        <Icon className={`w-6 h-6 text-amber-400`} />
+                    <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-8 h-full">
+                      <div className="text-5xl font-bold text-slate-200 mb-4">{item.step}</div>
+                      <div className={`w-12 h-12 rounded-xl bg-[var(--v2-mint)] border-[var(--v2-green)]/20 border flex items-center justify-center mb-4`}>
+                        <Icon className={`w-6 h-6 text-[var(--v2-green)]`} />
                       </div>
                       <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                      <p className="text-white/60 leading-relaxed">{item.description}</p>
+                      <p className="text-[var(--v2-body)] leading-relaxed">{item.description}</p>
                     </div>
                     {idx < 2 && (
                       <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
-                        <ArrowRight className="w-8 h-8 text-white/20" />
+                        <ArrowRight className="w-8 h-8 text-slate-300" />
                       </div>
                     )}
                   </div>
@@ -304,19 +300,19 @@ export default function ForElectricianManchesterPage() {
         </section>
 
         {/* ─── WHY ELECTRICIANS IN MANCHESTER NEED AI CALL ANSWERING ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 Why Electricians in Manchester Need AI Call Answering
               </h2>
             </div>
-            <div className="space-y-6 text-white/70 leading-relaxed">
+            <div className="space-y-6 text-[var(--v2-body)] leading-relaxed">
               <p>
                 Manchester&apos;s electrical market is fuelled by a booming student population, commercial regeneration, and ageing housing stock. In Prestwich and Whitefield, family homes with 1960s wiring need regular EICR updates and consumer unit replacements. MediaCity&apos;s commercial hub generates calls for office fit-outs, data cabling, and three-phase installations, while the Northern Quarter&apos;s bars and restaurants need rapid-response electricians for emergency repairs that can&apos;t wait until morning. With 8,500+ trade businesses serving 540K households and 3,400 missed calls every week, Manchester&apos;s electricians face competition from every direction.
               </p>
               <p>
-                The student HMO market is a defining feature. Areas around Fallowfield and Withington are packed with student houses that require annual electrical checks under HMO licensing rules. Landlords with multiple student properties book electricians months in advance for these inspections, but emergency calls still spike during term time when overloaded circuits trip or old wiring fails. A missed call from a landlord with five student properties isn&apos;t just one £310 job — it&apos;s a lost annual contract worth thousands. Katie captures the property type and whether the call relates to HMO compliance, ensuring you never miss the kind of recurring work that builds a stable Manchester trade business.
+                The student HMO market is a defining feature. Areas around Fallowfield and Withington are packed with student houses that require annual electrical checks under HMO licensing rules. Landlords with multiple student properties book electricians months in advance for these inspections, but emergency calls still spike during term time when overloaded circuits trip or old wiring fails. A missed call from a landlord with five student properties isn&apos;t just one £310 job. It&apos;s a lost annual contract worth thousands. Katie captures the property type and whether the call relates to HMO compliance, ensuring you never miss the kind of recurring work that builds a stable Manchester trade business.
               </p>
             </div>
           </div>
@@ -326,14 +322,14 @@ export default function ForElectricianManchesterPage() {
 
         {/* ─── CITY LINKS ─── */}
         {/* ─── LOCAL CONTEXT ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 What Electricians in Manchester Face Daily
               </h2>
             </div>
-            <div className="space-y-6 text-white/70 leading-relaxed">
+            <div className="space-y-6 text-[var(--v2-body)] leading-relaxed">
               <p>
                 From MediaCity and the Northern Quarter to Didsbury and Salford, Manchester&apos;s electrical trade serves a city where industrial heritage meets modern regeneration. Ex-mill buildings in Ancoats converted to flats need complete rewiring and complex heating system integration. Red brick terraces across Chorlton and Levenshulme still run on original wiring that fails inspection after inspection. With 100,000+ students and a booming buy-to-let market, EICR demand never stops.
               </p>
@@ -341,7 +337,7 @@ export default function ForElectricianManchesterPage() {
                 Student HMOs across Fallowfield and Rusholme need annual EICRs and frequent emergency callouts for overloaded circuits. Commercial work in the city centre and MediaCity demands reliable trades who can work around office hours. New-build apartments in Salford Quays need EV charging infrastructure and smart home systems. Manchester&apos;s 867mm annual rainfall causes persistent damp that corrodes junction boxes and triggers RCD faults in older properties.
               </p>
               <p>
-                Match days create traffic chaos that makes emergency callouts a logistical nightmare. When a student landlord in Withington books an EICR for a three-bed HMO, or a commercial client in Spinningfields needs out-of-hours fault finding, Katie captures the property details, flags the deadline, and delivers a structured enquiry to your WhatsApp — no callback needed, no detail missed.
+                Match days create traffic chaos that makes emergency callouts a logistical nightmare. When a student landlord in Withington books an EICR for a three-bed HMO, or a commercial client in Spinningfields needs out-of-hours fault finding, Katie captures the property details, flags the deadline, and delivers a structured enquiry to your WhatsApp, no callback needed, no detail missed.
               </p>
             </div>
           </div>
@@ -350,13 +346,13 @@ export default function ForElectricianManchesterPage() {
         <div className="section-divider" />
 
 
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 More Electricians Locations
               </h2>
-              <p className="text-white/60">
+              <p className="text-[var(--v2-body)]">
                 Katie answers calls for electricians across the UK.
               </p>
             </div>
@@ -366,7 +362,7 @@ export default function ForElectricianManchesterPage() {
             <div className="mt-8 text-center">
               <Link
                 href="/for-electricians"
-                className={`inline-flex items-center text-amber-400 hover:text-amber-300 font-medium transition-colors`}
+                className={`inline-flex items-center text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] font-medium transition-colors`}
               >
                 View all electricians pages
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -378,21 +374,21 @@ export default function ForElectricianManchesterPage() {
         <div className="section-divider" />
 
         {/* ─── FAQ ─── */}
-        <section className="trade-faq py-16 lg:py-24">
+        <section className="trade-faq v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 Questions Electricians in Manchester Ask
               </h2>
-              <p className="text-white/60">
+              <p className="text-[var(--v2-body)]">
                 Everything you need to know about AI call answering for electricians in Manchester.
               </p>
             </div>
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6" itemScope itemType="https://schema.org/Question">
+                <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6" itemScope itemType="https://schema.org/Question">
                   <h3 className="text-lg font-semibold mb-3" itemProp="name">{faq.question}</h3>
-                  <p className="text-white/60 leading-relaxed" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                  <p className="text-[var(--v2-body)] leading-relaxed" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
                     <span itemProp="text">{faq.answer}</span>
                   </p>
                 </div>
@@ -404,10 +400,10 @@ export default function ForElectricianManchesterPage() {
         <div className="section-divider" />
 
         {/* ─── TRUST SIGNALS ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 Trusted by Electricians Across the UK
               </h2>
             </div>
@@ -420,10 +416,10 @@ export default function ForElectricianManchesterPage() {
               ].map((item, idx) => {
                 const Icon = item.icon
                 return (
-                  <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
-                    <Icon className={`w-8 h-8 text-amber-400 mx-auto mb-3`} />
-                    <p className="font-semibold text-white">{item.label}</p>
-                    <p className="text-sm text-white/50">{item.sub}</p>
+                  <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 text-center">
+                    <Icon className={`w-8 h-8 text-[var(--v2-green)] mx-auto mb-3`} />
+                    <p className="font-semibold text-[var(--v2-ink)]">{item.label}</p>
+                    <p className="text-sm text-[var(--v2-muted)]">{item.sub}</p>
                   </div>
                 )
               })}
@@ -434,11 +430,7 @@ export default function ForElectricianManchesterPage() {
         <div className="section-divider" />
 
         {/* ─── FINAL CTA ─── */}
-        <section className="py-16 lg:py-24 relative overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[120px]" />
-            <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[100px]" />
-          </div>
+        <section className="bg-[var(--v2-navy)] text-white py-16 lg:py-24 relative overflow-hidden">
           <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
               Stop Losing Electrician Jobs in Manchester Today
@@ -448,15 +440,15 @@ export default function ForElectricianManchesterPage() {
             </p>
             <Link
               href="/"
-              className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-4 text-lg rounded-lg transition-all hover:scale-[1.02] shadow-2xl shadow-emerald-500/40"
+              className="v2-btn min-h-[54px] px-7 text-base"
             >
               Start Your Free 7-Day Trial
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white/50">
+            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white/65">
               {["No credit card required", "Setup in 30 minutes", "Cancel anytime", "24/7 call answering"].map(point => (
                 <span key={point} className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                   {point}
                 </span>
               ))}

@@ -171,41 +171,51 @@ const nextConfig = {
       },
 
       // === CRITICAL: Redirect missing UK city pages to homepage ===
-      {
+      // Draft city page in lib/locations.ts: the redirect stays until it is published,
+      // except on a draft-preview build (WHOZA_SHOW_DRAFT_CITIES=1).
+      ...(process.env.WHOZA_SHOW_DRAFT_CITIES === '1' ? [] : [{
         source: '/sheffield',
         destination: '/',
         permanent: true,
-      },
-      {
+      }]),
+      // Draft city page in lib/locations.ts: the redirect stays until it is published,
+      // except on a draft-preview build (WHOZA_SHOW_DRAFT_CITIES=1).
+      ...(process.env.WHOZA_SHOW_DRAFT_CITIES === '1' ? [] : [{
         source: '/newcastle',
         destination: '/',
         permanent: true,
-      },
-      {
+      }]),
+      // Draft city page in lib/locations.ts: the redirect stays until it is published,
+      // except on a draft-preview build (WHOZA_SHOW_DRAFT_CITIES=1).
+      ...(process.env.WHOZA_SHOW_DRAFT_CITIES === '1' ? [] : [{
         source: '/cardiff',
         destination: '/',
         permanent: true,
-      },
+      }]),
       {
         source: '/nottingham',
         destination: '/',
         permanent: true,
       },
-      {
+      // Draft city page in lib/locations.ts: the redirect stays until it is published,
+      // except on a draft-preview build (WHOZA_SHOW_DRAFT_CITIES=1).
+      ...(process.env.WHOZA_SHOW_DRAFT_CITIES === '1' ? [] : [{
         source: '/coventry',
         destination: '/',
         permanent: true,
-      },
+      }]),
       {
         source: '/bradford',
         destination: '/',
         permanent: true,
       },
-      {
+      // Draft city page in lib/locations.ts: the redirect stays until it is published,
+      // except on a draft-preview build (WHOZA_SHOW_DRAFT_CITIES=1).
+      ...(process.env.WHOZA_SHOW_DRAFT_CITIES === '1' ? [] : [{
         source: '/belfast',
         destination: '/',
         permanent: true,
-      },
+      }]),
       {
         source: '/derby',
         destination: '/',

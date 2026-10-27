@@ -28,7 +28,7 @@ export function TradeProblems({ tradeData }: TradeProblemsProps) {
             transition={{ delay: 0.1 }}
             className="mt-4 text-lg text-[var(--slate-500)] max-w-2xl mx-auto"
           >
-            You&apos;re great at your trade. But every missed call is a missed job — and a competitor&apos;s gain.
+            You&apos;re great at your trade. But every missed call is a missed job, and a competitor&apos;s gain.
           </motion.p>
         </div>
 

@@ -5,7 +5,7 @@ import { VoicemailScriptGenerator } from "@/components/tools/voicemail-scripts"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Free Voicemail Script Generator for UK Trades | whoza.ai",
-  description: "Generate professional, friendly, or urgent voicemail scripts tailored to your UK trade business. Free tool — no signup required.",
+  description: "Generate professional, friendly, or urgent voicemail scripts tailored to your UK trade business. Free tool, no signup required.",
   openGraph: {
     title: "Free Voicemail Script Generator for UK Trades | whoza.ai",
     description: "Generate professional voicemail scripts for your trade business. Friendly, formal, or urgent styles.",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Free Voicemail Script Generator UK Trades | whoza.ai",
-    description: "Generate tailored voicemail scripts for your trade business. Free — no signup.",
+    description: "Generate tailored voicemail scripts for your trade business. Free, no signup.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {

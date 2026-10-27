@@ -39,13 +39,13 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/for-locksmiths",
     siteName: "Whoza.ai",
-    title: "AI Call Handling for Locksmiths UK — 24/7 Lockout Help",
+    title: "AI Call Handling for Locksmiths UK | 24/7 Lockout Help",
     description: "Katie answers 24/7 for locksmiths. Captures emergency lockouts, key replacements and security upgrades. WhatsApp alerts in 3 seconds. Start your free trial.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai for Locksmiths" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Call Handling for Locksmiths UK — 24/7 Lockout Help",
+    title: "AI Call Handling for Locksmiths UK | 24/7 Lockout Help",
     description: "Katie answers 24/7 for locksmiths. Captures emergency lockouts, key replacements and security upgrades. WhatsApp alerts in 3 seconds. Start your free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
@@ -58,15 +58,15 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "How much does AI call handling cost for locksmiths?",
-    answer: "Whoza.ai starts at £59/month for the Starter plan. One captured emergency lockout averages £80-£150 callout fee. A full security upgrade can be £500-£2,000. At £59/month, one emergency lockout callout pays for the entire year. Overage minutes are billed at £0.40/minute. No hidden fees or contracts."
+    answer: "Whoza.ai starts at £59/month for the Starter plan. One captured emergency lockout averages £80 to £150 callout fee. A full security upgrade can be £500 to £2,000. At £59/month, one emergency lockout callout pays for the entire year. Overage minutes are billed at £0.40/minute. No hidden fees or contracts."
   },
   {
     question: "Can Katie handle emergency lockout calls at 3am?",
-    answer: "Yes. Katie answers 24/7, 365 days a year. She identifies lockout emergencies by keywords like 'locked out', 'lost keys', 'broken key', 'snapped key', 'can't get in', 'urgent', and 'emergency' — and marks the enquiry as emergency priority. You get an immediate WhatsApp with 'LOCKOUT EMERGENCY — URGENT' in the header, even at 3am on Christmas Day."
+    answer: "Yes. Katie answers 24/7, 365 days a year. She identifies lockout emergencies by keywords like 'locked out', 'lost keys', 'broken key', 'snapped key', 'can't get in', 'urgent', and 'emergency', and marks the enquiry as emergency priority. You get an immediate WhatsApp with 'LOCKOUT EMERGENCY: URGENT' in the header, even at 3am on Christmas Day."
   },
   {
     question: "What information does Katie collect from lockout customers?",
-    answer: "Katie collects: full name, phone number, postcode, property type (house/flat/commercial), lock type (if known — Yale, Chubb, euro cylinder, mortice, digital), how they got locked out (lost keys, broken key, snapped in lock, locked inside, lock failure), whether it's a tenant or landlord situation, number of locks affected, and how they found you."
+    answer: "Katie collects: full name, phone number, postcode, property type (house/flat/commercial), lock type (if known: Yale, Chubb, euro cylinder, mortice, digital), how they got locked out (lost keys, broken key, snapped in lock, locked inside, lock failure), whether it's a tenant or landlord situation, number of locks affected, and how they found you."
   },
   {
     question: "Can Katie distinguish between a residential lockout and a commercial security job?",
@@ -82,7 +82,7 @@ const faqs = [
   },
   {
     question: "Can Katie handle calls about security upgrades and CCTV?",
-    answer: "Yes. Katie identifies security upgrade calls by keywords like 'security survey', 'CCTV', 'alarm', 'smart lock', 'digital lock', 'keyless entry', and 'high security'. She captures: property type, number of entry points, current security level, budget range, and preferred survey date. These high-value enquiries (£500-£3,000+) get flagged as 'security upgrade' for priority follow-up."
+    answer: "Yes. Katie identifies security upgrade calls by keywords like 'security survey', 'CCTV', 'alarm', 'smart lock', 'digital lock', 'keyless entry', and 'high security'. She captures: property type, number of entry points, current security level, budget range, and preferred survey date. These high-value enquiries (£500 to £3,000+) get flagged as 'security upgrade' for priority follow-up."
   },
   {
     question: "Will customers trust an AI with their lockout emergency?",
@@ -93,7 +93,7 @@ const faqs = [
 const painPoints = [
   {
     icon: Lock,
-    title: "Lockouts are urgent — customers call 3-4 locksmiths at once",
+    title: "Lockouts are urgent: customers call 3 to 4 locksmiths at once",
     description: "A customer locked out at 11pm is panicking. They Google 'emergency locksmith near me' and call every number on page one. The first to answer gets the £120 callout. If you're on another job or asleep, you miss it. Katie answers instantly, captures the details, and reassures the customer you're on your way."
   },
   {
@@ -104,19 +104,19 @@ const painPoints = [
   {
     icon: DoorOpen,
     title: "Late-night commercial lockouts are premium jobs",
-    description: "A pub landlord calls at 1am — front door lock failed, can't secure the premises. This is a £200+ emergency callout plus a new lock. If you're asleep, the call goes to voicemail. The landlord calls the next number. Katie captures these high-value late-night commercial jobs while you sleep."
+    description: "A pub landlord calls at 1am: front door lock failed, can't secure the premises. This is a £200+ emergency callout plus a new lock. If you're asleep, the call goes to voicemail. The landlord calls the next number. Katie captures these high-value late-night commercial jobs while you sleep."
   },
   {
     icon: AlertTriangle,
     title: "Security upgrade enquiries need detailed qualification",
-    description: "A customer calls for a 'security survey'. Voicemail says nothing. Katie captures: property type, number of doors/windows, current locks, whether they want CCTV/alarms/smart locks, budget range, and timeline. You arrive at the survey knowing exactly what to quote — £800 vs £3,500."
+    description: "A customer calls for a 'security survey'. Voicemail says nothing. Katie captures: property type, number of doors/windows, current locks, whether they want CCTV/alarms/smart locks, budget range, and timeline. You arrive at the survey knowing exactly what to quote: £800 vs £3,500."
   }
 ]
 
 const howItWorks = [
   {
     step: 1,
-    title: "Lockout call comes in — any time",
+    title: "Lockout call comes in, any time",
     description: "Katie answers with your locksmith company's greeting. She identifies if it's an emergency lockout, key replacement, lock repair, or security upgrade enquiry."
   },
   {
@@ -127,7 +127,7 @@ const howItWorks = [
   {
     step: 3,
     title: "WhatsApp with full context",
-    description: "Alert shows: 'Lockout — Yale euro cylinder — snapped key — 2nd floor flat — BS3 1AB — emergency — tenant locked out — landlord contact available' with customer number and ETA request."
+    description: "Alert shows: 'Lockout, Yale euro cylinder, snapped key, 2nd floor flat, BS3 1AB, emergency, tenant locked out, landlord contact available' with customer number and ETA request."
   },
   {
     step: 4,
@@ -182,8 +182,8 @@ export default function ForLocksmithsPage() {
   return (
     <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />      <VideoSchema
-        name="Whoza.ai Demo — AI Call Handling for Locksmiths"
-        description="Watch how Katie captures a missed locksmith enquiry in under 60 seconds. Emergency lockouts, key replacements, security upgrades — answered 24/7."
+        name="Whoza.ai Demo: AI Call Handling for Locksmiths"
+        description="Watch how Katie captures a missed locksmith enquiry in under 60 seconds. Emergency lockouts, key replacements, security upgrades: answered 24/7."
         embedUrl="https://whoza.ai/for-locksmiths"
       />
       <Header />
@@ -195,49 +195,49 @@ export default function ForLocksmithsPage() {
 
       <main id="main-content" role="main" className="pb-24 lg:pb-0">
         {/* HERO */}
-        <section className="relative overflow-hidden bg-[var(--navy-900)] py-20 lg:py-28">
+        <section className="relative overflow-hidden bg-[var(--v2-navy)] text-white py-20 lg:py-28">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-flex items-center gap-2 bg-yellow-500/10 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <div className="inline-flex items-center gap-2 bg-yellow-500/10 text-[#6ee7b7] px-4 py-2 rounded-full text-sm font-medium mb-6">
                   <Lock className="w-4 h-4" />
                   Built for UK Locksmiths
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 trade-headline">
-                  Never Miss a Lockout Call — Even at 3am
+                  Never Miss a Lockout Call, Even at 3am
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8">
-                  Emergency lockouts, key replacements, lock repairs, security upgrades. Katie answers every call you miss, captures the full details, and sends them to your WhatsApp in 3 seconds. From £59/month — less than one callout fee.
+                  Emergency lockouts, key replacements, lock repairs, security upgrades. Katie answers every call you miss, captures the full details, and sends them to your WhatsApp in 3 seconds. From £59/month, less than one callout fee.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link
                     href="/"
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold rounded-xl transition-colors"
+                    className="v2-btn min-h-[54px] px-7 text-base"
                   >
                     Start 7-Day Free Trial
                     <ArrowRight className="w-5 h-5" />
                   </Link>
                   <Link
                     href="/how-it-works"
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-colors"
+                    className="v2-btn-secondary min-h-[54px] px-7 text-base text-white border-white/25 hover:border-white"
                   >
                     See How It Works
                   </Link>
                 </div>
-                <p className="mt-4 text-sm text-white/50">
-                  <a href="/" className="text-yellow-400 hover:text-yellow-300 underline">Try Katie free for 7 days</a> — no credit card required.
+                <p className="mt-4 text-sm text-white/65">
+                  <a href="/" className="text-[#6ee7b7] hover:text-white underline">Try Katie free for 7 days</a>, no credit card required.
                 </p>
-                <div className="flex items-center gap-6 mt-8 text-white/50 text-sm">
+                <div className="flex items-center gap-6 mt-8 text-white/65 text-sm">
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-yellow-400" />
+                    <CheckCircle className="w-4 h-4 text-[#6ee7b7]" />
                     No credit card required
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-yellow-400" />
+                    <CheckCircle className="w-4 h-4 text-[#6ee7b7]" />
                     Setup in 30 minutes
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-yellow-400" />
+                    <CheckCircle className="w-4 h-4 text-[#6ee7b7]" />
                     Cancel anytime
                   </div>
                 </div>
@@ -246,25 +246,25 @@ export default function ForLocksmithsPage() {
                 <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-full bg-yellow-500/20 flex items-center justify-center">
-                      <Phone className="w-5 h-5 text-yellow-400" />
+                      <Phone className="w-5 h-5 text-[#6ee7b7]" />
                     </div>
                     <div>
-                      <p className="text-white font-medium">New Enquiry — Katie</p>
-                      <p className="text-white/50 text-sm">Lockout call, 02:17</p>
+                      <p className="text-white font-medium">New Enquiry from Katie</p>
+                      <p className="text-white/65 text-sm">Lockout call, 02:17</p>
                     </div>
                   </div>
                   <div className="space-y-2 text-white/80 text-sm">
                     <p>👤 Name: Marcus Chen</p>
                     <p>📞 Phone: 07XXX XXXXXX</p>
                     <p>📍 Postcode: E14 5AB</p>
-                    <p>🔧 Job: Locked out of flat — snapped key in euro cylinder</p>
-                    <p>⚡ Urgency: Emergency — cannot enter property</p>
+                    <p>🔧 Job: Locked out of flat, snapped key in euro cylinder</p>
+                    <p>⚡ Urgency: Emergency, cannot enter property</p>
                     <p>🏠 Property: 1st floor flat, residential block</p>
-                    <p>💰 Estimated Value: £120-150 callout + new cylinder</p>
+                    <p>💰 Estimated Value: £120 to £150 callout + new cylinder</p>
                     <p>📊 Lock: UPVC door, euro cylinder (likely Yale)</p>
                   </div>
                   <div className="flex gap-2 mt-4">
-                    <button className="flex-1 py-2 bg-yellow-600 text-white rounded-lg text-sm font-medium">Accept</button>
+                    <button className="flex-1 py-2 bg-[var(--v2-green)] text-white rounded-lg text-sm font-medium">Accept</button>
                     <button className="flex-1 py-2 bg-white/10 text-white rounded-lg text-sm font-medium">Call Back</button>
                     <button className="flex-1 py-2 bg-white/10 text-white rounded-lg text-sm font-medium">Decline</button>
                   </div>
@@ -280,7 +280,7 @@ export default function ForLocksmithsPage() {
           serviceUrl="/for-locksmiths"
           items={[            {
               label: "Instant pickup",
-              answer: "Katie answers every lockout call in under 3 seconds — even at midnight on a bank holiday.",
+              answer: "Katie answers every lockout call in under 3 seconds, even at midnight on a bank holiday.",
             },            {
               label: "Job identification",
               answer: "She identifies emergency lockouts, key replacements, security upgrades, and commercial enquiries.",
@@ -304,24 +304,24 @@ export default function ForLocksmithsPage() {
         <section className="section-padding-lg bg-white relative">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] text-sm font-medium mb-4">
+              <span className="v2-eyebrow">
                 The Problem
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
+              <h2 className="v2-h2 text-balance">
                 Why Locksmiths Lose Jobs to Missed Calls
               </h2>
-              <p className="mt-6 text-lg text-[var(--slate-500)] max-w-2xl mx-auto">
+              <p className="v2-lead mt-5 max-w-2xl mx-auto">
                 Lockouts are the most time-sensitive trade enquiries. A customer locked out in the rain will call every locksmith on Google until someone answers. If you're on another job or asleep, that £150 callout goes to your competitor.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 gap-8">
               {painPoints.map((point, idx) => (
-                <div key={idx} className="bg-[var(--off-white)] rounded-xl border border-[var(--border)] p-8">
-                  <div className="w-12 h-12 rounded-xl bg-[var(--katie-blue)]/10 flex items-center justify-center mb-4">
+                <div key={idx} className="bg-[var(--off-white)] rounded-2xl border border-[var(--border)] p-8">
+                  <div className="w-12 h-12 rounded-2xl bg-[var(--katie-blue)]/10 flex items-center justify-center mb-4">
                     <point.icon className="w-6 h-6 text-[var(--katie-blue)]" />
                   </div>
-                  <h3 className="text-xl font-bold text-[var(--navy-900)] mb-3">{point.title}</h3>
-                  <p className="text-[var(--slate-500)] leading-relaxed">{point.description}</p>
+                  <h3 className="text-xl font-bold text-[var(--v2-ink)] mb-3">{point.title}</h3>
+                  <p className="text-[var(--v2-body)] leading-relaxed">{point.description}</p>
                 </div>
               ))}
             </div>
@@ -338,25 +338,25 @@ export default function ForLocksmithsPage() {
         <section className="section-padding-lg bg-white relative">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] text-sm font-medium mb-4">
+              <span className="v2-eyebrow">
                 How It Works
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
+              <h2 className="v2-h2 text-balance">
                 How Katie Works for Locksmiths
               </h2>
-              <p className="mt-6 text-lg text-[var(--slate-500)] max-w-2xl mx-auto">
-                Four simple steps from missed call to booked job. Katie handles the conversation. You handle the locks. Read our <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-amber-400 hover:text-amber-300 underline">complete guide to AI call answering</a> for more details.
+              <p className="v2-lead mt-5 max-w-2xl mx-auto">
+                Four simple steps from missed call to booked job. Katie handles the conversation. You handle the locks. Read our <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] underline">complete guide to AI call answering</a> for more details.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {howItWorks.map((step) => (
                 <div key={step.step} className="relative">
-                  <div className="bg-[var(--off-white)] rounded-xl border border-[var(--border)] p-6 h-full">
-                    <div className="w-10 h-10 rounded-full bg-[var(--katie-blue)] text-white flex items-center justify-center font-bold text-lg mb-4">
+                  <div className="bg-[var(--off-white)] rounded-2xl border border-[var(--border)] p-6 h-full">
+                    <div className="w-10 h-10 rounded-full bg-[var(--katie-blue)] text-[var(--v2-ink)] flex items-center justify-center font-bold text-lg mb-4">
                       {step.step}
                     </div>
-                    <h3 className="text-lg font-bold text-[var(--navy-900)] mb-2">{step.title}</h3>
-                    <p className="text-[var(--slate-500)] text-sm leading-relaxed">{step.description}</p>
+                    <h3 className="text-lg font-bold text-[var(--v2-ink)] mb-2">{step.title}</h3>
+                    <p className="text-[var(--v2-body)] text-sm leading-relaxed">{step.description}</p>
                   </div>
                 </div>
               ))}
@@ -397,60 +397,60 @@ export default function ForLocksmithsPage() {
         {/* TESTIMONIAL */}
         <section className="section-padding-lg bg-[var(--off-white)] relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="inline-flex items-center gap-2 bg-yellow-500/10 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 bg-[var(--v2-mint)] text-[var(--v2-green)] px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Star className="w-4 h-4" />
               Locksmith Testimonial
             </div>
-            <blockquote className="text-2xl sm:text-3xl font-medium text-[var(--navy-900)] leading-relaxed mb-8">
-              "I was fitting a new mortice lock in Shoreditch when my phone rang twice. First was a key replacement — £20 job. Second was a full security upgrade for a restaurant in Hackney — £1,800 including smart locks, CCTV, and alarm integration. Katie captured both with full details. I called back at 4pm, quoted the upgrade on the spot, and booked it for next week."
+            <blockquote className="text-2xl sm:text-3xl font-medium text-[var(--v2-ink)] leading-relaxed mb-8">
+              "I was fitting a new mortice lock in Shoreditch when my phone rang twice. First was a key replacement, £20 job. Second was a full security upgrade for a restaurant in Hackney, £1,800 including smart locks, CCTV, and alarm integration. Katie captured both with full details. I called back at 4pm, quoted the upgrade on the spot, and booked it for next week."
             </blockquote>
             <div className="flex items-center justify-center gap-4">
               <div className="w-12 h-12 rounded-full bg-[var(--katie-blue)]/10 flex items-center justify-center text-[var(--katie-blue)] font-bold">
                 AP
               </div>
               <div className="text-left">
-                <p className="font-semibold text-[var(--navy-900)]">Ade Patterson</p>
-                <p className="text-sm text-[var(--slate-500)]">Patterson Security Solutions, East London</p>
+                <p className="font-semibold text-[var(--v2-ink)]">Ade Patterson</p>
+                <p className="text-sm text-[var(--v2-body)]">Patterson Security Solutions, East London</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* PRICING CTA */}
-        <section className="section-padding-lg bg-[var(--navy-900)] relative">
+        <section className="section-padding-lg bg-[var(--v2-navy)] text-white relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               One Security Upgrade Pays for 2 Years of Katie
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-              Emergency lockouts average £80-£150. Key replacements £15-£40. Security upgrades £500-£3,000+. Smart lock installations £800-£2,500. At £59/month, capturing one missed security survey pays for years of service.
+              Emergency lockouts average £80 to £150. Key replacements £15 to £40. Security upgrades £500 to £3,000+. Smart lock installations £800 to £2,500. At £59/month, capturing one missed security survey pays for years of service.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <Link
                 href="/"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold rounded-xl transition-colors"
+                className="v2-btn min-h-[54px] px-7 text-base"
               >
                 Start 7-Day Free Trial
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 href="/pricing"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-colors"
+                className="v2-btn-secondary min-h-[54px] px-7 text-base text-white border-white/25 hover:border-white"
               >
-                See Pricing — Plans from £59/month
+                See Pricing: Plans from £59/month
               </Link>
             </div>
-            <div className="flex items-center justify-center gap-6 text-white/50 text-sm">
+            <div className="flex items-center justify-center gap-6 text-white/65 text-sm">
               <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4 text-yellow-400" />
+                <Shield className="w-4 h-4 text-[#6ee7b7]" />
                 GDPR compliant
               </div>
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-yellow-400" />
+                <Clock className="w-4 h-4 text-[#6ee7b7]" />
                 24/7 answering
               </div>
               <div className="flex items-center gap-2">
-                <PoundSterling className="w-4 h-4 text-yellow-400" />
+                <PoundSterling className="w-4 h-4 text-[#6ee7b7]" />
                 £59/month
               </div>
             </div>
@@ -461,43 +461,43 @@ export default function ForLocksmithsPage() {
         <section className="section-padding-lg bg-white relative">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-2xl font-bold text-[var(--navy-900)] mb-4">
+              <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-4">
                 Trusted by Locksmiths Across the UK
               </h2>
-              <p className="text-[var(--slate-500)]">
-                From London to Leeds, locksmiths trust Katie to capture every call — day or night.
+              <p className="text-[var(--v2-body)]">
+                From London to Leeds, locksmiths trust Katie to capture every call, day or night.
               </p>
             </div>
             <div className="grid sm:grid-cols-3 gap-6 mb-12">
-              <div className="text-center p-6 bg-[var(--off-white)] rounded-xl border border-[var(--border)]">
+              <div className="text-center p-6 bg-[var(--off-white)] rounded-2xl border border-[var(--border)]">
                 <div className="text-3xl font-bold text-[var(--katie-blue)] mb-1">£120</div>
-                <p className="text-sm text-[var(--slate-500)]">Average lockout callout fee</p>
+                <p className="text-sm text-[var(--v2-body)]">Average lockout callout fee</p>
               </div>
-              <div className="text-center p-6 bg-[var(--off-white)] rounded-xl border border-[var(--border)]">
+              <div className="text-center p-6 bg-[var(--off-white)] rounded-2xl border border-[var(--border)]">
                 <div className="text-3xl font-bold text-[var(--katie-blue)] mb-1">89%</div>
-                <p className="text-sm text-[var(--slate-500)]">Lockout calls made after 8pm</p>
+                <p className="text-sm text-[var(--v2-body)]">Lockout calls made after 8pm</p>
               </div>
-              <div className="text-center p-6 bg-[var(--off-white)] rounded-xl border border-[var(--border)]">
+              <div className="text-center p-6 bg-[var(--off-white)] rounded-2xl border border-[var(--border)]">
                 <div className="text-3xl font-bold text-[var(--katie-blue)] mb-1">£1,800</div>
-                <p className="text-sm text-[var(--slate-500)]">Average security upgrade value</p>
+                <p className="text-sm text-[var(--v2-body)]">Average security upgrade value</p>
               </div>
             </div>
             <div className="text-center">
-              <p className="text-[var(--slate-500)] mb-4">Also explore:</p>
+              <p className="text-[var(--v2-body)] mb-4">Also explore:</p>
               <div className="flex flex-wrap justify-center gap-3">
-                <Link href="/for-painters-decorators" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                <Link href="/for-painters-decorators" className="px-4 py-2 bg-white border border-[var(--v2-line)] rounded-full text-[var(--v2-ink)] hover:border-[var(--v2-ink)]">
                   AI for Painters & Decorators
                 </Link>
-                <Link href="/for-locksmiths" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                <Link href="/for-locksmiths" className="px-4 py-2 bg-white border border-[var(--v2-line)] rounded-full text-[var(--v2-ink)] hover:border-[var(--v2-ink)]">
                   24/7 Call Answering for Locksmiths
                 </Link>
-                <Link href="/how-it-works" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                <Link href="/how-it-works" className="px-4 py-2 bg-white border border-[var(--v2-line)] rounded-full text-[var(--v2-ink)] hover:border-[var(--v2-ink)]">
                   How It Works
                 </Link>
-                <Link href="/best-ai-call-handler-uk-trades" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                <Link href="/best-ai-call-handler-uk-trades" className="px-4 py-2 bg-white border border-[var(--v2-line)] rounded-full text-[var(--v2-ink)] hover:border-[var(--v2-ink)]">
                   7 Best AI Call Answering Services Compared
                 </Link>
-                <Link href="/pricing" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                <Link href="/pricing" className="px-4 py-2 bg-white border border-[var(--v2-line)] rounded-full text-[var(--v2-ink)] hover:border-[var(--v2-ink)]">
                   Plans from £59/month
                 </Link>
               </div>
@@ -505,21 +505,21 @@ export default function ForLocksmithsPage() {
           </div>
         </section>
 
-        <section className="py-12 border-t border-white/10">
+        <section className="py-12 border-t border-[var(--v2-line)]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 className="text-lg font-semibold text-white/70 mb-6 text-center">Also See: AI Call Answering for Related Trades</h3>
+            <h3 className="text-lg font-semibold text-[var(--v2-body)] mb-6 text-center">Also See: AI Call Answering for Related Trades</h3>
             <div className="grid sm:grid-cols-3 gap-4">
-              <a href="/for-plumbers" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors text-center">
-                <div className="font-medium text-white">AI Call Answering for Plumbers</div>
-                <p className="text-sm text-white/50 mt-1">Never miss a job</p>
+              <a href="/for-plumbers" className="block bg-white border border-[var(--v2-line)] rounded-2xl p-4 hover:border-[#b9c6bf] transition-colors text-center">
+                <div className="font-medium text-[var(--v2-ink)]">AI Call Answering for Plumbers</div>
+                <p className="text-sm text-[var(--v2-muted)] mt-1">Never miss a job</p>
               </a>
-              <a href="/for-electricians" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors text-center">
-                <div className="font-medium text-white">AI Call Answering for Electricians</div>
-                <p className="text-sm text-white/50 mt-1">Never miss a job</p>
+              <a href="/for-electricians" className="block bg-white border border-[var(--v2-line)] rounded-2xl p-4 hover:border-[#b9c6bf] transition-colors text-center">
+                <div className="font-medium text-[var(--v2-ink)]">AI Call Answering for Electricians</div>
+                <p className="text-sm text-[var(--v2-muted)] mt-1">Never miss a job</p>
               </a>
-              <a href="/for-handymen" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors text-center">
-                <div className="font-medium text-white">AI Call Answering for Handymen</div>
-                <p className="text-sm text-white/50 mt-1">Never miss a job</p>
+              <a href="/for-handymen" className="block bg-white border border-[var(--v2-line)] rounded-2xl p-4 hover:border-[#b9c6bf] transition-colors text-center">
+                <div className="font-medium text-[var(--v2-ink)]">AI Call Answering for Handymen</div>
+                <p className="text-sm text-[var(--v2-muted)] mt-1">Never miss a job</p>
               </a>
             </div>
           </div>
@@ -549,32 +549,32 @@ export default function ForLocksmithsPage() {
         })()}
 
 
-<section className="trade-faq py-16 lg:py-24">
+<section className="trade-faq v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 Questions Locksmiths Ask
               </h2>
-              <p className="text-white/60">
+              <p className="text-[var(--v2-body)]">
                 Everything you need to know about AI call answering for locksmith businesses.
               </p>
             </div>
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                   <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
-                  <p className="text-white/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                  <p className="text-[var(--v2-body)] leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                 </div>
               ))}
             </div>
             <div className="mt-10 text-center">
-              <p className="text-white/50 text-sm">
+              <p className="text-[var(--v2-muted)] text-sm">
                 Still have questions? Read our{" "}
-                <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-orange-400 hover:text-orange-300 underline">
+                <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] underline">
                   complete AI call answering guide
                 </a>{" "}
                 or{" "}
-                <a href="/pricing" className="text-orange-400 hover:text-orange-300 underline">
+                <a href="/pricing" className="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] underline">
                   compare all pricing plans
                 </a>.
               </p>
@@ -588,7 +588,7 @@ export default function ForLocksmithsPage() {
 
       <div className="section-divider" />
         <RelatedTrades currentTrade="for-locksmiths" />
-        <Footer />
+        <Footer hideCta />
       <FloatingChatWidget />
     </>
   )

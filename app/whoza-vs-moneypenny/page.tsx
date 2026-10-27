@@ -36,11 +36,11 @@ export const metadata: Metadata = {
 }
 
 const comparisonData = [
-  { feature: "Monthly Price", whoza: "£59", competitor: "£150–£400", winner: "whoza", note: "Whoza is 62% cheaper entry" },
+  { feature: "Monthly Price", whoza: "£59", competitor: "£150 to £400", winner: "whoza", note: "Whoza is 62% cheaper entry" },
   { feature: "Price per Call", whoza: "£4.50/job booked", competitor: "Included in monthly", winner: "draw", note: "Different pricing models" },
   { feature: "Answerer Type", whoza: "AI voice agent", competitor: "Human receptionists", winner: "draw", note: "Different approaches" },
   { feature: "Availability", whoza: "24/7, unlimited calls", competitor: "24/7, within package", winner: "whoza", note: "AI never sleeps or takes breaks" },
-  { feature: "Setup Time", whoza: "30 minutes", competitor: "2–5 days", winner: "whoza", note: "whoze much faster" },
+  { feature: "Setup Time", whoza: "30 minutes", competitor: "2 to 5 days", winner: "whoza", note: "whoze much faster" },
   { feature: "WhatsApp Delivery", whoza: "✓ Native", competitor: "✗ Email/portal", winner: "whoza", note: "whoze better for mobile" },
   { feature: "Review Collection", whoza: "✓ Built-in", competitor: "✗ Not included", winner: "whoza", note: "whoze adds value" },
   { feature: "Competitor Analysis", whoza: "✓ Monthly reports", competitor: "✗ Not available", winner: "whoza", note: "whoze exclusive" },
@@ -56,7 +56,7 @@ export const revalidate = 3600
 
 const faqs = [
     { question: "How much cheaper is whoza.ai than Moneypenny?", answer: "whoza.ai is significantly cheaper. whoza.ai's Starter plan is £59/month versus Moneypenny's Small Business plan at £175/month. whoza.ai's Growth plan is £125/month versus Moneypenny's Business plan at £325/month. whoza.ai's Pro plan is £249/month versus Moneypenny's Corporate plan at £595/month." },
-    { question: "Is AI call answering better than human receptionists for trades?", answer: "AI call answering offers advantages for trade businesses: 24/7 coverage, unlimited simultaneous calls, instant response, and 94% cost reduction versus human staff. Human receptionists provide personal warmth but cannot answer when the tradesperson is on a job site, under a sink, or on a ladder. For trades where missed calls cost £50,000-£80,000 annually, AI coverage eliminates the structural problem." },
+    { question: "Is AI call answering better than human receptionists for trades?", answer: "AI call answering offers advantages for trade businesses: 24/7 coverage, unlimited simultaneous calls, instant response, and 94% cost reduction versus human staff. Human receptionists provide personal warmth but cannot answer when the tradesperson is on a job site, under a sink, or on a ladder. For trades where missed calls cost £50,000 to £80,000 annually, AI coverage eliminates the structural problem." },
     { question: "What do you actually get for your money with whoza.ai vs Moneypenny?", answer: "whoza.ai includes AI call answering, WhatsApp delivery, spam filtering, review collection (Claire), competitor analysis (Rex), and calendar integration. Moneypenny provides human receptionists with call answering, message taking, and transfer services. whoza.ai adds growth tools and automation; Moneypenny adds human rapport and complex enquiry handling." },
     { question: "Should you start with a free trial before committing?", answer: "Both services offer trials. whoza.ai offers a 7-day free trial with no credit card required and no contract. Moneypenny typically requires a consultation and setup call before pricing is confirmed. Starting with a free trial allows you to test call quality, feature fit, and integration with your workflow before any financial commitment." }
 ]
@@ -64,7 +64,7 @@ export default function VsMoneypennyPage() {
   return (
     <>
       
-      <div className="min-h-screen bg-[var(--navy-900)] text-white">
+      <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
         <Header />
         <BreadcrumbSchema items={[
           { name: "Home", item: "https://whoza.ai" },
@@ -76,21 +76,21 @@ export default function VsMoneypennyPage() {
           <section className="relative overflow-hidden" style={{ background: "linear-gradient(135deg, #0F1729 0%, #1A1A2E 50%, #0F1729 100%)" }}>
             <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
               <nav aria-label="Breadcrumb" className="mb-8">
-                <ol className="flex items-center text-sm text-white/40" style={{ listStyle: "none", padding: 0 }}>
-                  <li><a href="/" className="hover:text-white transition-colors">Home</a></li>
+                <ol className="flex items-center text-sm text-[var(--v2-muted)]" style={{ listStyle: "none", padding: 0 }}>
+                  <li><a href="/" className="hover:text-[var(--v2-ink)] transition-colors">Home</a></li>
                   <li className="mx-2">/</li>
-                  <li className="text-white">vs Moneypenny</li>
+                  <li className="text-[var(--v2-ink)]">vs Moneypenny</li>
                 </ol>
               </nav>
 
-              <div className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 px-3 py-1 rounded-full text-xs font-medium mb-6">
+              <div className="inline-flex items-center gap-2 bg-amber-50 text-amber-700 px-3 py-1 rounded-full text-xs font-medium mb-6">
                 <Star className="w-3 h-3" />
-                Comparison — August 2026
+                Comparison, August 2026
               </div>
 
               {/* Publisher Disclosure */}
-            <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-4 mb-8">
-              <p className="text-sm text-amber-300">
+            <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 mb-8">
+              <p className="text-sm text-amber-700">
                 <strong>Publisher note:</strong> This comparison is published by whoza.ai, which is one of the products compared.
                 Competitor details are taken from their public pricing pages, verified August 2026.
               </p>
@@ -98,20 +98,20 @@ export default function VsMoneypennyPage() {
 
             <h1 className="text-4xl lg:text-5xl font-extrabold mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
                 Whoza.ai vs Moneypenny{" "}
-                <span className="block text-emerald-400 mt-2">£59 AI vs £150+ Human Receptionists</span>
+                <span className="block text-[var(--v2-green)] mt-2">£59 AI vs £150+ Human Receptionists</span>
               </h1>
 
-              <p className="text-lg text-white/60 max-w-2xl mb-8">
-                Moneypenny is the UK's best-known call answering service — 25+ years, thousands of clients, 
+              <p className="text-lg text-[var(--v2-body)] max-w-2xl mb-8">
+                Moneypenny is the UK's best-known call answering service: 25+ years, thousands of clients, 
                 human receptionists. whoza.ai is the new AI alternative. Here's the honest breakdown of 
                 where each wins, where each loses, and which makes sense for your trade business.
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <a href="#comparison-table" className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-emerald-700 transition-colors">
+                <a href="#comparison-table" className="inline-flex items-center gap-2 bg-[var(--v2-green)] text-white font-bold px-6 py-3 rounded-lg hover:bg-[var(--v2-green-hover)] transition-colors v2-island">
                   See Full Comparison <ArrowRight className="w-4 h-4" />
                 </a>
-                <a href="/pricing" className="inline-flex items-center gap-2 bg-white/10 text-white font-bold px-6 py-3 rounded-lg hover:bg-white/20 transition-colors">
+                <a href="/pricing" className="inline-flex items-center gap-2 bg-white text-[var(--v2-ink)] font-bold px-6 py-3 rounded-lg hover:border-[#b9c6bf] transition-colors">
                   Try whoza.ai Free <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
@@ -120,20 +120,20 @@ export default function VsMoneypennyPage() {
 
           {/* Quick Verdict */}
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div className="bg-gradient-to-br from-emerald-500/10 to-amber-500/5 border border-emerald-500/20 rounded-2xl p-8">
+            <div className="bg-[var(--v2-navy)] text-white border border-white/10 rounded-2xl p-8 v2-island">
               <h2 className="text-2xl font-bold mb-6">Which should you choose: whoza.ai or Moneypenny?</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h3 className="font-bold text-emerald-400 mb-2 flex items-center gap-2">
+                  <h3 className="font-bold text-[#6ee7b7] mb-2 flex items-center gap-2">
                     <Check className="w-5 h-5" /> Choose whoza.ai if...
                   </h3>
                   <ul className="space-y-2 text-white/70 text-sm">
                     <li>• You want to save £1,000+ per year</li>
-                    <li>• You need instant setup (not 2-5 days)</li>
+                    <li>• You need instant setup (not 2 to 5 days)</li>
                     <li>• You want WhatsApp delivery</li>
                     <li>• You want review collection included</li>
                     <li>• You hate long-term contracts</li>
-                    <li>• You're a sole trader or small team (1-5 people)</li>
+                    <li>• You're a sole trader or small team (1 to 5 people)</li>
                   </ul>
                 </div>
                 <div>
@@ -156,46 +156,46 @@ export default function VsMoneypennyPage() {
           {/* Cost Reality Check */}
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-              <PoundSterling className="w-7 h-7 text-emerald-400" />
+              <PoundSterling className="w-7 h-7 text-[var(--v2-green)]" />
               How much cheaper is whoza.ai than Moneypenny?
             </h2>
-            <div className="bg-white/5 border border-white/10 rounded-xl p-8">
+            <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-8">
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="text-center">
-                  <div className="text-5xl font-extrabold text-emerald-400 mb-2">£59<span className="text-lg font-medium text-white/50">/mo</span></div>
-                  <p className="text-white/60 mb-4">whoza.ai Starter</p>
-                  <ul className="space-y-2 text-white/70 text-sm text-left">
-                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> 24/7 AI call answering</li>
-                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> WhatsApp delivery</li>
-                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> Lead capture</li>
-                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> No contract</li>
-                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> 7-day free trial</li>
+                  <div className="text-5xl font-extrabold text-[var(--v2-green)] mb-2">£59<span className="text-lg font-medium text-[var(--v2-muted)]">/mo</span></div>
+                  <p className="text-[var(--v2-body)] mb-4">whoza.ai Starter</p>
+                  <ul className="space-y-2 text-[var(--v2-body)] text-sm text-left">
+                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> 24/7 AI call answering</li>
+                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> WhatsApp delivery</li>
+                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> Lead capture</li>
+                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> No contract</li>
+                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> 7-day free trial</li>
                   </ul>
-                  <div className="mt-4 pt-4 border-t border-white/10">
-                    <div className="text-2xl font-bold text-white">£708<span className="text-sm font-normal text-white/50">/year</span></div>
+                  <div className="mt-4 pt-4 border-t border-[var(--v2-line)]">
+                    <div className="text-2xl font-bold text-[var(--v2-ink)]">£708<span className="text-sm font-normal text-[var(--v2-muted)]">/year</span></div>
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-5xl font-extrabold text-amber-400 mb-2">£150<span className="text-lg font-medium text-white/50">/mo+</span></div>
-                  <p className="text-white/60 mb-4">Moneypenny (typical)</p>
-                  <ul className="space-y-2 text-white/70 text-sm text-left">
-                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" /> Human receptionist</li>
-                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" /> 24/7 availability</li>
-                    <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-400 shrink-0 mt-0.5" /> Email delivery (not WhatsApp)</li>
-                    <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-400 shrink-0 mt-0.5" /> 12-month contract typical</li>
-                    <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-400 shrink-0 mt-0.5" /> No review collection</li>
+                  <div className="text-5xl font-extrabold text-amber-700 mb-2">£150<span className="text-lg font-medium text-[var(--v2-muted)]">/mo+</span></div>
+                  <p className="text-[var(--v2-body)] mb-4">Moneypenny (typical)</p>
+                  <ul className="space-y-2 text-[var(--v2-body)] text-sm text-left">
+                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" /> Human receptionist</li>
+                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" /> 24/7 availability</li>
+                    <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-600 shrink-0 mt-0.5" /> Email delivery (not WhatsApp)</li>
+                    <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-600 shrink-0 mt-0.5" /> 12-month contract typical</li>
+                    <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-600 shrink-0 mt-0.5" /> No review collection</li>
                   </ul>
-                  <div className="mt-4 pt-4 border-t border-white/10">
-                    <div className="text-2xl font-bold text-white">£1,800<span className="text-sm font-normal text-white/50">/year (min)</span></div>
+                  <div className="mt-4 pt-4 border-t border-[var(--v2-line)]">
+                    <div className="text-2xl font-bold text-[var(--v2-ink)]">£1,800<span className="text-sm font-normal text-[var(--v2-muted)]">/year (min)</span></div>
                   </div>
                 </div>
               </div>
-              <div className="mt-8 pt-6 border-t border-white/10 text-center">
-                <p className="text-white/70">
-                  <strong className="text-emerald-400">Annual saving with whoza.ai: £1,092+</strong> — based on Moneypenny's entry-level pricing.
-                  For their mid-tier packages (£250-400/month), the saving increases to £2,300-4,100/year. Moneypenny does not publish pricing — figures are industry-reported estimates. Request a quote at moneypenny.com to confirm current rates.
+              <div className="mt-8 pt-6 border-t border-[var(--v2-line)] text-center">
+                <p className="text-[var(--v2-body)]">
+                  <strong className="text-[var(--v2-green)]">Annual saving with whoza.ai: £1,092+</strong>, based on Moneypenny's entry-level pricing.
+                  For their mid-tier packages (£250 to £400/month), the saving increases to £2,300 to £4,100/year. Moneypenny does not publish pricing: figures are industry-reported estimates. Request a quote at moneypenny.com to confirm current rates.
                 </p>
-                <p className="text-white/50 text-sm mt-2">
+                <p className="text-[var(--v2-muted)] text-sm mt-2">
                   Source: Moneypenny pricing page, accessed August 2026. Prices approximate; exact quotes vary by call volume.
                 </p>
               </div>
@@ -205,33 +205,33 @@ export default function VsMoneypennyPage() {
           {/* Comparison Table */}
           <section id="comparison-table" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <h2 className="text-3xl font-bold mb-8 text-center">How do whoza.ai and Moneypenny compare on 14 key features?</h2>
-            <div className="overflow-x-auto rounded-xl border border-white/10">
+            <div className="overflow-x-auto rounded-2xl border border-[var(--v2-line)]">
               <table className="w-full text-left text-sm">
                 <thead>
-                  <tr className="bg-slate-900/80">
-                    <th className="px-6 py-4 font-semibold text-white">Feature</th>
-                    <th className="px-6 py-4 font-semibold text-emerald-400">Whoza.ai</th>
-                    <th className="px-6 py-4 font-semibold text-amber-400">Moneypenny</th>
-                    <th className="px-6 py-4 font-semibold text-white">Winner</th>
+                  <tr className="bg-white">
+                    <th className="px-6 py-4 font-semibold text-[var(--v2-ink)]">Feature</th>
+                    <th className="px-6 py-4 font-semibold text-[var(--v2-green)]">Whoza.ai</th>
+                    <th className="px-6 py-4 font-semibold text-amber-700">Moneypenny</th>
+                    <th className="px-6 py-4 font-semibold text-[var(--v2-ink)]">Winner</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-white/5">
+                <tbody className="divide-y divide-[var(--v2-line)]">
                   {comparisonData.map((row, i) => (
-                    <tr key={i} className={i % 2 === 0 ? "bg-white/5" : "bg-white/[0.02]"}>
-                      <td className="px-6 py-4 font-medium text-white">{row.feature}</td>
-                      <td className="px-6 py-4 text-emerald-300">{row.whoza}</td>
-                      <td className="px-6 py-4 text-amber-300">{row.competitor}</td>
+                    <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                      <td className="px-6 py-4 font-medium text-[var(--v2-ink)]">{row.feature}</td>
+                      <td className="px-6 py-4 text-[var(--v2-green)]">{row.whoza}</td>
+                      <td className="px-6 py-4 text-amber-700">{row.competitor}</td>
                       <td className="px-6 py-4">
-                        {row.winner === "whoza" && <span className="inline-flex items-center gap-1 text-emerald-400 font-semibold"><Check className="w-4 h-4" /> whoza</span>}
-                        {row.winner === "moneypenny" && <span className="inline-flex items-center gap-1 text-amber-400 font-semibold"><Check className="w-4 h-4" /> Moneypenny</span>}
-                        {row.winner === "draw" && <span className="text-white/50">Draw</span>}
+                        {row.winner === "whoza" && <span className="inline-flex items-center gap-1 text-[var(--v2-green)] font-semibold"><Check className="w-4 h-4" /> whoza</span>}
+                        {row.winner === "moneypenny" && <span className="inline-flex items-center gap-1 text-amber-700 font-semibold"><Check className="w-4 h-4" /> Moneypenny</span>}
+                        {row.winner === "draw" && <span className="text-[var(--v2-muted)]">Draw</span>}
                       </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <p className="text-xs text-white/40 mt-4 text-center">
+            <p className="text-xs text-[var(--v2-muted)] mt-4 text-center">
               Data sourced from moneypenny.co.uk pricing page and whoza.ai pricing page, accessed August 2026. Moneypenny prices are indicative; exact quotes require consultation.
             </p>
           </section>
@@ -240,21 +240,21 @@ export default function VsMoneypennyPage() {
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
             <div>
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
-                <TrendingUp className="w-6 h-6 text-emerald-400" />
+                <TrendingUp className="w-6 h-6 text-[var(--v2-green)]" />
                 Is AI call answering better than human receptionists for trades?
               </h2>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <p className="text-white/70 leading-relaxed mb-4">
-                  The AI vs human debate isn't ideological — it's mathematical. A receptionist earns £18,000 starter, £22,000 experienced (National Careers Service, gov.uk). With employer National Insurance and pension contributions the annual cost is roughly £20,000–£25,000. Even a part-time shared service like Moneypenny starts at £150/month (£1,800/year). AI call handling at £59/month (£708/year) costs significantly less. This comparison is on call-handling cost alone; a receptionist works 38–40 hours a week and handles tasks beyond answering calls.
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+                <p className="text-[var(--v2-body)] leading-relaxed mb-4">
+                  The AI vs human debate isn't ideological. It's mathematical. A receptionist earns £18,000 starter, £22,000 experienced (National Careers Service, gov.uk). With employer National Insurance and pension contributions the annual cost is roughly £20,000 to £25,000. Even a part-time shared service like Moneypenny starts at £150/month (£1,800/year). AI call handling at £59/month (£708/year) costs significantly less. This comparison is on call-handling cost alone; a receptionist works 38 to 40 hours a week and handles tasks beyond answering calls.
                 </p>
-                <p className="text-white/70 leading-relaxed mb-4">
+                <p className="text-[var(--v2-body)] leading-relaxed mb-4">
                   But cost isn't everything. Moneypenny's humans excel at empathy, relationship-building, 
                   and handling complex edge cases. If you're a commercial contractor bidding £50,000+ projects, 
                   a human receptionist who knows your clients by name is worth the premium. If you're a plumber 
-                  or electrician answering "my boiler's broken" calls, AI is more than sufficient — and the 
+                  or electrician answering "my boiler's broken" calls, AI is more than sufficient, and the 
                   savings fund a new van, tools, or marketing.
                 </p>
-                <p className="text-white/70 leading-relaxed">
+                <p className="text-[var(--v2-body)] leading-relaxed">
                   The sweet spot: Many trade businesses use whoza.ai for routine call capture and Moneypenny 
                   (or similar) for their top 10 commercial accounts. This hybrid approach costs less than full 
                   human coverage while preserving high-touch relationships where they matter most.
@@ -267,17 +267,17 @@ export default function VsMoneypennyPage() {
             {/* What You Actually Get */}
             <div>
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
-                <PhoneOff className="w-6 h-6 text-emerald-400" />
+                <PhoneOff className="w-6 h-6 text-[var(--v2-green)]" />
                 What do you actually get for your money with whoza.ai vs Moneypenny?
               </h2>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <p className="text-white/70 leading-relaxed mb-4">
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+                <p className="text-[var(--v2-body)] leading-relaxed mb-4">
                   Moneypenny's £150/month gets you a dedicated or shared human receptionist who answers calls 
                   in your company name, takes messages, and forwards urgent calls. What it doesn't include: 
                   review collection, competitor monitoring, WhatsApp delivery, or analytics. These are separate 
                   services you'd need to buy and integrate yourself.
                 </p>
-                <p className="text-white/70 leading-relaxed">
+                <p className="text-[var(--v2-body)] leading-relaxed">
                   whoza.ai's £59/month gets you AI call answering, WhatsApp delivery, lead capture dashboard, 
                   spam filtering, and call analytics. The Growth plan at £125 adds Claire (review collection) 
                   and Rex (competitor analysis). That's three integrated tools for less than Moneypenny's base price.
@@ -292,12 +292,12 @@ export default function VsMoneypennyPage() {
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                "Comparison — August 2026",
+                "Comparison, August 2026",
                 "Pricing verified from competitor websites",
                 "Moneypenny: 25+ year UK brand",
                 "whoze.ai: AI-native, founded 2025",
               ].map((item) => (
-                <span key={item} className="inline-flex items-center gap-2 bg-white/5 text-white/60 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">
+                <span key={item} className="inline-flex items-center gap-2 bg-white text-[var(--v2-body)] text-xs font-medium px-3 py-1.5 rounded-full border border-[var(--v2-line)]">
                   <Shield className="w-3 h-3" /> {item}
                 </span>
               ))}
@@ -307,36 +307,36 @@ export default function VsMoneypennyPage() {
           {/* CTA */}
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
             <h2 className="text-3xl font-bold mb-4">Should you start with a free trial before committing?</h2>
-            <p className="text-lg text-white/60 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-[var(--v2-body)] mb-8 max-w-2xl mx-auto">
               whoza.ai's 7-day trial costs nothing. Moneypenny offers consultations. 
-              Try whoza.ai for a week — if the AI doesn't work for your specific business, 
+              Try whoza.ai for a week. If the AI doesn't work for your specific business, 
               you've lost nothing and learned something.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="/pricing" className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-emerald-700 transition-colors shadow-lg">
+              <a href="/pricing" className="inline-flex items-center gap-2 bg-[var(--v2-green)] text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-[var(--v2-green-hover)] transition-colors shadow-lg v2-island">
                 Start whoza.ai Free Trial <ArrowRight className="w-5 h-5" />
               </a>
-              <a href="/best-ai-call-handler-uk-trades" className="inline-flex items-center gap-2 bg-white/10 text-white font-bold px-6 py-4 rounded-xl hover:bg-white/20 transition-colors">
+              <a href="/best-ai-call-handler-uk-trades" className="inline-flex items-center gap-2 bg-white text-[var(--v2-ink)] font-bold px-6 py-4 rounded-2xl hover:border-[#b9c6bf] transition-colors">
                 Read More Comparisons <ArrowRight className="w-5 h-5" />
               </a>
             </div>
           </section>
           {/* Link to related comparison */}
-          <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center border-t border-white/10">
-            <p className="text-white/50 text-sm mb-3">Still deciding between AI and human reception?</p>
-            <a href="/ai-vs-virtual-receptionist" className="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-medium text-sm transition-colors">
+          <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center border-t border-[var(--v2-line)]">
+            <p className="text-[var(--v2-muted)] text-sm mb-3">Still deciding between AI and human reception?</p>
+            <a href="/ai-vs-virtual-receptionist" className="inline-flex items-center text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] font-medium text-sm transition-colors">
               Read: AI vs Human Receptionist for Contractors <ArrowRight className="ml-2 w-4 h-4" />
             </a>
           </section>
 
           {/* Compare with other services */}
-          <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center border-t border-white/10">
-            <p className="text-white/50 text-sm mb-4">Compare whoza.ai with other services:</p>
+          <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center border-t border-[var(--v2-line)]">
+            <p className="text-[var(--v2-muted)] text-sm mb-4">Compare whoza.ai with other services:</p>
             <div className="flex flex-wrap justify-center gap-3">
-              <a href="/whoza-vs-clara" className="inline-flex items-center gap-2 bg-white/5 text-white/70 hover:text-white hover:bg-white/10 px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-white/10">
+              <a href="/whoza-vs-clara" className="inline-flex items-center gap-2 bg-white text-[var(--v2-body)] hover:text-[var(--v2-ink)] hover:border-[#b9c6bf] px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-[var(--v2-line)]">
                 vs Clara AI <ArrowRight className="w-3 h-3" />
               </a>
-              <a href="/whoza-vs-team-connect" className="inline-flex items-center gap-2 bg-white/5 text-white/70 hover:text-white hover:bg-white/10 px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-white/10">
+              <a href="/whoza-vs-team-connect" className="inline-flex items-center gap-2 bg-white text-[var(--v2-body)] hover:text-[var(--v2-ink)] hover:border-[#b9c6bf] px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-[var(--v2-line)]">
                 vs Team-Connect <ArrowRight className="w-3 h-3" />
               </a>
             </div>
@@ -344,25 +344,25 @@ export default function VsMoneypennyPage() {
 
         
 {/* FAQ Section */}
-<section className="py-16 lg:py-24 bg-white/5 border-t border-white/10">
+<section className="py-16 lg:py-24 bg-white border-t border-[var(--v2-line)]">
   <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
     <div className="space-y-6">
-      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-        <h3 className="text-lg font-semibold text-white mb-3">How much cheaper is whoza.ai than Moneypenny?</h3>
-        <p className="text-white/70 leading-relaxed">whoza.ai is significantly cheaper. whoza.ai's Starter plan is £59/month versus Moneypenny's Small Business plan at £175/month. whoza.ai's Growth plan is £125/month versus Moneypenny's Business plan at £325/month. whoza.ai's Pro plan is £249/month versus Moneypenny's Corporate plan at £595/month.</p>
+      <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+        <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-3">How much cheaper is whoza.ai than Moneypenny?</h3>
+        <p className="text-[var(--v2-body)] leading-relaxed">whoza.ai is significantly cheaper. whoza.ai's Starter plan is £59/month versus Moneypenny's Small Business plan at £175/month. whoza.ai's Growth plan is £125/month versus Moneypenny's Business plan at £325/month. whoza.ai's Pro plan is £249/month versus Moneypenny's Corporate plan at £595/month.</p>
       </div>
-      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-        <h3 className="text-lg font-semibold text-white mb-3">Is AI call answering better than human receptionists for trades?</h3>
-        <p className="text-white/70 leading-relaxed">AI call answering offers advantages for trade businesses: 24/7 coverage, unlimited simultaneous calls, instant response, and 94% cost reduction versus human staff. Human receptionists provide personal warmth but cannot answer when the tradesperson is on a job site, under a sink, or on a ladder. For trades where missed calls cost £50,000-£80,000 annually, AI coverage eliminates the structural problem.</p>
+      <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+        <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-3">Is AI call answering better than human receptionists for trades?</h3>
+        <p className="text-[var(--v2-body)] leading-relaxed">AI call answering offers advantages for trade businesses: 24/7 coverage, unlimited simultaneous calls, instant response, and 94% cost reduction versus human staff. Human receptionists provide personal warmth but cannot answer when the tradesperson is on a job site, under a sink, or on a ladder. For trades where missed calls cost £50,000 to £80,000 annually, AI coverage eliminates the structural problem.</p>
       </div>
-      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-        <h3 className="text-lg font-semibold text-white mb-3">What do you actually get for your money with whoza.ai vs Moneypenny?</h3>
-        <p className="text-white/70 leading-relaxed">whoza.ai includes AI call answering, WhatsApp delivery, spam filtering, review collection (Claire), competitor analysis (Rex), and calendar integration. Moneypenny provides human receptionists with call answering, message taking, and transfer services. whoza.ai adds growth tools and automation; Moneypenny adds human rapport and complex enquiry handling.</p>
+      <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+        <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-3">What do you actually get for your money with whoza.ai vs Moneypenny?</h3>
+        <p className="text-[var(--v2-body)] leading-relaxed">whoza.ai includes AI call answering, WhatsApp delivery, spam filtering, review collection (Claire), competitor analysis (Rex), and calendar integration. Moneypenny provides human receptionists with call answering, message taking, and transfer services. whoza.ai adds growth tools and automation; Moneypenny adds human rapport and complex enquiry handling.</p>
       </div>
-      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-        <h3 className="text-lg font-semibold text-white mb-3">Should you start with a free trial before committing?</h3>
-        <p className="text-white/70 leading-relaxed">Both services offer trials. whoza.ai offers a 7-day free trial with no credit card required and no contract. Moneypenny typically requires a consultation and setup call before pricing is confirmed. Starting with a free trial allows you to test call quality, feature fit, and integration with your workflow before any financial commitment.</p>
+      <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+        <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-3">Should you start with a free trial before committing?</h3>
+        <p className="text-[var(--v2-body)] leading-relaxed">Both services offer trials. whoza.ai offers a 7-day free trial with no credit card required and no contract. Moneypenny typically requires a consultation and setup call before pricing is confirmed. Starting with a free trial allows you to test call quality, feature fit, and integration with your workflow before any financial commitment.</p>
       </div>
     </div>
   </div>

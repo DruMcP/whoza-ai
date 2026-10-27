@@ -58,14 +58,12 @@ export default function LostJobsCalculatorPage() {
           <li>
             <a href="/resources/missed-call-cost-calculator" className="underline">
               Missed call cost calculator
-            </a>{" "}
-            &mdash; a fuller model including seasonal call peaks.
+            </a>, a fuller model including seasonal call peaks.
           </li>
           <li>
             <a href="/research/missed-call-index" className="underline">
-              The Missed Call Index — UK trades missed-call research
-            </a>{" "}
-            &mdash; the sourced data behind these figures.
+              The Missed Call Index: UK trades missed-call research
+            </a>, the sourced data behind these figures.
           </li>
           <li>
             <a href="/research/ai-voice-agents-uk-trades-2026" className="underline">

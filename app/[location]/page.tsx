@@ -30,7 +30,7 @@ import { CityContentSection } from "@/components/whoza/city-content-section"
 import { StickyCTA, FloatingChatWidget } from "@/components/whoza/sticky-cta"
 import { LocaleProvider } from "@/lib/locale-context"
 import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
-import { locations, getLocationBySlug } from "@/lib/locations"
+import { locations, draftLocations, getLocationBySlug } from "@/lib/locations"
 import { TRADE_CITY_PAGES } from "@/lib/trade-city-pages"
 import { VideoSchema } from "@/components/whoza/schema-markup"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
@@ -47,9 +47,14 @@ export async function generateStaticParams() {
   }))
 }
 
+// Draft cities (lib/locations.ts draftLocations) render only when this flag is
+// set, so they can be reviewed on a preview build without being published.
+const SHOW_DRAFTS = process.env.WHOZA_SHOW_DRAFT_CITIES === "1"
+const isDraft = (slug: string) => draftLocations.some((d) => d.slug === slug)
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { location } = await params
-  const locationData = getLocationBySlug(location)
+  const locationData = getLocationBySlug(location, { includeDrafts: SHOW_DRAFTS })
   
   if (!locationData) {
     return {
@@ -74,7 +79,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       siteName: "Whoza.ai",
       title: `AI Call Answering ${locationData.city} | whoza.ai`,
       description: citySpecificDescription,
-      images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: `whoza.ai — AI Call Handling in ${locationData.city}` }],
+      images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: `whoza.ai: AI Call Handling in ${locationData.city}` }],
     },
     twitter: {
       card: "summary_large_image",
@@ -82,10 +87,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: citySpecificDescription,
       images: ["https://whoza.ai/og-image.webp"],
     },
-    robots: {
-      index: true,
-      follow: true,
-    },
+    // Drafts are never indexable, even on a preview that renders them.
+    robots: isDraft(location) ? { index: false, follow: false } : { index: true, follow: true },
     other: {
       'geo.region': `GB-${locationData.region}`,
       'geo.placename': locationData.city,
@@ -97,7 +100,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function LocationPage({ params }: PageProps) {
   const { location } = await params
-  const locationData = getLocationBySlug(location)
+  const locationData = getLocationBySlug(location, { includeDrafts: SHOW_DRAFTS })
+  const draft = isDraft(location)
 
   if (!locationData) {
     notFound()
@@ -108,21 +112,22 @@ export default async function LocationPage({ params }: PageProps) {
     notFound()
   }
 
-  const jobsThisWeek = stableNum(location, 100, 180)
+  // Drafts show no "enquiries captured this week" counter: there is no real figure behind it.
+  const jobsThisWeek = draft ? undefined : stableNum(location, 100, 180)
 
   // City-specific FAQ content — unique per city
   const cityFaqs = [
     {
       question: `Do you cover all areas of ${locationData.city} including suburbs?`,
-      answer: `Yes — Katie answers calls for tradespeople across ${locationData.city} and surrounding areas${locationData.neighbourhoods ? `, including ${locationData.neighbourhoods.slice(0, 6).join(", ")} and beyond` : ""}. Whether you're working in the city centre or the outer suburbs, every missed call gets captured and delivered to your WhatsApp instantly.`,
+      answer: `Yes, Katie answers calls for tradespeople across ${locationData.city} and surrounding areas${locationData.neighbourhoods ? `, including ${locationData.neighbourhoods.slice(0, 6).join(", ")} and beyond` : ""}. Whether you're working in the city centre or the outer suburbs, every missed call gets captured and delivered to your WhatsApp instantly.`,
     },
     {
       question: `What's the average response time for tradespeople in ${locationData.city}?`,
-      answer: `${locationData.responseTime || "Most tradespeople in " + locationData.city + " respond within 20-30 minutes"}. Katie ensures you never miss the initial enquiry — she answers instantly, 24/7, and sends you the full job details via WhatsApp so you can call back prepared with all the context.`,
+      answer: `${locationData.responseTime || "Response times vary by trade and how busy you are"}. Katie ensures you never miss the initial enquiry: she answers instantly, 24/7, and sends you the full job details via WhatsApp so you can call back prepared with all the context.`,
     },
     {
       question: `Are missed calls a big problem for ${locationData.city} tradespeople?`,
-      answer: `Yes — ${locationData.localStats?.missedCallsWeekly || "thousands of"} calls go unanswered every week in ${locationData.city}. ${locationData.callVolume || ""} Many tradespeople miss calls while on site, driving between jobs, or during evenings and weekends. At an average job value of ${locationData.localStats?.avgJob || "£280"}, that's significant lost revenue every month. Katie captures every call so you don't lose a single job.`,
+      answer: `Yes, ${locationData.localStats?.missedCallsWeekly ? `${locationData.localStats.missedCallsWeekly} calls go unanswered every week in ${locationData.city}.` : `research by Moneypenny (2016) found that 33% of small UK businesses fail to answer incoming calls, and ${locationData.city} trades are no exception.`} ${locationData.callVolume || ""} Many tradespeople miss calls while on site, driving between jobs, or during evenings and weekends. At an average job value of ${locationData.localStats?.avgJob || "£280"}, that's significant lost revenue every month. Katie captures every call so you don't lose a single job.`,
     },
     {
       question: `Does whoza.ai work with local trade associations in ${locationData.city}?`,
@@ -130,7 +135,7 @@ export default async function LocationPage({ params }: PageProps) {
     },
     {
       question: `Can Katie handle emergency calls in ${locationData.city} at night and weekends?`,
-      answer: `Yes — Katie answers 24/7, including nights, weekends, and bank holidays. She identifies emergency keywords and marks urgent enquiries with priority flags in your WhatsApp. Whether it's a burst pipe at 2am or a boiler breakdown on Christmas Day, Katie captures the details and alerts you immediately.`,
+      answer: `Yes, Katie answers 24/7, including nights, weekends, and bank holidays. She identifies emergency keywords and marks urgent enquiries with priority flags in your WhatsApp. Whether it's a burst pipe at 2am or a boiler breakdown on Christmas Day, Katie captures the details and alerts you immediately.`,
     },
     {
       question: `How quickly can I get set up in ${locationData.city}?`,
@@ -149,7 +154,7 @@ export default async function LocationPage({ params }: PageProps) {
             "@context": "https://schema.org",
             "@type": "Service",
             "@id": `https://whoza.ai/${location}#service`,
-            "name": `whoza.ai — AI Call Answering in ${locationData.city}`,
+            "name": `whoza.ai: AI Call Answering in ${locationData.city}`,
             "url": `https://whoza.ai/${location}`,
             "provider": { "@id": "https://whoza.ai/#organization" },
             "areaServed": {
@@ -182,7 +187,7 @@ export default async function LocationPage({ params }: PageProps) {
       />
       <FAQPageSchema faqs={cityFaqs} />
       <VideoSchema
-        name={`Whoza.ai Demo — AI Call Handling in ${locationData.city}`}
+        name={`Whoza.ai Demo: AI Call Handling in ${locationData.city}`}
         description={`Watch how Whoza.ai's Katie captures a missed enquiry in under 60 seconds for ${locationData.trades?.slice(0, 2).join(", ") || "tradespeople"} in ${locationData.city}. The call is answered instantly, the enquiry lands in WhatsApp, and you accept or decline in two taps.`}
         embedUrl={`https://whoza.ai/${location}`}
       />
@@ -201,11 +206,13 @@ export default async function LocationPage({ params }: PageProps) {
           jobsThisWeek={jobsThisWeek}
         />
         <SocialProofBar />
-        <GeoProofBand 
-          city={locationData.city}
-          country={locationData.country}
-          jobsThisWeek={jobsThisWeek}
-        />
+        {!draft && (
+          <GeoProofBand
+            city={locationData.city}
+            country={locationData.country}
+            jobsThisWeek={jobsThisWeek}
+          />
+        )}
         <SocialProofBand />
 
         {/* CITY-SPECIFIC CONTENT — Unique value for each location */}
@@ -245,9 +252,9 @@ export default async function LocationPage({ params }: PageProps) {
 
         {/* VOICE AGENT DEMO — Experience Katie live */}
         <div className="section-divider" />
-        <section className="py-12 bg-[var(--navy-900)] dark-section">
+        <section className="py-12 bg-[var(--v2-navy)] text-white dark-section">
           <div className="max-w-7xl mx-auto px-4 text-center">
-            <p className="text-white/60 text-sm mb-4">Experience the demo — no signup needed</p>
+            <p className="text-white/60 text-sm mb-4">Experience the demo, no signup needed</p>
             <TrilletVoiceWidget buttonLabel="Talk to Katie" />
           </div>
         </section>
@@ -285,7 +292,7 @@ export default async function LocationPage({ params }: PageProps) {
 
         {/* TRADE LINKS — Cross-link to all trade pages */}
         <div className="section-divider" />
-        <section className="py-12 bg-[var(--navy-900)]">
+        <section className="py-12 bg-[var(--v2-navy)] text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">
               AI Call Handling for Every Trade in {locationData.city}
@@ -331,14 +338,14 @@ export default async function LocationPage({ params }: PageProps) {
 
         {/* CITY FAQ — visible matching schema */}
         <div className="section-divider" />
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Questions from {locationData.city} Tradespeople</h2>
+            <h2 className="v2-h2 text-center mb-12">Questions from {locationData.city} Tradespeople</h2>
             <div className="space-y-4">
               {cityFaqs.map((faq, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                   <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
-                  <p className="text-white/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                  <p className="text-[var(--v2-body)] leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                 </div>
               ))}
             </div>
@@ -350,7 +357,7 @@ export default async function LocationPage({ params }: PageProps) {
         <FinalCTA />
       </main>
 
-      <Footer />
+      <Footer hideCta />
       <FloatingChatWidget />
     </LocaleProvider>
   )

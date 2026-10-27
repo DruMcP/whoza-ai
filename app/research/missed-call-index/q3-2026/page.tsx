@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Missed Call Index Q3 2026: Findings and Data",
   description:
-    "A third of UK small-business calls go unanswered. The Missed Call Index Q3 2026 models £2.3bn of trades revenue at risk — the data, the cost, and the fix.",
+    "A third of UK small-business calls go unanswered. The Missed Call Index Q3 2026 models £2.3bn of trades revenue at risk: the data, the cost, and the fix.",
   alternates: {
     canonical: "https://whoza.ai/research/missed-call-index/q3-2026",
   },
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "Missed Call Index Q3 2026: Findings and Data",
     description:
-      "A third of UK small-business calls go unanswered. The Missed Call Index Q3 2026 models £2.3bn of trades revenue at risk — the data, the cost, and the fix.",
+      "A third of UK small-business calls go unanswered. The Missed Call Index Q3 2026 models £2.3bn of trades revenue at risk: the data, the cost, and the fix.",
     images: [
       {
         url: "https://whoza.ai/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "The Missed Call Index — Q3 2026 Edition",
+        alt: "The Missed Call Index: Q3 2026 Edition",
       },
     ],
   },
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Missed Call Index Q3 2026: Findings and Data",
     description:
-      "A third of UK small-business calls go unanswered. The Missed Call Index Q3 2026 models £2.3bn of trades revenue at risk — the data, the cost, and the fix.",
+      "A third of UK small-business calls go unanswered. The Missed Call Index Q3 2026 models £2.3bn of trades revenue at risk: the data, the cost, and the fix.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   other: {
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
 const reportSchema = {
   "@context": "https://schema.org",
   "@type": "Report",
-  "headline": "The Missed Call Index — Q3 2026 Edition",
+  "headline": "The Missed Call Index: Q3 2026 Edition",
   "author": {
     "@type": "Person",
     "name": "Dru McPherson",
@@ -74,7 +74,7 @@ const reportSchema = {
   "about": "Unanswered calls to UK trades businesses: rates, costs and AI adoption",
   "mainEntity": {
     "@type": "Dataset",
-    "name": "The Missed Call Index — Q3 2026",
+    "name": "The Missed Call Index: Q3 2026",
     "description":
       "Quarterly index of unanswered call rates and revenue at risk for UK trades businesses, combining Whoza platform data with named third-party sources.",
     "creator": { "@type": "Organization", "name": "Whoza", "url": "https://whoza.ai" },
@@ -92,7 +92,7 @@ const breadcrumbSchema = {
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://whoza.ai/" },
     { "@type": "ListItem", "position": 2, "name": "Research", "item": "https://whoza.ai/research" },
-    { "@type": "ListItem", "position": 3, "name": "The Missed Call Index — Q3 2026", "item": "https://whoza.ai/research/missed-call-index/q3-2026" },
+    { "@type": "ListItem", "position": 3, "name": "The Missed Call Index: Q3 2026", "item": "https://whoza.ai/research/missed-call-index/q3-2026" },
   ],
 }
 
@@ -165,7 +165,7 @@ const webPageSchema = {
 
 export default function MissedCallIndexPage() {
   return (
-    <div className="min-h-screen bg-[var(--navy-900)] text-white">
+    <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header />
 
       {/* ─── JSON-LD blocks ─── */}
@@ -177,15 +177,15 @@ export default function MissedCallIndexPage() {
       <main id="main-content" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* ─── Header / Byline ─── */}
         <header className="mb-12">
-          <p className="text-emerald-400 text-sm font-medium mb-4">
+          <p className="text-[var(--v2-green)] text-sm font-medium mb-4">
             Q3 2026 Field Report
           </p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
-            The Missed Call Index — Q3 2026 Edition
+            The Missed Call Index: Q3 2026 Edition
           </h1>
-          <p className="text-white/60 text-lg">
+          <p className="text-[var(--v2-body)] text-lg">
             A quarterly field report from Whoza on the calls UK trades businesses don&apos;t answer, written by{" "}
-            <span className="text-white font-medium">Dru McPherson</span>, Founder & CEO, whoza.ai.
+            <span className="text-[var(--v2-ink)] font-medium">Dru McPherson</span>, Founder & CEO, whoza.ai.
           </p>
         </header>
 
@@ -193,19 +193,19 @@ export default function MissedCallIndexPage() {
         <figure className="mb-12">
           <Image
             src="/images/hero_missed_call.webp"
-            alt="A heating engineer up a ladder while a phone rings unanswered on his van dashboard — the £8,000 ladder problem"
+            alt="A heating engineer up a ladder while a phone rings unanswered on his van dashboard: the £8,000 ladder problem"
             width={1280}
             height={720}
             priority
             fetchPriority="high"
-            className="w-full rounded-xl"
+            className="w-full rounded-2xl"
             srcSet="/images/hero_missed_call-768.webp 768w, /images/hero_missed_call-1280.webp 1280w, /images/hero_missed_call-1600.webp 1600w"
           />
           <noscript>
             <img
               src="/images/hero_missed_call.png"
-              alt="A heating engineer up a ladder while a phone rings unanswered on his van dashboard — the £8,000 ladder problem"
-              className="w-full rounded-xl"
+              alt="A heating engineer up a ladder while a phone rings unanswered on his van dashboard: the £8,000 ladder problem"
+              className="w-full rounded-2xl"
             />
           </noscript>
         </figure>
@@ -213,13 +213,13 @@ export default function MissedCallIndexPage() {
         {/* ─── Intro ─── */}
         <section className="mb-16">
           <h2 className="text-2xl font-bold mb-4">Intro: The £8,000 ladder problem</h2>
-          <p className="intro-paragraph text-white/80 leading-relaxed text-lg mb-4">
+          <p className="intro-paragraph text-[var(--v2-body)] leading-relaxed text-lg mb-4">
             Fifteen years ago I lost an £8,000 boiler install because I was up a ladder in Cheltenham when the phone rang. It went to voicemail. The woman didn&apos;t leave a message. They never do. She rang the next plumber on Google, he answered, and he fitted her boiler, her sister&apos;s boiler, and her bathroom two years later. I know because he told me, in the pub, with the exact grin you&apos;d expect.
           </p>
-          <p className="text-white/80 leading-relaxed text-lg mb-4">
+          <p className="text-[var(--v2-body)] leading-relaxed text-lg mb-4">
             I carried that one for years. Every tradesperson I know has a version of the same story, and we all tell it like it&apos;s bad luck. It isn&apos;t luck. It&apos;s arithmetic. One unanswered call here, two there, and by Christmas you&apos;ve paid for somebody else&apos;s holiday.
           </p>
-          <p className="text-white/80 leading-relaxed text-lg">
+          <p className="text-[var(--v2-body)] leading-relaxed text-lg">
             So we measured it. This is the first Missed Call Index: what we found, what it costs, and what the small minority who answer everything are doing differently.
           </p>
         </section>
@@ -232,7 +232,7 @@ export default function MissedCallIndexPage() {
             <h3 className="text-xl font-semibold mb-3">
               1. Missed calls put £2.3bn of UK trades revenue at risk every year
             </h3>
-            <p className="text-white/80 leading-relaxed text-lg">
+            <p className="text-[var(--v2-body)] leading-relaxed text-lg">
               <strong>
                 £2.3 billion a year in revenue is at risk across UK trades businesses from unanswered calls.
               </strong>{" "}
@@ -244,7 +244,7 @@ export default function MissedCallIndexPage() {
             <h3 className="text-xl font-semibold mb-3">
               2. A third of small businesses fail to answer the phone
             </h3>
-            <p className="text-white/80 leading-relaxed text-lg">
+            <p className="text-[var(--v2-body)] leading-relaxed text-lg">
               <strong>A third of UK micro-businesses fail to answer their incoming calls.</strong> One in three.
               That&apos;s from Moneypenny&apos;s Small Business Call Report, a proper survey of 300 micro-businesses backed by call data from 10,000 firms, not a marketing blog. If you get fifteen calls a week, five of them are ringing into a void.
             </p>
@@ -254,7 +254,7 @@ export default function MissedCallIndexPage() {
             <h3 className="text-xl font-semibold mb-3">
               3. Voicemail loses 69% of callers before the beep
             </h3>
-            <p className="text-white/80 leading-relaxed text-lg mb-4">
+            <p className="text-[var(--v2-body)] leading-relaxed text-lg mb-4">
               <strong>69% of callers who reach voicemail don't leave a message.</strong> Seven out of ten people who hit your recorded greeting are gone before the beep. Voicemail isn&apos;t a safety net. It&apos;s a polite way of telling customers to try your competitor.
             </p>
             <figure className="mb-4">
@@ -264,17 +264,17 @@ export default function MissedCallIndexPage() {
                 width={1280}
                 height={720}
                 loading="lazy"
-                className="w-full rounded-xl"
+                className="w-full rounded-2xl"
                 srcSet="/images/chart_missed_call_funnel-768.webp 768w, /images/chart_missed_call_funnel-1280.webp 1280w, /images/chart_missed_call_funnel-1600.webp 1600w"
               />
               <noscript>
                 <img
                   src="/images/chart_missed_call_funnel.png"
                   alt="Where a week of calls goes: 12 inbound calls, 4 unanswered (33%), roughly 3 of those callers hanging up at voicemail (69%). Source: Moneypenny Small Business Call Report, 2016."
-                  className="w-full rounded-xl"
+                  className="w-full rounded-2xl"
                 />
               </noscript>
-              <figcaption className="text-sm text-white/50 mt-2">
+              <figcaption className="text-sm text-[var(--v2-muted)] mt-2">
                 Where a week of calls goes: 12 inbound calls, 4 unanswered (33%), roughly 3 of those callers
                 hanging up at voicemail (69%). Source: Moneypenny Small Business Call Report, 2016.
               </figcaption>
@@ -283,9 +283,9 @@ export default function MissedCallIndexPage() {
 
           <div id="finding-4" className="mb-8">
             <h3 className="text-xl font-semibold mb-3">
-              4. Small firms lean on voicemail three times as much as big ones — at exactly the wrong hours
+              4. Small firms lean on voicemail three times as much as big ones, at exactly the wrong hours
             </h3>
-            <p className="text-white/80 leading-relaxed text-lg">
+            <p className="text-[var(--v2-body)] leading-relaxed text-lg">
               <strong>Small and micro businesses are three times more likely than large ones to rely on voicemail</strong>{" "}
               (Moneypenny). And the phone rings hardest when you&apos;re least able to answer it: customers ring when the boiler dies and the fuse box trips, which is mornings, mostly, which is when you&apos;re under a floor. Tuesday at 9am is when you&apos;re flat out, and it&apos;s when Mrs Patterson&apos;s boiler gives up. (Whoza platform data on hourly patterns: pending Q3 export, see appendix.)
             </p>
@@ -293,9 +293,9 @@ export default function MissedCallIndexPage() {
 
           <div id="finding-5" className="mb-8">
             <h3 className="text-xl font-semibold mb-3">
-              5. 88% of construction firms don&apos;t use AI — and that&apos;s the opening
+              5. 88% of construction firms don&apos;t use AI, and that&apos;s the opening
             </h3>
-            <p className="text-white/80 leading-relaxed text-lg">
+            <p className="text-[var(--v2-body)] leading-relaxed text-lg">
               <strong>
                 88% of construction firms neither use AI nor plan to, according to the Government&apos;s own AI
                 Adoption Research, while 16% of UK businesses overall already use it.
@@ -308,7 +308,7 @@ export default function MissedCallIndexPage() {
         {/* ─── Data by trade ─── */}
         <section className="mb-16">
           <h2 className="text-2xl font-bold mb-4">The data by trade</h2>
-          <p className="text-white/80 leading-relaxed text-lg mb-6">
+          <p className="text-[var(--v2-body)] leading-relaxed text-lg mb-6">
             Unanswered rates and peak windows are Whoza platform data (aggregate, anonymised, ~50 active trade
             businesses). Figures marked <strong>[PD]</strong> are reserved for the verified Q3 export and stay
             unpublished until it lands. Revenue-at-risk is modelled per &quot;What a missed call costs&quot;, with
@@ -317,54 +317,54 @@ export default function MissedCallIndexPage() {
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="border-b border-white/20">
-                  <th scope="col" className="py-3 px-4 text-sm font-semibold text-white/70">
+                <tr className="border-b border-[var(--v2-line)]">
+                  <th scope="col" className="py-3 px-4 text-sm font-semibold text-[var(--v2-body)]">
                     Trade
                   </th>
-                  <th scope="col" className="py-3 px-4 text-sm font-semibold text-white/70">
+                  <th scope="col" className="py-3 px-4 text-sm font-semibold text-[var(--v2-body)]">
                     Unanswered rate
                   </th>
-                  <th scope="col" className="py-3 px-4 text-sm font-semibold text-white/70">
+                  <th scope="col" className="py-3 px-4 text-sm font-semibold text-[var(--v2-body)]">
                     Peak missed-call window
                   </th>
-                  <th scope="col" className="py-3 px-4 text-sm font-semibold text-white/70">
+                  <th scope="col" className="py-3 px-4 text-sm font-semibold text-[var(--v2-body)]">
                     Est. revenue at risk / month
                   </th>
-                  <th scope="col" className="py-3 px-4 text-sm font-semibold text-white/70">
+                  <th scope="col" className="py-3 px-4 text-sm font-semibold text-[var(--v2-body)]">
                     Source
                   </th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[var(--v2-line)]">
                   <td className="py-3 px-4 text-sm">Plumber / heating engineer</td>
                   <td className="py-3 px-4 text-sm">[PD]</td>
                   <td className="py-3 px-4 text-sm">[PD]</td>
                   <td className="py-3 px-4 text-sm">~£217</td>
                   <td className="py-3 px-4 text-sm">Platform data [PD]; £50 avg job (Checkatrade 2026)</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[var(--v2-line)]">
                   <td className="py-3 px-4 text-sm">Electrician</td>
                   <td className="py-3 px-4 text-sm">[PD]</td>
                   <td className="py-3 px-4 text-sm">[PD]</td>
                   <td className="py-3 px-4 text-sm">~£217</td>
                   <td className="py-3 px-4 text-sm">Platform data [PD]; £50 avg job (Checkatrade 2026)</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[var(--v2-line)]">
                   <td className="py-3 px-4 text-sm">Locksmith</td>
                   <td className="py-3 px-4 text-sm">[PD]</td>
                   <td className="py-3 px-4 text-sm">[PD]</td>
                   <td className="py-3 px-4 text-sm">~£430</td>
                   <td className="py-3 px-4 text-sm">Platform data [PD]; £100 emergency call-out (Checkatrade 2026)</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[var(--v2-line)]">
                   <td className="py-3 px-4 text-sm">Roofer / builder</td>
                   <td className="py-3 px-4 text-sm">[PD]</td>
                   <td className="py-3 px-4 text-sm">[PD]</td>
                   <td className="py-3 px-4 text-sm">Withheld until export</td>
                   <td className="py-3 px-4 text-sm">Platform data [PD]</td>
                 </tr>
-                <tr className="bg-white/5 font-semibold">
+                <tr className="bg-white font-semibold">
                   <td className="py-3 px-4 text-sm">All trades (modelled average)</td>
                   <td className="py-3 px-4 text-sm">~33% (benchmark)</td>
                   <td className="py-3 px-4 text-sm">Weekday mornings</td>
@@ -379,21 +379,21 @@ export default function MissedCallIndexPage() {
         {/* ─── When the phone rings ─── */}
         <section className="mb-16">
           <h2 className="text-2xl font-bold mb-4">When the phone rings</h2>
-          <p className="text-white/80 leading-relaxed text-lg mb-4">
+          <p className="text-[var(--v2-body)] leading-relaxed text-lg mb-4">
             Customers don&apos;t ring when it&apos;s convenient for you. They ring when the school run reveals the leak and the commute reveals the &quot;we need someone today.&quot; Your busiest earning hours and your busiest ringing hours are the same hours. You can&apos;t solder a joint and take a booking at the same time. Something gives, and it&apos;s always the phone.
           </p>
-          <p className="text-white/80 leading-relaxed text-lg">
+          <p className="text-[var(--v2-body)] leading-relaxed text-lg">
             We&apos;ll publish the exact hourly and day-of-week pattern with the verified Q3 platform export. For now, the benchmark: small firms lean on voicemail three times as much as large ones, and 69% of callers punished for it hang up.
           </p>
         </section>
 
         {/* ─── What a missed call costs ─── */}
         <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-4">What a missed call costs — the calculation, step by step</h2>
-          <p className="text-white/80 leading-relaxed text-lg mb-4">
+          <h2 className="text-2xl font-bold mb-4">What a missed call costs: the calculation, step by step</h2>
+          <p className="text-[var(--v2-body)] leading-relaxed text-lg mb-4">
             No hand-waving. Every input below is either sourced or labelled as our assumption.
           </p>
-          <ol className="list-decimal list-inside space-y-3 text-white/80 leading-relaxed text-lg mb-6">
+          <ol className="list-decimal list-inside space-y-3 text-[var(--v2-body)] leading-relaxed text-lg mb-6">
             <li>
               <strong>Businesses.</strong> 885,000 SMEs operate in UK construction, the largest sector by business
               count (Department for Business &amp; Trade, Business Population Estimates 2025).
@@ -408,8 +408,8 @@ export default function MissedCallIndexPage() {
               <em>Stated conservative assumption.</em> That&apos;s one lost job a week.
             </li>
             <li>
-              <strong>Job value.</strong> £50, the midpoint of a typical plumber&apos;s call-out fee (£40–£60,
-              Checkatrade cost guides 2026). We use small-job value, not the £200–£600 full-job figures, to stay
+              <strong>Job value.</strong> £50, the midpoint of a typical plumber&apos;s call-out fee (£40 to £60,
+              Checkatrade cost guides 2026). We use small-job value, not the £200 to £600 full-job figures, to stay
               conservative.
             </li>
             <li>
@@ -420,13 +420,13 @@ export default function MissedCallIndexPage() {
               <strong>National total.</strong> £2,600 × 885,000 businesses = <strong>£2.3 billion a year.</strong>
             </li>
           </ol>
-          <p className="text-white/80 leading-relaxed text-lg mb-4">
+          <p className="text-[var(--v2-body)] leading-relaxed text-lg mb-4">
             Change an input and the number moves. Use Checkatrade&apos;s full-job average of £150 or more and it
             triples. We chose the smallest defensible version, because the smallest version is bad enough.
           </p>
-          <p className="text-white/80 leading-relaxed text-lg">
+          <p className="text-[var(--v2-body)] leading-relaxed text-lg">
             If you&apos;d rather not watch £217 leave the business every month,{" "}
-            <Link href="/pricing" className="text-emerald-400 hover:underline">
+            <Link href="/pricing" className="text-[var(--v2-green)] hover:underline">
               see how Whoza answers every call
             </Link>
             .
@@ -436,8 +436,8 @@ export default function MissedCallIndexPage() {
         {/* ─── What the 6% know ─── */}
         <section className="mb-16">
           <h2 className="text-2xl font-bold mb-4">What the 6% know</h2>
-          <p className="text-white/80 leading-relaxed text-lg mb-4">
-            The Government&apos;s AI Adoption Research (DSIT, fieldwork February–May 2025, 3,500 UK businesses) found
+          <p className="text-[var(--v2-body)] leading-relaxed text-lg mb-4">
+            The Government&apos;s AI Adoption Research (DSIT, fieldwork February to May 2025, 3,500 UK businesses) found
             16% of businesses now use AI. One in six. But in construction, 88% neither use it nor plan to. Strip out
             the planners and the firms actually using AI in construction come out in single figures: roughly six in a
             hundred, against 43% in information and communication (two in five) and 54% in a March 2026 British
@@ -446,37 +446,37 @@ export default function MissedCallIndexPage() {
           <figure className="mb-4">
             <Image
               src="/images/chart_ai_adoption_gap.webp"
-              alt="The AI adoption gap: 43% of information & communication businesses currently use AI, 16% of all UK businesses, and roughly 6% of construction firms (derived). Source: DSIT AI Adoption Research, fieldwork February–May 2025."
+              alt="The AI adoption gap: 43% of information & communication businesses currently use AI, 16% of all UK businesses, and roughly 6% of construction firms (derived). Source: DSIT AI Adoption Research, fieldwork February to May 2025."
               width={1280}
               height={720}
               loading="lazy"
-              className="w-full rounded-xl"
+              className="w-full rounded-2xl"
               srcSet="/images/chart_ai_adoption_gap-768.webp 768w, /images/chart_ai_adoption_gap-1280.webp 1280w, /images/chart_ai_adoption_gap-1600.webp 1600w"
             />
             <noscript>
               <img
                 src="/images/chart_ai_adoption_gap.png"
-                alt="The AI adoption gap: 43% of information & communication businesses currently use AI, 16% of all UK businesses, and roughly 6% of construction firms (derived). Source: DSIT AI Adoption Research, fieldwork February–May 2025."
-                className="w-full rounded-xl"
+                alt="The AI adoption gap: 43% of information & communication businesses currently use AI, 16% of all UK businesses, and roughly 6% of construction firms (derived). Source: DSIT AI Adoption Research, fieldwork February to May 2025."
+                className="w-full rounded-2xl"
               />
             </noscript>
-            <figcaption className="text-sm text-white/50 mt-2">
+            <figcaption className="text-sm text-[var(--v2-muted)] mt-2">
               The AI adoption gap: 43% of information &amp; communication businesses currently use AI, 16% of all UK
               businesses, and roughly 6% of construction firms (derived). Source: DSIT AI Adoption Research, fieldwork
-              February–May 2025.
+              February to May 2025.
             </figcaption>
           </figure>
-          <p className="text-white/80 leading-relaxed text-lg mb-4">
+          <p className="text-[var(--v2-body)] leading-relaxed text-lg mb-4">
             This isn&apos;t a lecture. I was the 94% for most of my working life; I didn&apos;t need an app to fit a
             bathroom. But here&apos;s what the 6% have worked out: AI in a trade business isn&apos;t robots laying
             bricks. It&apos;s someone answering the phone while you&apos;re laying bricks.
           </p>
-          <p className="text-white/80 leading-relaxed text-lg mb-4">
+          <p className="text-[var(--v2-body)] leading-relaxed text-lg mb-4">
             Construction sits among the least digitised sectors in Britain on the Government&apos;s own numbers. That
             gap isn&apos;t a failure of the trades. It&apos;s the biggest competitive opening we&apos;ve had in twenty
             years. The plumber who answers every call doesn&apos;t need to be cheaper, faster or better. He just needs
             to pick up. See{" "}
-            <Link href="/ai-vs-virtual-receptionist" className="text-emerald-400 hover:underline">
+            <Link href="/ai-vs-virtual-receptionist" className="text-[var(--v2-green)] hover:underline">
               how Whoza compares to a traditional answering service
             </Link>
             .
@@ -486,7 +486,7 @@ export default function MissedCallIndexPage() {
         {/* ─── Method & sources ─── */}
         <section className="mb-16">
           <h2 className="text-2xl font-bold mb-4">Method &amp; sources (appendix)</h2>
-          <p className="text-white/80 leading-relaxed text-lg mb-4">
+          <p className="text-[var(--v2-body)] leading-relaxed text-lg mb-4">
             <strong>Governance.</strong> Every figure traces to a named source below. Whoza platform data and
             third-party data are never blended. [PD] figures are withheld pending verified export. The £2.3bn
             aggregate is modelled, inputs shown above.
@@ -494,23 +494,23 @@ export default function MissedCallIndexPage() {
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="border-b border-white/20">
-                  <th scope="col" className="py-3 px-4 text-sm font-semibold text-white/70">
+                <tr className="border-b border-[var(--v2-line)]">
+                  <th scope="col" className="py-3 px-4 text-sm font-semibold text-[var(--v2-body)]">
                     #
                   </th>
-                  <th scope="col" className="py-3 px-4 text-sm font-semibold text-white/70">
+                  <th scope="col" className="py-3 px-4 text-sm font-semibold text-[var(--v2-body)]">
                     Figure claimed
                   </th>
-                  <th scope="col" className="py-3 px-4 text-sm font-semibold text-white/70">
+                  <th scope="col" className="py-3 px-4 text-sm font-semibold text-[var(--v2-body)]">
                     Source
                   </th>
-                  <th scope="col" className="py-3 px-4 text-sm font-semibold text-white/70">
+                  <th scope="col" className="py-3 px-4 text-sm font-semibold text-[var(--v2-body)]">
                     Date
                   </th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[var(--v2-line)]">
                   <td className="py-3 px-4 text-sm">1</td>
                   <td className="py-3 px-4 text-sm">33% of UK micro-businesses failed to answer incoming calls</td>
                   <td className="py-3 px-4 text-sm">
@@ -518,7 +518,7 @@ export default function MissedCallIndexPage() {
                       href="https://www.moneypenny.com/uk/resources/news/small-business-call-report/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-emerald-400 hover:underline"
+                      className="text-[var(--v2-green)] hover:underline"
                     >
                       Moneypenny Small Business Call Report
                     </a>
@@ -526,7 +526,7 @@ export default function MissedCallIndexPage() {
                   </td>
                   <td className="py-3 px-4 text-sm">2016</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[var(--v2-line)]">
                   <td className="py-3 px-4 text-sm">2</td>
                   <td className="py-3 px-4 text-sm">69% of callers who reach voicemail hang up with no message</td>
                   <td className="py-3 px-4 text-sm">
@@ -534,14 +534,14 @@ export default function MissedCallIndexPage() {
                       href="https://www.moneypenny.com/uk/resources/news/small-business-call-report/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-emerald-400 hover:underline"
+                      className="text-[var(--v2-green)] hover:underline"
                     >
                       Moneypenny Small Business Call Report
                     </a>
                   </td>
                   <td className="py-3 px-4 text-sm">2016</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[var(--v2-line)]">
                   <td className="py-3 px-4 text-sm">3</td>
                   <td className="py-3 px-4 text-sm">Small/micro firms 3× more likely than large ones to rely on voicemail</td>
                   <td className="py-3 px-4 text-sm">
@@ -549,50 +549,50 @@ export default function MissedCallIndexPage() {
                       href="https://www.moneypenny.com/uk/resources/news/small-business-call-report/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-emerald-400 hover:underline"
+                      className="text-[var(--v2-green)] hover:underline"
                     >
                       Moneypenny Small Business Call Report
                     </a>
                   </td>
                   <td className="py-3 px-4 text-sm">2016</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[var(--v2-line)]">
                   <td className="py-3 px-4 text-sm">4</td>
                   <td className="py-3 px-4 text-sm">885,000 SMEs in UK construction (largest sector)</td>
                   <td className="py-3 px-4 text-sm">DBT, Business Population Estimates 2025</td>
                   <td className="py-3 px-4 text-sm">Start of 2025</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[var(--v2-line)]">
                   <td className="py-3 px-4 text-sm">5</td>
                   <td className="py-3 px-4 text-sm">16% of UK businesses (5+ staff) use AI; 43% in information &amp; communication</td>
                   <td className="py-3 px-4 text-sm">DSIT AI Adoption Research (3,500 interviews)</td>
-                  <td className="py-3 px-4 text-sm">Fieldwork Feb–May 2025</td>
+                  <td className="py-3 px-4 text-sm">Fieldwork Feb to May 2025</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[var(--v2-line)]">
                   <td className="py-3 px-4 text-sm">6</td>
                   <td className="py-3 px-4 text-sm">88% of construction firms neither use nor plan AI; ~6% using (derived, shown above)</td>
                   <td className="py-3 px-4 text-sm">DSIT AI Adoption Research</td>
                   <td className="py-3 px-4 text-sm">As above</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[var(--v2-line)]">
                   <td className="py-3 px-4 text-sm">7</td>
                   <td className="py-3 px-4 text-sm">54% of SME Chamber members using AI</td>
                   <td className="py-3 px-4 text-sm">British Chambers of Commerce / Atos SME survey</td>
                   <td className="py-3 px-4 text-sm">March 2026</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[var(--v2-line)]">
                   <td className="py-3 px-4 text-sm">8</td>
-                  <td className="py-3 px-4 text-sm">Plumber call-out £40–£60; emergency £100–£120+</td>
+                  <td className="py-3 px-4 text-sm">Plumber call-out £40 to £60; emergency £100 to £120+</td>
                   <td className="py-3 px-4 text-sm">Checkatrade cost guides (checkatrade.com)</td>
                   <td className="py-3 px-4 text-sm">2026</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[var(--v2-line)]">
                   <td className="py-3 px-4 text-sm">9</td>
                   <td className="py-3 px-4 text-sm">£2.3bn national figure</td>
                   <td className="py-3 px-4 text-sm">Modelled: 885,000 × £2,600 (inputs 1, 4, 8 plus declared assumptions)</td>
                   <td className="py-3 px-4 text-sm">Q3 2026</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[var(--v2-line)]">
                   <td className="py-3 px-4 text-sm">10</td>
                   <td className="py-3 px-4 text-sm">Per-trade unanswered rates; time-of-day patterns</td>
                   <td className="py-3 px-4 text-sm">Whoza platform data, ~50 businesses</td>
@@ -600,16 +600,16 @@ export default function MissedCallIndexPage() {
                 </tr>
               </tbody>
             </table>
-            <p className="text-white/50 text-sm mt-4">
-              Moneypenny rows 1–3 cite the Small Business Call Report originally published on 21 November 2016.
+            <p className="text-[var(--v2-muted)] text-sm mt-4">
+              Moneypenny rows 1 to 3 cite the Small Business Call Report originally published on 21 November 2016.
               The source page was last updated on 27 January 2020; the figures are from the 2016 UK report.
             </p>
           </div>
-          <p className="text-white/80 leading-relaxed text-lg mt-6">
+          <p className="text-[var(--v2-body)] leading-relaxed text-lg mt-6">
             <strong>Declared assumptions (ours, not sourced):</strong> 15 inbound calls/week; 1-in-5
             missed-call-to-job conversion. Both deliberately conservative.
           </p>
-          <p className="text-white/80 leading-relaxed text-lg mt-4">
+          <p className="text-[var(--v2-body)] leading-relaxed text-lg mt-4">
             <strong>Deliberately excluded:</strong> the widely circulated &quot;62% of calls go unanswered&quot; and
             &quot;85% won&apos;t leave voicemail&quot; figures. Neither could be traced to a primary published source,
             so neither appears in this report.
@@ -623,31 +623,31 @@ export default function MissedCallIndexPage() {
           <div className="space-y-6">
             <div>
               <h3 className="text-lg font-semibold mb-2">How much do missed calls cost UK tradespeople?</h3>
-              <p className="text-white/80 leading-relaxed">
+              <p className="text-[var(--v2-body)] leading-relaxed">
                 £2.3 billion a year in revenue is at risk across UK trades businesses from unanswered calls.
               </p>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-2">How many calls does a small business actually miss?</h3>
-              <p className="text-white/80 leading-relaxed">
+              <p className="text-[var(--v2-body)] leading-relaxed">
                 A third of UK micro-businesses fail to answer their incoming calls.
               </p>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-2">Do callers leave voicemail when tradespeople don&apos;t answer?</h3>
-              <p className="text-white/80 leading-relaxed">
+              <p className="text-[var(--v2-body)] leading-relaxed">
                 69% of callers who reach voicemail don't leave a message.
               </p>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-2">When do missed calls happen?</h3>
-              <p className="text-white/80 leading-relaxed">
+              <p className="text-[var(--v2-body)] leading-relaxed">
                 Small and micro businesses are three times more likely than large ones to rely on voicemail.
               </p>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-2">How many construction firms use AI to answer calls?</h3>
-              <p className="text-white/80 leading-relaxed">
+              <p className="text-[var(--v2-body)] leading-relaxed">
                 88% of construction firms neither use AI nor plan to, according to the Government&apos;s own AI
                 Adoption Research, while 16% of UK businesses overall already use it.
               </p>
@@ -658,28 +658,28 @@ export default function MissedCallIndexPage() {
         {/* ─── About Whoza ─── */}
         <section className="mb-16">
           <h2 className="text-2xl font-bold mb-4">About Whoza</h2>
-          <p className="text-white/80 leading-relaxed text-lg mb-4">
-            <Link href="/" className="text-emerald-400 hover:underline">
+          <p className="text-[var(--v2-body)] leading-relaxed text-lg mb-4">
+            <Link href="/" className="text-[var(--v2-green)] hover:underline">
               Whoza
             </Link>{" "}
             is the AI receptionist built for UK tradespeople. It answers every call, captures the job details and sends
             them straight to your WhatsApp, so you stay on the tools while your business stays on the phone. Founded
             by Dru McPherson, a former tradesperson. Journalists can request the full dataset.
           </p>
-          <p className="text-white/80 leading-relaxed text-lg">
+          <p className="text-[var(--v2-body)] leading-relaxed text-lg">
             <strong>Press contact:</strong>{" "}
-            <a href="mailto:press@whoza.ai" className="text-emerald-400 hover:underline">
+            <a href="mailto:press@whoza.ai" className="text-[var(--v2-green)] hover:underline">
               press@whoza.ai
             </a>{" "}
             ·{" "}
-            <Link href="/" className="text-emerald-400 hover:underline">
+            <Link href="/" className="text-[var(--v2-green)] hover:underline">
               whoza.ai
             </Link>
           </p>
         </section>
         <div className="mt-12 text-center">
-          <p className="text-white/40 text-sm">
-            <a href="/data" className="text-emerald-400 hover:underline">Sources and methodology</a> for all figures in this report.
+          <p className="text-[var(--v2-muted)] text-sm">
+            <a href="/data" className="text-[var(--v2-green)] hover:underline">Sources and methodology</a> for all figures in this report.
           </p>
         </div>
       

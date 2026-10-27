@@ -26,7 +26,7 @@ export function KatieAvatar({ className = "" }: KatieAvatarProps) {
       >
         <img
           src="/assets/icons/katie-icon.webp"
-          alt="Katie - AI call handler"
+          alt="Katie: AI call handler"
           width="140" height="140"
           className="w-full h-full object-contain p-2"
         />

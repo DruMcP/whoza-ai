@@ -27,7 +27,7 @@ export default function DashboardPage() {
     { label: "Declined", value: stats.declined, icon: <XCircle className="w-5 h-5" />, color: "bg-red-500/10 text-red-400" },
     { label: "Missed", value: stats.missed, icon: <PhoneOff className="w-5 h-5" />, color: "bg-gray-500/10 text-gray-400" },
     { label: "Voicemail", value: stats.voicemail, icon: <Voicemail className="w-5 h-5" />, color: "bg-purple-500/10 text-purple-400" },
-    { label: "Avg Duration", value: stats.avgDuration > 0 ? `${Math.floor(stats.avgDuration / 60)}m ${stats.avgDuration % 60}s` : "—", icon: <Clock className="w-5 h-5" />, color: "bg-slate-500/10 text-slate-400" },
+    { label: "Avg Duration", value: stats.avgDuration > 0 ? `${Math.floor(stats.avgDuration / 60)}m ${stats.avgDuration % 60}s` : "N/A", icon: <Clock className="w-5 h-5" />, color: "bg-slate-500/10 text-slate-400" },
   ]
 
   return (

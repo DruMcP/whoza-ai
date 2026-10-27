@@ -8,7 +8,7 @@ const voiceAgents = [
     name: "Katie",
     role: "Call Capture",
     voice: "Female Voice",
-    description: "Katie answers calls 24/7, qualifies real customer enquiries, and sends them to WhatsApp while you work. Friendly, professional and calm under pressure - she helps customers feel heard before the enquiry reaches you.",
+    description: "Katie answers calls 24/7, qualifies real customer enquiries, and sends them to WhatsApp while you work. Friendly, professional and calm under pressure. She helps customers feel heard before the enquiry reaches you.",
     outcome: "Ready to accept, call back or decline.",
     audioSample: "Hi, you've reached Thompson Plumbing. My name is Katie. How can I help you today?",
     image: "/assets/icons/katie-icon.webp",
@@ -23,7 +23,7 @@ const voiceAgents = [
     name: "Mark",
     role: "Call Capture",
     voice: "Male Voice",
-    description: "Mark answers calls 24/7, qualifies real customer enquiries, and sends them to WhatsApp while you work. Clear, efficient and professional - ideal if you prefer a direct male voice.",
+    description: "Mark answers calls 24/7, qualifies real customer enquiries, and sends them to WhatsApp while you work. Clear, efficient and professional, ideal if you prefer a direct male voice.",
     outcome: "Job type, urgency, location and customer details captured.",
     audioSample: "Hi, you've reached us. This is Mark speaking. What can I do for you?",
     image: "/assets/icons/mark-icon.webp",
@@ -38,7 +38,7 @@ const voiceAgents = [
     name: "Claire",
     role: "Review Collection",
     headline: "Claire turns completed jobs into reviews",
-    description: "Claire follows up after completed work to request reviews while the customer still remembers the good service. Polite, timely and consistent - she helps turn good jobs into future trust.",
+    description: "Claire follows up after completed work to request reviews while the customer still remembers the good service. Polite, timely and consistent. She helps turn good jobs into future trust.",
     outcome: "More reviews. More trust. More customers choosing you.",
     entitlement: "Included in Growth plan and above.",
     whatsappMessage: "Hi John, thanks for choosing Thompson Plumbing yesterday. If you were happy with the service, would you mind leaving us a quick review? It really helps. [Google review link]",
@@ -88,14 +88,12 @@ export function MeetTheTeam({ businessName = "Thompson Plumbing" }: { businessNa
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-block px-6 py-3 rounded-full bg-[#e0f2fe] text-[#0369a1] text-lg font-bold mb-5 border-2 border-[#0369a1]/30 shadow-md tracking-wide">
-            Your AI Revenue Team
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance reveal">
+          <span className="v2-eyebrow">Your AI Revenue Team</span>
+          <h2 className="v2-h2 text-balance reveal">
             Meet{" "}
-            <span className="text-[var(--rex-green)]">Katie, Mark, Claire & Rex</span>
+            <span className="v2-accent">Katie, Mark, Claire & Rex</span>
           </h2>
-          <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
+          <p className="v2-lead mt-5 text-pretty">
             Four AI specialists working together to answer calls, capture enquiries, collect reviews and show you what to improve next.
           </p>
         </motion.div>
@@ -111,7 +109,7 @@ export function MeetTheTeam({ businessName = "Thompson Plumbing" }: { businessNa
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`persona-card relative bg-white rounded-xl p-6 border-2 ${agent.borderColor} shadow-md hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col`}
+                className="persona-card v2-card relative flex flex-col hover:-translate-y-1"
                 data-persona={agent.name.toLowerCase()}
               >
                 {/* Role Badge */}
@@ -151,7 +149,7 @@ export function MeetTheTeam({ businessName = "Thompson Plumbing" }: { businessNa
                 )}
 
                 {/* Description */}
-                <p className="text-[var(--slate-500)] mb-6 text-sm leading-relaxed">{agent.description}</p>
+                <p className="text-[var(--v2-body)] mb-6 text-sm leading-relaxed">{agent.description}</p>
 
                 {/* Audio Sample Preview - Voice Agents Only */}
                 {agent.isVoiceAgent && agent.audioSample && (
@@ -160,7 +158,7 @@ export function MeetTheTeam({ businessName = "Thompson Plumbing" }: { businessNa
                       <Volume2 className="w-4 h-4" style={{ color: agent.color }} />
                       <span className="text-sm font-medium text-[var(--navy-900)]">Sample greeting:</span>
                     </div>
-                    <p className="text-sm text-[var(--slate-500)] italic">"{agent.audioSample}"</p>
+                    <p className="text-sm text-[var(--v2-body)] italic">"{agent.audioSample}"</p>
                   </div>
                 )}
 
@@ -198,7 +196,7 @@ export function MeetTheTeam({ businessName = "Thompson Plumbing" }: { businessNa
 
                 {/* Entitlement note */}
                 {agent.entitlement && (
-                  <p className="text-xs text-[var(--slate-400)] mt-auto pt-2">
+                  <p className="text-xs text-[var(--v2-muted)] mt-auto pt-2">
                     {agent.entitlement}
                   </p>
                 )}

@@ -69,10 +69,10 @@ export function ClaireDashboard({ clientId = "demo" }: ClaireDashboardProps) {
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-[var(--rex-green)] font-semibold text-sm uppercase tracking-wider mb-2">
+          <p className="v2-eyebrow v2-eyebrow-light">
             Win More Jobs with Reviews
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 reveal">
+          <h2 className="v2-h2 text-white mb-4 reveal">
             Your Review Engine
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto">
@@ -118,7 +118,7 @@ export function ClaireDashboard({ clientId = "demo" }: ClaireDashboardProps) {
           <MetricCard
             icon={<Star className="w-5 h-5" />}
             label="Average Rating"
-            value={metrics.averageRating?.toFixed(1) || "—"}
+            value={metrics.averageRating?.toFixed(1) || "N/A"}
             subtext="Google Business Profile"
             color="yellow"
           />
@@ -163,7 +163,7 @@ export function ClaireDashboard({ clientId = "demo" }: ClaireDashboardProps) {
             Your improved rating is helping you win more jobs. 
             {metrics.estimatedJobWinIncrease > 0
               ? `Claire estimates ~${metrics.estimatedJobWinIncrease} additional jobs this ${period === "7d" ? "week" : period === "30d" ? "month" : "quarter"} from your reviews.`
-              : `Keep going — every review compounds into future revenue.`}
+              : `Keep going. Every review compounds into future revenue.`}
           </p>
         </motion.div>
 
@@ -176,7 +176,7 @@ export function ClaireDashboard({ clientId = "demo" }: ClaireDashboardProps) {
             description="Scheduled for send"
           />
           <StatusCard
-            icon={<MessageSquare className="w-5 h-5 text-blue-400" />}
+            icon={<MessageSquare className="w-5 h-5 text-[#6ee7b7]" />}
             label="Sent"
             value={metrics.sentCount - metrics.completedCount - metrics.pendingCount}
             description="Awaiting response"

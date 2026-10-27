@@ -2,10 +2,16 @@ import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { PreferredSourceButton } from "@/components/whoza/preferred-source-button"
-import { FileText, Clock, ArrowLeft, User, Calendar, CheckCircle } from "lucide-react"
+import { CheckCircle } from "lucide-react"
 import Link from "next/link"
+import { Fragment } from "react"
 import { notFound } from "next/navigation"
 import { blogPostContents } from "@/lib/blog-content"
+import { findBlogEntry, formatBlogDate, type BlogIndexEntry } from "@/lib/blog-index"
+import { ArticleCover, ArticleHeader, ArticleInlineCta, RelatedPosts } from "@/components/whoza/blog/article-parts"
+import { CtaBand } from "@/components/whoza/cta-band"
+import { RevealObserver } from "@/components/whoza/blog/reveal-observer"
+import { SharePost } from "@/components/whoza/blog/share-post"
 
 // Defensive blocklist: retired blog slugs that must return 404
 // These slugs no longer have live content. The page component below
@@ -82,8 +88,19 @@ interface BlogPostPageProps {
 
 export const revalidate = 3600
 
+// Slugs that also have their own folder under app/blog/. Both routes would
+// prerender the same URL and whichever build output is written last wins, so
+// the page flipped between two different titles, texts and schemas from one
+// deploy to the next. The dedicated page is the one live on whoza.ai, so this
+// template must not generate these slugs.
+const DEDICATED_PAGE_SLUGS = new Set([
+  "ai-call-answering-uk-tradespeople-definitive-guide-2026",
+])
+
 export function generateStaticParams() {
-  return Object.keys(blogPostContents).map((slug) => ({ slug }))
+  return Object.keys(blogPostContents)
+    .filter((slug) => !DEDICATED_PAGE_SLUGS.has(slug))
+    .map((slug) => ({ slug }))
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
@@ -194,21 +211,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     }
   } : null
 
-  const pillarSlugs = [
-    "how-does-ai-call-answering-work",
-    "ai-call-answering-cost-uk",
-    "how-to-grow-trade-business-uk-guide",
-    "how-to-get-more-plumbing-customers",
-  ]
-  const isPillarPost = pillarSlugs.includes(slug)
-
   const customerStoryAuthors = [
     "Mike Harrison", "Tom Edwards", "Gary Mitchell", "Dave Williams", "Mark Harrison",
     "Tom Hartley", "Steve Dawson", "Sarah Jenkins", "James Crawford", "Mark Henderson",
     "Sarah Williams", "Tom Bradley", "Ross McAllister", "Charlie Hardcastle"
   ]
   const isDruAuthor = post.author === "Dru McPherson"
-  const isOrgAuthor = customerStoryAuthors.includes(post.author) || post.author === "Whoza.ai Team"
   const needsDisclosure = customerStoryAuthors.includes(post.author)
 
   const authorSchema = isDruAuthor
@@ -272,177 +280,154 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     ],
   }
 
+  const entry: BlogIndexEntry = findBlogEntry(slug) ?? {
+    slug,
+    title: post.title,
+    excerpt: post.excerpt,
+    readTime: post.readTime,
+    date: post.date,
+    category: post.category,
+    cover: "whatsapp-lead",
+  }
+  // The "try it yourself" box goes roughly halfway through the article.
+  const inlineCtaAfter = content.sections.length >= 3 ? Math.floor(content.sections.length / 2) - 1 : -1
+
   return (
-    <div className="min-h-screen bg-[var(--navy-900)] text-white">
+    <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header />
       <script
         id="blog-post-graph-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(graphSchema) }}
       />
+      <RevealObserver />
 
-      <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <Link
-          href="/blog"
-          className="inline-flex items-center gap-2 text-white/50 hover:text-emerald-400 transition-colors mb-8"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          Back to Blog
-        </Link>
+      <main id="main-content" className="overflow-x-clip pb-24">
+        <article>
+          <ArticleHeader entry={entry} title={post.title} author={post.author} authorTitle={post.authorTitle}>
+            {needsDisclosure && (
+              <div className="mt-6 max-w-[900px] rounded-2xl border border-[var(--v2-line)] bg-white p-4">
+                <p className="text-[var(--v2-muted)] text-sm leading-relaxed">
+                  <strong className="text-[var(--v2-body)]">About this story.</strong>{" "}
+                  This account is based on outcomes reported to us by a whoza.ai customer and written up by the whoza.ai team. Names and figures are the customer&apos;s own. Results vary. See our{" "}
+                  <Link href="/data" className="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] underline">evidence base</Link>{" "}
+                  for how we handle numbers.
+                </p>
+              </div>
+            )}
+          </ArticleHeader>
 
-        <div className="mb-8">
-          <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <FileText className="w-4 h-4" />
-            {post.category}
-          </div>
-          <h1 className="text-3xl sm:text-4xl font-bold mb-4 leading-tight">{post.title}</h1>
-          <div className="flex flex-wrap items-center gap-4 text-white/40 text-sm">
-            <div className="flex items-center gap-2">
-              <User className="w-4 h-4" />
-              <span>{post.author}</span>
-              {post.authorTitle && <span className="text-white/30">— {post.authorTitle}</span>}
-            </div>
-            <div className="flex items-center gap-2">
-              <Calendar className="w-4 h-4" />
-              <time dateTime={post.date}>{post.date}</time>
-            </div>
-            <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4" />
-              <span>{post.readTime}</span>
-            </div>
-          </div>
-          <div className="mt-2 text-white/30 text-sm">
-            Last updated: <time dateTime={post.date}>{post.date}</time>
-          </div>
-          {needsDisclosure && (
-            <div className="mt-4 bg-white/5 border border-white/10 rounded-lg p-4">
-              <p className="text-white/50 text-sm leading-relaxed">
-                <strong className="text-white/70">About this story.</strong>{" "}
-                This account is based on outcomes reported to us by a whoza.ai customer and written up by the whoza.ai team. Names and figures are the customer&apos;s own. Results vary — see our{" "}
-                <Link href="/data" className="text-emerald-400 hover:text-emerald-300 underline">evidence base</Link>{" "}
-                for how we handle numbers.
+          <ArticleCover entry={entry} />
+
+          <div className="mx-auto max-w-[880px] px-4 pt-12 sm:px-6 sm:pt-16">
+            <div className="v2-article article-body">
+              <p data-reveal className="text-[clamp(19px,1.6vw,22px)] leading-relaxed text-[var(--v2-ink)]">{post.excerpt}</p>
+              <p className="text-[14px] text-[var(--v2-muted)]">
+                Last updated: <time dateTime={post.date}>{formatBlogDate(post.date)}</time>
               </p>
-            </div>
-          )}
-        </div>
 
-        <div className="bg-white/5 border border-white/10 rounded-xl p-8 mb-10">
-          <p className="text-white/70 text-lg leading-relaxed">{post.excerpt}</p>
-        </div>
+              <div
+                data-reveal
+                className="whitespace-pre-line"
+                dangerouslySetInnerHTML={{ __html: formatText(content.introduction) }}
+              />
 
-        <article className="prose prose-invert prose-lg max-w-none">
-          <div
-            className="text-white/80 leading-relaxed whitespace-pre-line mb-10"
-            dangerouslySetInnerHTML={{ __html: formatText(content.introduction) }}
-          />
+              {content.sections.map((section, idx) => (
+                <Fragment key={`section-${idx}`}>
+                  <section data-reveal>
+                    {section.headingTag === "h2" ? <h2>{section.heading}</h2> : <h3>{section.heading}</h3>}
 
-          {content.sections.map((section, idx) => (
-            <section key={`section-${idx}`} className="mb-10">
-              {section.headingTag === "h2" ? (
-                <h2 className="text-2xl font-bold text-white mb-4 mt-8">{section.heading}</h2>
-              ) : (
-                <h3 className="text-xl font-semibold text-white mb-3 mt-6">{section.heading}</h3>
-              )}
+                    {section.body && (
+                      <div
+                        className="whitespace-pre-line"
+                        dangerouslySetInnerHTML={{ __html: formatText(section.body) }}
+                      />
+                    )}
 
-              {section.body && (
-                <div
-                  className="text-white/80 leading-relaxed whitespace-pre-line mb-4"
-                  dangerouslySetInnerHTML={{ __html: formatText(section.body) }}
-                />
-              )}
+                    {section.table && section.table.length > 0 && (
+                      <div className="my-6 overflow-hidden rounded-2xl border border-[var(--v2-line)] bg-white">
+                        <table>
+                          <tbody>
+                            {section.table.map((row, ridx) => (
+                              <tr key={`row-${ridx}`} className="border-b border-[var(--v2-line)] last:border-0">
+                                <th scope="row" className="w-1/3 bg-[var(--v2-mint)] px-5 py-3.5 text-left font-semibold text-[var(--v2-ink)]">{row.label}</th>
+                                <td className="px-5 py-3.5 text-[var(--v2-body)]">{row.value}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    )}
 
-              {section.table && section.table.length > 0 && (
-                <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden mb-6">
-                  <table className="w-full text-sm">
-                    <tbody>
-                      {section.table.map((row, ridx) => (
-                        <tr key={`row-${ridx}`} className="border-b border-white/10 last:border-0">
-                          <td className="px-4 py-3 font-medium text-white/70 w-1/3">{row.label}</td>
-                          <td className="px-4 py-3 text-white/90">{row.value}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              )}
+                    {section.list && section.list.length > 0 && (
+                      <ul className="my-6 space-y-3">
+                        {section.list.map((item, lidx) => (
+                          <li key={`list-${lidx}`} className="flex items-start gap-3">
+                            <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-[var(--v2-green)]" aria-hidden="true" />
+                            <span dangerouslySetInnerHTML={{ __html: formatText(item) }} />
+                          </li>
+                        ))}
+                      </ul>
+                    )}
 
-              {section.list && section.list.length > 0 && (
-                <ul className="space-y-3 mb-6">
-                  {section.list.map((item, lidx) => (
-                    <li key={`list-${lidx}`} className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-white/80">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
-
-              {section.callout && (
-                <div className="bg-emerald-500/10 border-l-4 border-emerald-500 rounded-r-xl p-6 my-6">
-                  <p className="text-emerald-200/90 font-medium leading-relaxed">{section.callout}</p>
-                </div>
-              )}
-            </section>
-          ))}
-
-          <div className="bg-white/5 border border-white/10 rounded-xl p-8 mb-10">
-            <div
-              className="text-white/80 leading-relaxed whitespace-pre-line"
-              dangerouslySetInnerHTML={{ __html: formatText(content.conclusion) }}
-            />
-          </div>
-
-          <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-8 mb-10 text-center">
-            <div
-              className="text-white/90 leading-relaxed mb-6"
-              dangerouslySetInnerHTML={{ __html: formatText(content.cta) }}
-            />
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl transition-colors"
-            >
-              Start Your Free Trial
-              <ArrowLeft className="w-4 h-4 rotate-180" />
-            </Link>
-          </div>
-
-          <div className="mb-10">
-            <h2 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
-            <div className="space-y-4">
-              {content.faq.map((faq, fidx) => (
-                <div key={`faq-${fidx}`} className="bg-white/5 border border-white/10 rounded-xl p-6">
-                  <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
-                  <p className="text-white/70 leading-relaxed">{faq.answer}</p>
-                </div>
+                    {section.callout && (
+                      <div className="my-7 rounded-r-2xl border-l-4 border-[var(--v2-green)] bg-[var(--v2-mint)] p-6">
+                        <p className="!mb-0 font-medium text-[var(--v2-green-ink)]" dangerouslySetInnerHTML={{ __html: formatText(section.callout) }} />
+                      </div>
+                    )}
+                  </section>
+                  {idx === inlineCtaAfter && <ArticleInlineCta source={`blog-${slug}`} />}
+                </Fragment>
               ))}
-            </div>
-          </div>
 
-          {/* Related Posts */}
-          <div className="mb-10">
-            <h2 className="text-2xl font-bold text-white mb-6">Related Posts</h2>
-            <div className="grid gap-4">
-              {Object.entries(blogPostContents)
-                .filter(([key]) => key !== slug)
-                .slice(0, 3)
-                .map(([key, relatedPost]) => (
-                  <Link
-                    key={key}
-                    href={`/blog/${key}`}
-                    className="block bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors"
-                  >
-                    <div className="text-emerald-400 text-sm font-medium mb-2">{relatedPost.category}</div>
-                    <h3 className="text-lg font-semibold text-white mb-2">{relatedPost.title}</h3>
-                    <p className="text-white/60 text-sm line-clamp-2">{relatedPost.excerpt}</p>
-                  </Link>
-                ))}
+              <div
+                data-reveal
+                className="mt-12 whitespace-pre-line rounded-[24px] border border-[var(--v2-line)] bg-white p-7 sm:p-9"
+                dangerouslySetInnerHTML={{ __html: formatText(content.conclusion) }}
+              />
+
+              <div data-reveal className="mt-8">
+                <CtaBand
+                  id={`blog-${slug}`}
+                  compact
+                  headingTag="div"
+                  heading={["Let Katie answer", "your next missed call"]}
+                  text={<span dangerouslySetInnerHTML={{ __html: formatText(content.cta) }} />}
+                  primaryLabel="Start your free trial"
+                  source={`blog-${slug}-cta`}
+                  secondary={{ label: "Hear a real call", href: "/#katie-demo-audio" }}
+                />
+              </div>
+
+              <section data-reveal className="mt-16">
+                <h2>Frequently Asked Questions</h2>
+                <div className="divide-y divide-[var(--v2-line)] border-y border-[var(--v2-line)]">
+                  {content.faq.map((faq, fidx) => (
+                    <div key={`faq-${fidx}`} className="py-6">
+                      <h3 className="!mt-0">{faq.question}</h3>
+                      <p className="!mb-0">{faq.answer}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </div>
+
+            <div className="mt-14">
+              <SharePost url={`https://whoza.ai/blog/${slug}`} title={post.title} />
             </div>
           </div>
         </article>
-        <PreferredSourceButton label="Prefer whoza.ai as a source in Google." />
+
+        <div className="mt-24 sm:mt-32">
+          <RelatedPosts slug={slug} />
+        </div>
+
+        <div className="mx-auto mt-16 max-w-[880px] px-4 sm:px-6">
+          <PreferredSourceButton label="Prefer whoza.ai as a source in Google." />
+        </div>
       </main>
 
-      <Footer />
+      <Footer hideCta />
     </div>
   )
 }
@@ -450,7 +435,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 function formatText(text: string): string {
   const formatted = text
     // Convert markdown links to HTML anchor tags
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-emerald-400 hover:text-emerald-300 underline">$1</a>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] underline underline-offset-2">$1</a>')
     // Bold
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
     // Italic

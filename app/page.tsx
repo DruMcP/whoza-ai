@@ -1,15 +1,16 @@
 import { Header } from "@/components/whoza/header"
 import { Hero } from "@/components/whoza/hero"
-import { SocialProofBar } from "@/components/whoza/social-proof-bar"
-import { SocialProofBand } from "@/components/whoza/social-proof"
+import { PocketStats } from "@/components/whoza/pocket-stats"
 import { AudioDemo } from "@/components/whoza/audio-demo"
 import { HowWhozaWorks } from "@/components/whoza/how-whoza-works"
 import { MeetTheTeam } from "@/components/whoza/meet-the-team"
-import { ControlSection } from "@/components/whoza/control-section"
+import { TradeCallDemo } from "@/components/whoza/trade-call-demo"
+import { DayOnTheTools } from "@/components/whoza/day-on-the-tools"
+import { IntegrationsOrbit } from "@/components/whoza/integrations-orbit"
+import { HowItWorksSteps } from "@/components/whoza/how-it-works-steps"
+import { ExplainerVideo } from "@/components/whoza/explainer-video"
 // import { AudioDemo } from "@/components/whoza/audio-demo" // removed for soft launch
-import { Testimonials } from "@/components/whoza/testimonials"
 import { GoogleReviews } from "@/components/whoza/google-reviews"
-import { ComparisonTable } from "@/components/whoza/comparison-table"
 import { PricingSummary } from "@/components/whoza/pricing-summary"
 import { FAQ } from "@/components/whoza/faq"
 import { FinalCTA } from "@/components/whoza/final-cta"
@@ -26,26 +27,26 @@ const HOMEPAGE_FAQS = [
           { question: "What counts as a booked job?", answer: "A booked job is a job enquiry that the tradesperson has accepted via the Whoza WhatsApp channel (e.g. replying ACCEPT to the WhatsApp job card). Job cards sent but not accepted do not count toward plan job allowances and are not billed as extra jobs." },
           { question: "How does the Refer a Trade programme work?", answer: "Refer a fellow tradesperson to Whoza.ai using your unique referral link. Your friend gets their first paid month free after their 7-day trial, on whichever plan they choose. You get one free month of your own current plan credited after they complete their second consecutive paid month. You can earn up to 12 free months per rolling 12-month period. No credit if they cancel before their second payment." },
           { question: "How much does Whoza cost in total?", answer: "You pay a monthly plan fee (Starter £59, Growth £125, Pro £230, Scale £399). Each plan includes a set number of call handling minutes and booked enquiries. Additional enquiries beyond your included amount are charged per booking. Overage minutes are billed at £0.40 per minute. There are no hidden setup fees or long-term contracts. You can cancel anytime." },
-          { question: "Is there a free trial?", answer: "Yes — the 7-day free trial is available on the Starter plan only. Your trial includes 20 minutes of call handling and up to 4 booked enquiries at no charge. No credit card required to start. If Whoza works for your business, you can upgrade to any plan. If not, you can cancel anytime during the trial with no charge." },
+          { question: "Is there a free trial?", answer: "Yes. The 7-day free trial is available on the Starter plan only. Your trial includes 100 minutes of call handling and up to 10 booked enquiries at no charge. No credit card required to start. If Whoza works for your business, you can upgrade to any plan. If not, you can cancel anytime during the trial with no charge." },
           { question: "Is there a contract?", answer: "No. whoza.ai has no contracts. You're free to cancel anytime with no penalties. We also offer a 30-day money-back guarantee on all plans." },
-          { question: "Does it work with my existing phone number?", answer: "Yes. You simply forward your existing business number to your whoza.ai number. Your customers call the same number they always have — they just get answered every time instead of hitting voicemail. Setup takes 30 minutes with your phone provider." },
+          { question: "Does it work with my existing phone number?", answer: "Yes. You simply forward your existing business number to your whoza.ai number. Your customers call the same number they always have. They just get answered every time instead of hitting voicemail. Setup takes 30 minutes with your phone provider." },
           { question: "Can I search through my past calls?", answer: "Yes. Katie writes detailed text notes for every call, which you can search by keyword, job type, location, or date in your dashboard. Type 'boiler' to find all boiler-related calls, or 'Bristol' to find all calls from that area. Call notes are stored for 30 days on Starter, 90 days on Growth, and 1 year on Pro." },
-          { question: "Can I choose a different voice for my AI?", answer: "Absolutely. We offer 12 different voices with a range of UK accents and tones — from Scottish to Welsh to London. You can preview and change your voice anytime in your dashboard." },
-          { question: "What happens if someone leaves a voicemail?", answer: "Our AI detects voicemails, transcribes them to text, and sends the message to your WhatsApp within 60 seconds. If the voicemail mentions an emergency, it's flagged as urgent so you see it immediately. No audio is stored — only text transcripts." },
+          { question: "Can I choose a different voice for my AI?", answer: "Absolutely. We offer 12 different voices with a range of UK accents and tones, from Scottish to Welsh to London. You can preview and change your voice anytime in your dashboard." },
+          { question: "What happens if someone leaves a voicemail?", answer: "Our AI detects voicemails, transcribes them to text, and sends the message to your WhatsApp within 60 seconds. If the voicemail mentions an emergency, it's flagged as urgent so you see it immediately. No audio is stored, only text transcripts." },
           { question: "How many calls can whoza.ai handle at once?", answer: "It depends on your plan. Starter handles 1 concurrent call, Growth 2, Pro 3, and Scale 5. If all lines are busy, callers hear a polite message and you get an instant alert. See full details at /how-many-calls-at-once." },
           { question: "What integrations does whoza.ai support?", answer: "whoza.ai integrates with Google Calendar, Outlook, Apple Calendar, WhatsApp Business, Zapier, Make, Stripe, Twilio, and Supabase. Custom integrations are available on request. See the full list at /integrations." },
-          { question: "Can whoza.ai book appointments into my calendar?", answer: "Yes — on every plan. The AI checks your calendar (Google, Outlook, or Apple) before offering slots, then adds confirmed bookings directly. No double-bookings. Learn more at /booking." },
+          { question: "Can whoza.ai book appointments into my calendar?", answer: "Yes, on every plan. The AI checks your calendar (Google, Outlook, or Apple) before offering slots, then adds confirmed bookings directly. No double-bookings. Learn more at /booking." },
           { question: "What accents and voices are available?", answer: "12+ UK and Irish accents: Scottish, Northern English, Southern English, Midlands English, Welsh, and Irish. Male and female options. Switch anytime from your dashboard. See all voices at /accents." },
           { question: "What trades do you support?", answer: "We support all UK trades including plumbers, electricians, builders, roofers, painters, landscapers, heating engineers, carpenters, tilers, plasterers, locksmiths, drainage specialists, and pest control. Our agents are trained on trade-specific terminology and common customer queries for each profession." },
           { question: "What happens to my data if I cancel?", answer: "You can cancel anytime with one click. Your call transcripts, customer data, and enquiry history are yours. We can export your data on request, and all stored data is deleted in line with GDPR requirements after cancellation." },
           { question: "How quickly can I get set up?", answer: "Most tradespeople are fully set up in under 30 minutes. You'll forward your existing business number to your new whoza.ai number, customize your agent's greeting, connect your calendar, and you're live. No technical knowledge required." },
-          { question: "What happens if Katie can't handle a call?", answer: "Katie is trained to recognize when she needs to transfer to a human. For complex queries, emergencies, or if the customer specifically requests you, she'll put them through to you on that call — a live transfer, not a promise to call back later. If you're unavailable, she takes a detailed message and notifies you immediately via WhatsApp. Learn more: /will-my-customers-mind." },
-          { question: "Will my customers mind an AI answering my phone?", answer: "Almost nobody hangs up — because the alternative is your voicemail. Katie answers in a natural voice, captures the job details, and books it in. If a caller asks to speak to you, she puts them through. If you're unavailable, she takes the details and you get a WhatsApp summary instantly. Read the full answer: /will-my-customers-mind." },
-          { question: "Is it a phone tree?", answer: "No. There is no menu, no 'press 1 for sales,' no hold music. The phone rings, Katie says hello, asks what's wrong, and has a real conversation — the way a good receptionist would. If the caller wants to talk to you, she puts them through. Read more: /is-it-a-phone-tree." },
+          { question: "What happens if Katie can't handle a call?", answer: "Katie is trained to recognize when she needs to transfer to a human. For complex queries, emergencies, or if the customer specifically requests you, she'll put them through to you on that call: a live transfer, not a promise to call back later. If you're unavailable, she takes a detailed message and notifies you immediately via WhatsApp. Learn more: /will-my-customers-mind." },
+          { question: "Will my customers mind an AI answering my phone?", answer: "Almost nobody hangs up, because the alternative is your voicemail. Katie answers in a natural voice, captures the job details, and books it in. If a caller asks to speak to you, she puts them through. If you're unavailable, she takes the details and you get a WhatsApp summary instantly. Read the full answer: /will-my-customers-mind." },
+          { question: "Is it a phone tree?", answer: "No. There is no menu, no 'press 1 for sales,' no hold music. The phone rings, Katie says hello, asks what's wrong, and has a real conversation, the way a good receptionist would. If the caller wants to talk to you, she puts them through. Read more: /is-it-a-phone-tree." },
           { question: "Can I export my call data?", answer: "Yes, on Growth and above. You can export your call logs as CSV or Excel files, filter by date range, job type, and more. We can also automatically email you a monthly export." },
           { question: "Does whoza work with my other business tools?", answer: "Yes. On Growth and above, whoza connects with Zapier and Make, letting you sync enquiries with Google Sheets, Google Calendar, Xero, Mailchimp, and 8,000+ other apps." },
-          { question: "What if I want to cancel?", answer: "Cancel anytime — no contracts, no cancellation fees, no hassle. We're confident you'll stay because the system pays for itself many times over, but if it's not right for your business, you can cancel with one click from your dashboard." },
-          { question: "What does the free trial include?", answer: "The 7-day free trial is on the Starter plan only. It includes: 20 minutes of AI call handling, up to 4 booked enquiries, full access to the WhatsApp delivery system, and the complete dashboard. This gives you enough time to see real results from actual customer calls. Fair usage applies — the trial is designed for genuine business evaluation, not extended free service." },
+          { question: "What if I want to cancel?", answer: "Cancel anytime: no contracts, no cancellation fees, no hassle. We're confident you'll stay because the system pays for itself many times over, but if it's not right for your business, you can cancel with one click from your dashboard." },
+          { question: "What does the free trial include?", answer: "The 7-day free trial is on the Starter plan only. It includes: 100 minutes of AI call handling, up to 10 booked enquiries, full access to the WhatsApp delivery system, and the complete dashboard. This gives you enough time to see real results from actual customer calls. Fair usage applies: the trial is designed for genuine business evaluation, not extended free service." },
 ]
 
 export default function Home() {
@@ -67,15 +68,14 @@ export default function Home() {
       <main id="main-content" role="main" className="pb-24 lg:pb-0">
         {/* HOOK - Hero with clean hierarchy */}
         <Hero />
-        <SocialProofBar />
-        <SocialProofBand />
+        <PocketStats />
 
         {/* EDUCATE - How the system works */}
         <div className="section-divider" />
         <HowWhozaWorks />
 
-        {/* HOW IT WORKS - Setup process */}
-        <div className="section-divider" />
+        {/* SHOW - An example call for each trade */}
+        <TradeCallDemo />
 
         {/* DIFFERENTIATE - Meet the team */}
         <div className="section-divider" />
@@ -83,175 +83,41 @@ export default function Home() {
 
         {/* SHOW - Audio demo */}
         <div className="section-divider" />
-        <AudioDemo />
+        <AudioDemo showCities />
 
-        {/* CONTROL - You stay in control */}
-        <div className="section-divider" />
-        <ControlSection />
+        {/* FEATURES - A working day, and what happens to each call */}
+        <DayOnTheTools />
 
-        {/* FREE TOOLS — contextual in-body internal links (not footer boilerplate) */}
-        <div className="section-divider" />
-        <section className="py-14" aria-labelledby="free-tools-heading">
-          <div className="max-w-5xl mx-auto px-4">
-            <h2 id="free-tools-heading" className="text-2xl md:text-3xl font-bold mb-3">
-              Free tools for UK tradespeople
-            </h2>
-            <p className="mb-6 opacity-80">
-              Built from our research into missed calls across UK trades. Free to use, no signup —
-              every figure is based on real UK trade pricing and ONS call data.
-            </p>
-            <ul className="space-y-4">
-              <li>
-                <a href="/missed-calls-cost-calculator" className="font-semibold underline">
-                  Lost Jobs Calculator
-                </a>{" "}
-                — work out how many jobs a year you lose to unanswered calls, and what those missed
-                jobs are worth at your average job value.
-              </li>
-              <li>
-                <a href="/tools/rate-checker" className="font-semibold underline">
-                  Hourly Rate Checker for UK trades
-                </a>{" "}
-                — compare your hourly rate against typical rates for your trade and region before
-                you quote your next job.
-              </li>
-              <li>
-                <a href="/tools/emergency-pricing" className="font-semibold underline">
-                  Emergency Callout Pricing Calculator
-                </a>{" "}
-                — set a defensible out-of-hours callout charge, including evening, weekend and bank
-                holiday uplifts.
-              </li>
-              <li>
-                <a href="/tools/quote-generator" className="font-semibold underline">
-                  Free Quote Generator
-                </a>{" "}
-                — produce a clean, itemised quote you can send from your phone while you are still
-                on site.
-              </li>
-              <li>
-                <a href="/tools/voicemail-scripts" className="font-semibold underline">
-                  Voicemail Script Generator
-                </a>{" "}
-                — write a voicemail greeting that actually gets callers to leave their name, job
-                and number instead of hanging up.
-              </li>
-              <li>
-                <a href="/missed-calls-cost-calculator" className="font-semibold underline">
-                  Missed Call Cost Calculator
-                </a>{" "}
-                — the original tool behind our{" "}
-                <a href="/research/missed-call-index" className="underline">
-                  Missed Call Index research
-                </a>{" "}
-                research.
-              </li>
-            </ul>
-          </div>
-        </section>
+        {/* HOW IT WORKS - Set-up in four steps */}
+        <HowItWorksSteps />
 
-        <div className="section-divider" />
-        {/* CITY COVERAGE — contextual in-body internal links (city pages were
-            orphaned: sitemap-only discovery, zero in-body links site-wide, GSC 2026-08-30) */}
-        <div className="section-divider" />
-        <section className="py-14" aria-labelledby="city-answering-heading">
-          <div className="max-w-5xl mx-auto px-4">
-            <h2 id="city-answering-heading" className="text-2xl md:text-3xl font-bold mb-3">
-              24/7 call answering for trades, city by city
-            </h2>
-            <p className="mb-6 opacity-80">
-              Whoza is built in Scotland for UK trades, with 12 UK and Scottish accent options — so
-              a caller from Glasgow or Aberdeen is understood first time. You only pay for jobs you
-              accept, never for calls answered. Pick your city:
-            </p>
-            <ul className="space-y-4">
-              <li>
-                <a href="/glasgow" className="font-semibold underline">
-                  AI call answering in Glasgow
-                </a>{" "}
-                — Glaswegian-ready voice handling for plumbers, electricians and joiners across the
-                city, with qualified jobs sent straight to your WhatsApp.
-              </li>
-              <li>
-                <a href="/edinburgh" className="font-semibold underline">
-                  AI call answering in Edinburgh
-                </a>{" "}
-                — capture tenement callouts and emergency heating jobs while you are on site, with
-                RED/AMBER/GREEN urgency triage on every call.
-              </li>
-              <li>
-                <a href="/leeds" className="font-semibold underline">
-                  AI call answering in Leeds
-                </a>{" "}
-                — 24/7 cover for Yorkshire trades, including spam and sales-call filtering so only
-                real enquiries reach your phone.
-              </li>
-              <li>
-                <a href="/manchester" className="font-semibold underline">
-                  AI call answering in Manchester
-                </a>{" "}
-                — keep your existing business number and let Katie or Mark answer the calls you
-                cannot take from the van.
-              </li>
-              <li>
-                <a href="/birmingham" className="font-semibold underline">
-                  AI call answering in Birmingham
-                </a>{" "}
-                — Midlands trade cover with calendar sync, so confirmed bookings land in your diary
-                without double-booking.
-              </li>
-              <li>
-                <a href="/london" className="font-semibold underline">
-                  AI call answering in London
-                </a>{" "}
-                — high call-volume cover for London trades, with searchable transcripts of every
-                enquiry and one-tap accept or decline.
-              </li>
-              <li>
-                <a href="/bristol" className="font-semibold underline">
-                  AI call answering in Bristol
-                </a>{" "}
-                — South West trade cover, plus Claire turning completed jobs into Google reviews on
-                autopilot.
-              </li>
-            </ul>
-            <p className="mt-6 opacity-80">
-              Not sure what unanswered calls are already costing you? Use the{" "}
-              <a href="/missed-calls-cost-calculator" className="font-semibold underline">
-                missed call cost calculator
-              </a>{" "}
-              — or read how our Aberdonian-accent build was covered by{" "}
-              <a href="/press" className="font-semibold underline">
-                the Press and Journal
-              </a>
-              .
-            </p>
-          </div>
-        </section>
+        {/* INTEGRATIONS - The tools whoza.ai runs on and connects to */}
+        <IntegrationsOrbit />
 
-        {/* COMPARE - Why Whoza Wins */}
-        <div className="section-divider" />
-        <ComparisonTable />
+        {/* SHOW - Explainer video */}
+        <ExplainerVideo />
 
         {/* DECIDE - Pricing */}
         <div className="section-divider" />
-        <PricingSummary />
+        <PricingSummary showTools />
 
         {/* OBJECTIONS - FAQ (with Pricing) */}
         <div className="section-divider" />
         <FAQ />
 
-        {/* VALIDATE - Social proof */}
+        {/* VALIDATE - Social proof. The header and footer "Testimonials" links
+            point at /#testimonials, so the id lives on the Google reviews. */}
         <div className="section-divider" />
-        <Testimonials />
-        <GoogleReviews />
+        <div id="testimonials">
+          <GoogleReviews />
+        </div>
 
         {/* CLOSE - Hard close */}
         <div className="section-divider" />
         <FinalCTA />
       </main>
 
-      <Footer />
+      <Footer hideCta />
       <FloatingChatWidget />
       <ExitIntentModal />
     </>

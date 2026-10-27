@@ -5,16 +5,16 @@ import { Star } from "lucide-react"
 
 const reviews = [
   { name: "Kat Hibbert-Jordan", date: "", text: "I realised recently that my business was not appearing in AI search results at all. Whoza.ai helped me fix that. Now I'm showing up in AI search results and getting more calls. Really pleased with the service.", rating: 5 },
-  { name: "Ludmila Lamont", date: "", text: "I've tried different marketing tools before — they cost me over £350/month. Whoza.ai is by far the simplest and the cheapest. It's easy to use and I'm already seeing results. Highly recommend!", rating: 5 },
-  { name: "Nicholas Wood", date: "", text: "Tried this company with anticipation but have to say was very impressed with the simplicity and how it helped me — sales followed pretty quickly which I was amazed at.", rating: 5 },
+  { name: "Ludmila Lamont", date: "", text: "I've tried different marketing tools before. They cost me over £350/month. Whoza.ai is by far the simplest and the cheapest. It's easy to use and I'm already seeing results. Highly recommend!", rating: 5 },
+  { name: "Nicholas Wood", date: "", text: "Tried this company with anticipation but have to say was very impressed with the simplicity and how it helped me. Sales followed pretty quickly which I was amazed at.", rating: 5 },
   { name: "Luke Winter", date: "", text: "The future is now. A powerful business tool well executed. This will yield both short and long term benefits.", rating: 5 },
   { name: "Sandy Fyfe", date: "", text: "I am reluctant to try new things but this was recommended to me and seemed worth trying. Really really impressed.", rating: 5 },
 ]
 
 export function GoogleReviews() {
   return (
-    <section className="section-padding bg-[var(--off-white)]" aria-label="Google reviews">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="v2-section-tight bg-[var(--off-white)]" aria-label="Google reviews">
+      <div className="v2-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -22,7 +22,7 @@ export function GoogleReviews() {
           className="text-center"
         >
           {/* Header */}
-          <div className="inline-flex items-center gap-3 px-5 py-3 bg-white rounded-2xl shadow-sm border border-[var(--border)] mb-8">
+          <div className="inline-flex items-center gap-3 px-5 py-3 bg-white rounded-full border border-[var(--v2-line)] mb-10">
             <svg className="w-6 h-6" viewBox="0 0 24 24">
               <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
               <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
@@ -35,7 +35,7 @@ export function GoogleReviews() {
           </div>
 
           {/* Mini Reviews */}
-          <div className="mt-2 grid grid-cols-1 md:grid-cols-3 gap-4 reveal-stagger">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 reveal-stagger">
             {reviews.map((review, index) => (
               <motion.div
                 key={index}
@@ -43,16 +43,16 @@ export function GoogleReviews() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-4 rounded-xl border border-[var(--border)] text-left"
+                className="v2-card text-left flex flex-col"
               >
-                <div className="flex gap-0.5 mb-2">
+                <div className="flex gap-0.5 mb-4">
                   {[1, 2, 3, 4, 5].map((i) => (
-                    <Star key={i} className="w-3 h-3 text-[var(--claire-amber)] fill-[var(--claire-amber)]" />
+                    <Star key={i} className="w-4 h-4 text-[#f5b301] fill-[#f5b301]" />
                   ))}
                 </div>
-                <p className="text-xs text-[var(--slate-500)] mb-2 line-clamp-3">{`"${review.text}"`}</p>
-                <p className="text-xs font-medium text-[var(--navy-900)]">{review.name}</p>
-                <p className="text-[10px] text-[var(--slate-400)]">Google Review</p>
+                <p className="text-[15px] leading-relaxed text-[var(--v2-body)] mb-5 flex-grow">{`"${review.text}"`}</p>
+                <p className="text-sm font-semibold text-[var(--v2-ink)]">{review.name}</p>
+                <p className="text-xs text-[var(--v2-muted)]">Google Review</p>
               </motion.div>
             ))}
           </div>

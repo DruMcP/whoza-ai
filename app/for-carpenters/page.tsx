@@ -23,13 +23,13 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/for-carpenters",
     siteName: "Whoza.ai",
-    title: "AI Call Answering for Carpenters UK — Never Miss a Job",
+    title: "AI Call Answering for Carpenters UK | Never Miss a Job",
     description: "AI call answering for UK carpenters. Katie answers 24/7, captures bespoke furniture, kitchen fitting and renovation enquiries. Plans from £59. Free trial.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Carpenters" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Carpenters" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Call Answering for Carpenters UK — Never Miss a Job",
+    title: "AI Call Answering for Carpenters UK | Never Miss a Job",
     description: "AI call answering for UK carpenters. Katie answers 24/7, captures bespoke furniture, kitchen fitting and renovation enquiries. Plans from £59. Free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
@@ -58,11 +58,11 @@ const faqs = [
   },
   {
     question: "Will customers know they're talking to AI?",
-    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience — they just want their project started quickly.",
+    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience. They just want their project started quickly.",
   },
   {
     question: "Does it work with my existing business phone number?",
-    answer: "Yes. You simply set up call forwarding from your existing carpentry business number to your whoza.ai number. Your customers dial the same number they've always used — Katie just answers when you can't. Setup takes under 10 minutes.",
+    answer: "Yes. You simply set up call forwarding from your existing carpentry business number to your whoza.ai number. Your customers dial the same number they've always used. Katie just answers when you can't. Setup takes under 10 minutes.",
   },
   {
     question: "How quickly can I get set up?",
@@ -70,7 +70,7 @@ const faqs = [
   },
   {
     question: "Can Katie handle builder and developer enquiries?",
-    answer: "Yes. Katie identifies builder, developer, architect, and interior designer enquiries and tags them as priority. She captures project scale, number of units, commercial requirements, timeline constraints, and budget scope. These are your biggest repeat customer base — Katie makes sure you never miss them.",
+    answer: "Yes. Katie identifies builder, developer, architect, and interior designer enquiries and tags them as priority. She captures project scale, number of units, commercial requirements, timeline constraints, and budget scope. These are your biggest repeat customer base. Katie makes sure you never miss them.",
   },
   {
     question: "What happens if Katie can't handle a complex enquiry?",
@@ -84,7 +84,7 @@ export default function ForCarpentersPage() {
   return (
     <>
       <VideoSchema
-        name="Whoza.ai for Carpenters — AI Call Answering Demo"
+        name="Whoza.ai for Carpenters: AI Call Answering Demo"
         description="Watch Katie capture a missed carpentry enquiry in under 60 seconds. Bespoke kitchen project answered instantly, details sent to WhatsApp, quote prepared while the carpenter is still in the workshop."
         embedUrl="https://whoza.ai/for-carpenters"
       />
@@ -118,54 +118,50 @@ export default function ForCarpentersPage() {
             }
           })
         }}
-      />      <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
+      />      <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--v2-paper)] text-[var(--v2-body)]">
         {/* ─── HERO ─── */}
-        <section className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[120px]" />
-            <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[100px]" />
-          </div>
+        <section className="bg-[var(--v2-navy)] text-white relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <div className="inline-flex items-center gap-2 bg-amber-500/10 text-[#6ee7b7] px-4 py-2 rounded-full text-sm font-medium mb-6">
                   <Hammer className="w-4 h-4" />
                   Built for UK Carpenters
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   Call Answering Service for{" "}
-                  <span className="text-amber-400">Carpenters</span>{" "}
+                  <span className="text-[#6ee7b7]">Carpenters</span>{" "}
                   <span className="block mt-2 text-2xl sm:text-3xl lg:text-4xl">Never Miss a Carpentry Job Again</span>
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
-                  Bespoke furniture, fitted kitchens, wardrobes, staircases — customers call when they want quality craftsmanship. Katie, your AI receptionist, runs your call answering service: answers every call, captures the project details, and sends them to your WhatsApp.
+                  Bespoke furniture, fitted kitchens, wardrobes, staircases. Customers call when they want quality craftsmanship. Katie, your AI receptionist, runs your call answering service: answers every call, captures the project details, and sends them to your WhatsApp.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
                     href="/"
-                    className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-4 text-lg rounded-lg transition-all hover:scale-[1.02] shadow-2xl shadow-emerald-500/40"
+                    className="v2-btn min-h-[54px] px-7 text-base"
                   >
                     Try Katie free for 7 days
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                   <Link
                     href="/pricing"
-                    className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 text-lg rounded-lg transition-all border border-white/20"
+                    className="v2-btn-secondary min-h-[54px] px-7 text-base text-white border-white/25 hover:border-white"
                   >
                     See Pricing
                   </Link>
                 </div>
-                <div className="flex flex-wrap gap-4 text-sm text-white/50">
+                <div className="flex flex-wrap gap-4 text-sm text-white/65">
                   <span className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                     No credit card required
                   </span>
                   <span className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                     Setup in 30 minutes
                   </span>
                   <span className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                     Cancel anytime
                   </span>
                 </div>
@@ -173,7 +169,7 @@ export default function ForCarpentersPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -211,13 +207,13 @@ export default function ForCarpentersPage() {
         <div className="section-divider" />
 
         {/* ─── PAIN POINTS ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 The Real Cost of Missed Carpentry Calls
               </h2>
-              <p className="text-white/60 text-lg max-w-2xl mx-auto">
+              <p className="v2-lead max-w-2xl mx-auto">
                 Every missed call is a bespoke project going to your competitor. Here's what carpenters lose every single week.
               </p>
             </div>
@@ -250,27 +246,27 @@ export default function ForCarpentersPage() {
                                    item.color === "amber" ? "text-amber-400 bg-amber-500/10 border-amber-500/20" :
                                    "text-emerald-400 bg-emerald-500/10 border-emerald-500/20"
                 return (
-                  <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/[0.07] transition-colors">
+                  <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 hover:border-[#b9c6bf] transition-colors">
                     <div className={`w-12 h-12 rounded-xl ${colorClass} flex items-center justify-center mb-4 border`}>
                       <Icon className="w-6 h-6" />
                     </div>
                     <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                    <p className="text-white/60 leading-relaxed mb-4">{item.description}</p>
-                    <div className="text-sm font-medium text-emerald-400">{item.stat}</div>
+                    <p className="text-[var(--v2-body)] leading-relaxed mb-4">{item.description}</p>
+                    <div className="text-sm font-medium text-[var(--v2-green)]">{item.stat}</div>
                   </div>
                 )
               })}
             </div>
-            <div className="mt-12 bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-6 text-center">
-              <p className="text-emerald-200 font-medium text-lg">
+            <div className="mt-12 bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-6 text-center">
+              <p className="text-[var(--v2-green-ink)] font-medium text-lg">
                 The average UK carpenter misses 45% of calls weekly = <strong>£50,000+</strong> in lost bespoke project revenue per year
               </p>
-              <p className="text-emerald-200/70 text-sm mt-1">
-                Source: UK SME Communications Survey 2025 — based on £12,000 avg bespoke kitchen value, 35% conversion rate
+              <p className="text-[var(--v2-body)] text-sm mt-1">
+                Source: UK SME Communications Survey 2025, based on £12,000 avg bespoke kitchen value, 35% conversion rate
               </p>
             </div>
             <div className="mt-8 text-center">
-              <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="inline-flex items-center text-amber-400 hover:text-amber-300 font-medium transition-colors">
+              <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="inline-flex items-center text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] font-medium transition-colors">
                 Read our 24/7 call answering guide
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
@@ -281,13 +277,13 @@ export default function ForCarpentersPage() {
         <div className="section-divider" />
 
         {/* ─── HOW KATIE WORKS ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 How Katie Works for Carpenters
               </h2>
-              <p className="text-white/60 text-lg max-w-2xl mx-auto">
+              <p className="v2-lead max-w-2xl mx-auto">
                 Three simple steps from missed call to booked project. No apps to check. No dashboards to monitor.
               </p>
             </div>
@@ -297,7 +293,7 @@ export default function ForCarpentersPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: "Customer calls your number. Katie picks up in under 2 rings with your branded greeting: 'Hello, Johnson Carpentry. I'm Katie, how can I help?' — 24/7, even when you're in the workshop.",
+                  description: "Customer calls your number. Katie picks up in under 2 rings with your branded greeting: 'Hello, Johnson Carpentry. I'm Katie, how can I help?', 24/7, even when you're in the workshop.",
                 },
                 {
                   step: "02",
@@ -315,17 +311,17 @@ export default function ForCarpentersPage() {
                 const Icon = item.icon
                 return (
                   <div key={idx} className="relative">
-                    <div className="bg-white/5 border border-white/10 rounded-xl p-8 h-full">
-                      <div className="text-5xl font-bold text-white/10 mb-4">{item.step}</div>
-                      <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-4">
-                        <Icon className="w-6 h-6 text-amber-400" />
+                    <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-8 h-full">
+                      <div className="text-5xl font-bold text-slate-200 mb-4">{item.step}</div>
+                      <div className="w-12 h-12 rounded-2xl bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 flex items-center justify-center mb-4">
+                        <Icon className="w-6 h-6 text-[var(--v2-green)]" />
                       </div>
                       <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                      <p className="text-white/60 leading-relaxed">{item.description}</p>
+                      <p className="text-[var(--v2-body)] leading-relaxed">{item.description}</p>
                     </div>
                     {idx < 2 && (
                       <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
-                        <ArrowRight className="w-8 h-8 text-white/20" />
+                        <ArrowRight className="w-8 h-8 text-slate-300" />
                       </div>
                     )}
                   </div>
@@ -335,7 +331,7 @@ export default function ForCarpentersPage() {
             <div className="mt-12 text-center">
               <Link
                 href="/how-it-works"
-                className="inline-flex items-center text-amber-400 hover:text-amber-300 font-medium transition-colors"
+                className="inline-flex items-center text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] font-medium transition-colors"
               >
                 See the full process in detail
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -347,30 +343,30 @@ export default function ForCarpentersPage() {
         <div className="section-divider" />
 
         {/* ─── TESTIMONIAL ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-8">
+            <div className="v2-eyebrow inline-flex items-center gap-2 mb-8">
               <Star className="w-4 h-4" />
               Carpenter Success Story
             </div>
-            <blockquote className="text-2xl sm:text-3xl font-medium leading-relaxed text-white/90 mb-8">
-              "I used to miss 4-5 calls a week because I was in the workshop with machinery running. In 3 weeks using whoza.ai, I captured 11 jobs I would have missed, including a <span className="text-emerald-400 font-bold">£12,000</span> bespoke kitchen. It cost me £59 for the month."
+            <blockquote className="text-2xl sm:text-3xl font-medium leading-relaxed text-[var(--v2-ink)] mb-8">
+              "I used to miss 4 to 5 calls a week because I was in the workshop with machinery running. In 3 weeks using whoza.ai, I captured 11 jobs I would have missed, including a <span className="text-[var(--v2-green)] font-bold">£12,000</span> bespoke kitchen. It cost me £59 for the month."
             </blockquote>
             <div className="flex items-center justify-center gap-4">
-              <div className="w-14 h-14 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-400 font-bold text-xl">
+              <div className="w-14 h-14 rounded-full bg-[var(--v2-mint)] flex items-center justify-center text-[var(--v2-green)] font-bold text-xl">
                 JW
               </div>
               <div className="text-left">
-                <p className="font-semibold text-white">James Whitfield</p>
-                <p className="text-white/50 text-sm">Master Carpenter, Shoreditch, London</p>
+                <p className="font-semibold text-[var(--v2-ink)]">James Whitfield</p>
+                <p className="text-[var(--v2-muted)] text-sm">Master Carpenter, Shoreditch, London</p>
               </div>
             </div>
             <div className="mt-4 flex items-center justify-center gap-1">
               {[1,2,3,4,5].map(i => (
-                <Star key={i} className="w-5 h-5 text-amber-400 fill-amber-400" />
+                <Star key={i} className="w-5 h-5 text-[var(--v2-green)] fill-amber-400" />
               ))}
             </div>
-            <p className="mt-6 text-white/50 text-sm">
+            <p className="mt-6 text-[var(--v2-muted)] text-sm">
               Read James's full story: I Missed 4 Calls a Week. Then I Tried AI.
             </p>
           </div>
@@ -379,13 +375,13 @@ export default function ForCarpentersPage() {
         <div className="section-divider" />
 
         {/* ─── PRICING CTA ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="bg-[var(--v2-navy)] text-white v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            <h2 className="v2-h2 text-white mb-4">
               One Recovered Project Pays for the Whole Year
             </h2>
             <p className="text-white/60 text-lg max-w-2xl mx-auto mb-8">
-              See our <Link href="/pricing" className="text-blue-400 hover:text-blue-300 underline">full pricing and plan details</Link>.
+              See our <Link href="/pricing" className="text-[#6ee7b7] hover:text-white underline">full pricing and plan details</Link>.
             </p>
             <p className="text-white/60 text-lg max-w-2xl mx-auto mb-8">
               At £59/month, Katie costs less than one fitted wardrobe. Most carpenters recover that cost within 48 hours.
@@ -393,28 +389,28 @@ export default function ForCarpentersPage() {
             <div className="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-10">
               <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
                 <div className="text-3xl font-bold text-white mb-1">£59</div>
-                <div className="text-sm text-white/50">per month</div>
-                <div className="text-xs text-white/40 mt-1">Starter Plan</div>
+                <div className="text-sm text-white/65">per month</div>
+                <div className="text-xs text-white/60 mt-1">Starter Plan</div>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-emerald-400 mb-1">£3,500</div>
-                <div className="text-sm text-white/50">avg project value</div>
-                <div className="text-xs text-white/40 mt-1">Fitted wardrobe</div>
+                <div className="text-3xl font-bold text-[#6ee7b7] mb-1">£3,500</div>
+                <div className="text-sm text-white/65">avg project value</div>
+                <div className="text-xs text-white/60 mt-1">Fitted wardrobe</div>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-amber-400 mb-1">5,800%</div>
-                <div className="text-sm text-white/50">ROI on 1 project</div>
-                <div className="text-xs text-white/40 mt-1">First month alone</div>
+                <div className="text-3xl font-bold text-[#6ee7b7] mb-1">5,800%</div>
+                <div className="text-sm text-white/65">ROI on 1 project</div>
+                <div className="text-xs text-white/60 mt-1">First month alone</div>
               </div>
             </div>
             <Link
               href="/"
-              className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-4 text-lg rounded-lg transition-all hover:scale-[1.02] shadow-2xl shadow-emerald-500/40"
+              className="v2-btn min-h-[54px] px-7 text-base"
             >
               Try Katie free for 7 days
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <p className="mt-4 text-sm text-white/50">
+            <p className="mt-4 text-sm text-white/65">
               No credit card. No contract. Cancel anytime. Setup in 30 minutes.
             </p>
           </div>
@@ -422,32 +418,32 @@ export default function ForCarpentersPage() {
 
         <div className="section-divider" />
         {/* ─── FAQ ─── */}
-<section className="trade-faq py-16 lg:py-24">
+<section className="trade-faq v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 Questions Carpenters Ask
               </h2>
-              <p className="text-white/60">
+              <p className="text-[var(--v2-body)]">
                 Everything you need to know about AI call answering for carpentry businesses.
               </p>
             </div>
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                   <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
-                  <p className="text-white/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                  <p className="text-[var(--v2-body)] leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                 </div>
               ))}
             </div>
             <div className="mt-10 text-center">
-              <p className="text-white/50 text-sm">
+              <p className="text-[var(--v2-muted)] text-sm">
                 Still have questions? Read our{" "}
-                <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-orange-400 hover:text-orange-300 underline">
+                <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] underline">
                   complete AI call answering guide
                 </a>{" "}
                 or{" "}
-                <a href="/pricing" className="text-orange-400 hover:text-orange-300 underline">
+                <a href="/pricing" className="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] underline">
                   compare all pricing plans
                 </a>.
               </p>
@@ -461,13 +457,13 @@ export default function ForCarpentersPage() {
         <div className="section-divider" />
 
         {/* ─── TRUST SIGNALS ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 Trusted by Carpenters Across the UK
               </h2>
-              <p className="text-white/60 max-w-2xl mx-auto">
+              <p className="text-[var(--v2-body)] max-w-2xl mx-auto">
                 From solo craftsmen in London to workshop teams in Manchester, carpenters rely on Katie to capture every call.
               </p>
             </div>
@@ -480,17 +476,17 @@ export default function ForCarpentersPage() {
               ].map((item, idx) => {
                 const Icon = item.icon
                 return (
-                  <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
-                    <Icon className="w-8 h-8 text-amber-400 mx-auto mb-3" />
-                    <p className="font-semibold text-white">{item.label}</p>
-                    <p className="text-sm text-white/50">{item.sub}</p>
+                  <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 text-center">
+                    <Icon className="w-8 h-8 text-[var(--v2-green)] mx-auto mb-3" />
+                    <p className="font-semibold text-[var(--v2-ink)]">{item.label}</p>
+                    <p className="text-sm text-[var(--v2-muted)]">{item.sub}</p>
                   </div>
                 )
               })}
             </div>
             <div className="mt-12 flex flex-wrap justify-center gap-3">
               {["London", "Manchester", "Birmingham", "Glasgow", "Bristol", "Liverpool", "Leeds", "Edinburgh"].map(city => (
-                <span key={city} className="bg-white/5 border border-white/10 rounded-full px-4 py-2 text-sm text-white/60">
+                <span key={city} className="bg-white border border-[var(--v2-line)] rounded-full px-4 py-2 text-sm text-[var(--v2-body)]">
                   {city}
                 </span>
               ))}
@@ -501,21 +497,21 @@ export default function ForCarpentersPage() {
         <div className="section-divider" />
 
 {/* ─── RELATED TRADES ─── */}
-<section className="py-12 border-t border-white/10">
+<section className="py-12 border-t border-[var(--v2-line)]">
   <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h3 className="text-lg font-semibold text-white/70 mb-6 text-center">Also See: AI Call Answering for Related Trades</h3>
+    <h3 className="text-lg font-semibold text-[var(--v2-body)] mb-6 text-center">Also See: AI Call Answering for Related Trades</h3>
     <div className="grid sm:grid-cols-3 gap-4">
-      <a href="/for-joiners" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors text-center">
-        <div className="font-medium text-white">AI Call Answering for Joiners</div>
-        <p className="text-sm text-white/50 mt-1">Never miss a job</p>
+      <a href="/for-joiners" className="block bg-white border border-[var(--v2-line)] rounded-2xl p-4 hover:border-[#b9c6bf] transition-colors text-center">
+        <div className="font-medium text-[var(--v2-ink)]">AI Call Answering for Joiners</div>
+        <p className="text-sm text-[var(--v2-muted)] mt-1">Never miss a job</p>
       </a>
-      <a href="/for-builders" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors text-center">
-        <div className="font-medium text-white">AI Call Answering for Builders</div>
-        <p className="text-sm text-white/50 mt-1">Never miss a job</p>
+      <a href="/for-builders" className="block bg-white border border-[var(--v2-line)] rounded-2xl p-4 hover:border-[#b9c6bf] transition-colors text-center">
+        <div className="font-medium text-[var(--v2-ink)]">AI Call Answering for Builders</div>
+        <p className="text-sm text-[var(--v2-muted)] mt-1">Never miss a job</p>
       </a>
-      <a href="/for-roofers" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors text-center">
-        <div className="font-medium text-white">AI Call Answering for Roofers</div>
-        <p className="text-sm text-white/50 mt-1">Never miss a job</p>
+      <a href="/for-roofers" className="block bg-white border border-[var(--v2-line)] rounded-2xl p-4 hover:border-[#b9c6bf] transition-colors text-center">
+        <div className="font-medium text-[var(--v2-ink)]">AI Call Answering for Roofers</div>
+        <p className="text-sm text-[var(--v2-muted)] mt-1">Never miss a job</p>
       </a>
     </div>
   </div>
@@ -524,11 +520,7 @@ export default function ForCarpentersPage() {
         <div className="section-divider" />
 
         {/* ─── FINAL CTA ─── */}
-        <section className="py-16 lg:py-24 relative overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[120px]" />
-            <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[100px]" />
-          </div>
+        <section className="bg-[var(--v2-navy)] text-white py-16 lg:py-24 relative overflow-hidden">
           <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
               Stop Losing Carpentry Projects Today
@@ -538,15 +530,15 @@ export default function ForCarpentersPage() {
             </p>
             <Link
               href="/"
-              className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-4 text-lg rounded-lg transition-all hover:scale-[1.02] shadow-2xl shadow-emerald-500/40"
+              className="v2-btn min-h-[54px] px-7 text-base"
             >
               Try Katie free for 7 days
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white/50">
+            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white/65">
               {["No credit card required", "Setup in 30 minutes", "Cancel anytime", "24/7 call answering"].map(point => (
                 <span key={point} className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                   {point}
                 </span>
               ))}

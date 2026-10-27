@@ -15,7 +15,10 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: "*",
-        allow: ["/", "/_next/static/"],
+        // /_next/image serves every next/image (hero included); Googlebot must be
+        // able to fetch it to render pages and index images. Longest match wins,
+        // so these Allow lines beat the /_next/ Disallow below.
+        allow: ["/", "/_next/static/", "/_next/image"],
         disallow: [
           "/_next/",
           "/api/",

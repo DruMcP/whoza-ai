@@ -44,10 +44,10 @@ const categoriesByTrade: Record<string, string[]> = {
 const photoGuidelines = [
   { type: "Logo", count: "1", desc: "Clear, square logo (720x720px minimum). No text overlays." },
   { type: "Cover Photo", count: "1", desc: "Showcase your best work. 1332x400px minimum. Bright, well-lit." },
-  { type: "Exterior", count: "3-5", desc: "Your van, branded uniform, tools. Helps customers recognise you." },
-  { type: "Work Photos", count: "10-15", desc: "Before/during/after shots. Label with short captions." },
-  { type: "Team Photos", count: "2-3", desc: "Friendly, professional. Builds trust with homeowners." },
-  { type: "Certificates / Insurance", count: "2-3", desc: "Gas Safe, NICEIC, CHAS. Builds authority." },
+  { type: "Exterior", count: "3 to 5", desc: "Your van, branded uniform, tools. Helps customers recognise you." },
+  { type: "Work Photos", count: "10 to 15", desc: "Before/during/after shots. Label with short captions." },
+  { type: "Team Photos", count: "2 to 3", desc: "Friendly, professional. Builds trust with homeowners." },
+  { type: "Certificates / Insurance", count: "2 to 3", desc: "Gas Safe, NICEIC, CHAS. Builds authority." },
 ]
 
 const reviewTemplates: Record<string, { subject: string; body: string }> = {
@@ -84,10 +84,10 @@ const reviewTemplates: Record<string, { subject: string; body: string }> = {
 }
 
 const postStrategy = [
-  { frequency: "1x per week", type: "Offer / Promotion", example: '"10% off boiler servicing this month — book now"' },
+  { frequency: "1x per week", type: "Offer / Promotion", example: '"10% off boiler servicing this month, book now"' },
   { frequency: "1x per week", type: "Completed Job Photo", example: '"Before \u0026 after kitchen rewire for a happy customer in [Area]"' },
   { frequency: "2x per month", type: "Tip / Educational", example: '"3 signs your boiler needs a service before winter"' },
-  { frequency: "1x per month", type: "Team / Behind the Scenes", example: '"Meet Dave — our senior sparky with 15 years experience"' },
+  { frequency: "1x per month", type: "Team / Behind the Scenes", example: '"Meet Dave, our senior sparky with 15 years experience"' },
 ]
 
 const faqItems = [
@@ -97,7 +97,7 @@ const faqItems = [
   },
   {
     q: "How many photos should I upload to my Google Business Profile?",
-    a: "Google recommends at least 10 photos, but businesses with 20+ photos get significantly more engagement. Aim for: 1 logo, 1 cover photo, 3-5 exterior/van shots, 10-15 work photos, 2-3 team photos, and 2-3 certificate shots.",
+    a: "Google recommends at least 10 photos, but businesses with 20+ photos get significantly more engagement. Aim for: 1 logo, 1 cover photo, 3 to 5 exterior/van shots, 10 to 15 work photos, 2 to 3 team photos, and 2 to 3 certificate shots.",
   },
   {
     q: "How often should I post on my Google Business Profile?",
@@ -109,7 +109,7 @@ const faqItems = [
   },
   {
     q: "Should I respond to every review?",
-    a: "Yes — especially negative ones. Responding to reviews shows you care and can turn a 1-star review into a positive impression for future customers. Keep responses professional, thank the reviewer, and address any issues raised.",
+    a: "Yes, especially negative ones. Responding to reviews shows you care and can turn a 1-star review into a positive impression for future customers. Keep responses professional, thank the reviewer, and address any issues raised.",
   },
   {
     q: "What Q&A should I pre-populate on my profile?",
@@ -138,8 +138,8 @@ const checklistSections = [
       "Logo uploaded ( 720x720px, no text overlays )",
       "Cover photo showcases best work ( 1332x400px )",
       "At least 3 exterior/van photos uploaded",
-      "10-15 work photos with before/after shots",
-      "2-3 team photos showing friendly, professional staff",
+      "10 to 15 work photos with before/after shots",
+      "2 to 3 team photos showing friendly, professional staff",
       "Certificate/insurance photos uploaded ( Gas Safe, NICEIC, etc. )",
       "All photos are well-lit and high resolution",
       "Photo captions include location and service keywords",
@@ -171,7 +171,7 @@ const checklistSections = [
   {
     title: "Q&A & Engagement",
     items: [
-      "Pre-populated 5-10 common questions and answers",
+      "Pre-populated 5 to 10 common questions and answers",
       "Q&A covers: pricing, areas, emergency hours, insurance",
       "Monitoring system for new customer questions",
       "Response time target: under 2 hours for new questions",
@@ -250,7 +250,7 @@ export default function GoogleBusinessProfileChecklistPage() {
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold mb-2">Google Business Profile Checklist for UK Trades</h1>
 
-              <div className="mt-4 text-white/30 text-sm">
+              <div className="mt-4 text-[var(--v2-muted)] text-sm">
                 Last updated: <time dateTime="2026-06-06">2026-06-06</time>
               </div>
           <p className="text-slate-600">A complete optimisation checklist from whoza.ai</p>
@@ -269,7 +269,7 @@ export default function GoogleBusinessProfileChecklistPage() {
           </div>
         ))}
         <div className="mt-8 pt-4 border-t border-slate-300 text-sm text-slate-500">
-          <p>Checklist provided by whoza.ai — AI Voice Agents for UK Tradespeople</p>
+          <p>Checklist provided by whoza.ai: AI Voice Agents for UK Tradespeople</p>
           <p>https://whoza.ai/resources/google-business-profile-checklist-trades</p>
         </div>
       </div>
@@ -290,7 +290,7 @@ export default function GoogleBusinessProfileChecklistPage() {
       <main id="main-content" role="main" className="pb-24 lg:pb-0">
         {/* Hero */}
         <section
-          className="dark-section relative overflow-hidden"
+          className="dark-section relative overflow-hidden v2-island"
           style={{ background: "linear-gradient(135deg, #0F1729 0%, #1A1A2E 50%, #0F1729 100%)" }}
         >
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
@@ -317,7 +317,7 @@ export default function GoogleBusinessProfileChecklistPage() {
             </nav>
 
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <div className="v2-eyebrow v2-eyebrow-light inline-flex items-center gap-2 mb-6">
                 <CheckCircle className="w-4 h-4" />
                 Interactive Checklist
               </div>
@@ -327,16 +327,16 @@ export default function GoogleBusinessProfileChecklistPage() {
               >
                 Google Business Profile{" "}
                 <br />
-                <span className="text-emerald-400">Checklist for UK Trades</span>
+                <span className="text-[#6ee7b7]">Checklist for UK Trades</span>
               </h1>
               <p className="text-lg text-slate-400 max-w-2xl mb-8">
                 A complete, step-by-step checklist to optimise your Google Business Profile and rank higher in local
-                search. Tick items off as you go — your progress saves automatically.
+                search. Tick items off as you go. Your progress saves automatically.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
                   href="#checklist"
-                  className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-6 py-3 rounded-xl hover:bg-emerald-700 transition-all shadow-lg"
+                  className="inline-flex items-center gap-2 bg-[var(--v2-green)] text-white font-bold px-6 py-3 rounded-xl hover:bg-[var(--v2-green-hover)] transition-all shadow-lg"
                 >
                   Start the Checklist <ArrowRight className="w-4 h-4" />
                 </a>
@@ -358,7 +358,7 @@ export default function GoogleBusinessProfileChecklistPage() {
             <div className="flex items-center gap-4">
               <div className="flex-1 bg-emerald-200 rounded-full h-2.5 overflow-hidden">
                 <div
-                  className="bg-emerald-600 h-2.5 rounded-full transition-all duration-500"
+                  className="bg-[var(--v2-green)] h-2.5 rounded-full transition-all duration-500 v2-island"
                   style={{ width: `${percent}%` }}
                 />
               </div>
@@ -375,10 +375,10 @@ export default function GoogleBusinessProfileChecklistPage() {
             {/* Main checklist */}
             <div className="lg:col-span-2 space-y-8">
               {checklistSections.map((section, si) => (
-                <div key={si} className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                <div key={si} className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
                   <div className="bg-slate-50 px-6 py-4 border-b border-slate-200">
                     <h2 className="font-bold text-slate-900 flex items-center gap-2">
-                      <Search className="w-5 h-5 text-emerald-600" />
+                      <Search className="w-5 h-5 text-[var(--v2-green)]" />
                       {section.title}
                     </h2>
                   </div>
@@ -396,9 +396,9 @@ export default function GoogleBusinessProfileChecklistPage() {
                         >
                           <div className="mt-0.5 shrink-0">
                             {isChecked ? (
-                              <CheckCircle className="w-5 h-5 text-emerald-600" />
+                              <CheckCircle className="w-5 h-5 text-[var(--v2-green)]" />
                             ) : (
-                              <Circle className="w-5 h-5 text-slate-300" />
+                              <Circle className="w-5 h-5 text-[var(--v2-body)]" />
                             )}
                           </div>
                           <span className={`text-sm ${isChecked ? "text-slate-500 line-through" : "text-slate-700"}`}>
@@ -415,9 +415,9 @@ export default function GoogleBusinessProfileChecklistPage() {
             {/* Sidebar */}
             <div className="space-y-6">
               {/* Category picker */}
-              <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6">
+              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
                 <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
-                  <Wrench className="w-5 h-5 text-emerald-600" />
+                  <Wrench className="w-5 h-5 text-[var(--v2-green)]" />
                   Category Recommendations
                 </h3>
                 <select
@@ -446,9 +446,9 @@ export default function GoogleBusinessProfileChecklistPage() {
               </div>
 
               {/* Photo guidelines */}
-              <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6">
+              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
                 <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
-                  <Camera className="w-5 h-5 text-emerald-600" />
+                  <Camera className="w-5 h-5 text-[var(--v2-green)]" />
                   Photo Guidelines
                 </h3>
                 <div className="space-y-3">
@@ -467,9 +467,9 @@ export default function GoogleBusinessProfileChecklistPage() {
               </div>
 
               {/* Review template */}
-              <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6">
+              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
                 <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
-                  <Star className="w-5 h-5 text-emerald-600" />
+                  <Star className="w-5 h-5 text-[var(--v2-green)]" />
                   Review Request Template
                 </h3>
                 <div className="bg-slate-50 rounded-lg p-4 text-sm space-y-3">
@@ -490,14 +490,14 @@ export default function GoogleBusinessProfileChecklistPage() {
         {/* Post strategy */}
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-            <Calendar className="w-6 h-6 text-emerald-600" />
+            <Calendar className="w-6 h-6 text-[var(--v2-green)]" />
             Post Strategy for Trades
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {postStrategy.map((post, i) => (
-              <div key={i} className="bg-white rounded-xl border border-slate-200 p-5 hover:shadow-md transition-shadow">
+              <div key={i} className="bg-white rounded-2xl border border-slate-200 p-5 hover:shadow-md transition-shadow">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2 py-1 rounded-full">
+                  <span className="text-xs font-semibold text-[var(--v2-green)] bg-emerald-50 px-2 py-1 rounded-full">
                     {post.frequency}
                   </span>
                   <span className="text-sm font-medium text-slate-800">{post.type}</span>
@@ -511,7 +511,7 @@ export default function GoogleBusinessProfileChecklistPage() {
         {/* Q&A Section */}
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-            <HelpCircle className="w-6 h-6 text-emerald-600" />
+            <HelpCircle className="w-6 h-6 text-[var(--v2-green)]" />
             Pre-Populated Q&A for Your Profile
           </h2>
           <p className="text-slate-600 mb-6">
@@ -520,14 +520,14 @@ export default function GoogleBusinessProfileChecklistPage() {
           </p>
           <div className="space-y-3">
             {faqItems.map((faq, i) => (
-              <div key={i} className="bg-white rounded-xl border border-slate-200 overflow-hidden">
+              <div key={i} className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
                 <button
                   onClick={() => setExpandedFaq(expandedFaq === i ? null : i)}
                   className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-slate-50 transition-colors"
                 >
                   <span className="font-semibold text-slate-900 text-sm">{faq.q}</span>
                   <ChevronRight
-                    className={`w-4 h-4 text-slate-400 transition-transform ${expandedFaq === i ? "rotate-90" : ""}`}
+                    className={`w-4 h-4 text-[var(--v2-muted)] transition-transform ${expandedFaq === i ? "rotate-90" : ""}`}
                   />
                 </button>
                 {expandedFaq === i && (
@@ -544,7 +544,7 @@ export default function GoogleBusinessProfileChecklistPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Link
               href="/research/missed-call-index"
-              className="flex items-center gap-3 bg-white border border-slate-200 rounded-xl p-4 hover:border-emerald-300 hover:shadow-md transition-all"
+              className="flex items-center gap-3 bg-white border border-slate-200 rounded-2xl p-4 hover:border-[var(--v2-green)]/40 hover:shadow-md transition-all"
             >
               <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center">
                 <MapPin className="w-5 h-5 text-blue-600" />
@@ -553,20 +553,20 @@ export default function GoogleBusinessProfileChecklistPage() {
                 <div className="font-semibold text-slate-900">Google Business Profile for Trades</div>
                 <div className="text-sm text-slate-500">Complete setup guide</div>
               </div>
-              <ArrowRight className="w-4 h-4 text-slate-400 ml-auto" />
+              <ArrowRight className="w-4 h-4 text-[var(--v2-muted)] ml-auto" />
             </Link>
             <Link
               href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026"
-              className="flex items-center gap-3 bg-white border border-slate-200 rounded-xl p-4 hover:border-emerald-300 hover:shadow-md transition-all"
+              className="flex items-center gap-3 bg-white border border-slate-200 rounded-2xl p-4 hover:border-[var(--v2-green)]/40 hover:shadow-md transition-all"
             >
               <div className="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center">
-                <Search className="w-5 h-5 text-emerald-600" />
+                <Search className="w-5 h-5 text-[var(--v2-green)]" />
               </div>
               <div>
                 <div className="font-semibold text-slate-900">Local SEO for Trades</div>
                 <div className="text-sm text-slate-500">Complete 2026 guide</div>
               </div>
-              <ArrowRight className="w-4 h-4 text-slate-400 ml-auto" />
+              <ArrowRight className="w-4 h-4 text-[var(--v2-muted)] ml-auto" />
             </Link>
           </div>
         </section>
@@ -575,12 +575,12 @@ export default function GoogleBusinessProfileChecklistPage() {
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-3xl font-bold text-slate-900 mb-4">Get more calls from your Google profile</h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-            whoza.ai answers every call that comes through your Google Business Profile — even at 2am. Start your 7-day
+            whoza.ai answers every call that comes through your Google Business Profile, even at 2am. Start your 7-day
             free trial today.
           </p>
           <a
             href="/pricing"
-            className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-emerald-700 transition-colors shadow-lg"
+            className="inline-flex items-center gap-2 bg-[var(--v2-green)] text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-[var(--v2-green-hover)] transition-colors shadow-lg v2-island"
           >
             Try whoza.ai Free for 7 Days <ArrowRight className="w-5 h-5" />
           </a>

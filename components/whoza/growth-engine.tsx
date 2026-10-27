@@ -19,12 +19,12 @@ export function GrowthEngine() {
             {/* Weekly AI Recommendation Card */}
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 max-w-md mx-auto">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-[var(--claire-amber)]/20 flex items-center justify-center">
-                  <Zap className="w-5 h-5 text-[var(--claire-amber)]" />
+                <div className="w-10 h-10 rounded-lg bg-white/[0.06] flex items-center justify-center">
+                  <Zap className="w-5 h-5 text-[#6ee7b7]" />
                 </div>
                 <div>
                   <div className="text-white font-semibold">This Week&apos;s AI Recommendation</div>
-                  <div className="text-white/50 text-sm">From Rex — Your Growth Advisor</div>
+                  <div className="text-white/50 text-sm">From Rex, Your Growth Advisor</div>
                 </div>
               </div>
 
@@ -53,15 +53,15 @@ export function GrowthEngine() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.15 }}
                   viewport={{ once: true }}
-                  className="p-4 rounded-xl bg-[var(--claire-amber)]/10 border border-[var(--claire-amber)]/20"
+                  className="p-4 rounded-xl bg-white/[0.06] border border-white/10"
                 >
                   <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-[var(--claire-amber)]/20 flex items-center justify-center shrink-0">
-                      <Eye className="w-3 h-3 text-[var(--claire-amber)]" />
+                    <div className="w-6 h-6 rounded-full bg-white/[0.06] flex items-center justify-center shrink-0">
+                      <Eye className="w-3 h-3 text-[#6ee7b7]" />
                     </div>
                     <div>
                       <div className="text-white text-sm font-medium">Your nearest competitor has 41 reviews to your 32</div>
-                      <div className="text-[var(--claire-amber)] text-xs mt-1 font-medium">→ Action: ask 5 recent customers this week</div>
+                      <div className="text-[#6ee7b7] text-xs mt-1 font-medium">→ Action: ask 5 recent customers this week</div>
                     </div>
                   </div>
                 </motion.div>
@@ -92,12 +92,12 @@ export function GrowthEngine() {
                   className="p-4 rounded-xl bg-white/5 border border-white/10"
                 >
                   <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-[var(--katie-blue)]/20 flex items-center justify-center shrink-0">
-                      <Zap className="w-3 h-3 text-[var(--katie-blue)]" />
+                    <div className="w-6 h-6 rounded-full bg-white/[0.06] flex items-center justify-center shrink-0">
+                      <Zap className="w-3 h-3 text-[#6ee7b7]" />
                     </div>
                     <div>
                       <div className="text-white text-sm font-medium">Top recommendation: Add 3 more jobs to your portfolio</div>
-                      <div className="text-[var(--katie-blue)] text-xs mt-1 font-medium">→ Result: Stronger AI recommendations in 7 days</div>
+                      <div className="text-[#6ee7b7] text-xs mt-1 font-medium">→ Result: Stronger AI recommendations in 7 days</div>
                     </div>
                   </div>
                 </motion.div>
@@ -122,7 +122,7 @@ export function GrowthEngine() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
               viewport={{ once: true }}
-              className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--claire-amber)] text-white text-sm font-bold shadow-lg"
+              className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--v2-green)] text-white text-sm font-bold shadow-lg"
             >
               <Zap className="w-4 h-4" />
               Delivered every Monday
@@ -136,15 +136,12 @@ export function GrowthEngine() {
             viewport={{ once: true }}
             className="order-1 lg:order-2"
           >
-            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--claire-amber)]/20 text-[var(--claire-amber)] text-base font-bold mb-6 border border-[var(--claire-amber)]/30 shadow-sm">
-              <Eye className="w-5 h-5" />
-              Rex — Your Growth Advisor
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight text-balance reveal">
-              Get More Work Every Week{" "}
-              <span className="text-[var(--claire-amber)]">— Without Ads</span>
+            <span className="v2-eyebrow v2-eyebrow-light">Rex: Your Growth Advisor</span>
+            <h2 className="v2-h2 text-white text-balance reveal">
+              Get More Work Every Week,{" "}
+              <span className="v2-accent-light">Without Ads</span>
             </h2>
-            <p className="mt-6 text-lg text-white/60 text-pretty">
+            <p className="v2-lead mt-5 text-white/70 text-pretty">
               When customers ask ChatGPT or Google AI for a tradesperson, Rex helps make sure your business is the one recommended.
               <span className="block mt-2 font-semibold text-white">Rex tells you what to fix this week so you get more calls and more jobs.</span>
             </p>
@@ -152,8 +149,8 @@ export function GrowthEngine() {
             <div className="mt-10 space-y-4 reveal-stagger">
               {[
                 { text: "Monthly competitor analysis on every plan", color: "text-[var(--rex-green)]" },
-                { text: "Weekly AI visibility actions from Growth upwards", color: "text-[var(--claire-amber)]" },
-                { text: "Advanced Rex reporting on Pro and Scale", color: "text-[var(--katie-blue)]" },
+                { text: "Weekly AI visibility actions from Growth upwards", color: "text-[#6ee7b7]" },
+                { text: "Advanced Rex reporting on Pro and Scale", color: "text-[#6ee7b7]" },
                 { text: "Multi-location intelligence on Scale", color: "text-white" },
               ].map((feature, index) => (
                 <motion.div
@@ -181,15 +178,15 @@ export function GrowthEngine() {
                     {step}
                   </span>
                 ))}
-                <span className="px-3 py-1 rounded-full bg-[var(--claire-amber)]/20 text-[var(--claire-amber)] text-sm font-bold">
+                <span className="px-3 py-1 rounded-full bg-white/[0.06] text-[#6ee7b7] text-sm font-bold">
                   Grow
                 </span>
               </div>
             </div>
 
-            <div className="mt-6 p-4 rounded-xl bg-[var(--claire-amber)]/10 border border-[var(--claire-amber)]/20">
+            <div className="mt-6 p-4 rounded-xl bg-white/[0.06] border border-white/10">
               <div className="flex items-center gap-2 mb-2">
-                <CheckCircle2 className="w-5 h-5 text-[var(--claire-amber)]" />
+                <CheckCircle2 className="w-5 h-5 text-[#6ee7b7]" />
                 <span className="font-semibold text-white">Every plan includes monthly competitor analysis</span>
               </div>
               <p className="text-sm text-white/60">Growth and above unlock weekly actionable AI visibility insights that show what to fix so AI search and customers are more likely to recommend your business.</p>

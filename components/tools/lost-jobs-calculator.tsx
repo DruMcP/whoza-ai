@@ -21,10 +21,10 @@ const tradeDefaults: Record<string, { jobValue: number; label: string }> = {
 }
 
 const scoreLabels = [
-  { min: 0, max: 30, label: "Low risk — keep it up", color: "#10B981", emoji: "🟢" },
-  { min: 30, max: 60, label: "Moderate — some calls slipping", color: "#F59E0B", emoji: "🟡" },
-  { min: 60, max: 85, label: "High — losing serious money", color: "#F97316", emoji: "🟠" },
-  { min: 85, max: 100, label: "Critical — every missed call hurts", color: "#B91C1C", emoji: "🔴" },,
+  { min: 0, max: 30, label: "Low risk: keep it up", color: "#10B981", emoji: "🟢" },
+  { min: 30, max: 60, label: "Moderate: some calls slipping", color: "#F59E0B", emoji: "🟡" },
+  { min: 60, max: 85, label: "High: losing serious money", color: "#F97316", emoji: "🟠" },
+  { min: 85, max: 100, label: "Critical: every missed call hurts", color: "#B91C1C", emoji: "🔴" },,
 ]
 
 export function LostJobsCalculator() {
@@ -52,10 +52,10 @@ export function LostJobsCalculator() {
   const shareText = `I scored ${score}/100 on the Lost Jobs Calculator. I lose £${Math.round(annualLoss).toLocaleString()}/year to missed calls 😱 Check yours: whoza.ai/missed-calls-cost-calculator`
 
   return (
-    <div className="min-h-screen bg-[var(--navy-900)] text-white">
+    <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header />
 
-      <main className="pt-32 pb-20">
+      <main id="main-content" className="pt-32 pb-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <motion.div
@@ -70,8 +70,8 @@ export function LostJobsCalculator() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               How Much Are Missed Calls Costing Your Trade Business?
             </h1>
-            <p className="text-white/60 text-lg max-w-2xl mx-auto">
-              Most UK tradespeople don't track missed calls. But the Moneypenny Small Business Call Report (2016) found that 33% of small businesses fail to answer incoming calls — and 69% of voicemail callers don't leave a message. They just call the next name on Google.
+            <p className="v2-lead max-w-2xl mx-auto">
+              Most UK tradespeople don't track missed calls. But the Moneypenny Small Business Call Report (2016) found that 33% of small businesses fail to answer incoming calls, and 69% of voicemail callers don't leave a message. They just call the next name on Google.
             </p>
           </motion.div>
 
@@ -80,21 +80,21 @@ export function LostJobsCalculator() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 mb-8"
+            className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 md:p-8 mb-8"
           >
             <div className="space-y-6">
               {/* Trade */}
               <div>
-                <label className="block text-sm font-medium text-white/80 mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2">
                   What trade are you in? <span className="text-[var(--coral)]">*</span>
                 </label>
                 <select
                   value={trade}
                   onChange={(e) => handleTradeChange(e.target.value)}
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/40 text-white focus:outline-none focus:border-[var(--katie-blue)] appearance-none cursor-pointer"
+                  className="w-full px-4 py-3 rounded-lg bg-white border border-white/40 text-[var(--v2-ink)] focus:outline-none focus:border-[var(--v2-green)] appearance-none cursor-pointer"
                 >
                   {Object.entries(tradeDefaults).map(([key, info]) => (
-                    <option key={key} value={key} className="bg-[var(--navy-900)]">
+                    <option key={key} value={key} className="bg-white">
                       {info.label}
                     </option>
                   ))}
@@ -103,7 +103,7 @@ export function LostJobsCalculator() {
 
               {/* Missed Calls */}
               <div>
-                <label className="block text-sm font-medium text-white/80 mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2">
                   How many calls do you miss per week? <span className="text-[var(--coral)]">*</span>
                 </label>
                 <div className="flex items-center gap-4">
@@ -119,14 +119,14 @@ export function LostJobsCalculator() {
                     {missedCalls}
                   </span>
                 </div>
-                <p className="text-sm text-white/50 mt-1">
+                <p className="text-sm text-[var(--v2-muted)] mt-1">
                   {missedCalls} calls = £{Math.round(missedCalls * jobValue * (daysPerWeek / 7)).toLocaleString()}/week
                 </p>
               </div>
 
               {/* Job Value */}
               <div>
-                <label className="block text-sm font-medium text-white/80 mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2">
                   What's your average job value? <span className="text-[var(--coral)]">*</span>
                 </label>
                 <div className="flex items-center gap-4">
@@ -143,14 +143,14 @@ export function LostJobsCalculator() {
                     £{jobValue}
                   </span>
                 </div>
-                <p className="text-sm text-white/50 mt-1">
-                  Typical {tradeInfo.label.toLowerCase()} call-out: £{Math.round(jobValue * 0.5)}–£{Math.round(jobValue * 1.2)}
+                <p className="text-sm text-[var(--v2-muted)] mt-1">
+                  Typical {tradeInfo.label.toLowerCase()} call-out: £{Math.round(jobValue * 0.5)} to £{Math.round(jobValue * 1.2)}
                 </p>
               </div>
 
               {/* Days per week */}
               <div>
-                <label className="block text-sm font-medium text-white/80 mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2">
                   How many days a week do you work? <span className="text-[var(--coral)]">*</span>
                 </label>
                 <div className="flex items-center gap-4">
@@ -170,23 +170,23 @@ export function LostJobsCalculator() {
 
               {/* Email */}
               <div>
-                <label className="block text-sm font-medium text-white/80 mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2">
                   Your email (optional)
                 </label>
-                <input
+                <input aria-label="Your email address"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@company.com"
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/40 text-white placeholder:text-white/40 focus:outline-none focus:border-[var(--katie-blue)]"
+                  className="w-full px-4 py-3 rounded-lg bg-white border border-white/40 text-[var(--v2-ink)] placeholder:text-slate-400 focus:outline-none focus:border-[var(--v2-green)]"
                 />
-                <p className="text-sm text-white/50 mt-1">We'll send you the full breakdown</p>
+                <p className="text-sm text-[var(--v2-muted)] mt-1">We'll send you the full breakdown</p>
               </div>
 
               {/* Calculate Button */}
               <button
                 onClick={() => setShowResults(true)}
-                className="w-full py-4 rounded-lg bg-[var(--coral)] hover:bg-[var(--coral)]/90 text-white font-bold text-lg transition-colors flex items-center justify-center gap-2"
+                className="w-full py-4 rounded-lg bg-[var(--coral)] hover:bg-[var(--coral)]/90 text-[var(--v2-ink)] font-bold text-lg transition-colors flex items-center justify-center gap-2"
               >
                 <Calculator className="w-5 h-5" />
                 CALCULATE MY LOSSES
@@ -199,7 +199,7 @@ export function LostJobsCalculator() {
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 mb-8"
+              className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 md:p-8 mb-8"
             >
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <TrendingDown className="w-6 h-6 text-[var(--coral)]" />
@@ -207,22 +207,22 @@ export function LostJobsCalculator() {
               </h2>
 
               <div className="grid md:grid-cols-3 gap-4 mb-8">
-                <div className="bg-white/5 rounded-xl p-4 text-center">
-                  <p className="text-sm text-white/60 mb-1">Weekly Loss</p>
+                <div className="bg-white rounded-2xl p-4 text-center">
+                  <p className="text-sm text-[var(--v2-body)] mb-1">Weekly Loss</p>
                   <p className="text-3xl font-bold text-[var(--coral)]">£{Math.round(weeklyLoss).toLocaleString()}</p>
                 </div>
-                <div className="bg-white/5 rounded-xl p-4 text-center">
-                  <p className="text-sm text-white/60 mb-1">Monthly Loss</p>
+                <div className="bg-white rounded-2xl p-4 text-center">
+                  <p className="text-sm text-[var(--v2-body)] mb-1">Monthly Loss</p>
                   <p className="text-3xl font-bold text-[var(--coral)]">£{Math.round(monthlyLoss).toLocaleString()}</p>
                 </div>
-                <div className="bg-white/5 rounded-xl p-4 text-center">
-                  <p className="text-sm text-white/60 mb-1">Annual Loss</p>
+                <div className="bg-white rounded-2xl p-4 text-center">
+                  <p className="text-sm text-[var(--v2-body)] mb-1">Annual Loss</p>
                   <p className="text-3xl font-bold text-[var(--coral)]">£{Math.round(annualLoss).toLocaleString()}</p>
                 </div>
               </div>
 
               {/* Score */}
-              <div className="bg-white/5 rounded-xl p-6 mb-6">
+              <div className="bg-white rounded-2xl p-6 mb-6">
                 <div className="flex items-center gap-4 mb-4">
                   <div
                     className="w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold"
@@ -231,13 +231,13 @@ export function LostJobsCalculator() {
                     {score}
                   </div>
                   <div>
-                    <p className="text-sm text-white/60">YOUR SCORE</p>
+                    <p className="text-sm text-[var(--v2-body)]">YOUR SCORE</p>
                     <p className="text-xl font-bold" style={{ color: scoreInfo.color }}>
                       {scoreInfo.emoji} {scoreInfo.label}
                     </p>
                   </div>
                 </div>
-                <div className="h-3 bg-white/10 rounded-full overflow-hidden">
+                <div className="h-3 bg-white rounded-full overflow-hidden">
                   <motion.div
                     initial={{ width: 0 }}
                     animate={{ width: `${score}%` }}
@@ -250,18 +250,18 @@ export function LostJobsCalculator() {
 
               {/* Equivalents */}
               <div className="space-y-3 mb-8">
-                <p className="text-sm text-white/60 font-medium">That's equivalent to:</p>
+                <p className="text-sm text-[var(--v2-body)] font-medium">That's equivalent to:</p>
                 <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-[var(--katie-blue)] shrink-0 mt-0.5" />
-                  <span className="text-white/80">{Math.round(annualLoss / 25000)} new van per year</span>
+                  <Check className="w-5 h-5 text-[var(--v2-green)] shrink-0 mt-0.5" />
+                  <span className="text-[var(--v2-body)]">{Math.round(annualLoss / 25000)} new van per year</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-[var(--katie-blue)] shrink-0 mt-0.5" />
-                  <span className="text-white/80">{Math.round(annualLoss / 18000)} months of wages for an apprentice</span>
+                  <Check className="w-5 h-5 text-[var(--v2-green)] shrink-0 mt-0.5" />
+                  <span className="text-[var(--v2-body)]">{Math.round(annualLoss / 18000)} months of wages for an apprentice</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-[var(--katie-blue)] shrink-0 mt-0.5" />
-                  <span className="text-white/80">{Math.round(annualLoss / jobValue)} hours of your time at £{jobValue}/hour</span>
+                  <Check className="w-5 h-5 text-[var(--v2-green)] shrink-0 mt-0.5" />
+                  <span className="text-[var(--v2-body)]">{Math.round(annualLoss / jobValue)} hours of your time at £{jobValue}/hour</span>
                 </div>
               </div>
 
@@ -278,10 +278,10 @@ export function LostJobsCalculator() {
                 </a>
                 <a
                   href="/pricing"
-                  className="flex-1 py-3 rounded-lg bg-[var(--coral)] hover:bg-[var(--coral)]/90 text-white font-bold transition-colors flex items-center justify-center gap-2"
+                  className="flex-1 py-3 rounded-lg bg-[var(--coral)] hover:bg-[var(--coral)]/90 text-[var(--v2-ink)] font-bold transition-colors flex items-center justify-center gap-2"
                 >
                   <AlertTriangle className="w-5 h-5" />
-                  STOP THE BLEEDING — TRY KATIE FREE
+                  STOP THE BLEEDING: TRY KATIE FREE
                 </a>
               </div>
             </motion.div>
@@ -293,7 +293,7 @@ export function LostJobsCalculator() {
             <h3>How much does a missed call cost a UK tradesperson?</h3>
             <p>The average missed call costs a UK tradesperson between £180 and £800 depending on their trade. Plumbers average £350 per job, electricians £280, roofers £450, and builders £800.</p>
             <h3>How many calls do tradespeople miss per week?</h3>
-            <p>UK tradespeople miss an average of 3-5 calls per week, rising to 8-12 during busy periods or when on emergency callouts.</p>
+            <p>UK tradespeople miss an average of 3 to 5 calls per week, rising to 8 to 12 during busy periods or when on emergency callouts.</p>
             <h3>Do missed callers leave a voicemail?</h3>
             <p>69% of missed callers to trade businesses don't leave a voicemail. They simply call the next tradesperson on Google.</p>
             <h3>Is the Lost Jobs Calculator free?</h3>
@@ -336,7 +336,7 @@ export function LostJobsCalculator() {
                     name: "How many calls do tradespeople miss per week?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "UK tradespeople miss an average of 3-5 calls per week, rising to 8-12 during busy periods or when on emergency callouts.",
+                      text: "UK tradespeople miss an average of 3 to 5 calls per week, rising to 8 to 12 during busy periods or when on emergency callouts.",
                     },
                   },
                   {

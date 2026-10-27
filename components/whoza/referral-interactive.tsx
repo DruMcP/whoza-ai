@@ -70,15 +70,15 @@ export function ReferralInteractive() {
 
   const handleShareWhatsApp = () => {
     if (!referralLink) return
-    const text = `Check out Whoza.ai — an AI receptionist that answers missed calls 24/7 and books jobs via WhatsApp. Use my link and your first paid month is free after the trial: ${referralLink}`
+    const text = `Check out Whoza.ai, an AI receptionist that answers missed calls 24/7 and books jobs via WhatsApp. Use my link and your first paid month is free after the trial: ${referralLink}`
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank")
     trackCTA("Share Referral WhatsApp", "refer-page")
   }
 
   const handleShareEmail = () => {
     if (!referralLink) return
-    const subject = "Try Whoza.ai — AI receptionist for trades"
-    const body = `Hi,\n\nI thought you'd be interested in Whoza.ai — an AI receptionist that answers missed calls 24/7 and sends job details straight to WhatsApp.\n\nUse my referral link and your first paid month is free after the 7-day trial:\n${referralLink}\n\nCheers!`
+    const subject = "Try Whoza.ai: AI receptionist for trades"
+    const body = `Hi,\n\nI thought you'd be interested in Whoza.ai, an AI receptionist that answers missed calls 24/7 and sends job details straight to WhatsApp.\n\nUse my referral link and your first paid month is free after the 7-day trial:\n${referralLink}\n\nCheers!`
     window.open(`mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, "_blank")
     trackCTA("Share Referral Email", "refer-page")
   }
@@ -170,14 +170,14 @@ export function ReferralInteractive() {
               <div className="flex gap-3 justify-center">
                 <button
                   onClick={handleShareWhatsApp}
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366]/20 transition-colors font-medium"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#25D366]/10 text-[#0f7a3d] hover:bg-[#25D366]/20 transition-colors font-medium"
                 >
                   <MessageCircle className="w-4 h-4" />
                   WhatsApp
                 </button>
                 <button
                   onClick={handleShareEmail}
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] hover:bg-[var(--katie-blue)]/20 transition-colors font-medium"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--v2-mint)] text-[var(--v2-green)] hover:bg-[#dcf5e6] transition-colors font-medium"
                 >
                   <Mail className="w-4 h-4" />
                   Email
@@ -203,19 +203,19 @@ export function ReferralInteractive() {
             </p>
 
             <form onSubmit={handleSubmitFriendEmail} className="space-y-4">
-              <div className="flex gap-2">
-                <input
+              <div className="flex flex-col sm:flex-row gap-2">
+                <input aria-label="Your friend's email address"
                   type="email"
                   value={friendEmail}
                   onChange={(e) => setFriendEmail(e.target.value)}
                   placeholder="friend@example.com"
                   required
-                  className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-[var(--rex-green)]"
+                  className="flex-1 min-w-0 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-[var(--rex-green)]"
                 />
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="px-6 py-3 bg-[var(--rex-green)] text-white font-medium rounded-lg hover:bg-[var(--rex-green-hover)] transition-colors disabled:opacity-50"
+                  className="px-6 py-3 bg-[var(--v2-green)] text-white font-medium rounded-lg hover:bg-[var(--v2-green-hover)] transition-colors disabled:opacity-50"
                 >
                   {isSubmitting ? "Sending..." : "Send"}
                 </button>

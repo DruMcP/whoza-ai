@@ -43,8 +43,9 @@ const resources = [
 
 export default function ResourcesPage() {
   return (
-    <main className="min-h-screen bg-[var(--navy-950)] text-white">
+    <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header />
+      <main id="main-content">
       <BreadcrumbSchema
         items={[
           { name: "Home", item: "https://whoza.ai" },
@@ -57,8 +58,8 @@ export default function ResourcesPage() {
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">
             Free Resources for UK Trades
           </h1>
-          <p className="text-xl text-white/60 max-w-2xl mx-auto">
-            Practical tools and guides built specifically for UK tradespeople — no signup required.
+          <p className="text-xl text-[var(--v2-body)] max-w-2xl mx-auto">
+            Practical tools and guides built specifically for UK tradespeople, no signup required.
           </p>
         </div>
       </section>
@@ -71,20 +72,20 @@ export default function ResourcesPage() {
               <Link
                 key={r.slug}
                 href={r.href ?? `/resources/${r.slug}`}
-                className="group block bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 transition-all"
+                className="group block bg-white border border-[var(--v2-line)] rounded-2xl p-8 hover:border-[#b9c6bf] hover:border-[#b9c6bf] transition-all"
               >
                 <div className="flex items-start gap-6">
-                  <div className="shrink-0 w-12 h-12 bg-[var(--katie-blue)]/10 rounded-xl flex items-center justify-center">
-                    <Icon className="w-6 h-6 text-[var(--katie-blue)]" />
+                  <div className="shrink-0 w-12 h-12 bg-[var(--v2-mint)] rounded-xl flex items-center justify-center">
+                    <Icon className="w-6 h-6 text-[var(--v2-green)]" />
                   </div>
                   <div className="flex-1">
-                    <h2 className="text-2xl font-bold mb-2 group-hover:text-[var(--katie-blue)] transition-colors">
+                    <h2 className="text-2xl font-bold mb-2 group-hover:text-[var(--v2-green)] transition-colors">
                       {r.title}
                     </h2>
-                    <p className="text-white/60 leading-relaxed mb-4">
+                    <p className="text-[var(--v2-body)] leading-relaxed mb-4">
                       {r.description}
                     </p>
-                    <span className="inline-flex items-center gap-2 text-[var(--katie-blue)] font-medium">
+                    <span className="inline-flex items-center gap-2 text-[var(--v2-green)] font-medium">
                       {r.cta}
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </span>
@@ -96,7 +97,8 @@ export default function ResourcesPage() {
         </div>
       </section>
 
+      </main>
       <Footer />
-    </main>
+    </div>
   )
 }

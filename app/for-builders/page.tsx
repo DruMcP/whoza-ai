@@ -33,7 +33,7 @@ import { tradeCaseStudies } from "@/lib/trade-case-studies"
 const faqs = [
   {
     question: "How much does AI call handling cost for builders?",
-    answer: "Whoza.ai starts at £59/month for the Starter plan. One captured extension or renovation enquiry can be worth £15,000-£80,000. That's one free trial to pay for over a decade. Overage minutes are billed at £0.40/minute. No hidden setup fees or long-term contracts."
+    answer: "Whoza.ai starts at £59/month for the Starter plan. One captured extension or renovation enquiry can be worth £15,000 to £80,000. That's one free trial to pay for over a decade. Overage minutes are billed at £0.40/minute. No hidden setup fees or long-term contracts."
   },
   {
     question: "Can Katie handle large project enquiries like full house renovations?",
@@ -41,7 +41,7 @@ const faqs = [
   },
   {
     question: "What happens if a customer calls about emergency structural damage?",
-    answer: "Katie identifies emergency keywords like 'collapse', 'structural damage', 'subsidence', 'crack in wall', 'unsafe', and 'dangerous' — and marks the enquiry as emergency priority. You get an immediate WhatsApp with 'STRUCTURAL EMERGENCY — URGENT' in the header, even at 2am."
+    answer: "Katie identifies emergency keywords like 'collapse', 'structural damage', 'subsidence', 'crack in wall', 'unsafe', and 'dangerous', and marks the enquiry as emergency priority. You get an immediate WhatsApp with 'STRUCTURAL EMERGENCY: URGENT' in the header, even at 2am."
   },
   {
     question: "Does Katie collect information for building quotes?",
@@ -53,7 +53,7 @@ const faqs = [
   },
   {
     question: "How does whoza.ai handle after-hours calls for builders?",
-    answer: "Builders often work on-site from 8am-6pm, but enquiries come in evenings and weekends when homeowners have time to research. Katie answers 24/7, capturing every call and delivering it to your WhatsApp. You review and respond when it suits you — no more Monday morning panic."
+    answer: "Builders often work on-site from 8am-6pm, but enquiries come in evenings and weekends when homeowners have time to research. Katie answers 24/7, capturing every call and delivering it to your WhatsApp. You review and respond when it suits you, no more Monday morning panic."
   },
   {
     question: "Will customers know they're talking to an AI receptionist?",
@@ -68,7 +68,7 @@ const faqs = [
 const painPoints = [
   {
     icon: Hammer,
-    title: "You're on site with machinery — phones ring in your van",
+    title: "You're on site with machinery. Phones ring in your van",
     description: "You're operating a digger, cutting timber, or laying foundations. The phone rings. By the time you wash up and check, it's gone to voicemail. That was a £25,000 extension enquiry. Your competitor answered."
   },
   {
@@ -78,13 +78,13 @@ const painPoints = [
   },
   {
     icon: ClipboardList,
-    title: "Extension enquiries need detail — voicemails don't deliver",
-    description: "'Hi, I need a quote for an extension' tells you nothing. How big? What type? Budget? Timeline? Planning permission status? Katie captures all of this — property age, project scope, budget range, architect involvement — so you arrive at the site meeting fully prepared."
+    title: "Extension enquiries need detail. Voicemails don't deliver",
+    description: "'Hi, I need a quote for an extension' tells you nothing. How big? What type? Budget? Timeline? Planning permission status? Katie captures all of this (property age, project scope, budget range, architect involvement) so you arrive at the site meeting fully prepared."
   },
   {
     icon: Phone,
     title: "Weekend calls from serious buyers go to voicemail",
-    description: "Homeowners research builders on Saturday and Sunday evenings. They call 2-3 firms. The one that answers — or at least captures the enquiry professionally — gets the site visit. By Monday, the serious buyers have already chosen."
+    description: "Homeowners research builders on Saturday and Sunday evenings. They call 2 to 3 firms. The one that answers, or at least captures the enquiry professionally, gets the site visit. By Monday, the serious buyers have already chosen."
   }
 ]
 
@@ -102,7 +102,7 @@ const howItWorks = [
   {
     step: 3,
     title: "WhatsApp with full brief",
-    description: "Alert shows: '4-bed extension — £40k-60k budget — Q3 timeline — architect appointed — planning submitted — postcode SE22 — callback requested' with customer number."
+    description: "Alert shows: '4-bed extension, £40k to £60k budget, Q3 timeline, architect appointed, planning submitted, postcode SE22, callback requested' with customer number."
   },
   {
     step: 4,
@@ -155,8 +155,8 @@ export default function ForBuildersPage() {
   return (
     <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />      <VideoSchema
-        name="Whoza.ai Demo — AI Call Handling for Builders"
-        description="Watch how Katie captures a missed building enquiry in under 60 seconds. Extensions, renovations, emergency structural work — answered 24/7."
+        name="Whoza.ai Demo: AI Call Handling for Builders"
+        description="Watch how Katie captures a missed building enquiry in under 60 seconds. Extensions, renovations, emergency structural work, answered 24/7."
         embedUrl="https://whoza.ai/for-builders"
       />
       <Header />
@@ -168,48 +168,48 @@ export default function ForBuildersPage() {
 
       <main id="main-content" role="main" className="pb-24 lg:pb-0">
         {/* HERO */}
-        <section className="relative overflow-hidden bg-[var(--navy-900)] py-20 lg:py-28">
+        <section className="relative overflow-hidden bg-[var(--v2-navy)] text-white py-20 lg:py-28">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <div className="inline-flex items-center gap-2 bg-amber-500/10 text-[#6ee7b7] px-4 py-2 rounded-full text-sm font-medium mb-6">
                   <Building className="w-4 h-4" />
                   Built for UK Builders
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 trade-headline">
                   Call Answering Service for{" "}
-                  <span className="text-emerald-400">Builders</span>{" "}
-                  <span className="block mt-2 text-2xl sm:text-3xl lg:text-4xl">Never Miss a Building Enquiry — Even From Site</span>
+                  <span className="text-[#6ee7b7]">Builders</span>{" "}
+                  <span className="block mt-2 text-2xl sm:text-3xl lg:text-4xl">Never Miss a Building Enquiry, Even From Site</span>
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8">
-                  Extensions, renovations, new builds, emergency structural work. Katie — your AI receptionist — provides a 24/7 call answering service for builders: answers every call you miss, captures the full project details, and sends them to your WhatsApp in 3 seconds. From £59/month — less than one missed quote.
+                  Extensions, renovations, new builds, emergency structural work. Katie, your AI receptionist, provides a 24/7 call answering service for builders: answers every call you miss, captures the full project details, and sends them to your WhatsApp in 3 seconds. From £59/month, less than one missed quote.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link
                     href="/"
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-amber-600 hover:bg-amber-700 text-white font-semibold rounded-xl transition-colors"
+                    className="v2-btn min-h-[54px] px-7 text-base"
                   >
                     Start 7-Day Free Trial
                     <ArrowRight className="w-5 h-5" />
                   </Link>
                   <Link
                     href="/how-it-works"
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-colors"
+                    className="v2-btn-secondary min-h-[54px] px-7 text-base text-white border-white/25 hover:border-white"
                   >
                     See How It Works
                   </Link>
                 </div>
-                <div className="flex items-center gap-6 mt-8 text-white/50 text-sm">
+                <div className="flex items-center gap-6 mt-8 text-white/65 text-sm">
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-amber-400" />
+                    <CheckCircle className="w-4 h-4 text-[#6ee7b7]" />
                     No credit card required
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-amber-400" />
+                    <CheckCircle className="w-4 h-4 text-[#6ee7b7]" />
                     Setup in 30 minutes
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-amber-400" />
+                    <CheckCircle className="w-4 h-4 text-[#6ee7b7]" />
                     Cancel anytime
                   </div>
                 </div>
@@ -218,25 +218,25 @@ export default function ForBuildersPage() {
                 <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center">
-                      <Phone className="w-5 h-5 text-amber-400" />
+                      <Phone className="w-5 h-5 text-[#6ee7b7]" />
                     </div>
                     <div>
-                      <p className="text-white font-medium">New Enquiry — Katie</p>
-                      <p className="text-white/50 text-sm">Extension call, 18:47</p>
+                      <p className="text-white font-medium">New Enquiry from Katie</p>
+                      <p className="text-white/65 text-sm">Extension call, 18:47</p>
                     </div>
                   </div>
                   <div className="space-y-2 text-white/80 text-sm">
                     <p>👤 Name: Rebecca Hartley</p>
                     <p>📞 Phone: 07XXX XXXXXX</p>
                     <p>📍 Postcode: SW18 3TQ</p>
-                    <p>🔧 Job: Single-storey rear extension — kitchen/diner</p>
-                    <p>💰 Budget: £45,000-£65,000</p>
+                    <p>🔧 Job: Single-storey rear extension, kitchen/diner</p>
+                    <p>💰 Budget: £45,000 to £65,000</p>
                     <p>📅 Timeline: September start</p>
                     <p>🏠 Property: 3-bed Victorian terrace</p>
-                    <p>📋 Planning: Not yet applied — needs advice</p>
+                    <p>📋 Planning: Not yet applied, needs advice</p>
                   </div>
                   <div className="flex gap-2 mt-4">
-                    <button className="flex-1 py-2 bg-amber-600 text-white rounded-lg text-sm font-medium">Accept</button>
+                    <button className="flex-1 py-2 bg-[var(--v2-green)] text-white rounded-lg text-sm font-medium">Accept</button>
                     <button className="flex-1 py-2 bg-white/10 text-white rounded-lg text-sm font-medium">Call Back</button>
                     <button className="flex-1 py-2 bg-white/10 text-white rounded-lg text-sm font-medium">Decline</button>
                   </div>
@@ -261,7 +261,7 @@ export default function ForBuildersPage() {
               answer: "£50k+ extensions get flagged for same-day callback, so you prioritise high-value jobs.",
             },            {
               label: "Both contacts",
-              answer: "Both partners' details are captured — no more 'let me check with my wife' delays.",
+              answer: "Both partners' details are captured, no more 'let me check with my wife' delays.",
             },            {
               label: "WhatsApp brief",
               answer: "A full project brief arrives on your phone before you even call back.",
@@ -276,24 +276,24 @@ export default function ForBuildersPage() {
         <section className="section-padding-lg bg-white relative">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] text-sm font-medium mb-4">
+              <span className="v2-eyebrow">
                 The Problem
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
+              <h2 className="v2-h2 text-balance">
                 Why Builders Lose Jobs to Missed Calls
               </h2>
-              <p className="mt-6 text-lg text-[var(--slate-500)] max-w-2xl mx-auto">
-                Building projects are high-value, long-lead enquiries. Homeowners research for weeks, then call 2-3 builders on the same evening. The one that captures the enquiry professionally wins the site visit.
+              <p className="v2-lead mt-5 max-w-2xl mx-auto">
+                Building projects are high-value, long-lead enquiries. Homeowners research for weeks, then call 2 to 3 builders on the same evening. The one that captures the enquiry professionally wins the site visit.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 gap-8">
               {painPoints.map((point, idx) => (
-                <div key={idx} className="bg-[var(--off-white)] rounded-xl border border-[var(--border)] p-8">
-                  <div className="w-12 h-12 rounded-xl bg-[var(--katie-blue)]/10 flex items-center justify-center mb-4">
+                <div key={idx} className="bg-[var(--off-white)] rounded-2xl border border-[var(--border)] p-8">
+                  <div className="w-12 h-12 rounded-2xl bg-[var(--katie-blue)]/10 flex items-center justify-center mb-4">
                     <point.icon className="w-6 h-6 text-[var(--katie-blue)]" />
                   </div>
-                  <h3 className="text-xl font-bold text-[var(--navy-900)] mb-3">{point.title}</h3>
-                  <p className="text-[var(--slate-500)] leading-relaxed">{point.description}</p>
+                  <h3 className="text-xl font-bold text-[var(--v2-ink)] mb-3">{point.title}</h3>
+                  <p className="text-[var(--v2-body)] leading-relaxed">{point.description}</p>
                 </div>
               ))}
             </div>
@@ -310,25 +310,25 @@ export default function ForBuildersPage() {
         <section className="section-padding-lg bg-white relative">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] text-sm font-medium mb-4">
+              <span className="v2-eyebrow">
                 How It Works
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance">
+              <h2 className="v2-h2 text-balance">
                 How Katie Works for Builders
               </h2>
-              <p className="mt-6 text-lg text-[var(--slate-500)] max-w-2xl mx-auto">
+              <p className="v2-lead mt-5 max-w-2xl mx-auto">
                 Four simple steps from missed call to booked site survey. Katie handles the conversation. You handle the build.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {howItWorks.map((step) => (
                 <div key={step.step} className="relative">
-                  <div className="bg-[var(--off-white)] rounded-xl border border-[var(--border)] p-6 h-full">
-                    <div className="w-10 h-10 rounded-full bg-[var(--katie-blue)] text-white flex items-center justify-center font-bold text-lg mb-4">
+                  <div className="bg-[var(--off-white)] rounded-2xl border border-[var(--border)] p-6 h-full">
+                    <div className="w-10 h-10 rounded-full bg-[var(--katie-blue)] text-[var(--v2-ink)] flex items-center justify-center font-bold text-lg mb-4">
                       {step.step}
                     </div>
-                    <h3 className="text-lg font-bold text-[var(--navy-900)] mb-2">{step.title}</h3>
-                    <p className="text-[var(--slate-500)] text-sm leading-relaxed">{step.description}</p>
+                    <h3 className="text-lg font-bold text-[var(--v2-ink)] mb-2">{step.title}</h3>
+                    <p className="text-[var(--v2-body)] text-sm leading-relaxed">{step.description}</p>
                   </div>
                 </div>
               ))}
@@ -369,11 +369,11 @@ export default function ForBuildersPage() {
         {/* TESTIMONIAL */}
         <section className="section-padding-lg bg-[var(--off-white)] relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 bg-[var(--v2-mint)] text-[var(--v2-green)] px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Star className="w-4 h-4" />
               Builder Testimonial
             </div>
-            <blockquote className="text-2xl sm:text-3xl font-medium text-[var(--navy-900)] leading-relaxed mb-8">
+            <blockquote className="text-2xl sm:text-3xl font-medium text-[var(--v2-ink)] leading-relaxed mb-8">
               "I was pouring a concrete slab in Croydon when my phone rang four times. Three were time-wasters. One was a £67,000 loft conversion in Bromley. Katie filtered out the tyre-kickers, captured the full brief with budget and timeline, and sent it to my WhatsApp. I called back at 6pm and booked the site survey the next morning."
             </blockquote>
             <div className="flex items-center justify-center gap-4">
@@ -381,42 +381,42 @@ export default function ForBuildersPage() {
                 DW
               </div>
               <div className="text-left">
-                <p className="font-semibold text-[var(--navy-900)]">David Williams</p>
-                <p className="text-sm text-[var(--slate-500)]">Williams Construction, South London</p>
+                <p className="font-semibold text-[var(--v2-ink)]">David Williams</p>
+                <p className="text-sm text-[var(--v2-body)]">Williams Construction, South London</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* PRICING CTA */}
-        <section className="section-padding-lg bg-[var(--navy-900)] relative">
+        <section className="section-padding-lg bg-[var(--v2-navy)] text-white relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               One Extension Enquiry Pays for 15 Years of Katie
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-              Average kitchen extension: £45,000-£65,000. Loft conversion: £35,000-£55,000. Full renovation: £80,000+. At £59/month, capturing one missed job pays for the next decade.
+              Average kitchen extension: £45,000 to £65,000. Loft conversion: £35,000 to £55,000. Full renovation: £80,000+. At £59/month, capturing one missed job pays for the next decade.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <Link
                 href="/"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-amber-600 hover:bg-amber-700 text-white font-semibold rounded-xl transition-colors"
+                className="v2-btn min-h-[54px] px-7 text-base"
               >
                 Start 7-Day Free Trial
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
-            <div className="flex items-center justify-center gap-6 text-white/50 text-sm">
+            <div className="flex items-center justify-center gap-6 text-white/65 text-sm">
               <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4 text-amber-400" />
+                <Shield className="w-4 h-4 text-[#6ee7b7]" />
                 GDPR compliant
               </div>
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-amber-400" />
+                <Clock className="w-4 h-4 text-[#6ee7b7]" />
                 24/7 answering
               </div>
               <div className="flex items-center gap-2">
-                <PoundSterling className="w-4 h-4 text-amber-400" />
+                <PoundSterling className="w-4 h-4 text-[#6ee7b7]" />
                 £59/month
               </div>
             </div>
@@ -427,37 +427,37 @@ export default function ForBuildersPage() {
         <section className="section-padding-lg bg-white relative">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-2xl font-bold text-[var(--navy-900)] mb-4">
+              <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-4">
                 Trusted by Builders Across the UK
               </h2>
-              <p className="text-[var(--slate-500)]">
+              <p className="text-[var(--v2-body)]">
                 From London to Birmingham, builders trust Katie to capture every enquiry.
               </p>
             </div>
             <div className="grid sm:grid-cols-3 gap-6 mb-12">
-              <div className="text-center p-6 bg-[var(--off-white)] rounded-xl border border-[var(--border)]">
+              <div className="text-center p-6 bg-[var(--off-white)] rounded-2xl border border-[var(--border)]">
                 <div className="text-3xl font-bold text-[var(--katie-blue)] mb-1">£47k</div>
-                <p className="text-sm text-[var(--slate-500)]">Average extension value</p>
+                <p className="text-sm text-[var(--v2-body)]">Average extension value</p>
               </div>
-              <div className="text-center p-6 bg-[var(--off-white)] rounded-xl border border-[var(--border)]">
+              <div className="text-center p-6 bg-[var(--off-white)] rounded-2xl border border-[var(--border)]">
                 <div className="text-3xl font-bold text-[var(--katie-blue)] mb-1">£63k</div>
-                <p className="text-sm text-[var(--slate-500)]">Average loft conversion value</p>
+                <p className="text-sm text-[var(--v2-body)]">Average loft conversion value</p>
               </div>
-              <div className="text-center p-6 bg-[var(--off-white)] rounded-xl border border-[var(--border)]">
+              <div className="text-center p-6 bg-[var(--off-white)] rounded-2xl border border-[var(--border)]">
                 <div className="text-3xl font-bold text-[var(--katie-blue)] mb-1">82%</div>
-                <p className="text-sm text-[var(--slate-500)]">Enquiries made after 6pm</p>
+                <p className="text-sm text-[var(--v2-body)]">Enquiries made after 6pm</p>
               </div>
             </div>
             <div className="text-center">
-              <p className="text-[var(--slate-500)] mb-4">Also explore:</p>
+              <p className="text-[var(--v2-body)] mb-4">Also explore:</p>
               <div className="flex flex-wrap justify-center gap-3">
-                <a href="/for-roofers" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                <a href="/for-roofers" className="px-4 py-2 bg-white border border-[var(--v2-line)] rounded-full text-[var(--v2-ink)] hover:border-[var(--v2-ink)]">
                   AI for Roofers
                 </a>
-                <a href="/for-builders" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                <a href="/for-builders" className="px-4 py-2 bg-white border border-[var(--v2-line)] rounded-full text-[var(--v2-ink)] hover:border-[var(--v2-ink)]">
                   Builders Lead Generation Guide
                 </a>
-                <a href="/how-it-works" className="px-4 py-2 bg-[var(--off-white)] border border-[var(--border)] rounded-lg text-[var(--navy-900)] hover:bg-[var(--katie-blue)]/10 hover:border-[var(--katie-blue)]/30 transition-colors text-sm">
+                <a href="/how-it-works" className="px-4 py-2 bg-white border border-[var(--v2-line)] rounded-full text-[var(--v2-ink)] hover:border-[var(--v2-ink)]">
                   How It Works
                 </a>
               </div>
@@ -489,32 +489,32 @@ export default function ForBuildersPage() {
         })()}
 
 
-<section className="trade-faq py-16 lg:py-24">
+<section className="trade-faq v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 Questions Builders Ask
               </h2>
-              <p className="text-white/60">
+              <p className="text-[var(--v2-body)]">
                 Everything you need to know about AI call answering for building businesses.
               </p>
             </div>
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                   <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
-                  <p className="text-white/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                  <p className="text-[var(--v2-body)] leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                 </div>
               ))}
             </div>
             <div className="mt-10 text-center">
-              <p className="text-white/50 text-sm">
+              <p className="text-[var(--v2-muted)] text-sm">
                 Still have questions? Read our{" "}
-                <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-orange-400 hover:text-orange-300 underline">
+                <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] underline">
                   complete AI call answering guide
                 </a>{" "}
                 or{" "}
-                <a href="/pricing" className="text-orange-400 hover:text-orange-300 underline">
+                <a href="/pricing" className="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] underline">
                   compare all pricing plans
                 </a>.
               </p>
@@ -528,7 +528,7 @@ export default function ForBuildersPage() {
 
       <div className="section-divider" />
         <RelatedTrades currentTrade="for-builders" />
-        <Footer />
+        <Footer hideCta />
       <FloatingChatWidget />
     </>
   )

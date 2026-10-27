@@ -25,13 +25,13 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/for-cleaners",
     siteName: "Whoza.ai",
-    title: "AI Call Answering for Cleaners UK — Never Miss a Booking",
+    title: "AI Call Answering for Cleaners UK | Never Miss a Booking",
     description: "AI call handling for UK cleaners. Katie answers 24/7, captures domestic, commercial and end-of-tenancy enquiries. WhatsApp alerts in 3 seconds. Free trial.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Cleaners" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Cleaners" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Call Answering for Cleaners UK — Never Miss a Booking",
+    title: "AI Call Answering for Cleaners UK | Never Miss a Booking",
     description: "AI call handling for UK cleaners. Katie answers 24/7, captures domestic, commercial and end-of-tenancy enquiries. WhatsApp alerts in 3 seconds. Free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     question: "Can Katie handle commercial cleaning enquiries?",
-    answer: "Absolutely. Katie is trained to recognise commercial enquiries from offices, hotels, restaurants, gyms, retail, and warehouses. She captures contract details, frequency requirements, square footage, and budget — then tags the lead as 'commercial priority' in your WhatsApp alert so you can follow up fast. Commercial clients expect fast response; Katie ensures you never miss a £5k/month contract.",
+    answer: "Absolutely. Katie is trained to recognise commercial enquiries from offices, hotels, restaurants, gyms, retail, and warehouses. She captures contract details, frequency requirements, square footage, and budget, then tags the lead as 'commercial priority' in your WhatsApp alert so you can follow up fast. Commercial clients expect fast response; Katie ensures you never miss a £5k/month contract.",
   },
   {
     question: "What information does Katie collect from cleaning customers?",
@@ -60,11 +60,11 @@ const faqs = [
   },
   {
     question: "Will customers know they're talking to AI?",
-    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience — they just want their cleaning booked quickly.",
+    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience. They just want their cleaning booked quickly.",
   },
   {
     question: "Does it work with my existing business phone number?",
-    answer: "Yes. You simply set up call forwarding from your existing cleaning business number to your whoza.ai number. Your customers dial the same number they've always used — Katie just answers when you can't. Setup takes under 10 minutes.",
+    answer: "Yes. You simply set up call forwarding from your existing cleaning business number to your whoza.ai number. Your customers dial the same number they've always used. Katie just answers when you can't. Setup takes under 10 minutes.",
   },
   {
     question: "How quickly can I get set up?",
@@ -72,7 +72,7 @@ const faqs = [
   },
   {
     question: "Can Katie handle end-of-tenancy cleaning calls?",
-    answer: "Yes. Katie recognises end-of-tenancy enquiries immediately and marks them as urgent — these are time-sensitive and often need same-day or next-day service. She captures the property size, move-out date, deposit requirements, and any special instructions (e.g., carpet cleaning, oven clean). You get all the details in WhatsApp so you can quote and schedule fast.",
+    answer: "Yes. Katie recognises end-of-tenancy enquiries immediately and marks them as urgent. These are time-sensitive and often need same-day or next-day service. She captures the property size, move-out date, deposit requirements, and any special instructions (e.g., carpet cleaning, oven clean). You get all the details in WhatsApp so you can quote and schedule fast.",
   },
   {
     question: "What happens if Katie can't handle a complex enquiry?",
@@ -86,7 +86,7 @@ export default function ForCleanersPage() {
   return (
     <>
       <VideoSchema
-        name="Whoza.ai for Cleaners — AI Call Answering Demo"
+        name="Whoza.ai for Cleaners: AI Call Answering Demo"
         description="Watch Katie capture a missed cleaning enquiry in under 60 seconds. End-of-tenancy call answered instantly, details sent to WhatsApp, job booked while the cleaner is still at another property."
         embedUrl="https://whoza.ai/for-cleaners"
       />
@@ -120,54 +120,50 @@ export default function ForCleanersPage() {
             }
           })
         }}
-      />      <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
+      />      <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--v2-paper)] text-[var(--v2-body)]">
         {/* ─── HERO ─── */}
-        <section className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px]" />
-            <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[100px]" />
-          </div>
+        <section className="bg-[var(--v2-navy)] text-white relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-flex items-center gap-2 bg-blue-500/10 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <div className="v2-eyebrow v2-eyebrow-light inline-flex items-center gap-2 mb-6">
                   <Sparkles className="w-4 h-4" />
                   Built for UK Cleaners
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   Call Answering Service for{" "}
-                  <span className="text-blue-400">Cleaners</span>{" "}
+                  <span className="text-[#6ee7b7]">Cleaners</span>{" "}
                   <span className="block mt-2 text-2xl sm:text-3xl lg:text-4xl">Never Miss a Booking</span>
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
-                  Domestic, commercial, end-of-tenancy, carpet cleaning — customers call when they need it done fast. Katie, your AI receptionist, provides the call answering service: answers every call, captures the job details, and sends them to your WhatsApp.
+                  Domestic, commercial, end-of-tenancy, carpet cleaning: customers call when they need it done fast. Katie, your AI receptionist, provides the call answering service: answers every call, captures the job details, and sends them to your WhatsApp.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
                     href="/"
-                    className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-4 text-lg rounded-lg transition-all hover:scale-[1.02] shadow-2xl shadow-emerald-500/40"
+                    className="v2-btn min-h-[54px] px-7 text-base"
                   >
                     Try Katie free for 7 days
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                   <Link
                     href="/pricing"
-                    className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 text-lg rounded-lg transition-all border border-white/20"
+                    className="v2-btn-secondary min-h-[54px] px-7 text-base text-white border-white/25 hover:border-white"
                   >
                     See Pricing
                   </Link>
                 </div>
-                <div className="flex flex-wrap gap-4 text-sm text-white/50">
+                <div className="flex flex-wrap gap-4 text-sm text-white/65">
                   <span className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                     No credit card required
                   </span>
                   <span className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                     Setup in 30 minutes
                   </span>
                   <span className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                     Cancel anytime
                   </span>
                 </div>
@@ -175,7 +171,7 @@ export default function ForCleanersPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -213,13 +209,13 @@ export default function ForCleanersPage() {
         <div className="section-divider" />
 
         {/* ─── PAIN POINTS ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 The Real Cost of Missed Cleaning Calls
               </h2>
-              <p className="text-white/60 text-lg max-w-2xl mx-auto">
+              <p className="v2-lead max-w-2xl mx-auto">
                 Every missed call is a booking going to your competitor. Here's what cleaning businesses lose every single week.
               </p>
             </div>
@@ -235,14 +231,14 @@ export default function ForCleanersPage() {
                 {
                   icon: Building2,
                   title: "Commercial Contracts Slip Away",
-                  description: "Office manager calls about weekly cleaning for a 50-desk office. You don't answer — you're elbow-deep in oven cleaner at a residential job. They call competitor #3 who picks up. You lost a £2,500/month contract because you couldn't answer the phone.",
+                  description: "Office manager calls about weekly cleaning for a 50-desk office. You don't answer. You're elbow-deep in oven cleaner at a residential job. They call competitor #3 who picks up. You lost a £2,500/month contract because you couldn't answer the phone.",
                   stat: "£2,500/month avg contract",
                   color: "amber",
                 },
                 {
                   icon: Home,
                   title: "Evening & Weekend Emergency Cleans",
-                  description: "Saturday night after a party. Sunday morning post-construction. Calls come in when you're off-duty or at home. Voicemail doesn't cut it — customers want immediate confirmation. By Monday morning, they've booked someone else who answered.",
+                  description: "Saturday night after a party. Sunday morning post-construction. Calls come in when you're off-duty or at home. Voicemail doesn't cut it: customers want immediate confirmation. By Monday morning, they've booked someone else who answered.",
                   stat: "1 in 3 firms miss calls",
                   color: "blue",
                 },
@@ -252,27 +248,27 @@ export default function ForCleanersPage() {
                                    item.color === "amber" ? "text-amber-400 bg-amber-500/10 border-amber-500/20" :
                                    "text-blue-400 bg-blue-500/10 border-blue-500/20"
                 return (
-                  <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/[0.07] transition-colors">
+                  <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 hover:border-[#b9c6bf] transition-colors">
                     <div className={`w-12 h-12 rounded-xl ${colorClass} flex items-center justify-center mb-4 border`}>
                       <Icon className="w-6 h-6" />
                     </div>
                     <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                    <p className="text-white/60 leading-relaxed mb-4">{item.description}</p>
-                    <div className="text-sm font-medium text-emerald-400">{item.stat}</div>
+                    <p className="text-[var(--v2-body)] leading-relaxed mb-4">{item.description}</p>
+                    <div className="text-sm font-medium text-[var(--v2-green)]">{item.stat}</div>
                   </div>
                 )
               })}
             </div>
-            <div className="mt-12 bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-6 text-center">
-              <p className="text-emerald-200 font-medium text-lg">
+            <div className="mt-12 bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-6 text-center">
+              <p className="text-[var(--v2-green-ink)] font-medium text-lg">
                 The average UK cleaning business misses 12 calls per week = <strong>£74,880</strong> in lost revenue per year
               </p>
-              <p className="text-emerald-200/70 text-sm mt-1">
-                Source: UK SME Communications Survey 2025 — based on £120 avg domestic job + £2,500 commercial contract value, 35% conversion rate
+              <p className="text-[var(--v2-body)] text-sm mt-1">
+                Source: UK SME Communications Survey 2025, based on £120 avg domestic job + £2,500 commercial contract value, 35% conversion rate
               </p>
             </div>
             <div className="mt-8 text-center">
-              <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium transition-colors">
+              <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="inline-flex items-center text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] font-medium transition-colors">
                 Read our 24/7 call answering guide
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
@@ -283,13 +279,13 @@ export default function ForCleanersPage() {
         <div className="section-divider" />
 
         {/* ─── HOW KATIE WORKS ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 How Katie Works for Cleaners
               </h2>
-              <p className="text-white/60 text-lg max-w-2xl mx-auto">
+              <p className="v2-lead max-w-2xl mx-auto">
                 Four simple steps from missed call to booked cleaning job. No apps to check. No dashboards to monitor.
               </p>
             </div>
@@ -323,17 +319,17 @@ export default function ForCleanersPage() {
                 const Icon = item.icon
                 return (
                   <div key={idx} className="relative">
-                    <div className="bg-white/5 border border-white/10 rounded-xl p-8 h-full">
-                      <div className="text-5xl font-bold text-white/10 mb-4">{item.step}</div>
-                      <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-4">
-                        <Icon className="w-6 h-6 text-blue-400" />
+                    <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-8 h-full">
+                      <div className="text-5xl font-bold text-slate-200 mb-4">{item.step}</div>
+                      <div className="w-12 h-12 rounded-2xl bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 flex items-center justify-center mb-4">
+                        <Icon className="w-6 h-6 text-[var(--v2-green)]" />
                       </div>
                       <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                      <p className="text-white/60 leading-relaxed">{item.description}</p>
+                      <p className="text-[var(--v2-body)] leading-relaxed">{item.description}</p>
                     </div>
                     {idx < 3 && (
                       <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
-                        <ArrowRight className="w-8 h-8 text-white/20" />
+                        <ArrowRight className="w-8 h-8 text-slate-300" />
                       </div>
                     )}
                   </div>
@@ -343,7 +339,7 @@ export default function ForCleanersPage() {
             <div className="mt-12 text-center">
               <Link
                 href="/how-it-works"
-                className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium transition-colors"
+                className="inline-flex items-center text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] font-medium transition-colors"
               >
                 See the full process in detail
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -355,30 +351,30 @@ export default function ForCleanersPage() {
         <div className="section-divider" />
 
         {/* ─── TESTIMONIAL ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-8">
+            <div className="v2-eyebrow inline-flex items-center gap-2 mb-8">
               <Star className="w-4 h-4" />
               Cleaner Success Story
             </div>
-            <blockquote className="text-2xl sm:text-3xl font-medium leading-relaxed text-white/90 mb-8">
-              "I used to miss 4-5 calls a day while I was cleaning other properties. In 3 weeks using whoza.ai, I captured 14 jobs I would have lost, including a <span className="text-emerald-400 font-bold">£2,200/month</span> office cleaning contract. It cost me £59 for the month."
+            <blockquote className="text-2xl sm:text-3xl font-medium leading-relaxed text-[var(--v2-ink)] mb-8">
+              "I used to miss 4 to 5 calls a day while I was cleaning other properties. In 3 weeks using whoza.ai, I captured 14 jobs I would have lost, including a <span className="text-[var(--v2-green)] font-bold">£2,200/month</span> office cleaning contract. It cost me £59 for the month."
             </blockquote>
             <div className="flex items-center justify-center gap-4">
-              <div className="w-14 h-14 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-xl">
+              <div className="w-14 h-14 rounded-full bg-[var(--v2-mint)] flex items-center justify-center text-[var(--v2-green)] font-bold text-xl">
                 SR
               </div>
               <div className="text-left">
-                <p className="font-semibold text-white">Sarah Roberts</p>
-                <p className="text-white/50 text-sm">Owner, CleanSpace Bristol</p>
+                <p className="font-semibold text-[var(--v2-ink)]">Sarah Roberts</p>
+                <p className="text-[var(--v2-muted)] text-sm">Owner, CleanSpace Bristol</p>
               </div>
             </div>
             <div className="mt-4 flex items-center justify-center gap-1">
               {[1,2,3,4,5].map(i => (
-                <Star key={i} className="w-5 h-5 text-amber-400 fill-amber-400" />
+                <Star key={i} className="w-5 h-5 text-[var(--v2-green)] fill-amber-400" />
               ))}
             </div>
-            <p className="mt-6 text-white/50 text-sm">
+            <p className="mt-6 text-[var(--v2-muted)] text-sm">
               Read Sarah's full story: I Missed 4 Calls a Day. Then I Tried AI.
             </p>
           </div>
@@ -387,42 +383,42 @@ export default function ForCleanersPage() {
         <div className="section-divider" />
 
         {/* ─── PRICING CTA ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            <h2 className="v2-h2 mb-4">
               One Recovered Commercial Contract Pays for 3 Years
             </h2>
-            <p className="text-white/60 text-lg max-w-2xl mx-auto mb-8">
-              See our <Link href="/pricing" className="text-blue-400 hover:text-blue-300 underline">full pricing and plan details</Link>.
+            <p className="v2-lead max-w-2xl mx-auto mb-8">
+              See our <Link href="/pricing" className="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] underline">full pricing and plan details</Link>.
             </p>
-            <p className="text-white/60 text-lg max-w-2xl mx-auto mb-8">
+            <p className="v2-lead max-w-2xl mx-auto mb-8">
               At £59/month, Katie costs less than one domestic deep clean. Most cleaning businesses recover that cost within 48 hours.
             </p>
             <div className="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-10">
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-white mb-1">£59</div>
-                <div className="text-sm text-white/50">per month</div>
-                <div className="text-xs text-white/40 mt-1">Starter Plan</div>
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 text-center">
+                <div className="text-3xl font-bold text-[var(--v2-ink)] mb-1">£59</div>
+                <div className="text-sm text-[var(--v2-muted)]">per month</div>
+                <div className="text-xs text-[var(--v2-muted)] mt-1">Starter Plan</div>
               </div>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-emerald-400 mb-1">£120</div>
-                <div className="text-sm text-white/50">avg domestic job</div>
-                <div className="text-xs text-white/40 mt-1">One-off deep clean</div>
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 text-center">
+                <div className="text-3xl font-bold text-[var(--v2-green)] mb-1">£120</div>
+                <div className="text-sm text-[var(--v2-muted)]">avg domestic job</div>
+                <div className="text-xs text-[var(--v2-muted)] mt-1">One-off deep clean</div>
               </div>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-1">£2,500</div>
-                <div className="text-sm text-white/50">avg commercial contract</div>
-                <div className="text-xs text-white/40 mt-1">Per month</div>
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 text-center">
+                <div className="text-3xl font-bold text-[var(--v2-green)] mb-1">£2,500</div>
+                <div className="text-sm text-[var(--v2-muted)]">avg commercial contract</div>
+                <div className="text-xs text-[var(--v2-muted)] mt-1">Per month</div>
               </div>
             </div>
             <Link
               href="/"
-              className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-4 text-lg rounded-lg transition-all hover:scale-[1.02] shadow-2xl shadow-emerald-500/40"
+              className="v2-btn min-h-[54px] px-7 text-base"
             >
               Try Katie free for 7 days
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <p className="mt-4 text-sm text-white/50">
+            <p className="mt-4 text-sm text-[var(--v2-muted)]">
               No credit card. No contract. Cancel anytime. Setup in 30 minutes.
             </p>
           </div>
@@ -430,32 +426,32 @@ export default function ForCleanersPage() {
 
         <div className="section-divider" />
         {/* ─── FAQ ─── */}
-<section className="trade-faq py-16 lg:py-24">
+<section className="trade-faq v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 Questions Cleaners Ask
               </h2>
-              <p className="text-white/60">
+              <p className="text-[var(--v2-body)]">
                 Everything you need to know about AI call answering for cleaning businesses.
               </p>
             </div>
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6">
+                <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                   <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
-                  <p className="text-white/60 leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                  <p className="text-[var(--v2-body)] leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                 </div>
               ))}
             </div>
             <div className="mt-10 text-center">
-              <p className="text-white/50 text-sm">
+              <p className="text-[var(--v2-muted)] text-sm">
                 Still have questions? Read our{" "}
-                <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-orange-400 hover:text-orange-300 underline">
+                <a href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" className="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] underline">
                   complete AI call answering guide
                 </a>{" "}
                 or{" "}
-                <a href="/pricing" className="text-orange-400 hover:text-orange-300 underline">
+                <a href="/pricing" className="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] underline">
                   compare all pricing plans
                 </a>.
               </p>
@@ -469,13 +465,13 @@ export default function ForCleanersPage() {
         <div className="section-divider" />
 
         {/* ─── TRUST SIGNALS ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 Trusted by Cleaners Across the UK
               </h2>
-              <p className="text-white/60 max-w-2xl mx-auto">
+              <p className="text-[var(--v2-body)] max-w-2xl mx-auto">
                 From solo operators in London to multi-team cleaning companies in Manchester, cleaners rely on Katie to capture every call.
               </p>
             </div>
@@ -488,17 +484,17 @@ export default function ForCleanersPage() {
               ].map((item, idx) => {
                 const Icon = item.icon
                 return (
-                  <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
-                    <Icon className="w-8 h-8 text-blue-400 mx-auto mb-3" />
-                    <p className="font-semibold text-white">{item.label}</p>
-                    <p className="text-sm text-white/50">{item.sub}</p>
+                  <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 text-center">
+                    <Icon className="w-8 h-8 text-[var(--v2-green)] mx-auto mb-3" />
+                    <p className="font-semibold text-[var(--v2-ink)]">{item.label}</p>
+                    <p className="text-sm text-[var(--v2-muted)]">{item.sub}</p>
                   </div>
                 )
               })}
             </div>
             <div className="mt-12 flex flex-wrap justify-center gap-3">
               {["London", "Manchester", "Birmingham", "Glasgow", "Bristol", "Liverpool", "Leeds", "Edinburgh"].map(city => (
-                <span key={city} className="bg-white/5 border border-white/10 rounded-full px-4 py-2 text-sm text-white/60">
+                <span key={city} className="bg-white border border-[var(--v2-line)] rounded-full px-4 py-2 text-sm text-[var(--v2-body)]">
                   {city}
                 </span>
               ))}
@@ -509,21 +505,21 @@ export default function ForCleanersPage() {
         <div className="section-divider" />
 
 {/* ─── RELATED TRADES ─── */}
-<section className="py-12 border-t border-white/10">
+<section className="py-12 border-t border-[var(--v2-line)]">
   <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h3 className="text-lg font-semibold text-white/70 mb-6 text-center">Also See: AI Call Answering for Related Trades</h3>
+    <h3 className="text-lg font-semibold text-[var(--v2-body)] mb-6 text-center">Also See: AI Call Answering for Related Trades</h3>
     <div className="grid sm:grid-cols-3 gap-4">
-      <a href="/for-handymen" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors text-center">
-        <div className="font-medium text-white">AI Call Answering for Handymen</div>
-        <p className="text-sm text-white/50 mt-1">Never miss a job</p>
+      <a href="/for-handymen" className="block bg-white border border-[var(--v2-line)] rounded-2xl p-4 hover:border-[#b9c6bf] transition-colors text-center">
+        <div className="font-medium text-[var(--v2-ink)]">AI Call Answering for Handymen</div>
+        <p className="text-sm text-[var(--v2-muted)] mt-1">Never miss a job</p>
       </a>
-      <a href="/for-pest-control" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors text-center">
-        <div className="font-medium text-white">AI Call Answering for Pest Control</div>
-        <p className="text-sm text-white/50 mt-1">Never miss a job</p>
+      <a href="/for-pest-control" className="block bg-white border border-[var(--v2-line)] rounded-2xl p-4 hover:border-[#b9c6bf] transition-colors text-center">
+        <div className="font-medium text-[var(--v2-ink)]">AI Call Answering for Pest Control</div>
+        <p className="text-sm text-[var(--v2-muted)] mt-1">Never miss a job</p>
       </a>
-      <a href="/for-plumbers" className="block bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors text-center">
-        <div className="font-medium text-white">AI Call Answering for Plumbers</div>
-        <p className="text-sm text-white/50 mt-1">Never miss a job</p>
+      <a href="/for-plumbers" className="block bg-white border border-[var(--v2-line)] rounded-2xl p-4 hover:border-[#b9c6bf] transition-colors text-center">
+        <div className="font-medium text-[var(--v2-ink)]">AI Call Answering for Plumbers</div>
+        <p className="text-sm text-[var(--v2-muted)] mt-1">Never miss a job</p>
       </a>
     </div>
   </div>
@@ -532,11 +528,7 @@ export default function ForCleanersPage() {
         <div className="section-divider" />
 
         {/* ─── FINAL CTA ─── */}
-        <section className="py-16 lg:py-24 relative overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px]" />
-            <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[100px]" />
-          </div>
+        <section className="bg-[var(--v2-navy)] text-white py-16 lg:py-24 relative overflow-hidden">
           <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
               Stop Losing Cleaning Bookings Today
@@ -546,15 +538,15 @@ export default function ForCleanersPage() {
             </p>
             <Link
               href="/"
-              className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-4 text-lg rounded-lg transition-all hover:scale-[1.02] shadow-2xl shadow-emerald-500/40"
+              className="v2-btn min-h-[54px] px-7 text-base"
             >
               Try Katie free for 7 days
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white/50">
+            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white/65">
               {["No credit card required", "Setup in 30 minutes", "Cancel anytime", "24/7 call answering"].map(point => (
                 <span key={point} className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                   {point}
                 </span>
               ))}

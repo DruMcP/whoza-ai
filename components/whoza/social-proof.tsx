@@ -109,7 +109,7 @@ export function TrustBadgeBand() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--border)] hover:bg-[var(--katie-blue)]/5 hover:border-[var(--katie-blue)]/20 transition-all cursor-pointer"
+                className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[var(--border)] hover:border-[var(--v2-ink)] transition-all cursor-pointer"
               >
                 <span className="text-sm font-medium text-[var(--navy-900)]">{trade}</span>
               </MotionLink>
@@ -124,14 +124,14 @@ export function TrustBadgeBand() {
 export function StatsBand() {
   // Micro proof signals instead of false aggregate claims
   const stats = [
-    { value: "3 sec", label: "Answer Time", colorClass: "text-[var(--katie-blue)]" },
-    { value: "24/7", label: "Always Working", colorClass: "text-[var(--rex-green)]" },
-    { value: "£2–£4", label: "Per Booked Job", colorClass: "text-[var(--claire-amber)]" },
-    { value: "30 min", label: "Install Time", colorClass: "text-[var(--mark-grey)]" },
+    { value: "3 sec", label: "Answer Time", colorClass: "text-white" },
+    { value: "24/7", label: "Always Working", colorClass: "text-white" },
+    { value: "£2 to £4", label: "Per Booked Job", colorClass: "text-white" },
+    { value: "30 min", label: "Install Time", colorClass: "text-white" },
   ]
 
   return (
-    <section className="py-16 bg-[var(--navy-900)] dark-section" aria-label="Customer testimonials">
+    <section className="py-16 bg-[var(--v2-navy)] dark-section" aria-label="Customer testimonials">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
@@ -146,7 +146,7 @@ export function StatsBand() {
               <div className={`text-3xl sm:text-4xl lg:text-5xl font-bold ${stat.colorClass}`}>
                 {stat.value}
               </div>
-              <div className="mt-2 text-sm text-white/60">{stat.label}</div>
+              <div className="mt-2 text-sm text-[#6ee7b7]">{stat.label}</div>
             </motion.div>
           ))}
         </div>

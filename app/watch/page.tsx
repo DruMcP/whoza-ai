@@ -7,7 +7,7 @@ import { WatchPageClient } from "./watch-page-client"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "Watch Whoza in Action — 60-Second Demo",
+  title: "Watch Whoza in Action: 60-Second Demo",
   description: "Watch Katie capture a missed trade enquiry in 60 seconds. AI receptionist answers, qualifies, and delivers job details straight to WhatsApp. Free trial.",
   keywords: [
     "AI call answering demo",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "watch whoza",
   ],
   openGraph: {
-    title: "Watch Whoza in Action — 60-Second Demo",
+    title: "Watch Whoza in Action: 60-Second Demo",
     description:
       "See Katie capture a missed enquiry in under 60 seconds. The enquiry lands in WhatsApp. Claire requests the review. Rex shows what to improve.",
     url: "https://whoza.ai/watch",
@@ -36,13 +36,13 @@ export const metadata: Metadata = {
         url: "https://whoza.ai/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Whoza.ai — Watch the 60-second demo",
+        alt: "Whoza.ai: Watch the 60-second demo",
       },
     ],
   },
   twitter: {
     card: "player",
-    title: "Watch Whoza in Action — 60-Second Demo",
+    title: "Watch Whoza in Action: 60-Second Demo",
     description:
       "See Katie capture a missed enquiry in under 60 seconds. Every unanswered call becomes a booked job.",
     images: ["https://whoza.ai/og-image.webp"],
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
 const videoSchema = {
   "@context": "https://schema.org",
   "@type": "VideoObject",
-  name: "Whoza.ai 60-Second Demo — Katie Answers Every Call",
+  name: "Whoza.ai 60-Second Demo: Katie Answers Every Call",
   description:
     "Watch Katie, Whoza's AI call handler, capture a missed enquiry in under 60 seconds. The call is answered instantly, the enquiry lands in WhatsApp, Claire requests a review, and Rex delivers growth insights. Built for UK tradespeople.",
   thumbnailUrl: [
@@ -117,7 +117,7 @@ export default function WatchPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
       />
-      <div className="min-h-screen bg-[var(--navy-900)] text-white">
+      <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
         <Header />
         <BreadcrumbSchema
           items={[

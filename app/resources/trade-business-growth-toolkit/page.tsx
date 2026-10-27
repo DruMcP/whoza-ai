@@ -19,14 +19,14 @@ export default function TradeBusinessGrowthToolkitPage() {
 
   const toolkitItems = [
     {
-      icon: <FileSpreadsheet className="w-6 h-6 text-emerald-600" />,
+      icon: <FileSpreadsheet className="w-6 h-6 text-[var(--v2-green)]" />,
       title: "Quoting Calculator Spreadsheet",
       description: "Never underquote again. Auto-calculates materials, labour, markup, and VAT for 12+ trade types.",
     },
     {
       icon: <FileText className="w-6 h-6 text-blue-600" />,
       title: "Customer Enquiry Form Template",
-      description: "Professional form to capture every detail on first contact — job type, urgency, location, budget.",
+      description: "Professional form to capture every detail on first contact: job type, urgency, location, budget.",
     },
     {
       icon: <Mail className="w-6 h-6 text-purple-600" />,
@@ -71,7 +71,7 @@ export default function TradeBusinessGrowthToolkitPage() {
       <main id="main-content" role="main" className="pb-24 lg:pb-0">
         {/* Hero */}
         <section
-          className="dark-section relative overflow-hidden"
+          className="dark-section relative overflow-hidden v2-island"
           style={{ background: "linear-gradient(135deg, #0F1729 0%, #1A1A2E 50%, #0F1729 100%)" }}
         >
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
@@ -99,7 +99,7 @@ export default function TradeBusinessGrowthToolkitPage() {
 
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <div className="v2-eyebrow v2-eyebrow-light inline-flex items-center gap-2 mb-6">
                   <Download className="w-4 h-4" />
                   Free Download
                 </div>
@@ -109,7 +109,7 @@ export default function TradeBusinessGrowthToolkitPage() {
                 >
                   Free Trade Business{" "}
                   <br />
-                  <span className="text-emerald-400">Growth Toolkit</span>
+                  <span className="text-[#6ee7b7]">Growth Toolkit</span>
                 </h1>
 
               <div className="mt-4 text-white/30 text-sm">
@@ -126,7 +126,7 @@ export default function TradeBusinessGrowthToolkitPage() {
                     {[1, 2, 3, 4].map((i) => (
                       <div
                         key={i}
-                        className="w-8 h-8 rounded-full bg-emerald-500/20 border-2 border-[#0F1729] flex items-center justify-center text-xs text-emerald-400 font-bold"
+                        className="w-8 h-8 rounded-full bg-emerald-500/20 border-2 border-[#0F1729] flex items-center justify-center text-xs text-[#6ee7b7] font-bold"
                       >
                         {String.fromCharCode(64 + i)}
                       </div>
@@ -145,7 +145,7 @@ export default function TradeBusinessGrowthToolkitPage() {
                         "The quoting spreadsheet alone saved me from underquoting three jobs in my first week. Best free
                         resource I've downloaded."
                       </p>
-                      <p className="text-white/50 text-xs mt-2">— Dave R., Electrician, Lewisham</p>
+                      <p className="text-white/65 text-xs mt-2">Dave R., Electrician, Lewisham</p>
                     </div>
                   </div>
                 </div>
@@ -210,13 +210,13 @@ export default function TradeBusinessGrowthToolkitPage() {
 
                     <button
                       type="submit"
-                      className="w-full bg-emerald-600 text-white font-bold py-4 rounded-xl hover:bg-emerald-700 transition-colors shadow-lg flex items-center justify-center gap-2"
+                      className="w-full bg-[var(--v2-green)] text-white font-bold py-4 rounded-xl hover:bg-[var(--v2-green-hover)] transition-colors shadow-lg flex items-center justify-center gap-2"
                     >
                       <Download className="w-5 h-5" />
                       Download Free Toolkit
                     </button>
 
-                    <p className="text-xs text-slate-400 text-center flex items-center justify-center gap-1">
+                    <p className="text-xs text-[var(--v2-muted)] text-center flex items-center justify-center gap-1">
                       <Users className="w-3 h-3" />
                       No credit card required. Unsubscribe anytime.
                     </p>
@@ -258,7 +258,7 @@ export default function TradeBusinessGrowthToolkitPage() {
             {toolkitItems.map((item, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl border border-slate-200 p-6 hover:shadow-md transition-shadow"
+                className="bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-md transition-shadow"
               >
                 <div className="w-12 h-12 rounded-lg bg-slate-50 flex items-center justify-center mb-4">{item.icon}</div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
@@ -290,7 +290,7 @@ export default function TradeBusinessGrowthToolkitPage() {
                 a: "Absolutely. Once downloaded, the toolkit is yours to use across your entire business.",
               },
             ].map((faq, i) => (
-              <div key={i} className="bg-white rounded-xl border border-slate-200 p-6">
+              <div key={i} className="bg-white rounded-2xl border border-slate-200 p-6">
                 <h3 className="font-semibold text-slate-900 mb-2">{faq.q}</h3>
                 <p className="text-slate-600 text-sm">{faq.a}</p>
               </div>
@@ -304,20 +304,20 @@ export default function TradeBusinessGrowthToolkitPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Link
               href="/pricing"
-              className="flex items-center gap-3 bg-white border border-slate-200 rounded-xl p-4 hover:border-emerald-300 hover:shadow-md transition-all"
+              className="flex items-center gap-3 bg-white border border-slate-200 rounded-2xl p-4 hover:border-[var(--v2-green)]/40 hover:shadow-md transition-all"
             >
               <div className="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center">
-                <PoundSterling className="w-5 h-5 text-emerald-600" />
+                <PoundSterling className="w-5 h-5 text-[var(--v2-green)]" />
               </div>
               <div>
                 <div className="font-semibold text-slate-900">View Pricing</div>
                 <div className="text-sm text-slate-500">Plans from £59/month</div>
               </div>
-              <ArrowRight className="w-4 h-4 text-slate-400 ml-auto" />
+              <ArrowRight className="w-4 h-4 text-[var(--v2-muted)] ml-auto" />
             </Link>
             <Link
               href="/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026"
-              className="flex items-center gap-3 bg-white border border-slate-200 rounded-xl p-4 hover:border-emerald-300 hover:shadow-md transition-all"
+              className="flex items-center gap-3 bg-white border border-slate-200 rounded-2xl p-4 hover:border-[var(--v2-green)]/40 hover:shadow-md transition-all"
             >
               <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center">
                 <Briefcase className="w-5 h-5 text-blue-600" />
@@ -326,7 +326,7 @@ export default function TradeBusinessGrowthToolkitPage() {
                 <div className="font-semibold text-slate-900">How to Grow Your Trade Business</div>
                 <div className="text-sm text-slate-500">Complete 2026 guide</div>
               </div>
-              <ArrowRight className="w-4 h-4 text-slate-400 ml-auto" />
+              <ArrowRight className="w-4 h-4 text-[var(--v2-muted)] ml-auto" />
             </Link>
           </div>
         </section>
@@ -336,11 +336,11 @@ export default function TradeBusinessGrowthToolkitPage() {
           <h2 className="text-3xl font-bold text-slate-900 mb-4">Ready to stop losing jobs to missed calls?</h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
             whoza.ai answers every call, qualifies leads, and delivers them to your WhatsApp. Start your 7-day free
-            trial today — no credit card required.
+            trial today, no credit card required.
           </p>
           <a
             href="/pricing"
-            className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-emerald-700 transition-colors shadow-lg"
+            className="inline-flex items-center gap-2 bg-[var(--v2-green)] text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-[var(--v2-green-hover)] transition-colors shadow-lg v2-island"
           >
             Try whoza.ai Free for 7 Days <ArrowRight className="w-5 h-5" />
           </a>

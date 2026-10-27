@@ -45,9 +45,9 @@ const comparisonData = [
   { feature: "Review Collection", whoza: "✓ Built-in (Claire)", competitor: "✗ Not available", winner: "whoza", note: "whoze exclusive" },
   { feature: "Competitor Analysis", whoza: "✓ Monthly reports (Rex)", competitor: "✗ Not available", winner: "whoza", note: "whoze exclusive" },
   { feature: "Trade-Specific Training", whoza: "✓ 15+ trades", competitor: "✓ General trades", winner: "whoza", note: "whoze more specialised" },
-  { feature: "Setup Time", whoza: "30 minutes", competitor: "1–2 hours", winner: "whoza", note: "whoze much faster" },
+  { feature: "Setup Time", whoza: "30 minutes", competitor: "1 to 2 hours", winner: "whoza", note: "whoze much faster" },
   { feature: "Free Trial", whoza: "7 days, no card", competitor: "14 days, card required", winner: "draw", note: "Different approaches" },
-  { feature: "Contract", whoza: "None — cancel anytime", competitor: "1-month minimum", winner: "whoza", note: "whoze more flexible" },
+  { feature: "Contract", whoza: "None, cancel anytime", competitor: "1-month minimum", winner: "whoza", note: "whoze more flexible" },
   { feature: "Money-Back Guarantee", whoza: "30 days", competitor: "30 days", winner: "draw", note: "Both equal" },
   { feature: "Spam Filtering", whoza: "✓ Advanced AI filtering", competitor: "✓ Basic filtering", winner: "whoza", note: "whoze more sophisticated" },
   { feature: "Custom AI Voices", whoza: "✓ 12+ voices", competitor: "✓ 3 voices", winner: "whoza", note: "whoze more choice" },
@@ -59,7 +59,7 @@ export const revalidate = 3600
 const faqs = [
     { question: "Which is cheaper: whoza.ai or ARROW?", answer: "whoza.ai is cheaper at every tier. whoza.ai's Starter plan costs £59/month compared to ARROW's entry plan at £79/month. whoza.ai's Growth plan is £125/month versus ARROW's Pro at £149/month. whoza.ai's Pro plan is £249/month versus ARROW's Enterprise at £299/month." },
     { question: "Does ARROW offer WhatsApp delivery like whoza.ai?", answer: "No. ARROW delivers enquiries via email and SMS only, while whoza.ai offers native WhatsApp integration with instant push notifications, one-tap accept/decline/call back buttons, and rich media support. According to Ofcom's Online Nation 2025 report, 90% of UK adults use WhatsApp regularly." },
-    { question: "What features does whoza.ai have that ARROW lacks?", answer: "whoza.ai offers Claire (automated review collection) and Rex (competitor analysis reports) — genuine revenue drivers not available from ARROW. whoza.ai also provides calendar auto-sync, 12+ voice options with regional UK accents, and trade-specific training for 15+ trades. ARROW focuses on core call answering without follow-up systems or growth tools." },
+    { question: "What features does whoza.ai have that ARROW lacks?", answer: "whoza.ai offers Claire (automated review collection) and Rex (competitor analysis reports), genuine revenue drivers not available from ARROW. whoza.ai also provides calendar auto-sync, 12+ voice options with regional UK accents, and trade-specific training for 15+ trades. ARROW focuses on core call answering without follow-up systems or growth tools." },
     { question: "How does AI voice quality compare between whoza.ai and ARROW?", answer: "Both services use advanced text-to-speech with good UK voice quality. whoza.ai offers 12+ voice options including regional accents (Northern, Scottish, Welsh, Midlands), while ARROW provides 3 standard voices. Both handle trade terminology correctly, but whoza.ai's 15+ trade-specific training modules provide more nuanced understanding for complex enquiries." },
     { question: "How long does setup take for whoza.ai vs ARROW?", answer: "whoza.ai claims 30-minute setup, which held true in testing. ARROW's setup took 1 hour 23 minutes in testing, involving a more detailed onboarding form, manual configuration of call routing rules, and a verification period before the AI goes live." }
 ]
@@ -67,7 +67,7 @@ export default function WhozaVsArrowPage() {
   return (
     <>
       
-      <div className="min-h-screen bg-[var(--navy-900)] text-white">
+      <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
         <Header />
         <BreadcrumbSchema items={[
           { name: "Home", item: "https://whoza.ai" },
@@ -79,21 +79,21 @@ export default function WhozaVsArrowPage() {
           <section className="relative overflow-hidden" style={{ background: "linear-gradient(135deg, #0F1729 0%, #1A1A2E 50%, #0F1729 100%)" }}>
             <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
               <nav aria-label="Breadcrumb" className="mb-8">
-                <ol className="flex items-center text-sm text-white/40" style={{ listStyle: "none", padding: 0 }}>
-                  <li><a href="/" className="hover:text-white transition-colors">Home</a></li>
+                <ol className="flex items-center text-sm text-[var(--v2-muted)]" style={{ listStyle: "none", padding: 0 }}>
+                  <li><a href="/" className="hover:text-[var(--v2-ink)] transition-colors">Home</a></li>
                   <li className="mx-2">/</li>
-                  <li className="text-white">vs ARROW</li>
+                  <li className="text-[var(--v2-ink)]">vs ARROW</li>
                 </ol>
               </nav>
 
-              <div className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 px-3 py-1 rounded-full text-xs font-medium mb-6">
+              <div className="inline-flex items-center gap-2 bg-amber-50 text-amber-700 px-3 py-1 rounded-full text-xs font-medium mb-6">
                 <Star className="w-3 h-3" />
-                Comparison — August 2026
+                Comparison, August 2026
               </div>
 
               {/* Publisher Disclosure */}
-            <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-4 mb-8">
-              <p className="text-sm text-amber-300">
+            <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 mb-8">
+              <p className="text-sm text-amber-700">
                 <strong>Publisher note:</strong> This comparison is published by whoza.ai, which is one of the products compared.
                 Competitor details are taken from their public pricing pages, verified August 2026.
               </p>
@@ -101,20 +101,20 @@ export default function WhozaVsArrowPage() {
 
             <h1 className="text-4xl lg:text-5xl font-extrabold mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
                 Whoza.ai vs ARROW{" "}
-                <span className="block text-emerald-400 mt-2">— Honest Head-to-Head for UK Trades</span>
+                <span className="block text-[var(--v2-green)] mt-2">Honest Head-to-Head for UK Trades</span>
               </h1>
 
-              <p className="text-lg text-white/60 max-w-2xl mb-8">
+              <p className="text-lg text-[var(--v2-body)] max-w-2xl mb-8">
                 ARROW (£79/month) and whoza.ai (£59/month) are two leading AI receptionists 
-                for UK tradespeople. We compared them on price, features, AI capabilities, and value — 
+                for UK tradespeople. We compared them on price, features, AI capabilities, and value, 
                 with real data from their websites and hands-on testing.
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <a href="#comparison-table" className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-emerald-700 transition-colors">
+                <a href="#comparison-table" className="inline-flex items-center gap-2 bg-[var(--v2-green)] text-white font-bold px-6 py-3 rounded-lg hover:bg-[var(--v2-green-hover)] transition-colors v2-island">
                   See Comparison Table <ArrowRight className="w-4 h-4" />
                 </a>
-                <a href="/pricing" className="inline-flex items-center gap-2 bg-white/10 text-white font-bold px-6 py-3 rounded-lg hover:bg-white/20 transition-colors">
+                <a href="/pricing" className="inline-flex items-center gap-2 bg-white text-[var(--v2-ink)] font-bold px-6 py-3 rounded-lg hover:border-[#b9c6bf] transition-colors">
                   Try whoza.ai Free <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
@@ -123,11 +123,11 @@ export default function WhozaVsArrowPage() {
 
           {/* Quick Verdict */}
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div className="bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 border border-emerald-500/20 rounded-2xl p-8">
+            <div className="bg-[var(--v2-navy)] text-white border border-white/10 rounded-2xl p-8 v2-island">
               <h2 className="text-2xl font-bold mb-4">Which service should you choose: whoza.ai or ARROW?</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h3 className="font-bold text-emerald-400 mb-2 flex items-center gap-2">
+                  <h3 className="font-bold text-[#6ee7b7] mb-2 flex items-center gap-2">
                     <Check className="w-5 h-5" /> Choose whoza.ai if...
                   </h3>
                   <ul className="space-y-2 text-white/70 text-sm">
@@ -159,33 +159,33 @@ export default function WhozaVsArrowPage() {
           {/* Comparison Table */}
           <section id="comparison-table" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <h2 className="text-3xl font-bold mb-8 text-center">How do whoza.ai and ARROW compare head-to-head?</h2>
-            <div className="overflow-x-auto rounded-xl border border-white/10">
+            <div className="overflow-x-auto rounded-2xl border border-[var(--v2-line)]">
               <table className="w-full text-left text-sm">
                 <thead>
-                  <tr className="bg-slate-900/80">
-                    <th className="px-6 py-4 font-semibold text-white">Feature</th>
-                    <th className="px-6 py-4 font-semibold text-emerald-400">Whoza.ai</th>
-                    <th className="px-6 py-4 font-semibold text-amber-400">ARROW</th>
-                    <th className="px-6 py-4 font-semibold text-white">Winner</th>
+                  <tr className="bg-white">
+                    <th className="px-6 py-4 font-semibold text-[var(--v2-ink)]">Feature</th>
+                    <th className="px-6 py-4 font-semibold text-[var(--v2-green)]">Whoza.ai</th>
+                    <th className="px-6 py-4 font-semibold text-amber-700">ARROW</th>
+                    <th className="px-6 py-4 font-semibold text-[var(--v2-ink)]">Winner</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-white/5">
+                <tbody className="divide-y divide-[var(--v2-line)]">
                   {comparisonData.map((row, i) => (
-                    <tr key={i} className={i % 2 === 0 ? "bg-white/5" : "bg-white/[0.02]"}>
-                      <td className="px-6 py-4 font-medium text-white">{row.feature}</td>
-                      <td className="px-6 py-4 text-emerald-300">{row.whoza}</td>
-                      <td className="px-6 py-4 text-amber-300">{row.competitor}</td>
+                    <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                      <td className="px-6 py-4 font-medium text-[var(--v2-ink)]">{row.feature}</td>
+                      <td className="px-6 py-4 text-[var(--v2-green)]">{row.whoza}</td>
+                      <td className="px-6 py-4 text-amber-700">{row.competitor}</td>
                       <td className="px-6 py-4">
-                        {row.winner === "whoza" && <span className="inline-flex items-center gap-1 text-emerald-400 font-semibold"><Check className="w-4 h-4" /> whoza</span>}
-                        {row.winner === "arrow" && <span className="inline-flex items-center gap-1 text-amber-400 font-semibold"><Check className="w-4 h-4" /> ARROW</span>}
-                        {row.winner === "draw" && <span className="text-white/50">Draw</span>}
+                        {row.winner === "whoza" && <span className="inline-flex items-center gap-1 text-[var(--v2-green)] font-semibold"><Check className="w-4 h-4" /> whoza</span>}
+                        {row.winner === "arrow" && <span className="inline-flex items-center gap-1 text-amber-700 font-semibold"><Check className="w-4 h-4" /> ARROW</span>}
+                        {row.winner === "draw" && <span className="text-[var(--v2-muted)]">Draw</span>}
                       </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <p className="text-xs text-white/40 mt-4 text-center">
+            <p className="text-xs text-[var(--v2-muted)] mt-4 text-center">
               Data sourced from arrow.ai pricing page and whoza.ai pricing page, accessed August 2026. Prices subject to change.
             </p>
           </section>
@@ -195,25 +195,25 @@ export default function WhozaVsArrowPage() {
             {/* Price Section */}
             <div>
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
-                <PoundSterling className="w-6 h-6 text-emerald-400" />
+                <PoundSterling className="w-6 h-6 text-[var(--v2-green)]" />
                 Which is cheaper: whoza.ai or ARROW?
               </h2>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <p className="text-white/70 leading-relaxed mb-4">
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+                <p className="text-[var(--v2-body)] leading-relaxed mb-4">
                   whoza.ai wins on price at every tier. The entry-level Starter plan at £59/month undercuts 
                   ARROW's basic plan at £79/month by £20. Over a year, that's a £240 saving before you even 
                   consider features. The mid-tier comparison is even more pronounced: whoza.ai Growth at £125 vs 
-                  ARROW Pro at £149 — a £24/month difference. At the top tier, whoza.ai Pro at £249 beats 
+                  ARROW Pro at £149, a £24/month difference. At the top tier, whoza.ai Pro at £249 beats 
                   ARROW Enterprise at £299 by £50/month.
                 </p>
-                <p className="text-white/70 leading-relaxed mb-4">
-                  <strong className="text-white">Real-world cost example:</strong> A heating engineer receiving 
+                <p className="text-[var(--v2-body)] leading-relaxed mb-4">
+                  <strong className="text-[var(--v2-ink)]">Real-world cost example:</strong> A heating engineer receiving 
                   20 calls/week. ARROW's basic plan (£79) answers calls but delivers via email and SMS. 
                   whoza.ai Starter (£59) answers calls and delivers to WhatsApp. The £20/month difference 
-                  means whoza.ai pays for itself faster — one missed boiler breakdown call (£120 callout fee) 
+                  means whoza.ai pays for itself faster: one missed boiler breakdown call (£120 callout fee) 
                   covers two months of the service difference.
                 </p>
-                <p className="text-white/70 leading-relaxed">
+                <p className="text-[var(--v2-body)] leading-relaxed">
                   Both services offer 30-day money-back guarantees, so there's no financial risk in trying either. 
                   However, ARROW requires a 1-month minimum commitment, while whoza.ai has no contract at all.
                 </p>
@@ -223,33 +223,33 @@ export default function WhozaVsArrowPage() {
             {/* WhatsApp Section */}
             <div>
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
-                <MessageCircle className="w-6 h-6 text-emerald-400" />
+                <MessageCircle className="w-6 h-6 text-[var(--v2-green)]" />
                 Does ARROW offer WhatsApp delivery like whoza.ai?
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-emerald-500/5 border border-emerald-500/20 rounded-xl p-6">
-                  <h3 className="font-bold text-emerald-400 mb-3">whoza.ai — WhatsApp</h3>
-                  <ul className="space-y-2 text-white/70 text-sm">
-                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> Instant push notification</li>
-                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> One-tap accept/decline/call back</li>
-                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> Already installed on every tradesperson's phone</li>
-                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> No login, no password, no app to learn</li>
-                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" /> Rich media: photos, voice notes, locations</li>
+                <div className="bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-6">
+                  <h3 className="font-bold text-[var(--v2-green)] mb-3">whoza.ai: WhatsApp</h3>
+                  <ul className="space-y-2 text-[var(--v2-body)] text-sm">
+                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> Instant push notification</li>
+                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> One-tap accept/decline/call back</li>
+                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> Already installed on every tradesperson's phone</li>
+                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> No login, no password, no app to learn</li>
+                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> Rich media: photos, voice notes, locations</li>
                   </ul>
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                  <h3 className="font-bold text-amber-400 mb-3">ARROW — Email & SMS</h3>
-                  <ul className="space-y-2 text-white/70 text-sm">
-                    <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-400 shrink-0 mt-0.5" /> Must check inbox regularly</li>
-                    <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-400 shrink-0 mt-0.5" /> SMS limited to 160 characters</li>
-                    <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-400 shrink-0 mt-0.5" /> No instant rich notifications</li>
-                    <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-400 shrink-0 mt-0.5" /> Requires opening email app, reading, then action</li>
-                    <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-400 shrink-0 mt-0.5" /> No one-tap response buttons</li>
+                <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+                  <h3 className="font-bold text-amber-700 mb-3">ARROW: Email & SMS</h3>
+                  <ul className="space-y-2 text-[var(--v2-body)] text-sm">
+                    <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-600 shrink-0 mt-0.5" /> Must check inbox regularly</li>
+                    <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-600 shrink-0 mt-0.5" /> SMS limited to 160 characters</li>
+                    <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-600 shrink-0 mt-0.5" /> No instant rich notifications</li>
+                    <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-600 shrink-0 mt-0.5" /> Requires opening email app, reading, then action</li>
+                    <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-600 shrink-0 mt-0.5" /> No one-tap response buttons</li>
                   </ul>
                 </div>
               </div>
-              <p className="text-white/60 text-sm mt-4">
-                Source: Ofcom, Online Nation 2025, 10 December 2025 — 90% of UK adults use WhatsApp; 
+              <p className="text-[var(--v2-body)] text-sm mt-4">
+                Source: Ofcom, Online Nation 2025, 10 December 2025. 90% of UK adults use WhatsApp; 
                 trade business owners check messaging apps 4.2x more frequently than email during work hours. 
                 SMS is limited to 160 characters, which severely constrains the detail ARROW can deliver.
               </p>
@@ -258,27 +258,27 @@ export default function WhozaVsArrowPage() {
             {/* Features Section */}
             <div>
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
-                <Star className="w-6 h-6 text-emerald-400" />
+                <Star className="w-6 h-6 text-[var(--v2-green)]" />
                 What features does whoza.ai have that ARROW lacks?
               </h2>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <p className="text-white/70 leading-relaxed mb-4">
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+                <p className="text-[var(--v2-body)] leading-relaxed mb-4">
                   whoza.ai's standout differentiators are Claire (review collection) and Rex (competitor analysis). 
                   These are genuine revenue drivers, not bolt-on features. According to BrightLocal's 2025 UK survey, 
                   businesses with 40+ Google reviews receive 3.5x more enquiries than those with fewer than 10. 
-                  Claire automates the entire review collection process — following up after jobs, requesting feedback, 
-                  and guiding customers to Google. This typically takes 2–3 hours per week if done manually, 
+                  Claire automates the entire review collection process: following up after jobs, requesting feedback, 
+                  and guiding customers to Google. This typically takes 2 to 3 hours per week if done manually, 
                   or simply doesn't happen for busy tradespeople.
                 </p>
-                <p className="text-white/70 leading-relaxed mb-4">
+                <p className="text-[var(--v2-body)] leading-relaxed mb-4">
                   Rex's competitor analysis reports help you understand exactly why a rival is ranking higher on Google, 
                   what keywords they're targeting, and what actions you can take to improve your visibility. In the 
                   competitive UK trade market, where a single position difference on Google Maps can mean £10,000+ 
                   in annual revenue, this intelligence is invaluable.
                 </p>
-                <p className="text-white/70 leading-relaxed">
+                <p className="text-[var(--v2-body)] leading-relaxed">
                   ARROW focuses on core call answering with solid AI voice quality. It handles call qualification 
-                  well and understands basic trade terminology. However, it stops at the call — there's no follow-up 
+                  well and understands basic trade terminology. However, it stops at the call: there's no follow-up 
                   system, no review automation, no competitive intelligence, and no calendar integration. It's a 
                   single-tool solution that answers calls but doesn't help you grow.
                 </p>
@@ -288,24 +288,24 @@ export default function WhozaVsArrowPage() {
             {/* AI Voice Section */}
             <div>
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
-                <Zap className="w-6 h-6 text-emerald-400" />
+                <Zap className="w-6 h-6 text-[var(--v2-green)]" />
                 How does AI voice quality compare between whoza.ai and ARROW?
               </h2>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <p className="text-white/70 leading-relaxed mb-4">
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+                <p className="text-[var(--v2-body)] leading-relaxed mb-4">
                   Both whoza.ai and ARROW use advanced text-to-speech models with good UK voice quality. 
                   In our testing (June 2026), both services produced natural-sounding voices that callers found 
                   acceptable. However, whoza.ai offers 12+ different voice options including regional accents 
                   (Northern, Scottish, Welsh, Midlands), while ARROW provides 3 standard voices.
                 </p>
-                <p className="text-white/70 leading-relaxed mb-4">
+                <p className="text-[var(--v2-body)] leading-relaxed mb-4">
                   For tradespeople serving specific UK regions, this matters. A plumber in Glasgow using a Scottish 
                   accent voice builds instant rapport with local callers. A builder in Birmingham with a Midlands 
                   accent sounds like a local firm, not a distant call centre. whoza.ai's voice selection allows 
                   you to match your agent's voice to your customer base, which ARROW doesn't offer.
                 </p>
-                <p className="text-white/70 leading-relaxed">
-                  Both services handle trade terminology well — "boiler breakdown", "rewire", "EICR", "blockage", 
+                <p className="text-[var(--v2-body)] leading-relaxed">
+                  Both services handle trade terminology well: "boiler breakdown", "rewire", "EICR", "blockage", 
                   "extension" are all recognised correctly. ARROW's training on trade-specific language is solid, 
                   but whoza.ai's 15+ trade-specific training modules provide more nuanced understanding for 
                   complex enquiries like planning permission questions or gas safety certificate requirements.
@@ -316,20 +316,20 @@ export default function WhozaVsArrowPage() {
             {/* Calendar Section */}
             <div>
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
-                <Clock className="w-6 h-6 text-emerald-400" />
+                <Clock className="w-6 h-6 text-[var(--v2-green)]" />
                 Does ARROW integrate with calendars like whoza.ai?
               </h2>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <p className="text-white/70 leading-relaxed mb-4">
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+                <p className="text-[var(--v2-body)] leading-relaxed mb-4">
                   whoza.ai's Growth plan includes auto-synced calendar integration. When you tap "Accept" on a 
                   WhatsApp enquiry, Katie automatically creates a calendar event with all the customer details, 
                   job type, and urgency level. This eliminates the manual step of copying information from an 
                   email or SMS into your calendar app, which is where many missed appointments originate.
                 </p>
-                <p className="text-white/70 leading-relaxed">
+                <p className="text-[var(--v2-body)] leading-relaxed">
                   ARROW does not offer calendar integration. You receive the enquiry via email or SMS, then manually 
-                  add it to your calendar. For a busy tradesperson receiving 15-20 calls per week, this extra step 
-                  adds 30-45 minutes of admin time and increases the risk of double-booking or missed appointments. 
+                  add it to your calendar. For a busy tradesperson receiving 15 to 20 calls per week, this extra step 
+                  adds 30 to 45 minutes of admin time and increases the risk of double-booking or missed appointments. 
                   The automation gap is significant for high-volume trades like plumbing, electrical, and heating engineering.
                 </p>
               </div>
@@ -338,21 +338,21 @@ export default function WhozaVsArrowPage() {
             {/* Setup Section */}
             <div>
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
-                <Phone className="w-6 h-6 text-emerald-400" />
+                <Phone className="w-6 h-6 text-[var(--v2-green)]" />
                 How long does setup take for whoza.ai vs ARROW?
               </h2>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <p className="text-white/70 leading-relaxed mb-4">
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+                <p className="text-[var(--v2-body)] leading-relaxed mb-4">
                   whoza.ai claims 30-minute setup, and in our testing this held true. The process is streamlined: 
                   connect your number via call forwarding (2 minutes), fill in your services and hours (5 minutes), 
                   select your AI voice and greeting (3 minutes), test with a sample call (3 minutes), and go live 
                   (17 minutes for DNS/call routing propagation). You can be capturing real customer calls within 
                   half an hour of signing up.
                 </p>
-                <p className="text-white/70 leading-relaxed">
+                <p className="text-[var(--v2-body)] leading-relaxed">
                   ARROW's setup took 1 hour 23 minutes in our test. The process involves a more detailed onboarding 
                   form, manual configuration of call routing rules, and a verification period before the AI goes live. 
-                  ARROW's longer setup isn't necessarily a flaw — some users appreciate the thoroughness — but if you 
+                  ARROW's longer setup isn't necessarily a flaw (some users appreciate the thoroughness), but if you 
                   need to be live today, whoza.ai is significantly faster. For tradespeople who've just discovered 
                   they've missed a week's worth of calls, speed matters.
                 </p>
@@ -362,19 +362,19 @@ export default function WhozaVsArrowPage() {
             {/* Growth Section */}
             <div>
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
-                <TrendingUp className="w-6 h-6 text-emerald-400" />
+                <TrendingUp className="w-6 h-6 text-[var(--v2-green)]" />
                 Which service helps you grow your business more effectively?
               </h2>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <p className="text-white/70 leading-relaxed mb-4">
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+                <p className="text-[var(--v2-body)] leading-relaxed mb-4">
                   whoza.ai is designed as a complete revenue system, not just a call answering service. The growth 
-                  features — Claire's review automation, Rex's competitor analysis, and the weekly insights dashboard 
-                  — are built to help you acquire more customers, improve your reputation, and outrank competitors. 
+                  features (Claire's review automation, Rex's competitor analysis, and the weekly insights dashboard)
+                  are built to help you acquire more customers, improve your reputation, and outrank competitors. 
                   For a UK trade business, these features directly impact revenue: more reviews = more enquiries, 
                   better ranking = more calls, competitor intelligence = better positioning.
                 </p>
-                <p className="text-white/70 leading-relaxed">
-                  ARROW is a focused call answering tool. It does this well — voice quality is good, call 
+                <p className="text-[var(--v2-body)] leading-relaxed">
+                  ARROW is a focused call answering tool. It does this well: voice quality is good, call 
                   qualification is accurate, and the service is reliable. But it doesn't offer growth tools. 
                   If you're looking for a service that not only captures missed calls but actively helps you 
                   get more calls in the first place, whoza.ai's additional features provide clear value. 
@@ -391,12 +391,12 @@ export default function WhozaVsArrowPage() {
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                "Comparison — August 2026",
+                "Comparison, August 2026",
                 "Pricing verified from competitor websites",
                 "No affiliate links or paid placement",
                 "whoza.ai and ARROW both reviewed",
               ].map((item) => (
-                <span key={item} className="inline-flex items-center gap-2 bg-white/5 text-white/60 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">
+                <span key={item} className="inline-flex items-center gap-2 bg-white text-[var(--v2-body)] text-xs font-medium px-3 py-1.5 rounded-full border border-[var(--v2-line)]">
                   <Shield className="w-3 h-3" /> {item}
                 </span>
               ))}
@@ -406,36 +406,36 @@ export default function WhozaVsArrowPage() {
           {/* CTA */}
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
             <h2 className="text-3xl font-bold mb-4">Which AI receptionist should you try first?</h2>
-            <p className="text-lg text-white/60 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-[var(--v2-body)] mb-8 max-w-2xl mx-auto">
               whoza.ai offers a 7-day free trial with no credit card. ARROW offers a 14-day trial with card required. 
               Test both with real calls and see which fits your workflow and budget.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="/pricing" className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-emerald-700 transition-colors shadow-lg">
+              <a href="/pricing" className="inline-flex items-center gap-2 bg-[var(--v2-green)] text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-[var(--v2-green-hover)] transition-colors shadow-lg v2-island">
                 Start whoza.ai Free Trial <ArrowRight className="w-5 h-5" />
               </a>
-              <a href="/best-ai-call-handler-uk-trades" className="inline-flex items-center gap-2 bg-white/10 text-white font-bold px-6 py-4 rounded-xl hover:bg-white/20 transition-colors">
+              <a href="/best-ai-call-handler-uk-trades" className="inline-flex items-center gap-2 bg-white text-[var(--v2-ink)] font-bold px-6 py-4 rounded-2xl hover:border-[#b9c6bf] transition-colors">
                 Read More Comparisons <ArrowRight className="w-5 h-5" />
               </a>
             </div>
           </section>
 
           {/* Link to related comparison */}
-          <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center border-t border-white/10">
-            <p className="text-white/50 text-sm mb-3">Still deciding between AI reception services?</p>
-            <a href="/whoza-vs-clara" className="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-medium text-sm transition-colors">
+          <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center border-t border-[var(--v2-line)]">
+            <p className="text-[var(--v2-muted)] text-sm mb-3">Still deciding between AI reception services?</p>
+            <a href="/whoza-vs-clara" className="inline-flex items-center text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] font-medium text-sm transition-colors">
               Read: Whoza.ai vs Clara AI Comparison <ArrowRight className="ml-2 w-4 h-4" />
             </a>
           </section>
 
           {/* Compare with other services */}
-          <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center border-t border-white/10">
-            <p className="text-white/50 text-sm mb-4">Compare whoza.ai with other services:</p>
+          <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center border-t border-[var(--v2-line)]">
+            <p className="text-[var(--v2-muted)] text-sm mb-4">Compare whoza.ai with other services:</p>
             <div className="flex flex-wrap justify-center gap-3">
-              <a href="/whoza-vs-moneypenny" className="inline-flex items-center gap-2 bg-white/5 text-white/70 hover:text-white hover:bg-white/10 px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-white/10">
+              <a href="/whoza-vs-moneypenny" className="inline-flex items-center gap-2 bg-white text-[var(--v2-body)] hover:text-[var(--v2-ink)] hover:border-[#b9c6bf] px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-[var(--v2-line)]">
                 vs Moneypenny <ArrowRight className="w-3 h-3" />
               </a>
-              <a href="/whoza-vs-team-connect" className="inline-flex items-center gap-2 bg-white/5 text-white/70 hover:text-white hover:bg-white/10 px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-white/10">
+              <a href="/whoza-vs-team-connect" className="inline-flex items-center gap-2 bg-white text-[var(--v2-body)] hover:text-[var(--v2-ink)] hover:border-[#b9c6bf] px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-[var(--v2-line)]">
                 vs Team-Connect <ArrowRight className="w-3 h-3" />
               </a>
             </div>
@@ -443,29 +443,29 @@ export default function WhozaVsArrowPage() {
 
         
 {/* FAQ Section */}
-<section className="py-16 lg:py-24 bg-white/5 border-t border-white/10">
+<section className="py-16 lg:py-24 bg-white border-t border-[var(--v2-line)]">
   <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
     <div className="space-y-6">
-      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-        <h3 className="text-lg font-semibold text-white mb-3">Which is cheaper: whoza.ai or ARROW?</h3>
-        <p className="text-white/70 leading-relaxed">whoza.ai is cheaper at every tier. whoza.ai's Starter plan costs £59/month compared to ARROW's entry plan at £79/month. whoza.ai's Growth plan is £125/month versus ARROW's Pro at £149/month. whoza.ai's Pro plan is £249/month versus ARROW's Enterprise at £299/month.</p>
+      <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+        <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-3">Which is cheaper: whoza.ai or ARROW?</h3>
+        <p className="text-[var(--v2-body)] leading-relaxed">whoza.ai is cheaper at every tier. whoza.ai's Starter plan costs £59/month compared to ARROW's entry plan at £79/month. whoza.ai's Growth plan is £125/month versus ARROW's Pro at £149/month. whoza.ai's Pro plan is £249/month versus ARROW's Enterprise at £299/month.</p>
       </div>
-      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-        <h3 className="text-lg font-semibold text-white mb-3">Does ARROW offer WhatsApp delivery like whoza.ai?</h3>
-        <p className="text-white/70 leading-relaxed">No. ARROW delivers enquiries via email and SMS only, while whoza.ai offers native WhatsApp integration with instant push notifications, one-tap accept/decline/call back buttons, and rich media support. According to Ofcom's Online Nation 2025 report, 90% of UK adults use WhatsApp regularly.</p>
+      <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+        <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-3">Does ARROW offer WhatsApp delivery like whoza.ai?</h3>
+        <p className="text-[var(--v2-body)] leading-relaxed">No. ARROW delivers enquiries via email and SMS only, while whoza.ai offers native WhatsApp integration with instant push notifications, one-tap accept/decline/call back buttons, and rich media support. According to Ofcom's Online Nation 2025 report, 90% of UK adults use WhatsApp regularly.</p>
       </div>
-      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-        <h3 className="text-lg font-semibold text-white mb-3">What features does whoza.ai have that ARROW lacks?</h3>
-        <p className="text-white/70 leading-relaxed">whoza.ai offers Claire (automated review collection) and Rex (competitor analysis reports) — genuine revenue drivers not available from ARROW. whoza.ai also provides calendar auto-sync, 12+ voice options with regional UK accents, and trade-specific training for 15+ trades. ARROW focuses on core call answering without follow-up systems or growth tools.</p>
+      <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+        <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-3">What features does whoza.ai have that ARROW lacks?</h3>
+        <p className="text-[var(--v2-body)] leading-relaxed">whoza.ai offers Claire (automated review collection) and Rex (competitor analysis reports), genuine revenue drivers not available from ARROW. whoza.ai also provides calendar auto-sync, 12+ voice options with regional UK accents, and trade-specific training for 15+ trades. ARROW focuses on core call answering without follow-up systems or growth tools.</p>
       </div>
-      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-        <h3 className="text-lg font-semibold text-white mb-3">How does AI voice quality compare between whoza.ai and ARROW?</h3>
-        <p className="text-white/70 leading-relaxed">Both services use advanced text-to-speech with good UK voice quality. whoza.ai offers 12+ voice options including regional accents (Northern, Scottish, Welsh, Midlands), while ARROW provides 3 standard voices. Both handle trade terminology correctly, but whoza.ai's 15+ trade-specific training modules provide more nuanced understanding for complex enquiries.</p>
+      <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+        <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-3">How does AI voice quality compare between whoza.ai and ARROW?</h3>
+        <p className="text-[var(--v2-body)] leading-relaxed">Both services use advanced text-to-speech with good UK voice quality. whoza.ai offers 12+ voice options including regional accents (Northern, Scottish, Welsh, Midlands), while ARROW provides 3 standard voices. Both handle trade terminology correctly, but whoza.ai's 15+ trade-specific training modules provide more nuanced understanding for complex enquiries.</p>
       </div>
-      <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-        <h3 className="text-lg font-semibold text-white mb-3">How long does setup take for whoza.ai vs ARROW?</h3>
-        <p className="text-white/70 leading-relaxed">whoza.ai claims 30-minute setup, which held true in testing. ARROW's setup took 1 hour 23 minutes in testing, involving a more detailed onboarding form, manual configuration of call routing rules, and a verification period before the AI goes live.</p>
+      <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+        <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-3">How long does setup take for whoza.ai vs ARROW?</h3>
+        <p className="text-[var(--v2-body)] leading-relaxed">whoza.ai claims 30-minute setup, which held true in testing. ARROW's setup took 1 hour 23 minutes in testing, involving a more detailed onboarding form, manual configuration of call routing rules, and a verification period before the AI goes live.</p>
       </div>
     </div>
   </div>

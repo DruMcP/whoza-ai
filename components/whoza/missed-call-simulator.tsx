@@ -76,7 +76,7 @@ export function MissedCallSimulator({ className = "" }: MissedCallSimulatorProps
             <span className="w-2 h-2 rounded-full animate-pulse bg-red-500" aria-hidden="true" />
             </div>
             <p className="text-sm text-slate-400">
-              Sarah — Boiler repair
+              Sarah: Boiler repair
             </p>
             <button
               onClick={handleSeeKatieAnswer}
@@ -128,7 +128,7 @@ export function MissedCallSimulator({ className = "" }: MissedCallSimulatorProps
                 <path d="M5 8.5l1.5 1.5 3.5-3.5" stroke="#10B981" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
               </svg>
               <span className="text-[13px] text-emerald-500 font-medium">
-                New enquiry — WhatsApp
+                New enquiry: WhatsApp
               </span>
             </div>
             <div
@@ -147,7 +147,7 @@ export function MissedCallSimulator({ className = "" }: MissedCallSimulatorProps
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-[13px] text-gray-500 font-medium min-w-[60px]">Issue</span>
-                <span className="text-[13px] text-white">No hot water — boiler fault</span>
+                <span className="text-[13px] text-white">No hot water, boiler fault</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-[13px] text-gray-500 font-medium min-w-[60px]">Urgency</span>
@@ -155,7 +155,7 @@ export function MissedCallSimulator({ className = "" }: MissedCallSimulatorProps
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-[13px] text-gray-500 font-medium min-w-[60px]">Est. Value</span>
-                <span className="text-[13px] text-white font-semibold">£180-240</span>
+                <span className="text-[13px] text-white font-semibold">£180 to £240</span>
               </div>
               <div className="flex gap-2 pt-1">
                 <span className="px-3 py-1.5 rounded-md text-xs font-medium bg-emerald-500/[0.15] text-emerald-500">

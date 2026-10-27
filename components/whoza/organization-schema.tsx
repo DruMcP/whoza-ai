@@ -11,6 +11,7 @@
 
 import { COMPANY } from "@/lib/company"
 import { ORG_SAME_AS } from "@/lib/seo/identity"
+import { KEY_CITIES } from "@/lib/locations"
 
 export const organizationSchemaObject = {
   "@type": "Organization",
@@ -29,7 +30,7 @@ export const organizationSchemaObject = {
   "description":
     "AI call answering service built in Scotland for UK tradespeople. Katie answers every missed call 24/7, qualifies jobs, and sends details to WhatsApp.",
   "disambiguatingDescription":
-    "whoza.ai (Whoza AI Ltd, company SC874716) is a UK AI call answering service for tradespeople — not related to other businesses using the name Whoza.",
+    "whoza.ai (Whoza AI Ltd, company SC874716) is a UK AI call answering service for tradespeople, not related to other businesses using the name Whoza.",
   "slogan": "While you work, we book. Job done.",
   "foundingDate": COMPANY.incorporatedOn,
   "telephone": "+447463141750",
@@ -49,7 +50,7 @@ export const organizationSchemaObject = {
   "founder": { "@id": "https://whoza.ai/#dru-mcpherson" },
   "numberOfEmployees": {
     "@type": "QuantitativeValue",
-    "value": "5-10",
+    "value": "5 to 10",
   },
   "knowsAbout": [
     "AI Voice Agents",
@@ -61,7 +62,11 @@ export const organizationSchemaObject = {
     "Emergency Call Handling",
     "WhatsApp Business Integration",
   ],
-  "areaServed": "GB",
+  // UK-wide, with the client's key cities named (lib/locations.ts KEY_CITIES).
+  "areaServed": [
+    { "@type": "Country", "name": "United Kingdom" },
+    ...KEY_CITIES.map((name) => ({ "@type": "City", "name": name })),
+  ],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "6 Atholl Crescent",

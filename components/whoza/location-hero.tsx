@@ -18,7 +18,7 @@ interface LocationHeroProps {
 
 /* ── Trust pills (aligned with main site) ── */
 const trustItems = [
-  "7-day free trial — no card required",
+  "7-day free trial, no card required",
   "30-day money-back guarantee",
   "Live in 30 minutes",
   "Works with your existing number",
@@ -43,16 +43,17 @@ const londonBoroughs = [
   "Islington", "Greenwich", "Westminster", "and all London boroughs",
 ]
 
-export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: LocationHeroProps) {
+export function LocationHero({ city, trade, region, jobsThisWeek }: LocationHeroProps) {
   const { country, config } = useLocale()
   const cityKey = city.toLowerCase()
-  const stats = cityStats[cityKey] || { businesses: "5,000+", households: "250K", avgJob: "£300" }
+  // No made-up fallback: cities without real figures get no stat bar.
+  const stats = cityStats[cityKey]
   const [showWaitlist, setShowWaitlist] = useState(false)
 
   // Natural H1 — no keyword stuffing, punchy and human
   const h1Text = trade
-    ? `Your phone's ringing.\nKatie's got it — in ${city}.`
-    : `Your phone's ringing.\nKatie's got it — in ${city}.`
+    ? `Your phone's ringing.\nKatie's got it, in ${city}.`
+    : `Your phone's ringing.\nKatie's got it, in ${city}.`
 
   // Borough list for London, otherwise city + region
   const serviceArea = cityKey === "london"
@@ -61,20 +62,10 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
 
   return (
     <section
-      className="hero hero-grain dark-section relative overflow-hidden bg-gradient-to-br from-[#0F1729] via-[#1A1A2E] to-[#0F1729] pt-[var(--section-py-xl)]"
+      className="hero dark-section relative overflow-hidden bg-[var(--v2-navy)] pt-[var(--section-py-xl)]"
       aria-label={`${city} AI receptionist`}
       aria-label={`AI call handling for ${trade || "trades"} in ${city}`}
     >
-      {/* ── Background atmosphere ── */}
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <div
-          className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full bg-emerald-500/[0.08] blur-[120px]"
-        />
-        <div
-          className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-emerald-500/[0.05] blur-[100px]"
-        />
-      </div>
-
       {/* Subtle grid */}
       <div
         className="absolute inset-0 pointer-events-none bg-[length:60px_60px]"
@@ -117,7 +108,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             }}
           >
             <MapPin className="w-4 h-4" />
-            {jobsThisWeek}+ enquiries captured this week in {city}
+            {jobsThisWeek ? `${jobsThisWeek}+ enquiries captured this week in ${city}` : `Answering calls for trades in ${city}`}
           </motion.div>
 
           {/* H1 — Punchy, natural, no keyword stuffing */}
@@ -128,8 +119,8 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             className="font-sans text-[clamp(36px,5vw,56px)] font-extrabold leading-[1.05] tracking-tight text-white mb-4 whitespace-pre-line"
           >
             <span className="block">Your phone&apos;s ringing.</span>{" "}
-            <span className="block text-red-400">
-              Katie&apos;s got it — in {city}.
+            <span className="block text-[#6ee7b7]">
+              Katie&apos;s got it, in {city}.
             </span>
           </motion.h1>
 
@@ -140,7 +131,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             transition={{ duration: 0.6, delay: 0.28, ease: [0.16, 1, 0.3, 1] }}
             className="font-sans text-lg font-semibold text-emerald-500 mb-4 leading-snug tracking-tight"
           >
-            While you work, we book - Job done.
+            While you work, we book. Job done.
           </motion.p>
 
           {/* Subhead */}
@@ -152,7 +143,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
           >
             The <abbr title="Artificial Intelligence">AI</abbr> call handler and Revenue Team built for{" "}
             {country === "uk" ? "UK" : "US"} {config.language.tradesPeople}. Answers every missed call,
-            qualifies real jobs, and sends them straight to your WhatsApp — so you accept, call back,
+            qualifies real jobs, and sends them straight to your WhatsApp, so you accept, call back,
             or decline in two taps.
           </motion.p>
 
@@ -195,16 +186,16 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
               aria-label="Audio demo coming soon"
               style={{ pointerEvents: "none" }}
             >
-              <span className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[10px] text-white/30">
+              <span className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[10px] text-white/60">
                 <Play className="w-3 h-3 fill-current" />
               </span>
-              Audio demo — coming soon
+              Audio demo: coming soon
             </a>
 
             {/* Pricing anchor */}
             <p className="text-sm text-slate-400 mt-1">
-              From <strong className="text-white">{config.currencySymbol}59/month</strong>{" "}
-              — one recovered job pays for the entire year
+              From <strong className="text-white">{config.currencySymbol}59/month</strong>,{" "}
+              one recovered job pays for the entire year
             </p>
 
             {/* Calculator teaser */}
@@ -252,13 +243,14 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
                 key={item}
                 className="inline-flex items-center gap-1.5 bg-white/[0.06] text-slate-400 text-[13px] px-3.5 py-2 rounded-[20px] border border-white/[0.08]"
               >
-                <span className="text-red-400 font-bold">✓</span>
+                <span className="text-[#6ee7b7] font-bold">✓</span>
                 {item}
               </li>
             ))}
           </motion.ul>
 
           {/* City-specific stat bar */}
+          {stats && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -270,7 +262,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
               <div className="text-xs text-slate-400 mt-1">trade businesses<br />in {city}</div>
             </div>
             <div className="text-center">
-              <div className="text-xl font-bold text-blue-500">{stats.households}</div>
+              <div className="text-xl font-bold text-[#6ee7b7]">{stats.households}</div>
               <div className="text-xs text-slate-400 mt-1">households<br />in {city}</div>
             </div>
             <div className="text-center">
@@ -278,6 +270,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
               <div className="text-xs text-slate-400 mt-1">average job<br />in {city}</div>
             </div>
           </motion.div>
+          )}
 
           {/* Founder Bar */}
           <motion.div
@@ -361,7 +354,8 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             </p>
             <footer className="flex items-center gap-3">
               <cite className="text-[13px] text-slate-500 not-italic">
-                — Ludmila Lamont, {city}
+                {/* Her real review; no city, since this hero renders on every city page. */}
+                Ludmila Lamont
               </cite>
               <span className="text-[13px] text-emerald-500">★★★★★ Google Review</span>
             </footer>
@@ -374,7 +368,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek = 127 }: Locati
             transition={{ duration: 0.6, delay: 1.18, ease: [0.16, 1, 0.3, 1] }}
             style={{
               fontSize: 12,
-              color: "#64748B",
+              color: "#94A3B8",
               marginTop: 16,
               lineHeight: 1.5,
             }}

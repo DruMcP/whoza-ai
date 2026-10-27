@@ -11,20 +11,20 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Whoza Pricing 2026: AI Call Answering from £59/month",
-  description: "Whoza pricing 2026: plans from £59/month — what's included in each tier, overage rates, and how the 7-day free trial works. No contract, cancel anytime.",
+  description: "Whoza pricing 2026: plans from £59/month. What's included in each tier, overage rates, and how the 7-day free trial works. No contract, cancel anytime.",
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "https://whoza.ai/pricing",
     siteName: "Whoza.ai",
     title: "Whoza Pricing 2026: AI Call Answering from £59/month",
-    description: "Whoza pricing 2026: plans from £59/month — what's included in each tier, overage rates, and how the 7-day free trial works. No contract, cancel anytime.",
+    description: "Whoza pricing 2026: plans from £59/month. What's included in each tier, overage rates, and how the 7-day free trial works. No contract, cancel anytime.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Whoza.ai Pricing" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Whoza Pricing 2026: AI Call Answering from £59/month",
-    description: "Whoza pricing 2026: plans from £59/month — what's included in each tier, overage rates, and how the 7-day free trial works. No contract, cancel anytime.",
+    description: "Whoza pricing 2026: plans from £59/month. What's included in each tier, overage rates, and how the 7-day free trial works. No contract, cancel anytime.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {
@@ -39,53 +39,53 @@ const pricingFaqs = [
   { question: "How does the Refer a Trade programme work?", answer: "Refer a fellow tradesperson to Whoza.ai using your unique referral link. Your friend gets their first paid month free after their 7-day trial, on whichever plan they choose. You get one free month of your own current plan credited after they complete their second consecutive paid month. You can earn up to 12 free months per rolling 12-month period. No credit if they cancel before their second payment." },
   { question: "How much does Whoza cost in total?", answer: "You pay a monthly plan fee (Starter £59, Growth £125, Pro £230, Scale £399). Each plan includes a set number of call handling minutes and booked enquiries. Additional enquiries beyond your included amount are charged per booking. Overage minutes are billed at £0.40 per minute. There are no hidden setup fees or long-term contracts. You can cancel anytime." },
   { question: "Is there a contract?", answer: "No. whoza.ai has no contracts. You're free to cancel anytime with no penalties. We also offer a 30-day money-back guarantee on all plans." },
-  { question: "What if I want to cancel?", answer: "Cancel anytime — no contracts, no cancellation fees, no hassle. We're confident you'll stay because the system pays for itself many times over, but if it's not right for your business, you can cancel with one click from your dashboard." },
+  { question: "What if I want to cancel?", answer: "Cancel anytime: no contracts, no cancellation fees, no hassle. We're confident you'll stay because the system pays for itself many times over, but if it's not right for your business, you can cancel with one click from your dashboard." },
 ]
 
 export default function PricingPage() {
   return (
-    <div className="min-h-screen bg-[var(--navy-900)] text-white">
+    <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
         { name: "Pricing", item: "https://whoza.ai/pricing" },
       ]} />
       
-      <main>
+      <main id="main-content">
         {/* Pricing Section */}
         <section className="pt-32 pb-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <div className="inline-flex items-center gap-2 bg-[var(--v2-mint)] text-[var(--v2-green)] px-4 py-2 rounded-full text-sm font-medium mb-6">
                 Simple Pricing
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
                 Whoza Pricing: AI Call Answering Plans from £59/month
               </h1>
-              <p className="text-white/60 max-w-2xl mx-auto text-lg mb-6">
+              <p className="text-[var(--v2-body)] max-w-2xl mx-auto text-lg mb-6">
                 Compare AI receptionist costs: Whoza.ai from £59/month vs £25,000+/year for a full-time human. One captured job pays for the entire year. 7-day free trial.
               </p>
               <div className="flex flex-wrap justify-center gap-4 text-sm">
-                <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full">
-                  <span className="text-[var(--katie-blue)]">✓</span>
-                  <span className="text-white/80">No contract. Cancel anytime.</span>
+                <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full">
+                  <span className="text-[var(--v2-green)]">✓</span>
+                  <span className="text-[var(--v2-body)]">No contract. Cancel anytime.</span>
                 </div>
-                <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full">
-                  <span className="text-[var(--katie-blue)]">✓</span>
-                  <span className="text-white/80">Keep your existing number</span>
+                <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full">
+                  <span className="text-[var(--v2-green)]">✓</span>
+                  <span className="text-[var(--v2-body)]">Keep your existing number</span>
                 </div>
-                <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full">
-                  <span className="text-[var(--katie-blue)]">✓</span>
-                  <span className="text-white/80">Pay for jobs booked, not calls answered</span>
-                  <span className="text-white/40 text-xs ml-1" title="A booked job is an enquiry you accept via WhatsApp or SMS. Declined or auto-declined (no response in 24h) jobs are never charged.">ⓘ</span>
+                <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full">
+                  <span className="text-[var(--v2-green)]">✓</span>
+                  <span className="text-[var(--v2-body)]">Pay for jobs booked, not calls answered</span>
+                  <span className="text-[var(--v2-muted)] text-xs ml-1" title="A booked job is an enquiry you accept via WhatsApp or SMS. Declined or auto-declined (no response in 24h) jobs are never charged.">ⓘ</span>
                 </div>
-                <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full">
-                  <span className="text-[var(--katie-blue)]">✓</span>
-                  <span className="text-white/80">No hidden fees</span>
+                <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full">
+                  <span className="text-[var(--v2-green)]">✓</span>
+                  <span className="text-[var(--v2-body)]">No hidden fees</span>
                 </div>
-                <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full">
-                  <span className="text-[var(--katie-blue)]">✓</span>
-                  <span className="text-white/80">No VAT charged</span>
+                <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full">
+                  <span className="text-[var(--v2-green)]">✓</span>
+                  <span className="text-[var(--v2-body)]">No VAT charged</span>
                 </div>
               </div>
             </div>
@@ -99,9 +99,9 @@ export default function PricingPage() {
 
         {/* Real story link */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-            <p className="text-white/70">
-              <strong className="text-white">Real story from a Glasgow joiner:</strong> Ross spent two weeks comparing virtual receptionist prices from Moneypenny, Verbatim, AnswerConnect and others. He documented exactly what each costs, what is included, and what happened when he switched to AI. <a href="/for-joiners" className="text-[var(--katie-blue)] hover:underline font-semibold">Read his honest comparison →</a>
+          <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+            <p className="text-[var(--v2-body)]">
+              <strong className="text-[var(--v2-ink)]">Real story from a Glasgow joiner:</strong> Ross spent two weeks comparing virtual receptionist prices from Moneypenny, Verbatim, AnswerConnect and others. He documented exactly what each costs, what is included, and what happened when he switched to AI. <a href="/for-joiners" className="text-[var(--v2-green)] hover:underline font-semibold">Read his honest comparison →</a>
             </p>
           </div>
         </section>
@@ -113,7 +113,7 @@ export default function PricingPage() {
         <FinalCTA />
       </main>
 
-      <Footer />
+      <Footer hideCta />
       <script
         id="pricing-schema"
         type="application/ld+json"

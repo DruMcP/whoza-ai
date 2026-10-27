@@ -1,5 +1,7 @@
 import { Metadata } from "next"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
+import { Header } from "@/components/whoza/header"
+import { Footer } from "@/components/whoza/footer"
 import { ChevronRight, Accessibility, CheckCircle2 } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -15,20 +17,22 @@ export const revalidate = 3600
 
 export default function AccessibilityPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-950 to-black text-white">
+    <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <BreadcrumbSchema
         items={[
           { name: "Home", item: "https://whoza.ai" },
           { name: "Accessibility Statement", item: "https://whoza.ai/accessibility" },
         ]}
       />
-      <div className="max-w-4xl mx-auto px-4 py-16 md:py-24">
+      <Header />
+      {/* pt-32 clears the fixed header */}
+      <main id="main-content" className="max-w-4xl mx-auto px-4 pt-32 pb-16 md:pb-24">
         <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[var(--v2-green)] to-emerald-500 bg-clip-text text-transparent">
             Accessibility Statement
           </h1>
-          <p className="text-slate-400 text-lg">
-            WHOZA AI LTD — Committed to digital accessibility for all
+          <p className="text-[var(--v2-muted)] text-lg">
+            WHOZA AI LTD: Committed to digital accessibility for all
           </p>
         </div>
 
@@ -36,15 +40,15 @@ export default function AccessibilityPage() {
           {/* Introduction */}
           <section>
             <div className="flex items-center gap-2 mb-4">
-              <Accessibility className="w-5 h-5 text-blue-400" />
-              <h2 className="text-xl font-semibold text-white">Our Commitment</h2>
+              <Accessibility className="w-5 h-5 text-[var(--v2-green)]" />
+              <h2 className="text-xl font-semibold text-[var(--v2-ink)]">Our Commitment</h2>
             </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 space-y-4 text-slate-300">
+            <div className="bg-white border border-[var(--v2-line)] rounded-lg p-6 space-y-4 text-[var(--v2-body)]">
               <p>
                 WHOZA AI LTD is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.
               </p>
               <p>
-                We believe the web should be accessible to all, regardless of ability or technology. This statement applies to <a href="https://whoza.ai" className="text-blue-400 hover:text-blue-300 underline">whoza.ai</a> and all associated web properties operated by WHOZA AI LTD.
+                We believe the web should be accessible to all, regardless of ability or technology. This statement applies to <a href="https://whoza.ai" className="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] underline">whoza.ai</a> and all associated web properties operated by WHOZA AI LTD.
               </p>
             </div>
           </section>
@@ -52,12 +56,12 @@ export default function AccessibilityPage() {
           {/* Standards */}
           <section>
             <div className="flex items-center gap-2 mb-4">
-              <ChevronRight className="w-5 h-5 text-blue-400" />
-              <h2 className="text-xl font-semibold text-white">Conformance Standards</h2>
+              <ChevronRight className="w-5 h-5 text-[var(--v2-green)]" />
+              <h2 className="text-xl font-semibold text-[var(--v2-ink)]">Conformance Standards</h2>
             </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 space-y-4 text-slate-300">
+            <div className="bg-white border border-[var(--v2-line)] rounded-lg p-6 space-y-4 text-[var(--v2-body)]">
               <p>
-                We aim to conform to the <strong className="text-white">Web Content Accessibility Guidelines (WCAG) 2.1 Level AA</strong> as published by the World Wide Web Consortium (W3C).
+                We aim to conform to the <strong className="text-[var(--v2-ink)]">Web Content Accessibility Guidelines (WCAG) 2.1 Level AA</strong> as published by the World Wide Web Consortium (W3C).
               </p>
               <p>
                 These guidelines explain how to make web content more accessible for people with disabilities, including:
@@ -75,65 +79,65 @@ export default function AccessibilityPage() {
           {/* Measures */}
           <section>
             <div className="flex items-center gap-2 mb-4">
-              <ChevronRight className="w-5 h-5 text-blue-400" />
-              <h2 className="text-xl font-semibold text-white">Accessibility Measures</h2>
+              <ChevronRight className="w-5 h-5 text-[var(--v2-green)]" />
+              <h2 className="text-xl font-semibold text-[var(--v2-ink)]">Accessibility Measures</h2>
             </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 space-y-4 text-slate-300">
-              <p className="text-white font-medium">We have implemented the following accessibility features:</p>
+            <div className="bg-white border border-[var(--v2-line)] rounded-lg p-6 space-y-4 text-[var(--v2-body)]">
+              <p className="text-[var(--v2-ink)] font-medium">We have implemented the following accessibility features:</p>
               <div className="grid md:grid-cols-2 gap-4">
-                <div className="bg-slate-900/50 rounded-lg p-4 border border-slate-700">
+                <div className="bg-white rounded-lg p-4 border border-[var(--v2-line)]">
                   <div className="flex items-center gap-2 mb-2">
-                    <CheckCircle2 className="w-4 h-4 text-green-400" />
-                    <h3 className="font-medium text-white">Keyboard Navigation</h3>
+                    <CheckCircle2 className="w-4 h-4 text-[var(--v2-green)]" />
+                    <h3 className="font-medium text-[var(--v2-ink)]">Keyboard Navigation</h3>
                   </div>
                   <p className="text-sm">All interactive elements are accessible via keyboard. Tab order follows logical content flow.</p>
                 </div>
-                <div className="bg-slate-900/50 rounded-lg p-4 border border-slate-700">
+                <div className="bg-white rounded-lg p-4 border border-[var(--v2-line)]">
                   <div className="flex items-center gap-2 mb-2">
-                    <CheckCircle2 className="w-4 h-4 text-green-400" />
-                    <h3 className="font-medium text-white">Screen Reader Support</h3>
+                    <CheckCircle2 className="w-4 h-4 text-[var(--v2-green)]" />
+                    <h3 className="font-medium text-[var(--v2-ink)]">Screen Reader Support</h3>
                   </div>
                   <p className="text-sm">ARIA labels, roles, and landmarks enable proper navigation with assistive technologies.</p>
                 </div>
-                <div className="bg-slate-900/50 rounded-lg p-4 border border-slate-700">
+                <div className="bg-white rounded-lg p-4 border border-[var(--v2-line)]">
                   <div className="flex items-center gap-2 mb-2">
-                    <CheckCircle2 className="w-4 h-4 text-green-400" />
-                    <h3 className="font-medium text-white">Colour Contrast</h3>
+                    <CheckCircle2 className="w-4 h-4 text-[var(--v2-green)]" />
+                    <h3 className="font-medium text-[var(--v2-ink)]">Colour Contrast</h3>
                   </div>
                   <p className="text-sm">Text meets WCAG AA contrast ratios (4.5:1 for normal text, 3:1 for large text).</p>
                 </div>
-                <div className="bg-slate-900/50 rounded-lg p-4 border border-slate-700">
+                <div className="bg-white rounded-lg p-4 border border-[var(--v2-line)]">
                   <div className="flex items-center gap-2 mb-2">
-                    <CheckCircle2 className="w-4 h-4 text-green-400" />
-                    <h3 className="font-medium text-white">Focus Indicators</h3>
+                    <CheckCircle2 className="w-4 h-4 text-[var(--v2-green)]" />
+                    <h3 className="font-medium text-[var(--v2-ink)]">Focus Indicators</h3>
                   </div>
                   <p className="text-sm">Clear visible focus indicators on all interactive elements for keyboard users.</p>
                 </div>
-                <div className="bg-slate-900/50 rounded-lg p-4 border border-slate-700">
+                <div className="bg-white rounded-lg p-4 border border-[var(--v2-line)]">
                   <div className="flex items-center gap-2 mb-2">
-                    <CheckCircle2 className="w-4 h-4 text-green-400" />
-                    <h3 className="font-medium text-white">Alt Text</h3>
+                    <CheckCircle2 className="w-4 h-4 text-[var(--v2-green)]" />
+                    <h3 className="font-medium text-[var(--v2-ink)]">Alt Text</h3>
                   </div>
                   <p className="text-sm">All meaningful images include descriptive alt text. Decorative images are marked appropriately.</p>
                 </div>
-                <div className="bg-slate-900/50 rounded-lg p-4 border border-slate-700">
+                <div className="bg-white rounded-lg p-4 border border-[var(--v2-line)]">
                   <div className="flex items-center gap-2 mb-2">
-                    <CheckCircle2 className="w-4 h-4 text-green-400" />
-                    <h3 className="font-medium text-white">Reduced Motion</h3>
+                    <CheckCircle2 className="w-4 h-4 text-[var(--v2-green)]" />
+                    <h3 className="font-medium text-[var(--v2-ink)]">Reduced Motion</h3>
                   </div>
-                  <p className="text-sm">Animations respect <code className="bg-slate-800 px-1 rounded">prefers-reduced-motion</code> user preferences.</p>
+                  <p className="text-sm">Animations respect <code className="bg-slate-800 px-1 rounded v2-island">prefers-reduced-motion</code> user preferences.</p>
                 </div>
-                <div className="bg-slate-900/50 rounded-lg p-4 border border-slate-700">
+                <div className="bg-white rounded-lg p-4 border border-[var(--v2-line)]">
                   <div className="flex items-center gap-2 mb-2">
-                    <CheckCircle2 className="w-4 h-4 text-green-400" />
-                    <h3 className="font-medium text-white">Resizable Text</h3>
+                    <CheckCircle2 className="w-4 h-4 text-[var(--v2-green)]" />
+                    <h3 className="font-medium text-[var(--v2-ink)]">Resizable Text</h3>
                   </div>
                   <p className="text-sm">Content remains functional when text is resized up to 200% without assistive technology.</p>
                 </div>
-                <div className="bg-slate-900/50 rounded-lg p-4 border border-slate-700">
+                <div className="bg-white rounded-lg p-4 border border-[var(--v2-line)]">
                   <div className="flex items-center gap-2 mb-2">
-                    <CheckCircle2 className="w-4 h-4 text-green-400" />
-                    <h3 className="font-medium text-white">Semantic HTML</h3>
+                    <CheckCircle2 className="w-4 h-4 text-[var(--v2-green)]" />
+                    <h3 className="font-medium text-[var(--v2-ink)]">Semantic HTML</h3>
                   </div>
                   <p className="text-sm">Proper heading hierarchy, landmark regions, and form labels for structure and navigation.</p>
                 </div>
@@ -144,10 +148,10 @@ export default function AccessibilityPage() {
           {/* Known Limitations */}
           <section>
             <div className="flex items-center gap-2 mb-4">
-              <ChevronRight className="w-5 h-5 text-blue-400" />
-              <h2 className="text-xl font-semibold text-white">Known Limitations</h2>
+              <ChevronRight className="w-5 h-5 text-[var(--v2-green)]" />
+              <h2 className="text-xl font-semibold text-[var(--v2-ink)]">Known Limitations</h2>
             </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 space-y-4 text-slate-300">
+            <div className="bg-white border border-[var(--v2-line)] rounded-lg p-6 space-y-4 text-[var(--v2-body)]">
               <p>
                 We are aware of the following accessibility limitations and are actively working to address them:
               </p>
@@ -165,10 +169,10 @@ export default function AccessibilityPage() {
           {/* Assessment */}
           <section>
             <div className="flex items-center gap-2 mb-4">
-              <ChevronRight className="w-5 h-5 text-blue-400" />
-              <h2 className="text-xl font-semibold text-white">Assessment Methods</h2>
+              <ChevronRight className="w-5 h-5 text-[var(--v2-green)]" />
+              <h2 className="text-xl font-semibold text-[var(--v2-ink)]">Assessment Methods</h2>
             </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 space-y-4 text-slate-300">
+            <div className="bg-white border border-[var(--v2-line)] rounded-lg p-6 space-y-4 text-[var(--v2-body)]">
               <p>
                 We assess accessibility through:
               </p>
@@ -180,7 +184,7 @@ export default function AccessibilityPage() {
                 <li>Periodic external accessibility audits</li>
               </ul>
               <p>
-                Last assessed: <strong className="text-white">May 2025</strong>
+                Last assessed: <strong className="text-[var(--v2-ink)]">May 2025</strong>
               </p>
             </div>
           </section>
@@ -188,19 +192,19 @@ export default function AccessibilityPage() {
           {/* Feedback */}
           <section>
             <div className="flex items-center gap-2 mb-4">
-              <ChevronRight className="w-5 h-5 text-blue-400" />
-              <h2 className="text-xl font-semibold text-white">Feedback and Contact</h2>
+              <ChevronRight className="w-5 h-5 text-[var(--v2-green)]" />
+              <h2 className="text-xl font-semibold text-[var(--v2-ink)]">Feedback and Contact</h2>
             </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 space-y-4 text-slate-300">
+            <div className="bg-white border border-[var(--v2-line)] rounded-lg p-6 space-y-4 text-[var(--v2-body)]">
               <p>
                 We welcome your feedback on the accessibility of whoza.ai. If you encounter any barriers or have suggestions for improvement, please contact us:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Email: <a href="mailto:dru@whoza.ai" className="text-blue-400 hover:text-blue-300 underline">dru@whoza.ai</a></li>
+                <li>Email: <a href="mailto:dru@whoza.ai" className="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] underline">dru@whoza.ai</a></li>
                 <li>Postal: WHOZA AI LTD, 6 Atholl Crescent, Perth, PH1 5JN</li>
               </ul>
               <p className="mt-4">
-                We aim to respond to accessibility feedback within <strong className="text-white">5 business days</strong> and to propose a solution within <strong className="text-white">10 business days</strong>.
+                We aim to respond to accessibility feedback within <strong className="text-[var(--v2-ink)]">5 business days</strong> and to propose a solution within <strong className="text-[var(--v2-ink)]">10 business days</strong>.
               </p>
             </div>
           </section>
@@ -208,10 +212,10 @@ export default function AccessibilityPage() {
           {/* Enforcement */}
           <section>
             <div className="flex items-center gap-2 mb-4">
-              <ChevronRight className="w-5 h-5 text-blue-400" />
-              <h2 className="text-xl font-semibold text-white">Enforcement Procedure</h2>
+              <ChevronRight className="w-5 h-5 text-[var(--v2-green)]" />
+              <h2 className="text-xl font-semibold text-[var(--v2-ink)]">Enforcement Procedure</h2>
             </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 space-y-4 text-slate-300">
+            <div className="bg-white border border-[var(--v2-line)] rounded-lg p-6 space-y-4 text-[var(--v2-body)]">
               <p>
                 In the event that you are dissatisfied with our response to an accessibility concern, you may escalate the matter to:
               </p>
@@ -222,11 +226,12 @@ export default function AccessibilityPage() {
             </div>
           </section>
 
-          <p className="text-slate-500 text-sm mt-12 pt-8 border-t border-slate-800">
+          <p className="text-slate-500 text-sm mt-12 pt-8 border-t border-[var(--v2-line)]">
             Last updated: May 2025 | Next review: November 2025
           </p>
         </div>
-      </div>
+      </main>
+      <Footer />
     </div>
   )
 }

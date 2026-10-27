@@ -49,7 +49,7 @@ export const GUIDE_PAGES: GuidePage[] = [
     title: "The Whoza System Guide",
     subtitle:
       "An AI phone receptionist for UK tradespeople. Missed calls become WhatsApp leads in seconds.",
-    metaTitle: "Whoza System Guide — How It All Works",
+    metaTitle: "Whoza System Guide: How It All Works",
     metaDescription:
       "The full Whoza.ai system guide for UK tradespeople: how calls are answered, how to set up, how the WhatsApp workflow runs, and what every dashboard tab does.",
     blocks: [
@@ -92,7 +92,7 @@ export const GUIDE_PAGES: GuidePage[] = [
     navLabel: "How it works",
     title: "How a Call Becomes a Job",
     subtitle: "From the first ring to a lead card on your WhatsApp in about ten seconds.",
-    metaTitle: "How a Call Becomes a Job — Whoza Guide",
+    metaTitle: "How a Call Becomes a Job | Whoza Guide",
     metaDescription:
       "Follow a customer call through Whoza.ai step by step: the answer, the spam filter, the qualifying questions, and the WhatsApp lead card sent to your phone.",
     blocks: [
@@ -132,7 +132,7 @@ export const GUIDE_PAGES: GuidePage[] = [
     navLabel: "Getting started",
     title: "Getting Started with Whoza",
     subtitle: "Sign up, work through onboarding in about thirty minutes, then go live.",
-    metaTitle: "Getting Started with Whoza — Setup Guide",
+    metaTitle: "Getting Started with Whoza: Setup Guide",
     metaDescription:
       "The eight onboarding steps for Whoza.ai, from business details to your first live call. Takes about thirty minutes and needs no technical skill to complete.",
     blocks: [
@@ -181,7 +181,7 @@ export const GUIDE_PAGES: GuidePage[] = [
     navLabel: "WhatsApp workflow",
     title: "The WhatsApp Workflow",
     subtitle: "WhatsApp is where you run the job. The dashboard is optional.",
-    metaTitle: "WhatsApp Workflow — Whoza Guide",
+    metaTitle: "WhatsApp Workflow | Whoza Guide",
     metaDescription:
       "How Whoza.ai delivers qualified jobs to WhatsApp, what ACCEPT, DECLINE and CALLBACK each do, and when the customer hears back from you after you reply.",
     blocks: [
@@ -217,7 +217,7 @@ export const GUIDE_PAGES: GuidePage[] = [
     navLabel: "Dashboard help",
     title: "Finding Your Way Round the Dashboard",
     subtitle: "For setting up, checking history, and tuning what your agent says.",
-    metaTitle: "Dashboard Help — Whoza Guide",
+    metaTitle: "Dashboard Help | Whoza Guide",
     metaDescription:
       "What every tab of the Whoza.ai dashboard does, from the live call log and lead pipeline to the knowledge base, reports and your agent voice settings.",
     blocks: [
@@ -258,7 +258,7 @@ export const GUIDE_PAGES: GuidePage[] = [
     navLabel: "Guide FAQ",
     title: "Guide Questions and Answers",
     subtitle: "The short answers to what people ask while they are setting up.",
-    metaTitle: "Whoza Guide FAQ — Setup Questions",
+    metaTitle: "Whoza Guide FAQ: Setup Questions",
     metaDescription:
       "Short answers to the questions people ask while setting up Whoza.ai: skills needed, what the trial covers, where to accept jobs, and how your data is held.",
     blocks: [

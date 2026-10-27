@@ -11,32 +11,32 @@ import { ReferralStrip } from "./referral-strip"
 
 const colorStyles = {
   blue: {
-    border: "border-[var(--katie-blue)]",
-    bg: "bg-[var(--katie-blue)]",
-    bgLight: "bg-[var(--katie-blue)]/10",
-    text: "text-[var(--katie-blue)]",
-    hover: "hover:bg-[var(--katie-blue)]/90",
+    border: "border-[var(--v2-green)]",
+    bg: "bg-[var(--v2-green)]",
+    bgLight: "bg-[var(--v2-mint)]",
+    text: "text-[var(--v2-green)]",
+    hover: "hover:bg-[var(--v2-green-hover)]",
   },
   green: {
-    border: "border-[var(--rex-green)]",
-    bg: "bg-[var(--rex-green)]",
-    bgLight: "bg-[var(--rex-green)]/10",
-    text: "text-[var(--rex-green)]",
-    hover: "hover:bg-[var(--rex-green-hover)]",
+    border: "border-[var(--v2-green)]",
+    bg: "bg-[var(--v2-green)]",
+    bgLight: "bg-[var(--v2-mint)]",
+    text: "text-[var(--v2-green)]",
+    hover: "hover:bg-[var(--v2-green-hover)]",
   },
   amber: {
-    border: "border-[var(--claire-amber)]",
-    bg: "bg-[var(--claire-amber)]",
-    bgLight: "bg-[var(--claire-amber)]/10",
-    text: "text-[var(--claire-amber)]",
-    hover: "hover:bg-[var(--claire-amber)]/90",
+    border: "border-[var(--v2-green)]",
+    bg: "bg-[var(--v2-green)]",
+    bgLight: "bg-[var(--v2-mint)]",
+    text: "text-[var(--v2-green)]",
+    hover: "hover:bg-[var(--v2-green-hover)]",
   },
   grey: {
-    border: "border-[var(--mark-grey)]",
-    bg: "bg-[var(--mark-grey)]",
-    bgLight: "bg-[var(--mark-grey)]/10",
-    text: "text-[var(--mark-grey)]",
-    hover: "hover:bg-[var(--mark-grey)]/90",
+    border: "border-[var(--v2-green)]",
+    bg: "bg-[var(--v2-green)]",
+    bgLight: "bg-[var(--v2-mint)]",
+    text: "text-[var(--v2-green)]",
+    hover: "hover:bg-[var(--v2-green-hover)]",
   },
 }
 
@@ -77,8 +77,8 @@ export function Pricing() {
         { text: "WhatsApp job delivery", included: true },
         { text: "Keep your existing business number", included: true },
         { text: "Calendar sync (Google, Outlook, Apple)", included: true },
-        { text: "Live transfer to you — if you're available, Katie puts them through", included: true },
-        { text: "No contract — cancel anytime", included: true },
+        { text: "Live transfer to you: if you're available, Katie puts them through", included: true },
+        { text: "No contract, cancel anytime", included: true },
         { text: "Monthly competitor analysis", included: true },
         { text: "10 booked enquiries included", included: true },
       ],
@@ -145,7 +145,7 @@ export function Pricing() {
   return (
     <>
       <ReferralStrip />
-      <section id="pricing" className="py-24 lg:py-40 bg-[var(--off-white)]" aria-label="Pricing">
+      <section id="pricing" className="v2-section bg-[var(--v2-paper)]" aria-label="Pricing">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -154,36 +154,36 @@ export function Pricing() {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-block px-4 py-2 rounded-full bg-[var(--rex-green)] text-white text-sm font-bold mb-4">
+          <span className="v2-eyebrow mb-4">
             No Contract. Cancel Anytime.
           </span>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--navy-900)] tracking-tight text-balance reveal">
+          <h2 className="v2-h2 text-balance reveal">
             Simple Pricing That{" "}
-            <span className="text-[var(--rex-green)]">Scales With You</span>
+            <span className="text-[var(--v2-green)]">Scales With You</span>
           </h2>
-          <p className="mt-6 text-xl text-[var(--slate-500)] text-pretty max-w-2xl mx-auto">
+          <p className="v2-lead mt-6 text-pretty max-w-2xl mx-auto">
             Jobs included. {cs}2.25-{cs}4.50 per extra job. Scales as you grow.
-            <span className="block mt-2 font-semibold text-[var(--navy-900)]">Start small. Only pay more as you get more work.</span>
-            <span className="block mt-2 font-semibold text-[var(--navy-900)]">Most customers cover their cost in their first few jobs.</span>
+            <span className="block mt-2 font-semibold text-[var(--v2-ink)]">Start small. Only pay more as you get more work.</span>
+            <span className="block mt-2 font-semibold text-[var(--v2-ink)]">Most customers cover their cost in their first few jobs.</span>
           </p>
-          <div className="mt-4 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[var(--rex-green)]/10 text-[var(--rex-green)] font-bold border border-[var(--rex-green)]/20">
+          <div className="mt-4 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[var(--v2-mint)] text-[var(--v2-green)] font-bold border border-[var(--v2-green)]/20">
             <CheckCircle2 className="w-5 h-5" />
-            30-day money-back guarantee — no questions asked. No contract. Cancel anytime.
+            30-day money-back guarantee, no questions asked. No contract. Cancel anytime.
           </div>
 
           {/* Economics breakdown */}
           <div className="mt-8 flex flex-wrap justify-center gap-6 lg:gap-10 text-center">
-            <div className="px-4 py-3 rounded-xl bg-white shadow-sm border border-[var(--border)]">
-              <div className="text-2xl font-bold text-[var(--navy-900)]">{cs}2.25-{cs}4.50</div>
-              <div className="text-sm text-[var(--slate-500)]">per booked job</div>
+            <div className="px-4 py-3 rounded-2xl bg-white border border-[var(--v2-line)]">
+              <div className="text-2xl font-bold text-[var(--v2-ink)]">{cs}2.25-{cs}4.50</div>
+              <div className="text-sm text-[var(--v2-muted)]">per booked job</div>
             </div>
-            <div className="px-4 py-3 rounded-xl bg-[var(--rex-green)]/10 border border-[var(--rex-green)]/20">
-              <div className="text-2xl font-bold text-[var(--rex-green)]">{cs}140+</div>
-              <div className="text-sm text-[var(--slate-500)]">avg job value</div>
+            <div className="px-4 py-3 rounded-2xl bg-[var(--v2-mint)] border border-[var(--v2-green)]/20">
+              <div className="text-2xl font-bold text-[var(--v2-green)]">{cs}140+</div>
+              <div className="text-sm text-[var(--v2-muted)]">avg job value</div>
             </div>
-            <div className="px-4 py-3 rounded-xl bg-white shadow-sm border border-[var(--border)]">
-              <div className="text-2xl font-bold text-[var(--navy-900)]">35x</div>
-              <div className="text-sm text-[var(--slate-500)]">return on cost</div>
+            <div className="px-4 py-3 rounded-2xl bg-white border border-[var(--v2-line)]">
+              <div className="text-2xl font-bold text-[var(--v2-ink)]">35x</div>
+              <div className="text-sm text-[var(--v2-muted)]">return on cost</div>
             </div>
           </div>
         </motion.div>
@@ -195,16 +195,16 @@ export function Pricing() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <p className="text-lg text-[var(--slate-500)] font-semibold mb-2">Choose a plan based on how many enquiries you need.</p>
-          <div className="mt-3 inline-flex flex-col sm:flex-row items-center gap-3 px-5 py-3 rounded-xl bg-[var(--rex-green)]/10 border border-[var(--rex-green)]/20 text-sm">
-            <CheckCircle2 className="w-4 h-4 text-[var(--rex-green)] shrink-0" />
-            <span className="text-[var(--navy-900)] font-medium">30-day money-back guarantee on all plans.</span>
+          <p className="text-lg text-[var(--v2-muted)] font-semibold mb-2">Choose a plan based on how many enquiries you need.</p>
+          <div className="mt-3 inline-flex flex-col sm:flex-row items-center gap-3 px-5 py-3 rounded-2xl bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 text-sm">
+            <CheckCircle2 className="w-4 h-4 text-[var(--v2-green)] shrink-0" />
+            <span className="text-[var(--v2-ink)] font-medium">30-day money-back guarantee on all plans.</span>
           </div>
-          <div className="mt-2 inline-flex flex-col sm:flex-row items-center gap-3 px-5 py-3 rounded-xl bg-[var(--katie-blue)]/10 border border-[var(--katie-blue)]/20 text-sm">
-            <CheckCircle2 className="w-4 h-4 text-[var(--katie-blue)] shrink-0" />
-            <span className="text-[var(--navy-900)] font-medium">No VAT charged.</span>
+          <div className="mt-2 inline-flex flex-col sm:flex-row items-center gap-3 px-5 py-3 rounded-2xl bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 text-sm">
+            <CheckCircle2 className="w-4 h-4 text-[var(--v2-green)] shrink-0" />
+            <span className="text-[var(--v2-ink)] font-medium">No VAT charged.</span>
           </div>
-          <p className="mt-2 text-sm text-[var(--slate-500)]">Upgrade anytime as your business grows.</p>
+          <p className="mt-2 text-sm text-[var(--v2-muted)]">Upgrade anytime as your business grows.</p>
         </motion.div>
 
         {/* Pricing Cards */}
@@ -218,17 +218,17 @@ export function Pricing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative bg-white rounded-xl border ${
+                className={`relative bg-white rounded-2xl border ${
                   plan.popular
-                    ? `pricing-card popular ${colors.border} border-2 shadow-xl md:scale-105 z-10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300`
-                    : "pricing-card border-[var(--border)] shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+                    ? `pricing-card popular ${colors.border} border-2 shadow-[0_24px_48px_-24px_rgba(11,125,80,0.35)] z-10 transition-transform duration-300 hover:-translate-y-1`
+                    : "pricing-card border-[var(--v2-line)] transition-[transform,border-color] duration-300 hover:-translate-y-1 hover:border-[#b9c6bf] overflow-hidden"
                 }`}
               >
                 {/* Popular Badge */}
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20"
                   >
-                    <span className={`px-4 py-1.5 rounded-full ${colors.bg} text-white text-xs font-bold shadow-lg animate-pulse`}
+                    <span className={`px-4 py-1.5 rounded-full ${colors.bg} text-white text-xs font-bold`}
                     >
                       <Sparkles className="inline w-3 h-3 mr-1" />
                       Most Popular
@@ -239,30 +239,30 @@ export function Pricing() {
                 <div className={`p-6 ${plan.popular ? "pt-8" : ""}`}>
                   {/* Plan Header */}
                   <div className="mb-4">
-                    <h3 className="text-xl font-bold text-[var(--navy-900)]">{plan.name}</h3>
-                    <p className="text-sm text-[var(--slate-500)] mt-1">{plan.description}</p>
+                    <h3 className="text-xl font-bold text-[var(--v2-ink)]">{plan.name}</h3>
+                    <p className="text-sm text-[var(--v2-muted)] mt-1">{plan.description}</p>
                   </div>
 
                   {/* Price */}
                   <div className="mb-6">
                     <div className="flex items-baseline gap-1">
-                      <span className="text-3xl font-bold text-[var(--navy-900)]">{cs}{plan.price}</span>
-                      <span className="text-[var(--slate-500)]">/{plan.period}</span>
+                      <span className="text-3xl font-bold text-[var(--v2-ink)]">{cs}{plan.price}</span>
+                      <span className="text-[var(--v2-muted)]">/{plan.period}</span>
                     </div>
                     <div className="flex items-center gap-2 mt-2">
-                      <span className="text-sm text-[var(--rex-green)] font-semibold">{cs}{plan.perJob}/job</span>
+                      <span className="text-sm text-[var(--v2-green)] font-semibold">{cs}{plan.perJob}/job</span>
                       {plan.jobsIncluded ? (
-                        <span className="text-xs text-[var(--slate-400)]">• {plan.jobsIncluded} jobs included</span>
+                        <span className="text-xs text-[var(--v2-muted)]">• {plan.jobsIncluded} jobs included</span>
                       ) : (
-                        <span className="text-xs text-[var(--slate-400)]">• no enquiries included</span>
+                        <span className="text-xs text-[var(--v2-muted)]">• no enquiries included</span>
                       )}
                     </div>
-                    <div className="mt-2 text-sm text-[var(--slate-500)]">
+                    <div className="mt-2 text-sm text-[var(--v2-muted)]">
                       Includes {plan.includedMinutes} call handling minutes/month
                     </div>
                     {/* Trial badge */}
                     {(plan.name === "Starter") && (
-                      <div className="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[var(--rex-green)]/10 border border-[var(--rex-green)]/20 text-xs font-medium text-[var(--rex-green)]">
+                      <div className="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 text-xs font-medium text-[var(--v2-green)]">
                         <Sparkles className="w-3 h-3" />
                         7-day free trial
                       </div>
@@ -278,7 +278,7 @@ export function Pricing() {
                         ) : (
                           <X className="w-4 h-4 mt-0.5 shrink-0 text-[var(--slate-300)]" />
                         )}
-                        <span className={`text-sm ${feature.included ? "text-[var(--navy-900)]" : "text-[var(--slate-400)]"}`}>
+                        <span className={`text-sm ${feature.included ? "text-[var(--v2-ink)]" : "text-[var(--v2-muted)]"}`}>
                           {feature.text}
                         </span>
                       </li>
@@ -288,10 +288,10 @@ export function Pricing() {
                   {/* CTA - All plans open waitlist with selected plan */}
                   <button
                     onClick={() => openWaitlist(plan.name)}
-                    className={`inline-flex items-center justify-center w-full font-bold transition-all py-2 px-4 rounded-md ${
+                    className={`inline-flex items-center justify-center w-full min-h-[48px] font-semibold transition-colors py-3 px-5 rounded-full ${
                       plan.popular
-                        ? `${colors.bg} ${colors.hover} text-white shadow-lg hover:scale-105 active:scale-95 cursor-pointer`
-                        : `bg-[var(--navy-900)] hover:bg-[var(--navy-800)] text-white hover:scale-105 active:scale-95 cursor-pointer`
+                        ? `${colors.bg} ${colors.hover} text-white cursor-pointer`
+                        : `bg-[var(--v2-navy)] hover:bg-[var(--v2-navy-2)] text-white cursor-pointer`
                     }`}
                   >
                     {plan.cta}
@@ -310,7 +310,7 @@ export function Pricing() {
           viewport={{ once: true }}
           className="mt-8 text-center"
         >
-          <p className="text-sm text-[var(--slate-500)] max-w-xl mx-auto">
+          <p className="text-sm text-[var(--v2-muted)] max-w-xl mx-auto">
             7-day free trial on Starter. No contract. Cancel anytime.
             {/* Scale is built and live, but sold on request rather than listed: a multi-site
                 firm wants a conversation before paying £399. Same rule as the dashboard. */}
@@ -330,7 +330,7 @@ export function Pricing() {
           viewport={{ once: true }}
           className="mt-8 text-center"
         >
-          <p className="text-sm text-[var(--slate-500)]">
+          <p className="text-sm text-[var(--v2-muted)]">
             Need more call time? Add 100-minute bundles for {cs}20, or pay {cs}0.40/min for additional usage. These minutes never expire.
           </p>
         </motion.div>
@@ -343,10 +343,10 @@ export function Pricing() {
           className="mt-16"
         >
           <div className="text-center mb-10">
-            <h3 className="text-2xl sm:text-3xl font-bold text-[var(--navy-900)]">
+            <h3 className="text-2xl sm:text-3xl font-bold text-[var(--v2-ink)]">
               Optional Upgrades
             </h3>
-            <p className="mt-2 text-[var(--slate-500)]">
+            <p className="mt-2 text-[var(--v2-muted)]">
               Flexible add-ons to support your business as you grow.
             </p>
           </div>
@@ -357,18 +357,18 @@ export function Pricing() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-6 border border-[var(--border)] shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              className="bg-white rounded-2xl p-6 border border-[var(--v2-line)] hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
               <div className="flex items-start justify-between mb-4">
                 <div>
-                  <h4 className="text-lg font-bold text-[var(--navy-900)]">100 Minute Bundle</h4>
-                  <p className="text-sm text-[var(--slate-500)] mt-1">Extra call handling minutes at a discounted rate.</p>
+                  <h4 className="text-lg font-bold text-[var(--v2-ink)]">100 Minute Bundle</h4>
+                  <p className="text-sm text-[var(--v2-muted)] mt-1">Extra call handling minutes at a discounted rate.</p>
                 </div>
                 <div className="text-right">
-                  <div className="text-2xl font-bold text-[var(--navy-900)] whitespace-nowrap">{cs}20</div>
+                  <div className="text-2xl font-bold text-[var(--v2-ink)] whitespace-nowrap">{cs}20</div>
                 </div>
               </div>
-              <div className="flex items-center gap-2 text-sm text-[var(--rex-green)] font-medium bg-[var(--rex-green)]/10 rounded-lg px-3 py-2 mb-4">
+              <div className="flex items-center gap-2 text-sm text-[var(--v2-green)] font-medium bg-[var(--v2-mint)] rounded-lg px-3 py-2 mb-4">
                 <CheckCircle2 className="w-4 h-4" />
                 Lower cost than standard overage rate ({cs}0.40/min)
               </div>
@@ -386,18 +386,18 @@ export function Pricing() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-6 border border-[var(--border)] shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              className="bg-white rounded-2xl p-6 border border-[var(--v2-line)] hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
               <div className="flex items-start justify-between mb-4">
                 <div>
-                  <h4 className="text-lg font-bold text-[var(--navy-900)]">Done-for-you AI & Automation Support</h4>
-                  <p className="text-sm text-[var(--slate-500)] mt-1">Extra help setting up your AI assistant, call flows and business automations.</p>
+                  <h4 className="text-lg font-bold text-[var(--v2-ink)]">Done-for-you AI & Automation Support</h4>
+                  <p className="text-sm text-[var(--v2-muted)] mt-1">Extra help setting up your AI assistant, call flows and business automations.</p>
                 </div>
                 <div className="text-right">
-                  <div className="text-lg font-bold text-[var(--navy-900)] whitespace-nowrap">{cs}200 per hour</div>
+                  <div className="text-lg font-bold text-[var(--v2-ink)] whitespace-nowrap">{cs}200 per hour</div>
                 </div>
               </div>
-              <div className="flex items-center gap-2 text-sm text-[var(--katie-blue)] font-medium bg-[var(--katie-blue)]/10 rounded-lg px-3 py-2 mb-4">
+              <div className="flex items-center gap-2 text-sm text-[var(--v2-green)] font-medium bg-[var(--v2-mint)] rounded-lg px-3 py-2 mb-4">
                 <CheckCircle2 className="w-4 h-4" />
                 Ideal for scaling businesses and advanced optimisation
               </div>
@@ -420,10 +420,10 @@ export function Pricing() {
           className="mt-16"
         >
           <div className="text-center mb-10">
-            <h3 className="text-2xl sm:text-3xl font-bold text-[var(--navy-900)]">
+            <h3 className="text-2xl sm:text-3xl font-bold text-[var(--v2-ink)]">
               What happens after you sign up?
             </h3>
-            <p className="mt-2 text-[var(--slate-500)]">
+            <p className="mt-2 text-[var(--v2-muted)]">
               Live in less than 30 minutes. Here&apos;s how.
             </p>
           </div>
@@ -467,7 +467,7 @@ export function Pricing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="relative bg-white rounded-2xl p-5 border border-[var(--border)] shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+                className="relative bg-white rounded-2xl p-5 border border-[var(--v2-line)] hover:shadow-md hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="flex items-center gap-2 mb-3">
                   <div
@@ -476,12 +476,12 @@ export function Pricing() {
                   >
                     <step.icon className="w-4 h-4" style={{ color: step.color }} />
                   </div>
-                  <span className="text-xs font-bold text-[var(--navy-900)] uppercase tracking-wider">
+                  <span className="text-xs font-bold text-[var(--v2-ink)] uppercase tracking-wider">
                     Step {index + 1}
                   </span>
                 </div>
-                <h4 className="text-sm font-bold text-[var(--navy-900)] mb-2 leading-snug">{step.title}</h4>
-                <p className="text-xs text-[var(--slate-500)] leading-relaxed">{step.body}</p>
+                <h4 className="text-sm font-bold text-[var(--v2-ink)] mb-2 leading-snug">{step.title}</h4>
+                <p className="text-xs text-[var(--v2-muted)] leading-relaxed">{step.body}</p>
                 {index < 4 && (
                   <div className="hidden md:block absolute top-1/2 -right-2 transform -translate-y-1/2 z-10">
                     <ArrowRight className="w-4 h-4 text-[var(--slate-300)]" />
@@ -500,7 +500,7 @@ export function Pricing() {
           className="mt-12 text-center"
         >
           <div className="inline-flex flex-col sm:flex-row items-center gap-4 px-6 py-4 rounded-2xl bg-[var(--navy-900)] text-white">
-            <CheckCircle2 className="w-6 h-6 text-[var(--rex-green)] shrink-0" />
+            <CheckCircle2 className="w-6 h-6 text-[var(--v2-green)] shrink-0" />
             <p className="text-sm">
               <span className="font-bold">Simple pricing that scales with your business.</span>{" "}
               Most customers cover their cost in their first few jobs.{" "}
@@ -516,8 +516,8 @@ export function Pricing() {
           viewport={{ once: true }}
           className="mt-8 text-center"
         >
-          <p className="text-lg text-[var(--slate-500)] font-semibold">Each plan includes enquiries, with additional ones charged per job - so you can scale as you grow.</p>
-          <p className="text-sm text-[var(--slate-500)] mt-2">Start small. Only pay more as you get more work.</p>
+          <p className="text-lg text-[var(--v2-muted)] font-semibold">Each plan includes enquiries, with additional ones charged per job, so you can scale as you grow.</p>
+          <p className="text-sm text-[var(--v2-muted)] mt-2">Start small. Only pay more as you get more work.</p>
         </motion.div>
         {/* Overage Footnote */}
         <motion.div
@@ -526,7 +526,7 @@ export function Pricing() {
           viewport={{ once: true }}
           className="mt-8 text-center"
         >
-          <p className="text-sm text-[var(--slate-400)]">
+          <p className="text-sm text-[var(--v2-muted)]">
             Additional call handling minutes are charged at {cs}0.40 per minute across all plans. You can monitor and control usage at any time.
           </p>
         </motion.div>
@@ -539,7 +539,7 @@ export function Pricing() {
           viewport={{ once: true }}
           className="mt-4 text-center"
         >
-          <p className="text-sm text-[var(--slate-400)] max-w-2xl mx-auto">
+          <p className="text-sm text-[var(--v2-muted)] max-w-2xl mx-auto">
             A booked job is a job enquiry that the tradesperson has accepted via the Whoza WhatsApp channel (e.g. replying ACCEPT to the WhatsApp job card). Job cards sent but not accepted do not count toward plan job allowances and are not billed as extra jobs.
           </p>
         </motion.div>

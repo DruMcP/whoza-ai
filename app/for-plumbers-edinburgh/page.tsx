@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "AI Call Answering for Plumbers in Edinburgh | whoza.ai",
     description: "Stop losing plumber jobs to missed calls in Edinburgh. Katie answers 24/7, captures burst pipe and boiler enquiries via WhatsApp. Plans from £59/month.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Plumbers in Edinburgh" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Plumbers in Edinburgh" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     "question": "Does it work with my existing Edinburgh business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing Edinburgh business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "answer": "Yes. You simply set up call forwarding from your existing Edinburgh business number to your whoza.ai number. Your customers dial the same number they've always used. Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
     "question": "How quickly can I get set up as a plumber in Edinburgh?",
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     "question": "What makes whoza.ai different for plumbers in Edinburgh?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for plumbers. She understands burst pipes, boiler repairs, leak detection, drainage & installations — and with 4,500+ trade businesses competing in Edinburgh, capturing every call gives you a real competitive edge."
+    "answer": "Unlike generic call answering services, Katie is trained specifically for plumbers. She understands burst pipes, boiler repairs, leak detection, drainage & installations, and with 4,500+ trade businesses competing in Edinburgh, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -79,56 +79,52 @@ export default function ForPlumberEdinburghPage() {
       <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
       </div>
 
-            <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
+            <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--v2-paper)] text-[var(--v2-body)]">
       <CityTradeSchema trade="Plumber" tradePlural="Plumbers" city="Edinburgh" region="City of Edinburgh" pageUrl="https://whoza.ai/for-plumbers-edinburgh" />
-        <section className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px]" />
-            <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[100px]" />
-          </div>
+        <section className="bg-[var(--v2-navy)] text-white relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-flex items-center gap-2 bg-blue-500/10 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <div className="v2-eyebrow v2-eyebrow-light inline-flex items-center gap-2 mb-6">
                   <Wrench className="w-4 h-4" />
                   Plumbers in Edinburgh
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   Never Miss a{" "}
-                  <span className="text-blue-400">Plumber</span>{" "}
+                  <span className="text-[#6ee7b7]">Plumber</span>{" "}
                   Job in Edinburgh Again
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Edinburgh has 4,500+ trade businesses competing for 245K households. 
                   With 2,200 missed calls every week across the city, 
-                  Katie ensures you capture every plumbing enquiry — burst pipes, boiler repairs, leak detection, drainage & installations.
+                  Katie ensures you capture every plumbing enquiry: burst pipes, boiler repairs, leak detection, drainage & installations.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
                     href="/"
-                    className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-4 text-lg rounded-lg transition-all hover:scale-[1.02] shadow-2xl shadow-emerald-500/40"
+                    className="v2-btn min-h-[54px] px-7 text-base"
                   >
                     Start Your Free 7-Day Trial
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                   <Link
                     href="/pricing"
-                    className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 text-lg rounded-lg transition-all border border-white/20"
+                    className="v2-btn-secondary min-h-[54px] px-7 text-base text-white border-white/25 hover:border-white"
                   >
                     See Pricing
                   </Link>
                 </div>
-                <div className="flex flex-wrap gap-4 text-sm text-white/50">
+                <div className="flex flex-wrap gap-4 text-sm text-white/65">
                   <span className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                     No credit card required
                   </span>
                   <span className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                     Setup in 30 minutes
                   </span>
                   <span className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                     Cancel anytime
                   </span>
                 </div>
@@ -136,7 +132,7 @@ export default function ForPlumberEdinburghPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -149,9 +145,9 @@ export default function ForPlumberEdinburghPage() {
         {/* ─── CITY HUB LINK ─── */}
         <section className="py-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-white/60">
+            <p className="text-[var(--v2-body)]">
               Also available across all trades in 
-              <a href="/edinburgh" className="text-emerald-400 hover:underline">
+              <a href="/edinburgh" className="text-[var(--v2-green)] hover:underline">
                 Edinburgh
               </a>
             </p>
@@ -161,13 +157,13 @@ export default function ForPlumberEdinburghPage() {
 
         <div className="section-divider" />
 
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 Edinburgh Plumbers Market
               </h2>
-              <p className="text-white/60 text-lg max-w-2xl mx-auto">
+              <p className="v2-lead max-w-2xl mx-auto">
                 The numbers that matter for plumbers in Edinburgh.
               </p>
             </div>
@@ -181,10 +177,10 @@ export default function ForPlumberEdinburghPage() {
               ].map((item, idx) => {
                 const Icon = item.icon
                 return (
-                  <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+                  <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 text-center">
                     <Icon className={`w-8 h-8 ${item.color} mx-auto mb-3`} />
-                    <div className="text-2xl font-bold text-white mb-1">{item.value}</div>
-                    <div className="text-sm text-white/50">{item.label}</div>
+                    <div className="text-2xl font-bold text-[var(--v2-ink)] mb-1">{item.value}</div>
+                    <div className="text-sm text-[var(--v2-muted)]">{item.label}</div>
                   </div>
                 )
               })}
@@ -194,50 +190,50 @@ export default function ForPlumberEdinburghPage() {
 
         <div className="section-divider" />
 
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 The Real Cost of Missed Calls for Plumbers in Edinburgh
               </h2>
-              <p className="text-white/60 text-lg max-w-2xl mx-auto">
+              <p className="v2-lead max-w-2xl mx-auto">
                 Georgian and Victorian buildings need specialist conservation trades. Festival season brings emergency maintenance demands for venues. Tourist rentals need rapid turnaround between bookings.
               </p>
             </div>
             <div className="space-y-8">
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <div className="flex items-start gap-4">
                   <div className={`w-12 h-12 rounded-xl bg-blue-500/10 border-blue-500/20 border flex items-center justify-center flex-shrink-0`}>
                     <AlertTriangle className={`w-6 h-6 text-blue-400`} />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">While You're on the Job</h3>
-                    <p className="text-white/60 leading-relaxed">
-                      You're mid-job and your phone rings. Can't answer — hands full, focused on the task. Check missed call at break. Customer already booked someone else.
+                    <p className="text-[var(--v2-body)] leading-relaxed">
+                      You're mid-job and your phone rings. Can't answer: hands full, focused on the task. Check missed call at break. Customer already booked someone else.
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-red-400" />
+                  <div className="w-12 h-12 rounded-2xl bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-6 h-6 text-[var(--v2-green)]" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">After Hours & Emergencies</h3>
-                    <p className="text-white/60 leading-relaxed">
+                    <p className="text-[var(--v2-body)] leading-relaxed">
                       A customer calls about an urgent issue at 8pm while you're having dinner. They leave a voicemail, then call the next plumber on Google. You lose a £315+ job.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="mt-8 bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-6 text-center">
-              <p className="text-emerald-200 font-medium text-lg">
+            <div className="mt-8 bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-6 text-center">
+              <p className="text-[var(--v2-green-ink)] font-medium text-lg">
                 The average Edinburgh plumber misses multiple calls per day = 
                 <strong> £45,000+</strong> in lost revenue per year
               </p>
-              <p className="text-emerald-200/70 text-sm mt-1">
+              <p className="text-[var(--v2-body)] text-sm mt-1">
                 Based on £315 avg job value with 35% conversion rate
               </p>
             </div>
@@ -246,13 +242,13 @@ export default function ForPlumberEdinburghPage() {
 
         <div className="section-divider" />
 
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 How Katie Works for Plumbers in Edinburgh
               </h2>
-              <p className="text-white/60 text-lg max-w-2xl mx-auto">
+              <p className="v2-lead max-w-2xl mx-auto">
                 Three simple steps from missed call to booked job. No apps to check. No dashboards to monitor.
               </p>
             </div>
@@ -262,7 +258,7 @@ export default function ForPlumberEdinburghPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your Edinburgh number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your Edinburgh number. Katie picks up in under 2 rings with your branded greeting, 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",
@@ -280,17 +276,17 @@ export default function ForPlumberEdinburghPage() {
                 const Icon = item.icon
                 return (
                   <div key={idx} className="relative">
-                    <div className="bg-white/5 border border-white/10 rounded-xl p-8 h-full">
-                      <div className="text-5xl font-bold text-white/10 mb-4">{item.step}</div>
+                    <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-8 h-full">
+                      <div className="text-5xl font-bold text-slate-200 mb-4">{item.step}</div>
                       <div className={`w-12 h-12 rounded-xl bg-blue-500/10 border-blue-500/20 border flex items-center justify-center mb-4`}>
                         <Icon className={`w-6 h-6 text-blue-400`} />
                       </div>
                       <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                      <p className="text-white/60 leading-relaxed">{item.description}</p>
+                      <p className="text-[var(--v2-body)] leading-relaxed">{item.description}</p>
                     </div>
                     {idx < 2 && (
                       <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
-                        <ArrowRight className="w-8 h-8 text-white/20" />
+                        <ArrowRight className="w-8 h-8 text-slate-300" />
                       </div>
                     )}
                   </div>
@@ -301,19 +297,19 @@ export default function ForPlumberEdinburghPage() {
         </section>
 
         {/* ─── WHY PLUMBERS IN EDINBURGH NEED AI CALL ANSWERING ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 Why Plumbers in Edinburgh Need AI Call Answering
               </h2>
             </div>
-            <div className="space-y-6 text-white/70 leading-relaxed">
+            <div className="space-y-6 text-[var(--v2-body)] leading-relaxed">
               <p>
-                Edinburgh&apos;s plumbing scene is shaped by its UNESCO-listed Georgian and Victorian architecture, hard water from local reservoirs, and a dense concentration of rental properties. In New Town and Stockbridge, Georgian townhouses with original lead pipework require careful handling — any work on listed properties needs planning consent, and only plumbers with the right experience get these jobs. Leith&apos;s vibrant mix of old port housing and new developments creates constant demand for both emergency repairs and modern installations, while Morningside&apos;s established Victorian homes face the same hard water scaling issues that plague the entire city. With 3,800+ trade businesses competing for 245K households and 1,900 missed calls every week, Edinburgh&apos;s market rewards responsiveness.
+                Edinburgh&apos;s plumbing scene is shaped by its UNESCO-listed Georgian and Victorian architecture, hard water from local reservoirs, and a dense concentration of rental properties. In New Town and Stockbridge, Georgian townhouses with original lead pipework require careful handling: any work on listed properties needs planning consent, and only plumbers with the right experience get these jobs. Leith&apos;s vibrant mix of old port housing and new developments creates constant demand for both emergency repairs and modern installations, while Morningside&apos;s established Victorian homes face the same hard water scaling issues that plague the entire city. With 3,800+ trade businesses competing for 245K households and 1,900 missed calls every week, Edinburgh&apos;s market rewards responsiveness.
               </p>
               <p>
-                The listed building factor is critical here. In New Town especially — a UNESCO World Heritage Site — even internal plumbing alterations can require consent, and estate agents managing short-term lets in the area maintain lists of approved tradespeople who understand these restrictions. A missed call from an estate agent or a homeowner in a listed property isn&apos;t just a lost £275 job — it&apos;s a lost relationship with a client who needs ongoing maintenance. Katie captures the property type and urgency, ensuring that when a call comes in from a Georgian townhouse or a Leith tenement, you have the details to respond with the right expertise.
+                The listed building factor is critical here. In New Town especially (a UNESCO World Heritage Site), even internal plumbing alterations can require consent, and estate agents managing short-term lets in the area maintain lists of approved tradespeople who understand these restrictions. A missed call from an estate agent or a homeowner in a listed property isn&apos;t just a lost £275 job. It&apos;s a lost relationship with a client who needs ongoing maintenance. Katie captures the property type and urgency, ensuring that when a call comes in from a Georgian townhouse or a Leith tenement, you have the details to respond with the right expertise.
               </p>
             </div>
           </div>
@@ -323,22 +319,22 @@ export default function ForPlumberEdinburghPage() {
 
         {/* ─── CITY LINKS ─── */}
         {/* ─── LOCAL CONTEXT ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 What Plumbers in Edinburgh Face Daily
               </h2>
             </div>
-            <div className="space-y-6 text-white/70 leading-relaxed">
+            <div className="space-y-6 text-[var(--v2-body)] leading-relaxed">
               <p>
-                From Georgian townhouses in the New Town to Victorian tenements in Leith and Marchmont, Edinburgh&apos;s plumbing trade operates in a city where history and modernity collide. Category A listed buildings in Stockbridge and Comely Bank retain original lead piping that requires specialist knowledge and careful handling. With 47% of the city centre designated as a UNESCO World Heritage Site, almost every external repair needs planning permission — customers who call expect trades who understand these constraints.
+                From Georgian townhouses in the New Town to Victorian tenements in Leith and Marchmont, Edinburgh&apos;s plumbing trade operates in a city where history and modernity collide. Category A listed buildings in Stockbridge and Comely Bank retain original lead piping that requires specialist knowledge and careful handling. With 47% of the city centre designated as a UNESCO World Heritage Site, almost every external repair needs planning permission. Customers who call expect trades who understand these constraints.
               </p>
               <p>
-                Hard water in west Edinburgh — particularly Corstorphine and Balerno — causes severe limescale buildup that destroys boilers and narrows pipes. East-coast winds from the Firth of Forth drive rain horizontally into roof spaces and down external walls, creating hidden damp that manifests as plumbing emergencies. Winter temperatures regularly drop below freezing, and with sunset around 3:30pm in December, emergency callouts often happen in darkness.
+                Hard water in west Edinburgh, particularly Corstorphine and Balerno, causes severe limescale buildup that destroys boilers and narrows pipes. East-coast winds from the Firth of Forth drive rain horizontally into roof spaces and down external walls, creating hidden damp that manifests as plumbing emergencies. Winter temperatures regularly drop below freezing, and with sunset around 3:30pm in December, emergency callouts often happen in darkness.
               </p>
               <p>
-                Edinburgh&apos;s affluent market — the highest average household income outside London — means customers expect professionalism and pay for quality. But with 60,000+ students and a booming short-term let economy in the Old and New Towns, property managers need rapid turnaround on maintenance calls. When an Airbnb host in Bruntsfield reports a leak between changeovers, Katie captures the urgency, the time pressure, and delivers everything to your WhatsApp before the next guest checks in.
+                Edinburgh&apos;s affluent market, the highest average household income outside London, means customers expect professionalism and pay for quality. But with 60,000+ students and a booming short-term let economy in the Old and New Towns, property managers need rapid turnaround on maintenance calls. When an Airbnb host in Bruntsfield reports a leak between changeovers, Katie captures the urgency, the time pressure, and delivers everything to your WhatsApp before the next guest checks in.
               </p>
             </div>
           </div>
@@ -352,12 +348,12 @@ export default function ForPlumberEdinburghPage() {
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">
               AI Call Answering for Plumbers Across the UK
             </h2>
-            <p className="text-white/60 mb-6">
+            <p className="text-[var(--v2-body)] mb-6">
               Katie answers calls for plumbers in cities nationwide. Find your location:
             </p>
             <TradeCityLinks trade="for-plumbers" current="edinburgh" />
             <div className="mt-6">
-              <Link href="/for-plumbers" className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-all">
+              <Link href="/for-plumbers" className="inline-flex items-center text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] text-sm font-medium transition-all">
                 View all Plumbers →
               </Link>
             </div>
@@ -366,21 +362,21 @@ export default function ForPlumberEdinburghPage() {
 
         <div className="section-divider" />
 
-        <section className="trade-faq py-16 lg:py-24">
+        <section className="trade-faq v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 Questions Plumbers in Edinburgh Ask
               </h2>
-              <p className="text-white/60">
+              <p className="text-[var(--v2-body)]">
                 Everything you need to know about AI call answering for plumbers in Edinburgh.
               </p>
             </div>
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6" itemScope itemType="https://schema.org/Question">
+                <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6" itemScope itemType="https://schema.org/Question">
                   <h3 className="text-lg font-semibold mb-3" itemProp="name">{faq.question}</h3>
-                  <p className="text-white/60 leading-relaxed" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                  <p className="text-[var(--v2-body)] leading-relaxed" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
                     <span itemProp="text">{faq.answer}</span>
                   </p>
                 </div>
@@ -391,10 +387,10 @@ export default function ForPlumberEdinburghPage() {
 
         <div className="section-divider" />
 
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 Trusted by Plumbers Across the UK
               </h2>
             </div>
@@ -407,10 +403,10 @@ export default function ForPlumberEdinburghPage() {
               ].map((item, idx) => {
                 const Icon = item.icon
                 return (
-                  <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+                  <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 text-center">
                     <Icon className={`w-8 h-8 text-blue-400 mx-auto mb-3`} />
-                    <p className="font-semibold text-white">{item.label}</p>
-                    <p className="text-sm text-white/50">{item.sub}</p>
+                    <p className="font-semibold text-[var(--v2-ink)]">{item.label}</p>
+                    <p className="text-sm text-[var(--v2-muted)]">{item.sub}</p>
                   </div>
                 )
               })}
@@ -420,11 +416,7 @@ export default function ForPlumberEdinburghPage() {
 
         <div className="section-divider" />
 
-        <section className="py-16 lg:py-24 relative overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px]" />
-            <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[100px]" />
-          </div>
+        <section className="bg-[var(--v2-navy)] text-white py-16 lg:py-24 relative overflow-hidden">
           <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
               Stop Losing Plumber Jobs in Edinburgh Today
@@ -434,15 +426,15 @@ export default function ForPlumberEdinburghPage() {
             </p>
             <Link
               href="/"
-              className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-4 text-lg rounded-lg transition-all hover:scale-[1.02] shadow-2xl shadow-emerald-500/40"
+              className="v2-btn min-h-[54px] px-7 text-base"
             >
               Start Your Free 7-Day Trial
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white/50">
+            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white/65">
               {["No credit card required", "Setup in 30 minutes", "Cancel anytime", "24/7 call answering"].map(point => (
                 <span key={point} className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                   {point}
                 </span>
               ))}

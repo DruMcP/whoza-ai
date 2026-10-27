@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Phone, CheckCircle2, ArrowRight, Zap, Star, BarChart3, Target } from "lucide-react"
+import { Phone, CheckCircle2, ArrowRight, Star, BarChart3, Target } from "lucide-react"
 import { useLocale } from "@/lib/locale-context"
 
 export function PreLaunchProof() {
@@ -17,13 +17,10 @@ export function PreLaunchProof() {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] text-sm font-bold mb-4">
-            <Zap className="w-4 h-4" />
-            What This Looks Like in Practice
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance reveal">
+          <span className="v2-eyebrow">What This Looks Like in Practice</span>
+          <h2 className="v2-h2 text-balance reveal">
             A Typical Day{" "}
-            <span className="text-[var(--rex-green)]">With Whoza</span>
+            <span className="v2-accent">With Whoza</span>
           </h2>
         </motion.div>
 
@@ -36,7 +33,7 @@ export function PreLaunchProof() {
           >
             <div className="bg-white rounded-xl p-8 shadow-xl border border-[var(--border)]">
               <div className="flex items-center gap-2 mb-6">
-                <span className="px-3 py-1 rounded-full bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] text-xs font-bold">
+                <span className="px-3 py-1 rounded-full bg-[var(--v2-green)]/10 text-[var(--v2-green)] text-xs font-bold">
                   EXAMPLE SCENARIO
                 </span>
                 <span className="text-xs text-[var(--slate-500)">Example based on typical trades</span>
@@ -48,8 +45,8 @@ export function PreLaunchProof() {
               <div className="space-y-2">
                 {/* Step 1: Calls captured */}
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-[var(--katie-blue)]/10 flex items-center justify-center shrink-0">
-                    <Phone className="w-6 h-6 text-[var(--katie-blue)]" />
+                  <div className="w-12 h-12 rounded-xl bg-[var(--v2-green)]/10 flex items-center justify-center shrink-0">
+                    <Phone className="w-6 h-6 text-[var(--v2-green)]" />
                   </div>
                   <div>
                     <div className="text-lg font-bold text-[var(--navy-900)]">Calls captured</div>
@@ -63,7 +60,7 @@ export function PreLaunchProof() {
                 </div>
                 <div className="flex items-center gap-3 ml-4">
                   <ArrowRight className="w-4 h-4 text-[var(--slate-300)] rotate-90" />
-                  <span className="text-xs font-bold text-[var(--katie-blue)] uppercase tracking-wider">Katie answers</span>
+                  <span className="text-xs font-bold text-[var(--v2-green)] uppercase tracking-wider">Katie answers</span>
                 </div>
                 <div className="flex items-center ml-6">
                   <div className="border-l-2 border-dashed border-[var(--slate-200)] h-4" />
@@ -109,7 +106,7 @@ export function PreLaunchProof() {
                 </div>
                 <div className="flex items-center gap-3 ml-4">
                   <ArrowRight className="w-4 h-4 text-[var(--slate-300)] rotate-90" />
-                  <span className="text-xs font-bold text-[var(--claire-amber)] uppercase tracking-wider">Claire follows up</span>
+                  <span className="text-xs font-bold text-amber-700 uppercase tracking-wider">Claire follows up</span>
                 </div>
                 <div className="flex items-center ml-6">
                   <div className="border-l-2 border-dashed border-[var(--slate-200)] h-4" />

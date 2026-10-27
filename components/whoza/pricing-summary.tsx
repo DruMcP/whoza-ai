@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Check, ArrowRight, Sparkles } from "lucide-react"
+import { Check, ArrowRight, Calculator } from "lucide-react"
 import { trackCTA, trackPricingView } from "@/lib/gtag"
 import { useLocale } from "@/lib/locale-context"
 import { WaitlistModal } from "./waitlist-modal"
@@ -34,7 +34,18 @@ const colorStyles = {
   },
 }
 
-export function PricingSummary() {
+// The free tools, linked from the homepage pricing section (in-body links, not
+// only the nav and footer).
+const FREE_TOOLS = [
+  { label: "Lost Jobs Calculator", href: "/tools/lost-jobs-calculator" },
+  { label: "Missed Call Cost Calculator", href: "/missed-calls-cost-calculator" },
+  { label: "Hourly Rate Checker", href: "/tools/rate-checker" },
+  { label: "Emergency Callout Pricing Calculator", href: "/tools/emergency-pricing" },
+  { label: "Free Quote Generator", href: "/tools/quote-generator" },
+  { label: "Voicemail Script Generator", href: "/tools/voicemail-scripts" },
+]
+
+export function PricingSummary({ showTools = false }: { showTools?: boolean }) {
   const { config } = useLocale()
   const cs = config.currencySymbol
   const [showWaitlist, setShowWaitlist] = useState(false)
@@ -96,7 +107,7 @@ export function PricingSummary() {
   ]
 
   return (
-    <section id="pricing" className="py-24 lg:py-40 bg-[var(--off-white)]" aria-label="Pricing">
+    <section id="pricing" className="v2-section bg-[var(--off-white)]" aria-label="Pricing">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.div
@@ -105,14 +116,11 @@ export function PricingSummary() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <span className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              <Sparkles className="w-4 h-4" />
-              Simple, Transparent Pricing
-            </span>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--navy-900)] tracking-tight mb-6">
+            <span className="v2-eyebrow">Simple, Transparent Pricing</span>
+            <h2 className="v2-h2 mb-5">
               Start Free. Scale as You Grow.
             </h2>
-            <p className="text-xl text-[var(--navy-900)]/60 max-w-2xl mx-auto">
+            <p className="v2-lead max-w-2xl mx-auto">
               No hidden fees. No long-term contracts. Cancel anytime.
             </p>
           </motion.div>
@@ -120,7 +128,8 @@ export function PricingSummary() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => {
-            const colors = colorStyles[plan.color]
+            // One accent site-wide: the popular plan is the dark card, the rest are plain.
+            const dark = plan.popular
             return (
               <motion.div
                 key={plan.name}
@@ -128,31 +137,31 @@ export function PricingSummary() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`relative rounded-2xl border-2 ${colors.border} bg-white p-6 lg:p-8 flex flex-col ${
-                  plan.popular ? "ring-2 ring-emerald-500 shadow-xl" : "shadow-lg"
+                className={`relative rounded-[20px] border p-6 lg:p-8 flex flex-col ${
+                  dark ? "bg-[var(--v2-navy)] border-[var(--v2-navy)] text-white" : "bg-white border-[var(--v2-line)]"
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="bg-emerald-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-[var(--v2-green)] text-white px-4 py-1 rounded-full text-[13px] font-semibold">
                       Most Popular
                     </span>
                   </div>
                 )}
 
                 <div className="mb-6">
-                  <h3 className="text-2xl font-bold text-[var(--navy-900)] mb-1">{plan.name}</h3>
-                  <p className="text-[var(--navy-900)]/60 text-sm">{plan.description}</p>
+                  <h3 className={`text-2xl font-bold mb-1 ${dark ? "text-white" : "text-[var(--v2-ink)]"}`}>{plan.name}</h3>
+                  <p className={`text-sm ${dark ? "text-white/60" : "text-[var(--v2-muted)]"}`}>{plan.description}</p>
                 </div>
 
                 <div className="mb-6">
                   <div className="flex items-baseline gap-1">
-                    <span className="text-4xl font-bold text-[var(--navy-900)]">
+                    <span className={`text-4xl font-bold tracking-tight ${dark ? "text-white" : "text-[var(--v2-ink)]"}`}>
                       {cs}{plan.price}
                     </span>
-                    <span className="text-[var(--navy-900)]/60">/{plan.period}</span>
+                    <span className={dark ? "text-white/60" : "text-[var(--v2-muted)]"}>/{plan.period}</span>
                   </div>
-                  <p className="text-sm text-[var(--navy-900)]/60 mt-1">
+                  <p className={`text-sm mt-1 ${dark ? "text-white/60" : "text-[var(--v2-muted)]"}`}>
                     {plan.jobsIncluded} jobs included
                   </p>
                 </div>
@@ -160,15 +169,15 @@ export function PricingSummary() {
                 <ul className="space-y-3 mb-8 flex-grow">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
-                      <Check className={`w-5 h-5 ${colors.text} flex-shrink-0 mt-0.5`} />
-                      <span className="text-[var(--navy-900)]/80 text-sm">{feature}</span>
+                      <Check className={`w-5 h-5 flex-shrink-0 mt-0.5 ${dark ? "text-[#6ee7b7]" : "text-[var(--v2-green)]"}`} />
+                      <span className={`text-sm ${dark ? "text-white/80" : "text-[var(--v2-body)]"}`}>{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 <button
                   onClick={() => openWaitlist(plan.name)}
-                  className={`w-full ${colors.bg} ${colors.hover} text-white font-semibold py-3 px-6 rounded-xl transition-colors flex items-center justify-center gap-2`}
+                  className={`${dark ? "v2-btn" : "v2-btn-secondary"} w-full cursor-pointer`}
                 >
                   Get Started
                   <ArrowRight className="w-4 h-4" />
@@ -178,10 +187,40 @@ export function PricingSummary() {
           })}
         </div>
 
+        {showTools && (
+          <div className="mx-auto mt-14 max-w-6xl rounded-[24px] border border-[var(--v2-line)] bg-white p-6 sm:p-8">
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
+              <div className="max-w-md">
+                <p className="text-[18px] font-semibold text-[var(--v2-ink)]">Not sure it pays? Work it out first.</p>
+                <p className="mt-1.5 text-[15px] leading-relaxed text-[var(--v2-muted)]">
+                  Free tools for UK tradespeople, built from our{" "}
+                  <a href="/research/missed-call-index" className="font-medium text-[var(--v2-green)] underline underline-offset-2">
+                    Missed Call Index research
+                  </a>
+                  . No signup.
+                </p>
+              </div>
+              <ul className="flex flex-wrap gap-2 lg:max-w-[620px] lg:justify-end">
+                {FREE_TOOLS.map((tool) => (
+                  <li key={tool.href}>
+                    <a
+                      href={tool.href}
+                      className="inline-flex items-center gap-1.5 rounded-full border border-[var(--v2-line)] bg-[var(--v2-paper)] px-3.5 py-2 text-[14px] font-medium text-[var(--v2-ink)] no-underline transition-colors hover:border-[var(--v2-green)] hover:text-[var(--v2-green)]"
+                    >
+                      <Calculator className="h-3.5 w-3.5 text-[var(--v2-green)]" aria-hidden="true" />
+                      {tool.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
+
         <div className="text-center mt-12">
           <a
             href="/pricing"
-            className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-semibold transition-colors"
+            className="inline-flex items-center gap-2 text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] font-semibold transition-colors"
           >
             See full plan comparison
             <ArrowRight className="w-4 h-4" />

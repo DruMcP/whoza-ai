@@ -7,6 +7,8 @@
  *
  * A server component with no state, so it is in the served HTML like the rest of the header.
  */
+import { useId } from "react"
+
 interface Props {
   /** "light" for dark grounds (white lettering), "dark" for light grounds. */
   colorMode?: "light" | "dark"
@@ -17,7 +19,7 @@ export function Logo({ colorMode = "light", className = "" }: Props) {
   const lettering = colorMode === "light" ? "#ffffff" : "#0f172a"
   // The gradient id must be unique per render or a second instance on the page reuses the
   // first one's definition, which breaks when either is removed from the DOM.
-  const gradientId = `whoza-bolt-${colorMode}`
+  const gradientId = `whoza-bolt-${colorMode}-${useId().replace(/:/g, "")}`
 
   return (
     <svg

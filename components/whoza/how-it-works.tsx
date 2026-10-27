@@ -7,7 +7,7 @@ const steps = [
   {
     number: "01",
     title: "We Answer Every Call",
-    description: "Forward your existing business number to whoza.ai through simple call forwarding — setup takes under 10 minutes with your phone provider. Katie goes live and starts answering your missed calls within 30 minutes. No technical knowledge required, no software to install, and zero downtime for your business.",
+    description: "Forward your existing business number to whoza.ai through simple call forwarding. Setup takes under 10 minutes with your phone provider. Katie goes live and starts answering your missed calls within 30 minutes. No technical knowledge required, no software to install, and zero downtime for your business.",
     icon: Phone,
     bgClass: "bg-[var(--katie-blue)]",
     bgLightClass: "bg-[var(--katie-blue)]/10",

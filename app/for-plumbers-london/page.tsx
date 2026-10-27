@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/for-plumbers-london",
     description: "Stop losing plumber jobs to missed calls in London. Katie answers 24/7, captures burst pipe and boiler enquiries via WhatsApp. Plans from £59/month. Read now.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Plumbers in London" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Plumbers in London" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -48,7 +48,7 @@ const faqs = [
   },
   {
     "question": "Does it work with my existing London business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing London business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "answer": "Yes. You simply set up call forwarding from your existing London business number to your whoza.ai number. Your customers dial the same number they've always used. Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
     "question": "How quickly can I get set up as a plumber in London?",
@@ -56,7 +56,7 @@ const faqs = [
   },
   {
     "question": "What makes whoza.ai different for plumbers in London?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for plumbers. She understands burst pipe emergencies, boiler breakdowns, blocked drains & leak enquiries — and with 32,000+ trade businesses competing in London, capturing every call gives you a real competitive edge."
+    "answer": "Unlike generic call answering services, Katie is trained specifically for plumbers. She understands burst pipe emergencies, boiler breakdowns, blocked drains & leak enquiries, and with 32,000+ trade businesses competing in London, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -75,57 +75,53 @@ export default function ForPlumberLondonPage() {
       <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
 
       {/* Schema JSON-LD */}
-            <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
+            <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--v2-paper)] text-[var(--v2-body)]">
       <CityTradeSchema trade="Plumber" tradePlural="Plumbers" city="London" region="Greater London" pageUrl="https://whoza.ai/for-plumbers-london" />
         {/* ─── HERO ─── */}
-        <section className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px]" />
-            <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[100px]" />
-          </div>
+        <section className="bg-[var(--v2-navy)] text-white relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-flex items-center gap-2 bg-blue-500/10 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <div className="v2-eyebrow v2-eyebrow-light inline-flex items-center gap-2 mb-6">
                   <Droplets className="w-4 h-4" />
                   Plumbers in London
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   Never Miss a{" "}
-                  <span className="text-blue-400">Plumber</span>{" "}
+                  <span className="text-[#6ee7b7]">Plumber</span>{" "}
                   Job in London Again
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   London has 32,000+ trade businesses competing for 1.2M households. 
                   With 8,200 missed calls every week across the city, 
-                  Katie ensures you capture every plumbing enquiry — burst pipe emergencies, boiler breakdowns, blocked drains & leak enquiries.
+                  Katie ensures you capture every plumbing enquiry: burst pipe emergencies, boiler breakdowns, blocked drains & leak enquiries.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
                     href="/"
-                    className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-4 text-lg rounded-lg transition-all hover:scale-[1.02] shadow-2xl shadow-emerald-500/40"
+                    className="v2-btn min-h-[54px] px-7 text-base"
                   >
                     Start Your Free 7-Day Trial
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                   <Link
                     href="/pricing"
-                    className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 text-lg rounded-lg transition-all border border-white/20"
+                    className="v2-btn-secondary min-h-[54px] px-7 text-base text-white border-white/25 hover:border-white"
                   >
                     See Pricing
                   </Link>
                 </div>
-                <div className="flex flex-wrap gap-4 text-sm text-white/50">
+                <div className="flex flex-wrap gap-4 text-sm text-white/65">
                   <span className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                     No credit card required
                   </span>
                   <span className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                     Setup in 30 minutes
                   </span>
                   <span className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                     Cancel anytime
                   </span>
                 </div>
@@ -133,7 +129,7 @@ export default function ForPlumberLondonPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -146,9 +142,9 @@ export default function ForPlumberLondonPage() {
         {/* ─── CITY HUB LINK ─── */}
         <section className="py-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-white/60">
+            <p className="text-[var(--v2-body)]">
               Also available across all trades in 
-              <a href="/london" className="text-emerald-400 hover:underline">
+              <a href="/london" className="text-[var(--v2-green)] hover:underline">
                 London
               </a>
             </p>
@@ -159,13 +155,13 @@ export default function ForPlumberLondonPage() {
         <div className="section-divider" />
 
         {/* ─── LOCAL STATS ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 London Plumbers Market
               </h2>
-              <p className="text-white/60 text-lg max-w-2xl mx-auto">
+              <p className="v2-lead max-w-2xl mx-auto">
                 The numbers that matter for plumbers in London.
               </p>
             </div>
@@ -179,10 +175,10 @@ export default function ForPlumberLondonPage() {
               ].map((item, idx) => {
                 const Icon = item.icon
                 return (
-                  <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+                  <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 text-center">
                     <Icon className={`w-8 h-8 ${item.color} mx-auto mb-3`} />
-                    <div className="text-2xl font-bold text-white mb-1">{item.value}</div>
-                    <div className="text-sm text-white/50">{item.label}</div>
+                    <div className="text-2xl font-bold text-[var(--v2-ink)] mb-1">{item.value}</div>
+                    <div className="text-sm text-[var(--v2-muted)]">{item.label}</div>
                   </div>
                 )
               })}
@@ -193,50 +189,50 @@ export default function ForPlumberLondonPage() {
         <div className="section-divider" />
 
         {/* ─── SCENARIO ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 The Real Cost of Missed Calls for Plumbers in London
               </h2>
-              <p className="text-white/60 text-lg max-w-2xl mx-auto">
-                High competition — 15+ trade businesses per postcode in central London. Emergency calls peak during commute hours when you're on the road. Diverse housing stock from Victorian terraces to new-build apartments. Tenant vs landlord enquiries need different handling.
+              <p className="v2-lead max-w-2xl mx-auto">
+                High competition: 15+ trade businesses per postcode in central London. Emergency calls peak during commute hours when you're on the road. Diverse housing stock from Victorian terraces to new-build apartments. Tenant vs landlord enquiries need different handling.
               </p>
             </div>
             <div className="space-y-8">
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <div className="flex items-start gap-4">
                   <div className={`w-12 h-12 rounded-xl bg-blue-500/10 border-blue-500/20 border flex items-center justify-center flex-shrink-0`}>
                     <AlertTriangle className={`w-6 h-6 text-blue-400`} />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">While You're on the Job</h3>
-                    <p className="text-white/60 leading-relaxed">
-                      You're under a sink fixing a waste pipe. Phone vibrates in your pocket. Can't answer — hands full of muck, water everywhere. Check missed call at 4pm. Customer already booked someone else.
+                    <p className="text-[var(--v2-body)] leading-relaxed">
+                      You're under a sink fixing a waste pipe. Phone vibrates in your pocket. Can't answer: hands full of muck, water everywhere. Check missed call at 4pm. Customer already booked someone else.
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-red-400" />
+                  <div className="w-12 h-12 rounded-2xl bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-6 h-6 text-[var(--v2-green)]" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">After Hours & Emergencies</h3>
-                    <p className="text-white/60 leading-relaxed">
+                    <p className="text-[var(--v2-body)] leading-relaxed">
                       A tenant calls about a burst pipe at 2am while you're asleep. They leave a voicemail, then call the next plumber on Google. You lose a £400 emergency callout.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="mt-8 bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-6 text-center">
-              <p className="text-emerald-200 font-medium text-lg">
+            <div className="mt-8 bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-6 text-center">
+              <p className="text-[var(--v2-green-ink)] font-medium text-lg">
                 The average London plumber misses multiple calls per day = 
                 <strong> £50,568</strong> in lost revenue per year
               </p>
-              <p className="text-emerald-200/70 text-sm mt-1">
+              <p className="text-[var(--v2-body)] text-sm mt-1">
                 Based on £280 avg job value with 35% conversion rate
               </p>
             </div>
@@ -246,13 +242,13 @@ export default function ForPlumberLondonPage() {
         <div className="section-divider" />
 
         {/* ─── HOW KATIE WORKS ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 How Katie Works for Plumbers in London
               </h2>
-              <p className="text-white/60 text-lg max-w-2xl mx-auto">
+              <p className="v2-lead max-w-2xl mx-auto">
                 Three simple steps from missed call to booked job. No apps to check. No dashboards to monitor.
               </p>
             </div>
@@ -262,7 +258,7 @@ export default function ForPlumberLondonPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your London number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your London number. Katie picks up in under 2 rings with your branded greeting, 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",
@@ -280,17 +276,17 @@ export default function ForPlumberLondonPage() {
                 const Icon = item.icon
                 return (
                   <div key={idx} className="relative">
-                    <div className="bg-white/5 border border-white/10 rounded-xl p-8 h-full">
-                      <div className="text-5xl font-bold text-white/10 mb-4">{item.step}</div>
+                    <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-8 h-full">
+                      <div className="text-5xl font-bold text-slate-200 mb-4">{item.step}</div>
                       <div className={`w-12 h-12 rounded-xl bg-blue-500/10 border-blue-500/20 border flex items-center justify-center mb-4`}>
                         <Icon className={`w-6 h-6 text-blue-400`} />
                       </div>
                       <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                      <p className="text-white/60 leading-relaxed">{item.description}</p>
+                      <p className="text-[var(--v2-body)] leading-relaxed">{item.description}</p>
                     </div>
                     {idx < 2 && (
                       <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
-                        <ArrowRight className="w-8 h-8 text-white/20" />
+                        <ArrowRight className="w-8 h-8 text-slate-300" />
                       </div>
                     )}
                   </div>
@@ -301,19 +297,19 @@ export default function ForPlumberLondonPage() {
         </section>
 
         {/* ─── WHY PLUMBERS IN LONDON NEED AI CALL ANSWERING ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 Why Plumbers in London Need AI Call Answering
               </h2>
             </div>
-            <div className="space-y-6 text-white/70 leading-relaxed">
+            <div className="space-y-6 text-[var(--v2-body)] leading-relaxed">
               <p>
                 London&apos;s plumbing market is unlike anywhere else in the UK. In areas like Chelsea and Kensington, ageing Victorian water mains and hard water from the Thames create constant demand for pipe replacement and descaling work. Meanwhile, in Hackney and Stratford, the mix of new-build apartments and converted industrial spaces means plumbers field calls about everything from boiler installations in high-rise blocks to emergency leaks in period properties. With 28,000+ trade businesses competing for 1.2M households and 7,800 missed calls every week, the plumbers who answer first win the job.
               </p>
               <p>
-                What makes London particularly challenging is the sheer diversity of housing stock and the pressure on water infrastructure. Thames Water operates different pressure zones across the city, meaning a plumber in Kensington may deal with entirely different supply issues than one in Stratford. Tenant turnover in rental hotspots like Hackney drives constant maintenance enquiries, while landlords in Chelsea expect rapid response times for emergency repairs. When you&apos;re on a job in one postcode and a call comes in from another, Katie captures every detail — from the specific property type to the urgency level — so you never lose a £320 average job to a missed call.
+                What makes London particularly challenging is the sheer diversity of housing stock and the pressure on water infrastructure. Thames Water operates different pressure zones across the city, meaning a plumber in Kensington may deal with entirely different supply issues than one in Stratford. Tenant turnover in rental hotspots like Hackney drives constant maintenance enquiries, while landlords in Chelsea expect rapid response times for emergency repairs. When you&apos;re on a job in one postcode and a call comes in from another, Katie captures every detail, from the specific property type to the urgency level, so you never lose a £320 average job to a missed call.
               </p>
             </div>
           </div>
@@ -323,22 +319,22 @@ export default function ForPlumberLondonPage() {
 
         {/* ─── CITY LINKS ─── */}
         {/* ─── LOCAL CONTEXT ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 What Plumbers in London Face Daily
               </h2>
             </div>
-            <div className="space-y-6 text-white/70 leading-relaxed">
+            <div className="space-y-6 text-[var(--v2-body)] leading-relaxed">
               <p>
-                From Chelsea and Kensington to Hackney and Stratford, London&apos;s plumbing market is fiercely competitive. Victorian terraces in Islington and period conversions in Camden still run on original lead piping that fails without warning. With 15+ trade businesses per postcode in central London, a missed call rarely gets a second chance — the customer simply dials the next number.
+                From Chelsea and Kensington to Hackney and Stratford, London&apos;s plumbing market is fiercely competitive. Victorian terraces in Islington and period conversions in Camden still run on original lead piping that fails without warning. With 15+ trade businesses per postcode in central London, a missed call rarely gets a second chance. The customer simply dials the next number.
               </p>
               <p>
                 Hard water across north and west London causes limescale buildup that destroys boilers and narrows pipes. Thames Water pressure zones vary dramatically by borough, meaning a fix that works in Westminster may fail in Haringey. Winter freeze-thaw cycles burst exposed pipes in council estates across Tower Hamlets and Southwark, while summer heatwaves trigger air conditioning and ventilation enquiries that plumbers increasingly field.
               </p>
               <p>
-                Emergency calls peak during commute hours when you&apos;re between jobs — stuck in ULEZ, congestion charge, or resident parking restrictions. When a tenant in a Pimlico period conversion reports a burst pipe at 7pm, Katie captures the postcode, flags the urgency, and gives you the full context before you commit to a site visit. That qualification alone saves hours of unbillable travel across London&apos;s sprawling zones.
+                Emergency calls peak during commute hours when you&apos;re between jobs: stuck in ULEZ, congestion charge, or resident parking restrictions. When a tenant in a Pimlico period conversion reports a burst pipe at 7pm, Katie captures the postcode, flags the urgency, and gives you the full context before you commit to a site visit. That qualification alone saves hours of unbillable travel across London&apos;s sprawling zones.
               </p>
             </div>
           </div>
@@ -347,13 +343,13 @@ export default function ForPlumberLondonPage() {
         <div className="section-divider" />
 
 
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 More Plumbers Locations
               </h2>
-              <p className="text-white/60">
+              <p className="text-[var(--v2-body)]">
                 Katie answers calls for plumbers across the UK.
               </p>
             </div>
@@ -363,7 +359,7 @@ export default function ForPlumberLondonPage() {
             <div className="mt-8 text-center">
               <Link
                 href="/for-plumbers"
-                className={`inline-flex items-center text-blue-400 hover:text-blue-300 font-medium transition-colors`}
+                className={`inline-flex items-center text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] font-medium transition-colors`}
               >
                 View all plumbers pages
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -375,21 +371,21 @@ export default function ForPlumberLondonPage() {
         <div className="section-divider" />
 
         {/* ─── FAQ ─── */}
-        <section className="trade-faq py-16 lg:py-24">
+        <section className="trade-faq v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 Questions Plumbers in London Ask
               </h2>
-              <p className="text-white/60">
+              <p className="text-[var(--v2-body)]">
                 Everything you need to know about AI call answering for plumbers in London.
               </p>
             </div>
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6" itemScope itemType="https://schema.org/Question">
+                <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6" itemScope itemType="https://schema.org/Question">
                   <h3 className="text-lg font-semibold mb-3" itemProp="name">{faq.question}</h3>
-                  <p className="text-white/60 leading-relaxed" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                  <p className="text-[var(--v2-body)] leading-relaxed" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
                     <span itemProp="text">{faq.answer}</span>
                   </p>
                 </div>
@@ -401,10 +397,10 @@ export default function ForPlumberLondonPage() {
         <div className="section-divider" />
 
         {/* ─── TRUST SIGNALS ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 Trusted by Plumbers Across the UK
               </h2>
             </div>
@@ -417,10 +413,10 @@ export default function ForPlumberLondonPage() {
               ].map((item, idx) => {
                 const Icon = item.icon
                 return (
-                  <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+                  <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 text-center">
                     <Icon className={`w-8 h-8 text-blue-400 mx-auto mb-3`} />
-                    <p className="font-semibold text-white">{item.label}</p>
-                    <p className="text-sm text-white/50">{item.sub}</p>
+                    <p className="font-semibold text-[var(--v2-ink)]">{item.label}</p>
+                    <p className="text-sm text-[var(--v2-muted)]">{item.sub}</p>
                   </div>
                 )
               })}
@@ -431,11 +427,7 @@ export default function ForPlumberLondonPage() {
         <div className="section-divider" />
 
         {/* ─── FINAL CTA ─── */}
-        <section className="py-16 lg:py-24 relative overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px]" />
-            <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[100px]" />
-          </div>
+        <section className="bg-[var(--v2-navy)] text-white py-16 lg:py-24 relative overflow-hidden">
           <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
               Stop Losing Plumber Jobs in London Today
@@ -445,15 +437,15 @@ export default function ForPlumberLondonPage() {
             </p>
             <Link
               href="/"
-              className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-4 text-lg rounded-lg transition-all hover:scale-[1.02] shadow-2xl shadow-emerald-500/40"
+              className="v2-btn min-h-[54px] px-7 text-base"
             >
               Start Your Free 7-Day Trial
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white/50">
+            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white/65">
               {["No credit card required", "Setup in 30 minutes", "Cancel anytime", "24/7 call answering"].map(point => (
                 <span key={point} className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                   {point}
                 </span>
               ))}

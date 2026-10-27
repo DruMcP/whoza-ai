@@ -1,13 +1,13 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Shield, Check, Phone, Clock, FileText, Bell, MessageCircle, Mail, Smartphone } from "lucide-react"
+import { Check, Phone, Clock, FileText, Bell, MessageCircle, Mail, Smartphone } from "lucide-react"
 
 const controlFeatures = [
-  { icon: Check, text: "Accept or decline every enquiry instantly", color: "text-[var(--rex-green)]" },
-  { icon: Phone, text: "Request callback before deciding", color: "text-[var(--katie-blue)]" },
-  { icon: Clock, text: "Adjust booking time if needed", color: "text-[var(--claire-amber)]" },
-  { icon: FileText, text: "See full job details before accepting", color: "text-[var(--mark-grey)]" },
+  { icon: Check, text: "Accept or decline every enquiry instantly", color: "text-[var(--v2-green)]" },
+  { icon: Phone, text: "Request callback before deciding", color: "text-[var(--v2-green)]" },
+  { icon: Clock, text: "Adjust booking time if needed", color: "text-[var(--v2-green)]" },
+  { icon: FileText, text: "See full job details before accepting", color: "text-[var(--v2-green)]" },
 ]
 
 const channels = [
@@ -27,16 +27,13 @@ export function ControlSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--katie-blue)]/10 text-[var(--katie-blue)] text-sm font-medium mb-6">
-              <Shield className="w-4 h-4" />
-              Full Control
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-900)] tracking-tight text-balance reveal">
+            <span className="v2-eyebrow">Full Control</span>
+            <h2 className="v2-h2 text-balance reveal">
               You Stay In Control
             </h2>
-            <p className="mt-6 text-lg text-[var(--slate-500)] text-pretty">
+            <p className="v2-lead mt-5 text-pretty">
               Every job comes to you first. You decide which ones to take.
-              <span className="block mt-2 font-semibold text-[var(--navy-900)]">Choose how your calls are answered — tone, questions and job types.</span>
+              <span className="block mt-2 font-semibold text-[var(--navy-900)]">Choose how your calls are answered: tone, questions and job types.</span>
             </p>
 
             <div className="mt-10 space-y-4 reveal-stagger">
@@ -66,14 +63,14 @@ export function ControlSection() {
             className="space-y-8"
           >
             {/* Multi-Channel Card */}
-            <div className="p-8 rounded-xl bg-[var(--navy-900)] text-white">
+            <div className="p-8 rounded-2xl bg-[var(--v2-navy)] text-white">
               <div className="flex items-center gap-3 mb-6">
                 <Bell className="w-6 h-6 text-[var(--claire-amber)]" />
                 <h3 className="text-xl font-bold">You Never Miss a Job</h3>
               </div>
 
               <div className="space-y-4">
-                <p className="text-white/90 text-sm mb-4">WhatsApp, SMS or email — your choice.</p>
+                <p className="text-white/90 text-sm mb-4">WhatsApp, SMS or email, your choice.</p>
                 {channels.map((channel, index) => (
                   <motion.div
                     key={channel.name}

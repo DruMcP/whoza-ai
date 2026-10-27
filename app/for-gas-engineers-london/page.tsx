@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "AI Call Answering for Gas Engineers in London | whoza.ai",
     description: "Stop losing gas engineer jobs to missed calls in London. Katie answers 24/7, captures gas leak and safety enquiries via WhatsApp. Plans from £59/month.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Gas Engineers in London" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Gas Engineers in London" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     "question": "Does it work with my existing London business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing London business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "answer": "Yes. You simply set up call forwarding from your existing London business number to your whoza.ai number. Your customers dial the same number they've always used. Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
     "question": "How quickly can I get set up as a gas engineer in London?",
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     "question": "What makes whoza.ai different for gas engineers in London?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for gas engineers. She understands CP12 certificates, gas leaks, boiler breakdowns & carbon monoxide emergencies — and with 32,000+ trade businesses competing in London, capturing every call gives you a real competitive edge."
+    "answer": "Unlike generic call answering services, Katie is trained specifically for gas engineers. She understands CP12 certificates, gas leaks, boiler breakdowns & carbon monoxide emergencies, and with 32,000+ trade businesses competing in London, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -78,57 +78,53 @@ export default function ForGasEngineerLondonPage() {
       <FAQPageSchema faqs={faqs} speakableSelectors={[".trade-headline", ".trade-faq"]} />
 
       {/* Schema JSON-LD */}
-            <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--navy-900)] text-white">
+            <main id="main-content" role="main" className="pb-24 lg:pb-0 bg-[var(--v2-paper)] text-[var(--v2-body)]">
       <CityTradeSchema trade="Gas Engineer" tradePlural="Gas Engineers" city="London" region="Greater London" pageUrl="https://whoza.ai/for-gas-engineers-london" />
         {/* ─── HERO ─── */}
-        <section className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-red-500/10 rounded-full blur-[120px]" />
-            <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[100px]" />
-          </div>
+        <section className="bg-[var(--v2-navy)] text-white relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-flex items-center gap-2 bg-red-500/10 text-red-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <div className="inline-flex items-center gap-2 bg-red-500/10 text-[#6ee7b7] px-4 py-2 rounded-full text-sm font-medium mb-6">
                   <Flame className="w-4 h-4" />
                   Gas Engineers in London
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   Never Miss a{" "}
-                  <span className="text-red-400">Gas Engineer</span>{" "}
+                  <span className="text-[#6ee7b7]">Gas Engineer</span>{" "}
                   Job in London Again
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   London has 32,000+ trade businesses competing for 1.2M households. 
                   With 8,200 missed calls every week across the city, 
-                  Katie ensures you capture every gas enquiry — CP12 certificates, gas leaks, boiler breakdowns & carbon monoxide emergencies.
+                  Katie ensures you capture every gas enquiry: CP12 certificates, gas leaks, boiler breakdowns & carbon monoxide emergencies.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
                     href="/"
-                    className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-4 text-lg rounded-lg transition-all hover:scale-[1.02] shadow-2xl shadow-emerald-500/40"
+                    className="v2-btn min-h-[54px] px-7 text-base"
                   >
                     Start Your Free 7-Day Trial
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                   <Link
                     href="/pricing"
-                    className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 text-lg rounded-lg transition-all border border-white/20"
+                    className="v2-btn-secondary min-h-[54px] px-7 text-base text-white border-white/25 hover:border-white"
                   >
                     See Pricing
                   </Link>
                 </div>
-                <div className="flex flex-wrap gap-4 text-sm text-white/50">
+                <div className="flex flex-wrap gap-4 text-sm text-white/65">
                   <span className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                     No credit card required
                   </span>
                   <span className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                     Setup in 30 minutes
                   </span>
                   <span className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                     Cancel anytime
                   </span>
                 </div>
@@ -136,7 +132,7 @@ export default function ForGasEngineerLondonPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -149,9 +145,9 @@ export default function ForGasEngineerLondonPage() {
         {/* ─── CITY HUB LINK ─── */}
         <section className="py-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-white/60">
+            <p className="text-[var(--v2-body)]">
               Also available across all trades in 
-              <a href="/london" className="text-emerald-400 hover:underline">
+              <a href="/london" className="text-[var(--v2-green)] hover:underline">
                 London
               </a>
             </p>
@@ -162,13 +158,13 @@ export default function ForGasEngineerLondonPage() {
         <div className="section-divider" />
 
         {/* ─── LOCAL STATS ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 London Gas Engineers Market
               </h2>
-              <p className="text-white/60 text-lg max-w-2xl mx-auto">
+              <p className="v2-lead max-w-2xl mx-auto">
                 The numbers that matter for gas engineers in London.
               </p>
             </div>
@@ -182,10 +178,10 @@ export default function ForGasEngineerLondonPage() {
               ].map((item, idx) => {
                 const Icon = item.icon
                 return (
-                  <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+                  <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 text-center">
                     <Icon className={`w-8 h-8 ${item.color} mx-auto mb-3`} />
-                    <div className="text-2xl font-bold text-white mb-1">{item.value}</div>
-                    <div className="text-sm text-white/50">{item.label}</div>
+                    <div className="text-2xl font-bold text-[var(--v2-ink)] mb-1">{item.value}</div>
+                    <div className="text-sm text-[var(--v2-muted)]">{item.label}</div>
                   </div>
                 )
               })}
@@ -196,50 +192,50 @@ export default function ForGasEngineerLondonPage() {
         <div className="section-divider" />
 
         {/* ─── SCENARIO ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 The Real Cost of Missed Calls for Gas Engineers in London
               </h2>
-              <p className="text-white/60 text-lg max-w-2xl mx-auto">
-                High competition — 15+ trade businesses per postcode in central London. Emergency calls peak during commute hours when you're on the road. Diverse housing stock from Victorian terraces to new-build apartments. Tenant vs landlord enquiries need different handling.
+              <p className="v2-lead max-w-2xl mx-auto">
+                High competition: 15+ trade businesses per postcode in central London. Emergency calls peak during commute hours when you're on the road. Diverse housing stock from Victorian terraces to new-build apartments. Tenant vs landlord enquiries need different handling.
               </p>
             </div>
             <div className="space-y-8">
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <div className="flex items-start gap-4">
-                  <div className={`w-12 h-12 rounded-xl bg-red-500/10 border-red-500/20 border flex items-center justify-center flex-shrink-0`}>
-                    <AlertTriangle className={`w-6 h-6 text-red-400`} />
+                  <div className={`w-12 h-12 rounded-xl bg-[var(--v2-mint)] border-[var(--v2-green)]/20 border flex items-center justify-center flex-shrink-0`}>
+                    <AlertTriangle className={`w-6 h-6 text-[var(--v2-green)]`} />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">While You're on the Job</h3>
-                    <p className="text-white/60 leading-relaxed">
+                    <p className="text-[var(--v2-body)] leading-relaxed">
                       A landlord calls about CP12 certificates for 8 properties before a new tenancy starts. You miss the call while on another job. By the time you call back, they've booked another Gas Safe engineer for the entire portfolio.
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-red-400" />
+                  <div className="w-12 h-12 rounded-2xl bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-6 h-6 text-[var(--v2-green)]" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">After Hours & Emergencies</h3>
-                    <p className="text-white/60 leading-relaxed">
+                    <p className="text-[var(--v2-body)] leading-relaxed">
                       A customer smells gas and calls you in a panic. You don't answer. They call the gas emergency line and then another Gas Safe engineer. You lose a £300 callout and the chance to build a long-term customer relationship.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="mt-8 bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-6 text-center">
-              <p className="text-emerald-200 font-medium text-lg">
+            <div className="mt-8 bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-6 text-center">
+              <p className="text-[var(--v2-green-ink)] font-medium text-lg">
                 The average London gas engineer misses multiple calls per day = 
                 <strong> £48,000</strong> in lost revenue per year
               </p>
-              <p className="text-emerald-200/70 text-sm mt-1">
+              <p className="text-[var(--v2-body)] text-sm mt-1">
                 Based on £300 avg callout value with 35% conversion rate
               </p>
             </div>
@@ -249,13 +245,13 @@ export default function ForGasEngineerLondonPage() {
         <div className="section-divider" />
 
         {/* ─── HOW KATIE WORKS ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 How Katie Works for Gas Engineers in London
               </h2>
-              <p className="text-white/60 text-lg max-w-2xl mx-auto">
+              <p className="v2-lead max-w-2xl mx-auto">
                 Three simple steps from missed call to booked job. No apps to check. No dashboards to monitor.
               </p>
             </div>
@@ -265,7 +261,7 @@ export default function ForGasEngineerLondonPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your London number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your London number. Katie picks up in under 2 rings with your branded greeting, 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",
@@ -283,17 +279,17 @@ export default function ForGasEngineerLondonPage() {
                 const Icon = item.icon
                 return (
                   <div key={idx} className="relative">
-                    <div className="bg-white/5 border border-white/10 rounded-xl p-8 h-full">
-                      <div className="text-5xl font-bold text-white/10 mb-4">{item.step}</div>
-                      <div className={`w-12 h-12 rounded-xl bg-red-500/10 border-red-500/20 border flex items-center justify-center mb-4`}>
-                        <Icon className={`w-6 h-6 text-red-400`} />
+                    <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-8 h-full">
+                      <div className="text-5xl font-bold text-slate-200 mb-4">{item.step}</div>
+                      <div className={`w-12 h-12 rounded-xl bg-[var(--v2-mint)] border-[var(--v2-green)]/20 border flex items-center justify-center mb-4`}>
+                        <Icon className={`w-6 h-6 text-[var(--v2-green)]`} />
                       </div>
                       <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                      <p className="text-white/60 leading-relaxed">{item.description}</p>
+                      <p className="text-[var(--v2-body)] leading-relaxed">{item.description}</p>
                     </div>
                     {idx < 2 && (
                       <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
-                        <ArrowRight className="w-8 h-8 text-white/20" />
+                        <ArrowRight className="w-8 h-8 text-slate-300" />
                       </div>
                     )}
                   </div>
@@ -306,19 +302,19 @@ export default function ForGasEngineerLondonPage() {
         <div className="section-divider" />
 
         {/* ─── LOCAL CONTEXT ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 Why Gas Engineers in London Need AI Call Answering
               </h2>
             </div>
-            <div className="space-y-6 text-white/70 leading-relaxed">
+            <div className="space-y-6 text-[var(--v2-body)] leading-relaxed">
               <p>
-                From Chelsea and Kensington to Croydon and Bromley, London gas engineers operate in a market where landlord enquiries dominate. With around 45% of London households rented — well above the UK average — annual gas safety certificates are legally required and non-compliance carries £6,000+ fines. Period conversions in Pimlico and Maida Vale need Gas Safe-registered engineers who understand multi-unit buildings, while new-build apartments in Canary Wharf require warranty-period snagging and smart home gas appliance integration.
+                From Chelsea and Kensington to Croydon and Bromley, London gas engineers operate in a market where landlord enquiries dominate. With around 45% of London households rented, well above the UK average, annual gas safety certificates are legally required and non-compliance carries £6,000+ fines. Period conversions in Pimlico and Maida Vale need Gas Safe-registered engineers who understand multi-unit buildings, while new-build apartments in Canary Wharf require warranty-period snagging and smart home gas appliance integration.
               </p>
               <p>
-                With 32,000+ trade businesses competing for work and 15+ businesses per postcode in central London, customers move fast. Emergency gas calls peak during commute hours when you're on the road, and landlords often need same-day CP12 certificates before new tenancies begin. Katie answers every call instantly, 24/7, captures the property details and urgency, and delivers them to your WhatsApp in seconds — so you never lose a £340 callout to a competitor who simply picked up first.
+                With 32,000+ trade businesses competing for work and 15+ businesses per postcode in central London, customers move fast. Emergency gas calls peak during commute hours when you're on the road, and landlords often need same-day CP12 certificates before new tenancies begin. Katie answers every call instantly, 24/7, captures the property details and urgency, and delivers them to your WhatsApp in seconds, so you never lose a £340 callout to a competitor who simply picked up first.
               </p>
             </div>
           </div>
@@ -327,13 +323,13 @@ export default function ForGasEngineerLondonPage() {
         <div className="section-divider" />
 
         {/* ─── CITY LINKS ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 More Gas Engineers Locations
               </h2>
-              <p className="text-white/60">
+              <p className="text-[var(--v2-body)]">
                 Katie answers calls for gas engineers across the UK.
               </p>
             </div>
@@ -343,7 +339,7 @@ export default function ForGasEngineerLondonPage() {
             <div className="mt-8 text-center">
               <Link
                 href="/for-gas-engineers"
-                className={`inline-flex items-center text-red-400 hover:text-red-300 font-medium transition-colors`}
+                className={`inline-flex items-center text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] font-medium transition-colors`}
               >
                 View all gas engineers pages
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -355,21 +351,21 @@ export default function ForGasEngineerLondonPage() {
         <div className="section-divider" />
 
         {/* ─── FAQ ─── */}
-        <section className="trade-faq py-16 lg:py-24">
+        <section className="trade-faq v2-section">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 Questions Gas Engineers in London Ask
               </h2>
-              <p className="text-white/60">
+              <p className="text-[var(--v2-body)]">
                 Everything you need to know about AI call answering for gas engineers in London.
               </p>
             </div>
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6" itemScope itemType="https://schema.org/Question">
+                <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6" itemScope itemType="https://schema.org/Question">
                   <h3 className="text-lg font-semibold mb-3" itemProp="name">{faq.question}</h3>
-                  <p className="text-white/60 leading-relaxed" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                  <p className="text-[var(--v2-body)] leading-relaxed" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
                     <span itemProp="text">{faq.answer}</span>
                   </p>
                 </div>
@@ -381,10 +377,10 @@ export default function ForGasEngineerLondonPage() {
         <div className="section-divider" />
 
         {/* ─── TRUST SIGNALS ─── */}
-        <section className="py-16 lg:py-24">
+        <section className="v2-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="v2-h2 mb-4">
                 Trusted by Gas Engineers Across the UK
               </h2>
             </div>
@@ -397,10 +393,10 @@ export default function ForGasEngineerLondonPage() {
               ].map((item, idx) => {
                 const Icon = item.icon
                 return (
-                  <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
-                    <Icon className={`w-8 h-8 text-red-400 mx-auto mb-3`} />
-                    <p className="font-semibold text-white">{item.label}</p>
-                    <p className="text-sm text-white/50">{item.sub}</p>
+                  <div key={idx} className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 text-center">
+                    <Icon className={`w-8 h-8 text-[var(--v2-green)] mx-auto mb-3`} />
+                    <p className="font-semibold text-[var(--v2-ink)]">{item.label}</p>
+                    <p className="text-sm text-[var(--v2-muted)]">{item.sub}</p>
                   </div>
                 )
               })}
@@ -411,11 +407,7 @@ export default function ForGasEngineerLondonPage() {
         <div className="section-divider" />
 
         {/* ─── FINAL CTA ─── */}
-        <section className="py-16 lg:py-24 relative overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-red-500/10 rounded-full blur-[120px]" />
-            <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[100px]" />
-          </div>
+        <section className="bg-[var(--v2-navy)] text-white py-16 lg:py-24 relative overflow-hidden">
           <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
               Stop Losing Gas Engineer Jobs in London Today
@@ -425,15 +417,15 @@ export default function ForGasEngineerLondonPage() {
             </p>
             <Link
               href="/"
-              className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-4 text-lg rounded-lg transition-all hover:scale-[1.02] shadow-2xl shadow-emerald-500/40"
+              className="v2-btn min-h-[54px] px-7 text-base"
             >
               Start Your Free 7-Day Trial
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white/50">
+            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white/65">
               {["No credit card required", "Setup in 30 minutes", "Cancel anytime", "24/7 call answering"].map(point => (
                 <span key={point} className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  <CheckCircle2 className="w-4 h-4 text-[#6ee7b7]" />
                   {point}
                 </span>
               ))}

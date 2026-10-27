@@ -1,153 +1,46 @@
 "use client"
 
-import { useState } from "react"
-import { motion } from "framer-motion"
-import { ArrowRight, Phone, Star, Eye, CheckCircle2 } from "lucide-react"
-import { WaitlistModal } from "./waitlist-modal"
+import { CheckCircle2, Star } from "lucide-react"
+import { CtaBand } from "@/components/whoza/cta-band"
 
-import { trackCTA } from "@/lib/gtag"
-
-const teamMembers = [
-  { name: "Katie", icon: Phone, bgClass: "bg-[var(--katie-blue)]/20 border-[var(--katie-blue)]/30", iconClass: "text-[var(--katie-blue)]" },
-  { name: "Mark", icon: Phone, bgClass: "bg-[var(--mark-grey)]/20 border-[var(--mark-grey)]/30", iconClass: "text-[var(--mark-grey)]" },
-  { name: "Claire", icon: Star, bgClass: "bg-[var(--claire-amber)]/20 border-[var(--claire-amber)]/30", iconClass: "text-[var(--claire-amber)]" },
-  { name: "Rex", icon: Eye, bgClass: "bg-[var(--rex-green)]/20 border-[var(--rex-green)]/30", iconClass: "text-[var(--rex-green)]" },
-]
-
+/* The closing call to action on the homepage, pricing, trade and city pages,
+   in the shared CtaBand style. The copy is unchanged. */
 export function FinalCTA() {
-  const [showWaitlist, setShowWaitlist] = useState(false)
-  
   return (
-    <>
-    <section id="final-cta" className="section-padding-xl bg-[var(--navy-900)] relative overflow-hidden dark-section" aria-label="Call to action">
-      {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[var(--katie-blue)]/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-[var(--rex-green)]/10 rounded-full blur-[100px]" />
-      </div>
-
-      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Team Avatars */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="flex justify-center gap-4 mb-8"
+    <section id="final-cta" className="v2-section-tight bg-[var(--v2-paper)] px-3 sm:px-4" aria-label="Call to action">
+      {/* Same width as the footer panel below it */}
+      <div className="mx-auto max-w-[1600px]">
+        <CtaBand
+          id="final-cta"
+          heading={["Don't Miss", "Another Job"]}
+          text={
+            <>
+              Every missed call is a job going to your competitor.{" "}
+              <strong className="font-semibold text-[var(--v2-green-ink)]">Try Whoza free for 7 days on Starter.</strong>
+            </>
+          }
+          primaryLabel="Start your free week"
+          source="final-cta"
+          secondary={{ label: "Create your account", href: "/signup" }}
         >
-          {teamMembers.map((member, index) => (
-            <motion.div
-              key={member.name}
-              initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className={`w-16 h-16 rounded-2xl ${member.bgClass} border flex items-center justify-center`}
-            >
-              <member.icon className={`w-8 h-8 ${member.iconClass}`} />
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Content */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="heading-gradient text-4xl sm:text-5xl lg:text-7xl font-bold text-white tracking-tight text-balance reveal">
-            Don't Miss Another Job
-          </h2>
-          <p className="mt-8 text-xl lg:text-2xl text-white/70 max-w-2xl mx-auto text-pretty">
-            Every missed call is a job going to your competitor.
-            <span className="block mt-3 font-bold text-[var(--rex-green)] text-2xl">Try Whoza free for 7 days on Starter.</span>
-          </p>
-          <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/70 text-sm">
-            <CheckCircle2 className="w-4 h-4 text-[var(--rex-green)]" />
+          <p className="mt-5 inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-2 text-[14px] text-[var(--v2-body)]">
+            <CheckCircle2 className="h-4 w-4 text-[var(--v2-green)]" aria-hidden="true" />
             7-day free trial on Starter: 100 minutes + 10 jobs included. Cancel anytime.
+          </p>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[14px] text-[var(--v2-muted)]">
+            <span className="flex items-center gap-1.5 font-semibold text-[var(--v2-ink)]">
+              <Star className="h-4 w-4 fill-[#f5b301] text-[#f5b301]" aria-hidden="true" />
+              4.9/5 average rating from verified users
+            </span>
+            {["Installed in 30 minutes", "Runs in the background", "Always working for you"].map((point) => (
+              <span key={point} className="flex items-center gap-1.5">
+                <CheckCircle2 className="h-4 w-4 text-[var(--v2-green)]" aria-hidden="true" />
+                {point}
+              </span>
+            ))}
           </div>
-        </motion.div>
-
-        {/* Social Proof Counters */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-12 grid grid-cols-1 gap-6 max-w-lg mx-auto"
-        >
-          {[
-            { value: "4.9/5", label: "Average rating from verified users", icon: Star },
-          ].map((stat, i) => {
-            const StatIcon = stat.icon
-            return (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 + i * 0.1 }}
-                className="text-center"
-              >
-                <div className="text-2xl sm:text-3xl font-bold text-white mb-1">{stat.value}</div>
-                <div className="flex items-center justify-center gap-1 text-xs text-white/50">
-                  <StatIcon className="w-3 h-3" />
-                  {stat.label}
-                </div>
-              </motion.div>
-            )
-          })}
-        </motion.div>
-
-        <div className="mt-4 flex justify-center">
-          {/* Pilot spot counter removed */}
-        </div>
-
-        {/* CTAs */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          viewport={{ once: true }}
-          className="mt-10 flex justify-center"
-        >
-          <button
-            onClick={() => {
-              trackCTA("Start your free week", "final-cta")
-              setShowWaitlist(true)
-            }}
-            className="inline-flex items-center justify-center bg-[var(--rex-green)] hover:bg-[var(--rex-green-hover)] text-white font-bold px-8 py-6 text-lg rounded-lg transition-all hover:scale-105 active:scale-95 shadow-2xl shadow-[var(--rex-green)]/40 cursor-pointer"
-          >
-            Start your free week
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </button>
-        </motion.div>
-
-        {/* Reassurance */}
-        <p className="mt-3 text-sm text-white/50 text-center">
-          Set up in 30 minutes and start catching more calls. Prefer to go straight in?{" "}
-          <a href="/signup" className="text-[var(--rex-green)] hover:underline font-medium">
-            Create your account
-          </a>
-          .
-        </p>
-
-        {/* Trust Points */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-          viewport={{ once: true }}
-          className="mt-6 flex flex-wrap gap-6 justify-center text-sm text-white/50"
-        >
-          {["Installed in 30 minutes", "Runs in the background", "Always working for you"].map((point) => (
-            <div key={point} className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[var(--rex-green)]" />
-              <span>{point}</span>
-            </div>
-          ))}
-        </motion.div>
+        </CtaBand>
       </div>
-      {showWaitlist && <WaitlistModal onClose={() => setShowWaitlist(false)} source="final-cta" />}
     </section>
-    </>
   )
 }

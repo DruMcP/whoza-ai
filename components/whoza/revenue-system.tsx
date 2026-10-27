@@ -8,7 +8,7 @@ const stages = [
   {
     number: "01",
     stage: "CAPTURE",
-    title: "AI Answers — Call Notes, Spam Filter, Urgent Flags",
+    title: "AI Answers: Call Notes, Spam Filter, Urgent Flags",
     description: "Your chosen voice answers every call 24/7. AI takes detailed text notes, filters spam, and flags urgent jobs instantly. Every conversation captured as searchable text.",
     icon: FileText,
     color: "var(--katie-blue)",
@@ -19,7 +19,7 @@ const stages = [
   {
     number: "02",
     stage: "DELIVER",
-    title: "Deliver — WhatsApp, Calendar Sync, Keep Your Number",
+    title: "Deliver: WhatsApp, Calendar Sync, Keep Your Number",
     description: "Searchable dashboard, auto-synced calendar, and keep your existing number. All job details sent to your phone instantly. Your customers never know anything changed.",
     icon: Calendar,
     color: "var(--claire-amber)",
@@ -30,7 +30,7 @@ const stages = [
   {
     number: "03",
     stage: "CONVERT",
-    title: "Convert — Google Reviews on Autopilot",
+    title: "Convert: Google Reviews on Autopilot",
     description: "Claire auto-requests Google reviews after every completed job. More reviews = more trust = more customers choosing you. Turn every job into future work.",
     icon: Star,
     color: "var(--rex-green)",
@@ -41,7 +41,7 @@ const stages = [
   {
     number: "04",
     stage: "GROW",
-    title: "Grow — Weekly Insights, Advanced Analytics",
+    title: "Grow: Weekly Insights, Advanced Analytics",
     description: "Weekly summary email every Monday. Advanced analytics (Pro+). Rex insights tell you what to fix so you show up more in ChatGPT and Google AI. More calls. More jobs.",
     icon: TrendingUp,
     color: "var(--mark-grey)",

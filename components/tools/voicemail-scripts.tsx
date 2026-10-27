@@ -24,17 +24,17 @@ const styleOptions = [
   {
     key: "formal",
     label: "Formal & Professional",
-    description: "Polished, corporate tone — ideal for B2B or premium positioning",
+    description: "Polished, corporate tone, ideal for B2B or premium positioning",
   },
   {
     key: "friendly",
     label: "Friendly & Local",
-    description: "Warm, approachable — perfect for residential trade work",
+    description: "Warm, approachable, perfect for residential trade work",
   },
   {
     key: "urgent",
     label: "Urgent & Direct",
-    description: "Short, action-focused — best for emergency services",
+    description: "Short, action-focused, best for emergency services",
   },
 ]
 
@@ -93,7 +93,7 @@ export function VoicemailScriptGenerator() {
     return [
       {
         title: "Warm Welcome",
-        text: `Hi there! You have reached ${b}. It is ${n} here — sorry I missed your call! I am probably up a ladder or under a sink right now. Leave your name and number after the beep and I will get back to you as soon as I am free. If it is urgent, give me a text on ${p} and I will call you straight back. Thanks!`,
+        text: `Hi there! You have reached ${b}. It is ${n} here. Sorry I missed your call! I am probably up a ladder or under a sink right now. Leave your name and number after the beep and I will get back to you as soon as I am free. If it is urgent, give me a text on ${p} and I will call you straight back. Thanks!`,
       },
       {
         title: "Local & Trusted",
@@ -101,7 +101,7 @@ export function VoicemailScriptGenerator() {
       },
       {
         title: "Helpful & Clear",
-        text: `Thanks for calling ${b}! This is ${n}. I am unable to take your call right now — either I am with a customer or driving between jobs. Please leave a message with your name, number, and what you need help with. I return every single call. Text ${p} if you need a faster reply. Looking forward to speaking with you!`,
+        text: `Thanks for calling ${b}! This is ${n}. I am unable to take your call right now. Either I am with a customer or driving between jobs. Please leave a message with your name, number, and what you need help with. I return every single call. Text ${p} if you need a faster reply. Looking forward to speaking with you!`,
       },
     ]
   }
@@ -115,10 +115,10 @@ export function VoicemailScriptGenerator() {
   }
 
   return (
-    <div className="min-h-screen bg-[var(--navy-900)] text-white">
+    <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header />
 
-      <main className="pt-32 pb-20">
+      <main id="main-content" className="pt-32 pb-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <motion.div
@@ -133,8 +133,8 @@ export function VoicemailScriptGenerator() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Voicemail Script Generator for UK Tradespeople
             </h1>
-            <p className="text-white/60 text-lg max-w-2xl mx-auto">
-              69% of callers to trade businesses don't leave a voicemail — because most greetings are generic, vague, or unprofessional. Generate three tailored scripts in seconds and win back lost enquiries.
+            <p className="v2-lead max-w-2xl mx-auto">
+              69% of callers to trade businesses don't leave a voicemail, because most greetings are generic, vague, or unprofessional. Generate three tailored scripts in seconds and win back lost enquiries.
             </p>
           </motion.div>
 
@@ -143,64 +143,64 @@ export function VoicemailScriptGenerator() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 mb-8"
+            className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 md:p-8 mb-8"
           >
             <div className="space-y-6">
               {/* Name */}
               <div>
-                <label className="block text-sm font-medium text-white/80 mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2" htmlFor="vm-field-1">
                   Your name <span className="text-[var(--coral)]">*</span>
                 </label>
-                <input
+                <input id="vm-field-1"
                   type="text"
                   value={name}
                   onChange={(e) => { setName(e.target.value); setShowResults(false) }}
                   placeholder="e.g. Dave"
-                  className="w-full px-4 py-3 min-h-[44px] rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-[var(--katie-blue)]"
+                  className="w-full px-4 py-3 min-h-[44px] rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] placeholder:text-slate-400 focus:outline-none focus:border-[var(--v2-green)]"
                 />
               </div>
 
               {/* Business name */}
               <div>
-                <label className="block text-sm font-medium text-white/80 mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2" htmlFor="vm-field-2">
                   Business name
                 </label>
-                <input
+                <input id="vm-field-2"
                   type="text"
                   value={businessName}
                   onChange={(e) => { setBusinessName(e.target.value); setShowResults(false) }}
                   placeholder="e.g. Dave's Plumbing"
-                  className="w-full px-4 py-3 min-h-[44px] rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-[var(--katie-blue)]"
+                  className="w-full px-4 py-3 min-h-[44px] rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] placeholder:text-slate-400 focus:outline-none focus:border-[var(--v2-green)]"
                 />
-                <p className="text-sm text-white/50 mt-1">Leave blank to use "[Your name] [Trade]"</p>
+                <p className="text-sm text-[var(--v2-muted)] mt-1">Leave blank to use "[Your name] [Trade]"</p>
               </div>
 
               {/* Phone */}
               <div>
-                <label className="block text-sm font-medium text-white/80 mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2" htmlFor="vm-field-3">
                   Your phone number <span className="text-[var(--coral)]">*</span>
                 </label>
-                <input
+                <input id="vm-field-3"
                   type="tel"
                   value={phone}
                   onChange={(e) => { setPhone(e.target.value); setShowResults(false) }}
                   placeholder="e.g. 07700 900123"
-                  className="w-full px-4 py-3 min-h-[44px] rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-[var(--katie-blue)]"
+                  className="w-full px-4 py-3 min-h-[44px] rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] placeholder:text-slate-400 focus:outline-none focus:border-[var(--v2-green)]"
                 />
               </div>
 
               {/* Trade */}
               <div>
-                <label className="block text-sm font-medium text-white/80 mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2" htmlFor="vm-field-4">
                   Your trade <span className="text-[var(--coral)]">*</span>
                 </label>
-                <select
+                <select id="vm-field-4"
                   value={trade}
                   onChange={(e) => { setTrade(e.target.value); setShowResults(false) }}
-                  className="w-full px-4 py-3 min-h-[44px] rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:border-[var(--katie-blue)] appearance-none cursor-pointer"
+                  className="w-full px-4 py-3 min-h-[44px] rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] focus:outline-none focus:border-[var(--v2-green)] appearance-none cursor-pointer"
                 >
                   {trades.map((t) => (
-                    <option key={t.key} value={t.key} className="bg-[var(--navy-900)]">
+                    <option key={t.key} value={t.key} className="bg-white">
                       {t.label}
                     </option>
                   ))}
@@ -209,7 +209,7 @@ export function VoicemailScriptGenerator() {
 
               {/* Style */}
               <div>
-                <label className="block text-sm font-medium text-white/80 mb-2">
+                <label className="block text-sm font-medium text-[var(--v2-body)] mb-2">
                   Script style <span className="text-[var(--coral)]">*</span>
                 </label>
                 <div className="space-y-3">
@@ -219,7 +219,7 @@ export function VoicemailScriptGenerator() {
                       className={`flex items-start gap-3 p-4 rounded-lg border cursor-pointer transition-colors ${
                         style === s.key
                           ? "border-[var(--coral)] bg-[var(--coral)]/10"
-                          : "border-white/10 bg-white/5 hover:bg-white/10"
+                          : "border-[var(--v2-line)] bg-white hover:border-[#b9c6bf]"
                       }`}
                     >
                       <input
@@ -231,8 +231,8 @@ export function VoicemailScriptGenerator() {
                         className="mt-1 accent-[var(--coral)] min-w-[20px] min-h-[20px]"
                       />
                       <div>
-                        <p className="font-medium text-white">{s.label}</p>
-                        <p className="text-sm text-white/50">{s.description}</p>
+                        <p className="font-medium text-[var(--v2-ink)]">{s.label}</p>
+                        <p className="text-sm text-[var(--v2-muted)]">{s.description}</p>
                       </div>
                     </label>
                   ))}
@@ -242,7 +242,7 @@ export function VoicemailScriptGenerator() {
               {/* Generate */}
               <button
                 onClick={() => setShowResults(true)}
-                className="w-full py-4 min-h-[56px] rounded-lg bg-[var(--coral)] hover:bg-[var(--coral)]/90 text-white font-bold text-lg transition-colors flex items-center justify-center gap-2"
+                className="w-full py-4 min-h-[56px] rounded-lg bg-[var(--coral)] hover:bg-[var(--coral)]/90 text-[var(--v2-ink)] font-bold text-lg transition-colors flex items-center justify-center gap-2"
               >
                 <MessageSquare className="w-5 h-5" />
                 GENERATE SCRIPTS
@@ -268,18 +268,18 @@ export function VoicemailScriptGenerator() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8"
+                  className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 md:p-8"
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-lg font-bold text-[var(--katie-blue)]">{script.title}</h3>
+                    <h3 className="text-lg font-bold text-[var(--v2-green)]">{script.title}</h3>
                     <button
                       onClick={() => handleCopy(index, script.text)}
-                      className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-sm font-medium transition-colors min-h-[44px]"
+                      className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white hover:border-[#b9c6bf] text-sm font-medium transition-colors min-h-[44px]"
                     >
                       {copiedIndex === index ? (
                         <>
-                          <CheckCircle2 className="w-4 h-4 text-[#10B981]" />
-                          <span className="text-[#10B981]">Copied</span>
+                          <CheckCircle2 className="w-4 h-4 text-[var(--v2-green)]" />
+                          <span className="text-[var(--v2-green)]">Copied</span>
                         </>
                       ) : (
                         <>
@@ -289,50 +289,50 @@ export function VoicemailScriptGenerator() {
                       )}
                     </button>
                   </div>
-                  <div className="bg-[var(--navy-800)] rounded-xl p-4 md:p-6 border border-white/5">
+                  <div className="bg-[var(--navy-800)] rounded-xl p-4 md:p-6 border border-white/5 v2-island">
                     <p className="text-white/90 leading-relaxed whitespace-pre-line">{script.text}</p>
                   </div>
-                  <p className="text-sm text-white/40 mt-3 flex items-center gap-2">
+                  <p className="text-sm text-[var(--v2-muted)] mt-3 flex items-center gap-2">
                     <Volume2 className="w-4 h-4" />
-                    Read it aloud 3 times before recording — aim for under 25 seconds
+                    Read it aloud 3 times before recording. Aim for under 25 seconds
                   </p>
                 </motion.div>
               ))}
 
               {/* Recording tips */}
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8">
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 md:p-8">
                 <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
                   <Mic className="w-5 h-5 text-[var(--coral)]" />
                   Recording Tips
                 </h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   {[
-                    "Speak clearly and slowly — most people mumble on voicemail",
-                    "Keep it under 25 seconds — callers hang up after 30s",
+                    "Speak clearly and slowly: most people mumble on voicemail",
+                    "Keep it under 25 seconds: callers hang up after 30s",
                     "Record in a quiet space with your phone on airplane mode",
-                    "Smile while you record — it genuinely changes your tone",
-                    "Include your mobile number — 67% of callers prefer to text back",
-                    "Update it seasonally — mention emergency cover in winter",
+                    "Smile while you record: it genuinely changes your tone",
+                    "Include your mobile number: 67% of callers prefer to text back",
+                    "Update it seasonally: mention emergency cover in winter",
                   ].map((tip, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#10B981] shrink-0 mt-0.5" />
-                      <span className="text-white/80 text-sm">{tip}</span>
+                      <CheckCircle2 className="w-5 h-5 text-[var(--v2-green)] shrink-0 mt-0.5" />
+                      <span className="text-[var(--v2-body)] text-sm">{tip}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               {/* CTA */}
-              <div className="bg-[var(--coral)]/10 border border-[var(--coral)]/20 rounded-xl p-6 text-center">
-                <p className="text-lg text-white font-medium mb-3">
+              <div className="bg-[var(--coral)]/10 border border-[var(--coral)]/20 rounded-2xl p-6 text-center">
+                <p className="text-lg text-[var(--v2-ink)] font-medium mb-3">
                   Even the best voicemail still loses 69% of callers.
                 </p>
                 <a
                   href="/pricing"
-                  className="inline-flex items-center gap-2 py-3 px-6 rounded-lg bg-[var(--coral)] hover:bg-[var(--coral)]/90 text-white font-bold transition-colors min-h-[48px]"
+                  className="inline-flex items-center gap-2 py-3 px-6 rounded-lg bg-[var(--coral)] hover:bg-[var(--coral)]/90 text-[var(--v2-ink)] font-bold transition-colors min-h-[48px]"
                 >
                   <Phone className="w-5 h-5" />
-                  LET KATIE ANSWER EVERY CALL LIVE — FREE TRIAL
+                  LET KATIE ANSWER EVERY CALL LIVE, FREE TRIAL
                 </a>
               </div>
             </motion.div>
@@ -344,7 +344,7 @@ export function VoicemailScriptGenerator() {
             <h3>Why do most callers not leave a voicemail for tradespeople?</h3>
             <p>69% of callers to trade businesses don't leave a voicemail because the greeting is too long, too generic, or fails to promise a callback. A clear, warm, and specific greeting increases callback rates by up to 40%.</p>
             <h3>How long should a trade business voicemail be?</h3>
-            <p>Aim for 20–25 seconds. Research shows most callers abandon voicemail after 30 seconds. Include your name, business, a brief apology, and a clear callback promise.</p>
+            <p>Aim for 20 to 25 seconds. Research shows most callers abandon voicemail after 30 seconds. Include your name, business, a brief apology, and a clear callback promise.</p>
             <h3>Should I include my mobile number on my voicemail?</h3>
             <p>Yes. 67% of UK consumers prefer to text back rather than leave a voicemail. Including your mobile number gives them an alternative way to reach you.</p>
             <h3>Is the Voicemail Script Generator free?</h3>
@@ -386,7 +386,7 @@ export function VoicemailScriptGenerator() {
                     name: "How long should a trade business voicemail be?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Aim for 20–25 seconds. Research shows most callers abandon voicemail after 30 seconds. Include your name, business, a brief apology, and a clear callback promise.",
+                      text: "Aim for 20 to 25 seconds. Research shows most callers abandon voicemail after 30 seconds. Include your name, business, a brief apology, and a clear callback promise.",
                     },
                   },
                   {
