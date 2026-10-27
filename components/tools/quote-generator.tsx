@@ -67,7 +67,7 @@ export function QuoteGenerator() {
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Free Quote Generator for UK Tradespeople</h2>
             <p className="v2-lead max-w-2xl mx-auto">
-              Stop scribbling quotes on the back of receipts. Create professional, branded quotes that win more jobs — and look legit to customers checking you out on Google.
+              Stop scribbling quotes on the back of receipts. Create professional, branded quotes that win more jobs, and look legit to customers checking you out on Google.
             </p>
           </motion.div>
 
@@ -286,7 +286,7 @@ export function QuoteGenerator() {
                   <tbody>
                     {lineItems.map((item) => (
                       <tr key={item.id} className="border-b border-[var(--navy-900)]/5">
-                        <td className="py-2 text-sm">{item.description || "—"}</td>
+                        <td className="py-2 text-sm">{item.description || "N/A"}</td>
                         <td className="py-2 text-sm text-right">{item.quantity}</td>
                         <td className="py-2 text-sm text-right">£{money(item.unitPrice)}</td>
                         <td className="py-2 text-sm text-right font-medium">£{money(item.quantity * item.unitPrice)}</td>

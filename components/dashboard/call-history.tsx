@@ -130,7 +130,7 @@ export function CallHistory({ clientId }: { clientId?: string }) {
   }
 
   const formatTime = (timestamp: string | null) => {
-    if (!timestamp) return "—"
+    if (!timestamp) return "N/A"
     return new Date(timestamp).toLocaleTimeString("en-GB", {
       hour: "2-digit",
       minute: "2-digit",
@@ -138,7 +138,7 @@ export function CallHistory({ clientId }: { clientId?: string }) {
   }
 
   const formatDate = (timestamp: string | null) => {
-    if (!timestamp) return "—"
+    if (!timestamp) return "N/A"
     return new Date(timestamp).toLocaleDateString("en-GB", {
       day: "numeric",
       month: "short",
@@ -239,7 +239,7 @@ export function CallHistory({ clientId }: { clientId?: string }) {
                     <div className="flex items-center gap-3 mt-1 text-sm text-[var(--slate-500)]">
                       <span className="flex items-center gap-1">
                         <Phone className="w-3.5 h-3.5" />
-                        {call.caller_number || "—"}
+                        {call.caller_number || "N/A"}
                       </span>
                       {call.duration_seconds > 0 && (
                         <span className="flex items-center gap-1">
@@ -310,7 +310,7 @@ export function CallHistory({ clientId }: { clientId?: string }) {
                         {call.transcript && (
                           <div className="flex items-center gap-2 text-xs text-[var(--slate-400)] bg-gray-50 rounded-lg p-2">
                             <FileText className="w-3.5 h-3.5" />
-                            Text transcript only — no audio recording stored
+                            Text transcript only, no audio recording stored
                           </div>
                         )}
 

@@ -30,7 +30,7 @@ export const organizationSchemaObject = {
   "description":
     "AI call answering service built in Scotland for UK tradespeople. Katie answers every missed call 24/7, qualifies jobs, and sends details to WhatsApp.",
   "disambiguatingDescription":
-    "whoza.ai (Whoza AI Ltd, company SC874716) is a UK AI call answering service for tradespeople — not related to other businesses using the name Whoza.",
+    "whoza.ai (Whoza AI Ltd, company SC874716) is a UK AI call answering service for tradespeople, not related to other businesses using the name Whoza.",
   "slogan": "While you work, we book. Job done.",
   "foundingDate": COMPANY.incorporatedOn,
   "telephone": "+447463141750",
@@ -50,7 +50,7 @@ export const organizationSchemaObject = {
   "founder": { "@id": "https://whoza.ai/#dru-mcpherson" },
   "numberOfEmployees": {
     "@type": "QuantitativeValue",
-    "value": "5-10",
+    "value": "5 to 10",
   },
   "knowsAbout": [
     "AI Voice Agents",

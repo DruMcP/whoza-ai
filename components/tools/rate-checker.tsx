@@ -36,7 +36,7 @@ const regions = [
 
 const experienceLevels = [
   { key: "apprentice", label: "Apprentice / Trainee", multiplier: 0.6 },
-  { key: "qualified", label: "Qualified (2–14 years)", multiplier: 1.0 },
+  { key: "qualified", label: "Qualified (2 to 14 years)", multiplier: 1.0 },
   { key: "master", label: "Master / 15+ years", multiplier: 1.3 },
 ]
 
@@ -102,7 +102,7 @@ export function RateChecker() {
   const annualEvening = Math.round(yourRate * timeMultipliers.evening * 40 * 48)
   const annualWeekend = Math.round(yourRate * timeMultipliers.weekend * 40 * 48)
 
-  const breakdownText = `${tradeLabel} Rate Check — ${region}\nExperience: ${expInfo.label}\n\nYour recommended rate: £${yourRate}/hr\nRegional average: £${regionalAvg}/hr\nTop 10% rate: £${top10Rate}/hr\n\nAnnual projection (40h/wk, 48 wks):\nNormal hours: £${annualNormal.toLocaleString()}\nEvening rate: £${annualEvening.toLocaleString()}\nWeekend rate: £${annualWeekend.toLocaleString()}`
+  const breakdownText = `${tradeLabel} Rate Check: ${region}\nExperience: ${expInfo.label}\n\nYour recommended rate: £${yourRate}/hr\nRegional average: £${regionalAvg}/hr\nTop 10% rate: £${top10Rate}/hr\n\nAnnual projection (40h/wk, 48 wks):\nNormal hours: £${annualNormal.toLocaleString()}\nEvening rate: £${annualEvening.toLocaleString()}\nWeekend rate: £${annualWeekend.toLocaleString()}`
 
   const handleCopy = () => {
     navigator.clipboard.writeText(breakdownText)
@@ -130,7 +130,7 @@ export function RateChecker() {
               Hourly Rate Checker for UK Tradespeople
             </h1>
             <p className="v2-lead max-w-2xl mx-auto">
-              Are you charging what you are worth? Compare your rate against regional averages and the top 10% in your trade. Most UK tradespeople undervalue their skills by 15–30%.
+              Are you charging what you are worth? Compare your rate against regional averages and the top 10% in your trade. Most UK tradespeople undervalue their skills by 15 to 30%.
             </p>
           </motion.div>
 
@@ -193,7 +193,7 @@ export function RateChecker() {
                     className="w-full pl-8 pr-4 py-3 min-h-[44px] rounded-lg bg-white border border-[var(--v2-line)] text-[var(--v2-ink)] placeholder:text-slate-400 focus:outline-none focus:border-[var(--v2-green)]"
                   />
                 </div>
-                <p className="text-sm text-[var(--v2-muted)] mt-1">Leave blank if you are unsure — we will show you the benchmark</p>
+                <p className="text-sm text-[var(--v2-muted)] mt-1">Leave blank if you are unsure. We will show you the benchmark</p>
               </div>
 
               {/* Experience */}
@@ -327,7 +327,7 @@ export function RateChecker() {
                   className="flex-1 py-3 min-h-[48px] rounded-lg bg-[var(--coral)] hover:bg-[var(--coral)]/90 text-[var(--v2-ink)] font-bold transition-colors flex items-center justify-center gap-2"
                 >
                   <ArrowRight className="w-5 h-5" />
-                  KATIE HANDLES THE ADMIN — FREE TRIAL
+                  KATIE HANDLES THE ADMIN: FREE TRIAL
                 </a>
               </div>
             </motion.div>
@@ -341,7 +341,7 @@ export function RateChecker() {
             <h3>How much more should a master tradesperson charge?</h3>
             <p>Master tradespeople with 15+ years experience typically command 30% above the qualified rate. An apprentice or trainee should charge around 60% of the qualified benchmark.</p>
             <h3>Do hourly rates vary by region in the UK?</h3>
-            <p>Yes. London and the South East have the highest rates (20–35% above national average), while Northern Ireland and the North East are typically 10–12% below average.</p>
+            <p>Yes. London and the South East have the highest rates (20 to 35% above national average), while Northern Ireland and the North East are typically 10 to 12% below average.</p>
             <h3>Is the Rate Checker free?</h3>
             <p>Yes. It is completely free to use with no signup required.</p>
           </div>
@@ -389,7 +389,7 @@ export function RateChecker() {
                     name: "Do hourly rates vary by region in the UK?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Yes. London and the South East have the highest rates (20–35% above national average), while Northern Ireland and the North East are typically 10–12% below average.",
+                      text: "Yes. London and the South East have the highest rates (20 to 35% above national average), while Northern Ireland and the North East are typically 10 to 12% below average.",
                     },
                   },
                   {

@@ -18,7 +18,7 @@ interface LocationHeroProps {
 
 /* ── Trust pills (aligned with main site) ── */
 const trustItems = [
-  "7-day free trial — no card required",
+  "7-day free trial, no card required",
   "30-day money-back guarantee",
   "Live in 30 minutes",
   "Works with your existing number",
@@ -52,8 +52,8 @@ export function LocationHero({ city, trade, region, jobsThisWeek }: LocationHero
 
   // Natural H1 — no keyword stuffing, punchy and human
   const h1Text = trade
-    ? `Your phone's ringing.\nKatie's got it — in ${city}.`
-    : `Your phone's ringing.\nKatie's got it — in ${city}.`
+    ? `Your phone's ringing.\nKatie's got it, in ${city}.`
+    : `Your phone's ringing.\nKatie's got it, in ${city}.`
 
   // Borough list for London, otherwise city + region
   const serviceArea = cityKey === "london"
@@ -120,7 +120,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek }: LocationHero
           >
             <span className="block">Your phone&apos;s ringing.</span>{" "}
             <span className="block text-[#6ee7b7]">
-              Katie&apos;s got it — in {city}.
+              Katie&apos;s got it, in {city}.
             </span>
           </motion.h1>
 
@@ -131,7 +131,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek }: LocationHero
             transition={{ duration: 0.6, delay: 0.28, ease: [0.16, 1, 0.3, 1] }}
             className="font-sans text-lg font-semibold text-emerald-500 mb-4 leading-snug tracking-tight"
           >
-            While you work, we book - Job done.
+            While you work, we book. Job done.
           </motion.p>
 
           {/* Subhead */}
@@ -143,7 +143,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek }: LocationHero
           >
             The <abbr title="Artificial Intelligence">AI</abbr> call handler and Revenue Team built for{" "}
             {country === "uk" ? "UK" : "US"} {config.language.tradesPeople}. Answers every missed call,
-            qualifies real jobs, and sends them straight to your WhatsApp — so you accept, call back,
+            qualifies real jobs, and sends them straight to your WhatsApp, so you accept, call back,
             or decline in two taps.
           </motion.p>
 
@@ -189,13 +189,13 @@ export function LocationHero({ city, trade, region, jobsThisWeek }: LocationHero
               <span className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[10px] text-white/60">
                 <Play className="w-3 h-3 fill-current" />
               </span>
-              Audio demo — coming soon
+              Audio demo: coming soon
             </a>
 
             {/* Pricing anchor */}
             <p className="text-sm text-slate-400 mt-1">
-              From <strong className="text-white">{config.currencySymbol}59/month</strong>{" "}
-              — one recovered job pays for the entire year
+              From <strong className="text-white">{config.currencySymbol}59/month</strong>,{" "}
+              one recovered job pays for the entire year
             </p>
 
             {/* Calculator teaser */}
@@ -355,7 +355,7 @@ export function LocationHero({ city, trade, region, jobsThisWeek }: LocationHero
             <footer className="flex items-center gap-3">
               <cite className="text-[13px] text-slate-500 not-italic">
                 {/* Her real review; no city, since this hero renders on every city page. */}
-                — Ludmila Lamont
+                Ludmila Lamont
               </cite>
               <span className="text-[13px] text-emerald-500">★★★★★ Google Review</span>
             </footer>

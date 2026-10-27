@@ -118,7 +118,7 @@ export function ClaireDashboard({ clientId = "demo" }: ClaireDashboardProps) {
           <MetricCard
             icon={<Star className="w-5 h-5" />}
             label="Average Rating"
-            value={metrics.averageRating?.toFixed(1) || "—"}
+            value={metrics.averageRating?.toFixed(1) || "N/A"}
             subtext="Google Business Profile"
             color="yellow"
           />
@@ -163,7 +163,7 @@ export function ClaireDashboard({ clientId = "demo" }: ClaireDashboardProps) {
             Your improved rating is helping you win more jobs. 
             {metrics.estimatedJobWinIncrease > 0
               ? `Claire estimates ~${metrics.estimatedJobWinIncrease} additional jobs this ${period === "7d" ? "week" : period === "30d" ? "month" : "quarter"} from your reviews.`
-              : `Keep going — every review compounds into future revenue.`}
+              : `Keep going. Every review compounds into future revenue.`}
           </p>
         </motion.div>
 

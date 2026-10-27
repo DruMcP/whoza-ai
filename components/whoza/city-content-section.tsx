@@ -111,7 +111,7 @@ export function CityContentSection({ locationData }: CityContentSectionProps) {
                 Response Times in {locationData.city}
               </h3>
               <p className="text-[var(--v2-body)] text-sm leading-relaxed mb-3">
-                {locationData.responseTime}. Katie answers every call instantly — 24/7, 365 days a year — so your customers never hear voicemail.
+                {locationData.responseTime}. Katie answers every call instantly, 24/7, 365 days a year, so your customers never hear voicemail.
               </p>
               {locationData.callVolume && (
                 <p className="text-[var(--v2-muted)] text-sm">

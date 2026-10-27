@@ -77,8 +77,8 @@ export function Pricing() {
         { text: "WhatsApp job delivery", included: true },
         { text: "Keep your existing business number", included: true },
         { text: "Calendar sync (Google, Outlook, Apple)", included: true },
-        { text: "Live transfer to you — if you're available, Katie puts them through", included: true },
-        { text: "No contract — cancel anytime", included: true },
+        { text: "Live transfer to you: if you're available, Katie puts them through", included: true },
+        { text: "No contract, cancel anytime", included: true },
         { text: "Monthly competitor analysis", included: true },
         { text: "10 booked enquiries included", included: true },
       ],
@@ -168,7 +168,7 @@ export function Pricing() {
           </p>
           <div className="mt-4 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[var(--v2-mint)] text-[var(--v2-green)] font-bold border border-[var(--v2-green)]/20">
             <CheckCircle2 className="w-5 h-5" />
-            30-day money-back guarantee — no questions asked. No contract. Cancel anytime.
+            30-day money-back guarantee, no questions asked. No contract. Cancel anytime.
           </div>
 
           {/* Economics breakdown */}
@@ -516,7 +516,7 @@ export function Pricing() {
           viewport={{ once: true }}
           className="mt-8 text-center"
         >
-          <p className="text-lg text-[var(--v2-muted)] font-semibold">Each plan includes enquiries, with additional ones charged per job - so you can scale as you grow.</p>
+          <p className="text-lg text-[var(--v2-muted)] font-semibold">Each plan includes enquiries, with additional ones charged per job, so you can scale as you grow.</p>
           <p className="text-sm text-[var(--v2-muted)] mt-2">Start small. Only pay more as you get more work.</p>
         </motion.div>
         {/* Overage Footnote */}

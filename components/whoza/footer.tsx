@@ -1,10 +1,8 @@
 "use client"
 
-import { ArrowRight, Check } from "lucide-react"
-import { useState } from "react"
-import { WaitlistModal } from "./waitlist-modal"
+import { Check } from "lucide-react"
 import { Logo } from "@/components/whoza/logo"
-import { trackCTA } from "@/lib/gtag"
+import { CtaBand } from "@/components/whoza/cta-band"
 import { COMPANY } from "@/lib/company"
 
 type FooterLink = { label: string; href: string; external?: boolean; onClick?: () => void }
@@ -40,7 +38,7 @@ const footerLinks: Record<string, FooterLink[]> = {
     { label: "Best AI Call Handler", href: "/best-ai-call-handler-uk-trades" },
     { label: "Missed Calls Cost", href: "/missed-calls-cost-calculator" },
     { label: "Evidence Base", href: "/data" },
-    { label: "Part of 5R-AI — the UK AI agency", href: "https://www.5r-ai.com", external: true },
+    { label: "Part of 5R-AI, the UK AI agency", href: "https://www.5r-ai.com", external: true },
   ],
   comparisons: [
     { label: "vs Trade Receptionist", href: "/vs-trade-receptionist" },
@@ -121,109 +119,133 @@ const badges = [
   "Cancel Anytime",
 ]
 
-const linkClass = "text-sm text-white/60 hover:text-white transition-colors no-underline"
+const linkClass = "text-[15px] text-[var(--v2-body)] hover:text-[var(--v2-green)] transition-colors no-underline"
+// Body colour, not muted: the small print sits on the greener end of the panel gradient
+const smallLinkClass = "text-[13px] text-[var(--v2-body)] hover:text-[var(--v2-green-ink)] transition-colors"
+const socialClass =
+  "w-9 h-9 inline-flex items-center justify-center rounded-full text-[var(--v2-ink)] hover:bg-white hover:text-[var(--v2-green)] transition-colors"
 
-export function Footer() {
-  const [showWaitlist, setShowWaitlist] = useState(false)
-
-  const openWaitlist = () => {
-    trackCTA("Start Free Trial - Footer", "footer")
-    setShowWaitlist(true)
-  }
-
+/* The closing call to action band, then a light rounded panel inset from the
+   page edges. Pages that already end with their own CtaBand (FinalCTA, blog
+   articles) pass hideCta so the page doesn't end with two bands in a row.
+   Every link and label from the previous footer is kept. */
+export function Footer({ hideCta = false }: { hideCta?: boolean }) {
   return (
-    <footer className="bg-[var(--v2-navy)]" role="contentinfo" aria-label="Footer">
-      <div className="v2-container pt-16 sm:pt-20 pb-10">
-        {/* CTA band */}
-        <div className="rounded-[20px] border border-white/10 bg-[var(--v2-navy-2)] px-6 py-8 sm:px-10 sm:py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-          <div>
-            <div className="text-white text-[clamp(22px,2.6vw,30px)] font-bold tracking-[-0.02em] leading-tight">
-              Start your free trial
-            </div>
-            <p className="mt-2 text-[15px] text-white/60">Limited to 50 UK trades. Start your free trial today.</p>
-          </div>
-          <div className="flex flex-wrap items-center gap-3">
-            <button
-              onClick={openWaitlist}
-              className="v2-btn cursor-pointer"
-            >
-              Start Free Trial
-              <ArrowRight className="w-4 h-4" aria-hidden="true" />
-            </button>
-            <a href="/pricing" className="v2-btn-secondary" style={{ color: "#fff", borderColor: "rgba(255,255,255,0.24)" }}>
-              See pricing
-            </a>
-          </div>
+    <footer className={`bg-[var(--v2-paper)] px-3 pb-3 sm:px-4 sm:pb-4 ${hideCta ? "pt-10" : "pt-20 sm:pt-28"}`} role="contentinfo" aria-label="Footer">
+      {!hideCta && (
+        <div className="mx-auto mb-16 max-w-[1600px] sm:mb-24">
+          <CtaBand
+            id="footer"
+            headingTag="div"
+            heading={["Start your", "free trial"]}
+            text="Limited to 50 UK trades. Start your free trial today."
+            primaryLabel="Start Free Trial"
+            source="footer"
+            trackLabel="Start Free Trial - Footer"
+            secondary={{ label: "See pricing", href: "/pricing" }}
+          />
         </div>
+      )}
 
-        {/* Brand + link columns */}
-        {/* Desktop: brand + trades on the left across two rows; the six link
-            groups in two rows of three, wide enough that no label wraps. */}
-        <div className="mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-[1.25fr_1fr_1fr_1fr] gap-x-8 gap-y-10 lg:gap-y-12">
-          <div className="col-span-2 sm:col-span-3 lg:col-span-1 lg:row-span-2 lg:pr-10">
-            <a href="/" className="inline-flex items-center no-underline" aria-label="whoza.ai home">
-              <Logo colorMode="light" className="h-7 w-auto" />
-            </a>
-            <p className="mt-4 text-sm leading-relaxed text-white/60 max-w-xs">
-              AI revenue system for UK tradespeople. Capture missed calls, book more jobs, grow automatically. No contracts. Cancel anytime.
-            </p>
+      {/* Footer panel: the hero's green-to-mint gradient turned upside down,
+          so the page closes on the colour it opened with. */}
+      <div className="rounded-[28px] border border-[var(--v2-line)] bg-[linear-gradient(180deg,#f1f5f2_0%,#effdf4_35%,#e4fcef_55%,#b7f9da_80%,#69f2b6_100%)]">
+        <div className="mx-auto max-w-[1200px] px-6 pb-10 pt-14 sm:px-10 sm:pt-20">
+          {/* Brand and trades on the left across two rows; the six link
+              groups in two rows of three. */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-x-8 gap-y-12">
+            <div className="col-span-2 sm:col-span-3 lg:col-span-1 lg:row-span-2 lg:pr-12">
+              <a href="/" className="inline-flex items-center no-underline" aria-label="whoza.ai home">
+                <Logo colorMode="dark" className="h-8 w-auto" />
+              </a>
+              <p className="mt-5 max-w-sm text-[15px] leading-relaxed text-[var(--v2-muted)]">
+                AI revenue system for UK tradespeople. Capture missed calls, book more jobs, grow automatically. No contracts. Cancel anytime.
+              </p>
 
-            <div className="mt-7 text-xs font-semibold uppercase tracking-[0.14em] text-white/55">Trades we cover</div>
-            <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-1.5 max-w-sm" aria-label="Trades we cover">
-              {trades.map((t) => (
-                <li key={t.href}>
-                  <a href={t.href} className="text-[13px] text-white/60 hover:text-white transition-colors no-underline">
-                    {t.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+              <div className="mt-6 flex items-center gap-2">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61586217731657"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={socialClass}
+                  aria-label="Facebook"
+                >
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                </a>
+                <span className="h-5 w-px bg-[var(--v2-line)]" aria-hidden="true" />
+                <a
+                  href="https://www.linkedin.com/company/whoza"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={socialClass}
+                  aria-label="LinkedIn"
+                >
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </a>
+              </div>
 
-          {columns.map((col) => (
-            <div key={col.key}>
-              <div className="text-[13px] font-semibold text-white mb-4">{col.title}</div>
-              <ul className="space-y-2.5">
-                {footerLinks[col.key].map((link) => (
-                  <li key={link.href + link.label}>
+              <div className="mt-10 text-[17px] text-[var(--v2-ink)]">Trades we cover</div>
+              <ul className="mt-4 flex max-w-md flex-wrap gap-2" aria-label="Trades we cover">
+                {trades.map((t) => (
+                  <li key={t.href}>
                     <a
-                      href={link.href}
-                      className={linkClass}
-                      {...(link.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                      href={t.href}
+                      className="inline-flex rounded-full border border-[var(--v2-line)] bg-white px-3 py-1.5 text-[13px] text-[var(--v2-body)] no-underline transition-colors hover:border-[var(--v2-green)] hover:text-[var(--v2-green)]"
                     >
-                      {link.label}
+                      {t.label}
                     </a>
                   </li>
                 ))}
               </ul>
             </div>
-          ))}
-        </div>
 
-        {/* Trust row */}
-        <div className="mt-14 pt-8 border-t border-white/10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-          <ul className="flex flex-wrap items-center gap-x-5 gap-y-2" aria-label="Trust and compliance">
+            {columns.map((col) => (
+              <div key={col.key}>
+                <div className="mb-5 text-[17px] text-[var(--v2-ink)]">{col.title}</div>
+                <ul className="space-y-3.5">
+                  {footerLinks[col.key].map((link) => (
+                    <li key={link.href + link.label}>
+                      <a
+                        href={link.href}
+                        className={linkClass}
+                        {...(link.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Trust row */}
+          <ul className="mt-16 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 border-t border-[var(--v2-green-ink)]/10 pt-8" aria-label="Trust and compliance">
             {badges.map((badge) => (
-              <li key={badge} className="flex items-center gap-1.5 text-xs text-white/55">
-                <Check className="w-3.5 h-3.5 text-[#6ee7b7]" aria-hidden="true" />
+              <li key={badge} className="flex items-center gap-1.5 text-[13px] text-[var(--v2-body)]">
+                <Check className="w-3.5 h-3.5 text-[var(--v2-green-ink)]" aria-hidden="true" />
                 {badge}
               </li>
             ))}
-            <li className="flex items-center gap-1.5 text-xs text-white/55">
-              <Check className="w-3.5 h-3.5 text-[#6ee7b7]" aria-hidden="true" />
-              ICO: <a href="https://ico.org.uk/ESDWebPages/Entry/ZC077271" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">ZC077271</a>
+            <li className="flex items-center gap-1.5 text-[13px] text-[var(--v2-body)]">
+              <Check className="w-3.5 h-3.5 text-[var(--v2-green-ink)]" aria-hidden="true" />
+              ICO: <a href="https://ico.org.uk/ESDWebPages/Entry/ZC077271" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--v2-green-ink)] transition-colors">ZC077271</a>
             </li>
             <li>
               <a
                 href="https://theinstituteofai.co.uk"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-xs text-white/55 hover:text-white transition-colors no-underline"
+                className={`flex items-center gap-1.5 no-underline ${smallLinkClass}`}
                 aria-label="Member of The Institute of AI"
               >
                 <img
                   src="/images/ioai-member-badge-dark.png"
-                  alt="IOAI Member — Dru McPherson"
+                  alt="IOAI Member: Dru McPherson"
                   width="16"
                   height="16"
                   className="w-4 h-4 rounded-sm"
@@ -234,80 +256,46 @@ export function Footer() {
             </li>
           </ul>
 
-          <div className="flex items-center gap-2">
-            <a
-              href="https://www.facebook.com/profile.php?id=61586217731657"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-9 h-9 inline-flex items-center justify-center rounded-full border border-white/10 text-white/60 hover:text-white hover:border-white/30 transition-colors"
-              aria-label="Facebook"
-            >
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-              </svg>
-            </a>
-            <a
-              href="https://www.linkedin.com/company/whoza"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-9 h-9 inline-flex items-center justify-center rounded-full border border-white/10 text-white/60 hover:text-white hover:border-white/30 transition-colors"
-              aria-label="LinkedIn"
-            >
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
+          {/* Legal links */}
+          <nav aria-label="Legal" className="mt-6">
+            <ul className="flex flex-wrap justify-center gap-x-5 gap-y-2">
+              {footerLinks.legal.map((link) => (
+                <li key={link.label}>
+                  {link.onClick ? (
+                    <button
+                      onClick={link.onClick}
+                      className={`${smallLinkClass} bg-transparent border-none cursor-pointer p-0`}
+                    >
+                      {link.label}
+                    </button>
+                  ) : (
+                    <a href={link.href} className={`${smallLinkClass} no-underline`}>
+                      {link.label}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </nav>
 
-        {/* Legal links */}
-        <nav aria-label="Legal" className="mt-8">
-          <ul className="flex flex-wrap gap-x-5 gap-y-2">
-            {footerLinks.legal.map((link) => (
-              <li key={link.label}>
-                {link.onClick ? (
-                  <button
-                    onClick={link.onClick}
-                    className="text-xs text-white/45 hover:text-white transition-colors bg-transparent border-none cursor-pointer p-0"
-                  >
-                    {link.label}
-                  </button>
-                ) : (
-                  <a href={link.href} className="text-xs text-white/45 hover:text-white transition-colors no-underline">
-                    {link.label}
-                  </a>
-                )}
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        {/* Company details */}
-        <div className="mt-8 pt-6 border-t border-white/[0.06] flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-          <div className="space-y-1">
-            <p className="text-xs text-white/50">
-              WHOZA AI LTD · Registered in Scotland — Company Number {COMPANY.companyNumber} · ICO Registration: ZC077271
+          {/* Company details */}
+          <div className="mt-8 space-y-1 border-t border-[var(--v2-green-ink)]/10 pt-6 text-center">
+            <p className="text-[13px] text-[var(--v2-body)]">
+              WHOZA AI LTD · Registered in Scotland, Company Number {COMPANY.companyNumber} · ICO Registration: ZC077271
             </p>
-            <p className="text-xs text-white/50">
+            <p className="text-[13px] text-[var(--v2-body)]">
               Registered address: 6 Atholl Crescent, 6, Perth, PH1 5JN, United Kingdom
             </p>
-            <p className="text-xs text-white/50">
+            <p className="text-[13px] text-[var(--v2-body)]">
               Office address: 97 Main Street, Tomintoul AB37 9HA
             </p>
-          </div>
-          <div className="text-xs text-white/45">
-            © {new Date().getFullYear()} whoza.ai. All rights reserved.
+            <p className="pt-3 text-[13px] text-[var(--v2-ink)]">
+              © {new Date().getFullYear()} whoza.ai. All rights reserved.
+            </p>
           </div>
         </div>
       </div>
 
-      {/* Waitlist Modal */}
-      {showWaitlist && (
-        <WaitlistModal
-          onClose={() => setShowWaitlist(false)}
-          source="footer"
-        />
-      )}
     </footer>
   )
 }

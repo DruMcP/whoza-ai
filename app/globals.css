@@ -422,7 +422,8 @@
   }
   body {
     @apply bg-background text-foreground;
-    overflow-x: hidden;
+    /* clip, not hidden: hidden would make body a scroll box and stop position: sticky */
+    overflow-x: clip;
   }
   html {
     scroll-behavior: smooth;
@@ -964,3 +965,133 @@ html:not([data-v2-seen]) header[role="banner"] nav {
    v2 green from here instead. */
 .v2-page a:is(.text-emerald-400, .text-amber-400),
 .trade-faq a:is(.text-emerald-400, .text-amber-400) { color: var(--v2-green); }
+
+/* ---------- Blur-in reveal (blog) ----------
+   Elements with data-reveal start soft and slightly low, then sharpen into
+   place. data-reveal="load" runs on first paint from CSS alone (headings and
+   covers at the top of the page); plain data-reveal waits until the element
+   scrolls into view, when RevealObserver adds data-shown. Start opacity is
+   0.001, as for the entrance above, so LCP is not held back. Without
+   JavaScript, or with reduced motion, everything is shown as is. */
+@keyframes v2-blur-in {
+  from { opacity: 0.001; filter: blur(12px); transform: translateY(18px); }
+  to { opacity: 1; filter: blur(0); transform: none; }
+}
+[data-reveal="load"] {
+  animation: v2-blur-in 0.9s var(--v2-ease) both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+[data-reveal]:not([data-reveal="load"]) {
+  opacity: 0.001;
+  filter: blur(12px);
+  transform: translateY(18px);
+  transition: opacity 0.9s var(--v2-ease), filter 0.9s var(--v2-ease), transform 0.9s var(--v2-ease);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+[data-reveal][data-shown] { opacity: 1; filter: none; transform: none; }
+@media (scripting: none) {
+  [data-reveal]:not([data-reveal="load"]) { opacity: 1; filter: none; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal="load"] { animation: none; }
+  [data-reveal]:not([data-reveal="load"]) { opacity: 1; filter: none; transform: none; transition: none; }
+}
+
+/* ---------- Blog article body ----------
+   The reading column on /blog/[slug]: wider than before (880px), with a
+   17-18px body size so long lines stay comfortable. */
+.v2-article { font-size: clamp(16.5px, 1.2vw, 18px); line-height: 1.78; color: var(--v2-body); }
+.v2-article :where(p) { margin-block: 0 1.15em; }
+.v2-article :where(h2) {
+  font-size: clamp(26px, 2.6vw, 34px);
+  line-height: 1.18;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  color: var(--v2-ink);
+  margin: 2.2em 0 0.7em;
+}
+.v2-article :where(h3) {
+  font-size: clamp(20px, 1.8vw, 24px);
+  line-height: 1.3;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  color: var(--v2-ink);
+  margin: 1.8em 0 0.6em;
+}
+.v2-article :where(strong) { color: var(--v2-ink); font-weight: 650; }
+.v2-article :where(a:not(.v2-btn, .v2-btn-secondary, .cta-link)) { color: var(--v2-green); text-decoration: underline; text-underline-offset: 3px; }
+.v2-article :where(a:not(.v2-btn, .v2-btn-secondary, .cta-link)):hover { color: var(--v2-green-hover); }
+.v2-article :where(table) { width: 100%; border-collapse: collapse; font-size: 0.92em; }
+
+/* ---------- Offer bar ----------
+   The 36px bar above the nav sits in the page flow. The fixed header starts
+   below it and moves up as the bar scrolls away (Header sets --promo-scroll).
+   Once dismissed, html[data-promo-closed] removes both. */
+:root { --promo-h: 36px; }
+html[data-promo-closed] { --promo-h: 0px; }
+html[data-promo-closed] .v2-promo { display: none; }
+.v2-header { transform: translateY(max(0px, calc(var(--promo-h) - var(--promo-scroll, 0px)))); }
+
+/* ---------- Homepage: example call, set-up sheet, explainer ---------- */
+/* WhatsApp-style chat wallpaper behind the example call */
+.wa-wallpaper {
+  background-color: #efe7dd;
+  background-image: radial-gradient(rgba(111, 100, 87, 0.16) 1px, transparent 1.4px);
+  background-size: 16px 16px;
+}
+/* Voice bars on the phone while someone is speaking */
+@keyframes call-wave { 0%, 100% { transform: scaleY(0.45); } 50% { transform: scaleY(1.15); } }
+.call-wave { animation: call-wave 0.9s ease-in-out infinite; transform-origin: center; }
+/* The dot that carries the job from the call to WhatsApp */
+@keyframes handoff-x { from { left: 0; opacity: 1; } to { left: 100%; opacity: 0; } }
+@keyframes handoff-y { from { top: 0; opacity: 1; } to { top: 100%; opacity: 0; } }
+.handoff-dot { animation: handoff-y 0.7s var(--v2-ease) both; }
+@media (min-width: 768px) { .handoff-dot { animation-name: handoff-x; } }
+/* Slow ring around the play button */
+@keyframes play-ring { from { transform: scale(1); opacity: 0.8; } to { transform: scale(1.5); opacity: 0; } }
+.play-ring { animation: play-ring 2.2s ease-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .call-wave, .handoff-dot, .play-ring { animation: none; }
+}
+
+/* ---------- CTA band ribbons ----------
+   The two green ribbons drift a few pixels up and down, out of step. */
+@keyframes cta-ribbon-float {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(0, -8px, 0) rotate(-1.5deg); }
+}
+.cta-ribbon { animation: cta-ribbon-float 9s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .cta-ribbon { animation: none; }
+}
+
+/* ---------- Set-up steps: the four mock screens ----------
+   One 6-second loop per screen: the website scan bar fills, "Scanned" and
+   "Ready" pop in, the ticks land one after another, and the pointer presses
+   "Test call". Everything rests in its finished state under reduced motion. */
+@keyframes hiw-pointer {
+  0% { transform: translate(46px, 56px); opacity: 0; }
+  12% { opacity: 1; }
+  38% { transform: translate(0, 0) scale(1); }
+  42% { transform: translate(0, 0) scale(0.82); }
+  46%, 86% { transform: translate(0, 0) scale(1); opacity: 1; }
+  100% { transform: translate(0, 0); opacity: 0; }
+}
+.hiw-pointer { animation: hiw-pointer 6s var(--v2-ease) infinite; }
+@keyframes hiw-press { 0%, 39% { transform: scale(1); } 43% { transform: scale(0.94); } 48%, 100% { transform: scale(1); } }
+.hiw-press { animation: hiw-press 6s ease-in-out infinite; }
+@keyframes hiw-scan-bar { 0% { transform: scaleX(0); opacity: 1; } 30% { transform: scaleX(1); opacity: 1; } 36%, 100% { transform: scaleX(1); opacity: 0; } }
+.hiw-scan-bar { animation: hiw-scan-bar 6s ease-in-out infinite both; }
+@keyframes hiw-ready { 0%, 32% { opacity: 0; transform: scale(0.6); } 38%, 92% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+.hiw-ready { animation: hiw-ready 6s cubic-bezier(0.3, 1.5, 0.5, 1) infinite both; }
+@keyframes hiw-setting-up { 0%, 32% { opacity: 1; } 36%, 96% { opacity: 0; } 100% { opacity: 1; } }
+.hiw-setting-up { animation: hiw-setting-up 6s ease infinite both; }
+@keyframes hiw-tick { 0%, 40% { transform: scale(0); } 46%, 92% { transform: scale(1); } 100% { transform: scale(0); } }
+.hiw-tick { animation: hiw-tick 6s cubic-bezier(0.3, 1.5, 0.5, 1) infinite both; }
+@keyframes hiw-caret { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+.hiw-caret { animation: hiw-caret 1s step-end infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .hiw-pointer, .hiw-press, .hiw-scan-bar, .hiw-ready, .hiw-tick, .hiw-caret { animation: none; }
+  .hiw-scan-bar { opacity: 0; }
+  .hiw-setting-up { animation: none; opacity: 0; }
+}

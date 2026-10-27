@@ -25,7 +25,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://whoza.ai'),
-  title: 'AI Receptionist for UK Trades | 24/7 | From £59 — Whoza.ai',
+  title: 'AI Receptionist for UK Trades | 24/7 | From £59 | Whoza.ai',
   description: "Stop losing £12,000/year to missed calls. Whoza.ai's AI receptionist answers 24/7, captures leads, and grows your visibility. Start free.",
   // Keywords meta tag removed per SEO best practices — can be spam signal
   authors: [{ name: 'whoza.ai' }],
@@ -46,20 +46,20 @@ export const metadata: Metadata = {
     locale: 'en_GB',
     url: 'https://whoza.ai',
     siteName: 'Whoza.ai',
-    title: 'AI Receptionist for UK Trades | 24/7 | From £59 — Whoza.ai',
+    title: 'AI Receptionist for UK Trades | 24/7 | From £59 | Whoza.ai',
     description: "Stop losing £12,000/year to missed calls. Whoza.ai's AI receptionist answers 24/7, captures leads, and grows your visibility. Start free.",
     images: [
       {
         url: 'https://whoza.ai/og-image.webp',
         width: 1200,
         height: 630,
-        alt: 'whoza.ai — AI Voice Agents for UK Tradespeople',
+        alt: 'whoza.ai: AI Voice Agents for UK Tradespeople',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Receptionist for UK Trades | 24/7 | From £59 — Whoza.ai',
+    title: 'AI Receptionist for UK Trades | 24/7 | From £59 | Whoza.ai',
     description: "Stop losing £12,000/year to missed calls. Whoza.ai's AI receptionist answers 24/7, captures leads, and grows your visibility. Start free.",
     images: ['https://whoza.ai/og-image.webp'],
   },
@@ -96,6 +96,14 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html:
               "try{var s=window.sessionStorage;if(s.getItem('v2-seen')){document.documentElement.setAttribute('data-v2-seen','')}else{s.setItem('v2-seen','1')}}catch(e){document.documentElement.setAttribute('data-v2-seen','')}",
+          }}
+        />
+        {/* Offer bar above the nav: once dismissed it stays hidden, applied before
+            first paint so the page does not jump (globals.css, "Offer bar"). */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{if(window.localStorage.getItem('whoza-promo-closed')==='1'){document.documentElement.setAttribute('data-promo-closed','')}}catch(e){}",
           }}
         />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -156,7 +164,7 @@ export default function RootLayout({
                   "Competitor analysis and tracking",
                   "Unlimited simultaneous calls",
                   "Keep your existing business number",
-                  "No contract — cancel anytime",
+                  "No contract, cancel anytime",
                   "30-day money-back guarantee"
                 ]
               }

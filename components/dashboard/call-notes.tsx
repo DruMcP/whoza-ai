@@ -55,7 +55,7 @@ export function CallNotes({ calls, loading, error }: { calls: Call[]; loading: b
   })
 
   const formatDate = (timestamp: string | null) => {
-    if (!timestamp) return "—"
+    if (!timestamp) return "N/A"
     return new Date(timestamp).toLocaleDateString("en-GB", {
       day: "numeric",
       month: "short",
@@ -160,7 +160,7 @@ export function CallNotes({ calls, loading, error }: { calls: Call[]; loading: b
                     <div className="flex items-center gap-3 mt-1 text-sm text-[var(--slate-500)]">
                       <span className="flex items-center gap-1">
                         <Phone className="w-3.5 h-3.5" />
-                        {call.caller_number || "—"}
+                        {call.caller_number || "N/A"}
                       </span>
                       <span className="flex items-center gap-1">
                         <Clock className="w-3.5 h-3.5" />
@@ -241,7 +241,7 @@ export function CallNotes({ calls, loading, error }: { calls: Call[]; loading: b
           <p className="text-[var(--slate-500)]">
             {searchQuery || priorityFilter !== "all"
               ? "No call notes match your search"
-              : "No call notes yet — transcripts appear after calls are processed"}
+              : "No call notes yet. Transcripts appear after calls are processed"}
           </p>
         </div>
       )}

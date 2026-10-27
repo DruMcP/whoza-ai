@@ -12,13 +12,13 @@ import { trackCTA } from "@/lib/gtag"
 // Job value examples by trade and location
 const jobExamples: Record<string, { hint: string; minValue: number; maxValue: number; defaultValue: number }> = {
   default: {
-    hint: "Typical plumbing call-out in the UK: £180-£350",
+    hint: "Typical plumbing call-out in the UK: £180 to £350",
     minValue: 50,
     maxValue: 2000,
     defaultValue: 280,
   },
   electrician: {
-    hint: "Typical electrical call-out in the UK: £150-£300",
+    hint: "Typical electrical call-out in the UK: £150 to £300",
     minValue: 75,
     maxValue: 2000,
     defaultValue: 220,

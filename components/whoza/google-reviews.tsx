@@ -5,8 +5,8 @@ import { Star } from "lucide-react"
 
 const reviews = [
   { name: "Kat Hibbert-Jordan", date: "", text: "I realised recently that my business was not appearing in AI search results at all. Whoza.ai helped me fix that. Now I'm showing up in AI search results and getting more calls. Really pleased with the service.", rating: 5 },
-  { name: "Ludmila Lamont", date: "", text: "I've tried different marketing tools before — they cost me over £350/month. Whoza.ai is by far the simplest and the cheapest. It's easy to use and I'm already seeing results. Highly recommend!", rating: 5 },
-  { name: "Nicholas Wood", date: "", text: "Tried this company with anticipation but have to say was very impressed with the simplicity and how it helped me — sales followed pretty quickly which I was amazed at.", rating: 5 },
+  { name: "Ludmila Lamont", date: "", text: "I've tried different marketing tools before. They cost me over £350/month. Whoza.ai is by far the simplest and the cheapest. It's easy to use and I'm already seeing results. Highly recommend!", rating: 5 },
+  { name: "Nicholas Wood", date: "", text: "Tried this company with anticipation but have to say was very impressed with the simplicity and how it helped me. Sales followed pretty quickly which I was amazed at.", rating: 5 },
   { name: "Luke Winter", date: "", text: "The future is now. A powerful business tool well executed. This will yield both short and long term benefits.", rating: 5 },
   { name: "Sandy Fyfe", date: "", text: "I am reluctant to try new things but this was recommended to me and seemed worth trying. Really really impressed.", rating: 5 },
 ]

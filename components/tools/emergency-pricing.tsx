@@ -35,16 +35,16 @@ const regions = [
 ]
 
 const timeOfDayOptions = [
-  { key: "normal", label: "Normal hours (8am–6pm)", multiplier: 1.0 },
-  { key: "evening", label: "Evening (6pm–10pm)", multiplier: 1.5 },
-  { key: "night", label: "Night (10pm–8am)", multiplier: 2.0 },
+  { key: "normal", label: "Normal hours (8am to 6pm)", multiplier: 1.0 },
+  { key: "evening", label: "Evening (6pm to 10pm)", multiplier: 1.5 },
+  { key: "night", label: "Night (10pm to 8am)", multiplier: 2.0 },
   { key: "weekend", label: "Weekend", multiplier: 1.5 },
   { key: "bank-holiday", label: "Bank Holiday", multiplier: 2.0 },
 ]
 
 const complexityOptions = [
   { key: "simple", label: "Simple fix (~1 hour)", hours: 1 },
-  { key: "standard", label: "Standard job (2–3 hours)", hours: 2.5 },
+  { key: "standard", label: "Standard job (2 to 3 hours)", hours: 2.5 },
   { key: "complex", label: "Complex (4+ hours)", hours: 4.5 },
 ]
 
@@ -118,7 +118,7 @@ export function EmergencyPricingCalculator() {
   const avgRate = Math.round(recommendedRate * 0.95)
   const topRate = Math.round(recommendedRate * 1.25)
 
-  const breakdownText = `Emergency ${tradeLabel} — ${region}\nTime: ${timeInfo.label}\nComplexity: ${complexityInfo.label}\n\nCallout fee: £${callout}\nLabour (${complexityInfo.hours}h @ £${hourlyRate}/hr): £${labourCost}\nMaterials estimate: £${materialsEstimate}\n\nRecommended rate: £${recommendedRate}\nMarket range: £${lowRate} – £${topRate}`
+  const breakdownText = `Emergency ${tradeLabel}: ${region}\nTime: ${timeInfo.label}\nComplexity: ${complexityInfo.label}\n\nCallout fee: £${callout}\nLabour (${complexityInfo.hours}h @ £${hourlyRate}/hr): £${labourCost}\nMaterials estimate: £${materialsEstimate}\n\nRecommended rate: £${recommendedRate}\nMarket range: £${lowRate} to £${topRate}`
 
   const handleCopy = () => {
     navigator.clipboard.writeText(breakdownText)
@@ -146,7 +146,7 @@ export function EmergencyPricingCalculator() {
               Emergency Callout Pricing Calculator
             </h1>
             <p className="v2-lead max-w-2xl mx-auto">
-              Quote emergency jobs with confidence. Most UK tradespeople undercharge for out-of-hours callouts — this calculator uses real regional rate data so you never leave money on the table.
+              Quote emergency jobs with confidence. Most UK tradespeople undercharge for out-of-hours callouts. This calculator uses real regional rate data so you never leave money on the table.
             </p>
           </motion.div>
 
@@ -352,9 +352,9 @@ export function EmergencyPricingCalculator() {
           <div className="hidden">
             <h2>FAQ</h2>
             <h3>How much should I charge for an emergency callout in the UK?</h3>
-            <p>Emergency callout rates vary by trade, region, and time of day. A plumber in London charging for a night callout should quote £150–£350 including callout fee, labour, and materials. Use our calculator for precise regional rates.</p>
+            <p>Emergency callout rates vary by trade, region, and time of day. A plumber in London charging for a night callout should quote £150 to £350 including callout fee, labour, and materials. Use our calculator for precise regional rates.</p>
             <h3>Do UK tradespeople charge more for weekend or bank holiday jobs?</h3>
-            <p>Yes. Most UK tradespeople apply a 1.5x multiplier for evenings and weekends, and a 2.0x multiplier for night work (10pm–8am) and bank holidays.</p>
+            <p>Yes. Most UK tradespeople apply a 1.5x multiplier for evenings and weekends, and a 2.0x multiplier for night work (10pm to 8am) and bank holidays.</p>
             <h3>What is a typical callout fee for a UK plumber or electrician?</h3>
             <p>Callout fees typically range from £45 for a locksmith to £80 for a builder. The fee covers travel, diagnostic time, and the first hour of labour.</p>
             <h3>Is the Emergency Pricing Calculator free?</h3>
@@ -388,7 +388,7 @@ export function EmergencyPricingCalculator() {
                     name: "How much should I charge for an emergency callout in the UK?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Emergency callout rates vary by trade, region, and time of day. A plumber in London charging for a night callout should quote £150–£350 including callout fee, labour, and materials. Use our calculator for precise regional rates.",
+                      text: "Emergency callout rates vary by trade, region, and time of day. A plumber in London charging for a night callout should quote £150 to £350 including callout fee, labour, and materials. Use our calculator for precise regional rates.",
                     },
                   },
                   {
@@ -396,7 +396,7 @@ export function EmergencyPricingCalculator() {
                     name: "Do UK tradespeople charge more for weekend or bank holiday jobs?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Yes. Most UK tradespeople apply a 1.5x multiplier for evenings and weekends, and a 2.0x multiplier for night work (10pm–8am) and bank holidays.",
+                      text: "Yes. Most UK tradespeople apply a 1.5x multiplier for evenings and weekends, and a 2.0x multiplier for night work (10pm to 8am) and bank holidays.",
                     },
                   },
                   {

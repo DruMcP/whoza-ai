@@ -95,7 +95,7 @@ export function AudioModal({ onClose }: AudioModalProps) {
           Hear Katie handle a boiler enquiry
         </h2>
         <p className="mt-1" className="text-sm text-slate-400 font-sans">
-          Real AI voice demo — 30 seconds
+          Real AI voice demo: 30 seconds
         </p>
 
         {/* Audio Player */}

@@ -41,7 +41,7 @@ const relatedTradesMap: Record<string, Array<{ slug: string; name: string; icon:
   ],
   "for-roofers": [
     { slug: "/for-builders", name: "Builders", icon: Home },
-    { slug: "/for-builders", name: "Builders", icon: Shield },
+    { slug: "/for-joiners", name: "Joiners", icon: Hammer },
     { slug: "/for-drainage", name: "Drainage Specialists", icon: Droplets },
     { slug: "/for-handymen", name: "Handymen", icon: Wrench },
   ],
@@ -64,8 +64,8 @@ const relatedTradesMap: Record<string, Array<{ slug: string; name: string; icon:
     { slug: "/for-handymen", name: "Handymen", icon: Wrench },
   ],
   "for-locksmiths": [
-    { slug: "/for-handymen", name: "Handymen", icon: Shield },
     { slug: "/for-handymen", name: "Handymen", icon: Wrench },
+    { slug: "/for-joiners", name: "Joiners", icon: Hammer },
     { slug: "/for-electricians", name: "Electricians", icon: Zap },
     { slug: "/for-builders", name: "Builders", icon: Home },
   ],
@@ -82,10 +82,10 @@ const relatedTradesMap: Record<string, Array<{ slug: string; name: string; icon:
     { slug: "/for-handymen", name: "Handymen", icon: Wrench },
   ],
   "for-landscapers": [
-    { slug: "/for-handymen", name: "Handymen", icon: TreePine },
     { slug: "/for-builders", name: "Builders", icon: Truck },
     { slug: "/for-handymen", name: "Handymen", icon: Wrench },
-    { slug: "/for-builders", name: "Builders", icon: Home },
+    { slug: "/for-drainage", name: "Drainage Specialists", icon: Droplets },
+    { slug: "/for-carpenters", name: "Carpenters", icon: Hammer },
   ],
   "for-pest-control": [
     { slug: "/for-cleaners", name: "Cleaners", icon: Shield },
@@ -112,7 +112,10 @@ interface RelatedTradesProps {
 }
 
 export function RelatedTrades({ currentTrade }: RelatedTradesProps) {
-  const related = relatedTradesMap[currentTrade]
+  // One card per page, even if the map above ever lists a trade twice.
+  const related = relatedTradesMap[currentTrade]?.filter(
+    (trade, i, all) => all.findIndex((t) => t.slug === trade.slug) === i,
+  )
   
   if (!related || related.length === 0) return null
 

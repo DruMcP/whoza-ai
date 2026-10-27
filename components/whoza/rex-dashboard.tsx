@@ -159,7 +159,7 @@ export default function RexDashboard() {
             <h1 className="text-3xl font-bold text-white">Rex AI Visibility Engine</h1>
           </div>
           <p className="text-white/60">
-            Entity Confidence Evaluation — How clearly AI sees and recommends your business
+            Entity Confidence Evaluation: How clearly AI sees and recommends your business
           </p>
         </div>
 
@@ -175,12 +175,12 @@ export default function RexDashboard() {
               <div className={`text-5xl font-bold ${getScoreColor(overallScore)}`}>{overallScore}/100</div>
               <div className="text-white/40 text-sm mt-1">
                 {overallScore >= 80
-                  ? "Excellent — AI will confidently recommend you"
+                  ? "Excellent: AI will confidently recommend you"
                   : overallScore >= 60
-                    ? "Good — Some improvements needed"
+                    ? "Good: Some improvements needed"
                     : overallScore >= 40
-                      ? "Fair — Significant gaps to address"
-                      : "Poor — AI struggles to identify your business"}
+                      ? "Fair: Significant gaps to address"
+                      : "Poor: AI struggles to identify your business"}
               </div>
             </div>
             <div className="text-right">
@@ -261,7 +261,7 @@ export default function RexDashboard() {
                 {pillar.id === evaluation.weakest_pillar.toUpperCase() && (
                   <div className="mt-3 flex items-center gap-2 text-red-400 text-sm">
                     <ArrowRight className="w-4 h-4" />
-                    Weakest pillar — focus here first
+                    Weakest pillar: focus here first
                   </div>
                 )}
               </motion.div>

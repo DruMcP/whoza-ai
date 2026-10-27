@@ -70,15 +70,15 @@ export function ReferralInteractive() {
 
   const handleShareWhatsApp = () => {
     if (!referralLink) return
-    const text = `Check out Whoza.ai — an AI receptionist that answers missed calls 24/7 and books jobs via WhatsApp. Use my link and your first paid month is free after the trial: ${referralLink}`
+    const text = `Check out Whoza.ai, an AI receptionist that answers missed calls 24/7 and books jobs via WhatsApp. Use my link and your first paid month is free after the trial: ${referralLink}`
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank")
     trackCTA("Share Referral WhatsApp", "refer-page")
   }
 
   const handleShareEmail = () => {
     if (!referralLink) return
-    const subject = "Try Whoza.ai — AI receptionist for trades"
-    const body = `Hi,\n\nI thought you'd be interested in Whoza.ai — an AI receptionist that answers missed calls 24/7 and sends job details straight to WhatsApp.\n\nUse my referral link and your first paid month is free after the 7-day trial:\n${referralLink}\n\nCheers!`
+    const subject = "Try Whoza.ai: AI receptionist for trades"
+    const body = `Hi,\n\nI thought you'd be interested in Whoza.ai, an AI receptionist that answers missed calls 24/7 and sends job details straight to WhatsApp.\n\nUse my referral link and your first paid month is free after the 7-day trial:\n${referralLink}\n\nCheers!`
     window.open(`mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, "_blank")
     trackCTA("Share Referral Email", "refer-page")
   }

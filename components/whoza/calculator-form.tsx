@@ -21,7 +21,7 @@ export function CalculatorForm() {
   const annualLoss = Math.round(monthlyLoss * 12)
   const whozaROI = Math.round(monthlyLoss - 59)
   const fields = [
-    { id: "calc-job-value", label: "Average job value (£)", value: avgJobValue, set: setAvgJobValue, max: 100000, hint: "Plumbing: £180-350 | Electrical: £150-400 | Roofing: £500+" },
+    { id: "calc-job-value", label: "Average job value (£)", value: avgJobValue, set: setAvgJobValue, max: 100000, hint: "Plumbing: £180 to £350 | Electrical: £150 to £400 | Roofing: £500+" },
     { id: "calc-weekly-calls", label: "Total calls per week", value: weeklyCalls, set: setWeeklyCalls, max: 2000, hint: "Include all business calls" },
     { id: "calc-conversion", label: "Conversion rate (%)", value: conversionRate, set: setConversionRate, max: 100, hint: "UK trade average: 35%" },
     { id: "calc-answer-rate", label: "Current answer rate (%)", value: answerRate, set: setAnswerRate, max: 100, hint: "UK average varies by trade (Moneypenny 2016: 33% of small businesses miss calls)" },

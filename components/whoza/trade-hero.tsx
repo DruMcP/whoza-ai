@@ -98,7 +98,7 @@ export function TradeHero({ tradeData }: TradeHeroProps) {
                 aria-label="Audio demo coming soon"
               >
                 <Play className="w-5 h-5 opacity-40" />
-                Audio demo — coming soon
+                Audio demo: coming soon
               </Button>
             </div>
 

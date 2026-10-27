@@ -71,7 +71,7 @@ export function buildHomepageEntityNodes() {
       {
         "@type": "Service",
         "@id": "https://whoza.ai/#katie",
-        "name": "Katie — AI Call Answering Agent",
+        "name": "Katie: AI Call Answering Agent",
         "alternateName": "Katie by whoza.ai",
         "serviceType": "AI voice call answering for UK tradespeople",
         "provider": { "@id": "https://whoza.ai/#organization" },
@@ -87,7 +87,7 @@ export function buildHomepageEntityNodes() {
       {
         "@type": "Service",
         "@id": "https://whoza.ai/#mark",
-        "name": "Mark — AI Call Answering Agent (male voice)",
+        "name": "Mark: AI Call Answering Agent (male voice)",
         "alternateName": "Mark by whoza.ai",
         "serviceType": "AI voice call answering for UK tradespeople",
         "provider": { "@id": "https://whoza.ai/#organization" },
@@ -103,7 +103,7 @@ export function buildHomepageEntityNodes() {
       {
         "@type": "Service",
         "@id": "https://whoza.ai/#claire",
-        "name": "Claire — AI Review Collection Agent",
+        "name": "Claire: AI Review Collection Agent",
         "alternateName": "Claire by whoza.ai",
         "serviceType": "AI review collection and reputation management",
         "provider": { "@id": "https://whoza.ai/#organization" },
@@ -114,7 +114,7 @@ export function buildHomepageEntityNodes() {
       {
         "@type": "Service",
         "@id": "https://whoza.ai/#rex",
-        "name": "Rex — AI Visibility & Competitor Tracking Agent",
+        "name": "Rex: AI Visibility & Competitor Tracking Agent",
         "alternateName": "Rex by whoza.ai",
         "serviceType": "AI visibility and competitor tracking",
         "provider": { "@id": "https://whoza.ai/#organization" },

@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Check, ArrowRight } from "lucide-react"
+import { Check, ArrowRight, Calculator } from "lucide-react"
 import { trackCTA, trackPricingView } from "@/lib/gtag"
 import { useLocale } from "@/lib/locale-context"
 import { WaitlistModal } from "./waitlist-modal"
@@ -34,7 +34,18 @@ const colorStyles = {
   },
 }
 
-export function PricingSummary() {
+// The free tools, linked from the homepage pricing section (in-body links, not
+// only the nav and footer).
+const FREE_TOOLS = [
+  { label: "Lost Jobs Calculator", href: "/tools/lost-jobs-calculator" },
+  { label: "Missed Call Cost Calculator", href: "/missed-calls-cost-calculator" },
+  { label: "Hourly Rate Checker", href: "/tools/rate-checker" },
+  { label: "Emergency Callout Pricing Calculator", href: "/tools/emergency-pricing" },
+  { label: "Free Quote Generator", href: "/tools/quote-generator" },
+  { label: "Voicemail Script Generator", href: "/tools/voicemail-scripts" },
+]
+
+export function PricingSummary({ showTools = false }: { showTools?: boolean }) {
   const { config } = useLocale()
   const cs = config.currencySymbol
   const [showWaitlist, setShowWaitlist] = useState(false)
@@ -175,6 +186,36 @@ export function PricingSummary() {
             )
           })}
         </div>
+
+        {showTools && (
+          <div className="mx-auto mt-14 max-w-6xl rounded-[24px] border border-[var(--v2-line)] bg-white p-6 sm:p-8">
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
+              <div className="max-w-md">
+                <p className="text-[18px] font-semibold text-[var(--v2-ink)]">Not sure it pays? Work it out first.</p>
+                <p className="mt-1.5 text-[15px] leading-relaxed text-[var(--v2-muted)]">
+                  Free tools for UK tradespeople, built from our{" "}
+                  <a href="/research/missed-call-index" className="font-medium text-[var(--v2-green)] underline underline-offset-2">
+                    Missed Call Index research
+                  </a>
+                  . No signup.
+                </p>
+              </div>
+              <ul className="flex flex-wrap gap-2 lg:max-w-[620px] lg:justify-end">
+                {FREE_TOOLS.map((tool) => (
+                  <li key={tool.href}>
+                    <a
+                      href={tool.href}
+                      className="inline-flex items-center gap-1.5 rounded-full border border-[var(--v2-line)] bg-[var(--v2-paper)] px-3.5 py-2 text-[14px] font-medium text-[var(--v2-ink)] no-underline transition-colors hover:border-[var(--v2-green)] hover:text-[var(--v2-green)]"
+                    >
+                      <Calculator className="h-3.5 w-3.5 text-[var(--v2-green)]" aria-hidden="true" />
+                      {tool.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
 
         <div className="text-center mt-12">
           <a

@@ -24,7 +24,7 @@ export function GrowthEngine() {
                 </div>
                 <div>
                   <div className="text-white font-semibold">This Week&apos;s AI Recommendation</div>
-                  <div className="text-white/50 text-sm">From Rex — Your Growth Advisor</div>
+                  <div className="text-white/50 text-sm">From Rex, Your Growth Advisor</div>
                 </div>
               </div>
 
@@ -136,10 +136,10 @@ export function GrowthEngine() {
             viewport={{ once: true }}
             className="order-1 lg:order-2"
           >
-            <span className="v2-eyebrow v2-eyebrow-light">Rex — Your Growth Advisor</span>
+            <span className="v2-eyebrow v2-eyebrow-light">Rex: Your Growth Advisor</span>
             <h2 className="v2-h2 text-white text-balance reveal">
-              Get More Work Every Week{" "}
-              <span className="v2-accent-light">— Without Ads</span>
+              Get More Work Every Week,{" "}
+              <span className="v2-accent-light">Without Ads</span>
             </h2>
             <p className="v2-lead mt-5 text-white/70 text-pretty">
               When customers ask ChatGPT or Google AI for a tradesperson, Rex helps make sure your business is the one recommended.

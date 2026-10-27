@@ -21,10 +21,10 @@ const tradeDefaults: Record<string, { jobValue: number; label: string }> = {
 }
 
 const scoreLabels = [
-  { min: 0, max: 30, label: "Low risk — keep it up", color: "#10B981", emoji: "🟢" },
-  { min: 30, max: 60, label: "Moderate — some calls slipping", color: "#F59E0B", emoji: "🟡" },
-  { min: 60, max: 85, label: "High — losing serious money", color: "#F97316", emoji: "🟠" },
-  { min: 85, max: 100, label: "Critical — every missed call hurts", color: "#B91C1C", emoji: "🔴" },,
+  { min: 0, max: 30, label: "Low risk: keep it up", color: "#10B981", emoji: "🟢" },
+  { min: 30, max: 60, label: "Moderate: some calls slipping", color: "#F59E0B", emoji: "🟡" },
+  { min: 60, max: 85, label: "High: losing serious money", color: "#F97316", emoji: "🟠" },
+  { min: 85, max: 100, label: "Critical: every missed call hurts", color: "#B91C1C", emoji: "🔴" },,
 ]
 
 export function LostJobsCalculator() {
@@ -71,7 +71,7 @@ export function LostJobsCalculator() {
               How Much Are Missed Calls Costing Your Trade Business?
             </h1>
             <p className="v2-lead max-w-2xl mx-auto">
-              Most UK tradespeople don't track missed calls. But the Moneypenny Small Business Call Report (2016) found that 33% of small businesses fail to answer incoming calls — and 69% of voicemail callers don't leave a message. They just call the next name on Google.
+              Most UK tradespeople don't track missed calls. But the Moneypenny Small Business Call Report (2016) found that 33% of small businesses fail to answer incoming calls, and 69% of voicemail callers don't leave a message. They just call the next name on Google.
             </p>
           </motion.div>
 
@@ -144,7 +144,7 @@ export function LostJobsCalculator() {
                   </span>
                 </div>
                 <p className="text-sm text-[var(--v2-muted)] mt-1">
-                  Typical {tradeInfo.label.toLowerCase()} call-out: £{Math.round(jobValue * 0.5)}–£{Math.round(jobValue * 1.2)}
+                  Typical {tradeInfo.label.toLowerCase()} call-out: £{Math.round(jobValue * 0.5)} to £{Math.round(jobValue * 1.2)}
                 </p>
               </div>
 
@@ -281,7 +281,7 @@ export function LostJobsCalculator() {
                   className="flex-1 py-3 rounded-lg bg-[var(--coral)] hover:bg-[var(--coral)]/90 text-[var(--v2-ink)] font-bold transition-colors flex items-center justify-center gap-2"
                 >
                   <AlertTriangle className="w-5 h-5" />
-                  STOP THE BLEEDING — TRY KATIE FREE
+                  STOP THE BLEEDING: TRY KATIE FREE
                 </a>
               </div>
             </motion.div>
@@ -293,7 +293,7 @@ export function LostJobsCalculator() {
             <h3>How much does a missed call cost a UK tradesperson?</h3>
             <p>The average missed call costs a UK tradesperson between £180 and £800 depending on their trade. Plumbers average £350 per job, electricians £280, roofers £450, and builders £800.</p>
             <h3>How many calls do tradespeople miss per week?</h3>
-            <p>UK tradespeople miss an average of 3-5 calls per week, rising to 8-12 during busy periods or when on emergency callouts.</p>
+            <p>UK tradespeople miss an average of 3 to 5 calls per week, rising to 8 to 12 during busy periods or when on emergency callouts.</p>
             <h3>Do missed callers leave a voicemail?</h3>
             <p>69% of missed callers to trade businesses don't leave a voicemail. They simply call the next tradesperson on Google.</p>
             <h3>Is the Lost Jobs Calculator free?</h3>
@@ -336,7 +336,7 @@ export function LostJobsCalculator() {
                     name: "How many calls do tradespeople miss per week?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "UK tradespeople miss an average of 3-5 calls per week, rising to 8-12 during busy periods or when on emergency callouts.",
+                      text: "UK tradespeople miss an average of 3 to 5 calls per week, rising to 8 to 12 during busy periods or when on emergency callouts.",
                     },
                   },
                   {

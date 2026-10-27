@@ -242,7 +242,7 @@ export function HowWhozaWorks() {
                   <MapPin size={13} className="text-slate-400" /> Leeds, LS6
                 </li>
                 <li className="flex items-center gap-2">
-                  <PoundSterling size={13} className="text-slate-400" /> £180 – £250
+                  <PoundSterling size={13} className="text-slate-400" /> £180 to £250
                 </li>
               </ul>
             </div>
@@ -297,7 +297,7 @@ export function HowWhozaWorks() {
                             <MapPin size={12} className="text-slate-500" /> Leeds, LS6
                           </li>
                           <li className="flex items-center gap-2">
-                            <PoundSterling size={12} className="text-slate-500" /> £180 – £250 · ASAP
+                            <PoundSterling size={12} className="text-slate-500" /> £180 to £250 · ASAP
                           </li>
                         </ul>
                         <p className="mt-1.5 text-right text-[10px] text-slate-600">10:24</p>

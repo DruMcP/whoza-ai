@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Play, Pause, Volume2, MessageCircle, ChevronRight } from "lucide-react"
+import { Play, Pause, Volume2, MessageCircle, ChevronRight, MapPin } from "lucide-react"
 
 function trackGA4(event: string, params?: Record<string, unknown>) {
   if (typeof window !== "undefined" && "gtag" in window) {
@@ -77,7 +77,19 @@ function PulseRings({ isPlaying }: { isPlaying: boolean }) {
   )
 }
 
-export function AudioDemo() {
+// City pages, linked from the homepage demo. Leeds and Bristol have no other
+// in-body link, so without this they are orphans (GSC, 30 Aug 2026).
+const CITIES = [
+  { name: "Glasgow", href: "/glasgow" },
+  { name: "Edinburgh", href: "/edinburgh" },
+  { name: "Leeds", href: "/leeds" },
+  { name: "Manchester", href: "/manchester" },
+  { name: "Birmingham", href: "/birmingham" },
+  { name: "London", href: "/london" },
+  { name: "Bristol", href: "/bristol" },
+]
+
+export function AudioDemo({ showCities = false }: { showCities?: boolean }) {
   const [isPlaying, setIsPlaying] = useState(false)
   const [progress, setProgress] = useState(0)
   const [currentTime, setCurrentTime] = useState(0)
@@ -212,7 +224,6 @@ export function AudioDemo() {
       ref={sectionRef}
       id="katie-demo-audio"
       className="section-padding-lg relative overflow-hidden bg-[var(--v2-navy)] text-white"
-      aria-label="Katie audio demo"
       aria-label="Katie demo audio player"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -231,7 +242,7 @@ export function AudioDemo() {
             </span>
           </h2>
           <p className="v2-lead text-white/70 max-w-2xl mx-auto">
-            Listen to Katie qualify a leaking tap enquiry and send it straight to WhatsApp — in 64 seconds.
+            Listen to Katie qualify a leaking tap enquiry and send it straight to WhatsApp, in 64 seconds.
           </p>
         </motion.div>
 
@@ -405,7 +416,7 @@ export function AudioDemo() {
           className="mt-10 text-center"
         >
           <p className="text-slate-400 text-sm mb-4">
-            That was a 64-second call. Katie captured the issue, location, and availability — then sent it to WhatsApp.
+            That was a 64-second call. Katie captured the issue, location, and availability, then sent it to WhatsApp.
           </p>
           <a
             href="#final-cta"
@@ -416,6 +427,27 @@ export function AudioDemo() {
             <ChevronRight className="w-4 h-4" />
           </a>
         </motion.div>
+
+        {showCities && (
+          <div className="mt-14 border-t border-white/10 pt-10 text-center">
+            <p className="text-[15px] text-white/70">
+              12 UK and Irish accents, so callers hear a local voice. AI call answering for trades in:
+            </p>
+            <ul className="mt-5 flex flex-wrap justify-center gap-2">
+              {CITIES.map((city) => (
+                <li key={city.href}>
+                  <a
+                    href={city.href}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3.5 py-2 text-[14px] font-medium text-white/90 no-underline transition-colors hover:border-white/40 hover:bg-white/10 hover:text-white"
+                  >
+                    <MapPin className="h-3.5 w-3.5 text-[#6ee7b7]" aria-hidden="true" />
+                    {city.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </section>
   )

@@ -82,7 +82,7 @@ export function PhoneSetup() {
               <ArrowRight className="w-4 h-4" />
             </button>
             <p className="text-xs text-[var(--slate-400)] mt-3 text-center">
-              {trilletServer.isMockMode() && "(Mock mode — showing example numbers. Real numbers appear once trial starts.)"}
+              {trilletServer.isMockMode() && "(Mock mode: showing example numbers. Real numbers appear once trial starts.)"}
             </p>
           </motion.div>
         )}
@@ -201,7 +201,7 @@ export function PhoneSetup() {
             <Loader2 className="w-8 h-8 text-[var(--katie-blue)] animate-spin mx-auto mb-4" />
             <p className="text-[var(--navy-900)] font-medium">Provisioning your number…</p>
             <p className="text-sm text-[var(--slate-500)] mt-2">
-              This usually takes 30–60 seconds
+              This usually takes 30 to 60 seconds
             </p>
           </motion.div>
         )}

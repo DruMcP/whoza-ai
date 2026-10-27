@@ -126,7 +126,7 @@ export function StatsBand() {
   const stats = [
     { value: "3 sec", label: "Answer Time", colorClass: "text-white" },
     { value: "24/7", label: "Always Working", colorClass: "text-white" },
-    { value: "£2–£4", label: "Per Booked Job", colorClass: "text-white" },
+    { value: "£2 to £4", label: "Per Booked Job", colorClass: "text-white" },
     { value: "30 min", label: "Install Time", colorClass: "text-white" },
   ]
 

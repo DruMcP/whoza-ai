@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     question: "Is there a free trial?",
-    answer: "Yes — the 7-day free trial is available on the Starter plan only. Your trial includes 100 minutes of call handling and up to 10 booked enquiries at no charge. No credit card required to start. If Whoza works for your business, you can upgrade to any plan. If not, you can cancel anytime during the trial with no charge.",
+    answer: "Yes. The 7-day free trial is available on the Starter plan only. Your trial includes 100 minutes of call handling and up to 10 booked enquiries at no charge. No credit card required to start. If Whoza works for your business, you can upgrade to any plan. If not, you can cancel anytime during the trial with no charge.",
     category: "General",
   },
   {
@@ -38,7 +38,7 @@ const faqs = [
   },
   {
     question: "Does it work with my existing phone number?",
-    answer: "Yes. You simply forward your existing business number to your whoza.ai number. Your customers call the same number they always have — they just get answered every time instead of hitting voicemail. Setup takes 30 minutes with your phone provider.",
+    answer: "Yes. You simply forward your existing business number to your whoza.ai number. Your customers call the same number they always have. They just get answered every time instead of hitting voicemail. Setup takes 30 minutes with your phone provider.",
     category: "Setup",
   },
   {
@@ -48,12 +48,12 @@ const faqs = [
   },
   {
     question: "Can I choose a different voice for my AI?",
-    answer: "Absolutely. We offer 12 different voices with a range of UK accents and tones — from Scottish to Welsh to London. You can preview and change your voice anytime in your dashboard.",
+    answer: "Absolutely. We offer 12 different voices with a range of UK accents and tones, from Scottish to Welsh to London. You can preview and change your voice anytime in your dashboard.",
     category: "General",
   },
   {
     question: "What happens if someone leaves a voicemail?",
-    answer: "Our AI detects voicemails, transcribes them to text, and sends the message to your WhatsApp within 60 seconds. If the voicemail mentions an emergency, it's flagged as urgent so you see it immediately. No audio is stored — only text transcripts.",
+    answer: "Our AI detects voicemails, transcribes them to text, and sends the message to your WhatsApp within 60 seconds. If the voicemail mentions an emergency, it's flagged as urgent so you see it immediately. No audio is stored, only text transcripts.",
     category: "General",
   },
   {
@@ -68,7 +68,7 @@ const faqs = [
   },
   {
     question: "Can whoza.ai book appointments into my calendar?",
-    answer: "Yes — on every plan. The AI checks your calendar (Google, Outlook, or Apple) before offering slots, then adds confirmed bookings directly. No double-bookings. Learn more at /booking.",
+    answer: "Yes, on every plan. The AI checks your calendar (Google, Outlook, or Apple) before offering slots, then adds confirmed bookings directly. No double-bookings. Learn more at /booking.",
     category: "General",
   },
   {
@@ -93,17 +93,17 @@ const faqs = [
   },
   {
     question: "What happens if Katie can't handle a call?",
-    answer: "Katie is trained to recognize when she needs to transfer to a human. For complex queries, emergencies, or if the customer specifically requests you, she'll put them through to you on that call — a live transfer, not a promise to call back later. If you're unavailable, she takes a detailed message and notifies you immediately via WhatsApp. Learn more: /will-my-customers-mind.",
+    answer: "Katie is trained to recognize when she needs to transfer to a human. For complex queries, emergencies, or if the customer specifically requests you, she'll put them through to you on that call: a live transfer, not a promise to call back later. If you're unavailable, she takes a detailed message and notifies you immediately via WhatsApp. Learn more: /will-my-customers-mind.",
     category: "General",
   },
   {
     question: "Will my customers mind an AI answering my phone?",
-    answer: "Almost nobody hangs up — because the alternative is your voicemail. Katie answers in a natural voice, captures the job details, and books it in. If a caller asks to speak to you, she puts them through. If you're unavailable, she takes the details and you get a WhatsApp summary instantly. Read the full answer: /will-my-customers-mind.",
+    answer: "Almost nobody hangs up, because the alternative is your voicemail. Katie answers in a natural voice, captures the job details, and books it in. If a caller asks to speak to you, she puts them through. If you're unavailable, she takes the details and you get a WhatsApp summary instantly. Read the full answer: /will-my-customers-mind.",
     category: "General",
   },
   {
     question: "Is it a phone tree?",
-    answer: "No. There is no menu, no 'press 1 for sales,' no hold music. The phone rings, Katie says hello, asks what's wrong, and has a real conversation — the way a good receptionist would. If the caller wants to talk to you, she puts them through. Read more: /is-it-a-phone-tree.",
+    answer: "No. There is no menu, no 'press 1 for sales,' no hold music. The phone rings, Katie says hello, asks what's wrong, and has a real conversation, the way a good receptionist would. If the caller wants to talk to you, she puts them through. Read more: /is-it-a-phone-tree.",
     category: "General",
   },
   {
@@ -118,12 +118,12 @@ const faqs = [
   },
   {
     question: "What if I want to cancel?",
-    answer: "Cancel anytime — no contracts, no cancellation fees, no hassle. We're confident you'll stay because the system pays for itself many times over, but if it's not right for your business, you can cancel with one click from your dashboard.",
+    answer: "Cancel anytime: no contracts, no cancellation fees, no hassle. We're confident you'll stay because the system pays for itself many times over, but if it's not right for your business, you can cancel with one click from your dashboard.",
     category: "Pricing",
   },
   {
     question: "What does the free trial include?",
-    answer: "The 7-day free trial is on the Starter plan only. It includes: 100 minutes of AI call handling, up to 10 booked enquiries, full access to the WhatsApp delivery system, and the complete dashboard. This gives you enough time to see real results from actual customer calls. Fair usage applies — the trial is designed for genuine business evaluation, not extended free service.",
+    answer: "The 7-day free trial is on the Starter plan only. It includes: 100 minutes of AI call handling, up to 10 booked enquiries, full access to the WhatsApp delivery system, and the complete dashboard. This gives you enough time to see real results from actual customer calls. Fair usage applies: the trial is designed for genuine business evaluation, not extended free service.",
     category: "General",
   },
 ]

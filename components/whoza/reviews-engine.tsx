@@ -10,8 +10,8 @@ interface ReviewsEngineProps {
 export function ReviewsEngine({ trade }: ReviewsEngineProps) {
 
   const reviewContext = trade === "electrician" 
-    ? "Your electrical work is complete — we'd love your feedback!"
-    : "Your boiler repair is complete — we'd love your feedback!"
+    ? "Your electrical work is complete. We'd love your feedback!"
+    : "Your boiler repair is complete. We'd love your feedback!"
 
   return (
     <section className="py-20 lg:py-32 bg-[var(--rex-green)]/5" aria-label="Review engine">
@@ -23,9 +23,9 @@ export function ReviewsEngine({ trade }: ReviewsEngineProps) {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <span className="v2-eyebrow">Claire — Every Job Becomes Your Next Review</span>
+            <span className="v2-eyebrow">Claire: Every Job Becomes Your Next Review</span>
             <h2 className="v2-h2 text-balance reveal">
-              Every Completed Job Becomes Your Next Review — And Your Next Customer
+              Every Completed Job Becomes Your Next Review, And Your Next Customer
             </h2>
             <p className="v2-lead mt-5 text-pretty">
               Claire automatically turns completed work into 5-star Google reviews, helping more customers choose you.
@@ -35,7 +35,7 @@ export function ReviewsEngine({ trade }: ReviewsEngineProps) {
             <div className="mt-10 space-y-4 reveal-stagger">
               {[
                 { icon: MessageSquare, text: "Automatic WhatsApp follow-up after every completed job", color: "text-[var(--rex-green)]" },
-                { icon: Star, text: "Smart timing — reaches out when customer satisfaction is highest", color: "text-[var(--claire-amber)]" },
+                { icon: Star, text: "Smart timing: reaches out when customer satisfaction is highest", color: "text-[var(--claire-amber)]" },
                 { icon: ThumbsUp, text: "Handle issues privately before they become public feedback", color: "text-[var(--v2-green)]" },
                 { icon: TrendingUp, text: "Track how reviews translate into more calls", color: "text-[var(--mark-grey)]" },
               ].map((feature, index) => (

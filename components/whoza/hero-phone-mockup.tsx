@@ -106,7 +106,7 @@ export function HeroPhoneMockup() {
                 <div className="mb-0.5"><strong>Sarah Williams</strong></div>
                 <div>&#128295; Boiler Repair</div>
                 <div>&#128205; Bristol, BS16</div>
-                <div>&#128176; &#163;250 &#8211; &#163;450</div>
+                <div>&#128176; &#163;250 to &#163;450</div>
                 <div className="text-red-400">&#9889; High Priority</div>
               </div>
               {/* Time + read receipts */}

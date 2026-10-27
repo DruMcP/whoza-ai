@@ -21,7 +21,7 @@ export function TradeCaseStudy({
             Real tradespeople. Real numbers.
           </p>
           <h2 className="v2-h2 mb-4">
-            {trade} Who Stopped Missing Calls — and What It Made Them
+            {trade} Who Stopped Missing Calls, and What It Made Them
           </h2>
           <p className="v2-lead max-w-2xl mx-auto">
             These stories were originally told as full blog posts. They&apos;re

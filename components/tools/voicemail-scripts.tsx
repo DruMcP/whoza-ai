@@ -24,17 +24,17 @@ const styleOptions = [
   {
     key: "formal",
     label: "Formal & Professional",
-    description: "Polished, corporate tone — ideal for B2B or premium positioning",
+    description: "Polished, corporate tone, ideal for B2B or premium positioning",
   },
   {
     key: "friendly",
     label: "Friendly & Local",
-    description: "Warm, approachable — perfect for residential trade work",
+    description: "Warm, approachable, perfect for residential trade work",
   },
   {
     key: "urgent",
     label: "Urgent & Direct",
-    description: "Short, action-focused — best for emergency services",
+    description: "Short, action-focused, best for emergency services",
   },
 ]
 
@@ -93,7 +93,7 @@ export function VoicemailScriptGenerator() {
     return [
       {
         title: "Warm Welcome",
-        text: `Hi there! You have reached ${b}. It is ${n} here — sorry I missed your call! I am probably up a ladder or under a sink right now. Leave your name and number after the beep and I will get back to you as soon as I am free. If it is urgent, give me a text on ${p} and I will call you straight back. Thanks!`,
+        text: `Hi there! You have reached ${b}. It is ${n} here. Sorry I missed your call! I am probably up a ladder or under a sink right now. Leave your name and number after the beep and I will get back to you as soon as I am free. If it is urgent, give me a text on ${p} and I will call you straight back. Thanks!`,
       },
       {
         title: "Local & Trusted",
@@ -101,7 +101,7 @@ export function VoicemailScriptGenerator() {
       },
       {
         title: "Helpful & Clear",
-        text: `Thanks for calling ${b}! This is ${n}. I am unable to take your call right now — either I am with a customer or driving between jobs. Please leave a message with your name, number, and what you need help with. I return every single call. Text ${p} if you need a faster reply. Looking forward to speaking with you!`,
+        text: `Thanks for calling ${b}! This is ${n}. I am unable to take your call right now. Either I am with a customer or driving between jobs. Please leave a message with your name, number, and what you need help with. I return every single call. Text ${p} if you need a faster reply. Looking forward to speaking with you!`,
       },
     ]
   }
@@ -134,7 +134,7 @@ export function VoicemailScriptGenerator() {
               Voicemail Script Generator for UK Tradespeople
             </h1>
             <p className="v2-lead max-w-2xl mx-auto">
-              69% of callers to trade businesses don't leave a voicemail — because most greetings are generic, vague, or unprofessional. Generate three tailored scripts in seconds and win back lost enquiries.
+              69% of callers to trade businesses don't leave a voicemail, because most greetings are generic, vague, or unprofessional. Generate three tailored scripts in seconds and win back lost enquiries.
             </p>
           </motion.div>
 
@@ -294,7 +294,7 @@ export function VoicemailScriptGenerator() {
                   </div>
                   <p className="text-sm text-[var(--v2-muted)] mt-3 flex items-center gap-2">
                     <Volume2 className="w-4 h-4" />
-                    Read it aloud 3 times before recording — aim for under 25 seconds
+                    Read it aloud 3 times before recording. Aim for under 25 seconds
                   </p>
                 </motion.div>
               ))}
@@ -307,12 +307,12 @@ export function VoicemailScriptGenerator() {
                 </h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   {[
-                    "Speak clearly and slowly — most people mumble on voicemail",
-                    "Keep it under 25 seconds — callers hang up after 30s",
+                    "Speak clearly and slowly: most people mumble on voicemail",
+                    "Keep it under 25 seconds: callers hang up after 30s",
                     "Record in a quiet space with your phone on airplane mode",
-                    "Smile while you record — it genuinely changes your tone",
-                    "Include your mobile number — 67% of callers prefer to text back",
-                    "Update it seasonally — mention emergency cover in winter",
+                    "Smile while you record: it genuinely changes your tone",
+                    "Include your mobile number: 67% of callers prefer to text back",
+                    "Update it seasonally: mention emergency cover in winter",
                   ].map((tip, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[var(--v2-green)] shrink-0 mt-0.5" />
@@ -332,7 +332,7 @@ export function VoicemailScriptGenerator() {
                   className="inline-flex items-center gap-2 py-3 px-6 rounded-lg bg-[var(--coral)] hover:bg-[var(--coral)]/90 text-[var(--v2-ink)] font-bold transition-colors min-h-[48px]"
                 >
                   <Phone className="w-5 h-5" />
-                  LET KATIE ANSWER EVERY CALL LIVE — FREE TRIAL
+                  LET KATIE ANSWER EVERY CALL LIVE, FREE TRIAL
                 </a>
               </div>
             </motion.div>
@@ -344,7 +344,7 @@ export function VoicemailScriptGenerator() {
             <h3>Why do most callers not leave a voicemail for tradespeople?</h3>
             <p>69% of callers to trade businesses don't leave a voicemail because the greeting is too long, too generic, or fails to promise a callback. A clear, warm, and specific greeting increases callback rates by up to 40%.</p>
             <h3>How long should a trade business voicemail be?</h3>
-            <p>Aim for 20–25 seconds. Research shows most callers abandon voicemail after 30 seconds. Include your name, business, a brief apology, and a clear callback promise.</p>
+            <p>Aim for 20 to 25 seconds. Research shows most callers abandon voicemail after 30 seconds. Include your name, business, a brief apology, and a clear callback promise.</p>
             <h3>Should I include my mobile number on my voicemail?</h3>
             <p>Yes. 67% of UK consumers prefer to text back rather than leave a voicemail. Including your mobile number gives them an alternative way to reach you.</p>
             <h3>Is the Voicemail Script Generator free?</h3>
@@ -386,7 +386,7 @@ export function VoicemailScriptGenerator() {
                     name: "How long should a trade business voicemail be?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Aim for 20–25 seconds. Research shows most callers abandon voicemail after 30 seconds. Include your name, business, a brief apology, and a clear callback promise.",
+                      text: "Aim for 20 to 25 seconds. Research shows most callers abandon voicemail after 30 seconds. Include your name, business, a brief apology, and a clear callback promise.",
                     },
                   },
                   {

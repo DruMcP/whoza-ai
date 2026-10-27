@@ -6,14 +6,14 @@ import { Check, X, Phone, MapPin, Clock, MessageCircle, CheckCircle2 } from "luc
 
 const jobExamples: Record<string, Array<{label: string; heading: string; jobType: string; name: string; area: string; urgency: string; time: string; value: string}>> = {
   default: [
-    { label: "WhatsApp Enquiry Received", heading: "New Customer Enquiry", jobType: "Boiler Repair — No Hot Water", name: "Sarah Mitchell", area: "Bristol, BS3", urgency: "Today", time: "ASAP", value: "£180–£240" },
-    { label: "WhatsApp Enquiry Received", heading: "New Customer Enquiry", jobType: "Blocked Drain", name: "David Wilson", area: "Birmingham", urgency: "Today", time: "5pm", value: "£85–£120" },
-    { label: "WhatsApp Enquiry Received", heading: "New Customer Enquiry", jobType: "Tap Install", name: "Emma Clarke", area: "Leeds", urgency: "This Week", time: "Friday 10am", value: "£95–£140" },
+    { label: "WhatsApp Enquiry Received", heading: "New Customer Enquiry", jobType: "Boiler Repair: No Hot Water", name: "Sarah Mitchell", area: "Bristol, BS3", urgency: "Today", time: "ASAP", value: "£180 to £240" },
+    { label: "WhatsApp Enquiry Received", heading: "New Customer Enquiry", jobType: "Blocked Drain", name: "David Wilson", area: "Birmingham", urgency: "Today", time: "5pm", value: "£85 to £120" },
+    { label: "WhatsApp Enquiry Received", heading: "New Customer Enquiry", jobType: "Tap Install", name: "Emma Clarke", area: "Leeds", urgency: "This Week", time: "Friday 10am", value: "£95 to £140" },
   ],
   electrician: [
-    { label: "WhatsApp Enquiry Received", heading: "New Customer Enquiry", jobType: "Emergency Fault — No Power", name: "Sarah Mitchell", area: "Bristol, BS3", urgency: "Today", time: "ASAP", value: "£180–£260" },
-    { label: "WhatsApp Enquiry Received", heading: "New Customer Enquiry", jobType: "EICR Certificate — Landlord", name: "David Wilson", area: "Birmingham", urgency: "This Week", time: "Wednesday 2pm", value: "£150–£220" },
-    { label: "WhatsApp Enquiry Received", heading: "New Customer Enquiry", jobType: "EV Charger Install", name: "Emma Clarke", area: "Leeds", urgency: "This Week", time: "Friday 10am", value: "£400–£650" },
+    { label: "WhatsApp Enquiry Received", heading: "New Customer Enquiry", jobType: "Emergency Fault: No Power", name: "Sarah Mitchell", area: "Bristol, BS3", urgency: "Today", time: "ASAP", value: "£180 to £260" },
+    { label: "WhatsApp Enquiry Received", heading: "New Customer Enquiry", jobType: "EICR Certificate: Landlord", name: "David Wilson", area: "Birmingham", urgency: "This Week", time: "Wednesday 2pm", value: "£150 to £220" },
+    { label: "WhatsApp Enquiry Received", heading: "New Customer Enquiry", jobType: "EV Charger Install", name: "Emma Clarke", area: "Leeds", urgency: "This Week", time: "Friday 10am", value: "£400 to £650" },
   ],
 }
 

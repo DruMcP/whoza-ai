@@ -33,7 +33,7 @@ export function ControlSection() {
             </h2>
             <p className="v2-lead mt-5 text-pretty">
               Every job comes to you first. You decide which ones to take.
-              <span className="block mt-2 font-semibold text-[var(--navy-900)]">Choose how your calls are answered — tone, questions and job types.</span>
+              <span className="block mt-2 font-semibold text-[var(--navy-900)]">Choose how your calls are answered: tone, questions and job types.</span>
             </p>
 
             <div className="mt-10 space-y-4 reveal-stagger">
@@ -70,7 +70,7 @@ export function ControlSection() {
               </div>
 
               <div className="space-y-4">
-                <p className="text-white/90 text-sm mb-4">WhatsApp, SMS or email — your choice.</p>
+                <p className="text-white/90 text-sm mb-4">WhatsApp, SMS or email, your choice.</p>
                 {channels.map((channel, index) => (
                   <motion.div
                     key={channel.name}

@@ -159,7 +159,7 @@ export function HeroDarkBackup() {
             >
               Your phone rings. Katie answers 24/7.
               <br />
-              While you work, we book — job done.
+              While you work, we book. Job done.
             </motion.p>
 
             {/* Sub-paragraph */}

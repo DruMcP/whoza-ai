@@ -1,5 +1,6 @@
 "use client"
 
+import { Fragment } from "react"
 import { motion } from "framer-motion"
 import { Check, X, ArrowRight, Minus } from "lucide-react"
 
@@ -22,14 +23,14 @@ const groups: Group[] = [
     phase: "VALUE",
     rows: [
       {
-        outcome: "Pay only for jobs you accept — unaccepted enquiries are never billed",
+        outcome: "Pay only for jobs you accept: unaccepted enquiries are never billed",
         whoza: "yes",
         typical: "no",
         // The definition lives on /pricing; a bare "#..." was dead on every other page.
         outcomeLink: "/pricing#booked-job-definition",
       },
       {
-        outcome: "No contract — cancel anytime, 30-day money-back guarantee",
+        outcome: "No contract, cancel anytime, 30-day money-back guarantee",
         whoza: "yes",
         typical: "varies",
       },
@@ -40,11 +41,11 @@ const groups: Group[] = [
     rows: [
       { outcome: "Every call answered 24/7", whoza: "yes", typical: "no" },
       { outcome: "Caller qualified as a real job (not spam)", whoza: "yes", typical: "no" },
-      { outcome: "Urgency triage — every call flagged RED/AMBER/GREEN", whoza: "yes", typical: "no" },
+      { outcome: "Urgency triage: every call flagged RED/AMBER/GREEN", whoza: "yes", typical: "no" },
       { outcome: "Spam & sales calls filtered automatically", whoza: "yes", typical: "no" },
       { outcome: "Voicemail detection + auto-forward", whoza: "yes", typical: "no" },
       { outcome: "Live transfer to you mid-call when you're available", whoza: "yes", typical: "no" },
-      { outcome: "Keep your existing business number — customers notice nothing", whoza: "yes", typical: "sometimes" },
+      { outcome: "Keep your existing business number: customers notice nothing", whoza: "yes", typical: "sometimes" },
     ],
   },
   {
@@ -53,7 +54,7 @@ const groups: Group[] = [
       { outcome: "Job sent to your phone instantly via WhatsApp", whoza: "yes", typical: "no" },
       { outcome: "Accept, call back or decline with one tap", whoza: "yes", typical: "no" },
       { outcome: "AI call notes + searchable transcripts", whoza: "yes", typical: "no" },
-      { outcome: "Choice of 12 UK voices — name your own assistant", whoza: "yes", typical: "no" },
+      { outcome: "Choice of 12 UK voices, name your own assistant", whoza: "yes", typical: "no" },
       { outcome: "Booking automation + calendar sync (Google, Outlook, Apple)", whoza: "yes", typical: "no" },
       { outcome: "Customer confirmation & follow-up sent automatically", whoza: "yes", typical: "no" },
     ],
@@ -62,7 +63,7 @@ const groups: Group[] = [
     phase: "Convert",
     rows: [
       { outcome: "Completed job → review requested automatically (Claire)", whoza: "yes", typical: "no" },
-      { outcome: "CRM integration — Jobber, ServiceTitan (Pro plan)", whoza: "yes", typical: "no" },
+      { outcome: "CRM integration: Jobber, ServiceTitan (Pro plan)", whoza: "yes", typical: "no" },
       { outcome: "Monthly competitor analysis (Rex)", whoza: "yes", typical: "no" },
       { outcome: "Weekly AI visibility actions", whoza: "yes", typical: "no" },
       { outcome: "One clear action to get more calls, every week", whoza: "yes", typical: "no" },
@@ -129,7 +130,7 @@ export function ComparisonTable() {
         >
           <span className="v2-eyebrow">Why Whoza Wins</span>
           <h2 className="v2-h2 text-balance reveal">
-            From Call to More Work — Every Week
+            From Call to More Work, Every Week
           </h2>
         </motion.div>
 
@@ -174,7 +175,7 @@ export function ComparisonTable() {
                 </td>
               </tr>
               {groups.map((group, groupIndex) => (
-                <>
+                <Fragment key={group.phase}>
                   {/* Phase header row */}
                   <tr key={`${group.phase}-header`} className="bg-[var(--navy-900)]">
                     <td
@@ -211,7 +212,7 @@ export function ComparisonTable() {
                       </td>
                     </tr>
                   ))}
-                </>
+                </Fragment>
               ))}
             </tbody>
           </table>
