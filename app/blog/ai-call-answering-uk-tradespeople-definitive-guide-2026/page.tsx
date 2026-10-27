@@ -2,6 +2,11 @@ import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
+import { CtaBand } from "@/components/whoza/cta-band"
+import { findBlogEntry } from "@/lib/blog-index"
+import { ArticleCover, ArticleHeader, RelatedPosts } from "@/components/whoza/blog/article-parts"
+import { RevealObserver } from "@/components/whoza/blog/reveal-observer"
+import { SharePost } from "@/components/whoza/blog/share-post"
 import { ArrowRight, Star, PoundSterling, Clock, Shield, Check, X, ChevronDown, Award, TrendingUp, Users, Zap, MessageSquare, BarChart3, HeadphonesIcon, Phone, Wrench, Calculator, Play, HelpCircle, Briefcase, Calendar, User, Cpu, HeartHandshake } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -83,7 +88,7 @@ const faqSchema = {
       "name": "How much does AI call answering cost for UK trades?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "AI call answering for UK trades costs between £59–£399 per month depending on call volume and features. Entry-level plans start at £59/month for sole traders. Mid-tier plans for growing teams cost £125–£199/month. Enterprise plans for multi-van operations range from £249–£399/month. Most sole traders find suitable coverage between £59–£125/month.",
+        "text": "AI call answering for UK trades costs between £59 and £399 per month depending on call volume and features. Entry-level plans start at £59/month for sole traders. Mid-tier plans for growing teams cost £125 to £199/month. Enterprise plans for multi-van operations range from £249 to £399/month. Most sole traders find suitable coverage between £59 and £125/month.",
       },
     },
     {
@@ -99,7 +104,7 @@ const faqSchema = {
       "name": "Which UK trades benefit most from AI call answering?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Emergency trades benefit most: plumbers, locksmiths, heating engineers, and electricians lose the most revenue from missed calls because customers will immediately call the next tradesperson. Roofers, builders, and landscapers also see strong returns as their jobs have high average values (£500–£5,000+). Pest control and cleaning services benefit from capturing time-sensitive enquiries.",
+        "text": "Emergency trades benefit most: plumbers, locksmiths, heating engineers, and electricians lose the most revenue from missed calls because customers will immediately call the next tradesperson. Roofers, builders, and landscapers also see strong returns as their jobs have high average values (£500 to £5,000+). Pest control and cleaning services benefit from capturing time-sensitive enquiries.",
       },
     },
     {
@@ -107,7 +112,7 @@ const faqSchema = {
       "name": "Is AI call answering better than voicemail?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "AI call answering is dramatically better than voicemail. According to the Moneypenny Small Business Call Report (2016), 69% of voicemail callers don't leave a message. AI call answering captures 100% of callers, qualifies their needs, and delivers structured lead information instantly. A tradesperson using AI call answering instead of voicemail typically recovers £15,000–£25,000 in lost revenue annually.",
+        "text": "AI call answering is dramatically better than voicemail. According to the Moneypenny Small Business Call Report (2016), 69% of voicemail callers don't leave a message. AI call answering captures 100% of callers, qualifies their needs, and delivers structured lead information instantly. A tradesperson using AI call answering instead of voicemail typically recovers £15,000 to £25,000 in lost revenue annually.",
       },
     },
     {
@@ -123,7 +128,7 @@ const faqSchema = {
       "name": "How quickly can I set up AI call answering?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "With whoza.ai, setup takes approximately 30 minutes: connect your number via call forwarding, configure your services and operating hours, customize the questions the AI asks callers, test with a sample call, and go live. Other services range from under 1 hour (IONOS) to 2–5 days (Moneypenny human receptionists). Most tradespeople can be live the same day.",
+        "text": "With whoza.ai, setup takes approximately 30 minutes: connect your number via call forwarding, configure your services and operating hours, customize the questions the AI asks callers, test with a sample call, and go live. Other services range from under 1 hour (IONOS) to 2 to 5 days (Moneypenny human receptionists). Most tradespeople can be live the same day.",
       },
     },
     {
@@ -131,7 +136,7 @@ const faqSchema = {
       "name": "What is the ROI of AI call answering for trades?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The ROI of AI call answering is exceptional. A typical plumber missing 5 calls per day loses approximately £625 daily in potential revenue (at £125 average job value and 50% conversion rate). Even if AI recovers only 20% of missed calls, that generates £32,500 additional annual revenue. Against a service cost of £708–£1,500/year, the ROI ranges from 2,100% to 4,500%. For emergency trades, capturing one extra callout per week pays for the entire monthly service.",
+        "text": "The ROI of AI call answering is exceptional. A typical plumber missing 5 calls per day loses approximately £625 daily in potential revenue (at £125 average job value and 50% conversion rate). Even if AI recovers only 20% of missed calls, that generates £32,500 additional annual revenue. Against a service cost of £708 to £1,500/year, the ROI ranges from 2,100% to 4,500%. For emergency trades, capturing one extra callout per week pays for the entire monthly service.",
       },
     },
     {
@@ -139,7 +144,7 @@ const faqSchema = {
       "name": "Does AI call answering work with my existing phone number?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, AI call answering works with your existing business phone number. You simply configure call forwarding on your mobile or landline to divert unanswered or busy calls to the AI service. Your customers never know the difference — they dial your usual number and the AI answers professionally in your business name. You can also get a dedicated number if preferred.",
+        "text": "Yes, AI call answering works with your existing business phone number. You simply configure call forwarding on your mobile or landline to divert unanswered or busy calls to the AI service. Your customers never know the difference. They dial your usual number and the AI answers professionally in your business name. You can also get a dedicated number if preferred.",
       },
     },
     {
@@ -155,7 +160,7 @@ const faqSchema = {
       "name": "Can I try AI call answering before committing?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, whoza.ai offers a 7-day free trial with no credit card required, plus a 30-day money-back guarantee. This means you can test the full service for 37 days total with zero financial risk. Most reputable AI call answering services offer trial periods ranging from 7–14 days. Avoid any service that does not offer a trial period.",
+        "text": "Yes, whoza.ai offers a 7-day free trial with no credit card required, plus a 30-day money-back guarantee. This means you can test the full service for 37 days total with zero financial risk. Most reputable AI call answering services offer trial periods ranging from 7 to 14 days. Avoid any service that does not offer a trial period.",
       },
     },
     {
@@ -163,13 +168,15 @@ const faqSchema = {
       "name": "How does AI call answering compare to a human receptionist?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "AI call answering costs significantly less than employing a human receptionist. A receptionist earns £18,000 starter, £22,000 experienced (National Careers Service, gov.uk). With employer National Insurance and pension contributions the annual cost is roughly £20,000–£25,000. Whoza plans start at £59 a month — £708 a year. This comparison is on call-handling cost alone; a receptionist works 38–40 hours a week and handles tasks beyond answering calls. AI answers 24/7 without sick days, holidays, or breaks. AI sets up in 30 minutes versus weeks of recruitment and training. However, human receptionists offer superior empathy and can handle highly complex, nuanced conversations. For most trades, AI provides better value; luxury or commercial trades may still prefer human receptionists.",
+        "text": "AI call answering costs significantly less than employing a human receptionist. A receptionist earns £18,000 starter, £22,000 experienced (National Careers Service, gov.uk). With employer National Insurance and pension contributions the annual cost is roughly £20,000 to £25,000. Whoza plans start at £59 a month, £708 a year. This comparison is on call-handling cost alone; a receptionist works 38 to 40 hours a week and handles tasks beyond answering calls. AI answers 24/7 without sick days, holidays, or breaks. AI sets up in 30 minutes versus weeks of recruitment and training. However, human receptionists offer superior empathy and can handle highly complex, nuanced conversations. For most trades, AI provides better value; luxury or commercial trades may still prefer human receptionists.",
       },
     },
   ],
 }
 
 export const revalidate = 3600
+
+const BLOG_ENTRY = findBlogEntry("ai-call-answering-uk-tradespeople-definitive-guide-2026")!
 
 export default function AICallAnsweringGuidePage() {
   return (
@@ -185,80 +192,53 @@ export default function AICallAnsweringGuidePage() {
           { name: "AI Call Answering UK Trades Guide 2026", item: "https://whoza.ai/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" },
         ]} />
 
-        <main id="main-content" className="pb-24">
-          {/* Hero */}
-          <section className="relative overflow-hidden" style={{ background: "linear-gradient(135deg, #0F1729 0%, #1A1A2E 50%, #0F1729 100%)" }}>
-            <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-              <nav aria-label="Breadcrumb" className="mb-8">
-                <ol className="flex items-center text-sm text-[var(--v2-muted)]" style={{ listStyle: "none", padding: 0 }}>
-                  <li><a href="/" className="hover:text-[var(--v2-ink)] transition-colors">Home</a></li>
-                  <li className="mx-2">/</li>
-                  <li><a href="/blog" className="hover:text-[var(--v2-ink)] transition-colors">Blog</a></li>
-                  <li className="mx-2">/</li>
-                  <li className="text-[var(--v2-ink)]">AI Call Answering Guide 2026</li>
-                </ol>
-              </nav>
-
-              <div className="inline-flex items-center gap-2 bg-[var(--v2-mint)] text-[var(--v2-green)] px-3 py-1 rounded-full text-xs font-medium mb-6">
-                <Star className="w-3 h-3" />
-                Definitive Guide — June 2026
-              </div>
-
-              <h1 className="text-4xl lg:text-5xl font-extrabold mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
-                AI Call Answering for UK Trades:
-                <span className="block text-[var(--v2-green)] mt-2">The Complete 2026 Guide</span>
-              </h1>
-
-              <div className="flex flex-wrap items-center gap-4 text-[var(--v2-muted)] text-sm mt-4">
-                <div className="flex items-center gap-2">
-                  <User className="w-4 h-4" />
-                  <span>whoza.ai</span>
-                  <span className="text-[var(--v2-muted)]">— Research Team</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4" />
-                  <time dateTime="2026-06-06">2026-06-06</time>
-                </div>
-              </div>
-              <div className="mt-2 text-[var(--v2-muted)] text-sm">
-                Last updated: <time dateTime="2026-06-06">2026-06-06</time>
-              </div>
-
-              <p className="text-lg text-[var(--v2-body)] max-w-2xl mb-8">
-                Everything UK tradespeople need to know about AI call answering: how it works, 
-                what it costs, which trades benefit most, and how to get started in 30 minutes.
-                Based on ONS data, real pricing, and independent testing.
-              </p>
-
-              <div className="flex flex-wrap gap-4">
-                <a href="#how-it-works" className="inline-flex items-center gap-2 bg-[var(--v2-green)] text-white font-bold px-6 py-3 rounded-lg hover:bg-[var(--v2-green-hover)] transition-colors v2-island">
-                  How It Works <ArrowRight className="w-4 h-4" />
-                </a>
-                <a href="#pricing" className="inline-flex items-center gap-2 bg-white text-[var(--v2-ink)] font-bold px-6 py-3 rounded-lg hover:border-[#b9c6bf] transition-colors">
-                  Pricing Guide <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-
-              <div className="flex items-center gap-6 mt-8 text-sm text-[var(--v2-muted)]">
-                <span className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" /> 22 min read
-                </span>
-                <span className="flex items-center gap-2">
-                  <Shield className="w-4 h-4" /> ONS Data Verified
-                </span>
-                <span className="flex items-center gap-2">
-                  <Users className="w-4 h-4" /> 15+ Trade Verticals
-                </span>
-              </div>
+        <main id="main-content" className="overflow-x-clip pb-24">
+          <RevealObserver />
+          <ArticleHeader entry={BLOG_ENTRY} title="AI Call Answering for UK Trades: The Complete 2026 Guide" author="whoza.ai Research Team" date="2026-06-06" readTime="22 min read">
+            <p
+              data-reveal="load"
+              style={{ "--reveal-delay": "200ms" } as React.CSSProperties}
+              className="v2-lead mt-8 max-w-[760px]"
+            >
+              Everything UK tradespeople need to know about AI call answering: how it works, what it costs, which trades benefit most, and how to get started in 30 minutes. Based on ONS data, real pricing, and independent testing.
+            </p>
+            <div
+              data-reveal="load"
+              style={{ "--reveal-delay": "260ms" } as React.CSSProperties}
+              className="mt-8 flex flex-wrap gap-3"
+            >
+              <a href="#how-it-works" className="v2-btn">
+                How It Works <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </a>
+              <a href="#pricing" className="v2-btn-secondary bg-white">
+                Pricing Guide <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </a>
             </div>
-          </section>
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-[var(--v2-muted)]">
+              <span className="flex items-center gap-2">
+                <Star className="h-4 w-4" aria-hidden="true" /> Definitive Guide, June 2026
+              </span>
+              <span className="flex items-center gap-2">
+                <Shield className="h-4 w-4" aria-hidden="true" /> ONS Data Verified
+              </span>
+              <span className="flex items-center gap-2">
+                <Users className="h-4 w-4" aria-hidden="true" /> 15+ Trade Verticals
+              </span>
+              <span>
+                Last updated: <time dateTime="2026-06-06">6 Jun 2026</time>
+              </span>
+            </div>
+          </ArticleHeader>
+
+          <ArticleCover entry={BLOG_ENTRY} />
+
 
           {/* Introduction */}
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-8">
               <p className="text-[var(--v2-body)] leading-relaxed mb-6">
-                If you are a UK tradesperson — <a href="/for-plumbers" className="text-[var(--v2-green)] hover:underline">plumber</a>, <a href="/for-electricians" className="text-[var(--v2-green)] hover:underline">electrician</a>, <a href="/for-roofers" className="text-[var(--v2-green)] hover:underline">roofer</a>, <a href="/for-locksmiths" className="text-[var(--v2-green)] hover:underline">locksmith</a>, gas engineer, 
-                <a href="/for-builders" className="text-[var(--v2-green)] hover:underline">builder</a>, <a href="/for-landscapers" className="text-[var(--v2-green)] hover:underline">landscaper</a>, or any trade that works with your hands — you have a phone problem. 
+                If you are a UK tradesperson (<a href="/for-plumbers" className="text-[var(--v2-green)] hover:underline">plumber</a>, <a href="/for-electricians" className="text-[var(--v2-green)] hover:underline">electrician</a>, <a href="/for-roofers" className="text-[var(--v2-green)] hover:underline">roofer</a>, <a href="/for-locksmiths" className="text-[var(--v2-green)] hover:underline">locksmith</a>, gas engineer, 
+                <a href="/for-builders" className="text-[var(--v2-green)] hover:underline">builder</a>, <a href="/for-landscapers" className="text-[var(--v2-green)] hover:underline">landscaper</a>, or any trade that works with your hands), you have a phone problem. 
                 The Office for National Statistics (ONS) reports that <strong className="text-[var(--v2-ink)]">33% of small 
                 UK businesses fail to answer incoming calls</strong>. Of those missed callers, 69% don't leave a message. 
                 They simply call the next number on Google.
@@ -267,14 +247,14 @@ export default function AICallAnsweringGuidePage() {
                 The financial impact is staggering. A typical sole trader loses an estimated <strong className="text-[var(--v2-ink)]">£5,200 
                 to £25,000+ per year</strong> in missed revenue, depending on trade and average job value. 
                 For emergency trades like plumbing and locksmithing, where a single emergency callout can 
-                be worth £150–£400, the cost of one missed call per day exceeds £50,000 annually.
+                be worth £150 to £400, the cost of one missed call per day exceeds £50,000 annually.
               </p>
               <p className="text-[var(--v2-body)] leading-relaxed mb-6">
                 AI call answering has emerged as the practical, affordable solution. What began as basic 
                 voicemail replacements has evolved into sophisticated revenue capture systems that answer 
                 every call 24/7, qualify leads, capture customer details, and deliver enquiries instantly 
                 to your WhatsApp. For tradespeople who cannot stop mid-job to answer a phone, AI call 
-                answering is not a luxury — it is essential business infrastructure.
+                answering is not a luxury. It is essential business infrastructure.
               </p>
               <p className="text-[var(--v2-body)] leading-relaxed">
                 This guide covers everything: what AI call answering is, how the technology works, 
@@ -305,14 +285,14 @@ export default function AICallAnsweringGuidePage() {
                   <Check className="w-5 h-5 text-[var(--v2-green)] shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-[var(--v2-ink)]">ICO Registered</strong>
-                    <p className="text-[var(--v2-muted)]">whoza.ai: ICO ZC077271 — UK GDPR compliant</p>
+                    <p className="text-[var(--v2-muted)]">whoza.ai: ICO ZC077271, UK GDPR compliant</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-[var(--v2-green)] shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-[var(--v2-ink)]">Registered UK Company</strong>
-                    <p className="text-[var(--v2-muted)]">Company number SC874716 — Scotland</p>
+                    <p className="text-[var(--v2-muted)]">Company number SC874716, Scotland</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -333,7 +313,7 @@ export default function AICallAnsweringGuidePage() {
                   <Check className="w-5 h-5 text-[var(--v2-green)] shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-[var(--v2-ink)]">No Affiliate Links</strong>
-                    <p className="text-[var(--v2-muted)]">Editorially independent — no paid placement</p>
+                    <p className="text-[var(--v2-muted)]">Editorially independent, no paid placement</p>
                   </div>
                 </div>
               </div>
@@ -387,7 +367,7 @@ export default function AICallAnsweringGuidePage() {
               understands "my combi boiler has no pressure," "I need a consumer unit upgrade," 
               "I've locked myself out," and "my guttering is leaking." For plumbing businesses, see our 
               <a href="/for-plumbers" className="text-[var(--v2-green)] hover:underline">AI call answering for plumbers</a> page. 
-              It does not just take a message — it captures the details you actually need to quote and schedule the job.
+              It does not just take a message. It captures the details you actually need to quote and schedule the job.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed">
               For UK tradespeople, this means no more missed opportunities, no more playing phone tag 
@@ -405,7 +385,7 @@ export default function AICallAnsweringGuidePage() {
             <p className="text-[var(--v2-body)] leading-relaxed mb-6">
               Let us look at the hard numbers. According to the Moneypenny Small Business Call Report (2016), 
               <strong className="text-[var(--v2-ink)]"> 33% of small UK businesses fail to answer incoming calls</strong>. 
-              For trade businesses, this figure is often higher — plumbers, electricians, and roofers 
+              For trade businesses, this figure is often higher: plumbers, electricians, and roofers 
               physically cannot answer a phone while crawling under floorboards, on a ladder, or handling 
               live electrics.
             </p>
@@ -426,7 +406,7 @@ export default function AICallAnsweringGuidePage() {
             <p className="text-[var(--v2-body)] leading-relaxed mb-6">
               The Federation of Small Businesses (FSB) estimates that missed calls cost UK small businesses 
               an average of £1,200 per year. But this average includes businesses with low transaction values. 
-              For tradespeople, where a single job can be worth £200–£2,000+, the impact is far greater.
+              For tradespeople, where a single job can be worth £200 to £2,000+, the impact is far greater.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-6">
               Consider a plumber receiving 10 calls per day. If 6 go unanswered (60%) and each missed call 
@@ -437,12 +417,12 @@ export default function AICallAnsweringGuidePage() {
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-6">
               The psychology of missed calls compounds the problem. When a customer with a burst pipe or 
-              broken boiler cannot reach you, they experience immediate frustration. They do not wait — they 
+              broken boiler cannot reach you, they experience immediate frustration. They do not wait. They 
               call the next search result. Google research shows that 74% of consumers who search for local 
               services contact multiple businesses. The first to answer often wins the job.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed">
-              Traditional solutions fail. Voicemail is where enquiries go to die — 69% of voicemail callers don't leave a message (Moneypenny Small Business Call Report, 2016). Call forwarding to family members is unreliable and unprofessional. Hiring a human receptionist costs £20,000–£25,000 per year plus National Insurance, pension contributions, and holiday cover (ONS 2024 average wages data). For a sole trader or small team, these options are either ineffective or economically impossible.
+              Traditional solutions fail. Voicemail is where enquiries go to die: 69% of voicemail callers don't leave a message (Moneypenny Small Business Call Report, 2016). Call forwarding to family members is unreliable and unprofessional. Hiring a human receptionist costs £20,000 to £25,000 per year plus National Insurance, pension contributions, and holiday cover (ONS 2024 average wages data). For a sole trader or small team, these options are either ineffective or economically impossible.
             </p>
           </section>
 
@@ -465,7 +445,7 @@ export default function AICallAnsweringGuidePage() {
                   <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                     You configure your business phone (mobile or landline) to forward unanswered or busy calls 
                     to the AI service. This takes 2 minutes on most UK networks. Your customers dial your 
-                    existing number — they never know calls are being forwarded.
+                    existing number. They never know calls are being forwarded.
                   </p>
                 </div>
               </div>
@@ -474,9 +454,9 @@ export default function AICallAnsweringGuidePage() {
                 <div>
                   <h3 className="font-semibold text-[var(--v2-ink)] mb-1">AI Answers the Call</h3>
                   <p className="text-[var(--v2-body)] text-sm leading-relaxed">
-                    The AI answers within 2–3 rings, introducing itself with your business name. 
+                    The AI answers within 2 to 3 rings, introducing itself with your business name. 
                     "Good morning, you're through to Smith Plumbing. I'm your digital assistant. How can I help today?" 
-                    The voice is natural and professional — callers often do not realise they are speaking to AI.
+                    The voice is natural and professional. Callers often do not realise they are speaking to AI.
                   </p>
                 </div>
               </div>
@@ -486,7 +466,7 @@ export default function AICallAnsweringGuidePage() {
                   <h3 className="font-semibold text-[var(--v2-ink)] mb-1">Trade-Specific Qualification</h3>
                   <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                     The AI asks questions configured for your trade. For plumbing: "Is this an emergency or 
-                    routine booking?" "What type of property?" "What's the issue — leak, boiler, drainage, 
+                    routine booking?" "What type of property?" "What's the issue: leak, boiler, drainage, 
                     or something else?" For electricians: "Is power completely off or partially affected?" 
                     "When do you need this done?" Every answer is captured and structured.
                   </p>
@@ -550,7 +530,7 @@ export default function AICallAnsweringGuidePage() {
               The Technology Behind the Voice (2026)
             </h2>
             <p className="text-[var(--v2-body)] leading-relaxed mb-6">
-              AI call answering has moved fast. In 2024 it was a gimmick — robotic voices that frustrated callers.
+              AI call answering has moved fast. In 2024 it was a gimmick: robotic voices that frustrated callers.
               In 2025 it became almost human. In 2026, it is indistinguishable from a professional receptionist
               for job-qualification conversations. That jump was driven by improvements in four core technologies.
             </p>
@@ -560,9 +540,9 @@ export default function AICallAnsweringGuidePage() {
                 <h3 className="font-semibold text-[var(--v2-ink)] mb-2">1. Speech-to-Text (Listening)</h3>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                   Older speech recognition was trained on clean studio audio and fell apart on phone calls.
-                  Modern models (Whisper, Deepgram) are trained specifically on telephone audio — compressed,
-                  noisy, with background noise — and stream transcription in real time, so there is no awkward
-                  processing pause mid-conversation. Real-time streaming has eliminated the 2–3 second delays
+                  Modern models (Whisper, Deepgram) are trained specifically on telephone audio (compressed,
+                  noisy, with background noise) and stream transcription in real time, so there is no awkward
+                  processing pause mid-conversation. Real-time streaming has eliminated the 2 to 3 second delays
                   that made early AI phones feel broken.
                 </p>
               </div>
@@ -571,14 +551,14 @@ export default function AICallAnsweringGuidePage() {
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                   Large language models (GPT-4 class) now understand intent, not just keywords. They handle
                   ambiguity ("the boiler's making that noise again"), interpret trade-specific terminology
-                  (combi vs conventional, RCD vs MCB), and maintain context across a multi-turn conversation —
+                  (combi vs conventional, RCD vs MCB), and maintain context across a multi-turn conversation,
                   remembering the caller mentioned an upstairs leak when later asked about access.
                 </p>
               </div>
               <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <h3 className="font-semibold text-[var(--v2-ink)] mb-2">3. Decision Logic (Responding)</h3>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed">
-                  For trade call answering, the AI does not need to know everything — it needs to ask the right
+                  For trade call answering, the AI does not need to know everything. It needs to ask the right
                   questions. Decision frameworks are configured per trade: emergency vs routine triage, job-type
                   classification, urgency flagging, and caller-detail capture. If a caller asks something outside
                   the script ("can you tell me your opening hours?"), modern AI handles it gracefully instead of
@@ -590,7 +570,7 @@ export default function AICallAnsweringGuidePage() {
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                   Neural voices (ElevenLabs, Deepgram Aura) are indistinguishable from human speakers for
                   short interactions. Latency under 500ms means natural conversational rhythm. UK-accent voices
-                  (including regional variants) are now standard — important when your customers expect to hear
+                  (including regional variants) are now standard, important when your customers expect to hear
                   someone local, not an American phone-bot.
                 </p>
               </div>
@@ -599,14 +579,14 @@ export default function AICallAnsweringGuidePage() {
             <div className="bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-6">
               <h4 className="font-semibold text-[var(--v2-green)] mb-3">Why Telephone Audio Is the Hard Part</h4>
               <p className="text-[var(--v2-body)] text-sm leading-relaxed mb-3">
-                Phone calls are 8kHz audio — dramatically lower quality than a podcast or voice note. Background
+                Phone calls are 8kHz audio, dramatically lower quality than a podcast or voice note. Background
                 noise (traffic, site machinery, wind) makes it worse. Modern systems are specifically trained on
                 this, and still handle the awkward cases that trip up older tech:
               </p>
               <ul className="space-y-2 text-sm text-[var(--v2-body)]">
-                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> Interruptions — the AI stops talking when the caller does, instead of speaking over them</li>
-                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> "I don't know" answers — captured as-is rather than forcing a menu choice</li>
-                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> UK regional accents — trained on British English, not just American</li>
+                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> Interruptions: the AI stops talking when the caller does, instead of speaking over them</li>
+                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> "I don't know" answers: captured as-is rather than forcing a menu choice</li>
+                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> UK regional accents: trained on British English, not just American</li>
                 <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> Landline and mobile audio quality, both directions</li>
               </ul>
             </div>
@@ -636,9 +616,9 @@ export default function AICallAnsweringGuidePage() {
                 <tbody className="divide-y divide-[var(--v2-line)]">
                   <tr className="bg-white">
                     <td className="px-4 py-3 font-medium">Monthly Cost</td>
-                    <td className="px-4 py-3 text-[var(--v2-green)]">£59–£399</td>
-                    <td className="px-4 py-3 text-amber-700">£1,500–£2,500+</td>
-                    <td className="px-4 py-3 text-red-600">£0–£15</td>
+                    <td className="px-4 py-3 text-[var(--v2-green)]">£59 to £399</td>
+                    <td className="px-4 py-3 text-amber-700">£1,500 to £2,500+</td>
+                    <td className="px-4 py-3 text-red-600">£0 to £15</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-3 font-medium">Availability</td>
@@ -649,7 +629,7 @@ export default function AICallAnsweringGuidePage() {
                   <tr className="bg-white">
                     <td className="px-4 py-3 font-medium">Setup Time</td>
                     <td className="px-4 py-3 text-[var(--v2-green)]">30 minutes</td>
-                    <td className="px-4 py-3 text-amber-700">2–6 weeks (recruitment)</td>
+                    <td className="px-4 py-3 text-amber-700">2 to 6 weeks (recruitment)</td>
                     <td className="px-4 py-3 text-red-600">Immediate</td>
                   </tr>
                   <tr>
@@ -700,8 +680,8 @@ export default function AICallAnsweringGuidePage() {
 
             <p className="text-[var(--v2-body)] leading-relaxed mb-6">
               <strong className="text-[var(--v2-ink)]">The verdict for most trades:</strong> AI call answering 
-              offers the best balance of cost, coverage, and capability. A receptionist earns £18,000 starter, £22,000 experienced (National Careers Service, gov.uk). With employer National Insurance and pension contributions the annual cost is roughly £20,000–£25,000. Whoza plans start at £59 a month — £708 a year. This comparison is on call-handling cost alone; a receptionist works 38–40 hours a week and handles tasks beyond answering calls. Voicemail is 
-              effectively free but loses most callers — a false economy that costs far more in lost revenue 
+              offers the best balance of cost, coverage, and capability. A receptionist earns £18,000 starter, £22,000 experienced (National Careers Service, gov.uk). With employer National Insurance and pension contributions the annual cost is roughly £20,000 to £25,000. Whoza plans start at £59 a month, £708 a year. This comparison is on call-handling cost alone; a receptionist works 38 to 40 hours a week and handles tasks beyond answering calls. Voicemail is 
+              effectively free but loses most callers, a false economy that costs far more in lost revenue 
               than it saves in monthly fees.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed">
@@ -732,8 +712,8 @@ export default function AICallAnsweringGuidePage() {
                   <h3 className="font-bold text-[var(--v2-ink)]"><a href="/for-plumbers" className="hover:text-[var(--v2-green)] transition-colors">Plumbers</a></h3>
                 </div>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed mb-3">
-                  Emergency callouts (£150–£400) make every missed call expensive. AI captures burst pipes, 
-                  boiler failures, and drainage emergencies 24/7. Average recovery: £18,000–£35,000/year.
+                  Emergency callouts (£150 to £400) make every missed call expensive. AI captures burst pipes, 
+                  boiler failures, and drainage emergencies 24/7. Average recovery: £18,000 to £35,000/year.
                 </p>
                 <div className="flex gap-2 text-xs">
                   <span className="bg-[var(--v2-mint)] text-[var(--v2-green)] px-2 py-1 rounded-full">Emergency focus</span>
@@ -750,8 +730,8 @@ export default function AICallAnsweringGuidePage() {
                   <h3 className="font-bold text-[var(--v2-ink)]"><a href="/for-electricians" className="hover:text-[var(--v2-green)] transition-colors">Electricians</a></h3>
                 </div>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed mb-3">
-                  Consumer unit upgrades (£800–£2,500) and EICRs (£150–£300) require detailed qualification. 
-                  AI captures property type, urgency, and scope. Average recovery: £15,000–£28,000/year.
+                  Consumer unit upgrades (£800 to £2,500) and EICRs (£150 to £300) require detailed qualification. 
+                  AI captures property type, urgency, and scope. Average recovery: £15,000 to £28,000/year.
                 </p>
                 <div className="flex gap-2 text-xs">
                   <span className="bg-[var(--v2-mint)] text-[var(--v2-green)] px-2 py-1 rounded-full">Technical detail</span>
@@ -768,9 +748,9 @@ export default function AICallAnsweringGuidePage() {
                   <h3 className="font-bold text-[var(--v2-ink)]"><a href="/for-roofers" className="hover:text-[var(--v2-green)] transition-colors">Roofers</a></h3>
                 </div>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed mb-3">
-                  Roof repairs (£300–£1,500) and replacements (£5,000–£15,000+) are high-value enquiries 
+                  Roof repairs (£300 to £1,500) and replacements (£5,000 to £15,000+) are high-value enquiries 
                   that cannot afford to be missed. AI captures roof type, damage description, and urgency. 
-                  Average recovery: £20,000–£45,000/year.
+                  Average recovery: £20,000 to £45,000/year.
                 </p>
                 <div className="flex gap-2 text-xs">
                   <span className="bg-[var(--v2-mint)] text-[var(--v2-green)] px-2 py-1 rounded-full">Highest job value</span>
@@ -787,9 +767,9 @@ export default function AICallAnsweringGuidePage() {
                   <h3 className="font-bold text-[var(--v2-ink)]"><a href="/for-locksmiths" className="hover:text-[var(--v2-green)] transition-colors">Locksmiths</a></h3>
                 </div>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed mb-3">
-                  Emergency lockouts (£80–£250) are time-critical. Customers call multiple locksmiths 
-                  simultaneously — the first to answer wins. AI ensures 100% capture rate. 
-                  Average recovery: £25,000–£40,000/year.
+                  Emergency lockouts (£80 to £250) are time-critical. Customers call multiple locksmiths 
+                  simultaneously. The first to answer wins. AI ensures 100% capture rate. 
+                  Average recovery: £25,000 to £40,000/year.
                 </p>
                 <div className="flex gap-2 text-xs">
                   <span className="bg-[var(--v2-mint)] text-[var(--v2-green)] px-2 py-1 rounded-full">Speed critical</span>
@@ -806,9 +786,9 @@ export default function AICallAnsweringGuidePage() {
                   <h3 className="font-bold text-[var(--v2-ink)]"><a href="/for-heating-engineers" className="hover:text-[var(--v2-green)] transition-colors">Heating Engineers</a></h3>
                 </div>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed mb-3">
-                  Boiler breakdowns (£150–£400) and installations (£2,000–£4,500) peak in winter when 
+                  Boiler breakdowns (£150 to £400) and installations (£2,000 to £4,500) peak in winter when 
                   call volumes surge. AI handles overflow without additional staff. 
-                  Average recovery: £22,000–£38,000/year.
+                  Average recovery: £22,000 to £38,000/year.
                 </p>
                 <div className="flex gap-2 text-xs">
                   <span className="bg-[var(--v2-mint)] text-[var(--v2-green)] px-2 py-1 rounded-full">Seasonal spikes</span>
@@ -825,9 +805,9 @@ export default function AICallAnsweringGuidePage() {
                   <h3 className="font-bold text-[var(--v2-ink)]"><a href="/for-builders" className="hover:text-[var(--v2-green)] transition-colors">Builders</a></h3>
                 </div>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed mb-3">
-                  Extensions (£20,000–£60,000), renovations (£10,000–£30,000), and smaller jobs 
-                  (£500–£2,000) all require detailed qualification. AI captures project scope, 
-                  budget range, and timeline. Average recovery: £30,000–£60,000/year.
+                  Extensions (£20,000 to £60,000), renovations (£10,000 to £30,000), and smaller jobs 
+                  (£500 to £2,000) all require detailed qualification. AI captures project scope, 
+                  budget range, and timeline. Average recovery: £30,000 to £60,000/year.
                 </p>
                 <div className="flex gap-2 text-xs">
                   <span className="bg-[var(--v2-mint)] text-[var(--v2-green)] px-2 py-1 rounded-full">Project detail</span>
@@ -844,9 +824,9 @@ export default function AICallAnsweringGuidePage() {
                   <h3 className="font-bold text-[var(--v2-ink)]"><a href="/for-landscapers" className="hover:text-[var(--v2-green)] transition-colors">Landscapers</a></h3>
                 </div>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed mb-3">
-                  Garden redesigns (£3,000–£15,000) and maintenance contracts (£200–£500/month) 
+                  Garden redesigns (£3,000 to £15,000) and maintenance contracts (£200 to £500/month) 
                   benefit from capturing enquiry details while on other sites. 
-                  Average recovery: £15,000–£30,000/year.
+                  Average recovery: £15,000 to £30,000/year.
                 </p>
                 <div className="flex gap-2 text-xs">
                   <span className="bg-[var(--v2-mint)] text-[var(--v2-green)] px-2 py-1 rounded-full">Site-based</span>
@@ -863,9 +843,9 @@ export default function AICallAnsweringGuidePage() {
                   <h3 className="font-bold text-[var(--v2-ink)]"><a href="/for-pest-control" className="hover:text-[var(--v2-green)] transition-colors">Pest Control</a></h3>
                 </div>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed mb-3">
-                  Urgent pest issues (£80–£300) and commercial contracts (£500–£2,000/month) 
+                  Urgent pest issues (£80 to £300) and commercial contracts (£500 to £2,000/month) 
                   require rapid response. AI captures pest type, property size, and infestation severity. 
-                  Average recovery: £12,000–£25,000/year.
+                  Average recovery: £12,000 to £25,000/year.
                 </p>
                 <div className="flex gap-2 text-xs">
                   <span className="bg-[var(--v2-mint)] text-[var(--v2-green)] px-2 py-1 rounded-full">Urgent response</span>
@@ -882,9 +862,9 @@ export default function AICallAnsweringGuidePage() {
                   <h3 className="font-bold text-[var(--v2-ink)]"><a href="/for-cleaners" className="hover:text-[var(--v2-green)] transition-colors">Cleaners</a></h3>
                 </div>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed mb-3">
-                  End-of-tenancy cleans (£150–£400), regular domestic (£15–£25/hour), and commercial 
-                  contracts (£500–£2,000/month) benefit from capturing all enquiry types. 
-                  Average recovery: £10,000–£20,000/year.
+                  End-of-tenancy cleans (£150 to £400), regular domestic (£15 to £25/hour), and commercial 
+                  contracts (£500 to £2,000/month) benefit from capturing all enquiry types. 
+                  Average recovery: £10,000 to £20,000/year.
                 </p>
                 <div className="flex gap-2 text-xs">
                   <span className="bg-[var(--v2-mint)] text-[var(--v2-green)] px-2 py-1 rounded-full">Volume business</span>
@@ -895,7 +875,7 @@ export default function AICallAnsweringGuidePage() {
 
             <p className="text-[var(--v2-muted)] text-sm text-center">
               Recovery estimates based on 60% unanswered call rate, £200 average job value, 
-              50% conversion rate, and AI recovering 25–35% of previously missed enquiries.
+              50% conversion rate, and AI recovering 25 to 35% of previously missed enquiries.
             </p>
           </section>
 
@@ -956,14 +936,14 @@ export default function AICallAnsweringGuidePage() {
                 <X className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-[var(--v2-ink)] text-sm">Setup Fees</strong>
-                  <p className="text-[var(--v2-muted)] text-sm">Some services charge £50–£200 for initial configuration. whoza.ai includes setup in all plans.</p>
+                  <p className="text-[var(--v2-muted)] text-sm">Some services charge £50 to £200 for initial configuration. whoza.ai includes setup in all plans.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3 bg-red-50 border border-red-200 rounded-lg p-4">
                 <X className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-[var(--v2-ink)] text-sm">Minimum Contracts</strong>
-                  <p className="text-[var(--v2-muted)] text-sm">3–12 month lock-ins are common. whoza.ai has no contract — cancel anytime.</p>
+                  <p className="text-[var(--v2-muted)] text-sm">3 to 12 month lock-ins are common. whoza.ai has no contract. Cancel anytime.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3 bg-red-50 border border-red-200 rounded-lg p-4">
@@ -977,7 +957,7 @@ export default function AICallAnsweringGuidePage() {
                 <X className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-[var(--v2-ink)] text-sm">Holiday Cover Surcharges</strong>
-                  <p className="text-[var(--v2-muted)] text-sm">Human receptionist services often charge 150–200% for bank holiday cover. AI has no surcharges.</p>
+                  <p className="text-[var(--v2-muted)] text-sm">Human receptionist services often charge 150 to 200% for bank holiday cover. AI has no surcharges.</p>
                 </div>
               </div>
             </div>
@@ -1066,7 +1046,7 @@ export default function AICallAnsweringGuidePage() {
             <p className="text-[var(--v2-body)] leading-relaxed mb-6">
               The numbers become even more compelling for emergency trades. A locksmith missing one 
               emergency lockout per day (£150 average) loses £750/week or £37,500/year. At 25% recovery, 
-              AI generates £9,375 in additional revenue against a £708 annual cost — a 1,223% ROI.
+              AI generates £9,375 in additional revenue against a £708 annual cost, a 1,223% ROI.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed">
               For builders and roofers with higher job values, the returns are extraordinary. A builder 
@@ -1095,8 +1075,8 @@ export default function AICallAnsweringGuidePage() {
                 </div>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                   Create your account at whoza.ai. No credit card required for the 7-day trial. 
-                  Enter your business name, trade type, and contact details. Select your plan — 
-                  you can change this anytime.
+                  Enter your business name, trade type, and contact details. Select your plan. 
+                  You can change this anytime.
                 </p>
               </div>
               <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
@@ -1131,7 +1111,7 @@ export default function AICallAnsweringGuidePage() {
                 </div>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                   Link your WhatsApp number to receive instant lead notifications. Scan a QR code 
-                  or enter your number — leads arrive within 3 seconds of each call ending. 
+                  or enter your number. Leads arrive within 3 seconds of each call ending. 
                   You can also add team members to receive copies.
                 </p>
               </div>
@@ -1151,10 +1131,10 @@ export default function AICallAnsweringGuidePage() {
             <div className="bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-6">
               <h4 className="font-semibold text-[var(--v2-green)] mb-3">Pro Tips for Maximum Effectiveness</h4>
               <ul className="space-y-2 text-sm text-[var(--v2-body)]">
-                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> Set forwarding for "no answer" after 3–4 rings, not immediately — this lets you catch easy calls</li>
-                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> Include pricing ranges in your AI script — callers with unrealistic budgets self-filter</li>
-                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> Ask for preferred callback times — customers love feeling in control</li>
-                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> Enable review collection immediately — it compounds your results over time</li>
+                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> Set forwarding for "no answer" after 3 to 4 rings, not immediately: this lets you catch easy calls</li>
+                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> Include pricing ranges in your AI script: callers with unrealistic budgets self-filter</li>
+                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> Ask for preferred callback times: customers love feeling in control</li>
+                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> Enable review collection immediately: it compounds your results over time</li>
                 <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> Train your AI on common objections and specialist services you offer</li>
               </ul>
             </div>
@@ -1169,7 +1149,7 @@ export default function AICallAnsweringGuidePage() {
             </h2>
             <p className="text-[var(--v2-body)] leading-relaxed mb-8">
               Most AI marketing is written by people who have never been on a roof at 7am. Strip away the hype
-              and the trade-business wishlist is refreshingly short — and it explains why AI call answering has
+              and the trade-business wishlist is refreshingly short, and it explains why AI call answering has
               become the first AI tool most trades actually keep using.
             </p>
 
@@ -1178,7 +1158,7 @@ export default function AICallAnsweringGuidePage() {
                 <h3 className="font-semibold text-[var(--v2-ink)] mb-2">1. Answer the phone. That is the entire headline.</h3>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                   Not a dashboard, not a CRM, not "insights". Just answer the phone when both hands are in a
-                  boiler. Every missed call is £200–£800 walking to a competitor — 33% of incoming calls go
+                  boiler. Every missed call is £200 to £800 walking to a competitor: 33% of incoming calls go
                   unanswered during the working day, and 85% of those callers never ring back.
                 </p>
               </div>
@@ -1186,7 +1166,7 @@ export default function AICallAnsweringGuidePage() {
                 <h3 className="font-semibold text-[var(--v2-ink)] mb-2">2. Don't make me learn anything</h3>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                   New software has a hidden cost: the hours spent learning it, then re-learning it after three
-                  months away. Call forwarding setup takes 2 minutes and requires zero ongoing input — the AI
+                  months away. Call forwarding setup takes 2 minutes and requires zero ongoing input. The AI
                   works even when you forget it exists.
                 </p>
               </div>
@@ -1194,7 +1174,7 @@ export default function AICallAnsweringGuidePage() {
                 <h3 className="font-semibold text-[var(--v2-ink)] mb-2">3. Give me my evenings back</h3>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                   The average tradesperson spends 2+ hours every evening on admin: returning missed calls,
-                  quoting, invoicing, chasing payments. Tools that remove that — not add to it — are the ones
+                  quoting, invoicing, chasing payments. Tools that remove that, not add to it, are the ones
                   that survive. At a typical £45/hour charge-out rate, admin eats more than £17,000 of billable
                   value a year.
                 </p>
@@ -1202,7 +1182,7 @@ export default function AICallAnsweringGuidePage() {
               <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <h3 className="font-semibold text-[var(--v2-ink)] mb-2">4. Get me paid</h3>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed">
-                  Chasing outstanding invoices is the least favourite job in every trade business — an average
+                  Chasing outstanding invoices is the least favourite job in every trade business: an average
                   of £17,000 outstanding at any one time and 86 hours a year chasing it. Faster response to
                   enquiries means jobs start sooner, finish sooner, and get invoiced sooner.
                 </p>
@@ -1211,7 +1191,7 @@ export default function AICallAnsweringGuidePage() {
                 <h3 className="font-semibold text-[var(--v2-ink)] mb-2">5. Prove it works before I pay for it</h3>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                   Tradespeople are rightly sceptical of subscriptions. That is why a 7-day free trial with real
-                  calls matters more than any case study — you see your own missed calls get answered before
+                  calls matters more than any case study. You see your own missed calls get answered before
                   spending a penny. No contract, cancel anytime.
                 </p>
               </div>
@@ -1220,10 +1200,10 @@ export default function AICallAnsweringGuidePage() {
             <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
               <h4 className="font-semibold text-[var(--v2-ink)] mb-3">The don't-want list (just as important)</h4>
               <ul className="space-y-2 text-sm text-[var(--v2-body)]">
-                <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-600 shrink-0 mt-0.5" /> Dashboards to check — if it needs me to log in, it has failed</li>
+                <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-600 shrink-0 mt-0.5" /> Dashboards to check: if it needs me to log in, it has failed</li>
                 <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-600 shrink-0 mt-0.5" /> Apps to learn, update, and remember passwords for</li>
                 <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-600 shrink-0 mt-0.5" /> 12-month contracts for a tool I have not tested on my own calls</li>
-                <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-600 shrink-0 mt-0.5" /> "Call recording" as the headline feature — answer the phone first</li>
+                <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-600 shrink-0 mt-0.5" /> "Call recording" as the headline feature: answer the phone first</li>
               </ul>
             </div>
           </section>
@@ -1242,7 +1222,7 @@ export default function AICallAnsweringGuidePage() {
                 },
                 {
                   q: "How much does AI call answering cost for UK trades?",
-                  a: "AI call answering for UK trades costs between £59–£399 per month depending on call volume and features. Entry-level plans start at £59/month for sole traders. Mid-tier plans for growing teams cost £125–£199/month. Enterprise plans for multi-van operations range from £249–£399/month. Most sole traders find suitable coverage between £59–£125/month.",
+                  a: "AI call answering for UK trades costs between £59 and £399 per month depending on call volume and features. Entry-level plans start at £59/month for sole traders. Mid-tier plans for growing teams cost £125 to £199/month. Enterprise plans for multi-van operations range from £249 to £399/month. Most sole traders find suitable coverage between £59 and £125/month.",
                 },
                 {
                   q: "How does AI call answering work technically?",
@@ -1250,11 +1230,11 @@ export default function AICallAnsweringGuidePage() {
                 },
                 {
                   q: "Which UK trades benefit most from AI call answering?",
-                  a: "Emergency trades benefit most: plumbers, locksmiths, heating engineers, and electricians lose the most revenue from missed calls because customers will immediately call the next tradesperson. Roofers, builders, and landscapers also see strong returns as their jobs have high average values (£500–£5,000+). Pest control and cleaning services benefit from capturing time-sensitive enquiries.",
+                  a: "Emergency trades benefit most: plumbers, locksmiths, heating engineers, and electricians lose the most revenue from missed calls because customers will immediately call the next tradesperson. Roofers, builders, and landscapers also see strong returns as their jobs have high average values (£500 to £5,000+). Pest control and cleaning services benefit from capturing time-sensitive enquiries.",
                 },
                 {
                   q: "Is AI call answering better than voicemail?",
-                  a: "AI call answering is dramatically better than voicemail. According to the Moneypenny Small Business Call Report (2016), 69% of voicemail callers don't leave a message. AI call answering captures 100% of callers, qualifies their needs, and delivers structured lead information instantly. A tradesperson using AI call answering instead of voicemail typically recovers £15,000–£25,000 in lost revenue annually.",
+                  a: "AI call answering is dramatically better than voicemail. According to the Moneypenny Small Business Call Report (2016), 69% of voicemail callers don't leave a message. AI call answering captures 100% of callers, qualifies their needs, and delivers structured lead information instantly. A tradesperson using AI call answering instead of voicemail typically recovers £15,000 to £25,000 in lost revenue annually.",
                 },
                 {
                   q: "Can AI call answering handle trade-specific terminology?",
@@ -1262,15 +1242,15 @@ export default function AICallAnsweringGuidePage() {
                 },
                 {
                   q: "How quickly can I set up AI call answering?",
-                  a: "With whoza.ai, setup takes approximately 30 minutes: connect your number via call forwarding, configure your services and operating hours, customize the questions the AI asks callers, test with a sample call, and go live. Other services range from under 1 hour (IONOS) to 2–5 days (Moneypenny human receptionists). Most tradespeople can be live the same day.",
+                  a: "With whoza.ai, setup takes approximately 30 minutes: connect your number via call forwarding, configure your services and operating hours, customize the questions the AI asks callers, test with a sample call, and go live. Other services range from under 1 hour (IONOS) to 2 to 5 days (Moneypenny human receptionists). Most tradespeople can be live the same day.",
                 },
                 {
                   q: "What is the ROI of AI call answering for trades?",
-                  a: "The ROI of AI call answering is exceptional. A typical plumber missing 5 calls per day loses approximately £625 daily in potential revenue (at £125 average job value and 50% conversion rate). Even if AI recovers only 20% of missed calls, that generates £32,500 additional annual revenue. Against a service cost of £708–£1,500/year, the ROI ranges from 2,100% to 4,500%. For emergency trades, capturing one extra callout per week pays for the entire monthly service. Use our \u003ca href='/' className='text-emerald-400 hover:underline'\u003eLost Jobs Calculator\u003c/a\u003e to see your exact numbers.",
+                  a: "The ROI of AI call answering is exceptional. A typical plumber missing 5 calls per day loses approximately £625 daily in potential revenue (at £125 average job value and 50% conversion rate). Even if AI recovers only 20% of missed calls, that generates £32,500 additional annual revenue. Against a service cost of £708 to £1,500/year, the ROI ranges from 2,100% to 4,500%. For emergency trades, capturing one extra callout per week pays for the entire monthly service. Use our \u003ca href='/' className='text-emerald-400 hover:underline'\u003eLost Jobs Calculator\u003c/a\u003e to see your exact numbers.",
                 },
                 {
                   q: "Does AI call answering work with my existing phone number?",
-                  a: "Yes, AI call answering works with your existing business phone number. You simply configure call forwarding on your mobile or landline to divert unanswered or busy calls to the AI service. Your customers never know the difference — they dial your usual number and the AI answers professionally in your business name. You can also get a dedicated number if preferred. For after-hours coverage, see our \u003ca href='/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026' className='text-emerald-400 hover:underline'\u003e24/7 call answering guide\u003c/a\u003e.",
+                  a: "Yes, AI call answering works with your existing business phone number. You simply configure call forwarding on your mobile or landline to divert unanswered or busy calls to the AI service. Your customers never know the difference. They dial your usual number and the AI answers professionally in your business name. You can also get a dedicated number if preferred. For after-hours coverage, see our \u003ca href='/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026' className='text-emerald-400 hover:underline'\u003e24/7 call answering guide\u003c/a\u003e.",
                 },
                 {
                   q: "Is AI call answering GDPR compliant for UK trades?",
@@ -1278,11 +1258,11 @@ export default function AICallAnsweringGuidePage() {
                 },
                 {
                   q: "Can I try AI call answering before committing?",
-                  a: "Yes, whoza.ai offers a 7-day free trial with no credit card required, plus a 30-day money-back guarantee. This means you can test the full service for 37 days total with zero financial risk. Most reputable AI call answering services offer trial periods ranging from 7–14 days. Avoid any service that does not offer a trial period. See our \u003ca href='/pricing' className='text-emerald-400 hover:underline'\u003epricing page\u003c/a\u003e for plan details.",
+                  a: "Yes, whoza.ai offers a 7-day free trial with no credit card required, plus a 30-day money-back guarantee. This means you can test the full service for 37 days total with zero financial risk. Most reputable AI call answering services offer trial periods ranging from 7 to 14 days. Avoid any service that does not offer a trial period. See our \u003ca href='/pricing' className='text-emerald-400 hover:underline'\u003epricing page\u003c/a\u003e for plan details.",
                 },
                 {
                   q: "How does AI call answering compare to a human receptionist?",
-                  a: "AI call answering costs significantly less than employing a human receptionist. A receptionist earns £18,000 starter, £22,000 experienced (National Careers Service, gov.uk). With employer National Insurance and pension contributions the annual cost is roughly £20,000–£25,000. Whoza plans start at £59 a month — £708 a year. This comparison is on call-handling cost alone; a receptionist works 38–40 hours a week and handles tasks beyond answering calls. AI answers 24/7 without sick days, holidays, or breaks. AI sets up in 30 minutes versus weeks of recruitment and training. However, human receptionists offer superior empathy and can handle highly complex, nuanced conversations. For most trades, AI provides better value; luxury or commercial trades may still prefer human receptionists. Read our <a href='/blog/ai-call-answering-pricing-guide-uk-2026' className='text-emerald-400 hover:underline'>AI call answering pricing guide</a> for a full cost breakdown.",
+                  a: "AI call answering costs significantly less than employing a human receptionist. A receptionist earns £18,000 starter, £22,000 experienced (National Careers Service, gov.uk). With employer National Insurance and pension contributions the annual cost is roughly £20,000 to £25,000. Whoza plans start at £59 a month, £708 a year. This comparison is on call-handling cost alone; a receptionist works 38 to 40 hours a week and handles tasks beyond answering calls. AI answers 24/7 without sick days, holidays, or breaks. AI sets up in 30 minutes versus weeks of recruitment and training. However, human receptionists offer superior empathy and can handle highly complex, nuanced conversations. For most trades, AI provides better value; luxury or commercial trades may still prefer human receptionists. Read our <a href='/blog/ai-call-answering-pricing-guide-uk-2026' className='text-emerald-400 hover:underline'>AI call answering pricing guide</a> for a full cost breakdown.",
                 },
               ].map((faq, index) => (
                 <details key={index} className="group bg-white border border-[var(--v2-line)] rounded-2xl open:border-emerald-500/30 open:bg-emerald-500/[0.03] transition-all">
@@ -1299,44 +1279,37 @@ export default function AICallAnsweringGuidePage() {
           </section>
 
           {/* CTA Section */}
-          <section id="cta" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
-            <div className="bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 border border-emerald-500/20 rounded-2xl p-8 v2-island">
-              <h2 className="text-3xl font-bold mb-4">Stop Losing Calls. Start Winning Jobs.</h2>
-              <p className="text-lg text-white/60 mb-8 max-w-2xl mx-auto">
-                Every missed call is a job for your competitor. AI call answering captures every 
-                opportunity 24/7, delivers leads to your WhatsApp instantly, and pays for itself 
-                with a single recovered job per month.
+          <section id="cta" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <CtaBand
+              id="definitive-guide"
+              heading={["Stop Losing Calls.", "Start Winning Jobs."]}
+              text="Every missed call is a job for your competitor. AI call answering captures every opportunity 24/7, delivers leads to your WhatsApp instantly, and pays for itself with a single recovered job per month."
+              primaryLabel="Start Free Trial"
+              source="definitive-guide-cta"
+              secondary={{ label: "See Service Comparison", href: "/best-ai-call-handler-uk-trades" }}
+            >
+              <p className="mt-6 text-sm text-[var(--v2-muted)]">
+                <a href="/pricing" className="cta-link text-[var(--v2-green)] hover:underline">Whoza.ai pricing</a> starts at £59/month.{" "}
+                <a href="/pricing" className="cta-link text-[var(--v2-green)] hover:underline">View our plans</a> for sole traders and growing teams.
               </p>
-              <div className="flex flex-wrap justify-center gap-4 mb-8">
-                <a href="/pricing" className="inline-flex items-center gap-2 bg-[var(--v2-green)] text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-[var(--v2-green-hover)] transition-colors shadow-lg">
-                  Start Free Trial <ArrowRight className="w-5 h-5" />
-                </a>
-                <a href="/best-ai-call-handler-uk-trades" className="inline-flex items-center gap-2 bg-white/10 text-white font-bold px-6 py-4 rounded-xl hover:bg-white/20 transition-colors">
-                  See Service Comparison <ArrowRight className="w-5 h-5" />
-                </a>
-              </div>
-              <p className="text-white/65 text-sm text-center mb-4">
-                <a href="/pricing" className="text-[#6ee7b7] hover:underline">Whoza.ai pricing</a> starts at £59/month. 
-                <a href="/pricing" className="text-[#6ee7b7] hover:underline">View our plans</a> for sole traders and growing teams.
-              </p>
-              <div className="flex flex-wrap justify-center gap-6 text-sm text-white/60">
+              <div className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-[var(--v2-muted)]">
                 <span className="flex items-center gap-2">
-                  <Shield className="w-4 h-4" /> ICO Registered (ZC077271)
+                  <Shield className="w-4 h-4 text-[var(--v2-green)]" /> ICO Registered (ZC077271)
                 </span>
                 <span className="flex items-center gap-2">
-                  <Award className="w-4 h-4" /> Company SC874716
+                  <Award className="w-4 h-4 text-[var(--v2-green)]" /> Company SC874716
                 </span>
                 <span className="flex items-center gap-2">
-                  <Zap className="w-4 h-4" /> 30-Day Guarantee
+                  <Zap className="w-4 h-4 text-[var(--v2-green)]" /> 30-Day Guarantee
                 </span>
                 <span className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" /> 7-Day Free Trial
+                  <Clock className="w-4 h-4 text-[var(--v2-green)]" /> 7-Day Free Trial
                 </span>
                 <span className="flex items-center gap-2">
-                  <X className="w-4 h-4" /> No Contract
+                  <X className="w-4 h-4 text-[var(--v2-green)]" /> No Contract
                 </span>
               </div>
-            </div>
+            </CtaBand>
           </section>
 
           {/* Related Content */}
@@ -1365,6 +1338,13 @@ export default function AICallAnsweringGuidePage() {
               </a>
             </div>
           </section>
+          <div className="mx-auto mt-12 max-w-4xl px-4 sm:px-6 lg:px-8">
+            <SharePost url="https://whoza.ai/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026" title="AI Call Answering for UK Trades: The Complete 2026 Guide" />
+          </div>
+
+          <div className="mt-24 sm:mt-32">
+            <RelatedPosts slug="ai-call-answering-uk-tradespeople-definitive-guide-2026" />
+          </div>
         </main>
 
         
@@ -1388,7 +1368,7 @@ export default function AICallAnsweringGuidePage() {
           })
         }}
       />
-<Footer />
+<Footer hideCta />
       </div>
     </>
   )

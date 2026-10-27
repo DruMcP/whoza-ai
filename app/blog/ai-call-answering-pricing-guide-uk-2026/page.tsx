@@ -2,6 +2,11 @@ import { Metadata } from "next"
 import { Header } from "@/components/whoza/header"
 import { Footer } from "@/components/whoza/footer"
 import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
+import { CtaBand } from "@/components/whoza/cta-band"
+import { findBlogEntry } from "@/lib/blog-index"
+import { ArticleCover, ArticleHeader, RelatedPosts } from "@/components/whoza/blog/article-parts"
+import { RevealObserver } from "@/components/whoza/blog/reveal-observer"
+import { SharePost } from "@/components/whoza/blog/share-post"
 import { ArrowRight, PoundSterling, Clock, Shield, Check, AlertTriangle, TrendingUp, Calculator, Phone, HelpCircle, Building, CreditCard, BadgeCheck, XCircle, FileText, BarChart3, Briefcase , Calendar, User , Users } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -74,7 +79,7 @@ const faqSchema = {
       "name": "How much does AI call answering cost in the UK?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "AI call answering in the UK costs between £9 and £400+ per month depending on the provider and pricing model. Entry-level services like IONOS start at £9/month. Mid-tier AI services like Clara AI cost £49–£149/month. Premium human-assisted services like Moneypenny range from £150–£400+/month. Whoza.ai offers trade-specific plans from £59–£399/month with per-job pricing.",
+        "text": "AI call answering in the UK costs between £9 and £400+ per month depending on the provider and pricing model. Entry-level services like IONOS start at £9/month. Mid-tier AI services like Clara AI cost £49 to £149/month. Premium human-assisted services like Moneypenny range from £150 to £400+/month. Whoza.ai offers trade-specific plans from £59 to £399/month with per-job pricing.",
       },
     },
     {
@@ -82,7 +87,7 @@ const faqSchema = {
       "name": "What is the cheapest AI receptionist in the UK?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The cheapest AI receptionist in the UK is IONOS at £9.99/month for basic call handling. However, cheapest is not always best value — IONOS uses basic auto-attendant technology, not true AI. For genuine AI conversation, Clara AI starts at £49/month and Whoza.ai at £59/month for tradespeople. Consider call quality, lead capture accuracy, and integration features when comparing price.",
+        "text": "The cheapest AI receptionist in the UK is IONOS at £9.99/month for basic call handling. However, cheapest is not always best value: IONOS uses basic auto-attendant technology, not true AI. For genuine AI conversation, Clara AI starts at £49/month and Whoza.ai at £59/month for tradespeople. Consider call quality, lead capture accuracy, and integration features when comparing price.",
       },
     },
     {
@@ -90,7 +95,7 @@ const faqSchema = {
       "name": "Is per-job or per-minute pricing better for tradespeople?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Per-job pricing is generally better for tradespeople because it aligns cost with revenue. A plumber paying £5 per captured job knows exactly what each lead costs. Per-minute pricing penalises longer qualification calls — a complex boiler enquiry might take 4 minutes but be worth £800. Per-month pricing offers predictability but may waste money during quiet periods. Most trade businesses prefer per-job or flat monthly pricing.",
+        "text": "Per-job pricing is generally better for tradespeople because it aligns cost with revenue. A plumber paying £5 per captured job knows exactly what each lead costs. Per-minute pricing penalises longer qualification calls: a complex boiler enquiry might take 4 minutes but be worth £800. Per-month pricing offers predictability but may waste money during quiet periods. Most trade businesses prefer per-job or flat monthly pricing.",
       },
     },
     {
@@ -98,7 +103,7 @@ const faqSchema = {
       "name": "Are there hidden costs with AI call answering services?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Common hidden costs include: setup fees (£50–£250), overage charges when you exceed monthly call limits, contract lock-in penalties (some providers require 12-month commitments), integration fees for connecting to your CRM or calendar, number porting charges, and premium features like WhatsApp delivery or call recording that cost extra. Always ask for a total cost breakdown before signing.",
+        "text": "Yes. Common hidden costs include: setup fees (£50 to £250), overage charges when you exceed monthly call limits, contract lock-in penalties (some providers require 12-month commitments), integration fees for connecting to your CRM or calendar, number porting charges, and premium features like WhatsApp delivery or call recording that cost extra. Always ask for a total cost breakdown before signing.",
       },
     },
     {
@@ -106,7 +111,7 @@ const faqSchema = {
       "name": "How many jobs does it take to break even on AI call answering?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For most UK trades, breaking even takes 1–2 jobs per month. Example: a plumber on Whoza.ai's £59/month Starter plan needs to win just one £280 job to cover the cost. An electrician on the £125 Growth plan needs one £320 job. A roofer on any plan needs less than one job — a single £850 roof repair more than covers even premium plans. Most trade businesses recover 10–50x their monthly AI cost in additional revenue.",
+        "text": "For most UK trades, breaking even takes 1 to 2 jobs per month. Example: a plumber on Whoza.ai's £59/month Starter plan needs to win just one £280 job to cover the cost. An electrician on the £125 Growth plan needs one £320 job. A roofer on any plan needs less than one job: a single £850 roof repair more than covers even premium plans. Most trade businesses recover 10 to 50x their monthly AI cost in additional revenue.",
       },
     },
     {
@@ -114,7 +119,7 @@ const faqSchema = {
       "name": "Does cheap AI answering actually work for trades?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Cheap AI answering (£9–£30/month) typically uses basic auto-attendant or simple voice-menu technology, not true conversational AI. For tradespeople, this means callers get frustrated, hang up, or leave incomplete messages. True AI answering (£49–£125/month) uses natural language processing to have real conversations, ask trade-specific questions, and capture complete job details. The £40–£100 monthly difference often pays for itself with one extra captured job.",
+        "text": "Cheap AI answering (£9 to £30/month) typically uses basic auto-attendant or simple voice-menu technology, not true conversational AI. For tradespeople, this means callers get frustrated, hang up, or leave incomplete messages. True AI answering (£49 to £125/month) uses natural language processing to have real conversations, ask trade-specific questions, and capture complete job details. The £40 to £100 monthly difference often pays for itself with one extra captured job.",
       },
     },
     {
@@ -122,7 +127,7 @@ const faqSchema = {
       "name": "How does AI call answering compare to a human receptionist on cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A full-time UK receptionist costs £27,800–£38,700 per year including employer NI, pension, holiday and sick cover, training, and office overheads. A virtual receptionist service costs £150–£400/month. AI call answering costs £59–£399/month flat with unlimited calls, 24/7 coverage, WhatsApp delivery, and no contract — a 94–98% saving versus in-house staff.",
+        "text": "A full-time UK receptionist costs £27,800 to £38,700 per year including employer NI, pension, holiday and sick cover, training, and office overheads. A virtual receptionist service costs £150 to £400/month. AI call answering costs £59 to £399/month flat with unlimited calls, 24/7 coverage, WhatsApp delivery, and no contract, a 94 to 98% saving versus in-house staff.",
       },
     },
     {
@@ -130,7 +135,7 @@ const faqSchema = {
       "name": "What ROI can a trade business expect from AI call answering?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Conservative: capturing 25% of 5 missed weekly calls at £250 average job value recovers £15,000/year — a 2,119% ROI on the £708/year Starter plan. Realistic for a busy emergency plumber: ~355 recovered opportunities/year at £105 expected value recovers £37,128/year — a 5,148% ROI. On the £125/month Growth plan the realistic scenario returns 2,475% ROI.",
+        "text": "Conservative: capturing 25% of 5 missed weekly calls at £250 average job value recovers £15,000/year, a 2,119% ROI on the £708/year Starter plan. Realistic for a busy emergency plumber: ~355 recovered opportunities/year at £105 expected value recovers £37,128/year, a 5,148% ROI. On the £125/month Growth plan the realistic scenario returns 2,475% ROI.",
       },
     },
     {
@@ -138,7 +143,7 @@ const faqSchema = {
       "name": "Is AI call answering tax-deductible for UK tradespeople?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. AI call answering subscriptions are an allowable business expense for sole traders, partnerships, and limited companies — the full cost reduces taxable profit. For a basic-rate taxpayer the effective net cost of the £59/month Starter plan is around £47/month after income tax relief.",
+        "text": "Yes. AI call answering subscriptions are an allowable business expense for sole traders, partnerships, and limited companies. The full cost reduces taxable profit. For a basic-rate taxpayer the effective net cost of the £59/month Starter plan is around £47/month after income tax relief.",
       },
     },
   ],
@@ -151,9 +156,9 @@ const pricingTableSchema = {
   "tableBody": {
     "@type": "TableRow",
     "row": [
-      { "@type": "TableRow", "row": ["Whoza.ai", "£59–£399", "Per job / flat", "Trades-specific AI", "7-day trial", "No"] },
-      { "@type": "TableRow", "row": ["Clara AI", "£49–£149", "Flat monthly", "General AI", "14-day trial", "No"] },
-      { "@type": "TableRow", "row": ["Moneypenny", "£150–£400+", "Per minute", "Human + AI hybrid", "Custom", "Yes (12 mo)"] },
+      { "@type": "TableRow", "row": ["Whoza.ai", "£59 to £399", "Per job / flat", "Trades-specific AI", "7-day trial", "No"] },
+      { "@type": "TableRow", "row": ["Clara AI", "£49 to £149", "Flat monthly", "General AI", "14-day trial", "No"] },
+      { "@type": "TableRow", "row": ["Moneypenny", "£150 to £400+", "Per minute", "Human + AI hybrid", "Custom", "Yes (12 mo)"] },
       { "@type": "TableRow", "row": ["ARROW", "£99", "Flat monthly", "Auto-attendant", "No", "No"] },
       { "@type": "TableRow", "row": ["IONOS", "£9", "Flat monthly", "Basic auto-attendant", "No", "No"] },
       { "@type": "TableRow", "row": ["RingCentral AIR", "£32", "Per user/mo", "Cloud PBX + AI", "30-day trial", "No"] },
@@ -163,9 +168,9 @@ const pricingTableSchema = {
 }
 
 const pricingData = [
-  { provider: "Whoza.ai", price: "£59–£399", model: "Per job / flat monthly", type: "Trades-specific AI", trial: "7-day free", contract: "No", bestFor: "UK tradespeople" },
-  { provider: "Clara AI", price: "£49–£149", model: "Flat monthly", type: "General AI", trial: "14-day free", contract: "No", bestFor: "Small businesses" },
-  { provider: "Moneypenny", price: "£150–£400+", model: "Per minute", type: "Human + AI hybrid", trial: "Custom", contract: "Yes (12 mo)", bestFor: "Premium service" },
+  { provider: "Whoza.ai", price: "£59 to £399", model: "Per job / flat monthly", type: "Trades-specific AI", trial: "7-day free", contract: "No", bestFor: "UK tradespeople" },
+  { provider: "Clara AI", price: "£49 to £149", model: "Flat monthly", type: "General AI", trial: "14-day free", contract: "No", bestFor: "Small businesses" },
+  { provider: "Moneypenny", price: "£150 to £400+", model: "Per minute", type: "Human + AI hybrid", trial: "Custom", contract: "Yes (12 mo)", bestFor: "Premium service" },
   { provider: "ARROW", price: "£99", model: "Flat monthly", type: "Auto-attendant", trial: "No", contract: "No", bestFor: "Simple routing" },
   { provider: "IONOS", price: "£9", model: "Flat monthly", type: "Basic auto-attendant", trial: "No", contract: "No", bestFor: "Cheapest option" },
   { provider: "RingCentral AIR", price: "£32", model: "Per user/month", type: "Cloud PBX + AI", trial: "30-day free", contract: "No", bestFor: "Teams needing PBX" },
@@ -180,6 +185,8 @@ const tradeBreakEven = [
   { trade: "Locksmith", avgJob: 120, plan: "Starter £59/mo", jobsNeeded: 1, monthlyRoi: "£1,081", annualRoi: "£12,972" },
   { trade: "Heating Engineer", avgJob: 240, plan: "Starter £59/mo", jobsNeeded: 1, monthlyRoi: "£1,921", annualRoi: "£23,052" },
 ]
+
+const BLOG_ENTRY = findBlogEntry("ai-call-answering-pricing-guide-uk-2026")!
 
 export const revalidate = 3600
 
@@ -198,72 +205,46 @@ export default function PricingGuidePage() {
           { name: "AI Call Answering Pricing Guide 2026", item: "https://whoza.ai/blog/ai-call-answering-pricing-guide-uk-2026" },
         ]} />
 
-        <main id="main-content" className="pb-24">
-          {/* Hero */}
-          <section className="relative overflow-hidden" style={{ background: "linear-gradient(135deg, #0F1729 0%, #1A1A2E 50%, #0F1729 100%)" }}>
-            <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-              <nav aria-label="Breadcrumb" className="mb-8">
-                <ol className="flex items-center text-sm text-[var(--v2-muted)]" style={{ listStyle: "none", padding: 0 }}>
-                  <li><a href="/" className="hover:text-[var(--v2-ink)] transition-colors">Home</a></li>
-                  <li className="mx-2">/</li>
-                  <li><a href="/blog" className="hover:text-[var(--v2-ink)] transition-colors">Blog</a></li>
-                  <li className="mx-2">/</li>
-                  <li className="text-[var(--v2-ink)]">Pricing Guide 2026</li>
-                </ol>
-              </nav>
-
-              <div className="inline-flex items-center gap-2 bg-[var(--v2-mint)] text-[var(--v2-green)] px-3 py-1 rounded-full text-xs font-medium mb-6">
-                <PoundSterling className="w-3 h-3" />
-                Transparent Pricing — June 2026
-              </div>
-
-              <h1 className="text-4xl lg:text-5xl font-extrabold mb-6" style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}>
-                How Much Does AI Call Answering{" "}
-                <span className="block text-[var(--v2-green)] mt-2">Cost in the UK? (2026)</span>
-              </h1>
-
-              <div className="flex flex-wrap items-center gap-4 text-[var(--v2-muted)] text-sm mt-4">
-                <div className="flex items-center gap-2">
-                  <User className="w-4 h-4" />
-                  <span>whoza.ai</span>
-                  <span className="text-[var(--v2-muted)]">— Research Team</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4" />
-                  <time dateTime="2026-06-06">2026-06-06</time>
-                </div>
-              </div>
-              <div className="mt-2 text-[var(--v2-muted)] text-sm">
-                Last updated: <time dateTime="2026-06-06">2026-06-06</time>
-              </div>
-
-              <p className="text-lg text-[var(--v2-body)] max-w-2xl mb-8">
-                A fully transparent pricing guide comparing every major AI call answering service in the UK. 
-                Real prices, hidden costs, and trade-specific ROI calculations — no affiliate links, no BS.
-              </p>
-
-              <div className="flex flex-wrap gap-4">
-                <a href="#comparison-table" className="inline-flex items-center gap-2 bg-[var(--v2-green)] text-white font-bold px-6 py-3 rounded-lg hover:bg-[var(--v2-green-hover)] transition-colors v2-island">
-                  See Price Comparison <ArrowRight className="w-4 h-4" />
-                </a>
-                <a href="#roi-calculator" className="inline-flex items-center gap-2 bg-white text-[var(--v2-ink)] font-bold px-6 py-3 rounded-lg hover:border-[#b9c6bf] transition-colors">
-                  Calculate Your ROI <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-
-              <div className="flex items-center gap-6 mt-8 text-sm text-[var(--v2-muted)]">
-                <span className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" /> 18 min read
-                </span>
-                <span className="flex items-center gap-2">
-                  <Shield className="w-4 h-4" /> ONS Data Verified
-                </span>
-                <span className="flex items-center gap-2">
-                  <BadgeCheck className="w-4 h-4" /> No Affiliate Links
-                </span>
-              </div>
+        <main id="main-content" className="overflow-x-clip pb-24">
+          <RevealObserver />
+          <ArticleHeader entry={BLOG_ENTRY} title="How Much Does AI Call Answering Cost in the UK? (2026)" author="whoza.ai Research Team" date="2026-06-06" readTime="18 min read">
+            <p
+              data-reveal="load"
+              style={{ "--reveal-delay": "200ms" } as React.CSSProperties}
+              className="v2-lead mt-8 max-w-[760px]"
+            >
+              A fully transparent pricing guide comparing every major AI call answering service in the UK. Real prices, hidden costs, and trade-specific ROI calculations. No affiliate links, no BS.
+            </p>
+            <div
+              data-reveal="load"
+              style={{ "--reveal-delay": "260ms" } as React.CSSProperties}
+              className="mt-8 flex flex-wrap gap-3"
+            >
+              <a href="#comparison-table" className="v2-btn">
+                See Price Comparison <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </a>
+              <a href="#roi-calculator" className="v2-btn-secondary bg-white">
+                Calculate Your ROI <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </a>
             </div>
-          </section>
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-[var(--v2-muted)]">
+              <span className="flex items-center gap-2">
+                <PoundSterling className="h-4 w-4" aria-hidden="true" /> Transparent Pricing, June 2026
+              </span>
+              <span className="flex items-center gap-2">
+                <Shield className="h-4 w-4" aria-hidden="true" /> ONS Data Verified
+              </span>
+              <span className="flex items-center gap-2">
+                <BadgeCheck className="h-4 w-4" aria-hidden="true" /> No Affiliate Links
+              </span>
+              <span>
+                Last updated: <time dateTime="2026-06-06">6 Jun 2026</time>
+              </span>
+            </div>
+          </ArticleHeader>
+
+          <ArticleCover entry={BLOG_ENTRY} />
+
 
           {/* E-E-A-T Signals */}
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -283,14 +264,14 @@ export default function PricingGuidePage() {
                   <Check className="w-5 h-5 text-[var(--v2-green)] shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-[var(--v2-ink)]">ICO Registered</strong>
-                    <p className="text-[var(--v2-muted)]">whoza.ai: ICO ZC077271 — UK GDPR compliant</p>
+                    <p className="text-[var(--v2-muted)]">whoza.ai: ICO ZC077271, UK GDPR compliant</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-[var(--v2-green)] shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-[var(--v2-ink)]">Registered UK Company</strong>
-                    <p className="text-[var(--v2-muted)]">Company No. SC874716 — Scotland</p>
+                    <p className="text-[var(--v2-muted)]">Company No. SC874716, Scotland</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -311,7 +292,7 @@ export default function PricingGuidePage() {
                   <Check className="w-5 h-5 text-[var(--v2-green)] shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-[var(--v2-ink)]">Trade-Specific Focus</strong>
-                    <p className="text-[var(--v2-muted)]">Not generic — built for UK tradespeople</p>
+                    <p className="text-[var(--v2-muted)]">Not generic, built for UK tradespeople</p>
                   </div>
                 </div>
               </div>
@@ -323,14 +304,14 @@ export default function PricingGuidePage() {
             <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-8">
               <p className="text-[var(--v2-body)] leading-relaxed mb-6">
                 If you are researching AI call answering for your UK trade business, the first question is always: 
-                <strong className="text-[var(--v2-ink)]"> how much does it actually cost?</strong> The answer is not simple — 
+                <strong className="text-[var(--v2-ink)]"> how much does it actually cost?</strong> The answer is not simple: 
                 pricing varies wildly depending on the provider, pricing model, call volume, and features you need. 
                 Entry-level services start at £9 per month. Premium human-AI hybrid services can exceed £400 per month. 
                 Most trade businesses find effective coverage between £59 and £125 per month.
               </p>
               <p className="text-[var(--v2-body)] leading-relaxed mb-6">
                 This guide cuts through the marketing fluff. We have gathered real 2026 pricing from every major 
-                UK AI call answering provider — Whoza.ai, Clara AI, Moneypenny, ARROW, IONOS, RingCentral AIR, and 
+                UK AI call answering provider: Whoza.ai, Clara AI, Moneypenny, ARROW, IONOS, RingCentral AIR, and 
                 Answer.co.uk. We break down per-job, per-minute, and per-month pricing models. We reveal hidden costs 
                 that providers do not advertise. And we calculate exact break-even points for plumbers, electricians, 
                 roofers, and builders. For a complete overview of round-the-clock service, see our 
@@ -338,7 +319,7 @@ export default function PricingGuidePage() {
               </p>
               <p className="text-[var(--v2-body)] leading-relaxed mb-6">
                 All pricing is verified from provider websites, direct sales enquiries, and our own independent testing. 
-                We do not use affiliate links — this guide is editorially independent. Our goal is simple: help you 
+                We do not use affiliate links. This guide is editorially independent. Our goal is simple: help you 
                 choose the right AI call answering service at the right price for your trade business.
               </p>
               <p className="text-[var(--v2-body)] leading-relaxed">
@@ -377,7 +358,7 @@ export default function PricingGuidePage() {
               What Affects AI Call Answering Pricing
             </h2>
             <p className="text-[var(--v2-body)] leading-relaxed mb-6">
-              Before comparing prices, understand what drives cost. AI call answering pricing is not arbitrary — 
+              Before comparing prices, understand what drives cost. AI call answering pricing is not arbitrary: 
               it reflects four key factors that determine the value you receive.
             </p>
 
@@ -389,9 +370,9 @@ export default function PricingGuidePage() {
                 </h3>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                   Every provider sets limits. Some offer unlimited calls (flat monthly). Others charge per minute 
-                  (Moneypenny: 90p/minute). Per-job providers like Whoza.ai charge per captured lead, not per call — 
+                  (Moneypenny: 90p/minute). Per-job providers like Whoza.ai charge per captured lead, not per call, 
                   so a 30-second spam call costs nothing. Estimate your monthly call volume before choosing a plan. 
-                  A busy plumber receiving 8–12 calls daily needs more capacity than a part-time decorator.
+                  A busy plumber receiving 8 to 12 calls daily needs more capacity than a part-time decorator.
                 </p>
               </div>
 
@@ -401,10 +382,10 @@ export default function PricingGuidePage() {
                   Features and Integrations
                 </h3>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed">
-                  Basic auto-attendants (£9–£30/month) route calls and take messages. True AI conversation 
-                  (£49–£125/month) qualifies leads, asks trade-specific questions, and captures structured data. 
+                  Basic auto-attendants (£9 to £30/month) route calls and take messages. True AI conversation 
+                  (£49 to £125/month) qualifies leads, asks trade-specific questions, and captures structured data. 
                   Premium features like WhatsApp delivery, calendar booking, CRM integration, and call recording 
-                  typically cost £20–£50 extra. Consider which features actually generate revenue versus nice-to-have extras.
+                  typically cost £20 to £50 extra. Consider which features actually generate revenue versus nice-to-have extras.
                 </p>
               </div>
 
@@ -429,8 +410,8 @@ export default function PricingGuidePage() {
                   Human Backup and Hybrid Models
                 </h3>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed">
-                  Pure AI services (£49–£125/month) handle everything digitally. Hybrid services like Moneypenny 
-                  (£150–£400+/month) use human receptionists backed by AI tools. The human touch costs 3–5x more 
+                  Pure AI services (£49 to £125/month) handle everything digitally. Hybrid services like Moneypenny 
+                  (£150 to £400+/month) use human receptionists backed by AI tools. The human touch costs 3 to 5x more 
                   but suits complex B2B enquiries or luxury trades where empathy matters. For most emergency 
                   and domestic trades, pure AI delivers better ROI.
                 </p>
@@ -499,13 +480,13 @@ export default function PricingGuidePage() {
               <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold text-[var(--v2-ink)]">Whoza.ai</h3>
-                  <span className="text-[var(--v2-green)] font-bold">£59–£399 / month</span>
+                  <span className="text-[var(--v2-green)] font-bold">£59 to £399 / month</span>
                 </div>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed mb-4">
                   The only AI call answering service built specifically for UK trades. Per-job pricing means you 
-                  only pay for captured leads — spam calls, wrong numbers, and sales calls cost nothing. Starter 
+                  only pay for captured leads: spam calls, wrong numbers, and sales calls cost nothing. Starter 
                   plan (£59/mo) includes unlimited calls and 15 trade-specific AI personalities. Growth plan (£125/mo) 
-                  adds calendar integration and custom qualification flows. Enterprise (£249–£399) supports multi-van 
+                  adds calendar integration and custom qualification flows. Enterprise (£249 to £399) supports multi-van 
                   operations with team routing.
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -522,7 +503,7 @@ export default function PricingGuidePage() {
               <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold text-[var(--v2-ink)]">Clara AI</h3>
-                  <span className="text-[var(--v2-green)] font-bold">£49–£149 / month</span>
+                  <span className="text-[var(--v2-green)] font-bold">£49 to £149 / month</span>
                 </div>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed mb-4">
                   General-purpose AI receptionist with broad small business focus. Entry plan (£49/mo) includes 
@@ -542,7 +523,7 @@ export default function PricingGuidePage() {
               <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold text-[var(--v2-ink)]">Moneypenny</h3>
-                  <span className="text-amber-700 font-bold">£150–£400+ / month</span>
+                  <span className="text-amber-700 font-bold">£150 to £400+ / month</span>
                 </div>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed mb-4">
                   Premium human-AI hybrid service. Real receptionists answer calls with AI-assisted note-taking 
@@ -586,7 +567,7 @@ export default function PricingGuidePage() {
                   <span className="text-[var(--v2-green)] font-bold">£9 / month</span>
                 </div>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed mb-4">
-                  Basic auto-attendant and call routing. Not true AI — uses pre-recorded menus and simple 
+                  Basic auto-attendant and call routing. Not true AI. Uses pre-recorded menus and simple 
                   voicemail routing. At £9.99/month it is the cheapest option but offers minimal lead capture 
                   capability. Callers navigate menus and leave messages. Suitable for businesses that just need 
                   professional call routing and do not rely on phone enquiries for revenue. No trial, no contract.
@@ -607,8 +588,8 @@ export default function PricingGuidePage() {
                 </div>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed mb-4">
                   Cloud PBX system with AI-powered call handling add-ons. Core service is business phone 
-                  system (£32/user/month) with optional AI receptionist features (£15–£25/user/month extra). 
-                  Total cost for a single user with AI: £47–£57/month. Good for trades already using RingCentral 
+                  system (£32/user/month) with optional AI receptionist features (£15 to £25/user/month extra). 
+                  Total cost for a single user with AI: £47 to £57/month. Good for trades already using RingCentral 
                   or needing full phone system features. AI is competent but not trade-specific. 30-day free trial.
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -623,14 +604,14 @@ export default function PricingGuidePage() {
               <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold text-[var(--v2-ink)]">Answer.co.uk</h3>
-                  <span className="text-[var(--v2-green)] font-bold">PAYG — per call</span>
+                  <span className="text-[var(--v2-green)] font-bold">PAYG: per call</span>
                 </div>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed mb-4">
                   Traditional human answering service with pay-as-you-go pricing. Real people answer calls 
-                  and take messages. Costs £1.20–£2.50 per call depending on complexity. No monthly fee, no 
+                  and take messages. Costs £1.20 to £2.50 per call depending on complexity. No monthly fee, no 
                   contract, no trial. Best for businesses with very low call volumes (under 20 calls/month) 
-                  who prefer human interaction. Costs escalate quickly at higher volumes — 50 calls/month 
-                  equals £60–£125, comparable to AI services.
+                  who prefer human interaction. Costs escalate quickly at higher volumes: 50 calls/month 
+                  equals £60 to £125, comparable to AI services.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <span className="bg-white text-[var(--v2-body)] px-2 py-1 rounded-full text-xs">Per call</span>
@@ -649,7 +630,7 @@ export default function PricingGuidePage() {
               Per-Job vs Per-Minute vs Per-Month: Which Model Wins?
             </h2>
             <p className="text-[var(--v2-body)] leading-relaxed mb-6">
-              Understanding pricing models is crucial — the same provider can cost £50 or £500 depending on 
+              Understanding pricing models is crucial: the same provider can cost £50 or £500 depending on 
               how they charge. Here is how each model works and which suits tradespeople.
             </p>
 
@@ -658,7 +639,7 @@ export default function PricingGuidePage() {
                 <h3 className="font-bold text-[var(--v2-green)] mb-3">Per-Job Pricing</h3>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed mb-4">
                   You pay only when the AI captures a qualified lead. Spam calls, wrong numbers, and 
-                  sales pitches cost nothing. Example: Whoza.ai charges £5–£15 per captured job depending 
+                  sales pitches cost nothing. Example: Whoza.ai charges £5 to £15 per captured job depending 
                   on plan, plus a small base fee.
                 </p>
                 <div className="text-sm">
@@ -671,8 +652,8 @@ export default function PricingGuidePage() {
               <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6">
                 <h3 className="font-bold text-amber-700 mb-3">Per-Minute Pricing</h3>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed mb-4">
-                  You pay for every minute the AI or human spends on calls. Rates range from 45p–£1.50/minute. 
-                  A 3-minute qualification call costs £1.35–£4.50. Monthly bills vary with call volume and duration.
+                  You pay for every minute the AI or human spends on calls. Rates range from 45p to £1.50/minute. 
+                  A 3-minute qualification call costs £1.35 to £4.50. Monthly bills vary with call volume and duration.
                 </p>
                 <div className="text-sm">
                   <div className="flex justify-between text-[var(--v2-body)] mb-1"><span>Best for</span><span className="text-amber-700">Low volume</span></div>
@@ -718,8 +699,8 @@ export default function PricingGuidePage() {
                     <tr className="border-b border-[var(--v2-line)]">
                       <td className="py-3">Per-minute</td>
                       <td>Moneypenny (90p/min)</td>
-                      <td className="text-right font-mono">£108–£180</td>
-                      <td className="text-right font-mono">£1,296–£2,160</td>
+                      <td className="text-right font-mono">£108 to £180</td>
+                      <td className="text-right font-mono">£1,296 to £2,160</td>
                     </tr>
                     <tr className="border-b border-[var(--v2-line)]">
                       <td className="py-3">Flat monthly</td>
@@ -738,7 +719,7 @@ export default function PricingGuidePage() {
               </div>
               <p className="text-xs text-[var(--v2-muted)] mt-4">
                 Based on 20 calls/week, 3-minute average call duration, 80% qualification rate. 
-                Per-job assumes 8 captured leads/week at £5–£7.50 per job plus base fee.
+                Per-job assumes 8 captured leads/week at £5 to £7.50 per job plus base fee.
               </p>
             </div>
           </section>
@@ -751,7 +732,7 @@ export default function PricingGuidePage() {
             </h2>
             <p className="text-[var(--v2-body)] leading-relaxed mb-6">
               The advertised price is rarely the total price. Here are the hidden costs that catch trade 
-              businesses out — and how to avoid them.
+              businesses out, and how to avoid them.
             </p>
 
             <div className="space-y-4 mb-8">
@@ -761,11 +742,11 @@ export default function PricingGuidePage() {
                     <Building className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-[var(--v2-ink)] mb-1">Setup Fees (£50–£250)</h3>
+                    <h3 className="font-bold text-[var(--v2-ink)] mb-1">Setup Fees (£50 to £250)</h3>
                     <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                       Some providers charge a one-time setup fee for number configuration, AI training, and 
                       integration. Whoza.ai and Clara AI include setup in the monthly price. Moneypenny charges 
-                      £150–£250 for complex configurations. Always ask: "Is setup included?"
+                      £150 to £250 for complex configurations. Always ask: "Is setup included?"
                     </p>
                   </div>
                 </div>
@@ -780,8 +761,8 @@ export default function PricingGuidePage() {
                     <h3 className="font-bold text-[var(--v2-ink)] mb-1">Overage Charges (Variable)</h3>
                     <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                       Flat monthly plans often have call limits. Exceed 100 minutes on Clara AI's entry plan 
-                      and you pay £0.65/minute overage. A busy week with emergency calls can add £50–£100 to 
-                      your bill. Per-job and per-minute models avoid this trap — you only pay for what you use.
+                      and you pay £0.65/minute overage. A busy week with emergency calls can add £50 to £100 to 
+                      your bill. Per-job and per-minute models avoid this trap: you only pay for what you use.
                     </p>
                   </div>
                 </div>
@@ -810,11 +791,11 @@ export default function PricingGuidePage() {
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-[var(--v2-ink)] mb-1">Number Porting Charges (£15–£50)</h3>
+                    <h3 className="font-bold text-[var(--v2-ink)] mb-1">Number Porting Charges (£15 to £50)</h3>
                     <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                       Transferring your existing business number to a new provider may incur porting fees. 
-                      Some providers waive this; others charge £25–£50. If you want to keep your established 
-                      number (and you should — changing numbers confuses customers), factor this into first-year costs.
+                      Some providers waive this; others charge £25 to £50. If you want to keep your established 
+                      number (and you should, changing numbers confuses customers), factor this into first-year costs.
                     </p>
                   </div>
                 </div>
@@ -826,11 +807,11 @@ export default function PricingGuidePage() {
                     <Briefcase className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-[var(--v2-ink)] mb-1">Integration Fees (£10–£30/month)</h3>
+                    <h3 className="font-bold text-[var(--v2-ink)] mb-1">Integration Fees (£10 to £30/month)</h3>
                     <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                       Connecting to your CRM, calendar, or accounting software may cost extra. Calendar booking 
-                      integration: £15–£25/month. CRM sync: £10–£20/month. WhatsApp Business API: sometimes free, 
-                      sometimes £5–£10/month. Whoza.ai includes WhatsApp delivery and basic calendar integration 
+                      integration: £15 to £25/month. CRM sync: £10 to £20/month. WhatsApp Business API: sometimes free, 
+                      sometimes £5 to £10/month. Whoza.ai includes WhatsApp delivery and basic calendar integration 
                       in all plans.
                     </p>
                   </div>
@@ -865,30 +846,30 @@ export default function PricingGuidePage() {
               Is Cheap AI Answering Actually Worth It?
             </h2>
             <p className="text-[var(--v2-body)] leading-relaxed mb-6">
-              At £9–£30 per month, cheap AI answering is tempting. But there is a critical difference between 
+              At £9 to £30 per month, cheap AI answering is tempting. But there is a critical difference between 
               <strong className="text-[var(--v2-ink)]"> auto-attendant</strong> technology and <strong className="text-[var(--v2-ink)]">true AI conversation</strong>. 
               Understanding this distinction saves you from buying a service that actually loses you money.
             </p>
 
             <div className="grid md:grid-cols-2 gap-4 mb-8">
               <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
-                <h3 className="font-bold text-red-700 mb-4">Cheap Auto-Attendant (£9–£30/month)</h3>
+                <h3 className="font-bold text-red-700 mb-4">Cheap Auto-Attendant (£9 to £30/month)</h3>
                 <ul className="space-y-3 text-sm text-[var(--v2-body)]">
                   <li className="flex items-start gap-2"><XCircle className="w-4 h-4 text-red-700 shrink-0 mt-0.5" /> Pre-recorded menu: "Press 1 for sales, 2 for support..."</li>
                   <li className="flex items-start gap-2"><XCircle className="w-4 h-4 text-red-700 shrink-0 mt-0.5" /> Cannot handle natural conversation</li>
                   <li className="flex items-start gap-2"><XCircle className="w-4 h-4 text-red-700 shrink-0 mt-0.5" /> Callers often hang up in frustration</li>
-                  <li className="flex items-start gap-2"><XCircle className="w-4 h-4 text-red-700 shrink-0 mt-0.5" /> No lead qualification — just voicemail routing</li>
+                  <li className="flex items-start gap-2"><XCircle className="w-4 h-4 text-red-700 shrink-0 mt-0.5" /> No lead qualification, just voicemail routing</li>
                   <li className="flex items-start gap-2"><XCircle className="w-4 h-4 text-red-700 shrink-0 mt-0.5" /> No trade-specific terminology</li>
                   <li className="flex items-start gap-2"><XCircle className="w-4 h-4 text-red-700 shrink-0 mt-0.5" /> Message delivery via email only (no WhatsApp)</li>
                 </ul>
                 <div className="mt-4 pt-4 border-t border-[var(--v2-line)]">
                   <p className="text-sm text-[var(--v2-body)]">Examples: <span className="text-[var(--v2-ink)]">IONOS (£9), basic RingCentral plans</span></p>
-                  <p className="text-sm text-red-700 mt-1">Effective lead capture: ~30–40%</p>
+                  <p className="text-sm text-red-700 mt-1">Effective lead capture: ~30 to 40%</p>
                 </div>
               </div>
 
               <div className="bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-6">
-                <h3 className="font-bold text-[var(--v2-green)] mb-4">True AI Conversation (£49–£125/month)</h3>
+                <h3 className="font-bold text-[var(--v2-green)] mb-4">True AI Conversation (£49 to £125/month)</h3>
                 <ul className="space-y-3 text-sm text-[var(--v2-body)]">
                   <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> Natural language: "How can I help you today?"</li>
                   <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> Understands context and asks follow-ups</li>
@@ -899,7 +880,7 @@ export default function PricingGuidePage() {
                 </ul>
                 <div className="mt-4 pt-4 border-t border-[var(--v2-green)]/20">
                   <p className="text-sm text-[var(--v2-body)]">Examples: <span className="text-[var(--v2-ink)]">Whoza.ai (£59+), Clara AI (£49+)</span></p>
-                  <p className="text-sm text-[var(--v2-green)] mt-1">Effective lead capture: ~90–95%</p>
+                  <p className="text-sm text-[var(--v2-green)] mt-1">Effective lead capture: ~90 to 95%</p>
                 </div>
               </div>
             </div>
@@ -908,7 +889,7 @@ export default function PricingGuidePage() {
               <h4 className="font-semibold text-[var(--v2-ink)] mb-3">The Math: Cheap vs True AI</h4>
               <p className="text-[var(--v2-body)] text-sm leading-relaxed mb-4">
                 Let us say you receive 20 calls per week, 10 of which are genuine enquiries. A cheap auto-attendant 
-                captures 40% (4 leads). True AI captures 90% (9 leads). That is 5 extra leads per week — 
+                captures 40% (4 leads). True AI captures 90% (9 leads). That is 5 extra leads per week, 
                 260 extra leads per year.
               </p>
               <div className="grid sm:grid-cols-2 gap-4 text-sm">
@@ -945,7 +926,7 @@ export default function PricingGuidePage() {
               ROI Calculator: How Many Jobs to Break Even?
             </h2>
             <p className="text-[var(--v2-body)] leading-relaxed mb-6">
-              The most important number is not the monthly fee — it is how many jobs you need to win to cover 
+              The most important number is not the monthly fee. It is how many jobs you need to win to cover 
               the cost. For UK trades, the answer is almost always: <strong className="text-[var(--v2-ink)]">one job per month</strong>.
             </p>
 
@@ -979,15 +960,15 @@ export default function PricingGuidePage() {
             <div className="bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-6">
               <h4 className="font-semibold text-[var(--v2-green)] mb-3">How We Calculate ROI</h4>
               <p className="text-[var(--v2-body)] text-sm leading-relaxed mb-4">
-                Monthly ROI = (Average job value × Estimated extra jobs captured/month) – Monthly AI cost.
-                We assume AI captures 8 extra qualified leads per month (conservative — based on 20 calls/week, 
+                Monthly ROI = (Average job value × Estimated extra jobs captured/month) minus Monthly AI cost.
+                We assume AI captures 8 extra qualified leads per month (conservative: based on 20 calls/week, 
                 33% missed rate, 90% AI capture vs 22% voicemail capture, 35% conversion).
               </p>
               <div className="bg-white rounded-lg p-4 font-mono text-sm">
                 <p className="text-[var(--v2-green)]">Plumber Example:</p>
                 <p className="text-[var(--v2-body)]">8 extra leads × 35% conversion = 2.8 extra jobs/month</p>
                 <p className="text-[var(--v2-body)]">2.8 jobs × £280 = £784 extra revenue/month</p>
-                <p className="text-[var(--v2-body)]">£784 revenue – £59 AI cost = <span className="text-[var(--v2-green)]">£725 net monthly gain</span></p>
+                <p className="text-[var(--v2-body)]">£784 revenue minus £59 AI cost = <span className="text-[var(--v2-green)]">£725 net monthly gain</span></p>
               </div>
             </div>
           </section>
@@ -1005,11 +986,11 @@ export default function PricingGuidePage() {
 
             <div className="space-y-6">
               <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
-                <h3 className="font-bold text-[var(--v2-ink)] mb-3">Plumber — Recommended: Whoza.ai Starter (£59/month)</h3>
+                <h3 className="font-bold text-[var(--v2-ink)] mb-3">Plumber | Recommended: Whoza.ai Starter (£59/month)</h3>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed mb-3">
                   Plumbers receive high call volumes with emergency and routine mix. Average job value (£280) 
-                  means breaking even takes one job. Per-job pricing is ideal — emergency burst pipe calls at 
-                  2am cost the same as routine boiler service enquiries. Expected monthly ROI: £700–£1,200.
+                  means breaking even takes one job. Per-job pricing is ideal: emergency burst pipe calls at 
+                  2am cost the same as routine boiler service enquiries. Expected monthly ROI: £700 to £1,200.
                 </p>
                 <div className="flex flex-wrap gap-2 text-xs">
                   <span className="bg-[var(--v2-mint)] text-[var(--v2-green)] px-2 py-1 rounded-full">Emergency calls</span>
@@ -1019,12 +1000,12 @@ export default function PricingGuidePage() {
               </div>
 
               <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
-                <h3 className="font-bold text-[var(--v2-ink)] mb-3">Electrician — Recommended: Whoza.ai Growth (£125/month) or Clara Professional (£99/month)</h3>
+                <h3 className="font-bold text-[var(--v2-ink)] mb-3">Electrician | Recommended: Whoza.ai Growth (£125/month) or Clara Professional (£99/month)</h3>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed mb-3">
                   Electricians handle complex enquiries: EICRs, consumer unit upgrades, rewires, and emergency 
                   callouts. Job values range from £120 (callout) to £2,500 (consumer unit). AI needs to understand 
                   electrical terminology and compliance requirements. Higher plan justifies cost with one 
-                  consumer unit job covering 20 months of service. Expected monthly ROI: £1,200–£2,000.
+                  consumer unit job covering 20 months of service. Expected monthly ROI: £1,200 to £2,000.
                 </p>
                 <div className="flex flex-wrap gap-2 text-xs">
                   <span className="bg-amber-50 text-amber-700 px-2 py-1 rounded-full">Technical detail</span>
@@ -1034,12 +1015,12 @@ export default function PricingGuidePage() {
               </div>
 
               <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
-                <h3 className="font-bold text-[var(--v2-ink)] mb-3">Roofer — Recommended: Whoza.ai Starter (£59/month)</h3>
+                <h3 className="font-bold text-[var(--v2-ink)] mb-3">Roofer | Recommended: Whoza.ai Starter (£59/month)</h3>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed mb-3">
                   Roofers have the highest average job values (£850+) but lower call volume. One captured roof 
-                  repair covers 14 months of AI service. Per-job pricing is essential — you do not want to pay 
+                  repair covers 14 months of AI service. Per-job pricing is essential: you do not want to pay 
                   monthly during quiet winter periods. Emergency storm damage calls spike suddenly; AI handles 
-                  overflow without extra staff. Expected monthly ROI: £2,000–£4,000+.
+                  overflow without extra staff. Expected monthly ROI: £2,000 to £4,000+.
                 </p>
                 <div className="flex flex-wrap gap-2 text-xs">
                   <span className="bg-slate-100 text-[var(--v2-muted)] px-2 py-1 rounded-full">Highest job values</span>
@@ -1049,12 +1030,12 @@ export default function PricingGuidePage() {
               </div>
 
               <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
-                <h3 className="font-bold text-[var(--v2-ink)] mb-3">Builder — Recommended: Whoza.ai Growth (£125/month) or Enterprise (£249/month)</h3>
+                <h3 className="font-bold text-[var(--v2-ink)] mb-3">Builder | Recommended: Whoza.ai Growth (£125/month) or Enterprise (£249/month)</h3>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed mb-3">
                   Builders handle the most complex enquiries: extensions, renovations, new builds. Job values 
-                  (£500–£60,000) justify premium AI with detailed qualification. Multi-van operations need team 
+                  (£500 to £60,000) justify premium AI with detailed qualification. Multi-van operations need team 
                   routing and job allocation. Enterprise plan supports multiple team members and project managers. 
-                  One extension enquiry (£20,000+) covers 80+ months of service. Expected monthly ROI: £3,000–£8,000+.
+                  One extension enquiry (£20,000+) covers 80+ months of service. Expected monthly ROI: £3,000 to £8,000+.
                 </p>
                 <div className="flex flex-wrap gap-2 text-xs">
                   <span className="bg-stone-500/10 text-stone-600 px-2 py-1 rounded-full">Project detail</span>
@@ -1086,17 +1067,17 @@ export default function PricingGuidePage() {
                   </tr>
                 </thead>
                 <tbody className="text-[var(--v2-body)]">
-                  <tr className="border-b border-[var(--v2-line)]"><td className="p-4">Base salary (receptionist, full-time)</td><td className="p-4">£22,000 – £28,000</td></tr>
-                  <tr className="border-b border-[var(--v2-line)]"><td className="p-4">Employer National Insurance</td><td className="p-4">£2,200 – £2,800</td></tr>
-                  <tr className="border-b border-[var(--v2-line)]"><td className="p-4">Auto-enrolment pension contributions</td><td className="p-4">£600 – £900</td></tr>
-                  <tr className="border-b border-[var(--v2-line)]"><td className="p-4">Holiday &amp; sick cover (temp/agency)</td><td className="p-4">£2,000 – £3,000</td></tr>
-                  <tr className="border-b border-[var(--v2-line)]"><td className="p-4">Training, recruitment &amp; management time</td><td className="p-4">£1,000 – £2,000</td></tr>
-                  <tr><td className="p-4">Office space, desk, phone &amp; equipment</td><td className="p-4">£500 – £1,500</td></tr>
+                  <tr className="border-b border-[var(--v2-line)]"><td className="p-4">Base salary (receptionist, full-time)</td><td className="p-4">£22,000 to £28,000</td></tr>
+                  <tr className="border-b border-[var(--v2-line)]"><td className="p-4">Employer National Insurance</td><td className="p-4">£2,200 to £2,800</td></tr>
+                  <tr className="border-b border-[var(--v2-line)]"><td className="p-4">Auto-enrolment pension contributions</td><td className="p-4">£600 to £900</td></tr>
+                  <tr className="border-b border-[var(--v2-line)]"><td className="p-4">Holiday &amp; sick cover (temp/agency)</td><td className="p-4">£2,000 to £3,000</td></tr>
+                  <tr className="border-b border-[var(--v2-line)]"><td className="p-4">Training, recruitment &amp; management time</td><td className="p-4">£1,000 to £2,000</td></tr>
+                  <tr><td className="p-4">Office space, desk, phone &amp; equipment</td><td className="p-4">£500 to £1,500</td></tr>
                 </tbody>
                 <tfoot>
                   <tr className="border-t border-[var(--v2-green)]/30 bg-[var(--v2-mint)]">
                     <td className="p-4 font-bold text-[var(--v2-ink)]">True total cost per year</td>
-                    <td className="p-4 font-bold text-[var(--v2-green)]">£27,800 – £38,700</td>
+                    <td className="p-4 font-bold text-[var(--v2-green)]">£27,800 to £38,700</td>
                   </tr>
                 </tfoot>
               </table>
@@ -1105,18 +1086,18 @@ export default function PricingGuidePage() {
             <h3 className="text-xl font-bold mb-4">What about a virtual receptionist service?</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-6">
               A UK virtual receptionist service (human agents answering remotely) typically costs
-              <strong className="text-[var(--v2-ink)]"> £150–£400 per month (£1,800–£4,800 per year)</strong>, requires 2–5 days
+              <strong className="text-[var(--v2-ink)]"> £150 to £400 per month (£1,800 to £4,800 per year)</strong>, requires 2 to 5 days
               setup, answers one call per agent at a time, delivers messages by email, usually requires a 12-month
               contract, and needs trade knowledge trained from scratch. One joiner who spent two weeks comparing
-              four services found the cheapest at £150/month — still 2.5x the cost of an AI plan with fewer features.
+              four services found the cheapest at £150/month, still 2.5x the cost of an AI plan with fewer features.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
               <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <h4 className="font-bold text-[var(--v2-ink)] mb-3">Human receptionist (or virtual service)</h4>
                 <ul className="space-y-2 text-sm text-[var(--v2-body)]">
-                  <li>£27,800–£38,700/year (in-house) or £1,800–£4,800/year (virtual)</li>
-                  <li>Working hours only — evenings, weekends and simultaneous calls missed or charged extra</li>
+                  <li>£27,800 to £38,700/year (in-house) or £1,800 to £4,800/year (virtual)</li>
+                  <li>Working hours only: evenings, weekends and simultaneous calls missed or charged extra</li>
                   <li>Holiday cover, sick days and training required</li>
                   <li>One call at a time per agent</li>
                   <li>12-month contracts typical for virtual services</li>
@@ -1125,11 +1106,11 @@ export default function PricingGuidePage() {
               <div className="bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-6">
                 <h4 className="font-bold text-[var(--v2-green)] mb-3">AI call answering (whoza.ai)</h4>
                 <ul className="space-y-2 text-sm text-[var(--v2-body)]">
-                  <li>£708–£4,788/year (£59–£399/month, flat — unlimited calls)</li>
+                  <li>£708 to £4,788/year (£59 to £399/month, flat, unlimited calls)</li>
                   <li>24/7/365 including bank holidays, unlimited simultaneous calls</li>
                   <li>Never ill, never on holiday, no training or management overhead</li>
                   <li>Pre-trained on trade terminology, delivers to WhatsApp in seconds</li>
-                  <li>No contract — cancel anytime, 7-day free trial</li>
+                  <li>No contract, cancel anytime, 7-day free trial</li>
                 </ul>
               </div>
             </div>
@@ -1137,10 +1118,10 @@ export default function PricingGuidePage() {
             <div className="bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-6">
               <p className="text-[var(--v2-body)] leading-relaxed text-sm">
                 <strong className="text-[var(--v2-green)]">The bottom line:</strong> AI call answering delivers comparable
-                (and for missed-call capture, superior) coverage for <strong className="text-[var(--v2-ink)]">94–98% less</strong> than an
-                in-house receptionist and roughly 60–85% less than a virtual receptionist service. And because the
-                subscription is an allowable business expense, the effective cost after tax relief is lower still —
-                one tradesperson&apos;s accountant described the tax deduction as the surprise bonus of the switch.
+                (and for missed-call capture, superior) coverage for <strong className="text-[var(--v2-ink)]">94 to 98% less</strong> than an
+                in-house receptionist and roughly 60 to 85% less than a virtual receptionist service. And because the
+                subscription is an allowable business expense, the effective cost after tax relief is lower still.
+                One tradesperson&apos;s accountant described the tax deduction as the surprise bonus of the switch.
               </p>
             </div>
           </section>
@@ -1152,8 +1133,8 @@ export default function PricingGuidePage() {
               ROI: Real Numbers for Trade Businesses
             </h2>
             <p className="text-[var(--v2-body)] leading-relaxed mb-6">
-              ROI depends on how many calls you miss and what a job is worth. Two scenarios — one conservative,
-              one realistic — using figures UK trades report: 33% of incoming calls go unanswered, 69% of voicemail
+              ROI depends on how many calls you miss and what a job is worth. Two scenarios (one conservative,
+              one realistic) using figures UK trades report: 33% of incoming calls go unanswered, 69% of voicemail
               callers hang up, and 35% is a typical conversion rate on qualified enquiries.
             </p>
 
@@ -1189,9 +1170,9 @@ export default function PricingGuidePage() {
 
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
               On the Growth plan (£125/month = £1,500/year), the realistic scenario returns <strong className="text-[var(--v2-ink)]">2,475% ROI</strong>.
-              Even a single recovered job typically covers months of service — a roofer capturing one £850 repair covers
-              over 14 months of the Starter plan. Against a human receptionist at £27,800–£38,700/year, AI answering
-              recovering £15,000–£37,000/year is not an expense — it is the highest-ROI line item most trade
+              Even a single recovered job typically covers months of service: a roofer capturing one £850 repair covers
+              over 14 months of the Starter plan. Against a human receptionist at £27,800 to £38,700/year, AI answering
+              recovering £15,000 to £37,000/year is not an expense. It is the highest-ROI line item most trade
               businesses can add.
             </p>
           </section>
@@ -1199,7 +1180,7 @@ export default function PricingGuidePage() {
           {/* CTA Section 1 */}
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
             <div className="bg-gradient-to-br from-emerald-500/10 to-emerald-500/5 border border-emerald-500/20 rounded-xl p-8 v2-island">
-              <h3 className="text-2xl font-bold text-white mb-4">Get 7 Days Free — No Credit Card Required</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Get 7 Days Free, No Credit Card Required</h3>
               <p className="text-white/60 mb-6 max-w-xl mx-auto">
                 See exactly how many calls you are missing and what they are worth. Whoza.ai's 7-day trial 
                 includes full AI call answering, WhatsApp delivery, and trade-specific qualification. 
@@ -1228,7 +1209,7 @@ export default function PricingGuidePage() {
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                   AI call answering in the UK costs between £9 and £400+ per month depending on the provider and 
                   pricing model. Entry-level services like IONOS start at £9/month. Mid-tier AI services like Clara 
-                  AI cost £49–£149/month. Premium human-assisted services like Moneypenny range from £150–£400+/month. 
+                  AI cost £49 to £149/month. Premium human-assisted services like Moneypenny range from £150 to £400+/month. 
                   Whoza.ai offers trade-specific plans from 
                   <a href="/pricing" className="text-[var(--v2-green)] hover:underline">£59/month</a> with per-job pricing. 
                   For a full breakdown, see our 
@@ -1239,7 +1220,7 @@ export default function PricingGuidePage() {
                 <h3 className="font-bold text-[var(--v2-ink)] mb-2">What is the cheapest AI receptionist in the UK?</h3>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                   The cheapest AI receptionist in the UK is IONOS at £9.99/month for basic call handling. However, 
-                  cheapest is not always best value — IONOS uses basic auto-attendant technology, not true AI. For 
+                  cheapest is not always best value: IONOS uses basic auto-attendant technology, not true AI. For 
                   genuine AI conversation, Clara AI starts at £49/month and Whoza.ai at £59/month for tradespeople. 
                   Consider call quality, lead capture accuracy, and integration features when comparing price.
                 </p>
@@ -1249,7 +1230,7 @@ export default function PricingGuidePage() {
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                   Per-job pricing is generally better for tradespeople because it aligns cost with revenue. A plumber 
                   paying £5 per captured job knows exactly what each lead costs. Per-minute pricing penalises longer 
-                  qualification calls — a complex boiler enquiry might take 4 minutes but be worth £800. Per-month 
+                  qualification calls: a complex boiler enquiry might take 4 minutes but be worth £800. Per-month 
                   pricing offers predictability but may waste money during quiet periods. Most trade businesses prefer 
                   per-job or flat monthly pricing.
                 </p>
@@ -1257,7 +1238,7 @@ export default function PricingGuidePage() {
               <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <h3 className="font-bold text-[var(--v2-ink)] mb-2">Are there hidden costs with AI call answering services?</h3>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed">
-                  Yes. Common hidden costs include: setup fees (£50–£250), overage charges when you exceed monthly 
+                  Yes. Common hidden costs include: setup fees (£50 to £250), overage charges when you exceed monthly 
                   call limits, contract lock-in penalties (some providers require 12-month commitments), integration 
                   fees for connecting to your CRM or calendar, number porting charges, and premium features like 
                   WhatsApp delivery or call recording that cost extra. Always ask for a total cost breakdown before 
@@ -1267,31 +1248,31 @@ export default function PricingGuidePage() {
               <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <h3 className="font-bold text-[var(--v2-ink)] mb-2">How many jobs does it take to break even on AI call answering?</h3>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed">
-                  For most UK trades, breaking even takes 1–2 jobs per month. Example: a plumber on Whoza.ai's 
+                  For most UK trades, breaking even takes 1 to 2 jobs per month. Example: a plumber on Whoza.ai's 
                   £59/month Starter plan needs to win just one £280 job to cover the cost. An electrician on the 
-                  £125 Growth plan needs one £320 job. A roofer on any plan needs less than one job — a single 
-                  £850 roof repair more than covers even premium plans. Most trade businesses recover 10–50x their 
+                  £125 Growth plan needs one £320 job. A roofer on any plan needs less than one job: a single 
+                  £850 roof repair more than covers even premium plans. Most trade businesses recover 10 to 50x their 
                   monthly AI cost in additional revenue.
                 </p>
               </div>
               <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <h3 className="font-bold text-[var(--v2-ink)] mb-2">Does cheap AI answering actually work for trades?</h3>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed">
-                  Cheap AI answering (£9–£30/month) typically uses basic auto-attendant or simple voice-menu 
+                  Cheap AI answering (£9 to £30/month) typically uses basic auto-attendant or simple voice-menu 
                   technology, not true conversational AI. For tradespeople, this means callers get frustrated, 
-                  hang up, or leave incomplete messages. True AI answering (£49–£125/month) uses natural language 
+                  hang up, or leave incomplete messages. True AI answering (£49 to £125/month) uses natural language 
                   processing to have real conversations, ask trade-specific questions, and capture complete job 
-                  details. The £40–£100 monthly difference often pays for itself with one extra captured job.
+                  details. The £40 to £100 monthly difference often pays for itself with one extra captured job.
                 </p>
               </div>
 
               <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <h3 className="font-bold text-[var(--v2-ink)] mb-2">How does AI call answering compare to a human receptionist on cost?</h3>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed">
-                  A full-time UK receptionist costs £27,800–£38,700 per year once employer National Insurance, pension,
-                  holiday and sick cover, training, and office overheads are included (base salary £22,000–£28,000).
-                  A virtual receptionist service costs £150–£400/month. AI call answering costs £59–£399/month flat with
-                  unlimited calls, 24/7 coverage, WhatsApp delivery, and no contract — a 94–98% saving versus in-house
+                  A full-time UK receptionist costs £27,800 to £38,700 per year once employer National Insurance, pension,
+                  holiday and sick cover, training, and office overheads are included (base salary £22,000 to £28,000).
+                  A virtual receptionist service costs £150 to £400/month. AI call answering costs £59 to £399/month flat with
+                  unlimited calls, 24/7 coverage, WhatsApp delivery, and no contract, a 94 to 98% saving versus in-house
                   staff for superior missed-call capture.
                 </p>
               </div>
@@ -1300,8 +1281,8 @@ export default function PricingGuidePage() {
                 <h3 className="font-bold text-[var(--v2-ink)] mb-2">What ROI can a trade business expect from AI call answering?</h3>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                   Conservative scenario: capturing 25% of 5 missed weekly calls at a £250 average job value recovers
-                  £15,000/year — a 2,119% ROI on the £708/year Starter plan. Realistic scenario for a busy emergency
-                  plumber: ~355 recovered opportunities/year at £105 expected value each recovers £37,128/year — a 5,148%
+                  £15,000/year, a 2,119% ROI on the £708/year Starter plan. Realistic scenario for a busy emergency
+                  plumber: ~355 recovered opportunities/year at £105 expected value each recovers £37,128/year, a 5,148%
                   ROI. On the £125/month Growth plan, the realistic scenario returns 2,475% ROI.
                 </p>
               </div>
@@ -1310,9 +1291,9 @@ export default function PricingGuidePage() {
                 <h3 className="font-bold text-[var(--v2-ink)] mb-2">Is AI call answering tax-deductible for UK tradespeople?</h3>
                 <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                   Yes. AI call answering subscriptions are an allowable business expense for sole traders, partnerships,
-                  and limited companies — the full cost reduces your taxable profit. For a basic-rate taxpayer that
+                  and limited companies. The full cost reduces your taxable profit. For a basic-rate taxpayer that
                   means the effective net cost of the £59/month Starter plan is around £47/month after income tax
-                  relief; for limited companies the effective cost is reduced by 19–25% corporation tax. There is no
+                  relief; for limited companies the effective cost is reduced by 19 to 25% corporation tax. There is no
                   benefit-in-kind or employment tax overhead as there would be with hiring staff.
                 </p>
               </div>
@@ -1320,33 +1301,27 @@ export default function PricingGuidePage() {
           </section>
 
           {/* Final CTA */}
-          <section id="cta" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
-            <h2 className="text-3xl font-bold mb-4">Stop Guessing. Start Capturing.</h2>
-            <p className="text-lg text-[var(--v2-body)] mb-8 max-w-2xl mx-auto">
-              Every missed call is a job that went to your competitor. For less than the cost of one average 
-              trade job per month, AI call answering captures every enquiry 24/7, qualifies leads, and delivers 
-              them instantly to your phone. The maths is simple. The trial is free. The only question is: 
-              how many jobs are you willing to keep losing?
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a href="/pricing" className="inline-flex items-center gap-2 bg-[var(--v2-green)] text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-[var(--v2-green-hover)] transition-colors shadow-lg v2-island">
-                Start 7-Day Free Trial <ArrowRight className="w-5 h-5" />
-              </a>
-              <a href="/missed-calls-cost-calculator" className="inline-flex items-center gap-2 bg-white text-[var(--v2-ink)] font-bold px-6 py-4 rounded-2xl hover:border-[#b9c6bf] transition-colors">
-                Calculate Your Losses <ArrowRight className="w-5 h-5" />
-              </a>
-            </div>
-            <p className="text-[var(--v2-muted)] text-sm mt-6 text-center">
-              <a href="/pricing" className="text-[var(--v2-green)] hover:underline">Plans from £59/month</a>. 
-              <a href="/pricing" className="text-[var(--v2-green)] hover:underline">How much whoza costs</a> 
-              depends on your call volume and trade.
-            </p>
-            <div className="flex flex-wrap justify-center gap-6 mt-8 text-sm text-[var(--v2-muted)]">
-              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[var(--v2-green)]" /> No credit card required</span>
-              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[var(--v2-green)]" /> 30-day money-back guarantee</span>
-              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[var(--v2-green)]" /> Cancel anytime — no contract</span>
-              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[var(--v2-green)]" /> Setup in 30 minutes</span>
-            </div>
+          <section id="cta" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <CtaBand
+              id="pricing-guide"
+              heading={["Stop Guessing.", "Start Capturing."]}
+              text="Every missed call is a job that went to your competitor. For less than the cost of one average trade job per month, AI call answering captures every enquiry 24/7, qualifies leads, and delivers them instantly to your phone. The maths is simple. The trial is free. The only question is: how many jobs are you willing to keep losing?"
+              primaryLabel="Start 7-Day Free Trial"
+              source="pricing-guide-cta"
+              secondary={{ label: "Calculate Your Losses", href: "/missed-calls-cost-calculator" }}
+            >
+              <p className="mt-6 text-sm text-[var(--v2-muted)]">
+                <a href="/pricing" className="cta-link text-[var(--v2-green)] hover:underline">Plans from £59/month</a>.{" "}
+                <a href="/pricing" className="cta-link text-[var(--v2-green)] hover:underline">How much whoza costs</a>{" "}
+                depends on your call volume and trade.
+              </p>
+              <div className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-[var(--v2-muted)]">
+                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[var(--v2-green)]" /> No credit card required</span>
+                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[var(--v2-green)]" /> 30-day money-back guarantee</span>
+                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[var(--v2-green)]" /> Cancel anytime, no contract</span>
+                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-[var(--v2-green)]" /> Setup in 30 minutes</span>
+              </div>
+            </CtaBand>
           </section>
 
           {/* Related Content */}
@@ -1375,6 +1350,13 @@ export default function PricingGuidePage() {
               </a>
             </div>
           </section>
+          <div className="mx-auto mt-12 max-w-4xl px-4 sm:px-6 lg:px-8">
+            <SharePost url="https://whoza.ai/blog/ai-call-answering-pricing-guide-uk-2026" title="AI Call Answering Cost UK (2026): Pricing Guide" />
+          </div>
+
+          <div className="mt-24 sm:mt-32">
+            <RelatedPosts slug="ai-call-answering-pricing-guide-uk-2026" />
+          </div>
         </main>
 
         
@@ -1398,7 +1380,7 @@ export default function PricingGuidePage() {
           })
         }}
       />
-<Footer />
+<Footer hideCta />
       </div>
     </>
   )
