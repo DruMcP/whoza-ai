@@ -30,3 +30,6 @@ deploy-root/
 deploy-staging/
 *.log
 .indexnow-store.json
+
+# Local reference/inspiration videos dropped in the repo root (site videos live in public/)
+/*.mp4

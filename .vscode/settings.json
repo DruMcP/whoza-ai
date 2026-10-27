@@ -1,0 +1,12 @@
+{
+  // Use the project's TypeScript (5.7, the version `tsc` and Next.js build with)
+  // rather than the newer one bundled with VS Code, which flags "baseUrl" in
+  // tsconfig.json as deprecated for TypeScript 7.
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+
+  // Tailwind IntelliSense: the codebase writes arbitrary values as
+  // text-[var(--v2-ink)]; the "can be written as text-(--v2-ink)" suggestions
+  // are style-only and made up most of the Problems panel.
+  "tailwindCSS.lint.suggestCanonicalClasses": "ignore"
+}
