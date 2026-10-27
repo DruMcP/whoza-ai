@@ -134,7 +134,7 @@ const faqSchema = {
       "name": "What's included in the 7-day free trial?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The 7-day free trial includes: 20 minutes of AI call handling, 4 job enquiry deliveries to WhatsApp, full access to the dashboard, and the ability to test Katie with real calls. No credit card is required to start. At the end of the trial, you can choose to subscribe to a paid plan or simply let it expire. There's no automatic billing. The trial is designed to let you experience real call handling with your actual customers, not a scripted demo. Most tradespeople see value within the first 2 to 3 days when they catch their first missed call."
+        "text": "The 7-day free trial includes: 100 minutes of AI call handling, 10 job enquiry deliveries to WhatsApp, full access to the dashboard, and the ability to test Katie with real calls. No credit card is required to start. At the end of the trial, you can choose to subscribe to a paid plan or simply let it expire. There's no automatic billing. The trial is designed to let you experience real call handling with your actual customers, not a scripted demo. Most tradespeople see value within the first 2 to 3 days when they catch their first missed call."
       }
     },
     {
