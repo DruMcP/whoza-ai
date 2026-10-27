@@ -9,7 +9,7 @@ import { ArrowRight, Phone } from "lucide-react"
 export const metadata: Metadata = {
   title: "Start Your Free Trial | Whoza",
   description:
-    "Sign up for Whoza — the AI phone receptionist for UK trades. Katie answers every call 24/7 and books real jobs to your WhatsApp. 7-day free trial, no.",
+    "Sign up for Whoza, the AI phone receptionist for UK trades. Katie answers every call 24/7 and books real jobs to your WhatsApp. 7-day free trial, no.",
   alternates: {
     canonical: "https://whoza.ai/signup",
   },
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "Start Your Free Trial | Whoza",
     description:
-      "Sign up for Whoza — the AI phone receptionist for UK trades. Katie answers every call 24/7 and books real jobs to your WhatsApp. 7-day free trial, no card, live in 30 minutes.",
+      "Sign up for Whoza, the AI phone receptionist for UK trades. Katie answers every call 24/7 and books real jobs to your WhatsApp. 7-day free trial, no card, live in 30 minutes.",
     images: [
       { url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Start your free trial with Whoza.ai" },
     ],
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Start Your Free Trial | Whoza",
     description:
-      "Sign up for Whoza — the AI phone receptionist for UK trades. Katie answers every call 24/7 and books real jobs to your WhatsApp. 7-day free trial, no card, live in 30 minutes.",
+      "Sign up for Whoza, the AI phone receptionist for UK trades. Katie answers every call 24/7 and books real jobs to your WhatsApp. 7-day free trial, no card, live in 30 minutes.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {
@@ -54,13 +54,13 @@ export default function SignupPage() {
         <div className="text-center mb-10">
           <div className="v2-eyebrow inline-flex items-center gap-2 mb-6">
             <Phone className="w-4 h-4" />
-            Limited to {EARLY_ACCESS_CAP} tradespeople — early access
+            Limited to {EARLY_ACCESS_CAP} tradespeople, early access
           </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4">
             Start your free trial
           </h1>
           <p className="text-[var(--v2-muted)] text-lg max-w-md mx-auto">
-            Limited to the first {EARLY_ACCESS_CAP} tradespeople — get early access.
+            Limited to the first {EARLY_ACCESS_CAP} tradespeople. Get early access.
           </p>
         </div>
 

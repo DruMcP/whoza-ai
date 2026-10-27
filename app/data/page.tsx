@@ -9,7 +9,7 @@ import { CitationSchema } from "@/components/whoza/citation-schema"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Evidence Base: Every Statistic We Use and Its Source",
-  description: "Every statistic, source, and methodology behind whoza.ai's content. Verified, descriptive, or unverified — we show our working.",
+  description: "Every statistic, source, and methodology behind whoza.ai's content. Verified, descriptive, or unverified, we show our working.",
   alternates: {
     canonical: "https://whoza.ai/data",
   },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/data",
     siteName: "whoza.ai",
     title: "Evidence Base: Every Statistic We Use and Its Source",
-    description: "Every statistic, source, and methodology behind whoza.ai's content. Verified, descriptive, or unverified — we show our working.",
+    description: "Every statistic, source, and methodology behind whoza.ai's content. Verified, descriptive, or unverified, we show our working.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai evidence base" }],
   },
 }
@@ -31,8 +31,8 @@ const sources = {
     { name: "National Careers Service", year: 2024, url: "https://nationalcareers.service.gov.uk/job-profiles/receptionist", what: "Receptionist salaries: £18,000 starter, £22,000 experienced", verified: "verified" },
     { name: "Department for Business and Trade, Business Population Estimates 2025", year: 2025, url: "https://www.gov.uk/government/statistics/business-population-estimates-2025/business-population-estimates-for-the-uk-and-regions-2025-statistical-release", what: "5.7 million UK private sector businesses; 4.3 million (75%) have no employees; 885,000 construction SMEs (16%, the largest sector)", verified: "verified" },
     { name: "Federation of Small Businesses (FSB)", year: 2025, url: "https://www.fsb.org.uk/", what: "78% of UK micro-businesses spend less than £200/month on business software", verified: "unverified" },
-    { name: "ONS, Artificial intelligence in UK businesses: 2023 to 2026", year: 2026, url: "https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/articles/artificialintelligenceinukbusinesses/2023to2026", what: "28% of businesses with 0–9 employees use at least one AI technology; construction lowest of any industry at 13%. BICS Wave 159, fieldwork 15–28 June 2026, 38,637 responses", verified: "verified" },
-    { name: "DSIT, Public Engagement Survey 2025/2026", year: 2026, url: "https://www.gov.uk/government/statistics/dsit-public-engagement-survey-20252026/dsit-public-engagement-survey-20252026", what: "97% of adults aware of AI; 59% used generative AI in the last three months; 74% concerned AI-produced information may be inaccurate. 30,698 respondents, fieldwork Nov 2025 – Mar 2026", verified: "verified" },
+    { name: "ONS, Artificial intelligence in UK businesses: 2023 to 2026", year: 2026, url: "https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/articles/artificialintelligenceinukbusinesses/2023to2026", what: "28% of businesses with 0 to 9 employees use at least one AI technology; construction lowest of any industry at 13%. BICS Wave 159, fieldwork 15 to 28 June 2026, 38,637 responses", verified: "verified" },
+    { name: "DSIT, Public Engagement Survey 2025/2026", year: 2026, url: "https://www.gov.uk/government/statistics/dsit-public-engagement-survey-20252026/dsit-public-engagement-survey-20252026", what: "97% of adults aware of AI; 59% used generative AI in the last three months; 74% concerned AI-produced information may be inaccurate. 30,698 respondents, fieldwork Nov 2025 to Mar 2026", verified: "verified" },
     { name: "FMB, State of Trade Survey H2 2025", year: 2026, url: "https://www.fmb.org.uk/resource/state-of-trade-survey-h2-2025.html", what: "Enquiries +18% (England +19%, Scotland +16%); workloads +22%; 72% affected by lack of skilled tradespeople; 49% had job delays. 493 responses, published 31 March 2026", verified: "verified" },
   ],
   secondary: [
@@ -52,18 +52,18 @@ const sources = {
 const removedClaims = [
   {
     claim: "78% of customers hire whoever responds first",
-    why: "Withheld, not discredited. The underlying research — 500 UK trades businesses surveyed by email and WhatsApp, fieldwork July 2024 – July 2025, conducted by Dru McPherson — is real. The exact wording of the question that produced 78% is not retained. A specific claim needs the specific question behind it. The figure will return if and when that wording surfaces.",
+    why: "Withheld, not discredited. The underlying research (500 UK trades businesses surveyed by email and WhatsApp, fieldwork July 2024 to July 2025, conducted by Dru McPherson) is real. The exact wording of the question that produced 78% is not retained. A specific claim needs the specific question behind it. The figure will return if and when that wording surfaces.",
   },
   {
-    claim: "Forbes / Ruby Research (2025) — 80% of callers don't leave a message",
+    claim: "Forbes / Ruby Research (2025): 80% of callers don't leave a message",
     why: "Source could not be verified. No matching Forbes or Ruby study found. Replaced with Moneypenny Small Business Call Report (2016) figure of 69%.",
   },
   {
-    claim: "411 Locals (2024) — 62% of business calls go unanswered",
+    claim: "411 Locals (2024): 62% of business calls go unanswered",
     why: "Source unverified. No peer-reviewed study or methodology disclosed. Replaced with Moneypenny Small Business Call Report (2016) figure of 33% of small UK trade businesses failing to answer incoming calls.",
   },
   {
-    claim: "Dialzara (2025) — 62% of unanswered callers immediately contact a competitor",
+    claim: "Dialzara (2025): 62% of unanswered callers immediately contact a competitor",
     why: "Source unverified. No peer-reviewed study or methodology disclosed. Removed entirely pending verified replacement.",
   },
 ]
@@ -71,10 +71,10 @@ const removedClaims = [
 const officialAudit = [
   { source: "Ofcom, Online Nation 2025", figure: "90% of UK adults use WhatsApp", status: "verified", url: "https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025", note: "Loaded Ofcom page. Figure confirmed in headline findings." },
   { source: "National Careers Service", figure: "Receptionist: £18,000 starter, £22,000 experienced", status: "verified", url: "https://nationalcareers.service.gov.uk/job-profiles/receptionist", note: "Loaded NCS job profile. Salary band confirmed." },
-  { source: "ONS 2024 average wages data", figure: "Human receptionist £20,000–£25,000/year", status: "descriptive", url: "", note: "Source cited by third-party blogs. Not loaded directly. The £20,000–£25,000 range is our arithmetic from NCS salaries plus estimated employer NI and pension." },
+  { source: "ONS 2024 average wages data", figure: "Human receptionist £20,000 to £25,000/year", status: "descriptive", url: "", note: "Source cited by third-party blogs. Not loaded directly. The £20,000 to £25,000 range is our arithmetic from NCS salaries plus estimated employer NI and pension." },
   { source: "DBT, Business Population Estimates 2025", figure: "885,000 construction SMEs; 4.3m (75%) of UK businesses have no employees", status: "verified", url: "https://www.gov.uk/government/statistics/business-population-estimates-2025/business-population-estimates-for-the-uk-and-regions-2025-statistical-release", note: "Statistical release loaded 22 Aug 2026. Published 2 October 2025. Figures confirmed verbatim." },
-  { source: "ONS, AI in UK businesses 2023–2026", figure: "28% of 0–9 employee businesses use AI; construction 13%, lowest of any industry", status: "verified", url: "https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/articles/artificialintelligenceinukbusinesses/2023to2026", note: "Publisher page loaded 22 Aug 2026. BICS Wave 159, fieldwork 15–28 June 2026, 38,637 responses, 26.7% response rate." },
-  { source: "DSIT, Public Engagement Survey 2025/2026", figure: "74% concerned AI-produced information may be inaccurate", status: "verified", url: "https://www.gov.uk/government/statistics/dsit-public-engagement-survey-20252026/dsit-public-engagement-survey-20252026", note: "Publisher page loaded 22 Aug 2026. 30,698 respondents, fieldwork Nov 2025 – Mar 2026. Published because it counts against us, not for us." },
+  { source: "ONS, AI in UK businesses 2023 to 2026", figure: "28% of 0 to 9 employee businesses use AI; construction 13%, lowest of any industry", status: "verified", url: "https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/articles/artificialintelligenceinukbusinesses/2023to2026", note: "Publisher page loaded 22 Aug 2026. BICS Wave 159, fieldwork 15 to 28 June 2026, 38,637 responses, 26.7% response rate." },
+  { source: "DSIT, Public Engagement Survey 2025/2026", figure: "74% concerned AI-produced information may be inaccurate", status: "verified", url: "https://www.gov.uk/government/statistics/dsit-public-engagement-survey-20252026/dsit-public-engagement-survey-20252026", note: "Publisher page loaded 22 Aug 2026. 30,698 respondents, fieldwork Nov 2025 to Mar 2026. Published because it counts against us, not for us." },
   { source: "FMB, State of Trade Survey H2 2025", figure: "Enquiries +18%; 72% affected by skills shortage; 49% had job delays", status: "verified", url: "https://www.fmb.org.uk/resource/state-of-trade-survey-h2-2025.html", note: "Publisher page loaded 22 Aug 2026. 493 responses, published 31 March 2026." },
 ]
 
@@ -294,7 +294,7 @@ export default function DataPage() {
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-[var(--v2-line)]">
           <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-8 flex items-center gap-3">
             <Shield className="w-6 h-6 text-[var(--v2-green)]" />
-            Whoza.ai — Our Own Claims
+            Whoza.ai: Our Own Claims
           </h2>
           <p className="text-[var(--v2-body)] mb-6">
             We apply the same scrutiny to our own marketing that we apply to third-party sources. Every claim about our own business is listed here with its evidence status.
@@ -314,10 +314,10 @@ export default function DataPage() {
         <section id="business-claims" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-[var(--v2-line)]">
           <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-8 flex items-center gap-3">
             <Shield className="w-6 h-6 text-[var(--v2-green)]" />
-            Business Claims — Verified vs Unverified
+            Business Claims: Verified vs Unverified
           </h2>
           <p className="text-[var(--v2-body)] mb-6">
-            Every commercial claim on whoza.ai — revenue figures, savings, ROI — is listed here with its evidence status. We distinguish between numbers we can demonstrate, numbers that are illustrative estimates, and numbers we have removed.
+            Every commercial claim on whoza.ai (revenue figures, savings, ROI) is listed here with its evidence status. We distinguish between numbers we can demonstrate, numbers that are illustrative estimates, and numbers we have removed.
           </p>
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm">
@@ -337,13 +337,13 @@ export default function DataPage() {
                   <td className="py-3"><StatusBadge status="verified" /></td>
                 </tr>
                 <tr className="border-b border-[var(--v2-line)]">
-                  <td className="py-3 pr-4">£20,000–£25,000/year human receptionist cost</td>
+                  <td className="py-3 pr-4">£20,000 to £25,000/year human receptionist cost</td>
                   <td className="py-3 pr-4">/pricing, /data, /ai-receptionist-vs-human-cost-guide-2026</td>
-                  <td className="py-3 pr-4">National Careers Service (£18k–£22k) + employer NI + pension arithmetic</td>
+                  <td className="py-3 pr-4">National Careers Service (£18k to £22k) + employer NI + pension arithmetic</td>
                   <td className="py-3"><StatusBadge status="descriptive" /></td>
                 </tr>
                 <tr className="border-b border-[var(--v2-line)]">
-                  <td className="py-3 pr-4">£400–£600 average emergency callout value</td>
+                  <td className="py-3 pr-4">£400 to £600 average emergency callout value</td>
                   <td className="py-3 pr-4">Blog persona posts, case studies</td>
                   <td className="py-3 pr-4">Self-reported by customers; illustrative estimate</td>
                   <td className="py-3"><StatusBadge status="descriptive" /></td>
@@ -361,7 +361,7 @@ export default function DataPage() {
                   <td className="py-3"><StatusBadge status="descriptive" /></td>
                 </tr>
                 <tr className="border-b border-[var(--v2-line)]">
-                  <td className="py-3 pr-4">£5,200–£15,600 annual missed-call cost</td>
+                  <td className="py-3 pr-4">£5,200 to £15,600 annual missed-call cost</td>
                   <td className="py-3 pr-4">FAQ, blog posts</td>
                   <td className="py-3 pr-4">1,200 UK trade business self-reported survey, 2025</td>
                   <td className="py-3"><StatusBadge status="descriptive" /></td>
@@ -449,7 +449,7 @@ export default function DataPage() {
           </h2>
           <div className="space-y-4 text-[var(--v2-body)]">
             <p>
-              <strong>Our rule:</strong> if we cannot show the exact question that produced a percentage, we do not show the percentage. We will state the qualitative point — "the business that answers first usually gets the job" — rather than attach a number we cannot defend.
+              <strong>Our rule:</strong> if we cannot show the exact question that produced a percentage, we do not show the percentage. We will state the qualitative point, "the business that answers first usually gets the job", rather than attach a number we cannot defend.
             </p>
             <p>
               <strong>Our process for new statistics:</strong> (1) identify the original publisher, (2) load the primary source page, (3) confirm the figure and its context, (4) cite with URL and publication date, (5) add to this evidence base. If any step fails, the statistic does not go on the site.
@@ -458,7 +458,7 @@ export default function DataPage() {
               <strong>What we do not do:</strong> copy statistics from vendor blogs without tracing them to a primary source; modernise publication dates to make research look newer; replace a withdrawn figure with a similar-sounding one; or present our own arithmetic as if it came from a government dataset.
             </p>
             <p>
-              <strong>Missed-call cost survey.</strong> 1,200 UK trade businesses, self-reported data, 2025. Underpins the £5,200–£15,600 annual range quoted in our FAQ.
+              <strong>Missed-call cost survey.</strong> 1,200 UK trade businesses, self-reported data, 2025. Underpins the £5,200 to £15,600 annual range quoted in our FAQ.
             </p>
             <p>
               <strong>Updates:</strong> This page is updated whenever a source is verified, withdrawn, or corrected. Last updated: August 2026.

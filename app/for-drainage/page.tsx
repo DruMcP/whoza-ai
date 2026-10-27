@@ -25,13 +25,13 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/for-drainage",
     siteName: "Whoza.ai",
-    title: "AI Call Answering for Drainage UK — Never Miss a Job",
+    title: "AI Call Answering for Drainage UK | Never Miss a Job",
     description: "AI call answering for UK drainage engineers. Katie handles 24/7 emergency calls, captures flood enquiries. WhatsApp alerts instantly. Plans from £59/month.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Drainage Engineers" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Drainage Engineers" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Call Answering for Drainage UK — Never Miss a Job",
+    title: "AI Call Answering for Drainage UK | Never Miss a Job",
     description: "AI call answering for UK drainage engineers. Katie handles 24/7 emergency calls, captures flood enquiries. WhatsApp alerts instantly. Plans from £59/month.",
     images: ["https://whoza.ai/og-image.webp"],
   },
@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     question: "Can Katie handle emergency drainage calls at night?",
-    answer: "Absolutely. Katie answers 24/7 including nights, weekends, and bank holidays. She identifies emergency keywords like 'flooding', 'sewage backup', 'blocked drain', 'drain collapse', and 'toilet overflowing' — then marks the enquiry as emergency priority in your WhatsApp alert. You see it immediately and can dispatch your crew within minutes.",
+    answer: "Absolutely. Katie answers 24/7 including nights, weekends, and bank holidays. She identifies emergency keywords like 'flooding', 'sewage backup', 'blocked drain', 'drain collapse', and 'toilet overflowing', then marks the enquiry as emergency priority in your WhatsApp alert. You see it immediately and can dispatch your crew within minutes.",
   },
   {
     question: "What information does Katie collect from drainage customers?",
@@ -60,11 +60,11 @@ const faqs = [
   },
   {
     question: "Will customers know they're talking to AI?",
-    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience — they just want their flooding or blocked drain fixed fast.",
+    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience. They just want their flooding or blocked drain fixed fast.",
   },
   {
     question: "Does it work with my existing business phone number?",
-    answer: "Yes. You simply set up call forwarding from your existing drainage business number to your whoza.ai number. Your customers dial the same number they've always used — Katie just answers when you can't. Setup takes under 10 minutes.",
+    answer: "Yes. You simply set up call forwarding from your existing drainage business number to your whoza.ai number. Your customers dial the same number they've always used. Katie just answers when you can't. Setup takes under 10 minutes.",
   },
   {
     question: "How quickly can I get set up?",
@@ -86,7 +86,7 @@ export default function ForDrainagePage() {
   return (
     <>
       <VideoSchema
-        name="Whoza.ai for Drainage Companies — AI Call Answering Demo"
+        name="Whoza.ai for Drainage Companies: AI Call Answering Demo"
         description="Watch Katie capture a missed drainage enquiry in under 60 seconds. Flooding emergency answered instantly, details sent to WhatsApp, emergency crew dispatched while the drainage team is still on another job."
         embedUrl="https://whoza.ai/for-drainage"
       />
@@ -133,10 +133,10 @@ export default function ForDrainagePage() {
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   AI Call Answering for{" "}
                   <span className="text-[#6ee7b7]">Drainage</span>{" "}
-                  Companies UK — Never Miss an Emergency
+                  Companies UK: Never Miss an Emergency
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
-                  Blocked drains, flooding, sewage backups — customers call in distress. Katie answers every call, captures the emergency details, and sends them to your WhatsApp so you can respond fast.
+                  Blocked drains, flooding, sewage backups: customers call in distress. Katie answers every call, captures the emergency details, and sends them to your WhatsApp so you can respond fast.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -171,7 +171,7 @@ export default function ForDrainagePage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -224,14 +224,14 @@ export default function ForDrainagePage() {
                 {
                   icon: Waves,
                   title: "Flooding & Sewage Backups",
-                  description: "Drainage emergencies are urgent — flooding and sewage backups need immediate response. But you can't tell if it's a simple blocked drain or a full sewage backup from a missed call. The customer leaves a voicemail, calls the next drainage company on Google, and gets emergency help within 20 minutes. You lost a £400+ emergency callout and potentially a £2,000 flood damage job.",
+                  description: "Drainage emergencies are urgent: flooding and sewage backups need immediate response. But you can't tell if it's a simple blocked drain or a full sewage backup from a missed call. The customer leaves a voicemail, calls the next drainage company on Google, and gets emergency help within 20 minutes. You lost a £400+ emergency callout and potentially a £2,000 flood damage job.",
                   stat: "£400+ lost per call",
                   color: "red",
                 },
                 {
                   icon: Building2,
                   title: "Insurance & Commercial Contracts",
-                  description: "Insurance companies and property managers expect fast callback — voicemail loses contracts. A property manager calls about a blocked drain at a rental property. You don't answer. They call your competitor who picks up immediately. You lost a £280 repair plus the ongoing commercial contract worth £15,000+ annually.",
+                  description: "Insurance companies and property managers expect fast callback. Voicemail loses contracts. A property manager calls about a blocked drain at a rental property. You don't answer. They call your competitor who picks up immediately. You lost a £280 repair plus the ongoing commercial contract worth £15,000+ annually.",
                   stat: "First responder gets the job",
                   color: "amber",
                 },
@@ -264,7 +264,7 @@ export default function ForDrainagePage() {
                 The average UK drainage company misses 58% of calls = <strong>£72,800</strong> in lost revenue per year
               </p>
               <p className="text-[var(--v2-body)] text-sm mt-1">
-                Source: UK SME Communications Survey 2025 — based on £280 avg emergency job value, 35% conversion rate, 58% call miss rate
+                Source: UK SME Communications Survey 2025, based on £280 avg emergency job value, 35% conversion rate, 58% call miss rate
               </p>
             </div>
             <div className="mt-8 text-center">
@@ -295,7 +295,7 @@ export default function ForDrainagePage() {
                   step: "01",
                   icon: Phone,
                   title: "Customer Calls",
-                  description: "Customer calls your number about a drainage problem — blocked drain, flooding, sewage backup, or drain collapse. Katie picks up in under 2 rings with your branded greeting: 'Hello, Rapid Drain Solutions. I'm Katie, how can I help?' — 24/7, even at 2am on a Sunday.",
+                  description: "Customer calls your number about a drainage problem: blocked drain, flooding, sewage backup, or drain collapse. Katie picks up in under 2 rings with your branded greeting: 'Hello, Rapid Drain Solutions. I'm Katie, how can I help?', 24/7, even at 2am on a Sunday.",
                 },
                 {
                   step: "02",
@@ -381,7 +381,7 @@ export default function ForDrainagePage() {
                 {
                   icon: Building2,
                   title: "Full Context Capture",
-                  description: "She captures: problem type, property type, severity, insurance claim status, water damage extent. You get the full picture before calling back — knowing if it's a simple blocked drain (£120) or a full sewage backup with property damage (£2,000+). Arrive prepared with the right equipment and crew.",
+                  description: "She captures: problem type, property type, severity, insurance claim status, water damage extent. You get the full picture before calling back, knowing if it's a simple blocked drain (£120) or a full sewage backup with property damage (£2,000+). Arrive prepared with the right equipment and crew.",
                 },
               ].map((item, idx) => {
                 const Icon = item.icon

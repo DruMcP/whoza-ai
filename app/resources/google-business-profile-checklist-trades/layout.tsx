@@ -58,7 +58,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   {
                     "@type": "Question",
                     "name": "How many photos should I upload to my Google Business Profile?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Google recommends at least 10 photos, but businesses with 20+ photos get significantly more engagement. Aim for: 1 logo, 1 cover photo, 3-5 exterior/van shots, 10-15 work photos, 2-3 team photos, and 2-3 certificate shots." },
+                    "acceptedAnswer": { "@type": "Answer", "text": "Google recommends at least 10 photos, but businesses with 20+ photos get significantly more engagement. Aim for: 1 logo, 1 cover photo, 3 to 5 exterior/van shots, 10 to 15 work photos, 2 to 3 team photos, and 2 to 3 certificate shots." },
                   },
                   {
                     "@type": "Question",
@@ -73,7 +73,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   {
                     "@type": "Question",
                     "name": "Should I respond to every review?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Yes — especially negative ones. Responding to reviews shows you care and can turn a 1-star review into a positive impression for future customers. Keep responses professional, thank the reviewer, and address any issues raised." },
+                    "acceptedAnswer": { "@type": "Answer", "text": "Yes, especially negative ones. Responding to reviews shows you care and can turn a 1-star review into a positive impression for future customers. Keep responses professional, thank the reviewer, and address any issues raised." },
                   },
                   {
                     "@type": "Question",

@@ -58,7 +58,7 @@ export function WatchPageClient() {
   const shareVideo = () => {
     if (navigator.share) {
       navigator.share({
-        title: "Watch Whoza in Action — 60-Second Demo",
+        title: "Watch Whoza in Action: 60-Second Demo",
         text: "See how Katie captures every missed enquiry in under 60 seconds.",
         url: "https://whoza.ai/watch",
       })
@@ -107,7 +107,7 @@ export function WatchPageClient() {
               <span className="text-[var(--v2-green)]">Missed Enquiry</span>
             </h1>
             <p className="text-lg text-[var(--v2-body)] max-w-2xl mx-auto">
-              See Katie answer a call, capture the job, and deliver it to WhatsApp —
+              See Katie answer a call, capture the job, and deliver it to WhatsApp,
               all in under 60 seconds. No code. No setup. Just results.
             </p>
           </motion.div>
@@ -184,7 +184,7 @@ export function WatchPageClient() {
                           </div>
 
                           <div className="pt-2 border-t border-white/20 flex items-center justify-between">
-                            <span className="text-lg font-bold">£250 – £450</span>
+                            <span className="text-lg font-bold">£250 to £450</span>
                             <span className="text-xs text-white/70">estimated</span>
                           </div>
                         </div>
@@ -332,7 +332,7 @@ export function WatchPageClient() {
                 icon: MessageSquare,
                 color: "bg-[var(--rex-green)]",
                 title: "WhatsApp Delivery",
-                description: "The full enquiry lands in WhatsApp — who, what, where, urgency, and estimated value.",
+                description: "The full enquiry lands in WhatsApp: who, what, where, urgency, and estimated value.",
               },
               {
                 icon: Star,
@@ -416,17 +416,17 @@ export function WatchPageClient() {
             <div className="prose max-w-none">
               <p className="text-[var(--v2-body)] leading-relaxed mb-4">
                 <strong className="text-[var(--v2-ink)]">[00:00-00:03]</strong> A missed call comes in to a UK tradesperson's
-                mobile. The phone rings out. The caller hits voicemail — and 69% of them don't leave a message.
+                mobile. The phone rings out. The caller hits voicemail, and 69% of them don't leave a message.
               </p>
               <p className="text-[var(--v2-body)] leading-relaxed mb-4">
                 <strong className="text-[var(--v2-ink)]">[00:03-00:12]</strong> Katie, Whoza's AI call handler, picks up the call
                 in under 3 seconds. She introduces herself as the trade business's receptionist and begins capturing
-                the enquiry details — name, service needed, location, and urgency.
+                the enquiry details: name, service needed, location, and urgency.
               </p>
               <p className="text-[var(--v2-body)] leading-relaxed mb-4">
                 <strong className="text-[var(--v2-ink)]">[00:12-00:20]</strong> The full enquiry is compiled into a WhatsApp
                 message card and delivered instantly to the tradesperson's phone. The card shows the customer's name,
-                the job type, the location, the urgency level, and the estimated value — everything needed to book the
+                the job type, the location, the urgency level, and the estimated value, everything needed to book the
                 job with one tap.
               </p>
               <p className="text-[var(--v2-body)] leading-relaxed mb-4">
@@ -434,12 +434,12 @@ export function WatchPageClient() {
                 WhatsApp. The customer's details are automatically saved. No manual data entry. No lost paperwork.
               </p>
               <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-                <strong className="text-[var(--v2-ink)]">[00:35-00:48]</strong> After the job is completed, Claire — Whoza's
-                review engine — automatically sends a review request to the customer via WhatsApp. The customer leaves
+                <strong className="text-[var(--v2-ink)]">[00:35-00:48]</strong> After the job is completed, Claire, Whoza's
+                review engine, automatically sends a review request to the customer via WhatsApp. The customer leaves
                 a 5-star Google review, boosting the business's local search ranking.
               </p>
               <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-                <strong className="text-[var(--v2-ink)]">[00:48-01:00]</strong> Rex — Whoza's growth engine — delivers weekly
+                <strong className="text-[var(--v2-ink)]">[00:48-01:00]</strong> Rex, Whoza's growth engine, delivers weekly
                 insights to the tradesperson: how many calls were answered, how many jobs were booked, average job
                 value, and AI-powered recommendations for improving visibility and conversion.
               </p>

@@ -101,7 +101,7 @@ export default function MultiLocationPage() {
         </section>
 
         <section className="bg-[var(--v2-mint)] border border-[var(--v2-line)] rounded-2xl p-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">£399/month — No Contract</h2>
+          <h2 className="text-2xl font-bold mb-4">£399/month, No Contract</h2>
           <p className="text-[var(--v2-body)] mb-6 max-w-xl mx-auto">
             The Scale plan is designed for businesses with 3+ locations. All calls answered 24/7. One captured job per location per week pays for the entire plan.
           </p>

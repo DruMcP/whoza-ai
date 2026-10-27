@@ -6,7 +6,7 @@ import { Shield, RefreshCw } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Refund Policy | whoza.ai",
-  description: "whoza.ai refund policy — 30-day money-back guarantee, no questions asked. ICO-registered (ZC077271). Cancel anytime, no contract.",
+  description: "whoza.ai refund policy: 30-day money-back guarantee, no questions asked. ICO-registered (ZC077271). Cancel anytime, no contract.",
   alternates: {
     canonical: "https://whoza.ai/refund-policy",
   },
@@ -50,7 +50,7 @@ export default function RefundPolicy() {
                 <div>
                   <h2 className="text-xl font-semibold mb-2">30-Day Money-Back Guarantee</h2>
                   <p className="text-[var(--v2-body)] leading-relaxed">
-                    Try Whoza risk-free. If you're not satisfied within 30 days of your first paid subscription, contact us for a full refund — no questions asked.
+                    Try Whoza risk-free. If you're not satisfied within 30 days of your first paid subscription, contact us for a full refund, no questions asked.
                   </p>
                 </div>
               </div>
@@ -124,7 +124,7 @@ export default function RefundPolicy() {
           <section className="mb-10">
             <h2 className="text-xl font-semibold mb-4">6. Payment Processing</h2>
             <p className="text-[var(--v2-body)] leading-relaxed">
-              Refunds are processed through Stripe and typically appear in your account within 5-10 business days, depending on your bank.
+              Refunds are processed through Stripe and typically appear in your account within 5 to 10 business days, depending on your bank.
             </p>
           </section>
 

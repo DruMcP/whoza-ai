@@ -6,7 +6,7 @@ import { Cookie, Shield, ExternalLink } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Cookie Policy | whoza.ai",
-  description: "whoza.ai cookie policy — ICO-registered (ZC077271), UK GDPR compliant. Learn how we use cookies and manage your preferences.",
+  description: "whoza.ai cookie policy: ICO-registered (ZC077271), UK GDPR compliant. Learn how we use cookies and manage your preferences.",
   alternates: {
     canonical: "https://whoza.ai/cookie-policy",
   },
@@ -162,11 +162,11 @@ export default function CookiePolicy() {
             <ul className="space-y-3 text-[var(--v2-body)]">
               <li className="flex items-start gap-3">
                 <span className="text-[var(--v2-green)] mt-1">•</span>
-                <span><strong>Stripe</strong> — Payment processing (only on billing pages)</span>
+                <span><strong>Stripe</strong>: Payment processing (only on billing pages)</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-[var(--v2-green)] mt-1">•</span>
-                <span><strong>Supabase</strong> — Authentication (only when you log in)</span>
+                <span><strong>Supabase</strong>: Authentication (only when you log in)</span>
               </li>
             </ul>
             <p className="text-[var(--v2-body)] leading-relaxed mt-4">

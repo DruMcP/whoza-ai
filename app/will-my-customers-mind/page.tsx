@@ -8,7 +8,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Will My Customers Mind an AI Answering My Phone? | whoza.ai",
-  description: "The honest answer: some callers can tell it's AI. But almost nobody hangs up — because the alternative is your voicemail. Here's what actually happens.",
+  description: "The honest answer: some callers can tell it's AI. But almost nobody hangs up, because the alternative is your voicemail. Here's what actually happens.",
   alternates: {
     canonical: "https://whoza.ai/will-my-customers-mind",
   },
@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/will-my-customers-mind",
     siteName: "Whoza.ai",
     title: "Will My Customers Mind an AI Answering My Phone? | whoza.ai",
-    description: "The honest answer: some callers can tell. But almost nobody hangs up — because the alternative is your voicemail. Here's what actually happens when Katie answers.",
+    description: "The honest answer: some callers can tell. But almost nobody hangs up, because the alternative is your voicemail. Here's what actually happens when Katie answers.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Will my customers mind an AI answering my phone?" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Will My Customers Mind an AI Answering My Phone? | whoza.ai",
-    description: "The honest answer: some callers can tell. But almost nobody hangs up — because the alternative is your voicemail. Here's what actually happens when Katie answers.",
+    description: "The honest answer: some callers can tell. But almost nobody hangs up, because the alternative is your voicemail. Here's what actually happens when Katie answers.",
     images: ["https://whoza.ai/og-image.webp"],
   },
 }
@@ -56,7 +56,7 @@ export default function WillMyCustomersMindPage() {
             <span className="text-[var(--v2-green)]">an AI Answering My Phone?</span>
           </h1>
           <p className="text-lg text-[var(--v2-body)] max-w-2xl">
-            That's the first thing every tradesperson says. It's a fair worry — nobody wants to be the plumber whose phone gets answered by a robot.
+            That's the first thing every tradesperson says. It's a fair worry: nobody wants to be the plumber whose phone gets answered by a robot.
           </p>
           <p className="text-lg text-[var(--v2-body)] max-w-2xl mt-4">
             So here's the honest version.
@@ -68,10 +68,10 @@ export default function WillMyCustomersMindPage() {
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-4">Some Callers Can Tell</h2>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              Not many, but some. And if anyone asks Katie directly whether she's an AI, she says yes. We don't pretend otherwise — pretending is how you lose trust, not how you keep it.
+              Not many, but some. And if anyone asks Katie directly whether she's an AI, she says yes. We don't pretend otherwise. Pretending is how you lose trust, not how you keep it.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed">
-              And if they'd rather speak to you, they can. Ask for a human and Katie puts you on — a real transfer, not a promise to ring back later. The transfer only works if you're available to answer. If you don't pick up, it falls back to booking or message capture. We say that plainly because the honesty is what makes the rest credible.
+              And if they'd rather speak to you, they can. Ask for a human and Katie puts you on: a real transfer, not a promise to ring back later. The transfer only works if you're available to answer. If you don't pick up, it falls back to booking or message capture. We say that plainly because the honesty is what makes the rest credible.
             </p>
           </section>
 
@@ -85,7 +85,7 @@ export default function WillMyCustomersMindPage() {
               <div>
                 <p className="text-[var(--v2-ink)] font-semibold mb-2">They get your voicemail.</p>
                 <p className="text-[var(--v2-body)]">
-                  Your customer isn't choosing between you and a robot. They're choosing between a robot that takes their details and books them in for Tuesday — and a beep.
+                  Your customer isn't choosing between you and a robot. They're choosing between a robot that takes their details and books them in for Tuesday, and a beep.
                 </p>
               </div>
             </div>
@@ -107,10 +107,10 @@ export default function WillMyCustomersMindPage() {
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-4">What the Public Actually Thinks About AI</h2>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              The DSIT Public Engagement Survey 2025/2026 (30,698 respondents, fieldwork November 2025 – March 2026) found that <strong>97% of UK adults are aware of AI</strong>, and <strong>59% have used generative AI in the last three months</strong>. AI is not fringe technology — it is mainstream consumer behaviour.
+              The DSIT Public Engagement Survey 2025/2026 (30,698 respondents, fieldwork November 2025 to March 2026) found that <strong>97% of UK adults are aware of AI</strong>, and <strong>59% have used generative AI in the last three months</strong>. AI is not fringe technology. It is mainstream consumer behaviour.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              The same survey found that <strong>74% are concerned AI-produced information may be inaccurate</strong>. That is the concern to address — not whether AI answers the phone, but whether it answers it well. Katie says yes when asked, handles the booking accurately, and transfers to a human when requested. The transparency is what turns the 74% concern into acceptance.
+              The same survey found that <strong>74% are concerned AI-produced information may be inaccurate</strong>. That is the concern to address: not whether AI answers the phone, but whether it answers it well. Katie says yes when asked, handles the booking accurately, and transfers to a human when requested. The transparency is what turns the 74% concern into acceptance.
             </p>
           </section>
 
@@ -145,7 +145,7 @@ export default function WillMyCustomersMindPage() {
               </div>
             </div>
             <p className="text-[var(--v2-body)] leading-relaxed">
-              The Moneypenny Small Business Call Report (2016) reports that 33% of small businesses fail to answer incoming calls. Every one of those is a job your competitor gets instead. Katie doesn't replace you — she replaces the beep.
+              The Moneypenny Small Business Call Report (2016) reports that 33% of small businesses fail to answer incoming calls. Every one of those is a job your competitor gets instead. Katie doesn't replace you. She replaces the beep.
             </p>
           </section>
 
@@ -155,7 +155,7 @@ export default function WillMyCustomersMindPage() {
               Yes. If a caller says "I'd rather speak to the plumber," Katie transfers them to you on that call. Not "someone will call you back." Not a message in a queue. A live transfer, to your phone, right then.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed">
-              If you're up a ladder and can't take it, she takes the details and books them in — same as always. But the choice is the customer's, not the software's. That's the difference between a phone tree and a real assistant.
+              If you're up a ladder and can't take it, she takes the details and books them in, same as always. But the choice is the customer's, not the software's. That's the difference between a phone tree and a real assistant.
             </p>
           </section>
         </div>
@@ -164,7 +164,7 @@ export default function WillMyCustomersMindPage() {
         <div className="mt-16 text-center">
           <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-4">Try It Yourself</h2>
           <p className="text-[var(--v2-body)] mb-6 max-w-xl mx-auto">
-            The 7-day free trial lets you hear Katie handle real calls. See what your customers actually experience — and decide for yourself.
+            The 7-day free trial lets you hear Katie handle real calls. See what your customers actually experience, and decide for yourself.
           </p>
           <a href="/pricing" className="inline-flex items-center gap-2 bg-[var(--v2-green)] text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-[var(--v2-green-hover)] transition-colors shadow-lg v2-island">
             Start Free Trial <ArrowRight className="w-5 h-5" />

@@ -8,7 +8,7 @@ export const revalidate = 3600
 
 export const metadata: Metadata = {
   title: "Terms of Service | whoza.ai",
-  description: "whoza.ai terms of service — no contracts, monthly rolling, 7-day free trial. Read our full terms and conditions for UK trade businesses.",
+  description: "whoza.ai terms of service: no contracts, monthly rolling, 7-day free trial. Read our full terms and conditions for UK trade businesses.",
   alternates: {
     canonical: "https://whoza.ai/terms",
   },
@@ -183,7 +183,7 @@ export default function TermsOfService() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-[var(--v2-green)] mt-1">•</span>
-                <span><strong>Credit application:</strong> Credits are non-transferable, have no cash alternative, and apply automatically to your next invoice(s). Pilot users keep their locked introductory rates — credits stack on top.</span>
+                <span><strong>Credit application:</strong> Credits are non-transferable, have no cash alternative, and apply automatically to your next invoice(s). Pilot users keep their locked introductory rates. Credits stack on top.</span>
               </li>
             </ul>
             <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-3">Restrictions</h3>

@@ -19,15 +19,15 @@ export const revalidate = 3600
 const researchReports = [
   {
     date: "September 2026",
-    title: "The Missed Call Index — UK trades missed-call research",
-    description: "The standing index of UK trades missed-call research: per-trade cost modelling (£16K–£33K lost per year), the £2.3bn national picture, seasonal patterns, methodology and citations.",
+    title: "The Missed Call Index: UK trades missed-call research",
+    description: "The standing index of UK trades missed-call research: per-trade cost modelling (£16K to £33K lost per year), the £2.3bn national picture, seasonal patterns, methodology and citations.",
     href: "/research/missed-call-index",
     status: "live" as const,
   },
   {
     date: "August 2026",
     title: "Missed Call Index Q3 2026: Findings and Data",
-    description: "A third of UK small-business calls go unanswered. The Missed Call Index Q3 2026 models £2.3bn of trades revenue at risk — the data, the cost, and the fix.",
+    description: "A third of UK small-business calls go unanswered. The Missed Call Index Q3 2026 models £2.3bn of trades revenue at risk: the data, the cost, and the fix.",
     href: "/research/missed-call-index/q3-2026",
     status: "live" as const,
   },
@@ -41,7 +41,7 @@ const researchReports = [
   {
     date: "June 2026",
     title: "Answer Engine Optimisation: Small Business & AI-Driven Search",
-    description: "Research on AEO — how small businesses must prepare for AI-driven search or risk invisibility.",
+    description: "Research on AEO: how small businesses must prepare for AI-driven search or risk invisibility.",
     href: "/research/aeo-ai-search-optimisation-2026",
     status: "live" as const,
   },
@@ -55,7 +55,7 @@ const researchReports = [
   {
     date: "June 2026",
     title: "Caller Experience Revolution: AI Voice Agents 2026",
-    description: "How AI voice agents are transforming customer experience for UK trades — data, trends, and implementation strategies.",
+    description: "How AI voice agents are transforming customer experience for UK trades: data, trends, and implementation strategies.",
     href: "/research/caller-experience-revolution-ai-voice-agents-2026",
     status: "live" as const,
   },

@@ -181,7 +181,7 @@ const faqs = [
     { question: "What percentage of callers who reach voicemail don't leave a message?", answer: "69% of callers who reach voicemail leave no message (Moneypenny, Small Business Call Report, 2016). Most callers who don't get through simply move on to the next number." },
     { question: "How much more likely is a business to connect with a lead if they respond within five minutes?", answer: "MIT's Lead Response Management Study found that companies responding within five minutes are 100 times more likely to make contact than those waiting 30 minutes, and 21 times more likely to qualify the lead. Velocify found that calling within one minute boosts conversion by 391% compared to waiting two minutes." },
     { question: "What percentage of customers will avoid a company after one negative service experience?", answer: "Accenture research shows that 87% of customers with even one negative service experience will avoid that company in the future. For small businesses where word-of-mouth drives growth, a single missed call carries amplified consequences." },
-    { question: "What is the average business response time to leads?", answer: "Optifai's 2026 Pipeline Study of 939 B2B companies found the average lead response time is 47 hours — nearly two full days. Only 23% respond within five minutes, while 42% take longer than 24 hours. 23% never respond to leads at all." }
+    { question: "What is the average business response time to leads?", answer: "Optifai's 2026 Pipeline Study of 939 B2B companies found the average lead response time is 47 hours, nearly two full days. Only 23% respond within five minutes, while 42% take longer than 24 hours. 23% never respond to leads at all." }
 ]
 export default function ResearchPage() {
   return (
@@ -240,7 +240,7 @@ export default function ResearchPage() {
                 <div className="flex items-center gap-2">
                   <User className="w-4 h-4" />
                   <span>whoza.ai</span>
-                  <span className="text-[var(--v2-muted)]">— Research Team</span>
+                  <span className="text-[var(--v2-muted)]">Research Team</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
@@ -270,7 +270,7 @@ export default function ResearchPage() {
               <ul className="space-y-2 mb-4">
                 <li className="flex items-start gap-2 text-[var(--v2-body)]">
                   <CheckCircle className="w-5 h-5 text-[var(--v2-green)] flex-shrink-0 mt-0.5" />
-                  <strong>The business that answers first usually gets the job</strong>, yet the average company takes 47 hours to respond, and only 7-23% reply within the critical five-minute window.
+                  <strong>The business that answers first usually gets the job</strong>, yet the average company takes 47 hours to respond, and only 7 to 23% reply within the critical five-minute window.
                 </li>
                 <li className="flex items-start gap-2 text-[var(--v2-body)]">
                   <CheckCircle className="w-5 h-5 text-[var(--v2-green)] flex-shrink-0 mt-0.5" />
@@ -309,7 +309,7 @@ export default function ResearchPage() {
             </p>
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">The Call Flow Map</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              The typical inbound call follows a predictable pattern. The caller identifies a need, searches for providers, selects 2-3 businesses, and calls sequentially. If the first answers and demonstrates competence, the caller stops. If not, they move to the second. By the third, patience is diminished and any responsive provider will suffice.
+              The typical inbound call follows a predictable pattern. The caller identifies a need, searches for providers, selects 2 to 3 businesses, and calls sequentially. If the first answers and demonstrates competence, the caller stops. If not, they move to the second. By the third, patience is diminished and any responsive provider will suffice.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
               This sequential calling behaviour explains why the first responder wins. A business that answers immediately, at any hour, with a professional demeanour and the ability to capture the caller&apos;s requirements, secures the job before competitors are even aware an opportunity existed.
@@ -326,7 +326,7 @@ export default function ResearchPage() {
               Research reveals a stark pattern of caller abandonment. Moneypenny's Small Business Call Report (2016) found that <strong>69% of callers who reach voicemail don't leave a message</strong>. Most callers who don't get through simply move on to the next number. For callers, voicemail signals the business does not prioritise their enquiry.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              The voicemail problem is compounded by callback delays. A 2025 study of 142 UK SMEs found average callback response time exceeds six hours — by which point callers have typically hired a competitor. The Drift Lead Response Report found waiting just five minutes increases lead loss risk by 10 times; waiting 10 minutes increases it by 100 times.
+              The voicemail problem is compounded by callback delays. A 2025 study of 142 UK SMEs found average callback response time exceeds six hours, by which point callers have typically hired a competitor. The Drift Lead Response Report found waiting just five minutes increases lead loss risk by 10 times; waiting 10 minutes increases it by 100 times.
             </p>
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">The Ringout Problem</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
@@ -358,8 +358,8 @@ export default function ResearchPage() {
                   </tr>
                   <tr className="border-b border-[var(--v2-line)]">
                     <td className="px-4 py-3 text-[var(--v2-body)]">Calls missed by small businesses</td>
-                    <td className="px-4 py-3 font-medium text-[var(--v2-green)]">—</td>
-                    <td className="px-4 py-3 text-[var(--v2-body)]">—</td>
+                    <td className="px-4 py-3 font-medium text-[var(--v2-green)]">N/A</td>
+                    <td className="px-4 py-3 text-[var(--v2-body)]">N/A</td>
                   </tr>
                   <tr className="border-b border-[var(--v2-line)]">
                     <td className="px-4 py-3 text-[var(--v2-body)]">UK SME calls unanswered</td>
@@ -391,7 +391,7 @@ export default function ResearchPage() {
               Dr. James Oldroyd at MIT conducted the foundational research, analysing 15,000+ leads across industries. The study established the five-minute rule: <strong>companies responding within five minutes are 100 times more likely to make contact than those waiting 30 minutes</strong>, and 21 times more likely to qualify the lead. Published in Harvard Business Review as &quot;The Short Life of Online Sales Leads.&quot;
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              Velocify found that calling a lead within one minute of inquiry boosts conversion rates by 391% compared to waiting just two minutes. InsideSales.com confirmed that <strong>50% of sales go to the vendor that responds first</strong> — not the best vendor, but the fastest. The business that answers first usually gets the job.
+              Velocify found that calling a lead within one minute of inquiry boosts conversion rates by 391% compared to waiting just two minutes. InsideSales.com confirmed that <strong>50% of sales go to the vendor that responds first</strong>, not the best vendor, but the fastest. The business that answers first usually gets the job.
             </p>
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">The Decay Curve</h3>
@@ -423,19 +423,19 @@ export default function ResearchPage() {
                     <td className="px-4 py-3 text-[var(--v2-body)]">MIT/InsideSales</td>
                   </tr>
                   <tr className="border-b border-[var(--v2-line)]">
-                    <td className="px-4 py-3 text-[var(--v2-body)]">5-30 minutes</td>
+                    <td className="px-4 py-3 text-[var(--v2-body)]">5 to 30 minutes</td>
                     <td className="px-4 py-3 font-medium text-[var(--v2-green)]">24%</td>
                     <td className="px-4 py-3 text-[var(--v2-body)]">2.0x</td>
                     <td className="px-4 py-3 text-[var(--v2-body)]">Optifai, 2026</td>
                   </tr>
                   <tr className="border-b border-[var(--v2-line)]">
-                    <td className="px-4 py-3 text-[var(--v2-body)]">30 min - 1 hour</td>
+                    <td className="px-4 py-3 text-[var(--v2-body)]">30 min to 1 hour</td>
                     <td className="px-4 py-3 font-medium text-[var(--v2-green)]">18%</td>
                     <td className="px-4 py-3 text-[var(--v2-body)]">1.5x</td>
                     <td className="px-4 py-3 text-[var(--v2-body)]">Optifai, 2026</td>
                   </tr>
                   <tr className="border-b border-[var(--v2-line)]">
-                    <td className="px-4 py-3 text-[var(--v2-body)]">1-24 hours</td>
+                    <td className="px-4 py-3 text-[var(--v2-body)]">1 to 24 hours</td>
                     <td className="px-4 py-3 font-medium text-[var(--v2-green)]">15%</td>
                     <td className="px-4 py-3 text-[var(--v2-body)]">1.3x</td>
                     <td className="px-4 py-3 text-[var(--v2-body)]">Optifai, 2026</td>
@@ -452,13 +452,13 @@ export default function ResearchPage() {
 
             <div className="bg-[var(--v2-mint)] border-l-4 border-[var(--v2-green)] rounded-r-xl p-6 my-6">
               <p className="text-[var(--v2-green-ink)] font-medium leading-relaxed">
-                A plumbing business that responds to an enquiry in five minutes has a 32% probability of closing the job; the same business responding after 24 hours has a 12% probability. The difference is not marginal — it is the difference between a thriving business and one that struggles to maintain pipeline.
+                A plumbing business that responds to an enquiry in five minutes has a 32% probability of closing the job; the same business responding after 24 hours has a 12% probability. The difference is not marginal. It is the difference between a thriving business and one that struggles to maintain pipeline.
               </p>
             </div>
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">The Average Business Response Gap</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              Despite this research, average business response time remains abysmal. Optifai&apos;s 2026 Pipeline Study of 939 B2B companies found the average lead response time is <strong>47 hours</strong> — nearly two full days. Only 23% respond within five minutes, while 42% take longer than 24 hours. 23% never respond to leads at all.
+              Despite this research, average business response time remains abysmal. Optifai&apos;s 2026 Pipeline Study of 939 B2B companies found the average lead response time is <strong>47 hours</strong>, nearly two full days. Only 23% respond within five minutes, while 42% take longer than 24 hours. 23% never respond to leads at all.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
               For small trade businesses, the gap is likely wider. Unlike B2B SaaS companies with dedicated sales teams, trade businesses typically have no one solely responsible for responding to enquiries. The electrician installing a distribution board cannot pause mid-job to answer the phone. Even businesses with excellent technical skills lose jobs simply because they could not respond in time.
@@ -472,7 +472,7 @@ export default function ResearchPage() {
             </p>
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">The Zero-Second Answer</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              The most transformative feature of AI voice agents is the guarantee of answer. Unlike human receptionists limited to one call at a time, AI agents accept unlimited simultaneous calls with no busy signals or hold queues. Callers get immediate connection — a human-sounding voice that greets them by name and asks how it can help.
+              The most transformative feature of AI voice agents is the guarantee of answer. Unlike human receptionists limited to one call at a time, AI agents accept unlimited simultaneous calls with no busy signals or hold queues. Callers get immediate connection: a human-sounding voice that greets them by name and asks how it can help.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
               Research from Freshworks found that first response time for tickets dropped from over six hours to less than four minutes with AI-powered support, and customer satisfaction climbed from 89% to 99%. The underlying principle is identical: the faster a customer&apos;s need is acknowledged, the more positively they evaluate the interaction.
@@ -480,10 +480,10 @@ export default function ResearchPage() {
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">24/7 Availability as Competitive Weapon</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              The expectation of round-the-clock availability has shifted from a luxury to a baseline requirement. According to Zendesk&apos;s CX Trends 2026 report, <strong>74% of consumers now expect 24/7 customer service</strong>. Among Gen Z and Millennial consumers, 34-35% identify 24/7 availability as one of the most important attributes of a positive customer support experience.
+              The expectation of round-the-clock availability has shifted from a luxury to a baseline requirement. According to Zendesk&apos;s CX Trends 2026 report, <strong>74% of consumers now expect 24/7 customer service</strong>. Among Gen Z and Millennial consumers, 34 to 35% identify 24/7 availability as one of the most important attributes of a positive customer support experience.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              For trade businesses, this expectation creates both a challenge and an opportunity. Human-staffed 24/7 coverage is economically impractical for most small businesses. AI voice agents provide this coverage at a fraction of the cost — typically <strong>£59-£125 per month versus £22,000-£28,000 annually</strong> for a full-time receptionist. A business answering calls at 10pm on Sunday captures enquiries that would otherwise go to competitors.
+              For trade businesses, this expectation creates both a challenge and an opportunity. Human-staffed 24/7 coverage is economically impractical for most small businesses. AI voice agents provide this coverage at a fraction of the cost, typically <strong>£59 to £125 per month versus £22,000 to £28,000 annually</strong> for a full-time receptionist. A business answering calls at 10pm on Sunday captures enquiries that would otherwise go to competitors.
             </p>
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">Natural Conversation and Barge-In Handling</h3>
@@ -491,7 +491,7 @@ export default function ResearchPage() {
               Modern AI voice agents operate with conversational fluency callers routinely mistake for human interaction. Sub-200ms response latency, natural turn-taking, and barge-in handling create interactions indistinguishable from live receptionists. In blind testing, <strong>94% of callers believed they were speaking to a human</strong> rather than an AI system.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              This naturalness is critical to caller satisfaction. Metrigy&apos;s 2025 study of 503 consumers found that while 79% prefer human agents, this preference is driven by negative experiences with poor-quality AI. When AI demonstrates competence and fluency, acceptance rates increase dramatically. Gen Z consumers are most likely to try self-service first (94%) and most forgiving after negative experiences — only 20% unwilling to retry versus 61% of Baby Boomers.
+              This naturalness is critical to caller satisfaction. Metrigy&apos;s 2025 study of 503 consumers found that while 79% prefer human agents, this preference is driven by negative experiences with poor-quality AI. When AI demonstrates competence and fluency, acceptance rates increase dramatically. Gen Z consumers are most likely to try self-service first (94%) and most forgiving after negative experiences: only 20% unwilling to retry versus 61% of Baby Boomers.
             </p>
           </section>
 
@@ -505,7 +505,7 @@ export default function ResearchPage() {
               McKinsey&apos;s 2025 Consumer Pulse Survey reveals significant generational variation in AI trust. While 79% of consumers overall prefer human agents, younger consumers show substantially higher comfort with AI-mediated service. Their satisfaction is driven by outcomes rather than interaction type. When AI resolves issues quickly and accurately, satisfaction scores match or exceed human-only service.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              The key determinant of trust is not whether the agent is human or AI, but whether the interaction is competent, transparent, and effective. Salesforce research confirms that <strong>consumers who understand when they are interacting with AI and how their data will be used report higher satisfaction</strong> than those who encounter undisclosed automation. Transparency is not a compliance checkbox — it is a trust-building mechanism.
+              The key determinant of trust is not whether the agent is human or AI, but whether the interaction is competent, transparent, and effective. Salesforce research confirms that <strong>consumers who understand when they are interacting with AI and how their data will be used report higher satisfaction</strong> than those who encounter undisclosed automation. Transparency is not a compliance checkbox. It is a trust-building mechanism.
             </p>
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">Best Practice: Disclosure and Consent</h3>
@@ -528,11 +528,11 @@ export default function ResearchPage() {
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-4">CSAT and the Measurable Impact on Satisfaction</h2>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              The impact of AI voice agents on customer satisfaction is not theoretical — it is quantifiable, reproducible, and increasingly well-documented across industry studies and vendor benchmarks.
+              The impact of AI voice agents on customer satisfaction is not theoretical. It is quantifiable, reproducible, and increasingly well-documented across industry studies and vendor benchmarks.
             </p>
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">AI-Powered CSAT Scores</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              Gladly&apos;s 2025 analysis found that companies using AI-trained support systems achieved <strong>CSAT scores averaging 90%</strong> — the highest recorded in recent industry studies. This represents a significant improvement over traditional systems, where satisfaction scores typically plateau at 75-80% for human-only support and 65-70% for basic chatbot implementations.
+              Gladly&apos;s 2025 analysis found that companies using AI-trained support systems achieved <strong>CSAT scores averaging 90%</strong>, the highest recorded in recent industry studies. This represents a significant improvement over traditional systems, where satisfaction scores typically plateau at 75 to 80% for human-only support and 65 to 70% for basic chatbot implementations.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
               The drivers of this improvement are straightforward. AI agents provide consistent, accurate information without human variability: fatigue, distraction, incomplete training, or interpersonal inconsistency. Every caller receives the same quality of interaction and professional demeanour. For small businesses where the owner may answer calls differently depending on their current situation, this consistency is a meaningful advantage.
@@ -540,7 +540,7 @@ export default function ResearchPage() {
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">Resolution Speed and First-Contact Resolution</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              Freshworks&apos; 2025 analysis found that AI-powered customer service achieves <strong>up to 60% faster query resolution</strong> than human-only systems. The American Customer Satisfaction Index (ACSI) confirms that first-contact resolution is the strongest predictor of customer satisfaction across all service channels — stronger than agent friendliness, hold time, or follow-up quality.
+              Freshworks&apos; 2025 analysis found that AI-powered customer service achieves <strong>up to 60% faster query resolution</strong> than human-only systems. The American Customer Satisfaction Index (ACSI) confirms that first-contact resolution is the strongest predictor of customer satisfaction across all service channels, stronger than agent friendliness, hold time, or follow-up quality.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
               For trade businesses, first-contact resolution means capturing the enquiry completely in the initial call: customer details, job description, urgency, location, and preferred callback time. An AI agent capturing all this in 90 seconds and delivering it via WhatsApp achieves first-contact resolution. The tradesperson has everything needed to callback with full context. Compare this to a voicemail providing only a phone number and garbled message about &quot;something leaking,&quot; requiring multiple callbacks.
@@ -571,7 +571,7 @@ export default function ResearchPage() {
               AI voice agents address this gap through automated, contextual review solicitation. When a job is marked complete, the AI places a brief follow-up call or WhatsApp message: &quot;Hi, this is Katie from [Business Name]. We hope your [job type] was completed to your satisfaction. If you have two minutes, we&apos;d be grateful for a quick Google review. Here&apos;s the link.&quot;
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              This automation transforms review solicitation from a manual, inconsistent process into a systematic, reliable one. The Journal of Small Business Strategy&apos;s 2026 research on reputation management confirms that <strong>automated review requests achieve 3-4 times higher response rates</strong> than manual requests, primarily because they are sent immediately after service completion when customer satisfaction is highest.
+              This automation transforms review solicitation from a manual, inconsistent process into a systematic, reliable one. The Journal of Small Business Strategy&apos;s 2026 research on reputation management confirms that <strong>automated review requests achieve 3 to 4 times higher response rates</strong> than manual requests, primarily because they are sent immediately after service completion when customer satisfaction is highest.
             </p>
 
             <div className="bg-white border border-[var(--v2-line)] rounded-2xl overflow-hidden mb-6">
@@ -590,12 +590,12 @@ export default function ResearchPage() {
                     <td className="px-4 py-3 text-[var(--v2-body)]">BrightLocal, 2025</td>
                   </tr>
                   <tr className="border-b border-[var(--v2-line)]">
-                    <td className="px-4 py-3 text-[var(--v2-body)]">10-20</td>
+                    <td className="px-4 py-3 text-[var(--v2-body)]">10 to 20</td>
                     <td className="px-4 py-3 font-medium text-[var(--v2-green)]">1.8x</td>
                     <td className="px-4 py-3 text-[var(--v2-body)]">BrightLocal, 2025</td>
                   </tr>
                   <tr className="border-b border-[var(--v2-line)]">
-                    <td className="px-4 py-3 text-[var(--v2-body)]">20-40</td>
+                    <td className="px-4 py-3 text-[var(--v2-body)]">20 to 40</td>
                     <td className="px-4 py-3 font-medium text-[var(--v2-green)]">2.4x</td>
                     <td className="px-4 py-3 text-[var(--v2-body)]">BrightLocal, 2025</td>
                   </tr>
@@ -648,7 +648,7 @@ export default function ResearchPage() {
                 <CheckCircle className="w-5 h-5 text-[var(--v2-green)] flex-shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-semibold text-[var(--v2-ink)] mb-1">Integrate with existing workflows</h4>
-                  <p className="text-[var(--v2-body)]">The AI should deliver enquiries to systems you already use — WhatsApp, email, calendar, CRM. If the AI creates friction in your workflow, you will stop checking it. If it fits seamlessly, it becomes indispensable.</p>
+                  <p className="text-[var(--v2-body)]">The AI should deliver enquiries to systems you already use: WhatsApp, email, calendar, CRM. If the AI creates friction in your workflow, you will stop checking it. If it fits seamlessly, it becomes indispensable.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -686,7 +686,7 @@ export default function ResearchPage() {
               The evidence presented in this report converges on five unambiguous conclusions:
             </p>
             <ol className="space-y-3 mb-6 list-decimal list-inside">
-              <li className="text-[var(--v2-body)]"><strong>Speed is the dominant factor in conversion:</strong> The five-minute rule is not a suggestion — it is a statistical law. Businesses that respond within five minutes win disproportionately. Those that take hours or days lose disproportionately.</li>
+              <li className="text-[var(--v2-body)]"><strong>Speed is the dominant factor in conversion:</strong> The five-minute rule is not a suggestion. It is a statistical law. Businesses that respond within five minutes win disproportionately. Those that take hours or days lose disproportionately.</li>
               <li className="text-[var(--v2-body)]"><strong>AI voice agents solve a structural problem, not a staffing problem:</strong> Small businesses do not miss calls because they are negligent. They miss calls because it is physically impossible for one or two people to be on a job site and answering the phone simultaneously. AI eliminates this constraint.</li>
               <li className="text-[var(--v2-body)]"><strong>Transparency builds trust that compounds over time:</strong> Disclosing AI use, providing seamless human escalation, and delivering consistently high-quality interactions produces caller satisfaction that exceeds what many small businesses achieve with human-only coverage.</li>
               <li className="text-[var(--v2-body)]"><strong>The caller experience is a revenue multiplier, not a cost centre:</strong> When automated review collection, 24/7 availability, and lead qualification are factored in, AI voice agents generate revenue that far exceeds their subscription cost. The ROI is measured in weeks, not years.</li>
@@ -713,7 +713,7 @@ export default function ResearchPage() {
                 <li>Harvard Business Review (2011). &apos;The Short Life of Online Sales Leads.&apos;</li>
                 <li>InsideSales.com. &apos;Lead Response Management Study.&apos; Dr. James Oldroyd, MIT.</li>
                 <li>McKinsey (2025). &apos;Consumer Pulse Survey: AI Preferences by Generation.&apos;</li>
-                <li>Metrigy (2025). &apos;AI for Business Success 2025-26.&apos;</li>
+                <li>Metrigy (2025). &apos;AI for Business Success 2025 to 26.&apos;</li>
                 <li>MIT/InsideSales.com. &apos;Lead Response Management Study.&apos; Analysis of 15,000+ leads.</li>
                 <li>Optifai (2026). &apos;Lead Response Time Benchmarks: 939 B2B Companies.&apos;</li>
                 <li>Paperclip Research (2025). &apos;How Many Calls Do UK Businesses Miss?&apos;</li>
@@ -787,7 +787,7 @@ export default function ResearchPage() {
       </div>
       <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
         <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-3">What is the average business response time to leads?</h3>
-        <p className="text-[var(--v2-body)] leading-relaxed">Optifai's 2026 Pipeline Study of 939 B2B companies found the average lead response time is 47 hours — nearly two full days. Only 23% respond within five minutes, while 42% take longer than 24 hours. 23% never respond to leads at all.</p>
+        <p className="text-[var(--v2-body)] leading-relaxed">Optifai's 2026 Pipeline Study of 939 B2B companies found the average lead response time is 47 hours, nearly two full days. Only 23% respond within five minutes, while 42% take longer than 24 hours. 23% never respond to leads at all.</p>
       </div>
     </div>
   </div>

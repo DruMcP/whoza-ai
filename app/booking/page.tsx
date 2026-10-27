@@ -35,7 +35,7 @@ const steps = [
   },
   {
     title: "Offers Available Slots",
-    desc: "The AI offers 2–3 time slots that work for both you and the caller. The caller picks one — or asks for alternatives.",
+    desc: "The AI offers 2 to 3 time slots that work for both you and the caller. The caller picks one, or asks for alternatives.",
   },
   {
     title: "Booking Confirmed",
@@ -67,7 +67,7 @@ export default function BookingPage() {
             Never Double-Book Again
           </h1>
           <p className="text-[var(--v2-body)] max-w-2xl text-lg">
-            whoza.ai checks your calendar before confirming any job. Google Calendar, Outlook, Apple Calendar — all supported. Available on every plan.
+            whoza.ai checks your calendar before confirming any job. Google Calendar, Outlook, Apple Calendar: all supported. Available on every plan.
           </p>
         </div>
 
@@ -125,16 +125,16 @@ export default function BookingPage() {
             Not "someone will call you back." Not a message in a queue. A live transfer, on that call, to your phone.
           </p>
           <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-            If you're up a ladder and can't take it, she takes the details and books them in — same as always. But the choice is the customer's, not the software's.
+            If you're up a ladder and can't take it, she takes the details and books them in, same as always. But the choice is the customer's, not the software's.
           </p>
           <p className="text-[var(--v2-muted)] text-sm leading-relaxed">
-            Transfer only works if you're available to answer. If you don't pick up, it falls back to booking or message capture — so the caller never gets left hanging.
+            Transfer only works if you're available to answer. If you don't pick up, it falls back to booking or message capture, so the caller never gets left hanging.
           </p>
         </section>
 
         <section className="text-center">
           <p className="text-[var(--v2-body)] mb-6">
-            Calendar integration is included on every plan — Starter, Growth, Pro, and Scale.
+            Calendar integration is included on every plan: Starter, Growth, Pro, and Scale.
           </p>
           <a
             href="/pricing"

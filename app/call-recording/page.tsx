@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description:
       "How whoza.ai handles call data: no audio recordings, written transcripts only, with exact retention periods per data class.",
     images: [
-      { url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Whoza.ai — Call Recording & Data Retention" },
+      { url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Whoza.ai: Call Recording & Data Retention" },
     ],
   },
   twitter: {
@@ -116,7 +116,7 @@ export default function CallRecordingPage() {
           <p className="text-xl text-[var(--v2-body)] leading-relaxed retention-lead">
             This page describes how whoza.ai handles call data. It is not legal advice. Recording
             obligations vary by purpose, sector and lawful basis, and what follows is a statement of
-            how Whoza operates — not a statement of what any business must do.
+            how Whoza operates, not a statement of what any business must do.
           </p>
         </div>
 
@@ -200,8 +200,8 @@ export default function CallRecordingPage() {
             <p>
               Choosing a transcript-only architecture means you cannot listen back to a disputed
               call. You cannot use recordings for staff training or quality assurance. A transcript
-              is a reconstruction of the conversation — useful, searchable, and delivered instantly
-              to your WhatsApp — but it is not the call itself.
+              is a reconstruction of the conversation (useful, searchable, and delivered instantly
+              to your WhatsApp), but it is not the call itself.
             </p>
             <p>
               What you get instead: a complete text record of every conversation, flagged by urgency,

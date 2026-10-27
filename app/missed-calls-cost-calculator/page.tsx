@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "How much do missed calls cost UK tradespeople?",
-    answer: "Missed calls cost UK tradespeople £3,000-£12,000 per year on average. Based on the Moneypenny Small Business Call Report (2016), 33% of small businesses fail to answer incoming calls. With an average job value of £280 and 35% conversion rate, 10 missed calls per week = £5,096 in lost annual revenue.",
+    answer: "Missed calls cost UK tradespeople £3,000 to £12,000 per year on average. Based on the Moneypenny Small Business Call Report (2016), 33% of small businesses fail to answer incoming calls. With an average job value of £280 and 35% conversion rate, 10 missed calls per week = £5,096 in lost annual revenue.",
   },
   {
     question: "What percentage of calls do trade businesses miss?",
@@ -41,15 +41,15 @@ const faqs = [
   },
   {
     question: "What is the average job value for UK trades?",
-    answer: "The average job value varies by trade: Plumbing (£180-350), Electrical (£150-400), Roofing (£500-2,000), Heating (£200-600), Building (£1,000-5,000). The UK average across all trades is approximately £280 per job.",
+    answer: "The average job value varies by trade: Plumbing (£180 to £350), Electrical (£150 to £400), Roofing (£500 to £2,000), Heating (£200 to £600), Building (£1,000 to £5,000). The UK average across all trades is approximately £280 per job.",
   },
   {
     question: "How many missed calls turn into actual jobs?",
-    answer: "Approximately 35% of answered calls convert into booked jobs for UK tradespeople. This means if you miss 10 calls per week, you're losing 3-4 potential jobs — worth £840-£1,120 per week.",
+    answer: "Approximately 35% of answered calls convert into booked jobs for UK tradespeople. This means if you miss 10 calls per week, you're losing 3 to 4 potential jobs, worth £840 to £1,120 per week.",
   },
   {
     question: "Can an AI call handler recover lost revenue?",
-    answer: "Yes. AI call handlers like whoza.ai answer 100% of missed calls, qualify leads, and deliver them via WhatsApp. Tradespeople using AI call handling report recovering 2-5 additional jobs per month, worth £560-£1,400 monthly.",
+    answer: "Yes. AI call handlers like whoza.ai answer 100% of missed calls, qualify leads, and deliver them via WhatsApp. Tradespeople using AI call handling report recovering 2 to 5 additional jobs per month, worth £560 to £1,400 monthly.",
   },
 ]
 
@@ -151,8 +151,8 @@ export default function MissedCallsCalculatorPage() {
                 <h3 className="text-xl font-bold text-slate-900 mb-2">AI call handling pays for itself</h3>
                 <p className="text-slate-700">
                   whoza.ai costs £59/month. If it recovers just 1 extra job per month (worth £280), 
-                  you're already up £221. Most trades recover 2-5 additional jobs monthly — 
-                  worth £560-£1,400 in extra revenue.
+                  you're already up £221. Most trades recover 2 to 5 additional jobs monthly, 
+                  worth £560 to £1,400 in extra revenue.
                 </p>
               </div>
             </div>

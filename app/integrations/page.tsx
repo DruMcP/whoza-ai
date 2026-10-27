@@ -6,14 +6,14 @@ import { ArrowRight, Calendar, MessageSquare, Zap, Phone, Database, Check } from
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "Integrations — Connect whoza.ai to Your Tools | UK Trades",
+  title: "Integrations: Connect whoza.ai to Your Tools | UK Trades",
   description: "whoza.ai integrates with Google Calendar, Outlook, Apple Calendar, WhatsApp, Zapier, Make, Stripe, Twilio, Supabase, and more. Built for UK tradespeople.",
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "https://whoza.ai/integrations",
     siteName: "Whoza.ai",
-    title: "Integrations — Connect whoza.ai to Your Tools | UK Trades",
+    title: "Integrations: Connect whoza.ai to Your Tools | UK Trades",
     description: "whoza.ai integrates with Google Calendar, Outlook, Apple Calendar, WhatsApp, Zapier, Make, Stripe, Twilio, Supabase, and more. Built for UK tradespeople.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Whoza.ai Integrations" }],
   },
@@ -88,7 +88,7 @@ const integrations = [
       {
         name: "Stripe",
         desc: "Secure payment processing. No card data stored.",
-        detail: "PCI-compliant payment processing for plan subscriptions and optional job deposits. Stripe handles all card data — whoza.ai never stores card numbers. Automatic invoicing, VAT handling, and secure subscription management.",
+        detail: "PCI-compliant payment processing for plan subscriptions and optional job deposits. Stripe handles all card data: whoza.ai never stores card numbers. Automatic invoicing, VAT handling, and secure subscription management.",
         icon: Database,
       },
       {
@@ -119,7 +119,7 @@ export default function IntegrationsPage() {
             Connect whoza.ai to the Tools You Already Use
           </h1>
           <p className="text-[var(--v2-body)] max-w-2xl text-lg">
-            No rebuilding your workflow. whoza.ai slots into your existing stack — calendars, WhatsApp, CRMs, and automation tools.
+            No rebuilding your workflow. whoza.ai slots into your existing stack: calendars, WhatsApp, CRMs, and automation tools.
           </p>
         </div>
 
@@ -149,7 +149,7 @@ export default function IntegrationsPage() {
         <section className="bg-white border border-[var(--v2-line)] rounded-2xl p-8 mt-16">
           <h2 className="text-2xl font-semibold mb-4">Need a Custom Integration?</h2>
           <p className="text-[var(--v2-body)] mb-6">
-            We are adding new integrations every month. If you need a specific connection — Jobber, ServiceTitan, Xero, or something else — let us know and we will prioritise it.
+            We are adding new integrations every month. If you need a specific connection (Jobber, ServiceTitan, Xero, or something else), let us know and we will prioritise it.
           </p>
           <a
             href="mailto:dru@whoza.ai"

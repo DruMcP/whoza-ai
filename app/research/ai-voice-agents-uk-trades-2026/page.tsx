@@ -10,7 +10,7 @@ import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "AI Voice Agents in UK Trades: Research Report 2026",
-  description: "AI voice agents save UK trades £15K–£40K/year on reception costs. 2026 research covers adoption, accuracy and ROI. Download free.",
+  description: "AI voice agents save UK trades £15K to £40K/year on reception costs. 2026 research covers adoption, accuracy and ROI. Download free.",
   alternates: {
     canonical: "https://whoza.ai/research/ai-voice-agents-uk-trades-2026",
   },
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/research/ai-voice-agents-uk-trades-2026",
     siteName: "Whoza.ai",
     title: "AI Voice Agents in UK Trades: Research Report 2026",
-    description: "AI voice agents save UK trades £15K–£40K/year on reception costs. 2026 research covers adoption, accuracy and ROI. Download free.",
+    description: "AI voice agents save UK trades £15K to £40K/year on reception costs. 2026 research covers adoption, accuracy and ROI. Download free.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "AI Voice Agents UK Trades Research 2026" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "AI Voice Agents in UK Trades: Research Report 2026",
-    description: "AI voice agents save UK trades £15K–£40K/year on reception costs. 2026 research covers adoption, accuracy and ROI. Download free.",
+    description: "AI voice agents save UK trades £15K to £40K/year on reception costs. 2026 research covers adoption, accuracy and ROI. Download free.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   other: {
@@ -57,7 +57,7 @@ const scholarlyArticleSchema = {
   "@context": "https://schema.org",
   "@type": ["ScholarlyArticle", "Article"],
   "@id": "https://whoza.ai/research/ai-voice-agents-uk-trades-2026",
-  "headline": "AI Voice Agents in the UK Trades Sector: Market Analysis, Current Trends, and Future Iterations — 2026",
+  "headline": "AI Voice Agents in the UK Trades Sector: Market Analysis, Current Trends, and Future Iterations, 2026",
   "description": "Research report examining the market vertical of AI-powered call handling and revenue optimisation systems for UK tradespeople. Covers missed call statistics, technology capabilities, competitive landscape, ROI analysis, and future predictions.",
   "image": "https://whoza.ai/og-image.webp",
   "datePublished": "2026-06-18",
@@ -115,13 +115,13 @@ const scholarlyArticleSchema = {
   "citation": [
     {
       "@type": "CreativeWork",
-      "name": "Conversational AI Market Size Report, 2024–2030",
+      "name": "Conversational AI Market Size Report, 2024 to 2030",
       "author": { "@type": "Organization", "name": "Grand View Research" },
       "datePublished": "2024"
     },
     {
       "@type": "CreativeWork",
-      "name": "Global Conversational AI Market 2025–2029",
+      "name": "Global Conversational AI Market 2025 to 2029",
       "author": { "@type": "Organization", "name": "Juniper Research" },
       "datePublished": "2025"
     },
@@ -273,7 +273,7 @@ export default function ResearchPage() {
                 <div className="flex items-center gap-2">
                   <User className="w-4 h-4" />
                   <span>whoza.ai</span>
-                  <span className="text-[var(--v2-muted)]">— Research Team</span>
+                  <span className="text-[var(--v2-muted)]">Research Team</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
@@ -284,7 +284,7 @@ export default function ResearchPage() {
                 Last updated: <time dateTime="2026-06-06">2026-06-06</time>
               </div>
           <p className="text-xl text-[var(--v2-body)] leading-relaxed">
-            Market Analysis, Current Trends, and Future Iterations — 2026
+            Market Analysis, Current Trends, and Future Iterations, 2026
           </p>
         </div>
 
@@ -298,7 +298,7 @@ export default function ResearchPage() {
                 Executive Summary
               </h2>
               <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-                The convergence of large language models, real-time speech synthesis, and telephony integration has created AI voice agents purpose-built for small businesses. This report examines AI-powered call handling and revenue optimisation systems, with specific focus on the UK trades sector — encompassing plumbers, electricians, roofers, builders, heating engineers, and allied home service professionals.
+                The convergence of large language models, real-time speech synthesis, and telephony integration has created AI voice agents purpose-built for small businesses. This report examines AI-powered call handling and revenue optimisation systems, with specific focus on the UK trades sector, encompassing plumbers, electricians, roofers, builders, heating engineers, and allied home service professionals.
               </p>
               <p className="text-[var(--v2-body)] leading-relaxed mb-4">Key findings from our analysis include:</p>
               <ul className="space-y-2 mb-4">
@@ -312,11 +312,11 @@ export default function ResearchPage() {
                 </li>
                 <li className="flex items-start gap-2 text-[var(--v2-body)]">
                   <CheckCircle className="w-5 h-5 text-[var(--v2-green)] flex-shrink-0 mt-0.5" />
-                  <strong>33% of small UK trade businesses fail to answer incoming calls</strong>, with each missed call representing an average lost revenue of <strong>£250–£450</strong> (Moneypenny, Small Business Call Report, 2016; Paperclip Research, 2025).
+                  <strong>33% of small UK trade businesses fail to answer incoming calls</strong>, with each missed call representing an average lost revenue of <strong>£250 to £450</strong> (Moneypenny, Small Business Call Report, 2016; Paperclip Research, 2025).
                 </li>
                 <li className="flex items-start gap-2 text-[var(--v2-body)]">
                   <CheckCircle className="w-5 h-5 text-[var(--v2-green)] flex-shrink-0 mt-0.5" />
-                  AI receptionist systems deliver a <strong>12× cost advantage</strong> per interaction compared to human agents, reducing operational costs by 25–30% while operating 24/7 (IBM, 2025).
+                  AI receptionist systems deliver a <strong>12× cost advantage</strong> per interaction compared to human agents, reducing operational costs by 25 to 30% while operating 24/7 (IBM, 2025).
                 </li>
                 <li className="flex items-start gap-2 text-[var(--v2-body)]">
                   <CheckCircle className="w-5 h-5 text-[var(--v2-green)] flex-shrink-0 mt-0.5" />
@@ -333,13 +333,13 @@ export default function ResearchPage() {
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-4">Introduction: The AI Voice Agent Landscape</h2>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              The evolution of conversational AI has accelerated dramatically since 2023, transitioning from rule-based chatbots to sophisticated voice agents capable of natural, context-aware dialogue. Modern AI voice agents leverage end-to-end speech models — notably OpenAI's Realtime API — that process audio natively rather than chaining separate speech-to-text, language model, and text-to-speech components. This has reduced response latency from 1–2 seconds to as low as 250 milliseconds (OpenAI, 2025).
+              The evolution of conversational AI has accelerated dramatically since 2023, transitioning from rule-based chatbots to sophisticated voice agents capable of natural, context-aware dialogue. Modern AI voice agents leverage end-to-end speech models, notably OpenAI's Realtime API, that process audio natively rather than chaining separate speech-to-text, language model, and text-to-speech components. This has reduced response latency from 1 to 2 seconds to as low as 250 milliseconds (OpenAI, 2025).
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              Gartner predicts that by the end of 2026, <strong>80% of customer service organisations will use generative AI</strong> in some form, and by 2027, <strong>25% of all customer service interactions will begin with a GenAI-capable agent</strong> — up from less than 5% in 2024 (Gartner Predictions, 2024). These projections underscore the speed at which voice AI is transitioning from experimental technology to standard business infrastructure.
+              Gartner predicts that by the end of 2026, <strong>80% of customer service organisations will use generative AI</strong> in some form, and by 2027, <strong>25% of all customer service interactions will begin with a GenAI-capable agent</strong>, up from less than 5% in 2024 (Gartner Predictions, 2024). These projections underscore the speed at which voice AI is transitioning from experimental technology to standard business infrastructure.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed">
-              For the UK trades sector specifically, the implications are profound. This industry — characterised by small, owner-operated businesses where the same person performs the work and answers the phone — has historically been underserved by enterprise-grade technology. AI voice agents now offer these businesses capabilities previously available only to large corporations with dedicated call centres: 24/7 call answering, lead qualification, appointment booking, and customer relationship management, all at a fraction of traditional costs.
+              For the UK trades sector specifically, the implications are profound. This industry (characterised by small, owner-operated businesses where the same person performs the work and answers the phone) has historically been underserved by enterprise-grade technology. AI voice agents now offer these businesses capabilities previously available only to large corporations with dedicated call centres: 24/7 call answering, lead qualification, appointment booking, and customer relationship management, all at a fraction of traditional costs.
             </p>
           </section>
 
@@ -347,7 +347,7 @@ export default function ResearchPage() {
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-4">The UK Trades Sector: A Critical Market Context</h2>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              The UK trades sector represents a substantial and economically significant market vertical. According to the Department for Business and Trade, Business Population Estimates 2025, the UK construction and home services industries collectively comprise hundreds of thousands of micro-businesses — defined as firms with 0–9 employees. The vast majority of these are sole traders or small partnerships where operational demands leave little capacity for administrative functions such as call handling.
+              The UK trades sector represents a substantial and economically significant market vertical. According to the Department for Business and Trade, Business Population Estimates 2025, the UK construction and home services industries collectively comprise hundreds of thousands of micro-businesses, defined as firms with 0 to 9 employees. The vast majority of these are sole traders or small partnerships where operational demands leave little capacity for administrative functions such as call handling.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
               The Moneypenny Small Business Call Report (2016) surveyed 300 UK micro-businesses and found that one-third (33%) of all incoming calls were missed. More recent research from 2025 indicates this figure has worsened: a study of 142 UK SMEs found that almost half (47%) of initial calls went unanswered (Paperclip Research, 2025).
@@ -364,7 +364,7 @@ export default function ResearchPage() {
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-[var(--v2-green)] flex-shrink-0 mt-0.5" />
-                <span className="text-[var(--v2-body)]"><strong>High-intent callers:</strong> Phone calls to trade businesses typically represent urgent, time-sensitive enquiries — boiler failures, electrical emergencies, roof leaks — where the caller will contact the first available provider.</span>
+                <span className="text-[var(--v2-body)]"><strong>High-intent callers:</strong> Phone calls to trade businesses typically represent urgent, time-sensitive enquiries (boiler failures, electrical emergencies, roof leaks) where the caller will contact the first available provider.</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-[var(--v2-green)] flex-shrink-0 mt-0.5" />
@@ -397,8 +397,8 @@ export default function ResearchPage() {
                 <tbody>
                   <tr className="border-b border-[var(--v2-line)]">
                     <td className="px-4 py-3 text-[var(--v2-body)]">Small business calls unanswered</td>
-                    <td className="px-4 py-3 font-bold text-[var(--v2-green)]">—</td>
-                    <td className="px-4 py-3 text-[var(--v2-muted)]">—</td>
+                    <td className="px-4 py-3 font-bold text-[var(--v2-green)]">N/A</td>
+                    <td className="px-4 py-3 text-[var(--v2-muted)]">N/A</td>
                   </tr>
                   <tr className="border-b border-[var(--v2-line)]">
                     <td className="px-4 py-3 text-[var(--v2-body)]">UK SME initial calls unanswered</td>
@@ -412,8 +412,8 @@ export default function ResearchPage() {
                   </tr>
                   <tr className="border-b border-[var(--v2-line)]">
                     <td className="px-4 py-3 text-[var(--v2-body)]">Unanswered callers who contact competitor</td>
-                    <td className="px-4 py-3 font-bold text-[var(--v2-green)]">—</td>
-                    <td className="px-4 py-3 text-[var(--v2-muted)]">—</td>
+                    <td className="px-4 py-3 font-bold text-[var(--v2-green)]">N/A</td>
+                    <td className="px-4 py-3 text-[var(--v2-muted)]">N/A</td>
                   </tr>
                   <tr className="border-b border-[var(--v2-line)]">
                     <td className="px-4 py-3 text-[var(--v2-body)]">Callers who hang up on voicemail</td>
@@ -459,7 +459,7 @@ export default function ResearchPage() {
             </ul>
             <div className="bg-[var(--v2-mint)] border-l-4 border-[var(--v2-green)] rounded-r-xl p-6 my-6">
               <p className="text-[var(--v2-green-ink)] font-medium leading-relaxed">
-                "Every missed call is a job going to your competitor. The math is simple: if a plumber misses five calls per week at an average job value of £350, that's £1,750 weekly or £91,000 annually in lost revenue — often without the business owner realising the scale of the loss." — Sift Digital, 2025
+                "Every missed call is a job going to your competitor. The math is simple: if a plumber misses five calls per week at an average job value of £350, that's £1,750 weekly or £91,000 annually in lost revenue, often without the business owner realising the scale of the loss." Sift Digital, 2025
               </p>
             </div>
           </section>
@@ -476,13 +476,13 @@ export default function ResearchPage() {
               The technical foundation of contemporary AI voice agents rests on three converging capabilities:
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              <strong>First, end-to-end speech models</strong> such as OpenAI's Realtime API eliminate the traditional speech-to-text → language model → text-to-speech pipeline. By processing audio natively through WebRTC and WebSocket transport, these models reduce latency to 250–800 milliseconds while preserving conversational nuance — including filler words, pauses, and emotional tone (OpenAI, 2025). In blind testing, <strong>94% of callers believed they were speaking to a human receptionist</strong> rather than an AI system (whoza.ai internal testing, 2026).
+              <strong>First, end-to-end speech models</strong> such as OpenAI's Realtime API eliminate the traditional speech-to-text → language model → text-to-speech pipeline. By processing audio natively through WebRTC and WebSocket transport, these models reduce latency to 250 to 800 milliseconds while preserving conversational nuance, including filler words, pauses, and emotional tone (OpenAI, 2025). In blind testing, <strong>94% of callers believed they were speaking to a human receptionist</strong> rather than an AI system (whoza.ai internal testing, 2026).
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              <strong>Second, large language models</strong> enable context-aware conversation handling. AI receptionists can qualify job enquiries by asking trade-specific questions — What type of job? Where is the property? How urgent is the issue? — and capture structured data for business owners. According to Botphonic AI (2026), modern systems handle interruptions gracefully, manage topic switches, and execute multi-step workflows within a single call.
+              <strong>Second, large language models</strong> enable context-aware conversation handling. AI receptionists can qualify job enquiries by asking trade-specific questions (What type of job? Where is the property? How urgent is the issue?) and capture structured data for business owners. According to Botphonic AI (2026), modern systems handle interruptions gracefully, manage topic switches, and execute multi-step workflows within a single call.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              <strong>Third, telephony and messaging integrations</strong> — particularly native WhatsApp delivery — ensure that captured information reaches business owners through channels they already use. According to Ofcom, Online Nation 2025, <strong>90% of UK adults use WhatsApp regularly</strong>, making it the most reliable delivery method for tradespeople who may not check email for hours (Ofcom, Online Nation 2025, 10 December 2025).
+              <strong>Third, telephony and messaging integrations</strong>, particularly native WhatsApp delivery, ensure that captured information reaches business owners through channels they already use. According to Ofcom, Online Nation 2025, <strong>90% of UK adults use WhatsApp regularly</strong>, making it the most reliable delivery method for tradespeople who may not check email for hours (Ofcom, Online Nation 2025, 10 December 2025).
             </p>
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">Key Functional Capabilities</h3>
@@ -625,9 +625,9 @@ export default function ResearchPage() {
                   <tr className="border-b border-[var(--v2-line)]">
                     <td className="px-4 py-3 font-medium text-[var(--v2-body)]">Setup Time</td>
                     <td className="px-4 py-3 font-bold text-[var(--v2-green)]">30 minutes</td>
-                    <td className="px-4 py-3 text-[var(--v2-ink)]">2–4 hours</td>
+                    <td className="px-4 py-3 text-[var(--v2-ink)]">2 to 4 hours</td>
                     <td className="px-4 py-3 text-[var(--v2-ink)]">1 hour</td>
-                    <td className="px-4 py-3 text-[var(--v2-ink)]">2–5 days</td>
+                    <td className="px-4 py-3 text-[var(--v2-ink)]">2 to 5 days</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-3 font-medium text-[var(--v2-body)]">Free Trial</td>
@@ -670,20 +670,20 @@ export default function ResearchPage() {
 
           {/* ── MARKET TRENDS ── */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-4">Current Market Trends (2025–2026)</h2>
+            <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-4">Current Market Trends (2025 to 2026)</h2>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              Several interconnected trends are shaping the AI voice agent market for trade businesses in 2025–2026. These trends reflect broader shifts in AI adoption, consumer behaviour, and the competitive dynamics of local service markets.
+              Several interconnected trends are shaping the AI voice agent market for trade businesses in 2025 to 2026. These trends reflect broader shifts in AI adoption, consumer behaviour, and the competitive dynamics of local service markets.
             </p>
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">Trend 1: Surging Small Business AI Adoption</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              Small business AI adoption has reached an inflection point. According to Thryv's 2025 survey of 540 small business decision-makers, AI usage jumped from 39% in 2024 to <strong>55% in 2025</strong> — a 41% year-over-year increase (Thryv, 2025). Among businesses with 10–100 employees, adoption reached 68%. Critically, <strong>91% of AI-using small businesses report revenue increases</strong>, and 58% save over 20 hours per month (Salesforce, 2024).
+              Small business AI adoption has reached an inflection point. According to Thryv's 2025 survey of 540 small business decision-makers, AI usage jumped from 39% in 2024 to <strong>55% in 2025</strong>, a 41% year-over-year increase (Thryv, 2025). Among businesses with 10 to 100 employees, adoption reached 68%. Critically, <strong>91% of AI-using small businesses report revenue increases</strong>, and 58% save over 20 hours per month (Salesforce, 2024).
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed">
               The U.S. Chamber of Commerce's 2025 report found that <strong>96% of small business owners plan to adopt emerging technologies including AI</strong>, representing unprecedented intention to embrace new technology among traditionally cautious SMB operators (U.S. Chamber, 2025).
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mt-4">
-              UK government data paints a more grounded picture. The ONS Business Insights and Conditions Survey (Wave 159, fieldwork 15–28 June 2026, 38,637 responses) found that <strong>28% of businesses with 0–9 employees use at least one AI technology</strong> — well below the 35% recorded among businesses with 10 or more employees. For the construction industry specifically, adoption is <strong>13%, the lowest of any UK industry</strong> (<a href="https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/articles/artificialintelligenceinukbusinesses/2023to2026" className="text-[var(--v2-green)] hover:underline" target="_blank" rel="noopener noreferrer">ONS, 20 July 2026</a>). This gap between enthusiasm and actual deployment is the opportunity: trades businesses that adopt AI call answering now are ahead of the 87% of construction businesses not yet using any AI technology.
+              UK government data paints a more grounded picture. The ONS Business Insights and Conditions Survey (Wave 159, fieldwork 15 to 28 June 2026, 38,637 responses) found that <strong>28% of businesses with 0 to 9 employees use at least one AI technology</strong>, well below the 35% recorded among businesses with 10 or more employees. For the construction industry specifically, adoption is <strong>13%, the lowest of any UK industry</strong> (<a href="https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/articles/artificialintelligenceinukbusinesses/2023to2026" className="text-[var(--v2-green)] hover:underline" target="_blank" rel="noopener noreferrer">ONS, 20 July 2026</a>). This gap between enthusiasm and actual deployment is the opportunity: trades businesses that adopt AI call answering now are ahead of the 87% of construction businesses not yet using any AI technology.
             </p>
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">Trend 2: AI as Revenue Generator, Not Cost Centre</h3>
@@ -691,7 +691,7 @@ export default function ResearchPage() {
               The narrative around AI voice agents is shifting from cost reduction to revenue generation. Rather than positioning AI receptionists as cheaper alternatives to human staff, leading providers now emphasise revenue recovery: capturing previously missed calls, automating review collection to improve local search rankings, and providing competitor intelligence to inform marketing strategy.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed">
-              BrightLocal's 2025 UK Local Consumer Review Survey found that <strong>76% of consumers regularly read online reviews for local businesses</strong>, and businesses with 40+ Google reviews receive <strong>3.5× more enquiries</strong> than those with fewer than 10 (BrightLocal, 2025). This data underscores the revenue impact of automated review collection — a feature that transforms call handling from an operational expense into a marketing investment.
+              BrightLocal's 2025 UK Local Consumer Review Survey found that <strong>76% of consumers regularly read online reviews for local businesses</strong>, and businesses with 40+ Google reviews receive <strong>3.5× more enquiries</strong> than those with fewer than 10 (BrightLocal, 2025). This data underscores the revenue impact of automated review collection, a feature that transforms call handling from an operational expense into a marketing investment.
             </p>
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">Trend 3: Industry-Specific AI Specialisation</h3>
@@ -701,7 +701,7 @@ export default function ResearchPage() {
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">Trend 4: WhatsApp as Business Communication Infrastructure</h3>
             <p className="text-[var(--v2-body)] leading-relaxed">
-              The dominance of WhatsApp as the primary communication channel for UK tradespeople has driven platform design decisions. According to Ofcom, Online Nation 2025, <strong>90% of UK adults use WhatsApp regularly</strong>. AI voice agents that deliver job details natively within WhatsApp — with one-tap accept, call back, or decline buttons — achieve significantly higher response rates than email or app-based alternatives (whoza.ai FAQ, 2026).
+              The dominance of WhatsApp as the primary communication channel for UK tradespeople has driven platform design decisions. According to Ofcom, Online Nation 2025, <strong>90% of UK adults use WhatsApp regularly</strong>. AI voice agents that deliver job details natively within WhatsApp (with one-tap accept, call back, or decline buttons) achieve significantly higher response rates than email or app-based alternatives (whoza.ai FAQ, 2026).
             </p>
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">Trend 5: The Rehiring Boomerang and Human-AI Balance</h3>
@@ -722,7 +722,7 @@ export default function ResearchPage() {
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">Agentic AI and Autonomous Decision-Making</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              The transition from responsive to proactive AI represents the most significant evolution on the horizon. Agentic AI systems — those capable of making decisions and taking actions without constant human oversight — are projected to autonomously resolve <strong>80% of common customer service issues by 2029</strong> (Gartner, 2025). For trade businesses, this means AI agents that not only capture enquiries but proactively schedule appointments based on calendar availability, dispatch urgent jobs to on-call engineers, and negotiate pricing within pre-set parameters.
+              The transition from responsive to proactive AI represents the most significant evolution on the horizon. Agentic AI systems, those capable of making decisions and taking actions without constant human oversight, are projected to autonomously resolve <strong>80% of common customer service issues by 2029</strong> (Gartner, 2025). For trade businesses, this means AI agents that not only capture enquiries but proactively schedule appointments based on calendar availability, dispatch urgent jobs to on-call engineers, and negotiate pricing within pre-set parameters.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed">
               Deloitte's 2026 survey confirms that <strong>75% of organisations plan agentic AI deployment within two years</strong>, though only 21% currently have mature governance models (Deloitte, 2026). The agentic AI market is projected to grow from USD 9.14 billion in 2026 to USD 139.19 billion by 2034 (Fortune Business Insights, 2026).
@@ -730,7 +730,7 @@ export default function ResearchPage() {
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">Multimodal and Memory-Rich AI</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              Next-generation AI voice agents will incorporate multimodal capabilities — processing text, images, and video alongside voice. A tradesperson's customer could photograph a leaking pipe and share it during the AI conversation, enabling more accurate job assessment and pricing estimates. Zendesk's 2026 data reveals that <strong>76% of consumers would choose a company offering multimodal support</strong>, yet only 33% of companies currently offer omnichannel AI support (Zendesk, 2026).
+              Next-generation AI voice agents will incorporate multimodal capabilities: processing text, images, and video alongside voice. A tradesperson's customer could photograph a leaking pipe and share it during the AI conversation, enabling more accurate job assessment and pricing estimates. Zendesk's 2026 data reveals that <strong>76% of consumers would choose a company offering multimodal support</strong>, yet only 33% of companies currently offer omnichannel AI support (Zendesk, 2026).
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed">
               Memory-rich AI agents that retain context across conversations will enable personalised customer journeys. Rather than repeating information on every call, returning customers will be recognised and their service history recalled automatically.
@@ -738,7 +738,7 @@ export default function ResearchPage() {
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">IoT Integration and Predictive Service</h3>
             <p className="text-[var(--v2-body)] leading-relaxed">
-              Integration with Internet of Things (IoT) devices will enable proactive customer service. Smart home devices — boilers, thermostats, security systems — will feed diagnostic data to AI agents, which can then contact customers to schedule maintenance before failures occur. This transforms the business model from reactive (waiting for the phone to ring) to proactive (anticipating service needs) (Resonate AI, 2026).
+              Integration with Internet of Things (IoT) devices will enable proactive customer service. Smart home devices (boilers, thermostats, security systems) will feed diagnostic data to AI agents, which can then contact customers to schedule maintenance before failures occur. This transforms the business model from reactive (waiting for the phone to ring) to proactive (anticipating service needs) (Resonate AI, 2026).
             </p>
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">Hyper-Realistic Voice Synthesis</h3>
@@ -748,7 +748,7 @@ export default function ResearchPage() {
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">AI Search Optimisation (AEO)</h3>
             <p className="text-[var(--v2-body)] leading-relaxed">
-              As AI-powered search engines — ChatGPT, Perplexity, Google's AI Overviews — become primary information discovery channels, trade businesses must optimise for AI-driven recommendations rather than traditional keyword rankings. AI voice agents that capture and structure business data (services, service areas, availability, reviews) in AI-readable formats will improve visibility in these emerging search paradigms. The businesses that structure their information for AI consumption will be the ones recommended when potential customers ask, "Who's the best plumber in Bristol?"
+              As AI-powered search engines (ChatGPT, Perplexity, Google's AI Overviews) become primary information discovery channels, trade businesses must optimise for AI-driven recommendations rather than traditional keyword rankings. AI voice agents that capture and structure business data (services, service areas, availability, reviews) in AI-readable formats will improve visibility in these emerging search paradigms. The businesses that structure their information for AI consumption will be the ones recommended when potential customers ask, "Who's the best plumber in Bristol?"
             </p>
           </section>
 
@@ -761,7 +761,7 @@ export default function ResearchPage() {
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">Direct Revenue Recovery</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              At a typical subscription cost of £59–£125 per month, AI voice agents recover their investment through captured calls alone. The standard ROI calculation follows this model:
+              At a typical subscription cost of £59 to £125 per month, AI voice agents recover their investment through captured calls alone. The standard ROI calculation follows this model:
             </p>
             <div className="bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-6 mb-6">
               <p className="text-[var(--v2-ink)] leading-relaxed mb-2">
@@ -771,7 +771,7 @@ export default function ResearchPage() {
                 62 missed calls × 30% conversion × £350 = £6,510
               </p>
               <p className="text-[var(--v2-ink)] leading-relaxed">
-                An AI voice agent capturing even 50% of previously missed calls generates <strong>£3,255 in recovered monthly revenue</strong> — a <strong>55× return</strong> on a £59 monthly investment.
+                An AI voice agent capturing even 50% of previously missed calls generates <strong>£3,255 in recovered monthly revenue</strong>, a <strong>55× return</strong> on a £59 monthly investment.
               </p>
             </div>
 
@@ -789,37 +789,37 @@ export default function ResearchPage() {
                   <tr className="border-b border-[var(--v2-line)]">
                     <td className="px-4 py-3 text-[var(--v2-body)]">Annual salary / wages</td>
                     <td className="px-4 py-3 text-[var(--v2-ink)]">N/A</td>
-                    <td className="px-4 py-3 text-[var(--v2-ink)]">£22,000–£28,000</td>
+                    <td className="px-4 py-3 text-[var(--v2-ink)]">£22,000 to £28,000</td>
                   </tr>
                   <tr className="border-b border-[var(--v2-line)]">
                     <td className="px-4 py-3 text-[var(--v2-body)]">Software subscription</td>
-                    <td className="px-4 py-3 font-bold text-[var(--v2-green)]">£708–£1,500</td>
+                    <td className="px-4 py-3 font-bold text-[var(--v2-green)]">£708 to £1,500</td>
                     <td className="px-4 py-3 text-[var(--v2-ink)]">N/A</td>
                   </tr>
                   <tr className="border-b border-[var(--v2-line)]">
                     <td className="px-4 py-3 text-[var(--v2-body)]">Employer NI contributions</td>
                     <td className="px-4 py-3 text-[var(--v2-ink)]">N/A</td>
-                    <td className="px-4 py-3 text-[var(--v2-ink)]">£2,200–£2,800</td>
+                    <td className="px-4 py-3 text-[var(--v2-ink)]">£2,200 to £2,800</td>
                   </tr>
                   <tr className="border-b border-[var(--v2-line)]">
                     <td className="px-4 py-3 text-[var(--v2-body)]">Pension contributions</td>
                     <td className="px-4 py-3 text-[var(--v2-ink)]">N/A</td>
-                    <td className="px-4 py-3 text-[var(--v2-ink)]">£600–£900</td>
+                    <td className="px-4 py-3 text-[var(--v2-ink)]">£600 to £900</td>
                   </tr>
                   <tr className="border-b border-[var(--v2-line)]">
                     <td className="px-4 py-3 text-[var(--v2-body)]">Holiday / sick cover</td>
                     <td className="px-4 py-3 font-bold text-[var(--v2-green)]">Included (24/7)</td>
-                    <td className="px-4 py-3 text-[var(--v2-ink)]">£2,000–£3,000</td>
+                    <td className="px-4 py-3 text-[var(--v2-ink)]">£2,000 to £3,000</td>
                   </tr>
                   <tr className="border-b border-[var(--v2-line)]">
                     <td className="px-4 py-3 text-[var(--v2-body)]">Training and management</td>
                     <td className="px-4 py-3 text-[var(--v2-ink)]">N/A</td>
-                    <td className="px-4 py-3 text-[var(--v2-ink)]">£1,000–£2,000</td>
+                    <td className="px-4 py-3 text-[var(--v2-ink)]">£1,000 to £2,000</td>
                   </tr>
                   <tr className="border-b border-[var(--v2-line)] bg-white">
                     <td className="px-4 py-3 font-bold text-[var(--v2-ink)]">Total Annual Cost</td>
-                    <td className="px-4 py-3 font-bold text-[var(--v2-green)]">£708–£1,500</td>
-                    <td className="px-4 py-3 font-bold text-[var(--v2-ink)]">£27,800–£36,700</td>
+                    <td className="px-4 py-3 font-bold text-[var(--v2-green)]">£708 to £1,500</td>
+                    <td className="px-4 py-3 font-bold text-[var(--v2-ink)]">£27,800 to £36,700</td>
                   </tr>
                 </tbody>
               </table>
@@ -847,7 +847,7 @@ export default function ResearchPage() {
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-[var(--v2-green)] flex-shrink-0 mt-0.5" />
-                <span className="text-[var(--v2-body)]"><strong>Time savings:</strong> Eliminating 30–60 minutes of daily voicemail follow-up frees business owners for revenue-generating work.</span>
+                <span className="text-[var(--v2-body)]"><strong>Time savings:</strong> Eliminating 30 to 60 minutes of daily voicemail follow-up frees business owners for revenue-generating work.</span>
               </li>
             </ul>
           </section>
@@ -861,7 +861,7 @@ export default function ResearchPage() {
             <ol className="space-y-4 mb-6">
               <li className="flex items-start gap-3">
                 <span className="w-6 h-6 bg-[var(--v2-mint)] text-[var(--v2-green)] rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">1</span>
-                <span className="text-[var(--v2-body)]"><strong>The missed call crisis is quantifiable and severe:</strong> With 33% of small UK trade businesses failing to answer incoming calls, and each unanswered call representing £250–£1,200 in lost revenue, the aggregate annual loss runs into billions of pounds. This is not a customer service inconvenience but a structural revenue leak.</span>
+                <span className="text-[var(--v2-body)]"><strong>The missed call crisis is quantifiable and severe:</strong> With 33% of small UK trade businesses failing to answer incoming calls, and each unanswered call representing £250 to £1,200 in lost revenue, the aggregate annual loss runs into billions of pounds. This is not a customer service inconvenience but a structural revenue leak.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-6 h-6 bg-[var(--v2-mint)] text-[var(--v2-green)] rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">2</span>
@@ -873,7 +873,7 @@ export default function ResearchPage() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-6 h-6 bg-[var(--v2-mint)] text-[var(--v2-green)] rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">4</span>
-                <span className="text-[var(--v2-body)]"><strong>Revenue-focused positioning outperforms cost-focused positioning:</strong> Providers that frame AI voice agents as revenue generators — through call recovery, review collection, and competitor intelligence — achieve stronger value propositions than those positioning solely as cost-saving alternatives to human receptionists.</span>
+                <span className="text-[var(--v2-body)]"><strong>Revenue-focused positioning outperforms cost-focused positioning:</strong> Providers that frame AI voice agents as revenue generators (through call recovery, review collection, and competitor intelligence) achieve stronger value propositions than those positioning solely as cost-saving alternatives to human receptionists.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-6 h-6 bg-[var(--v2-mint)] text-[var(--v2-green)] rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">5</span>
@@ -882,7 +882,7 @@ export default function ResearchPage() {
             </ol>
             <div className="bg-[var(--v2-mint)] border-l-4 border-[var(--v2-green)] rounded-r-xl p-6">
               <p className="text-[var(--v2-green-ink)] font-medium leading-relaxed">
-                For trade business owners evaluating AI voice agent adoption, the recommendation is straightforward: the cost of inaction — measured in missed calls, lost jobs, and eroding market position — now exceeds the cost of adoption. The seven-day free trials offered by leading providers eliminate financial risk, while the data presented in this report demonstrates that the question is no longer whether AI voice agents work, but how quickly businesses can implement them before their competitors do.
+                For trade business owners evaluating AI voice agent adoption, the recommendation is straightforward: the cost of inaction (measured in missed calls, lost jobs, and eroding market position) now exceeds the cost of adoption. The seven-day free trials offered by leading providers eliminate financial risk, while the data presented in this report demonstrates that the question is no longer whether AI voice agents work, but how quickly businesses can implement them before their competitors do.
               </p>
             </div>
           </section>
@@ -900,12 +900,12 @@ export default function ResearchPage() {
               <p>Gartner (2025). 'Predicts Agentic AI Will Autonomously Resolve 80% of Common Customer Service Issues by 2029.' Gartner Newsroom, 5 March 2025.</p>
               <p>Gartner (2025). 'Predicts 40% of Enterprise Apps Will Feature Task-Specific AI Agents by 2026.' Gartner Newsroom, 26 August 2025.</p>
               <p>Gartner (2026). 'Predicts Half of Companies That Cut Customer Service Staff Due to AI Will Rehire by 2027.' Gartner Newsroom, 2 February 2026.</p>
-              <p>Grand View Research (2024). 'Conversational AI Market Size Report, 2024–2030.' Grand View Research.</p>
+              <p>Grand View Research (2024). 'Conversational AI Market Size Report, 2024 to 2030.' Grand View Research.</p>
               <p>IBM (2025). 'Global AI Adoption Index.' IBM Institute for Business Value.</p>
-              <p>Juniper Research (2025). 'Global Conversational AI Market 2025–2029.' Juniper Research.</p>
-              <p>MarketIntelo (2026). 'Enterprise Voice AI Agents Market Research Report 2025–2034.' marketintelo.com, 17 May 2026.</p>
+              <p>Juniper Research (2025). 'Global Conversational AI Market 2025 to 2029.' Juniper Research.</p>
+              <p>MarketIntelo (2026). 'Enterprise Voice AI Agents Market Research Report 2025 to 2034.' marketintelo.com, 17 May 2026.</p>
               <p>Neomanex (2026). 'AI Customer Service Statistics: 127 Data Points for 2026.' neomanex.com, 16 February 2026.</p>
-              <p>Ofcom (2025). 'Online Nation 2025: From apps to AI search — how the UK goes online.' Office of Communications, 10 December 2025. <a href="https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025" className="text-[var(--v2-green)] hover:underline" target="_blank" rel="noopener noreferrer">ofcom.org.uk</a></p>
+              <p>Ofcom (2025). 'Online Nation 2025: From apps to AI search, how the UK goes online.' Office of Communications, 10 December 2025. <a href="https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025" className="text-[var(--v2-green)] hover:underline" target="_blank" rel="noopener noreferrer">ofcom.org.uk</a></p>
               <p>OpenAI (2025). 'GPT Realtime API Documentation.' OpenAI Developer Platform.</p>
               <p>Paperclip Research (2025). 'How Many Calls Do UK Businesses Miss?' paperclip.co.uk, 13 February 2026.</p>
               <p>Precedence Research (2026). 'AI Agents Market Size to Hit USD 294.66 Billion by 2035.' precedenceresearch.com, 12 May 2026.</p>
@@ -984,7 +984,7 @@ export default function ResearchPage() {
               >
                 <div className="text-[var(--v2-green)] text-sm font-medium mb-2">AI Technology</div>
                 <h4 className="text-lg font-semibold text-[var(--v2-ink)] mb-2">AI Phone Technology Guide for UK Trades (2026)</h4>
-                <p className="text-[var(--v2-body)] text-sm">How AI voice agents actually work — NLP, speech synthesis, intent recognition, and the future of AI phone technology.</p>
+                <p className="text-[var(--v2-body)] text-sm">How AI voice agents actually work: NLP, speech synthesis, intent recognition, and the future of AI phone technology.</p>
               </Link>
             </div>
           </div>

@@ -39,13 +39,13 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/for-locksmiths",
     siteName: "Whoza.ai",
-    title: "AI Call Handling for Locksmiths UK — 24/7 Lockout Help",
+    title: "AI Call Handling for Locksmiths UK | 24/7 Lockout Help",
     description: "Katie answers 24/7 for locksmiths. Captures emergency lockouts, key replacements and security upgrades. WhatsApp alerts in 3 seconds. Start your free trial.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai for Locksmiths" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Call Handling for Locksmiths UK — 24/7 Lockout Help",
+    title: "AI Call Handling for Locksmiths UK | 24/7 Lockout Help",
     description: "Katie answers 24/7 for locksmiths. Captures emergency lockouts, key replacements and security upgrades. WhatsApp alerts in 3 seconds. Start your free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
@@ -58,15 +58,15 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "How much does AI call handling cost for locksmiths?",
-    answer: "Whoza.ai starts at £59/month for the Starter plan. One captured emergency lockout averages £80-£150 callout fee. A full security upgrade can be £500-£2,000. At £59/month, one emergency lockout callout pays for the entire year. Overage minutes are billed at £0.40/minute. No hidden fees or contracts."
+    answer: "Whoza.ai starts at £59/month for the Starter plan. One captured emergency lockout averages £80 to £150 callout fee. A full security upgrade can be £500 to £2,000. At £59/month, one emergency lockout callout pays for the entire year. Overage minutes are billed at £0.40/minute. No hidden fees or contracts."
   },
   {
     question: "Can Katie handle emergency lockout calls at 3am?",
-    answer: "Yes. Katie answers 24/7, 365 days a year. She identifies lockout emergencies by keywords like 'locked out', 'lost keys', 'broken key', 'snapped key', 'can't get in', 'urgent', and 'emergency' — and marks the enquiry as emergency priority. You get an immediate WhatsApp with 'LOCKOUT EMERGENCY — URGENT' in the header, even at 3am on Christmas Day."
+    answer: "Yes. Katie answers 24/7, 365 days a year. She identifies lockout emergencies by keywords like 'locked out', 'lost keys', 'broken key', 'snapped key', 'can't get in', 'urgent', and 'emergency', and marks the enquiry as emergency priority. You get an immediate WhatsApp with 'LOCKOUT EMERGENCY: URGENT' in the header, even at 3am on Christmas Day."
   },
   {
     question: "What information does Katie collect from lockout customers?",
-    answer: "Katie collects: full name, phone number, postcode, property type (house/flat/commercial), lock type (if known — Yale, Chubb, euro cylinder, mortice, digital), how they got locked out (lost keys, broken key, snapped in lock, locked inside, lock failure), whether it's a tenant or landlord situation, number of locks affected, and how they found you."
+    answer: "Katie collects: full name, phone number, postcode, property type (house/flat/commercial), lock type (if known: Yale, Chubb, euro cylinder, mortice, digital), how they got locked out (lost keys, broken key, snapped in lock, locked inside, lock failure), whether it's a tenant or landlord situation, number of locks affected, and how they found you."
   },
   {
     question: "Can Katie distinguish between a residential lockout and a commercial security job?",
@@ -82,7 +82,7 @@ const faqs = [
   },
   {
     question: "Can Katie handle calls about security upgrades and CCTV?",
-    answer: "Yes. Katie identifies security upgrade calls by keywords like 'security survey', 'CCTV', 'alarm', 'smart lock', 'digital lock', 'keyless entry', and 'high security'. She captures: property type, number of entry points, current security level, budget range, and preferred survey date. These high-value enquiries (£500-£3,000+) get flagged as 'security upgrade' for priority follow-up."
+    answer: "Yes. Katie identifies security upgrade calls by keywords like 'security survey', 'CCTV', 'alarm', 'smart lock', 'digital lock', 'keyless entry', and 'high security'. She captures: property type, number of entry points, current security level, budget range, and preferred survey date. These high-value enquiries (£500 to £3,000+) get flagged as 'security upgrade' for priority follow-up."
   },
   {
     question: "Will customers trust an AI with their lockout emergency?",
@@ -93,7 +93,7 @@ const faqs = [
 const painPoints = [
   {
     icon: Lock,
-    title: "Lockouts are urgent — customers call 3-4 locksmiths at once",
+    title: "Lockouts are urgent: customers call 3 to 4 locksmiths at once",
     description: "A customer locked out at 11pm is panicking. They Google 'emergency locksmith near me' and call every number on page one. The first to answer gets the £120 callout. If you're on another job or asleep, you miss it. Katie answers instantly, captures the details, and reassures the customer you're on your way."
   },
   {
@@ -104,19 +104,19 @@ const painPoints = [
   {
     icon: DoorOpen,
     title: "Late-night commercial lockouts are premium jobs",
-    description: "A pub landlord calls at 1am — front door lock failed, can't secure the premises. This is a £200+ emergency callout plus a new lock. If you're asleep, the call goes to voicemail. The landlord calls the next number. Katie captures these high-value late-night commercial jobs while you sleep."
+    description: "A pub landlord calls at 1am: front door lock failed, can't secure the premises. This is a £200+ emergency callout plus a new lock. If you're asleep, the call goes to voicemail. The landlord calls the next number. Katie captures these high-value late-night commercial jobs while you sleep."
   },
   {
     icon: AlertTriangle,
     title: "Security upgrade enquiries need detailed qualification",
-    description: "A customer calls for a 'security survey'. Voicemail says nothing. Katie captures: property type, number of doors/windows, current locks, whether they want CCTV/alarms/smart locks, budget range, and timeline. You arrive at the survey knowing exactly what to quote — £800 vs £3,500."
+    description: "A customer calls for a 'security survey'. Voicemail says nothing. Katie captures: property type, number of doors/windows, current locks, whether they want CCTV/alarms/smart locks, budget range, and timeline. You arrive at the survey knowing exactly what to quote: £800 vs £3,500."
   }
 ]
 
 const howItWorks = [
   {
     step: 1,
-    title: "Lockout call comes in — any time",
+    title: "Lockout call comes in, any time",
     description: "Katie answers with your locksmith company's greeting. She identifies if it's an emergency lockout, key replacement, lock repair, or security upgrade enquiry."
   },
   {
@@ -127,7 +127,7 @@ const howItWorks = [
   {
     step: 3,
     title: "WhatsApp with full context",
-    description: "Alert shows: 'Lockout — Yale euro cylinder — snapped key — 2nd floor flat — BS3 1AB — emergency — tenant locked out — landlord contact available' with customer number and ETA request."
+    description: "Alert shows: 'Lockout, Yale euro cylinder, snapped key, 2nd floor flat, BS3 1AB, emergency, tenant locked out, landlord contact available' with customer number and ETA request."
   },
   {
     step: 4,
@@ -182,8 +182,8 @@ export default function ForLocksmithsPage() {
   return (
     <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />      <VideoSchema
-        name="Whoza.ai Demo — AI Call Handling for Locksmiths"
-        description="Watch how Katie captures a missed locksmith enquiry in under 60 seconds. Emergency lockouts, key replacements, security upgrades — answered 24/7."
+        name="Whoza.ai Demo: AI Call Handling for Locksmiths"
+        description="Watch how Katie captures a missed locksmith enquiry in under 60 seconds. Emergency lockouts, key replacements, security upgrades: answered 24/7."
         embedUrl="https://whoza.ai/for-locksmiths"
       />
       <Header />
@@ -204,10 +204,10 @@ export default function ForLocksmithsPage() {
                   Built for UK Locksmiths
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 trade-headline">
-                  Never Miss a Lockout Call — Even at 3am
+                  Never Miss a Lockout Call, Even at 3am
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8">
-                  Emergency lockouts, key replacements, lock repairs, security upgrades. Katie answers every call you miss, captures the full details, and sends them to your WhatsApp in 3 seconds. From £59/month — less than one callout fee.
+                  Emergency lockouts, key replacements, lock repairs, security upgrades. Katie answers every call you miss, captures the full details, and sends them to your WhatsApp in 3 seconds. From £59/month, less than one callout fee.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link
@@ -225,7 +225,7 @@ export default function ForLocksmithsPage() {
                   </Link>
                 </div>
                 <p className="mt-4 text-sm text-white/65">
-                  <a href="/" className="text-[#6ee7b7] hover:text-white underline">Try Katie free for 7 days</a> — no credit card required.
+                  <a href="/" className="text-[#6ee7b7] hover:text-white underline">Try Katie free for 7 days</a>, no credit card required.
                 </p>
                 <div className="flex items-center gap-6 mt-8 text-white/65 text-sm">
                   <div className="flex items-center gap-2">
@@ -249,7 +249,7 @@ export default function ForLocksmithsPage() {
                       <Phone className="w-5 h-5 text-[#6ee7b7]" />
                     </div>
                     <div>
-                      <p className="text-white font-medium">New Enquiry — Katie</p>
+                      <p className="text-white font-medium">New Enquiry from Katie</p>
                       <p className="text-white/65 text-sm">Lockout call, 02:17</p>
                     </div>
                   </div>
@@ -257,10 +257,10 @@ export default function ForLocksmithsPage() {
                     <p>👤 Name: Marcus Chen</p>
                     <p>📞 Phone: 07XXX XXXXXX</p>
                     <p>📍 Postcode: E14 5AB</p>
-                    <p>🔧 Job: Locked out of flat — snapped key in euro cylinder</p>
-                    <p>⚡ Urgency: Emergency — cannot enter property</p>
+                    <p>🔧 Job: Locked out of flat, snapped key in euro cylinder</p>
+                    <p>⚡ Urgency: Emergency, cannot enter property</p>
                     <p>🏠 Property: 1st floor flat, residential block</p>
-                    <p>💰 Estimated Value: £120-150 callout + new cylinder</p>
+                    <p>💰 Estimated Value: £120 to £150 callout + new cylinder</p>
                     <p>📊 Lock: UPVC door, euro cylinder (likely Yale)</p>
                   </div>
                   <div className="flex gap-2 mt-4">
@@ -280,7 +280,7 @@ export default function ForLocksmithsPage() {
           serviceUrl="/for-locksmiths"
           items={[            {
               label: "Instant pickup",
-              answer: "Katie answers every lockout call in under 3 seconds — even at midnight on a bank holiday.",
+              answer: "Katie answers every lockout call in under 3 seconds, even at midnight on a bank holiday.",
             },            {
               label: "Job identification",
               answer: "She identifies emergency lockouts, key replacements, security upgrades, and commercial enquiries.",
@@ -402,7 +402,7 @@ export default function ForLocksmithsPage() {
               Locksmith Testimonial
             </div>
             <blockquote className="text-2xl sm:text-3xl font-medium text-[var(--v2-ink)] leading-relaxed mb-8">
-              "I was fitting a new mortice lock in Shoreditch when my phone rang twice. First was a key replacement — £20 job. Second was a full security upgrade for a restaurant in Hackney — £1,800 including smart locks, CCTV, and alarm integration. Katie captured both with full details. I called back at 4pm, quoted the upgrade on the spot, and booked it for next week."
+              "I was fitting a new mortice lock in Shoreditch when my phone rang twice. First was a key replacement, £20 job. Second was a full security upgrade for a restaurant in Hackney, £1,800 including smart locks, CCTV, and alarm integration. Katie captured both with full details. I called back at 4pm, quoted the upgrade on the spot, and booked it for next week."
             </blockquote>
             <div className="flex items-center justify-center gap-4">
               <div className="w-12 h-12 rounded-full bg-[var(--katie-blue)]/10 flex items-center justify-center text-[var(--katie-blue)] font-bold">
@@ -423,7 +423,7 @@ export default function ForLocksmithsPage() {
               One Security Upgrade Pays for 2 Years of Katie
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-              Emergency lockouts average £80-£150. Key replacements £15-£40. Security upgrades £500-£3,000+. Smart lock installations £800-£2,500. At £59/month, capturing one missed security survey pays for years of service.
+              Emergency lockouts average £80 to £150. Key replacements £15 to £40. Security upgrades £500 to £3,000+. Smart lock installations £800 to £2,500. At £59/month, capturing one missed security survey pays for years of service.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <Link
@@ -437,7 +437,7 @@ export default function ForLocksmithsPage() {
                 href="/pricing"
                 className="v2-btn-secondary min-h-[54px] px-7 text-base text-white border-white/25 hover:border-white"
               >
-                See Pricing — Plans from £59/month
+                See Pricing: Plans from £59/month
               </Link>
             </div>
             <div className="flex items-center justify-center gap-6 text-white/65 text-sm">
@@ -465,7 +465,7 @@ export default function ForLocksmithsPage() {
                 Trusted by Locksmiths Across the UK
               </h2>
               <p className="text-[var(--v2-body)]">
-                From London to Leeds, locksmiths trust Katie to capture every call — day or night.
+                From London to Leeds, locksmiths trust Katie to capture every call, day or night.
               </p>
             </div>
             <div className="grid sm:grid-cols-3 gap-6 mb-12">
@@ -588,7 +588,7 @@ export default function ForLocksmithsPage() {
 
       <div className="section-divider" />
         <RelatedTrades currentTrade="for-locksmiths" />
-        <Footer />
+        <Footer hideCta />
       <FloatingChatWidget />
     </>
   )

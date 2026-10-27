@@ -6,7 +6,7 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Sample AI Call — Hear Katie Answer | whoza.ai",
+  title: "Sample AI Call: Hear Katie Answer | whoza.ai",
   description: "Hear Katie answer a real trade call in 60 seconds. AI receptionist captures enquiries, sends details to WhatsApp. See the whoza.ai demo. Free 7-day trial.",
   alternates: {
     canonical: "https://whoza.ai/sample-call",
@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/sample-call",
     siteName: "Whoza.ai",
-    title: "Sample AI Call — Hear Katie Answer | whoza.ai",
+    title: "Sample AI Call: Hear Katie Answer | whoza.ai",
     description: "Hear Katie answer a real trade call in 60 seconds. AI receptionist captures enquiries, sends details to WhatsApp. See the whoza.ai demo. Free 7-day trial.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Hear Katie answer a sample call" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sample AI Call — Hear Katie Answer | whoza.ai",
+    title: "Sample AI Call: Hear Katie Answer | whoza.ai",
     description: "Hear Katie answer a real trade call in 60 seconds. AI receptionist captures enquiries, sends details to WhatsApp. See the whoza.ai demo. Free 7-day trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },

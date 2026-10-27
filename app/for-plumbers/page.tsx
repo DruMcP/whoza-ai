@@ -38,13 +38,13 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/for-plumbers",
     siteName: "Whoza.ai",
-    title: "AI Receptionist Plumbers UK | From £59/mo — Never Miss Jobs",
+    title: "AI Receptionist Plumbers UK | From £59/mo, Never Miss Jobs",
     description: "UK plumbers miss calls worth £2,600+/year on average (conservative estimate). Whoza.ai answers 24/7, qualifies boiler repairs & leaks, sends job details to WhatsApp. 7-day free trial.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Plumbers" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Plumbers" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Receptionist Plumbers UK | From £59/mo — Never Miss Jobs",
+    title: "AI Receptionist Plumbers UK | From £59/mo, Never Miss Jobs",
     description: "UK plumbers miss calls worth £2,600+/year on average (conservative estimate). Whoza.ai answers 24/7, qualifies boiler repairs & leaks, sends job details to WhatsApp. 7-day free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
@@ -61,7 +61,7 @@ const faqs = [
   },
   {
     question: "Can Katie handle burst pipe emergencies at 2am?",
-    answer: "Absolutely. Katie answers 24/7 including nights, weekends, and bank holidays. She identifies emergency keywords like 'burst pipe', 'flooding', 'no water', and 'leak through ceiling' — then marks the enquiry as emergency priority in your WhatsApp alert. You see it immediately and can call back within minutes.",
+    answer: "Absolutely. Katie answers 24/7 including nights, weekends, and bank holidays. She identifies emergency keywords like 'burst pipe', 'flooding', 'no water', and 'leak through ceiling', then marks the enquiry as emergency priority in your WhatsApp alert. You see it immediately and can call back within minutes.",
   },
   {
     question: "What information does Katie collect from plumbing customers?",
@@ -69,7 +69,7 @@ const faqs = [
   },
   {
     question: "Will customers know they're talking to AI?",
-    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience — they just want their leak fixed fast.",
+    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience. They just want their leak fixed fast.",
   },
   {
     question: "Does whoza.ai work with my existing business phone number?",
@@ -97,7 +97,7 @@ const faqs = [
   },
   {
     question: "Can an AI receptionist handle emergency plumbing calls?",
-    answer: "Yes — Katie identifies emergency plumbing keywords like 'burst pipe' and 'flooding' and marks them as urgent priority, sending an immediate WhatsApp alert even at 2am.",
+    answer: "Yes. Katie identifies emergency plumbing keywords like 'burst pipe' and 'flooding' and marks them as urgent priority, sending an immediate WhatsApp alert even at 2am.",
   },
   {
     question: "Can Katie distinguish between a routine service and an emergency?",
@@ -111,7 +111,7 @@ export default function ForPlumbersPage() {
   return (
     <>
       <VideoSchema
-        name="Whoza.ai for Plumbers — AI Call Answering Demo"
+        name="Whoza.ai for Plumbers: AI Call Answering Demo"
         description="Watch Katie capture a missed plumbing enquiry in under 60 seconds. Burst pipe emergency answered instantly, details sent to WhatsApp, job booked while the plumber is still under the sink."
         embedUrl="https://whoza.ai/for-plumbers"
       />
@@ -158,7 +158,7 @@ export default function ForPlumbersPage() {
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   AI Receptionist for{" "}
                   <span className="text-[#6ee7b7]">Plumbers UK</span>:{" "}
-                  From £59/mo — Never Miss Jobs
+                  From £59/mo, Never Miss Jobs
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   UK plumbers miss calls worth £2,600+/year on average (conservative estimate). Whoza.ai is an AI receptionist for plumbers: answers 24/7, qualifies boiler repairs and emergency leaks, and sends job details to your WhatsApp in 3 seconds.
@@ -196,7 +196,7 @@ export default function ForPlumbersPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -221,11 +221,11 @@ export default function ForPlumbersPage() {
             },
             {
               label: "Job triage",
-              answer: "Katie asks what the plumbing issue is — burst pipe, boiler breakdown, blocked drain, or leak — and estimates urgency. Emergency calls are flagged immediately.",
+              answer: "Katie asks what the plumbing issue is (burst pipe, boiler breakdown, blocked drain, or leak) and estimates urgency. Emergency calls are flagged immediately.",
             },
             {
               label: "Emergency prioritisation",
-              answer: "Burst pipe, flooding, no water, or leak through ceiling — Katie recognises emergency keywords and marks the enquiry as urgent. You get an immediate WhatsApp even at 2am.",
+              answer: "Burst pipe, flooding, no water, or leak through ceiling. Katie recognises emergency keywords and marks the enquiry as urgent. You get an immediate WhatsApp even at 2am.",
             },
             {
               label: "Calendar sync",
@@ -278,7 +278,7 @@ export default function ForPlumbersPage() {
                 {
                   icon: Droplets,
                   title: "Leak Emergencies While Working",
-                  description: "You're under a sink fixing a waste pipe. Phone vibrates in your pocket. Can't answer — hands full of muck, water everywhere. Check missed call at 4pm. Customer already booked someone else. Lost £350 job.",
+                  description: "You're under a sink fixing a waste pipe. Phone vibrates in your pocket. Can't answer: hands full of muck, water everywhere. Check missed call at 4pm. Customer already booked someone else. Lost £350 job.",
                   stat: "1 in 3 firms miss calls",
                   color: "blue",
                 },
@@ -304,7 +304,7 @@ export default function ForPlumbersPage() {
                 The average UK plumber misses 5 calls per day = <strong>£50,568</strong> in lost revenue per year
               </p>
               <p className="text-[var(--v2-body)] text-sm mt-1">
-                Source: UK SME Communications Survey 2025 — based on £280 avg job value, 35% conversion rate
+                Source: UK SME Communications Survey 2025, based on £280 avg job value, 35% conversion rate
               </p>
             </div>
           </div>
@@ -329,7 +329,7 @@ export default function ForPlumbersPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: "Customer calls your number. Katie picks up in under 2 rings with your branded greeting: 'Hello, Smith Plumbing. I'm Katie, how can I help?' — 24/7, even at 2am on a Sunday.",
+                  description: "Customer calls your number. Katie picks up in under 2 rings with your branded greeting: 'Hello, Smith Plumbing. I'm Katie, how can I help?', 24/7, even at 2am on a Sunday.",
                 },
                 {
                   step: "02",

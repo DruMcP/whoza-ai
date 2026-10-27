@@ -44,10 +44,10 @@ const categoriesByTrade: Record<string, string[]> = {
 const photoGuidelines = [
   { type: "Logo", count: "1", desc: "Clear, square logo (720x720px minimum). No text overlays." },
   { type: "Cover Photo", count: "1", desc: "Showcase your best work. 1332x400px minimum. Bright, well-lit." },
-  { type: "Exterior", count: "3-5", desc: "Your van, branded uniform, tools. Helps customers recognise you." },
-  { type: "Work Photos", count: "10-15", desc: "Before/during/after shots. Label with short captions." },
-  { type: "Team Photos", count: "2-3", desc: "Friendly, professional. Builds trust with homeowners." },
-  { type: "Certificates / Insurance", count: "2-3", desc: "Gas Safe, NICEIC, CHAS. Builds authority." },
+  { type: "Exterior", count: "3 to 5", desc: "Your van, branded uniform, tools. Helps customers recognise you." },
+  { type: "Work Photos", count: "10 to 15", desc: "Before/during/after shots. Label with short captions." },
+  { type: "Team Photos", count: "2 to 3", desc: "Friendly, professional. Builds trust with homeowners." },
+  { type: "Certificates / Insurance", count: "2 to 3", desc: "Gas Safe, NICEIC, CHAS. Builds authority." },
 ]
 
 const reviewTemplates: Record<string, { subject: string; body: string }> = {
@@ -84,10 +84,10 @@ const reviewTemplates: Record<string, { subject: string; body: string }> = {
 }
 
 const postStrategy = [
-  { frequency: "1x per week", type: "Offer / Promotion", example: '"10% off boiler servicing this month — book now"' },
+  { frequency: "1x per week", type: "Offer / Promotion", example: '"10% off boiler servicing this month, book now"' },
   { frequency: "1x per week", type: "Completed Job Photo", example: '"Before \u0026 after kitchen rewire for a happy customer in [Area]"' },
   { frequency: "2x per month", type: "Tip / Educational", example: '"3 signs your boiler needs a service before winter"' },
-  { frequency: "1x per month", type: "Team / Behind the Scenes", example: '"Meet Dave — our senior sparky with 15 years experience"' },
+  { frequency: "1x per month", type: "Team / Behind the Scenes", example: '"Meet Dave, our senior sparky with 15 years experience"' },
 ]
 
 const faqItems = [
@@ -97,7 +97,7 @@ const faqItems = [
   },
   {
     q: "How many photos should I upload to my Google Business Profile?",
-    a: "Google recommends at least 10 photos, but businesses with 20+ photos get significantly more engagement. Aim for: 1 logo, 1 cover photo, 3-5 exterior/van shots, 10-15 work photos, 2-3 team photos, and 2-3 certificate shots.",
+    a: "Google recommends at least 10 photos, but businesses with 20+ photos get significantly more engagement. Aim for: 1 logo, 1 cover photo, 3 to 5 exterior/van shots, 10 to 15 work photos, 2 to 3 team photos, and 2 to 3 certificate shots.",
   },
   {
     q: "How often should I post on my Google Business Profile?",
@@ -109,7 +109,7 @@ const faqItems = [
   },
   {
     q: "Should I respond to every review?",
-    a: "Yes — especially negative ones. Responding to reviews shows you care and can turn a 1-star review into a positive impression for future customers. Keep responses professional, thank the reviewer, and address any issues raised.",
+    a: "Yes, especially negative ones. Responding to reviews shows you care and can turn a 1-star review into a positive impression for future customers. Keep responses professional, thank the reviewer, and address any issues raised.",
   },
   {
     q: "What Q&A should I pre-populate on my profile?",
@@ -138,8 +138,8 @@ const checklistSections = [
       "Logo uploaded ( 720x720px, no text overlays )",
       "Cover photo showcases best work ( 1332x400px )",
       "At least 3 exterior/van photos uploaded",
-      "10-15 work photos with before/after shots",
-      "2-3 team photos showing friendly, professional staff",
+      "10 to 15 work photos with before/after shots",
+      "2 to 3 team photos showing friendly, professional staff",
       "Certificate/insurance photos uploaded ( Gas Safe, NICEIC, etc. )",
       "All photos are well-lit and high resolution",
       "Photo captions include location and service keywords",
@@ -171,7 +171,7 @@ const checklistSections = [
   {
     title: "Q&A & Engagement",
     items: [
-      "Pre-populated 5-10 common questions and answers",
+      "Pre-populated 5 to 10 common questions and answers",
       "Q&A covers: pricing, areas, emergency hours, insurance",
       "Monitoring system for new customer questions",
       "Response time target: under 2 hours for new questions",
@@ -269,7 +269,7 @@ export default function GoogleBusinessProfileChecklistPage() {
           </div>
         ))}
         <div className="mt-8 pt-4 border-t border-slate-300 text-sm text-slate-500">
-          <p>Checklist provided by whoza.ai — AI Voice Agents for UK Tradespeople</p>
+          <p>Checklist provided by whoza.ai: AI Voice Agents for UK Tradespeople</p>
           <p>https://whoza.ai/resources/google-business-profile-checklist-trades</p>
         </div>
       </div>
@@ -331,7 +331,7 @@ export default function GoogleBusinessProfileChecklistPage() {
               </h1>
               <p className="text-lg text-slate-400 max-w-2xl mb-8">
                 A complete, step-by-step checklist to optimise your Google Business Profile and rank higher in local
-                search. Tick items off as you go — your progress saves automatically.
+                search. Tick items off as you go. Your progress saves automatically.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
@@ -575,7 +575,7 @@ export default function GoogleBusinessProfileChecklistPage() {
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-3xl font-bold text-slate-900 mb-4">Get more calls from your Google profile</h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-            whoza.ai answers every call that comes through your Google Business Profile — even at 2am. Start your 7-day
+            whoza.ai answers every call that comes through your Google Business Profile, even at 2am. Start your 7-day
             free trial today.
           </p>
           <a

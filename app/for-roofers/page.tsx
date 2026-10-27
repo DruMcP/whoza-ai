@@ -37,7 +37,7 @@ const faqs = [
   },
   {
     question: "Can Katie handle storm damage emergencies at 2am?",
-    answer: "Yes. Katie answers 24/7, including nights, weekends, and bank holidays. She identifies storm damage by keywords like 'leak', 'water coming through', 'storm damage', and 'wind damage' — and marks the enquiry as emergency priority. You get an immediate WhatsApp with 'STORM DAMAGE — URGENT' in the header."
+    answer: "Yes. Katie answers 24/7, including nights, weekends, and bank holidays. She identifies storm damage by keywords like 'leak', 'water coming through', 'storm damage', and 'wind damage', and marks the enquiry as emergency priority. You get an immediate WhatsApp with 'STORM DAMAGE: URGENT' in the header."
   },
   {
     question: "What information does Katie collect from roofing customers?",
@@ -61,7 +61,7 @@ const faqs = [
   },
   {
     question: "Does whoza.ai work with my existing roofer phone number?",
-    answer: "Yes. You simply forward your existing business number to your whoza.ai number. Your customers call the same number they always have — they just get answered every time instead of hitting voicemail. No need to change business cards, van signage, or Google listings."
+    answer: "Yes. You simply forward your existing business number to your whoza.ai number. Your customers call the same number they always have. They just get answered every time instead of hitting voicemail. No need to change business cards, van signage, or Google listings."
   },
   {
     question: "How much does an AI receptionist cost in the UK?",
@@ -73,7 +73,7 @@ const faqs = [
   },
   {
     question: "Can an AI receptionist handle emergency roofing calls?",
-    answer: "Yes — Katie identifies emergency roofing keywords like 'storm damage' and 'active leak' and marks them as urgent priority, sending an immediate WhatsApp alert even during severe weather."
+    answer: "Yes. Katie identifies emergency roofing keywords like 'storm damage' and 'active leak' and marks them as urgent priority, sending an immediate WhatsApp alert even during severe weather."
   }
 ]
 
@@ -86,24 +86,24 @@ const painPoints = [
   {
     icon: Droplets,
     title: "Active leaks = customers who won't wait",
-    description: "A customer with water coming through their ceiling will call 3-4 roofers. The first to answer gets the job. If you're on a roof tiling, you miss it. That £320 emergency repair goes to your competitor."
+    description: "A customer with water coming through their ceiling will call 3 to 4 roofers. The first to answer gets the job. If you're on a roof tiling, you miss it. That £320 emergency repair goes to your competitor."
   },
   {
     icon: Wrench,
     title: "You can't see the roof from a missed call",
-    description: "A voicemail saying 'my roof is leaking' tells you nothing. Is it a slipped tile (£150) or a full re-roof (£14,000)? Katie captures roof type, property age, leak location, and insurance status — so you arrive prepared."
+    description: "A voicemail saying 'my roof is leaking' tells you nothing. Is it a slipped tile (£150) or a full re-roof (£14,000)? Katie captures roof type, property age, leak location, and insurance status, so you arrive prepared."
   },
   {
     icon: Phone,
     title: "After-hours calls from tenants and landlords pile up",
-    description: "Roofing emergencies don't stick to 9-5. Weekend storm damage, late-night leaks, bank holiday wind damage. While you're having dinner, missed calls stack up. By Monday morning, the jobs are gone."
+    description: "Roofing emergencies don't stick to 9 to 5. Weekend storm damage, late-night leaks, bank holiday wind damage. While you're having dinner, missed calls stack up. By Monday morning, the jobs are gone."
   }
 ]
 
 const howItWorks = [
   {
     step: 1,
-    title: "Storm hits — phones start ringing",
+    title: "Storm hits, phones start ringing",
     description: "Katie answers every call with your roofing company's greeting. She identifies if it's an active leak, storm damage, or routine maintenance."
   },
   {
@@ -114,7 +114,7 @@ const howItWorks = [
   {
     step: 3,
     title: "WhatsApp with full context",
-    description: "Alert shows: 'Active leak — bedroom ceiling — 1930s semi — tiled roof — insured — photos available — urgent callback' with customer number and photo link."
+    description: "Alert shows: 'Active leak, bedroom ceiling, 1930s semi, tiled roof, insured, photos available, urgent callback' with customer number and photo link."
   },
   {
     step: 4,
@@ -167,8 +167,8 @@ export default function ForRoofersPage() {
   return (
     <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />      <VideoSchema
-        name="Whoza.ai Demo — AI Call Handling for Roofers"
-        description="Watch how Katie captures a missed roofing enquiry in under 60 seconds. Storm damage, leaks, emergency repairs — answered 24/7."
+        name="Whoza.ai Demo: AI Call Handling for Roofers"
+        description="Watch how Katie captures a missed roofing enquiry in under 60 seconds. Storm damage, leaks, emergency repairs: answered 24/7."
         embedUrl="https://whoza.ai/for-roofers"
       />
       <Header />
@@ -192,7 +192,7 @@ export default function ForRoofersPage() {
                   AI Customer Service for Roofers: Never Miss a Storm Call
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8">
-                  Whoza.ai provides AI customer service for roofers: answers every call 24/7, captures storm damage details, and sends them to your WhatsApp in 3 seconds. From £59/month — less than one missed repair.
+                  Whoza.ai provides AI customer service for roofers: answers every call 24/7, captures storm damage details, and sends them to your WhatsApp in 3 seconds. From £59/month, less than one missed repair.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link
@@ -231,7 +231,7 @@ export default function ForRoofersPage() {
                       <Phone className="w-5 h-5 text-[#6ee7b7]" />
                     </div>
                     <div>
-                      <p className="text-white font-medium">New Enquiry — Katie</p>
+                      <p className="text-white font-medium">New Enquiry from Katie</p>
                       <p className="text-white/65 text-sm">Storm damage call, 14:32</p>
                     </div>
                   </div>
@@ -239,10 +239,10 @@ export default function ForRoofersPage() {
                     <p>👤 Name: Sarah Mitchell</p>
                     <p>📞 Phone: 07XXX XXXXXX</p>
                     <p>📍 Postcode: M20 4BD</p>
-                    <p>🔧 Job: Storm damage — tiles blown off, water entering loft</p>
-                    <p>⚡ Urgency: Emergency — needs today</p>
+                    <p>🔧 Job: Storm damage, tiles blown off, water entering loft</p>
+                    <p>⚡ Urgency: Emergency, needs today</p>
                     <p>🏠 Property: 1930s semi, tiled roof</p>
-                    <p>💰 Estimated Value: £450-800</p>
+                    <p>💰 Estimated Value: £450 to £800</p>
                     <p>📸 Photos: Available</p>
                   </div>
                   <div className="flex gap-2 mt-4">
@@ -270,11 +270,11 @@ export default function ForRoofersPage() {
             },
             {
               label: "Job triage",
-              answer: "Katie asks what the roofing issue is — leak, storm damage, missing tiles, or full re-roof — and estimates urgency. Emergency weather damage calls are flagged immediately.",
+              answer: "Katie asks what the roofing issue is (leak, storm damage, missing tiles, or full re-roof) and estimates urgency. Emergency weather damage calls are flagged immediately.",
             },
             {
               label: "Emergency prioritisation",
-              answer: "Storm damage, leak through ceiling, or exposed felt — Katie recognises emergency keywords and marks the enquiry as urgent. You get an immediate WhatsApp even during bad weather.",
+              answer: "Storm damage, leak through ceiling, or exposed felt: Katie recognises emergency keywords and marks the enquiry as urgent. You get an immediate WhatsApp even during bad weather.",
             },
             {
               label: "Calendar sync",
@@ -425,7 +425,7 @@ export default function ForRoofersPage() {
                 },
                 {
                   q: "Can Katie handle storm damage emergencies at 2am?",
-                  a: "Yes. Katie answers 24/7, including nights, weekends, and bank holidays. She identifies storm damage by keywords like 'leak', 'water coming through', 'storm damage', and 'wind damage' — and marks the enquiry as emergency priority. You get an immediate WhatsApp with 'STORM DAMAGE — URGENT' in the header."
+                  a: "Yes. Katie answers 24/7, including nights, weekends, and bank holidays. She identifies storm damage by keywords like 'leak', 'water coming through', 'storm damage', and 'wind damage', and marks the enquiry as emergency priority. You get an immediate WhatsApp with 'STORM DAMAGE: URGENT' in the header."
                 },
                 {
                   q: "What information does Katie collect from roofing customers?",
@@ -449,7 +449,7 @@ export default function ForRoofersPage() {
                 },
                 {
                   q: "Does whoza.ai work with my existing roofer phone number?",
-                  a: "Yes. You simply forward your existing business number to your whoza.ai number. Your customers call the same number they always have — they just get answered every time instead of hitting voicemail. No need to change business cards, van signage, or Google listings."
+                  a: "Yes. You simply forward your existing business number to your whoza.ai number. Your customers call the same number they always have. They just get answered every time instead of hitting voicemail. No need to change business cards, van signage, or Google listings."
                 },
                 {
                   q: "How much does an AI receptionist cost in the UK?",
@@ -461,7 +461,7 @@ export default function ForRoofersPage() {
                 },
                 {
                   q: "Can an AI receptionist handle emergency roofing calls?",
-                  a: "Yes — Katie identifies emergency roofing keywords like 'storm damage' and 'active leak' and marks them as urgent priority, sending an immediate WhatsApp alert even during severe weather."
+                  a: "Yes. Katie identifies emergency roofing keywords like 'storm damage' and 'active leak' and marks them as urgent priority, sending an immediate WhatsApp alert even during severe weather."
                 }
               ].map((faq, idx) => (
                 <div key={idx} className="bg-[var(--off-white)] rounded-2xl border border-[var(--border)] p-6">
@@ -509,7 +509,7 @@ export default function ForRoofersPage() {
               One Missed Re-Roof Pays for 20 Years of Katie
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-              Emergency tile repairs average £200-400. Full re-roofs are £8,000-25,000. Insurance claims can exceed £50,000. At £59/month, capturing one missed job pays for the entire year.
+              Emergency tile repairs average £200 to £400. Full re-roofs are £8,000 to £25,000. Insurance claims can exceed £50,000. At £59/month, capturing one missed job pays for the entire year.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <Link
@@ -585,7 +585,7 @@ export default function ForRoofersPage() {
 
       <div className="section-divider" />
         <RelatedTrades currentTrade="for-roofers" />
-        <Footer />
+        <Footer hideCta />
       <FloatingChatWidget />
     </>
   )

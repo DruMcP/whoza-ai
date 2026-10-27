@@ -74,10 +74,10 @@ export default function QuoteGeneratorPage() {
           <section className="mb-16 max-w-3xl mx-auto">
             <h2 className="text-2xl font-bold mb-4 text-center">Why Tradespeople Use This Tool</h2>
             <ul className="space-y-3 text-[var(--v2-body)]">
-              <li className="flex items-start gap-3"><span className="text-[var(--v2-green)] mt-1">✓</span> <span>Look professional on every quote — no more scribbled notes or Excel spreadsheets</span></li>
+              <li className="flex items-start gap-3"><span className="text-[var(--v2-green)] mt-1">✓</span> <span>Look professional on every quote, no more scribbled notes or Excel spreadsheets</span></li>
               <li className="flex items-start gap-3"><span className="text-[var(--v2-green)] mt-1">✓</span> <span>Win more jobs by sending branded quotes within minutes of a site visit</span></li>
               <li className="flex items-start gap-3"><span className="text-[var(--v2-green)] mt-1">✓</span> <span>Track your pricing history and stay consistent across all customers</span></li>
-              <li className="flex items-start gap-3"><span className="text-[var(--v2-green)] mt-1">✓</span> <span>100% free — no sign-up, no credit card, no data stored</span></li>
+              <li className="flex items-start gap-3"><span className="text-[var(--v2-green)] mt-1">✓</span> <span>100% free: no sign-up, no credit card, no data stored</span></li>
             </ul>
           </section>
 

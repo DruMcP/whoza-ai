@@ -9,12 +9,12 @@ import { Star, Quote, Newspaper, TrendingUp, PhoneOff, Building2, Calendar, Mail
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Press Centre | whoza.ai",
-  description: "Media resources, press releases for whoza.ai — the AI call answering platform for UK tradespeople. Incorporated " + COMPANY.incorporatedOnDisplay + ". Company: " + COMPANY.companyNumber + ".",
+  description: "Media resources, press releases for whoza.ai, the AI call answering platform for UK tradespeople. Incorporated " + COMPANY.incorporatedOnDisplay + ". Company: " + COMPANY.companyNumber + ".",
   alternates: { canonical: "https://whoza.ai/press" },
   robots: { index: true, follow: true },
   openGraph: {
     title: "Press Centre | whoza.ai",
-    description: "Media resources, press releases, and company information for whoza.ai — the AI call answering platform for UK tradespeople.",
+    description: "Media resources, press releases, and company information for whoza.ai, the AI call answering platform for UK tradespeople.",
     url: "https://whoza.ai/press",
     type: "website",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai press centre" }],
@@ -43,7 +43,7 @@ export default function PressPage() {
               Press Centre
             </h1>
             <p className="text-[var(--v2-body)] text-lg max-w-2xl">
-              Media resources and company information for whoza.ai — the AI call answering platform built for UK tradespeople.
+              Media resources and company information for whoza.ai, the AI call answering platform built for UK tradespeople.
             </p>
           </header>
 
@@ -52,7 +52,7 @@ export default function PressPage() {
             <h2 className="text-xl font-bold text-[var(--v2-muted)] uppercase tracking-wider mb-4 flex items-center gap-2">
               <Quote className="w-5 h-5" />
               Company Boilerplate
-              <span className="text-xs normal-case tracking-normal text-[var(--v2-muted)] ml-2 bg-white px-2 py-1 rounded">For journalist use — 75 words</span>
+              <span className="text-xs normal-case tracking-normal text-[var(--v2-muted)] ml-2 bg-white px-2 py-1 rounded">For journalist use: 75 words</span>
             </h2>
             <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 md:p-8">
               <p className="text-[var(--v2-body)] leading-relaxed text-lg">
@@ -125,14 +125,14 @@ export default function PressPage() {
                 <p className="text-sm text-[var(--v2-body)] mb-3">estimated annual revenue lost to missed calls across UK trades</p>
                 <a href="/research/missed-call-index/q3-2026" className="flex items-start gap-2 text-xs text-[var(--v2-muted)] hover:text-[var(--v2-green)] transition-colors">
                   <ExternalLink className="w-3 h-3 mt-0.5 shrink-0" />
-                  <span>Source: whoza.ai research, 2026 — 885,000 UK trade SMEs × £2,600 avg annual loss</span>
+                  <span>Source: whoza.ai research, 2026 (885,000 UK trade SMEs × £2,600 avg annual loss)</span>
                 </a>
               </div>
 
 
               <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <div className="text-4xl font-extrabold text-[var(--v2-green)] mb-2">24/7</div>
-                <p className="text-sm text-[var(--v2-body)] mb-3">AI call answering including bank holidays — no human required</p>
+                <p className="text-sm text-[var(--v2-body)] mb-3">AI call answering including bank holidays, no human required</p>
                 <div className="flex items-start gap-2 text-xs text-[var(--v2-muted)]">
                   <ExternalLink className="w-3 h-3 mt-0.5 shrink-0" />
                   <span>Source: whoza.ai product specification, 2026</span>
@@ -161,19 +161,19 @@ export default function PressPage() {
               <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 md:p-8 space-y-4 text-[var(--v2-body)] leading-relaxed">
                 <p>
                   whoza.ai began with a single observation: the tradespeople keeping Britain running were losing jobs not to competitors, 
-                  but to their own ringing phones. In 2024, founder <strong className="text-[var(--v2-ink)]">Dru McPherson</strong> — then running 
-                  a digital services business in the Scottish Highlands — noticed a pattern among his trade clients. The plumbers, 
+                  but to their own ringing phones. In 2024, founder <strong className="text-[var(--v2-ink)]">Dru McPherson</strong>, then running 
+                  a digital services business in the Scottish Highlands, noticed a pattern among his trade clients. The plumbers, 
                   electricians, and roofers he worked with were universally excellent at their craft and universally terrible at 
                   answering their phones.
                 </p>
                 <p>
-                  "I would call a plumber at 10 AM on a Tuesday and get voicemail. Not because they were lazy — because they were 
+                  "I would call a plumber at 10 AM on a Tuesday and get voicemail. Not because they were lazy. Because they were 
                   under someone's sink fixing a leak. The call went to voicemail, the customer called the next number on Google, 
                   and that was £250 gone before lunch."
                 </p>
                 <p>
                   The problem was structural, not personal. UK trades operate as mobile, single-person or small-team businesses. 
-                  They do not have receptionists. They cannot pause mid-job to answer a call. And voicemail — the default fallback — 
+                  They do not have receptionists. They cannot pause mid-job to answer a call. And voicemail, the default fallback, 
                   loses 69% of callers permanently, per Moneypenny Small Business Call Report, 2016.
                 </p>
                 <p>
@@ -184,7 +184,7 @@ export default function PressPage() {
                 </p>
                 <p>
                   <strong className="text-[var(--v2-ink)]">Whoza AI Ltd</strong> was formally incorporated in Scotland on {COMPANY.incorporatedOnDisplay} 
-                  (Companies House {COMPANY.companyNumber}), with its operational base established in Tomintoul, Banffshire — a village in the 
+                  (Companies House {COMPANY.companyNumber}), with its operational base established in Tomintoul, Banffshire, a village in the 
                   Cairngorms National Park. The company launched its flagship AI agent, <strong className="text-[var(--v2-ink)]">Katie</strong>, 
                   in early 2026, targeting UK trades with a simple value proposition: never miss a job again.
                 </p>
@@ -262,7 +262,7 @@ export default function PressPage() {
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "NewsArticle",
-                "headline": "Press Centre — whoza.ai",
+                "headline": "Press Centre | whoza.ai",
                 "description": "Media resources and company information for whoza.ai.",
                 "image": "https://whoza.ai/og-image.webp",
                 "author": {

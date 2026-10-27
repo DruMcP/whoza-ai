@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "AI Call Answering for Roofers in London | whoza.ai",
     description: "Stop losing roofer jobs to missed calls in London. Katie answers 24/7, captures storm damage and repair enquiries via WhatsApp. Plans from £59/month.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Roofers in London" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Roofers in London" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     "question": "Does it work with my existing London business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing London business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "answer": "Yes. You simply set up call forwarding from your existing London business number to your whoza.ai number. Your customers dial the same number they've always used. Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
     "question": "How quickly can I get set up as a roofer in London?",
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     "question": "What makes whoza.ai different for roofers in London?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for roofers. She understands storm damage, slipped tiles, leak emergencies & full re-roof quotes — and with 32,000+ trade businesses competing in London, capturing every call gives you a real competitive edge."
+    "answer": "Unlike generic call answering services, Katie is trained specifically for roofers. She understands storm damage, slipped tiles, leak emergencies & full re-roof quotes, and with 32,000+ trade businesses competing in London, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -97,7 +97,7 @@ export default function ForRooferLondonPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   London has 32,000+ trade businesses competing for 1.2M households. 
                   With 8,200 missed calls every week across the city, 
-                  Katie ensures you capture every roofing enquiry — storm damage, slipped tiles, leak emergencies & full re-roof quotes.
+                  Katie ensures you capture every roofing enquiry: storm damage, slipped tiles, leak emergencies & full re-roof quotes.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -132,7 +132,7 @@ export default function ForRooferLondonPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -199,7 +199,7 @@ export default function ForRooferLondonPage() {
                 The Real Cost of Missed Calls for Roofers in London
               </h2>
               <p className="v2-lead max-w-2xl mx-auto">
-                High competition — 15+ trade businesses per postcode in central London. Emergency calls peak during commute hours when you're on the road. Diverse housing stock from Victorian terraces to new-build apartments. Tenant vs landlord enquiries need different handling.
+                High competition: 15+ trade businesses per postcode in central London. Emergency calls peak during commute hours when you're on the road. Diverse housing stock from Victorian terraces to new-build apartments. Tenant vs landlord enquiries need different handling.
               </p>
             </div>
             <div className="space-y-8">
@@ -261,7 +261,7 @@ export default function ForRooferLondonPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your London number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your London number. Katie picks up in under 2 rings with your branded greeting, 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",
@@ -311,13 +311,13 @@ export default function ForRooferLondonPage() {
             </div>
             <div className="space-y-6 text-[var(--v2-body)] leading-relaxed">
               <p>
-                Chelsea and Kensington in west London are filled with Victorian terraces that still carry their original slate roofs — beautiful but fragile after 150 years of British weather. Stratford and Canary Wharf present the opposite challenge: new-build apartments with flat roofs and green roof installations that need specialist waterproofing knowledge. Bromley and Croydon in the south sit somewhere between, with 1930s semi-detached homes and 1960s estates where flat roof repairs and gutter replacements are the bread and butter of local roofers.
+                Chelsea and Kensington in west London are filled with Victorian terraces that still carry their original slate roofs, beautiful but fragile after 150 years of British weather. Stratford and Canary Wharf present the opposite challenge: new-build apartments with flat roofs and green roof installations that need specialist waterproofing knowledge. Bromley and Croydon in the south sit somewhere between, with 1930s semi-detached homes and 1960s estates where flat roof repairs and gutter replacements are the bread and butter of local roofers.
               </p>
               <p>
-                London&apos;s hard water and urban heat island effect create distinct roofing stresses. Summer heatwaves cause thermal expansion that cracks older slate and tile, while winter freeze-thaw cycles — particularly on north-facing slopes in Camden and Islington — accelerate mortar and pointing deterioration. With 32,000+ trade businesses competing across the capital, a missed call about a slipped tile often means the customer has already booked someone else by the time you check your phone.
+                London&apos;s hard water and urban heat island effect create distinct roofing stresses. Summer heatwaves cause thermal expansion that cracks older slate and tile, while winter freeze-thaw cycles, particularly on north-facing slopes in Camden and Islington, accelerate mortar and pointing deterioration. With 32,000+ trade businesses competing across the capital, a missed call about a slipped tile often means the customer has already booked someone else by the time you check your phone.
               </p>
               <p>
-                Emergency roofing calls in London peak during commute hours — 7–9am and 5–7pm — when trades are on the road between jobs or stuck in congestion. A customer in Hackney discovering water coming through their ceiling at 6pm will call three roofers in quick succession. Katie answers instantly, captures the postcode and damage details, and delivers the enquiry to your WhatsApp with an emergency flag. You see it immediately and can respond before the caller moves down their list.
+                Emergency roofing calls in London peak during commute hours (7 to 9am and 5 to 7pm) when trades are on the road between jobs or stuck in congestion. A customer in Hackney discovering water coming through their ceiling at 6pm will call three roofers in quick succession. Katie answers instantly, captures the postcode and damage details, and delivers the enquiry to your WhatsApp with an emergency flag. You see it immediately and can respond before the caller moves down their list.
               </p>
             </div>
           </div>

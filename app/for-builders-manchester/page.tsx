@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "AI Call Answering for Builders in Manchester | whoza.ai",
     description: "Stop losing builder jobs to missed calls in Manchester. Katie answers 24/7, captures extension and renovation enquiries via WhatsApp. Plans from £59/month.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Builders in Manchester" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Builders in Manchester" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     "question": "Does it work with my existing Manchester business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing Manchester business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "answer": "Yes. You simply set up call forwarding from your existing Manchester business number to your whoza.ai number. Your customers dial the same number they've always used. Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
     "question": "How quickly can I get set up as a builder in Manchester?",
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     "question": "What makes whoza.ai different for builders in Manchester?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for builders. She understands extension enquiries, renovation quotes, new build leads & commercial contracts — and with 8,500+ trade businesses competing in Manchester, capturing every call gives you a real competitive edge."
+    "answer": "Unlike generic call answering services, Katie is trained specifically for builders. She understands extension enquiries, renovation quotes, new build leads & commercial contracts, and with 8,500+ trade businesses competing in Manchester, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -97,7 +97,7 @@ export default function ForBuilderManchesterPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Manchester has 8,500+ trade businesses competing for 540K households. 
                   With 3,400 missed calls every week across the city, 
-                  Katie ensures you capture every building enquiry — extension enquiries, renovation quotes, new build leads & commercial contracts.
+                  Katie ensures you capture every building enquiry: extension enquiries, renovation quotes, new build leads & commercial contracts.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -132,7 +132,7 @@ export default function ForBuilderManchesterPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -261,7 +261,7 @@ export default function ForBuilderManchesterPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your Manchester number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your Manchester number. Katie picks up in under 2 rings with your branded greeting, 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",
@@ -311,10 +311,10 @@ export default function ForBuilderManchesterPage() {
             </div>
             <div className="space-y-6 text-[var(--v2-body)] leading-relaxed">
               <p>
-                Didsbury and Chorlton in south Manchester are filled with red brick terraces built between 1890 and 1930 — solid construction but ageing services that keep builders busy with loft conversions and kitchen extensions. Meanwhile, Ancoats and the Northern Quarter have seen explosive regeneration, turning former cotton mills into high-end apartments and commercial spaces that demand specialist fit-out trades. Salford Quays and MediaCity add new-build warranty snagging to the mix.
+                Didsbury and Chorlton in south Manchester are filled with red brick terraces built between 1890 and 1930: solid construction but ageing services that keep builders busy with loft conversions and kitchen extensions. Meanwhile, Ancoats and the Northern Quarter have seen explosive regeneration, turning former cotton mills into high-end apartments and commercial spaces that demand specialist fit-out trades. Salford Quays and MediaCity add new-build warranty snagging to the mix.
               </p>
               <p>
-                Manchester&apos;s high rainfall — averaging 867mm per year, well above the UK average — means damp issues, gutter overflow, and persistent roof leaks are constant triggers for emergency calls. Winter cold snaps, though rarely severe, cause pipe freezes in poorly insulated Victorian properties, creating sudden spikes in building repair enquiries that can overwhelm a solo tradesperson.
+                Manchester&apos;s high rainfall (averaging 867mm per year, well above the UK average) means damp issues, gutter overflow, and persistent roof leaks are constant triggers for emergency calls. Winter cold snaps, though rarely severe, cause pipe freezes in poorly insulated Victorian properties, creating sudden spikes in building repair enquiries that can overwhelm a solo tradesperson.
               </p>
               <p>
                 The Manchester planning portal is notoriously strict in conservation areas, particularly around Castlefield and parts of Chorlton. A caller from Prestwich asking about a rear extension may not know their street falls under Article 4 direction. Katie captures the postcode, notes the job type, and delivers it to your WhatsApp with the location context you need to check planning constraints before returning the call. That preparation turns a cold enquiry into a qualified lead.

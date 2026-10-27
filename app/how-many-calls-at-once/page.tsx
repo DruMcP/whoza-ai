@@ -49,7 +49,7 @@ export default function HowManyCallsPage() {
             How Many Calls Can whoza.ai Handle at Once?
           </h1>
           <p className="text-[var(--v2-body)] max-w-2xl text-lg">
-            We do not claim "unlimited" calls — because that is not honest. Here is exactly how many simultaneous calls each plan handles.
+            We do not claim "unlimited" calls, because that is not honest. Here is exactly how many simultaneous calls each plan handles.
           </p>
         </div>
 
@@ -88,7 +88,7 @@ export default function HowManyCallsPage() {
             If a call comes in while all your concurrent lines are busy, the caller hears a polite message asking them to leave a voicemail or call back. You get an instant WhatsApp alert so you know a call was missed.
           </p>
           <p className="text-[var(--v2-body)]">
-            This is rare for most trade businesses. Even on the Starter plan (1 concurrent call), the vast majority of calls are sequential — one finishes before the next begins. If you are running radio ads or TV campaigns that generate burst traffic, upgrade to Growth or Pro.
+            This is rare for most trade businesses. Even on the Starter plan (1 concurrent call), the vast majority of calls are sequential: one finishes before the next begins. If you are running radio ads or TV campaigns that generate burst traffic, upgrade to Growth or Pro.
           </p>
         </section>
 

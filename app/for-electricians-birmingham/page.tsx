@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "AI Call Answering for Electricians in Birmingham | whoza.ai",
     description: "Stop losing electrician jobs to missed calls in Birmingham. Katie answers 24/7, captures emergency and EICR enquiries via WhatsApp. Plans from £59/month.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Electricians in Birmingham" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Electricians in Birmingham" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     "question": "Does it work with my existing Birmingham business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing Birmingham business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "answer": "Yes. You simply set up call forwarding from your existing Birmingham business number to your whoza.ai number. Your customers dial the same number they've always used. Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
     "question": "How quickly can I get set up as an electrician in Birmingham?",
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     "question": "What makes whoza.ai different for electricians in Birmingham?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for electricians. She understands EICR enquiries, emergency faults, consumer unit upgrades & power outages — and with 11,000+ trade businesses competing in Birmingham, capturing every call gives you a real competitive edge."
+    "answer": "Unlike generic call answering services, Katie is trained specifically for electricians. She understands EICR enquiries, emergency faults, consumer unit upgrades & power outages, and with 11,000+ trade businesses competing in Birmingham, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -97,7 +97,7 @@ export default function ForElectricianBirminghamPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Birmingham has 11,000+ trade businesses competing for 680K households. 
                   With 4,100 missed calls every week across the city, 
-                  Katie ensures you capture every electrical enquiry — EICR enquiries, emergency faults, consumer unit upgrades & power outages.
+                  Katie ensures you capture every electrical enquiry: EICR enquiries, emergency faults, consumer unit upgrades & power outages.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -132,7 +132,7 @@ export default function ForElectricianBirminghamPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -261,7 +261,7 @@ export default function ForElectricianBirminghamPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your Birmingham number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your Birmingham number. Katie picks up in under 2 rings with your branded greeting, 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",
@@ -312,7 +312,7 @@ export default function ForElectricianBirminghamPage() {
                 Birmingham&apos;s electrical market is being reshaped by the Big City Plan and a wave of commercial regeneration. In the Jewellery Quarter, converted industrial units need specialist electricians who understand both heritage building constraints and modern power requirements for manufacturing equipment. Digbeth&apos;s creative and tech sector demands data cabling, EV charging points, and smart building installations, while Selly Oak&apos;s student population drives constant HMO electrical inspection work. Harborne&apos;s established suburban homes, meanwhile, generate steady domestic demand for EICRs, rewiring, and consumer unit upgrades. With 11,000+ trade businesses competing across 680K households and 4,100 missed calls weekly, Birmingham is one of the UK&apos;s most active electrical markets.
               </p>
               <p>
-                The Big City Plan is the key driver here. Birmingham&apos;s 20-year regeneration strategy is transforming neighbourhoods across the city centre and surrounding districts, creating sustained demand for commercial electrical work in refurbished buildings and new developments. Electricians who establish relationships with developers and contractors during this phase secure long-term work as projects expand. Meanwhile, the city&apos;s large student population — concentrated in Selly Oak and the city centre — means HMO landlords need reliable electricians for annual compliance checks. Katie captures whether a call is a domestic EICR in Harborne, a commercial fit-out in Digbeth, or an emergency repair in the Jewellery Quarter, ensuring you never miss a £295 average job in a £380M market.
+                The Big City Plan is the key driver here. Birmingham&apos;s 20-year regeneration strategy is transforming neighbourhoods across the city centre and surrounding districts, creating sustained demand for commercial electrical work in refurbished buildings and new developments. Electricians who establish relationships with developers and contractors during this phase secure long-term work as projects expand. Meanwhile, the city&apos;s large student population, concentrated in Selly Oak and the city centre, means HMO landlords need reliable electricians for annual compliance checks. Katie captures whether a call is a domestic EICR in Harborne, a commercial fit-out in Digbeth, or an emergency repair in the Jewellery Quarter, ensuring you never miss a £295 average job in a £380M market.
               </p>
             </div>
           </div>
@@ -331,10 +331,10 @@ export default function ForElectricianBirminghamPage() {
             </div>
             <div className="space-y-6 text-[var(--v2-body)] leading-relaxed">
               <p>
-                From the Jewellery Quarter and Digbeth to Edgbaston and Solihull, Birmingham&apos;s electrical trade operates in the UK&apos;s youngest major city. Victorian villas in Moseley and Handsworth need complete rewiring and sympathetic upgrades that preserve original features. New-build developments across Smithfield and Perry Barr demand EV charging infrastructure and smart home integration. With 40% of the population under 25, the rental market is relentless — and every landlord needs an EICR.
+                From the Jewellery Quarter and Digbeth to Edgbaston and Solihull, Birmingham&apos;s electrical trade operates in the UK&apos;s youngest major city. Victorian villas in Moseley and Handsworth need complete rewiring and sympathetic upgrades that preserve original features. New-build developments across Smithfield and Perry Barr demand EV charging infrastructure and smart home integration. With 40% of the population under 25, the rental market is relentless, and every landlord needs an EICR.
               </p>
               <p>
-                Student areas like Selly Oak and Harborne generate constant EICR bookings and emergency callouts for overloaded circuits in converted terraced houses. Commercial work in the Jewellery Quarter and Digbeth spans manufacturing, retail, and creative industries — each with different electrical requirements. Birmingham&apos;s inland position means colder winters than coastal cities, with temperatures regularly dropping below freezing and causing electrical faults in poorly insulated outbuildings and garages.
+                Student areas like Selly Oak and Harborne generate constant EICR bookings and emergency callouts for overloaded circuits in converted terraced houses. Commercial work in the Jewellery Quarter and Digbeth spans manufacturing, retail, and creative industries, each with different electrical requirements. Birmingham&apos;s inland position means colder winters than coastal cities, with temperatures regularly dropping below freezing and causing electrical faults in poorly insulated outbuildings and garages.
               </p>
               <p>
                 The Big City Plan&apos;s £10bn regeneration investment means specialist trades are in constant demand, but customers expect immediate response. When a first-time buyer in Kings Heath discovers outdated wiring during a survey, or a letting agent in Edgbaston needs urgent EICRs for a portfolio ahead of tenancy renewals, Katie captures every detail, flags the deadline, and delivers a structured enquiry that lets you quote without playing phone tag.

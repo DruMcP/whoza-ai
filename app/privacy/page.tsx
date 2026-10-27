@@ -8,7 +8,7 @@ export const revalidate = 3600
 
 export const metadata: Metadata = {
   title: "Privacy Policy | whoza.ai",
-  description: "whoza.ai privacy policy — ICO-registered (ZC077271), UK GDPR compliant. Learn how we protect your data, your rights, and your customers.",
+  description: "whoza.ai privacy policy: ICO-registered (ZC077271), UK GDPR compliant. Learn how we protect your data, your rights, and your customers.",
   alternates: {
     canonical: "https://whoza.ai/privacy",
   },
@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/privacy",
     siteName: "Whoza.ai",
     title: "Privacy Policy | whoza.ai",
-    description: "whoza.ai privacy policy — ICO-registered, UK GDPR compliant. Learn how we protect your data.",
+    description: "whoza.ai privacy policy: ICO-registered, UK GDPR compliant. Learn how we protect your data.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Privacy Policy" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Privacy Policy | whoza.ai",
-    description: "whoza.ai privacy policy — ICO-registered, UK GDPR compliant. Learn how we protect your data.",
+    description: "whoza.ai privacy policy: ICO-registered, UK GDPR compliant. Learn how we protect your data.",
     images: ["https://whoza.ai/og-image.webp"],
   },
 }
@@ -83,7 +83,7 @@ export default function PrivacyPolicy() {
             <ul className="space-y-3 text-[var(--v2-body)]">
               <li className="flex items-start gap-3">
                 <span className="text-[var(--v2-green)] mt-1">•</span>
-                <span><strong>Call transcripts:</strong> Voice calls answered by our AI agents (Katie/Mark) are transcribed for quality and service delivery purposes. Calls are <strong>not recorded</strong>; a written transcript is generated and processed by AI. No audio is stored. The AI assistant identifies itself as AI only when a caller asks, and always answers honestly — it never claims to be human.</span>
+                <span><strong>Call transcripts:</strong> Voice calls answered by our AI agents (Katie/Mark) are transcribed for quality and service delivery purposes. Calls are <strong>not recorded</strong>; a written transcript is generated and processed by AI. No audio is stored. The AI assistant identifies itself as AI only when a caller asks, and always answers honestly. It never claims to be human.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-[var(--v2-green)] mt-1">•</span>
@@ -147,7 +147,7 @@ export default function PrivacyPolicy() {
               4. AI Processing Disclosure
             </h2>
             <p className="text-[var(--v2-body)] leading-relaxed">
-              Whoza.ai uses artificial intelligence to process voice calls, transcribe conversations, and generate responses. Our AI agents (Katie and Mark) are powered by third-party voice AI infrastructure. All AI processing occurs within UK/EU data centres or jurisdictions with adequate data protection safeguards. The AI assistant identifies itself as AI only when a caller asks, and always answers honestly — it never claims to be human.
+              Whoza.ai uses artificial intelligence to process voice calls, transcribe conversations, and generate responses. Our AI agents (Katie and Mark) are powered by third-party voice AI infrastructure. All AI processing occurs within UK/EU data centres or jurisdictions with adequate data protection safeguards. The AI assistant identifies itself as AI only when a caller asks, and always answers honestly. It never claims to be human.
             </p>
           </section>
 

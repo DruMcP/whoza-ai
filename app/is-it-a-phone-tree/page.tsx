@@ -68,7 +68,7 @@ export default function IsItAPhoneTreePage() {
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-4">The Phone Rings, and Someone Says Hello</h2>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              Katie asks what's wrong. She listens to the answer — the actual answer, in the caller's own words, not a number they've pressed. Then she asks the next sensible question, the way a good receptionist would.
+              Katie asks what's wrong. She listens to the answer: the actual answer, in the caller's own words, not a number they've pressed. Then she asks the next sensible question, the way a good receptionist would.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed">
               Burst pipe under the sink? She knows that's urgent, and she'll say so. She asks for the postcode, checks your diary, and offers a time. The caller doesn't press anything. They just talk.
@@ -89,7 +89,7 @@ export default function IsItAPhoneTreePage() {
                   <li>Press 3 to wait</li>
                   <li>Hold music for 8 minutes</li>
                   <li>"Your call is important to us"</li>
-                  <li>Disconnected — call back later</li>
+                  <li>Disconnected, call back later</li>
                 </ul>
               </div>
               <div className="bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-6">
@@ -118,7 +118,7 @@ export default function IsItAPhoneTreePage() {
               If the caller would rather talk to you, they say so and she puts them through. No menu. No queue. No "your call is important to us."
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              The transfer works if you're available to answer. If you're up a ladder and can't take it, she takes the details and books them in — same as always. We state this constraint honestly because the honesty is what makes the rest credible.
+              The transfer works if you're available to answer. If you're up a ladder and can't take it, she takes the details and books them in, same as always. We state this constraint honestly because the honesty is what makes the rest credible.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed">
               If you don't pick up, it falls back to booking or message capture. The caller still gets what they need: their job logged, their time booked, their details captured. They don't get dropped into a void.
@@ -134,7 +134,7 @@ export default function IsItAPhoneTreePage() {
               They want someone to hear them, understand the problem, and tell them when help is coming. That's what Katie does. She doesn't make them navigate a system. She has a conversation, the same way a good receptionist would.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed">
-              The Moneypenny Small Business Call Report (2016) reports that 33% of small businesses fail to answer incoming calls. Not because tradespeople don't care — because they're on a job, at the merchants, or it's 7pm. Katie answers every call as if it's the only one that matters. Because to that caller, it is.
+              The Moneypenny Small Business Call Report (2016) reports that 33% of small businesses fail to answer incoming calls. Not because tradespeople don't care. Because they're on a job, at the merchants, or it's 7pm. Katie answers every call as if it's the only one that matters. Because to that caller, it is.
             </p>
           </section>
         </div>

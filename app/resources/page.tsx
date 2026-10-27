@@ -59,7 +59,7 @@ export default function ResourcesPage() {
             Free Resources for UK Trades
           </h1>
           <p className="text-xl text-[var(--v2-body)] max-w-2xl mx-auto">
-            Practical tools and guides built specifically for UK tradespeople — no signup required.
+            Practical tools and guides built specifically for UK tradespeople, no signup required.
           </p>
         </div>
       </section>

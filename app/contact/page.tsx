@@ -6,7 +6,7 @@ import { MessageSquare, Mail, Phone, MapPin, Clock, ExternalLink, RefreshCw } fr
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Contact whoza.ai — AI Call Answering for UK Trades",
+  title: "Contact whoza.ai: AI Call Answering for UK Trades",
   description: "Contact whoza.ai via WhatsApp, email or phone. Get help with AI call answering for your trade business. Response within 2 hours. Scotland based, UK wide.",
   alternates: {
     canonical: "https://whoza.ai/contact",
@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/contact",
     siteName: "Whoza.ai",
-    title: "Contact whoza.ai — AI Call Answering for UK Trades",
+    title: "Contact whoza.ai: AI Call Answering for UK Trades",
     description: "Contact whoza.ai via WhatsApp, email or phone. Get help with AI call answering for your trade business. Response within 2 hours. Scotland based, UK wide.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "Contact whoza.ai" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact whoza.ai — AI Call Answering for UK Trades",
+    title: "Contact whoza.ai: AI Call Answering for UK Trades",
     description: "Contact whoza.ai via WhatsApp, email or phone. Get help with AI call answering for your trade business. Response within 2 hours. Scotland based, UK wide.",
     images: ["https://whoza.ai/og-image.webp"],
   },
@@ -40,7 +40,7 @@ const localBusinessSchema = {
   "url": "https://whoza.ai",
   "logo": "https://whoza.ai/logo.webp",
   "image": "https://whoza.ai/logo.webp",
-  "description": "AI call answering for UK trades — never miss a job. whoza.ai provides AI-powered voice agents that answer missed calls 24/7, capture enquiries via WhatsApp, collect Google reviews, and track competitor visibility for UK tradespeople.",
+  "description": "AI call answering for UK trades, never miss a job. whoza.ai provides AI-powered voice agents that answer missed calls 24/7, capture enquiries via WhatsApp, collect Google reviews, and track competitor visibility for UK tradespeople.",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "97 Main Street",
@@ -141,7 +141,7 @@ export default function ContactPage() {
           </div>
           <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
           <p className="text-[var(--v2-body)] text-lg max-w-2xl">
-            Questions about Katie? Want to see a demo? Just want to say hello? We're here — pick your channel.
+            Questions about Katie? Want to see a demo? Just want to say hello? We're here. Pick your channel.
           </p>
 
         <div className="grid gap-6 mb-12">

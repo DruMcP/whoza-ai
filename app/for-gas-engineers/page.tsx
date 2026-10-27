@@ -15,7 +15,7 @@ import { tradeCaseStudies } from "@/lib/trade-case-studies"
 
 export const metadata: Metadata = {
   title: "UK Call Answering Service for Gas Engineers | From £59",
-  description: "24/7 call answering for UK gas engineers — Birmingham to Edinburgh. Every CP12, boiler breakdown and gas leak captured to WhatsApp in 3 seconds. From £59.",
+  description: "24/7 call answering for UK gas engineers, Birmingham to Edinburgh. Every CP12, boiler breakdown and gas leak captured to WhatsApp in 3 seconds. From £59.",
   alternates: {
     canonical: "https://whoza.ai/for-gas-engineers",
   },
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/for-gas-engineers",
     siteName: "Whoza.ai",
-    title: "AI Call Answering for Gas Engineers UK — 24/7",
+    title: "AI Call Answering for Gas Engineers UK | 24/7",
     description: "Katie answers 24/7 for gas engineers. Captures CP12 certificates, boiler breakdowns and gas leaks. WhatsApp alerts in 3 seconds. Start your free trial.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Gas Engineers" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Gas Engineers" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Call Answering for Gas Engineers UK — 24/7",
+    title: "AI Call Answering for Gas Engineers UK | 24/7",
     description: "Katie answers 24/7 for gas engineers. Captures CP12 certificates, boiler breakdowns and gas leaks. WhatsApp alerts in 3 seconds. Start your free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
@@ -55,11 +55,11 @@ const faqs = [
   },
   {
     question: "Does it work with my existing business phone number?",
-    answer: "Yes. You simply set up call forwarding from your existing Gas Safe registered business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and your existing voicemail stays as a backup. Works with mobile and landline numbers.",
+    answer: "Yes. You simply set up call forwarding from your existing Gas Safe registered business number to your whoza.ai number. Your customers dial the same number they've always used. Katie answers when you can't. Setup takes under 10 minutes and your existing voicemail stays as a backup. Works with mobile and landline numbers.",
   },
   {
     question: "Can Katie handle CP12 and gas safety certificate enquiries?",
-    answer: "Yes. Katie is specifically trained for gas safety certificate work. She captures: property type and size, number of gas appliances (boiler, hob, fire), certificate type (CP12/Landlord Gas Safety Record, service, installation), number of properties for portfolio landlords, and preferred date. These are tagged as 'landlord-gas' in your dashboard for fast bulk scheduling — your most reliable repeat income.",
+    answer: "Yes. Katie is specifically trained for gas safety certificate work. She captures: property type and size, number of gas appliances (boiler, hob, fire), certificate type (CP12/Landlord Gas Safety Record, service, installation), number of properties for portfolio landlords, and preferred date. These are tagged as 'landlord-gas' in your dashboard for fast bulk scheduling, your most reliable repeat income.",
   },
   {
     question: "How quickly can I get set up?",
@@ -71,7 +71,7 @@ const faqs = [
   },
   {
     question: "What happens if Katie can't handle a complex gas enquiry?",
-    answer: "Katie recognises when a call needs human attention — for complex boiler replacements, multi-appliance commercial jobs, or warranty enquiries. She takes a detailed message, captures all available context (appliance details, warranty status, previous work history), and flags it for your immediate callback. You receive the full details in WhatsApp so you can call back fully prepared.",
+    answer: "Katie recognises when a call needs human attention: for complex boiler replacements, multi-appliance commercial jobs, or warranty enquiries. She takes a detailed message, captures all available context (appliance details, warranty status, previous work history), and flags it for your immediate callback. You receive the full details in WhatsApp so you can call back fully prepared.",
   },
 ]
 
@@ -81,7 +81,7 @@ export default function ForGasEngineersPage() {
   return (
     <>
       <VideoSchema
-        name="Whoza.ai for Gas Engineers — AI Call Answering Demo"
+        name="Whoza.ai for Gas Engineers: AI Call Answering Demo"
         description="Watch Katie capture a missed gas safety enquiry in under 60 seconds. Boiler breakdown emergency answered instantly, details sent to WhatsApp, CP12 booking confirmed while the gas engineer is still on another job."
         embedUrl="https://whoza.ai/for-gas-engineers"
       />
@@ -166,7 +166,7 @@ export default function ForGasEngineersPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -259,7 +259,7 @@ export default function ForGasEngineersPage() {
                 The average UK gas engineer misses 4 calls per day = <strong>£46,720</strong> in lost revenue per year
               </p>
               <p className="text-[var(--v2-body)] text-sm mt-1">
-                Source: UK SME Communications Survey 2025 — based on £320 avg job value, 35% conversion rate
+                Source: UK SME Communications Survey 2025, based on £320 avg job value, 35% conversion rate
               </p>
             </div>
           </div>
@@ -284,7 +284,7 @@ export default function ForGasEngineersPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: "Customer calls your number. Katie picks up in under 2 rings with your branded greeting: 'Hello, Green Gas Services. I'm Katie, how can I help?' — 24/7, even at midnight on a bank holiday when a boiler breaks down.",
+                  description: "Customer calls your number. Katie picks up in under 2 rings with your branded greeting: 'Hello, Green Gas Services. I'm Katie, how can I help?', 24/7, even at midnight on a bank holiday when a boiler breaks down.",
                 },
                 {
                   step: "02",
@@ -341,7 +341,7 @@ export default function ForGasEngineersPage() {
               Gas Engineer Success Story
             </div>
             <blockquote className="text-2xl sm:text-3xl font-medium leading-relaxed text-[var(--v2-ink)] mb-8">
-              "I was losing CP12 bookings every week because I was on jobs and couldn't answer. whoza.ai captured 11 landlord certificate enquiries in my first month that I would have missed. That's <span className="text-[var(--v2-green)] font-bold">£3,520</span> in recovered revenue — and they're all annual repeat customers."
+              "I was losing CP12 bookings every week because I was on jobs and couldn't answer. whoza.ai captured 11 landlord certificate enquiries in my first month that I would have missed. That's <span className="text-[var(--v2-green)] font-bold">£3,520</span> in recovered revenue, and they're all annual repeat customers."
             </blockquote>
             <div className="flex items-center justify-center gap-4">
               <div className="w-14 h-14 rounded-full bg-[var(--v2-mint)] flex items-center justify-center text-[var(--v2-green)] font-bold text-xl">

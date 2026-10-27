@@ -26,7 +26,7 @@ export default function TradeBusinessGrowthToolkitPage() {
     {
       icon: <FileText className="w-6 h-6 text-blue-600" />,
       title: "Customer Enquiry Form Template",
-      description: "Professional form to capture every detail on first contact — job type, urgency, location, budget.",
+      description: "Professional form to capture every detail on first contact: job type, urgency, location, budget.",
     },
     {
       icon: <Mail className="w-6 h-6 text-purple-600" />,
@@ -145,7 +145,7 @@ export default function TradeBusinessGrowthToolkitPage() {
                         "The quoting spreadsheet alone saved me from underquoting three jobs in my first week. Best free
                         resource I've downloaded."
                       </p>
-                      <p className="text-white/65 text-xs mt-2">— Dave R., Electrician, Lewisham</p>
+                      <p className="text-white/65 text-xs mt-2">Dave R., Electrician, Lewisham</p>
                     </div>
                   </div>
                 </div>
@@ -336,7 +336,7 @@ export default function TradeBusinessGrowthToolkitPage() {
           <h2 className="text-3xl font-bold text-slate-900 mb-4">Ready to stop losing jobs to missed calls?</h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
             whoza.ai answers every call, qualifies leads, and delivers them to your WhatsApp. Start your 7-day free
-            trial today — no credit card required.
+            trial today, no credit card required.
           </p>
           <a
             href="/pricing"

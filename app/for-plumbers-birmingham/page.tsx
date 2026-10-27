@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "AI Call Answering for Plumbers in Birmingham | whoza.ai",
     description: "Stop losing plumber jobs to missed calls in Birmingham. Katie answers 24/7, captures burst pipe and boiler enquiries via WhatsApp. Plans from £59/month.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Plumbers in Birmingham" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Plumbers in Birmingham" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     "question": "Does it work with my existing Birmingham business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing Birmingham business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "answer": "Yes. You simply set up call forwarding from your existing Birmingham business number to your whoza.ai number. Your customers dial the same number they've always used. Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
     "question": "How quickly can I get set up as a plumber in Birmingham?",
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     "question": "What makes whoza.ai different for plumbers in Birmingham?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for plumbers. She understands burst pipe emergencies, boiler breakdowns, blocked drains & leak enquiries — and with 11,000+ trade businesses competing in Birmingham, capturing every call gives you a real competitive edge."
+    "answer": "Unlike generic call answering services, Katie is trained specifically for plumbers. She understands burst pipe emergencies, boiler breakdowns, blocked drains & leak enquiries, and with 11,000+ trade businesses competing in Birmingham, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -97,7 +97,7 @@ export default function ForPlumberBirminghamPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Birmingham has 11,000+ trade businesses competing for 680K households. 
                   With 4,100 missed calls every week across the city, 
-                  Katie ensures you capture every plumbing enquiry — burst pipe emergencies, boiler breakdowns, blocked drains & leak enquiries.
+                  Katie ensures you capture every plumbing enquiry: burst pipe emergencies, boiler breakdowns, blocked drains & leak enquiries.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -132,7 +132,7 @@ export default function ForPlumberBirminghamPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -211,7 +211,7 @@ export default function ForPlumberBirminghamPage() {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">While You're on the Job</h3>
                     <p className="text-[var(--v2-body)] leading-relaxed">
-                      You're under a sink fixing a waste pipe. Phone vibrates in your pocket. Can't answer — hands full of muck, water everywhere. Check missed call at 4pm. Customer already booked someone else.
+                      You're under a sink fixing a waste pipe. Phone vibrates in your pocket. Can't answer: hands full of muck, water everywhere. Check missed call at 4pm. Customer already booked someone else.
                     </p>
                   </div>
                 </div>
@@ -261,7 +261,7 @@ export default function ForPlumberBirminghamPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your Birmingham number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your Birmingham number. Katie picks up in under 2 rings with your branded greeting, 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",
@@ -309,10 +309,10 @@ export default function ForPlumberBirminghamPage() {
             </div>
             <div className="space-y-6 text-[var(--v2-body)] leading-relaxed">
               <p>
-                Birmingham&apos;s sprawling suburban layout and diverse housing stock create unique plumbing challenges across the city. In Edgbaston and Moseley, large Victorian and Edwardian homes with original plumbing systems require specialist knowledge for repairs and upgrades. Digbeth&apos;s industrial heritage means converted warehouse apartments with modern systems sit alongside older terraces in need of frequent maintenance. Meanwhile, Sutton Coldfield&apos;s suburban semis face seasonal pressure — cold snaps freeze outdoor pipes and push call volumes well beyond what a solo plumber can handle. With 9,500+ trade businesses competing across 680K households and 3,600 missed calls every week, the demand is relentless.
+                Birmingham&apos;s sprawling suburban layout and diverse housing stock create unique plumbing challenges across the city. In Edgbaston and Moseley, large Victorian and Edwardian homes with original plumbing systems require specialist knowledge for repairs and upgrades. Digbeth&apos;s industrial heritage means converted warehouse apartments with modern systems sit alongside older terraces in need of frequent maintenance. Meanwhile, Sutton Coldfield&apos;s suburban semis face seasonal pressure: cold snaps freeze outdoor pipes and push call volumes well beyond what a solo plumber can handle. With 9,500+ trade businesses competing across 680K households and 3,600 missed calls every week, the demand is relentless.
               </p>
               <p>
-                One factor that sets Birmingham apart is its extensive canal network, which runs through neighbourhoods like Digbeth and impacts basement properties directly. Plumbers here regularly deal with flooding and damp-related pipe issues that wouldn&apos;t occur in other cities. Combined with the city&apos;s cold winters — pipe freezes are a genuine annual crisis — Birmingham plumbers face a double threat of weather emergencies and infrastructure-age problems. Katie captures the urgency and location specifics, whether it&apos;s a burst pipe in a Moseley Victorian or basement flooding near the canal, making sure you don&apos;t lose a £280 average job to a competitor who simply picked up the phone.
+                One factor that sets Birmingham apart is its extensive canal network, which runs through neighbourhoods like Digbeth and impacts basement properties directly. Plumbers here regularly deal with flooding and damp-related pipe issues that wouldn&apos;t occur in other cities. Combined with the city&apos;s cold winters (pipe freezes are a genuine annual crisis), Birmingham plumbers face a double threat of weather emergencies and infrastructure-age problems. Katie captures the urgency and location specifics, whether it&apos;s a burst pipe in a Moseley Victorian or basement flooding near the canal, making sure you don&apos;t lose a £280 average job to a competitor who simply picked up the phone.
               </p>
             </div>
           </div>
@@ -334,10 +334,10 @@ export default function ForPlumberBirminghamPage() {
                 From Edgbaston and Moseley to Digbeth and Sutton Coldfield, Birmingham&apos;s plumbing trade faces a city in transition. Victorian villas in Handsworth and period homes in Kings Heath still rely on original plumbing that fails without warning, while the Big City Plan drives new-build developments across Digbeth and Smithfield. As the youngest city in Europe, Birmingham&apos;s 40% under-25 population creates constant demand for rental property maintenance.
               </p>
               <p>
-                Birmingham&apos;s inland position means colder winters than coastal cities — temperatures regularly drop below freezing in January and February, bursting pipes in poorly insulated 1930s semis across Kingstanding and Erdington. Summer thunderstorms cause flash flooding and drainage issues, particularly in the 35 miles of canal-side properties where basement flooding is a recurring problem. Post-war estates in Castle Vale and Bromford need responsive maintenance for aging pipework.
+                Birmingham&apos;s inland position means colder winters than coastal cities: temperatures regularly drop below freezing in January and February, bursting pipes in poorly insulated 1930s semis across Kingstanding and Erdington. Summer thunderstorms cause flash flooding and drainage issues, particularly in the 35 miles of canal-side properties where basement flooding is a recurring problem. Post-war estates in Castle Vale and Bromford need responsive maintenance for aging pipework.
               </p>
               <p>
-                With £10bn of regeneration investment, specialist trades are in constant demand — but customers won&apos;t wait. When a first-time buyer in Harborne discovers a leak during their survey, or a landlord in Selly Oak needs an emergency callout for a student property, Katie captures every detail, qualifies the job, and delivers it to your WhatsApp while you&apos;re still on your current fix.
+                With £10bn of regeneration investment, specialist trades are in constant demand, but customers won&apos;t wait. When a first-time buyer in Harborne discovers a leak during their survey, or a landlord in Selly Oak needs an emergency callout for a student property, Katie captures every detail, qualifies the job, and delivers it to your WhatsApp while you&apos;re still on your current fix.
               </p>
             </div>
           </div>

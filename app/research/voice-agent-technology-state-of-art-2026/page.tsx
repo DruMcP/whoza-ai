@@ -70,7 +70,7 @@ const breadcrumbItems = [
 
 const faqs = [
     { question: "What is the 200-millisecond barrier in voice agent technology?", answer: "Research published in PNAS by Stivers and colleagues established that humans hand off conversational turns in approximately 200ms. Traditional stitched voice AI pipelines (STT → LLM → TTS) produced 600ms-1.7s latency, which is conversationally broken. Modern end-to-end models like OpenAI's Realtime API achieve sub-200ms latency, crossing the human conversational threshold." },
-    { question: "How has speech synthesis crossed the uncanny valley?", answer: "CosyVoice v2 achieved a MOS (Mean Opinion Score) of 5.53 for naturalness, exceeding the typical human speech range of 4.5-5.0. In blind testing, 94% of callers believed they were speaking to a human receptionist rather than an AI system. Contemporary voice agents preserve prosodic information, emotional tone, and speaker characteristics." },
+    { question: "How has speech synthesis crossed the uncanny valley?", answer: "CosyVoice v2 achieved a MOS (Mean Opinion Score) of 5.53 for naturalness, exceeding the typical human speech range of 4.5 to 5.0. In blind testing, 94% of callers believed they were speaking to a human receptionist rather than an AI system. Contemporary voice agents preserve prosodic information, emotional tone, and speaker characteristics." },
     { question: "What is the global conversational AI market size?", answer: "The global conversational AI market reached USD 17.12 billion in 2026 and is projected to reach USD 42.51 billion by 2030 at a 25.5% CAGR. Gartner projects that 80% of customer service organisations will have adopted generative AI by end of 2026, and conversational AI will reduce labour costs by USD 80 billion annually." },
     { question: "What is the difference between stacked and end-to-end voice AI?", answer: "Stacked pipelines chain separate STT, LLM, and TTS components, each adding latency (total 600ms-1.7s) and compounding errors. End-to-end models like OpenAI's Realtime API process audio natively through a single neural network, reducing latency to under 200ms while maintaining conversational nuance including filler words, pauses, and emotional tone." }
 ]
@@ -90,7 +90,7 @@ export default function VoiceAgentTechnologyPage() {
             "@type": ["ScholarlyArticle", "Article"],
             "@id": "https://whoza.ai/research/voice-agent-technology-state-of-art-2026",
             headline:
-              "Voice Agent Technology: State of the Art, Technical Architecture, and Future Trajectory — 2026",
+              "Voice Agent Technology: State of the Art, Technical Architecture, and Future Trajectory, 2026",
             description:
               "Technical deep-dive into voice AI architecture examining end-to-end neural speech models, latency engineering below 200ms, speech synthesis quality benchmarks, barge-in handling, and the agentic AI future trajectory.",
             image: "https://whoza.ai/og-image.webp",
@@ -280,7 +280,7 @@ export default function VoiceAgentTechnologyPage() {
                 <div className="flex items-center gap-2">
                   <User className="w-4 h-4" />
                   <span>whoza.ai</span>
-                  <span className="text-[var(--v2-muted)]">— Research Team</span>
+                  <span className="text-[var(--v2-muted)]">Research Team</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
@@ -291,7 +291,7 @@ export default function VoiceAgentTechnologyPage() {
                 Last updated: <time dateTime="2026-06-06">2026-06-06</time>
               </div>
               <p className="text-lg text-[var(--v2-body)] max-w-3xl">
-                A technical deep-dive into the architecture powering modern voice AI — end-to-end neural models,
+                A technical deep-dive into the architecture powering modern voice AI: end-to-end neural models,
                 sub-200ms latency engineering, human-parity speech synthesis, and the agentic AI trajectory.
               </p>
             </div>
@@ -322,23 +322,23 @@ export default function VoiceAgentTechnologyPage() {
               <ul className="space-y-2 ml-4">
                 <li className="flex items-start gap-2">
                   <span className="text-[var(--v2-green)] mt-1">●</span>
-                  <span><strong className="text-[var(--v2-ink)]">USD 17.12 billion</strong> — global conversational AI market in 2026, projected to reach USD 42.51 billion by 2030 at 25.5% CAGR</span>
+                  <span><strong className="text-[var(--v2-ink)]">USD 17.12 billion</strong>: global conversational AI market in 2026, projected to reach USD 42.51 billion by 2030 at 25.5% CAGR</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[var(--v2-green)] mt-1">●</span>
-                  <span><strong className="text-[var(--v2-ink)]">&lt;200ms</strong> — voice-to-voice latency achieved by end-to-end models, crossing the human conversational threshold</span>
+                  <span><strong className="text-[var(--v2-ink)]">&lt;200ms</strong>: voice-to-voice latency achieved by end-to-end models, crossing the human conversational threshold</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[var(--v2-green)] mt-1">●</span>
-                  <span><strong className="text-[var(--v2-ink)]">MOS 5.53</strong> — CosyVoice v2 naturalness score, exceeding typical human speech range (4.5–5.0)</span>
+                  <span><strong className="text-[var(--v2-ink)]">MOS 5.53</strong>: CosyVoice v2 naturalness score, exceeding typical human speech range (4.5 to 5.0)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[var(--v2-green)] mt-1">●</span>
-                  <span><strong className="text-[var(--v2-ink)]">95%+</strong> — barge-in detection accuracy with sub-200ms stop latency now standard</span>
+                  <span><strong className="text-[var(--v2-ink)]">95%+</strong>: barge-in detection accuracy with sub-200ms stop latency now standard</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[var(--v2-green)] mt-1">●</span>
-                  <span><strong className="text-[var(--v2-ink)]">80%</strong> — of common customer service issues projected to be autonomously resolved by agentic AI by 2029</span>
+                  <span><strong className="text-[var(--v2-ink)]">80%</strong>: of common customer service issues projected to be autonomously resolved by agentic AI by 2029</span>
                 </li>
               </ul>
             </div>
@@ -354,7 +354,7 @@ export default function VoiceAgentTechnologyPage() {
                 Voice artificial intelligence has progressed from a laboratory curiosity to a production-grade enterprise technology in fewer than five years. The systems deployed in 2026 bear little resemblance to the rule-based interactive voice response (IVR) systems that preceded them, or even to the early concatenative text-to-speech engines of the late 2010s.
               </p>
               <p>
-                Contemporary voice agents are built on deep neural architectures that process, understand, and generate speech as a continuous signal rather than a sequence of discrete symbolic representations. Where previous-generation systems chained together separate speech-to-text (STT), natural language understanding (NLU), dialog management, and text-to-speech (TTS) components — each adding latency and compounding error rates — modern end-to-end models process audio directly through a single neural network.
+                Contemporary voice agents are built on deep neural architectures that process, understand, and generate speech as a continuous signal rather than a sequence of discrete symbolic representations. Where previous-generation systems chained together separate speech-to-text (STT), natural language understanding (NLU), dialog management, and text-to-speech (TTS) components, each adding latency and compounding error rates, modern end-to-end models process audio directly through a single neural network.
               </p>
               <p>
                 According to Gartner, 80% of customer service organisations will have adopted generative AI in some capacity by the end of 2026, and conversational AI implementations within contact centres will reduce labour costs by USD 80 billion annually. These projections reflect not merely incremental improvement but a fundamental restructuring of how organisations handle voice-based communication.
@@ -377,7 +377,7 @@ export default function VoiceAgentTechnologyPage() {
                 Traditional voice AI systems were assembled from discrete components sourced from different vendors: an STT engine (Google, AWS, or Deepgram) transcribed audio to text; a language model (OpenAI GPT, Anthropic Claude) processed the transcript; and a TTS engine (Google WaveNet, Amazon Polly, or ElevenLabs) synthesised the response. Each component added its own latency and error profile.
               </p>
               <p>
-                As Telnyx documented in their 2026 latency analysis, a typical stitched pipeline incurred: speech-to-text (100–300ms), LLM inference (350–1,000ms), text-to-speech (90–200ms), and network round-trips between vendors (50–200ms) — producing total end-to-end latency of 600ms to 1.7 seconds. Research published in the Proceedings of the National Academy of Sciences by Stivers and colleagues established that humans hand off conversational turns in approximately 200ms. A system requiring 1,700ms to respond is not merely slow; it is conversationally broken.
+                As Telnyx documented in their 2026 latency analysis, a typical stitched pipeline incurred: speech-to-text (100 to 300ms), LLM inference (350 to 1,000ms), text-to-speech (90 to 200ms), and network round-trips between vendors (50 to 200ms), producing total end-to-end latency of 600ms to 1.7 seconds. Research published in the Proceedings of the National Academy of Sciences by Stivers and colleagues established that humans hand off conversational turns in approximately 200ms. A system requiring 1,700ms to respond is not merely slow; it is conversationally broken.
               </p>
 
               <h3 className="text-xl font-semibold text-[var(--v2-ink)] mt-8 mb-4">Native Audio Processing</h3>
@@ -408,27 +408,27 @@ export default function VoiceAgentTechnologyPage() {
                 <tbody className="text-[var(--v2-body)]">
                   <tr className="border-b border-[var(--v2-line)]">
                     <td className="py-3 pr-4">Speech-to-Text</td>
-                    <td className="py-3 pr-4">100–300ms (external API)</td>
+                    <td className="py-3 pr-4">100 to 300ms (external API)</td>
                     <td className="py-3 pr-4 text-[var(--v2-green)]">Internal, ~50ms</td>
                   </tr>
                   <tr className="border-b border-[var(--v2-line)]">
                     <td className="py-3 pr-4">LLM Inference</td>
-                    <td className="py-3 pr-4">350–1,000ms</td>
+                    <td className="py-3 pr-4">350 to 1,000ms</td>
                     <td className="py-3 pr-4 text-[var(--v2-green)]">Single forward pass</td>
                   </tr>
                   <tr className="border-b border-[var(--v2-line)]">
                     <td className="py-3 pr-4">Text-to-Speech</td>
-                    <td className="py-3 pr-4">90–200ms (external API)</td>
+                    <td className="py-3 pr-4">90 to 200ms (external API)</td>
                     <td className="py-3 pr-4 text-[var(--v2-green)]">Native generation</td>
                   </tr>
                   <tr className="border-b border-[var(--v2-line)]">
                     <td className="py-3 pr-4">Network Hops</td>
-                    <td className="py-3 pr-4">50–200ms (vendor→vendor)</td>
+                    <td className="py-3 pr-4">50 to 200ms (vendor→vendor)</td>
                     <td className="py-3 pr-4 text-[var(--v2-green)]">Zero (single model)</td>
                   </tr>
                   <tr className="border-b border-[var(--v2-line)]">
                     <td className="py-3 pr-4 font-medium text-[var(--v2-ink)]">Total Latency</td>
-                    <td className="py-3 pr-4 font-medium text-red-600">600–1,700ms</td>
+                    <td className="py-3 pr-4 font-medium text-red-600">600 to 1,700ms</td>
                     <td className="py-3 pr-4 font-medium text-[var(--v2-green)]">&lt;200ms</td>
                   </tr>
                   <tr>
@@ -448,7 +448,7 @@ export default function VoiceAgentTechnologyPage() {
             </h2>
             <div className="prose max-w-none text-[var(--v2-body)] leading-relaxed space-y-4">
               <p>
-                Latency is the single most critical performance metric for voice AI systems. Research across linguistics, human-computer interaction, and telecommunications converges on a consistent finding: conversational agents must respond within approximately 200–500ms to feel natural, and exceeding 800ms produces a distinctly robotic, frustrating user experience.
+                Latency is the single most critical performance metric for voice AI systems. Research across linguistics, human-computer interaction, and telecommunications converges on a consistent finding: conversational agents must respond within approximately 200 to 500ms to feel natural, and exceeding 800ms produces a distinctly robotic, frustrating user experience.
               </p>
 
               <h3 className="text-xl font-semibold text-[var(--v2-ink)] mt-8 mb-4">The Human Baseline</h3>
@@ -456,7 +456,7 @@ export default function VoiceAgentTechnologyPage() {
                 The 200ms benchmark for human turn-taking originates from cross-cultural psycholinguistic research. Stivers et al., publishing in the Proceedings of the National Academy of Sciences, analysed turn-taking across ten languages and found an average inter-turn gap of approximately 200ms. A follow-up editorial from the Max Planck Institute confirmed this baseline, noting that humans produce even one-word replies in approximately 600ms, meaning that turn-taking coordination operates on a faster cycle than speech production itself.
               </p>
               <p>
-                The ITU-T G.114 recommendation for voice telephony specifies no more than 150ms of one-way transmission delay for good interactive quality — a standard that voice AI stacks must now satisfy across ASR, LLM inference, and TTS combined.
+                The ITU-T G.114 recommendation for voice telephony specifies no more than 150ms of one-way transmission delay for good interactive quality, a standard that voice AI stacks must now satisfy across ASR, LLM inference, and TTS combined.
               </p>
 
               <h3 className="text-xl font-semibold text-[var(--v2-ink)] mt-8 mb-4">Platform Latency Benchmarks (2026)</h3>
@@ -495,13 +495,13 @@ export default function VoiceAgentTechnologyPage() {
                   <tr className="border-b border-[var(--v2-line)]">
                     <td className="py-3 pr-4 font-medium">Vapi</td>
                     <td className="py-3 pr-4">API-first</td>
-                    <td className="py-3 pr-4 text-amber-700">400–600ms</td>
+                    <td className="py-3 pr-4 text-amber-700">400 to 600ms</td>
                     <td className="py-3 pr-4"><span className="px-2 py-0.5 bg-amber-50 text-amber-800 rounded text-xs">Silver</span></td>
                   </tr>
                   <tr className="border-b border-[var(--v2-line)]">
                     <td className="py-3 pr-4 font-medium">Synthflow</td>
                     <td className="py-3 pr-4">API-first</td>
-                    <td className="py-3 pr-4 text-amber-700">400–600ms</td>
+                    <td className="py-3 pr-4 text-amber-700">400 to 600ms</td>
                     <td className="py-3 pr-4"><span className="px-2 py-0.5 bg-amber-50 text-amber-800 rounded text-xs">Silver</span></td>
                   </tr>
                   <tr className="border-b border-[var(--v2-line)]">
@@ -522,7 +522,7 @@ export default function VoiceAgentTechnologyPage() {
 
             <div className="mt-8 prose max-w-none text-[var(--v2-body)] leading-relaxed">
               <p>
-                The benchmark data reveals a clear stratification. Co-located stacks that run all processing layers on a single network consistently achieve sub-200ms latency by eliminating inter-vendor network hops. API-first platforms operate in the 400–600ms range, sufficient for many applications but producing perceptible pauses. General-purpose AI platforms that prioritise flexibility over optimisation land at 800ms or above, creating the disjointed interactions that have historically frustrated callers.
+                The benchmark data reveals a clear stratification. Co-located stacks that run all processing layers on a single network consistently achieve sub-200ms latency by eliminating inter-vendor network hops. API-first platforms operate in the 400 to 600ms range, sufficient for many applications but producing perceptible pauses. General-purpose AI platforms that prioritise flexibility over optimisation land at 800ms or above, creating the disjointed interactions that have historically frustrated callers.
               </p>
 
               <h3 className="text-xl font-semibold text-[var(--v2-ink)] mt-8 mb-4">Latency Budget Optimisation</h3>
@@ -530,11 +530,11 @@ export default function VoiceAgentTechnologyPage() {
                 For developers building voice AI systems, the following latency budget represents the current state-of-the-art target:
               </p>
               <ul className="space-y-2 ml-4">
-                <li><strong className="text-[var(--v2-ink)]">Speech-to-Text:</strong> 80–200ms target, 350ms upper limit. Streaming ASR with early partial transcripts is essential.</li>
-                <li><strong className="text-[var(--v2-ink)]">LLM Time-to-First-Token:</strong> 100–200ms target, 400ms upper limit. Model quantisation and KV-cache warming reduce cold-start latency.</li>
-                <li><strong className="text-[var(--v2-ink)]">Text-to-Speech TTFB:</strong> 60–150ms target, 250ms upper limit. Streaming TTS with sentence-level pre-fetching enables audio playback before the full response is generated.</li>
-                <li><strong className="text-[var(--v2-ink)]">Network and Orchestration:</strong> 50–100ms target, 150ms upper limit. WebRTC for client-side, regional deployment for server-side.</li>
-                <li><strong className="text-[var(--v2-ink)]">Total Mouth-to-Ear Gap:</strong> 300–500ms for gold-standard systems, 800ms acceptable ceiling.</li>
+                <li><strong className="text-[var(--v2-ink)]">Speech-to-Text:</strong> 80 to 200ms target, 350ms upper limit. Streaming ASR with early partial transcripts is essential.</li>
+                <li><strong className="text-[var(--v2-ink)]">LLM Time-to-First-Token:</strong> 100 to 200ms target, 400ms upper limit. Model quantisation and KV-cache warming reduce cold-start latency.</li>
+                <li><strong className="text-[var(--v2-ink)]">Text-to-Speech TTFB:</strong> 60 to 150ms target, 250ms upper limit. Streaming TTS with sentence-level pre-fetching enables audio playback before the full response is generated.</li>
+                <li><strong className="text-[var(--v2-ink)]">Network and Orchestration:</strong> 50 to 100ms target, 150ms upper limit. WebRTC for client-side, regional deployment for server-side.</li>
+                <li><strong className="text-[var(--v2-ink)]">Total Mouth-to-Ear Gap:</strong> 300 to 500ms for gold-standard systems, 800ms acceptable ceiling.</li>
               </ul>
             </div>
           </section>
@@ -546,7 +546,7 @@ export default function VoiceAgentTechnologyPage() {
             </h2>
             <div className="prose max-w-none text-[var(--v2-body)] leading-relaxed space-y-4">
               <p>
-                The ability to handle interruptions naturally is one of the clearest differentiators between modern voice agents and their robotic predecessors. Barge-in — the capability that allows a caller to interrupt an AI agent mid-utterance — requires precise coordination across multiple signal processing layers.
+                The ability to handle interruptions naturally is one of the clearest differentiators between modern voice agents and their robotic predecessors. Barge-in, the capability that allows a caller to interrupt an AI agent mid-utterance, requires precise coordination across multiple signal processing layers.
               </p>
 
               <h3 className="text-xl font-semibold text-[var(--v2-ink)] mt-8 mb-4">Technical Architecture</h3>
@@ -554,13 +554,13 @@ export default function VoiceAgentTechnologyPage() {
                 Barge-in handling depends on four integrated components, each with strict latency requirements:
               </p>
               <ul className="space-y-2 ml-4">
-                <li><strong className="text-[var(--v2-ink)]">Voice Activity Detection (VAD):</strong> Continuously analyses inbound audio to detect human speech. Modern systems use neural VAD (Silero VAD) achieving 85–100ms detection latency with 95%+ accuracy.</li>
+                <li><strong className="text-[var(--v2-ink)]">Voice Activity Detection (VAD):</strong> Continuously analyses inbound audio to detect human speech. Modern systems use neural VAD (Silero VAD) achieving 85 to 100ms detection latency with 95%+ accuracy.</li>
                 <li><strong className="text-[var(--v2-ink)]">Acoustic Echo Cancellation (AEC):</strong> Removes the agent's own outbound audio from the inbound signal to prevent false triggering.</li>
                 <li><strong className="text-[var(--v2-ink)]">TTS Cancellation:</strong> The system must stop playback within 200ms of detecting a barge-in event. Sub-200ms stop latency is the threshold for natural feel.</li>
                 <li><strong className="text-[var(--v2-ink)]">End-of-Turn Detection:</strong> Determines when the caller has finished speaking, analysing pauses, speech timing, and sentence patterns.</li>
               </ul>
               <p>
-                A 2025 case study at a major telecommunications provider demonstrated the business impact: post-deployment, barge-in detection accuracy reached 95%, interruption handling time decreased by 40%, average call duration fell by 25%, and customer satisfaction scores increased by 15% — with a projected ROI of 200% within the first year.
+                A 2025 case study at a major telecommunications provider demonstrated the business impact: post-deployment, barge-in detection accuracy reached 95%, interruption handling time decreased by 40%, average call duration fell by 25%, and customer satisfaction scores increased by 15%, with a projected ROI of 200% within the first year.
               </p>
 
               <h3 className="text-xl font-semibold text-[var(--v2-ink)] mt-8 mb-4">The User Experience Imperative</h3>
@@ -582,7 +582,7 @@ export default function VoiceAgentTechnologyPage() {
 
               <h3 className="text-xl font-semibold text-[var(--v2-ink)] mt-8 mb-4">Quality Benchmarks and MOS Scores</h3>
               <p>
-                Mean Opinion Score (MOS) is the standard metric for evaluating speech naturalness, with human speech typically scoring 4.5–5.0 on a 5-point scale. The TTS landscape in 2025–2026 has seen multiple systems approach or exceed this threshold.
+                Mean Opinion Score (MOS) is the standard metric for evaluating speech naturalness, with human speech typically scoring 4.5 to 5.0 on a 5-point scale. The TTS landscape in 2025 to 2026 has seen multiple systems approach or exceed this threshold.
               </p>
             </div>
 
@@ -605,35 +605,35 @@ export default function VoiceAgentTechnologyPage() {
                   <tr className="border-b border-[var(--v2-line)]">
                     <td className="py-3 pr-4 font-medium">CosyVoice v2</td>
                     <td className="py-3 pr-4 text-[var(--v2-green)] font-bold">5.53</td>
-                    <td className="py-3 pr-4">—</td>
+                    <td className="py-3 pr-4">N/A</td>
                     <td className="py-3 pr-4">Apache 2.0</td>
                     <td className="py-3 pr-4">Multilingual, emotion control</td>
                   </tr>
                   <tr className="border-b border-[var(--v2-line)]">
                     <td className="py-3 pr-4 font-medium">F5-TTS</td>
                     <td className="py-3 pr-4">5.1+</td>
-                    <td className="py-3 pr-4">—</td>
+                    <td className="py-3 pr-4">N/A</td>
                     <td className="py-3 pr-4">Open source</td>
                     <td className="py-3 pr-4">Flow-matching, zero-shot cloning</td>
                   </tr>
                   <tr className="border-b border-[var(--v2-line)]">
                     <td className="py-3 pr-4 font-medium">Higgs Audio V2</td>
                     <td className="py-3 pr-4">4.9+</td>
-                    <td className="py-3 pr-4">—</td>
+                    <td className="py-3 pr-4">N/A</td>
                     <td className="py-3 pr-4">Open source</td>
                     <td className="py-3 pr-4">Emotion expression, dialogue realism</td>
                   </tr>
                   <tr className="border-b border-[var(--v2-line)]">
                     <td className="py-3 pr-4 font-medium">Kokoro-82M</td>
                     <td className="py-3 pr-4">4.5+</td>
-                    <td className="py-3 pr-4">—</td>
+                    <td className="py-3 pr-4">N/A</td>
                     <td className="py-3 pr-4">Open source</td>
                     <td className="py-3 pr-4">Sub-0.3s processing, fastest TTS</td>
                   </tr>
                   <tr>
                     <td className="py-3 pr-4 font-medium">ElevenLabs Turbo</td>
                     <td className="py-3 pr-4">4.8+</td>
-                    <td className="py-3 pr-4">—</td>
+                    <td className="py-3 pr-4">N/A</td>
                     <td className="py-3 pr-4">Commercial</td>
                     <td className="py-3 pr-4">28 languages, integrated agent builder</td>
                   </tr>
@@ -822,7 +822,7 @@ export default function VoiceAgentTechnologyPage() {
                       AI Phone Technology Guide for UK Trades
                     </div>
                     <div className="text-sm text-[var(--v2-muted)]">
-                      How AI voice agents actually work — NLP, speech synthesis, intent recognition, and the future of AI phone technology.
+                      How AI voice agents actually work: NLP, speech synthesis, intent recognition, and the future of AI phone technology.
                     </div>
                   </div>
                 </div>
@@ -861,8 +861,8 @@ export default function VoiceAgentTechnologyPage() {
               <li>GrowwStacks (2025). 'How to Build Conversational AI Voice Agents with ElevenLabs.'</li>
               <li>HubSpot (2025). 'State of Customer Service Report.'</li>
               <li>IDC (2025). 'AI ROI Study 2025.'</li>
-              <li>Juniper Research (2026). 'Conversational AI Market Report 2026-2030.'</li>
-              <li>MarketIntelo (2026). 'Enterprise Voice AI Agents Market Research Report 2025-2034.'</li>
+              <li>Juniper Research (2026). 'Conversational AI Market Report 2026 to 2030.'</li>
+              <li>MarketIntelo (2026). 'Enterprise Voice AI Agents Market Research Report 2025 to 2034.'</li>
               <li>McKinsey (2025). 'Consumer Pulse Survey: AI Preferences by Generation.'</li>
               <li>Meta (2025). 'Q4 2025 Investor Relations: WhatsApp Business Metrics.'</li>
               <li>Microsoft (2026). 'Use the GPT Realtime API for Speech and Audio.' Microsoft Learn.</li>
@@ -879,7 +879,7 @@ export default function VoiceAgentTechnologyPage() {
               <li>Retell AI (2026). 'Sub-Second Latency Showdown: Voice Assistant Benchmarks.'</li>
               <li>Salesforce (2025). 'State of Service Report.'</li>
               <li>Sparkco AI (2025). 'Master Voice Agent Barge-In Detection & Handling.'</li>
-              <li>Stivers, T., et al. (2009). 'Universals and Cultural Variation in Turn-Taking in Conversation.' PNAS, 106(26), 10587-10592.</li>
+              <li>Stivers, T., et al. (2009). 'Universals and Cultural Variation in Turn-Taking in Conversation.' PNAS, 106(26), 10587 to 10592.</li>
               <li>Telnyx (2026). 'Voice AI Agents Compared on Latency in 2026.'</li>
               <li>Wissen Research (2025). 'Conversational AI Market Size, Trends, and Forecast Report.'</li>
               <li>Zendesk (2026). 'CX Trends Report 2026.'</li>
@@ -892,7 +892,7 @@ export default function VoiceAgentTechnologyPage() {
               See Voice AI in Action for Your Trade Business
             </h3>
             <p className="text-[var(--v2-body)] mb-6 max-w-2xl mx-auto">
-              whoza.ai builds on the state-of-the-art voice AI architecture described in this report — end-to-end neural models, sub-200ms latency, human-parity speech synthesis, and robust interruption handling — specifically optimised for UK trade businesses.
+              whoza.ai builds on the state-of-the-art voice AI architecture described in this report (end-to-end neural models, sub-200ms latency, human-parity speech synthesis, and robust interruption handling), specifically optimised for UK trade businesses.
             </p>
             <a
               href="/"
@@ -919,7 +919,7 @@ export default function VoiceAgentTechnologyPage() {
       </div>
       <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
         <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-3">How has speech synthesis crossed the uncanny valley?</h3>
-        <p className="text-[var(--v2-body)] leading-relaxed">CosyVoice v2 achieved a MOS (Mean Opinion Score) of 5.53 for naturalness, exceeding the typical human speech range of 4.5-5.0. In blind testing, 94% of callers believed they were speaking to a human receptionist rather than an AI system. Contemporary voice agents preserve prosodic information, emotional tone, and speaker characteristics.</p>
+        <p className="text-[var(--v2-body)] leading-relaxed">CosyVoice v2 achieved a MOS (Mean Opinion Score) of 5.53 for naturalness, exceeding the typical human speech range of 4.5 to 5.0. In blind testing, 94% of callers believed they were speaking to a human receptionist rather than an AI system. Contemporary voice agents preserve prosodic information, emotional tone, and speaker characteristics.</p>
       </div>
       <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
         <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-3">What is the global conversational AI market size?</h3>

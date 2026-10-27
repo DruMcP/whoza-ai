@@ -271,7 +271,7 @@ export default function MissedCallCostCalculatorPage() {
                 <h3 className="text-xl font-bold text-slate-900 mb-2">AI call handling pays for itself</h3>
                 <p className="text-slate-700">
                   whoza.ai costs <strong>£59/month</strong>. If it recovers just 1 extra job per month (worth £280),
-                  you're already up £221. Most trades recover 2–5 additional jobs monthly — worth £560–£1,400 in
+                  you're already up £221. Most trades recover 2 to 5 additional jobs monthly, worth £560 to £1,400 in
                   extra revenue.
                 </p>
               </div>
@@ -330,7 +330,7 @@ export default function MissedCallCostCalculatorPage() {
           <h2 className="text-3xl font-bold text-slate-900 mb-4">Stop losing jobs to missed calls</h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
             whoza.ai answers every call, qualifies leads, and delivers them to your WhatsApp. Start your 7-day free
-            trial today — no credit card required.
+            trial today, no credit card required.
           </p>
           <a
             href="/pricing"

@@ -36,11 +36,11 @@ export const metadata: Metadata = {
 }
 
 const comparisonData = [
-  { feature: "Monthly Price", whoza: "£59", competitor: "£150–£400", winner: "whoza", note: "Whoza is 62% cheaper entry" },
+  { feature: "Monthly Price", whoza: "£59", competitor: "£150 to £400", winner: "whoza", note: "Whoza is 62% cheaper entry" },
   { feature: "Price per Call", whoza: "£4.50/job booked", competitor: "Included in monthly", winner: "draw", note: "Different pricing models" },
   { feature: "Answerer Type", whoza: "AI voice agent", competitor: "Human receptionists", winner: "draw", note: "Different approaches" },
   { feature: "Availability", whoza: "24/7, unlimited calls", competitor: "24/7, within package", winner: "whoza", note: "AI never sleeps or takes breaks" },
-  { feature: "Setup Time", whoza: "30 minutes", competitor: "2–5 days", winner: "whoza", note: "whoze much faster" },
+  { feature: "Setup Time", whoza: "30 minutes", competitor: "2 to 5 days", winner: "whoza", note: "whoze much faster" },
   { feature: "WhatsApp Delivery", whoza: "✓ Native", competitor: "✗ Email/portal", winner: "whoza", note: "whoze better for mobile" },
   { feature: "Review Collection", whoza: "✓ Built-in", competitor: "✗ Not included", winner: "whoza", note: "whoze adds value" },
   { feature: "Competitor Analysis", whoza: "✓ Monthly reports", competitor: "✗ Not available", winner: "whoza", note: "whoze exclusive" },
@@ -56,7 +56,7 @@ export const revalidate = 3600
 
 const faqs = [
     { question: "How much cheaper is whoza.ai than Moneypenny?", answer: "whoza.ai is significantly cheaper. whoza.ai's Starter plan is £59/month versus Moneypenny's Small Business plan at £175/month. whoza.ai's Growth plan is £125/month versus Moneypenny's Business plan at £325/month. whoza.ai's Pro plan is £249/month versus Moneypenny's Corporate plan at £595/month." },
-    { question: "Is AI call answering better than human receptionists for trades?", answer: "AI call answering offers advantages for trade businesses: 24/7 coverage, unlimited simultaneous calls, instant response, and 94% cost reduction versus human staff. Human receptionists provide personal warmth but cannot answer when the tradesperson is on a job site, under a sink, or on a ladder. For trades where missed calls cost £50,000-£80,000 annually, AI coverage eliminates the structural problem." },
+    { question: "Is AI call answering better than human receptionists for trades?", answer: "AI call answering offers advantages for trade businesses: 24/7 coverage, unlimited simultaneous calls, instant response, and 94% cost reduction versus human staff. Human receptionists provide personal warmth but cannot answer when the tradesperson is on a job site, under a sink, or on a ladder. For trades where missed calls cost £50,000 to £80,000 annually, AI coverage eliminates the structural problem." },
     { question: "What do you actually get for your money with whoza.ai vs Moneypenny?", answer: "whoza.ai includes AI call answering, WhatsApp delivery, spam filtering, review collection (Claire), competitor analysis (Rex), and calendar integration. Moneypenny provides human receptionists with call answering, message taking, and transfer services. whoza.ai adds growth tools and automation; Moneypenny adds human rapport and complex enquiry handling." },
     { question: "Should you start with a free trial before committing?", answer: "Both services offer trials. whoza.ai offers a 7-day free trial with no credit card required and no contract. Moneypenny typically requires a consultation and setup call before pricing is confirmed. Starting with a free trial allows you to test call quality, feature fit, and integration with your workflow before any financial commitment." }
 ]
@@ -85,7 +85,7 @@ export default function VsMoneypennyPage() {
 
               <div className="inline-flex items-center gap-2 bg-amber-50 text-amber-700 px-3 py-1 rounded-full text-xs font-medium mb-6">
                 <Star className="w-3 h-3" />
-                Comparison — August 2026
+                Comparison, August 2026
               </div>
 
               {/* Publisher Disclosure */}
@@ -102,7 +102,7 @@ export default function VsMoneypennyPage() {
               </h1>
 
               <p className="text-lg text-[var(--v2-body)] max-w-2xl mb-8">
-                Moneypenny is the UK's best-known call answering service — 25+ years, thousands of clients, 
+                Moneypenny is the UK's best-known call answering service: 25+ years, thousands of clients, 
                 human receptionists. whoza.ai is the new AI alternative. Here's the honest breakdown of 
                 where each wins, where each loses, and which makes sense for your trade business.
               </p>
@@ -129,11 +129,11 @@ export default function VsMoneypennyPage() {
                   </h3>
                   <ul className="space-y-2 text-white/70 text-sm">
                     <li>• You want to save £1,000+ per year</li>
-                    <li>• You need instant setup (not 2-5 days)</li>
+                    <li>• You need instant setup (not 2 to 5 days)</li>
                     <li>• You want WhatsApp delivery</li>
                     <li>• You want review collection included</li>
                     <li>• You hate long-term contracts</li>
-                    <li>• You're a sole trader or small team (1-5 people)</li>
+                    <li>• You're a sole trader or small team (1 to 5 people)</li>
                   </ul>
                 </div>
                 <div>
@@ -192,8 +192,8 @@ export default function VsMoneypennyPage() {
               </div>
               <div className="mt-8 pt-6 border-t border-[var(--v2-line)] text-center">
                 <p className="text-[var(--v2-body)]">
-                  <strong className="text-[var(--v2-green)]">Annual saving with whoza.ai: £1,092+</strong> — based on Moneypenny's entry-level pricing.
-                  For their mid-tier packages (£250-400/month), the saving increases to £2,300-4,100/year.
+                  <strong className="text-[var(--v2-green)]">Annual saving with whoza.ai: £1,092+</strong>, based on Moneypenny's entry-level pricing.
+                  For their mid-tier packages (£250 to £400/month), the saving increases to £2,300 to £4,100/year.
                 </p>
                 <p className="text-[var(--v2-muted)] text-sm mt-2">
                   Source: Moneypenny pricing page, accessed August 2026. Prices approximate; exact quotes vary by call volume.
@@ -245,13 +245,13 @@ export default function VsMoneypennyPage() {
               </h2>
               <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-                  The AI vs human debate isn't ideological — it's mathematical. A receptionist earns £18,000 starter, £22,000 experienced (National Careers Service, gov.uk). With employer National Insurance and pension contributions the annual cost is roughly £20,000–£25,000. Even a part-time shared service like Moneypenny starts at £150/month (£1,800/year). AI call handling at £59/month (£708/year) costs significantly less. This comparison is on call-handling cost alone; a receptionist works 38–40 hours a week and handles tasks beyond answering calls.
+                  The AI vs human debate isn't ideological. It's mathematical. A receptionist earns £18,000 starter, £22,000 experienced (National Careers Service, gov.uk). With employer National Insurance and pension contributions the annual cost is roughly £20,000 to £25,000. Even a part-time shared service like Moneypenny starts at £150/month (£1,800/year). AI call handling at £59/month (£708/year) costs significantly less. This comparison is on call-handling cost alone; a receptionist works 38 to 40 hours a week and handles tasks beyond answering calls.
                 </p>
                 <p className="text-[var(--v2-body)] leading-relaxed mb-4">
                   But cost isn't everything. Moneypenny's humans excel at empathy, relationship-building, 
                   and handling complex edge cases. If you're a commercial contractor bidding £50,000+ projects, 
                   a human receptionist who knows your clients by name is worth the premium. If you're a plumber 
-                  or electrician answering "my boiler's broken" calls, AI is more than sufficient — and the 
+                  or electrician answering "my boiler's broken" calls, AI is more than sufficient, and the 
                   savings fund a new van, tools, or marketing.
                 </p>
                 <p className="text-[var(--v2-body)] leading-relaxed">
@@ -292,7 +292,7 @@ export default function VsMoneypennyPage() {
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                "Comparison — August 2026",
+                "Comparison, August 2026",
                 "Pricing verified from competitor websites",
                 "Moneypenny: 25+ year UK brand",
                 "whoze.ai: AI-native, founded 2025",
@@ -309,7 +309,7 @@ export default function VsMoneypennyPage() {
             <h2 className="text-3xl font-bold mb-4">Should you start with a free trial before committing?</h2>
             <p className="text-lg text-[var(--v2-body)] mb-8 max-w-2xl mx-auto">
               whoza.ai's 7-day trial costs nothing. Moneypenny offers consultations. 
-              Try whoza.ai for a week — if the AI doesn't work for your specific business, 
+              Try whoza.ai for a week. If the AI doesn't work for your specific business, 
               you've lost nothing and learned something.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -354,7 +354,7 @@ export default function VsMoneypennyPage() {
       </div>
       <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
         <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-3">Is AI call answering better than human receptionists for trades?</h3>
-        <p className="text-[var(--v2-body)] leading-relaxed">AI call answering offers advantages for trade businesses: 24/7 coverage, unlimited simultaneous calls, instant response, and 94% cost reduction versus human staff. Human receptionists provide personal warmth but cannot answer when the tradesperson is on a job site, under a sink, or on a ladder. For trades where missed calls cost £50,000-£80,000 annually, AI coverage eliminates the structural problem.</p>
+        <p className="text-[var(--v2-body)] leading-relaxed">AI call answering offers advantages for trade businesses: 24/7 coverage, unlimited simultaneous calls, instant response, and 94% cost reduction versus human staff. Human receptionists provide personal warmth but cannot answer when the tradesperson is on a job site, under a sink, or on a ladder. For trades where missed calls cost £50,000 to £80,000 annually, AI coverage eliminates the structural problem.</p>
       </div>
       <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
         <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-3">What do you actually get for your money with whoza.ai vs Moneypenny?</h3>

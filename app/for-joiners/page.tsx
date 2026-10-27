@@ -27,13 +27,13 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/for-joiners",
     siteName: "Whoza.ai",
-    title: "AI Call Answering for Joiners UK — Never Miss a Job",
+    title: "AI Call Answering for Joiners UK | Never Miss a Job",
     description: "AI call answering for UK joiners. Katie captures 24/7 enquiries for kitchens, staircases and fitted furniture. WhatsApp alerts instantly. Plans from £59.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Joiners" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Joiners" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Call Answering for Joiners UK — Never Miss a Job",
+    title: "AI Call Answering for Joiners UK | Never Miss a Job",
     description: "AI call answering for UK joiners. Katie captures 24/7 enquiries for kitchens, staircases and fitted furniture. WhatsApp alerts instantly. Plans from £59.",
     images: ["https://whoza.ai/og-image.webp"],
   },
@@ -54,7 +54,7 @@ const faqs = [
   },
   {
     question: "Can Katie handle bespoke furniture enquiries?",
-    answer: "Absolutely. Katie is trained to handle detailed joinery enquiries including bespoke kitchens, fitted wardrobes, staircases, doors, and cabinets. She captures project type, materials preference, budget range, timeline, and dimensions — giving you a full brief before you even call back. Customers describing complex projects are guided through the key details Katie needs to collect.",
+    answer: "Absolutely. Katie is trained to handle detailed joinery enquiries including bespoke kitchens, fitted wardrobes, staircases, doors, and cabinets. She captures project type, materials preference, budget range, timeline, and dimensions, giving you a full brief before you even call back. Customers describing complex projects are guided through the key details Katie needs to collect.",
   },
   {
     question: "What information does Katie collect from joinery customers?",
@@ -62,11 +62,11 @@ const faqs = [
   },
   {
     question: "Will customers know they're talking to AI?",
-    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience — they just want their joinery project discussed promptly and professionally.",
+    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience. They just want their joinery project discussed promptly and professionally.",
   },
   {
     question: "Does it work with my existing business phone number?",
-    answer: "Yes. You simply set up call forwarding from your existing joinery business number to your whoza.ai number. Your customers dial the same number they've always used — Katie just answers when you can't. Setup takes under 10 minutes.",
+    answer: "Yes. You simply set up call forwarding from your existing joinery business number to your whoza.ai number. Your customers dial the same number they've always used. Katie just answers when you can't. Setup takes under 10 minutes.",
   },
   {
     question: "How quickly can I get set up?",
@@ -74,11 +74,11 @@ const faqs = [
   },
   {
     question: "Can Katie handle commercial joinery contracts?",
-    answer: "Yes. Katie identifies commercial enquiries from builders, developers, architects, and interior designers. She captures project scale, contract value, timeline, and decision-maker details. Commercial enquiries are tagged as priority in your WhatsApp alert so you can follow up fast — these are often your highest-value jobs.",
+    answer: "Yes. Katie identifies commercial enquiries from builders, developers, architects, and interior designers. She captures project scale, contract value, timeline, and decision-maker details. Commercial enquiries are tagged as priority in your WhatsApp alert so you can follow up fast. These are often your highest-value jobs.",
   },
   {
     question: "What happens if Katie can't handle a complex enquiry?",
-    answer: "Katie is trained to recognise when a call needs human attention. For complex bespoke projects or unusual situations, she takes a detailed message and flags it for your immediate callback. You receive the full context in WhatsApp so you can call back prepared with all the details — no more 'can you tell me about your project again' conversations.",
+    answer: "Katie is trained to recognise when a call needs human attention. For complex bespoke projects or unusual situations, she takes a detailed message and flags it for your immediate callback. You receive the full context in WhatsApp so you can call back prepared with all the details, no more 'can you tell me about your project again' conversations.",
   },
 ]
 
@@ -88,7 +88,7 @@ export default function ForJoinersPage() {
   return (
     <>
       <VideoSchema
-        name="Whoza.ai for Joiners — AI Call Answering Demo"
+        name="Whoza.ai for Joiners: AI Call Answering Demo"
         description="Watch Katie capture a missed joinery enquiry in under 60 seconds. Bespoke kitchen project details collected, sent to WhatsApp, and ready for quoting while the carpenter is still on site."
         embedUrl="https://whoza.ai/for-joiners"
       />
@@ -135,10 +135,10 @@ export default function ForJoinersPage() {
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   AI Call Answering for{" "}
                   <span className="text-[#6ee7b7]">Joiners</span>{" "}
-                  UK — Never Miss a Job
+                  UK: Never Miss a Job
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
-                  Bespoke kitchens, fitted wardrobes, staircases, doors — customers call when they want quality woodwork. Katie answers every call, captures the project details, and sends them to your WhatsApp.
+                  Bespoke kitchens, fitted wardrobes, staircases, doors: customers call when they want quality woodwork. Katie answers every call, captures the project details, and sends them to your WhatsApp.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -173,7 +173,7 @@ export default function ForJoinersPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -266,7 +266,7 @@ export default function ForJoinersPage() {
                 The average UK joiner misses 4 detailed calls per week = <strong>£38,400</strong> in lost revenue per year
               </p>
               <p className="text-[var(--v2-body)] text-sm mt-1">
-                Source: UK SME Communications Survey 2025 — based on £8,000 avg project value, 30% conversion rate
+                Source: UK SME Communications Survey 2025, based on £8,000 avg project value, 30% conversion rate
               </p>
             </div>
             <div className="mt-8 text-center">
@@ -297,7 +297,7 @@ export default function ForJoinersPage() {
                   step: "01",
                   icon: Phone,
                   title: "Customer Calls About a Project",
-                  description: "Customer calls your number about a joinery or carpentry project — a bespoke kitchen, fitted wardrobe, staircase, or door replacement. Katie picks up in under 2 rings with your branded greeting.",
+                  description: "Customer calls your number about a joinery or carpentry project: a bespoke kitchen, fitted wardrobe, staircase, or door replacement. Katie picks up in under 2 rings with your branded greeting.",
                 },
                 {
                   step: "02",
@@ -360,7 +360,7 @@ export default function ForJoinersPage() {
               Joiner Success Story
             </div>
             <blockquote className="text-2xl sm:text-3xl font-medium leading-relaxed text-[var(--v2-ink)] mb-8">
-              "I used to miss 3-4 project enquiries a week because I was in the workshop with machines running. In 6 weeks using whoza.ai, I captured 14 jobs I would have missed, recovering <span className="text-[var(--v2-green)] font-bold">£11,200</span> in revenue. It cost me £59 for the month."
+              "I used to miss 3 to 4 project enquiries a week because I was in the workshop with machines running. In 6 weeks using whoza.ai, I captured 14 jobs I would have missed, recovering <span className="text-[var(--v2-green)] font-bold">£11,200</span> in revenue. It cost me £59 for the month."
             </blockquote>
             <div className="flex items-center justify-center gap-4">
               <div className="w-14 h-14 rounded-full bg-[var(--v2-mint)] flex items-center justify-center text-[var(--v2-green)] font-bold text-xl">

@@ -6,7 +6,7 @@ import { ArrowRight, Sparkles } from "lucide-react"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "Whoza.ai vs IONOS — AI Call Answering Comparison",
+  title: "Whoza.ai vs IONOS: AI Call Answering Comparison",
   description: "Compare whoza.ai vs IONOS for UK trades. AI call answering from £59/month with 24/7 answering, WhatsApp delivery, and instant setup. See the full comparison.",
   robots: {
     index: false,
@@ -48,7 +48,7 @@ export default function WhozaVsIonosPage() {
             </li>
             <li className="flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-[var(--v2-green)]" />
-              No contract — cancel anytime
+              No contract, cancel anytime
             </li>
             <li className="flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-[var(--v2-green)]" />

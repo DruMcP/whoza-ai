@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "AI Call Answering for Electricians in London | whoza.ai",
     description: "Stop losing electrician jobs to missed calls in London. Katie answers 24/7, captures emergency and EICR enquiries via WhatsApp. Plans from £59/month.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Electricians in London" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Electricians in London" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     "question": "Does it work with my existing London business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing London business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "answer": "Yes. You simply set up call forwarding from your existing London business number to your whoza.ai number. Your customers dial the same number they've always used. Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
     "question": "How quickly can I get set up as an electrician in London?",
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     "question": "What makes whoza.ai different for electricians in London?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for electricians. She understands EICR enquiries, emergency faults, consumer unit upgrades & power outages — and with 32,000+ trade businesses competing in London, capturing every call gives you a real competitive edge."
+    "answer": "Unlike generic call answering services, Katie is trained specifically for electricians. She understands EICR enquiries, emergency faults, consumer unit upgrades & power outages, and with 32,000+ trade businesses competing in London, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -97,7 +97,7 @@ export default function ForElectricianLondonPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   London has 32,000+ trade businesses competing for 1.2M households. 
                   With 8,200 missed calls every week across the city, 
-                  Katie ensures you capture every electrical enquiry — EICR enquiries, emergency faults, consumer unit upgrades & power outages.
+                  Katie ensures you capture every electrical enquiry: EICR enquiries, emergency faults, consumer unit upgrades & power outages.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -132,7 +132,7 @@ export default function ForElectricianLondonPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -199,7 +199,7 @@ export default function ForElectricianLondonPage() {
                 The Real Cost of Missed Calls for Electricians in London
               </h2>
               <p className="v2-lead max-w-2xl mx-auto">
-                High competition — 15+ trade businesses per postcode in central London. Emergency calls peak during commute hours when you're on the road. Diverse housing stock from Victorian terraces to new-build apartments. Tenant vs landlord enquiries need different handling.
+                High competition: 15+ trade businesses per postcode in central London. Emergency calls peak during commute hours when you're on the road. Diverse housing stock from Victorian terraces to new-build apartments. Tenant vs landlord enquiries need different handling.
               </p>
             </div>
             <div className="space-y-8">
@@ -261,7 +261,7 @@ export default function ForElectricianLondonPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your London number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your London number. Katie picks up in under 2 rings with your branded greeting, 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",
@@ -309,10 +309,10 @@ export default function ForElectricianLondonPage() {
             </div>
             <div className="space-y-6 text-[var(--v2-body)] leading-relaxed">
               <p>
-                London&apos;s electrical market is driven by regulatory pressure and rapid technological change. In Islington and Camden, landlords face strict EICR requirements — electrical installations must be inspected every 5 years for tenancies, and letting agents demand certificates before marketing properties. Canary Wharf&apos;s commercial sector generates calls for three-phase upgrades and EV charger installations in multi-storey car parks, while Croydon&apos;s suburban mix of 1930s semis and new developments creates steady demand for consumer unit replacements and rewiring. With 32,000+ trade businesses competing across 1.2M households and 8,200 missed calls weekly, London&apos;s electricians operate in the UK&apos;s most competitive trade market.
+                London&apos;s electrical market is driven by regulatory pressure and rapid technological change. In Islington and Camden, landlords face strict EICR requirements: electrical installations must be inspected every 5 years for tenancies, and letting agents demand certificates before marketing properties. Canary Wharf&apos;s commercial sector generates calls for three-phase upgrades and EV charger installations in multi-storey car parks, while Croydon&apos;s suburban mix of 1930s semis and new developments creates steady demand for consumer unit replacements and rewiring. With 32,000+ trade businesses competing across 1.2M households and 8,200 missed calls weekly, London&apos;s electricians operate in the UK&apos;s most competitive trade market.
               </p>
               <p>
-                The EICR deadline pressure is particularly acute. Since 2020, private landlords in London must have valid EICR certificates, and the city&apos;s high tenant turnover means these inspections come around frequently. Letting agents in Islington and Camden often call multiple electricians simultaneously to find the fastest availability — the first to answer gets the job and potentially a recurring contract across a portfolio of properties. Meanwhile, Canary Wharf&apos;s commercial clients need specialists who understand three-phase systems and EV infrastructure. Katie captures whether a call is a domestic EICR, a commercial three-phase job, or an emergency fault, delivering the details to your WhatsApp in 3 seconds so you never lose a £340 average job.
+                The EICR deadline pressure is particularly acute. Since 2020, private landlords in London must have valid EICR certificates, and the city&apos;s high tenant turnover means these inspections come around frequently. Letting agents in Islington and Camden often call multiple electricians simultaneously to find the fastest availability: the first to answer gets the job and potentially a recurring contract across a portfolio of properties. Meanwhile, Canary Wharf&apos;s commercial clients need specialists who understand three-phase systems and EV infrastructure. Katie captures whether a call is a domestic EICR, a commercial three-phase job, or an emergency fault, delivering the details to your WhatsApp in 3 seconds so you never lose a £340 average job.
               </p>
             </div>
           </div>
@@ -337,7 +337,7 @@ export default function ForElectricianLondonPage() {
                 The 6-yearly EICR requirement for landlords means a constant stream of inspection bookings across every borough. Commercial work in the City and Docklands demands three-phase expertise and out-of-hours availability. Summer heatwaves push air conditioning and ventilation installations to peak demand, while winter boiler breakdowns create secondary electrical faults in integrated heating systems. Hard water in north and west London indirectly affects electrical systems through limescale-damaged components.
               </p>
               <p>
-                Competition is brutal — 15+ trade businesses per postcode in central London. Emergency calls peak during commute hours when you&apos;re between jobs, navigating ULEZ and congestion charge zones. When a letting agent in Kensington books an EICR for a portfolio of properties, Katie captures the full schedule, flags the certificate deadline, and delivers a structured enquiry that lets you quote accurately without a callback.
+                Competition is brutal: 15+ trade businesses per postcode in central London. Emergency calls peak during commute hours when you&apos;re between jobs, navigating ULEZ and congestion charge zones. When a letting agent in Kensington books an EICR for a portfolio of properties, Katie captures the full schedule, flags the certificate deadline, and delivers a structured enquiry that lets you quote accurately without a callback.
               </p>
             </div>
           </div>

@@ -12,11 +12,11 @@ const faqs = [
   },
   {
     question: "Does whoza.ai use real people or AI?",
-    answer: "whoza.ai uses AI voice agents (Katie and Mark) who answer calls 24/7. Trade Receptionist also uses AI voice agents. Both services use AI — compare them with real calls during their free trials.",
+    answer: "whoza.ai uses AI voice agents (Katie and Mark) who answer calls 24/7. Trade Receptionist also uses AI voice agents. Both services use AI. Compare them with real calls during their free trials.",
   },
   {
     question: "Which is faster to set up?",
-    answer: "Trade Receptionist claims setup in under 14 minutes. whoza.ai is typically live in 30 minutes. Both are fast — the real difference is what you get on the other side.",
+    answer: "Trade Receptionist claims setup in under 14 minutes. whoza.ai is typically live in 30 minutes. Both are fast. The real difference is what you get on the other side.",
   },
   {
     question: "Why does whoza.ai charge per minute instead of per call?",
@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     question: "Can I cancel whoza.ai anytime?",
-    answer: "Yes. whoza.ai has no contracts — cancel anytime. Trade Receptionist also has no contract and offers a 14-day free trial with no card required.",
+    answer: "Yes. whoza.ai has no contracts, cancel anytime. Trade Receptionist also has no contract and offers a 14-day free trial with no card required.",
   },
 ]
 
@@ -297,7 +297,7 @@ export default function VsTradeReceptionistPage() {
           <h2 className="text-3xl font-bold text-slate-900 mb-6">Setup Time: 30 Minutes vs ~14 Minutes</h2>
           <p className="text-lg text-slate-600 mb-6">
             Trade Receptionist claims setup in under 14 minutes. whoza.ai is live in 30 minutes.
-            Both are fast - the real difference is what you get on the other side.
+            Both are fast. The real difference is what you get on the other side.
           </p>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4">
@@ -305,21 +305,21 @@ export default function VsTradeReceptionistPage() {
                 <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-[var(--v2-green)] font-bold">1</div>
                 <div>
                   <h4 className="font-bold text-slate-900">Connect your number</h4>
-                  <p className="text-sm text-slate-600">2 minutes - forward your existing business number</p>
+                  <p className="text-sm text-slate-600">2 minutes: forward your existing business number</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-[var(--v2-green)] font-bold">2</div>
                 <div>
                   <h4 className="font-bold text-slate-900">Set your hours</h4>
-                  <p className="text-sm text-slate-600">3 minutes - tell Katie when to answer</p>
+                  <p className="text-sm text-slate-600">3 minutes: tell Katie when to answer</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-[var(--v2-green)] font-bold">3</div>
                 <div>
                   <h4 className="font-bold text-slate-900">Receive your first lead</h4>
-                  <p className="text-sm text-slate-600">25 minutes - test call, then go live</p>
+                  <p className="text-sm text-slate-600">25 minutes: test call, then go live</p>
                 </div>
               </div>
             </div>
@@ -352,7 +352,7 @@ export default function VsTradeReceptionistPage() {
                   &quot;I ran a trade business for years. I know what it&apos;s like to miss a call while you&apos;re under a sink,
                   on a roof, or in a customer&apos;s home. Every missed call is a job lost to a competitor.
                   I built Katie because I needed her myself. Every feature is designed around the reality
-                  of working in the trades - not a corporate office.&quot;
+                  of working in the trades, not a corporate office.&quot;
                 </p>
                 <div className="flex items-center gap-4 text-sm text-slate-600">
                   <a href="mailto:dru@whoza.ai" className="text-emerald-600 hover:underline font-medium">dru@whoza.ai</a>
@@ -367,7 +367,7 @@ export default function VsTradeReceptionistPage() {
         {/* Trust badges */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-wrap justify-center gap-4">
-            {["7-day free trial - no card needed", "30-day money-back guarantee", "Live in 30 minutes", "No contracts", "ICO Registered ZC077271"].map((item) => (
+            {["7-day free trial, no card needed", "30-day money-back guarantee", "Live in 30 minutes", "No contracts", "ICO Registered ZC077271"].map((item) => (
               <span key={item} className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-800 text-sm font-medium px-4 py-2 rounded-full border border-emerald-100">
                 <Shield className="w-4 h-4" /> {item}
               </span>
@@ -380,7 +380,7 @@ export default function VsTradeReceptionistPage() {
           <h2 className="text-3xl font-bold text-slate-900 mb-4">Ready to stop missing calls?</h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
             Join UK tradespeople who&apos;ve switched to whoza.ai.
-            Start your 7-day free trial - no credit card required.
+            Start your 7-day free trial, no credit card required.
           </p>
           <a href="/pricing" className="inline-flex items-center gap-2 bg-[var(--v2-green)] text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-[var(--v2-green-hover)] transition-colors shadow-lg hover:shadow-xl v2-island">
             Try whoza.ai free for 7 days <ArrowRight className="w-5 h-5" />

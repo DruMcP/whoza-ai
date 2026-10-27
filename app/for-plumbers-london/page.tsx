@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/for-plumbers-london",
     description: "Stop losing plumber jobs to missed calls in London. Katie answers 24/7, captures burst pipe and boiler enquiries via WhatsApp. Plans from £59/month. Read now.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Plumbers in London" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Plumbers in London" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -48,7 +48,7 @@ const faqs = [
   },
   {
     "question": "Does it work with my existing London business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing London business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "answer": "Yes. You simply set up call forwarding from your existing London business number to your whoza.ai number. Your customers dial the same number they've always used. Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
     "question": "How quickly can I get set up as a plumber in London?",
@@ -56,7 +56,7 @@ const faqs = [
   },
   {
     "question": "What makes whoza.ai different for plumbers in London?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for plumbers. She understands burst pipe emergencies, boiler breakdowns, blocked drains & leak enquiries — and with 32,000+ trade businesses competing in London, capturing every call gives you a real competitive edge."
+    "answer": "Unlike generic call answering services, Katie is trained specifically for plumbers. She understands burst pipe emergencies, boiler breakdowns, blocked drains & leak enquiries, and with 32,000+ trade businesses competing in London, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -94,7 +94,7 @@ export default function ForPlumberLondonPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   London has 32,000+ trade businesses competing for 1.2M households. 
                   With 8,200 missed calls every week across the city, 
-                  Katie ensures you capture every plumbing enquiry — burst pipe emergencies, boiler breakdowns, blocked drains & leak enquiries.
+                  Katie ensures you capture every plumbing enquiry: burst pipe emergencies, boiler breakdowns, blocked drains & leak enquiries.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -129,7 +129,7 @@ export default function ForPlumberLondonPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -196,7 +196,7 @@ export default function ForPlumberLondonPage() {
                 The Real Cost of Missed Calls for Plumbers in London
               </h2>
               <p className="v2-lead max-w-2xl mx-auto">
-                High competition — 15+ trade businesses per postcode in central London. Emergency calls peak during commute hours when you're on the road. Diverse housing stock from Victorian terraces to new-build apartments. Tenant vs landlord enquiries need different handling.
+                High competition: 15+ trade businesses per postcode in central London. Emergency calls peak during commute hours when you're on the road. Diverse housing stock from Victorian terraces to new-build apartments. Tenant vs landlord enquiries need different handling.
               </p>
             </div>
             <div className="space-y-8">
@@ -208,7 +208,7 @@ export default function ForPlumberLondonPage() {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">While You're on the Job</h3>
                     <p className="text-[var(--v2-body)] leading-relaxed">
-                      You're under a sink fixing a waste pipe. Phone vibrates in your pocket. Can't answer — hands full of muck, water everywhere. Check missed call at 4pm. Customer already booked someone else.
+                      You're under a sink fixing a waste pipe. Phone vibrates in your pocket. Can't answer: hands full of muck, water everywhere. Check missed call at 4pm. Customer already booked someone else.
                     </p>
                   </div>
                 </div>
@@ -258,7 +258,7 @@ export default function ForPlumberLondonPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your London number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your London number. Katie picks up in under 2 rings with your branded greeting, 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",
@@ -309,7 +309,7 @@ export default function ForPlumberLondonPage() {
                 London&apos;s plumbing market is unlike anywhere else in the UK. In areas like Chelsea and Kensington, ageing Victorian water mains and hard water from the Thames create constant demand for pipe replacement and descaling work. Meanwhile, in Hackney and Stratford, the mix of new-build apartments and converted industrial spaces means plumbers field calls about everything from boiler installations in high-rise blocks to emergency leaks in period properties. With 28,000+ trade businesses competing for 1.2M households and 7,800 missed calls every week, the plumbers who answer first win the job.
               </p>
               <p>
-                What makes London particularly challenging is the sheer diversity of housing stock and the pressure on water infrastructure. Thames Water operates different pressure zones across the city, meaning a plumber in Kensington may deal with entirely different supply issues than one in Stratford. Tenant turnover in rental hotspots like Hackney drives constant maintenance enquiries, while landlords in Chelsea expect rapid response times for emergency repairs. When you&apos;re on a job in one postcode and a call comes in from another, Katie captures every detail — from the specific property type to the urgency level — so you never lose a £320 average job to a missed call.
+                What makes London particularly challenging is the sheer diversity of housing stock and the pressure on water infrastructure. Thames Water operates different pressure zones across the city, meaning a plumber in Kensington may deal with entirely different supply issues than one in Stratford. Tenant turnover in rental hotspots like Hackney drives constant maintenance enquiries, while landlords in Chelsea expect rapid response times for emergency repairs. When you&apos;re on a job in one postcode and a call comes in from another, Katie captures every detail, from the specific property type to the urgency level, so you never lose a £320 average job to a missed call.
               </p>
             </div>
           </div>
@@ -328,13 +328,13 @@ export default function ForPlumberLondonPage() {
             </div>
             <div className="space-y-6 text-[var(--v2-body)] leading-relaxed">
               <p>
-                From Chelsea and Kensington to Hackney and Stratford, London&apos;s plumbing market is fiercely competitive. Victorian terraces in Islington and period conversions in Camden still run on original lead piping that fails without warning. With 15+ trade businesses per postcode in central London, a missed call rarely gets a second chance — the customer simply dials the next number.
+                From Chelsea and Kensington to Hackney and Stratford, London&apos;s plumbing market is fiercely competitive. Victorian terraces in Islington and period conversions in Camden still run on original lead piping that fails without warning. With 15+ trade businesses per postcode in central London, a missed call rarely gets a second chance. The customer simply dials the next number.
               </p>
               <p>
                 Hard water across north and west London causes limescale buildup that destroys boilers and narrows pipes. Thames Water pressure zones vary dramatically by borough, meaning a fix that works in Westminster may fail in Haringey. Winter freeze-thaw cycles burst exposed pipes in council estates across Tower Hamlets and Southwark, while summer heatwaves trigger air conditioning and ventilation enquiries that plumbers increasingly field.
               </p>
               <p>
-                Emergency calls peak during commute hours when you&apos;re between jobs — stuck in ULEZ, congestion charge, or resident parking restrictions. When a tenant in a Pimlico period conversion reports a burst pipe at 7pm, Katie captures the postcode, flags the urgency, and gives you the full context before you commit to a site visit. That qualification alone saves hours of unbillable travel across London&apos;s sprawling zones.
+                Emergency calls peak during commute hours when you&apos;re between jobs: stuck in ULEZ, congestion charge, or resident parking restrictions. When a tenant in a Pimlico period conversion reports a burst pipe at 7pm, Katie captures the postcode, flags the urgency, and gives you the full context before you commit to a site visit. That qualification alone saves hours of unbillable travel across London&apos;s sprawling zones.
               </p>
             </div>
           </div>

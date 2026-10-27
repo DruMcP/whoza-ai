@@ -32,7 +32,7 @@ export default function ComplaintsPage() {
             Complaints Procedure
           </h1>
           <p className="text-[var(--v2-muted)] text-lg">
-            WHOZA AI LTD — We take complaints seriously
+            WHOZA AI LTD: We take complaints seriously
           </p>
         </div>
 
@@ -62,7 +62,7 @@ export default function ComplaintsPage() {
             <div className="bg-white border border-[var(--v2-line)] rounded-lg p-6 space-y-4 text-[var(--v2-body)]">
               <p className="text-[var(--v2-ink)] font-medium">You can make a complaint by:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Email: <a href="mailto:dru@whoza.ai" className="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] underline">dru@whoza.ai</a> — Please include "Complaint" in the subject line</li>
+                <li>Email: <a href="mailto:dru@whoza.ai" className="text-[var(--v2-green)] hover:text-[var(--v2-green-hover)] underline">dru@whoza.ai</a>. Please include "Complaint" in the subject line</li>
                 <li>Post: WHOZA AI LTD, 6 Atholl Crescent, Perth, PH1 5JN, United Kingdom</li>
               </ul>
               <p>

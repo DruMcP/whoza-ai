@@ -25,13 +25,13 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/for-pest-control",
     siteName: "Whoza.ai",
-    title: "AI Call Answering for Pest Control UK — Never Miss a Job",
+    title: "AI Call Answering for Pest Control UK | Never Miss a Job",
     description: "AI call answering for UK pest control companies. Katie handles 24/7 emergency calls, captures rodent, insect and wildlife enquiries. Instant WhatsApp alerts.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Pest Control" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Pest Control" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Call Answering for Pest Control UK — Never Miss a Job",
+    title: "AI Call Answering for Pest Control UK | Never Miss a Job",
     description: "AI call answering for UK pest control companies. Katie handles 24/7 emergency calls, captures rodent, insect and wildlife enquiries. Instant WhatsApp alerts.",
     images: ["https://whoza.ai/og-image.webp"],
   },
@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     question: "Can Katie handle emergency pest calls at night?",
-    answer: "Absolutely. Katie answers 24/7 including nights, weekends, and bank holidays. She identifies emergency keywords like 'wasp nest', 'rat infestation', 'bed bugs', 'swarm', and 'bites' — then marks the enquiry as emergency priority in your WhatsApp alert. You see it immediately and can respond within minutes, even at 3am.",
+    answer: "Absolutely. Katie answers 24/7 including nights, weekends, and bank holidays. She identifies emergency keywords like 'wasp nest', 'rat infestation', 'bed bugs', 'swarm', and 'bites', then marks the enquiry as emergency priority in your WhatsApp alert. You see it immediately and can respond within minutes, even at 3am.",
   },
   {
     question: "What information does Katie collect from pest control customers?",
@@ -60,11 +60,11 @@ const faqs = [
   },
   {
     question: "Will customers know they're talking to AI?",
-    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone — especially during panic situations like wasp stings or rat sightings. Most callers are satisfied with the AI experience — they just want the pest problem solved fast.",
+    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone, especially during panic situations like wasp stings or rat sightings. Most callers are satisfied with the AI experience. They just want the pest problem solved fast.",
   },
   {
     question: "Does it work with my existing business phone number?",
-    answer: "Yes. You simply set up call forwarding from your existing pest control business number to your whoza.ai number. Your customers dial the same number they've always used — Katie just answers when you can't. Setup takes under 10 minutes and requires no hardware changes.",
+    answer: "Yes. You simply set up call forwarding from your existing pest control business number to your whoza.ai number. Your customers dial the same number they've always used. Katie just answers when you can't. Setup takes under 10 minutes and requires no hardware changes.",
   },
   {
     question: "How quickly can I get set up?",
@@ -72,7 +72,7 @@ const faqs = [
   },
   {
     question: "Can Katie handle commercial pest control contracts?",
-    answer: "Yes. Katie is trained to identify commercial enquiries from restaurants, hotels, offices, warehouses, and food production facilities. She tags these as commercial priority, collects business name and contact details, and flags them for fast follow-up. Commercial contracts are your highest-value repeat business — Katie ensures you never miss one.",
+    answer: "Yes. Katie is trained to identify commercial enquiries from restaurants, hotels, offices, warehouses, and food production facilities. She tags these as commercial priority, collects business name and contact details, and flags them for fast follow-up. Commercial contracts are your highest-value repeat business. Katie ensures you never miss one.",
   },
   {
     question: "What happens if Katie can't handle a complex enquiry?",
@@ -86,7 +86,7 @@ export default function ForPestControlPage() {
   return (
     <>
       <VideoSchema
-        name="Whoza.ai for Pest Control — AI Call Answering Demo"
+        name="Whoza.ai for Pest Control: AI Call Answering Demo"
         description="Watch Katie capture a missed pest control enquiry in under 60 seconds. Wasp nest emergency answered instantly, infestation details sent to WhatsApp, job booked while the technician is still on another call."
         embedUrl="https://whoza.ai/for-pest-control"
       />
@@ -136,7 +136,7 @@ export default function ForPestControlPage() {
                   <span className="block mt-2 text-2xl sm:text-3xl lg:text-4xl">Never Miss an Infestation Call</span>
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
-                  Wasps, rats, bed bugs, mice — customers call in panic. Katie, your AI receptionist, provides the call answering service: answers every call, calms the situation, and captures the full infestation details so you arrive prepared.
+                  Wasps, rats, bed bugs, mice. Customers call in panic. Katie, your AI receptionist, provides the call answering service: answers every call, calms the situation, and captures the full infestation details so you arrive prepared.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -171,7 +171,7 @@ export default function ForPestControlPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -231,21 +231,21 @@ export default function ForPestControlPage() {
                 {
                   icon: Calendar,
                   title: "Seasonal Spikes Overwhelm",
-                  description: "Wasps in summer, rats in winter, bed bugs in spring — your phone rings off the hook during peak season. One technician can't answer 3 simultaneous emergency calls. You capture one and lose two £200+ jobs.",
+                  description: "Wasps in summer, rats in winter, bed bugs in spring. Your phone rings off the hook during peak season. One technician can't answer 3 simultaneous emergency calls. You capture one and lose two £200+ jobs.",
                   stat: "3x peak season calls",
                   color: "amber",
                 },
                 {
                   icon: Bug,
                   title: "Missed Calls = Unknown Severity",
-                  description: "A missed call voicemail says 'I've got a pest problem'. You can't tell if it's a single mouse or a full rat infestation. You arrive unprepared, waste time, and look unprofessional — losing repeat business.",
+                  description: "A missed call voicemail says 'I've got a pest problem'. You can't tell if it's a single mouse or a full rat infestation. You arrive unprepared, waste time, and look unprofessional, losing repeat business.",
                   stat: "£180 avg emergency call",
                   color: "orange",
                 },
                 {
                   icon: Building,
                   title: "Commercial Contracts Lost",
-                  description: "Property managers and restaurant owners need fast response. They expect callback within the hour. Miss their call and they move to your competitor. Commercial contracts are worth £5,000-£50,000 annually.",
+                  description: "Property managers and restaurant owners need fast response. They expect callback within the hour. Miss their call and they move to your competitor. Commercial contracts are worth £5,000 to £50,000 annually.",
                   stat: "First responder gets the job",
                   color: "blue",
                 },
@@ -272,7 +272,7 @@ export default function ForPestControlPage() {
                 The average UK pest control operator misses 8 calls per day = <strong>£67,392</strong> in lost revenue per year
               </p>
               <p className="text-[var(--v2-body)] text-sm mt-1">
-                Source: UK SME Communications Survey 2025 — based on £180 avg emergency call value, 40% conversion rate
+                Source: UK SME Communications Survey 2025, based on £180 avg emergency call value, 40% conversion rate
               </p>
             </div>
           </div>
@@ -308,7 +308,7 @@ export default function ForPestControlPage() {
                 {
                   icon: AlertTriangle,
                   title: "Emergency Priority Tagging",
-                  description: "Urgent calls — wasp nests, rat infestations, bed bug outbreaks — get emergency priority tagging. You see them immediately in WhatsApp with a red flag. Respond first, charge emergency rates, win the job.",
+                  description: "Urgent calls (wasp nests, rat infestations, bed bug outbreaks) get emergency priority tagging. You see them immediately in WhatsApp with a red flag. Respond first, charge emergency rates, win the job.",
                   color: "red",
                 },
                 {
@@ -362,7 +362,7 @@ export default function ForPestControlPage() {
                   step: "01",
                   icon: Phone,
                   title: "Customer Calls About Pest Problem",
-                  description: "Customer calls your number in panic — wasp nest, rat sighting, bed bugs. Katie picks up in under 2 rings with your branded greeting: 'Hello, Pest Control Pro. I'm Katie, how can I help?' — 24/7, even during seasonal spikes.",
+                  description: "Customer calls your number in panic: wasp nest, rat sighting, bed bugs. Katie picks up in under 2 rings with your branded greeting: 'Hello, Pest Control Pro. I'm Katie, how can I help?', 24/7, even during seasonal spikes.",
                 },
                 {
                   step: "02",
@@ -380,7 +380,7 @@ export default function ForPestControlPage() {
                   step: "04",
                   icon: CheckCircle2,
                   title: "Accept or Schedule Visit",
-                  description: "Tap Accept, Call Back, or Decline in WhatsApp. Customer gets an instant SMS either way. You arrive fully prepared with the right equipment and chemicals — because you know exactly what you're dealing with before you knock on the door.",
+                  description: "Tap Accept, Call Back, or Decline in WhatsApp. Customer gets an instant SMS either way. You arrive fully prepared with the right equipment and chemicals, because you know exactly what you're dealing with before you knock on the door.",
                 },
               ].map((item, idx) => {
                 const Icon = item.icon

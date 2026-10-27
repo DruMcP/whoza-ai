@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/for-heating-engineers-manchester",
     title: "AI Call Answering Heating Engineers Manchester | whoza.ai",
     description: "Stop losing heating engineer jobs to missed calls in Manchester. Katie answers 24/7, captures boiler and heating enquiries via WhatsApp. Plans from £59/month.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Heating Engineers in Manchester" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Heating Engineers in Manchester" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -50,7 +50,7 @@ const faqs = [
   },
   {
     "question": "Does it work with my existing Manchester business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing Manchester business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "answer": "Yes. You simply set up call forwarding from your existing Manchester business number to your whoza.ai number. Your customers dial the same number they've always used. Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
     "question": "How quickly can I get set up as a heating engineer in Manchester?",
@@ -58,7 +58,7 @@ const faqs = [
   },
   {
     "question": "What makes whoza.ai different for heating engineers in Manchester?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for heating engineers. She understands boiler breakdowns, no hot water emergencies, gas safety checks & heating installations — and with 8,500+ trade businesses competing in Manchester, capturing every call gives you a real competitive edge."
+    "answer": "Unlike generic call answering services, Katie is trained specifically for heating engineers. She understands boiler breakdowns, no hot water emergencies, gas safety checks & heating installations, and with 8,500+ trade businesses competing in Manchester, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -96,7 +96,7 @@ export default function ForHeatingEngineerManchesterPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Manchester has 8,500+ trade businesses competing for 540K households. 
                   With 3,400 missed calls every week across the city, 
-                  Katie ensures you capture every heating enquiry — boiler breakdowns, no hot water emergencies, gas safety checks & heating installations.
+                  Katie ensures you capture every heating enquiry: boiler breakdowns, no hot water emergencies, gas safety checks & heating installations.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -131,7 +131,7 @@ export default function ForHeatingEngineerManchesterPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -260,7 +260,7 @@ export default function ForHeatingEngineerManchesterPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your Manchester number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your Manchester number. Katie picks up in under 2 rings with your branded greeting, 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",
@@ -310,10 +310,10 @@ export default function ForHeatingEngineerManchesterPage() {
             </div>
             <div className="space-y-6 text-[var(--v2-body)] leading-relaxed">
               <p>
-                In Didsbury, Chorlton, Salford and Ancoats, Manchester's heating engineers face a market shaped by red brick terraces, industrial conversions, and rapid new-build regeneration. The red brick terraces of south Manchester — many converted to combi boiler systems — still suffer from aging pipework and cold, damp conditions that stress heating systems year-round. With 8,500+ trade businesses competing across Greater Manchester, missing a call means losing a £310 job to the next engineer on the list.
+                In Didsbury, Chorlton, Salford and Ancoats, Manchester's heating engineers face a market shaped by red brick terraces, industrial conversions, and rapid new-build regeneration. The red brick terraces of south Manchester, many converted to combi boiler systems, still suffer from aging pipework and cold, damp conditions that stress heating systems year-round. With 8,500+ trade businesses competing across Greater Manchester, missing a call means losing a £310 job to the next engineer on the list.
               </p>
               <p>
-                Manchester's high rainfall and cold, damp climate put constant pressure on older boilers. Hard water in Trafford and Stockport causes scale buildup that reduces efficiency and triggers breakdowns. When a family in Prestwich or Whitefield loses heating during a cold snap, they call the first engineer who answers. Katie captures every call 24/7, qualifies the urgency, and sends the details straight to your WhatsApp — so you never miss a breakdown, installation, or service enquiry, even when you're on the job.
+                Manchester's high rainfall and cold, damp climate put constant pressure on older boilers. Hard water in Trafford and Stockport causes scale buildup that reduces efficiency and triggers breakdowns. When a family in Prestwich or Whitefield loses heating during a cold snap, they call the first engineer who answers. Katie captures every call 24/7, qualifies the urgency, and sends the details straight to your WhatsApp, so you never miss a breakdown, installation, or service enquiry, even when you're on the job.
               </p>
             </div>
           </div>

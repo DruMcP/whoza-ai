@@ -25,13 +25,13 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/for-cleaners",
     siteName: "Whoza.ai",
-    title: "AI Call Answering for Cleaners UK — Never Miss a Booking",
+    title: "AI Call Answering for Cleaners UK | Never Miss a Booking",
     description: "AI call handling for UK cleaners. Katie answers 24/7, captures domestic, commercial and end-of-tenancy enquiries. WhatsApp alerts in 3 seconds. Free trial.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Cleaners" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Cleaners" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Call Answering for Cleaners UK — Never Miss a Booking",
+    title: "AI Call Answering for Cleaners UK | Never Miss a Booking",
     description: "AI call handling for UK cleaners. Katie answers 24/7, captures domestic, commercial and end-of-tenancy enquiries. WhatsApp alerts in 3 seconds. Free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     question: "Can Katie handle commercial cleaning enquiries?",
-    answer: "Absolutely. Katie is trained to recognise commercial enquiries from offices, hotels, restaurants, gyms, retail, and warehouses. She captures contract details, frequency requirements, square footage, and budget — then tags the lead as 'commercial priority' in your WhatsApp alert so you can follow up fast. Commercial clients expect fast response; Katie ensures you never miss a £5k/month contract.",
+    answer: "Absolutely. Katie is trained to recognise commercial enquiries from offices, hotels, restaurants, gyms, retail, and warehouses. She captures contract details, frequency requirements, square footage, and budget, then tags the lead as 'commercial priority' in your WhatsApp alert so you can follow up fast. Commercial clients expect fast response; Katie ensures you never miss a £5k/month contract.",
   },
   {
     question: "What information does Katie collect from cleaning customers?",
@@ -60,11 +60,11 @@ const faqs = [
   },
   {
     question: "Will customers know they're talking to AI?",
-    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience — they just want their cleaning booked quickly.",
+    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience. They just want their cleaning booked quickly.",
   },
   {
     question: "Does it work with my existing business phone number?",
-    answer: "Yes. You simply set up call forwarding from your existing cleaning business number to your whoza.ai number. Your customers dial the same number they've always used — Katie just answers when you can't. Setup takes under 10 minutes.",
+    answer: "Yes. You simply set up call forwarding from your existing cleaning business number to your whoza.ai number. Your customers dial the same number they've always used. Katie just answers when you can't. Setup takes under 10 minutes.",
   },
   {
     question: "How quickly can I get set up?",
@@ -72,7 +72,7 @@ const faqs = [
   },
   {
     question: "Can Katie handle end-of-tenancy cleaning calls?",
-    answer: "Yes. Katie recognises end-of-tenancy enquiries immediately and marks them as urgent — these are time-sensitive and often need same-day or next-day service. She captures the property size, move-out date, deposit requirements, and any special instructions (e.g., carpet cleaning, oven clean). You get all the details in WhatsApp so you can quote and schedule fast.",
+    answer: "Yes. Katie recognises end-of-tenancy enquiries immediately and marks them as urgent. These are time-sensitive and often need same-day or next-day service. She captures the property size, move-out date, deposit requirements, and any special instructions (e.g., carpet cleaning, oven clean). You get all the details in WhatsApp so you can quote and schedule fast.",
   },
   {
     question: "What happens if Katie can't handle a complex enquiry?",
@@ -86,7 +86,7 @@ export default function ForCleanersPage() {
   return (
     <>
       <VideoSchema
-        name="Whoza.ai for Cleaners — AI Call Answering Demo"
+        name="Whoza.ai for Cleaners: AI Call Answering Demo"
         description="Watch Katie capture a missed cleaning enquiry in under 60 seconds. End-of-tenancy call answered instantly, details sent to WhatsApp, job booked while the cleaner is still at another property."
         embedUrl="https://whoza.ai/for-cleaners"
       />
@@ -131,11 +131,11 @@ export default function ForCleanersPage() {
                   Built for UK Cleaners
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
-                  AI Call Answering for Cleaners UK —{" "}
+                  AI Call Answering for Cleaners UK:{" "}
                   <span className="text-[#6ee7b7]">Never Miss a Booking</span>
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
-                  Domestic, commercial, end-of-tenancy, carpet cleaning — customers call when they need it done fast. Katie answers every call, captures the job details, and sends them to your WhatsApp.
+                  Domestic, commercial, end-of-tenancy, carpet cleaning: customers call when they need it done fast. Katie answers every call, captures the job details, and sends them to your WhatsApp.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -170,7 +170,7 @@ export default function ForCleanersPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -230,14 +230,14 @@ export default function ForCleanersPage() {
                 {
                   icon: Building2,
                   title: "Commercial Contracts Slip Away",
-                  description: "Office manager calls about weekly cleaning for a 50-desk office. You don't answer — you're elbow-deep in oven cleaner at a residential job. They call competitor #3 who picks up. You lost a £2,500/month contract because you couldn't answer the phone.",
+                  description: "Office manager calls about weekly cleaning for a 50-desk office. You don't answer. You're elbow-deep in oven cleaner at a residential job. They call competitor #3 who picks up. You lost a £2,500/month contract because you couldn't answer the phone.",
                   stat: "£2,500/month avg contract",
                   color: "amber",
                 },
                 {
                   icon: Home,
                   title: "Evening & Weekend Emergency Cleans",
-                  description: "Saturday night after a party. Sunday morning post-construction. Calls come in when you're off-duty or at home. Voicemail doesn't cut it — customers want immediate confirmation. By Monday morning, they've booked someone else who answered.",
+                  description: "Saturday night after a party. Sunday morning post-construction. Calls come in when you're off-duty or at home. Voicemail doesn't cut it: customers want immediate confirmation. By Monday morning, they've booked someone else who answered.",
                   stat: "1 in 3 firms miss calls",
                   color: "blue",
                 },
@@ -263,7 +263,7 @@ export default function ForCleanersPage() {
                 The average UK cleaning business misses 12 calls per week = <strong>£74,880</strong> in lost revenue per year
               </p>
               <p className="text-[var(--v2-body)] text-sm mt-1">
-                Source: UK SME Communications Survey 2025 — based on £120 avg domestic job + £2,500 commercial contract value, 35% conversion rate
+                Source: UK SME Communications Survey 2025, based on £120 avg domestic job + £2,500 commercial contract value, 35% conversion rate
               </p>
             </div>
             <div className="mt-8 text-center">
@@ -357,7 +357,7 @@ export default function ForCleanersPage() {
               Cleaner Success Story
             </div>
             <blockquote className="text-2xl sm:text-3xl font-medium leading-relaxed text-[var(--v2-ink)] mb-8">
-              "I used to miss 4-5 calls a day while I was cleaning other properties. In 3 weeks using whoza.ai, I captured 14 jobs I would have lost, including a <span className="text-[var(--v2-green)] font-bold">£2,200/month</span> office cleaning contract. It cost me £59 for the month."
+              "I used to miss 4 to 5 calls a day while I was cleaning other properties. In 3 weeks using whoza.ai, I captured 14 jobs I would have lost, including a <span className="text-[var(--v2-green)] font-bold">£2,200/month</span> office cleaning contract. It cost me £59 for the month."
             </blockquote>
             <div className="flex items-center justify-center gap-4">
               <div className="w-14 h-14 rounded-full bg-[var(--v2-mint)] flex items-center justify-center text-[var(--v2-green)] font-bold text-xl">

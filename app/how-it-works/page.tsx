@@ -7,7 +7,7 @@ import { Settings, Phone, MessageSquare, BarChart3, Shield, RefreshCw } from "lu
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "How Katie Works — AI Call Answering | whoza.ai",
+  title: "How Katie Works: AI Call Answering | whoza.ai",
   description: "Discover how whoza.ai's AI voice agent Katie answers calls, qualifies leads and books jobs for UK tradespeople. 30-minute setup, 24/7 coverage. Plans from £59.",
   alternates: {
     canonical: "https://whoza.ai/how-it-works",
@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     url: "https://whoza.ai/how-it-works",
     siteName: "Whoza.ai",
     title: "How It Works | whoza.ai",
-    description: "Discover how whoza.ai's AI voice agent Katie answers calls, qualifies leads and books jobs for UK tradespeople — 24/7. Setup in 30 mins. Plans from £59.",
+    description: "Discover how whoza.ai's AI voice agent Katie answers calls, qualifies leads and books jobs for UK tradespeople, 24/7. Setup in 30 mins. Plans from £59.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "How whoza.ai works" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "How It Works | whoza.ai",
-    description: "Discover how whoza.ai's AI voice agent Katie answers calls, qualifies leads and books jobs for UK tradespeople — 24/7. Setup in 30 mins. Plans from £59.",
+    description: "Discover how whoza.ai's AI voice agent Katie answers calls, qualifies leads and books jobs for UK tradespeople, 24/7. Setup in 30 mins. Plans from £59.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {
@@ -36,11 +36,11 @@ export const metadata: Metadata = {
 const howItWorksFaqs = [
   {
     question: "How does Katie actually answer my phone calls?",
-    answer: "When a customer calls your business number, Katie picks up instantly — usually within 2 rings. She greets them with your branded message, asks qualifying questions about their job, and captures all the details. The entire conversation happens in natural, conversational English. No menus, no hold music, no 'press 1 for sales'. If you've been burned by phone-tree menus before, see <a href=\"/is-it-a-phone-tree\" class=\"text-emerald-400 underline hover:text-emerald-300\">exactly what happens when a customer calls whoza.ai</a> — and why it's nothing like a phone tree.",
+    answer: "When a customer calls your business number, Katie picks up instantly, usually within 2 rings. She greets them with your branded message, asks qualifying questions about their job, and captures all the details. The entire conversation happens in natural, conversational English. No menus, no hold music, no 'press 1 for sales'. If you've been burned by phone-tree menus before, see <a href=\"/is-it-a-phone-tree\" class=\"text-emerald-400 underline hover:text-emerald-300\">exactly what happens when a customer calls whoza.ai</a>, and why it's nothing like a phone tree.",
   },
   {
     question: "Do I need to change my business phone number?",
-    answer: "No. You keep your existing number. You simply set up call forwarding from your current provider (BT, Virgin, Vodafone, etc.) to your whoza.ai number. Your customers dial the same number they've always used — they just get answered every time instead of hitting voicemail. Setup takes under 10 minutes.",
+    answer: "No. You keep your existing number. You simply set up call forwarding from your current provider (BT, Virgin, Vodafone, etc.) to your whoza.ai number. Your customers dial the same number they've always used. They just get answered every time instead of hitting voicemail. Setup takes under 10 minutes.",
   },
   {
     question: "How quickly can I get set up?",
@@ -52,7 +52,7 @@ const howItWorksFaqs = [
   },
   {
     question: "Will customers know they're talking to AI?",
-    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience — they just want their problem fixed fast.",
+    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience. They just want their problem fixed fast.",
   },
   {
     question: "How does the WhatsApp delivery work?",
@@ -72,12 +72,12 @@ const steps = [
   {
     icon: Settings,
     title: "1. Quick Setup",
-    description: "Tell us about your business — your trade, services, areas you cover, and how you like to handle enquiries. Katie learns your voice in minutes.",
+    description: "Tell us about your business: your trade, services, areas you cover, and how you like to handle enquiries. Katie learns your voice in minutes.",
   },
   {
     icon: Phone,
     title: "2. Diverts Your Calls",
-    description: "Forward your business number to whoza.ai. When a customer calls, Katie picks up instantly — no hold music, no voicemail, no missed jobs.",
+    description: "Forward your business number to whoza.ai. When a customer calls, Katie picks up instantly, no hold music, no voicemail, no missed jobs.",
   },
   {
     icon: MessageSquare,
@@ -87,12 +87,12 @@ const steps = [
   {
     icon: BarChart3,
     title: "4. Delivers to Your Phone",
-    description: "Qualified enquiries land in your WhatsApp or SMS with caller details, job summary, and urgency level. You decide — accept, callback, or decline.",
+    description: "Qualified enquiries land in your WhatsApp or SMS with caller details, job summary, and urgency level. You decide: accept, callback, or decline.",
   },
   {
     icon: Shield,
     title: "5. You Stay in Control",
-    description: "Full dashboard visibility — listen to calls, tweak Katie's responses, set custom rules, and track every enquiry from first call to booked job.",
+    description: "Full dashboard visibility: listen to calls, tweak Katie's responses, set custom rules, and track every enquiry from first call to booked job.",
   },
 ]
 
@@ -138,7 +138,7 @@ export default function HowItWorksPage() {
               {
                 "@type": "HowToStep",
                 "name": "Create your account",
-                "text": "Sign up at whoza.ai and choose your plan. The 7-day free trial starts immediately — no credit card required.",
+                "text": "Sign up at whoza.ai and choose your plan. The 7-day free trial starts immediately, no credit card required.",
                 "url": "https://whoza.ai/how-it-works#step1",
                 "image": "https://whoza.ai/images/step1-signup.webp"
               },
@@ -179,7 +179,7 @@ export default function HowItWorksPage() {
           </div>
           <h1 className="text-4xl font-bold mb-4">How whoza.ai Works</h1>
           <p className="text-[var(--v2-body)] text-lg max-w-2xl">
-            From the first ring to the booked job — here's how Katie becomes your AI revenue team in five simple steps.
+            From the first ring to the booked job, here's how Katie becomes your AI revenue team in five simple steps.
           </p>
         </div>
 

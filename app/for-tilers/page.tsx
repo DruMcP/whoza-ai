@@ -25,13 +25,13 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/for-tilers",
     siteName: "Whoza.ai",
-    title: "AI Call Answering for Tilers UK — Never Miss a Job",
+    title: "AI Call Answering for Tilers UK | Never Miss a Job",
     description: "AI call answering for UK tilers. Katie captures 24/7 bathroom, kitchen, floor and commercial tiling enquiries. WhatsApp alerts in 3 seconds. Free trial.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Tilers" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Tilers" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Call Answering for Tilers UK — Never Miss a Job",
+    title: "AI Call Answering for Tilers UK | Never Miss a Job",
     description: "AI call answering for UK tilers. Katie captures 24/7 bathroom, kitchen, floor and commercial tiling enquiries. WhatsApp alerts in 3 seconds. Free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     question: "Can Katie handle builder and developer enquiries?",
-    answer: "Absolutely. Builder and developer enquiries are automatically tagged as priority in your WhatsApp alert. Katie captures project scope, timeline, site address, and contact details — everything you need to quote fast. These are your biggest repeat customer base, so they get VIP treatment.",
+    answer: "Absolutely. Builder and developer enquiries are automatically tagged as priority in your WhatsApp alert. Katie captures project scope, timeline, site address, and contact details, everything you need to quote fast. These are your biggest repeat customer base, so they get VIP treatment.",
   },
   {
     question: "What information does Katie collect from tiling customers?",
@@ -60,11 +60,11 @@ const faqs = [
   },
   {
     question: "Will customers know they're talking to AI?",
-    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience — they just want their tiling project booked fast.",
+    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience. They just want their tiling project booked fast.",
   },
   {
     question: "Does it work with my existing business phone number?",
-    answer: "Yes. You simply set up call forwarding from your existing tiling business number to your whoza.ai number. Your customers dial the same number they've always used — Katie just answers when you can't. Setup takes under 10 minutes.",
+    answer: "Yes. You simply set up call forwarding from your existing tiling business number to your whoza.ai number. Your customers dial the same number they've always used. Katie just answers when you can't. Setup takes under 10 minutes.",
   },
   {
     question: "How quickly can I get set up?",
@@ -86,7 +86,7 @@ export default function ForTilersPage() {
   return (
     <>
       <VideoSchema
-        name="Whoza.ai for Tilers — AI Call Answering Demo"
+        name="Whoza.ai for Tilers: AI Call Answering Demo"
         description="Watch Katie capture a missed tiling enquiry in under 60 seconds. Bathroom renovation call answered instantly, project details sent to WhatsApp, quote prepared while the tiler is still on the job."
         embedUrl="https://whoza.ai/for-tilers"
       />
@@ -133,10 +133,10 @@ export default function ForTilersPage() {
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   AI Call Answering for{" "}
                   <span className="text-[#6ee7b7]">Tilers</span>{" "}
-                  UK — Never Miss a Job
+                  UK: Never Miss a Job
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
-                  Bathroom tiling, kitchen splashbacks, floor tiling, commercial projects — customers call when they want quality work. Katie answers every call, captures the project details, and sends them to your WhatsApp.
+                  Bathroom tiling, kitchen splashbacks, floor tiling, commercial projects. Customers call when they want quality work. Katie answers every call, captures the project details, and sends them to your WhatsApp.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -171,7 +171,7 @@ export default function ForTilersPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -224,7 +224,7 @@ export default function ForTilersPage() {
                 {
                   icon: LayoutGrid,
                   title: "Detailed Enquiries Missed on the Job",
-                  description: "You're knee-deep in a bathroom renovation, hands covered in adhesive. Phone rings — it's a new £4,500 bathroom job. You can't answer. By 6pm, they've booked someone else. You lost a week's worth of work.",
+                  description: "You're knee-deep in a bathroom renovation, hands covered in adhesive. Phone rings: it's a new £4,500 bathroom job. You can't answer. By 6pm, they've booked someone else. You lost a week's worth of work.",
                   stat: "46% of tiling calls missed",
                   color: "blue",
                 },
@@ -264,7 +264,7 @@ export default function ForTilersPage() {
                 The average UK tiler misses 4 calls per day = <strong>£45,600</strong> in lost revenue per year
               </p>
               <p className="text-[var(--v2-body)] text-sm mt-1">
-                Source: UK SME Communications Survey 2025 — based on £4,500 avg bathroom value, 30% conversion rate
+                Source: UK SME Communications Survey 2025, based on £4,500 avg bathroom value, 30% conversion rate
               </p>
             </div>
             <div className="mt-8 text-center">
@@ -295,7 +295,7 @@ export default function ForTilersPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: "Customer calls your number. Katie picks up in under 2 rings with your branded greeting: 'Hello, Johnson Tiling. I'm Katie, how can I help?' — 24/7, even when you're on the job or it's after hours.",
+                  description: "Customer calls your number. Katie picks up in under 2 rings with your branded greeting: 'Hello, Johnson Tiling. I'm Katie, how can I help?', 24/7, even when you're on the job or it's after hours.",
                 },
                 {
                   step: "02",
@@ -352,7 +352,7 @@ export default function ForTilersPage() {
               Tiler Success Story
             </div>
             <blockquote className="text-2xl sm:text-3xl font-medium leading-relaxed text-[var(--v2-ink)] mb-8">
-              "I used to miss 3-4 calls a day while I was tiling — bathrooms, kitchens, commercial jobs. In my first month with whoza.ai, I captured 11 jobs I would have missed, worth <span className="text-[var(--v2-green)] font-bold">£8,200</span>. It cost me £59. That's not a cost, that's a weapon."
+              "I used to miss 3 to 4 calls a day while I was tiling: bathrooms, kitchens, commercial jobs. In my first month with whoza.ai, I captured 11 jobs I would have missed, worth <span className="text-[var(--v2-green)] font-bold">£8,200</span>. It cost me £59. That's not a cost, that's a weapon."
             </blockquote>
             <div className="flex items-center justify-center gap-4">
               <div className="w-14 h-14 rounded-full bg-[var(--v2-mint)] flex items-center justify-center text-[var(--v2-green)] font-bold text-xl">

@@ -7,7 +7,7 @@ import { Gift, Share2, Users, ArrowRight } from "lucide-react"
 import { organizationSchemaObject } from "@/components/whoza/organization-schema"
 
 export const metadata: Metadata = {
-  title: "Refer a Trade — Give a Free Month, Get a Free Month",
+  title: "Refer a Trade: Give a Free Month, Get a Free Month",
   description: "Refer fellow UK tradespeople to Whoza.ai. When they join and stay, you both get rewarded with free months, up to a full year free for you.",
   alternates: {
     canonical: "https://whoza.ai/refer",
@@ -129,7 +129,7 @@ export default function ReferPage() {
                 },
                 {
                   question: "Can I refer multiple people?",
-                  answer: "Yes — refer as many tradespeople as you like. You can earn up to 12 free months in any 12-month period — a full year free. After the cap, referrals still track but no further credits accrue until the rolling window frees up.",
+                  answer: "Yes. Refer as many tradespeople as you like. You can earn up to 12 free months in any 12-month period, a full year free. After the cap, referrals still track but no further credits accrue until the rolling window frees up.",
                 },
                 {
                   question: "What if my friend cancels?",

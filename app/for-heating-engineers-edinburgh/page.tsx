@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "AI Call Answering for Heating Engineers in Edinburgh",
     description: "Stop losing heating engineer jobs to missed calls in Edinburgh. Katie answers 24/7, captures boiler and heating enquiries via WhatsApp. Plans from £59/month.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Heating Engineers in Edinburgh" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Heating Engineers in Edinburgh" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     "question": "Does it work with my existing Edinburgh business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing Edinburgh business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "answer": "Yes. You simply set up call forwarding from your existing Edinburgh business number to your whoza.ai number. Your customers dial the same number they've always used. Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
     "question": "How quickly can I get set up as a heating engineer in Edinburgh?",
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     "question": "What makes whoza.ai different for heating engineers in Edinburgh?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for heating engineers. She understands boiler breakdowns, servicing, installations & Gas Safety certificates — and with 4,500+ trade businesses competing in Edinburgh, capturing every call gives you a real competitive edge."
+    "answer": "Unlike generic call answering services, Katie is trained specifically for heating engineers. She understands boiler breakdowns, servicing, installations & Gas Safety certificates, and with 4,500+ trade businesses competing in Edinburgh, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -97,7 +97,7 @@ export default function ForHeatingEngineerEdinburghPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Edinburgh has 4,500+ trade businesses competing for 245K households. 
                   With 2,200 missed calls every week across the city, 
-                  Katie ensures you capture every heating engineers enquiry — boiler breakdowns, servicing, installations & Gas Safety certificates.
+                  Katie ensures you capture every heating engineers enquiry: boiler breakdowns, servicing, installations & Gas Safety certificates.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -132,7 +132,7 @@ export default function ForHeatingEngineerEdinburghPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -209,7 +209,7 @@ export default function ForHeatingEngineerEdinburghPage() {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">While You're on the Job</h3>
                     <p className="text-[var(--v2-body)] leading-relaxed">
-                      You're mid-job and your phone rings. Can't answer — hands full, focused on the task. Check missed call at break. Customer already booked someone else.
+                      You're mid-job and your phone rings. Can't answer: hands full, focused on the task. Check missed call at break. Customer already booked someone else.
                     </p>
                   </div>
                 </div>
@@ -258,7 +258,7 @@ export default function ForHeatingEngineerEdinburghPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your Edinburgh number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your Edinburgh number. Katie picks up in under 2 rings with your branded greeting, 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",
@@ -311,7 +311,7 @@ export default function ForHeatingEngineerEdinburghPage() {
                 From Georgian townhouses in New Town to family homes in Morningside and Bruntsfield, Edinburgh's heating engineers work across properties that demand specialist expertise. The New Town's Category A listed buildings still run traditional wet central heating systems with original pipework, while Victorian tenements in Stockbridge require careful boiler upgrades that respect stone construction and shared services. With 4,500+ trade businesses competing for 245K households, availability is everything.
               </p>
               <p>
-                Edinburgh is colder and drier than Glasgow but still faces high wind exposure from the Firth of Forth. East-coast winds drive rain horizontally, and winter temperatures regularly drop below freezing — stressing older heating systems when families need them most. Sunset falls as early as 3:30pm in December, meaning emergency callouts often happen in darkness. Whether you're servicing a townhouse in the New Town or replacing a boiler in Bruntsfield, Katie answers every call 24/7 and delivers the details to your WhatsApp so you never miss a £315 enquiry.
+                Edinburgh is colder and drier than Glasgow but still faces high wind exposure from the Firth of Forth. East-coast winds drive rain horizontally, and winter temperatures regularly drop below freezing, stressing older heating systems when families need them most. Sunset falls as early as 3:30pm in December, meaning emergency callouts often happen in darkness. Whether you're servicing a townhouse in the New Town or replacing a boiler in Bruntsfield, Katie answers every call 24/7 and delivers the details to your WhatsApp so you never miss a £315 enquiry.
               </p>
             </div>
           </div>

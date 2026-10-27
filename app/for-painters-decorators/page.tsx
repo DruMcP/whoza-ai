@@ -28,7 +28,7 @@ import { RelatedTrades } from "@/components/whoza/related-trades"
 
 export const metadata: Metadata = {
   title: "UK Call Answering for Painters & Decorators | From £59",
-  description: "24/7 call answering for UK painters & decorators — every interior, exterior and commercial enquiry captured to WhatsApp in 3 seconds. Plans from £59.",
+  description: "24/7 call answering for UK painters & decorators: every interior, exterior and commercial enquiry captured to WhatsApp in 3 seconds. Plans from £59.",
   alternates: {
     canonical: "https://whoza.ai/for-painters-decorators",
   },
@@ -56,11 +56,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "How much does AI call handling cost for painters and decorators?",
-    answer: "Whoza.ai starts at £59/month for the Starter plan. One captured interior painting job for a 3-bedroom house averages £1,200-£2,500. A full exterior repaint can be £3,000-£8,000. At £59/month, one missed room repaint pays for the entire year. Overage minutes are billed at £0.40/minute. No hidden fees or contracts."
+    answer: "Whoza.ai starts at £59/month for the Starter plan. One captured interior painting job for a 3-bedroom house averages £1,200 to £2,500. A full exterior repaint can be £3,000 to £8,000. At £59/month, one missed room repaint pays for the entire year. Overage minutes are billed at £0.40/minute. No hidden fees or contracts."
   },
   {
     question: "Can Katie handle emergency painting and touch-up calls?",
-    answer: "Yes. Katie identifies urgent painting enquiries like 'water stain on ceiling', 'peeling paint after leak', 'mould on walls', 'scuff marks before house sale', and 'tenant check-out painting'. She marks these as priority and captures the full context — room size, surface type, colour match requirements, and timeline — so you arrive prepared with the right paint and tools."
+    answer: "Yes. Katie identifies urgent painting enquiries like 'water stain on ceiling', 'peeling paint after leak', 'mould on walls', 'scuff marks before house sale', and 'tenant check-out painting'. She marks these as priority and captures the full context (room size, surface type, colour match requirements, and timeline) so you arrive prepared with the right paint and tools."
   },
   {
     question: "What information does Katie collect from painting customers?",
@@ -84,37 +84,37 @@ const faqs = [
   },
   {
     question: "Will customers trust an AI with their home painting project?",
-    answer: "Katie introduces herself as your AI assistant and explains that she's capturing details so you can provide an accurate quote. Most customers appreciate the immediate response and detailed information gathering. Most callers are satisfied with the AI experience, and painting customers particularly like that Katie captures room sizes, surface conditions, and colour preferences — saving time on the initial quote call."
+    answer: "Katie introduces herself as your AI assistant and explains that she's capturing details so you can provide an accurate quote. Most customers appreciate the immediate response and detailed information gathering. Most callers are satisfied with the AI experience, and painting customers particularly like that Katie captures room sizes, surface conditions, and colour preferences, saving time on the initial quote call."
   }
 ]
 
 const painPoints = [
   {
     icon: Paintbrush,
-    title: "You're up a ladder or in a dust sheet — phones go unanswered",
+    title: "You're up a ladder or in a dust sheet. Phones go unanswered",
     description: "You're mid-roll on a ceiling, up a ladder cutting in, or covered in dust sheets. The phone rings. By the time you clean up, the caller has moved on to the next painter on Google. That £2,500 exterior repaint goes to your competitor while you're still washing brushes."
   },
   {
     icon: Home,
     title: "Pre-sale painting enquiries are time-sensitive and high-value",
-    description: "A homeowner calls in February — 'We need the whole house painted before it goes on the market in March'. This is a £4,000-£6,000 job with a hard deadline. If you miss the call, they've already rung two other painters by the time you check your phone. Katie captures the deadline, room count, and move date immediately."
+    description: "A homeowner calls in February: 'We need the whole house painted before it goes on the market in March'. This is a £4,000 to £6,000 job with a hard deadline. If you miss the call, they've already rung two other painters by the time you check your phone. Katie captures the deadline, room count, and move date immediately."
   },
   {
     icon: Briefcase,
     title: "Commercial contracts come from agents who won't leave voicemail",
-    description: "A letting agent calls about painting 12 flats between tenancies. It's a £8,000 recurring contract. But agents are busy — they won't leave voicemail. If you miss the call, they move to the next painter on their approved list. Katie captures agent details, property count, and timeline — then texts you instantly."
+    description: "A letting agent calls about painting 12 flats between tenancies. It's a £8,000 recurring contract. But agents are busy. They won't leave voicemail. If you miss the call, they move to the next painter on their approved list. Katie captures agent details, property count, and timeline, then texts you instantly."
   },
   {
     icon: Palette,
     title: "Colour-matching emergency calls need context voicemail can't capture",
-    description: "A customer calls — 'I need the lounge ceiling repainted after a leak, and it needs to match the walls exactly'. A voicemail says nothing about the existing colour, finish type, or urgency. Katie captures: room size, existing paint brand/colour (if known), surface damage extent, and whether it's insurance work — so you arrive with colour cards and samples."
+    description: "A customer calls: 'I need the lounge ceiling repainted after a leak, and it needs to match the walls exactly'. A voicemail says nothing about the existing colour, finish type, or urgency. Katie captures: room size, existing paint brand/colour (if known), surface damage extent, and whether it's insurance work, so you arrive with colour cards and samples."
   }
 ]
 
 const howItWorks = [
   {
     step: 1,
-    title: "Painting enquiry comes in — any time",
+    title: "Painting enquiry comes in, any time",
     description: "Katie answers with your painting company's greeting. She identifies if it's an interior job, exterior repaint, commercial contract, emergency touch-up, or specialist finish enquiry."
   },
   {
@@ -125,7 +125,7 @@ const howItWorks = [
   {
     step: 3,
     title: "WhatsApp with full brief",
-    description: "Alert shows: 'Full exterior repaint — 4-bed detached — soffits/fascias/guttering included — current paint flaking — want weather-resistant masonry paint — budget £4-6k — need completed before house sale — postcode RG1 — survey requested' with customer number."
+    description: "Alert shows: 'Full exterior repaint, 4-bed detached, soffits/fascias/guttering included, current paint flaking, want weather-resistant masonry paint, budget £4k to £6k, need completed before house sale, postcode RG1, survey requested' with customer number."
   },
   {
     step: 4,
@@ -180,8 +180,8 @@ export default function ForPaintersDecoratorsPage() {
   return (
     <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />      <VideoSchema
-        name="Whoza.ai Demo — AI Call Handling for Painters & Decorators"
-        description="Watch how Katie captures a missed painting enquiry in under 60 seconds. Interior, exterior, commercial, emergency touch-ups — answered 24/7."
+        name="Whoza.ai Demo: AI Call Handling for Painters & Decorators"
+        description="Watch how Katie captures a missed painting enquiry in under 60 seconds. Interior, exterior, commercial, emergency touch-ups, answered 24/7."
         embedUrl="https://whoza.ai/for-painters-decorators"
       />
       <Header />
@@ -202,10 +202,10 @@ export default function ForPaintersDecoratorsPage() {
                   Built for UK Painters & Decorators
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 trade-headline">
-                  Never Miss a Painting Enquiry — Even Up a Ladder
+                  Never Miss a Painting Enquiry, Even Up a Ladder
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8">
-                  Interior painting, exterior repaints, commercial contracts, emergency touch-ups, wallpapering. Katie answers every call you miss, captures the full job details, and sends them to your WhatsApp in 3 seconds. From £59/month — less than one room repaint.
+                  Interior painting, exterior repaints, commercial contracts, emergency touch-ups, wallpapering. Katie answers every call you miss, captures the full job details, and sends them to your WhatsApp in 3 seconds. From £59/month, less than one room repaint.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link
@@ -244,7 +244,7 @@ export default function ForPaintersDecoratorsPage() {
                       <Phone className="w-5 h-5 text-[#6ee7b7]" />
                     </div>
                     <div>
-                      <p className="text-white font-medium">New Enquiry — Katie</p>
+                      <p className="text-white font-medium">New Enquiry from Katie</p>
                       <p className="text-white/65 text-sm">Exterior repaint call, 19:45</p>
                     </div>
                   </div>
@@ -252,10 +252,10 @@ export default function ForPaintersDecoratorsPage() {
                     <p>👤 Name: Eleanor Davies</p>
                     <p>📞 Phone: 07XXX XXXXXX</p>
                     <p>📍 Postcode: BS8 1TL</p>
-                    <p>🔧 Job: Full exterior repaint — 4-bed Victorian semi</p>
-                    <p>⚡ Urgency: High — house going on market in 6 weeks</p>
+                    <p>🔧 Job: Full exterior repaint, 4-bed Victorian semi</p>
+                    <p>⚡ Urgency: High, house going on market in 6 weeks</p>
                     <p>🏠 Property: Victorian semi, 3 storeys, bay windows</p>
-                    <p>💰 Estimated Value: £4,500-£6,500</p>
+                    <p>💰 Estimated Value: £4,500 to £6,500</p>
                     <p>🎨 Finish: Masonry paint, woodwork gloss, heritage colours</p>
                   </div>
                   <div className="flex gap-2 mt-4">
@@ -306,7 +306,7 @@ export default function ForPaintersDecoratorsPage() {
                 Why Painters & Decorators Lose Jobs to Missed Calls
               </h2>
               <p className="v2-lead mt-5 max-w-2xl mx-auto">
-                Painting jobs range from £200 touch-ups to £8,000+ commercial contracts. But you're up a ladder, in a dust sheet, or with paint on your hands. When the phone rings, you miss it — and the customer moves on.
+                Painting jobs range from £200 touch-ups to £8,000+ commercial contracts. But you're up a ladder, in a dust sheet, or with paint on your hands. When the phone rings, you miss it, and the customer moves on.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 gap-8">
@@ -424,7 +424,7 @@ export default function ForPaintersDecoratorsPage() {
               Painter Testimonial
             </div>
             <blockquote className="text-2xl sm:text-3xl font-medium text-[var(--v2-ink)] leading-relaxed mb-8">
-              "I was cutting in a ceiling in Clifton when my phone rang three times. First was a lounge repaint — £850 job. Second was a letting agent with 8 flats between tenancies — £6,400 contract. Third was a scuff touch-up — £120. Katie captured all three with room counts, deadlines, and agent details. I called back at 4pm and booked the agent contract for next month. That one job paid for Katie for 9 years."
+              "I was cutting in a ceiling in Clifton when my phone rang three times. First was a lounge repaint, £850 job. Second was a letting agent with 8 flats between tenancies, £6,400 contract. Third was a scuff touch-up, £120. Katie captured all three with room counts, deadlines, and agent details. I called back at 4pm and booked the agent contract for next month. That one job paid for Katie for 9 years."
             </blockquote>
             <div className="flex items-center justify-center gap-4">
               <div className="w-12 h-12 rounded-full bg-[var(--katie-blue)]/10 flex items-center justify-center text-[var(--katie-blue)] font-bold">
@@ -445,7 +445,7 @@ export default function ForPaintersDecoratorsPage() {
               One Exterior Repaint Pays for 7 Years of Katie
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-              Room repaints average £400-£800. Full interior house £2,500-£5,000. Exterior repaints £4,000-£8,000. Commercial contracts £5,000-£15,000+. At £59/month, capturing one missed exterior repaint pays for nearly a decade.
+              Room repaints average £400 to £800. Full interior house £2,500 to £5,000. Exterior repaints £4,000 to £8,000. Commercial contracts £5,000 to £15,000+. At £59/month, capturing one missed exterior repaint pays for nearly a decade.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <Link
@@ -541,7 +541,7 @@ export default function ForPaintersDecoratorsPage() {
 
       <div className="section-divider" />
         <RelatedTrades currentTrade="for-painters-decorators" />
-        <Footer />
+        <Footer hideCta />
       <FloatingChatWidget />
     </>
   )

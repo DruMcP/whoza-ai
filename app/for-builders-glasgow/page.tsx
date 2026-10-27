@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "AI Call Answering for Builders in Glasgow | whoza.ai",
     description: "Stop losing builder jobs to missed calls in Glasgow. Katie answers 24/7, captures extension and renovation enquiries via WhatsApp. Plans from £59/month.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Builders in Glasgow" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Builders in Glasgow" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     "question": "Does it work with my existing Glasgow business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing Glasgow business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "answer": "Yes. You simply set up call forwarding from your existing Glasgow business number to your whoza.ai number. Your customers dial the same number they've always used. Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
     "question": "How quickly can I get set up as a builder in Glasgow?",
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     "question": "What makes whoza.ai different for builders in Glasgow?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for builders. She understands extensions, renovations & new builds — and with 5,500+ trade businesses competing in Glasgow, capturing every call gives you a real competitive edge."
+    "answer": "Unlike generic call answering services, Katie is trained specifically for builders. She understands extensions, renovations & new builds, and with 5,500+ trade businesses competing in Glasgow, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -97,7 +97,7 @@ export default function ForBuilderGlasgowPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Glasgow has 5,500+ trade businesses competing for 310K households. 
                   With 2,600 missed calls every week across the city, 
-                  Katie ensures you capture every building enquiry — extensions, renovations & new builds.
+                  Katie ensures you capture every building enquiry: extensions, renovations & new builds.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -132,7 +132,7 @@ export default function ForBuilderGlasgowPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -197,7 +197,7 @@ export default function ForBuilderGlasgowPage() {
                 The Real Cost of Missed Calls for Builders in Glasgow
               </h2>
               <p className="v2-lead max-w-2xl mx-auto">
-                Tenement buildings have shared systems — emergencies affect multiple flats. Harsh winters cause boiler and heating emergencies to spike. Older housing stock needs frequent updates.
+                Tenement buildings have shared systems. Emergencies affect multiple flats. Harsh winters cause boiler and heating emergencies to spike. Older housing stock needs frequent updates.
               </p>
             </div>
             <div className="space-y-8">
@@ -209,7 +209,7 @@ export default function ForBuilderGlasgowPage() {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">While You're on the Job</h3>
                     <p className="text-[var(--v2-body)] leading-relaxed">
-                      You're mid-job and your phone rings. Can't answer — hands full, focused on the task. Check missed call at break. Customer already booked someone else.
+                      You're mid-job and your phone rings. Can't answer: hands full, focused on the task. Check missed call at break. Customer already booked someone else.
                     </p>
                   </div>
                 </div>
@@ -258,7 +258,7 @@ export default function ForBuilderGlasgowPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your Glasgow number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your Glasgow number. Katie picks up in under 2 rings with your branded greeting, 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",
@@ -308,10 +308,10 @@ export default function ForBuilderGlasgowPage() {
             </div>
             <div className="space-y-6 text-[var(--v2-body)] leading-relaxed">
               <p>
-                Hyndland and Partick in the West End are defined by sandstone tenements built between 1880 and 1920 — high ceilings, shared services, and a steady demand for kitchen and bathroom renovations. Shawlands and Pollokshields in the Southside offer a mix of tenement flats and Victorian villas where loft conversions are increasingly popular. Bearsden and Milngavie in the north-west provide a different market entirely: suburban detached homes where extensions and garden room builds dominate enquiry types.
+                Hyndland and Partick in the West End are defined by sandstone tenements built between 1880 and 1920: high ceilings, shared services, and a steady demand for kitchen and bathroom renovations. Shawlands and Pollokshields in the Southside offer a mix of tenement flats and Victorian villas where loft conversions are increasingly popular. Bearsden and Milngavie in the north-west provide a different market entirely: suburban detached homes where extensions and garden room builds dominate enquiry types.
               </p>
               <p>
-                Glasgow has the highest rainfall of any major UK city at 1,124mm per year. Persistent damp and driving rain cause gutter overflow, external stone deterioration, and roof leaks that keep builders busy year-round. Harsh winters with frequent freeze-thaw cycles stress pipes and heating systems, while short daylight hours in December — sunset around 4pm — mean emergency callouts often happen in darkness when trades are already stretched.
+                Glasgow has the highest rainfall of any major UK city at 1,124mm per year. Persistent damp and driving rain cause gutter overflow, external stone deterioration, and roof leaks that keep builders busy year-round. Harsh winters with frequent freeze-thaw cycles stress pipes and heating systems, while short daylight hours in December, sunset around 4pm, mean emergency callouts often happen in darkness when trades are already stretched.
               </p>
               <p>
                 The factoring system is unique to Glasgow. Most tenement flats are managed by factoring companies like FirstPort and Factoring Services, who maintain approved contractor lists. Getting on these lists is lucrative but requires demonstrating reliable communication. When a factor in Hillhead needs an emergency repair quote at 6pm, Katie captures the call, marks it urgent, and delivers the details to your WhatsApp before the factor moves to their second-choice builder.

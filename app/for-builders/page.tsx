@@ -33,7 +33,7 @@ import { tradeCaseStudies } from "@/lib/trade-case-studies"
 const faqs = [
   {
     question: "How much does AI call handling cost for builders?",
-    answer: "Whoza.ai starts at £59/month for the Starter plan. One captured extension or renovation enquiry can be worth £15,000-£80,000. That's one free trial to pay for over a decade. Overage minutes are billed at £0.40/minute. No hidden setup fees or long-term contracts."
+    answer: "Whoza.ai starts at £59/month for the Starter plan. One captured extension or renovation enquiry can be worth £15,000 to £80,000. That's one free trial to pay for over a decade. Overage minutes are billed at £0.40/minute. No hidden setup fees or long-term contracts."
   },
   {
     question: "Can Katie handle large project enquiries like full house renovations?",
@@ -41,7 +41,7 @@ const faqs = [
   },
   {
     question: "What happens if a customer calls about emergency structural damage?",
-    answer: "Katie identifies emergency keywords like 'collapse', 'structural damage', 'subsidence', 'crack in wall', 'unsafe', and 'dangerous' — and marks the enquiry as emergency priority. You get an immediate WhatsApp with 'STRUCTURAL EMERGENCY — URGENT' in the header, even at 2am."
+    answer: "Katie identifies emergency keywords like 'collapse', 'structural damage', 'subsidence', 'crack in wall', 'unsafe', and 'dangerous', and marks the enquiry as emergency priority. You get an immediate WhatsApp with 'STRUCTURAL EMERGENCY: URGENT' in the header, even at 2am."
   },
   {
     question: "Does Katie collect information for building quotes?",
@@ -53,7 +53,7 @@ const faqs = [
   },
   {
     question: "How does whoza.ai handle after-hours calls for builders?",
-    answer: "Builders often work on-site from 8am-6pm, but enquiries come in evenings and weekends when homeowners have time to research. Katie answers 24/7, capturing every call and delivering it to your WhatsApp. You review and respond when it suits you — no more Monday morning panic."
+    answer: "Builders often work on-site from 8am-6pm, but enquiries come in evenings and weekends when homeowners have time to research. Katie answers 24/7, capturing every call and delivering it to your WhatsApp. You review and respond when it suits you, no more Monday morning panic."
   },
   {
     question: "Will customers know they're talking to an AI receptionist?",
@@ -68,7 +68,7 @@ const faqs = [
 const painPoints = [
   {
     icon: Hammer,
-    title: "You're on site with machinery — phones ring in your van",
+    title: "You're on site with machinery. Phones ring in your van",
     description: "You're operating a digger, cutting timber, or laying foundations. The phone rings. By the time you wash up and check, it's gone to voicemail. That was a £25,000 extension enquiry. Your competitor answered."
   },
   {
@@ -78,13 +78,13 @@ const painPoints = [
   },
   {
     icon: ClipboardList,
-    title: "Extension enquiries need detail — voicemails don't deliver",
-    description: "'Hi, I need a quote for an extension' tells you nothing. How big? What type? Budget? Timeline? Planning permission status? Katie captures all of this — property age, project scope, budget range, architect involvement — so you arrive at the site meeting fully prepared."
+    title: "Extension enquiries need detail. Voicemails don't deliver",
+    description: "'Hi, I need a quote for an extension' tells you nothing. How big? What type? Budget? Timeline? Planning permission status? Katie captures all of this (property age, project scope, budget range, architect involvement) so you arrive at the site meeting fully prepared."
   },
   {
     icon: Phone,
     title: "Weekend calls from serious buyers go to voicemail",
-    description: "Homeowners research builders on Saturday and Sunday evenings. They call 2-3 firms. The one that answers — or at least captures the enquiry professionally — gets the site visit. By Monday, the serious buyers have already chosen."
+    description: "Homeowners research builders on Saturday and Sunday evenings. They call 2 to 3 firms. The one that answers, or at least captures the enquiry professionally, gets the site visit. By Monday, the serious buyers have already chosen."
   }
 ]
 
@@ -102,7 +102,7 @@ const howItWorks = [
   {
     step: 3,
     title: "WhatsApp with full brief",
-    description: "Alert shows: '4-bed extension — £40k-60k budget — Q3 timeline — architect appointed — planning submitted — postcode SE22 — callback requested' with customer number."
+    description: "Alert shows: '4-bed extension, £40k to £60k budget, Q3 timeline, architect appointed, planning submitted, postcode SE22, callback requested' with customer number."
   },
   {
     step: 4,
@@ -155,8 +155,8 @@ export default function ForBuildersPage() {
   return (
     <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />      <VideoSchema
-        name="Whoza.ai Demo — AI Call Handling for Builders"
-        description="Watch how Katie captures a missed building enquiry in under 60 seconds. Extensions, renovations, emergency structural work — answered 24/7."
+        name="Whoza.ai Demo: AI Call Handling for Builders"
+        description="Watch how Katie captures a missed building enquiry in under 60 seconds. Extensions, renovations, emergency structural work, answered 24/7."
         embedUrl="https://whoza.ai/for-builders"
       />
       <Header />
@@ -177,10 +177,10 @@ export default function ForBuildersPage() {
                   Built for UK Builders
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 trade-headline">
-                  Never Miss a Building Enquiry — Even From Site
+                  Never Miss a Building Enquiry, Even From Site
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8">
-                  Extensions, renovations, new builds, emergency structural work. Katie answers every call you miss, captures the full project details, and sends them to your WhatsApp in 3 seconds. From £59/month — less than one missed quote.
+                  Extensions, renovations, new builds, emergency structural work. Katie answers every call you miss, captures the full project details, and sends them to your WhatsApp in 3 seconds. From £59/month, less than one missed quote.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link
@@ -219,7 +219,7 @@ export default function ForBuildersPage() {
                       <Phone className="w-5 h-5 text-[#6ee7b7]" />
                     </div>
                     <div>
-                      <p className="text-white font-medium">New Enquiry — Katie</p>
+                      <p className="text-white font-medium">New Enquiry from Katie</p>
                       <p className="text-white/65 text-sm">Extension call, 18:47</p>
                     </div>
                   </div>
@@ -227,11 +227,11 @@ export default function ForBuildersPage() {
                     <p>👤 Name: Rebecca Hartley</p>
                     <p>📞 Phone: 07XXX XXXXXX</p>
                     <p>📍 Postcode: SW18 3TQ</p>
-                    <p>🔧 Job: Single-storey rear extension — kitchen/diner</p>
-                    <p>💰 Budget: £45,000-£65,000</p>
+                    <p>🔧 Job: Single-storey rear extension, kitchen/diner</p>
+                    <p>💰 Budget: £45,000 to £65,000</p>
                     <p>📅 Timeline: September start</p>
                     <p>🏠 Property: 3-bed Victorian terrace</p>
-                    <p>📋 Planning: Not yet applied — needs advice</p>
+                    <p>📋 Planning: Not yet applied, needs advice</p>
                   </div>
                   <div className="flex gap-2 mt-4">
                     <button className="flex-1 py-2 bg-[var(--v2-green)] text-white rounded-lg text-sm font-medium">Accept</button>
@@ -259,7 +259,7 @@ export default function ForBuildersPage() {
               answer: "£50k+ extensions get flagged for same-day callback, so you prioritise high-value jobs.",
             },            {
               label: "Both contacts",
-              answer: "Both partners' details are captured — no more 'let me check with my wife' delays.",
+              answer: "Both partners' details are captured, no more 'let me check with my wife' delays.",
             },            {
               label: "WhatsApp brief",
               answer: "A full project brief arrives on your phone before you even call back.",
@@ -281,7 +281,7 @@ export default function ForBuildersPage() {
                 Why Builders Lose Jobs to Missed Calls
               </h2>
               <p className="v2-lead mt-5 max-w-2xl mx-auto">
-                Building projects are high-value, long-lead enquiries. Homeowners research for weeks, then call 2-3 builders on the same evening. The one that captures the enquiry professionally wins the site visit.
+                Building projects are high-value, long-lead enquiries. Homeowners research for weeks, then call 2 to 3 builders on the same evening. The one that captures the enquiry professionally wins the site visit.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 gap-8">
@@ -393,7 +393,7 @@ export default function ForBuildersPage() {
               One Extension Enquiry Pays for 15 Years of Katie
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-              Average kitchen extension: £45,000-£65,000. Loft conversion: £35,000-£55,000. Full renovation: £80,000+. At £59/month, capturing one missed job pays for the next decade.
+              Average kitchen extension: £45,000 to £65,000. Loft conversion: £35,000 to £55,000. Full renovation: £80,000+. At £59/month, capturing one missed job pays for the next decade.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <Link
@@ -526,7 +526,7 @@ export default function ForBuildersPage() {
 
       <div className="section-divider" />
         <RelatedTrades currentTrade="for-builders" />
-        <Footer />
+        <Footer hideCta />
       <FloatingChatWidget />
     </>
   )

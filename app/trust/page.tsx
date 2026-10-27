@@ -41,7 +41,7 @@ const trustItems = [
   {
     icon: Lock,
     title: "UK GDPR Compliant",
-    description: "All data processing follows UK General Data Protection Regulation and the Data Protection Act 2018. Our AI assistant identifies itself as AI only when a caller asks, and always answers honestly — it never claims to be human.",
+    description: "All data processing follows UK General Data Protection Regulation and the Data Protection Act 2018. Our AI assistant identifies itself as AI only when a caller asks, and always answers honestly. It never claims to be human.",
   },
   {
     icon: Server,
@@ -56,7 +56,7 @@ const trustItems = [
   {
     icon: Clock,
     title: "Controlled Data Retention",
-    description: "Calls are not recorded — only live text transcripts are produced, and audio is never stored. Transcripts and call notes are visible in your dashboard for 30 days, then removed. Backend archive of transcripts and metadata for billing and dispute resolution is retained for 90 days. Caller contact records are retained while your account is active plus the dispute window. Earlier deletion of transcripts, metadata and caller contact records is available on request.",
+    description: "Calls are not recorded: only live text transcripts are produced, and audio is never stored. Transcripts and call notes are visible in your dashboard for 30 days, then removed. Backend archive of transcripts and metadata for billing and dispute resolution is retained for 90 days. Caller contact records are retained while your account is active plus the dispute window. Earlier deletion of transcripts, metadata and caller contact records is available on request.",
   },
   {
     icon: Globe,
@@ -84,7 +84,7 @@ export default function TrustPage() {
           </div>
           <h1 className="text-4xl font-bold mb-4">Trust & Security</h1>
           <p className="text-[var(--v2-body)] text-lg max-w-2xl">
-            Security isn't a feature — it's the foundation. Here's how we protect your business, your customers, and every call Katie handles.
+            Security isn't a feature. It's the foundation. Here's how we protect your business, your customers, and every call Katie handles.
           </p>
         </div>
 

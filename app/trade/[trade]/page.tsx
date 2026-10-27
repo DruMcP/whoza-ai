@@ -69,7 +69,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       siteName: "Whoza.ai",
       title: tradeData.headline,
       description: tradeData.metaDescription,
-      images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: `whoza.ai — AI Call Handling for ${tradeData.display}` }],
+      images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: `whoza.ai: AI Call Handling for ${tradeData.display}` }],
     },
     twitter: {
       card: "summary_large_image",
@@ -96,7 +96,7 @@ export default async function TradePage({ params }: PageProps) {
     <>
       <TradeSchema tradeData={tradeData} />
       <VideoSchema
-        name={`Whoza.ai Demo — AI Call Handling for ${tradeData.display}`}
+        name={`Whoza.ai Demo: AI Call Handling for ${tradeData.display}`}
         description={`Watch how Whoza.ai's Katie captures a missed enquiry in under 60 seconds for ${tradeData.display}. The call is answered instantly, the enquiry lands in WhatsApp, and you accept or decline in two taps.`}
         embedUrl={`https://whoza.ai/trade/${tradeData.slug}`}
       />
@@ -169,7 +169,7 @@ export default async function TradePage({ params }: PageProps) {
         <FinalCTA />
       </main>
 
-      <Footer />
+      <Footer hideCta />
       <FloatingChatWidget />
     </>
   )

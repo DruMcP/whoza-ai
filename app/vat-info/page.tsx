@@ -52,10 +52,10 @@ export default function VatInfoPage() {
               </p>
               <div className="bg-white rounded border border-[var(--v2-line)] p-4 space-y-2 text-sm mt-4">
                 <p className="text-[var(--v2-green)] font-semibold">What you see is what you pay:</p>
-                <p>Starter Plan: <strong className="text-[var(--v2-ink)]">£59/month</strong> — total, no extras</p>
-                <p>Growth Plan: <strong className="text-[var(--v2-ink)]">£125/month</strong> — total, no extras</p>
-                <p>Pro Plan: <strong className="text-[var(--v2-ink)]">£230/month</strong> — total, no extras</p>
-                <p>Scale Plan: <strong className="text-[var(--v2-ink)]">£399/month</strong> — total, no extras</p>
+                <p>Starter Plan: <strong className="text-[var(--v2-ink)]">£59/month</strong>, total, no extras</p>
+                <p>Growth Plan: <strong className="text-[var(--v2-ink)]">£125/month</strong>, total, no extras</p>
+                <p>Pro Plan: <strong className="text-[var(--v2-ink)]">£230/month</strong>, total, no extras</p>
+                <p>Scale Plan: <strong className="text-[var(--v2-ink)]">£399/month</strong>, total, no extras</p>
               </div>
             </div>
           </section>

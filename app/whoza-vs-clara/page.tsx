@@ -41,9 +41,9 @@ const comparisonData = [
   { feature: "WhatsApp Delivery", whoza: "✓ Native integration", competitor: "✗ Email only", winner: "whoza", note: "Major differentiator" },
   { feature: "Review Collection", whoza: "✓ Built-in (Claire)", competitor: "✗ Not available", winner: "whoza", note: "whoze exclusive" },
   { feature: "Competitor Analysis", whoza: "✓ Monthly reports (Rex)", competitor: "✗ Not available", winner: "whoza", note: "whoze exclusive" },
-  { feature: "Setup Time", whoza: "30 minutes", competitor: "2–4 hours", winner: "whoza", note: "whoze much faster" },
+  { feature: "Setup Time", whoza: "30 minutes", competitor: "2 to 4 hours", winner: "whoza", note: "whoze much faster" },
   { feature: "Free Trial", whoza: "7 days, no card", competitor: "7 days, card required", winner: "whoza", note: "whoze more accessible" },
-  { feature: "Contract", whoza: "None — cancel anytime", competitor: "3-month minimum", winner: "whoza", note: "whoze more flexible" },
+  { feature: "Contract", whoza: "None, cancel anytime", competitor: "3-month minimum", winner: "whoza", note: "whoze more flexible" },
   { feature: "Money-Back Guarantee", whoza: "30 days", competitor: "14 days", winner: "whoza", note: "whoze longer period" },
   { feature: "UK Voice Quality", whoza: "✓ Natural regional accents", competitor: "✓ Good UK voices", winner: "draw", note: "Both excellent" },
   { feature: "Spam Filtering", whoza: "✓ Advanced AI filtering", competitor: "✓ Basic filtering", winner: "whoza", note: "whoze more sophisticated" },
@@ -61,7 +61,7 @@ const faqs = [
   },
   {
     question: "Which AI call handler is faster to set up?",
-    answer: "whoza.ai is designed for same-day setup. Most tradespeople are live within 2 hours. Clara AI typically requires 24-48 hours for account verification and script configuration. If you need coverage immediately, whoza.ai is the faster option."
+    answer: "whoza.ai is designed for same-day setup. Most tradespeople are live within 2 hours. Clara AI typically requires 24 to 48 hours for account verification and script configuration. If you need coverage immediately, whoza.ai is the faster option."
   },
   {
     question: "Is Clara AI or whoza.ai better for UK tradespeople?",
@@ -96,7 +96,7 @@ export default function VsClaraPage() {
 
               <div className="inline-flex items-center gap-2 bg-amber-50 text-amber-700 px-3 py-1 rounded-full text-xs font-medium mb-6">
                 <Star className="w-3 h-3" />
-                Comparison — August 2026
+                Comparison, August 2026
               </div>
 
               {/* Publisher Disclosure */}
@@ -114,7 +114,7 @@ export default function VsClaraPage() {
 
               <p className="text-lg text-[var(--v2-body)] max-w-2xl mb-8">
                 Clara (£49.99/month) and whoza.ai (£59/month) are the two most popular AI receptionists 
-                for UK tradespeople. We compared them on price, features, setup, and value — 
+                for UK tradespeople. We compared them on price, features, setup, and value, 
                 with real data from their websites and user reviews.
               </p>
 
@@ -209,13 +209,13 @@ export default function VsClaraPage() {
                   Clara's entry price of £49.99 beats whoza.ai's £59 by £9/month. Over a year, that's a £108 saving. 
                   However, Clara requires a 3-month minimum commitment (£149.97 upfront), while whoza.ai has no contract. 
                   Clara's mid-tier Pro plan at £99.99 is cheaper than whoza.ai's Growth at £125, but Clara Pro doesn't include 
-                  review collection or competitor analysis — features that whoza.ai includes at the Growth level.
+                  review collection or competitor analysis, features that whoza.ai includes at the Growth level.
                 </p>
                 <p className="text-[var(--v2-body)] leading-relaxed">
                   <strong className="text-[var(--v2-ink)]">Real-world cost example:</strong> A plumber receiving 15 calls/week. 
                   Clara Standard (£49.99) answers calls but delivers via email. whoza.ai Starter (£59) answers calls 
                   and delivers to WhatsApp. The £9/month difference is negligible compared to the convenience of 
-                  WhatsApp delivery — which most tradespeople prefer according to a 2025 FSB survey showing 73% of 
+                  WhatsApp delivery, which most tradespeople prefer according to a 2025 FSB survey showing 73% of 
                   trade business owners check WhatsApp more frequently than email.
                 </p>
               </div>
@@ -229,7 +229,7 @@ export default function VsClaraPage() {
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-6">
-                  <h3 className="font-bold text-[var(--v2-green)] mb-3">whoza.ai — WhatsApp</h3>
+                  <h3 className="font-bold text-[var(--v2-green)] mb-3">whoza.ai: WhatsApp</h3>
                   <ul className="space-y-2 text-[var(--v2-body)] text-sm">
                     <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> Instant push notification</li>
                     <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> One-tap accept/decline/call back</li>
@@ -238,7 +238,7 @@ export default function VsClaraPage() {
                   </ul>
                 </div>
                 <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
-                  <h3 className="font-bold text-amber-700 mb-3">Clara — Email</h3>
+                  <h3 className="font-bold text-amber-700 mb-3">Clara: Email</h3>
                   <ul className="space-y-2 text-[var(--v2-body)] text-sm">
                     <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-600 shrink-0 mt-0.5" /> Must check inbox regularly</li>
                     <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-600 shrink-0 mt-0.5" /> Can get buried under other emails</li>
@@ -248,7 +248,7 @@ export default function VsClaraPage() {
                 </div>
               </div>
               <p className="text-[var(--v2-body)] text-sm mt-4">
-                Source: Ofcom, Online Nation 2025, 10 December 2025 — 90% of UK adults use WhatsApp; 
+                Source: Ofcom, Online Nation 2025, 10 December 2025. 90% of UK adults use WhatsApp; 
                 trade business owners check messaging apps 4.2x more frequently than email during work hours.
               </p>
             </div>
@@ -262,14 +262,14 @@ export default function VsClaraPage() {
               <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <p className="text-[var(--v2-body)] leading-relaxed mb-4">
                   whoza.ai's standout features are Claire (review collection) and Rex (competitor analysis). 
-                  These aren't gimmicks — they're revenue drivers. According to BrightLocal's 2025 UK survey, 
+                  These aren't gimmicks. They're revenue drivers. According to BrightLocal's 2025 UK survey, 
                   businesses with 40+ Google reviews receive 3.5x more enquiries. Claire automates the review 
-                  collection process, which typically takes 2–3 hours per week if done manually. Rex's competitor 
+                  collection process, which typically takes 2 to 3 hours per week if done manually. Rex's competitor 
                   reports help you understand why a rival is ranking higher on Google, giving you actionable steps 
                   to improve your visibility.
                 </p>
                 <p className="text-[var(--v2-body)] leading-relaxed">
-                  Clara focuses purely on call answering. It does this well — voice quality is good, 
+                  Clara focuses purely on call answering. It does this well: voice quality is good, 
                   setup is straightforward, and the AI understands trade terminology. But it's a single-tool 
                   solution. If you want reviews, competitor insights, or WhatsApp delivery, you'll need 
                   separate tools, adding cost and complexity.
@@ -287,7 +287,7 @@ export default function VsClaraPage() {
               </h2>
               <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-                  whoza.ai claims 30-minute setup. In our testing (August 2026), this held up — we went from 
+                  whoza.ai claims 30-minute setup. In our testing (August 2026), this held up: we went from 
                   sign-up to live call handling in 28 minutes. The process is: connect your number via call 
                   forwarding (2 mins), fill in your services and hours (5 mins), test with a sample call (3 mins), 
                   go live (18 mins for DNS/call routing propagation).
@@ -295,7 +295,7 @@ export default function VsClaraPage() {
                 <p className="text-[var(--v2-body)] leading-relaxed">
                   Clara's setup took 2 hours 47 minutes in our test. The process involves more configuration 
                   steps, a longer onboarding form, and a mandatory "training period" where the AI learns your 
-                  business from submitted documents. This isn't necessarily bad — some users prefer the thoroughness — 
+                  business from submitted documents. This isn't necessarily bad (some users prefer the thoroughness), 
                   but if you need to be live today, whoza.ai is faster.
                 </p>
               </div>
@@ -306,7 +306,7 @@ export default function VsClaraPage() {
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                "Comparison — August 2026",
+                "Comparison, August 2026",
                 "Pricing verified from competitor websites",
                 "No affiliate links or paid placement",
                 "whoza.ai and Clara both reviewed",

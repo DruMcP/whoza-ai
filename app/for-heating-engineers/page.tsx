@@ -30,7 +30,7 @@ import { tradeCaseStudies } from "@/lib/trade-case-studies"
 
 export const metadata: Metadata = {
   title: "UK Call Answering Service for Heating Engineers | From £59",
-  description: "24/7 call answering for UK heating engineers — Manchester to Glasgow. Boiler breakdowns and no-heat emergencies captured to WhatsApp in 3 seconds. From £59.",
+  description: "24/7 call answering for UK heating engineers, Manchester to Glasgow. Boiler breakdowns and no-heat emergencies captured to WhatsApp in 3 seconds. From £59.",
   alternates: {
     canonical: "https://whoza.ai/for-heating-engineers",
   },
@@ -58,11 +58,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "How much does AI call handling cost for heating engineers?",
-    answer: "Whoza.ai starts at £59/month for the Starter plan. One captured boiler breakdown averages £120-£200 callout. A full boiler replacement can be £2,500-£4,500. At £59/month, one emergency callout pays for the whole year. Overage minutes are billed at £0.40/minute."
+    answer: "Whoza.ai starts at £59/month for the Starter plan. One captured boiler breakdown averages £120 to £200 callout. A full boiler replacement can be £2,500 to £4,500. At £59/month, one emergency callout pays for the whole year. Overage minutes are billed at £0.40/minute."
   },
   {
     question: "Can Katie handle emergency boiler breakdown calls at 6am on a Sunday?",
-    answer: "Yes. Katie answers 24/7, including weekends, bank holidays, and early mornings. She identifies emergency heating keywords like 'no heating', 'no hot water', 'boiler not working', 'leaking boiler', 'pilot light out', 'pressure dropped' — and marks the enquiry as emergency priority. You get an immediate WhatsApp with 'BOILER EMERGENCY — URGENT' in the header, even at 2am on Christmas morning."
+    answer: "Yes. Katie answers 24/7, including weekends, bank holidays, and early mornings. She identifies emergency heating keywords like 'no heating', 'no hot water', 'boiler not working', 'leaking boiler', 'pilot light out', 'pressure dropped', and marks the enquiry as emergency priority. You get an immediate WhatsApp with 'BOILER EMERGENCY: URGENT' in the header, even at 2am on Christmas morning."
   },
   {
     question: "What information does Katie collect from heating customers?",
@@ -82,7 +82,7 @@ const faqs = [
   },
   {
     question: "Can Katie handle calls about central heating installation quotes?",
-    answer: "Yes. Katie captures installation enquiries with: property type and size, number of radiators, current heating system (combi/system/regular/none), fuel type (gas/LPG/oil/electric), property age, budget range, and timeline. These high-value enquiries (£3,000-£8,000+) get flagged as 'installation quote' for priority follow-up."
+    answer: "Yes. Katie captures installation enquiries with: property type and size, number of radiators, current heating system (combi/system/regular/none), fuel type (gas/LPG/oil/electric), property age, budget range, and timeline. These high-value enquiries (£3,000 to £8,000+) get flagged as 'installation quote' for priority follow-up."
   },
   {
     question: "Will customers trust an AI with their boiler emergency?",
@@ -98,7 +98,7 @@ const painPoints = [
   },
   {
     icon: Thermometer,
-    title: "Emergency calls need fast triage — voicemail wastes 20 minutes",
+    title: "Emergency calls need fast triage. Voicemail wastes 20 minutes",
     description: "A voicemail saying 'my boiler's broken' tells you nothing. Is it a £50 pressure top-up or a £4,000 replacement? Katie captures: fault description, boiler make/model, property age, and whether there's hot water. You call back with parts already in the van."
   },
   {
@@ -109,14 +109,14 @@ const painPoints = [
   {
     icon: Wrench,
     title: "Annual service reminders slip through the cracks",
-    description: "Service customers call to book their annual boiler service. If you miss the call, they often just go to the next engineer on their list. Katie captures every service enquiry with property details, preferred dates, and even sets up recurring annual reminders — building your predictable maintenance pipeline."
+    description: "Service customers call to book their annual boiler service. If you miss the call, they often just go to the next engineer on their list. Katie captures every service enquiry with property details, preferred dates, and even sets up recurring annual reminders, building your predictable maintenance pipeline."
   }
 ]
 
 const howItWorks = [
   {
     step: 1,
-    title: "Boiler breaks — customer calls",
+    title: "Boiler breaks, customer calls",
     description: "Katie answers with your heating company's greeting. She identifies if it's an emergency breakdown, annual service, gas safety certificate, or installation enquiry."
   },
   {
@@ -127,7 +127,7 @@ const howItWorks = [
   {
     step: 3,
     title: "WhatsApp with diagnostic context",
-    description: "Alert shows: 'Vaillant EcoTEC — no hot water — pressure at 0.5 bar — 1960s semi — rented — tenant contact — emergency callback' with customer number and property details."
+    description: "Alert shows: 'Vaillant EcoTEC, no hot water, pressure at 0.5 bar, 1960s semi, rented, tenant contact, emergency callback' with customer number and property details."
   },
   {
     step: 4,
@@ -182,8 +182,8 @@ export default function ForHvacPage() {
   return (
     <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />      <VideoSchema
-        name="Whoza.ai Demo — AI Call Handling for Heating Engineers"
-        description="Watch how Katie captures a missed heating enquiry in under 60 seconds. Boiler breakdowns, emergency heating, annual services — answered 24/7."
+        name="Whoza.ai Demo: AI Call Handling for Heating Engineers"
+        description="Watch how Katie captures a missed heating enquiry in under 60 seconds. Boiler breakdowns, emergency heating, annual services, answered 24/7."
         embedUrl="https://whoza.ai/for-heating-engineers"
       />
       <Header />
@@ -204,10 +204,10 @@ export default function ForHvacPage() {
                   Built for UK Heating Engineers
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 trade-headline">
-                  Never Miss a Boiler Breakdown — Even at 2am
+                  Never Miss a Boiler Breakdown, Even at 2am
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8">
-                  Boiler breakdowns, emergency heating, annual services, gas safety certificates. Katie answers every call you miss, captures the fault details, and sends them to your WhatsApp in 3 seconds. From £59/month — less than one callout fee.
+                  Boiler breakdowns, emergency heating, annual services, gas safety certificates. Katie answers every call you miss, captures the fault details, and sends them to your WhatsApp in 3 seconds. From £59/month, less than one callout fee.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link
@@ -225,7 +225,7 @@ export default function ForHvacPage() {
                   </Link>
                 </div>
                 <p className="mt-4 text-sm text-white/65">
-                  <a href="/" className="text-[#6ee7b7] hover:text-white underline">Try Katie free for 7 days</a> — no credit card required.
+                  <a href="/" className="text-[#6ee7b7] hover:text-white underline">Try Katie free for 7 days</a>, no credit card required.
                 </p>
                 <div className="flex items-center gap-6 mt-8 text-white/65 text-sm">
                   <div className="flex items-center gap-2">
@@ -249,7 +249,7 @@ export default function ForHvacPage() {
                       <Phone className="w-5 h-5 text-[#6ee7b7]" />
                     </div>
                     <div>
-                      <p className="text-white font-medium">New Enquiry — Katie</p>
+                      <p className="text-white font-medium">New Enquiry from Katie</p>
                       <p className="text-white/65 text-sm">Boiler breakdown, 06:23</p>
                     </div>
                   </div>
@@ -257,11 +257,11 @@ export default function ForHvacPage() {
                     <p>👤 Name: Patricia O'Connor</p>
                     <p>📞 Phone: 07XXX XXXXXX</p>
                     <p>📍 Postcode: B15 2TT</p>
-                    <p>🔧 Job: Worcester Bosch Greenstar — no hot water or heating</p>
-                    <p>⚡ Urgency: Emergency — young children in house, no heating</p>
+                    <p>🔧 Job: Worcester Bosch Greenstar, no hot water or heating</p>
+                    <p>⚡ Urgency: Emergency, young children in house, no heating</p>
                     <p>🏠 Property: 1990s detached, owned</p>
-                    <p>💰 Estimated Value: £120-180 callout</p>
-                    <p>📊 Fault: Pressure gauge at 0 — possible leak</p>
+                    <p>💰 Estimated Value: £120 to £180 callout</p>
+                    <p>📊 Fault: Pressure gauge at 0, possible leak</p>
                   </div>
                   <div className="flex gap-2 mt-4">
                     <button className="flex-1 py-2 bg-[var(--v2-green)] text-white rounded-lg text-sm font-medium">Accept</button>
@@ -311,7 +311,7 @@ export default function ForHvacPage() {
                 Why Heating Engineers Lose Jobs to Missed Calls
               </h2>
               <p className="v2-lead mt-5 max-w-2xl mx-auto">
-                Boiler breakdowns are urgent, emotional, and time-sensitive. Customers with no heating in January will call 3-4 engineers. The first to answer — or at least capture the call professionally — gets the job.
+                Boiler breakdowns are urgent, emotional, and time-sensitive. Customers with no heating in January will call 3 to 4 engineers. The first to answer, or at least capture the call professionally, gets the job.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 gap-8">
@@ -462,7 +462,7 @@ export default function ForHvacPage() {
               Heating Engineer Testimonial
             </div>
             <blockquote className="text-2xl sm:text-3xl font-medium text-[var(--v2-ink)] leading-relaxed mb-8">
-              "I was under a floorboard in Solihull fixing a leak when my phone rang three times. Two were annual service bookings. One was a boiler replacement in Edgbaston worth £3,800. Katie captured all three with full details — boiler models, addresses, tenant contacts. I called back at 5pm and booked the replacement for Thursday. The service calls I scheduled for next month."
+              "I was under a floorboard in Solihull fixing a leak when my phone rang three times. Two were annual service bookings. One was a boiler replacement in Edgbaston worth £3,800. Katie captured all three with full details: boiler models, addresses, tenant contacts. I called back at 5pm and booked the replacement for Thursday. The service calls I scheduled for next month."
             </blockquote>
             <div className="flex items-center justify-center gap-4">
               <div className="w-12 h-12 rounded-full bg-[var(--katie-blue)]/10 flex items-center justify-center text-[var(--katie-blue)] font-bold">
@@ -483,7 +483,7 @@ export default function ForHvacPage() {
               One Boiler Replacement Pays for 5 Years of Katie
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-              Emergency callouts average £120-£200. Boiler replacements are £2,500-£4,500. Full central heating installations can exceed £8,000. At £59/month, capturing one missed replacement pays for 5 years of service.
+              Emergency callouts average £120 to £200. Boiler replacements are £2,500 to £4,500. Full central heating installations can exceed £8,000. At £59/month, capturing one missed replacement pays for 5 years of service.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <Link
@@ -497,7 +497,7 @@ export default function ForHvacPage() {
                 href="/pricing"
                 className="v2-btn-secondary min-h-[54px] px-7 text-base text-white border-white/25 hover:border-white"
               >
-                See Pricing — Plans from £59/month
+                See Pricing: Plans from £59/month
               </Link>
             </div>
             <div className="flex items-center justify-center gap-6 text-white/65 text-sm">
@@ -591,7 +591,7 @@ export default function ForHvacPage() {
 
       <div className="section-divider" />
         <RelatedTrades currentTrade="for-heating-engineers" />
-        <Footer />
+        <Footer hideCta />
       <FloatingChatWidget />
     </>
   )

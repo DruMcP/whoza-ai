@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "AI Call Answering for Roofers in Edinburgh | whoza.ai",
     description: "Stop losing roofer jobs to missed calls in Edinburgh. Katie answers 24/7, captures storm damage and repair enquiries via WhatsApp. Plans from £59/month.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Roofers in Edinburgh" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Roofers in Edinburgh" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     "question": "Does it work with my existing Edinburgh business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing Edinburgh business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "answer": "Yes. You simply set up call forwarding from your existing Edinburgh business number to your whoza.ai number. Your customers dial the same number they've always used. Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
     "question": "How quickly can I get set up as a roofer in Edinburgh?",
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     "question": "What makes whoza.ai different for roofers in Edinburgh?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for roofers. She understands storm damage, slipped tiles, leak emergencies & full re-roof quotes — and with 4,500+ trade businesses competing in Edinburgh, capturing every call gives you a real competitive edge."
+    "answer": "Unlike generic call answering services, Katie is trained specifically for roofers. She understands storm damage, slipped tiles, leak emergencies & full re-roof quotes, and with 4,500+ trade businesses competing in Edinburgh, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -97,7 +97,7 @@ export default function ForRooferEdinburghPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Edinburgh has 4,500+ trade businesses competing for 245K households. 
                   With 2,200 missed calls every week across the city, 
-                  Katie ensures you capture every roofing enquiry — storm damage, slipped tiles, leak emergencies & full re-roof quotes.
+                  Katie ensures you capture every roofing enquiry: storm damage, slipped tiles, leak emergencies & full re-roof quotes.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -132,7 +132,7 @@ export default function ForRooferEdinburghPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -209,7 +209,7 @@ export default function ForRooferEdinburghPage() {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">While You're on the Job</h3>
                     <p className="text-[var(--v2-body)] leading-relaxed">
-                      You're mid-job and your phone rings. Can't answer — hands full, focused on the task. Check missed call at break. Customer already booked someone else.
+                      You're mid-job and your phone rings. Can't answer: hands full, focused on the task. Check missed call at break. Customer already booked someone else.
                     </p>
                   </div>
                 </div>
@@ -258,7 +258,7 @@ export default function ForRooferEdinburghPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your Edinburgh number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your Edinburgh number. Katie picks up in under 2 rings with your branded greeting, 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",
@@ -311,7 +311,7 @@ export default function ForRooferEdinburghPage() {
                 Comely Bank and the New Town are dominated by Georgian townhouses with original slate roofs that are now approaching 200 years old. These Category A listed buildings require specialist conservation trades for any external work, and the planning process can add weeks to what seems like a simple repair. Portobello and Leith present a different challenge: regeneration areas where modern flat-roofed apartments sit alongside Victorian tenements, each needing entirely different expertise.
               </p>
               <p>
-                Edinburgh&apos;s position on the Firth of Forth exposes it to fierce east-coast winds that drive rain horizontally into roof spaces and behind pointing. The city is colder and drier than Glasgow, but wind damage is the dominant roofing issue — particularly on elevated properties in Bruntsfield and Morningside where gusts accelerate across the rooftops. Winter temperatures regularly drop below freezing, and with sunset as early as 3:30pm in mid-December, emergency leaks are often discovered after dark when most roofers have finished for the day.
+                Edinburgh&apos;s position on the Firth of Forth exposes it to fierce east-coast winds that drive rain horizontally into roof spaces and behind pointing. The city is colder and drier than Glasgow, but wind damage is the dominant roofing issue, particularly on elevated properties in Bruntsfield and Morningside where gusts accelerate across the rooftops. Winter temperatures regularly drop below freezing, and with sunset as early as 3:30pm in mid-December, emergency leaks are often discovered after dark when most roofers have finished for the day.
               </p>
               <p>
                 The Festival economy in August creates a unique spike in demand. With thousands of visitors filling short-term lets across the Old Town and New Town, property managers need rapid turnaround on maintenance issues. A slipped tile or blocked gutter can mean a bad review and a cancelled booking. When a property manager calls at 7pm during the Fringe, Katie captures the enquiry with the urgency context you need to decide whether to dispatch an emergency repair team or schedule for first light.

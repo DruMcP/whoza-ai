@@ -38,7 +38,7 @@ const features = [
   "Male and female voice options",
   "Customisable greeting scripts",
   "Accents matched to your region",
-  "Natural, conversational tone — not robotic",
+  "Natural, conversational tone, not robotic",
   "Switch accent anytime from your dashboard",
 ]
 
@@ -60,7 +60,7 @@ export default function AccentsPage() {
             Your AI Receptionist Sounds Local
           </h1>
           <p className="text-[var(--v2-body)] max-w-2xl text-lg">
-            Choose from 12+ UK and Irish accents. Scottish, English, Welsh, Irish — male and female voices. Your customers hear someone who sounds like they are from the same area.
+            Choose from 12+ UK and Irish accents. Scottish, English, Welsh, Irish. Male and female voices. Your customers hear someone who sounds like they are from the same area.
           </p>
         </div>
 
@@ -122,7 +122,7 @@ export default function AccentsPage() {
 
         <section className="text-center">
           <p className="text-[var(--v2-body)] mb-6">
-            All voice options are included on every plan — Starter, Growth, Pro, and Scale.
+            All voice options are included on every plan: Starter, Growth, Pro, and Scale.
           </p>
           <a
             href="/pricing"

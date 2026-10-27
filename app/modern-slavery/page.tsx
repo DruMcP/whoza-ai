@@ -32,7 +32,7 @@ export default function ModernSlaveryPage() {
             Modern Slavery Statement
           </h1>
           <p className="text-[var(--v2-muted)] text-lg">
-            WHOZA AI LTD — Transparency in our operations and supply chain
+            WHOZA AI LTD: Transparency in our operations and supply chain
           </p>
         </div>
 
@@ -87,10 +87,10 @@ export default function ModernSlaveryPage() {
             <div className="bg-white border border-[var(--v2-line)] rounded-lg p-6 space-y-4 text-[var(--v2-body)]">
               <p className="text-[var(--v2-ink)] font-medium">We have assessed our operations and supply chain and identified the following risk areas:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Cloud infrastructure and data centre operations (low risk — all providers have published modern slavery policies)</li>
-                <li>Software development and professional services (low risk — all workers are skilled professionals in regulated industries)</li>
-                <li>Telecommunications services (low risk — major UK and international carriers with established compliance programmes)</li>
-                <li>Office facilities and maintenance (low risk — UK-based contractors)</li>
+                <li>Cloud infrastructure and data centre operations (low risk: all providers have published modern slavery policies)</li>
+                <li>Software development and professional services (low risk: all workers are skilled professionals in regulated industries)</li>
+                <li>Telecommunications services (low risk: major UK and international carriers with established compliance programmes)</li>
+                <li>Office facilities and maintenance (low risk: UK-based contractors)</li>
               </ul>
               <p>
                 We consider our overall risk exposure to modern slavery to be <strong className="text-[var(--v2-ink)]">low</strong>, given the nature of our technology-focused business and the jurisdictions in which we operate.

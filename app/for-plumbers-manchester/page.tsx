@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "AI Call Answering for Plumbers in Manchester | whoza.ai",
     description: "Stop losing plumber jobs to missed calls in Manchester. Katie answers 24/7, captures burst pipe and boiler enquiries via WhatsApp. Plans from £59/month.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Plumbers in Manchester" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Plumbers in Manchester" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     "question": "Does it work with my existing Manchester business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing Manchester business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "answer": "Yes. You simply set up call forwarding from your existing Manchester business number to your whoza.ai number. Your customers dial the same number they've always used. Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
     "question": "How quickly can I get set up as a plumber in Manchester?",
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     "question": "What makes whoza.ai different for plumbers in Manchester?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for plumbers. She understands burst pipe emergencies, boiler breakdowns, blocked drains & leak enquiries — and with 8,500+ trade businesses competing in Manchester, capturing every call gives you a real competitive edge."
+    "answer": "Unlike generic call answering services, Katie is trained specifically for plumbers. She understands burst pipe emergencies, boiler breakdowns, blocked drains & leak enquiries, and with 8,500+ trade businesses competing in Manchester, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -97,7 +97,7 @@ export default function ForPlumberManchesterPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Manchester has 8,500+ trade businesses competing for 540K households. 
                   With 3,400 missed calls every week across the city, 
-                  Katie ensures you capture every plumbing enquiry — burst pipe emergencies, boiler breakdowns, blocked drains & leak enquiries.
+                  Katie ensures you capture every plumbing enquiry: burst pipe emergencies, boiler breakdowns, blocked drains & leak enquiries.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -132,7 +132,7 @@ export default function ForPlumberManchesterPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -211,7 +211,7 @@ export default function ForPlumberManchesterPage() {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">While You're on the Job</h3>
                     <p className="text-[var(--v2-body)] leading-relaxed">
-                      You're under a sink fixing a waste pipe. Phone vibrates in your pocket. Can't answer — hands full of muck, water everywhere. Check missed call at 4pm. Customer already booked someone else.
+                      You're under a sink fixing a waste pipe. Phone vibrates in your pocket. Can't answer: hands full of muck, water everywhere. Check missed call at 4pm. Customer already booked someone else.
                     </p>
                   </div>
                 </div>
@@ -261,7 +261,7 @@ export default function ForPlumberManchesterPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your Manchester number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your Manchester number. Katie picks up in under 2 rings with your branded greeting, 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",
@@ -312,7 +312,7 @@ export default function ForPlumberManchesterPage() {
                 Manchester&apos;s plumbing landscape is shaped by its Victorian heritage and notoriously wet climate. In Didsbury and Chorlton, leafy suburbs with Edwardian semis and terraced conversions, plumbers regularly encounter ageing cast iron drains and original lead pipework that struggles with the region&apos;s heavy rainfall. Salford&apos;s rapid regeneration has introduced modern apartment blocks alongside traditional housing, creating a split market where one call might be about a combi boiler installation in a converted terrace and the next about a burst pipe in a new-build flat. With 7,200+ trade businesses serving 540K households and 3,000 missed calls weekly, every unanswered phone is a competitor&apos;s gain.
               </p>
               <p>
-                The city&apos;s plumbing challenges are distinctly local. Manchester&apos;s terrace conversions — common in Ancoats and Chorlton — often involve relocating combi boilers from kitchens to utility cupboards, a job that requires specific expertise and can&apos;t be handled by a generic call-taker. Meanwhile, Salford&apos;s ongoing development means new housing stock with modern systems sits alongside Victorian infrastructure, creating unpredictable demand. Katie understands these distinctions, capturing whether a caller needs emergency drain clearance after a Manchester downpour or a planned combi relocation in a terrace conversion, ensuring you never miss a £295 average job.
+                The city&apos;s plumbing challenges are distinctly local. Manchester&apos;s terrace conversions, common in Ancoats and Chorlton, often involve relocating combi boilers from kitchens to utility cupboards, a job that requires specific expertise and can&apos;t be handled by a generic call-taker. Meanwhile, Salford&apos;s ongoing development means new housing stock with modern systems sits alongside Victorian infrastructure, creating unpredictable demand. Katie understands these distinctions, capturing whether a caller needs emergency drain clearance after a Manchester downpour or a planned combi relocation in a terrace conversion, ensuring you never miss a £295 average job.
               </p>
             </div>
           </div>
@@ -331,10 +331,10 @@ export default function ForPlumberManchesterPage() {
             </div>
             <div className="space-y-6 text-[var(--v2-body)] leading-relaxed">
               <p>
-                From Didsbury and Chorlton to Salford and Ancoats, Manchester&apos;s plumbing trade serves a housing stock as varied as its neighbourhoods. Red brick terraces in Levenshulme still run on original cast iron pipes and shared drains that back up without warning. With rapid regeneration across Salford Quays and MediaCity, new-build apartments sit alongside century-old infrastructure — and both need reliable plumbers who answer their phone.
+                From Didsbury and Chorlton to Salford and Ancoats, Manchester&apos;s plumbing trade serves a housing stock as varied as its neighbourhoods. Red brick terraces in Levenshulme still run on original cast iron pipes and shared drains that back up without warning. With rapid regeneration across Salford Quays and MediaCity, new-build apartments sit alongside century-old infrastructure, and both need reliable plumbers who answer their phone.
               </p>
               <p>
-                Manchester&apos;s rainfall averages 867mm per year — well above the UK average — causing persistent damp, gutter overflow, and blocked drains across the city. Victorian cast iron pipes in south Manchester terraces corrode from the inside out, while combi boilers in converted flats struggle with hard water scale from Trafford and Stockport. Prolonged cold snaps freeze poorly insulated pipes in Wythenshawe and Miles Platting council estates.
+                Manchester&apos;s rainfall averages 867mm per year, well above the UK average, causing persistent damp, gutter overflow, and blocked drains across the city. Victorian cast iron pipes in south Manchester terraces corrode from the inside out, while combi boilers in converted flats struggle with hard water scale from Trafford and Stockport. Prolonged cold snaps freeze poorly insulated pipes in Wythenshawe and Miles Platting council estates.
               </p>
               <p>
                 The city&apos;s 100,000+ students create a constant stream of HMO maintenance calls, often from landlords who manage remotely from London. On match days, traffic gridlock around Old Trafford and the Etihad makes emergency callouts a nightmare. When a student landlord in Withington gets a leak report at 8pm, Katie captures the tenant details, flags the urgency, and delivers everything to your WhatsApp before you&apos;ve finished your current job.

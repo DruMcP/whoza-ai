@@ -45,9 +45,9 @@ const comparisonData = [
   { feature: "Review Collection", whoza: "✓ Built-in (Claire)", competitor: "✗ Not available", winner: "whoza", note: "whoze exclusive" },
   { feature: "Competitor Analysis", whoza: "✓ Monthly reports (Rex)", competitor: "✗ Not available", winner: "whoza", note: "whoze exclusive" },
   { feature: "Trade-Specific Training", whoza: "✓ 15+ trades", competitor: "✓ General trades", winner: "whoza", note: "whoze more specialised" },
-  { feature: "Setup Time", whoza: "30 minutes", competitor: "1–2 hours", winner: "whoza", note: "whoze much faster" },
+  { feature: "Setup Time", whoza: "30 minutes", competitor: "1 to 2 hours", winner: "whoza", note: "whoze much faster" },
   { feature: "Free Trial", whoza: "7 days, no card", competitor: "14 days, card required", winner: "draw", note: "Different approaches" },
-  { feature: "Contract", whoza: "None — cancel anytime", competitor: "1-month minimum", winner: "whoza", note: "whoze more flexible" },
+  { feature: "Contract", whoza: "None, cancel anytime", competitor: "1-month minimum", winner: "whoza", note: "whoze more flexible" },
   { feature: "Money-Back Guarantee", whoza: "30 days", competitor: "30 days", winner: "draw", note: "Both equal" },
   { feature: "Spam Filtering", whoza: "✓ Advanced AI filtering", competitor: "✓ Basic filtering", winner: "whoza", note: "whoze more sophisticated" },
   { feature: "Custom AI Voices", whoza: "✓ 12+ voices", competitor: "✓ 3 voices", winner: "whoza", note: "whoze more choice" },
@@ -59,7 +59,7 @@ export const revalidate = 3600
 const faqs = [
     { question: "Which is cheaper: whoza.ai or ARROW?", answer: "whoza.ai is cheaper at every tier. whoza.ai's Starter plan costs £59/month compared to ARROW's entry plan at £79/month. whoza.ai's Growth plan is £125/month versus ARROW's Pro at £149/month. whoza.ai's Pro plan is £249/month versus ARROW's Enterprise at £299/month." },
     { question: "Does ARROW offer WhatsApp delivery like whoza.ai?", answer: "No. ARROW delivers enquiries via email and SMS only, while whoza.ai offers native WhatsApp integration with instant push notifications, one-tap accept/decline/call back buttons, and rich media support. According to Ofcom's Online Nation 2025 report, 90% of UK adults use WhatsApp regularly." },
-    { question: "What features does whoza.ai have that ARROW lacks?", answer: "whoza.ai offers Claire (automated review collection) and Rex (competitor analysis reports) — genuine revenue drivers not available from ARROW. whoza.ai also provides calendar auto-sync, 12+ voice options with regional UK accents, and trade-specific training for 15+ trades. ARROW focuses on core call answering without follow-up systems or growth tools." },
+    { question: "What features does whoza.ai have that ARROW lacks?", answer: "whoza.ai offers Claire (automated review collection) and Rex (competitor analysis reports), genuine revenue drivers not available from ARROW. whoza.ai also provides calendar auto-sync, 12+ voice options with regional UK accents, and trade-specific training for 15+ trades. ARROW focuses on core call answering without follow-up systems or growth tools." },
     { question: "How does AI voice quality compare between whoza.ai and ARROW?", answer: "Both services use advanced text-to-speech with good UK voice quality. whoza.ai offers 12+ voice options including regional accents (Northern, Scottish, Welsh, Midlands), while ARROW provides 3 standard voices. Both handle trade terminology correctly, but whoza.ai's 15+ trade-specific training modules provide more nuanced understanding for complex enquiries." },
     { question: "How long does setup take for whoza.ai vs ARROW?", answer: "whoza.ai claims 30-minute setup, which held true in testing. ARROW's setup took 1 hour 23 minutes in testing, involving a more detailed onboarding form, manual configuration of call routing rules, and a verification period before the AI goes live." }
 ]
@@ -88,7 +88,7 @@ export default function WhozaVsArrowPage() {
 
               <div className="inline-flex items-center gap-2 bg-amber-50 text-amber-700 px-3 py-1 rounded-full text-xs font-medium mb-6">
                 <Star className="w-3 h-3" />
-                Comparison — August 2026
+                Comparison, August 2026
               </div>
 
               {/* Publisher Disclosure */}
@@ -106,7 +106,7 @@ export default function WhozaVsArrowPage() {
 
               <p className="text-lg text-[var(--v2-body)] max-w-2xl mb-8">
                 ARROW (£79/month) and whoza.ai (£59/month) are two leading AI receptionists 
-                for UK tradespeople. We compared them on price, features, AI capabilities, and value — 
+                for UK tradespeople. We compared them on price, features, AI capabilities, and value, 
                 with real data from their websites and hands-on testing.
               </p>
 
@@ -203,14 +203,14 @@ export default function WhozaVsArrowPage() {
                   whoza.ai wins on price at every tier. The entry-level Starter plan at £59/month undercuts 
                   ARROW's basic plan at £79/month by £20. Over a year, that's a £240 saving before you even 
                   consider features. The mid-tier comparison is even more pronounced: whoza.ai Growth at £125 vs 
-                  ARROW Pro at £149 — a £24/month difference. At the top tier, whoza.ai Pro at £249 beats 
+                  ARROW Pro at £149, a £24/month difference. At the top tier, whoza.ai Pro at £249 beats 
                   ARROW Enterprise at £299 by £50/month.
                 </p>
                 <p className="text-[var(--v2-body)] leading-relaxed mb-4">
                   <strong className="text-[var(--v2-ink)]">Real-world cost example:</strong> A heating engineer receiving 
                   20 calls/week. ARROW's basic plan (£79) answers calls but delivers via email and SMS. 
                   whoza.ai Starter (£59) answers calls and delivers to WhatsApp. The £20/month difference 
-                  means whoza.ai pays for itself faster — one missed boiler breakdown call (£120 callout fee) 
+                  means whoza.ai pays for itself faster: one missed boiler breakdown call (£120 callout fee) 
                   covers two months of the service difference.
                 </p>
                 <p className="text-[var(--v2-body)] leading-relaxed">
@@ -228,7 +228,7 @@ export default function WhozaVsArrowPage() {
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-6">
-                  <h3 className="font-bold text-[var(--v2-green)] mb-3">whoza.ai — WhatsApp</h3>
+                  <h3 className="font-bold text-[var(--v2-green)] mb-3">whoza.ai: WhatsApp</h3>
                   <ul className="space-y-2 text-[var(--v2-body)] text-sm">
                     <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> Instant push notification</li>
                     <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[var(--v2-green)] shrink-0 mt-0.5" /> One-tap accept/decline/call back</li>
@@ -238,7 +238,7 @@ export default function WhozaVsArrowPage() {
                   </ul>
                 </div>
                 <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
-                  <h3 className="font-bold text-amber-700 mb-3">ARROW — Email & SMS</h3>
+                  <h3 className="font-bold text-amber-700 mb-3">ARROW: Email & SMS</h3>
                   <ul className="space-y-2 text-[var(--v2-body)] text-sm">
                     <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-600 shrink-0 mt-0.5" /> Must check inbox regularly</li>
                     <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-600 shrink-0 mt-0.5" /> SMS limited to 160 characters</li>
@@ -249,7 +249,7 @@ export default function WhozaVsArrowPage() {
                 </div>
               </div>
               <p className="text-[var(--v2-body)] text-sm mt-4">
-                Source: Ofcom, Online Nation 2025, 10 December 2025 — 90% of UK adults use WhatsApp; 
+                Source: Ofcom, Online Nation 2025, 10 December 2025. 90% of UK adults use WhatsApp; 
                 trade business owners check messaging apps 4.2x more frequently than email during work hours. 
                 SMS is limited to 160 characters, which severely constrains the detail ARROW can deliver.
               </p>
@@ -266,8 +266,8 @@ export default function WhozaVsArrowPage() {
                   whoza.ai's standout differentiators are Claire (review collection) and Rex (competitor analysis). 
                   These are genuine revenue drivers, not bolt-on features. According to BrightLocal's 2025 UK survey, 
                   businesses with 40+ Google reviews receive 3.5x more enquiries than those with fewer than 10. 
-                  Claire automates the entire review collection process — following up after jobs, requesting feedback, 
-                  and guiding customers to Google. This typically takes 2–3 hours per week if done manually, 
+                  Claire automates the entire review collection process: following up after jobs, requesting feedback, 
+                  and guiding customers to Google. This typically takes 2 to 3 hours per week if done manually, 
                   or simply doesn't happen for busy tradespeople.
                 </p>
                 <p className="text-[var(--v2-body)] leading-relaxed mb-4">
@@ -278,7 +278,7 @@ export default function WhozaVsArrowPage() {
                 </p>
                 <p className="text-[var(--v2-body)] leading-relaxed">
                   ARROW focuses on core call answering with solid AI voice quality. It handles call qualification 
-                  well and understands basic trade terminology. However, it stops at the call — there's no follow-up 
+                  well and understands basic trade terminology. However, it stops at the call: there's no follow-up 
                   system, no review automation, no competitive intelligence, and no calendar integration. It's a 
                   single-tool solution that answers calls but doesn't help you grow.
                 </p>
@@ -305,7 +305,7 @@ export default function WhozaVsArrowPage() {
                   you to match your agent's voice to your customer base, which ARROW doesn't offer.
                 </p>
                 <p className="text-[var(--v2-body)] leading-relaxed">
-                  Both services handle trade terminology well — "boiler breakdown", "rewire", "EICR", "blockage", 
+                  Both services handle trade terminology well: "boiler breakdown", "rewire", "EICR", "blockage", 
                   "extension" are all recognised correctly. ARROW's training on trade-specific language is solid, 
                   but whoza.ai's 15+ trade-specific training modules provide more nuanced understanding for 
                   complex enquiries like planning permission questions or gas safety certificate requirements.
@@ -328,8 +328,8 @@ export default function WhozaVsArrowPage() {
                 </p>
                 <p className="text-[var(--v2-body)] leading-relaxed">
                   ARROW does not offer calendar integration. You receive the enquiry via email or SMS, then manually 
-                  add it to your calendar. For a busy tradesperson receiving 15-20 calls per week, this extra step 
-                  adds 30-45 minutes of admin time and increases the risk of double-booking or missed appointments. 
+                  add it to your calendar. For a busy tradesperson receiving 15 to 20 calls per week, this extra step 
+                  adds 30 to 45 minutes of admin time and increases the risk of double-booking or missed appointments. 
                   The automation gap is significant for high-volume trades like plumbing, electrical, and heating engineering.
                 </p>
               </div>
@@ -352,7 +352,7 @@ export default function WhozaVsArrowPage() {
                 <p className="text-[var(--v2-body)] leading-relaxed">
                   ARROW's setup took 1 hour 23 minutes in our test. The process involves a more detailed onboarding 
                   form, manual configuration of call routing rules, and a verification period before the AI goes live. 
-                  ARROW's longer setup isn't necessarily a flaw — some users appreciate the thoroughness — but if you 
+                  ARROW's longer setup isn't necessarily a flaw (some users appreciate the thoroughness), but if you 
                   need to be live today, whoza.ai is significantly faster. For tradespeople who've just discovered 
                   they've missed a week's worth of calls, speed matters.
                 </p>
@@ -368,13 +368,13 @@ export default function WhozaVsArrowPage() {
               <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
                 <p className="text-[var(--v2-body)] leading-relaxed mb-4">
                   whoza.ai is designed as a complete revenue system, not just a call answering service. The growth 
-                  features — Claire's review automation, Rex's competitor analysis, and the weekly insights dashboard 
-                  — are built to help you acquire more customers, improve your reputation, and outrank competitors. 
+                  features (Claire's review automation, Rex's competitor analysis, and the weekly insights dashboard)
+                  are built to help you acquire more customers, improve your reputation, and outrank competitors. 
                   For a UK trade business, these features directly impact revenue: more reviews = more enquiries, 
                   better ranking = more calls, competitor intelligence = better positioning.
                 </p>
                 <p className="text-[var(--v2-body)] leading-relaxed">
-                  ARROW is a focused call answering tool. It does this well — voice quality is good, call 
+                  ARROW is a focused call answering tool. It does this well: voice quality is good, call 
                   qualification is accurate, and the service is reliable. But it doesn't offer growth tools. 
                   If you're looking for a service that not only captures missed calls but actively helps you 
                   get more calls in the first place, whoza.ai's additional features provide clear value. 
@@ -391,7 +391,7 @@ export default function WhozaVsArrowPage() {
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                "Comparison — August 2026",
+                "Comparison, August 2026",
                 "Pricing verified from competitor websites",
                 "No affiliate links or paid placement",
                 "whoza.ai and ARROW both reviewed",
@@ -457,7 +457,7 @@ export default function WhozaVsArrowPage() {
       </div>
       <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
         <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-3">What features does whoza.ai have that ARROW lacks?</h3>
-        <p className="text-[var(--v2-body)] leading-relaxed">whoza.ai offers Claire (automated review collection) and Rex (competitor analysis reports) — genuine revenue drivers not available from ARROW. whoza.ai also provides calendar auto-sync, 12+ voice options with regional UK accents, and trade-specific training for 15+ trades. ARROW focuses on core call answering without follow-up systems or growth tools.</p>
+        <p className="text-[var(--v2-body)] leading-relaxed">whoza.ai offers Claire (automated review collection) and Rex (competitor analysis reports), genuine revenue drivers not available from ARROW. whoza.ai also provides calendar auto-sync, 12+ voice options with regional UK accents, and trade-specific training for 15+ trades. ARROW focuses on core call answering without follow-up systems or growth tools.</p>
       </div>
       <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
         <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-3">How does AI voice quality compare between whoza.ai and ARROW?</h3>

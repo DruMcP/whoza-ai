@@ -7,8 +7,8 @@ import { MessageSquare, Phone, Shield, Users, Target, Zap, Heart } from "lucide-
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "About whoza.ai — AI Call Answering for UK Trades",
-  description: "AI call answering for UK trades — never miss a job. whoza.ai was built by a former tradesperson who knows what it's like to lose work to missed calls.",
+  title: "About whoza.ai | AI Call Answering for UK Trades",
+  description: "AI call answering for UK trades, never miss a job. whoza.ai was built by a former tradesperson who knows what it's like to lose work to missed calls.",
   alternates: {
     canonical: "https://whoza.ai/about",
   },
@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/about",
     siteName: "Whoza.ai",
-    title: "About whoza.ai — AI Call Answering for UK Trades",
-    description: "AI call answering for UK trades — never miss a job. Built by a former tradesperson who knows what it's like to lose work because the phone rang while you were busy.",
+    title: "About whoza.ai | AI Call Answering for UK Trades",
+    description: "AI call answering for UK trades, never miss a job. Built by a former tradesperson who knows what it's like to lose work because the phone rang while you were busy.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "About whoza.ai" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About whoza.ai — AI Call Answering for UK Trades",
-    description: "AI call answering for UK trades — never miss a job. Built by a former tradesperson who knows what it's like to lose work because the phone rang while you were busy.",
+    title: "About whoza.ai | AI Call Answering for UK Trades",
+    description: "AI call answering for UK trades, never miss a job. Built by a former tradesperson who knows what it's like to lose work because the phone rang while you were busy.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   robots: {
@@ -37,17 +37,17 @@ const values = [
   {
     icon: Heart,
     title: "Built by Tradespeople, for Tradespeople",
-    description: "Our founder spent years on-site — up ladders, under sinks, in lofts. He knows the exact moment when a missed call becomes a lost job. Every feature in whoza.ai is designed around real trade workflows.",
+    description: "Our founder spent years on-site: up ladders, under sinks, in lofts. He knows the exact moment when a missed call becomes a lost job. Every feature in whoza.ai is designed around real trade workflows.",
   },
   {
     icon: Target,
     title: "Every Call Matters",
-    description: "We believe no trade business should lose work because they were doing their actual job. A plumber under a sink. An electrician in a fuse box. A roofer 30 feet up. You can't answer the phone — but Katie can.",
+    description: "We believe no trade business should lose work because they were doing their actual job. A plumber under a sink. An electrician in a fuse box. A roofer 30 feet up. You can't answer the phone, but Katie can.",
   },
   {
     icon: Shield,
     title: "Transparent & Fair",
-    description: "No hidden fees. No long-term contracts. No setup charges. What you see is what you pay. If whoza.ai doesn't pay for itself within a month, you shouldn't be using it — and you can cancel anytime.",
+    description: "No hidden fees. No long-term contracts. No setup charges. What you see is what you pay. If whoza.ai doesn't pay for itself within a month, you shouldn't be using it, and you can cancel anytime.",
   },
   {
     icon: Zap,
@@ -81,10 +81,10 @@ export default function AboutPage() {
             Our Story
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            About whoza.ai — Built by Tradespeople, for Tradespeople
+            About whoza.ai: Built by Tradespeople, for Tradespeople
           </h1>
           <p className="text-xl text-[var(--v2-body)] max-w-3xl mb-8 leading-relaxed">
-            whoza.ai was built by someone who has been exactly where you are — on a roof, under a floorboard, 
+            whoza.ai was built by someone who has been exactly where you are: on a roof, under a floorboard, 
             or wrist-deep in a boiler, hearing the phone ring and knowing that if you don't answer, someone else will.
           </p>
           <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-8 mb-8">
@@ -92,7 +92,7 @@ export default function AboutPage() {
               "I lost an £8,000 job because I was up a ladder. That was the moment I knew there had to be a better way."
             </blockquote>
             <cite className="text-[var(--v2-muted)] not-italic">
-              — Dru McPherson, Founder & CEO
+              Dru McPherson, Founder & CEO
             </cite>
           </div>
           <p className="text-lg text-[var(--v2-body)] max-w-3xl leading-relaxed">

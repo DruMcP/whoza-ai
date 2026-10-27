@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "AI Call Answering for Gas Engineers in Glasgow | whoza.ai",
     description: "Stop losing gas engineer jobs to missed calls in Glasgow. Katie answers 24/7, captures gas leak and safety enquiries via WhatsApp. Plans from £59/month.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Gas Engineers in Glasgow" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Gas Engineers in Glasgow" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     "question": "Does it work with my existing Glasgow business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing Glasgow business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "answer": "Yes. You simply set up call forwarding from your existing Glasgow business number to your whoza.ai number. Your customers dial the same number they've always used. Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
     "question": "How quickly can I get set up as a gas engineer in Glasgow?",
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     "question": "What makes whoza.ai different for gas engineers in Glasgow?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for gas engineers. She understands Gas Safety certificates, boiler repairs, installations & servicing — and with 5,500+ trade businesses competing in Glasgow, capturing every call gives you a real competitive edge."
+    "answer": "Unlike generic call answering services, Katie is trained specifically for gas engineers. She understands Gas Safety certificates, boiler repairs, installations & servicing, and with 5,500+ trade businesses competing in Glasgow, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -97,7 +97,7 @@ export default function ForGasEngineerGlasgowPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Glasgow has 5,500+ trade businesses competing for 310K households. 
                   With 2,600 missed calls every week across the city, 
-                  Katie ensures you capture every gas enquiry — Gas Safety certificates, boiler repairs, installations & servicing.
+                  Katie ensures you capture every gas enquiry: Gas Safety certificates, boiler repairs, installations & servicing.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -132,7 +132,7 @@ export default function ForGasEngineerGlasgowPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -197,7 +197,7 @@ export default function ForGasEngineerGlasgowPage() {
                 The Real Cost of Missed Calls for Gas Engineers in Glasgow
               </h2>
               <p className="v2-lead max-w-2xl mx-auto">
-                Tenement buildings have shared systems — emergencies affect multiple flats. Harsh winters cause boiler and heating emergencies to spike. Older housing stock needs frequent updates.
+                Tenement buildings have shared systems. Emergencies affect multiple flats. Harsh winters cause boiler and heating emergencies to spike. Older housing stock needs frequent updates.
               </p>
             </div>
             <div className="space-y-8">
@@ -209,7 +209,7 @@ export default function ForGasEngineerGlasgowPage() {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">While You're on the Job</h3>
                     <p className="text-[var(--v2-body)] leading-relaxed">
-                      You're mid-job and your phone rings. Can't answer — hands full, focused on the task. Check missed call at break. Customer already booked someone else.
+                      You're mid-job and your phone rings. Can't answer: hands full, focused on the task. Check missed call at break. Customer already booked someone else.
                     </p>
                   </div>
                 </div>
@@ -258,7 +258,7 @@ export default function ForGasEngineerGlasgowPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your Glasgow number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your Glasgow number. Katie picks up in under 2 rings with your branded greeting, 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",
@@ -311,7 +311,7 @@ export default function ForGasEngineerGlasgowPage() {
                 From Pollokshields and Shawlands in the Southside to Dennistoun and the City Centre, Glasgow gas engineers serve a market defined by tenement flats, student rentals, and social housing contracts. Tenement buildings have shared gas services where one fault can affect multiple flats, and 50,000+ students across three universities create constant demand for annual gas safety checks in HMO properties. Glasgow Housing Association manages 43,000 homes and maintains approved contractor lists where reliable call handling is essential for contract retention.
               </p>
               <p>
-                With 5,500+ trade businesses competing for 310K households, missing a call means losing a £290 job. Harsh winters drive emergency boiler and gas appliance failures, and factoring companies like FirstPort expect rapid response times from their approved contractors. Whether you're issuing a CP12 in a Shawlands tenement or responding to an emergency gas leak in the City Centre, Katie answers 24/7, qualifies the enquiry, and sends it to your WhatsApp instantly — so you're always first to respond.
+                With 5,500+ trade businesses competing for 310K households, missing a call means losing a £290 job. Harsh winters drive emergency boiler and gas appliance failures, and factoring companies like FirstPort expect rapid response times from their approved contractors. Whether you're issuing a CP12 in a Shawlands tenement or responding to an emergency gas leak in the City Centre, Katie answers 24/7, qualifies the enquiry, and sends it to your WhatsApp instantly, so you're always first to respond.
               </p>
             </div>
           </div>

@@ -32,7 +32,7 @@ export default function AccessibilityPage() {
             Accessibility Statement
           </h1>
           <p className="text-[var(--v2-muted)] text-lg">
-            WHOZA AI LTD — Committed to digital accessibility for all
+            WHOZA AI LTD: Committed to digital accessibility for all
           </p>
         </div>
 

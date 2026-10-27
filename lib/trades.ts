@@ -30,33 +30,33 @@ export const trades: TradeData[] = [
     singular: "plumber",
     plural: "plumbers",
     display: "Plumbers",
-    headline: "AI Call Handling for Plumbers — Never Miss an Emergency",
+    headline: "AI Call Handling for Plumbers: Never Miss an Emergency",
     subheadline: "Burst pipes, boiler breakdowns, blocked drains. Customers call when it hurts. Katie answers every call, qualifies the job, and sends the details to your phone in 30 seconds.",
     metaDescription: "Stop losing plumbing jobs to missed calls. AI call handling for UK plumbers. Katie answers 24/7, qualifies jobs, and sends WhatsApp alerts. 7-day free trial.",
     problemStatements: [
-      "Emergency calls go to voicemail — customer calls the next plumber on Google",
+      "Emergency calls go to voicemail. Customer calls the next plumber on Google",
       "Quoting jobs over the phone wastes time you could spend fixing",
       "After-hours calls from tenants and landlords pile up unanswered",
       "You can't tell if it's a £50 tap fix or a £2,000 boiler replacement until you call back"
     ],
     solutionStatements: [
-      "Katie answers every call in 2 rings — even at 2am on a Sunday",
-      "She asks: postcode, problem type, urgency, budget — then pings your WhatsApp",
-      "You see 'Emergency burst pipe — SW11 — tenant — call back urgently' before you even pick up",
+      "Katie answers every call in 2 rings, even at 2am on a Sunday",
+      "She asks: postcode, problem type, urgency, budget, then pings your WhatsApp",
+      "You see 'Emergency burst pipe, SW11, tenant, call back urgently' before you even pick up",
       "Customers feel heard. You feel in control. Jobs get booked while you sleep"
     ],
     howItWorks: [
       { step: 1, title: "Customer calls your number", description: "Katie picks up instantly with a friendly, professional greeting customised for your plumbing business" },
       { step: 2, title: "She qualifies the job", description: "Asks for postcode, problem type (leak, boiler, drain, etc.), urgency level, and property type" },
-      { step: 3, title: "You get a WhatsApp alert", description: "Full job details arrive on your phone in 30 seconds — postcode, problem, urgency, and customer number" },
-      { step: 4, title: "Accept, callback or decline", description: "Tap to accept the job, schedule a callback, or decline if you're fully booked — customer gets an instant SMS update" }
+      { step: 3, title: "You get a WhatsApp alert", description: "Full job details arrive on your phone in 30 seconds: postcode, problem, urgency, and customer number" },
+      { step: 4, title: "Accept, callback or decline", description: "Tap to accept the job, schedule a callback, or decline if you're fully booked. Customer gets an instant SMS update" }
     ],
     faqs: [
       { question: "How much does AI call handling cost for a plumber?", answer: "Whoza starts at £59/month for the Starter plan. That's less than the cost of one missed emergency call. Starter includes 100 call minutes and 10 booked jobs a month, with WhatsApp delivery and a 7-day free trial. Extra minutes are £0.26." },
       { question: "Can Katie handle emergency plumbing calls at 2am?", answer: "Yes. Katie answers 24/7, including nights, weekends, and bank holidays. She identifies emergency calls (burst pipes, no heating, gas leaks) and marks them as high urgency in your WhatsApp alert so you see them first." },
       { question: "What information does Katie collect from plumbing customers?", answer: "Katie collects: full name, phone number, postcode, property type (house/flat/commercial), problem description, urgency level (routine/urgent/emergency), preferred appointment time, and how they found you." },
-      { question: "Will customers know they're talking to AI?", answer: "Yes — Katie introduces herself as your AI assistant. Customers appreciate the honesty and the instant response. Most prefer a friendly AI that answers immediately over voicemail or a ringing phone." },
-      { question: "How do I get plumbing reviews after completing a job?", answer: "Claire — our review collection agent — automatically sends a WhatsApp message to every customer whose job you mark as complete. She asks for a Google review, makes it one-tap easy, and follows up politely if needed." }
+      { question: "Will customers know they're talking to AI?", answer: "Yes. Katie introduces herself as your AI assistant. Customers appreciate the honesty and the instant response. Most prefer a friendly AI that answers immediately over voicemail or a ringing phone." },
+      { question: "How do I get plumbing reviews after completing a job?", answer: "Claire, our review collection agent, automatically sends a WhatsApp message to every customer whose job you mark as complete. She asks for a Google review, makes it one-tap easy, and follows up politely if needed." }
     ],
     stats: [
       { label: "Average plumbing call-out", value: "£180" },
@@ -70,26 +70,26 @@ export const trades: TradeData[] = [
     singular: "electrician",
     plural: "electricians",
     display: "Electricians",
-    headline: "AI Call Handling for Electricians — Never Miss a Lead",
+    headline: "AI Call Handling for Electricians: Never Miss a Lead",
     subheadline: "Electrical faults, rewiring quotes, safety certificates. When customers call, they're often worried or in a hurry. Katie answers in seconds, calms the situation, and captures every detail.",
     metaDescription: "AI call handling for UK electricians. Katie answers 24/7, qualifies jobs, and sends WhatsApp alerts. Never miss a £500+ job again. Free trial.",
     problemStatements: [
       "Emergency electrical calls (no power, sparking sockets) go unanswered after 6pm",
-      "You can't quote EICRs or rewires over the phone — but you need the lead details",
+      "You can't quote EICRs or rewires over the phone, but you need the lead details",
       "Domestic, commercial, and landlord enquiries all need different qualification",
-      "Repeat callers (property managers) want to feel recognised — but you can't remember every name"
+      "Repeat callers (property managers) want to feel recognised, but you can't remember every name"
     ],
     solutionStatements: [
       "Katie answers every electrical call with a calm, professional tone",
       "She identifies emergency vs. routine, domestic vs. commercial, and property size",
-      "Landlord enquiries get tagged for fast follow-up — your biggest repeat customer base",
+      "Landlord enquiries get tagged for fast follow-up, your biggest repeat customer base",
       "Regular customers are recognised by phone number and greeted by name"
     ],
     howItWorks: [
       { step: 1, title: "Customer calls about an electrical issue", description: "Katie answers with your branded greeting and immediately asks whether it's an emergency (no power, sparking, burning smell) or routine work" },
       { step: 2, title: "Job details captured in 45 seconds", description: "Postcode, property type, job category (fault finding, rewiring, EICR, EV charger, etc.), and whether it's a landlord or homeowner" },
-      { step: 3, title: "Smart alert sent to your phone", description: "WhatsApp message with full context: 'Emergency fault — no power — 3-bed house — SE22 — landlord — callback urgently'" },
-      { step: 4, title: "Accept and book, or queue for tomorrow", description: "Tap to accept, schedule a callback with time preference, or queue for your next available slot — customer gets confirmation instantly" }
+      { step: 3, title: "Smart alert sent to your phone", description: "WhatsApp message with full context: 'Emergency fault, no power, 3-bed house, SE22, landlord, callback urgently'" },
+      { step: 4, title: "Accept and book, or queue for tomorrow", description: "Tap to accept, schedule a callback with time preference, or queue for your next available slot. Customer gets confirmation instantly" }
     ],
     faqs: [
       { question: "Can Katie handle emergency electrical calls?", answer: "Yes. Katie is trained to identify electrical emergencies (no power, burning smell, sparking, shock risk) and marks them as highest priority. You'll get an immediate WhatsApp alert with an emergency tag so you can respond within minutes." },
@@ -110,29 +110,29 @@ export const trades: TradeData[] = [
     singular: "builder",
     plural: "builders",
     display: "Builders",
-    headline: "AI Call Handling for Builders — Every Enquiry Captured",
-    subheadline: "Extensions, renovations, new builds. Big jobs start with a phone call. Katie captures the full project scope, budget signals, and timeline — so you walk into every quote meeting prepared.",
+    headline: "AI Call Handling for Builders: Every Enquiry Captured",
+    subheadline: "Extensions, renovations, new builds. Big jobs start with a phone call. Katie captures the full project scope, budget signals, and timeline, so you walk into every quote meeting prepared.",
     metaDescription: "AI call handling for builders. Katie qualifies extension and renovation enquiries 24/7. Captures budget, timeline, and scope. Free 7-day trial.",
     problemStatements: [
-      "Extension and renovation enquiries need detailed qualification — but you miss the call on site",
+      "Extension and renovation enquiries need detailed qualification, but you miss the call on site",
       "Unqualified site visits waste half a day and cost £200+ in fuel and labour",
       "You can't tell if it's a £5k loft conversion or a £50k extension from a missed call",
-      "Multiple decision-makers (couples) — Katie speaks to whoever calls, captures both contacts"
+      "Multiple decision-makers (couples): Katie speaks to whoever calls, captures both contacts"
     ],
     solutionStatements: [
-      "Katie qualifies building projects with 8 key questions — budget, timeline, property type, planning status",
+      "Katie qualifies building projects with 8 key questions: budget, timeline, property type, planning status",
       "You get a full project brief on WhatsApp before you even call back",
       "Budget signals help you prioritise: £50k+ extensions get flagged for same-day callback",
-      "Both partners' contact details captured — no more 'let me check with my wife' delays"
+      "Both partners' contact details captured, no more 'let me check with my wife' delays"
     ],
     howItWorks: [
       { step: 1, title: "Homeowner calls about an extension", description: "Katie answers with your building company's branded greeting and asks about project type, property size, and budget range" },
       { step: 2, title: "Full project qualification", description: "Captures: project type (extension, renovation, new build, loft conversion), property type and size, budget range, timeline, planning permission status, and both decision-makers' contacts" },
-      { step: 3, title: "Project brief to your phone", description: "WhatsApp alert: 'Extension enquiry — 4-bed detached — £40-60k budget — 6-month timeline — planning not yet applied — SW19 — both partners contactable'" },
+      { step: 3, title: "Project brief to your phone", description: "WhatsApp alert: 'Extension enquiry, 4-bed detached, £40k to £60k budget, 6-month timeline, planning not yet applied, SW19, both partners contactable'" },
       { step: 4, title: "Accept for site visit or request more info", description: "Tap to accept (triggers site visit booking), call back (sends SMS to customer), or decline (sends polite referral message)" }
     ],
     faqs: [
-      { question: "Can Katie qualify building project budgets?", answer: "Yes. Katie tactfully asks for budget range using bracketed options (£10-20k, £20-50k, £50k+). This helps you prioritise high-value enquiries and avoid unqualified site visits. The budget is included in every WhatsApp alert." },
+      { question: "Can Katie qualify building project budgets?", answer: "Yes. Katie tactfully asks for budget range using bracketed options (£10k to £20k, £20k to £50k, £50k+). This helps you prioritise high-value enquiries and avoid unqualified site visits. The budget is included in every WhatsApp alert." },
       { question: "Does AI call handling work for large construction projects?", answer: "Yes. Katie handles everything from small repairs to £500k+ commercial builds. For large projects, she captures additional details: project manager contact, architect details, planning reference number, and tender deadline." },
       { question: "Can Katie handle multiple project types?", answer: "Yes. Katie is trained to identify and categorise: extensions, loft conversions, basement conversions, renovations, new builds, commercial fit-outs, maintenance contracts, and emergency repairs. Each type gets routed with the right qualification questions." },
       { question: "How do I handle follow-up with qualified leads?", answer: "Your dashboard shows every qualified lead with full project details. Tap 'Call Back' to schedule a follow-up, 'Accept' to move to quote stage, or 'Decline' to free up capacity. Claire sends review requests after every completed project." },
@@ -150,33 +150,33 @@ export const trades: TradeData[] = [
     singular: "roofer",
     plural: "roofers",
     display: "Roofers",
-    headline: "AI Call Handling for Roofers — Every Leak is a Lead",
-    subheadline: "Storm damage, slipped tiles, full re-roofs. When water's coming through the ceiling, customers call fast and expect an answer. Katie never misses a roofing call — rain or shine, day or night.",
+    headline: "AI Call Handling for Roofers: Every Leak is a Lead",
+    subheadline: "Storm damage, slipped tiles, full re-roofs. When water's coming through the ceiling, customers call fast and expect an answer. Katie never misses a roofing call, rain or shine, day or night.",
     metaDescription: "AI call handling for UK roofers. Katie captures emergency leak and storm damage calls 24/7. WhatsApp alerts with job details. Free trial.",
     problemStatements: [
-      "Storm damage calls peak when you're already on a roof — impossible to answer",
-      "Customers with active leaks will call 3-4 roofers — first to answer gets the job",
-      "Insurance work requires photos and documentation — hard to capture over a ringing phone",
-      "You can't see the roof from the ground — but you need to know if it's a tile fix or full re-roof"
+      "Storm damage calls peak when you're already on a roof, impossible to answer",
+      "Customers with active leaks will call 3 to 4 roofers. First to answer gets the job",
+      "Insurance work requires photos and documentation, hard to capture over a ringing phone",
+      "You can't see the roof from the ground, but you need to know if it's a tile fix or full re-roof"
     ],
     solutionStatements: [
       "Katie answers every roofing call while you're up a ladder or driving between jobs",
       "She identifies leak severity, roof type, property age, and insurance status",
-      "Customers can text photos to a dedicated number — Katie links them to the enquiry",
-      "Insurance work flagged for immediate callback — these are your highest-value jobs"
+      "Customers can text photos to a dedicated number. Katie links them to the enquiry",
+      "Insurance work flagged for immediate callback. These are your highest-value jobs"
     ],
     howItWorks: [
-      { step: 1, title: "Storm hits — phones start ringing", description: "Katie answers every call with your roofing company's greeting. She identifies if it's an active leak, storm damage, or routine maintenance" },
+      { step: 1, title: "Storm hits, phones start ringing", description: "Katie answers every call with your roofing company's greeting. She identifies if it's an active leak, storm damage, or routine maintenance" },
       { step: 2, title: "Roof-specific qualification", description: "Captures: roof type (tile, slate, flat, metal), property age, leak location, insurance status, and whether photos are available. Active leaks get emergency priority" },
-      { step: 3, title: "WhatsApp with full context", description: "Alert shows: 'Active leak — bedroom ceiling — 1930s semi — tiled roof — insured — photos available — urgent callback' with customer number and photo link" },
+      { step: 3, title: "WhatsApp with full context", description: "Alert shows: 'Active leak, bedroom ceiling, 1930s semi, tiled roof, insured, photos available, urgent callback' with customer number and photo link" },
       { step: 4, title: "Accept emergency or schedule survey", description: "For active leaks: tap to accept and head straight there. For quotes: schedule a roof survey with time preference. Insurance work gets flagged for priority handling" }
     ],
     faqs: [
-      { question: "How does Katie handle storm damage emergencies?", answer: "Katie identifies storm damage by keywords (leak, water coming through, storm, wind damage) and marks the enquiry as emergency priority. You'll get an immediate WhatsApp with 'STORM DAMAGE — URGENT' in the header. Customers also receive an SMS confirming help is on the way." },
+      { question: "How does Katie handle storm damage emergencies?", answer: "Katie identifies storm damage by keywords (leak, water coming through, storm, wind damage) and marks the enquiry as emergency priority. You'll get an immediate WhatsApp with 'STORM DAMAGE: URGENT' in the header. Customers also receive an SMS confirming help is on the way." },
       { question: "Can customers send roof photos to Katie?", answer: "Yes. Katie invites customers to send photos to a dedicated WhatsApp number. Photos are automatically linked to the enquiry in your dashboard, so you can assess the damage before you even call back." },
       { question: "Does AI call handling work for insurance roofing claims?", answer: "Yes. Katie specifically asks about insurance status and captures the insurance company name, policy number, and loss adjuster details when available. Insurance work is tagged as 'insurance' in your dashboard for specialised follow-up." },
       { question: "What if I can't get to an emergency call immediately?", answer: "Tap 'Call Back' and set an estimated arrival time. Katie sends the customer an SMS: 'Your roofer will call you back within 30 minutes. Emergency priority confirmed.' Most customers appreciate the transparency over silence." },
-      { question: "How much is a missed roofing job worth?", answer: "Emergency tile repairs average £200-400. Full re-roofs are £8,000-25,000. Insurance claims can exceed £50,000. At £59/month, capturing one missed re-roof pays for 10+ years of Whoza." }
+      { question: "How much is a missed roofing job worth?", answer: "Emergency tile repairs average £200 to £400. Full re-roofs are £8,000 to £25,000. Insurance claims can exceed £50,000. At £59/month, capturing one missed re-roof pays for 10+ years of Whoza." }
     ],
     stats: [
       { label: "Roofing calls missed in storms", value: "73%" },
@@ -190,29 +190,29 @@ export const trades: TradeData[] = [
     singular: "landscaper",
     plural: "landscapers",
     display: "Landscapers",
-    headline: "AI Call Handling for Landscapers — Grow Your Business",
-    subheadline: "Garden redesigns, patio installations, maintenance contracts. Customers have visions but struggle to describe them. Katie draws out the details — budget, timeline, garden size, style preferences — so you arrive with a plan, not just a tape measure.",
+    headline: "AI Call Handling for Landscapers: Grow Your Business",
+    subheadline: "Garden redesigns, patio installations, maintenance contracts. Customers have visions but struggle to describe them. Katie draws out the details (budget, timeline, garden size, style preferences) so you arrive with a plan, not just a tape measure.",
     metaDescription: "AI call handling for landscapers. Katie qualifies garden projects 24/7, captures budget and timeline. Never miss a £10k+ enquiry. Free trial.",
     problemStatements: [
-      "Garden enquiries are vague ('I want something nice') — Katie asks the right questions to reveal scope",
-      "You're working outdoors with dirty hands — answering the phone is impractical",
-      "Seasonal peaks (spring rush) mean 3-4x normal call volume — impossible to handle alone",
+      "Garden enquiries are vague ('I want something nice'). Katie asks the right questions to reveal scope",
+      "You're working outdoors with dirty hands. Answering the phone is impractical",
+      "Seasonal peaks (spring rush) mean 3 to 4x normal call volume, impossible to handle alone",
       "Commercial maintenance contracts need different qualification than residential redesigns"
     ],
     solutionStatements: [
       "Katie qualifies garden projects with structured questions: size, style, features, budget, timeline",
       "She identifies commercial vs. residential, one-off vs. maintenance contract",
-      "Spring rush? Katie handles unlimited simultaneous calls — no busy signals ever",
-      "You get a full design brief: 'Garden redesign — 200m² — contemporary — patio + water feature — £15-25k — start in April'"
+      "Spring rush? Katie handles unlimited simultaneous calls, no busy signals ever",
+      "You get a full design brief: 'Garden redesign, 200m², contemporary, patio + water feature, £15k to £25k, start in April'"
     ],
     howItWorks: [
       { step: 1, title: "Customer calls about a garden project", description: "Katie answers while you're mid-plant or on a digger. She asks whether it's a redesign, patio, driveway, maintenance, or tree work" },
       { step: 2, title: "Landscape qualification in 60 seconds", description: "Captures: garden size, property type, style preference (contemporary, traditional, low-maintenance, family-friendly), key features (patio, lawn, water feature, lighting), budget range, and start month" },
-      { step: 3, title: "Design brief to your phone", description: "WhatsApp alert: 'Garden redesign — 150m² Victorian terrace — traditional style — patio + lawn + planting — £12-18k — start May — SW6' — full context before you call back" },
+      { step: 3, title: "Design brief to your phone", description: "WhatsApp alert: 'Garden redesign, 150m² Victorian terrace, traditional style, patio + lawn + planting, £12k to £18k, start May, SW6', full context before you call back" },
       { step: 4, title: "Accept for design visit or send portfolio", description: "Tap to accept (schedule design consultation), call back (send estimate first), or decline (sends polite message with referral). Commercial enquiries flagged for priority handling" }
     ],
     faqs: [
-      { question: "Can Katie handle spring rush call volumes?", answer: "Yes. Katie handles unlimited simultaneous calls with zero wait time. During your busiest season, every caller gets answered instantly — no busy signals, no voicemail, no lost enquiries. One landscaper captured 23 enquiries in a single April Saturday using Katie." },
+      { question: "Can Katie handle spring rush call volumes?", answer: "Yes. Katie handles unlimited simultaneous calls with zero wait time. During your busiest season, every caller gets answered instantly: no busy signals, no voicemail, no lost enquiries. One landscaper captured 23 enquiries in a single April Saturday using Katie." },
       { question: "How does AI call handling work for commercial landscaping contracts?", description: "Katie identifies commercial enquiries (business name, site address, contract type) and asks about: site size, service frequency (weekly/monthly), additional services (snow clearance, litter picking), contract length, and decision-maker details. Commercial leads are tagged for fast follow-up." },
       { question: "Can Katie collect garden photos from customers?", answer: "Yes. Katie invites customers to send photos of their current garden to a dedicated WhatsApp number. Photos are linked to the enquiry in your dashboard, so you can prepare ideas and a rough estimate before the design visit." },
       { question: "What information do I get for a landscaping enquiry?", answer: "Every WhatsApp alert includes: customer name and number, postcode, garden size, property type, project type, style preference, key features requested, budget range, timeline, how they found you, and whether photos are available. Commercial enquiries also include site details." },
@@ -230,12 +230,12 @@ export const trades: TradeData[] = [
     singular: "hvac",
     plural: "hvac",
     display: "HVAC",
-    headline: "AI Call Handling for HVAC — Hot Leads, Cool Conversions",
+    headline: "AI Call Handling for HVAC: Hot Leads, Cool Conversions",
     subheadline: "Boiler breakdowns, AC installations, heat pump upgrades. When heating fails in winter or AC fails in summer, customers call in distress. Katie answers with empathy, qualifies the system type, and gets you the details fast.",
     metaDescription: "AI call handling for HVAC engineers. Katie handles boiler breakdowns, AC installs, and heat pump enquiries 24/7. WhatsApp alerts with details. Free trial.",
     problemStatements: [
       "Boiler breakdowns in winter = peak call volume when you're already on jobs",
-      "Customers can't describe their heating system ('the white box thing') — Katie knows the right questions",
+      "Customers can't describe their heating system ('the white box thing'). Katie knows the right questions",
       "Heat pump enquiries are complex (government grants, MCS certification, property suitability)",
       "Landlord contracts and service agreements need different handling than one-off repairs"
     ],
@@ -248,7 +248,7 @@ export const trades: TradeData[] = [
     howItWorks: [
       { step: 1, title: "Customer calls with heating or cooling issue", description: "Katie answers with HVAC-specific greeting and identifies whether it's a breakdown, installation, service, or heat pump enquiry" },
       { step: 2, title: "System-specific qualification", description: "Captures: system type (boiler, furnace, AC, heat pump, ventilation), make/model if known, property size and type, fault symptoms, warranty status, and whether it's a landlord or homeowner" },
-      { step: 3, title: "Smart alert with system context", description: "WhatsApp: 'Boiler breakdown — Worcester Bosch 30i — no hot water — 3-bed semi — warranty active — landlord — urgent — NW3' — you know the parts to bring before you arrive" },
+      { step: 3, title: "Smart alert with system context", description: "WhatsApp: 'Boiler breakdown, Worcester Bosch 30i, no hot water, 3-bed semi, warranty active, landlord, urgent, NW3'. You know the parts to bring before you arrive" },
       { step: 4, title: "Emergency repair or scheduled service", description: "Tap 'Accept' for emergency dispatch with ETA. Tap 'Call Back' to schedule service visit. Heat pump enquiries get routed to your specialist team with full property assessment notes" }
     ],
     faqs: [
@@ -256,7 +256,7 @@ export const trades: TradeData[] = [
       { question: "How does AI call handling handle heat pump enquiries?", answer: "Katie recognises heat pump interest and asks about: property age, insulation status, current heating system, garden space (for ground source), grant interest (Boiler Upgrade Scheme), and MCS certification requirements. These enquiries are tagged 'heat-pump' for specialist follow-up." },
       { question: "Can Katie handle landlord and service contract calls?", answer: "Yes. Katie identifies landlords and letting agents and asks about: number of properties, service contract status, certificate requirements (Gas Safety, EPC), and preferred service frequency. These are tagged 'landlord' for your service contract team." },
       { question: "What happens when a customer has an emergency breakdown?", answer: "Katie identifies emergency keywords (no heating, no hot water, leaking, error code, cold house) and marks the enquiry as emergency priority. You get an immediate WhatsApp with an 'EMERGENCY' header. Customer receives SMS: 'Emergency call logged. Engineer callback within 15 minutes.'" },
-      { question: "How does the 7-day free trial work for HVAC companies?", answer: "Sign up, choose a UK number or forward your existing one, and Katie starts answering immediately. Full access to all features: AI answering, WhatsApp alerts, enquiry dashboard, and review collection. Cancel anytime before day 14 — no charge. Most HVAC companies see ROI within the first week." }
+      { question: "How does the 7-day free trial work for HVAC companies?", answer: "Sign up, choose a UK number or forward your existing one, and Katie starts answering immediately. Full access to all features: AI answering, WhatsApp alerts, enquiry dashboard, and review collection. Cancel anytime before day 14, no charge. Most HVAC companies see ROI within the first week." }
     ],
     stats: [
       { label: "HVAC calls missed in winter", value: "67%" },
@@ -270,12 +270,12 @@ export const trades: TradeData[] = [
     singular: "heating engineer",
     plural: "heating engineers",
     display: "Heating Engineers",
-    headline: "AI Call Handling for Heating Engineers — 24/7 Booking",
+    headline: "AI Call Handling for Heating Engineers: 24/7 Booking",
     subheadline: "Boiler breakdowns, no hot water, gas safety checks. When a customer's heating fails in winter, every minute matters. Katie answers every call with empathy, qualifies the fault, and sends you the full job details before you even pick up.",
     metaDescription: "AI call handling for heating engineers. Katie answers boiler breakdown and servicing calls 24/7. Captures fault details via WhatsApp. Free trial.",
     problemStatements: [
       "Boiler breakdowns in winter = peak call volume when you're already on jobs",
-      "Customers can't describe their heating system ('the white box thing') — Katie knows the right questions",
+      "Customers can't describe their heating system ('the white box thing'). Katie knows the right questions",
       "Gas Safety Certificate enquiries need different handling than breakdowns",
       "Landlord contracts and annual service agreements need different follow-up than one-off repairs"
     ],
@@ -288,7 +288,7 @@ export const trades: TradeData[] = [
     howItWorks: [
       { step: 1, title: "Customer calls with heating issue", description: "Katie answers with heating-specific greeting and identifies whether it's a breakdown, service, installation, or Gas Safety enquiry" },
       { step: 2, title: "System-specific qualification", description: "Captures: boiler type (combi, system, heat-only), make/model if known, property size and type, fault symptoms, warranty status, and whether it's a landlord or homeowner" },
-      { step: 3, title: "Smart alert with system context", description: "WhatsApp: 'Boiler breakdown — Worcester Bosch 30i — no hot water — 3-bed semi — warranty active — landlord — urgent — NW3' — you know the parts to bring before you arrive" },
+      { step: 3, title: "Smart alert with system context", description: "WhatsApp: 'Boiler breakdown, Worcester Bosch 30i, no hot water, 3-bed semi, warranty active, landlord, urgent, NW3'. You know the parts to bring before you arrive" },
       { step: 4, title: "Emergency repair or scheduled service", description: "Tap 'Accept' for emergency dispatch with ETA. Tap 'Call Back' to schedule service visit. Installations get routed to your sales team with full property assessment notes" }
     ],
     faqs: [
@@ -296,7 +296,7 @@ export const trades: TradeData[] = [
       { question: "How does AI call handling work for Gas Safety Certificates?", answer: "Katie recognises CP12/Gas Safety enquiries and asks about: number of properties, certificate expiry date, appliance count, and preferred inspection time. These are tagged 'gas-safety' for your certification team." },
       { question: "Can Katie handle landlord and service contract calls?", answer: "Yes. Katie identifies landlords and letting agents and asks about: number of properties, service contract status, certificate requirements (Gas Safety, EPC), and preferred service frequency. These are tagged 'landlord' for your service contract team." },
       { question: "What happens when a customer has an emergency breakdown?", answer: "Katie identifies emergency keywords (no heating, no hot water, leaking, error code, cold house) and marks the enquiry as emergency priority. You get an immediate WhatsApp with an 'EMERGENCY' header. Customer receives SMS: 'Emergency call logged. Engineer callback within 15 minutes.'" },
-      { question: "How does the 7-day free trial work for heating engineers?", answer: "Sign up, choose a UK number or forward your existing one, and Katie starts answering immediately. Full access to all features: AI answering, WhatsApp alerts, enquiry dashboard, and review collection. Cancel anytime before day 14 — no charge. Most heating engineers see ROI within the first week." }
+      { question: "How does the 7-day free trial work for heating engineers?", answer: "Sign up, choose a UK number or forward your existing one, and Katie starts answering immediately. Full access to all features: AI answering, WhatsApp alerts, enquiry dashboard, and review collection. Cancel anytime before day 14, no charge. Most heating engineers see ROI within the first week." }
     ],
     stats: [
       { label: "Heating calls missed in winter", value: "67%" },
@@ -311,12 +311,12 @@ export const trades: TradeData[] = [
     plural: "joiners",
     display: "Joiners & Carpenters",
     headline: "AI Call Answering for Joiners & Carpenters UK",
-    subheadline: "Bespoke kitchens, fitted wardrobes, staircases, doors — customers call when they want quality woodwork. Katie answers every call, captures the project details, and sends them to your WhatsApp.",
+    subheadline: "Bespoke kitchens, fitted wardrobes, staircases, doors. Customers call when they want quality woodwork. Katie answers every call, captures the project details, and sends them to your WhatsApp.",
     metaDescription: "AI call handling for UK joiners. Katie answers 24/7, captures bespoke furniture and renovation enquiries. WhatsApp alerts in 3 seconds. Free trial.",
     problemStatements: [
-      "Joinery enquiries are detailed — customers describe bespoke projects that need careful quoting",
+      "Joinery enquiries are detailed: customers describe bespoke projects that need careful quoting",
       "You can't tell if it's a simple door hinge or a £15k kitchen from a missed call",
-      "Commercial clients (builders, developers, architects) expect fast response — voicemail loses contracts",
+      "Commercial clients (builders, developers, architects) expect fast response. Voicemail loses contracts",
       "Evening and weekend calls for urgent repairs (broken doors, stuck windows) go unanswered"
     ],
     solutionStatements: [
@@ -326,14 +326,14 @@ export const trades: TradeData[] = [
       "Bespoke and high-value projects get detailed capture for accurate quoting"
     ],
     howItWorks: [
-      { step: 1, title: "Customer calls about joinery/carpentry project", description: "Katie picks up instantly with your branded greeting and identifies the project type — kitchen, wardrobe, staircase, door, or repair" },
+      { step: 1, title: "Customer calls about joinery/carpentry project", description: "Katie picks up instantly with your branded greeting and identifies the project type: kitchen, wardrobe, staircase, door, or repair" },
       { step: 2, title: "Katie captures project details", description: "She collects: project type, materials preference, budget range, timeline, property type, and whether it's commercial or residential" },
       { step: 3, title: "WhatsApp alert with full context", description: "A structured message lands on your phone with all project details. Commercial enquiries tagged as priority" },
       { step: 4, title: "Quote, accept, or schedule site visit", description: "Tap to accept, call back, or decline. Customer gets an instant SMS either way. You walk into every conversation fully prepared" }
     ],
     faqs: [
       { question: "How much does AI call answering cost for joiners?", answer: "Whoza starts at £59/month for the Starter plan. That's less than one bespoke kitchen consultation. Most joiners recover the cost within a week by capturing just one missed project enquiry." },
-      { question: "Can Katie handle bespoke furniture enquiries?", answer: "Yes. Katie is trained to handle detailed joinery enquiries including bespoke kitchens, fitted wardrobes, staircases, and cabinets. She captures project type, materials, budget, and dimensions — giving you a full brief before you call back." },
+      { question: "Can Katie handle bespoke furniture enquiries?", answer: "Yes. Katie is trained to handle detailed joinery enquiries including bespoke kitchens, fitted wardrobes, staircases, and cabinets. She captures project type, materials, budget, and dimensions, giving you a full brief before you call back." },
       { question: "What information does Katie collect from joinery customers?", answer: "Katie captures: full name, phone number, postcode, project type, materials preference, budget range, timeline, property type, and whether it's commercial or residential. For bespoke projects, she also asks about style preferences and available drawings." },
       { question: "Can Katie handle commercial joinery contracts?", answer: "Yes. Katie identifies commercial enquiries from builders, developers, architects, and interior designers. She captures project scale, contract value, timeline, and decision-maker details. Commercial enquiries are tagged as priority in your WhatsApp alert." },
       { question: "What happens if Katie can't handle a complex enquiry?", answer: "Katie recognises when a call needs human attention. For complex bespoke projects, she takes a detailed message and flags it for your immediate callback. You receive the full context in WhatsApp so you can call back prepared." }
@@ -350,25 +350,25 @@ export const trades: TradeData[] = [
     singular: "locksmith",
     plural: "locksmiths",
     display: "Locksmiths",
-    headline: "AI Call Handling for Locksmiths UK — 24/7 Lockout Help",
+    headline: "AI Call Handling for Locksmiths UK: 24/7 Lockout Help",
     subheadline: "Emergency lockouts, key replacements, security upgrades. When a customer is locked out at midnight or a tenant has lost their keys, every second counts. Katie answers every call instantly, qualifies the job, and sends you the details before you even pick up.",
     metaDescription: "AI call handling for UK locksmiths. Katie answers emergency lockouts 24/7. Captures location and job type. WhatsApp alerts in 3 seconds. Free trial.",
     problemStatements: [
-      "Emergency lockout calls at 2am go straight to voicemail — customer calls the next locksmith on Google",
+      "Emergency lockout calls at 2am go straight to voicemail. Customer calls the next locksmith on Google",
       "You can't tell if it's a £60 key copy or a £400 commercial lock change from a missed call",
       "Landlord enquiries for multi-property lock changes need different handling than residential lockouts",
-      "After-hours security upgrade calls (burglary repairs, CCTV, access control) are your highest-value jobs — but you miss them on site"
+      "After-hours security upgrade calls (burglary repairs, CCTV, access control) are your highest-value jobs, but you miss them on site"
     ],
     solutionStatements: [
-      "Katie answers every lockout call in under 3 seconds — even at midnight on a bank holiday",
+      "Katie answers every lockout call in under 3 seconds, even at midnight on a bank holiday",
       "She identifies emergency vs. routine, residential vs. commercial, and security upgrade vs. lockout",
-      "You get a full job brief: 'Emergency lockout — 2-bed flat — SW11 — no keys — urgent — 2:14am'",
-      "Landlord and commercial enquiries tagged for priority follow-up — these are your repeat revenue"
+      "You get a full job brief: 'Emergency lockout, 2-bed flat, SW11, no keys, urgent, 2:14am'",
+      "Landlord and commercial enquiries tagged for priority follow-up. These are your repeat revenue"
     ],
     howItWorks: [
       { step: 1, title: "Customer calls locked out or needs keys", description: "Katie answers instantly with your locksmith company's branded greeting. She identifies if it's an emergency lockout, key replacement, security upgrade, or commercial enquiry" },
       { step: 2, title: "Locksmith-specific qualification", description: "Captures: property type (house/flat/commercial), lock type (mortice, Yale, UPVC, digital), access situation (lost keys, broken lock, snapped key), insurance status, and whether it's a landlord or homeowner" },
-      { step: 3, title: "WhatsApp alert with full context", description: "Alert shows: 'Emergency lockout — 2-bed flat — Yale lock — lost keys — SW11 — tenant — urgent callback' with customer number and exact location" },
+      { step: 3, title: "WhatsApp alert with full context", description: "Alert shows: 'Emergency lockout, 2-bed flat, Yale lock, lost keys, SW11, tenant, urgent callback' with customer number and exact location" },
       { step: 4, title: "Dispatch or schedule service", description: "For emergency lockouts: tap to accept and head straight there with ETA. For key cutting or security surveys: schedule appointment. Commercial enquiries get priority tagging for contract follow-up" }
     ],
     faqs: [
@@ -376,7 +376,7 @@ export const trades: TradeData[] = [
       { question: "Can Katie handle emergency lockout calls at midnight?", answer: "Yes. Katie answers 24/7, including nights, weekends, and bank holidays. She identifies emergency lockouts by keywords (locked out, lost keys, snapped key, can't get in) and marks them as highest priority. You get an immediate WhatsApp with 'EMERGENCY LOCKOUT' in the header." },
       { question: "How does Katie distinguish between residential and commercial locksmith jobs?", answer: "Yes. Katie is trained to identify the type of locksmith job from the customer's description. 'Locked out of my house' gets residential lockout priority. 'Need to change all locks on my rental property' gets landlord/multi-property tagging. 'Security survey for my shop' gets commercial security priority. Each type gets different follow-up handling in your dashboard." },
       { question: "Can Katie handle landlord and letting agent calls?", answer: "Yes. Katie identifies landlords and letting agents and asks about: number of properties, lock type, access requirements (master key system, key safe), and preferred service time. These are tagged 'landlord' for your property services team and represent your highest repeat-customer value." },
-      { question: "What if a customer needs a security upgrade after a burglary?", answer: "Katie recognises security upgrade enquiries (burglary, break-in, damaged lock, wants stronger locks, CCTV interest) and captures: property type, number of entry points, insurance claim status, and budget range. These are tagged 'security-upgrade' and flagged as high-value priority — often £400-1,200+ jobs." }
+      { question: "What if a customer needs a security upgrade after a burglary?", answer: "Katie recognises security upgrade enquiries (burglary, break-in, damaged lock, wants stronger locks, CCTV interest) and captures: property type, number of entry points, insurance claim status, and budget range. These are tagged 'security-upgrade' and flagged as high-value priority, often £400 to £1,200+ jobs." }
     ],
     stats: [
       { label: "Lockout calls missed after hours", value: "78%" },

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "AI Call Answering for Electricians in Manchester | whoza.ai",
     description: "Stop losing electrician jobs to missed calls in Manchester. Katie answers 24/7, captures emergency and EICR enquiries via WhatsApp. Plans from £59/month.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Electricians in Manchester" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Electricians in Manchester" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     "question": "Does it work with my existing Manchester business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing Manchester business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "answer": "Yes. You simply set up call forwarding from your existing Manchester business number to your whoza.ai number. Your customers dial the same number they've always used. Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
     "question": "How quickly can I get set up as an electrician in Manchester?",
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     "question": "What makes whoza.ai different for electricians in Manchester?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for electricians. She understands EICR enquiries, emergency faults, consumer unit upgrades & power outages — and with 8,500+ trade businesses competing in Manchester, capturing every call gives you a real competitive edge."
+    "answer": "Unlike generic call answering services, Katie is trained specifically for electricians. She understands EICR enquiries, emergency faults, consumer unit upgrades & power outages, and with 8,500+ trade businesses competing in Manchester, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -97,7 +97,7 @@ export default function ForElectricianManchesterPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Manchester has 8,500+ trade businesses competing for 540K households. 
                   With 3,400 missed calls every week across the city, 
-                  Katie ensures you capture every electrical enquiry — EICR enquiries, emergency faults, consumer unit upgrades & power outages.
+                  Katie ensures you capture every electrical enquiry: EICR enquiries, emergency faults, consumer unit upgrades & power outages.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -132,7 +132,7 @@ export default function ForElectricianManchesterPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -261,7 +261,7 @@ export default function ForElectricianManchesterPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your Manchester number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your Manchester number. Katie picks up in under 2 rings with your branded greeting, 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",
@@ -312,7 +312,7 @@ export default function ForElectricianManchesterPage() {
                 Manchester&apos;s electrical market is fuelled by a booming student population, commercial regeneration, and ageing housing stock. In Prestwich and Whitefield, family homes with 1960s wiring need regular EICR updates and consumer unit replacements. MediaCity&apos;s commercial hub generates calls for office fit-outs, data cabling, and three-phase installations, while the Northern Quarter&apos;s bars and restaurants need rapid-response electricians for emergency repairs that can&apos;t wait until morning. With 8,500+ trade businesses serving 540K households and 3,400 missed calls every week, Manchester&apos;s electricians face competition from every direction.
               </p>
               <p>
-                The student HMO market is a defining feature. Areas around Fallowfield and Withington are packed with student houses that require annual electrical checks under HMO licensing rules. Landlords with multiple student properties book electricians months in advance for these inspections, but emergency calls still spike during term time when overloaded circuits trip or old wiring fails. A missed call from a landlord with five student properties isn&apos;t just one £310 job — it&apos;s a lost annual contract worth thousands. Katie captures the property type and whether the call relates to HMO compliance, ensuring you never miss the kind of recurring work that builds a stable Manchester trade business.
+                The student HMO market is a defining feature. Areas around Fallowfield and Withington are packed with student houses that require annual electrical checks under HMO licensing rules. Landlords with multiple student properties book electricians months in advance for these inspections, but emergency calls still spike during term time when overloaded circuits trip or old wiring fails. A missed call from a landlord with five student properties isn&apos;t just one £310 job. It&apos;s a lost annual contract worth thousands. Katie captures the property type and whether the call relates to HMO compliance, ensuring you never miss the kind of recurring work that builds a stable Manchester trade business.
               </p>
             </div>
           </div>
@@ -337,7 +337,7 @@ export default function ForElectricianManchesterPage() {
                 Student HMOs across Fallowfield and Rusholme need annual EICRs and frequent emergency callouts for overloaded circuits. Commercial work in the city centre and MediaCity demands reliable trades who can work around office hours. New-build apartments in Salford Quays need EV charging infrastructure and smart home systems. Manchester&apos;s 867mm annual rainfall causes persistent damp that corrodes junction boxes and triggers RCD faults in older properties.
               </p>
               <p>
-                Match days create traffic chaos that makes emergency callouts a logistical nightmare. When a student landlord in Withington books an EICR for a three-bed HMO, or a commercial client in Spinningfields needs out-of-hours fault finding, Katie captures the property details, flags the deadline, and delivers a structured enquiry to your WhatsApp — no callback needed, no detail missed.
+                Match days create traffic chaos that makes emergency callouts a logistical nightmare. When a student landlord in Withington books an EICR for a three-bed HMO, or a commercial client in Spinningfields needs out-of-hours fault finding, Katie captures the property details, flags the deadline, and delivers a structured enquiry to your WhatsApp, no callback needed, no detail missed.
               </p>
             </div>
           </div>

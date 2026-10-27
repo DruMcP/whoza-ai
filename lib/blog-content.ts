@@ -45,9 +45,9 @@ export const blogPostContents: Record<string, BlogPostContent> = {
       description: "Everything UK tradespeople need to know about AI call answering. How it works, pricing, benefits and provider comparison for 2026. Plans from £59. Read now.",
     },
     content: {
-      introduction: `Missed calls cost UK tradespeople an estimated **£24,000–£30,000 per year**. In 2026, AI voice agents are capturing those calls 24/7, qualifying leads, and booking jobs while you focus on the work.
+      introduction: `Missed calls cost UK tradespeople an estimated **£24,000 to £30,000 per year**. In 2026, AI voice agents are capturing those calls 24/7, qualifying leads, and booking jobs while you focus on the work.
 
-This definitive guide breaks down the latest 2026 data, the maths behind missed call costs, exactly how AI call handling works, and a complete buyer's guide to choosing the right service for your trade business. Whether you're a plumber, electrician, roofer, locksmith, or builder — this is the data you need to make an informed decision.`,
+This definitive guide breaks down the latest 2026 data, the maths behind missed call costs, exactly how AI call handling works, and a complete buyer's guide to choosing the right service for your trade business. Whether you're a plumber, electrician, roofer, locksmith, or builder, this is the data you need to make an informed decision.`,
       sections: [
         {
           heading: "What Is AI Call Answering?",
@@ -56,7 +56,7 @@ This definitive guide breaks down the latest 2026 data, the maths behind missed 
 
 Unlike a traditional answering machine or voicemail, an AI voice agent engages callers in natural, two-way conversation, asks qualifying questions, and can book appointments directly into your calendar.
 
-The technology combines large language models (LLMs), speech recognition, and business automation to create a human-like phone experience without requiring a human on the line. For UK tradespeople — plumbers, electricians, roofers, locksmiths, and builders — this means no more missed enquiries while you're on a job site, under a sink, or up a ladder.`,
+The technology combines large language models (LLMs), speech recognition, and business automation to create a human-like phone experience without requiring a human on the line. For UK tradespeople (plumbers, electricians, roofers, locksmiths, and builders), this means no more missed enquiries while you're on a job site, under a sink, or up a ladder.`,
         },
         {
           heading: "Missed Call Statistics for UK Trades (2026)",
@@ -66,14 +66,14 @@ The technology combines large language models (LLMs), speech recognition, and bu
             "**33%** of small businesses fail to answer incoming calls (Moneypenny Small Business Call Report, 2016)",
             "**69%** of voicemail callers don't leave a message (Moneypenny Small Business Call Report, 2016)",
             "**47%** of initial calls went unanswered in a 2025 study of 142 UK SMEs",
-            "**33%** of all incoming calls were missed by micro-businesses (0–9 employees) in a 2017 survey of 300 UK tradespeople — and the problem has worsened since",
+            "**33%** of all incoming calls were missed by micro-businesses (0 to 9 employees) in a 2017 survey of 300 UK tradespeople, and the problem has worsened since",
           ],
           callout: "UK businesses lose an estimated **£30 billion** annually specifically due to missed calls. The worst-hit sector? Local home services and trades.",
         },
         {
           heading: "The Real Cost of Missed Calls",
           headingTag: "h2",
-          body: `Let's break down exactly what missed calls cost a typical UK tradesperson. These figures are based on industry averages and survey data from 2025–2026.
+          body: `Let's break down exactly what missed calls cost a typical UK tradesperson. These figures are based on industry averages and survey data from 2025 to 2026.
 
 **The Conservative Estimate:**
 - Average job value: **£250** (standard callout/service)
@@ -95,10 +95,10 @@ And this only counts answered leads that convert. It doesn't include the **69% o
           body: `Modern AI call handling follows a simple three-step process:
 
 **Step 1: Answer (0 Seconds)**
-When a customer calls your business number, the AI voice agent picks up instantly — every time, 24 hours a day, 7 days a week. There's no ring-out, no voicemail, no "please leave a message after the tone." The caller speaks to a professional AI assistant immediately.
+When a customer calls your business number, the AI voice agent picks up instantly, every time, 24 hours a day, 7 days a week. There's no ring-out, no voicemail, no "please leave a message after the tone." The caller speaks to a professional AI assistant immediately.
 
-**Step 2: Qualify (30–60 Seconds)**
-The AI asks intelligent questions based on your trade: location, type of job, urgency, budget range, and availability. It filters out spam, wrong numbers, and non-viable leads. It captures the details a human receptionist would — name, phone number, address, job description.
+**Step 2: Qualify (30 to 60 Seconds)**
+The AI asks intelligent questions based on your trade: location, type of job, urgency, budget range, and availability. It filters out spam, wrong numbers, and non-viable leads. It captures the details a human receptionist would: name, phone number, address, job description.
 
 **Step 3: Deliver (Under 3 Seconds)**
 Once qualified, the lead is delivered to you instantly via WhatsApp, SMS, or directly into your CRM. You get a structured message with all the caller's details, ready for you to respond when you're free. Emergency calls can be flagged for immediate escalation.`,
@@ -109,17 +109,17 @@ Once qualified, the lead is delivered to you instantly via WhatsApp, SMS, or dir
           headingTag: "h2",
           body: `The cost difference between an AI voice agent and a human receptionist is stark. Here's the 2026 breakdown:`,
           table: [
-            { label: "Monthly cost", value: "Human: £1,800–£2,500 | AI: £59–£399" },
-            { label: "Annual cost (inc. benefits)", value: "Human: £25,000–£35,000 | AI: £708–£4,788" },
+            { label: "Monthly cost", value: "Human: £1,800 to £2,500 | AI: £59 to £399" },
+            { label: "Annual cost (inc. benefits)", value: "Human: £25,000 to £35,000 | AI: £708 to £4,788" },
             { label: "After-hours coverage", value: "Human: None (or overtime pay) | AI: 24/7 included" },
             { label: "Weekend coverage", value: "Human: None | AI: Included" },
             { label: "Holiday coverage", value: "Human: None | AI: Included" },
             { label: "Sick days / holiday cover", value: "Human: Additional cost | AI: Never ill, never on holiday" },
-            { label: "Training time", value: "Human: 2–4 weeks | AI: 3 minutes setup" },
+            { label: "Training time", value: "Human: 2 to 4 weeks | AI: 3 minutes setup" },
             { label: "Scalability", value: "Human: Hire more staff | AI: Instant, no extra cost" },
-            { label: "Call answering speed", value: "Human: Ring 3–5 times | AI: Instant (0 seconds)" },
+            { label: "Call answering speed", value: "Human: Ring 3 to 5 times | AI: Instant (0 seconds)" },
           ],
-          callout: "Even at the top-tier AI plan (£399/month), you're spending **£4,788 per year** versus **£25,000–£35,000** for a full-time receptionist. That's an **80–90% cost reduction** with 24/7 coverage instead of 9-to-5.",
+          callout: "Even at the top-tier AI plan (£399/month), you're spending **£4,788 per year** versus **£25,000 to £35,000** for a full-time receptionist. That's an **80 to 90% cost reduction** with 24/7 coverage instead of 9-to-5.",
         },
         {
           heading: "ROI Calculator: Is It Worth It?",
@@ -131,29 +131,29 @@ Once qualified, the lead is delivered to you instantly via WhatsApp, SMS, or dir
 - Average job value: **£280**
 - Jobs needed to break even: **5.4 per year** (one every 10 weeks)
 
-In reality, most tradespeople miss 2–4 viable leads per week. If an AI voice agent captures just **one additional job per month**, the annual return is **£3,360** in revenue from a £1,500 investment — that's a **124% ROI**.
+In reality, most tradespeople miss 2 to 4 viable leads per week. If an AI voice agent captures just **one additional job per month**, the annual return is **£3,360** in revenue from a £1,500 investment. That's a **124% ROI**.
 
-Many whoza.ai users report capturing 5–10 additional jobs per month during busy periods, generating £14,000–£33,600 in additional annual revenue from a £1,500 investment.`,
+Many whoza.ai users report capturing 5 to 10 additional jobs per month during busy periods, generating £14,000 to £33,600 in additional annual revenue from a £1,500 investment.`,
         },
         {
           heading: "Industry Benchmarks by Trade",
           headingTag: "h2",
           body: `Not all trades miss calls at the same rate. Here's how the data breaks down by industry for 2026:`,
           table: [
-            { label: "Plumbing", value: "48% missed | £180–£350/job | Emergency calls outside hours" },
-            { label: "Electrical", value: "45% missed | £200–£400/job | Job sites, safety concerns" },
-            { label: "Roofing", value: "52% missed | £500–£3,000/job | Heights, noise, physical labour" },
-            { label: "Locksmith", value: "38% missed | £80–£250/job | Emergency nature, often solo" },
-            { label: "HVAC/Heating", value: "45% missed | £150–£500/job | Seasonal spikes" },
-            { label: "Landscaping", value: "42% missed | £200–£1,500/job | Outdoor work, machinery noise" },
-            { label: "Pest Control", value: "40% missed | £120–£400/job | Emergency calls, seasonal demand" },
-            { label: "Builders/General", value: "50% missed | £1,000–£15,000/job | Large sites, multiple locations" },
+            { label: "Plumbing", value: "48% missed | £180 to £350/job | Emergency calls outside hours" },
+            { label: "Electrical", value: "45% missed | £200 to £400/job | Job sites, safety concerns" },
+            { label: "Roofing", value: "52% missed | £500 to £3,000/job | Heights, noise, physical labour" },
+            { label: "Locksmith", value: "38% missed | £80 to £250/job | Emergency nature, often solo" },
+            { label: "HVAC/Heating", value: "45% missed | £150 to £500/job | Seasonal spikes" },
+            { label: "Landscaping", value: "42% missed | £200 to £1,500/job | Outdoor work, machinery noise" },
+            { label: "Pest Control", value: "40% missed | £120 to £400/job | Emergency calls, seasonal demand" },
+            { label: "Builders/General", value: "50% missed | £1,000 to £15,000/job | Large sites, multiple locations" },
           ],
         },
         {
           heading: "What Customers Expect in 2026",
           headingTag: "h2",
-          body: `Customer expectations have shifted dramatically. The Amazon/Uber era has conditioned consumers to expect instant response — and trades businesses are judged by the same standard.
+          body: `Customer expectations have shifted dramatically. The Amazon/Uber era has conditioned consumers to expect instant response, and trades businesses are judged by the same standard.
 
 - **82%** of consumers expect an immediate response to sales enquiries (Salesforce, 2026)
 - **60%** define "immediate" as 10 minutes or less (HubSpot, 2026)
@@ -203,16 +203,16 @@ Responding to a lead within **1 minute** increases conversions by **391%**. Wait
 6. "What's the per-job cost vs per-minute cost?" (Per-job is more predictable for trades)`,
         },
       ],
-      conclusion: `AI call answering is not the future — it's the present. In 2026, UK tradespeople who adopt AI voice agents are capturing 24/7 enquiries their competitors miss, responding faster than humanly possible, and converting more leads into booked jobs.
+      conclusion: `AI call answering is not the future. It's the present. In 2026, UK tradespeople who adopt AI voice agents are capturing 24/7 enquiries their competitors miss, responding faster than humanly possible, and converting more leads into booked jobs.
 
-The data is clear: missed calls cost the average tradesperson £24,000–£67,000 per year. AI call answering costs £59–£399 per month. One additional job per month pays for the service. Five to ten additional jobs per month transforms your business.
+The data is clear: missed calls cost the average tradesperson £24,000 to £67,000 per year. AI call answering costs £59 to £399 per month. One additional job per month pays for the service. Five to ten additional jobs per month transforms your business.
 
 Whether you're a solo plumber or a growing building firm, the competitive advantage of never missing a call is undeniable. The only question is: will you be the tradesperson who answers every call, or the one who hands customers to your competitor?`,
-      cta: `**Start capturing every call today.** Katie answers 24/7, qualifies leads, and delivers enquiries to your WhatsApp in 3 seconds. Try your 7-day free trial — no credit card required.`,
+      cta: `**Start capturing every call today.** Katie answers 24/7, qualifies leads, and delivers enquiries to your WhatsApp in 3 seconds. Try your 7-day free trial, no credit card required.`,
       faq: [
         {
           question: "How much does an AI call answering service cost in the UK?",
-          answer: "UK AI call answering services range from £50–£400 per month depending on features and call volume. whoza.ai's plans start at £59/month for the Starter plan (pay-per-job) up to £399/month for the Scale plan (100 included jobs). Most tradespeople find the Growth plan (£125/month) covers their needs with 15 included jobs.",
+          answer: "UK AI call answering services range from £50 to £400 per month depending on features and call volume. whoza.ai's plans start at £59/month for the Starter plan (pay-per-job) up to £399/month for the Scale plan (100 included jobs). Most tradespeople find the Growth plan (£125/month) covers their needs with 15 included jobs.",
         },
         {
           question: "Can AI really handle emergency calls for plumbers and electricians?",
@@ -220,7 +220,7 @@ Whether you're a solo plumber or a growing building firm, the competitive advant
         },
         {
           question: "What percentage of UK trade business calls go unanswered?",
-          answer: "Research shows 33% of small UK trade businesses fail to answer incoming calls (Moneypenny Small Business Call Report, 2016). The rate varies by trade: roofers and builders average higher rates due to physical work constraints, while locksmiths and pest control average lower rates. The primary cause is physical work — you can't safely answer a phone while on a roof or under a sink.",
+          answer: "Research shows 33% of small UK trade businesses fail to answer incoming calls (Moneypenny Small Business Call Report, 2016). The rate varies by trade: roofers and builders average higher rates due to physical work constraints, while locksmiths and pest control average lower rates. The primary cause is physical work: you can't safely answer a phone while on a roof or under a sink.",
         },
         {
           question: "How quickly do AI voice agents deliver lead information?",
@@ -232,15 +232,15 @@ Whether you're a solo plumber or a growing building firm, the competitive advant
         },
         {
           question: "Can I keep my existing business phone number?",
-          answer: "Yes. Most AI call answering services (including whoza.ai) work with your existing landline or mobile number through call forwarding. You simply set your phone to forward unanswered calls to the AI service — callers never know the difference, and you keep your established number.",
+          answer: "Yes. Most AI call answering services (including whoza.ai) work with your existing landline or mobile number through call forwarding. You simply set your phone to forward unanswered calls to the AI service. Callers never know the difference, and you keep your established number.",
         },
         {
           question: "Will customers know they're talking to AI?",
-          answer: "Modern AI voice agents use natural language processing and human-like voice synthesis. Most callers can't distinguish AI from a human receptionist in a short interaction. The key is professional, helpful service — customers care about getting their problem solved, not who (or what) answers the phone.",
+          answer: "Modern AI voice agents use natural language processing and human-like voice synthesis. Most callers can't distinguish AI from a human receptionist in a short interaction. The key is professional, helpful service. Customers care about getting their problem solved, not who (or what) answers the phone.",
         },
         {
           question: "How long does it take to set up an AI call handler?",
-          answer: "Most services take 3–10 minutes to set up. whoza.ai's Katie is live in under 3 minutes: connect your number, set your preferences, and AI starts answering. No technical knowledge required — if you can set up a smartphone, you can set up AI call answering.",
+          answer: "Most services take 3 to 10 minutes to set up. whoza.ai's Katie is live in under 3 minutes: connect your number, set your preferences, and AI starts answering. No technical knowledge required. If you can set up a smartphone, you can set up AI call answering.",
         },
       ],
     },
@@ -259,20 +259,20 @@ Whether you're a solo plumber or a growing building firm, the competitive advant
       description: "Why 24/7 call answering is essential for UK emergency trades. How AI captures burst pipes, power cuts, and lockouts at 2am, weekends, and bank holidays.",
     },
     content: {
-      introduction: `Emergency trades do not work 9 to 5. A burst pipe at 2am does not wait for Monday morning. A power cut on Christmas Eve does not wait for Boxing Day. A child locked out of the house at 7pm on a Sunday needs help now, not tomorrow at 9am. And yet, 33% of small UK trade businesses fail to answer incoming calls — many of them during evenings, weekends, and bank holidays when human receptionists are off duty.\n\nThis guide explains why 24/7 call answering is essential for emergency trades, how AI captures emergency calls at all hours, and what the ROI looks like for plumbers, electricians, gas engineers, and locksmiths. For the complete picture of AI call answering, read our [Complete Guide](https://whoza.ai/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026). For cost details, see our [Pricing Guide](https://whoza.ai/blog/ai-call-answering-pricing-guide-uk-2026).`,
+      introduction: `Emergency trades do not work 9 to 5. A burst pipe at 2am does not wait for Monday morning. A power cut on Christmas Eve does not wait for Boxing Day. A child locked out of the house at 7pm on a Sunday needs help now, not tomorrow at 9am. And yet, 33% of small UK trade businesses fail to answer incoming calls, many of them during evenings, weekends, and bank holidays when human receptionists are off duty.\n\nThis guide explains why 24/7 call answering is essential for emergency trades, how AI captures emergency calls at all hours, and what the ROI looks like for plumbers, electricians, gas engineers, and locksmiths. For the complete picture of AI call answering, read our [Complete Guide](https://whoza.ai/blog/ai-call-answering-uk-tradespeople-definitive-guide-2026). For cost details, see our [Pricing Guide](https://whoza.ai/blog/ai-call-answering-pricing-guide-uk-2026).`,
       sections: [
         {
           heading: "Why Emergency Trades Need 24/7 Call Answering",
           headingTag: "h2",
           body: `The nature of emergency work means that calls come at unpredictable times. A boiler fails on the coldest night of the year. A pipe bursts while the family is away for the weekend. A fuse box trips on a bank holiday Monday. These are not hypothetical scenarios. They are daily realities for UK tradespeople.\n\nWhen a customer has an emergency, they do not wait. They call every plumber, electrician, or locksmith on Google until someone answers. The first business that picks up usually gets the job. If you miss the call because it is 8pm on a Saturday, the job goes to your competitor.\n\nThe financial impact is significant. Emergency callouts command premium rates. A plumber charging £280 for a daytime job might charge £400 for an emergency evening callout. An electrician might charge £350 for a weekend power failure. A locksmith might charge £200 for a midnight lockout. These are high-value jobs that you cannot afford to miss.\n\nBut the impact goes beyond immediate revenue. Emergency customers become loyal long-term customers. The plumber who fixes the burst pipe at 2am gets the bathroom renovation next year. The electrician who restores power on Sunday gets the full rewire recommendation. The locksmith who opens the door at midnight gets the security upgrade contract. Missing emergency calls means missing the most valuable customer relationships in your business.`,
-          callout: "Emergency callouts command premium rates: £350-£500 for evening and weekend jobs. Missing these calls means losing immediate revenue and long-term customer relationships.",
+          callout: "Emergency callouts command premium rates: £350 to £500 for evening and weekend jobs. Missing these calls means losing immediate revenue and long-term customer relationships.",
         },
         {
           heading: "How AI Captures Emergency Calls at 2am, Sundays, and Bank Holidays",
           headingTag: "h2",
-          body: `AI call answering works 24 hours a day, 7 days a week, 365 days a year. It does not sleep. It does not take weekends off. It does not observe bank holidays. When a customer calls your number at 2am on Christmas morning, the AI answers instantly.\n\nHere is how the process works for emergency calls:\n\n**The call connects instantly**\nThe customer dials your number. The AI picks up on the first ring. There is no voicemail, no "please leave a message," no ringing out. The customer speaks to a professional assistant immediately.\n\n**Emergency identification**\nThe AI asks safety questions and identifies emergency keywords. For plumbers: burst pipe, flooding, no water, sewage backup. For electricians: power cut, exposed wiring, burning smell, electric shock. For gas engineers: gas leak, carbon monoxide alarm, no heating, boiler failure. For locksmiths: lockout, broken key, security breach, child locked inside.\n\n**Urgency qualification**\nThe AI determines the severity of the situation. Is there immediate danger? Are there vulnerable residents — elderly people, children, disabled individuals? Is the property flooding? Is there a gas smell? The AI asks the right questions to assess urgency accurately.\n\n**Instant delivery to your WhatsApp**\nWithin 3 seconds of the call ending, you receive a WhatsApp message with a red urgent flag. The message includes the customer's name, phone number, address, emergency description, severity level, and recommended action. You can choose to respond immediately or schedule an emergency callout.\n\n**Automatic follow-up**\nThe customer receives a confirmation text: "Your emergency call has been logged. A technician will contact you within 15 minutes." This professional follow-up reassures the customer and buys you time to respond.`,
+          body: `AI call answering works 24 hours a day, 7 days a week, 365 days a year. It does not sleep. It does not take weekends off. It does not observe bank holidays. When a customer calls your number at 2am on Christmas morning, the AI answers instantly.\n\nHere is how the process works for emergency calls:\n\n**The call connects instantly**\nThe customer dials your number. The AI picks up on the first ring. There is no voicemail, no "please leave a message," no ringing out. The customer speaks to a professional assistant immediately.\n\n**Emergency identification**\nThe AI asks safety questions and identifies emergency keywords. For plumbers: burst pipe, flooding, no water, sewage backup. For electricians: power cut, exposed wiring, burning smell, electric shock. For gas engineers: gas leak, carbon monoxide alarm, no heating, boiler failure. For locksmiths: lockout, broken key, security breach, child locked inside.\n\n**Urgency qualification**\nThe AI determines the severity of the situation. Is there immediate danger? Are there vulnerable residents: elderly people, children, disabled individuals? Is the property flooding? Is there a gas smell? The AI asks the right questions to assess urgency accurately.\n\n**Instant delivery to your WhatsApp**\nWithin 3 seconds of the call ending, you receive a WhatsApp message with a red urgent flag. The message includes the customer's name, phone number, address, emergency description, severity level, and recommended action. You can choose to respond immediately or schedule an emergency callout.\n\n**Automatic follow-up**\nThe customer receives a confirmation text: "Your emergency call has been logged. A technician will contact you within 15 minutes." This professional follow-up reassures the customer and buys you time to respond.`,
           list: [
-            "AI answers emergency calls instantly — no voicemail, no waiting",
+            "AI answers emergency calls instantly, no voicemail, no waiting",
             "Emergency keywords identified for each trade: burst pipe, power cut, gas leak, lockout",
             "Urgency assessed with safety questions about vulnerable residents and immediate danger",
             "Red-flagged WhatsApp message delivered within 3 seconds",
@@ -282,22 +282,22 @@ Whether you're a solo plumber or a growing building firm, the competitive advant
         {
           heading: "Emergency Call Scenarios by Trade",
           headingTag: "h2",
-          body: `Different trades face different emergency scenarios. Here is how AI handles the most common emergency calls for each trade:\n\n**Plumbers**\nEmergency calls: burst pipes, major leaks, blocked drains, no water, sewage backup, boiler failure in winter. The AI identifies the severity, asks about flooding and water damage, determines if the stopcock has been turned off, and flags urgent cases for immediate attention. It captures the property address, contact details, and preferred timing.\n\n**Electricians**\nEmergency calls: power cuts, exposed wiring, burning smells, electric shocks, fuse box failures. The AI asks about safety hazards — is there a fire risk? Are there children in the property? Is the power completely out or partial? It flags cases with safety risks for immediate escalation and captures all details for rapid response.\n\n**Gas Engineers**\nEmergency calls: gas leaks, carbon monoxide alarms, no heating, boiler failures, pilot light issues. The AI asks about gas smell, alarm status, and whether the gas supply has been turned off. For gas leak reports, it immediately flags the enquiry as critical and advises the customer to call the National Gas Emergency Service on 0800 111 999 if they smell gas. It captures the address and contact details for follow-up.\n\n**Locksmiths**\nEmergency calls: lockouts, broken keys, lost keys, security breaches, child locked inside. The AI asks about the type of lock, the property address, and whether there are vulnerable people inside. It flags child lockouts and security breaches as urgent and captures all details for rapid dispatch.`,
+          body: `Different trades face different emergency scenarios. Here is how AI handles the most common emergency calls for each trade:\n\n**Plumbers**\nEmergency calls: burst pipes, major leaks, blocked drains, no water, sewage backup, boiler failure in winter. The AI identifies the severity, asks about flooding and water damage, determines if the stopcock has been turned off, and flags urgent cases for immediate attention. It captures the property address, contact details, and preferred timing.\n\n**Electricians**\nEmergency calls: power cuts, exposed wiring, burning smells, electric shocks, fuse box failures. The AI asks about safety hazards: is there a fire risk? Are there children in the property? Is the power completely out or partial? It flags cases with safety risks for immediate escalation and captures all details for rapid response.\n\n**Gas Engineers**\nEmergency calls: gas leaks, carbon monoxide alarms, no heating, boiler failures, pilot light issues. The AI asks about gas smell, alarm status, and whether the gas supply has been turned off. For gas leak reports, it immediately flags the enquiry as critical and advises the customer to call the National Gas Emergency Service on 0800 111 999 if they smell gas. It captures the address and contact details for follow-up.\n\n**Locksmiths**\nEmergency calls: lockouts, broken keys, lost keys, security breaches, child locked inside. The AI asks about the type of lock, the property address, and whether there are vulnerable people inside. It flags child lockouts and security breaches as urgent and captures all details for rapid dispatch.`,
           table: [
-            { label: "Plumbers", value: "Burst pipes, leaks, no water, sewage backup | £350-£500 emergency rate" },
-            { label: "Electricians", value: "Power cuts, exposed wiring, burning smell | £300-£450 emergency rate" },
-            { label: "Gas Engineers", value: "Gas leaks, CO alarms, no heating, boiler failure | £250-£400 emergency rate" },
-            { label: "Locksmiths", value: "Lockouts, broken keys, security breaches | £150-£250 emergency rate" },
+            { label: "Plumbers", value: "Burst pipes, leaks, no water, sewage backup | £350 to £500 emergency rate" },
+            { label: "Electricians", value: "Power cuts, exposed wiring, burning smell | £300 to £450 emergency rate" },
+            { label: "Gas Engineers", value: "Gas leaks, CO alarms, no heating, boiler failure | £250 to £400 emergency rate" },
+            { label: "Locksmiths", value: "Lockouts, broken keys, security breaches | £150 to £250 emergency rate" },
           ],
         },
         {
           heading: "The ROI of 24/7 Emergency Call Answering",
           headingTag: "h2",
-          body: `The return on investment for 24/7 emergency call answering is extraordinary. Emergency jobs command premium rates, and capturing just one or two emergency calls per month pays for the entire service.\n\n**Conservative estimate:**\n- AI cost: £59 per month\n- Emergency callouts captured: 2 per month\n- Average emergency rate: £400\n- Monthly revenue: £800\n- Annual revenue: £9,600\n- Net annual gain: £8,892\n- ROI: 1,405%\n\n**Realistic estimate:**\n- AI cost: £125 per month (Growth plan)\n- Emergency callouts captured: 4 per month\n- Average emergency rate: £400\n- Monthly revenue: £1,600\n- Annual revenue: £19,200\n- Net annual gain: £17,700\n- ROI: 1,080%\n\nThese numbers only count emergency callouts. They do not include the regular jobs that also come in during evenings and weekends — routine enquiries, quote requests, and booking calls that happen outside 9-5. When you add those, the total revenue recovery is even higher.\n\nThe real value, though, is in the customer relationships. The customer whose burst pipe you fix at 2am becomes a customer for life. They recommend you to neighbours, family, and friends. They book you for non-emergency work. They leave glowing reviews. One emergency call can generate £5,000-£10,000 in lifetime value. Missing that call means losing all of it.`,
+          body: `The return on investment for 24/7 emergency call answering is extraordinary. Emergency jobs command premium rates, and capturing just one or two emergency calls per month pays for the entire service.\n\n**Conservative estimate:**\n- AI cost: £59 per month\n- Emergency callouts captured: 2 per month\n- Average emergency rate: £400\n- Monthly revenue: £800\n- Annual revenue: £9,600\n- Net annual gain: £8,892\n- ROI: 1,405%\n\n**Realistic estimate:**\n- AI cost: £125 per month (Growth plan)\n- Emergency callouts captured: 4 per month\n- Average emergency rate: £400\n- Monthly revenue: £1,600\n- Annual revenue: £19,200\n- Net annual gain: £17,700\n- ROI: 1,080%\n\nThese numbers only count emergency callouts. They do not include the regular jobs that also come in during evenings and weekends: routine enquiries, quote requests, and booking calls that happen outside 9 to 5. When you add those, the total revenue recovery is even higher.\n\nThe real value, though, is in the customer relationships. The customer whose burst pipe you fix at 2am becomes a customer for life. They recommend you to neighbours, family, and friends. They book you for non-emergency work. They leave glowing reviews. One emergency call can generate £5,000 to £10,000 in lifetime value. Missing that call means losing all of it.`,
           callout: "One emergency callout per month at £400 pays for the entire AI service. Four emergency callouts per month generates £17,700 in net annual gain. And the lifetime value of an emergency customer exceeds £5,000 through referrals and repeat business.",
         },
       ],
-      conclusion: `Emergency trades cannot afford to miss calls. Emergencies do not wait for business hours. Customers do not leave voicemail at 2am. They call the next number on Google until someone answers. If that is not you, the job — and the lifetime customer relationship — goes to your competitor.\n\nAI call answering solves this permanently. For £59-£125 per month, Katie answers every emergency call you miss, 24/7, including evenings, weekends, and bank holidays. She identifies the emergency, assesses the urgency, captures all details, and delivers them to your WhatsApp with a red urgent flag. You respond when you are ready.\n\nOne emergency callout per month pays for the service. Four per month generates £17,700 in net annual gain. And the lifetime value of an emergency customer who becomes a loyal client exceeds £5,000. The ROI is not just compelling — it is transformative.\n\nIf you are an emergency tradesperson who has ever missed a call at 8pm on a Saturday or 6am on a Sunday, you know the pain. The 7-day free trial eliminates that pain immediately. No credit card. No contract. Just a week of never missing an emergency.`,
+      conclusion: `Emergency trades cannot afford to miss calls. Emergencies do not wait for business hours. Customers do not leave voicemail at 2am. They call the next number on Google until someone answers. If that is not you, the job, and the lifetime customer relationship, goes to your competitor.\n\nAI call answering solves this permanently. For £59 to £125 per month, Katie answers every emergency call you miss, 24/7, including evenings, weekends, and bank holidays. She identifies the emergency, assesses the urgency, captures all details, and delivers them to your WhatsApp with a red urgent flag. You respond when you are ready.\n\nOne emergency callout per month pays for the service. Four per month generates £17,700 in net annual gain. And the lifetime value of an emergency customer who becomes a loyal client exceeds £5,000. The ROI is not just compelling. It is transformative.\n\nIf you are an emergency tradesperson who has ever missed a call at 8pm on a Saturday or 6am on a Sunday, you know the pain. The 7-day free trial eliminates that pain immediately. No credit card. No contract. Just a week of never missing an emergency.`,
       cta: `**Never miss an emergency call again.** Try Katie free for 7 days and capture every 2am, Sunday, and bank holiday call. [Start your free trial →](https://whoza.ai)`,
       faq: [
         {
@@ -310,11 +310,11 @@ Whether you're a solo plumber or a growing building firm, the competitive advant
         },
         {
           question: "What is the ROI of 24/7 call answering for emergency trades?",
-          answer: "At £59/month, one emergency callout at £400 pays for the service. Most emergency trades capture 2-4 emergency calls per month, generating £8,000-£19,000 in annual revenue from a £708-£1,500 investment. ROI exceeds 1,000%.",
+          answer: "At £59/month, one emergency callout at £400 pays for the service. Most emergency trades capture 2 to 4 emergency calls per month, generating £8,000 to £19,000 in annual revenue from a £708 to £1,500 investment. ROI exceeds 1,000%.",
         },
         {
           question: "Do customers trust AI for emergency calls?",
-          answer: "Customers trust professionalism and speed. AI answers instantly, asks the right safety questions, and arranges immediate callbacks. In surveys, 89% of callers are satisfied with the AI experience. The alternative is voicemail or no answer — both of which customers find far more frustrating in emergencies.",
+          answer: "Customers trust professionalism and speed. AI answers instantly, asks the right safety questions, and arranges immediate callbacks. In surveys, 89% of callers are satisfied with the AI experience. The alternative is voicemail or no answer, both of which customers find far more frustrating in emergencies.",
         },
         {
           question: "Can AI handle gas leak emergencies?",
@@ -330,7 +330,7 @@ Whether you're a solo plumber or a growing building firm, the competitive advant
   "how-to-grow-trade-business-uk-guide": {
     title: "Grow Your Trade Business: UK Guide (2025)",
     metaTitle: "Grow Your Trade Business: UK Guide (2025) | whoza.ai",
-    excerpt: "12 proven strategies to get more customers, increase revenue, and build a thriving trade business in the UK. From local SEO to Google reviews, partnerships to AI call answering — this is the guide that actually works.",
+    excerpt: "12 proven strategies to get more customers, increase revenue, and build a thriving trade business in the UK. From local SEO to Google reviews, partnerships to AI call answering, this is the guide that actually works.",
     readTime: "15 min read",
     date: "2026-06-05",
     category: "Trade Business Tips",
@@ -343,7 +343,7 @@ Whether you're a solo plumber or a growing building firm, the competitive advant
     content: {
       introduction: `Running a trade business in the UK is harder than ever. Materials costs are up, competition is fierce, and customers have more choice than they've ever had. But here's the thing: most trade businesses aren't struggling because there's no work. They're struggling because they can't get found, can't answer the phone, and can't turn enquiries into booked jobs.
 
-I've spent years around UK trades — plumbers in London, electricians in Manchester, gas engineers in Birmingham, roofers in Glasgow. The ones who grow all do the same 12 things consistently. The ones who stay stuck make the same 5 mistakes over and over.
+I've spent years around UK trades: plumbers in London, electricians in Manchester, gas engineers in Birmingham, roofers in Glasgow. The ones who grow all do the same 12 things consistently. The ones who stay stuck make the same 5 mistakes over and over.
 
 This guide is the distillation of what actually works. No fluff. No generic business advice. Just 12 proven strategies that UK tradespeople are using right now to grow their businesses. Whether you're a solo operator or running a multi-van team, these tactics will get you more customers, higher-value jobs, and a more predictable income.`,
       sections: [
@@ -355,7 +355,7 @@ This guide is the distillation of what actually works. No fluff. No generic busi
 The three biggest growth blockers are:
 
 **1. Invisibility online**
-85% of UK customers now search online before hiring a tradesperson. If you're not on Google Maps, not ranking in local search, and not showing up when someone searches "plumber near me" — you don't exist to most customers.
+85% of UK customers now search online before hiring a tradesperson. If you're not on Google Maps, not ranking in local search, and not showing up when someone searches "plumber near me", you don't exist to most customers.
 
 **2. Missed calls**
 33% of small UK trade businesses fail to answer incoming calls. When you're under a sink, up a ladder, or on scaffolding, you physically cannot answer the phone. Every missed call is a customer calling your competitor. We covered this in detail in our article on [how much missed calls cost UK trades](/research/missed-call-index).
@@ -368,7 +368,7 @@ The good news: all three problems are solvable. And most of the solutions cost l
         {
           heading: "1. Get Your Google Business Profile Absolutely Perfect",
           headingTag: "h2",
-          body: `Your Google Business Profile (GBP) is the single most important marketing asset for a UK trade business. It's not just a listing — it's your shop window, your credibility signal, and your primary source of local enquiries.
+          body: `Your Google Business Profile (GBP) is the single most important marketing asset for a UK trade business. It's not just a listing. It's your shop window, your credibility signal, and your primary source of local enquiries.
 
 Here's what most tradespeople get wrong: they create a GBP, add their phone number, and forget about it. Then they wonder why they're not showing up in searches.
 
@@ -386,27 +386,27 @@ A proper GBP for a trade business needs:
 
 **Use the Q&A section.** Pre-answer common questions: "Do you do emergency callouts?" "Are you Gas Safe registered?" "What areas do you cover?" This helps customers and improves your keyword relevance.
 
-A well-optimized GBP can generate 50-100% more local enquiries than a neglected one. For most tradespeople, it's the highest-ROI marketing activity available.`,
+A well-optimized GBP can generate 50 to 100% more local enquiries than a neglected one. For most tradespeople, it's the highest-ROI marketing activity available.`,
         },
         {
           heading: "2. Master Local SEO for Trades",
           headingTag: "h2",
-          body: `Local SEO is the art of showing up when someone in your area searches for your trade. Unlike general SEO, local SEO is heavily weighted toward proximity and relevance — which means small, local businesses can outrank national competitors.
+          body: `Local SEO is the art of showing up when someone in your area searches for your trade. Unlike general SEO, local SEO is heavily weighted toward proximity and relevance, which means small, local businesses can outrank national competitors.
 
 **The foundation: consistent NAP**
-Your Name, Address, and Phone number must be identical everywhere they appear online. Your website, your GBP, your directory listings, your social media — everywhere. If you're "Smith Plumbing Ltd" on one site and "Smith Plumbing" on another, Google gets confused and ranks you lower.
+Your Name, Address, and Phone number must be identical everywhere they appear online. Your website, your GBP, your directory listings, your social media, everywhere. If you're "Smith Plumbing Ltd" on one site and "Smith Plumbing" on another, Google gets confused and ranks you lower.
 
 **Build local citations**
 Get listed on UK trade directories: Checkatrade, Rated People, MyBuilder, TrustATrader, Yelp, and Thomson Local. Each listing is a citation that builds your local authority. Start with the top 10 and work your way down.
 
 **Create location pages on your website**
-If you serve multiple areas, create a dedicated page for each: /plumber-london, /plumber-croydon, /plumber-bromley. Each page should have unique content about that area, local landmarks, and specific services you offer there. Don't just duplicate the same page with different place names — Google penalises that.
+If you serve multiple areas, create a dedicated page for each: /plumber-london, /plumber-croydon, /plumber-bromley. Each page should have unique content about that area, local landmarks, and specific services you offer there. Don't just duplicate the same page with different place names. Google penalises that.
 
 **Get local backlinks**
 Backlinks from local websites signal to Google that you're a legitimate local business. Sponsor a local football team, join your local Chamber of Commerce, get featured in local news, or partner with local estate agents. Each backlink is a vote of confidence.
 
 **Use schema markup**
-Add LocalBusiness schema to your website. This structured data tells Google exactly what you do, where you are, and how to contact you. It's technical but worth it — businesses with schema markup often get rich snippets in search results.
+Add LocalBusiness schema to your website. This structured data tells Google exactly what you do, where you are, and how to contact you. It's technical but worth it: businesses with schema markup often get rich snippets in search results.
 
 Most tradespeople ignore local SEO because it seems complicated. It isn't. It's methodical, consistent work that compounds over time. Start with your GBP, add citations, build location pages, and get backlinks. Do this for 6 months and you'll dominate local search in your area.`,
         },
@@ -415,7 +415,7 @@ Most tradespeople ignore local SEO because it seems complicated. It isn't. It's 
           headingTag: "h2",
           body: `Google reviews are the currency of trust for trade businesses. A customer choosing between two plumbers will almost always pick the one with more, better reviews. It's not fair, but it's reality.
 
-The average UK trade business has 12 Google reviews. The top performers have 50+. That's not because they do better work — it's because they have a systematic review collection process.
+The average UK trade business has 12 Google reviews. The top performers have 50+. That's not because they do better work. It's because they have a systematic review collection process.
 
 **The 3-step review system:**
 
@@ -423,16 +423,16 @@ The average UK trade business has 12 Google reviews. The top performers have 50+
 The best time to ask for a review is within 24 hours of completing the work, while the customer is still happy and the job is fresh in their mind. Don't wait a week. Don't wait until you send the invoice. Ask right away.
 
 **Step 2: Make it ridiculously easy**
-Send a text message with a direct link to your Google review page. Not an email — a text. Most people check texts within minutes. Include a simple message: "Hi [Name], thanks for choosing Smith Plumbing. If you were happy with the service, would you mind leaving a quick review? It really helps small businesses like ours. [Link]"
+Send a text message with a direct link to your Google review page. Not an email, a text. Most people check texts within minutes. Include a simple message: "Hi [Name], thanks for choosing Smith Plumbing. If you were happy with the service, would you mind leaving a quick review? It really helps small businesses like ours. [Link]"
 
 **Step 3: Follow up once (and only once)**
-If they don't leave a review after 3 days, send one gentle follow-up: "Just a quick reminder about the review — no pressure at all! [Link]" Then leave it. Never harass customers for reviews. One follow-up is polite. Two is annoying.
+If they don't leave a review after 3 days, send one gentle follow-up: "Just a quick reminder about the review, no pressure at all! [Link]" Then leave it. Never harass customers for reviews. One follow-up is polite. Two is annoying.
 
 **What to do about negative reviews:**
 
-Every tradesperson gets a bad review eventually. It's not the end of the world — it's how you handle it that matters.
+Every tradesperson gets a bad review eventually. It's not the end of the world. It's how you handle it that matters.
 
-Respond within 24 hours. Apologise for the experience. Offer to make it right. Take the conversation offline if needed: "We're really sorry to hear this. Please call us directly on [number] so we can sort this out for you." A professional response to a negative review can actually increase trust — it shows you care.
+Respond within 24 hours. Apologise for the experience. Offer to make it right. Take the conversation offline if needed: "We're really sorry to hear this. Please call us directly on [number] so we can sort this out for you." A professional response to a negative review can actually increase trust: it shows you care.
 
 **The maths:**
 If you complete 8 jobs per week and get 50% of customers to leave a review, you'll add 200 reviews per year. That transforms your online presence and makes you the obvious choice in local search.`,
@@ -448,22 +448,22 @@ When you're on a job, you physically cannot answer the phone. You're under a sin
 
 Services like whoza.ai answer every call you miss, 24/7. They capture the customer's details, qualify the job, and send you a WhatsApp message with everything you need. You tap "Accept" or "Call Back" when you're free. The customer gets a professional response instantly. You never miss another lead.
 
-At £59/month, an AI call answering service costs less than one emergency callout. Most tradespeople capture 3-5 extra jobs per month within the first 60 days. That's £840-£1,400 in additional revenue from a £59 investment.
+At £59/month, an AI call answering service costs less than one emergency callout. Most tradespeople capture 3 to 5 extra jobs per month within the first 60 days. That's £840 to £1,400 in additional revenue from a £59 investment.
 
 If you only do one thing from this guide, do this. It's the single highest-ROI growth tactic available to UK tradespeople in 2025. We have detailed guides for [plumbers](/for-plumbers), [electricians](/for-electricians), and [gas engineers](/for-gas-engineers) on exactly how AI call answering works for each trade.`,
         },
         {
           heading: "5. Build Partnerships with Estate Agents and Property Managers",
           headingTag: "h2",
-          body: `Estate agents and property managers are the secret weapon for trade business growth. They have a constant stream of properties that need work — emergency repairs, pre-sale renovations, landlord compliance certificates, and tenant move-in/out maintenance.
+          body: `Estate agents and property managers are the secret weapon for trade business growth. They have a constant stream of properties that need work: emergency repairs, pre-sale renovations, landlord compliance certificates, and tenant move-in/out maintenance.
 
 **How to approach estate agents:**
 
 Don't just drop off a business card. That's what every other tradesperson does. Instead, offer value first.
 
-Create a "Trade Partner Pack" — a simple PDF or printed brochure that includes: your services, your areas, your emergency response time, your Gas Safe or NICEIC registration numbers, your insurance details, and 5-10 customer testimonials. Make it professional. Make it easy for them to refer you.
+Create a "Trade Partner Pack", a simple PDF or printed brochure that includes: your services, your areas, your emergency response time, your Gas Safe or NICEIC registration numbers, your insurance details, and 5 to 10 customer testimonials. Make it professional. Make it easy for them to refer you.
 
-Offer a referral fee. Estate agents are businesses too. A 5-10% referral fee on completed jobs incentivises them to send work your way. For a £5,000 renovation, that's £250-500 in their pocket. They'll remember you.
+Offer a referral fee. Estate agents are businesses too. A 5 to 10% referral fee on completed jobs incentivises them to send work your way. For a £5,000 renovation, that's £250 to £500 in their pocket. They'll remember you.
 
 Respond fast. When an estate agent sends you a lead, call back within 30 minutes. They have impatient landlords and tenants breathing down their necks. If you're slow, they'll find someone else.
 
@@ -482,25 +482,25 @@ Approach property managers at letting agent offices, landlord associations, and 
 
 **Top UK trade directories (in order of importance):**
 
-**Checkatrade** — The most trusted name in UK trade directories. Customers trust the Checkatrade badge. Membership costs £80-£120/month but generates serious leads. Worth it for most trades.
+**Checkatrade**: The most trusted name in UK trade directories. Customers trust the Checkatrade badge. Membership costs £80-£120/month but generates serious leads. Worth it for most trades.
 
-**Rated People** — Lead-based system where you pay per lead. Good for filling gaps in your schedule. Leads cost £15-£40 depending on trade and location.
+**Rated People**: Lead-based system where you pay per lead. Good for filling gaps in your schedule. Leads cost £15-£40 depending on trade and location.
 
-**MyBuilder** — Similar to Rated People but with a stronger focus on builders, roofers, and landscapers. Good for larger projects.
+**MyBuilder**: Similar to Rated People but with a stronger focus on builders, roofers, and landscapers. Good for larger projects.
 
-**TrustATrader** — Smaller than Checkatrade but has a loyal customer base. Worth testing if you have budget for multiple directories.
+**TrustATrader**: Smaller than Checkatrade but has a loyal customer base. Worth testing if you have budget for multiple directories.
 
-**Yell** — The old Yellow Pages, now online. Still generates enquiries for older demographics who remember the book.
+**Yell**: The old Yellow Pages, now online. Still generates enquiries for older demographics who remember the book.
 
-**Which? Trusted Traders** — Premium directory with strict vetting. The Which? badge carries enormous credibility. Higher cost but higher-quality leads.
+**Which? Trusted Traders**: Premium directory with strict vetting. The Which? badge carries enormous credibility. Higher cost but higher-quality leads.
 
 **Tips for directory success:**
 
 Complete your profile 100%. Add photos, certifications, insurance details, and service descriptions. Incomplete profiles rank lower and get fewer clicks.
 
-Collect reviews on each platform. Don't just focus on Google — reviews on Checkatrade and Rated People matter too. Many customers check multiple platforms before hiring.
+Collect reviews on each platform. Don't just focus on Google. Reviews on Checkatrade and Rated People matter too. Many customers check multiple platforms before hiring.
 
-Respond to leads within minutes. Directory leads are often sent to 3-5 tradespeople simultaneously. The first responder wins. If you're slow, you've wasted the lead fee.
+Respond to leads within minutes. Directory leads are often sent to 3 to 5 tradespeople simultaneously. The first responder wins. If you're slow, you've wasted the lead fee.
 
 Track your ROI. Note which directories generate profitable leads and which don't. Cancel the underperformers and double down on the winners.`,
         },
@@ -513,15 +513,15 @@ The key is creating content that answers real questions your customers have. Not
 
 **Content ideas that work for trades:**
 
-- "What to do if your boiler breaks down in winter" — captures emergency search traffic
-- "How much does a new bathroom cost in 2025?" — captures planning-stage customers
-- "5 signs your roof needs replacing" — captures early-stage buyers
-- "CP12 gas safety certificate: what landlords need to know" — captures landlord enquiries
-- "How to bleed a radiator: a step-by-step guide" — captures DIYers who might need you later
+- "What to do if your boiler breaks down in winter": captures emergency search traffic
+- "How much does a new bathroom cost in 2025?": captures planning-stage customers
+- "5 signs your roof needs replacing": captures early-stage buyers
+- "CP12 gas safety certificate: what landlords need to know": captures landlord enquiries
+- "How to bleed a radiator: a step-by-step guide": captures DIYers who might need you later
 
 **Where to publish:**
 
-Your website blog is the best place. Each article is a new page that Google can rank. Over time, 20-30 articles can generate hundreds of organic visitors per month — all potential customers.
+Your website blog is the best place. Each article is a new page that Google can rank. Over time, 20 to 30 articles can generate hundreds of organic visitors per month, all potential customers.
 
 Share on social media. Facebook groups, local community pages, and Nextdoor are great for reaching local audiences. A helpful post about winter boiler maintenance gets shared by homeowners worried about their heating.
 
@@ -529,7 +529,7 @@ Share on social media. Facebook groups, local community pages, and Nextdoor are 
 
 One good article can be repurposed into 5 pieces of content: the blog post, a Facebook post, an Instagram carousel, a LinkedIn article, and a newsletter email. Spend 2 hours writing, then get 5 pieces of marketing from it.
 
-Content marketing is a long game. You won't see results in week one. But after 6-12 months of consistent publishing, you'll have a content library that works for you 24/7, attracting customers while you sleep.`,
+Content marketing is a long game. You won't see results in week one. But after 6 to 12 months of consistent publishing, you'll have a content library that works for you 24/7, attracting customers while you sleep.`,
         },
         {
           heading: "8. Use Social Media Like a Tradesperson (Not a Brand)",
@@ -538,7 +538,7 @@ Content marketing is a long game. You won't see results in week one. But after 6
 
 **Facebook: The community hub**
 
-Join local community groups — "Walthamstow Residents," "Mums in Manchester," "Homeowners in Bristol." When someone asks for a plumber recommendation, be the first to respond. Don't just drop your number — offer advice first, then mention you're available if they need professional help.
+Join local community groups: "Walthamstow Residents," "Mums in Manchester," "Homeowners in Bristol." When someone asks for a plumber recommendation, be the first to respond. Don't just drop your number. Offer advice first, then mention you're available if they need professional help.
 
 Post before-and-after photos of your work. People love transformations. A photo of a bathroom you renovated gets 10x more engagement than a text post about your services.
 
@@ -561,7 +561,7 @@ The tradespeople who win on social media are the ones who help first and sell se
         {
           heading: "9. Build a Referral Programme That Actually Works",
           headingTag: "h2",
-          body: `Word-of-mouth is the most powerful marketing channel for trades. A referral from a satisfied customer is worth more than 10 Google Ads clicks. But most tradespeople leave referrals to chance — they happen when they happen, with no system to encourage them.
+          body: `Word-of-mouth is the most powerful marketing channel for trades. A referral from a satisfied customer is worth more than 10 Google Ads clicks. But most tradespeople leave referrals to chance: they happen when they happen, with no system to encourage them.
 
 **The simple referral system:**
 
@@ -571,20 +571,20 @@ That's it. Simple. Effective. Costs nothing.
 
 **The advanced referral system:**
 
-Offer a referral reward. "Refer a friend and get £50 off your next job." This works especially well for recurring trades like gardeners, cleaners, and maintenance services. The reward doesn't have to be huge — £20-50 is enough to motivate people without eating into your margins.
+Offer a referral reward. "Refer a friend and get £50 off your next job." This works especially well for recurring trades like gardeners, cleaners, and maintenance services. The reward doesn't have to be huge: £20 to £50 is enough to motivate people without eating into your margins.
 
 Create a formal referral card. "Give this card to a friend and they'll get 10% off their first job. You'll get £25 credit toward your next job." Physical cards work better than digital because they sit in people's wallets and get passed on.
 
 **The secret: ask at the right time.**
 
-Ask for referrals immediately after the customer has paid and expressed satisfaction. Not during the job. Not weeks later. The moment they say "great job, thanks" — that's your window. Strike while they're happy.
+Ask for referrals immediately after the customer has paid and expressed satisfaction. Not during the job. Not weeks later. The moment they say "great job, thanks", that's your window. Strike while they're happy.
 
-A well-run referral system can generate 20-30% of your total leads. For a business doing £100,000/year, that's £20,000-£30,000 in revenue from a system that costs almost nothing to implement.`,
+A well-run referral system can generate 20 to 30% of your total leads. For a business doing £100,000/year, that's £20,000 to £30,000 in revenue from a system that costs almost nothing to implement.`,
         },
         {
           heading: "10. Turn Your Van Into a Mobile Billboard",
           headingTag: "h2",
-          body: `Your van is probably the most underused marketing asset you own. It's on the road 8-10 hours a day, parked in front of customers' houses, visible to thousands of people. Yet most tradespeople have a plain white van with a tiny magnetic sign on the door.
+          body: `Your van is probably the most underused marketing asset you own. It's on the road 8 to 10 hours a day, parked in front of customers' houses, visible to thousands of people. Yet most tradespeople have a plain white van with a tiny magnetic sign on the door.
 
 **Professional van branding basics:**
 
@@ -597,7 +597,7 @@ A well-run referral system can generate 20-30% of your total leads. For a busine
 
 **Cost: £800-£1,500 for professional van wraps.**
 
-That sounds expensive, but a van wrap lasts 5-7 years. That's £150-200 per year for a mobile billboard that generates 10,000+ impressions per day in busy areas. Compare that to £500/month for Google Ads.
+That sounds expensive, but a van wrap lasts 5 to 7 years. That's £150 to £200 per year for a mobile billboard that generates 10,000+ impressions per day in busy areas. Compare that to £500/month for Google Ads.
 
 **The parking strategy:**
 
@@ -605,7 +605,7 @@ Park in visible locations when possible. High streets, near estate agents, outsi
 
 **The magnet alternative:**
 
-If you can't afford a full wrap, get professional magnetic signs (£80-150). They're not as impressive but still work. Better than nothing. Much better than a plain white van.
+If you can't afford a full wrap, get professional magnetic signs (£80 to £150). They're not as impressive but still work. Better than nothing. Much better than a plain white van.
 
 Your van is a marketing tool. Treat it like one.`,
         },
@@ -616,11 +616,11 @@ Your van is a marketing tool. Treat it like one.`,
 
 **The list: your most valuable asset**
 
-Every customer who pays you should be added to your email list. Get their email address on the invoice or booking form. Don't be shy about it — most people are happy to receive useful tips from a tradesperson they trust.
+Every customer who pays you should be added to your email list. Get their email address on the invoice or booking form. Don't be shy about it. Most people are happy to receive useful tips from a tradesperson they trust.
 
 **What to send:**
 
-**Seasonal maintenance reminders.** "Winter is coming — is your boiler ready?" "Spring check: 5 things to inspect after winter." These are helpful, not salesy, and position you as the expert.
+**Seasonal maintenance reminders.** "Winter is coming. Is your boiler ready?" "Spring check: 5 things to inspect after winter." These are helpful, not salesy, and position you as the expert.
 
 **Special offers.** "10% off boiler services booked in January." "Free gas safety check with every boiler install." Limited-time offers create urgency and drive bookings during quiet periods.
 
@@ -639,13 +639,13 @@ Mailchimp (free up to 500 subscribers), Brevo, or GoDaddy Email Marketing. These
         {
           heading: "12. Raise Your Prices (Yes, Really)",
           headingTag: "h2",
-          body: `This is the most uncomfortable growth tactic — and the most effective. Most UK tradespeople undercharge. They're so worried about losing customers that they price themselves into barely profitable work.
+          body: `This is the most uncomfortable growth tactic, and the most effective. Most UK tradespeople undercharge. They're so worried about losing customers that they price themselves into barely profitable work.
 
 **The pricing reality:**
 
 If you're booked solid 4 weeks ahead, you're too cheap. If customers never question your price, you're too cheap. If you feel resentment every time you quote a job, you're definitely too cheap.
 
-Raising prices by 15% doesn't lose 15% of customers. It usually loses 0-5% of customers, while increasing your profit per job by 15%. The maths is simple: 95% of customers × 115% price = 109% of previous revenue. You're making more money with less work.
+Raising prices by 15% doesn't lose 15% of customers. It usually loses 0 to 5% of customers, while increasing your profit per job by 15%. The maths is simple: 95% of customers × 115% price = 109% of previous revenue. You're making more money with less work.
 
 **How to raise prices:**
 
@@ -697,11 +697,11 @@ Raising prices by 15% doesn't lose 15% of customers. It usually loses 0-5% of cu
 This isn't theoretical. This is the exact path that successful UK trade businesses follow. Start with the foundation. Build visibility. Deepen relationships. Add content. Optimise. Scale.`,
         },
       ],
-      conclusion: `Growing a trade business in the UK isn't about working harder. It's about working smarter. The 12 strategies in this guide — from Google Business Profile optimisation to AI call answering to strategic pricing — are the levers that successful tradespeople pull consistently.
+      conclusion: `Growing a trade business in the UK isn't about working harder. It's about working smarter. The 12 strategies in this guide, from Google Business Profile optimisation to AI call answering to strategic pricing, are the levers that successful tradespeople pull consistently.
 
 You don't need to do all 12 at once. Start with the foundation: get your GBP perfect, answer every call with AI, and collect reviews systematically. Those three alone will transform your business in 90 days.
 
-Then layer on the other strategies as you build momentum. Local SEO, partnerships, content marketing, referrals — each one compounds the results of the last.
+Then layer on the other strategies as you build momentum. Local SEO, partnerships, content marketing, referrals: each one compounds the results of the last.
 
 The UK trades sector is worth £200 billion. There's more than enough work for tradespeople who show up, answer the phone, and deliver great service. The question is whether you'll be one of them.
 
@@ -714,7 +714,7 @@ Start today. Pick one strategy. Implement it this week. Then pick another. In 12
         },
         {
           question: "How much does it cost to market a trade business in the UK?",
-          answer: "Effective marketing for a trade business costs £200-£500/month. Google Business Profile optimisation is free. AI call answering is £59/month. Trade directories are £80-£120/month. Content marketing and social media are free (just your time). The total is less than most tradespeople lose from one missed emergency call per week.",
+          answer: "Effective marketing for a trade business costs £200 to £500/month. Google Business Profile optimisation is free. AI call answering is £59/month. Trade directories are £80 to £120/month. Content marketing and social media are free (just your time). The total is less than most tradespeople lose from one missed emergency call per week.",
         },
         {
           question: "Should I focus on Google Ads or organic marketing?",
@@ -722,15 +722,15 @@ Start today. Pick one strategy. Implement it this week. Then pick another. In 12
         },
         {
           question: "How long does it take to see results from local SEO?",
-          answer: "Local SEO takes 3-6 months to show significant results. But you can see immediate improvements from optimising your Google Business Profile (within days) and getting your first 10 reviews (within weeks). The full benefits of citations, backlinks, and content marketing build over 6-12 months.",
+          answer: "Local SEO takes 3 to 6 months to show significant results. But you can see immediate improvements from optimising your Google Business Profile (within days) and getting your first 10 reviews (within weeks). The full benefits of citations, backlinks, and content marketing build over 6 to 12 months.",
         },
         {
           question: "What's the best trade directory in the UK?",
-          answer: "Checkatrade is the most trusted and generates the highest-quality leads for most trades. Rated People and MyBuilder are good for volume. Which? Trusted Traders is best for premium positioning. Test 2-3 directories and track which generates profitable leads for your specific trade.",
+          answer: "Checkatrade is the most trusted and generates the highest-quality leads for most trades. Rated People and MyBuilder are good for volume. Which? Trusted Traders is best for premium positioning. Test 2 to 3 directories and track which generates profitable leads for your specific trade.",
         },
         {
           question: "How much should I charge as a self-employed tradesperson in the UK?",
-          answer: "UK tradesperson rates vary by trade and location, but as a general guide: plumbers £40-£60/hour, electricians £45-£65/hour, gas engineers £50-£70/hour, roofers £200-£400/day, builders £150-£250/day. If you're fully booked 4 weeks ahead, you're undercharging. Raise prices by 10-15% and see what happens.",
+          answer: "UK tradesperson rates vary by trade and location, but as a general guide: plumbers £40 to £60/hour, electricians £45 to £65/hour, gas engineers £50 to £70/hour, roofers £200 to £400/day, builders £150 to £250/day. If you're fully booked 4 weeks ahead, you're undercharging. Raise prices by 10 to 15% and see what happens.",
         },
       ],
     },
@@ -751,18 +751,18 @@ Start today. Pick one strategy. Implement it this week. Then pick another. In 12
     content: {
       introduction: `A customer is choosing between two plumbers. One has 8 reviews averaging 4.2 stars. The other has 47 reviews averaging 4.8 stars. Which one gets the call?
 
-It's not even a decision. The plumber with 47 reviews wins every time. Not because they're better — because they look more trustworthy, more established, and more proven.
+It's not even a decision. The plumber with 47 reviews wins every time. Not because they're better. Because they look more trustworthy, more established, and more proven.
 
 Google reviews are the single most important trust signal for trade businesses in 2025. They influence your search rankings, your click-through rates, and your conversion rates. A business with 50+ reviews gets 3x more calls than one with 10.
 
 Yet most tradespeople collect reviews haphazardly. They ask occasionally, forget to follow up, and never respond to the ones they get. Then they wonder why they're losing customers to competitors with better online reputations.
 
-This guide shows you how to collect Google reviews systematically. Not tricks or hacks. Just a simple, repeatable process that turns every happy customer into a review — and every review into future customers.`,
+This guide shows you how to collect Google reviews systematically. Not tricks or hacks. Just a simple, repeatable process that turns every happy customer into a review, and every review into future customers.`,
       sections: [
         {
           heading: "Why Google Reviews Matter More Than Any Other Marketing",
           headingTag: "h2",
-          body: `Before we get to the how, let's understand the why. Google reviews aren't just nice to have — they're the foundation of your online presence.
+          body: `Before we get to the how, let's understand the why. Google reviews aren't just nice to have. They're the foundation of your online presence.
 
 **The ranking factor:**
 
@@ -770,11 +770,11 @@ Google uses reviews as a major signal for local search rankings. Businesses with
 
 **The trust signal:**
 
-88% of consumers trust online reviews as much as personal recommendations. For tradespeople — who enter customers' homes and handle critical systems like plumbing, electrics, and gas — trust is everything. A customer letting you into their home at 2am needs to believe you're legitimate, skilled, and reliable. Reviews provide that proof.
+88% of consumers trust online reviews as much as personal recommendations. For tradespeople (who enter customers' homes and handle critical systems like plumbing, electrics, and gas), trust is everything. A customer letting you into their home at 2am needs to believe you're legitimate, skilled, and reliable. Reviews provide that proof.
 
 **The conversion multiplier:**
 
-A business with 50+ reviews and a 4.8-star rating converts 3-4x more website visitors into calls than a business with 5 reviews and a 4.2 rating. The reviews don't just attract traffic — they close the deal.
+A business with 50+ reviews and a 4.8-star rating converts 3 to 4x more website visitors into calls than a business with 5 reviews and a 4.2 rating. The reviews don't just attract traffic. They close the deal.
 
 **The voice search advantage:**
 
@@ -787,7 +787,7 @@ Unlike paid ads, which stop working when you stop paying, reviews are a permanen
         {
           heading: "The 3-Step System for Collecting Reviews Automatically",
           headingTag: "h2",
-          body: `Most tradespeople ask for reviews randomly. "Oh, if you're happy, leave us a review on Google." The customer nods, forgets immediately, and never does it. That's not a system — that's a hope.
+          body: `Most tradespeople ask for reviews randomly. "Oh, if you're happy, leave us a review on Google." The customer nods, forgets immediately, and never does it. That's not a system. That's a hope.
 
 Here's a repeatable process that actually works:
 
@@ -797,7 +797,7 @@ The best time to ask for a review is immediately after the job is complete and t
 
 **The script:**
 
-"[Name], I'm really glad we could get that sorted for you. If you're happy with the work, would you mind leaving a quick review on Google? It really helps small businesses like ours get found. I'll send you a text with the link — it takes 30 seconds."
+"[Name], I'm really glad we could get that sorted for you. If you're happy with the work, would you mind leaving a quick review on Google? It really helps small businesses like ours get found. I'll send you a text with the link. It takes 30 seconds."
 
 **Why this works:**
 
@@ -805,7 +805,7 @@ The best time to ask for a review is immediately after the job is complete and t
 - You're asking when they're satisfied, not weeks later
 - You're making it easy by offering to send the link
 - You're framing it as helping a small business (people want to help)
-- You're specifying the platform (Google — don't leave it vague)
+- You're specifying the platform (Google, don't leave it vague)
 
 **Step 2: The Text Message (Within 1 Hour)**
 
@@ -813,7 +813,7 @@ Send a text message with a direct link to your Google review page. Not an email.
 
 **The message:**
 
-"Hi [Name], thanks again for choosing Smith Plumbing today. If you have 30 seconds, would you mind leaving a review? It really helps us out. [Google Review Link] — No pressure at all if you're busy!"
+"Hi [Name], thanks again for choosing Smith Plumbing today. If you have 30 seconds, would you mind leaving a review? It really helps us out. [Google Review Link]. No pressure at all if you're busy!"
 
 **The link:**
 Get your Google review link from your GBP dashboard (under "Get more reviews"). Use a URL shortener if it's long. Test it on your own phone to make sure it works.
@@ -822,7 +822,7 @@ Get your Google review link from your GBP dashboard (under "Get more reviews"). 
 
 If no review after 3 days, send one gentle follow-up:
 
-"Hi [Name], just a quick reminder about the Google review if you get a chance. No pressure at all — only if you have time! [Link]"
+"Hi [Name], just a quick reminder about the Google review if you get a chance. No pressure at all, only if you have time! [Link]"
 
 Then stop. Never send more than one follow-up. Two follow-ups is annoying. Three is harassment. One is polite.
 
@@ -833,13 +833,13 @@ If you complete 8 jobs per week and 60% of customers leave a review, you'll add 
         {
           heading: "How to Respond to Every Review (Good and Bad)",
           headingTag: "h2",
-          body: `Responding to reviews isn't just polite — it's a ranking signal and a conversion tool. Businesses that respond to reviews rank higher and convert more customers than those that don't.
+          body: `Responding to reviews isn't just polite. It's a ranking signal and a conversion tool. Businesses that respond to reviews rank higher and convert more customers than those that don't.
 
 **Responding to positive reviews:**
 
 **The formula:** Thank them by name + mention the specific job + invite them back.
 
-"Thanks so much, Sarah! Really glad we could fix that leak in your kitchen quickly. Let us know if you need anything else in the future — we're always here to help. — Dave, Smith Plumbing"
+"Thanks so much, Sarah! Really glad we could fix that leak in your kitchen quickly. Let us know if you need anything else in the future. We're always here to help. Dave, Smith Plumbing"
 
 **Why this works:**
 
@@ -851,11 +851,11 @@ If you complete 8 jobs per week and 60% of customers leave a review, you'll add 
 
 **Responding to negative reviews:**
 
-Every tradesperson gets a bad review eventually. It's not the end of the world — it's how you handle it that matters.
+Every tradesperson gets a bad review eventually. It's not the end of the world. It's how you handle it that matters.
 
 **The formula:** Apologise + acknowledge + take it offline + offer to make it right.
 
-"Hi John, we're really sorry to hear about your experience. That's not the standard we hold ourselves to. Please give me a call directly on [number] so I can understand what happened and make this right for you. — Dave, Smith Plumbing"
+"Hi John, we're really sorry to hear about your experience. That's not the standard we hold ourselves to. Please give me a call directly on [number] so I can understand what happened and make this right for you. Dave, Smith Plumbing"
 
 **Why this works:**
 
@@ -885,7 +885,7 @@ Fake reviews often have these characteristics:
 
 **How to report fake reviews:**
 
-In Google Maps, find the review, click the three dots, and select "Report review." Choose the reason: "Conflict of interest" (if it's a competitor), "Off-topic," or "Fake." Google investigates and removes reviews that violate their policies. The process takes 3-7 days.
+In Google Maps, find the review, click the three dots, and select "Report review." Choose the reason: "Conflict of interest" (if it's a competitor), "Off-topic," or "Fake." Google investigates and removes reviews that violate their policies. The process takes 3 to 7 days.
 
 **How to respond to unfair reviews:**
 
@@ -908,15 +908,15 @@ The best defence against fake reviews is to have so many genuine positive review
 
 **On your website:**
 
-Create a testimonials page that pulls in your Google reviews. Add a widget or embed that shows your latest reviews. Include star ratings on your homepage, service pages, and contact page. Reviews on your website increase conversion rates by 15-30%.
+Create a testimonials page that pulls in your Google reviews. Add a widget or embed that shows your latest reviews. Include star ratings on your homepage, service pages, and contact page. Reviews on your website increase conversion rates by 15 to 30%.
 
 **On your van:**
 
-Add "Check our 50+ Google reviews" to your van branding. Include a QR code that links directly to your Google review page. When customers scan it, they see your reviews instantly. This is incredibly powerful — a van parked on a customer's street is a mobile trust signal.
+Add "Check our 50+ Google reviews" to your van branding. Include a QR code that links directly to your Google review page. When customers scan it, they see your reviews instantly. This is incredibly powerful: a van parked on a customer's street is a mobile trust signal.
 
 **On social media:**
 
-Screenshot your best reviews and share them on Facebook and Instagram. "Another 5-star review from a happy customer in Clapham! 'Fixed our burst pipe in under an hour. Professional, friendly, and fairly priced.' — Thanks, Sarah! ⭐⭐⭐⭐⭐"
+Screenshot your best reviews and share them on Facebook and Instagram. "Another 5-star review from a happy customer in Clapham! 'Fixed our burst pipe in under an hour. Professional, friendly, and fairly priced.' Thanks, Sarah! ⭐⭐⭐⭐⭐"
 
 **In your email signature:**
 
@@ -924,7 +924,7 @@ Add your Google review link and star rating to your email signature. Every email
 
 **In proposals and quotes:**
 
-Include your review count and rating on every quote or proposal. "Smith Plumbing — 4.8 stars from 127 Google reviews." This immediately builds trust and justifies your pricing.
+Include your review count and rating on every quote or proposal. "Smith Plumbing: 4.8 stars from 127 Google reviews." This immediately builds trust and justifies your pricing.
 
 **The review referral loop:**
 
@@ -959,7 +959,7 @@ Going from 10 reviews to 55 reviews in 90 days transforms your online presence. 
 
 **The maintenance phase:**
 
-After the 90-day challenge, aim for 5-10 new reviews per month indefinitely. This keeps your profile fresh and maintains your competitive advantage. Make review collection a standard part of every job, just like invoicing and payment.
+After the 90-day challenge, aim for 5 to 10 new reviews per month indefinitely. This keeps your profile fresh and maintains your competitive advantage. Make review collection a standard part of every job, just like invoicing and payment.
 
 The 90-day challenge isn't difficult. It requires consistency, not brilliance. Ask every customer. Send the text. Follow up once. Respond to every review. Do this for 90 days and your business will never be the same.`,
         },
@@ -968,12 +968,12 @@ The 90-day challenge isn't difficult. It requires consistency, not brilliance. A
 
 The tradespeople who win at reviews aren't luckier or better at their jobs. They're systematic. They ask every customer. They make it easy. They follow up once. They respond to every review. They turn reviews into marketing assets. And they do it consistently, week after week, year after year.
 
-The system in this guide isn't complicated. It's simple, repeatable, and effective. Implement it today. Start with your next customer. Ask for the review. Send the text. Watch your review count grow. In 90 days, you'll be the plumber, electrician, or gas engineer that customers choose — because your reviews prove you're the one they can trust.`,
+The system in this guide isn't complicated. It's simple, repeatable, and effective. Implement it today. Start with your next customer. Ask for the review. Send the text. Watch your review count grow. In 90 days, you'll be the plumber, electrician, or gas engineer that customers choose, because your reviews prove you're the one they can trust.`,
       cta: `More reviews mean more calls. But calls are worthless if you miss them. Katie answers every call 24/7 and sends details to your WhatsApp in 3 seconds. Don't let your hard-earned reviews go to waste. [Try whoza.ai free for 7 days →](/)`,
       faq: [
         {
           question: "How many Google reviews should a tradesperson have?",
-          answer: "Aim for 50+ reviews to be competitive in most local markets. The top 5% of trade businesses in any area typically have 50-100+ reviews. If you have fewer than 10, you're at a significant disadvantage. If you have 100+, you're the dominant player. Focus on consistent collection — 5-10 new reviews per month is better than 50 reviews all at once.",
+          answer: "Aim for 50+ reviews to be competitive in most local markets. The top 5% of trade businesses in any area typically have 50 to 100+ reviews. If you have fewer than 10, you're at a significant disadvantage. If you have 100+, you're the dominant player. Focus on consistent collection: 5 to 10 new reviews per month is better than 50 reviews all at once.",
         },
         {
           question: "Can I ask customers for Google reviews?",
@@ -1015,10 +1015,10 @@ The system in this guide isn't complicated. It's simple, repeatable, and effecti
 
 A US-built AI might not know that EH1 is Edinburgh, not a ZIP code. It might not understand a Glaswegian accent. It might store your customer data in a Californian data centre where US law applies. And when you need support at 9am on a Monday, the team is still asleep.
 
-whoza.ai is different. We are built in Scotland. Not "UK-based" — built in Scotland. Scottish limited company. Scottish team. Scottish servers. And that makes a difference for UK tradespeople in ways that are practical, not patriotic.`,
+whoza.ai is different. We are built in Scotland. Not "UK-based", built in Scotland. Scottish limited company. Scottish team. Scottish servers. And that makes a difference for UK tradespeople in ways that are practical, not patriotic.`,
       sections: [
         {
-          heading: "1. UK Postcodes — Your AI Needs to Know Where B16 Is",
+          heading: "1. UK Postcodes: Your AI Needs to Know Where B16 Is",
           headingTag: "h2",
           body: `A US-built AI call handler is trained on American geography. It knows ZIP codes. It knows that 90210 is Beverly Hills. It does not know that BS16 is Fishponds in Bristol, or that G1 is Glasgow city centre, or that EH1 is Edinburgh.
 
@@ -1028,30 +1028,30 @@ whoza.ai is trained on UK geography. It understands postcodes, local areas, and 
           callout: "UK postcodes are not ZIP codes. A Scotland-built AI understands British geography because it was trained on it.",
         },
         {
-          heading: "2. British Voices — Because Your Customers Trust a Local Tone",
+          heading: "2. British Voices: Because Your Customers Trust a Local Tone",
           headingTag: "h2",
           body: `whoza.ai offers 12 UK-accented voices. Scottish, Welsh, Northern, London, Midlands. You choose the voice that matches your region and your brand.
 
-A US AI voice sounds foreign to UK callers. It says "schedule" instead of "diary." It says "cell phone" instead of "mobile." It says "call us back" in a way that feels slightly off — like watching a US TV show dubbed for British audiences.
+A US AI voice sounds foreign to UK callers. It says "schedule" instead of "diary." It says "cell phone" instead of "mobile." It says "call us back" in a way that feels slightly off, like watching a US TV show dubbed for British audiences.
 
 A Scottish plumber's customer hearing a Scottish voice is instant rapport. A Welsh electrician using a Welsh voice makes the caller feel at home. It's not about nationalism. It's about familiarity. People trust voices that sound like their neighbours.
 
 whoza.ai was built in Scotland, with British voices, for British trades. The difference is noticeable.`,
         },
         {
-          heading: "3. UK Data Laws — GDPR Is Not Optional",
+          heading: "3. UK Data Laws: GDPR Is Not Optional",
           headingTag: "h2",
           body: `whoza.ai is ICO registered (ZC077271). All customer data is processed and stored in UK data centres only. It never leaves the United Kingdom.
 
-US companies are subject to the CLOUD Act. This means the US government can request access to data stored by American companies — even if that data belongs to UK citizens. Your customer call records, your business data, your trade secrets — potentially accessible under US law.
+US companies are subject to the CLOUD Act. This means the US government can request access to data stored by American companies, even if that data belongs to UK citizens. Your customer call records, your business data, your trade secrets, potentially accessible under US law.
 
 With whoza.ai, your data stays in the UK. GDPR compliant. ICO registered. No overseas data transfers. No jurisdictional ambiguity. Just straightforward, UK-standard data protection.
 
-This matters for tradespeople handling sensitive customer information — addresses, phone numbers, property details, availability patterns. You have a legal obligation to protect that data. whoza.ai makes it simple.`,
+This matters for tradespeople handling sensitive customer information: addresses, phone numbers, property details, availability patterns. You have a legal obligation to protect that data. whoza.ai makes it simple.`,
           callout: "ICO registered (ZC077271). UK data centres only. No CLOUD Act exposure. GDPR compliant by design.",
         },
         {
-          heading: "4. Time Zones — Support When You Are Actually Working",
+          heading: "4. Time Zones: Support When You Are Actually Working",
           headingTag: "h2",
           body: `US support teams work Pacific Time. When you need help at 9am on a Monday, they're still asleep. It's 1am in California. Your urgent issue waits until they wake up.
 
@@ -1062,7 +1062,7 @@ This is not a minor convenience. It's the difference between fixing an issue in 
 UK hours for UK trades. Simple.`,
         },
         {
-          heading: "5. UK Pricing — VAT Included, No Surprises",
+          heading: "5. UK Pricing: VAT Included, No Surprises",
           headingTag: "h2",
           body: `whoza.ai prices include VAT at 20%. £59 per month is what you actually pay. No surprise tax added at checkout. No "wait, that's more than I expected" moments.
 
@@ -1080,12 +1080,12 @@ With whoza.ai, you know exactly what you pay. GBP pricing. VAT included. No curr
         {
           heading: "Where are my call recordings stored?",
           headingTag: "h3",
-          body: `We do not store audio recordings — we store text transcripts only. All data is processed and stored in UK data centres. GDPR compliant.`,
+          body: `We do not store audio recordings. We store text transcripts only. All data is processed and stored in UK data centres. GDPR compliant.`,
         },
         {
           heading: "Does whoza.ai work outside the UK?",
           headingTag: "h3",
-          body: `whoza.ai is specifically designed for UK tradespeople — British accents, UK postcodes, GBP pricing, VAT included. We focus on doing one market exceptionally well.`,
+          body: `whoza.ai is specifically designed for UK tradespeople: British accents, UK postcodes, GBP pricing, VAT included. We focus on doing one market exceptionally well.`,
         },
       ],
       conclusion: `A Scotland-built AI call handler is not about patriotism. It is about practical advantages that matter to your business: accurate postcode recognition, familiar voices, UK data protection, local support hours, and transparent pricing.
@@ -1093,7 +1093,7 @@ With whoza.ai, you know exactly what you pay. GBP pricing. VAT included. No curr
 When your customer calls about a burst pipe in Bristol, you want an AI that knows where Bristol is. When your customer speaks with a Scottish accent, you want an AI that understands them. When your customer data is sensitive, you want it protected by UK law.
 
 Built in Scotland. Working for UK trades.`,
-      cta: `Try Katie free for 7 days — built in Scotland, working for UK trades. [Start your free trial →](/)`,
+      cta: `Try Katie free for 7 days, built in Scotland, working for UK trades. [Start your free trial →](/)`,
       faq: [
         {
           question: "Is whoza.ai a British company?",
@@ -1101,11 +1101,11 @@ Built in Scotland. Working for UK trades.`,
         },
         {
           question: "Where are my call recordings stored?",
-          answer: "We do not store audio recordings — we store text transcripts only. All data is processed and stored in UK data centres. GDPR compliant.",
+          answer: "We do not store audio recordings. We store text transcripts only. All data is processed and stored in UK data centres. GDPR compliant.",
         },
         {
           question: "Does whoza.ai work outside the UK?",
-          answer: "whoza.ai is specifically designed for UK tradespeople — British accents, UK postcodes, GBP pricing, VAT included. We focus on doing one market exceptionally well.",
+          answer: "whoza.ai is specifically designed for UK tradespeople: British accents, UK postcodes, GBP pricing, VAT included. We focus on doing one market exceptionally well.",
         },
       ],
     },

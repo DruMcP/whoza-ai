@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "AI Call Answering for Gas Engineers in London | whoza.ai",
     description: "Stop losing gas engineer jobs to missed calls in London. Katie answers 24/7, captures gas leak and safety enquiries via WhatsApp. Plans from £59/month.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Gas Engineers in London" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Gas Engineers in London" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     "question": "Does it work with my existing London business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing London business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "answer": "Yes. You simply set up call forwarding from your existing London business number to your whoza.ai number. Your customers dial the same number they've always used. Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
     "question": "How quickly can I get set up as a gas engineer in London?",
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     "question": "What makes whoza.ai different for gas engineers in London?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for gas engineers. She understands CP12 certificates, gas leaks, boiler breakdowns & carbon monoxide emergencies — and with 32,000+ trade businesses competing in London, capturing every call gives you a real competitive edge."
+    "answer": "Unlike generic call answering services, Katie is trained specifically for gas engineers. She understands CP12 certificates, gas leaks, boiler breakdowns & carbon monoxide emergencies, and with 32,000+ trade businesses competing in London, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -97,7 +97,7 @@ export default function ForGasEngineerLondonPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   London has 32,000+ trade businesses competing for 1.2M households. 
                   With 8,200 missed calls every week across the city, 
-                  Katie ensures you capture every gas enquiry — CP12 certificates, gas leaks, boiler breakdowns & carbon monoxide emergencies.
+                  Katie ensures you capture every gas enquiry: CP12 certificates, gas leaks, boiler breakdowns & carbon monoxide emergencies.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -132,7 +132,7 @@ export default function ForGasEngineerLondonPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -199,7 +199,7 @@ export default function ForGasEngineerLondonPage() {
                 The Real Cost of Missed Calls for Gas Engineers in London
               </h2>
               <p className="v2-lead max-w-2xl mx-auto">
-                High competition — 15+ trade businesses per postcode in central London. Emergency calls peak during commute hours when you're on the road. Diverse housing stock from Victorian terraces to new-build apartments. Tenant vs landlord enquiries need different handling.
+                High competition: 15+ trade businesses per postcode in central London. Emergency calls peak during commute hours when you're on the road. Diverse housing stock from Victorian terraces to new-build apartments. Tenant vs landlord enquiries need different handling.
               </p>
             </div>
             <div className="space-y-8">
@@ -261,7 +261,7 @@ export default function ForGasEngineerLondonPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your London number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your London number. Katie picks up in under 2 rings with your branded greeting, 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",
@@ -311,10 +311,10 @@ export default function ForGasEngineerLondonPage() {
             </div>
             <div className="space-y-6 text-[var(--v2-body)] leading-relaxed">
               <p>
-                From Chelsea and Kensington to Croydon and Bromley, London gas engineers operate in a market where landlord enquiries dominate. With around 45% of London households rented — well above the UK average — annual gas safety certificates are legally required and non-compliance carries £6,000+ fines. Period conversions in Pimlico and Maida Vale need Gas Safe-registered engineers who understand multi-unit buildings, while new-build apartments in Canary Wharf require warranty-period snagging and smart home gas appliance integration.
+                From Chelsea and Kensington to Croydon and Bromley, London gas engineers operate in a market where landlord enquiries dominate. With around 45% of London households rented, well above the UK average, annual gas safety certificates are legally required and non-compliance carries £6,000+ fines. Period conversions in Pimlico and Maida Vale need Gas Safe-registered engineers who understand multi-unit buildings, while new-build apartments in Canary Wharf require warranty-period snagging and smart home gas appliance integration.
               </p>
               <p>
-                With 32,000+ trade businesses competing for work and 15+ businesses per postcode in central London, customers move fast. Emergency gas calls peak during commute hours when you're on the road, and landlords often need same-day CP12 certificates before new tenancies begin. Katie answers every call instantly, 24/7, captures the property details and urgency, and delivers them to your WhatsApp in seconds — so you never lose a £340 callout to a competitor who simply picked up first.
+                With 32,000+ trade businesses competing for work and 15+ businesses per postcode in central London, customers move fast. Emergency gas calls peak during commute hours when you're on the road, and landlords often need same-day CP12 certificates before new tenancies begin. Katie answers every call instantly, 24/7, captures the property details and urgency, and delivers them to your WhatsApp in seconds, so you never lose a £340 callout to a competitor who simply picked up first.
               </p>
             </div>
           </div>

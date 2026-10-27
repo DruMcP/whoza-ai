@@ -8,7 +8,7 @@ import { MapPin, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "AI Call Answering UK — Coverage Across 8 Cities | whoza.ai",
+  title: "AI Call Answering UK: Coverage Across 8 Cities | whoza.ai",
   description: "whoza.ai provides AI call answering for UK tradespeople in London, Manchester, Birmingham, Glasgow, Edinburgh, Bristol, Leeds and Liverpool. 24/7 coverage.",
   alternates: {
     canonical: "https://whoza.ai/locations",
@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/locations",
     siteName: "Whoza.ai",
-    title: "AI Call Answering UK — Coverage Across 8 Cities | whoza.ai",
+    title: "AI Call Answering UK: Coverage Across 8 Cities | whoza.ai",
     description: "whoza.ai provides AI call answering for UK tradespeople in London, Manchester, Birmingham, Glasgow, Edinburgh, Bristol, Leeds and Liverpool. 24/7 coverage from £59/month.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering Coverage Across the UK" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering Coverage Across the UK" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Call Answering UK — Coverage Across 8 Cities | whoza.ai",
+    title: "AI Call Answering UK: Coverage Across 8 Cities | whoza.ai",
     description: "whoza.ai provides AI call answering for UK tradespeople in London, Manchester, Birmingham, Glasgow, Edinburgh, Bristol, Leeds and Liverpool. 24/7 coverage from £59/month.",
     images: ["https://whoza.ai/og-image.webp"],
   },
@@ -73,7 +73,7 @@ export default function LocationsPage() {
             AI Call Answering Across the UK
           </h1>
           <p className="text-xl text-[var(--v2-body)] max-w-3xl mx-auto">
-            Katie answers missed calls for tradespeople in 8 major UK cities — 24/7, 365 days a year. 
+            Katie answers missed calls for tradespeople in 8 major UK cities, 24/7, 365 days a year. 
             Wherever you work, every enquiry gets captured and delivered to your WhatsApp in seconds.
           </p>
         </div>
@@ -130,7 +130,7 @@ export default function LocationsPage() {
             Browse by Trade and City
           </h2>
           <p className="text-[var(--v2-body)] mb-8">
-            Dedicated AI call answering pages for every trade we cover in each city — pick yours.
+            Dedicated AI call answering pages for every trade we cover in each city. Pick yours.
           </p>
           <div className="space-y-8">
             {Object.entries(TRADE_CITY_PAGES).map(([trade, cities]) => (

@@ -8,7 +8,7 @@ import { FAQPageSchema } from "@/components/whoza/faqpage-schema"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Whoza.ai vs Team-Connect: AI vs Budget (2026)",
-  description: "Honest comparison of whoza.ai (£59-£399) vs Team-Connect (£9.99-£79.99) for UK trades. Features, reliability, and value analysed head-to-head. See which wins.",
+  description: "Honest comparison of whoza.ai (£59 to £399) vs Team-Connect (£9.99 to £79.99) for UK trades. Features, reliability, and value analysed head-to-head.",
   keywords: [
     "whoza.ai vs Team-Connect",
     "Team-Connect receptionist review",
@@ -55,7 +55,7 @@ const comparisonData = [
 export const revalidate = 3600
 
 const faqs = [
-    { question: "Is Team-Connect actually cheaper than whoza.ai when you factor in features?", answer: "Team-Connect's base price is lower, but whoza.ai includes more features at every tier. Team-Connect charges extra for WhatsApp delivery, calendar integration, and custom voices — features included in whoza.ai's Growth plan. When comparing equivalent feature sets, whoza.ai is typically cheaper overall." },
+    { question: "Is Team-Connect actually cheaper than whoza.ai when you factor in features?", answer: "Team-Connect's base price is lower, but whoza.ai includes more features at every tier. Team-Connect charges extra for WhatsApp delivery, calendar integration, and custom voices, features included in whoza.ai's Growth plan. When comparing equivalent feature sets, whoza.ai is typically cheaper overall." },
     { question: "Does Team-Connect offer WhatsApp delivery like whoza.ai?", answer: "No. Team-Connect does not offer WhatsApp delivery. whoza.ai provides native WhatsApp integration with instant push notifications, one-tap response buttons, and rich media support. According to Ofcom, 90% of UK adults use WhatsApp regularly, making it the most reliable channel for reaching tradespeople." },
     { question: "When is Team-Connect the better choice over whoza.ai?", answer: "Team-Connect may suit businesses that need basic call answering at the lowest possible price and do not require WhatsApp delivery, review collection, competitor analysis, or calendar integration. For tradespeople who want growth tools and comprehensive automation, whoza.ai offers more value." }
 ]
@@ -84,7 +84,7 @@ export default function VsTeamConnectPage() {
 
               <div className="inline-flex items-center gap-2 bg-amber-50 text-amber-700 px-3 py-1 rounded-full text-xs font-medium mb-6">
                 <Star className="w-3 h-3" />
-                Comparison — August 2026
+                Comparison, August 2026
               </div>
 
               {/* Publisher Disclosure */}
@@ -101,7 +101,7 @@ export default function VsTeamConnectPage() {
               </h1>
 
               <p className="text-lg text-[var(--v2-body)] max-w-2xl mb-8">
-                Team-Connect starts at just £9.99/month — the cheapest call answering service we found. 
+                Team-Connect starts at just £9.99/month, the cheapest call answering service we found. 
                 whoza.ai starts at £59. Is the £49 difference worth it? We tested both to find out.
               </p>
 
@@ -172,7 +172,7 @@ export default function VsTeamConnectPage() {
                 <strong className="text-[var(--v2-ink)]">The maths:</strong> whoza.ai costs £49/month more than Team-Connect's entry plan. 
                 If whoza.ai's review collection (Claire) generates just 2 extra Google reviews per month, 
                 and those reviews bring in 1 additional job at £280 average value, you've generated £280 
-                in revenue for a £49 extra spend — a 5.7x return. The features aren't costs; they're revenue drivers.
+                in revenue for a £49 extra spend, a 5.7x return. The features aren't costs; they're revenue drivers.
               </p>
             </div>
           </section>
@@ -247,7 +247,7 @@ export default function VsTeamConnectPage() {
                 <p className="text-[var(--v2-body)] leading-relaxed mb-4">
                   The review collection feature (Claire) is a genuine revenue multiplier. Google reviews are 
                   the #1 factor in local search rankings for trades. Team-Connect doesn't help with this at all. 
-                  whoza.ai automates the entire process — sending follow-ups, providing direct links, and tracking 
+                  whoza.ai automates the entire process: sending follow-ups, providing direct links, and tracking 
                   progress. For a business that needs reviews to compete, this feature alone justifies the price difference.
                 </p>
                 <p className="text-[var(--v2-body)] leading-relaxed">
@@ -265,7 +265,7 @@ export default function VsTeamConnectPage() {
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                "Comparison — August 2026",
+                "Comparison, August 2026",
                 "Pricing verified from competitor websites",
                 "No affiliate links or paid placement",
                 "Both services tested with real calls",
@@ -322,7 +322,7 @@ export default function VsTeamConnectPage() {
     <div className="space-y-6">
       <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
         <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-3">Is Team-Connect actually cheaper than whoza.ai when you factor in features?</h3>
-        <p className="text-[var(--v2-body)] leading-relaxed">Team-Connect's base price is lower, but whoza.ai includes more features at every tier. Team-Connect charges extra for WhatsApp delivery, calendar integration, and custom voices — features included in whoza.ai's Growth plan. When comparing equivalent feature sets, whoza.ai is typically cheaper overall.</p>
+        <p className="text-[var(--v2-body)] leading-relaxed">Team-Connect's base price is lower, but whoza.ai includes more features at every tier. Team-Connect charges extra for WhatsApp delivery, calendar integration, and custom voices, features included in whoza.ai's Growth plan. When comparing equivalent feature sets, whoza.ai is typically cheaper overall.</p>
       </div>
       <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
         <h3 className="text-lg font-semibold text-[var(--v2-ink)] mb-3">Does Team-Connect offer WhatsApp delivery like whoza.ai?</h3>

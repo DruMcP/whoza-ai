@@ -27,13 +27,13 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/for-landscapers",
     siteName: "Whoza.ai",
-    title: "AI Call Answering for Landscapers UK — Never Miss a Job",
+    title: "AI Call Answering for Landscapers UK | Never Miss a Job",
     description: "AI call handling for UK landscapers. Katie answers 24/7, captures garden design, maintenance and patio enquiries. WhatsApp alerts in 3 seconds. Free trial.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Landscapers" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Landscapers" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Call Answering for Landscapers UK — Never Miss a Job",
+    title: "AI Call Answering for Landscapers UK | Never Miss a Job",
     description: "AI call handling for UK landscapers. Katie answers 24/7, captures garden design, maintenance and patio enquiries. WhatsApp alerts in 3 seconds. Free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
@@ -50,7 +50,7 @@ const faqs = [
   },
   {
     question: "Can Katie handle commercial landscaping enquiries?",
-    answer: "Absolutely. Katie is trained to identify commercial enquiries from estates, hotels, property developers, councils, schools, and office complexes. She captures contract details, site addresses, project scope, and budget ranges — then marks these as priority in your WhatsApp alert. Commercial clients are your biggest repeat customer base, so Katie makes sure you never miss them.",
+    answer: "Absolutely. Katie is trained to identify commercial enquiries from estates, hotels, property developers, councils, schools, and office complexes. She captures contract details, site addresses, project scope, and budget ranges, then marks these as priority in your WhatsApp alert. Commercial clients are your biggest repeat customer base, so Katie makes sure you never miss them.",
   },
   {
     question: "What information does Katie collect from landscaping customers?",
@@ -58,11 +58,11 @@ const faqs = [
   },
   {
     question: "Will customers know they're talking to AI?",
-    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience — they just want their garden project started fast.",
+    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience: they just want their garden project started fast.",
   },
   {
     question: "Does it work with my existing business phone number?",
-    answer: "Yes. You simply set up call forwarding from your existing landscaping business number to your whoza.ai number. Your customers dial the same number they've always used — Katie just answers when you can't. Setup takes under 10 minutes.",
+    answer: "Yes. You simply set up call forwarding from your existing landscaping business number to your whoza.ai number. Your customers dial the same number they've always used. Katie just answers when you can't. Setup takes under 10 minutes.",
   },
   {
     question: "How quickly can I get set up?",
@@ -70,7 +70,7 @@ const faqs = [
   },
   {
     question: "Can Katie handle emergency storm damage calls?",
-    answer: "Yes. Katie answers 24/7 including nights, weekends, and bank holidays. She identifies emergency keywords like 'storm damage', 'fallen tree', 'flooding', and 'dangerous branches' — then marks the enquiry as emergency priority in your WhatsApp alert. You see it immediately and can respond within minutes.",
+    answer: "Yes. Katie answers 24/7 including nights, weekends, and bank holidays. She identifies emergency keywords like 'storm damage', 'fallen tree', 'flooding', and 'dangerous branches', then marks the enquiry as emergency priority in your WhatsApp alert. You see it immediately and can respond within minutes.",
   },
   {
     question: "What happens if Katie can't handle a complex enquiry?",
@@ -84,7 +84,7 @@ export default function ForLandscapersPage() {
   return (
     <>
       <VideoSchema
-        name="Whoza.ai for Landscapers — AI Call Answering Demo"
+        name="Whoza.ai for Landscapers: AI Call Answering Demo"
         description="Watch Katie capture a missed landscaping enquiry in under 60 seconds. Garden design project answered instantly, details sent to WhatsApp, site visit booked while the landscaper is still on another job."
         embedUrl="https://whoza.ai/for-landscapers"
       />
@@ -131,10 +131,10 @@ export default function ForLandscapersPage() {
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   AI Call Answering for{" "}
                   <span className="text-green-400">Landscapers</span>{" "}
-                  UK — Never Miss a Job
+                  UK: Never Miss a Job
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
-                  Garden design, maintenance, patio laying, fencing — customers call when they want their outdoor space transformed. Katie answers every call, captures the project details, and sends them to your WhatsApp.
+                  Garden design, maintenance, patio laying, fencing. Customers call when they want their outdoor space transformed. Katie answers every call, captures the project details, and sends them to your WhatsApp.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -169,7 +169,7 @@ export default function ForLandscapersPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -262,7 +262,7 @@ export default function ForLandscapersPage() {
                 The average UK landscaper misses 8 calls per week = <strong>£76,800</strong> in lost revenue per year
               </p>
               <p className="text-[var(--v2-body)] text-sm mt-1">
-                Source: UK SME Communications Survey 2025 — based on £8,000 avg redesign value, 35% conversion rate, seasonal adjustments
+                Source: UK SME Communications Survey 2025, based on £8,000 avg redesign value, 35% conversion rate, seasonal adjustments
               </p>
             </div>
           </div>
@@ -287,7 +287,7 @@ export default function ForLandscapersPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: "Customer calls your number. Katie picks up in under 2 rings with your branded greeting: 'Hello, Greenleaf Landscaping. I'm Katie, how can I help?' — 24/7, even during the spring rush.",
+                  description: "Customer calls your number. Katie picks up in under 2 rings with your branded greeting: 'Hello, Greenleaf Landscaping. I'm Katie, how can I help?', 24/7, even during the spring rush.",
                 },
                 {
                   step: "02",
@@ -344,7 +344,7 @@ export default function ForLandscapersPage() {
               Landscaper Success Story
             </div>
             <blockquote className="text-2xl sm:text-3xl font-medium leading-relaxed text-[var(--v2-ink)] mb-8">
-              "I used to miss 4-5 enquiries a week during spring because I was on job sites with my hands full. In 6 weeks using whoza.ai, I captured 23 jobs I would have missed, recovering <span className="text-[var(--v2-green)] font-bold">£14,200</span> in revenue. It cost me £59 for the month."
+              "I used to miss 4 to 5 enquiries a week during spring because I was on job sites with my hands full. In 6 weeks using whoza.ai, I captured 23 jobs I would have missed, recovering <span className="text-[var(--v2-green)] font-bold">£14,200</span> in revenue. It cost me £59 for the month."
             </blockquote>
             <div className="flex items-center justify-center gap-4">
               <div className="w-14 h-14 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 font-bold text-xl">

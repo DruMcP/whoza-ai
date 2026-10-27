@@ -61,10 +61,10 @@ const comparisonData = [
     feature: "Setup time",
     whozaai: "30 minutes",
     clara: "10 minutes (app)",
-    tradeReceptionist: "1-2 days",
-    moneypenny: "2-5 days",
+    tradeReceptionist: "1 to 2 days",
+    moneypenny: "2 to 5 days",
     rosie: "30 minutes",
-    downToEarth: "1-2 days",
+    downToEarth: "1 to 2 days",
   },
   {
     feature: "Delivery method",
@@ -86,7 +86,7 @@ const comparisonData = [
   },
   {
     feature: "Live transfer to human",
-    whozaai: "Yes — instant",
+    whozaai: "Yes, instant",
     clara: "No",
     tradeReceptionist: "No",
     moneypenny: "Yes (human answers)",
@@ -148,15 +148,15 @@ const detailedReviews = [
     price: "From £59/month",
     trial: "7 days",
     setup: "30 minutes",
-    description: "whoza.ai is the only platform that gives you four AI specialists working together - not just one voice answering the phone.",
+    description: "whoza.ai is the only platform that gives you four AI specialists working together, not just one voice answering the phone.",
     howItWorks: [
       "Katie answers every call 24/7. She qualifies the job, captures the postcode, checks urgency, and sends it all to your WhatsApp.",
       "Mark follows up on high-value quotes and chases outstanding enquiries.",
       "Claire automatically requests Google reviews from happy customers.",
-      "Rex tracks what your competitors are doing - pricing changes, new reviews, who's ranking where.",
+      "Rex tracks what your competitors are doing: pricing changes, new reviews, who's ranking where.",
     ],
-    whatYouSee: "A WhatsApp message with the caller's name, job type, location, estimated value, and urgency - plus Accept Job, Call Back, and Decline buttons. Two taps. No app to download. No login. It just works in the WhatsApp you already use.",
-    bestFor: "Tradespeople who want more than just call answering - they want a system that actively grows their business. The review collection and competitor tracking are genuinely useful features no one else offers.",
+    whatYouSee: "A WhatsApp message with the caller's name, job type, location, estimated value, and urgency, plus Accept Job, Call Back, and Decline buttons. Two taps. No app to download. No login. It just works in the WhatsApp you already use.",
+    bestFor: "Tradespeople who want more than just call answering: they want a system that actively grows their business. The review collection and competitor tracking are genuinely useful features no one else offers.",
     downside: `Pricier than the cheapest option. Early access is limited to ${EARLY_ACCESS_CAP} tradespeople initially. You need to be comfortable with WhatsApp as your primary business communication tool.`,
     link: "/pricing",
     linkText: "Try whoza.ai free for 7 days",
@@ -173,11 +173,11 @@ const detailedReviews = [
     howItWorks: [
       "Clara answers your calls, takes messages, flags urgent calls, filters spam, and delivers summaries to your phone.",
       "You can choose from 20+ natural-sounding voices.",
-      "The app handles everything - call forwarding, transcripts, and live chat support.",
+      "The app handles everything: call forwarding, transcripts, and live chat support.",
     ],
     whatYouSee: "Summaries delivered through the app, not native WhatsApp (though summaries come to your phone).",
     bestFor: "Sole traders who want a straightforward, affordable call handler and don't mind managing another app. The 7-day trial with no credit card makes it low-risk to try.",
-    downside: "Single AI persona - she answers calls but doesn't do reviews, competitor tracking, or follow-ups. Requires app download. Delivery is through the app, not native WhatsApp.",
+    downside: "Single AI persona: she answers calls but doesn't do reviews, competitor tracking, or follow-ups. Requires app download. Delivery is through the app, not native WhatsApp.",
     link: "https://heyitsclara.com/gb",
     linkText: "Try Clara",
     isWinner: false,
@@ -188,16 +188,16 @@ const detailedReviews = [
     highlight: "Best for Traditional Phone-Based Service",
     price: "From £29/month",
     trial: "Unknown",
-    setup: "1-2 days",
+    setup: "1 to 2 days",
     description: "Trade Receptionist is the budget option. At £29/month, they're the cheapest dedicated call answering service for trades.",
     howItWorks: [
-      "A more traditional setup - calls are answered and details sent via email and a web dashboard.",
+      "A more traditional setup: calls are answered and details sent via email and a web dashboard.",
       "They also offer diary management and WhatsApp integration.",
-      "The lower price comes with a longer setup time (1-2 days) and a 12-month minimum contract.",
+      "The lower price comes with a longer setup time (1 to 2 days) and a 12-month minimum contract.",
     ],
     whatYouSee: "Email + dashboard delivery. Slower than WhatsApp.",
     bestFor: "Tradespeople who want the absolute lowest monthly cost and are comfortable with email-based call summaries. The diary management feature is useful if you need booking support.",
-    downside: "12-month contract locks you in. Email + dashboard delivery is slower than WhatsApp. Single-agent capacity means you can only handle 1-2 simultaneous calls. Less sophisticated AI - more of a traditional answering service with AI elements.",
+    downside: "12-month contract locks you in. Email + dashboard delivery is slower than WhatsApp. Single-agent capacity means you can only handle 1 to 2 simultaneous calls. Less sophisticated AI: more of a traditional answering service with AI elements.",
     link: "https://tradereceptionist.com",
     linkText: "Try Trade Receptionist",
     isWinner: false,
@@ -208,8 +208,8 @@ const detailedReviews = [
     highlight: "Best for Larger Trade Businesses",
     price: "From £150/month",
     trial: "7 days",
-    setup: "2-5 days",
-    description: "Moneypenny is the established name - 25 years in business, 10,000+ clients, 1,250 staff. They offer a hybrid human + AI service.",
+    setup: "2 to 5 days",
+    description: "Moneypenny is the established name: 25 years in business, 10,000+ clients, 1,250 staff. They offer a hybrid human + AI service.",
     howItWorks: [
       "A blend of human receptionists and AI technology.",
       "Calls are answered by real people supported by AI tools.",
@@ -217,7 +217,7 @@ const detailedReviews = [
     ],
     whatYouSee: "A polished web dashboard. Call summaries via email.",
     bestFor: "Multi-van operations and larger trade businesses that need a premium service with human oversight. If you're turning over £500K+ and want the 'safe' option, Moneypenny is it.",
-    downside: "3-7x more expensive than the others. 12-month contract. 2-5 day setup. Overkill for sole traders and small firms. You're paying for human receptionists whether you need them or not.",
+    downside: "3 to 7x more expensive than the others. 12-month contract. 2 to 5 day setup. Overkill for sole traders and small firms. You're paying for human receptionists whether you need them or not.",
     link: "https://moneypenny.com",
     linkText: "Try Moneypenny",
     isWinner: false,
@@ -248,7 +248,7 @@ const detailedReviews = [
     highlight: "Best for Tradespeople Who Want a Builder-Built Product",
     price: "From £45/month + ~£299 setup",
     trial: "Unknown",
-    setup: "1-2 days",
+    setup: "1 to 2 days",
     description: "Down To Earth AI is built by a tradesman with 25 years in the trade. The positioning is authentic: this is someone who actually worked on sites, dealt with missed calls, and built the product to solve his own problem.",
     howItWorks: [
       "The AI answers calls, takes messages, and delivers via app and SMS.",
@@ -285,7 +285,7 @@ const recommendationTable = [
 const faqs = [
   {
     question: "What is an AI call handler?",
-    answer: "An AI call handler is a virtual receptionist powered by artificial intelligence. It answers your business phone 24/7, speaks to callers in a natural voice, captures their details, qualifies the enquiry, and sends you a summary - so you only speak to real jobs.",
+    answer: "An AI call handler is a virtual receptionist powered by artificial intelligence. It answers your business phone 24/7, speaks to callers in a natural voice, captures their details, qualifies the enquiry, and sends you a summary, so you only speak to real jobs.",
   },
   {
     question: "How much does an AI call handler cost?",
@@ -297,11 +297,11 @@ const faqs = [
   },
   {
     question: "What happens to calls outside business hours?",
-    answer: "AI call handlers work 24/7, including evenings, weekends, and bank holidays. Every call is answered, qualified, and logged - you'll see every enquiry in your WhatsApp or app when you check in the morning.",
+    answer: "AI call handlers work 24/7, including evenings, weekends, and bank holidays. Every call is answered, qualified, and logged. You'll see every enquiry in your WhatsApp or app when you check in the morning.",
   },
   {
     question: "Is an AI call handler better than a human receptionist?",
-    answer: "For most UK tradespeople, yes. An AI call handler costs £59/month versus £20,000+/year for a full-time receptionist. It works 24/7, never takes sick leave, and handles multiple simultaneous calls (up to 5 on Scale — see <a href='/how-many-calls-at-once'>how many calls at once</a>). The only exception is large firms that need complex customer service - Moneypenny's hybrid model works better there.",
+    answer: "For most UK tradespeople, yes. An AI call handler costs £59/month versus £20,000+/year for a full-time receptionist. It works 24/7, never takes sick leave, and handles multiple simultaneous calls (up to 5 on Scale: see <a href='/how-many-calls-at-once'>how many calls at once</a>). The only exception is large firms that need complex customer service. Moneypenny's hybrid model works better there.",
   },
   {
     question: "Do I need to change my phone number?",
@@ -317,11 +317,11 @@ const faqs = [
   },
   {
     question: "Which AI call handler works with WhatsApp?",
-    answer: "whoza.ai delivers all alerts natively in WhatsApp - no app download required. Clara delivers summaries to your phone. Trade Receptionist offers WhatsApp integration. Moneypenny uses email. Rosie AI uses WhatsApp + app.",
+    answer: "whoza.ai delivers all alerts natively in WhatsApp, no app download required. Clara delivers summaries to your phone. Trade Receptionist offers WhatsApp integration. Moneypenny uses email. Rosie AI uses WhatsApp + app.",
   },
   {
     question: "How quickly can I get set up?",
-    answer: "Fastest: Clara (10 minutes via app). whoza.ai and Rosie AI (30 minutes). Trade Receptionist (1-2 days). Moneypenny (2-5 days).",
+    answer: "Fastest: Clara (10 minutes via app). whoza.ai and Rosie AI (30 minutes). Trade Receptionist (1 to 2 days). Moneypenny (2 to 5 days).",
   },
 ]
 
@@ -373,14 +373,14 @@ export default function BestAICallHandlerPage() {
             <p className="text-lg text-[var(--v2-body)] max-w-2xl mb-8">
               If you're a plumber, electrician, roofer, builder, or heating engineer in the UK, you already know the problem.
               Your phone rings while you're on a job, at the merchants, driving between sites, or after hours.
-              Every missed call is a £250-£450 job going to your competitor.
+              Every missed call is a £250 to £450 job going to your competitor.
             </p>
             <p className="text-lg text-[var(--v2-body)] max-w-2xl mb-8">
               AI call handlers promise to solve this. They answer your phone 24/7, qualify the caller, and send you the details
               so you only speak to real jobs. But which one actually works for UK tradespeople?
             </p>
             <p className="text-lg text-[var(--v2-body)] max-w-2xl mb-8">
-              We tested six leading options — signing up, making test calls, checking WhatsApp delivery, and comparing pricing. Here's what we found.
+              We tested six leading options: signing up, making test calls, checking WhatsApp delivery, and comparing pricing. Here's what we found.
             </p>
             <a href="/pricing" className="inline-flex items-center gap-2 bg-[var(--v2-green)] text-white font-bold px-6 py-3 rounded-lg hover:bg-[var(--v2-green-hover)] transition-all v2-island">
               Try #1 Pick Free for 7 Days <ArrowRight className="w-4 h-4" />
@@ -538,7 +538,7 @@ export default function BestAICallHandlerPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-[var(--v2-ink)] mb-1">WhatsApp delivery speed</h4>
-                  <p className="text-[var(--v2-body)] text-sm">We timed how long each service took to deliver the call summary to WhatsApp. whoza.ai and Rosie AI delivered in under 10 seconds. Clara took 15-30 seconds via app. Trade Receptionist and Moneypenny used email, which took 2-5 minutes.</p>
+                  <p className="text-[var(--v2-body)] text-sm">We timed how long each service took to deliver the call summary to WhatsApp. whoza.ai and Rosie AI delivered in under 10 seconds. Clara took 15 to 30 seconds via app. Trade Receptionist and Moneypenny used email, which took 2 to 5 minutes.</p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -556,7 +556,7 @@ export default function BestAICallHandlerPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-[var(--v2-ink)] mb-1">Setup complexity</h4>
-                  <p className="text-[var(--v2-body)] text-sm">We timed setup from signup to first answered call. Clara was fastest at 10 minutes via app. whoza.ai and Rosie AI took 30 minutes. Trade Receptionist required 1-2 days for configuration. Moneypenny needed 2-5 days for onboarding.</p>
+                  <p className="text-[var(--v2-body)] text-sm">We timed setup from signup to first answered call. Clara was fastest at 10 minutes via app. whoza.ai and Rosie AI took 30 minutes. Trade Receptionist required 1 to 2 days for configuration. Moneypenny needed 2 to 5 days for onboarding.</p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -570,7 +570,7 @@ export default function BestAICallHandlerPage() {
               </div>
             </div>
             <p className="text-[var(--v2-body)] leading-relaxed">
-              All pricing was verified against live websites as of July 2026. We tested each service with the same call scenarios to ensure fair comparison. This is not sponsored content — we tested these services independently to find the best option for UK tradespeople.
+              All pricing was verified against live websites as of July 2026. We tested each service with the same call scenarios to ensure fair comparison. This is not sponsored content. We tested these services independently to find the best option for UK tradespeople.
             </p>
           </div>
         </section>
@@ -635,16 +635,16 @@ export default function BestAICallHandlerPage() {
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-3xl font-bold text-[var(--v2-ink)] mb-6">The Problem: Why Missed Calls Cost UK Trades Thousands</h2>
         <p className="text-[var(--v2-body)] leading-relaxed mb-6">
-          Before comparing solutions, let us understand the scale of the problem. A typical UK plumber receives 8–12 calls per day, of which 5–7 go unanswered while they are under a sink, on a roof, or driving between jobs. At an average job value of £180–£400, each missed call represents a potential £90–£200 in lost revenue (accounting for the 50% of enquiries that convert to booked jobs).
+          Before comparing solutions, let us understand the scale of the problem. A typical UK plumber receives 8 to 12 calls per day, of which 5 to 7 go unanswered while they are under a sink, on a roof, or driving between jobs. At an average job value of £180 to £400, each missed call represents a potential £90 to £200 in lost revenue (accounting for the 50% of enquiries that convert to booked jobs).
         </p>
         <p className="text-[var(--v2-body)] leading-relaxed mb-6">
-          Multiply that by 5 working days, and you are looking at £450–£1,000 per week in lost revenue. Over a year, that is £23,400–£52,000 for a single plumber. For a multi-van operation, the numbers scale linearly. The Moneypenny Small Business Call Report (2016) confirms this: 33% of small UK businesses fail to answer incoming calls, and the Federation of Small Businesses (FSB) estimates that missed calls cost UK small businesses £1,200 per year on average — but for trades with higher job values, the figure is significantly higher.
+          Multiply that by 5 working days, and you are looking at £450 to £1,000 per week in lost revenue. Over a year, that is £23,400 to £52,000 for a single plumber. For a multi-van operation, the numbers scale linearly. The Moneypenny Small Business Call Report (2016) confirms this: 33% of small UK businesses fail to answer incoming calls, and the Federation of Small Businesses (FSB) estimates that missed calls cost UK small businesses £1,200 per year on average, but for trades with higher job values, the figure is significantly higher.
         </p>
         <p className="text-[var(--v2-body)] leading-relaxed mb-6">
-          The traditional solutions have clear limitations. Voicemail is essentially a graveyard for enquiries — 69% of voicemail callers don't leave a message (Moneypenny Small Business Call Report, 2016). Call forwarding to a family member is unreliable and unprofessional. Hiring a human receptionist costs £20,000–£25,000 per year plus National Insurance, pension contributions, and holiday cover (ONS 2024 average wages data). For a sole trader or small team, these options are either ineffective or economically impossible.
+          The traditional solutions have clear limitations. Voicemail is essentially a graveyard for enquiries: 69% of voicemail callers don't leave a message (Moneypenny Small Business Call Report, 2016). Call forwarding to a family member is unreliable and unprofessional. Hiring a human receptionist costs £20,000 to £25,000 per year plus National Insurance, pension contributions, and holiday cover (ONS 2024 average wages data). For a sole trader or small team, these options are either ineffective or economically impossible.
         </p>
         <p className="text-[var(--v2-body)] leading-relaxed">
-          AI call answering services emerged as the practical solution. They answer every call, 24/7, without sick days, holidays, or wage demands. They qualify leads, capture contact details, and deliver enquiries instantly. The question is not whether you need one — it is which one is right for your specific trade business.
+          AI call answering services emerged as the practical solution. They answer every call, 24/7, without sick days, holidays, or wage demands. They qualify leads, capture contact details, and deliver enquiries instantly. The question is not whether you need one. It is which one is right for your specific trade business.
         </p>
       </section>
 
@@ -655,12 +655,12 @@ export default function BestAICallHandlerPage() {
           Pricing Analysis: What Do You Actually Get for Your Money?
         </h2>
         <p className="text-[var(--v2-body)] leading-relaxed mb-6">
-          Price comparison is not straightforward because services package features differently. Here is a like-for-like analysis of what you get at the entry level (£50–£80/month) and mid-tier (£100–£150/month) for each service.
+          Price comparison is not straightforward because services package features differently. Here is a like-for-like analysis of what you get at the entry level (£50 to £80/month) and mid-tier (£100 to £150/month) for each service.
         </p>
 
         <div className="bg-white border border-[var(--v2-line)] rounded-2xl overflow-hidden mb-8">
           <div className="bg-white px-6 py-4 border-b border-[var(--v2-line)]">
-            <h3 className="font-semibold text-[var(--v2-ink)]">Entry Level (£50–£80/month) — Sole Traders</h3>
+            <h3 className="font-semibold text-[var(--v2-ink)]">Entry Level (£50 to £80/month): Sole Traders</h3>
           </div>
           <div className="p-6 space-y-4">
             {[
@@ -683,7 +683,7 @@ export default function BestAICallHandlerPage() {
 
         <div className="bg-white border border-[var(--v2-line)] rounded-2xl overflow-hidden">
           <div className="bg-white px-6 py-4 border-b border-[var(--v2-line)]">
-            <h3 className="font-semibold text-[var(--v2-ink)]">Mid-Tier (£100–£150/month) — Growing Teams</h3>
+            <h3 className="font-semibold text-[var(--v2-ink)]">Mid-Tier (£100 to £150/month): Growing Teams</h3>
           </div>
           <div className="p-6 space-y-4">
             {[
@@ -710,7 +710,7 @@ export default function BestAICallHandlerPage() {
           ROI: How Much Revenue Can AI Call Answering Recover?
         </h2>
         <p className="text-[var(--v2-body)] leading-relaxed mb-6">
-          Let us do the maths. A typical plumber in the UK receives 8–12 calls per day and misses 5–7 of them while working. At a 50% conversion rate (industry average for trade enquiries) and an average job value of £250, each missed call costs approximately £125 in potential revenue.
+          Let us do the maths. A typical plumber in the UK receives 8 to 12 calls per day and misses 5 to 7 of them while working. At a 50% conversion rate (industry average for trade enquiries) and an average job value of £250, each missed call costs approximately £125 in potential revenue.
         </p>
         <div className="grid sm:grid-cols-3 gap-4 mb-6">
           <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 text-center">
@@ -727,10 +727,10 @@ export default function BestAICallHandlerPage() {
           </div>
         </div>
         <p className="text-[var(--v2-body)] leading-relaxed mb-6">
-          That is £3,125 per week, or £162,500 per year in potential revenue. Even if AI call answering only recovers 20% of those missed calls (a conservative estimate), that is £32,500 in additional annual revenue. Against a service cost of £59–£125/month (£708–£1,500/year), the ROI is 2,100% to 4,500%. This is not a cost — it is an investment with measurable returns.
+          That is £3,125 per week, or £162,500 per year in potential revenue. Even if AI call answering only recovers 20% of those missed calls (a conservative estimate), that is £32,500 in additional annual revenue. Against a service cost of £59 to £125/month (£708 to £1,500/year), the ROI is 2,100% to 4,500%. This is not a cost. It is an investment with measurable returns.
         </p>
         <p className="text-[var(--v2-body)] leading-relaxed">
-          For emergency trades, the numbers are even more dramatic. Emergency callouts average £150–£400, and callers who cannot reach you will immediately call the next number on Google. Capturing just one additional emergency callout per week pays for the entire monthly service cost.
+          For emergency trades, the numbers are even more dramatic. Emergency callouts average £150 to £400, and callers who cannot reach you will immediately call the next number on Google. Capturing just one additional emergency callout per week pays for the entire monthly service cost.
         </p>
       </section>
 
@@ -775,11 +775,11 @@ export default function BestAICallHandlerPage() {
           <h2 className="text-3xl font-bold text-[var(--v2-ink)] mb-4">Bottom Line</h2>
           <p className="text-lg text-[var(--v2-body)] mb-8 max-w-2xl mx-auto">
             For UK tradespeople in 2026, AI call handling has gone from a luxury to a necessity.
-            The Moneypenny Small Business Call Report (2016) reports that 33% of small businesses fail to answer incoming calls - and every unanswered call is a job your competitor gets instead.
+            The Moneypenny Small Business Call Report (2016) reports that 33% of small businesses fail to answer incoming calls, and every unanswered call is a job your competitor gets instead.
           </p>
           <p className="text-lg text-[var(--v2-body)] mb-8 max-w-2xl mx-auto">
-            If you want the most capable system - one that answers calls, collects reviews, tracks competitors,
-            and delivers everything through WhatsApp - <strong className="text-[var(--v2-green)]">whoza.ai is the clear choice</strong>.
+            If you want the most capable system (one that answers calls, collects reviews, tracks competitors,
+            and delivers everything through WhatsApp), <strong className="text-[var(--v2-green)]">whoza.ai is the clear choice</strong>.
             The 7-day free trial makes it risk-free to try.
           </p>
           <a href="/pricing" className="inline-flex items-center gap-2 bg-[var(--v2-green)] text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-[var(--v2-green-hover)] transition-colors shadow-lg v2-island">

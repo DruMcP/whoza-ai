@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "AI Call Answering for Plumbers in Edinburgh | whoza.ai",
     description: "Stop losing plumber jobs to missed calls in Edinburgh. Katie answers 24/7, captures burst pipe and boiler enquiries via WhatsApp. Plans from £59/month.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Plumbers in Edinburgh" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Plumbers in Edinburgh" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     "question": "Does it work with my existing Edinburgh business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing Edinburgh business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "answer": "Yes. You simply set up call forwarding from your existing Edinburgh business number to your whoza.ai number. Your customers dial the same number they've always used. Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
     "question": "How quickly can I get set up as a plumber in Edinburgh?",
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     "question": "What makes whoza.ai different for plumbers in Edinburgh?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for plumbers. She understands burst pipes, boiler repairs, leak detection, drainage & installations — and with 4,500+ trade businesses competing in Edinburgh, capturing every call gives you a real competitive edge."
+    "answer": "Unlike generic call answering services, Katie is trained specifically for plumbers. She understands burst pipes, boiler repairs, leak detection, drainage & installations, and with 4,500+ trade businesses competing in Edinburgh, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -97,7 +97,7 @@ export default function ForPlumberEdinburghPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Edinburgh has 4,500+ trade businesses competing for 245K households. 
                   With 2,200 missed calls every week across the city, 
-                  Katie ensures you capture every plumbing enquiry — burst pipes, boiler repairs, leak detection, drainage & installations.
+                  Katie ensures you capture every plumbing enquiry: burst pipes, boiler repairs, leak detection, drainage & installations.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -132,7 +132,7 @@ export default function ForPlumberEdinburghPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -209,7 +209,7 @@ export default function ForPlumberEdinburghPage() {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">While You're on the Job</h3>
                     <p className="text-[var(--v2-body)] leading-relaxed">
-                      You're mid-job and your phone rings. Can't answer — hands full, focused on the task. Check missed call at break. Customer already booked someone else.
+                      You're mid-job and your phone rings. Can't answer: hands full, focused on the task. Check missed call at break. Customer already booked someone else.
                     </p>
                   </div>
                 </div>
@@ -258,7 +258,7 @@ export default function ForPlumberEdinburghPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your Edinburgh number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your Edinburgh number. Katie picks up in under 2 rings with your branded greeting, 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",
@@ -306,10 +306,10 @@ export default function ForPlumberEdinburghPage() {
             </div>
             <div className="space-y-6 text-[var(--v2-body)] leading-relaxed">
               <p>
-                Edinburgh&apos;s plumbing scene is shaped by its UNESCO-listed Georgian and Victorian architecture, hard water from local reservoirs, and a dense concentration of rental properties. In New Town and Stockbridge, Georgian townhouses with original lead pipework require careful handling — any work on listed properties needs planning consent, and only plumbers with the right experience get these jobs. Leith&apos;s vibrant mix of old port housing and new developments creates constant demand for both emergency repairs and modern installations, while Morningside&apos;s established Victorian homes face the same hard water scaling issues that plague the entire city. With 3,800+ trade businesses competing for 245K households and 1,900 missed calls every week, Edinburgh&apos;s market rewards responsiveness.
+                Edinburgh&apos;s plumbing scene is shaped by its UNESCO-listed Georgian and Victorian architecture, hard water from local reservoirs, and a dense concentration of rental properties. In New Town and Stockbridge, Georgian townhouses with original lead pipework require careful handling: any work on listed properties needs planning consent, and only plumbers with the right experience get these jobs. Leith&apos;s vibrant mix of old port housing and new developments creates constant demand for both emergency repairs and modern installations, while Morningside&apos;s established Victorian homes face the same hard water scaling issues that plague the entire city. With 3,800+ trade businesses competing for 245K households and 1,900 missed calls every week, Edinburgh&apos;s market rewards responsiveness.
               </p>
               <p>
-                The listed building factor is critical here. In New Town especially — a UNESCO World Heritage Site — even internal plumbing alterations can require consent, and estate agents managing short-term lets in the area maintain lists of approved tradespeople who understand these restrictions. A missed call from an estate agent or a homeowner in a listed property isn&apos;t just a lost £275 job — it&apos;s a lost relationship with a client who needs ongoing maintenance. Katie captures the property type and urgency, ensuring that when a call comes in from a Georgian townhouse or a Leith tenement, you have the details to respond with the right expertise.
+                The listed building factor is critical here. In New Town especially (a UNESCO World Heritage Site), even internal plumbing alterations can require consent, and estate agents managing short-term lets in the area maintain lists of approved tradespeople who understand these restrictions. A missed call from an estate agent or a homeowner in a listed property isn&apos;t just a lost £275 job. It&apos;s a lost relationship with a client who needs ongoing maintenance. Katie captures the property type and urgency, ensuring that when a call comes in from a Georgian townhouse or a Leith tenement, you have the details to respond with the right expertise.
               </p>
             </div>
           </div>
@@ -328,13 +328,13 @@ export default function ForPlumberEdinburghPage() {
             </div>
             <div className="space-y-6 text-[var(--v2-body)] leading-relaxed">
               <p>
-                From Georgian townhouses in the New Town to Victorian tenements in Leith and Marchmont, Edinburgh&apos;s plumbing trade operates in a city where history and modernity collide. Category A listed buildings in Stockbridge and Comely Bank retain original lead piping that requires specialist knowledge and careful handling. With 47% of the city centre designated as a UNESCO World Heritage Site, almost every external repair needs planning permission — customers who call expect trades who understand these constraints.
+                From Georgian townhouses in the New Town to Victorian tenements in Leith and Marchmont, Edinburgh&apos;s plumbing trade operates in a city where history and modernity collide. Category A listed buildings in Stockbridge and Comely Bank retain original lead piping that requires specialist knowledge and careful handling. With 47% of the city centre designated as a UNESCO World Heritage Site, almost every external repair needs planning permission. Customers who call expect trades who understand these constraints.
               </p>
               <p>
-                Hard water in west Edinburgh — particularly Corstorphine and Balerno — causes severe limescale buildup that destroys boilers and narrows pipes. East-coast winds from the Firth of Forth drive rain horizontally into roof spaces and down external walls, creating hidden damp that manifests as plumbing emergencies. Winter temperatures regularly drop below freezing, and with sunset around 3:30pm in December, emergency callouts often happen in darkness.
+                Hard water in west Edinburgh, particularly Corstorphine and Balerno, causes severe limescale buildup that destroys boilers and narrows pipes. East-coast winds from the Firth of Forth drive rain horizontally into roof spaces and down external walls, creating hidden damp that manifests as plumbing emergencies. Winter temperatures regularly drop below freezing, and with sunset around 3:30pm in December, emergency callouts often happen in darkness.
               </p>
               <p>
-                Edinburgh&apos;s affluent market — the highest average household income outside London — means customers expect professionalism and pay for quality. But with 60,000+ students and a booming short-term let economy in the Old and New Towns, property managers need rapid turnaround on maintenance calls. When an Airbnb host in Bruntsfield reports a leak between changeovers, Katie captures the urgency, the time pressure, and delivers everything to your WhatsApp before the next guest checks in.
+                Edinburgh&apos;s affluent market, the highest average household income outside London, means customers expect professionalism and pay for quality. But with 60,000+ students and a booming short-term let economy in the Old and New Towns, property managers need rapid turnaround on maintenance calls. When an Airbnb host in Bruntsfield reports a leak between changeovers, Katie captures the urgency, the time pressure, and delivers everything to your WhatsApp before the next guest checks in.
               </p>
             </div>
           </div>

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "AI Call Answering for Builders in London | whoza.ai",
     description: "Stop losing builder jobs to missed calls in London. Katie answers 24/7, captures extension and renovation enquiries via WhatsApp. Plans from £59/month.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Builders in London" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Builders in London" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     "question": "Does it work with my existing London business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing London business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "answer": "Yes. You simply set up call forwarding from your existing London business number to your whoza.ai number. Your customers dial the same number they've always used. Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
     "question": "How quickly can I get set up as a builder in London?",
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     "question": "What makes whoza.ai different for builders in London?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for builders. She understands extension enquiries, renovation quotes, new build leads & commercial contracts — and with 32,000+ trade businesses competing in London, capturing every call gives you a real competitive edge."
+    "answer": "Unlike generic call answering services, Katie is trained specifically for builders. She understands extension enquiries, renovation quotes, new build leads & commercial contracts, and with 32,000+ trade businesses competing in London, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -97,7 +97,7 @@ export default function ForBuilderLondonPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   London has 32,000+ trade businesses competing for 1.2M households. 
                   With 8,200 missed calls every week across the city, 
-                  Katie ensures you capture every building enquiry — extension enquiries, renovation quotes, new build leads & commercial contracts.
+                  Katie ensures you capture every building enquiry: extension enquiries, renovation quotes, new build leads & commercial contracts.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -132,7 +132,7 @@ export default function ForBuilderLondonPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -199,7 +199,7 @@ export default function ForBuilderLondonPage() {
                 The Real Cost of Missed Calls for Builders in London
               </h2>
               <p className="v2-lead max-w-2xl mx-auto">
-                High competition — 15+ trade businesses per postcode in central London. Emergency calls peak during commute hours when you're on the road. Diverse housing stock from Victorian terraces to new-build apartments. Tenant vs landlord enquiries need different handling.
+                High competition: 15+ trade businesses per postcode in central London. Emergency calls peak during commute hours when you're on the road. Diverse housing stock from Victorian terraces to new-build apartments. Tenant vs landlord enquiries need different handling.
               </p>
             </div>
             <div className="space-y-8">
@@ -261,7 +261,7 @@ export default function ForBuilderLondonPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your London number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your London number. Katie picks up in under 2 rings with your branded greeting, 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",
@@ -311,13 +311,13 @@ export default function ForBuilderLondonPage() {
             </div>
             <div className="space-y-6 text-[var(--v2-body)] leading-relaxed">
               <p>
-                From Kensington and Chelsea to Hackney and Stratford, London&apos;s builder market is fiercely competitive. Victorian terraces in Islington and period conversions in Camden demand specialist trades who understand Party Wall Act requirements and conservation area planning restrictions. With 15+ trade businesses per postcode in central London, customers rarely wait for a callback — they simply call the next number on Google.
+                From Kensington and Chelsea to Hackney and Stratford, London&apos;s builder market is fiercely competitive. Victorian terraces in Islington and period conversions in Camden demand specialist trades who understand Party Wall Act requirements and conservation area planning restrictions. With 15+ trade businesses per postcode in central London, customers rarely wait for a callback. They simply call the next number on Google.
               </p>
               <p>
                 The housing stock varies dramatically by borough. Croydon and Bromley in the south are dominated by 1930s semi-detached homes ripe for loft conversions and rear extensions, while Canary Wharf and Nine Elms see constant warranty-period snagging on new-build apartments. Winter freeze-thaw cycles stress older roofing across the city, and summer heatwaves drive air conditioning and ventilation enquiries that builders increasingly field.
               </p>
               <p>
-                Parking and congestion add hidden friction too — trades spend 20–30% of billable time navigating ULEZ, congestion charge, and resident parking restrictions. When a caller in Kensington books a £45k basement dig without understanding access costs, Katie captures the enquiry, flags the postcode, and gives you the full context before you commit to a site visit. That qualification alone saves hours of unbillable travel.
+                Parking and congestion add hidden friction too: trades spend 20 to 30% of billable time navigating ULEZ, congestion charge, and resident parking restrictions. When a caller in Kensington books a £45k basement dig without understanding access costs, Katie captures the enquiry, flags the postcode, and gives you the full context before you commit to a site visit. That qualification alone saves hours of unbillable travel.
               </p>
             </div>
           </div>

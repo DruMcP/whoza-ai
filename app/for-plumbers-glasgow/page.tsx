@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "AI Call Answering for Plumbers in Glasgow | whoza.ai",
     description: "Stop losing plumber jobs to missed calls in Glasgow. Katie answers 24/7, captures burst pipe and boiler enquiries via WhatsApp. Plans from £59/month.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Plumbers in Glasgow" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Plumbers in Glasgow" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     "question": "Does it work with my existing Glasgow business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing Glasgow business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "answer": "Yes. You simply set up call forwarding from your existing Glasgow business number to your whoza.ai number. Your customers dial the same number they've always used. Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
     "question": "How quickly can I get set up as a plumber in Glasgow?",
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     "question": "What makes whoza.ai different for plumbers in Glasgow?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for plumbers. She understands burst pipes, boiler repairs, leak detection, drainage & installations — and with 5,500+ trade businesses competing in Glasgow, capturing every call gives you a real competitive edge."
+    "answer": "Unlike generic call answering services, Katie is trained specifically for plumbers. She understands burst pipes, boiler repairs, leak detection, drainage & installations, and with 5,500+ trade businesses competing in Glasgow, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -97,7 +97,7 @@ export default function ForPlumberGlasgowPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Glasgow has 5,500+ trade businesses competing for 310K households. 
                   With 2,600 missed calls every week across the city, 
-                  Katie ensures you capture every plumbing enquiry — burst pipes, boiler repairs, leak detection, drainage & installations.
+                  Katie ensures you capture every plumbing enquiry: burst pipes, boiler repairs, leak detection, drainage & installations.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -132,7 +132,7 @@ export default function ForPlumberGlasgowPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -197,7 +197,7 @@ export default function ForPlumberGlasgowPage() {
                 The Real Cost of Missed Calls for Plumbers in Glasgow
               </h2>
               <p className="v2-lead max-w-2xl mx-auto">
-                Tenement buildings have shared systems — emergencies affect multiple flats. Harsh winters cause boiler and heating emergencies to spike. Older housing stock needs frequent updates.
+                Tenement buildings have shared systems. Emergencies affect multiple flats. Harsh winters cause boiler and heating emergencies to spike. Older housing stock needs frequent updates.
               </p>
             </div>
             <div className="space-y-8">
@@ -209,7 +209,7 @@ export default function ForPlumberGlasgowPage() {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">While You're on the Job</h3>
                     <p className="text-[var(--v2-body)] leading-relaxed">
-                      You're mid-job and your phone rings. Can't answer — hands full, focused on the task. Check missed call at break. Customer already booked someone else.
+                      You're mid-job and your phone rings. Can't answer: hands full, focused on the task. Check missed call at break. Customer already booked someone else.
                     </p>
                   </div>
                 </div>
@@ -258,7 +258,7 @@ export default function ForPlumberGlasgowPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your Glasgow number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your Glasgow number. Katie picks up in under 2 rings with your branded greeting, 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",
@@ -306,7 +306,7 @@ export default function ForPlumberGlasgowPage() {
             </div>
             <div className="space-y-6 text-[var(--v2-body)] leading-relaxed">
               <p>
-                Glasgow&apos;s plumbing market is defined by tenement living and the city&apos;s position as the UK&apos;s rainiest major city. In Hyndland and Partick, traditional sandstone tenements share drainage and supply systems — when a pipe bursts in one flat, it can affect multiple neighbours, creating urgent multi-property calls that demand immediate response. Pollokshields&apos; mix of Victorian villas and tenement flats adds further variety, while Bearsden&apos;s suburban detached homes bring their own set of challenges with private drainage and larger-scale bathroom renovations. With 4,800+ trade businesses serving 310K households and 2,400 missed calls weekly, Glasgow&apos;s plumbers are in constant demand.
+                Glasgow&apos;s plumbing market is defined by tenement living and the city&apos;s position as the UK&apos;s rainiest major city. In Hyndland and Partick, traditional sandstone tenements share drainage and supply systems: when a pipe bursts in one flat, it can affect multiple neighbours, creating urgent multi-property calls that demand immediate response. Pollokshields&apos; mix of Victorian villas and tenement flats adds further variety, while Bearsden&apos;s suburban detached homes bring their own set of challenges with private drainage and larger-scale bathroom renovations. With 4,800+ trade businesses serving 310K households and 2,400 missed calls weekly, Glasgow&apos;s plumbers are in constant demand.
               </p>
               <p>
                 A uniquely Glasgow factor is the role of factoring companies in tenement buildings. In areas like Hyndland and Partick, repairs to shared systems often require approval from factoring companies or the building&apos;s factor, and plumbers who are on approved contractor lists get priority access to these jobs. Missing a call from a factor or a resident dealing with a shared drain blockage means losing not just one job but potentially an ongoing contract for the entire building. Katie captures whether a call is a private job or a shared system issue, ensuring you never miss the kind of tenement work that builds long-term revenue in Glasgow&apos;s £200M market.
@@ -331,7 +331,7 @@ export default function ForPlumberGlasgowPage() {
                 From Hyndland and Partick in the West End to Pollokshields and Shawlands in the Southside, Glasgow&apos;s plumbing trade serves one of the most distinctive housing stocks in the UK. Sandstone tenements across Dennistoun and Hillhead share communal drains and pipework that make leak tracing a specialist skill. With 5,500+ trade businesses competing for work, a missed call means the customer moves on to the next number.
               </p>
               <p>
-                Glasgow has the highest rainfall of any major UK city at 1,124mm per year — persistent damp and driving rain cause gutter overflow, roof leaks, and external stone deterioration that infiltrates internal pipework. Shared drains in tenement blocks mean one blocked pipe affects multiple flats, and factoring companies like FirstPort maintain strict approved contractor lists. Harsh winters with frequent freeze-thaw cycles burst exposed pipes, particularly in post-war estates across Castlemilk and Easterhouse.
+                Glasgow has the highest rainfall of any major UK city at 1,124mm per year. Persistent damp and driving rain cause gutter overflow, roof leaks, and external stone deterioration that infiltrates internal pipework. Shared drains in tenement blocks mean one blocked pipe affects multiple flats, and factoring companies like FirstPort maintain strict approved contractor lists. Harsh winters with frequent freeze-thaw cycles burst exposed pipes, particularly in post-war estates across Castlemilk and Easterhouse.
               </p>
               <p>
                 The Glasgow Housing Association manages 43,000 homes and is a major client for responsive trades. Meanwhile, 50,000+ students across three universities create constant HMO maintenance demand. When a factoring company reports a communal drain issue in a West End tenement at 6pm, Katie captures the full context, flags the shared-service complexity, and delivers it to your WhatsApp before you&apos;ve packed up your tools.

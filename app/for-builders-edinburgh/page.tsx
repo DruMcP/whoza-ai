@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "AI Call Answering for Builders in Edinburgh | whoza.ai",
     description: "Stop losing builder jobs to missed calls in Edinburgh. Katie answers 24/7, captures extension and renovation enquiries via WhatsApp. Plans from £59/month.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Builders in Edinburgh" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Builders in Edinburgh" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     "question": "Does it work with my existing Edinburgh business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing Edinburgh business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "answer": "Yes. You simply set up call forwarding from your existing Edinburgh business number to your whoza.ai number. Your customers dial the same number they've always used. Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
     "question": "How quickly can I get set up as a builder in Edinburgh?",
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     "question": "What makes whoza.ai different for builders in Edinburgh?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for builders. She understands extensions, renovations & new builds — and with 4,500+ trade businesses competing in Edinburgh, capturing every call gives you a real competitive edge."
+    "answer": "Unlike generic call answering services, Katie is trained specifically for builders. She understands extensions, renovations & new builds, and with 4,500+ trade businesses competing in Edinburgh, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -97,7 +97,7 @@ export default function ForBuilderEdinburghPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Edinburgh has 4,500+ trade businesses competing for 245K households. 
                   With 2,200 missed calls every week across the city, 
-                  Katie ensures you capture every building enquiry — extensions, renovations & new builds.
+                  Katie ensures you capture every building enquiry: extensions, renovations & new builds.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -132,7 +132,7 @@ export default function ForBuilderEdinburghPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -209,7 +209,7 @@ export default function ForBuilderEdinburghPage() {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">While You're on the Job</h3>
                     <p className="text-[var(--v2-body)] leading-relaxed">
-                      You're mid-job and your phone rings. Can't answer — hands full, focused on the task. Check missed call at break. Customer already booked someone else.
+                      You're mid-job and your phone rings. Can't answer: hands full, focused on the task. Check missed call at break. Customer already booked someone else.
                     </p>
                   </div>
                 </div>
@@ -258,7 +258,7 @@ export default function ForBuilderEdinburghPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your Edinburgh number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your Edinburgh number. Katie picks up in under 2 rings with your branded greeting, 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",
@@ -308,13 +308,13 @@ export default function ForBuilderEdinburghPage() {
             </div>
             <div className="space-y-6 text-[var(--v2-body)] leading-relaxed">
               <p>
-                The New Town and Stockbridge are home to Georgian townhouses built between 1760 and 1840 — Category A listed buildings where almost every external alteration requires planning permission and listed building consent. Kitchen and bathroom renovations inside these properties command premium rates but demand trades who understand the constraints. Leith and Portobello offer a different dynamic: regeneration areas with new-build apartments alongside Victorian tenements that need sympathetic restoration.
+                The New Town and Stockbridge are home to Georgian townhouses built between 1760 and 1840, Category A listed buildings where almost every external alteration requires planning permission and listed building consent. Kitchen and bathroom renovations inside these properties command premium rates but demand trades who understand the constraints. Leith and Portobello offer a different dynamic: regeneration areas with new-build apartments alongside Victorian tenements that need sympathetic restoration.
               </p>
               <p>
                 Edinburgh is colder and drier than Glasgow but exposed to high winds from the Firth of Forth. East-coast winds drive rain horizontally, damaging roofs and exterior pointing on properties across Morningside and Bruntsfield. Winter temperatures regularly drop below freezing, and with sunset as early as 3:30pm in December, emergency building repairs often need immediate response outside normal working hours.
               </p>
               <p>
-                The city&apos;s tourism economy creates a unique pressure: short-term let operators in the Old Town and New Town need rapid turnaround between bookings. A leaking shower or broken lock discovered at 7pm on a Friday can mean a cancelled reservation. Property managers handling multiple Airbnb units need builders who answer immediately — and when you&apos;re mid-job in Corstorphine, Katie ensures that urgent repair enquiry never hits voicemail.
+                The city&apos;s tourism economy creates a unique pressure: short-term let operators in the Old Town and New Town need rapid turnaround between bookings. A leaking shower or broken lock discovered at 7pm on a Friday can mean a cancelled reservation. Property managers handling multiple Airbnb units need builders who answer immediately, and when you&apos;re mid-job in Corstorphine, Katie ensures that urgent repair enquiry never hits voicemail.
               </p>
             </div>
           </div>

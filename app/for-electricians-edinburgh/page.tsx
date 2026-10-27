@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "AI Call Answering for Electricians in Edinburgh | whoza.ai",
     description: "Stop losing electrician jobs to missed calls in Edinburgh. Katie answers 24/7, captures emergency and EICR enquiries via WhatsApp. Plans from £59/month.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Electricians in Edinburgh" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Electricians in Edinburgh" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     "question": "Does it work with my existing Edinburgh business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing Edinburgh business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "answer": "Yes. You simply set up call forwarding from your existing Edinburgh business number to your whoza.ai number. Your customers dial the same number they've always used. Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
     "question": "How quickly can I get set up as an electrician in Edinburgh?",
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     "question": "What makes whoza.ai different for electricians in Edinburgh?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for electricians. She understands rewiring, consumer units, EICR certificates, emergency faults & EV chargers — and with 4,500+ trade businesses competing in Edinburgh, capturing every call gives you a real competitive edge."
+    "answer": "Unlike generic call answering services, Katie is trained specifically for electricians. She understands rewiring, consumer units, EICR certificates, emergency faults & EV chargers, and with 4,500+ trade businesses competing in Edinburgh, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -97,7 +97,7 @@ export default function ForElectricianEdinburghPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Edinburgh has 4,500+ trade businesses competing for 245K households. 
                   With 2,200 missed calls every week across the city, 
-                  Katie ensures you capture every electrical enquiry — rewiring, consumer units, EICR certificates, emergency faults & EV chargers.
+                  Katie ensures you capture every electrical enquiry: rewiring, consumer units, EICR certificates, emergency faults & EV chargers.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -132,7 +132,7 @@ export default function ForElectricianEdinburghPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -209,7 +209,7 @@ export default function ForElectricianEdinburghPage() {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">While You're on the Job</h3>
                     <p className="text-[var(--v2-body)] leading-relaxed">
-                      You're mid-job and your phone rings. Can't answer — hands full, focused on the task. Check missed call at break. Customer already booked someone else.
+                      You're mid-job and your phone rings. Can't answer: hands full, focused on the task. Check missed call at break. Customer already booked someone else.
                     </p>
                   </div>
                 </div>
@@ -258,7 +258,7 @@ export default function ForElectricianEdinburghPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your Edinburgh number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your Edinburgh number. Katie picks up in under 2 rings with your branded greeting, 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",
@@ -306,10 +306,10 @@ export default function ForElectricianEdinburghPage() {
             </div>
             <div className="space-y-6 text-[var(--v2-body)] leading-relaxed">
               <p>
-                Edinburgh&apos;s electrical market combines heritage constraints, student rental demand, and strict conservation rules. In Marchmont and Newington, Victorian and Georgian properties with original wiring need careful upgrading — particularly in student HMOs where annual electrical inspections are mandatory under licensing rules. Bruntsfield&apos;s established family homes generate demand for modern consumer units and EV charger installations, while Corstorphine&apos;s suburban semis need regular EICR updates as properties change hands. With 4,500+ trade businesses competing for 245K households and 2,200 missed calls every week, Edinburgh rewards electricians who understand the city&apos;s unique requirements.
+                Edinburgh&apos;s electrical market combines heritage constraints, student rental demand, and strict conservation rules. In Marchmont and Newington, Victorian and Georgian properties with original wiring need careful upgrading, particularly in student HMOs where annual electrical inspections are mandatory under licensing rules. Bruntsfield&apos;s established family homes generate demand for modern consumer units and EV charger installations, while Corstorphine&apos;s suburban semis need regular EICR updates as properties change hands. With 4,500+ trade businesses competing for 245K households and 2,200 missed calls every week, Edinburgh rewards electricians who understand the city&apos;s unique requirements.
               </p>
               <p>
-                The UNESCO World Heritage Site status adds a layer of complexity found nowhere else in the UK. In the New Town and Old Town, even internal electrical alterations in listed buildings may require planning consent, and work must be carried out by electricians who understand both modern Part P requirements and conservation guidelines. Estate agents managing short-term lets in these areas maintain lists of approved contractors who can navigate this dual compliance landscape. A missed call from an agent with a portfolio of heritage properties isn&apos;t just a lost £315 job — it&apos;s a lost entry point to some of Edinburgh&apos;s most lucrative recurring work. Katie captures the property type, location, and urgency, ensuring you have the full picture before you even return the call.
+                The UNESCO World Heritage Site status adds a layer of complexity found nowhere else in the UK. In the New Town and Old Town, even internal electrical alterations in listed buildings may require planning consent, and work must be carried out by electricians who understand both modern Part P requirements and conservation guidelines. Estate agents managing short-term lets in these areas maintain lists of approved contractors who can navigate this dual compliance landscape. A missed call from an agent with a portfolio of heritage properties isn&apos;t just a lost £315 job. It&apos;s a lost entry point to some of Edinburgh&apos;s most lucrative recurring work. Katie captures the property type, location, and urgency, ensuring you have the full picture before you even return the call.
               </p>
             </div>
           </div>
@@ -328,13 +328,13 @@ export default function ForElectricianEdinburghPage() {
             </div>
             <div className="space-y-6 text-[var(--v2-body)] leading-relaxed">
               <p>
-                From Georgian townhouses in the New Town to Victorian tenements in Marchmont and Newington, Edinburgh&apos;s electrical trade operates in a city where almost every job requires specialist knowledge. Category A listed buildings in Stockbridge retain original wiring that needs sympathetic upgrading without damaging historic fabric. With 47% of the city centre a UNESCO World Heritage Site, external electrical work almost always needs planning permission — customers expect trades who understand these constraints.
+                From Georgian townhouses in the New Town to Victorian tenements in Marchmont and Newington, Edinburgh&apos;s electrical trade operates in a city where almost every job requires specialist knowledge. Category A listed buildings in Stockbridge retain original wiring that needs sympathetic upgrading without damaging historic fabric. With 47% of the city centre a UNESCO World Heritage Site, external electrical work almost always needs planning permission. Customers expect trades who understand these constraints.
               </p>
               <p>
-                The 60,000+ student population across four universities creates relentless EICR demand in HMOs across Marchmont, Newington, and Leith. Edinburgh&apos;s short-term let economy — Airbnb properties in the Old and New Towns — needs rapid-turnaround electrical repairs between changeovers. East-coast winds from the Firth of Forth drive rain horizontally into properties, causing damp that corrodes junction boxes and triggers persistent RCD faults in older installations.
+                The 60,000+ student population across four universities creates relentless EICR demand in HMOs across Marchmont, Newington, and Leith. Edinburgh&apos;s short-term let economy, Airbnb properties in the Old and New Towns, needs rapid-turnaround electrical repairs between changeovers. East-coast winds from the Firth of Forth drive rain horizontally into properties, causing damp that corrodes junction boxes and triggers persistent RCD faults in older installations.
               </p>
               <p>
-                Edinburgh&apos;s affluent market — highest average household income outside London — means customers pay for quality but expect professionalism from first contact. When a property manager in Bruntsfield needs an EICR turned around in 48 hours for a new tenancy, or a Georgian townhouse owner in Comely Bank wants a sympathetic rewire that preserves original features, Katie captures the full brief, flags the specialist requirements, and delivers a structured enquiry that lets you quote accurately without a callback.
+                Edinburgh&apos;s affluent market, highest average household income outside London, means customers pay for quality but expect professionalism from first contact. When a property manager in Bruntsfield needs an EICR turned around in 48 hours for a new tenancy, or a Georgian townhouse owner in Comely Bank wants a sympathetic rewire that preserves original features, Katie captures the full brief, flags the specialist requirements, and delivers a structured enquiry that lets you quote accurately without a callback.
               </p>
             </div>
           </div>

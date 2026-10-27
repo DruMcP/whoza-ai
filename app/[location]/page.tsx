@@ -79,7 +79,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       siteName: "Whoza.ai",
       title: `AI Call Answering ${locationData.city} | whoza.ai`,
       description: citySpecificDescription,
-      images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: `whoza.ai — AI Call Handling in ${locationData.city}` }],
+      images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: `whoza.ai: AI Call Handling in ${locationData.city}` }],
     },
     twitter: {
       card: "summary_large_image",
@@ -119,15 +119,15 @@ export default async function LocationPage({ params }: PageProps) {
   const cityFaqs = [
     {
       question: `Do you cover all areas of ${locationData.city} including suburbs?`,
-      answer: `Yes — Katie answers calls for tradespeople across ${locationData.city} and surrounding areas${locationData.neighbourhoods ? `, including ${locationData.neighbourhoods.slice(0, 6).join(", ")} and beyond` : ""}. Whether you're working in the city centre or the outer suburbs, every missed call gets captured and delivered to your WhatsApp instantly.`,
+      answer: `Yes, Katie answers calls for tradespeople across ${locationData.city} and surrounding areas${locationData.neighbourhoods ? `, including ${locationData.neighbourhoods.slice(0, 6).join(", ")} and beyond` : ""}. Whether you're working in the city centre or the outer suburbs, every missed call gets captured and delivered to your WhatsApp instantly.`,
     },
     {
       question: `What's the average response time for tradespeople in ${locationData.city}?`,
-      answer: `${locationData.responseTime || "Response times vary by trade and how busy you are"}. Katie ensures you never miss the initial enquiry — she answers instantly, 24/7, and sends you the full job details via WhatsApp so you can call back prepared with all the context.`,
+      answer: `${locationData.responseTime || "Response times vary by trade and how busy you are"}. Katie ensures you never miss the initial enquiry: she answers instantly, 24/7, and sends you the full job details via WhatsApp so you can call back prepared with all the context.`,
     },
     {
       question: `Are missed calls a big problem for ${locationData.city} tradespeople?`,
-      answer: `Yes — ${locationData.localStats?.missedCallsWeekly ? `${locationData.localStats.missedCallsWeekly} calls go unanswered every week in ${locationData.city}.` : `research by Moneypenny (2016) found that 33% of small UK businesses fail to answer incoming calls, and ${locationData.city} trades are no exception.`} ${locationData.callVolume || ""} Many tradespeople miss calls while on site, driving between jobs, or during evenings and weekends. At an average job value of ${locationData.localStats?.avgJob || "£280"}, that's significant lost revenue every month. Katie captures every call so you don't lose a single job.`,
+      answer: `Yes, ${locationData.localStats?.missedCallsWeekly ? `${locationData.localStats.missedCallsWeekly} calls go unanswered every week in ${locationData.city}.` : `research by Moneypenny (2016) found that 33% of small UK businesses fail to answer incoming calls, and ${locationData.city} trades are no exception.`} ${locationData.callVolume || ""} Many tradespeople miss calls while on site, driving between jobs, or during evenings and weekends. At an average job value of ${locationData.localStats?.avgJob || "£280"}, that's significant lost revenue every month. Katie captures every call so you don't lose a single job.`,
     },
     {
       question: `Does whoza.ai work with local trade associations in ${locationData.city}?`,
@@ -135,7 +135,7 @@ export default async function LocationPage({ params }: PageProps) {
     },
     {
       question: `Can Katie handle emergency calls in ${locationData.city} at night and weekends?`,
-      answer: `Yes — Katie answers 24/7, including nights, weekends, and bank holidays. She identifies emergency keywords and marks urgent enquiries with priority flags in your WhatsApp. Whether it's a burst pipe at 2am or a boiler breakdown on Christmas Day, Katie captures the details and alerts you immediately.`,
+      answer: `Yes, Katie answers 24/7, including nights, weekends, and bank holidays. She identifies emergency keywords and marks urgent enquiries with priority flags in your WhatsApp. Whether it's a burst pipe at 2am or a boiler breakdown on Christmas Day, Katie captures the details and alerts you immediately.`,
     },
     {
       question: `How quickly can I get set up in ${locationData.city}?`,
@@ -154,7 +154,7 @@ export default async function LocationPage({ params }: PageProps) {
             "@context": "https://schema.org",
             "@type": "Service",
             "@id": `https://whoza.ai/${location}#service`,
-            "name": `whoza.ai — AI Call Answering in ${locationData.city}`,
+            "name": `whoza.ai: AI Call Answering in ${locationData.city}`,
             "url": `https://whoza.ai/${location}`,
             "provider": { "@id": "https://whoza.ai/#organization" },
             "areaServed": {
@@ -187,7 +187,7 @@ export default async function LocationPage({ params }: PageProps) {
       />
       <FAQPageSchema faqs={cityFaqs} />
       <VideoSchema
-        name={`Whoza.ai Demo — AI Call Handling in ${locationData.city}`}
+        name={`Whoza.ai Demo: AI Call Handling in ${locationData.city}`}
         description={`Watch how Whoza.ai's Katie captures a missed enquiry in under 60 seconds for ${locationData.trades?.slice(0, 2).join(", ") || "tradespeople"} in ${locationData.city}. The call is answered instantly, the enquiry lands in WhatsApp, and you accept or decline in two taps.`}
         embedUrl={`https://whoza.ai/${location}`}
       />
@@ -254,7 +254,7 @@ export default async function LocationPage({ params }: PageProps) {
         <div className="section-divider" />
         <section className="py-12 bg-[var(--v2-navy)] text-white dark-section">
           <div className="max-w-7xl mx-auto px-4 text-center">
-            <p className="text-white/60 text-sm mb-4">Experience the demo — no signup needed</p>
+            <p className="text-white/60 text-sm mb-4">Experience the demo, no signup needed</p>
             <TrilletVoiceWidget buttonLabel="Talk to Katie" />
           </div>
         </section>
@@ -357,7 +357,7 @@ export default async function LocationPage({ params }: PageProps) {
         <FinalCTA />
       </main>
 
-      <Footer />
+      <Footer hideCta />
       <FloatingChatWidget />
     </LocaleProvider>
   )

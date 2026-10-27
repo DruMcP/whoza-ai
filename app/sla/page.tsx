@@ -6,7 +6,7 @@ import { Shield } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Service Level Agreement | whoza.ai",
-  description: "whoza.ai SLA — 99.5% uptime guarantee. ICO-registered (ZC077271). UK-based support. Learn our service level commitments.",
+  description: "whoza.ai SLA: a 99.5% uptime guarantee. ICO-registered (ZC077271). UK-based support. Learn our service level commitments.",
   alternates: {
     canonical: "https://whoza.ai/sla",
   },
@@ -70,11 +70,11 @@ export default function ServiceLevelAgreement() {
                 </thead>
                 <tbody>
                   <tr className="border-t border-[var(--v2-line)]">
-                    <td className="px-4 py-3">99.0% – 99.4%</td>
+                    <td className="px-4 py-3">99.0% to 99.4%</td>
                     <td className="px-4 py-3">10% of monthly fee</td>
                   </tr>
                   <tr className="border-t border-[var(--v2-line)]">
-                    <td className="px-4 py-3">98.0% – 98.9%</td>
+                    <td className="px-4 py-3">98.0% to 98.9%</td>
                     <td className="px-4 py-3">25% of monthly fee</td>
                   </tr>
                   <tr className="border-t border-[var(--v2-line)]">
@@ -142,7 +142,7 @@ export default function ServiceLevelAgreement() {
           <section className="mb-10">
             <h2 className="text-xl font-semibold mb-4">5. Scheduled Maintenance</h2>
             <p className="text-[var(--v2-body)] leading-relaxed">
-              We may perform scheduled maintenance to improve the service. We will notify you at least 48 hours in advance via email and WhatsApp. Maintenance windows are typically outside UK business hours (20:00 – 06:00 GMT).
+              We may perform scheduled maintenance to improve the service. We will notify you at least 48 hours in advance via email and WhatsApp. Maintenance windows are typically outside UK business hours (20:00 to 06:00 GMT).
             </p>
           </section>
 
@@ -159,22 +159,22 @@ export default function ServiceLevelAgreement() {
                 </thead>
                 <tbody>
                   <tr className="border-t border-[var(--v2-line)]">
-                    <td className="px-4 py-3"><strong>Critical</strong> — Service down</td>
+                    <td className="px-4 py-3"><strong>Critical</strong>: Service down</td>
                     <td className="px-4 py-3">Within 1 hour</td>
                     <td className="px-4 py-3">4 hours</td>
                   </tr>
                   <tr className="border-t border-[var(--v2-line)]">
-                    <td className="px-4 py-3"><strong>High</strong> — Major feature impaired</td>
+                    <td className="px-4 py-3"><strong>High</strong>: Major feature impaired</td>
                     <td className="px-4 py-3">Within 4 hours</td>
                     <td className="px-4 py-3">24 hours</td>
                   </tr>
                   <tr className="border-t border-[var(--v2-line)]">
-                    <td className="px-4 py-3"><strong>Medium</strong> — Minor issue</td>
+                    <td className="px-4 py-3"><strong>Medium</strong>: Minor issue</td>
                     <td className="px-4 py-3">Within 24 hours</td>
                     <td className="px-4 py-3">72 hours</td>
                   </tr>
                   <tr className="border-t border-[var(--v2-line)]">
-                    <td className="px-4 py-3"><strong>Low</strong> — Question or request</td>
+                    <td className="px-4 py-3"><strong>Low</strong>: Question or request</td>
                     <td className="px-4 py-3">Within 48 hours</td>
                     <td className="px-4 py-3">7 days</td>
                   </tr>

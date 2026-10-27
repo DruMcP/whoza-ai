@@ -25,13 +25,13 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/for-handymen",
     siteName: "Whoza.ai",
-    title: "AI Call Answering for Handymen UK — Never Miss a Job",
+    title: "AI Call Answering for Handymen UK | Never Miss a Job",
     description: "AI call handling for UK handymen. Katie answers 24/7, captures odd jobs, repairs, and maintenance enquiries. WhatsApp alerts in 3 seconds. 7-day free trial.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Handymen" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Handymen" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Call Answering for Handymen UK — Never Miss a Job",
+    title: "AI Call Answering for Handymen UK | Never Miss a Job",
     description: "AI call handling for UK handymen. Katie answers 24/7, captures odd jobs, repairs, and maintenance enquiries. WhatsApp alerts in 3 seconds. 7-day free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
@@ -48,7 +48,7 @@ const faqs = [
   },
   {
     question: "Can Katie handle varied handyman enquiries?",
-    answer: "Absolutely. Katie is trained on the full range of handyman services — from hanging pictures and flat-pack assembly to bathroom refits and full property maintenance. She captures job type, size, urgency, budget, materials needed, and whether it's a landlord or letting agent enquiry. No enquiry is too big or too small.",
+    answer: "Absolutely. Katie is trained on the full range of handyman services, from hanging pictures and flat-pack assembly to bathroom refits and full property maintenance. She captures job type, size, urgency, budget, materials needed, and whether it's a landlord or letting agent enquiry. No enquiry is too big or too small.",
   },
   {
     question: "What information does Katie collect from handyman customers?",
@@ -56,11 +56,11 @@ const faqs = [
   },
   {
     question: "Will customers know they're talking to AI?",
-    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience — they just want their job done fast.",
+    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience. They just want their job done fast.",
   },
   {
     question: "Does it work with my existing business phone number?",
-    answer: "Yes. You simply set up call forwarding from your existing handyman business number to your whoza.ai number. Your customers dial the same number they've always used — Katie just answers when you can't. Setup takes under 10 minutes.",
+    answer: "Yes. You simply set up call forwarding from your existing handyman business number to your whoza.ai number. Your customers dial the same number they've always used. Katie just answers when you can't. Setup takes under 10 minutes.",
   },
   {
     question: "How quickly can I get set up?",
@@ -68,7 +68,7 @@ const faqs = [
   },
   {
     question: "Can Katie handle landlord and letting agent enquiries?",
-    answer: "Yes — and this is one of her strongest features. Katie recognises landlord and letting agent enquiries and tags them as priority. She captures property portfolio size, regular maintenance needs, and contract terms. These are your highest-value repeat customers, and Katie ensures they never hit voicemail.",
+    answer: "Yes, and this is one of her strongest features. Katie recognises landlord and letting agent enquiries and tags them as priority. She captures property portfolio size, regular maintenance needs, and contract terms. These are your highest-value repeat customers, and Katie ensures they never hit voicemail.",
   },
   {
     question: "What happens if Katie can't handle a complex enquiry?",
@@ -82,7 +82,7 @@ export default function ForHandymenPage() {
   return (
     <>
       <VideoSchema
-        name="Whoza.ai for Handymen — AI Call Answering Demo"
+        name="Whoza.ai for Handymen: AI Call Answering Demo"
         description="Watch Katie capture a missed handyman enquiry in under 60 seconds. Flat-pack assembly job answered instantly, details sent to WhatsApp, quote confirmed while the handyman is still on another job."
         embedUrl="https://whoza.ai/for-handymen"
       />
@@ -129,10 +129,10 @@ export default function ForHandymenPage() {
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   AI Call Answering for{" "}
                   <span className="text-[#6ee7b7]">Handymen</span>{" "}
-                  UK — Never Miss a Job
+                  UK: Never Miss a Job
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
-                  Odd jobs, repairs, maintenance, flat-pack assembly — customers call when they need help fast. Katie answers every call, captures the job details, and sends them to your WhatsApp.
+                  Odd jobs, repairs, maintenance, flat-pack assembly. Customers call when they need help fast. Katie answers every call, captures the job details, and sends them to your WhatsApp.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -167,7 +167,7 @@ export default function ForHandymenPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -220,14 +220,14 @@ export default function ForHandymenPage() {
                 {
                   icon: AlertTriangle,
                   title: "Varied Enquiries Need Detail",
-                  description: "Handyman enquiries are varied — from hanging pictures to full bathroom refits — and need detailed capture. You can't tell if it's a £40 shelf fix or a £2k multi-room job from a missed call. Without the details, you can't price, prioritise, or prepare.",
-                  stat: "£40–£2k per job range",
+                  description: "Handyman enquiries are varied, from hanging pictures to full bathroom refits, and need detailed capture. You can't tell if it's a £40 shelf fix or a £2k multi-room job from a missed call. Without the details, you can't price, prioritise, or prepare.",
+                  stat: "£40 to £2k per job range",
                   color: "red",
                 },
                 {
                   icon: Home,
                   title: "Landlord & Agent Calls Lost",
-                  description: "Landlords and letting agents expect fast response — voicemail loses repeat work. A single landlord contract can be worth £1,500/month in regular maintenance. Miss their call and they move to the next handyman on their list.",
+                  description: "Landlords and letting agents expect fast response. Voicemail loses repeat work. A single landlord contract can be worth £1,500/month in regular maintenance. Miss their call and they move to the next handyman on their list.",
                   stat: "£1,500/mo contracts lost",
                   color: "amber",
                 },
@@ -260,7 +260,7 @@ export default function ForHandymenPage() {
                 The average UK handyman misses 47% of calls = <strong>£31,200</strong> in lost revenue per year
               </p>
               <p className="text-[var(--v2-body)] text-sm mt-1">
-                Source: UK SME Communications Survey 2025 — based on £80 avg odd job value, 35% conversion rate
+                Source: UK SME Communications Survey 2025, based on £80 avg odd job value, 35% conversion rate
               </p>
             </div>
           </div>
@@ -285,7 +285,7 @@ export default function ForHandymenPage() {
                   step: "01",
                   icon: Phone,
                   title: "Customer Calls About Handyman Job",
-                  description: "Customer calls your number about an odd job, repair, or maintenance need. Katie picks up in under 2 rings with your branded greeting: 'Hello, Handyman Direct. I'm Katie, how can I help?' — 24/7, even when you're on another job.",
+                  description: "Customer calls your number about an odd job, repair, or maintenance need. Katie picks up in under 2 rings with your branded greeting: 'Hello, Handyman Direct. I'm Katie, how can I help?', 24/7, even when you're on another job.",
                 },
                 {
                   step: "02",

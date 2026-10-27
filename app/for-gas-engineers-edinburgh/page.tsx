@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "AI Call Answering for Gas Engineers in Edinburgh | whoza.ai",
     description: "Stop losing gas engineer jobs to missed calls in Edinburgh. Katie answers 24/7, captures gas leak and safety enquiries via WhatsApp. Plans from £59/month.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Gas Engineers in Edinburgh" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Gas Engineers in Edinburgh" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     "question": "Does it work with my existing Edinburgh business phone number?",
-    "answer": "Yes. You simply set up call forwarding from your existing Edinburgh business number to your whoza.ai number. Your customers dial the same number they've always used — Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
+    "answer": "Yes. You simply set up call forwarding from your existing Edinburgh business number to your whoza.ai number. Your customers dial the same number they've always used. Katie answers when you can't. Setup takes under 10 minutes and works with both mobile and landline numbers."
   },
   {
     "question": "How quickly can I get set up as a gas engineer in Edinburgh?",
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     "question": "What makes whoza.ai different for gas engineers in Edinburgh?",
-    "answer": "Unlike generic call answering services, Katie is trained specifically for gas engineers. She understands Gas Safety certificates, boiler repairs, installations & servicing — and with 4,500+ trade businesses competing in Edinburgh, capturing every call gives you a real competitive edge."
+    "answer": "Unlike generic call answering services, Katie is trained specifically for gas engineers. She understands Gas Safety certificates, boiler repairs, installations & servicing, and with 4,500+ trade businesses competing in Edinburgh, capturing every call gives you a real competitive edge."
   }
 ]
 
@@ -97,7 +97,7 @@ export default function ForGasEngineerEdinburghPage() {
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
                   Edinburgh has 4,500+ trade businesses competing for 245K households. 
                   With 2,200 missed calls every week across the city, 
-                  Katie ensures you capture every gas enquiry — Gas Safety certificates, boiler repairs, installations & servicing.
+                  Katie ensures you capture every gas enquiry: Gas Safety certificates, boiler repairs, installations & servicing.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -132,7 +132,7 @@ export default function ForGasEngineerEdinburghPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -209,7 +209,7 @@ export default function ForGasEngineerEdinburghPage() {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">While You're on the Job</h3>
                     <p className="text-[var(--v2-body)] leading-relaxed">
-                      You're mid-job and your phone rings. Can't answer — hands full, focused on the task. Check missed call at break. Customer already booked someone else.
+                      You're mid-job and your phone rings. Can't answer: hands full, focused on the task. Check missed call at break. Customer already booked someone else.
                     </p>
                   </div>
                 </div>
@@ -258,7 +258,7 @@ export default function ForGasEngineerEdinburghPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: `Customer calls your Edinburgh number. Katie picks up in under 2 rings with your branded greeting — 24/7, even when you're on another job or after hours.`,
+                  description: `Customer calls your Edinburgh number. Katie picks up in under 2 rings with your branded greeting, 24/7, even when you're on another job or after hours.`,
                 },
                 {
                   step: "02",
@@ -308,10 +308,10 @@ export default function ForGasEngineerEdinburghPage() {
             </div>
             <div className="space-y-6 text-[var(--v2-body)] leading-relaxed">
               <p>
-                From Leith and Portobello to Marchmont and Corstorphine, Edinburgh gas engineers serve a market shaped by student rentals, short-term lets, and period properties. With 60,000+ students across four universities, landlords in Marchmont and Newington need annual gas safety checks for high-turnover HMOs. The rise of Airbnb in the Old Town and New Town means property managers need reliable gas engineers who can respond quickly between bookings — especially during August's Fringe Festival when trades are in short supply and emergency callouts command premium rates.
+                From Leith and Portobello to Marchmont and Corstorphine, Edinburgh gas engineers serve a market shaped by student rentals, short-term lets, and period properties. With 60,000+ students across four universities, landlords in Marchmont and Newington need annual gas safety checks for high-turnover HMOs. The rise of Airbnb in the Old Town and New Town means property managers need reliable gas engineers who can respond quickly between bookings, especially during August's Fringe Festival when trades are in short supply and emergency callouts command premium rates.
               </p>
               <p>
-                Edinburgh's 4,500+ trade businesses compete for 245K households, and with the highest average household income outside London, customers expect professionalism. Georgian townhouses and Victorian tenements have complex gas systems that require specialist knowledge, and all gas work must meet strict safety standards. Whether you're certifying a student flat in Leith or responding to a boiler fault in Portobello, Katie captures every call 24/7 and delivers qualified enquiries to your WhatsApp — so you never miss a £315 job.
+                Edinburgh's 4,500+ trade businesses compete for 245K households, and with the highest average household income outside London, customers expect professionalism. Georgian townhouses and Victorian tenements have complex gas systems that require specialist knowledge, and all gas work must meet strict safety standards. Whether you're certifying a student flat in Leith or responding to a boiler fault in Portobello, Katie captures every call 24/7 and delivers qualified enquiries to your WhatsApp, so you never miss a £315 job.
               </p>
             </div>
           </div>

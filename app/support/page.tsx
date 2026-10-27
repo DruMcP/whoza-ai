@@ -7,10 +7,10 @@ import { BookOpen, Mail, MessageSquare, Phone, Clock, Ticket, HelpCircle, Zap, A
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "Support Centre — AI Call Answering Help | whoza.ai",
+  title: "Support Centre: AI Call Answering Help | whoza.ai",
   description: "Get help with whoza.ai AI call answering. Email support, WhatsApp, and callback requests. Setup guides, billing, technical issues. Response within 24 hours.",
   openGraph: {
-    title: "Support Centre — AI Call Answering Help | whoza.ai",
+    title: "Support Centre: AI Call Answering Help | whoza.ai",
     description: "Get help with whoza.ai AI call answering. Email support, WhatsApp, and callback requests. Setup guides, billing, technical issues. Response within 24 hours.",
     url: "https://whoza.ai/support",
     images: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Support Centre — AI Call Answering Help | whoza.ai",
+    title: "Support Centre: AI Call Answering Help | whoza.ai",
     description: "Get help with whoza.ai AI call answering. Email support, WhatsApp, and callback requests. Setup guides, billing, technical issues. Response within 24 hours.",
     images: ["https://whoza.ai/og-image.webp"],
   },
@@ -94,7 +94,7 @@ const commonQuestions = [
   },
   {
     q: "Can I keep my existing business number?",
-    a: "Yes. whoza.ai works with your existing number through call forwarding. You do not need to change your number, business cards, website, or Google Business Profile. Callers dial your usual number — it forwards to Katie seamlessly.",
+    a: "Yes. whoza.ai works with your existing number through call forwarding. You do not need to change your number, business cards, website, or Google Business Profile. Callers dial your usual number. It forwards to Katie seamlessly.",
   },
   {
     q: "How do I upgrade or downgrade my plan?",
@@ -130,7 +130,7 @@ export default function SupportPage() {
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Support Centre</h1>
           <p className="v2-lead max-w-2xl mx-auto">
-            Problem solutions, general enquiries, callbacks, and ticketing — all handled via email for a clear record and fast resolution.
+            Problem solutions, general enquiries, callbacks, and ticketing, all handled via email for a clear record and fast resolution.
           </p>
         </div>
 
@@ -300,7 +300,7 @@ export default function SupportPage() {
           "@context": "https://schema.org",
           "@type": "ContactPage",
           "name": "whoza.ai Support Centre",
-          "description": "Get help with whoza.ai — email support, WhatsApp, and callback requests. Response within 24 hours.",
+          "description": "Get help with whoza.ai: email support, WhatsApp, and callback requests. Response within 24 hours.",
           "url": "https://whoza.ai/support",
           "mainEntity": {
             "@type": "ContactPoint",

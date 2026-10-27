@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "AI for Electricians UK | Catch Every Rewire & Emergency Call",
     description: "UK electricians: stop missing rewire enquiries and emergency callouts. Whoza.ai answers 24/7, qualifies jobs, and sends details to WhatsApp. 7-day free trial.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Electricians" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Electricians" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -58,7 +58,7 @@ const faqs = [
   },
   {
     question: "Can Katie handle electrical emergencies at 2am?",
-    answer: "Yes. Katie answers 24/7, including weekends and bank holidays. She identifies emergency electrical keywords like 'power cut', 'tripping', 'burning smell', 'sparking', 'fuse box', 'no lights' — and marks the enquiry as emergency priority. You get an immediate WhatsApp with 'ELECTRICAL EMERGENCY — URGENT' in the header, even at 2am.",
+    answer: "Yes. Katie answers 24/7, including weekends and bank holidays. She identifies emergency electrical keywords like 'power cut', 'tripping', 'burning smell', 'sparking', 'fuse box', 'no lights', and marks the enquiry as emergency priority. You get an immediate WhatsApp with 'ELECTRICAL EMERGENCY: URGENT' in the header, even at 2am.",
   },
   {
     question: "What information does Katie collect from electrical customers?",
@@ -82,7 +82,7 @@ const faqs = [
   },
   {
     question: "What happens if Katie can't handle a complex electrical enquiry?",
-    answer: "Katie recognises when a call needs human attention — for complex rewiring quotes, three-phase commercial work, or unusual situations. She takes a detailed message, captures all available context, and flags it for your immediate callback. You receive the full details in WhatsApp so you can call back fully prepared.",
+    answer: "Katie recognises when a call needs human attention, for complex rewiring quotes, three-phase commercial work, or unusual situations. She takes a detailed message, captures all available context, and flags it for your immediate callback. You receive the full details in WhatsApp so you can call back fully prepared.",
   },
   {
     question: "How much does an AI receptionist cost in the UK?",
@@ -94,7 +94,7 @@ const faqs = [
   },
   {
     question: "Can an AI receptionist handle emergency electrical calls?",
-    answer: "Yes — Katie identifies emergency electrical keywords like 'power cut' and 'burning smell' and marks them as urgent priority, sending an immediate WhatsApp alert even at 2am.",
+    answer: "Yes. Katie identifies emergency electrical keywords like 'power cut' and 'burning smell' and marks them as urgent priority, sending an immediate WhatsApp alert even at 2am.",
   },
   {
     question: "Will customers know they're talking to AI?",
@@ -102,7 +102,7 @@ const faqs = [
   },
   {
     question: "Can Katie handle rewire and installation quote enquiries?",
-    answer: "Yes. Katie captures installation enquiries with: property type and size, number of rooms, current wiring condition, whether it's a partial or full rewire, and timeline. These high-value enquiries (£2,000-£8,000+) get flagged as 'installation quote' for priority follow-up.",
+    answer: "Yes. Katie captures installation enquiries with: property type and size, number of rooms, current wiring condition, whether it's a partial or full rewire, and timeline. These high-value enquiries (£2,000 to £8,000+) get flagged as 'installation quote' for priority follow-up.",
   },
 ]
 
@@ -112,7 +112,7 @@ export default function ForElectriciansPage() {
   return (
     <>
       <VideoSchema
-        name="Whoza.ai for Electricians — AI Call Answering Demo"
+        name="Whoza.ai for Electricians: AI Call Answering Demo"
         description="Watch Katie capture a missed electrical enquiry in under 60 seconds. Emergency power fault answered instantly, details sent to WhatsApp, job booked while the electrician is still on another site."
         embedUrl="https://whoza.ai/for-electricians"
       />
@@ -197,7 +197,7 @@ export default function ForElectriciansPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -222,11 +222,11 @@ export default function ForElectriciansPage() {
             },
             {
               label: "Job triage",
-              answer: "Katie asks what the electrical issue is — emergency callout, rewire, fuse box, or PAT testing — and estimates urgency. Live wire and power loss are flagged immediately.",
+              answer: "Katie asks what the electrical issue is (emergency callout, rewire, fuse box, or PAT testing) and estimates urgency. Live wire and power loss are flagged immediately.",
             },
             {
               label: "Emergency prioritisation",
-              answer: "Live wire, power loss, sparks, or burning smell — Katie recognises emergency keywords and marks the enquiry as urgent. You get an immediate WhatsApp even at 2am.",
+              answer: "Live wire, power loss, sparks, or burning smell: Katie recognises emergency keywords and marks the enquiry as urgent. You get an immediate WhatsApp even at 2am.",
             },
             {
               label: "Calendar sync",
@@ -305,7 +305,7 @@ export default function ForElectriciansPage() {
                 The average UK electrician misses 4 calls per day = <strong>£43,680</strong> in lost revenue per year
               </p>
               <p className="text-[var(--v2-body)] text-sm mt-1">
-                Source: UK SME Communications Survey 2025 — based on £350 avg job value, 35% conversion rate
+                Source: UK SME Communications Survey 2025, based on £350 avg job value, 35% conversion rate
               </p>
             </div>
           </div>
@@ -330,7 +330,7 @@ export default function ForElectriciansPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: "Customer calls your number. Katie picks up in under 2 rings with your branded greeting: 'Hello, Evans Electrical. I'm Katie, how can I help?' — 24/7, even during dinner or when you're on another job.",
+                  description: "Customer calls your number. Katie picks up in under 2 rings with your branded greeting: 'Hello, Evans Electrical. I'm Katie, how can I help?', 24/7, even during dinner or when you're on another job.",
                 },
                 {
                   step: "02",

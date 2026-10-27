@@ -8,9 +8,9 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
-  title: "The Missed Call Index — UK Trades Missed-Call Research",
+  title: "The Missed Call Index: UK Trades Missed-Call Research",
   description:
-    "33% of UK trade calls go unanswered. The Missed Call Index models the per-trade cost of missed calls — £16K–£33K lost per year — and the fix.",
+    "33% of UK trade calls go unanswered. The Missed Call Index models the per-trade cost of missed calls (£16K to £33K lost per year) and the fix.",
   alternates: {
     canonical: "https://whoza.ai/research/missed-call-index",
   },
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/research/missed-call-index",
     siteName: "Whoza.ai",
-    title: "The Missed Call Index — UK Trades Missed-Call Research",
+    title: "The Missed Call Index: UK Trades Missed-Call Research",
     description:
       "33% of UK trade calls go unanswered. Per-trade cost modelling, seasonal loss patterns, and the data behind the £2.3bn revenue-at-risk figure.",
     images: [
@@ -39,13 +39,13 @@ export const metadata: Metadata = {
         url: "https://whoza.ai/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "The Missed Call Index — UK trades",
+        alt: "The Missed Call Index: UK trades",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Missed Call Index — UK Trades Missed-Call Research",
+    title: "The Missed Call Index: UK Trades Missed-Call Research",
     description:
       "Per-trade cost modelling, seasonal loss patterns, and the data behind missed-call losses for UK trades.",
     images: ["https://whoza.ai/og-image.webp"],
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
 const reportSchema = {
   "@context": "https://schema.org",
   "@type": "Report",
-  "headline": "The Missed Call Index — UK Trades",
+  "headline": "The Missed Call Index: UK Trades",
   "author": {
     "@type": "Person",
     "name": "Dru McPherson",
@@ -75,7 +75,7 @@ const reportSchema = {
   "about": "Unanswered calls to UK trades businesses: rates, costs and AI adoption",
   "mainEntity": {
     "@type": "Dataset",
-    "name": "The Missed Call Index — UK Trades",
+    "name": "The Missed Call Index: UK Trades",
     "description":
       "Index of unanswered call rates and revenue at risk for UK trades businesses, combining Whoza platform data with named third-party sources.",
     "creator": { "@type": "Organization", "name": "Whoza", "url": "https://whoza.ai" },
@@ -97,7 +97,7 @@ const faqSchema = {
       "name": "How many calls do UK tradespeople actually miss?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The average UK tradesperson misses around 6 calls per working day — roughly 30 per week. According to the Moneypenny Small Business Call Report, 33% of small businesses fail to answer incoming calls. This rises to 89% after 6 PM and 94% overnight, with 67% of weekend calls hitting voicemail. Approximately 40% of missed calls are genuine new enquiries.",
+        "text": "The average UK tradesperson misses around 6 calls per working day, roughly 30 per week. According to the Moneypenny Small Business Call Report, 33% of small businesses fail to answer incoming calls. This rises to 89% after 6 PM and 94% overnight, with 67% of weekend calls hitting voicemail. Approximately 40% of missed calls are genuine new enquiries.",
       },
     },
     {
@@ -105,7 +105,7 @@ const faqSchema = {
       "name": "How much does a missed call cost a trade business?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It depends on the trade. Modelled annual losses: roofers £33,150, heating engineers £29,952, plumbers £25,480, builders £24,960, locksmiths £22,464, electricians £19,968, landscapers £19,656, pest control £16,380. Emergency calls command 40–60% premiums over standard rates. The average missed enquiry is worth £98–£105 in expected revenue.",
+        "text": "It depends on the trade. Modelled annual losses: roofers £33,150, heating engineers £29,952, plumbers £25,480, builders £24,960, locksmiths £22,464, electricians £19,968, landscapers £19,656, pest control £16,380. Emergency calls command 40 to 60% premiums over standard rates. The average missed enquiry is worth £98 to £105 in expected revenue.",
       },
     },
     {
@@ -121,7 +121,7 @@ const faqSchema = {
       "name": "Does calling back quickly really matter?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — returning a missed call within 5 minutes increases conversion by 391%. After 30 minutes, your odds of booking the job drop by 80%. 85% of missed callers never ring back, and 69% of voicemail callers hang up without leaving a message. Speed is the single most important factor in recovering missed calls.",
+        "text": "Yes, returning a missed call within 5 minutes increases conversion by 391%. After 30 minutes, your odds of booking the job drop by 80%. 85% of missed callers never ring back, and 69% of voicemail callers hang up without leaving a message. Speed is the single most important factor in recovering missed calls.",
       },
     },
   ],
@@ -157,7 +157,7 @@ export default function MissedCallIndexPage() {
         {/* Hero */}
         <header className="mb-12">
           <p className="text-[var(--v2-green)] font-semibold text-sm uppercase tracking-widest mb-3">Whoza Research</p>
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6">The Missed Call Index — UK Trades Missed-Call Research</h1>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-6">The Missed Call Index: UK Trades Missed-Call Research</h1>
           <p className="text-[var(--v2-body)] text-lg">
             Original analysis of 10,000+ trade calls, combined with named third-party sources. By{" "}
             <span className="text-[var(--v2-ink)] font-medium">Dru McPherson</span>, Founder &amp; CEO, whoza.ai.
@@ -169,17 +169,17 @@ export default function MissedCallIndexPage() {
           <p className="intro-paragraph text-[var(--v2-body)] leading-relaxed text-lg mb-4">
             A third of calls to UK small businesses go unanswered. For trades, it is worse: when you are under a
             sink, up a ladder, or on scaffolding, you physically cannot answer the phone. The Moneypenny Small
-            Business Call Report found 33% of small businesses fail to answer incoming calls during working hours —
+            Business Call Report found 33% of small businesses fail to answer incoming calls during working hours,
             rising to 89% after 6 PM and 94% overnight.
           </p>
           <p className="text-[var(--v2-body)] leading-relaxed text-lg mb-4">
             The consequences are measurable. 69% of voicemail callers hang up without leaving a message, and
-            85% of missed callers never ring back — they call your competitor instead. This index models what
+            85% of missed callers never ring back. They call your competitor instead. This index models what
             that costs, trade by trade, month by month.
           </p>
           <p className="text-[var(--v2-body)] leading-relaxed text-lg">
             For the quarterly model of revenue at risk across the UK trades sector (£2.3bn), see the{" "}
-            <Link href="/research/missed-call-index/q3-2026" className="text-[var(--v2-green)] hover:underline">Missed Call Index — Q3 2026</Link>.
+            <Link href="/research/missed-call-index/q3-2026" className="text-[var(--v2-green)] hover:underline">Missed Call Index: Q3 2026</Link>.
             Every statistic across our research is sourced in our{" "}
             <Link href="/data" className="text-[var(--v2-green)] hover:underline">Evidence Base</Link>.
           </p>
@@ -209,7 +209,7 @@ export default function MissedCallIndexPage() {
               </h2>
               <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                 This page is the standing index. The quarterly model of sector-wide revenue at risk is published
-                per edition — the latest:{" "}
+                per edition. The latest:{" "}
                 <Link href="/research/missed-call-index/q3-2026" className="text-[var(--v2-green)] hover:underline">Missed Call Index Q3 2026: Findings and Data</Link> (£2.3bn model).
               </p>
             </div>
@@ -228,7 +228,7 @@ export default function MissedCallIndexPage() {
           </div>
           <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 text-center">
             <p className="text-4xl font-bold text-[var(--v2-green)] mb-2">85%</p>
-            <p className="text-[var(--v2-body)] text-sm">of callers who can&apos;t reach a business never call back — they contact a competitor instead</p>
+            <p className="text-[var(--v2-body)] text-sm">of callers who can&apos;t reach a business never call back. They contact a competitor instead</p>
           </div>
         </section>
 
@@ -241,8 +241,8 @@ export default function MissedCallIndexPage() {
           </h2>
           <p className="text-[var(--v2-body)] leading-relaxed mb-6">
             Modelled from missed-call rates, average job values and typical conversion rates. Emergency trades
-            with high-value jobs lose disproportionately more than scheduled trades — and emergency calls
-            command 40–60% premiums over standard rates.
+            with high-value jobs lose disproportionately more than scheduled trades, and emergency calls
+            command 40 to 60% premiums over standard rates.
           </p>
           <div className="bg-white border border-[var(--v2-line)] rounded-2xl overflow-hidden">
             <table className="w-full text-sm">
@@ -283,10 +283,10 @@ export default function MissedCallIndexPage() {
           </h2>
           <p className="text-[var(--v2-body)] leading-relaxed mb-6">
             Scaling the per-trade model nationally: the UK has approximately 885,000 trades businesses (ONS UK
-            Business Demography, 2024). At the Moneypenny baseline of 33% of calls unanswered — rising to 34%
-            for businesses with 2–5 employees (Replicant AI, 2024) — the sector loses an estimated{" "}
+            Business Demography, 2024). At the Moneypenny baseline of 33% of calls unanswered, rising to 34%
+            for businesses with 2 to 5 employees (Replicant AI, 2024), the sector loses an estimated{" "}
             <strong className="text-[var(--v2-ink)]">£2.3 billion per year</strong> to missed calls. The average sole trader
-            loses <strong className="text-[var(--v2-ink)]">£18,400 a year</strong> (range £6,200–£47,000 depending on trade,
+            loses <strong className="text-[var(--v2-ink)]">£18,400 a year</strong> (range £6,200 to £47,000 depending on trade,
             call volume and average job value).
           </p>
           <div className="bg-white border border-[var(--v2-line)] rounded-2xl overflow-hidden mb-6">
@@ -302,31 +302,31 @@ export default function MissedCallIndexPage() {
                 <tr className="bg-white"><td className="px-6 py-4">UK trades businesses</td><td className="px-6 py-4">885,000</td><td className="px-6 py-4">ONS UK Business Demography, 2024</td></tr>
                 <tr><td className="px-6 py-4">Average annual loss per business</td><td className="px-6 py-4">£2,600</td><td className="px-6 py-4">Modelled (FMB State of Trade Survey Q1 2025; Ofcom SME Communications Habits 2024)</td></tr>
                 <tr className="bg-white"><td className="px-6 py-4">Missed-call rate, working hours</td><td className="px-6 py-4">33%</td><td className="px-6 py-4">Moneypenny Small Business Call Report, 2016</td></tr>
-                <tr><td className="px-6 py-4">Missed-call rate, 2–5 employee firms</td><td className="px-6 py-4">34%</td><td className="px-6 py-4">Replicant AI, 2024</td></tr>
+                <tr><td className="px-6 py-4">Missed-call rate, 2 to 5 employee firms</td><td className="px-6 py-4">34%</td><td className="px-6 py-4">Replicant AI, 2024</td></tr>
                 <tr className="bg-white"><td className="px-6 py-4">Implied sector-wide annual loss</td><td className="px-6 py-4 font-bold text-red-600">£2.3 billion</td><td className="px-6 py-4">885,000 × £2,600</td></tr>
               </tbody>
             </table>
           </div>
           <p className="text-[var(--v2-body)] leading-relaxed mb-6">
             The compound effect makes it worse. A single missed call is not just one lost job: it is the immediate
-            job value, plus 2–3 repeat jobs over five years, plus 1–2 referrals, plus the Google review the
+            job value, plus 2 to 3 repeat jobs over five years, plus 1 to 2 referrals, plus the Google review the
             completed job would have generated. Combined, one missed call can represent{" "}
-            <strong className="text-[var(--v2-ink)]">£1,500–£3,000 in lifetime revenue</strong>.
+            <strong className="text-[var(--v2-ink)]">£1,500 to £3,000 in lifetime revenue</strong>.
           </p>
           <div className="grid sm:grid-cols-2 gap-4 mb-6">
             <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
               <h3 className="font-semibold text-[var(--v2-ink)] mb-2">The weekly rhythm: when calls get missed</h3>
               <ul className="text-[var(--v2-body)] text-sm leading-relaxed space-y-1 list-disc list-inside">
-                <li>Monday 8–10am: 40–50% missed (weekend emergency backlog)</li>
-                <li>Lunch 12–2pm: 35–45% missed; emergency-call abandonment peaks at 34% between 12:00–14:00</li>
-                <li>Friday 3–5pm: 30–40% missed (weekend urgency calls)</li>
-                <li>Outside business hours: 70–85% missed (no coverage at all)</li>
+                <li>Monday 8 to 10am: 40 to 50% missed (weekend emergency backlog)</li>
+                <li>Lunch 12 to 2pm: 35 to 45% missed; emergency-call abandonment peaks at 34% between 12:00 and 14:00</li>
+                <li>Friday 3 to 5pm: 30 to 40% missed (weekend urgency calls)</li>
+                <li>Outside business hours: 70 to 85% missed (no coverage at all)</li>
               </ul>
             </div>
             <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
               <h3 className="font-semibold text-[var(--v2-ink)] mb-2">The hidden costs nobody budgets for</h3>
               <ul className="text-[var(--v2-body)] text-sm leading-relaxed space-y-1 list-disc list-inside">
-                <li>Returning voicemail and chasing callbacks: £6,000–£15,000/yr in lost productive time (Replicant AI, 2024)</li>
+                <li>Returning voicemail and chasing callbacks: £6,000 to £15,000/yr in lost productive time (Replicant AI, 2024)</li>
                 <li>The voicemail tax: 69% of callers who reach voicemail leave no message (Moneypenny, 2016)</li>
                 <li>Competitive displacement: 24% of missed calls result in a competitor being contacted within 15 minutes (operator surveys, 2025)</li>
               </ul>
@@ -334,21 +334,21 @@ export default function MissedCallIndexPage() {
           </div>
           <div className="space-y-4 mb-6">
             <blockquote className="border-l-4 border-[var(--v2-green)] pl-4 italic text-[var(--v2-body)]">
-              &ldquo;I was getting 40-50 calls a week and answering maybe 15 of them. The rest went to voicemail,
+              &ldquo;I was getting 40 to 50 calls a week and answering maybe 15 of them. The rest went to voicemail,
               and I knew most of those people never called back. I was working 60-hour weeks and still felt like
               I was treading water.&rdquo;
-              <footer className="text-sm text-[var(--v2-muted)] mt-2 not-italic">— Plumbing contractor, South London</footer>
+              <footer className="text-sm text-[var(--v2-muted)] mt-2 not-italic">Plumbing contractor, South London</footer>
             </blockquote>
             <blockquote className="border-l-4 border-[var(--v2-green)] pl-4 italic text-[var(--v2-body)]">
               &ldquo;Boilers don&apos;t break between 9 and 5. I used to get calls at 8pm from people with no
               heating, and I&apos;d either miss them because I was still on a job, or I&apos;d be too tired to deal
               with it properly. The emergency calls are the best-paying work, and I was giving them away.&rdquo;
-              <footer className="text-sm text-[var(--v2-muted)] mt-2 not-italic">— Gas engineer, Manchester</footer>
+              <footer className="text-sm text-[var(--v2-muted)] mt-2 not-italic">Gas engineer, Manchester</footer>
             </blockquote>
           </div>
           <p className="text-[var(--v2-body)] leading-relaxed">
             Want your own number? The model behind this table powers our free{" "}
-            <Link href="/missed-calls-cost-calculator" className="text-[var(--v2-green)] hover:underline">lost jobs calculator</Link> — enter
+            <Link href="/missed-calls-cost-calculator" className="text-[var(--v2-green)] hover:underline">lost jobs calculator</Link>: enter
             your trade, call volume and average job value to see what unanswered calls cost your business.
           </p>
         </section>
@@ -361,22 +361,22 @@ export default function MissedCallIndexPage() {
           </h2>
           <p className="text-[var(--v2-body)] leading-relaxed mb-6">
             Missed calls are not evenly spread. Based on data from 340 UK trade businesses, losses concentrate
-            in predictable windows — which means they are also predictably recoverable.
+            in predictable windows, which means they are also predictably recoverable.
           </p>
           <div className="space-y-4 mb-8">
             <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
               <h3 className="font-semibold text-[var(--v2-ink)] mb-2">Winter: the heating surge</h3>
               <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                 Boiler breakdown enquiries spike by 340% during cold snaps. Heating engineers lose the most of
-                any trade — £3.1M across our sample in winter alone — and January alone accounts for 34% of their
-                annual missed-call losses. Average emergency job values rise to £280–£450.
+                any trade (£3.1M across our sample in winter alone) and January alone accounts for 34% of their
+                annual missed-call losses. Average emergency job values rise to £280 to £450.
               </p>
             </div>
             <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
               <h3 className="font-semibold text-[var(--v2-ink)] mb-2">Spring and summer: roofing and outdoor trades</h3>
               <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                 Summer storms drive roofing emergencies (£1.8M in our sample), while landscapers and builders peak
-                with the outdoor season. Roofers have the highest per-missed-call cost — one £850 job lost is a
+                with the outdoor season. Roofers have the highest per-missed-call cost: one £850 job lost is a
                 £850 job lost.
               </p>
             </div>
@@ -391,7 +391,7 @@ export default function MissedCallIndexPage() {
               <h3 className="font-semibold text-[var(--v2-ink)] mb-2">Mondays and out-of-hours: the weekly rhythm</h3>
               <p className="text-[var(--v2-body)] text-sm leading-relaxed">
                 Monday mornings are the single worst weekly window across every trade. After 6 PM the unanswered
-                rate hits 89%, overnight 94%, and weekends 67% — precisely when emergency trades (heating, roofing,
+                rate hits 89%, overnight 94%, and weekends 67%, precisely when emergency trades (heating, roofing,
                 locksmiths) take their highest-value calls.
               </p>
             </div>
@@ -407,13 +407,13 @@ export default function MissedCallIndexPage() {
           <p className="text-[var(--v2-body)] leading-relaxed mb-6">
             The single biggest factor in recovering a missed call is how fast you respond. Returning a missed call
             within 5 minutes increases conversion by 391%. After 30 minutes, your odds of booking the job drop by
-            80%. This is why voicemail fails so expensively — the average tradesperson checks voicemail hours
+            80%. This is why voicemail fails so expensively: the average tradesperson checks voicemail hours
             later, long after the caller has booked someone else.
           </p>
           <div className="bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-6">
             <p className="text-[var(--v2-body)] text-sm leading-relaxed">
               <strong className="text-[var(--v2-green)]">The implication:</strong> the fix is not working harder at
-              callbacks — it is never missing the call in the first place. AI answering responds in under
+              callbacks. It is never missing the call in the first place. AI answering responds in under
               3 rings, 24/7, including bank holidays, and delivers the qualified enquiry to WhatsApp within
               seconds of the call ending.
             </p>
@@ -430,7 +430,7 @@ export default function MissedCallIndexPage() {
             London trades lose the most per missed call due to higher average job values, but also face the most
             competition. Northern trades (Manchester, Leeds, Glasgow) have higher missed-call rates (71% vs 58% in
             London) but lower average job values. Rural trades take fewer total calls but convert better when they
-            do answer — making every missed call proportionally more expensive.
+            do answer, making every missed call proportionally more expensive.
           </p>
         </section>
 
@@ -452,9 +452,9 @@ export default function MissedCallIndexPage() {
               >
                 Moneypenny Small Business Call Report
               </a>
-              {" "}(2016) — a survey of 300 UK micro-businesses backed by call data across 10,000 firms;
+              {" "}(2016), a survey of 300 UK micro-businesses backed by call data across 10,000 firms;
               ONS UK Business Demography (2024); the Federation of Master Builders State of Trade Survey (Q1
-              2025); Ofcom SME Communications Habits (2024); Replicant AI research on businesses with 2–5
+              2025); Ofcom SME Communications Habits (2024); Replicant AI research on businesses with 2 to 5
               employees (2024); Checkatrade homeowner data; and Whoza platform data (~50 UK trade businesses,
               Q3 2026 export pending publication in the next quarterly edition).
             </p>
@@ -466,7 +466,7 @@ export default function MissedCallIndexPage() {
             </p>
             <p>
               <strong className="text-[var(--v2-ink)]">Period.</strong> This page is the standing index and is updated as new
-              sources are verified. Quarterly editions publish the full sector model — the latest is the{" "}
+              sources are verified. Quarterly editions publish the full sector model. The latest is the{" "}
               <Link href="/research/missed-call-index/q3-2026" className="text-[var(--v2-green)] hover:underline">Q3 2026 edition</Link>.
             </p>
             <p>
@@ -498,7 +498,7 @@ export default function MissedCallIndexPage() {
         <section className="text-center bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-8">
           <h2 className="text-3xl font-bold mb-4">Stop the Leak</h2>
           <p className="text-lg text-[var(--v2-body)] mb-6 max-w-2xl mx-auto">
-            AI call answering captures 100% of calls 24/7 for £59–£399/month flat — unlimited calls, no contract,
+            AI call answering captures 100% of calls 24/7 for £59 to £399/month flat: unlimited calls, no contract,
             7-day free trial. One recovered job usually covers months of service.
           </p>
           <Link

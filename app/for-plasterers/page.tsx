@@ -25,13 +25,13 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/for-plasterers",
     siteName: "Whoza.ai",
-    title: "AI Call Answering for Plasterers UK — Never Miss a Job",
+    title: "AI Call Answering for Plasterers UK | Never Miss a Job",
     description: "AI call answering for UK plasterers. Katie captures 24/7 skimming, rendering and dry lining enquiries. WhatsApp alerts instantly. Plans from £59. Free trial.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Plasterers" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Plasterers" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Call Answering for Plasterers UK — Never Miss a Job",
+    title: "AI Call Answering for Plasterers UK | Never Miss a Job",
     description: "AI call answering for UK plasterers. Katie captures 24/7 skimming, rendering and dry lining enquiries. WhatsApp alerts instantly. Plans from £59. Free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     question: "Can Katie handle builder and developer enquiries?",
-    answer: "Absolutely. Katie is trained to recognise builder and developer enquiries and tags them as priority in your WhatsApp alert. She captures project size, timeline, property type, and referral source — so you know it's a £3,500 full house re-skim before you even call back.",
+    answer: "Absolutely. Katie is trained to recognise builder and developer enquiries and tags them as priority in your WhatsApp alert. She captures project size, timeline, property type, and referral source, so you know it's a £3,500 full house re-skim before you even call back.",
   },
   {
     question: "What information does Katie collect from plastering customers?",
@@ -60,11 +60,11 @@ const faqs = [
   },
   {
     question: "Will customers know they're talking to AI?",
-    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience — they just want their walls smooth and ready.",
+    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience. They just want their walls smooth and ready.",
   },
   {
     question: "Does it work with my existing business phone number?",
-    answer: "Yes. You simply set up call forwarding from your existing plastering business number to your whoza.ai number. Your customers dial the same number they've always used — Katie just answers when you can't. Setup takes under 10 minutes.",
+    answer: "Yes. You simply set up call forwarding from your existing plastering business number to your whoza.ai number. Your customers dial the same number they've always used. Katie just answers when you can't. Setup takes under 10 minutes.",
   },
   {
     question: "How quickly can I get set up?",
@@ -72,7 +72,7 @@ const faqs = [
   },
   {
     question: "Can Katie handle emergency plaster repair calls?",
-    answer: "Yes. Katie answers 24/7 including nights, weekends, and bank holidays. She identifies emergency keywords like 'crack', 'water damage', 'blown plaster', 'ceiling collapse' — then marks the enquiry as emergency priority in your WhatsApp alert. You see it immediately and can call back within minutes.",
+    answer: "Yes. Katie answers 24/7 including nights, weekends, and bank holidays. She identifies emergency keywords like 'crack', 'water damage', 'blown plaster', 'ceiling collapse', then marks the enquiry as emergency priority in your WhatsApp alert. You see it immediately and can call back within minutes.",
   },
   {
     question: "What happens if Katie can't handle a complex enquiry?",
@@ -86,7 +86,7 @@ export default function ForPlasterersPage() {
   return (
     <>
       <VideoSchema
-        name="Whoza.ai for Plasterers — AI Call Answering Demo"
+        name="Whoza.ai for Plasterers: AI Call Answering Demo"
         description="Watch Katie capture a missed plastering enquiry in under 60 seconds. Full house re-skim enquiry answered instantly, details sent to WhatsApp, job quoted while the plasterer is still on the scaffold."
         embedUrl="https://whoza.ai/for-plasterers"
       />
@@ -133,10 +133,10 @@ export default function ForPlasterersPage() {
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 trade-headline">
                   AI Call Answering for{" "}
                   <span className="text-[#6ee7b7]">Plasterers</span>{" "}
-                  UK — Never Miss a Job
+                  UK: Never Miss a Job
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
-                  Skimming, rendering, dry lining, plaster repair — customers call when they need walls smooth and ready. Katie answers every call, captures the job details, and sends them to your WhatsApp.
+                  Skimming, rendering, dry lining, plaster repair: customers call when they need walls smooth and ready. Katie answers every call, captures the job details, and sends them to your WhatsApp.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -171,7 +171,7 @@ export default function ForPlasterersPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -264,7 +264,7 @@ export default function ForPlasterersPage() {
                 The average UK plasterer misses 4 calls per day = <strong>£36,400</strong> in lost revenue per year
               </p>
               <p className="text-[var(--v2-body)] text-sm mt-1">
-                Source: UK SME Communications Survey 2025 — based on £350 avg job value, 35% conversion rate
+                Source: UK SME Communications Survey 2025, based on £350 avg job value, 35% conversion rate
               </p>
             </div>
             <div className="mt-8 text-center">
@@ -295,7 +295,7 @@ export default function ForPlasterersPage() {
                   step: "01",
                   icon: Phone,
                   title: "Customer Calls About Plastering",
-                  description: "Customer calls your number about skimming, rendering, dry lining, or plaster repair. Katie picks up in under 2 rings with your branded greeting — 24/7, even while you're on the job.",
+                  description: "Customer calls your number about skimming, rendering, dry lining, or plaster repair. Katie picks up in under 2 rings with your branded greeting, 24/7, even while you're on the job.",
                 },
                 {
                   step: "02",
@@ -313,7 +313,7 @@ export default function ForPlasterersPage() {
                   step: "04",
                   icon: Calendar,
                   title: "Quote, Accept, or Schedule",
-                  description: "Tap Accept, Call Back, or Decline in WhatsApp. Customer gets an instant SMS either way. For complex jobs, you call back with full context — knowing it's a £3,500 re-skim before you dial.",
+                  description: "Tap Accept, Call Back, or Decline in WhatsApp. Customer gets an instant SMS either way. For complex jobs, you call back with full context, knowing it's a £3,500 re-skim before you dial.",
                 },
               ].map((item, idx) => {
                 const Icon = item.icon
@@ -358,7 +358,7 @@ export default function ForPlasterersPage() {
               Plasterer Success Story
             </div>
             <blockquote className="text-2xl sm:text-3xl font-medium leading-relaxed text-[var(--v2-ink)] mb-8">
-              "I used to miss 3-4 calls a day because I was on the scaffold with a trowel in my hand. In 6 weeks using whoza.ai, I captured 14 jobs I would have missed, recovering <span className="text-[var(--v2-green)] font-bold">£8,200</span> in revenue. It cost me £59 for the month."
+              "I used to miss 3 to 4 calls a day because I was on the scaffold with a trowel in my hand. In 6 weeks using whoza.ai, I captured 14 jobs I would have missed, recovering <span className="text-[var(--v2-green)] font-bold">£8,200</span> in revenue. It cost me £59 for the month."
             </blockquote>
             <div className="flex items-center justify-center gap-4">
               <div className="w-14 h-14 rounded-full bg-[var(--v2-mint)] flex items-center justify-center text-[var(--v2-green)] font-bold text-xl">

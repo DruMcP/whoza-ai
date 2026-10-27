@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Missed Call Index Q3 2026: Findings and Data",
   description:
-    "A third of UK small-business calls go unanswered. The Missed Call Index Q3 2026 models £2.3bn of trades revenue at risk — the data, the cost, and the fix.",
+    "A third of UK small-business calls go unanswered. The Missed Call Index Q3 2026 models £2.3bn of trades revenue at risk: the data, the cost, and the fix.",
   alternates: {
     canonical: "https://whoza.ai/research/missed-call-index/q3-2026",
   },
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     siteName: "Whoza.ai",
     title: "Missed Call Index Q3 2026: Findings and Data",
     description:
-      "A third of UK small-business calls go unanswered. The Missed Call Index Q3 2026 models £2.3bn of trades revenue at risk — the data, the cost, and the fix.",
+      "A third of UK small-business calls go unanswered. The Missed Call Index Q3 2026 models £2.3bn of trades revenue at risk: the data, the cost, and the fix.",
     images: [
       {
         url: "https://whoza.ai/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "The Missed Call Index — Q3 2026 Edition",
+        alt: "The Missed Call Index: Q3 2026 Edition",
       },
     ],
   },
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Missed Call Index Q3 2026: Findings and Data",
     description:
-      "A third of UK small-business calls go unanswered. The Missed Call Index Q3 2026 models £2.3bn of trades revenue at risk — the data, the cost, and the fix.",
+      "A third of UK small-business calls go unanswered. The Missed Call Index Q3 2026 models £2.3bn of trades revenue at risk: the data, the cost, and the fix.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   other: {
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
 const reportSchema = {
   "@context": "https://schema.org",
   "@type": "Report",
-  "headline": "The Missed Call Index — Q3 2026 Edition",
+  "headline": "The Missed Call Index: Q3 2026 Edition",
   "author": {
     "@type": "Person",
     "name": "Dru McPherson",
@@ -74,7 +74,7 @@ const reportSchema = {
   "about": "Unanswered calls to UK trades businesses: rates, costs and AI adoption",
   "mainEntity": {
     "@type": "Dataset",
-    "name": "The Missed Call Index — Q3 2026",
+    "name": "The Missed Call Index: Q3 2026",
     "description":
       "Quarterly index of unanswered call rates and revenue at risk for UK trades businesses, combining Whoza platform data with named third-party sources.",
     "creator": { "@type": "Organization", "name": "Whoza", "url": "https://whoza.ai" },
@@ -92,7 +92,7 @@ const breadcrumbSchema = {
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://whoza.ai/" },
     { "@type": "ListItem", "position": 2, "name": "Research", "item": "https://whoza.ai/research" },
-    { "@type": "ListItem", "position": 3, "name": "The Missed Call Index — Q3 2026", "item": "https://whoza.ai/research/missed-call-index/q3-2026" },
+    { "@type": "ListItem", "position": 3, "name": "The Missed Call Index: Q3 2026", "item": "https://whoza.ai/research/missed-call-index/q3-2026" },
   ],
 }
 
@@ -181,7 +181,7 @@ export default function MissedCallIndexPage() {
             Q3 2026 Field Report
           </p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
-            The Missed Call Index — Q3 2026 Edition
+            The Missed Call Index: Q3 2026 Edition
           </h1>
           <p className="text-[var(--v2-body)] text-lg">
             A quarterly field report from Whoza on the calls UK trades businesses don&apos;t answer, written by{" "}
@@ -193,7 +193,7 @@ export default function MissedCallIndexPage() {
         <figure className="mb-12">
           <Image
             src="/images/hero_missed_call.webp"
-            alt="A heating engineer up a ladder while a phone rings unanswered on his van dashboard — the £8,000 ladder problem"
+            alt="A heating engineer up a ladder while a phone rings unanswered on his van dashboard: the £8,000 ladder problem"
             width={1280}
             height={720}
             priority
@@ -204,7 +204,7 @@ export default function MissedCallIndexPage() {
           <noscript>
             <img
               src="/images/hero_missed_call.png"
-              alt="A heating engineer up a ladder while a phone rings unanswered on his van dashboard — the £8,000 ladder problem"
+              alt="A heating engineer up a ladder while a phone rings unanswered on his van dashboard: the £8,000 ladder problem"
               className="w-full rounded-2xl"
             />
           </noscript>
@@ -283,7 +283,7 @@ export default function MissedCallIndexPage() {
 
           <div id="finding-4" className="mb-8">
             <h3 className="text-xl font-semibold mb-3">
-              4. Small firms lean on voicemail three times as much as big ones — at exactly the wrong hours
+              4. Small firms lean on voicemail three times as much as big ones, at exactly the wrong hours
             </h3>
             <p className="text-[var(--v2-body)] leading-relaxed text-lg">
               <strong>Small and micro businesses are three times more likely than large ones to rely on voicemail</strong>{" "}
@@ -293,7 +293,7 @@ export default function MissedCallIndexPage() {
 
           <div id="finding-5" className="mb-8">
             <h3 className="text-xl font-semibold mb-3">
-              5. 88% of construction firms don&apos;t use AI — and that&apos;s the opening
+              5. 88% of construction firms don&apos;t use AI, and that&apos;s the opening
             </h3>
             <p className="text-[var(--v2-body)] leading-relaxed text-lg">
               <strong>
@@ -389,7 +389,7 @@ export default function MissedCallIndexPage() {
 
         {/* ─── What a missed call costs ─── */}
         <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-4">What a missed call costs — the calculation, step by step</h2>
+          <h2 className="text-2xl font-bold mb-4">What a missed call costs: the calculation, step by step</h2>
           <p className="text-[var(--v2-body)] leading-relaxed text-lg mb-4">
             No hand-waving. Every input below is either sourced or labelled as our assumption.
           </p>
@@ -408,8 +408,8 @@ export default function MissedCallIndexPage() {
               <em>Stated conservative assumption.</em> That&apos;s one lost job a week.
             </li>
             <li>
-              <strong>Job value.</strong> £50, the midpoint of a typical plumber&apos;s call-out fee (£40–£60,
-              Checkatrade cost guides 2026). We use small-job value, not the £200–£600 full-job figures, to stay
+              <strong>Job value.</strong> £50, the midpoint of a typical plumber&apos;s call-out fee (£40 to £60,
+              Checkatrade cost guides 2026). We use small-job value, not the £200 to £600 full-job figures, to stay
               conservative.
             </li>
             <li>
@@ -437,7 +437,7 @@ export default function MissedCallIndexPage() {
         <section className="mb-16">
           <h2 className="text-2xl font-bold mb-4">What the 6% know</h2>
           <p className="text-[var(--v2-body)] leading-relaxed text-lg mb-4">
-            The Government&apos;s AI Adoption Research (DSIT, fieldwork February–May 2025, 3,500 UK businesses) found
+            The Government&apos;s AI Adoption Research (DSIT, fieldwork February to May 2025, 3,500 UK businesses) found
             16% of businesses now use AI. One in six. But in construction, 88% neither use it nor plan to. Strip out
             the planners and the firms actually using AI in construction come out in single figures: roughly six in a
             hundred, against 43% in information and communication (two in five) and 54% in a March 2026 British
@@ -446,7 +446,7 @@ export default function MissedCallIndexPage() {
           <figure className="mb-4">
             <Image
               src="/images/chart_ai_adoption_gap.webp"
-              alt="The AI adoption gap: 43% of information & communication businesses currently use AI, 16% of all UK businesses, and roughly 6% of construction firms (derived). Source: DSIT AI Adoption Research, fieldwork February–May 2025."
+              alt="The AI adoption gap: 43% of information & communication businesses currently use AI, 16% of all UK businesses, and roughly 6% of construction firms (derived). Source: DSIT AI Adoption Research, fieldwork February to May 2025."
               width={1280}
               height={720}
               loading="lazy"
@@ -456,14 +456,14 @@ export default function MissedCallIndexPage() {
             <noscript>
               <img
                 src="/images/chart_ai_adoption_gap.png"
-                alt="The AI adoption gap: 43% of information & communication businesses currently use AI, 16% of all UK businesses, and roughly 6% of construction firms (derived). Source: DSIT AI Adoption Research, fieldwork February–May 2025."
+                alt="The AI adoption gap: 43% of information & communication businesses currently use AI, 16% of all UK businesses, and roughly 6% of construction firms (derived). Source: DSIT AI Adoption Research, fieldwork February to May 2025."
                 className="w-full rounded-2xl"
               />
             </noscript>
             <figcaption className="text-sm text-[var(--v2-muted)] mt-2">
               The AI adoption gap: 43% of information &amp; communication businesses currently use AI, 16% of all UK
               businesses, and roughly 6% of construction firms (derived). Source: DSIT AI Adoption Research, fieldwork
-              February–May 2025.
+              February to May 2025.
             </figcaption>
           </figure>
           <p className="text-[var(--v2-body)] leading-relaxed text-lg mb-4">
@@ -566,7 +566,7 @@ export default function MissedCallIndexPage() {
                   <td className="py-3 px-4 text-sm">5</td>
                   <td className="py-3 px-4 text-sm">16% of UK businesses (5+ staff) use AI; 43% in information &amp; communication</td>
                   <td className="py-3 px-4 text-sm">DSIT AI Adoption Research (3,500 interviews)</td>
-                  <td className="py-3 px-4 text-sm">Fieldwork Feb–May 2025</td>
+                  <td className="py-3 px-4 text-sm">Fieldwork Feb to May 2025</td>
                 </tr>
                 <tr className="border-b border-[var(--v2-line)]">
                   <td className="py-3 px-4 text-sm">6</td>
@@ -582,7 +582,7 @@ export default function MissedCallIndexPage() {
                 </tr>
                 <tr className="border-b border-[var(--v2-line)]">
                   <td className="py-3 px-4 text-sm">8</td>
-                  <td className="py-3 px-4 text-sm">Plumber call-out £40–£60; emergency £100–£120+</td>
+                  <td className="py-3 px-4 text-sm">Plumber call-out £40 to £60; emergency £100 to £120+</td>
                   <td className="py-3 px-4 text-sm">Checkatrade cost guides (checkatrade.com)</td>
                   <td className="py-3 px-4 text-sm">2026</td>
                 </tr>
@@ -601,7 +601,7 @@ export default function MissedCallIndexPage() {
               </tbody>
             </table>
             <p className="text-[var(--v2-muted)] text-sm mt-4">
-              Moneypenny rows 1–3 cite the Small Business Call Report originally published on 21 November 2016.
+              Moneypenny rows 1 to 3 cite the Small Business Call Report originally published on 21 November 2016.
               The source page was last updated on 27 January 2020; the figures are from the 2016 UK report.
             </p>
           </div>

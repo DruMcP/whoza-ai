@@ -23,13 +23,13 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://whoza.ai/for-carpenters",
     siteName: "Whoza.ai",
-    title: "AI Call Answering for Carpenters UK — Never Miss a Job",
+    title: "AI Call Answering for Carpenters UK | Never Miss a Job",
     description: "AI call answering for UK carpenters. Katie answers 24/7, captures bespoke furniture, kitchen fitting and renovation enquiries. Plans from £59. Free trial.",
-    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai — AI Call Answering for Carpenters" }],
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai: AI Call Answering for Carpenters" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Call Answering for Carpenters UK — Never Miss a Job",
+    title: "AI Call Answering for Carpenters UK | Never Miss a Job",
     description: "AI call answering for UK carpenters. Katie answers 24/7, captures bespoke furniture, kitchen fitting and renovation enquiries. Plans from £59. Free trial.",
     images: ["https://whoza.ai/og-image.webp"],
   },
@@ -58,11 +58,11 @@ const faqs = [
   },
   {
     question: "Will customers know they're talking to AI?",
-    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience — they just want their project started quickly.",
+    answer: "Katie introduces herself as your digital assistant with a natural, professional voice. Most callers appreciate the instant response over voicemail or a ringing phone. Most callers are satisfied with the AI experience. They just want their project started quickly.",
   },
   {
     question: "Does it work with my existing business phone number?",
-    answer: "Yes. You simply set up call forwarding from your existing carpentry business number to your whoza.ai number. Your customers dial the same number they've always used — Katie just answers when you can't. Setup takes under 10 minutes.",
+    answer: "Yes. You simply set up call forwarding from your existing carpentry business number to your whoza.ai number. Your customers dial the same number they've always used. Katie just answers when you can't. Setup takes under 10 minutes.",
   },
   {
     question: "How quickly can I get set up?",
@@ -70,7 +70,7 @@ const faqs = [
   },
   {
     question: "Can Katie handle builder and developer enquiries?",
-    answer: "Yes. Katie identifies builder, developer, architect, and interior designer enquiries and tags them as priority. She captures project scale, number of units, commercial requirements, timeline constraints, and budget scope. These are your biggest repeat customer base — Katie makes sure you never miss them.",
+    answer: "Yes. Katie identifies builder, developer, architect, and interior designer enquiries and tags them as priority. She captures project scale, number of units, commercial requirements, timeline constraints, and budget scope. These are your biggest repeat customer base. Katie makes sure you never miss them.",
   },
   {
     question: "What happens if Katie can't handle a complex enquiry?",
@@ -84,7 +84,7 @@ export default function ForCarpentersPage() {
   return (
     <>
       <VideoSchema
-        name="Whoza.ai for Carpenters — AI Call Answering Demo"
+        name="Whoza.ai for Carpenters: AI Call Answering Demo"
         description="Watch Katie capture a missed carpentry enquiry in under 60 seconds. Bespoke kitchen project answered instantly, details sent to WhatsApp, quote prepared while the carpenter is still in the workshop."
         embedUrl="https://whoza.ai/for-carpenters"
       />
@@ -134,7 +134,7 @@ export default function ForCarpentersPage() {
                   Job Again
                 </h1>
                 <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
-                  Bespoke furniture, fitted kitchens, wardrobes, staircases — customers call when they want quality craftsmanship. Katie answers every call, captures the project details, and sends them to your WhatsApp.
+                  Bespoke furniture, fitted kitchens, wardrobes, staircases. Customers call when they want quality craftsmanship. Katie answers every call, captures the project details, and sends them to your WhatsApp.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
@@ -169,7 +169,7 @@ export default function ForCarpentersPage() {
               <div className="relative flex justify-center">
                 <Image
                   src="/images/hero-phone-3d.webp"
-                  alt="Whoza.ai AI call answering — Katie captures missed calls and sends job details to WhatsApp"
+                  alt="Whoza.ai AI call answering: Katie captures missed calls and sends job details to WhatsApp"
                   width={735}
                   height={1103}
                   className="w-full max-w-[380px] h-auto drop-shadow-2xl"
@@ -262,7 +262,7 @@ export default function ForCarpentersPage() {
                 The average UK carpenter misses 45% of calls weekly = <strong>£50,000+</strong> in lost bespoke project revenue per year
               </p>
               <p className="text-[var(--v2-body)] text-sm mt-1">
-                Source: UK SME Communications Survey 2025 — based on £12,000 avg bespoke kitchen value, 35% conversion rate
+                Source: UK SME Communications Survey 2025, based on £12,000 avg bespoke kitchen value, 35% conversion rate
               </p>
             </div>
             <div className="mt-8 text-center">
@@ -293,7 +293,7 @@ export default function ForCarpentersPage() {
                   step: "01",
                   icon: Phone,
                   title: "Katie Answers Instantly",
-                  description: "Customer calls your number. Katie picks up in under 2 rings with your branded greeting: 'Hello, Johnson Carpentry. I'm Katie, how can I help?' — 24/7, even when you're in the workshop.",
+                  description: "Customer calls your number. Katie picks up in under 2 rings with your branded greeting: 'Hello, Johnson Carpentry. I'm Katie, how can I help?', 24/7, even when you're in the workshop.",
                 },
                 {
                   step: "02",
@@ -350,7 +350,7 @@ export default function ForCarpentersPage() {
               Carpenter Success Story
             </div>
             <blockquote className="text-2xl sm:text-3xl font-medium leading-relaxed text-[var(--v2-ink)] mb-8">
-              "I used to miss 4-5 calls a week because I was in the workshop with machinery running. In 3 weeks using whoza.ai, I captured 11 jobs I would have missed, including a <span className="text-[var(--v2-green)] font-bold">£12,000</span> bespoke kitchen. It cost me £59 for the month."
+              "I used to miss 4 to 5 calls a week because I was in the workshop with machinery running. In 3 weeks using whoza.ai, I captured 11 jobs I would have missed, including a <span className="text-[var(--v2-green)] font-bold">£12,000</span> bespoke kitchen. It cost me £59 for the month."
             </blockquote>
             <div className="flex items-center justify-center gap-4">
               <div className="w-14 h-14 rounded-full bg-[var(--v2-mint)] flex items-center justify-center text-[var(--v2-green)] font-bold text-xl">

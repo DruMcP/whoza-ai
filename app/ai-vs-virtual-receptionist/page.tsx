@@ -8,20 +8,20 @@ import { ArrowRight, Check, Bot, UserCheck } from "lucide-react"
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoza.ai"),
   title: "Virtual Receptionist Cost UK (2026): Real Prices vs AI £59",
-  description: "What a UK virtual receptionist really costs in 2026: published prices £45–£230/mo plus per-call fees, vs AI call answering at £59/mo flat. Checked Aug 2026.",
+  description: "What a UK virtual receptionist really costs in 2026: published prices £45 to £230/mo plus per-call fees, vs AI call answering at £59/mo flat. Checked Aug 2026.",
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "https://whoza.ai/ai-vs-virtual-receptionist",
     siteName: "Whoza.ai",
     title: "Virtual Receptionist Cost UK (2026): Real Prices vs AI £59",
-    description: "UK virtual receptionist prices, checked August 2026: £45–£230/mo plus £2.99-per-call overage, versus flat-rate AI call answering at £59/mo for trades.",
+    description: "UK virtual receptionist prices, checked August 2026: £45 to £230/mo plus £2.99-per-call overage, versus flat-rate AI call answering at £59/mo for trades.",
     images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "AI vs virtual receptionist comparison" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Virtual Receptionist Cost UK (2026): Real Prices vs AI £59",
-    description: "UK virtual receptionist prices, checked August 2026: £45–£230/mo plus £2.99-per-call overage, versus flat-rate AI call answering at £59/mo for trades.",
+    description: "UK virtual receptionist prices, checked August 2026: £45 to £230/mo plus £2.99-per-call overage, versus flat-rate AI call answering at £59/mo for trades.",
     images: ["https://whoza.ai/og-image.webp"],
   },
   alternates: {
@@ -30,20 +30,20 @@ export const metadata: Metadata = {
 }
 
 const comparisons = [
-  { category: "Cost", ai: "£59/mo flat", human: "£200-400/mo", winner: "ai", detail: "AI costs significantly less than a virtual receptionist service." },
+  { category: "Cost", ai: "£59/mo flat", human: "£200 to £400/mo", winner: "ai", detail: "AI costs significantly less than a virtual receptionist service." },
   { category: "Availability", ai: "24/7, 365 days", human: "Shift-based, sick days, holidays", winner: "ai", detail: "AI never sleeps, takes breaks, or calls in sick." },
-  { category: "Simultaneous calls", ai: "1–5 per plan", human: "1-2 per agent", winner: "ai", detail: "Starter handles 1, Growth 2, Pro 3, Scale 5. No queuing within your tier." },
-  { category: "Setup time", ai: "30 minutes", human: "2-5 days", winner: "ai", detail: "AI is live immediately. Humans need training." },
+  { category: "Simultaneous calls", ai: "1 to 5 per plan", human: "1 to 2 per agent", winner: "ai", detail: "Starter handles 1, Growth 2, Pro 3, Scale 5. No queuing within your tier." },
+  { category: "Setup time", ai: "30 minutes", human: "2 to 5 days", winner: "ai", detail: "AI is live immediately. Humans need training." },
   { category: "Personal touch", ai: "Consistent, polite", human: "Warm, empathetic", winner: "human", detail: "Humans excel at emotional connection." },
   { category: "Trade knowledge", ai: "Trained on your terms", human: "Must be taught", winner: "ai", detail: "AI knows 'combi boiler' vs 'system boiler' instantly." },
   { category: "Delivery", ai: "WhatsApp instant", human: "Email summary", winner: "ai", detail: "Tradespeople live on WhatsApp, not email." },
-  { category: "Contract", ai: "None — cancel anytime", human: "12-month typical", winner: "ai", detail: "No lock-in with AI. Freedom to leave." },
+  { category: "Contract", ai: "None, cancel anytime", human: "12-month typical", winner: "ai", detail: "No lock-in with AI. Freedom to leave." },
 ]
 
 const faqs = [
   {
     question: "Is an AI call handler better than a virtual receptionist?",
-    answer: "For most UK tradespeople, yes. AI call handlers cost significantly less than a virtual receptionist service (£59 vs £200-400/month), answer unlimited calls simultaneously, work 24/7, and deliver leads via WhatsApp. Human virtual receptionists offer personal warmth but cost significantly more and handle only 1-2 calls at a time.",
+    answer: "For most UK tradespeople, yes. AI call handlers cost significantly less than a virtual receptionist service (£59 vs £200 to £400/month), answer unlimited calls simultaneously, work 24/7, and deliver leads via WhatsApp. Human virtual receptionists offer personal warmth but cost significantly more and handle only 1 to 2 calls at a time.",
   },
   {
     question: "Do customers know they're talking to AI?",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     question: "Can AI handle complex trade enquiries?",
-    answer: "Yes. whoza.ai's AI is trained on trade-specific terminology — boilers, electrical faults, roofing materials, drainage issues. It asks the right qualifying questions (location, urgency, budget) and escalates complex cases to you immediately.",
+    answer: "Yes. whoza.ai's AI is trained on trade-specific terminology: boilers, electrical faults, roofing materials, drainage issues. It asks the right qualifying questions (location, urgency, budget) and escalates complex cases to you immediately.",
   },
   {
     question: "When should I choose a human receptionist instead?",
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     question: "How much can I save switching from virtual receptionist to AI?",
-    answer: "UK tradespeople save £1,700-4,100 per year switching from virtual receptionist (£200-400/month) to AI call handling (£59/month). whoza.ai includes unlimited calls, WhatsApp delivery, and 30-day money-back guarantee.",
+    answer: "UK tradespeople save £1,700 to £4,100 per year switching from virtual receptionist (£200 to £400/month) to AI call handling (£59/month). whoza.ai includes unlimited calls, WhatsApp delivery, and 30-day money-back guarantee.",
   },
 ]
 
@@ -204,7 +204,7 @@ export default function AIVsVirtualReceptionistPage() {
                 </div>
                 <div className="space-y-3 text-sm">
                   <div className="flex justify-between"><span>Monthly fee (avg)</span><span className="font-semibold">£300</span></div>
-                  <div className="flex justify-between"><span>Setup cost</span><span className="font-semibold">£50-100</span></div>
+                  <div className="flex justify-between"><span>Setup cost</span><span className="font-semibold">£50 to £100</span></div>
                   <div className="flex justify-between"><span>Overage charges</span><span className="font-semibold">Per minute</span></div>
                   <div className="flex justify-between"><span>Contract</span><span className="font-semibold">12-month min</span></div>
                   <div className="border-t border-slate-200 pt-3 flex justify-between text-lg font-bold">
@@ -247,10 +247,10 @@ export default function AIVsVirtualReceptionistPage() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
-                  <tr><td className="px-4 py-3 font-medium">Annual cost</td><td className="px-4 py-3 text-slate-600">£26,000-£35,000</td><td className="px-4 py-3 text-[var(--v2-green)] font-semibold">£708-£4,788</td></tr>
-                  <tr><td className="px-4 py-3 font-medium">Monthly cost</td><td className="px-4 py-3 text-slate-600">£1,667-£2,500</td><td className="px-4 py-3 text-[var(--v2-green)] font-semibold">£59-£399</td></tr>
-                  <tr><td className="px-4 py-3 font-medium">Setup cost</td><td className="px-4 py-3 text-slate-600">£2,000-£5,000</td><td className="px-4 py-3 text-[var(--v2-green)] font-semibold">£0</td></tr>
-                  <tr><td className="px-4 py-3 font-medium">Ongoing overheads</td><td className="px-4 py-3 text-slate-600">£300-£600/year</td><td className="px-4 py-3 text-[var(--v2-green)] font-semibold">£0</td></tr>
+                  <tr><td className="px-4 py-3 font-medium">Annual cost</td><td className="px-4 py-3 text-slate-600">£26,000 to £35,000</td><td className="px-4 py-3 text-[var(--v2-green)] font-semibold">£708 to £4,788</td></tr>
+                  <tr><td className="px-4 py-3 font-medium">Monthly cost</td><td className="px-4 py-3 text-slate-600">£1,667 to £2,500</td><td className="px-4 py-3 text-[var(--v2-green)] font-semibold">£59 to £399</td></tr>
+                  <tr><td className="px-4 py-3 font-medium">Setup cost</td><td className="px-4 py-3 text-slate-600">£2,000 to £5,000</td><td className="px-4 py-3 text-[var(--v2-green)] font-semibold">£0</td></tr>
+                  <tr><td className="px-4 py-3 font-medium">Ongoing overheads</td><td className="px-4 py-3 text-slate-600">£300 to £600/year</td><td className="px-4 py-3 text-[var(--v2-green)] font-semibold">£0</td></tr>
                 </tbody>
               </table>
             </div>
@@ -300,11 +300,11 @@ export default function AIVsVirtualReceptionistPage() {
             <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
               <h3 className="text-lg font-semibold text-slate-900 mb-4">AI Call Handler</h3>
               <ul className="space-y-3 text-slate-600">
-                <li className="flex items-start gap-2"><span className="text-[var(--v2-green)] mt-1">•</span>Consistent by design — every call, every time</li>
+                <li className="flex items-start gap-2"><span className="text-[var(--v2-green)] mt-1">•</span>Consistent by design: every call, every time</li>
                 <li className="flex items-start gap-2"><span className="text-[var(--v2-green)] mt-1">•</span>Never has a bad day or mood</li>
                 <li className="flex items-start gap-2"><span className="text-[var(--v2-green)] mt-1">•</span>Never forgets to ask for postcode</li>
                 <li className="flex items-start gap-2"><span className="text-[var(--v2-green)] mt-1">•</span>Captures details accurately every time</li>
-                <li className="flex items-start gap-2"><span className="text-[var(--v2-green)] mt-1">•</span>No training required — knows your business from day one</li>
+                <li className="flex items-start gap-2"><span className="text-[var(--v2-green)] mt-1">•</span>No training required: knows your business from day one</li>
               </ul>
             </div>
           </div>
@@ -321,7 +321,7 @@ export default function AIVsVirtualReceptionistPage() {
               The alternative for most trade businesses is not a human receptionist. It is voicemail. And voicemail is terrible. 69% of callers don't leave a message. Of the 31% who leave a message, most never get a callback because tradespeople forget to check voicemail or call back hours later.
             </p>
             <p className="text-slate-600 mb-4">
-              The other alternative is phone tag. You miss the call. You call back. They are busy. They call back. You are on a job. After 3-4 attempts, you connect. The customer is frustrated. You are stressed. This is not a good experience for anyone.
+              The other alternative is phone tag. You miss the call. You call back. They are busy. They call back. You are on a job. After 3 to 4 attempts, you connect. The customer is frustrated. You are stressed. This is not a good experience for anyone.
             </p>
             <p className="text-slate-600 mb-4">
               AI answers on the first ring. The voice is professional. The questions are relevant. The information is captured accurately. You get a WhatsApp message 3 seconds later and respond when convenient. Between voicemail, phone tag, and AI, callers overwhelmingly prefer AI.
@@ -352,7 +352,7 @@ export default function AIVsVirtualReceptionistPage() {
               </div>
               <div className="bg-slate-50 rounded-lg p-4 border border-slate-100">
                 <h4 className="font-semibold text-slate-900 mb-1">Scenario 3: Seasonal peaks</h4>
-                <p className="text-slate-600 text-sm">Winter hits. Boiler breakdowns spike. Call volume triples for 3 months. Your receptionist cannot keep up. You hire temporary help — expensive and inconsistent.</p>
+                <p className="text-slate-600 text-sm">Winter hits. Boiler breakdowns spike. Call volume triples for 3 months. Your receptionist cannot keep up. You hire temporary help, expensive and inconsistent.</p>
               </div>
             </div>
             <p className="text-slate-600 mb-4">
@@ -378,7 +378,7 @@ export default function AIVsVirtualReceptionistPage() {
               </div>
               <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
                 <h4 className="font-semibold text-blue-900 mb-1">Complex consultation bookings</h4>
-                <p className="text-blue-800 text-sm">Some businesses require detailed pre-qualification — architectural surveys, structural assessments, planning permission consultations. A human with domain expertise can navigate these conversations better than current AI.</p>
+                <p className="text-blue-800 text-sm">Some businesses require detailed pre-qualification: architectural surveys, structural assessments, planning permission consultations. A human with domain expertise can navigate these conversations better than current AI.</p>
               </div>
               <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
                 <h4 className="font-semibold text-blue-900 mb-1">In-person multi-role staff</h4>
@@ -386,11 +386,11 @@ export default function AIVsVirtualReceptionistPage() {
               </div>
               <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
                 <h4 className="font-semibold text-blue-900 mb-1">Very small call volumes</h4>
-                <p className="text-blue-800 text-sm">If you receive 1-2 calls per week, neither human nor AI receptionist makes economic sense. A simple voicemail-to-email service suffices.</p>
+                <p className="text-blue-800 text-sm">If you receive 1 to 2 calls per week, neither human nor AI receptionist makes economic sense. A simple voicemail-to-email service suffices.</p>
               </div>
             </div>
             <p className="text-slate-600">
-              For the vast majority of UK trade businesses — plumbers, electricians, roofers, builders, landscapers, locksmiths, heating engineers — none of these exceptions apply. The work is urgent, the calls are frequent, and the value is in capturing enquiries efficiently. For these businesses, AI is the clear winner.
+              For the vast majority of UK trade businesses (plumbers, electricians, roofers, builders, landscapers, locksmiths, heating engineers), none of these exceptions apply. The work is urgent, the calls are frequent, and the value is in capturing enquiries efficiently. For these businesses, AI is the clear winner.
             </p>
           </div>
         </section>
@@ -415,7 +415,7 @@ export default function AIVsVirtualReceptionistPage() {
           <h2 className="text-3xl font-bold text-slate-900 mb-4">Ready to switch to AI call handling?</h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
             Join UK tradespeople saving £2,900+ per year with whoza.ai.
-            7-day free trial — no credit card required.
+            7-day free trial, no credit card required.
           </p>
           <a href="/pricing" className="inline-flex items-center gap-2 bg-[var(--v2-green)] text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-[var(--v2-green-hover)] transition-colors shadow-lg v2-island">
             Try AI Call Handling Free <ArrowRight className="w-5 h-5" />

@@ -198,13 +198,13 @@ export default function ResearchPage() {
                 Executive Summary
               </h2>
               <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-                The search landscape is undergoing its most consequential transformation since the advent of PageRank. AI-powered answer engines — including Google AI Overviews, ChatGPT Search, Perplexity, and Bing Copilot — are fundamentally reshaping how consumers discover businesses, replacing the traditional list of ranked links with direct, synthesised answers that cite selected sources. For small businesses, this shift represents both an existential threat and an unprecedented opportunity.
+                The search landscape is undergoing its most consequential transformation since the advent of PageRank. AI-powered answer engines (including Google AI Overviews, ChatGPT Search, Perplexity, and Bing Copilot) are fundamentally reshaping how consumers discover businesses, replacing the traditional list of ranked links with direct, synthesised answers that cite selected sources. For small businesses, this shift represents both an existential threat and an unprecedented opportunity.
               </p>
               <p className="text-[var(--v2-body)] leading-relaxed mb-4">Key findings include:</p>
               <ul className="space-y-2 mb-4">
                 <li className="flex items-start gap-2 text-[var(--v2-body)]">
                   <CheckCircle className="w-5 h-5 text-[var(--v2-green)] flex-shrink-0 mt-0.5" />
-                  Google AI Overviews now appear on <strong>48% of all search queries</strong> as of March 2026 — a 58% year-over-year increase — reducing organic click-through rates by 34-61% where they appear.
+                  Google AI Overviews now appear on <strong>48% of all search queries</strong> as of March 2026, a 58% year-over-year increase, reducing organic click-through rates by 34 to 61% where they appear.
                 </li>
                 <li className="flex items-start gap-2 text-[var(--v2-body)]">
                   <CheckCircle className="w-5 h-5 text-[var(--v2-green)] flex-shrink-0 mt-0.5" />
@@ -216,7 +216,7 @@ export default function ResearchPage() {
                 </li>
                 <li className="flex items-start gap-2 text-[var(--v2-body)]">
                   <CheckCircle className="w-5 h-5 text-[var(--v2-green)] flex-shrink-0 mt-0.5" />
-                  AI search traffic converts at <strong>14.2% compared to Google's 2.8%</strong> — making AI-referred visitors 5 times more valuable.
+                  AI search traffic converts at <strong>14.2% compared to Google's 2.8%</strong>, making AI-referred visitors 5 times more valuable.
                 </li>
                 <li className="flex items-start gap-2 text-[var(--v2-body)]">
                   <CheckCircle className="w-5 h-5 text-[var(--v2-green)] flex-shrink-0 mt-0.5" />
@@ -236,20 +236,20 @@ export default function ResearchPage() {
             </p>
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">The Zero-Click Revolution</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              The most significant structural change in search behaviour is the rise of zero-click searches — queries that are answered entirely within the search interface, requiring no visit to an external website. Research by SparkToro and Datos found that <strong>58.5% of all Google searches in 2024 ended without any click</strong>. By 2025, Similarweb data showed this figure had risen to 69% for queries where AI Overviews were present, representing the sharpest year-over-year increase in zero-click rate on record.
+              The most significant structural change in search behaviour is the rise of zero-click searches: queries that are answered entirely within the search interface, requiring no visit to an external website. Research by SparkToro and Datos found that <strong>58.5% of all Google searches in 2024 ended without any click</strong>. By 2025, Similarweb data showed this figure had risen to 69% for queries where AI Overviews were present, representing the sharpest year-over-year increase in zero-click rate on record.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              The implications for businesses dependent on organic traffic are profound. When a user searches &quot;best plumber in Bristol&quot; and receives a direct answer with three recommended businesses, two of those businesses will receive no click — their visibility is limited to being named in the answer. The traditional SEO model, which optimises for ranking position to earn clicks, is increasingly irrelevant in a landscape where the answer itself is the destination.
+              The implications for businesses dependent on organic traffic are profound. When a user searches &quot;best plumber in Bristol&quot; and receives a direct answer with three recommended businesses, two of those businesses will receive no click. Their visibility is limited to being named in the answer. The traditional SEO model, which optimises for ranking position to earn clicks, is increasingly irrelevant in a landscape where the answer itself is the destination.
             </p>
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">Google&apos;s Strategic Pivot</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              Google&apos;s introduction of AI Overviews in May 2024 marked the company's formal acknowledgment that search was becoming answer-driven rather than link-driven. By March 2026, AI Overviews appeared on <strong>48% of all tracked queries</strong>, reaching 2 billion monthly users across 200+ countries. Google's market share, while still dominant at 90.04% globally, has declined from its 2023 peak of 92.9% — the steepest annual decline in a decade.
+              Google&apos;s introduction of AI Overviews in May 2024 marked the company's formal acknowledgment that search was becoming answer-driven rather than link-driven. By March 2026, AI Overviews appeared on <strong>48% of all tracked queries</strong>, reaching 2 billion monthly users across 200+ countries. Google's market share, while still dominant at 90.04% globally, has declined from its 2023 peak of 92.9%, the steepest annual decline in a decade.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
               Alphabet's Q4 2025 earnings report confirmed that Google Search generated <strong>USD 224.53 billion in revenue</strong> during fiscal year 2025, with AI-powered features driving a 17% year-over-year increase in search advertising revenue. AI Overviews are the new default for nearly half of all searches, and their coverage is expanding.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              The UK picture is equally striking. Ofcom's Online Nation 2025 report found that <strong>about 30% of UK Google searches now show AI Overviews</strong>, and more than half of adults (53%) see them often. Meanwhile, ChatGPT took <strong>1.8 billion UK visits in the first eight months of 2025</strong> — up from 368 million in 2024 — making it the fastest-growing consumer AI platform in Britain (<a href="https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025" className="text-[var(--v2-green)] hover:underline" target="_blank" rel="noopener noreferrer">Ofcom, Online Nation 2025</a>). For UK tradespeople, this means the old SEO playbook — ranking on page one of Google — is no longer sufficient. Customers are asking AI for recommendations, and the businesses that appear in those answers are winning the work.
+              The UK picture is equally striking. Ofcom's Online Nation 2025 report found that <strong>about 30% of UK Google searches now show AI Overviews</strong>, and more than half of adults (53%) see them often. Meanwhile, ChatGPT took <strong>1.8 billion UK visits in the first eight months of 2025</strong>, up from 368 million in 2024, making it the fastest-growing consumer AI platform in Britain (<a href="https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025" className="text-[var(--v2-green)] hover:underline" target="_blank" rel="noopener noreferrer">Ofcom, Online Nation 2025</a>). For UK tradespeople, this means the old SEO playbook, ranking on page one of Google, is no longer sufficient. Customers are asking AI for recommendations, and the businesses that appear in those answers are winning the work.
             </p>
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">The Competitive Landscape</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
@@ -257,7 +257,7 @@ export default function ResearchPage() {
             </p>
             <ul className="space-y-2 mb-4">
               <li className="text-[var(--v2-body)]"><strong>ChatGPT:</strong> 900 million weekly active users, 2.5 billion prompts daily, 81% market share in AI chatbots, 12% of Google's search volume.</li>
-              <li className="text-[var(--v2-body)]"><strong>Perplexity:</strong> 45 million monthly active users, 1.2-1.5 billion queries monthly, 800% year-over-year growth.</li>
+              <li className="text-[var(--v2-body)]"><strong>Perplexity:</strong> 45 million monthly active users, 1.2 to 1.5 billion queries monthly, 800% year-over-year growth.</li>
               <li className="text-[var(--v2-body)]"><strong>Bing Copilot:</strong> Integrated into Windows and Microsoft Edge, leveraging Bing's search index for real-time citations.</li>
             </ul>
             <p className="text-[var(--v2-body)] leading-relaxed">
@@ -277,9 +277,9 @@ export default function ResearchPage() {
                 <tbody>
                   <tr className="border-b border-[var(--v2-line)]"><td className="px-4 py-3 text-[var(--v2-body)]">AI Overviews on tracked queries (Mar 2026)</td><td className="px-4 py-3 font-medium text-[var(--v2-green)]">48%</td><td className="px-4 py-3 text-[var(--v2-body)]">BrightEdge</td></tr>
                   <tr className="border-b border-[var(--v2-line)]"><td className="px-4 py-3 text-[var(--v2-body)]">Year-over-year growth in AI Overviews</td><td className="px-4 py-3 font-medium text-[var(--v2-green)]">58%</td><td className="px-4 py-3 text-[var(--v2-body)]">Digital Applied</td></tr>
-                  <tr className="border-b border-[var(--v2-line)]"><td className="px-4 py-3 text-[var(--v2-body)]">Organic CTR drop with AI Overview present</td><td className="px-4 py-3 font-medium text-[var(--v2-green)]">34-61%</td><td className="px-4 py-3 text-[var(--v2-body)]">Seer / Ahrefs</td></tr>
+                  <tr className="border-b border-[var(--v2-line)]"><td className="px-4 py-3 text-[var(--v2-body)]">Organic CTR drop with AI Overview present</td><td className="px-4 py-3 font-medium text-[var(--v2-green)]">34 to 61%</td><td className="px-4 py-3 text-[var(--v2-body)]">Seer / Ahrefs</td></tr>
                   <tr className="border-b border-[var(--v2-line)]"><td className="px-4 py-3 text-[var(--v2-body)]">Position 1 CTR drop with AI Overview</td><td className="px-4 py-3 font-medium text-[var(--v2-green)]">58%</td><td className="px-4 py-3 text-[var(--v2-body)]">Ahrefs Dec 2025</td></tr>
-                  <tr className="border-b border-[var(--v2-line)]"><td className="px-4 py-3 text-[var(--v2-body)]">Zero-click rate (all searches, 2025)</td><td className="px-4 py-3 font-medium text-[var(--v2-green)]">60-69%</td><td className="px-4 py-3 text-[var(--v2-body)]">SparkToro / Similarweb</td></tr>
+                  <tr className="border-b border-[var(--v2-line)]"><td className="px-4 py-3 text-[var(--v2-body)]">Zero-click rate (all searches, 2025)</td><td className="px-4 py-3 font-medium text-[var(--v2-green)]">60 to 69%</td><td className="px-4 py-3 text-[var(--v2-body)]">SparkToro / Similarweb</td></tr>
                   <tr className="border-b border-[var(--v2-line)]"><td className="px-4 py-3 text-[var(--v2-body)]">Only 1% click links cited within AI Overviews</td><td className="px-4 py-3 font-medium text-[var(--v2-green)]">1%</td><td className="px-4 py-3 text-[var(--v2-body)]">Multiple studies</td></tr>
                   <tr><td className="px-4 py-3 text-[var(--v2-body)]">AI Overview monthly users globally</td><td className="px-4 py-3 font-medium text-[var(--v2-green)]">2 billion</td><td className="px-4 py-3 text-[var(--v2-body)]">DemandSage</td></tr>
                 </tbody>
@@ -288,7 +288,7 @@ export default function ResearchPage() {
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">The CTR Collapse</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              The most immediately consequential statistic for businesses is the collapse in organic click-through rates where AI Overviews appear. Ahrefs' study of 300,000 keywords found that position-1 rankings lose <strong>58% of their CTR</strong> when an AI Overview is present, dropping from approximately 39.8% to under 20%. Seer Interactive's analysis found organic CTR fell from 1.76% to 0.61% — a 61% decline — on queries with AI Overviews, the largest single-study CTR decline measured.
+              The most immediately consequential statistic for businesses is the collapse in organic click-through rates where AI Overviews appear. Ahrefs' study of 300,000 keywords found that position-1 rankings lose <strong>58% of their CTR</strong> when an AI Overview is present, dropping from approximately 39.8% to under 20%. Seer Interactive's analysis found organic CTR fell from 1.76% to 0.61%, a 61% decline, on queries with AI Overviews, the largest single-study CTR decline measured.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
               Even queries without AI Overviews have seen a <strong>41% CTR decline</strong>, suggesting that user behaviour is shifting across all search types as consumers become accustomed to receiving answers directly from the search interface.
@@ -323,7 +323,7 @@ export default function ResearchPage() {
             </p>
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">AEO vs. SEO: The Critical Distinction</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              Traditional SEO optimises for ranking position — the higher a page appears in search results, the more clicks it receives. AEO optimises for citation — the more frequently and prominently an AI system cites a business as a source, the more visible that business becomes to users who never visit a traditional search results page.
+              Traditional SEO optimises for ranking position: the higher a page appears in search results, the more clicks it receives. AEO optimises for citation: the more frequently and prominently an AI system cites a business as a source, the more visible that business becomes to users who never visit a traditional search results page.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
               As HubSpot's 2026 AEO analysis observes, when someone asks ChatGPT &quot;What&apos;s the best CRM for small businesses?&quot; or Perplexity &quot;Which plumber is recommended in Manchester?&quot; the AI does not search a results list. It synthesises an answer from various sources and names specific brands. The goal of AEO is to be one of those names.
@@ -384,19 +384,19 @@ export default function ResearchPage() {
             <ul className="space-y-2 mb-4">
               <li className="text-[var(--v2-body)]"><strong>ChatGPT:</strong> Prefers encyclopaedic, high-authority content. Wikipedia alone captures 7.8% of all browsing-mode citations. Tech publishers, major media outlets, and academic institutions dominate.</li>
               <li className="text-[var(--v2-body)]"><strong>Perplexity:</strong> Favours community and user-generated content. Reddit captures 6.6% of citations, significantly higher than on other platforms.</li>
-              <li className="text-[var(--v2-body)]"><strong>Google AI Overviews:</strong> Distributes citations more evenly across source types, with 76% of cited sources coming from the top 10 organic results — but only 38% of cited pages rank in the top 10, indicating AI Overviews pull from a much wider source pool than organic rankings alone.</li>
+              <li className="text-[var(--v2-body)]"><strong>Google AI Overviews:</strong> Distributes citations more evenly across source types, with 76% of cited sources coming from the top 10 organic results, but only 38% of cited pages rank in the top 10, indicating AI Overviews pull from a much wider source pool than organic rankings alone.</li>
             </ul>
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">The Freshness Factor</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              Content recency is a critical and often overlooked citation factor. Research found that <strong>content updated within 30 days receives 3.2 times more citations</strong> than stale content, and 89.7% of all cited pages had been updated within the current year. Pages not updated quarterly are 3 times more likely to lose AI citations. For small businesses, this means that maintaining current information — service offerings, pricing, business hours, staff details — is not merely good practice but a direct determinant of AI visibility.
+              Content recency is a critical and often overlooked citation factor. Research found that <strong>content updated within 30 days receives 3.2 times more citations</strong> than stale content, and 89.7% of all cited pages had been updated within the current year. Pages not updated quarterly are 3 times more likely to lose AI citations. For small businesses, this means that maintaining current information (service offerings, pricing, business hours, staff details) is not merely good practice but a direct determinant of AI visibility.
             </p>
           </section>
 
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-4">Structured Data: The Language of AI Search</h2>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              Structured data — machine-readable markup that explicitly defines the content, entities, and relationships on a web page — has evolved from an SEO enhancement to a critical requirement for AI visibility. Without structured data, AI systems must infer meaning from unstructured text, a process that introduces ambiguity and reduces citation confidence.
+              Structured data (machine-readable markup that explicitly defines the content, entities, and relationships on a web page) has evolved from an SEO enhancement to a critical requirement for AI visibility. Without structured data, AI systems must infer meaning from unstructured text, a process that introduces ambiguity and reduces citation confidence.
             </p>
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">The Citation Evidence</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
@@ -436,7 +436,7 @@ export default function ResearchPage() {
                 <CheckCircle className="w-5 h-5 text-[var(--v2-green)] flex-shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-semibold text-[var(--v2-ink)] mb-1">Service Schema</h4>
-                  <p className="text-[var(--v2-body)]">Defines specific services offered, eliminating ambiguity. &quot;Restoration&quot; could mean art, water damage, or automotive — Service schema makes the distinction explicit.</p>
+                  <p className="text-[var(--v2-body)]">Defines specific services offered, eliminating ambiguity. &quot;Restoration&quot; could mean art, water damage, or automotive. Service schema makes the distinction explicit.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -457,24 +457,24 @@ export default function ResearchPage() {
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">The Completeness Imperative</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              AccuraCast's analysis of over 2,000 prompts across ChatGPT, Google AI Overviews, and Perplexity — reviewing 9,000 cited sources — found that <strong>81% of cited pages have schema</strong>. However, the critical insight is that schema type alone does not determine citation. Authority and content quality do. Schema is what makes that authority machine-readable.
+              AccuraCast's analysis of over 2,000 prompts across ChatGPT, Google AI Overviews, and Perplexity (reviewing 9,000 cited sources) found that <strong>81% of cited pages have schema</strong>. However, the critical insight is that schema type alone does not determine citation. Authority and content quality do. Schema is what makes that authority machine-readable.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed">
-              Research consistently shows that thin schema — a type declared but properties mostly empty — performs worse than no schema at all. A page that claims to be an Article but provides no author, no date, and no description creates noise without context. Complete schema, with every relevant property populated, is what moves the needle.
+              Research consistently shows that thin schema, a type declared but properties mostly empty, performs worse than no schema at all. A page that claims to be an Article but provides no author, no date, and no description creates noise without context. Complete schema, with every relevant property populated, is what moves the needle.
             </p>
           </section>
 
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-4">Local Search in the AI Era</h2>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              Local search — queries with geographic intent such as &quot;plumber near me&quot; or &quot;best electrician in Leeds&quot; — is particularly significant for small businesses, and particularly vulnerable to disruption by AI-driven answer engines.
+              Local search, queries with geographic intent such as &quot;plumber near me&quot; or &quot;best electrician in Leeds&quot;, is particularly significant for small businesses, and particularly vulnerable to disruption by AI-driven answer engines.
             </p>
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">The Scale of Local Intent</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
               Google reports that <strong>46% of all searches have local intent</strong>, and 78% of local mobile searches result in an offline purchase within 24 hours. BrightLocal's research found that 66% of consumers trust Google most for local business information. These figures establish local search as the primary channel through which small service businesses acquire new customers.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              In the AI search era, local queries are among the most affected by AI Overviews. When a user asks &quot;Who&apos;s the best plumber in Bristol?&quot; Google AI Overviews, ChatGPT, or Perplexity will synthesise an answer from multiple sources — reviewing the business's website, Google Business Profile, review platforms, directory listings, and any other available structured data. The businesses with the most complete, consistent, and well-structured information across these sources are the ones that appear in the answer.
+              In the AI search era, local queries are among the most affected by AI Overviews. When a user asks &quot;Who&apos;s the best plumber in Bristol?&quot; Google AI Overviews, ChatGPT, or Perplexity will synthesise an answer from multiple sources, reviewing the business's website, Google Business Profile, review platforms, directory listings, and any other available structured data. The businesses with the most complete, consistent, and well-structured information across these sources are the ones that appear in the answer.
             </p>
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">Google Business Profile as AEO Foundation</h3>
@@ -484,7 +484,7 @@ export default function ResearchPage() {
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">The Review-Revenue Correlation</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              BrightLocal's 2025 survey found that businesses with <strong>40 or more Google reviews receive 3.5 times more enquiries</strong> than those with fewer than 10. The correlation between review volume and AI citation is equally direct: brands with review platform presence have 3 times higher citation chances, and sites with active Trustpilot profiles average 4.6-6.3 citations compared to 1.8 for sites without reviews.
+              BrightLocal's 2025 survey found that businesses with <strong>40 or more Google reviews receive 3.5 times more enquiries</strong> than those with fewer than 10. The correlation between review volume and AI citation is equally direct: brands with review platform presence have 3 times higher citation chances, and sites with active Trustpilot profiles average 4.6 to 6.3 citations compared to 1.8 for sites without reviews.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed">
               For small businesses, this creates a virtuous cycle: AI voice agents that automatically request reviews from satisfied customers increase review volume, which improves local search visibility, which increases organic enquiries, which creates more opportunities for review generation. The business that captures this cycle compounds its advantage over competitors who rely on manual review solicitation.
@@ -498,10 +498,10 @@ export default function ResearchPage() {
             </p>
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">The Cost of Inaction</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              The traffic impact of AI Overviews on existing organic search performance is substantial and well-documented. Major publishers have reported significant declines: HubSpot lost an estimated 70-80% of organic traffic on affected pages; CNN experienced a 27-38% decline. The median publisher saw a 10% year-over-year traffic decline in the first half of 2025.
+              The traffic impact of AI Overviews on existing organic search performance is substantial and well-documented. Major publishers have reported significant declines: HubSpot lost an estimated 70 to 80% of organic traffic on affected pages; CNN experienced a 27 to 38% decline. The median publisher saw a 10% year-over-year traffic decline in the first half of 2025.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              For small businesses, the impact is more nuanced but no less significant. A business that ranked first organically for &quot;emergency plumber Bristol&quot; might see its CTR drop from 39.8% to under 20% as Google AI Overviews answer the query directly. If that business is not cited in the AI Overview, its visibility is effectively eliminated for that query — even though it retains the top organic ranking.
+              For small businesses, the impact is more nuanced but no less significant. A business that ranked first organically for &quot;emergency plumber Bristol&quot; might see its CTR drop from 39.8% to under 20% as Google AI Overviews answer the query directly. If that business is not cited in the AI Overview, its visibility is effectively eliminated for that query, even though it retains the top organic ranking.
             </p>
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">ROI of AEO Investment</h3>
@@ -513,7 +513,7 @@ export default function ResearchPage() {
                 <CheckCircle className="w-5 h-5 text-[var(--v2-green)] flex-shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-semibold text-[var(--v2-ink)] mb-1">Traffic recovery</h4>
-                  <p className="text-[var(--v2-body)]">Companies implementing structured data, FAQ content, and GBP optimisation report 20-40% increases in organic visibility within 90 days.</p>
+                  <p className="text-[var(--v2-body)]">Companies implementing structured data, FAQ content, and GBP optimisation report 20 to 40% increases in organic visibility within 90 days.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -544,24 +544,24 @@ export default function ResearchPage() {
               Implementing AEO does not require enterprise-level budgets or dedicated technical teams. Small businesses can achieve significant AI visibility improvements through focused, sequential actions that build on existing digital presence.
             </p>
 
-            <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">Phase 1: Foundational Structured Data (Weeks 1-2)</h3>
+            <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">Phase 1: Foundational Structured Data (Weeks 1 to 2)</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              The highest-impact first step is implementing complete LocalBusiness, Service, and FAQPage schema on the business website. This requires no ongoing cost — schema markup is free to implement — and directly increases the probability of AI citation. The Otterly GEO Experiment recorded a <strong>+611% increase in Google AI Overview citations</strong> after schema implementation, and content with proper schema has a 2.5 times higher chance of appearing in AI-generated answers.
+              The highest-impact first step is implementing complete LocalBusiness, Service, and FAQPage schema on the business website. This requires no ongoing cost (schema markup is free to implement) and directly increases the probability of AI citation. The Otterly GEO Experiment recorded a <strong>+611% increase in Google AI Overview citations</strong> after schema implementation, and content with proper schema has a 2.5 times higher chance of appearing in AI-generated answers.
             </p>
 
-            <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">Phase 2: FAQ Content Development (Weeks 2-4)</h3>
+            <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">Phase 2: FAQ Content Development (Weeks 2 to 4)</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              Creating FAQ content that answers the specific questions customers ask — &quot;How much does an emergency plumber cost in [location]?&quot;, &quot;What should I do if my boiler loses pressure?&quot;, &quot;How quickly can you respond to a roofing emergency?&quot; — and wrapping this content in FAQPage schema produces the highest AEO returns. FAQ content with proper FAQPage schema produced <strong>350% more AI citations</strong> than FAQ content without schema.
+              Creating FAQ content that answers the specific questions customers ask (&quot;How much does an emergency plumber cost in [location]?&quot;, &quot;What should I do if my boiler loses pressure?&quot;, &quot;How quickly can you respond to a roofing emergency?&quot;) and wrapping this content in FAQPage schema produces the highest AEO returns. FAQ content with proper FAQPage schema produced <strong>350% more AI citations</strong> than FAQ content without schema.
             </p>
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">Phase 3: Review Generation at Scale (Ongoing)</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              With businesses featuring 40+ reviews receiving 3.5 times more enquiries, and review platform presence tripling AI citation chances, systematic review generation is a core AEO strategy. AI voice agents with integrated review collection capabilities automate this process, sending personalised follow-up messages via WhatsApp or SMS after each completed job. Businesses implementing automated review collection typically see 3-5x increases in monthly review volume within 90 days.
+              With businesses featuring 40+ reviews receiving 3.5 times more enquiries, and review platform presence tripling AI citation chances, systematic review generation is a core AEO strategy. AI voice agents with integrated review collection capabilities automate this process, sending personalised follow-up messages via WhatsApp or SMS after each completed job. Businesses implementing automated review collection typically see 3 to 5x increases in monthly review volume within 90 days.
             </p>
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">Phase 4: Cross-Platform Entity Consistency (Ongoing)</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              AI systems verify business information across multiple sources. Inconsistent NAP data — different phone numbers on the website versus the Google Business Profile versus directory listings — creates confusion that reduces citation confidence. Maintaining identical business information across all platforms, directories, and review sites is essential.
+              AI systems verify business information across multiple sources. Inconsistent NAP data (different phone numbers on the website versus the Google Business Profile versus directory listings) creates confusion that reduces citation confidence. Maintaining identical business information across all platforms, directories, and review sites is essential.
             </p>
 
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">Phase 5: Content Freshness Management (Ongoing)</h3>
@@ -577,15 +577,15 @@ export default function ResearchPage() {
             </p>
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">The Convergence of Voice and AI Search</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              Voice search — already accounting for 20%+ of Google App queries — and AI answer engines are converging. When a user asks their phone &quot;Who's the best electrician near me?&quot; the response is increasingly generated by AI rather than drawn from a ranked list. For small businesses, this means that the same structured data and content optimisation that drives AEO also drives voice search visibility. The SpeakableSpecification schema type is an increasingly relevant optimisation as voice AI usage grows.
+              Voice search (already accounting for 20%+ of Google App queries) and AI answer engines are converging. When a user asks their phone &quot;Who's the best electrician near me?&quot; the response is increasingly generated by AI rather than drawn from a ranked list. For small businesses, this means that the same structured data and content optimisation that drives AEO also drives voice search visibility. The SpeakableSpecification schema type is an increasingly relevant optimisation as voice AI usage grows.
             </p>
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">Agentic AI and Autonomous Discovery</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              Gartner projects that agentic AI systems capable of autonomous end-to-end resolution will handle 80% of common customer service issues by 2029. In the search context, this means AI agents that don't merely answer questions but take actions — booking appointments, comparing quotes, scheduling services — on behalf of users. A consumer might instruct their AI agent: &quot;Find me a reliable plumber in Bristol who can come today, has good reviews, and charges less than £100 per hour.&quot; The agent will search, evaluate, and book without the user ever visiting a search engine or business website. Businesses with complete, structured, and verified digital presence will be the ones these agents select.
+              Gartner projects that agentic AI systems capable of autonomous end-to-end resolution will handle 80% of common customer service issues by 2029. In the search context, this means AI agents that don't merely answer questions but take actions (booking appointments, comparing quotes, scheduling services) on behalf of users. A consumer might instruct their AI agent: &quot;Find me a reliable plumber in Bristol who can come today, has good reviews, and charges less than £100 per hour.&quot; The agent will search, evaluate, and book without the user ever visiting a search engine or business website. Businesses with complete, structured, and verified digital presence will be the ones these agents select.
             </p>
             <h3 className="text-xl font-semibold text-[var(--v2-ink)] mb-3 mt-6">The Decline of Traditional SEO</h3>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              Semrush projects that digital marketing and SEO topics may drive more visitors from AI search than traditional search by early 2028. If Google defaults to AI Mode, this transition could happen sooner. CTRs for high-funnel queries are projected to be 20-30% lower through 2026, continuing the decline that has already seen organic CTR drop 34-61% where AI Overviews appear.
+              Semrush projects that digital marketing and SEO topics may drive more visitors from AI search than traditional search by early 2028. If Google defaults to AI Mode, this transition could happen sooner. CTRs for high-funnel queries are projected to be 20 to 30% lower through 2026, continuing the decline that has already seen organic CTR drop 34 to 61% where AI Overviews appear.
             </p>
             <p className="text-[var(--v2-body)] leading-relaxed">
               The strategic implication is clear: businesses that invest exclusively in traditional SEO, without building AEO capabilities, are optimising for a channel that is declining in both volume and value. The businesses that thrive will be those that treat AEO and SEO as complementary disciplines, with AEO receiving increasing emphasis as AI-mediated discovery becomes the dominant consumer behaviour.
@@ -595,17 +595,17 @@ export default function ResearchPage() {
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-[var(--v2-ink)] mb-4">Conclusions</h2>
             <p className="text-[var(--v2-body)] leading-relaxed mb-4">
-              The transition from search engine optimisation to answer engine optimisation represents the most significant shift in digital discovery since the launch of Google. For small businesses, this transition is not a distant future scenario — it is happening now, with measurable consequences for visibility, traffic, and revenue. Several conclusions emerge from this analysis:
+              The transition from search engine optimisation to answer engine optimisation represents the most significant shift in digital discovery since the launch of Google. For small businesses, this transition is not a distant future scenario. It is happening now, with measurable consequences for visibility, traffic, and revenue. Several conclusions emerge from this analysis:
             </p>
             <ol className="space-y-3 mb-6 list-decimal list-inside">
               <li className="text-[var(--v2-body)]"><strong>AI-driven search is not an emerging trend; it is the present reality:</strong> With 48% of queries triggering AI Overviews, 60% of searches ending without clicks, and ChatGPT capturing 12% of Google's query volume, the shift is already well advanced.</li>
               <li className="text-[var(--v2-body)]"><strong>Visibility without clicks is the new metric:</strong> Being cited in an AI-generated answer, even without receiving a click, builds brand recognition and trust. Businesses cited in AI Overviews earn 35% more organic clicks than uncited competitors.</li>
-              <li className="text-[var(--v2-body)]"><strong>Structured data is the foundation of AEO:</strong> Content with proper schema has 2.5 times higher citation probability. FAQPage schema with FAQ content produces 350% more citations. These are not marginal improvements — they are the difference between being found and being invisible.</li>
+              <li className="text-[var(--v2-body)]"><strong>Structured data is the foundation of AEO:</strong> Content with proper schema has 2.5 times higher citation probability. FAQPage schema with FAQ content produces 350% more citations. These are not marginal improvements. They are the difference between being found and being invisible.</li>
               <li className="text-[var(--v2-body)]"><strong>Reviews are both a local SEO and an AEO signal:</strong> Businesses with 40+ reviews receive 3.5 times more enquiries. Review platform presence triples AI citation chances. Automated review collection transforms a static profile into a continuously improving asset.</li>
-              <li className="text-[var(--v2-body)]"><strong>The window for competitive advantage is narrowing:</strong> With fewer than 15% of small businesses actively managing structured data, early AEO adopters gain a significant first-mover advantage. As adoption increases, the relative advantage of optimisation decreases — but the penalty of non-optimisation remains severe.</li>
+              <li className="text-[var(--v2-body)]"><strong>The window for competitive advantage is narrowing:</strong> With fewer than 15% of small businesses actively managing structured data, early AEO adopters gain a significant first-mover advantage. As adoption increases, the relative advantage of optimisation decreases, but the penalty of non-optimisation remains severe.</li>
             </ol>
             <p className="text-[var(--v2-body)] leading-relaxed">
-              The question for small business owners is no longer whether AI-driven search will affect their customer acquisition. It already is. The question is whether they will be among the businesses that AI systems cite and recommend — or among those that become invisible as the search landscape they once understood transforms beyond recognition.
+              The question for small business owners is no longer whether AI-driven search will affect their customer acquisition. It already is. The question is whether they will be among the businesses that AI systems cite and recommend, or among those that become invisible as the search landscape they once understood transforms beyond recognition.
             </p>
           </section>
 
@@ -661,7 +661,7 @@ export default function ResearchPage() {
 
           <div className="bg-[var(--v2-mint)] border border-[var(--v2-green)]/20 rounded-2xl p-8 mb-10 text-center">
             <p className="text-[var(--v2-ink)] leading-relaxed mb-6">
-              Ready to future-proof your business for AI-driven search? Start with whoza.ai — AI voice agents that capture every call, build your review profile, and keep your business visible where customers are searching.
+              Ready to future-proof your business for AI-driven search? Start with whoza.ai: AI voice agents that capture every call, build your review profile, and keep your business visible where customers are searching.
             </p>
             <Link href="/" className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--v2-green)] hover:bg-[var(--v2-green-hover)] text-white font-semibold rounded-xl transition-colors v2-island">
               Start Your Free Trial
