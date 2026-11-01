@@ -1022,6 +1022,14 @@ html:not([data-v2-seen]) header[role="banner"] nav {
 .v2-article :where(a:not(.v2-btn, .v2-btn-secondary, .cta-link)) { color: var(--v2-green); text-decoration: underline; text-underline-offset: 3px; }
 .v2-article :where(a:not(.v2-btn, .v2-btn-secondary, .cta-link)):hover { color: var(--v2-green-hover); }
 .v2-article :where(table) { width: 100%; border-collapse: collapse; font-size: 0.92em; }
+/* Articles written in the admin console arrive as plain HTML, so the lists and images need
+   their styling here rather than on each element. */
+.v2-article-html :where(ul) { list-style: disc; padding-left: 1.4em; margin-block: 0 1.15em; }
+.v2-article-html :where(ol) { list-style: decimal; padding-left: 1.4em; margin-block: 0 1.15em; }
+.v2-article-html :where(li > p) { margin-block: 0 0.4em; }
+.v2-article-html :where(blockquote) { border-left: 4px solid var(--v2-green); padding-left: 1.1em; margin-block: 1.4em; color: var(--v2-ink); font-style: italic; }
+.v2-article-html :where(img) { max-width: 100%; height: auto; border-radius: 18px; margin-block: 1.6em; }
+.v2-article-html :where(hr) { border: 0; border-top: 1px solid var(--v2-line); margin-block: 2em; }
 
 /* ---------- Offer bar ----------
    The 36px bar above the nav sits in the page flow. The fixed header starts

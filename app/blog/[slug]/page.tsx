@@ -7,6 +7,8 @@ import Link from "next/link"
 import { Fragment } from "react"
 import { notFound } from "next/navigation"
 import { blogPostContents } from "@/lib/blog-content"
+import { fetchRemoteBlogPost } from "@/lib/blog-remote"
+import { RemoteArticle, remoteArticleMetadata } from "@/components/whoza/blog/remote-article"
 import { findBlogEntry, formatBlogDate, type BlogIndexEntry } from "@/lib/blog-index"
 import { ArticleCover, ArticleHeader, ArticleInlineCta, RelatedPosts } from "@/components/whoza/blog/article-parts"
 import { CtaBand } from "@/components/whoza/cta-band"
@@ -97,6 +99,9 @@ const DEDICATED_PAGE_SLUGS = new Set([
   "ai-call-answering-uk-tradespeople-definitive-guide-2026",
 ])
 
+// Posts written in the admin console are left out on purpose and rendered on their first visit.
+// Built here, their titles and headings would go through the SEO guard, and a post could stop the
+// next deploy of the whole site.
 export function generateStaticParams() {
   return Object.keys(blogPostContents)
     .filter((slug) => !DEDICATED_PAGE_SLUGS.has(slug))
@@ -107,6 +112,8 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const { slug } = await params
   const post = blogPostContents[slug]
   if (!post) {
+    const remote = RETIRED_BLOG_SLUGS.has(slug) ? null : await fetchRemoteBlogPost(slug)
+    if (remote) return remoteArticleMetadata(remote)
     return {
       title: "Blog Post | whoza.ai",
     }
@@ -154,7 +161,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const post = blogPostContents[slug]
 
   if (!post) {
-    notFound()
+    const remote = await fetchRemoteBlogPost(slug)
+    if (!remote) notFound()
+    return <RemoteArticle post={remote} />
   }
 
   const { content } = post
