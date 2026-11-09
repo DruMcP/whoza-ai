@@ -1,1 +1,283 @@
-THE_CONTENT_WOULD_BE_HERE
+import { BreadcrumbSchema } from "@/components/whoza/breadcrumb-schema"
+import { Metadata } from "next"
+import { Header } from "@/components/whoza/header"
+import { Footer } from "@/components/whoza/footer"
+import { organizationSchemaObject } from "@/components/whoza/organization-schema"
+import { COMPANY } from "@/lib/company"
+import { Star, Quote, Newspaper, TrendingUp, PhoneOff, Building2, Calendar, Mail, ExternalLink } from "lucide-react"
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://whoza.ai"),
+  title: "Press Centre | whoza.ai",
+  description: "Media resources, press releases for whoza.ai, the AI call answering platform for UK tradespeople. Incorporated " + COMPANY.incorporatedOnDisplay + ". Company: " + COMPANY.companyNumber + ".",
+  alternates: { canonical: "https://whoza.ai/press" },
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: "Press Centre | whoza.ai",
+    description: "Media resources, press releases, and company information for whoza.ai, the AI call answering platform for UK tradespeople.",
+    url: "https://whoza.ai/press",
+    type: "website",
+    images: [{ url: "https://whoza.ai/og-image.webp", width: 1200, height: 630, alt: "whoza.ai press centre" }],
+  },
+}
+
+export const revalidate = 3600
+
+export default function PressPage() {
+  return (
+    <>
+      <BreadcrumbSchema items={[
+        { name: "Home", item: "https://whoza.ai" },
+        { name: "Press", item: "https://whoza.ai/press" },
+      ]} />
+      <Header />
+      <main id="main-content" className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
+        <article className="max-w-4xl mx-auto px-6 py-16">
+          {/* ─── HEADER ─── */}
+          <header className="mb-12">
+            <div className="inline-flex items-center gap-2 bg-[var(--v2-mint)] text-[var(--v2-green)] px-3 py-1 rounded-full text-sm font-medium mb-4">
+              <Newspaper className="w-4 h-4" />
+              Media Resources
+            </div>
+            <h1 className="text-3xl md:text-5xl font-bold mb-4">
+              Press Centre
+            </h1>
+            <p className="text-[var(--v2-body)] text-lg max-w-2xl">
+              Media resources and company information for whoza.ai, the AI call answering platform built for UK tradespeople.
+            </p>
+          </header>
+
+          {/* ─── BOILERPLATE ─── */}
+          <section className="mb-16">
+            <h2 className="text-xl font-bold text-[var(--v2-muted)] uppercase tracking-wider mb-4 flex items-center gap-2">
+              <Quote className="w-5 h-5" />
+              Company Boilerplate{" "}
+              <span className="text-xs normal-case tracking-normal text-[var(--v2-muted)] ml-2 bg-white px-2 py-1 rounded">For journalist use: 75 words</span>
+            </h2>
+            <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 md:p-8">
+              <p className="text-[var(--v2-body)] leading-relaxed text-lg">
+                <strong className="text-[var(--v2-ink)]">whoza.ai</strong> is an AI-powered call answering platform for UK tradespeople. Incorporated in early 2026 in Tomintoul, Scotland, the company provides 24/7 AI voice agents that answer missed calls, qualify leads, and deliver enquiries via WhatsApp. Its flagship agent, Katie, speaks with a natural Scottish accent. whoza.ai serves plumbers, electricians, builders, roofers, and other trade businesses across the United Kingdom. Plans start from only £59 per month. Registered as Whoza AI Ltd (Companies House: {COMPANY.companyNumber}, ICO: ZC077271).
+              </p>
+              <div className="mt-4 flex items-center gap-2 text-[var(--v2-muted)] text-sm">
+                <span className="bg-white px-2 py-1 rounded">75 words</span>
+                <span>•</span>
+                <span>Approved for press use</span>
+              </div>
+            </div>
+          </section>
+
+          {/* ─── FOUNDER QUOTE ─── */}
+          <section className="mb-16">
+            <h2 className="text-xl font-bold text-[var(--v2-muted)] uppercase tracking-wider mb-4 flex items-center gap-2">
+              <Star className="w-5 h-5" />
+              From the Founder
+            </h2>
+            <div className="bg-[var(--v2-navy)] text-white border border-white/10 rounded-2xl p-6 md:p-10 v2-island">
+              <blockquote className="text-2xl md:text-3xl font-medium leading-relaxed text-white/90 mb-8">
+                "We built whoza.ai because the best tradesperson in the world still loses jobs when they're up a ladder and their phone rings."
+              </blockquote>
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 rounded-full bg-emerald-500/20 flex items-center justify-center text-[#6ee7b7] font-bold text-xl">
+                  DM
+                </div>
+                <div>
+                  <p className="font-semibold text-white text-lg">Dru McPherson</p>
+                  <p className="text-white/65">Founder & CEO, whoza.ai</p>
+                  <p className="text-white/60 text-sm">Based in Tomintoul, Scotland</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* ─── SOURCED STATISTICS PANEL ─── */}
+          <section className="mb-16">
+            <h2 className="text-xl font-bold text-[var(--v2-muted)] uppercase tracking-wider mb-4 flex items-center gap-2">
+              <TrendingUp className="w-5 h-5" />
+              Sourced Statistics
+            </h2>
+            <p className="text-[var(--v2-muted)] mb-6">
+              Key figures drawn from verified third-party research. Cite as indicated.
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {/* Stat 1 */}
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+                <div className="text-4xl font-extrabold text-red-600 mb-2">33%</div>
+                <p className="text-sm text-[var(--v2-body)] mb-3">of UK small businesses fail to answer incoming calls</p>
+                <div className="flex items-start gap-2 text-xs text-[var(--v2-muted)]">
+                  <ExternalLink className="w-3 h-3 mt-0.5 shrink-0" />
+                  <span>Source: Moneypenny Small Business Call Report, 2016</span>
+                </div>
+              </div>
+
+              {/* Stat 2 */}
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+                <div className="text-4xl font-extrabold text-red-600 mb-2">69%</div>
+                <p className="text-sm text-[var(--v2-body)] mb-3">of voicemail callers don't leave a message</p>
+                <div className="flex items-start gap-2 text-xs text-[var(--v2-muted)]">
+                  <ExternalLink className="w-3 h-3 mt-0.5 shrink-0" />
+                  <span>Source: Moneypenny Small Business Call Report, 2016</span>
+                </div>
+              </div>
+
+              {/* Stat 3 */}
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+                <div className="text-4xl font-extrabold text-[var(--v2-green)] mb-2">£2.3bn</div>
+                <p className="text-sm text-[var(--v2-body)] mb-3">estimated annual revenue lost to missed calls across UK trades</p>
+                <a href="/research/missed-call-index/q3-2026" className="flex items-start gap-2 text-xs text-[var(--v2-muted)] hover:text-[var(--v2-green)] transition-colors">
+                  <ExternalLink className="w-3 h-3 mt-0.5 shrink-0" />
+                  <span>Source: whoza.ai research, 2026 (885,000 UK trade SMEs × £2,600 avg annual loss)</span>
+                </a>
+              </div>
+
+
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+                <div className="text-4xl font-extrabold text-[var(--v2-green)] mb-2">24/7</div>
+                <p className="text-sm text-[var(--v2-body)] mb-3">AI call answering including bank holidays, no human required</p>
+                <div className="flex items-start gap-2 text-xs text-[var(--v2-muted)]">
+                  <ExternalLink className="w-3 h-3 mt-0.5 shrink-0" />
+                  <span>Source: whoza.ai product specification, 2026</span>
+                </div>
+              </div>
+
+              {/* Stat 6 */}
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6">
+                <div className="text-4xl font-extrabold text-[var(--v2-green)] mb-2">&lt;3s</div>
+                <p className="text-sm text-[var(--v2-body)] mb-3">average time from call end to WhatsApp delivery</p>
+                <div className="flex items-start gap-2 text-xs text-[var(--v2-muted)]">
+                  <ExternalLink className="w-3 h-3 mt-0.5 shrink-0" />
+                  <span>Source: whoza.ai internal performance data, 2026</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* ─── FOUNDING STORY ─── */}
+          <section className="mb-16">
+            <h2 className="text-xl font-bold text-[var(--v2-muted)] uppercase tracking-wider mb-4 flex items-center gap-2">
+              <Building2 className="w-5 h-5" />
+              Founding Story
+            </h2>
+            <div className="prose max-w-none">
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-6 md:p-8 space-y-4 text-[var(--v2-body)] leading-relaxed">
+                <p>
+                  whoza.ai began with a single observation: the tradespeople keeping Britain running were losing jobs not to competitors, 
+                  but to their own ringing phones. In 2024, founder <strong className="text-[var(--v2-ink)]">Dru McPherson</strong>, then running 
+                  a digital services business in the Scottish Highlands, noticed a pattern among his trade clients. The plumbers, 
+                  electricians, and roofers he worked with were universally excellent at their craft and universally terrible at 
+                  answering their phones.
+                </p>
+                <p>
+                  "I would call a plumber at 10 AM on a Tuesday and get voicemail. Not because they were lazy. Because they were 
+                  under someone's sink fixing a leak. The call went to voicemail, the customer called the next number on Google, 
+                  and that was £250 gone before lunch."
+                </p>
+                <p>
+                  The problem was structural, not personal. UK trades operate as mobile, single-person or small-team businesses. 
+                  They do not have receptionists. They cannot pause mid-job to answer a call. And voicemail, the default fallback, 
+                  loses 69% of callers permanently, per Moneypenny Small Business Call Report, 2016.
+                </p>
+                <p>
+                  In late 2024, McPherson began building what would become whoza.ai: an AI voice agent that could answer calls 
+                  in a natural Scottish accent, ask the right qualifying questions, and deliver structured job details to the 
+                  tradesperson's WhatsApp within seconds. The goal was not to replace human interaction, but to ensure no 
+                  qualified enquiry was ever lost to circumstance.
+                </p>
+                <p>
+                  <strong className="text-[var(--v2-ink)]">Whoza AI Ltd</strong> was formally incorporated in Scotland on {COMPANY.incorporatedOnDisplay} 
+                  (Companies House {COMPANY.companyNumber}), with its operational base established in Tomintoul, Banffshire, a village in the 
+                  Cairngorms National Park. The company launched its flagship AI agent, <strong className="text-[var(--v2-ink)]">Katie</strong>, 
+                  in early 2026, targeting UK trades with a simple value proposition: never miss a job again.
+                </p>
+                <p>
+                  By mid-2026, whoza.ai had expanded to serve plumbers, electricians, builders, roofers, locksmiths, heating engineers, 
+                  drainage companies, cleaners, pest control operators, joiners, plasterers, tilers, handymen, and landscapers 
+                  across the United Kingdom. The platform processes calls 24 hours a day, including weekends and bank holidays, 
+                  with pricing starting at £59 per month.
+                </p>
+                <p>
+                  The company's research arm has since published independent studies quantifying the 
+                  <a href="/research/missed-call-index/q3-2026" className="text-[var(--v2-green)] hover:underline"> £2.3 billion annual cost of missed calls to UK trades</a>, 
+                  drawing on data from the Office for National Statistics, the Federation of Small Businesses, and direct market analysis.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* ─── COMPANY INFORMATION ─── */}
+          <section className="mb-16">
+            <h2 className="text-xl font-bold text-[var(--v2-muted)] uppercase tracking-wider mb-4 flex items-center gap-2">
+              <Building2 className="w-5 h-5" />
+              Company Information
+            </h2>
+            <dl className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-5">
+                <dt className="text-[var(--v2-muted)] text-sm mb-1">Company Name</dt>
+                <dd className="text-[var(--v2-ink)] font-medium">Whoza AI Ltd</dd>
+              </div>
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-5">
+                <dt className="text-[var(--v2-muted)] text-sm mb-1">Incorporated</dt>
+                <dd className="text-[var(--v2-ink)] font-medium">{COMPANY.incorporatedOnDisplay}</dd>
+              </div>
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-5">
+                <dt className="text-[var(--v2-muted)] text-sm mb-1">Operational base</dt>
+                <dd className="text-[var(--v2-ink)] font-medium">97 Main Street, Tomintoul, Banffshire, AB37 9HA, Scotland</dd>
+              </div>
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-5">
+                <dt className="text-[var(--v2-muted)] text-sm mb-1">Registered office</dt>
+                <dd className="text-[var(--v2-ink)] font-medium">6 Atholl Crescent, Perth, PH1 5JN, Scotland</dd>
+              </div>
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-5">
+                <dt className="text-[var(--v2-muted)] text-sm mb-1">Companies House</dt>
+                <dd className="text-[var(--v2-ink)] font-medium">{COMPANY.companyNumber}</dd>
+              </div>
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-5">
+                <dt className="text-[var(--v2-muted)] text-sm mb-1">ICO Registration</dt>
+                <dd className="text-[var(--v2-ink)] font-medium">ZC077271</dd>
+              </div>
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-5">
+                <dt className="text-[var(--v2-muted)] text-sm mb-1">Press Contact</dt>
+                <dd className="text-[var(--v2-ink)] font-medium flex items-center gap-2">
+                  <Mail className="w-4 h-4 text-[var(--v2-green)]" />
+                  <a href="mailto:press@whoza.ai" className="text-[var(--v2-green)] hover:underline">press@whoza.ai</a>
+                </dd>
+              </div>
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-5">
+                <dt className="text-[var(--v2-muted)] text-sm mb-1">Founder & CEO</dt>
+                <dd className="text-[var(--v2-ink)] font-medium">Dru McPherson</dd>
+              </div>
+              <div className="bg-white border border-[var(--v2-line)] rounded-2xl p-5">
+                <dt className="text-[var(--v2-muted)] text-sm mb-1">Website</dt>
+                <dd className="text-[var(--v2-ink)] font-medium flex items-center gap-2">
+                  <ExternalLink className="w-4 h-4 text-[var(--v2-green)]" />
+                  <a href="https://whoza.ai" className="text-[var(--v2-green)] hover:underline">whoza.ai</a>
+                </dd>
+              </div>
+            </dl>
+          </section>
+
+          {/* ─── JSON-LD ─── */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "NewsArticle",
+                "headline": "Press Centre | whoza.ai",
+                "description": "Media resources and company information for whoza.ai.",
+                "image": "https://whoza.ai/og-image.webp",
+                "author": {
+                  "@type": "Organization",
+                  "name": "whoza.ai",
+                },
+                "publisher": organizationSchemaObject,
+                "datePublished": "2026-01-09",
+                "dateModified": "2026-01-09",
+              }),
+            }}
+          />
+        </article>
+      </main>
+      <Footer />
+    </>
+  )
+}
