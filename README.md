@@ -8,7 +8,6 @@ White-label AI voice-agent platform for UK tradespeople. Built with Next.js 15, 
 npm install
 npm run dev
 ```
-
 ## Architecture
 
 - **App Router** (`app/`): Next.js 15 with static generation + ISR
