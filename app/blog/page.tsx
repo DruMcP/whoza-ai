@@ -9,6 +9,7 @@ import { FeaturedSlider } from "@/components/whoza/blog/featured-slider"
 import { BlogGrid } from "@/components/whoza/blog/blog-grid"
 import { RevealObserver } from "@/components/whoza/blog/reveal-observer"
 import { blogIndex } from "@/lib/blog-index"
+import { fetchRemoteBlogPosts, withRemotePosts } from "@/lib/blog-remote"
 
 const serif = Newsreader({
   subsets: ["latin"],
@@ -44,15 +45,16 @@ export const metadata: Metadata = {
   },
 }
 
-export const revalidate = 3600
+export const revalidate = 300
 
-export default function BlogPage() {
-  const featured = blogIndex.filter((post) => post.featured)
+export default async function BlogPage() {
+  const posts = withRemotePosts(blogIndex, await fetchRemoteBlogPosts())
+  const featured = posts.filter((post) => post.featured)
 
   return (
     <div className="min-h-screen bg-[var(--v2-paper)] text-[var(--v2-body)] v2-page">
       <Header />
-      <BlogListingSchema posts={blogIndex.map(({ slug, title, excerpt, date, category, url }) => ({ slug, title, excerpt, date, category, url }))} />
+      <BlogListingSchema posts={posts.map(({ slug, title, excerpt, date, category, url }) => ({ slug, title, excerpt, date, category, url }))} />
       <BreadcrumbSchema items={[
         { name: "Home", item: "https://whoza.ai" },
         { name: "Blog", item: "https://whoza.ai/blog" },
@@ -94,7 +96,7 @@ export default function BlogPage() {
               Practical guides for UK tradespeople, and our own research on missed calls, AI search and voice agents.
             </p>
           </div>
-          <BlogGrid posts={blogIndex} perPage={6} />
+          <BlogGrid posts={posts} perPage={6} />
         </section>
 
         <div className="mx-auto mt-16 max-w-[1120px] px-4 sm:px-6">

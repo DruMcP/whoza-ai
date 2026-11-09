@@ -14,6 +14,10 @@ const nextConfig = {
   images: {
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
+    // Cover images of posts written in the admin console.
+    remotePatterns: [
+      { protocol: 'https', hostname: 'ligjstpxqtkurvteyyhw.supabase.co', pathname: '/storage/v1/object/public/blog-images/**' },
+    ],
   },
   trailingSlash: false,
   allowedDevOrigins: [

@@ -35,9 +35,9 @@ const colorStyles = {
 }
 
 // The free tools, linked from the homepage pricing section (in-body links, not
-// only the nav and footer).
+// only the nav and footer). The old Lost Jobs Calculator is the missed-call
+// calculator now (/tools/lost-jobs-calculator 301s there in netlify.toml).
 const FREE_TOOLS = [
-  { label: "Lost Jobs Calculator", href: "/tools/lost-jobs-calculator" },
   { label: "Missed Call Cost Calculator", href: "/missed-calls-cost-calculator" },
   { label: "Hourly Rate Checker", href: "/tools/rate-checker" },
   { label: "Emergency Callout Pricing Calculator", href: "/tools/emergency-pricing" },

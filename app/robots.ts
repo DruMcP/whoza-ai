@@ -35,6 +35,6 @@ export default function robots(): MetadataRoute.Robots {
         ],
       },
     ],
-    sitemap: "https://whoza.ai/sitemap.xml",
+    sitemap: ["https://whoza.ai/sitemap.xml", "https://whoza.ai/blog-posts-sitemap.xml"],
   }
 }
